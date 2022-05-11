@@ -10,7 +10,7 @@ jobs:
       - name: "Checkout Repository"
         uses: actions/checkout@v2
       - name: "Set Version"
-        run: echo "API_VERSION=$(cat meraki-openapi-version.txt)" >> $GITHUB_ENV
+        run: echo "API_VERSION=$(cat meraki-openapi-version.txt | tr -d '\n')" >> $GITHUB_ENV
       - name: "Install JRE"
         run: apt update && apt install -y default-jre
       - name: "Fetch Specification"
