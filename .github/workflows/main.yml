@@ -2,7 +2,7 @@ name: Generate OpenAPI
 on:
   push:
     branches:
-      - main
+      - release
 jobs:
   generate-client:
     runs-on: ubuntu-latest
@@ -12,22 +12,31 @@ jobs:
       - name: "Set Version"
         run: echo "API_VERSION=$(cat meraki-openapi-version.txt)" >> $GITHUB_ENV
       - name: "Install JRE"
-        run: apt-get install -y openjdk-8-jre
+        run: apt update && apt install -y default-jre
       - name: "Fetch Specification"
         run: wget https://github.com/meraki/openapi/archive/refs/tags/$API_VERSION.zip && unzip $API_VERSION.zip
       - name: "Install OpenAPI Generator"
         run: wget https://repo1.maven.org/maven2/org/openapitools/openapi-generator-cli/5.3.0/openapi-generator-cli-5.3.0.jar -O openapi-generator-cli.jar
       - name: "Run OpenAPI Generator"
-        run: java -jar $OPENAPI_PATH/openapi-generator-cli.jar generate -i spec2.json -g go -o client -p enumClassPrefix=true -p structPrefix=true --package-name client -p packageVersion=$API_VERSION --git-repo-id core-infra-svcs/dashboard-api-golang --git-host github.com
+        run: java -jar openapi-generator-cli.jar generate -i spec2.json -g go -o client -p enumClassPrefix=true -p structPrefix=true --package-name client -p packageVersion=$API_VERSION --git-repo-id core-infra-svcs/dashboard-api-golang --git-host github.com
   release:
     runs-on: ubuntu-latest
     steps:
+      - name: "Git Config"
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "<>"
+      - name: "Git Commit"
+        run: |
+          git add client/*
+          git commit -m "OpenAPI client generation $API_VERSION"
+          git push origin main
       - uses: actions/checkout@v2
       - name: Bump version and push tag
         id: tag_version
         uses: mathieudutour/github-tag-action@v6.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ env.GITHUB_TOKEN }}
           custom_tag: ${{ env.API_VERSION }}
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
