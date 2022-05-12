@@ -29,9 +29,7 @@ jobs:
           git config user.email "<>"
       - name: "Git Commit"
         run: |
-          git add generated_at.txt
-          git add client/*
-          git add client/.*
+          git add -A
           git commit -m "OpenAPI client generation $API_VERSION"
           git tag $API_VERSION
           git push origin main
