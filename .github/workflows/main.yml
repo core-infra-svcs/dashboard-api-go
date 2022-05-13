@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - build-automation-cleanup
 jobs:
   generate-client:
     runs-on: ubuntu-latest
@@ -34,7 +35,7 @@ jobs:
           git add -A
           git commit -m "OpenAPI client generation $API_VERSION"
           git tag $API_VERSION
-          git push origin main
+          git push origin build-automation-cleanup
           git push origin $API_VERSION
       - name: Create a GitHub release
         uses: ncipollo/release-action@v1
