@@ -36,10 +36,43 @@ rm $API_VERSION.zip; rm spec2.json
 Clone the repository
 
 ```shell
-go get core-infra-svcs/dashboard-api-golang/client
+export GOPRIVATE="github.com/core-infra-svcs/*"
+go get github.com/core-infra-svcs/dashboard-api-golang/client@7151297851db01350e884c6bff6511a29f20561d
+
+go build .
+
+export MERAKI_API_KEY=$(cat ~/meraki-api-key.txt)
+./meraki-client
 ```
 
 ## Usage
 
 Client API documentation is available in the /client/docs directory
+
+### CreateOrganization Example
+
+```go
+package main
+
+import "github.com/core-infra-svcs/dashboard-api-golang/client"
+import "context"
+import "fmt"
+import "os"
+
+func main() {
+	configuration := client.NewConfiguration()
+	configuration.AddDefaultHeader("X-Cisco-Meraki-API-Key", os.Getenv("MERAKI_API_KEY"))
+	apiClient := client.NewAPIClient(configuration)
+
+	orgs, _, err := apiClient.ConfigureApi.GetOrganizations(context.Background()).Execute()
+
+	if err != nil {
+		fmt.Println("Meraki API call failed. Details: ", err)
+	}
+
+	for _, org := range orgs {
+		fmt.Printf("%s\n", *org.Name)
+	}
+}
+```
  
