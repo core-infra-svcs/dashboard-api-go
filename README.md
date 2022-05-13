@@ -37,9 +37,9 @@ Clone the repository
 
 ```shell
 export GOPRIVATE="github.com/core-infra-svcs/*"
-go get github.com/core-infra-svcs/dashboard-api-golang/client@7151297851db01350e884c6bff6511a29f20561d
+go get github.com/core-infra-svcs/dashboard-api-golang/client
 
-go build .
+go build -o meraki-client .
 
 export MERAKI_API_KEY=$(cat ~/meraki-api-key.txt)
 ./meraki-client
