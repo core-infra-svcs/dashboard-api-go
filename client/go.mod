@@ -1,4 +1,4 @@
-module github.com/core-infra-svcs/dashboard-api-golang
+module github.com/core-infra-svcs/dashboard-api-golang/client
 
 go 1.13
 
