@@ -31,7 +31,15 @@ java -jar openapi-generator-cli.jar generate \
 rm $API_VERSION.zip; rm spec2.json
 ```
 
+## Installation
+
+Clone the repository
+
+```shell
+go get core-infra-svcs/dashboard-api-golang/client
+```
+
 ## Usage
 
-see /client/docs folder for code samples
+Client API documentation is available in the /client/docs directory
  
