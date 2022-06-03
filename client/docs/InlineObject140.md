@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Identity PSK | 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
-**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberFirewallL7FirewallRulesRules**](NetworksNetworkIdWirelessSsidsNumberFirewallL7FirewallRulesRules.md) | An array of L7 firewall rules for this SSID. Rules will get applied in the same order user has specified in request. Empty array will clear the L7 firewall rule configuration. | [optional] 
 
 ## Methods
 
 ### NewInlineObject140
 
-`func NewInlineObject140(name string, groupPolicyId string, ) *InlineObject140`
+`func NewInlineObject140() *InlineObject140`
 
 NewInlineObject140 instantiates a new InlineObject140 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +25,30 @@ NewInlineObject140WithDefaults instantiates a new InlineObject140 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRules
 
-`func (o *InlineObject140) GetName() string`
+`func (o *InlineObject140) GetRules() []NetworksNetworkIdWirelessSsidsNumberFirewallL7FirewallRulesRules`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesOk
 
-`func (o *InlineObject140) GetNameOk() (*string, bool)`
+`func (o *InlineObject140) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberFirewallL7FirewallRulesRules, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRules
 
-`func (o *InlineObject140) SetName(v string)`
+`func (o *InlineObject140) SetRules(v []NetworksNetworkIdWirelessSsidsNumberFirewallL7FirewallRulesRules)`
 
-SetName sets Name field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetPassphrase
+`func (o *InlineObject140) HasRules() bool`
 
-`func (o *InlineObject140) GetPassphrase() string`
-
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
-
-### GetPassphraseOk
-
-`func (o *InlineObject140) GetPassphraseOk() (*string, bool)`
-
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPassphrase
-
-`func (o *InlineObject140) SetPassphrase(v string)`
-
-SetPassphrase sets Passphrase field to given value.
-
-### HasPassphrase
-
-`func (o *InlineObject140) HasPassphrase() bool`
-
-HasPassphrase returns a boolean if a field has been set.
-
-### GetGroupPolicyId
-
-`func (o *InlineObject140) GetGroupPolicyId() string`
-
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
-
-### GetGroupPolicyIdOk
-
-`func (o *InlineObject140) GetGroupPolicyIdOk() (*string, bool)`
-
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupPolicyId
-
-`func (o *InlineObject140) SetGroupPolicyId(v string)`
-
-SetGroupPolicyId sets GroupPolicyId field to given value.
-
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

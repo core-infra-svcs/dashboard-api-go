@@ -37,7 +37,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    assignOrganizationLicensesSeats := *openapiclient.NewInlineObject178("LicenseId_example", "NetworkId_example", int32(123)) // InlineObject178 | 
+    assignOrganizationLicensesSeats := *openapiclient.NewInlineObject180("LicenseId_example", "NetworkId_example", int32(123)) // InlineObject180 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -67,7 +67,7 @@ Other parameters are passed through a pointer to a apiAssignOrganizationLicenses
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **assignOrganizationLicensesSeats** | [**InlineObject178**](InlineObject178.md) |  | 
+ **assignOrganizationLicensesSeats** | [**InlineObject180**](InlineObject180.md) |  | 
 
 ### Return type
 
@@ -334,7 +334,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    moveOrganizationLicenses := *openapiclient.NewInlineObject179("DestOrganizationId_example", []string{"LicenseIds_example"}) // InlineObject179 | 
+    moveOrganizationLicenses := *openapiclient.NewInlineObject181("DestOrganizationId_example", []string{"LicenseIds_example"}) // InlineObject181 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -364,7 +364,7 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensesRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicenses** | [**InlineObject179**](InlineObject179.md) |  | 
+ **moveOrganizationLicenses** | [**InlineObject181**](InlineObject181.md) |  | 
 
 ### Return type
 
@@ -406,7 +406,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    moveOrganizationLicensesSeats := *openapiclient.NewInlineObject180("DestOrganizationId_example", "LicenseId_example", int32(123)) // InlineObject180 | 
+    moveOrganizationLicensesSeats := *openapiclient.NewInlineObject182("DestOrganizationId_example", "LicenseId_example", int32(123)) // InlineObject182 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -436,7 +436,7 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensesSe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicensesSeats** | [**InlineObject180**](InlineObject180.md) |  | 
+ **moveOrganizationLicensesSeats** | [**InlineObject182**](InlineObject182.md) |  | 
 
 ### Return type
 
@@ -478,7 +478,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    renewOrganizationLicensesSeats := *openapiclient.NewInlineObject181("LicenseIdToRenew_example", "UnusedLicenseId_example") // InlineObject181 | 
+    renewOrganizationLicensesSeats := *openapiclient.NewInlineObject183("LicenseIdToRenew_example", "UnusedLicenseId_example") // InlineObject183 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -508,7 +508,7 @@ Other parameters are passed through a pointer to a apiRenewOrganizationLicensesS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **renewOrganizationLicensesSeats** | [**InlineObject181**](InlineObject181.md) |  | 
+ **renewOrganizationLicensesSeats** | [**InlineObject183**](InlineObject183.md) |  | 
 
 ### Return type
 
@@ -551,7 +551,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | 
     licenseId := "licenseId_example" // string | 
-    updateOrganizationLicense := *openapiclient.NewInlineObject182() // InlineObject182 |  (optional)
+    updateOrganizationLicense := *openapiclient.NewInlineObject184() // InlineObject184 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -583,7 +583,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationLicense** | [**InlineObject182**](InlineObject182.md) |  | 
+ **updateOrganizationLicense** | [**InlineObject184**](InlineObject184.md) |  | 
 
 ### Return type
 

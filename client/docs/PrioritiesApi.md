@@ -101,7 +101,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    updateOrganizationBrandingPoliciesPriorities := *openapiclient.NewInlineObject165([]string{"BrandingPolicyIds_example"}) // InlineObject165 | 
+    updateOrganizationBrandingPoliciesPriorities := *openapiclient.NewInlineObject167([]string{"BrandingPolicyIds_example"}) // InlineObject167 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationBranding
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationBrandingPoliciesPriorities** | [**InlineObject165**](InlineObject165.md) |  | 
+ **updateOrganizationBrandingPoliciesPriorities** | [**InlineObject167**](InlineObject167.md) |  | 
 
 ### Return type
 

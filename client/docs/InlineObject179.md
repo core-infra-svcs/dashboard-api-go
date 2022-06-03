@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
-**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
+**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
 
 ## Methods
 
 ### NewInlineObject179
 
-`func NewInlineObject179(destOrganizationId string, licenseIds []string, ) *InlineObject179`
+`func NewInlineObject179() *InlineObject179`
 
 NewInlineObject179 instantiates a new InlineObject179 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineObject179WithDefaults instantiates a new InlineObject179 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetSerials
 
-`func (o *InlineObject179) GetDestOrganizationId() string`
+`func (o *InlineObject179) GetSerials() []string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetSerialsOk
 
-`func (o *InlineObject179) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject179) GetSerialsOk() (*[]string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetSerials
 
-`func (o *InlineObject179) SetDestOrganizationId(v string)`
+`func (o *InlineObject179) SetSerials(v []string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetSerials sets Serials field to given value.
 
+### HasSerials
 
-### GetLicenseIds
+`func (o *InlineObject179) HasSerials() bool`
 
-`func (o *InlineObject179) GetLicenseIds() []string`
-
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
-
-### GetLicenseIdsOk
-
-`func (o *InlineObject179) GetLicenseIdsOk() (*[]string, bool)`
-
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseIds
-
-`func (o *InlineObject179) SetLicenseIds(v []string)`
-
-SetLicenseIds sets LicenseIds field to given value.
-
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

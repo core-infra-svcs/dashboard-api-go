@@ -36,7 +36,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject174("Name_example", "Address_example") // InlineObject174 | 
+    createOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject176("Name_example", "Address_example") // InlineObject176 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInsightM
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInsightMonitoredMediaServer** | [**InlineObject174**](InlineObject174.md) |  | 
+ **createOrganizationInsightMonitoredMediaServer** | [**InlineObject176**](InlineObject176.md) |  | 
 
 ### Return type
 
@@ -474,7 +474,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | 
     monitoredMediaServerId := "monitoredMediaServerId_example" // string | 
-    updateOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject175() // InlineObject175 |  (optional)
+    updateOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject177() // InlineObject177 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationInsightMonitoredMediaServer** | [**InlineObject175**](InlineObject175.md) |  | 
+ **updateOrganizationInsightMonitoredMediaServer** | [**InlineObject177**](InlineObject177.md) |  | 
 
 ### Return type
 

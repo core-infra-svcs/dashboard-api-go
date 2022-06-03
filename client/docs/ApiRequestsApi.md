@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApiRequests
 
-> []InlineResponse2001 GetOrganizationApiRequests(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).AdminId(adminId).Path(path).Method(method).ResponseCode(responseCode).SourceIp(sourceIp).UserAgent(userAgent).Execute()
+> []InlineResponse2002 GetOrganizationApiRequests(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).AdminId(adminId).Path(path).Method(method).ResponseCode(responseCode).SourceIp(sourceIp).UserAgent(userAgent).Version(version).OperationIds(operationIds).Execute()
 
 List the API requests made by an organization
 
@@ -43,15 +43,17 @@ func main() {
     responseCode := int32(56) // int32 | Filter the results by the response code of the API requests (optional)
     sourceIp := "sourceIp_example" // string | Filter the results by the IP address of the originating API request (optional)
     userAgent := "userAgent_example" // string | Filter the results by the user agent string of the API request (optional)
+    version := int32(56) // int32 | Filter the results by the API version of the API request (optional)
+    operationIds := []string{"Inner_example"} // []string | Filter the results by one or more operation IDs for the API request (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ApiRequestsApi.GetOrganizationApiRequests(context.Background(), organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).AdminId(adminId).Path(path).Method(method).ResponseCode(responseCode).SourceIp(sourceIp).UserAgent(userAgent).Execute()
+    resp, r, err := api_client.ApiRequestsApi.GetOrganizationApiRequests(context.Background(), organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).AdminId(adminId).Path(path).Method(method).ResponseCode(responseCode).SourceIp(sourceIp).UserAgent(userAgent).Version(version).OperationIds(operationIds).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ApiRequestsApi.GetOrganizationApiRequests``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequests`: []InlineResponse2001
+    // response from `GetOrganizationApiRequests`: []InlineResponse2002
     fmt.Fprintf(os.Stdout, "Response from `ApiRequestsApi.GetOrganizationApiRequests`: %v\n", resp)
 }
 ```
@@ -84,10 +86,12 @@ Name | Type | Description  | Notes
  **responseCode** | **int32** | Filter the results by the response code of the API requests | 
  **sourceIp** | **string** | Filter the results by the IP address of the originating API request | 
  **userAgent** | **string** | Filter the results by the user agent string of the API request | 
+ **version** | **int32** | Filter the results by the API version of the API request | 
+ **operationIds** | **[]string** | Filter the results by one or more operation IDs for the API request | 
 
 ### Return type
 
-[**[]InlineResponse2001**](InlineResponse2001.md)
+[**[]InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

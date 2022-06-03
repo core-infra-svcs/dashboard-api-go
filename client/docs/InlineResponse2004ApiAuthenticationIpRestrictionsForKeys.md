@@ -1,4 +1,4 @@
-# InlineResponse2003ApiAuthenticationIpRestrictionsForKeys
+# InlineResponse2004ApiAuthenticationIpRestrictionsForKeys
 
 ## Properties
 
@@ -9,70 +9,70 @@ Name | Type | Description | Notes
 
 ## Methods
 
-### NewInlineResponse2003ApiAuthenticationIpRestrictionsForKeys
+### NewInlineResponse2004ApiAuthenticationIpRestrictionsForKeys
 
-`func NewInlineResponse2003ApiAuthenticationIpRestrictionsForKeys() *InlineResponse2003ApiAuthenticationIpRestrictionsForKeys`
+`func NewInlineResponse2004ApiAuthenticationIpRestrictionsForKeys() *InlineResponse2004ApiAuthenticationIpRestrictionsForKeys`
 
-NewInlineResponse2003ApiAuthenticationIpRestrictionsForKeys instantiates a new InlineResponse2003ApiAuthenticationIpRestrictionsForKeys object
+NewInlineResponse2004ApiAuthenticationIpRestrictionsForKeys instantiates a new InlineResponse2004ApiAuthenticationIpRestrictionsForKeys object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewInlineResponse2003ApiAuthenticationIpRestrictionsForKeysWithDefaults
+### NewInlineResponse2004ApiAuthenticationIpRestrictionsForKeysWithDefaults
 
-`func NewInlineResponse2003ApiAuthenticationIpRestrictionsForKeysWithDefaults() *InlineResponse2003ApiAuthenticationIpRestrictionsForKeys`
+`func NewInlineResponse2004ApiAuthenticationIpRestrictionsForKeysWithDefaults() *InlineResponse2004ApiAuthenticationIpRestrictionsForKeys`
 
-NewInlineResponse2003ApiAuthenticationIpRestrictionsForKeysWithDefaults instantiates a new InlineResponse2003ApiAuthenticationIpRestrictionsForKeys object
+NewInlineResponse2004ApiAuthenticationIpRestrictionsForKeysWithDefaults instantiates a new InlineResponse2004ApiAuthenticationIpRestrictionsForKeys object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetEnabled
 
-`func (o *InlineResponse2003ApiAuthenticationIpRestrictionsForKeys) GetEnabled() bool`
+`func (o *InlineResponse2004ApiAuthenticationIpRestrictionsForKeys) GetEnabled() bool`
 
 GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
 ### GetEnabledOk
 
-`func (o *InlineResponse2003ApiAuthenticationIpRestrictionsForKeys) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse2004ApiAuthenticationIpRestrictionsForKeys) GetEnabledOk() (*bool, bool)`
 
 GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnabled
 
-`func (o *InlineResponse2003ApiAuthenticationIpRestrictionsForKeys) SetEnabled(v bool)`
+`func (o *InlineResponse2004ApiAuthenticationIpRestrictionsForKeys) SetEnabled(v bool)`
 
 SetEnabled sets Enabled field to given value.
 
 ### HasEnabled
 
-`func (o *InlineResponse2003ApiAuthenticationIpRestrictionsForKeys) HasEnabled() bool`
+`func (o *InlineResponse2004ApiAuthenticationIpRestrictionsForKeys) HasEnabled() bool`
 
 HasEnabled returns a boolean if a field has been set.
 
 ### GetRanges
 
-`func (o *InlineResponse2003ApiAuthenticationIpRestrictionsForKeys) GetRanges() []string`
+`func (o *InlineResponse2004ApiAuthenticationIpRestrictionsForKeys) GetRanges() []string`
 
 GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
 ### GetRangesOk
 
-`func (o *InlineResponse2003ApiAuthenticationIpRestrictionsForKeys) GetRangesOk() (*[]string, bool)`
+`func (o *InlineResponse2004ApiAuthenticationIpRestrictionsForKeys) GetRangesOk() (*[]string, bool)`
 
 GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRanges
 
-`func (o *InlineResponse2003ApiAuthenticationIpRestrictionsForKeys) SetRanges(v []string)`
+`func (o *InlineResponse2004ApiAuthenticationIpRestrictionsForKeys) SetRanges(v []string)`
 
 SetRanges sets Ranges field to given value.
 
 ### HasRanges
 
-`func (o *InlineResponse2003ApiAuthenticationIpRestrictionsForKeys) HasRanges() bool`
+`func (o *InlineResponse2004ApiAuthenticationIpRestrictionsForKeys) HasRanges() bool`
 
 HasRanges returns a boolean if a field has been set.
 

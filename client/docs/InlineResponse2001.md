@@ -4,15 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdminId** | Pointer to **string** | Database ID for the admin user who made the API request. | [optional] 
-**Method** | Pointer to **string** | HTTP method used in the API request. | [optional] 
-**Host** | Pointer to **string** | The host which the API request was directed at. | [optional] 
-**Path** | Pointer to **string** | The API request path. | [optional] 
-**QueryString** | Pointer to **string** | The query string sent with the API request. | [optional] 
-**UserAgent** | Pointer to **string** | The API request user agent. | [optional] 
-**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, indicating when the API request was made. | [optional] 
-**ResponseCode** | Pointer to **int32** | API request response code. | [optional] 
-**SourceIp** | Pointer to **string** | Public IP address from which the API request was made. | [optional] 
+**Id** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Organization name | [optional] 
+**Url** | Pointer to **string** | Organization URL | [optional] 
+**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
+**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
+**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
 
 ## Methods
 
@@ -33,230 +30,155 @@ NewInlineResponse2001WithDefaults instantiates a new InlineResponse2001 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAdminId
+### GetId
 
-`func (o *InlineResponse2001) GetAdminId() string`
+`func (o *InlineResponse2001) GetId() string`
 
-GetAdminId returns the AdminId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetAdminIdOk
+### GetIdOk
 
-`func (o *InlineResponse2001) GetAdminIdOk() (*string, bool)`
+`func (o *InlineResponse2001) GetIdOk() (*string, bool)`
 
-GetAdminIdOk returns a tuple with the AdminId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminId
+### SetId
 
-`func (o *InlineResponse2001) SetAdminId(v string)`
+`func (o *InlineResponse2001) SetId(v string)`
 
-SetAdminId sets AdminId field to given value.
+SetId sets Id field to given value.
 
-### HasAdminId
+### HasId
 
-`func (o *InlineResponse2001) HasAdminId() bool`
+`func (o *InlineResponse2001) HasId() bool`
 
-HasAdminId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMethod
+### GetName
 
-`func (o *InlineResponse2001) GetMethod() string`
+`func (o *InlineResponse2001) GetName() string`
 
-GetMethod returns the Method field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMethodOk
+### GetNameOk
 
-`func (o *InlineResponse2001) GetMethodOk() (*string, bool)`
+`func (o *InlineResponse2001) GetNameOk() (*string, bool)`
 
-GetMethodOk returns a tuple with the Method field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMethod
+### SetName
 
-`func (o *InlineResponse2001) SetMethod(v string)`
+`func (o *InlineResponse2001) SetName(v string)`
 
-SetMethod sets Method field to given value.
+SetName sets Name field to given value.
 
-### HasMethod
+### HasName
 
-`func (o *InlineResponse2001) HasMethod() bool`
+`func (o *InlineResponse2001) HasName() bool`
 
-HasMethod returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetHost
+### GetUrl
 
-`func (o *InlineResponse2001) GetHost() string`
+`func (o *InlineResponse2001) GetUrl() string`
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetHostOk
+### GetUrlOk
 
-`func (o *InlineResponse2001) GetHostOk() (*string, bool)`
+`func (o *InlineResponse2001) GetUrlOk() (*string, bool)`
 
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetUrl
 
-`func (o *InlineResponse2001) SetHost(v string)`
+`func (o *InlineResponse2001) SetUrl(v string)`
 
-SetHost sets Host field to given value.
+SetUrl sets Url field to given value.
 
-### HasHost
+### HasUrl
 
-`func (o *InlineResponse2001) HasHost() bool`
+`func (o *InlineResponse2001) HasUrl() bool`
 
-HasHost returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetPath
+### GetApi
 
-`func (o *InlineResponse2001) GetPath() string`
+`func (o *InlineResponse2001) GetApi() OrganizationsApi`
 
-GetPath returns the Path field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetPathOk
+### GetApiOk
 
-`func (o *InlineResponse2001) GetPathOk() (*string, bool)`
+`func (o *InlineResponse2001) GetApiOk() (*OrganizationsApi, bool)`
 
-GetPathOk returns a tuple with the Path field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPath
+### SetApi
 
-`func (o *InlineResponse2001) SetPath(v string)`
+`func (o *InlineResponse2001) SetApi(v OrganizationsApi)`
 
-SetPath sets Path field to given value.
+SetApi sets Api field to given value.
 
-### HasPath
+### HasApi
 
-`func (o *InlineResponse2001) HasPath() bool`
+`func (o *InlineResponse2001) HasApi() bool`
 
-HasPath returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
-### GetQueryString
+### GetLicensing
 
-`func (o *InlineResponse2001) GetQueryString() string`
+`func (o *InlineResponse2001) GetLicensing() OrganizationsLicensing`
 
-GetQueryString returns the QueryString field if non-nil, zero value otherwise.
+GetLicensing returns the Licensing field if non-nil, zero value otherwise.
 
-### GetQueryStringOk
+### GetLicensingOk
 
-`func (o *InlineResponse2001) GetQueryStringOk() (*string, bool)`
+`func (o *InlineResponse2001) GetLicensingOk() (*OrganizationsLicensing, bool)`
 
-GetQueryStringOk returns a tuple with the QueryString field if it's non-nil, zero value otherwise
+GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetQueryString
+### SetLicensing
 
-`func (o *InlineResponse2001) SetQueryString(v string)`
+`func (o *InlineResponse2001) SetLicensing(v OrganizationsLicensing)`
 
-SetQueryString sets QueryString field to given value.
+SetLicensing sets Licensing field to given value.
 
-### HasQueryString
+### HasLicensing
 
-`func (o *InlineResponse2001) HasQueryString() bool`
+`func (o *InlineResponse2001) HasLicensing() bool`
 
-HasQueryString returns a boolean if a field has been set.
+HasLicensing returns a boolean if a field has been set.
 
-### GetUserAgent
+### GetCloud
 
-`func (o *InlineResponse2001) GetUserAgent() string`
+`func (o *InlineResponse2001) GetCloud() OrganizationsCloud`
 
-GetUserAgent returns the UserAgent field if non-nil, zero value otherwise.
+GetCloud returns the Cloud field if non-nil, zero value otherwise.
 
-### GetUserAgentOk
+### GetCloudOk
 
-`func (o *InlineResponse2001) GetUserAgentOk() (*string, bool)`
+`func (o *InlineResponse2001) GetCloudOk() (*OrganizationsCloud, bool)`
 
-GetUserAgentOk returns a tuple with the UserAgent field if it's non-nil, zero value otherwise
+GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUserAgent
+### SetCloud
 
-`func (o *InlineResponse2001) SetUserAgent(v string)`
+`func (o *InlineResponse2001) SetCloud(v OrganizationsCloud)`
 
-SetUserAgent sets UserAgent field to given value.
+SetCloud sets Cloud field to given value.
 
-### HasUserAgent
+### HasCloud
 
-`func (o *InlineResponse2001) HasUserAgent() bool`
+`func (o *InlineResponse2001) HasCloud() bool`
 
-HasUserAgent returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse2001) GetTs() time.Time`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse2001) GetTsOk() (*time.Time, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse2001) SetTs(v time.Time)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse2001) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
-
-### GetResponseCode
-
-`func (o *InlineResponse2001) GetResponseCode() int32`
-
-GetResponseCode returns the ResponseCode field if non-nil, zero value otherwise.
-
-### GetResponseCodeOk
-
-`func (o *InlineResponse2001) GetResponseCodeOk() (*int32, bool)`
-
-GetResponseCodeOk returns a tuple with the ResponseCode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResponseCode
-
-`func (o *InlineResponse2001) SetResponseCode(v int32)`
-
-SetResponseCode sets ResponseCode field to given value.
-
-### HasResponseCode
-
-`func (o *InlineResponse2001) HasResponseCode() bool`
-
-HasResponseCode returns a boolean if a field has been set.
-
-### GetSourceIp
-
-`func (o *InlineResponse2001) GetSourceIp() string`
-
-GetSourceIp returns the SourceIp field if non-nil, zero value otherwise.
-
-### GetSourceIpOk
-
-`func (o *InlineResponse2001) GetSourceIpOk() (*string, bool)`
-
-GetSourceIpOk returns a tuple with the SourceIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSourceIp
-
-`func (o *InlineResponse2001) SetSourceIp(v string)`
-
-SetSourceIp sets SourceIp field to given value.
-
-### HasSourceIp
-
-`func (o *InlineResponse2001) HasSourceIp() bool`
-
-HasSourceIp returns a boolean if a field has been set.
+HasCloud returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

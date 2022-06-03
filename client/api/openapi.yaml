@@ -6,7 +6,7 @@ info:
   description: |
     The Cisco Meraki Dashboard API is a modern REST API based on the OpenAPI specification.
 
-    > Date: 04 May, 2022
+    > Date: 01 June, 2022
     >
     > [Recent Updates](https://meraki.io/whats-new/)
 
@@ -18,7 +18,7 @@ info:
 
     [Meraki Homepage](https://www.meraki.com)
   title: Meraki Dashboard API
-  version: 1.21.0
+  version: 1.22.0
 servers:
 - url: https://api.meraki.com/api/v1
 security:
@@ -52,6 +52,7 @@ tags:
 - name: applicationCategories
 - name: applicationUsage
 - name: applications
+- name: arpInspection
 - name: artifacts
 - name: authenticationToken
 - name: bandwidthUsageHistory
@@ -61,6 +62,8 @@ tags:
 - name: bluetoothClients
 - name: bonjourForwarding
 - name: brandingPolicies
+- name: byClient
+- name: byDevice
 - name: byEnergyUsage
 - name: bySwitch
 - name: byUsage
@@ -187,7 +190,9 @@ tags:
 - name: search
 - name: security
 - name: securityCenters
+- name: seen
 - name: sense
+- name: servers
 - name: settings
 - name: signalQualityHistory
 - name: singleLan
@@ -220,6 +225,7 @@ tags:
 - name: trafficAnalysis
 - name: trafficHistory
 - name: trafficShaping
+- name: trustedServers
 - name: uplink
 - name: uplinkBandwidth
 - name: uplinkSelection
@@ -229,6 +235,7 @@ tags:
 - name: usageHistory
 - name: userAccessDevices
 - name: users
+- name: v4
 - name: video
 - name: videoLink
 - name: vlans
@@ -237,6 +244,7 @@ tags:
 - name: vpnFirewallRules
 - name: vppAccounts
 - name: warmSpare
+- name: warnings
 - name: webhookTests
 - name: webhooks
 - name: wirelessProfiles
@@ -13119,6 +13127,81 @@ paths:
       - configure
       - pii
       - smOwnersForKey
+  /networks/{networkId}/policies/byClient:
+    get:
+      description: Get policies for all clients with policies
+      operationId: getNetworkPoliciesByClient
+      parameters:
+      - in: path
+        name: networkId
+        required: true
+        schema:
+          type: string
+      - description: The number of entries per page returned. Acceptable range is
+          3 - 1000. Default is 50.
+        in: query
+        name: perPage
+        schema:
+          type: integer
+      - description: A token used by the server to indicate the start of the page.
+          Often this is a timestamp or an ID but it is not limited to those. This
+          parameter should not be defined by client applications. The link for the
+          first, last, prev, or next page in the HTTP Link header should define it.
+        in: query
+        name: startingAfter
+        schema:
+          type: string
+      - description: A token used by the server to indicate the end of the page. Often
+          this is a timestamp or an ID but it is not limited to those. This parameter
+          should not be defined by client applications. The link for the first, last,
+          prev, or next page in the HTTP Link header should define it.
+        in: query
+        name: endingBefore
+        schema:
+          type: string
+      - description: The beginning of the timespan for the data. The maximum lookback
+          period is 31 days from today.
+        in: query
+        name: t0
+        schema:
+          type: string
+      - description: The timespan for which the information will be fetched. If specifying
+          timespan, do not specify parameter t0. The value must be in seconds and
+          be less than or equal to 31 days. The default is 1 day.
+        in: query
+        name: timespan
+        schema:
+          format: float
+          type: number
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+              - name: my phone
+                clientId: abc
+                assigned:
+                - name: Allowed
+                  type: ssid
+                  ssid:
+                  - ssidNumber: 1
+              schema:
+                items:
+                  $ref: '#/components/schemas/inline_response_200'
+                type: array
+          description: Successful operation
+          headers:
+            Link:
+              description: A comma-separated list of first, last, prev, and next relative
+                links used for subsequent paginated requests.
+              schema:
+                type: string
+      summary: Get policies for all clients with policies
+      tags:
+      - networks
+      - configure
+      - policies
+      - byClient
   /networks/{networkId}/settings:
     get:
       description: Return the settings for a network
@@ -15854,6 +15937,151 @@ paths:
       - configure
       - alternateManagementInterface
       x-codegen-request-body-name: updateNetworkSwitchAlternateManagementInterface
+  /networks/{networkId}/switch/dhcp/v4/servers/seen:
+    get:
+      description: Return the network's DHCPv4 servers seen within the selected timeframe
+        (default 1 day)
+      operationId: getNetworkSwitchDhcpV4ServersSeen
+      parameters:
+      - in: path
+        name: networkId
+        required: true
+        schema:
+          type: string
+      - description: The beginning of the timespan for the data. The maximum lookback
+          period is 31 days from today.
+        in: query
+        name: t0
+        schema:
+          type: string
+      - description: The timespan for which the information will be fetched. If specifying
+          timespan, do not specify parameter t0. The value must be in seconds and
+          be less than or equal to 31 days. The default is 1 day.
+        in: query
+        name: timespan
+        schema:
+          format: float
+          type: number
+      - description: The number of entries per page returned. Acceptable range is
+          3 - 1000. Default is 1000.
+        in: query
+        name: perPage
+        schema:
+          type: integer
+      - description: A token used by the server to indicate the start of the page.
+          Often this is a timestamp or an ID but it is not limited to those. This
+          parameter should not be defined by client applications. The link for the
+          first, last, prev, or next page in the HTTP Link header should define it.
+        in: query
+        name: startingAfter
+        schema:
+          type: string
+      - description: A token used by the server to indicate the end of the page. Often
+          this is a timestamp or an ID but it is not limited to those. This parameter
+          should not be defined by client applications. The link for the first, last,
+          prev, or next page in the HTTP Link header should define it.
+        in: query
+        name: endingBefore
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+              - mac: 00:11:22:33:44:55
+                vlan: 100
+                ipv4:
+                  address: 10.0.0.0/24
+                  subnet: 192.168.1.0/24
+                  gateway: 1.2.3.5
+                clientId: k74272e
+                isAllowed: true
+                isConfigured: true
+                lastSeenAt: 2018-02-11T00:00:00.090210Z
+                lastAck:
+                  ts: 2018-02-11T00:00:00.090210Z
+                  ipv4:
+                    address: 123.123.123.1
+                seenBy:
+                - serial: Q234-ABCD-0001
+                  name: My switch2
+                  url: https://n1.meraki.com//n//manage/nodes/new_list/0000000000001
+                type: device
+                device:
+                  serial: Q234-ABCD-0002
+                  url: https://n1.meraki.com//n//manage/nodes/new_list/000000000000
+                  interface:
+                    name: My L3 Interface
+                    url: https://n1.meraki.com//n//manage/configure/switch_l3/l3_interface/00000
+                lastPacket:
+                  source:
+                    mac: 00:11:22:33:44:55
+                    ipv4:
+                      address: 1.2.3.4
+                    port: 443
+                  destination:
+                    mac: 22:33:44:55:66:77
+                    ipv4:
+                      address: 123.123.123.1
+                    port: 444
+                  type: ACK
+                  ethernet:
+                    type: 0x1212
+                  ip:
+                    id: 0x1313
+                    version: 4
+                    length: 24929
+                    headerLength: 1
+                    protocol: 1
+                    ttl: 50
+                    dscp:
+                      tag: 24
+                      ecn: 1
+                  udp:
+                    length: 24929
+                    checksum: 0x1414
+                  fields:
+                    op: 1
+                    htype: 1
+                    hlen: 6
+                    hops: 0
+                    xid: 0x11111111
+                    secs: 1526087474
+                    flags: 0x0000
+                    ciaddr: 1.2.3.4
+                    yiaddr: 123.123.123.1
+                    siaddr: 1.2.3.4
+                    giaddr: 1.2.3.5
+                    chaddr: abcdefghijkl
+                    sname: 1.2.3.4
+                    magicCookie: 0x22222222
+                    options:
+                    - name: Lease time
+                      value: 86400 seconds
+                    - name: Subnet mask
+                      value: 255.255.255.0
+              schema:
+                items:
+                  properties: {}
+                  type: object
+                type: array
+          description: Successful operation
+          headers:
+            Link:
+              description: A comma-separated list of first, last, prev, and next relative
+                links used for subsequent paginated requests.
+              schema:
+                type: string
+      summary: Return the network's DHCPv4 servers seen within the selected timeframe
+        (default 1 day)
+      tags:
+      - switch
+      - configure
+      - dhcp
+      - v4
+      - servers
+      - seen
   /networks/{networkId}/switch/dhcpServerPolicy:
     get:
       description: Return the DHCP server settings. Blocked/allowed servers are only
@@ -15922,6 +16150,8 @@ paths:
                 arpInspection:
                   enabled: false
               properties:
+                alerts:
+                  $ref: '#/components/schemas/_networks__networkId__switch_dhcpServerPolicy_alerts'
                 defaultPolicy:
                   description: '''allow'' or ''block'' new DHCP servers. Default value
                     is ''allow''.'
@@ -15943,6 +16173,8 @@ paths:
                   items:
                     type: string
                   type: array
+                arpInspection:
+                  $ref: '#/components/schemas/_networks__networkId__switch_dhcpServerPolicy_arpInspection'
               type: object
         required: false
       responses:
@@ -15974,6 +16206,275 @@ paths:
       - configure
       - dhcpServerPolicy
       x-codegen-request-body-name: updateNetworkSwitchDhcpServerPolicy
+  /networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers:
+    get:
+      description: Return the list of servers trusted by Dynamic ARP Inspection on
+        this network. These are also known as whitelisted snoop entries
+      operationId: getNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers
+      parameters:
+      - in: path
+        name: networkId
+        required: true
+        schema:
+          type: string
+      - description: The number of entries per page returned. Acceptable range is
+          3 - 1000. Default is 1000.
+        in: query
+        name: perPage
+        schema:
+          type: integer
+      - description: A token used by the server to indicate the start of the page.
+          Often this is a timestamp or an ID but it is not limited to those. This
+          parameter should not be defined by client applications. The link for the
+          first, last, prev, or next page in the HTTP Link header should define it.
+        in: query
+        name: startingAfter
+        schema:
+          type: string
+      - description: A token used by the server to indicate the end of the page. Often
+          this is a timestamp or an ID but it is not limited to those. This parameter
+          should not be defined by client applications. The link for the first, last,
+          prev, or next page in the HTTP Link header should define it.
+        in: query
+        name: endingBefore
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+              - trustedServerId: "123"
+                mac: 00:11:22:33:44:55
+                vlan: 100
+                ipv4:
+                  address: 1.2.3.4
+              schema:
+                items:
+                  properties: {}
+                  type: object
+                type: array
+          description: Successful operation
+          headers:
+            Link:
+              description: A comma-separated list of first, last, prev, and next relative
+                links used for subsequent paginated requests.
+              schema:
+                type: string
+      summary: Return the list of servers trusted by Dynamic ARP Inspection on this
+        network
+      tags:
+      - switch
+      - configure
+      - dhcpServerPolicy
+      - arpInspection
+      - trustedServers
+    post:
+      description: Add a server to be trusted by Dynamic ARP Inspection on this network
+      operationId: createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
+      parameters:
+      - in: path
+        name: networkId
+        required: true
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/inline_object_96'
+        content:
+          application/json:
+            schema:
+              example:
+                mac: 00:11:22:33:44:55
+                vlan: 100
+                ipv4:
+                  address: 1.2.3.4
+              properties:
+                mac:
+                  description: The mac address of the trusted server being added
+                  type: string
+                vlan:
+                  description: The VLAN of the trusted server being added. It must
+                    be between 1 and 4094
+                  type: integer
+                ipv4:
+                  $ref: '#/components/schemas/_networks__networkId__switch_dhcpServerPolicy_arpInspection_trustedServers_ipv4'
+              required:
+              - ipv4
+              - mac
+              - vlan
+              type: object
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              example:
+                trustedServerId: "123"
+                mac: 00:11:22:33:44:55
+                vlan: 100
+                ipv4:
+                  address: 1.2.3.4
+              schema:
+                type: object
+          description: Successful operation
+      summary: Add a server to be trusted by Dynamic ARP Inspection on this network
+      tags:
+      - switch
+      - configure
+      - dhcpServerPolicy
+      - arpInspection
+      - trustedServers
+      x-codegen-request-body-name: createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
+  /networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}:
+    delete:
+      description: Remove a server from being trusted by Dynamic ARP Inspection on
+        this network
+      operationId: deleteNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
+      parameters:
+      - in: path
+        name: networkId
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: trustedServerId
+        required: true
+        schema:
+          type: string
+      responses:
+        "204":
+          content: {}
+          description: Successful operation
+      summary: Remove a server from being trusted by Dynamic ARP Inspection on this
+        network
+      tags:
+      - switch
+      - configure
+      - dhcpServerPolicy
+      - arpInspection
+      - trustedServers
+    put:
+      description: Update a server that is trusted by Dynamic ARP Inspection on this
+        network
+      operationId: updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
+      parameters:
+      - in: path
+        name: networkId
+        required: true
+        schema:
+          type: string
+      - in: path
+        name: trustedServerId
+        required: true
+        schema:
+          type: string
+      requestBody:
+        $ref: '#/components/requestBodies/inline_object_97'
+        content:
+          application/json:
+            schema:
+              example:
+                mac: 00:11:22:33:44:55
+                vlan: 100
+                ipv4:
+                  address: 1.2.3.4
+              properties:
+                mac:
+                  description: The updated mac address of the trusted server
+                  type: string
+                vlan:
+                  description: The updated VLAN of the trusted server. It must be
+                    between 1 and 4094
+                  type: integer
+                ipv4:
+                  $ref: '#/components/schemas/_networks__networkId__switch_dhcpServerPolicy_arpInspection_trustedServers__trustedServerId__ipv4'
+              type: object
+        required: false
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+                trustedServerId: "123"
+                mac: 00:11:22:33:44:55
+                vlan: 100
+                ipv4:
+                  address: 1.2.3.4
+              schema:
+                type: object
+          description: Successful operation
+      summary: Update a server that is trusted by Dynamic ARP Inspection on this network
+      tags:
+      - switch
+      - configure
+      - dhcpServerPolicy
+      - arpInspection
+      - trustedServers
+      x-codegen-request-body-name: updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
+  /networks/{networkId}/switch/dhcpServerPolicy/arpInspection/warnings/byDevice:
+    get:
+      description: Return the devices that have a Dynamic ARP Inspection warning and
+        their warnings
+      operationId: getNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice
+      parameters:
+      - in: path
+        name: networkId
+        required: true
+        schema:
+          type: string
+      - description: The number of entries per page returned. Acceptable range is
+          3 - 1000. Default is 1000.
+        in: query
+        name: perPage
+        schema:
+          type: integer
+      - description: A token used by the server to indicate the start of the page.
+          Often this is a timestamp or an ID but it is not limited to those. This
+          parameter should not be defined by client applications. The link for the
+          first, last, prev, or next page in the HTTP Link header should define it.
+        in: query
+        name: startingAfter
+        schema:
+          type: string
+      - description: A token used by the server to indicate the end of the page. Often
+          this is a timestamp or an ID but it is not limited to those. This parameter
+          should not be defined by client applications. The link for the first, last,
+          prev, or next page in the HTTP Link header should define it.
+        in: query
+        name: endingBefore
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              example:
+              - serial: Q234-ABCD-0001
+                name: My switch
+                url: https://n1.meraki.com//n//manage/nodes/new_list/000000000000
+                supportsInspection: false
+                hasTrustedPort: false
+              schema:
+                items:
+                  properties: {}
+                  type: object
+                type: array
+          description: Successful operation
+          headers:
+            Link:
+              description: A comma-separated list of first, last, prev, and next relative
+                links used for subsequent paginated requests.
+              schema:
+                type: string
+      summary: Return the devices that have a Dynamic ARP Inspection warning and their
+        warnings
+      tags:
+      - switch
+      - configure
+      - dhcpServerPolicy
+      - arpInspection
+      - warnings
+      - byDevice
   /networks/{networkId}/switch/dscpToCosMappings:
     get:
       description: Return the DSCP to CoS mappings
@@ -16011,7 +16512,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_96'
+        $ref: '#/components/requestBodies/inline_object_98'
         content:
           application/json:
             schema:
@@ -16103,7 +16604,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_97'
+        $ref: '#/components/requestBodies/inline_object_99'
         content:
           application/json:
             schema:
@@ -16211,7 +16712,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_98'
+        $ref: '#/components/requestBodies/inline_object_100'
         content:
           application/json:
             schema:
@@ -16325,7 +16826,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_99'
+        $ref: '#/components/requestBodies/inline_object_101'
         content:
           application/json:
             schema:
@@ -16446,7 +16947,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_100'
+        $ref: '#/components/requestBodies/inline_object_102'
         content:
           application/json:
             schema:
@@ -16576,7 +17077,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_101'
+        $ref: '#/components/requestBodies/inline_object_103'
         content:
           application/json:
             schema:
@@ -16709,7 +17210,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_102'
+        $ref: '#/components/requestBodies/inline_object_104'
         content:
           application/json:
             schema:
@@ -16820,7 +17321,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_103'
+        $ref: '#/components/requestBodies/inline_object_105'
         content:
           application/json:
             schema:
@@ -16931,7 +17432,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_104'
+        $ref: '#/components/requestBodies/inline_object_106'
         content:
           application/json:
             schema:
@@ -17050,7 +17551,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_105'
+        $ref: '#/components/requestBodies/inline_object_107'
         content:
           application/json:
             schema:
@@ -17166,7 +17667,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_106'
+        $ref: '#/components/requestBodies/inline_object_108'
         content:
           application/json:
             schema:
@@ -17280,7 +17781,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_107'
+        $ref: '#/components/requestBodies/inline_object_109'
         content:
           application/json:
             schema:
@@ -17371,7 +17872,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_108'
+        $ref: '#/components/requestBodies/inline_object_110'
         content:
           application/json:
             schema:
@@ -17502,7 +18003,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_109'
+        $ref: '#/components/requestBodies/inline_object_111'
         content:
           application/json:
             schema:
@@ -17599,7 +18100,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_110'
+        $ref: '#/components/requestBodies/inline_object_112'
         content:
           application/json:
             schema:
@@ -17714,7 +18215,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_111'
+        $ref: '#/components/requestBodies/inline_object_113'
         content:
           application/json:
             schema:
@@ -17763,7 +18264,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_112'
+        $ref: '#/components/requestBodies/inline_object_114'
         content:
           application/json:
             schema:
@@ -17863,7 +18364,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_113'
+        $ref: '#/components/requestBodies/inline_object_115'
         content:
           application/json:
             schema:
@@ -18069,7 +18570,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_114'
+        $ref: '#/components/requestBodies/inline_object_116'
         content:
           application/json:
             schema:
@@ -18241,7 +18742,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_115'
+        $ref: '#/components/requestBodies/inline_object_117'
         content:
           application/json:
             schema:
@@ -18431,7 +18932,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_116'
+        $ref: '#/components/requestBodies/inline_object_118'
         content:
           application/json:
             schema:
@@ -18577,7 +19078,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_117'
+        $ref: '#/components/requestBodies/inline_object_119'
         content:
           application/json:
             schema:
@@ -18665,7 +19166,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_118'
+        $ref: '#/components/requestBodies/inline_object_120'
         content:
           application/json:
             schema:
@@ -18753,7 +19254,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_119'
+        $ref: '#/components/requestBodies/inline_object_121'
         content:
           application/json:
             schema:
@@ -18847,7 +19348,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_120'
+        $ref: '#/components/requestBodies/inline_object_122'
         content:
           application/json:
             schema:
@@ -19126,7 +19627,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_121'
+        $ref: '#/components/requestBodies/inline_object_123'
         content:
           application/json:
             schema:
@@ -19347,7 +19848,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_122'
+        $ref: '#/components/requestBodies/inline_object_124'
         content:
           application/json:
             schema:
@@ -19472,7 +19973,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_123'
+        $ref: '#/components/requestBodies/inline_object_125'
         content:
           application/json:
             schema:
@@ -19562,7 +20063,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_124'
+        $ref: '#/components/requestBodies/inline_object_126'
         content:
           application/json:
             schema:
@@ -19695,7 +20196,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_125'
+        $ref: '#/components/requestBodies/inline_object_127'
         content:
           application/json:
             schema:
@@ -19759,7 +20260,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_126'
+        $ref: '#/components/requestBodies/inline_object_128'
         content:
           application/json:
             schema:
@@ -19949,7 +20450,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_127'
+        $ref: '#/components/requestBodies/inline_object_129'
         content:
           application/json:
             schema:
@@ -20068,7 +20569,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_128'
+        $ref: '#/components/requestBodies/inline_object_130'
         content:
           application/json:
             schema:
@@ -20158,7 +20659,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_129'
+        $ref: '#/components/requestBodies/inline_object_131'
         content:
           application/json:
             schema:
@@ -22053,7 +22554,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_130'
+        $ref: '#/components/requestBodies/inline_object_132'
         content:
           application/json:
             schema:
@@ -22089,6 +22590,8 @@ paths:
                   $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_twoFourGhzSettings'
                 fiveGhzSettings:
                   $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_fiveGhzSettings'
+                transmission:
+                  $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_transmission'
                 perSsidSettings:
                   $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_perSsidSettings'
               required:
@@ -22426,7 +22929,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_131'
+        $ref: '#/components/requestBodies/inline_object_133'
         content:
           application/json:
             schema:
@@ -22457,6 +22960,8 @@ paths:
                   $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles__rfProfileId__twoFourGhzSettings'
                 fiveGhzSettings:
                   $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles__rfProfileId__fiveGhzSettings'
+                transmission:
+                  $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_transmission'
                 perSsidSettings:
                   $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_perSsidSettings'
               type: object
@@ -22637,7 +23142,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_132'
+        $ref: '#/components/requestBodies/inline_object_134'
         content:
           application/json:
             schema:
@@ -23041,7 +23546,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_133'
+        $ref: '#/components/requestBodies/inline_object_135'
         content:
           application/json:
             schema:
@@ -23518,7 +24023,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_134'
+        $ref: '#/components/requestBodies/inline_object_136'
         content:
           application/json:
             schema:
@@ -23612,7 +24117,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_135'
+        $ref: '#/components/requestBodies/inline_object_137'
         content:
           application/json:
             schema:
@@ -23713,7 +24218,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_136'
+        $ref: '#/components/requestBodies/inline_object_138'
         content:
           application/json:
             schema:
@@ -23809,7 +24314,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_137'
+        $ref: '#/components/requestBodies/inline_object_139'
         content:
           application/json:
             schema:
@@ -23913,7 +24418,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_138'
+        $ref: '#/components/requestBodies/inline_object_140'
         content:
           application/json:
             schema:
@@ -24044,7 +24549,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_139'
+        $ref: '#/components/requestBodies/inline_object_141'
         content:
           application/json:
             schema:
@@ -24221,7 +24726,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_140'
+        $ref: '#/components/requestBodies/inline_object_142'
         content:
           application/json:
             schema:
@@ -24352,7 +24857,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_141'
+        $ref: '#/components/requestBodies/inline_object_143'
         content:
           application/json:
             schema:
@@ -24446,7 +24951,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_142'
+        $ref: '#/components/requestBodies/inline_object_144'
         content:
           application/json:
             schema:
@@ -24565,7 +25070,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_143'
+        $ref: '#/components/requestBodies/inline_object_145'
         content:
           application/json:
             schema:
@@ -24742,7 +25247,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_144'
+        $ref: '#/components/requestBodies/inline_object_146'
         content:
           application/json:
             schema:
@@ -24894,7 +25399,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_145'
+        $ref: '#/components/requestBodies/inline_object_147'
         content:
           application/json:
             schema:
@@ -25084,7 +25589,7 @@ paths:
                     name: North America
               schema:
                 items:
-                  $ref: '#/components/schemas/inline_response_200'
+                  $ref: '#/components/schemas/inline_response_200_1'
                 type: array
           description: Successful operation
       summary: List the organizations that the user has privileges on
@@ -25095,7 +25600,7 @@ paths:
       description: Create a new organization
       operationId: createOrganization
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_146'
+        $ref: '#/components/requestBodies/inline_object_148'
         content:
           application/json:
             schema:
@@ -25172,7 +25677,7 @@ paths:
                   region:
                     name: North America
               schema:
-                $ref: '#/components/schemas/inline_response_200'
+                $ref: '#/components/schemas/inline_response_200_1'
           description: Successful operation
       summary: Return an organization
       tags:
@@ -25188,7 +25693,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_147'
+        $ref: '#/components/requestBodies/inline_object_149'
         content:
           application/json:
             schema:
@@ -25288,7 +25793,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_148'
+        $ref: '#/components/requestBodies/inline_object_150'
         content:
           application/json:
             schema:
@@ -25446,7 +25951,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_149'
+        $ref: '#/components/requestBodies/inline_object_151'
         content:
           application/json:
             schema:
@@ -25548,7 +26053,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_150'
+        $ref: '#/components/requestBodies/inline_object_152'
         content:
           application/json:
             schema:
@@ -25706,7 +26211,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_151'
+        $ref: '#/components/requestBodies/inline_object_153'
         content:
           application/json:
             schema:
@@ -25824,7 +26329,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_152'
+        $ref: '#/components/requestBodies/inline_object_154'
         content:
           application/json:
             schema:
@@ -25968,7 +26473,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_153'
+        $ref: '#/components/requestBodies/inline_object_155'
         content:
           application/json:
             schema:
@@ -26109,7 +26614,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_154'
+        $ref: '#/components/requestBodies/inline_object_156'
         content:
           application/json:
             schema:
@@ -26263,7 +26768,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_155'
+        $ref: '#/components/requestBodies/inline_object_157'
         content:
           application/json:
             schema:
@@ -26370,7 +26875,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_156'
+        $ref: '#/components/requestBodies/inline_object_158'
         content:
           application/json:
             schema:
@@ -26459,7 +26964,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_157'
+        $ref: '#/components/requestBodies/inline_object_159'
         content:
           application/json:
             schema:
@@ -26582,7 +27087,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_158'
+        $ref: '#/components/requestBodies/inline_object_160'
         content:
           application/json:
             schema:
@@ -26703,7 +27208,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_159'
+        $ref: '#/components/requestBodies/inline_object_161'
         content:
           application/json:
             schema:
@@ -26829,7 +27334,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_160'
+        $ref: '#/components/requestBodies/inline_object_162'
         content:
           application/json:
             schema:
@@ -26986,6 +27491,23 @@ paths:
         name: userAgent
         schema:
           type: string
+      - description: Filter the results by the API version of the API request
+        in: query
+        name: version
+        schema:
+          enum:
+          - 0
+          - 1
+          type: integer
+      - description: Filter the results by one or more operation IDs for the API request
+        explode: false
+        in: query
+        name: operationIds
+        schema:
+          items:
+            type: string
+          type: array
+        style: form
       responses:
         "200":
           content:
@@ -27000,9 +27522,11 @@ paths:
                 ts: 2018-02-11T00:00:00.090210Z
                 responseCode: 200
                 sourceIp: 123.123.123.1
+                version: 1
+                operationId: getOrganizationApiRequests
               schema:
                 items:
-                  $ref: '#/components/schemas/inline_response_200_1'
+                  $ref: '#/components/schemas/inline_response_200_2'
                 type: array
           description: Successful operation
           headers:
@@ -27236,7 +27760,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_161'
+        $ref: '#/components/requestBodies/inline_object_163'
         content:
           application/json:
             schema:
@@ -27764,7 +28288,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_162'
+        $ref: '#/components/requestBodies/inline_object_164'
         content:
           application/json:
             schema:
@@ -27913,7 +28437,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_163'
+        $ref: '#/components/requestBodies/inline_object_165'
         content:
           application/json:
             schema:
@@ -28029,7 +28553,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_164'
+        $ref: '#/components/requestBodies/inline_object_166'
         content:
           application/json:
             schema:
@@ -28165,7 +28689,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_165'
+        $ref: '#/components/requestBodies/inline_object_167'
         content:
           application/json:
             schema:
@@ -28299,7 +28823,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_166'
+        $ref: '#/components/requestBodies/inline_object_168'
         content:
           application/json:
             schema:
@@ -28435,7 +28959,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_167'
+        $ref: '#/components/requestBodies/inline_object_169'
         content:
           application/json:
             schema:
@@ -28589,7 +29113,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_168'
+        $ref: '#/components/requestBodies/inline_object_170'
         content:
           application/json:
             schema:
@@ -28740,7 +29264,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_169'
+        $ref: '#/components/requestBodies/inline_object_171'
         content:
           application/json:
             schema:
@@ -28831,7 +29355,7 @@ paths:
                 downstream: 285
               schema:
                 items:
-                  $ref: '#/components/schemas/inline_response_200_2'
+                  $ref: '#/components/schemas/inline_response_200_3'
                 type: array
           description: Successful operation
       summary: Return data usage (in megabits per second) over time for all clients
@@ -29011,7 +29535,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_170'
+        $ref: '#/components/requestBodies/inline_object_172'
         content:
           application/json:
             schema:
@@ -29088,7 +29612,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_171'
+        $ref: '#/components/requestBodies/inline_object_173'
         content:
           application/json:
             schema:
@@ -29208,7 +29732,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_172'
+        $ref: '#/components/requestBodies/inline_object_174'
         content:
           application/json:
             schema:
@@ -29437,7 +29961,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_173'
+        $ref: '#/components/requestBodies/inline_object_175'
         content:
           application/json:
             schema:
@@ -30272,7 +30796,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_174'
+        $ref: '#/components/requestBodies/inline_object_176'
         content:
           application/json:
             schema:
@@ -30388,7 +30912,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_175'
+        $ref: '#/components/requestBodies/inline_object_177'
         content:
           application/json:
             schema:
@@ -30443,7 +30967,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_176'
+        $ref: '#/components/requestBodies/inline_object_178'
         content:
           application/json:
             schema:
@@ -30702,7 +31226,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_177'
+        $ref: '#/components/requestBodies/inline_object_179'
         content:
           application/json:
             schema:
@@ -30840,7 +31364,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_178'
+        $ref: '#/components/requestBodies/inline_object_180'
         content:
           application/json:
             schema:
@@ -30905,7 +31429,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_179'
+        $ref: '#/components/requestBodies/inline_object_181'
         content:
           application/json:
             schema:
@@ -30957,7 +31481,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_180'
+        $ref: '#/components/requestBodies/inline_object_182'
         content:
           application/json:
             schema:
@@ -31040,7 +31564,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_181'
+        $ref: '#/components/requestBodies/inline_object_183'
         content:
           application/json:
             schema:
@@ -31151,7 +31675,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_182'
+        $ref: '#/components/requestBodies/inline_object_184'
         content:
           application/json:
             schema:
@@ -31233,7 +31757,7 @@ paths:
                     - 192.195.83.1
                     - 192.168.33.33
               schema:
-                $ref: '#/components/schemas/inline_response_200_3'
+                $ref: '#/components/schemas/inline_response_200_4'
           description: Successful operation
       summary: Returns the login security settings for an organization.
       tags:
@@ -31250,7 +31774,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_183'
+        $ref: '#/components/requestBodies/inline_object_185'
         content:
           application/json:
             schema:
@@ -31333,7 +31857,7 @@ paths:
                     type: string
                   type: array
                 apiAuthentication:
-                  $ref: '#/components/schemas/inline_response_200_3_apiAuthentication'
+                  $ref: '#/components/schemas/inline_response_200_4_apiAuthentication'
               type: object
         required: false
       responses:
@@ -31362,7 +31886,7 @@ paths:
                     - 192.195.83.1
                     - 192.168.33.33
               schema:
-                $ref: '#/components/schemas/inline_response_200_3'
+                $ref: '#/components/schemas/inline_response_200_4'
           description: Successful operation
       summary: Update the login security settings for an organization
       tags:
@@ -31481,7 +32005,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_184'
+        $ref: '#/components/requestBodies/inline_object_186'
         content:
           application/json:
             schema:
@@ -31581,7 +32105,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_185'
+        $ref: '#/components/requestBodies/inline_object_187'
         content:
           application/json:
             schema:
@@ -31722,7 +32246,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_186'
+        $ref: '#/components/requestBodies/inline_object_188'
         content:
           application/json:
             schema:
@@ -31790,7 +32314,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_187'
+        $ref: '#/components/requestBodies/inline_object_189'
         content:
           application/json:
             schema:
@@ -31903,7 +32427,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_188'
+        $ref: '#/components/requestBodies/inline_object_190'
         content:
           application/json:
             schema:
@@ -31987,7 +32511,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_189'
+        $ref: '#/components/requestBodies/inline_object_191'
         content:
           application/json:
             schema:
@@ -32127,7 +32651,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_190'
+        $ref: '#/components/requestBodies/inline_object_192'
         content:
           application/json:
             schema:
@@ -32558,7 +33082,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_191'
+        $ref: '#/components/requestBodies/inline_object_193'
         content:
           application/json:
             schema:
@@ -32677,7 +33201,7 @@ paths:
                     percentage: 7.3
               schema:
                 items:
-                  $ref: '#/components/schemas/inline_response_200_4'
+                  $ref: '#/components/schemas/inline_response_200_5'
                 type: array
           description: Successful operation
       summary: Return the top 10 appliances sorted by utilization over given time
@@ -32737,7 +33261,7 @@ paths:
                   percentage: 80.2
               schema:
                 items:
-                  $ref: '#/components/schemas/inline_response_200_5'
+                  $ref: '#/components/schemas/inline_response_200_6'
                 type: array
           description: Successful operation
       summary: Return metrics for organization's top 10 clients by data usage (in
@@ -32794,7 +33318,7 @@ paths:
                   downstream: 8000.0
               schema:
                 items:
-                  $ref: '#/components/schemas/inline_response_200_6'
+                  $ref: '#/components/schemas/inline_response_200_7'
                 type: array
           description: Successful operation
       summary: Return metrics for organization's top clients by data usage (in mb)
@@ -32858,7 +33382,7 @@ paths:
                     total: 4
               schema:
                 items:
-                  $ref: '#/components/schemas/inline_response_200_7'
+                  $ref: '#/components/schemas/inline_response_200_8'
                 type: array
           description: Successful operation
       summary: Return metrics for organization's top 10 devices sorted by data usage
@@ -33030,7 +33554,7 @@ paths:
                   total: 800.021
               schema:
                 items:
-                  $ref: '#/components/schemas/inline_response_200_8'
+                  $ref: '#/components/schemas/inline_response_200_9'
                 type: array
           description: Successful operation
       summary: Return metrics for organization's top 10 switches by energy usage over
@@ -33056,7 +33580,7 @@ paths:
         schema:
           type: string
       requestBody:
-        $ref: '#/components/requestBodies/inline_object_192'
+        $ref: '#/components/requestBodies/inline_object_194'
         content:
           application/json:
             schema:
@@ -33593,7 +34117,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_132'
-      required: false
+      required: true
     inline_object_53:
       content:
         application/json:
@@ -33617,7 +34141,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_130'
-      required: true
+      required: false
     inline_object_55:
       content:
         application/json:
@@ -33665,7 +34189,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_128'
-      required: false
+      required: true
     inline_object_125:
       content:
         application/json:
@@ -33743,7 +34267,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_120'
-      required: true
+      required: false
     inline_object_47:
       content:
         application/json:
@@ -33797,13 +34321,13 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_156'
-      required: false
+      required: true
     inline_object_157:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_157'
-      required: true
+      required: false
     inline_object_32:
       content:
         application/json:
@@ -33929,7 +34453,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_146'
-      required: true
+      required: false
     inline_object_21:
       content:
         application/json:
@@ -33977,7 +34501,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_142'
-      required: false
+      required: true
     inline_object_25:
       content:
         application/json:
@@ -33995,7 +34519,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_140'
-      required: true
+      required: false
     inline_object_27:
       content:
         application/json:
@@ -34073,7 +34597,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_98'
-      required: false
+      required: true
     inline_object_97:
       content:
         application/json:
@@ -34151,7 +34675,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_118'
-      required: false
+      required: true
     inline_object_119:
       content:
         application/json:
@@ -34169,7 +34693,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_116'
-      required: true
+      required: false
     inline_object_117:
       content:
         application/json:
@@ -34187,7 +34711,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_114'
-      required: false
+      required: true
     inline_object_71:
       content:
         application/json:
@@ -34199,7 +34723,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_115'
-      required: false
+      required: true
     inline_object_74:
       content:
         application/json:
@@ -34235,7 +34759,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_110'
-      required: true
+      required: false
     inline_object_75:
       content:
         application/json:
@@ -34247,7 +34771,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_111'
-      required: true
+      required: false
     inline_object_78:
       content:
         application/json:
@@ -34271,31 +34795,31 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_109'
-      required: false
+      required: true
     inline_object_107:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_107'
-      required: true
+      required: false
     inline_object_108:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_108'
-      required: false
+      required: true
     inline_object_105:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_105'
-      required: false
+      required: true
     inline_object_106:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_106'
-      required: true
+      required: false
     inline_object_61:
       content:
         application/json:
@@ -34307,7 +34831,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_103'
-      required: true
+      required: false
     inline_object_60:
       content:
         application/json:
@@ -34319,7 +34843,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_104'
-      required: false
+      required: true
     inline_object_63:
       content:
         application/json:
@@ -34361,7 +34885,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_100'
-      required: true
+      required: false
     inline_object_67:
       content:
         application/json:
@@ -34445,13 +34969,13 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_178'
-      required: true
+      required: false
     inline_object_179:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_179'
-      required: true
+      required: false
     inline_object_10:
       content:
         application/json:
@@ -34463,7 +34987,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_176'
-      required: false
+      required: true
     inline_object_177:
       content:
         application/json:
@@ -34481,7 +35005,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_174'
-      required: true
+      required: false
     inline_object_11:
       content:
         application/json:
@@ -34505,7 +35029,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_172'
-      required: false
+      required: true
     inline_object_13:
       content:
         application/json:
@@ -34517,7 +35041,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_173'
-      required: false
+      required: true
     inline_object_16:
       content:
         application/json:
@@ -34529,7 +35053,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_170'
-      required: true
+      required: false
     inline_object_15:
       content:
         application/json:
@@ -34541,7 +35065,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_171'
-      required: true
+      required: false
     inline_object_169:
       content:
         application/json:
@@ -34553,7 +35077,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_167'
-      required: false
+      required: true
     inline_object_168:
       content:
         application/json:
@@ -34565,19 +35089,19 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_165'
-      required: true
+      required: false
     inline_object_166:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_166'
-      required: false
+      required: true
     inline_object_163:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_163'
-      required: false
+      required: true
     inline_object_164:
       content:
         application/json:
@@ -34595,19 +35119,31 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_162'
-      required: true
+      required: false
     inline_object_160:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_160'
       required: false
+    inline_object_194:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object_194'
+      required: true
     inline_object_192:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_192'
-      required: true
+      required: false
+    inline_object_193:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object_193'
+      required: false
     inline_object_190:
       content:
         application/json:
@@ -34619,7 +35155,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_191'
-      required: false
+      required: true
     inline_object_189:
       content:
         application/json:
@@ -34643,25 +35179,25 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_185'
-      required: true
+      required: false
     inline_object_186:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_186'
-      required: false
+      required: true
     inline_object_183:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_183'
-      required: false
+      required: true
     inline_object_184:
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_184'
-      required: true
+      required: false
     inline_object_181:
       content:
         application/json:
@@ -34673,7 +35209,7 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/inline_object_182'
-      required: false
+      required: true
     inline_object_180:
       content:
         application/json:
@@ -35158,6 +35694,14 @@ components:
           - hide
           - show
           type: string
+      type: object
+    _networks__networkId__switch_dhcpServerPolicy_alerts_email:
+      description: Email alert settings for DHCP servers
+      properties:
+        enabled:
+          description: When enabled, send an email if a new DHCP server is seen. Default
+            value is false.
+          type: boolean
       type: object
     _organizations__organizationId__summary_top_appliances_byUtilization_network:
       description: Network info
@@ -36183,6 +36727,12 @@ components:
           description: Idle timer timeout in seconds.
           type: integer
       type: object
+    _networks__networkId__switch_dhcpServerPolicy_alerts:
+      description: Alert settings for DHCP servers
+      properties:
+        email:
+          $ref: '#/components/schemas/_networks__networkId__switch_dhcpServerPolicy_alerts_email'
+      type: object
     _networks__networkId__mqttBrokers_security:
       description: Security settings of the MQTT broker.
       properties:
@@ -37012,19 +37562,24 @@ components:
       type: object
     inline_object_96:
       example:
-        mappings:
-        - dscp: 1
-          cos: 1
-          title: Video
+        mac: 00:11:22:33:44:55
+        vlan: 100
+        ipv4:
+          address: 1.2.3.4
       properties:
-        mappings:
-          description: An array of DSCP to CoS mappings. An empty array will reset
-            the mappings to default.
-          items:
-            $ref: '#/components/schemas/_networks__networkId__switch_dscpToCosMappings_mappings'
-          type: array
+        mac:
+          description: The mac address of the trusted server being added
+          type: string
+        vlan:
+          description: The VLAN of the trusted server being added. It must be between
+            1 and 4094
+          type: integer
+        ipv4:
+          $ref: '#/components/schemas/_networks__networkId__switch_dhcpServerPolicy_arpInspection_trustedServers_ipv4'
       required:
-      - mappings
+      - ipv4
+      - mac
+      - vlan
       type: object
     inline_object_95:
       example:
@@ -37041,6 +37596,8 @@ components:
         arpInspection:
           enabled: false
       properties:
+        alerts:
+          $ref: '#/components/schemas/_networks__networkId__switch_dhcpServerPolicy_alerts'
         defaultPolicy:
           description: '''allow'' or ''block'' new DHCP servers. Default value is
             ''allow''.'
@@ -37060,6 +37617,8 @@ components:
           items:
             type: string
           type: array
+        arpInspection:
+          $ref: '#/components/schemas/_networks__networkId__switch_dhcpServerPolicy_arpInspection'
       type: object
     _organizations__organizationId__actionBatches_actions:
       properties:
@@ -37086,37 +37645,19 @@ components:
       type: object
     inline_object_98:
       example:
-        id: NDU2N18yXzM=
-        switchPorts:
-        - serial: Q234-ABCD-0001
-          portId: "1"
-        - serial: Q234-ABCD-0002
-          portId: "2"
-        - serial: Q234-ABCD-0003
-          portId: "3"
-        - serial: Q234-ABCD-0004
-          portId: "4"
-        - serial: Q234-ABCD-0005
-          portId: "5"
-        - serial: Q234-ABCD-0006
-          portId: "6"
-        - serial: Q234-ABCD-0007
-          portId: "7"
-        - serial: Q234-ABCD-0008
-          portId: "8"
+        mappings:
+        - dscp: 1
+          cos: 1
+          title: Video
       properties:
-        switchPorts:
-          description: Array of switch or stack ports for updating aggregation group.
-            Minimum 2 and maximum 8 ports are supported.
+        mappings:
+          description: An array of DSCP to CoS mappings. An empty array will reset
+            the mappings to default.
           items:
-            $ref: '#/components/schemas/_networks__networkId__switch_linkAggregations_switchPorts'
+            $ref: '#/components/schemas/_networks__networkId__switch_dscpToCosMappings_mappings'
           type: array
-        switchProfilePorts:
-          description: Array of switch profile ports for updating aggregation group.
-            Minimum 2 and maximum 8 ports are supported.
-          items:
-            $ref: '#/components/schemas/_networks__networkId__switch_linkAggregations_switchProfilePorts'
-          type: array
+      required:
+      - mappings
       type: object
     _networks__networkId__clients__clientId__splashAuthorizationStatus_ssids_8:
       description: Splash authorization for SSID 8
@@ -37127,36 +37668,20 @@ components:
       type: object
     inline_object_97:
       example:
-        switchPorts:
-        - serial: Q234-ABCD-0001
-          portId: "1"
-        - serial: Q234-ABCD-0002
-          portId: "2"
-        - serial: Q234-ABCD-0003
-          portId: "3"
-        - serial: Q234-ABCD-0004
-          portId: "4"
-        - serial: Q234-ABCD-0005
-          portId: "5"
-        - serial: Q234-ABCD-0006
-          portId: "6"
-        - serial: Q234-ABCD-0007
-          portId: "7"
-        - serial: Q234-ABCD-0008
-          portId: "8"
+        mac: 00:11:22:33:44:55
+        vlan: 100
+        ipv4:
+          address: 1.2.3.4
       properties:
-        switchPorts:
-          description: Array of switch or stack ports for creating aggregation group.
-            Minimum 2 and maximum 8 ports are supported.
-          items:
-            $ref: '#/components/schemas/_networks__networkId__switch_linkAggregations_switchPorts'
-          type: array
-        switchProfilePorts:
-          description: Array of switch profile ports for creating aggregation group.
-            Minimum 2 and maximum 8 ports are supported.
-          items:
-            $ref: '#/components/schemas/_networks__networkId__switch_linkAggregations_switchProfilePorts'
-          type: array
+        mac:
+          description: The updated mac address of the trusted server
+          type: string
+        vlan:
+          description: The updated VLAN of the trusted server. It must be between
+            1 and 4094
+          type: integer
+        ipv4:
+          $ref: '#/components/schemas/_networks__networkId__switch_dhcpServerPolicy_arpInspection_trustedServers__trustedServerId__ipv4'
       type: object
     _networks__networkId__switch_stacks__switchStackId__routing_interfaces_ipv6:
       description: The IPv6 settings of the interface.
@@ -37188,26 +37713,35 @@ components:
       type: object
     inline_object_99:
       example:
-        defaultMtuSize: 9578
-        overrides:
-        - switches:
-          - Q234-ABCD-0001
-          - Q234-ABCD-0002
-          - Q234-ABCD-0003
-          mtuSize: 1500
-        - switchProfiles:
-          - "1284392014819"
-          - "2983092129865"
-          mtuSize: 1600
+        switchPorts:
+        - serial: Q234-ABCD-0001
+          portId: "1"
+        - serial: Q234-ABCD-0002
+          portId: "2"
+        - serial: Q234-ABCD-0003
+          portId: "3"
+        - serial: Q234-ABCD-0004
+          portId: "4"
+        - serial: Q234-ABCD-0005
+          portId: "5"
+        - serial: Q234-ABCD-0006
+          portId: "6"
+        - serial: Q234-ABCD-0007
+          portId: "7"
+        - serial: Q234-ABCD-0008
+          portId: "8"
       properties:
-        defaultMtuSize:
-          description: MTU size for the entire network. Default value is 9578.
-          type: integer
-        overrides:
-          description: Override MTU size for individual switches or switch profiles.
-            An empty array will clear overrides.
+        switchPorts:
+          description: Array of switch or stack ports for creating aggregation group.
+            Minimum 2 and maximum 8 ports are supported.
           items:
-            $ref: '#/components/schemas/_networks__networkId__switch_mtu_overrides'
+            $ref: '#/components/schemas/_networks__networkId__switch_linkAggregations_switchPorts'
+          type: array
+        switchProfilePorts:
+          description: Array of switch profile ports for creating aggregation group.
+            Minimum 2 and maximum 8 ports are supported.
+          items:
+            $ref: '#/components/schemas/_networks__networkId__switch_linkAggregations_switchProfilePorts'
           type: array
       type: object
     _networks__networkId__clients__clientId__splashAuthorizationStatus_ssids_3:
@@ -37366,19 +37900,6 @@ components:
           type: string
       required:
       - ruleId
-      type: object
-    inline_response_200_3_apiAuthentication:
-      description: Details for indicating whether organization will restrict access
-        to API (but not Dashboard) to certain IP addresses.
-      example:
-        ipRestrictionsForKeys:
-          ranges:
-          - ranges
-          - ranges
-          enabled: true
-      properties:
-        ipRestrictionsForKeys:
-          $ref: '#/components/schemas/inline_response_200_3_apiAuthentication_ipRestrictionsForKeys'
       type: object
     _networks__networkId__alerts_settings_alertDestinations:
       description: A hash of destinations for this specific alert
@@ -39049,6 +39570,13 @@ components:
           description: The maximum download limit (integer, in Kbps).
           type: integer
       type: object
+    _networks__networkId__switch_dhcpServerPolicy_arpInspection_trustedServers__trustedServerId__ipv4:
+      description: The updated IPv4 attributes of the trusted server
+      properties:
+        address:
+          description: The updated IPv4 address of the trusted server
+          type: string
+      type: object
     _networks__networkId__camera_wirelessProfiles_ssid:
       description: The details of the SSID config.
       properties:
@@ -39209,6 +39737,14 @@ components:
       properties:
         criticalAuth:
           $ref: '#/components/schemas/_networks__networkId__switch_accessPolicies_radius_criticalAuth'
+        failedAuthVlanId:
+          description: VLAN that clients will be placed on when RADIUS authentication
+            fails. Will be null if hostMode is Multi-Auth
+          type: integer
+        reAuthenticationInterval:
+          description: Re-authentication period in seconds. Will be null if hostMode
+            is Multi-Auth
+          type: integer
       type: object
     _networks__networkId__groupPolicies_scheduling_friday:
       description: The schedule object for Friday.
@@ -39227,6 +39763,19 @@ components:
             time specified in 'from'. Defaults to '24:00'. Only 30 minute increments
             are allowed.
           type: string
+      type: object
+    inline_response_200_4_apiAuthentication:
+      description: Details for indicating whether organization will restrict access
+        to API (but not Dashboard) to certain IP addresses.
+      example:
+        ipRestrictionsForKeys:
+          ranges:
+          - ranges
+          - ranges
+          enabled: true
+      properties:
+        ipRestrictionsForKeys:
+          $ref: '#/components/schemas/inline_response_200_4_apiAuthentication_ipRestrictionsForKeys'
       type: object
     inline_object_10:
       example:
@@ -39616,6 +40165,14 @@ components:
       - name
       - vlanId
       type: object
+    _networks__networkId__switch_dhcpServerPolicy_arpInspection:
+      description: Dynamic ARP Inspection settings
+      properties:
+        enabled:
+          description: Enable or disable Dynamic ARP Inspection on the network. Default
+            value is false.
+          type: boolean
+      type: object
     _devices__serial__switch_routing_interfaces__interfaceId__dhcp_fixedIpAssignments:
       properties:
         name:
@@ -39702,7 +40259,62 @@ components:
             $ref: '#/components/schemas/_networks__networkId__groupPolicies_bonjourForwarding_rules'
           type: array
       type: object
+    inline_response_200_9:
+      example:
+        usage:
+          total: 0.8008282
+        name: name
+        model: model
+        mac: mac
+        network:
+          name: name
+          id: id
+      properties:
+        network:
+          $ref: '#/components/schemas/_organizations__organizationId__summary_top_appliances_byUtilization_network'
+        name:
+          description: Name of the switch
+          type: string
+        mac:
+          description: Mac address of the switch
+          type: string
+        model:
+          description: Model of the switch
+          type: string
+        usage:
+          $ref: '#/components/schemas/_organizations__organizationId__summary_top_switches_byEnergyUsage_usage'
+      type: object
     inline_response_200_5:
+      example:
+        serial: serial
+        name: name
+        model: model
+        utilization:
+          average:
+            percentage: 0.8008282
+        mac: mac
+        network:
+          name: name
+          id: id
+      properties:
+        network:
+          $ref: '#/components/schemas/_organizations__organizationId__summary_top_appliances_byUtilization_network'
+        name:
+          description: Name of the appliance
+          type: string
+        mac:
+          description: Mac address of the appliance
+          type: string
+        serial:
+          description: Serial number of the appliance
+          type: string
+        model:
+          description: Model of the appliance
+          type: string
+        utilization:
+          $ref: '#/components/schemas/_organizations__organizationId__summary_top_appliances_byUtilization_utilization'
+      type: object
+    inline_response_200_6:
       example:
         usage:
           total: 0.8008282
@@ -39730,7 +40342,7 @@ components:
         usage:
           $ref: '#/components/schemas/_organizations__organizationId__summary_top_clients_byUsage_usage'
       type: object
-    inline_response_200_6:
+    inline_response_200_7:
       example:
         clients:
           counts:
@@ -39749,7 +40361,7 @@ components:
         usage:
           $ref: '#/components/schemas/_organizations__organizationId__summary_top_clients_manufacturers_byUsage_usage'
       type: object
-    inline_response_200_7:
+    inline_response_200_8:
       example:
         clients:
           counts:
@@ -39788,51 +40400,6 @@ components:
         clients:
           $ref: '#/components/schemas/_organizations__organizationId__summary_top_devices_byUsage_clients'
       type: object
-    inline_response_200_8:
-      example:
-        usage:
-          total: 0.8008282
-        name: name
-        model: model
-        mac: mac
-        network:
-          name: name
-          id: id
-      properties:
-        network:
-          $ref: '#/components/schemas/_organizations__organizationId__summary_top_appliances_byUtilization_network'
-        name:
-          description: Name of the switch
-          type: string
-        mac:
-          description: Mac address of the switch
-          type: string
-        model:
-          description: Model of the switch
-          type: string
-        usage:
-          $ref: '#/components/schemas/_organizations__organizationId__summary_top_switches_byEnergyUsage_usage'
-      type: object
-    inline_response_200_3_apiAuthentication_ipRestrictionsForKeys:
-      description: Details for API-only IP restrictions.
-      example:
-        ranges:
-        - ranges
-        - ranges
-        enabled: true
-      properties:
-        enabled:
-          description: Boolean indicating whether the organization will restrict API
-            key (not Dashboard GUI) usage to a specific list of IP addresses or CIDR
-            ranges.
-          type: boolean
-        ranges:
-          description: List of acceptable IP ranges. Entries can be single IP addresses,
-            IP address ranges, and CIDR subnets.
-          items:
-            type: string
-          type: array
-      type: object
     _networks__networkId__groupPolicies_bonjourForwarding_rules:
       properties:
         description:
@@ -39866,13 +40433,44 @@ components:
       type: object
     inline_response_200_1:
       example:
+        cloud:
+          region:
+            name: name
+        name: name
+        id: id
+        api:
+          enabled: true
+        url: url
+        licensing:
+          model: co-term
+      properties:
+        id:
+          description: Organization ID
+          type: string
+        name:
+          description: Organization name
+          type: string
+        url:
+          description: Organization URL
+          type: string
+        api:
+          $ref: '#/components/schemas/_organizations_api'
+        licensing:
+          $ref: '#/components/schemas/_organizations_licensing'
+        cloud:
+          $ref: '#/components/schemas/_organizations_cloud'
+      type: object
+    inline_response_200_2:
+      example:
         path: path
         method: method
         sourceIp: sourceIp
         adminId: adminId
         host: host
+        operationId: operationId
         userAgent: userAgent
         queryString: queryString
+        version: 6
         ts: 2000-01-23T04:56:07.000+00:00
         responseCode: 0
       properties:
@@ -39905,8 +40503,14 @@ components:
         sourceIp:
           description: Public IP address from which the API request was made.
           type: string
+        version:
+          description: API version of the endpoint.
+          type: integer
+        operationId:
+          description: Operation ID for the endpoint.
+          type: string
       type: object
-    inline_response_200_2:
+    inline_response_200_3:
       example:
         total: 0
         upstream: 6
@@ -39927,7 +40531,7 @@ components:
           description: Downloaded data, in mbps.
           type: integer
       type: object
-    inline_response_200_3:
+    inline_response_200_4:
       example:
         enforceStrongPasswords: true
         enforceLoginIpRanges: true
@@ -40005,37 +40609,7 @@ components:
             type: string
           type: array
         apiAuthentication:
-          $ref: '#/components/schemas/inline_response_200_3_apiAuthentication'
-      type: object
-    inline_response_200_4:
-      example:
-        serial: serial
-        name: name
-        model: model
-        utilization:
-          average:
-            percentage: 0.8008282
-        mac: mac
-        network:
-          name: name
-          id: id
-      properties:
-        network:
-          $ref: '#/components/schemas/_organizations__organizationId__summary_top_appliances_byUtilization_network'
-        name:
-          description: Name of the appliance
-          type: string
-        mac:
-          description: Mac address of the appliance
-          type: string
-        serial:
-          description: Serial number of the appliance
-          type: string
-        model:
-          description: Model of the appliance
-          type: string
-        utilization:
-          $ref: '#/components/schemas/_organizations__organizationId__summary_top_appliances_byUtilization_utilization'
+          $ref: '#/components/schemas/inline_response_200_4_apiAuthentication'
       type: object
     _networks__networkId__clients_provision_policiesBySsid:
       description: An object, describing the policy-connection associations for each
@@ -40174,6 +40748,26 @@ components:
             If 'type' is 'application' or 'applicationCategory', then 'value' must
             be an object with an ID for the application.
           type: string
+      type: object
+    inline_response_200_4_apiAuthentication_ipRestrictionsForKeys:
+      description: Details for API-only IP restrictions.
+      example:
+        ranges:
+        - ranges
+        - ranges
+        enabled: true
+      properties:
+        enabled:
+          description: Boolean indicating whether the organization will restrict API
+            key (not Dashboard GUI) usage to a specific list of IP addresses or CIDR
+            ranges.
+          type: boolean
+        ranges:
+          description: List of acceptable IP ranges. Entries can be single IP addresses,
+            IP address ranges, and CIDR subnets.
+          items:
+            type: string
+          type: array
       type: object
     _networks__networkId__appliance_trafficShaping_uplinkSelection_value_source:
       description: Source of this custom type traffic filter
@@ -40572,107 +41166,6 @@ components:
       - igmpSnoopingEnabled
       type: object
     inline_object_138:
-      example:
-        rules:
-        - policy: deny
-          type: host
-          value: google.com
-        - policy: deny
-          type: port
-          value: "23"
-        - policy: deny
-          type: ipRange
-          value: 10.11.12.00/24
-        - policy: deny
-          type: ipRange
-          value: 10.11.12.00/24:5555
-      properties:
-        rules:
-          description: An array of L7 firewall rules for this SSID. Rules will get
-            applied in the same order user has specified in request. Empty array will
-            clear the L7 firewall rule configuration.
-          items:
-            $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__firewall_l7FirewallRules_rules'
-          type: array
-      type: object
-    inline_object_139:
-      example:
-        enabled: true
-        operator:
-          name: Meraki Product Management
-        venue:
-          name: SF Branch
-          type: Unspecified Assembly
-        networkAccessType: Private network
-        domains:
-        - meraki.local
-        - domain2.com
-        roamConsortOis:
-        - ABC123
-        - 456EFG
-        mccMncs:
-        - mcc: "123"
-          mnc: "456"
-        - mcc: "563"
-          mnc: "232"
-        naiRealms:
-        - format: "1"
-          name: Realm 1
-          methods:
-          - id: "1"
-            authenticationTypes:
-              nonEapInnerAuthentication:
-              - MSCHAP
-              eapInnerAuthentication:
-              - EAP-TTLS with MSCHAPv2
-              credentials: []
-              tunneledEapMethodCredentials: []
-      properties:
-        enabled:
-          description: Whether or not Hotspot 2.0 for this SSID is enabled
-          type: boolean
-        operator:
-          $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__hotspot20_operator'
-        venue:
-          $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__hotspot20_venue'
-        networkAccessType:
-          description: The network type of this SSID ('Private network', 'Private
-            network with guest access', 'Chargeable public network', 'Free public
-            network', 'Personal device network', 'Emergency services only network',
-            'Test or experimental', 'Wildcard')
-          enum:
-          - Private network
-          - Private network with guest access
-          - Chargeable public network
-          - Free public network
-          - Personal device network
-          - Emergency services only network
-          - Test or experimental
-          - Wildcard
-          type: string
-        domains:
-          description: An array of domain names
-          items:
-            type: string
-          type: array
-        roamConsortOis:
-          description: An array of roaming consortium OIs (hexadecimal number 3-5
-            octets in length)
-          items:
-            type: string
-          type: array
-        mccMncs:
-          description: An array of MCC/MNC pairs
-          items:
-            $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__hotspot20_mccMncs'
-          type: array
-        naiRealms:
-          description: An array of NAI realms
-          items:
-            $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__hotspot20_naiRealms'
-          type: array
-      type: object
-    inline_object_136:
       example: {}
       properties:
         timeout:
@@ -40686,7 +41179,7 @@ components:
         eapolKey:
           $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__eapOverride_eapolKey'
       type: object
-    inline_object_137:
+    inline_object_139:
       example:
         rules:
         - comment: Allow TCP traffic to subnet with HTTP servers.
@@ -40706,7 +41199,7 @@ components:
             true allows access and false denies access) (optional)
           type: boolean
       type: object
-    inline_object_134:
+    inline_object_136:
       example:
         enabled: true
         rules:
@@ -40724,7 +41217,7 @@ components:
             $ref: '#/components/schemas/_networks__networkId__groupPolicies_bonjourForwarding_rules'
           type: array
       type: object
-    inline_object_135:
+    inline_object_137:
       example:
         enabled: true
         deviceTypePolicies:
@@ -40743,7 +41236,7 @@ components:
             $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__deviceTypeGroupPolicies_deviceTypePolicies'
           type: array
       type: object
-    inline_object_132:
+    inline_object_134:
       example:
         meshingEnabled: true
         ipv6BridgeEnabled: false
@@ -40774,7 +41267,7 @@ components:
             network (making them run dark)
           type: boolean
       type: object
-    inline_object_133:
+    inline_object_135:
       example:
         name: My SSID
         enabled: true
@@ -41080,7 +41573,15 @@ components:
         speedBurst:
           $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__speedBurst'
       type: object
-    inline_object_130:
+    _networks__networkId__wireless_rfProfiles_transmission:
+      description: Settings related to radio transmission.
+      properties:
+        enabled:
+          description: Toggle for radio transmission. When false, radios will not
+            transmit at all.
+          type: boolean
+      type: object
+    inline_object_132:
       example:
         name: Some Custom RF Profile
         bandSelectionType: ap
@@ -41113,13 +41614,15 @@ components:
           $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_twoFourGhzSettings'
         fiveGhzSettings:
           $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_fiveGhzSettings'
+        transmission:
+          $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_transmission'
         perSsidSettings:
           $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_perSsidSettings'
       required:
       - bandSelectionType
       - name
       type: object
-    inline_object_131:
+    inline_object_133:
       example: {}
       properties:
         name:
@@ -41147,8 +41650,65 @@ components:
           $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles__rfProfileId__twoFourGhzSettings'
         fiveGhzSettings:
           $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles__rfProfileId__fiveGhzSettings'
+        transmission:
+          $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_transmission'
         perSsidSettings:
           $ref: '#/components/schemas/_networks__networkId__wireless_rfProfiles_perSsidSettings'
+      type: object
+    inline_object_130:
+      example:
+        currency: USD
+        plans:
+        - id: "1"
+          price: 5
+          bandwidthLimits:
+            limitUp: 1000
+            limitDown: 1000
+          timeLimit: 1 hour
+      properties:
+        currency:
+          description: The currency code of this node group's billing plans
+          type: string
+        plans:
+          description: Array of billing plans in the node group. (Can configure a
+            maximum of 5)
+          items:
+            $ref: '#/components/schemas/_networks__networkId__wireless_billing_plans'
+          type: array
+      type: object
+    inline_object_131:
+      example:
+        scanningEnabled: true
+        advertisingEnabled: true
+        uuid: 00000000-0000-0000-000-000000000000
+        majorMinorAssignmentMode: Non-unique
+        major: 1
+      properties:
+        scanningEnabled:
+          description: Whether APs will scan for Bluetooth enabled clients. (true,
+            false)
+          type: boolean
+        advertisingEnabled:
+          description: Whether APs will advertise beacons. (true, false)
+          type: boolean
+        uuid:
+          description: The UUID to be used in the beacon identifier.
+          type: string
+        majorMinorAssignmentMode:
+          description: The way major and minor number should be assigned to nodes
+            in the network. ('Unique', 'Non-unique')
+          enum:
+          - Unique
+          - Non-unique
+          type: string
+        major:
+          description: The major number to be used in the beacon identifier. Only
+            valid in 'Non-unique' mode.
+          type: integer
+        minor:
+          description: The minor number to be used in the beacon identifier. Only
+            valid in 'Non-unique' mode.
+          type: integer
       type: object
     _networks__networkId__wireless_ssids__number__radiusAccountingServers:
       properties:
@@ -41261,80 +41821,6 @@ components:
       type: object
     inline_object_129:
       example:
-        scanningEnabled: true
-        advertisingEnabled: true
-        uuid: 00000000-0000-0000-000-000000000000
-        majorMinorAssignmentMode: Non-unique
-        major: 1
-      properties:
-        scanningEnabled:
-          description: Whether APs will scan for Bluetooth enabled clients. (true,
-            false)
-          type: boolean
-        advertisingEnabled:
-          description: Whether APs will advertise beacons. (true, false)
-          type: boolean
-        uuid:
-          description: The UUID to be used in the beacon identifier.
-          type: string
-        majorMinorAssignmentMode:
-          description: The way major and minor number should be assigned to nodes
-            in the network. ('Unique', 'Non-unique')
-          enum:
-          - Unique
-          - Non-unique
-          type: string
-        major:
-          description: The major number to be used in the beacon identifier. Only
-            valid in 'Non-unique' mode.
-          type: integer
-        minor:
-          description: The minor number to be used in the beacon identifier. Only
-            valid in 'Non-unique' mode.
-          type: integer
-      type: object
-    _networks__networkId__wireless_rfProfiles_perSsidSettings_10:
-      description: Settings for SSID 10
-      properties:
-        minBitrate:
-          description: Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2',
-            '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-          format: float
-          type: number
-        bandOperationMode:
-          description: Choice between 'dual', '2.4ghz' or '5ghz'.
-          enum:
-          - dual
-          - 2.4ghz
-          - 5ghz
-          type: string
-        bandSteeringEnabled:
-          description: Steers client to most open band between 2.4 GHz and 5 GHz.
-            Can be either true or false.
-          type: boolean
-      type: object
-    _networks__networkId__wireless_rfProfiles_perSsidSettings_11:
-      description: Settings for SSID 11
-      properties:
-        minBitrate:
-          description: Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2',
-            '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-          format: float
-          type: number
-        bandOperationMode:
-          description: Choice between 'dual', '2.4ghz' or '5ghz'.
-          enum:
-          - dual
-          - 2.4ghz
-          - 5ghz
-          type: string
-        bandSteeringEnabled:
-          description: Steers client to most open band between 2.4 GHz and 5 GHz.
-            Can be either true or false.
-          type: boolean
-      type: object
-    inline_object_127:
-      example:
         enabled: true
         vlanId: 100
         protocols:
@@ -41378,8 +41864,8 @@ components:
             $ref: '#/components/schemas/_networks__networkId__wireless_alternateManagementInterface_accessPoints'
           type: array
       type: object
-    _networks__networkId__wireless_rfProfiles_perSsidSettings_12:
-      description: Settings for SSID 12
+    _networks__networkId__wireless_rfProfiles_perSsidSettings_10:
+      description: Settings for SSID 10
       properties:
         minBitrate:
           description: Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2',
@@ -41398,29 +41884,8 @@ components:
             Can be either true or false.
           type: boolean
       type: object
-    inline_object_128:
-      example:
-        currency: USD
-        plans:
-        - id: "1"
-          price: 5
-          bandwidthLimits:
-            limitUp: 1000
-            limitDown: 1000
-          timeLimit: 1 hour
-      properties:
-        currency:
-          description: The currency code of this node group's billing plans
-          type: string
-        plans:
-          description: Array of billing plans in the node group. (Can configure a
-            maximum of 5)
-          items:
-            $ref: '#/components/schemas/_networks__networkId__wireless_billing_plans'
-          type: array
-      type: object
-    _networks__networkId__wireless_rfProfiles_perSsidSettings_13:
-      description: Settings for SSID 13
+    _networks__networkId__wireless_rfProfiles_perSsidSettings_11:
+      description: Settings for SSID 11
       properties:
         minBitrate:
           description: Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2',
@@ -41439,7 +41904,7 @@ components:
             Can be either true or false.
           type: boolean
       type: object
-    inline_object_125:
+    inline_object_127:
       example: {}
       properties:
         name:
@@ -41463,6 +41928,97 @@ components:
           format: byte
           pattern: ^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$
           type: string
+      type: object
+    _networks__networkId__wireless_rfProfiles_perSsidSettings_12:
+      description: Settings for SSID 12
+      properties:
+        minBitrate:
+          description: Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2',
+            '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+          format: float
+          type: number
+        bandOperationMode:
+          description: Choice between 'dual', '2.4ghz' or '5ghz'.
+          enum:
+          - dual
+          - 2.4ghz
+          - 5ghz
+          type: string
+        bandSteeringEnabled:
+          description: Steers client to most open band between 2.4 GHz and 5 GHz.
+            Can be either true or false.
+          type: boolean
+      type: object
+    inline_object_128:
+      example:
+        url: https://www.example.com/path
+        sharedSecret: shhh
+        payloadTemplateId: wpt_00001
+        alertTypeId: power_supply_down
+      properties:
+        url:
+          description: The URL where the test webhook will be sent
+          type: string
+        sharedSecret:
+          default: ""
+          description: The shared secret the test webhook will send. Optional. Defaults
+            to an empty string.
+          type: string
+        payloadTemplateId:
+          description: The ID of the payload template of the test webhook. Defaults
+            to the HTTP server's template ID if one exists for the given URL, or Generic
+            template ID otherwise
+          type: string
+        payloadTemplateName:
+          description: The name of the payload template.
+          type: string
+        alertTypeId:
+          default: power_supply_down
+          description: The type of alert which the test webhook will send. Optional.
+            Defaults to power_supply_down.
+          type: string
+      required:
+      - url
+      type: object
+    _networks__networkId__wireless_rfProfiles_perSsidSettings_13:
+      description: Settings for SSID 13
+      properties:
+        minBitrate:
+          description: Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2',
+            '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+          format: float
+          type: number
+        bandOperationMode:
+          description: Choice between 'dual', '2.4ghz' or '5ghz'.
+          enum:
+          - dual
+          - 2.4ghz
+          - 5ghz
+          type: string
+        bandSteeringEnabled:
+          description: Steers client to most open band between 2.4 GHz and 5 GHz.
+            Can be either true or false.
+          type: boolean
+      type: object
+    inline_object_125:
+      example:
+        name: Example Webhook Server
+        url: https://example.com
+        sharedSecret: shhh
+        payloadTemplate:
+          payloadTemplateId: wpt_00001
+          name: Meraki (included)
+      properties:
+        name:
+          description: A name for easy reference to the HTTP server
+          type: string
+        sharedSecret:
+          description: A shared secret that will be included in POSTs sent to the
+            HTTP server. This secret can be used to verify that the request was sent
+            by Meraki.
+          type: string
+        payloadTemplate:
+          $ref: '#/components/schemas/_networks__networkId__webhooks_httpServers__httpServerId__payloadTemplate'
       type: object
     _networks__networkId__wireless_rfProfiles_perSsidSettings_14:
       description: Settings for SSID 14
@@ -41498,57 +42054,6 @@ components:
       type: object
     inline_object_126:
       example:
-        url: https://www.example.com/path
-        sharedSecret: shhh
-        payloadTemplateId: wpt_00001
-        alertTypeId: power_supply_down
-      properties:
-        url:
-          description: The URL where the test webhook will be sent
-          type: string
-        sharedSecret:
-          default: ""
-          description: The shared secret the test webhook will send. Optional. Defaults
-            to an empty string.
-          type: string
-        payloadTemplateId:
-          description: The ID of the payload template of the test webhook. Defaults
-            to the HTTP server's template ID if one exists for the given URL, or Generic
-            template ID otherwise
-          type: string
-        payloadTemplateName:
-          description: The name of the payload template.
-          type: string
-        alertTypeId:
-          default: power_supply_down
-          description: The type of alert which the test webhook will send. Optional.
-            Defaults to power_supply_down.
-          type: string
-      required:
-      - url
-      type: object
-    inline_object_123:
-      example:
-        name: Example Webhook Server
-        url: https://example.com
-        sharedSecret: shhh
-        payloadTemplate:
-          payloadTemplateId: wpt_00001
-          name: Meraki (included)
-      properties:
-        name:
-          description: A name for easy reference to the HTTP server
-          type: string
-        sharedSecret:
-          description: A shared secret that will be included in POSTs sent to the
-            HTTP server. This secret can be used to verify that the request was sent
-            by Meraki.
-          type: string
-        payloadTemplate:
-          $ref: '#/components/schemas/_networks__networkId__webhooks_httpServers__httpServerId__payloadTemplate'
-      type: object
-    inline_object_124:
-      example:
         name: Weeb Hooks
       properties:
         name:
@@ -41576,7 +42081,7 @@ components:
       required:
       - name
       type: object
-    inline_object_121:
+    inline_object_123:
       example:
         mode: detailed
         customPieChartItems:
@@ -41612,7 +42117,7 @@ components:
             $ref: '#/components/schemas/_networks__networkId__trafficAnalysis_customPieChartItems'
           type: array
       type: object
-    inline_object_122:
+    inline_object_124:
       example:
         name: Example Webhook Server
         url: https://example.com
@@ -41638,6 +42143,48 @@ components:
       - name
       - url
       type: object
+    inline_object_121:
+      example:
+        rstpEnabled: true
+        stpBridgePriority:
+        - switches:
+          - Q234-ABCD-0001
+          - Q234-ABCD-0002
+          - Q234-ABCD-0003
+          stpPriority: 4096
+        - stacks:
+          - "789102"
+          - "123456"
+          - "129102"
+          stpPriority: 28672
+      properties:
+        rstpEnabled:
+          description: The spanning tree protocol status in network
+          type: boolean
+        stpBridgePriority:
+          description: STP bridge priority for switches/stacks or switch profiles.
+            An empty array will clear the STP bridge priority settings.
+          items:
+            $ref: '#/components/schemas/_networks__networkId__switch_stp_stpBridgePriority'
+          type: array
+      type: object
+    inline_object_122:
+      example:
+        servers:
+        - host: 1.2.3.4
+          port: 443
+          roles:
+          - Wireless event log
+          - URLs
+      properties:
+        servers:
+          description: A list of the syslog servers for this network
+          items:
+            $ref: '#/components/schemas/_networks__networkId__syslogServers_servers'
+          type: array
+      required:
+      - servers
+      type: object
     _networks__networkId__switch_linkAggregations_switchPorts:
       properties:
         serial:
@@ -41654,20 +42201,25 @@ components:
       type: object
     inline_object_120:
       example:
-        servers:
-        - host: 1.2.3.4
-          port: 443
-          roles:
-          - Wireless event log
-          - URLs
+        broadcastThreshold: 30
+        multicastThreshold: 30
+        unknownUnicastThreshold: 30
       properties:
-        servers:
-          description: A list of the syslog servers for this network
-          items:
-            $ref: '#/components/schemas/_networks__networkId__syslogServers_servers'
-          type: array
-      required:
-      - servers
+        broadcastThreshold:
+          description: Percentage (1 to 99) of total available port bandwidth for
+            broadcast traffic type. Default value 100 percent rate is to clear the
+            configuration.
+          type: integer
+        multicastThreshold:
+          description: Percentage (1 to 99) of total available port bandwidth for
+            multicast traffic type. Default value 100 percent rate is to clear the
+            configuration.
+          type: integer
+        unknownUnicastThreshold:
+          description: Percentage (1 to 99) of total available port bandwidth for
+            unknown unicast (dlf-destination lookup failure) traffic type. Default
+            value 100 percent rate is to clear the configuration.
+          type: integer
       type: object
     _networks__networkId__wireless_ssids__number__splash_settings_sentryEnrollment_systemsManagerNetwork:
       description: Systems Manager network targeted for sentry enrollment.
@@ -41707,6 +42259,14 @@ components:
           type: boolean
       required:
       - localSubnet
+      type: object
+    _networks__networkId__policies_byClient_ssid:
+      example:
+        ssidNumber: 0
+      properties:
+        ssidNumber:
+          description: number of ssid
+          type: integer
       type: object
     _networks__networkId__appliance_firewall_cellularFirewallRules_rules:
       properties:
@@ -41790,35 +42350,16 @@ components:
       type: object
     inline_object_158:
       example:
-        name: Miles Meraki
-        orgAccess: none
-        tags:
-        - tag: west
-          access: read-only
+        enabledNetworks:
+        - L_11111111
+        - L_22222222
+        - N_33333333
+        - L_44444444
       properties:
-        name:
-          description: The name of the dashboard administrator
-          type: string
-        orgAccess:
-          description: The privilege of the dashboard administrator on the organization.
-            Can be one of 'full', 'read-only', 'enterprise' or 'none'
-          enum:
-          - full
-          - read-only
-          - enterprise
-          - none
-          type: string
-        tags:
-          description: The list of tags that the dashboard administrator has privileges
-            on
+        enabledNetworks:
+          description: List of network IDs with adaptive policy enabled
           items:
-            $ref: '#/components/schemas/_organizations__organizationId__admins_tags'
-          type: array
-        networks:
-          description: The list of networks that the dashboard administrator has privileges
-            on
-          items:
-            $ref: '#/components/schemas/_organizations__organizationId__admins_networks'
+            type: string
           type: array
       type: object
     _devices__serial__managementInterface_wan1:
@@ -41856,52 +42397,53 @@ components:
       type: object
     inline_object_159:
       example:
-        type: wanUtilization
-        enabled: true
-        alertCondition:
-          duration: 60
-          window: 600
-          bit_rate_bps: 10000
-          interface: wan1
-        recipients:
-          emails:
-          - admin@example.org
-          httpServerIds:
-          - aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vcGF0aA==
-        networkTags:
-        - tag1
-        - tag2
-        description: WAN 1 high utilization
+        name: Miles Meraki
+        email: miles@meraki.com
+        orgAccess: none
+        tags:
+        - tag: west
+          access: read-only
       properties:
-        type:
-          description: The alert type
-          enum:
-          - voipJitter
-          - voipPacketLoss
-          - voipMos
-          - wanLatency
-          - wanPacketLoss
-          - wanUtilization
-          - wanStatus
-          - appOutage
+        email:
+          description: The email of the dashboard administrator. This attribute can
+            not be updated.
           type: string
-        alertCondition:
-          $ref: '#/components/schemas/_organizations__organizationId__alerts_profiles_alertCondition'
-        recipients:
-          $ref: '#/components/schemas/_organizations__organizationId__alerts_profiles_recipients'
-        networkTags:
-          description: Networks with these tags will be monitored for the alert
+        name:
+          description: The name of the dashboard administrator
+          type: string
+        orgAccess:
+          description: The privilege of the dashboard administrator on the organization.
+            Can be one of 'full', 'read-only', 'enterprise' or 'none'
+          enum:
+          - full
+          - read-only
+          - enterprise
+          - none
+          type: string
+        tags:
+          description: The list of tags that the dashboard administrator has privileges
+            on
           items:
-            type: string
+            $ref: '#/components/schemas/_organizations__organizationId__admins_tags'
           type: array
-        description:
-          description: User supplied description of the alert
+        networks:
+          description: The list of networks that the dashboard administrator has privileges
+            on
+          items:
+            $ref: '#/components/schemas/_organizations__organizationId__admins_networks'
+          type: array
+        authenticationMethod:
+          description: The method of authentication the user will use to sign in to
+            the Meraki dashboard. Can be one of 'Email' or 'Cisco SecureX Sign-On'.
+            The default is Email authentication
+          enum:
+          - Email
+          - Cisco SecureX Sign-On
           type: string
       required:
-      - alertCondition
-      - networkTags
-      - recipients
-      - type
+      - email
+      - name
+      - orgAccess
       type: object
     _organizations__organizationId__brandingPolicies_helpSettings:
       description: |2-
@@ -42024,81 +42566,6 @@ components:
       type: object
     inline_object_156:
       example:
-        enabledNetworks:
-        - L_11111111
-        - L_22222222
-        - N_33333333
-        - L_44444444
-      properties:
-        enabledNetworks:
-          description: List of network IDs with adaptive policy enabled
-          items:
-            type: string
-          type: array
-      type: object
-    inline_object_157:
-      example:
-        name: Miles Meraki
-        email: miles@meraki.com
-        orgAccess: none
-        tags:
-        - tag: west
-          access: read-only
-      properties:
-        email:
-          description: The email of the dashboard administrator. This attribute can
-            not be updated.
-          type: string
-        name:
-          description: The name of the dashboard administrator
-          type: string
-        orgAccess:
-          description: The privilege of the dashboard administrator on the organization.
-            Can be one of 'full', 'read-only', 'enterprise' or 'none'
-          enum:
-          - full
-          - read-only
-          - enterprise
-          - none
-          type: string
-        tags:
-          description: The list of tags that the dashboard administrator has privileges
-            on
-          items:
-            $ref: '#/components/schemas/_organizations__organizationId__admins_tags'
-          type: array
-        networks:
-          description: The list of networks that the dashboard administrator has privileges
-            on
-          items:
-            $ref: '#/components/schemas/_organizations__organizationId__admins_networks'
-          type: array
-        authenticationMethod:
-          description: The method of authentication the user will use to sign in to
-            the Meraki dashboard. Can be one of 'Email' or 'Cisco SecureX Sign-On'.
-            The default is Email authentication
-          enum:
-          - Email
-          - Cisco SecureX Sign-On
-          type: string
-      required:
-      - email
-      - name
-      - orgAccess
-      type: object
-    _networks__networkId__clients_provision_clients:
-      properties:
-        mac:
-          description: The MAC address of the client. Required.
-          type: string
-        name:
-          description: The display name for the client. Optional. Limited to 255 bytes.
-          type: string
-      required:
-      - mac
-      type: object
-    inline_object_154:
-      example:
         sourceGroup:
           id: "222"
           name: IoT Devices
@@ -42134,7 +42601,7 @@ components:
       - destinationGroup
       - sourceGroup
       type: object
-    inline_object_155:
+    inline_object_157:
       example:
         sourceGroup:
           id: "222"
@@ -42167,6 +42634,78 @@ components:
           - allow
           - deny
           type: string
+      type: object
+    _networks__networkId__clients_provision_clients:
+      properties:
+        mac:
+          description: The MAC address of the client. Required.
+          type: string
+        name:
+          description: The display name for the client. Optional. Limited to 255 bytes.
+          type: string
+      required:
+      - mac
+      type: object
+    inline_object_154:
+      example:
+        name: Employee Group
+        sgt: 1000
+        description: Group of XYZ Corp Employees
+        policyObjects:
+        - id: "2345"
+          name: Example Policy Object
+        isDefaultGroup: false
+        requiredIpMappings: []
+      properties:
+        name:
+          description: Name of the group
+          type: string
+        sgt:
+          description: SGT value of the group
+          type: integer
+        description:
+          description: 'Description of the group (default: "")'
+          type: string
+        policyObjects:
+          description: 'The policy objects that belong to this group; traffic from
+            addresses specified by these policy objects will be tagged with this group''s
+            SGT value if no other tagging scheme is being used (each requires one
+            unique attribute) (default: [])'
+          items:
+            $ref: '#/components/schemas/_organizations__organizationId__adaptivePolicy_groups_policyObjects'
+          type: array
+      required:
+      - name
+      - sgt
+      type: object
+    inline_object_155:
+      example:
+        name: Employee Group
+        sgt: 1000
+        description: Group of XYZ Corp Employees
+        policyObjects:
+        - id: "2345"
+          name: Example Policy Object
+        isDefaultGroup: false
+        requiredIpMappings: []
+      properties:
+        name:
+          description: Name of the group
+          type: string
+        sgt:
+          description: SGT value of the group
+          type: integer
+        description:
+          description: Description of the group
+          type: string
+        policyObjects:
+          description: The policy objects that belong to this group; traffic from
+            addresses specified by these policy objects will be tagged with this group's
+            SGT value if no other tagging scheme is being used (each requires one
+            unique attribute)
+          items:
+            $ref: '#/components/schemas/_organizations__organizationId__adaptivePolicy_groups_policyObjects'
+          type: array
       type: object
     _networks__networkId__appliance_vpn_bgp_neighbors:
       properties:
@@ -42202,67 +42741,6 @@ components:
       - remoteAsNumber
       type: object
     inline_object_152:
-      example:
-        name: Employee Group
-        sgt: 1000
-        description: Group of XYZ Corp Employees
-        policyObjects:
-        - id: "2345"
-          name: Example Policy Object
-        isDefaultGroup: false
-        requiredIpMappings: []
-      properties:
-        name:
-          description: Name of the group
-          type: string
-        sgt:
-          description: SGT value of the group
-          type: integer
-        description:
-          description: 'Description of the group (default: "")'
-          type: string
-        policyObjects:
-          description: 'The policy objects that belong to this group; traffic from
-            addresses specified by these policy objects will be tagged with this group''s
-            SGT value if no other tagging scheme is being used (each requires one
-            unique attribute) (default: [])'
-          items:
-            $ref: '#/components/schemas/_organizations__organizationId__adaptivePolicy_groups_policyObjects'
-          type: array
-      required:
-      - name
-      - sgt
-      type: object
-    inline_object_153:
-      example:
-        name: Employee Group
-        sgt: 1000
-        description: Group of XYZ Corp Employees
-        policyObjects:
-        - id: "2345"
-          name: Example Policy Object
-        isDefaultGroup: false
-        requiredIpMappings: []
-      properties:
-        name:
-          description: Name of the group
-          type: string
-        sgt:
-          description: SGT value of the group
-          type: integer
-        description:
-          description: Description of the group
-          type: string
-        policyObjects:
-          description: The policy objects that belong to this group; traffic from
-            addresses specified by these policy objects will be tagged with this group's
-            SGT value if no other tagging scheme is being used (each requires one
-            unique attribute)
-          items:
-            $ref: '#/components/schemas/_organizations__organizationId__adaptivePolicy_groups_policyObjects'
-          type: array
-      type: object
-    inline_object_150:
       example:
         name: Block sensitive web traffic
         description: Blocks sensitive web traffic
@@ -42302,7 +42780,7 @@ components:
       - name
       - rules
       type: object
-    inline_object_151:
+    inline_object_153:
       example:
         name: Block sensitive web traffic
         description: Blocks sensitive web traffic
@@ -42338,55 +42816,7 @@ components:
           - ipv6
           type: string
       type: object
-    _networks__networkId__groupPolicies_scheduling:
-      description: |2
-            The schedule for the group policy. Schedules are applied to days of the week.
-      properties:
-        enabled:
-          description: Whether scheduling is enabled (true) or disabled (false). Defaults
-            to false. If true, the schedule objects for each day of the week (monday
-            - sunday) are parsed.
-          type: boolean
-        monday:
-          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_monday'
-        tuesday:
-          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_tuesday'
-        wednesday:
-          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_wednesday'
-        thursday:
-          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_thursday'
-        friday:
-          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_friday'
-        saturday:
-          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_saturday'
-        sunday:
-          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_sunday'
-      type: object
-    inline_object_149:
-      example:
-        confirmed: true
-        synchronous: false
-      properties:
-        confirmed:
-          description: A boolean representing whether or not the batch has been confirmed.
-            This property cannot be unset once it is true.
-          type: boolean
-        synchronous:
-          description: Set to true to force the batch to run synchronous. There can
-            be at most 20 actions in synchronous batch.
-          type: boolean
-      type: object
-    inline_object_147:
-      example:
-        name: My organization
-      properties:
-        name:
-          description: The name of the organization
-          type: string
-        api:
-          $ref: '#/components/schemas/_organizations__organizationId__api'
-      type: object
-    inline_object_148:
+    inline_object_150:
       example:
         confirmed: true
         synchronous: false
@@ -42418,7 +42848,55 @@ components:
       required:
       - actions
       type: object
-    inline_object_145:
+    inline_object_151:
+      example:
+        confirmed: true
+        synchronous: false
+      properties:
+        confirmed:
+          description: A boolean representing whether or not the batch has been confirmed.
+            This property cannot be unset once it is true.
+          type: boolean
+        synchronous:
+          description: Set to true to force the batch to run synchronous. There can
+            be at most 20 actions in synchronous batch.
+          type: boolean
+      type: object
+    _networks__networkId__groupPolicies_scheduling:
+      description: |2
+            The schedule for the group policy. Schedules are applied to days of the week.
+      properties:
+        enabled:
+          description: Whether scheduling is enabled (true) or disabled (false). Defaults
+            to false. If true, the schedule objects for each day of the week (monday
+            - sunday) are parsed.
+          type: boolean
+        monday:
+          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_monday'
+        tuesday:
+          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_tuesday'
+        wednesday:
+          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_wednesday'
+        thursday:
+          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_thursday'
+        friday:
+          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_friday'
+        saturday:
+          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_saturday'
+        sunday:
+          $ref: '#/components/schemas/_networks__networkId__groupPolicies_scheduling_sunday'
+      type: object
+    inline_object_149:
+      example:
+        name: My organization
+      properties:
+        name:
+          description: The name of the organization
+          type: string
+        api:
+          $ref: '#/components/schemas/_organizations__organizationId__api'
+      type: object
+    inline_object_147:
       example:
         concentrator:
           networkId: N_123
@@ -42448,7 +42926,7 @@ components:
         failover:
           $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__vpn_failover'
       type: object
-    inline_object_146:
+    inline_object_148:
       example:
         name: My organization
       properties:
@@ -42458,7 +42936,7 @@ components:
       required:
       - name
       type: object
-    inline_object_143:
+    inline_object_145:
       example:
         splashPage: Click-through splash page
         splashUrl: https://www.custom_splash_url.com
@@ -42531,7 +43009,7 @@ components:
         sentryEnrollment:
           $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__splash_settings_sentryEnrollment'
       type: object
-    inline_object_144:
+    inline_object_146:
       example:
         trafficShapingEnabled: true
         defaultRulesEnabled: true
@@ -42576,7 +43054,7 @@ components:
             $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__trafficShaping_rules_rules'
           type: array
       type: object
-    inline_object_141:
+    inline_object_143:
       example:
         id: "1284392014819"
         name: Sample Identity PSK
@@ -42593,7 +43071,7 @@ components:
           description: The group policy to be applied to clients
           type: string
       type: object
-    inline_object_142:
+    inline_object_144:
       example:
         enabled: true
         ranges:
@@ -42624,21 +43102,84 @@ components:
             $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__schedules_rangesInSeconds'
           type: array
       type: object
-    _networks__networkId__switch_linkAggregations_switchProfilePorts:
+    inline_object_141:
+      example:
+        enabled: true
+        operator:
+          name: Meraki Product Management
+        venue:
+          name: SF Branch
+          type: Unspecified Assembly
+        networkAccessType: Private network
+        domains:
+        - meraki.local
+        - domain2.com
+        roamConsortOis:
+        - ABC123
+        - 456EFG
+        mccMncs:
+        - mcc: "123"
+          mnc: "456"
+        - mcc: "563"
+          mnc: "232"
+        naiRealms:
+        - format: "1"
+          name: Realm 1
+          methods:
+          - id: "1"
+            authenticationTypes:
+              nonEapInnerAuthentication:
+              - MSCHAP
+              eapInnerAuthentication:
+              - EAP-TTLS with MSCHAPv2
+              credentials: []
+              tunneledEapMethodCredentials: []
       properties:
-        profile:
-          description: Profile identifier.
+        enabled:
+          description: Whether or not Hotspot 2.0 for this SSID is enabled
+          type: boolean
+        operator:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__hotspot20_operator'
+        venue:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__hotspot20_venue'
+        networkAccessType:
+          description: The network type of this SSID ('Private network', 'Private
+            network with guest access', 'Chargeable public network', 'Free public
+            network', 'Personal device network', 'Emergency services only network',
+            'Test or experimental', 'Wildcard')
+          enum:
+          - Private network
+          - Private network with guest access
+          - Chargeable public network
+          - Free public network
+          - Personal device network
+          - Emergency services only network
+          - Test or experimental
+          - Wildcard
           type: string
-        portId:
-          description: 'Port identifier of switch port. For modules, the identifier
-            is "SlotNumber_ModuleType_PortNumber" (Ex: "1_8X10G_1"), otherwise it
-            is just the port number (Ex: "8").'
-          type: string
-      required:
-      - portId
-      - profile
+        domains:
+          description: An array of domain names
+          items:
+            type: string
+          type: array
+        roamConsortOis:
+          description: An array of roaming consortium OIs (hexadecimal number 3-5
+            octets in length)
+          items:
+            type: string
+          type: array
+        mccMncs:
+          description: An array of MCC/MNC pairs
+          items:
+            $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__hotspot20_mccMncs'
+          type: array
+        naiRealms:
+          description: An array of NAI realms
+          items:
+            $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__hotspot20_naiRealms'
+          type: array
       type: object
-    inline_object_140:
+    inline_object_142:
       example:
         id: "1284392014819"
         name: Sample Identity PSK
@@ -42658,6 +43199,44 @@ components:
       required:
       - groupPolicyId
       - name
+      type: object
+    _networks__networkId__switch_linkAggregations_switchProfilePorts:
+      properties:
+        profile:
+          description: Profile identifier.
+          type: string
+        portId:
+          description: 'Port identifier of switch port. For modules, the identifier
+            is "SlotNumber_ModuleType_PortNumber" (Ex: "1_8X10G_1"), otherwise it
+            is just the port number (Ex: "8").'
+          type: string
+      required:
+      - portId
+      - profile
+      type: object
+    inline_object_140:
+      example:
+        rules:
+        - policy: deny
+          type: host
+          value: google.com
+        - policy: deny
+          type: port
+          value: "23"
+        - policy: deny
+          type: ipRange
+          value: 10.11.12.00/24
+        - policy: deny
+          type: ipRange
+          value: 10.11.12.00/24:5555
+      properties:
+        rules:
+          description: An array of L7 firewall rules for this SSID. Rules will get
+            applied in the same order user has specified in request. Empty array will
+            clear the L7 firewall rule configuration.
+          items:
+            $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__firewall_l7FirewallRules_rules'
+          type: array
       type: object
     _networks__networkId__wireless_ssids__number__splash_settings_guestSponsorship:
       description: Details associated with guest sponsored splash.
@@ -42708,6 +43287,13 @@ components:
           type: string
       required:
       - ssidNumber
+      type: object
+    _networks__networkId__switch_dhcpServerPolicy_arpInspection_trustedServers_ipv4:
+      description: The IPv4 attributes of the trusted server being added
+      properties:
+        address:
+          description: The IPv4 address of the trusted server being added
+          type: string
       type: object
     _networks__networkId__camera_qualityRetentionProfiles_videoSettings_MV12_MV22_MV72:
       description: Quality and resolution for MV12/MV22/MV72 camera models.
@@ -42913,53 +43499,6 @@ components:
       type: object
     inline_object_118:
       example:
-        broadcastThreshold: 30
-        multicastThreshold: 30
-        unknownUnicastThreshold: 30
-      properties:
-        broadcastThreshold:
-          description: Percentage (1 to 99) of total available port bandwidth for
-            broadcast traffic type. Default value 100 percent rate is to clear the
-            configuration.
-          type: integer
-        multicastThreshold:
-          description: Percentage (1 to 99) of total available port bandwidth for
-            multicast traffic type. Default value 100 percent rate is to clear the
-            configuration.
-          type: integer
-        unknownUnicastThreshold:
-          description: Percentage (1 to 99) of total available port bandwidth for
-            unknown unicast (dlf-destination lookup failure) traffic type. Default
-            value 100 percent rate is to clear the configuration.
-          type: integer
-      type: object
-    inline_object_119:
-      example:
-        rstpEnabled: true
-        stpBridgePriority:
-        - switches:
-          - Q234-ABCD-0001
-          - Q234-ABCD-0002
-          - Q234-ABCD-0003
-          stpPriority: 4096
-        - stacks:
-          - "789102"
-          - "123456"
-          - "129102"
-          stpPriority: 28672
-      properties:
-        rstpEnabled:
-          description: The spanning tree protocol status in network
-          type: boolean
-        stpBridgePriority:
-          description: STP bridge priority for switches/stacks or switch profiles.
-            An empty array will clear the STP bridge priority settings.
-          items:
-            $ref: '#/components/schemas/_networks__networkId__switch_stp_stpBridgePriority'
-          type: array
-      type: object
-    inline_object_116:
-      example:
         name: My route
         subnet: 192.168.1.0/24
         nextHopIp: 1.2.3.4
@@ -42987,51 +43526,7 @@ components:
       - nextHopIp
       - subnet
       type: object
-    _networks__networkId__appliance_firewall_portForwardingRules_rules:
-      properties:
-        name:
-          description: A descriptive name for the rule
-          type: string
-        lanIp:
-          description: The IP address of the server or device that hosts the internal
-            resource that you wish to make available on the WAN
-          type: string
-        uplink:
-          description: The physical WAN interface on which the traffic will arrive
-            ('internet1' or, if available, 'internet2' or 'both')
-          enum:
-          - internet1
-          - internet2
-          - both
-          type: string
-        publicPort:
-          description: A port or port ranges that will be forwarded to the host on
-            the LAN
-          type: string
-        localPort:
-          description: A port or port ranges that will receive the forwarded traffic
-            from the WAN
-          type: string
-        allowedIps:
-          description: An array of ranges of WAN IP addresses that are allowed to
-            make inbound connections on the specified ports or port ranges (or any)
-          items:
-            type: string
-          type: array
-        protocol:
-          description: TCP or UDP
-          enum:
-          - tcp
-          - udp
-          type: string
-      required:
-      - allowedIps
-      - lanIp
-      - localPort
-      - protocol
-      - publicPort
-      type: object
-    inline_object_117:
+    inline_object_119:
       example:
         name: My route
         subnet: 192.168.1.0/24
@@ -43057,7 +43552,7 @@ components:
           description: Option to prefer static route over OSPF routes
           type: boolean
       type: object
-    inline_object_114:
+    inline_object_116:
       example:
         name: L3 interface
         subnet: 192.168.1.0/24
@@ -43112,7 +43607,51 @@ components:
         ipv6:
           $ref: '#/components/schemas/_networks__networkId__switch_stacks__switchStackId__routing_interfaces__interfaceId__ipv6'
       type: object
-    inline_object_115:
+    _networks__networkId__appliance_firewall_portForwardingRules_rules:
+      properties:
+        name:
+          description: A descriptive name for the rule
+          type: string
+        lanIp:
+          description: The IP address of the server or device that hosts the internal
+            resource that you wish to make available on the WAN
+          type: string
+        uplink:
+          description: The physical WAN interface on which the traffic will arrive
+            ('internet1' or, if available, 'internet2' or 'both')
+          enum:
+          - internet1
+          - internet2
+          - both
+          type: string
+        publicPort:
+          description: A port or port ranges that will be forwarded to the host on
+            the LAN
+          type: string
+        localPort:
+          description: A port or port ranges that will receive the forwarded traffic
+            from the WAN
+          type: string
+        allowedIps:
+          description: An array of ranges of WAN IP addresses that are allowed to
+            make inbound connections on the specified ports or port ranges (or any)
+          items:
+            type: string
+          type: array
+        protocol:
+          description: TCP or UDP
+          enum:
+          - tcp
+          - udp
+          type: string
+      required:
+      - allowedIps
+      - lanIp
+      - localPort
+      - protocol
+      - publicPort
+      type: object
+    inline_object_117:
       example:
         dhcpMode: dhcpServer
         dhcpLeaseTime: 1 day
@@ -43205,7 +43744,7 @@ components:
             $ref: '#/components/schemas/_devices__serial__switch_routing_interfaces__interfaceId__dhcp_fixedIpAssignments'
           type: array
       type: object
-    inline_object_112:
+    inline_object_114:
       example:
         serial: QBZY-XWVU-TSRQ
       properties:
@@ -43215,7 +43754,7 @@ components:
       required:
       - serial
       type: object
-    inline_object_113:
+    inline_object_115:
       example:
         name: L3 interface
         subnet: 192.168.1.0/24
@@ -43275,7 +43814,7 @@ components:
       - name
       - vlanId
       type: object
-    inline_object_110:
+    inline_object_112:
       example:
         name: A cool stack
         serials:
@@ -43294,7 +43833,7 @@ components:
       - name
       - serials
       type: object
-    inline_object_111:
+    inline_object_113:
       example:
         serial: QBZY-XWVU-TSRQ
       properties:
@@ -43303,6 +43842,82 @@ components:
           type: string
       required:
       - serial
+      type: object
+    inline_object_110:
+      example:
+        enabled: true
+        helloTimerInSeconds: 10
+        deadTimerInSeconds: 40
+        areas:
+        - areaId: "1284392014819"
+          areaName: Backbone
+          areaType: normal
+        v3:
+          enabled: true
+          helloTimerInSeconds: 10
+          deadTimerInSeconds: 40
+          areas:
+          - areaId: "1284392014819"
+            areaName: V3 Backbone
+            areaType: normal
+        md5AuthenticationEnabled: true
+        md5AuthenticationKey:
+          id: 1234
+          passphrase: abc1234
+      properties:
+        enabled:
+          description: Boolean value to enable or disable OSPF routing. OSPF routing
+            is disabled by default.
+          type: boolean
+        helloTimerInSeconds:
+          description: Time interval in seconds at which hello packet will be sent
+            to OSPF neighbors to maintain connectivity. Value must be between 1 and
+            255. Default is 10 seconds.
+          type: integer
+        deadTimerInSeconds:
+          description: Time interval to determine when the peer will be declared inactive/dead.
+            Value must be between 1 and 65535
+          type: integer
+        areas:
+          description: OSPF areas
+          items:
+            $ref: '#/components/schemas/_networks__networkId__switch_routing_ospf_areas'
+          type: array
+        v3:
+          $ref: '#/components/schemas/_networks__networkId__switch_routing_ospf_v3'
+        md5AuthenticationEnabled:
+          description: Boolean value to enable or disable MD5 authentication. MD5
+            authentication is disabled by default.
+          type: boolean
+        md5AuthenticationKey:
+          $ref: '#/components/schemas/_networks__networkId__switch_routing_ospf_md5AuthenticationKey'
+      type: object
+    inline_object_111:
+      example:
+        vlan: 100
+        useCombinedPower: false
+        powerExceptions:
+        - serial: Q234-ABCD-0001
+          powerType: redundant
+        - serial: Q234-ABCD-0002
+          powerType: combined
+        - serial: Q234-ABCD-0003
+          powerType: redundant
+        - serial: Q234-ABCD-0004
+          powerType: useNetworkSetting
+      properties:
+        vlan:
+          description: Management VLAN
+          type: integer
+        useCombinedPower:
+          description: The use Combined Power as the default behavior of secondary
+            power supplies on supported devices.
+          type: boolean
+        powerExceptions:
+          description: Exceptions on a per switch basis to "useCombinedPower"
+          items:
+            $ref: '#/components/schemas/_networks__networkId__switch_settings_powerExceptions'
+          type: array
       type: object
     _networks__networkId__appliance_firewall_oneToManyNatRules_rules:
       properties:
@@ -43427,30 +44042,18 @@ components:
       type: object
     inline_object_109:
       example:
-        vlan: 100
-        useCombinedPower: false
-        powerExceptions:
-        - serial: Q234-ABCD-0001
-          powerType: redundant
-        - serial: Q234-ABCD-0002
-          powerType: combined
-        - serial: Q234-ABCD-0003
-          powerType: redundant
-        - serial: Q234-ABCD-0004
-          powerType: useNetworkSetting
+        interfaceIp: 192.168.1.2
+        multicastGroup: 192.168.128.0/24
       properties:
-        vlan:
-          description: Management VLAN
-          type: integer
-        useCombinedPower:
-          description: The use Combined Power as the default behavior of secondary
-            power supplies on supported devices.
-          type: boolean
-        powerExceptions:
-          description: Exceptions on a per switch basis to "useCombinedPower"
-          items:
-            $ref: '#/components/schemas/_networks__networkId__switch_settings_powerExceptions'
-          type: array
+        interfaceIp:
+          description: The IP address of the interface to use
+          type: string
+        multicastGroup:
+          description: '''Any'', or the IP address of a multicast group'
+          type: string
+      required:
+      - interfaceIp
+      - multicastGroup
       type: object
     _organizations__organizationId__claim_licenses:
       properties:
@@ -43472,70 +44075,6 @@ components:
       - key
       type: object
     inline_object_107:
-      example:
-        interfaceIp: 192.168.1.2
-        multicastGroup: 192.168.128.0/24
-      properties:
-        interfaceIp:
-          description: The IP address of the interface to use
-          type: string
-        multicastGroup:
-          description: '''Any'', or the IP address of a multicast group'
-          type: string
-      required:
-      - interfaceIp
-      - multicastGroup
-      type: object
-    inline_object_108:
-      example:
-        enabled: true
-        helloTimerInSeconds: 10
-        deadTimerInSeconds: 40
-        areas:
-        - areaId: "1284392014819"
-          areaName: Backbone
-          areaType: normal
-        v3:
-          enabled: true
-          helloTimerInSeconds: 10
-          deadTimerInSeconds: 40
-          areas:
-          - areaId: "1284392014819"
-            areaName: V3 Backbone
-            areaType: normal
-        md5AuthenticationEnabled: true
-        md5AuthenticationKey:
-          id: 1234
-          passphrase: abc1234
-      properties:
-        enabled:
-          description: Boolean value to enable or disable OSPF routing. OSPF routing
-            is disabled by default.
-          type: boolean
-        helloTimerInSeconds:
-          description: Time interval in seconds at which hello packet will be sent
-            to OSPF neighbors to maintain connectivity. Value must be between 1 and
-            255. Default is 10 seconds.
-          type: integer
-        deadTimerInSeconds:
-          description: Time interval to determine when the peer will be declared inactive/dead.
-            Value must be between 1 and 65535
-          type: integer
-        areas:
-          description: OSPF areas
-          items:
-            $ref: '#/components/schemas/_networks__networkId__switch_routing_ospf_areas'
-          type: array
-        v3:
-          $ref: '#/components/schemas/_networks__networkId__switch_routing_ospf_v3'
-        md5AuthenticationEnabled:
-          description: Boolean value to enable or disable MD5 authentication. MD5
-            authentication is disabled by default.
-          type: boolean
-        md5AuthenticationKey:
-          $ref: '#/components/schemas/_networks__networkId__switch_routing_ospf_md5AuthenticationKey'
-      type: object
-    inline_object_105:
       example:
         defaultSettings:
           igmpSnoopingEnabled: true
@@ -43563,16 +44102,7 @@ components:
             $ref: '#/components/schemas/_networks__networkId__switch_routing_multicast_overrides'
           type: array
       type: object
-    _organizations__organizationId__adaptivePolicy_policies_acls:
-      properties:
-        id:
-          description: The ID of the adaptive policy ACL
-          type: string
-        name:
-          description: The name of the adaptive policy ACL
-          type: string
-      type: object
-    inline_object_106:
+    inline_object_108:
       example:
         interfaceIp: 192.168.1.2
         multicastGroup: 192.168.128.0/24
@@ -43587,7 +44117,7 @@ components:
       - interfaceIp
       - multicastGroup
       type: object
-    inline_object_103:
+    inline_object_105:
       example:
         ruleIds:
         - "1284392014819"
@@ -43602,7 +44132,16 @@ components:
       required:
       - ruleIds
       type: object
-    inline_object_104:
+    _organizations__organizationId__adaptivePolicy_policies_acls:
+      properties:
+        id:
+          description: The ID of the adaptive policy ACL
+          type: string
+        name:
+          description: The name of the adaptive policy ACL
+          type: string
+      type: object
+    inline_object_106:
       example:
         vlan: 100
         protocol: TCP
@@ -43645,7 +44184,7 @@ components:
             to -1 to trust incoming DSCP. Default value is 0.
           type: integer
       type: object
-    inline_object_101:
+    inline_object_103:
       example:
         name: Weekdays schedule
         portSchedule:
@@ -43684,7 +44223,7 @@ components:
         portSchedule:
           $ref: '#/components/schemas/_networks__networkId__switch_portSchedules_portSchedule'
       type: object
-    inline_object_102:
+    inline_object_104:
       example:
         vlan: 100
         protocol: TCP
@@ -43728,6 +44267,71 @@ components:
           type: integer
       required:
       - vlan
+      type: object
+    inline_object_101:
+      example:
+        defaultMtuSize: 9578
+        overrides:
+        - switches:
+          - Q234-ABCD-0001
+          - Q234-ABCD-0002
+          - Q234-ABCD-0003
+          mtuSize: 1500
+        - switchProfiles:
+          - "1284392014819"
+          - "2983092129865"
+          mtuSize: 1600
+      properties:
+        defaultMtuSize:
+          description: MTU size for the entire network. Default value is 9578.
+          type: integer
+        overrides:
+          description: Override MTU size for individual switches or switch profiles.
+            An empty array will clear overrides.
+          items:
+            $ref: '#/components/schemas/_networks__networkId__switch_mtu_overrides'
+          type: array
+      type: object
+    inline_object_102:
+      example:
+        name: Weekdays schedule
+        portSchedule:
+          monday:
+            active: true
+            from: 9:00
+            to: 17:00
+          tuesday:
+            active: true
+            from: 9:00
+            to: 17:00
+          wednesday:
+            active: true
+            from: 9:00
+            to: 17:00
+          thursday:
+            active: true
+            from: 9:00
+            to: 17:00
+          friday:
+            active: true
+            from: 9:00
+            to: 17:00
+          saturday:
+            active: false
+            from: 0:00
+            to: 24:00
+          sunday:
+            active: false
+            from: 0:00
+            to: 24:00
+      properties:
+        name:
+          description: The name for your port schedule. Required
+          type: string
+        portSchedule:
+          $ref: '#/components/schemas/_networks__networkId__switch_portSchedules_portSchedule'
+      required:
+      - name
       type: object
     _networks__networkId__wireless_ssids__number__deviceTypeGroupPolicies_deviceTypePolicies:
       properties:
@@ -43779,44 +44383,37 @@ components:
       type: object
     inline_object_100:
       example:
-        name: Weekdays schedule
-        portSchedule:
-          monday:
-            active: true
-            from: 9:00
-            to: 17:00
-          tuesday:
-            active: true
-            from: 9:00
-            to: 17:00
-          wednesday:
-            active: true
-            from: 9:00
-            to: 17:00
-          thursday:
-            active: true
-            from: 9:00
-            to: 17:00
-          friday:
-            active: true
-            from: 9:00
-            to: 17:00
-          saturday:
-            active: false
-            from: 0:00
-            to: 24:00
-          sunday:
-            active: false
-            from: 0:00
-            to: 24:00
+        id: NDU2N18yXzM=
+        switchPorts:
+        - serial: Q234-ABCD-0001
+          portId: "1"
+        - serial: Q234-ABCD-0002
+          portId: "2"
+        - serial: Q234-ABCD-0003
+          portId: "3"
+        - serial: Q234-ABCD-0004
+          portId: "4"
+        - serial: Q234-ABCD-0005
+          portId: "5"
+        - serial: Q234-ABCD-0006
+          portId: "6"
+        - serial: Q234-ABCD-0007
+          portId: "7"
+        - serial: Q234-ABCD-0008
+          portId: "8"
       properties:
-        name:
-          description: The name for your port schedule. Required
-          type: string
-        portSchedule:
-          $ref: '#/components/schemas/_networks__networkId__switch_portSchedules_portSchedule'
-      required:
-      - name
+        switchPorts:
+          description: Array of switch or stack ports for updating aggregation group.
+            Minimum 2 and maximum 8 ports are supported.
+          items:
+            $ref: '#/components/schemas/_networks__networkId__switch_linkAggregations_switchPorts'
+          type: array
+        switchProfilePorts:
+          description: Array of switch profile ports for updating aggregation group.
+            Minimum 2 and maximum 8 ports are supported.
+          items:
+            $ref: '#/components/schemas/_networks__networkId__switch_linkAggregations_switchProfilePorts'
+          type: array
       type: object
     _networks__networkId__groupPolicies_scheduling_saturday:
       description: The schedule object for Saturday.
@@ -44548,6 +45145,26 @@ components:
       - destination
       - source
       type: object
+    _networks__networkId__policies_byClient_assigned:
+      example:
+        name: name
+        type: type
+        ssid:
+        - ssidNumber: 0
+        - ssidNumber: 0
+      properties:
+        name:
+          description: name of policy
+          type: string
+        type:
+          description: type of policy
+          type: string
+        ssid:
+          description: ssid
+          items:
+            $ref: '#/components/schemas/_networks__networkId__policies_byClient_ssid'
+          type: array
+      type: object
     _devices__serial__wireless_radio_settings_fiveGhzSettings:
       description: Manual radio settings for 5 GHz.
       properties:
@@ -44992,62 +45609,6 @@ components:
       type: object
     inline_object_178:
       example:
-        licenseId: "1234"
-        networkId: N_24329156
-        seatCount: 20
-      properties:
-        licenseId:
-          description: The ID of the SM license to assign seats from
-          type: string
-        networkId:
-          description: The ID of the SM network to assign the seats to
-          type: string
-        seatCount:
-          description: The number of seats to assign to the SM network. Must be less
-            than or equal to the total number of seats of the license
-          type: integer
-      required:
-      - licenseId
-      - networkId
-      - seatCount
-      type: object
-    inline_object_179:
-      example:
-        destOrganizationId: "2930418"
-        licenseIds:
-        - "123"
-        - "456"
-      properties:
-        destOrganizationId:
-          description: The ID of the organization to move the licenses to
-          type: string
-        licenseIds:
-          description: A list of IDs of licenses to move to the new organization
-          items:
-            type: string
-          type: array
-      required:
-      - destOrganizationId
-      - licenseIds
-      type: object
-    _networks__networkId__appliance_staticRoutes__staticRouteId__reservedIpRanges:
-      properties:
-        start:
-          description: The first IP in the reserved range
-          type: string
-        end:
-          description: The last IP in the reserved range
-          type: string
-        comment:
-          description: A text comment for the reserved range
-          type: string
-      required:
-      - comment
-      - end
-      - start
-      type: object
-    inline_object_176:
-      example:
         orders:
         - 4CXXXXXXX
         serials:
@@ -45072,20 +45633,7 @@ components:
             $ref: '#/components/schemas/_organizations__organizationId__inventory_claim_licenses'
           type: array
       type: object
-    _networks__networkId__floorPlans_bottomRightCorner:
-      description: The longitude and latitude of the bottom right corner of your floor
-        plan.
-      properties:
-        lat:
-          description: Latitude
-          format: float
-          type: number
-        lng:
-          description: Longitude
-          format: float
-          type: number
-      type: object
-    inline_object_177:
+    inline_object_179:
       example:
         serials:
         - Q234-ABCD-5678
@@ -45096,7 +45644,23 @@ components:
             type: string
           type: array
       type: object
-    inline_object_174:
+    _networks__networkId__appliance_staticRoutes__staticRouteId__reservedIpRanges:
+      properties:
+        start:
+          description: The first IP in the reserved range
+          type: string
+        end:
+          description: The last IP in the reserved range
+          type: string
+        comment:
+          description: A text comment for the reserved range
+          type: string
+      required:
+      - comment
+      - end
+      - start
+      type: object
+    inline_object_176:
       example:
         name: Sample VoIP Provider
         address: 123.123.123.1
@@ -45117,7 +45681,20 @@ components:
       - address
       - name
       type: object
-    inline_object_175:
+    _networks__networkId__floorPlans_bottomRightCorner:
+      description: The longitude and latitude of the bottom right corner of your floor
+        plan.
+      properties:
+        lat:
+          description: Latitude
+          format: float
+          type: number
+        lng:
+          description: Longitude
+          format: float
+          type: number
+      type: object
+    inline_object_177:
       example:
         name: Sample VoIP Provider
         address: 123.123.123.1
@@ -45135,7 +45712,7 @@ components:
             pings, the nearest hop will be used in its stead.
           type: boolean
       type: object
-    inline_object_172:
+    inline_object_174:
       example:
         name: My config template
         timeZone: America/Los_Angeles
@@ -45150,7 +45727,7 @@ components:
             article.</a>
           type: string
       type: object
-    inline_object_173:
+    inline_object_175:
       example:
         name: My switch port
         tags:
@@ -45280,7 +45857,7 @@ components:
             port has flexible stacking enabled.
           type: boolean
       type: object
-    inline_object_170:
+    inline_object_172:
       example:
         name: My organization
       properties:
@@ -45290,7 +45867,7 @@ components:
       required:
       - name
       type: object
-    inline_object_171:
+    inline_object_173:
       example:
         name: My config template
         timeZone: America/Los_Angeles
@@ -45310,6 +45887,42 @@ components:
           type: string
       required:
       - name
+      type: object
+    inline_object_170:
+      example: {}
+      properties:
+        serial:
+          description: Serial of camera
+          type: string
+        wirelessCredentialsSent:
+          description: Note whether credentials were sent successfully
+          type: boolean
+      type: object
+    inline_object_171:
+      example:
+        orders:
+        - 4CXXXXXXX
+        serials:
+        - Q234-ABCD-5678
+        licenses:
+        - key: Z2XXXXXXXXXX
+          mode: addDevices
+      properties:
+        orders:
+          description: The numbers of the orders that should be claimed
+          items:
+            type: string
+          type: array
+        serials:
+          description: The serials of the devices that should be claimed
+          items:
+            type: string
+          type: array
+        licenses:
+          description: The licenses that should be claimed
+          items:
+            $ref: '#/components/schemas/_organizations__organizationId__claim_licenses'
+          type: array
       type: object
     _networks__networkId__wireless_ssids__number__gre_concentrator:
       description: The EoGRE concentrator's settings
@@ -45380,67 +45993,13 @@ components:
       type: object
     inline_object_169:
       example:
-        orders:
-        - 4CXXXXXXX
-        serials:
-        - Q234-ABCD-5678
-        licenses:
-        - key: Z2XXXXXXXXXX
-          mode: addDevices
-      properties:
-        orders:
-          description: The numbers of the orders that should be claimed
-          items:
-            type: string
-          type: array
-        serials:
-          description: The serials of the devices that should be claimed
-          items:
-            type: string
-          type: array
-        licenses:
-          description: The licenses that should be claimed
-          items:
-            $ref: '#/components/schemas/_organizations__organizationId__claim_licenses'
-          type: array
-      type: object
-    inline_object_167:
-      example:
         name: example
       properties:
         name:
           description: Unique name of the artifact
           type: string
       type: object
-    inline_object_168:
-      example: {}
-      properties:
-        serial:
-          description: Serial of camera
-          type: string
-        wirelessCredentialsSent:
-          description: Note whether credentials were sent successfully
-          type: boolean
-      type: object
-    _networks__networkId__wireless_ssids__number__hotspot20_methods:
-      properties:
-        id:
-          description: ID of method
-          type: string
-        authenticationTypes:
-          description: 'The authentication types for the method. These should be formatted
-            as an object with the EAP method category in camelcase as the key and
-            the list of types as the value (nonEapInnerAuthentication: Reserved, PAP,
-            CHAP, MSCHAP, MSCHAPV2; eapInnerAuthentication: EAP-TLS, EAP-SIM, EAP-AKA,
-            EAP-TTLS with MSCHAPv2; credentials: SIM, USIM, NFC Secure Element, Hardware
-            Token, Softoken, Certificate, username/password, none, Reserved, Vendor
-            Specific; tunneledEapMethodCredentials: SIM, USIM, NFC Secure Element,
-            Hardware Token, Softoken, Certificate, username/password, Reserved, Anonymous,
-            Vendor Specific)'
-          properties: {}
-          type: object
-      type: object
-    inline_object_165:
+    inline_object_167:
       example:
         brandingPolicyIds:
         - "123"
@@ -45456,7 +46015,7 @@ components:
       required:
       - brandingPolicyIds
       type: object
-    inline_object_166:
+    inline_object_168:
       example:
         brandingPolicyId: "456"
         name: My Branding Policy
@@ -45501,7 +46060,25 @@ components:
         customLogo:
           $ref: '#/components/schemas/_organizations__organizationId__brandingPolicies_customLogo'
       type: object
-    inline_object_163:
+    _networks__networkId__wireless_ssids__number__hotspot20_methods:
+      properties:
+        id:
+          description: ID of method
+          type: string
+        authenticationTypes:
+          description: 'The authentication types for the method. These should be formatted
+            as an object with the EAP method category in camelcase as the key and
+            the list of types as the value (nonEapInnerAuthentication: Reserved, PAP,
+            CHAP, MSCHAP, MSCHAPV2; eapInnerAuthentication: EAP-TLS, EAP-SIM, EAP-AKA,
+            EAP-TTLS with MSCHAPv2; credentials: SIM, USIM, NFC Secure Element, Hardware
+            Token, Softoken, Certificate, username/password, none, Reserved, Vendor
+            Specific; tunneledEapMethodCredentials: SIM, USIM, NFC Secure Element,
+            Hardware Token, Softoken, Certificate, username/password, Reserved, Anonymous,
+            Vendor Specific)'
+          properties: {}
+          type: object
+      type: object
+    inline_object_165:
       example:
         rules:
         - comment: Allow TCP traffic to subnet with HTTP servers.
@@ -45524,7 +46101,7 @@ components:
             you've configured a syslog server) (optional)
           type: boolean
       type: object
-    inline_object_164:
+    inline_object_166:
       example:
         brandingPolicyId: "456"
         name: My Branding Policy
@@ -45573,36 +46150,7 @@ components:
       - enabled
       - name
       type: object
-    _networks__networkId__appliance_firewall_oneToOneNatRules_rules:
-      properties:
-        name:
-          description: A descriptive name for the rule
-          type: string
-        publicIp:
-          description: The IP address that will be used to access the internal resource
-            from the WAN
-          type: string
-        lanIp:
-          description: The IP address of the server or device that hosts the internal
-            resource that you wish to make available on the WAN
-          type: string
-        uplink:
-          description: The physical WAN interface on which the traffic will arrive
-            ('internet1' or, if available, 'internet2')
-          enum:
-          - internet1
-          - internet2
-          type: string
-        allowedInbound:
-          description: The ports this mapping will provide access on, and the remote
-            IPs that will be allowed access to the resource
-          items:
-            $ref: '#/components/schemas/_networks__networkId__appliance_firewall_oneToOneNatRules_allowedInbound'
-          type: array
-      required:
-      - lanIp
-      type: object
-    inline_object_161:
+    inline_object_163:
       example:
         allowedRules:
         - ruleId: meraki:intrusion/snort/GID/01/SID/688
@@ -45619,7 +46167,7 @@ components:
       required:
       - allowedRules
       type: object
-    inline_object_162:
+    inline_object_164:
       example:
         peers:
         - name: My peer 1
@@ -45668,7 +46216,85 @@ components:
       required:
       - peers
       type: object
-    inline_object_160:
+    _networks__networkId__appliance_firewall_oneToOneNatRules_rules:
+      properties:
+        name:
+          description: A descriptive name for the rule
+          type: string
+        publicIp:
+          description: The IP address that will be used to access the internal resource
+            from the WAN
+          type: string
+        lanIp:
+          description: The IP address of the server or device that hosts the internal
+            resource that you wish to make available on the WAN
+          type: string
+        uplink:
+          description: The physical WAN interface on which the traffic will arrive
+            ('internet1' or, if available, 'internet2')
+          enum:
+          - internet1
+          - internet2
+          type: string
+        allowedInbound:
+          description: The ports this mapping will provide access on, and the remote
+            IPs that will be allowed access to the resource
+          items:
+            $ref: '#/components/schemas/_networks__networkId__appliance_firewall_oneToOneNatRules_allowedInbound'
+          type: array
+      required:
+      - lanIp
+      type: object
+    inline_object_161:
+      example:
+        type: wanUtilization
+        enabled: true
+        alertCondition:
+          duration: 60
+          window: 600
+          bit_rate_bps: 10000
+          interface: wan1
+        recipients:
+          emails:
+          - admin@example.org
+          httpServerIds:
+          - aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vcGF0aA==
+        networkTags:
+        - tag1
+        - tag2
+        description: WAN 1 high utilization
+      properties:
+        type:
+          description: The alert type
+          enum:
+          - voipJitter
+          - voipPacketLoss
+          - voipMos
+          - wanLatency
+          - wanPacketLoss
+          - wanUtilization
+          - wanStatus
+          - appOutage
+          type: string
+        alertCondition:
+          $ref: '#/components/schemas/_organizations__organizationId__alerts_profiles_alertCondition'
+        recipients:
+          $ref: '#/components/schemas/_organizations__organizationId__alerts_profiles_recipients'
+        networkTags:
+          description: Networks with these tags will be monitored for the alert
+          items:
+            type: string
+          type: array
+        description:
+          description: User supplied description of the alert
+          type: string
+      required:
+      - alertCondition
+      - networkTags
+      - recipients
+      - type
+      type: object
+    inline_object_162:
       example:
         enabled: true
       properties:
@@ -45699,6 +46325,39 @@ components:
         description:
           description: User supplied description of the alert
           type: string
+      type: object
+    inline_object_160:
+      example:
+        name: Miles Meraki
+        orgAccess: none
+        tags:
+        - tag: west
+          access: read-only
+      properties:
+        name:
+          description: The name of the dashboard administrator
+          type: string
+        orgAccess:
+          description: The privilege of the dashboard administrator on the organization.
+            Can be one of 'full', 'read-only', 'enterprise' or 'none'
+          enum:
+          - full
+          - read-only
+          - enterprise
+          - none
+          type: string
+        tags:
+          description: The list of tags that the dashboard administrator has privileges
+            on
+          items:
+            $ref: '#/components/schemas/_organizations__organizationId__admins_tags'
+          type: array
+        networks:
+          description: The list of networks that the dashboard administrator has privileges
+            on
+          items:
+            $ref: '#/components/schemas/_organizations__organizationId__admins_networks'
+          type: array
       type: object
     _devices__serial__cellularGateway_lan_reservedIpRanges:
       properties:
@@ -45914,7 +46573,7 @@ components:
             broker.
           type: boolean
       type: object
-    inline_object_192:
+    inline_object_194:
       example:
         sourceSerial: Q234-ABCD-5678
         targetSerials:
@@ -45936,7 +46595,7 @@ components:
       - sourceSerial
       - targetSerials
       type: object
-    inline_object_190:
+    inline_object_192:
       example:
         orgAccess: none
         networks:
@@ -45970,7 +46629,7 @@ components:
             $ref: '#/components/schemas/_organizations__organizationId__samlRoles_networks'
           type: array
       type: object
-    inline_object_191:
+    inline_object_193:
       example:
         v2cEnabled: false
         v3Enabled: true
@@ -46015,83 +46674,21 @@ components:
             type: string
           type: array
       type: object
-    _networks__networkId__cellularGateway_connectivityMonitoringDestinations_destinations:
-      properties:
-        ip:
-          description: The IP address to test connectivity with
-          type: string
-        description:
-          default: ""
-          description: Description of the testing destination. Optional, defaults
-            to an empty string
-          type: string
-        default:
-          default: false
-          description: Boolean indicating whether this is the default testing destination
-            (true) or not (false). Defaults to false. Only one default is allowed
-          type: boolean
-      required:
-      - ip
-      type: object
-    _networks__networkId__wireless_ssids__number__localRadius:
-      description: The current setting for Local Authentication, a built-in RADIUS
-        server on the access point. Only valid if authMode is '8021x-localradius'.
-      properties:
-        cacheTimeout:
-          description: The duration (in seconds) for which LDAP and OCSP lookups are
-            cached.
-          type: integer
-        passwordAuthentication:
-          $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__localRadius_passwordAuthentication'
-        certificateAuthentication:
-          $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__localRadius_certificateAuthentication'
-      type: object
-    inline_response_200:
+    inline_object_190:
       example:
-        cloud:
-          region:
-            name: name
-        name: name
-        id: id
-        api:
-          enabled: true
-        url: url
-        licensing:
-          model: co-term
+        idpId: ab0c1de23Fg
+        x509certSha1Fingerprint: 00:11:22:33:44:55:66:77:88:99:00:11:22:33:44:55:66:77:88:99
+        sloLogoutUrl: https://somewhere.com
       properties:
-        id:
-          description: Organization ID
+        x509certSha1Fingerprint:
+          description: Fingerprint (SHA1) of the SAML certificate provided by your
+            Identity Provider (IdP). This will be used for encryption / validation.
           type: string
-        name:
-          description: Organization name
+        sloLogoutUrl:
+          description: Dashboard will redirect users to this URL when they sign out.
           type: string
-        url:
-          description: Organization URL
-          type: string
-        api:
-          $ref: '#/components/schemas/_organizations_api'
-        licensing:
-          $ref: '#/components/schemas/_organizations_licensing'
-        cloud:
-          $ref: '#/components/schemas/_organizations_cloud'
       type: object
-    _networks__networkId__appliance_connectivityMonitoringDestinations_destinations:
-      properties:
-        ip:
-          description: The IP address to test connectivity with
-          type: string
-        description:
-          description: Description of the testing destination. Optional, defaults
-            to null
-          type: string
-        default:
-          description: Boolean indicating whether this is the default testing destination
-            (true) or not (false). Defaults to false. Only one default is allowed
-          type: boolean
-      required:
-      - ip
-      type: object
-    inline_object_189:
+    inline_object_191:
       example:
         role: myrole
         orgAccess: none
@@ -46129,7 +46726,82 @@ components:
       - orgAccess
       - role
       type: object
-    inline_object_187:
+    _networks__networkId__cellularGateway_connectivityMonitoringDestinations_destinations:
+      properties:
+        ip:
+          description: The IP address to test connectivity with
+          type: string
+        description:
+          default: ""
+          description: Description of the testing destination. Optional, defaults
+            to an empty string
+          type: string
+        default:
+          default: false
+          description: Boolean indicating whether this is the default testing destination
+            (true) or not (false). Defaults to false. Only one default is allowed
+          type: boolean
+      required:
+      - ip
+      type: object
+    _networks__networkId__wireless_ssids__number__localRadius:
+      description: The current setting for Local Authentication, a built-in RADIUS
+        server on the access point. Only valid if authMode is '8021x-localradius'.
+      properties:
+        cacheTimeout:
+          description: The duration (in seconds) for which LDAP and OCSP lookups are
+            cached.
+          type: integer
+        passwordAuthentication:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__localRadius_passwordAuthentication'
+        certificateAuthentication:
+          $ref: '#/components/schemas/_networks__networkId__wireless_ssids__number__localRadius_certificateAuthentication'
+      type: object
+    inline_response_200:
+      example:
+        clientId: clientId
+        name: name
+        assigned:
+        - name: name
+          type: type
+          ssid:
+          - ssidNumber: 0
+          - ssidNumber: 0
+        - name: name
+          type: type
+          ssid:
+          - ssidNumber: 0
+          - ssidNumber: 0
+      properties:
+        name:
+          description: Name of client
+          type: string
+        clientId:
+          description: ID of client
+          type: string
+        assigned:
+          description: Assigned policies
+          items:
+            $ref: '#/components/schemas/_networks__networkId__policies_byClient_assigned'
+          type: array
+      type: object
+    _networks__networkId__appliance_connectivityMonitoringDestinations_destinations:
+      properties:
+        ip:
+          description: The IP address to test connectivity with
+          type: string
+        description:
+          description: Description of the testing destination. Optional, defaults
+            to null
+          type: string
+        default:
+          description: Boolean indicating whether this is the default testing destination
+            (true) or not (false). Defaults to false. Only one default is allowed
+          type: boolean
+      required:
+      - ip
+      type: object
+    inline_object_189:
       example:
         idpId: ab0c1de23Fg
         x509certSha1Fingerprint: 00:11:22:33:44:55:66:77:88:99:00:11:22:33:44:55:66:77:88:99
@@ -46145,33 +46817,7 @@ components:
       required:
       - x509certSha1Fingerprint
       type: object
-    _networks__networkId__appliance_vpn_siteToSiteVpn_hubs:
-      properties:
-        hubId:
-          description: The network ID of the hub.
-          type: string
-        useDefaultRoute:
-          description: Only valid in 'spoke' mode. Indicates whether default route
-            traffic should be sent to this hub.
-          type: boolean
-      required:
-      - hubId
-      type: object
-    inline_object_188:
-      example:
-        idpId: ab0c1de23Fg
-        x509certSha1Fingerprint: 00:11:22:33:44:55:66:77:88:99:00:11:22:33:44:55:66:77:88:99
-        sloLogoutUrl: https://somewhere.com
-      properties:
-        x509certSha1Fingerprint:
-          description: Fingerprint (SHA1) of the SAML certificate provided by your
-            Identity Provider (IdP). This will be used for encryption / validation.
-          type: string
-        sloLogoutUrl:
-          description: Dashboard will redirect users to this URL when they sign out.
-          type: string
-      type: object
-    inline_object_185:
+    inline_object_187:
       example:
         name: Long Island Office
         networkIds:
@@ -46200,7 +46846,19 @@ components:
       - name
       - networkIds
       type: object
-    inline_object_186:
+    _networks__networkId__appliance_vpn_siteToSiteVpn_hubs:
+      properties:
+        hubId:
+          description: The network ID of the hub.
+          type: string
+        useDefaultRoute:
+          description: Only valid in 'spoke' mode. Indicates whether default route
+            traffic should be sent to this hub.
+          type: boolean
+      required:
+      - hubId
+      type: object
+    inline_object_188:
       example:
         enabled: true
       properties:
@@ -46208,7 +46866,7 @@ components:
           description: Boolean for updating SAML SSO enabled settings.
           type: boolean
       type: object
-    inline_object_183:
+    inline_object_185:
       example:
         enforcePasswordExpiration: true
         passwordExpirationDays: 90
@@ -46286,9 +46944,9 @@ components:
             type: string
           type: array
         apiAuthentication:
-          $ref: '#/components/schemas/inline_response_200_3_apiAuthentication'
+          $ref: '#/components/schemas/inline_response_200_4_apiAuthentication'
       type: object
-    inline_object_184:
+    inline_object_186:
       example:
         name: Long Island Office
         timeZone: America/Los_Angeles
@@ -46343,7 +47001,7 @@ components:
       - name
       - productTypes
       type: object
-    inline_object_181:
+    inline_object_183:
       example:
         licenseIdToRenew: "123"
         unusedLicenseId: "1234"
@@ -46361,7 +47019,7 @@ components:
       - licenseIdToRenew
       - unusedLicenseId
       type: object
-    inline_object_182:
+    inline_object_184:
       example: {}
       properties:
         deviceSerial:
@@ -46371,7 +47029,26 @@ components:
             license.
           type: string
       type: object
-    inline_object_180:
+    inline_object_181:
+      example:
+        destOrganizationId: "2930418"
+        licenseIds:
+        - "123"
+        - "456"
+      properties:
+        destOrganizationId:
+          description: The ID of the organization to move the licenses to
+          type: string
+        licenseIds:
+          description: A list of IDs of licenses to move to the new organization
+          items:
+            type: string
+          type: array
+      required:
+      - destOrganizationId
+      - licenseIds
+      type: object
+    inline_object_182:
       example:
         destOrganizationId: "2930418"
         licenseId: "1234"
@@ -46390,6 +47067,27 @@ components:
       required:
       - destOrganizationId
       - licenseId
+      - seatCount
+      type: object
+    inline_object_180:
+      example:
+        licenseId: "1234"
+        networkId: N_24329156
+        seatCount: 20
+      properties:
+        licenseId:
+          description: The ID of the SM license to assign seats from
+          type: string
+        networkId:
+          description: The ID of the SM network to assign the seats to
+          type: string
+        seatCount:
+          description: The number of seats to assign to the SM network. Must be less
+            than or equal to the total number of seats of the license
+          type: integer
+      required:
+      - licenseId
+      - networkId
       - seatCount
       type: object
     _networks__networkId__groupPolicies_firewallAndTrafficShaping_l3FirewallRules:
@@ -46547,6 +47245,18 @@ x-batchable-actions:
 - group: Custom performance class
   summary: Update a custom performance class for an MX network
   resource: /networks/{networkId}/appliance/trafficShaping/customPerformanceClasses/{customPerformanceClassId}
+  operation: update
+- group: Dai trusted server
+  summary: Add a server to be trusted by Dynamic ARP Inspection on this network
+  resource: /networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers
+  operation: create
+- group: Dai trusted server
+  summary: Remove a server from being trusted by Dynamic ARP Inspection on this network
+  resource: /networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}
+  operation: destroy
+- group: Dai trusted server
+  summary: Update a server that is trusted by Dynamic ARP Inspection on this network
+  resource: /networks/{networkId}/switch/dhcpServerPolicy/arpInspection/trustedServers/{trustedServerId}
   operation: update
 - group: Device
   summary: Update the attributes of a device

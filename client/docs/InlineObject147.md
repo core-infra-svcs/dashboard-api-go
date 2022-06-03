@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the organization | [optional] 
-**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
+**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
+**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject147WithDefaults instantiates a new InlineObject147 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConcentrator
 
-`func (o *InlineObject147) GetName() string`
+`func (o *InlineObject147) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConcentratorOk
 
-`func (o *InlineObject147) GetNameOk() (*string, bool)`
+`func (o *InlineObject147) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConcentrator
 
-`func (o *InlineObject147) SetName(v string)`
+`func (o *InlineObject147) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
 
-SetName sets Name field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasName
+### HasConcentrator
 
-`func (o *InlineObject147) HasName() bool`
+`func (o *InlineObject147) HasConcentrator() bool`
 
-HasName returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetApi
+### GetSplitTunnel
 
-`func (o *InlineObject147) GetApi() OrganizationsOrganizationIdApi`
+`func (o *InlineObject147) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetSplitTunnelOk
 
-`func (o *InlineObject147) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
+`func (o *InlineObject147) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetSplitTunnel
 
-`func (o *InlineObject147) SetApi(v OrganizationsOrganizationIdApi)`
+`func (o *InlineObject147) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
 
-SetApi sets Api field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasApi
+### HasSplitTunnel
 
-`func (o *InlineObject147) HasApi() bool`
+`func (o *InlineObject147) HasSplitTunnel() bool`
 
-HasApi returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
+
+### GetFailover
+
+`func (o *InlineObject147) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
+
+GetFailover returns the Failover field if non-nil, zero value otherwise.
+
+### GetFailoverOk
+
+`func (o *InlineObject147) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
+
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFailover
+
+`func (o *InlineObject147) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
+
+SetFailover sets Failover field to given value.
+
+### HasFailover
+
+`func (o *InlineObject147) HasFailover() bool`
+
+HasFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

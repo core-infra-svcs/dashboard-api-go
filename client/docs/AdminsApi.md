@@ -33,7 +33,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationAdmin := *openapiclient.NewInlineObject157("Email_example", "Name_example", "OrgAccess_example") // InlineObject157 | 
+    createOrganizationAdmin := *openapiclient.NewInlineObject159("Email_example", "Name_example", "OrgAccess_example") // InlineObject159 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -63,7 +63,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdminReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdmin** | [**InlineObject157**](InlineObject157.md) |  | 
+ **createOrganizationAdmin** | [**InlineObject159**](InlineObject159.md) |  | 
 
 ### Return type
 
@@ -247,7 +247,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | 
     adminId := "adminId_example" // string | 
-    updateOrganizationAdmin := *openapiclient.NewInlineObject158() // InlineObject158 |  (optional)
+    updateOrganizationAdmin := *openapiclient.NewInlineObject160() // InlineObject160 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdmin** | [**InlineObject158**](InlineObject158.md) |  | 
+ **updateOrganizationAdmin** | [**InlineObject160**](InlineObject160.md) |  | 
 
 ### Return type
 

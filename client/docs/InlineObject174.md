@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the VoIP provider | 
-**Address** | **string** | The IP address (IPv4 only) or hostname of the media server to monitor | 
-**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
+**Name** | Pointer to **string** | The name of the configuration template | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
 
 ## Methods
 
 ### NewInlineObject174
 
-`func NewInlineObject174(name string, address string, ) *InlineObject174`
+`func NewInlineObject174() *InlineObject174`
 
 NewInlineObject174 instantiates a new InlineObject174 object
 This constructor will assign default values to properties that have it defined,
@@ -46,51 +45,36 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetAddress
+`func (o *InlineObject174) HasName() bool`
 
-`func (o *InlineObject174) GetAddress() string`
+HasName returns a boolean if a field has been set.
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+### GetTimeZone
 
-### GetAddressOk
+`func (o *InlineObject174) GetTimeZone() string`
 
-`func (o *InlineObject174) GetAddressOk() (*string, bool)`
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+### GetTimeZoneOk
+
+`func (o *InlineObject174) GetTimeZoneOk() (*string, bool)`
+
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetTimeZone
 
-`func (o *InlineObject174) SetAddress(v string)`
+`func (o *InlineObject174) SetTimeZone(v string)`
 
-SetAddress sets Address field to given value.
+SetTimeZone sets TimeZone field to given value.
 
+### HasTimeZone
 
-### GetBestEffortMonitoringEnabled
+`func (o *InlineObject174) HasTimeZone() bool`
 
-`func (o *InlineObject174) GetBestEffortMonitoringEnabled() bool`
-
-GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
-
-### GetBestEffortMonitoringEnabledOk
-
-`func (o *InlineObject174) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
-
-GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBestEffortMonitoringEnabled
-
-`func (o *InlineObject174) SetBestEffortMonitoringEnabled(v bool)`
-
-SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
-
-### HasBestEffortMonitoringEnabled
-
-`func (o *InlineObject174) HasBestEffortMonitoringEnabled() bool`
-
-HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

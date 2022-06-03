@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules**](NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges**](NetworksNetworkIdWirelessSsidsNumberSchedulesRanges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds**](NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject144WithDefaults instantiates a new InlineObject144 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetEnabled
 
-`func (o *InlineObject144) GetTrafficShapingEnabled() bool`
+`func (o *InlineObject144) GetEnabled() bool`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetEnabledOk
 
-`func (o *InlineObject144) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineObject144) GetEnabledOk() (*bool, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetEnabled
 
-`func (o *InlineObject144) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineObject144) SetEnabled(v bool)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTrafficShapingEnabled
+### HasEnabled
 
-`func (o *InlineObject144) HasTrafficShapingEnabled() bool`
+`func (o *InlineObject144) HasEnabled() bool`
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetDefaultRulesEnabled
+### GetRanges
 
-`func (o *InlineObject144) GetDefaultRulesEnabled() bool`
+`func (o *InlineObject144) GetRanges() []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetRangesOk
 
-`func (o *InlineObject144) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineObject144) GetRangesOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetRanges
 
-`func (o *InlineObject144) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineObject144) SetRanges(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasDefaultRulesEnabled
+### HasRanges
 
-`func (o *InlineObject144) HasDefaultRulesEnabled() bool`
+`func (o *InlineObject144) HasRanges() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetRules
+### GetRangesInSeconds
 
-`func (o *InlineObject144) GetRules() []NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules`
+`func (o *InlineObject144) GetRangesInSeconds() []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetRangesInSecondsOk
 
-`func (o *InlineObject144) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules, bool)`
+`func (o *InlineObject144) GetRangesInSecondsOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetRangesInSeconds
 
-`func (o *InlineObject144) SetRules(v []NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules)`
+`func (o *InlineObject144) SetRangesInSeconds(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds)`
 
-SetRules sets Rules field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasRules
+### HasRangesInSeconds
 
-`func (o *InlineObject144) HasRules() bool`
+`func (o *InlineObject144) HasRangesInSeconds() bool`
 
-HasRules returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

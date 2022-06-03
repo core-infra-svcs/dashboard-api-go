@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
-**CustomPieChartItems** | Pointer to [**[]NetworksNetworkIdTrafficAnalysisCustomPieChartItems**](NetworksNetworkIdTrafficAnalysisCustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
+**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
+**StpBridgePriority** | Pointer to [**[]NetworksNetworkIdSwitchStpStpBridgePriority**](NetworksNetworkIdSwitchStpStpBridgePriority.md) | STP bridge priority for switches/stacks or switch profiles. An empty array will clear the STP bridge priority settings. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject121WithDefaults instantiates a new InlineObject121 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetRstpEnabled
 
-`func (o *InlineObject121) GetMode() string`
+`func (o *InlineObject121) GetRstpEnabled() bool`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetRstpEnabledOk
 
-`func (o *InlineObject121) GetModeOk() (*string, bool)`
+`func (o *InlineObject121) GetRstpEnabledOk() (*bool, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetRstpEnabled
 
-`func (o *InlineObject121) SetMode(v string)`
+`func (o *InlineObject121) SetRstpEnabled(v bool)`
 
-SetMode sets Mode field to given value.
+SetRstpEnabled sets RstpEnabled field to given value.
 
-### HasMode
+### HasRstpEnabled
 
-`func (o *InlineObject121) HasMode() bool`
+`func (o *InlineObject121) HasRstpEnabled() bool`
 
-HasMode returns a boolean if a field has been set.
+HasRstpEnabled returns a boolean if a field has been set.
 
-### GetCustomPieChartItems
+### GetStpBridgePriority
 
-`func (o *InlineObject121) GetCustomPieChartItems() []NetworksNetworkIdTrafficAnalysisCustomPieChartItems`
+`func (o *InlineObject121) GetStpBridgePriority() []NetworksNetworkIdSwitchStpStpBridgePriority`
 
-GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
+GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
 
-### GetCustomPieChartItemsOk
+### GetStpBridgePriorityOk
 
-`func (o *InlineObject121) GetCustomPieChartItemsOk() (*[]NetworksNetworkIdTrafficAnalysisCustomPieChartItems, bool)`
+`func (o *InlineObject121) GetStpBridgePriorityOk() (*[]NetworksNetworkIdSwitchStpStpBridgePriority, bool)`
 
-GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
+GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPieChartItems
+### SetStpBridgePriority
 
-`func (o *InlineObject121) SetCustomPieChartItems(v []NetworksNetworkIdTrafficAnalysisCustomPieChartItems)`
+`func (o *InlineObject121) SetStpBridgePriority(v []NetworksNetworkIdSwitchStpStpBridgePriority)`
 
-SetCustomPieChartItems sets CustomPieChartItems field to given value.
+SetStpBridgePriority sets StpBridgePriority field to given value.
 
-### HasCustomPieChartItems
+### HasStpBridgePriority
 
-`func (o *InlineObject121) HasCustomPieChartItems() bool`
+`func (o *InlineObject121) HasStpBridgePriority() bool`
 
-HasCustomPieChartItems returns a boolean if a field has been set.
+HasStpBridgePriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Alerts** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyAlerts**](NetworksNetworkIdSwitchDhcpServerPolicyAlerts.md) |  | [optional] 
 **DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
 **AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set to block. An empty array will clear the entries. | [optional] 
 **BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set to allow. An empty array will clear the entries. | [optional] 
+**ArpInspection** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspection**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspection.md) |  | [optional] 
 
 ## Methods
 
@@ -26,6 +28,31 @@ will change when the set of required properties is changed
 NewInlineObject95WithDefaults instantiates a new InlineObject95 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAlerts
+
+`func (o *InlineObject95) GetAlerts() NetworksNetworkIdSwitchDhcpServerPolicyAlerts`
+
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+
+### GetAlertsOk
+
+`func (o *InlineObject95) GetAlertsOk() (*NetworksNetworkIdSwitchDhcpServerPolicyAlerts, bool)`
+
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlerts
+
+`func (o *InlineObject95) SetAlerts(v NetworksNetworkIdSwitchDhcpServerPolicyAlerts)`
+
+SetAlerts sets Alerts field to given value.
+
+### HasAlerts
+
+`func (o *InlineObject95) HasAlerts() bool`
+
+HasAlerts returns a boolean if a field has been set.
 
 ### GetDefaultPolicy
 
@@ -101,6 +128,31 @@ SetBlockedServers sets BlockedServers field to given value.
 `func (o *InlineObject95) HasBlockedServers() bool`
 
 HasBlockedServers returns a boolean if a field has been set.
+
+### GetArpInspection
+
+`func (o *InlineObject95) GetArpInspection() NetworksNetworkIdSwitchDhcpServerPolicyArpInspection`
+
+GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
+
+### GetArpInspectionOk
+
+`func (o *InlineObject95) GetArpInspectionOk() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspection, bool)`
+
+GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetArpInspection
+
+`func (o *InlineObject95) SetArpInspection(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspection)`
+
+SetArpInspection sets ArpInspection field to given value.
+
+### HasArpInspection
+
+`func (o *InlineObject95) HasArpInspection() bool`
+
+HasArpInspection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

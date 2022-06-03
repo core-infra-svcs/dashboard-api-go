@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BrandingPolicyIds** | **[]string** | A list of branding policy IDs arranged in ascending priority order (IDs later in the array have higher priority). | 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
 ### NewInlineObject165
 
-`func NewInlineObject165(brandingPolicyIds []string, ) *InlineObject165`
+`func NewInlineObject165() *InlineObject165`
 
 NewInlineObject165 instantiates a new InlineObject165 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject165WithDefaults instantiates a new InlineObject165 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBrandingPolicyIds
+### GetRules
 
-`func (o *InlineObject165) GetBrandingPolicyIds() []string`
+`func (o *InlineObject165) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
 
-GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetBrandingPolicyIdsOk
+### GetRulesOk
 
-`func (o *InlineObject165) GetBrandingPolicyIdsOk() (*[]string, bool)`
+`func (o *InlineObject165) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
 
-GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBrandingPolicyIds
+### SetRules
 
-`func (o *InlineObject165) SetBrandingPolicyIds(v []string)`
+`func (o *InlineObject165) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
 
-SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
+
+`func (o *InlineObject165) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
+
+### GetSyslogDefaultRule
+
+`func (o *InlineObject165) GetSyslogDefaultRule() bool`
+
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+
+### GetSyslogDefaultRuleOk
+
+`func (o *InlineObject165) GetSyslogDefaultRuleOk() (*bool, bool)`
+
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSyslogDefaultRule
+
+`func (o *InlineObject165) SetSyslogDefaultRule(v bool)`
+
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+
+### HasSyslogDefaultRule
+
+`func (o *InlineObject165) HasSyslogDefaultRule() bool`
+
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
-**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
-**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings.md) |  | [optional] 
+**Name** | **string** | Name of the Dashboard branding policy. | 
+**Enabled** | **bool** | Boolean indicating whether this policy is enabled. | 
+**AdminSettings** | [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
 **CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject166
 
-`func NewInlineObject166() *InlineObject166`
+`func NewInlineObject166(name string, enabled bool, adminSettings OrganizationsOrganizationIdBrandingPoliciesAdminSettings, ) *InlineObject166`
 
 NewInlineObject166 instantiates a new InlineObject166 object
 This constructor will assign default values to properties that have it defined,
@@ -48,11 +48,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject166) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetEnabled
 
@@ -73,11 +68,6 @@ and a boolean to check if the value has been set.
 
 SetEnabled sets Enabled field to given value.
 
-### HasEnabled
-
-`func (o *InlineObject166) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
 
 ### GetAdminSettings
 
@@ -98,28 +88,23 @@ and a boolean to check if the value has been set.
 
 SetAdminSettings sets AdminSettings field to given value.
 
-### HasAdminSettings
-
-`func (o *InlineObject166) HasAdminSettings() bool`
-
-HasAdminSettings returns a boolean if a field has been set.
 
 ### GetHelpSettings
 
-`func (o *InlineObject166) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings`
+`func (o *InlineObject166) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
 
 GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
 
 ### GetHelpSettingsOk
 
-`func (o *InlineObject166) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings, bool)`
+`func (o *InlineObject166) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
 
 GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHelpSettings
 
-`func (o *InlineObject166) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings)`
+`func (o *InlineObject166) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
 
 SetHelpSettings sets HelpSettings field to given value.
 

@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new template | 
-**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
-**Headers** | Pointer to **string** | The liquid template used with the webhook headers. | [optional] 
-**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
-**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
+**Name** | **string** | A name for easy reference to the HTTP server | 
+**Url** | **string** | The URL of the HTTP server. Once set, cannot be updated. | 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject124
 
-`func NewInlineObject124(name string, ) *InlineObject124`
+`func NewInlineObject124(name string, url string, ) *InlineObject124`
 
 NewInlineObject124 instantiates a new InlineObject124 object
 This constructor will assign default values to properties that have it defined,
@@ -49,105 +48,75 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetBody
+### GetUrl
 
-`func (o *InlineObject124) GetBody() string`
+`func (o *InlineObject124) GetUrl() string`
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetBodyOk
+### GetUrlOk
 
-`func (o *InlineObject124) GetBodyOk() (*string, bool)`
+`func (o *InlineObject124) GetUrlOk() (*string, bool)`
 
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetUrl
 
-`func (o *InlineObject124) SetBody(v string)`
+`func (o *InlineObject124) SetUrl(v string)`
 
-SetBody sets Body field to given value.
+SetUrl sets Url field to given value.
 
-### HasBody
 
-`func (o *InlineObject124) HasBody() bool`
+### GetSharedSecret
 
-HasBody returns a boolean if a field has been set.
+`func (o *InlineObject124) GetSharedSecret() string`
 
-### GetHeaders
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-`func (o *InlineObject124) GetHeaders() string`
+### GetSharedSecretOk
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+`func (o *InlineObject124) GetSharedSecretOk() (*string, bool)`
 
-### GetHeadersOk
-
-`func (o *InlineObject124) GetHeadersOk() (*string, bool)`
-
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetSharedSecret
 
-`func (o *InlineObject124) SetHeaders(v string)`
+`func (o *InlineObject124) SetSharedSecret(v string)`
 
-SetHeaders sets Headers field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasHeaders
+### HasSharedSecret
 
-`func (o *InlineObject124) HasHeaders() bool`
+`func (o *InlineObject124) HasSharedSecret() bool`
 
-HasHeaders returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
 
-### GetBodyFile
+### GetPayloadTemplate
 
-`func (o *InlineObject124) GetBodyFile() string`
+`func (o *InlineObject124) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
 
-GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
 
-### GetBodyFileOk
+### GetPayloadTemplateOk
 
-`func (o *InlineObject124) GetBodyFileOk() (*string, bool)`
+`func (o *InlineObject124) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
 
-GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBodyFile
+### SetPayloadTemplate
 
-`func (o *InlineObject124) SetBodyFile(v string)`
+`func (o *InlineObject124) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
 
-SetBodyFile sets BodyFile field to given value.
+SetPayloadTemplate sets PayloadTemplate field to given value.
 
-### HasBodyFile
+### HasPayloadTemplate
 
-`func (o *InlineObject124) HasBodyFile() bool`
+`func (o *InlineObject124) HasPayloadTemplate() bool`
 
-HasBodyFile returns a boolean if a field has been set.
-
-### GetHeadersFile
-
-`func (o *InlineObject124) GetHeadersFile() string`
-
-GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
-
-### GetHeadersFileOk
-
-`func (o *InlineObject124) GetHeadersFileOk() (*string, bool)`
-
-GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeadersFile
-
-`func (o *InlineObject124) SetHeadersFile(v string)`
-
-SetHeadersFile sets HeadersFile field to given value.
-
-### HasHeadersFile
-
-`func (o *InlineObject124) HasHeadersFile() bool`
-
-HasHeadersFile returns a boolean if a field has been set.
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -34,7 +34,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationSamlIdp := *openapiclient.NewInlineObject187("X509certSha1Fingerprint_example") // InlineObject187 | 
+    createOrganizationSamlIdp := *openapiclient.NewInlineObject189("X509certSha1Fingerprint_example") // InlineObject189 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSamlIdpR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSamlIdp** | [**InlineObject187**](InlineObject187.md) |  | 
+ **createOrganizationSamlIdp** | [**InlineObject189**](InlineObject189.md) |  | 
 
 ### Return type
 
@@ -321,7 +321,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | 
     idpId := "idpId_example" // string | 
-    updateOrganizationSamlIdp := *openapiclient.NewInlineObject188() // InlineObject188 |  (optional)
+    updateOrganizationSamlIdp := *openapiclient.NewInlineObject190() // InlineObject190 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationSamlIdp** | [**InlineObject188**](InlineObject188.md) |  | 
+ **updateOrganizationSamlIdp** | [**InlineObject190**](InlineObject190.md) |  | 
 
 ### Return type
 

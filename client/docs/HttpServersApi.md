@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    createNetworkWebhooksHttpServer := *openapiclient.NewInlineObject122("Name_example", "Url_example") // InlineObject122 | 
+    createNetworkWebhooksHttpServer := *openapiclient.NewInlineObject124("Name_example", "Url_example") // InlineObject124 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksHttpS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksHttpServer** | [**InlineObject122**](InlineObject122.md) |  | 
+ **createNetworkWebhooksHttpServer** | [**InlineObject124**](InlineObject124.md) |  | 
 
 ### Return type
 
@@ -321,7 +321,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     httpServerId := "httpServerId_example" // string | 
-    updateNetworkWebhooksHttpServer := *openapiclient.NewInlineObject123() // InlineObject123 |  (optional)
+    updateNetworkWebhooksHttpServer := *openapiclient.NewInlineObject125() // InlineObject125 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWebhooksHttpServer** | [**InlineObject123**](InlineObject123.md) |  | 
+ **updateNetworkWebhooksHttpServer** | [**InlineObject125**](InlineObject125.md) |  | 
 
 ### Return type
 

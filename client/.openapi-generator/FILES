@@ -21,6 +21,7 @@ api_appliances.go
 api_application_categories.go
 api_application_usage.go
 api_applications.go
+api_arp_inspection.go
 api_artifacts.go
 api_authentication_token.go
 api_bandwidth_usage_history.go
@@ -30,6 +31,8 @@ api_bluetooth.go
 api_bluetooth_clients.go
 api_bonjour_forwarding.go
 api_branding_policies.go
+api_by_client.go
+api_by_device.go
 api_by_energy_usage.go
 api_by_switch.go
 api_by_usage.go
@@ -162,8 +165,10 @@ api_schedules.go
 api_search.go
 api_security.go
 api_security_centers.go
+api_seen.go
 api_sense.go
 api_sensor.go
+api_servers.go
 api_settings.go
 api_signal_quality_history.go
 api_single_lan.go
@@ -198,6 +203,7 @@ api_traffic.go
 api_traffic_analysis.go
 api_traffic_history.go
 api_traffic_shaping.go
+api_trusted_servers.go
 api_uplink.go
 api_uplink_bandwidth.go
 api_uplink_selection.go
@@ -207,6 +213,7 @@ api_usage_histories.go
 api_usage_history.go
 api_user_access_devices.go
 api_users.go
+api_v4.go
 api_video.go
 api_video_link.go
 api_vlans.go
@@ -215,6 +222,7 @@ api_vpn.go
 api_vpn_firewall_rules.go
 api_vpp_accounts.go
 api_warm_spare.go
+api_warnings.go
 api_webhook_tests.go
 api_webhooks.go
 api_wireless.go
@@ -241,6 +249,7 @@ docs/AppliancesApi.md
 docs/ApplicationCategoriesApi.md
 docs/ApplicationUsageApi.md
 docs/ApplicationsApi.md
+docs/ArpInspectionApi.md
 docs/ArtifactsApi.md
 docs/AuthenticationTokenApi.md
 docs/BandwidthUsageHistoryApi.md
@@ -250,6 +259,8 @@ docs/BluetoothApi.md
 docs/BluetoothClientsApi.md
 docs/BonjourForwardingApi.md
 docs/BrandingPoliciesApi.md
+docs/ByClientApi.md
+docs/ByDeviceApi.md
 docs/ByEnergyUsageApi.md
 docs/BySwitchApi.md
 docs/ByUsageApi.md
@@ -427,6 +438,8 @@ docs/InlineObject19.md
 docs/InlineObject190.md
 docs/InlineObject191.md
 docs/InlineObject192.md
+docs/InlineObject193.md
+docs/InlineObject194.md
 docs/InlineObject2.md
 docs/InlineObject20.md
 docs/InlineObject21.md
@@ -519,13 +532,14 @@ docs/InlineResponse200.md
 docs/InlineResponse2001.md
 docs/InlineResponse2002.md
 docs/InlineResponse2003.md
-docs/InlineResponse2003ApiAuthentication.md
-docs/InlineResponse2003ApiAuthenticationIpRestrictionsForKeys.md
 docs/InlineResponse2004.md
+docs/InlineResponse2004ApiAuthentication.md
+docs/InlineResponse2004ApiAuthenticationIpRestrictionsForKeys.md
 docs/InlineResponse2005.md
 docs/InlineResponse2006.md
 docs/InlineResponse2007.md
 docs/InlineResponse2008.md
+docs/InlineResponse2009.md
 docs/InsightApi.md
 docs/InterfacesApi.md
 docs/IntrusionApi.md
@@ -667,6 +681,8 @@ docs/NetworksNetworkIdMerakiAuthUsersAuthorizations.md
 docs/NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md
 docs/NetworksNetworkIdMqttBrokersSecurity.md
 docs/NetworksNetworkIdMqttBrokersSecuritySecurity.md
+docs/NetworksNetworkIdPoliciesByClientAssigned.md
+docs/NetworksNetworkIdPoliciesByClientSsid.md
 docs/NetworksNetworkIdSettingsLocalStatusPage.md
 docs/NetworksNetworkIdSettingsLocalStatusPageAuthentication.md
 docs/NetworksNetworkIdSettingsSecureConnect.md
@@ -679,6 +695,11 @@ docs/NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers.md
 docs/NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth.md
 docs/NetworksNetworkIdSwitchAccessPoliciesRadiusServers.md
 docs/NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches.md
+docs/NetworksNetworkIdSwitchDhcpServerPolicyAlerts.md
+docs/NetworksNetworkIdSwitchDhcpServerPolicyAlertsEmail.md
+docs/NetworksNetworkIdSwitchDhcpServerPolicyArpInspection.md
+docs/NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4.md
+docs/NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4.md
 docs/NetworksNetworkIdSwitchDscpToCosMappingsMappings.md
 docs/NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md
 docs/NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md
@@ -721,6 +742,7 @@ docs/NetworksNetworkIdWirelessRfProfilesPerSsidSettings9.md
 docs/NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings.md
 docs/NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings.md
 docs/NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings.md
+docs/NetworksNetworkIdWirelessRfProfilesTransmission.md
 docs/NetworksNetworkIdWirelessRfProfilesTwoFourGhzSettings.md
 docs/NetworksNetworkIdWirelessSsidsNumberActiveDirectory.md
 docs/NetworksNetworkIdWirelessSsidsNumberActiveDirectoryCredentials.md
@@ -849,8 +871,10 @@ docs/SchedulesApi.md
 docs/SearchApi.md
 docs/SecurityApi.md
 docs/SecurityCentersApi.md
+docs/SeenApi.md
 docs/SenseApi.md
 docs/SensorApi.md
+docs/ServersApi.md
 docs/SettingsApi.md
 docs/SignalQualityHistoryApi.md
 docs/SingleLanApi.md
@@ -885,6 +909,7 @@ docs/TrafficAnalysisApi.md
 docs/TrafficApi.md
 docs/TrafficHistoryApi.md
 docs/TrafficShapingApi.md
+docs/TrustedServersApi.md
 docs/UplinkApi.md
 docs/UplinkBandwidthApi.md
 docs/UplinkSelectionApi.md
@@ -894,6 +919,7 @@ docs/UsageHistoriesApi.md
 docs/UsageHistoryApi.md
 docs/UserAccessDevicesApi.md
 docs/UsersApi.md
+docs/V4Api.md
 docs/VideoApi.md
 docs/VideoLinkApi.md
 docs/VlansApi.md
@@ -902,6 +928,7 @@ docs/VpnApi.md
 docs/VpnFirewallRulesApi.md
 docs/VppAccountsApi.md
 docs/WarmSpareApi.md
+docs/WarningsApi.md
 docs/WebhookTestsApi.md
 docs/WebhooksApi.md
 docs/WirelessApi.md
@@ -1035,6 +1062,8 @@ model__networks__network_id__meraki_auth_users__meraki_auth_user_id__authorizati
 model__networks__network_id__meraki_auth_users_authorizations.go
 model__networks__network_id__mqtt_brokers_security.go
 model__networks__network_id__mqtt_brokers_security_security.go
+model__networks__network_id__policies_by_client_assigned.go
+model__networks__network_id__policies_by_client_ssid.go
 model__networks__network_id__settings_local_status_page.go
 model__networks__network_id__settings_local_status_page_authentication.go
 model__networks__network_id__settings_secure_connect.go
@@ -1047,6 +1076,11 @@ model__networks__network_id__switch_access_policies_radius_accounting_servers.go
 model__networks__network_id__switch_access_policies_radius_critical_auth.go
 model__networks__network_id__switch_access_policies_radius_servers.go
 model__networks__network_id__switch_alternate_management_interface_switches.go
+model__networks__network_id__switch_dhcp_server_policy_alerts.go
+model__networks__network_id__switch_dhcp_server_policy_alerts_email.go
+model__networks__network_id__switch_dhcp_server_policy_arp_inspection.go
+model__networks__network_id__switch_dhcp_server_policy_arp_inspection_trusted_servers__trusted_server_id__ipv4.go
+model__networks__network_id__switch_dhcp_server_policy_arp_inspection_trusted_servers_ipv4.go
 model__networks__network_id__switch_dscp_to_cos_mappings_mappings.go
 model__networks__network_id__switch_link_aggregations_switch_ports.go
 model__networks__network_id__switch_link_aggregations_switch_profile_ports.go
@@ -1089,6 +1123,7 @@ model__networks__network_id__wireless_rf_profiles_per_ssid_settings_6.go
 model__networks__network_id__wireless_rf_profiles_per_ssid_settings_7.go
 model__networks__network_id__wireless_rf_profiles_per_ssid_settings_8.go
 model__networks__network_id__wireless_rf_profiles_per_ssid_settings_9.go
+model__networks__network_id__wireless_rf_profiles_transmission.go
 model__networks__network_id__wireless_rf_profiles_two_four_ghz_settings.go
 model__networks__network_id__wireless_ssids__number__active_directory.go
 model__networks__network_id__wireless_ssids__number__active_directory_credentials.go
@@ -1279,6 +1314,8 @@ model_inline_object_19.go
 model_inline_object_190.go
 model_inline_object_191.go
 model_inline_object_192.go
+model_inline_object_193.go
+model_inline_object_194.go
 model_inline_object_2.go
 model_inline_object_20.go
 model_inline_object_21.go
@@ -1371,12 +1408,13 @@ model_inline_response_200.go
 model_inline_response_200_1.go
 model_inline_response_200_2.go
 model_inline_response_200_3.go
-model_inline_response_200_3_api_authentication.go
-model_inline_response_200_3_api_authentication_ip_restrictions_for_keys.go
 model_inline_response_200_4.go
+model_inline_response_200_4_api_authentication.go
+model_inline_response_200_4_api_authentication_ip_restrictions_for_keys.go
 model_inline_response_200_5.go
 model_inline_response_200_6.go
 model_inline_response_200_7.go
 model_inline_response_200_8.go
+model_inline_response_200_9.go
 response.go
 utils.go

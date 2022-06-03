@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Unique name of the artifact | [optional] 
+**BrandingPolicyIds** | **[]string** | A list of branding policy IDs arranged in ascending priority order (IDs later in the array have higher priority). | 
 
 ## Methods
 
 ### NewInlineObject167
 
-`func NewInlineObject167() *InlineObject167`
+`func NewInlineObject167(brandingPolicyIds []string, ) *InlineObject167`
 
 NewInlineObject167 instantiates a new InlineObject167 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject167WithDefaults instantiates a new InlineObject167 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetBrandingPolicyIds
 
-`func (o *InlineObject167) GetName() string`
+`func (o *InlineObject167) GetBrandingPolicyIds() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBrandingPolicyIdsOk
 
-`func (o *InlineObject167) GetNameOk() (*string, bool)`
+`func (o *InlineObject167) GetBrandingPolicyIdsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBrandingPolicyIds
 
-`func (o *InlineObject167) SetName(v string)`
+`func (o *InlineObject167) SetBrandingPolicyIds(v []string)`
 
-SetName sets Name field to given value.
+SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
 
-### HasName
-
-`func (o *InlineObject167) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

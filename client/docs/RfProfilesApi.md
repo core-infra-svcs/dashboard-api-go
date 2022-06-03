@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    createNetworkWirelessRfProfile := *openapiclient.NewInlineObject130("Name_example", "BandSelectionType_example") // InlineObject130 | 
+    createNetworkWirelessRfProfile := *openapiclient.NewInlineObject132("Name_example", "BandSelectionType_example") // InlineObject132 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkWirelessRfPro
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWirelessRfProfile** | [**InlineObject130**](InlineObject130.md) |  | 
+ **createNetworkWirelessRfProfile** | [**InlineObject132**](InlineObject132.md) |  | 
 
 ### Return type
 
@@ -323,7 +323,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     rfProfileId := "rfProfileId_example" // string | 
-    updateNetworkWirelessRfProfile := *openapiclient.NewInlineObject131() // InlineObject131 |  (optional)
+    updateNetworkWirelessRfProfile := *openapiclient.NewInlineObject133() // InlineObject133 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessRfProfile** | [**InlineObject131**](InlineObject131.md) |  | 
+ **updateNetworkWirelessRfProfile** | [**InlineObject133**](InlineObject133.md) |  | 
 
 ### Return type
 
