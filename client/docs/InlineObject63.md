@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DevicePolicy** | **string** | The policy to assign. Can be &#39;Whitelisted&#39;, &#39;Blocked&#39;, &#39;Normal&#39; or &#39;Group policy&#39;. Required. | 
-**GroupPolicyId** | Pointer to **string** | [optional] If &#39;devicePolicy&#39; is set to &#39;Group policy&#39; this param is used to specify the group policy ID. | [optional] 
+**Name** | **string** | The name of the camera wireless profile. This parameter is required. | 
+**Ssid** | [**NetworksNetworkIdCameraWirelessProfilesSsid**](NetworksNetworkIdCameraWirelessProfilesSsid.md) |  | 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject63
 
-`func NewInlineObject63(devicePolicy string, ) *InlineObject63`
+`func NewInlineObject63(name string, ssid NetworksNetworkIdCameraWirelessProfilesSsid, ) *InlineObject63`
 
 NewInlineObject63 instantiates a new InlineObject63 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,70 @@ NewInlineObject63WithDefaults instantiates a new InlineObject63 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevicePolicy
+### GetName
 
-`func (o *InlineObject63) GetDevicePolicy() string`
+`func (o *InlineObject63) GetName() string`
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDevicePolicyOk
+### GetNameOk
 
-`func (o *InlineObject63) GetDevicePolicyOk() (*string, bool)`
+`func (o *InlineObject63) GetNameOk() (*string, bool)`
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetName
 
-`func (o *InlineObject63) SetDevicePolicy(v string)`
+`func (o *InlineObject63) SetName(v string)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetName sets Name field to given value.
 
 
-### GetGroupPolicyId
+### GetSsid
 
-`func (o *InlineObject63) GetGroupPolicyId() string`
+`func (o *InlineObject63) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetSsidOk
 
-`func (o *InlineObject63) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineObject63) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetSsid
 
-`func (o *InlineObject63) SetGroupPolicyId(v string)`
+`func (o *InlineObject63) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetSsid sets Ssid field to given value.
 
-### HasGroupPolicyId
 
-`func (o *InlineObject63) HasGroupPolicyId() bool`
+### GetIdentity
 
-HasGroupPolicyId returns a boolean if a field has been set.
+`func (o *InlineObject63) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineObject63) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineObject63) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineObject63) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

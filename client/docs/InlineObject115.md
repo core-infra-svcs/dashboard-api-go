@@ -4,20 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | A friendly name or description for the interface or VLAN. | 
-**Subnet** | Pointer to **string** | The network that this routed interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
-**InterfaceIp** | Pointer to **string** | The IP address this switch stack will use for layer 3 routing on this VLAN or subnet. This cannot be the same as the switch&#39;s management IP. | [optional] 
-**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are, &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
-**VlanId** | **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | 
-**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route. This IP address must exist in a subnet with a routed interface. | [optional] 
-**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings**](DevicesSerialSwitchRoutingInterfacesOspfSettings.md) |  | [optional] 
-**Ipv6** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6.md) |  | [optional] 
+**Mac** | Pointer to **string** | The updated mac address of the trusted server | [optional] 
+**Vlan** | Pointer to **int32** | The updated VLAN of the trusted server. It must be between 1 and 4094 | [optional] 
+**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject115
 
-`func NewInlineObject115(name string, vlanId int32, ) *InlineObject115`
+`func NewInlineObject115() *InlineObject115`
 
 NewInlineObject115 instantiates a new InlineObject115 object
 This constructor will assign default values to properties that have it defined,
@@ -32,195 +27,80 @@ NewInlineObject115WithDefaults instantiates a new InlineObject115 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetMac
 
-`func (o *InlineObject115) GetName() string`
+`func (o *InlineObject115) GetMac() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMacOk
 
-`func (o *InlineObject115) GetNameOk() (*string, bool)`
+`func (o *InlineObject115) GetMacOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMac
 
-`func (o *InlineObject115) SetName(v string)`
+`func (o *InlineObject115) SetMac(v string)`
 
-SetName sets Name field to given value.
+SetMac sets Mac field to given value.
 
+### HasMac
 
-### GetSubnet
+`func (o *InlineObject115) HasMac() bool`
 
-`func (o *InlineObject115) GetSubnet() string`
+HasMac returns a boolean if a field has been set.
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+### GetVlan
 
-### GetSubnetOk
+`func (o *InlineObject115) GetVlan() int32`
 
-`func (o *InlineObject115) GetSubnetOk() (*string, bool)`
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+### GetVlanOk
+
+`func (o *InlineObject115) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetVlan
 
-`func (o *InlineObject115) SetSubnet(v string)`
+`func (o *InlineObject115) SetVlan(v int32)`
 
-SetSubnet sets Subnet field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasSubnet
+### HasVlan
 
-`func (o *InlineObject115) HasSubnet() bool`
+`func (o *InlineObject115) HasVlan() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetInterfaceIp
+### GetIpv4
 
-`func (o *InlineObject115) GetInterfaceIp() string`
+`func (o *InlineObject115) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4`
 
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
 
-### GetInterfaceIpOk
+### GetIpv4Ok
 
-`func (o *InlineObject115) GetInterfaceIpOk() (*string, bool)`
+`func (o *InlineObject115) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4, bool)`
 
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceIp
+### SetIpv4
 
-`func (o *InlineObject115) SetInterfaceIp(v string)`
+`func (o *InlineObject115) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4)`
 
-SetInterfaceIp sets InterfaceIp field to given value.
+SetIpv4 sets Ipv4 field to given value.
 
-### HasInterfaceIp
+### HasIpv4
 
-`func (o *InlineObject115) HasInterfaceIp() bool`
+`func (o *InlineObject115) HasIpv4() bool`
 
-HasInterfaceIp returns a boolean if a field has been set.
-
-### GetMulticastRouting
-
-`func (o *InlineObject115) GetMulticastRouting() string`
-
-GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
-
-### GetMulticastRoutingOk
-
-`func (o *InlineObject115) GetMulticastRoutingOk() (*string, bool)`
-
-GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMulticastRouting
-
-`func (o *InlineObject115) SetMulticastRouting(v string)`
-
-SetMulticastRouting sets MulticastRouting field to given value.
-
-### HasMulticastRouting
-
-`func (o *InlineObject115) HasMulticastRouting() bool`
-
-HasMulticastRouting returns a boolean if a field has been set.
-
-### GetVlanId
-
-`func (o *InlineObject115) GetVlanId() int32`
-
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
-
-### GetVlanIdOk
-
-`func (o *InlineObject115) GetVlanIdOk() (*int32, bool)`
-
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanId
-
-`func (o *InlineObject115) SetVlanId(v int32)`
-
-SetVlanId sets VlanId field to given value.
-
-
-### GetDefaultGateway
-
-`func (o *InlineObject115) GetDefaultGateway() string`
-
-GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
-
-### GetDefaultGatewayOk
-
-`func (o *InlineObject115) GetDefaultGatewayOk() (*string, bool)`
-
-GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaultGateway
-
-`func (o *InlineObject115) SetDefaultGateway(v string)`
-
-SetDefaultGateway sets DefaultGateway field to given value.
-
-### HasDefaultGateway
-
-`func (o *InlineObject115) HasDefaultGateway() bool`
-
-HasDefaultGateway returns a boolean if a field has been set.
-
-### GetOspfSettings
-
-`func (o *InlineObject115) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings`
-
-GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
-
-### GetOspfSettingsOk
-
-`func (o *InlineObject115) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings, bool)`
-
-GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOspfSettings
-
-`func (o *InlineObject115) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings)`
-
-SetOspfSettings sets OspfSettings field to given value.
-
-### HasOspfSettings
-
-`func (o *InlineObject115) HasOspfSettings() bool`
-
-HasOspfSettings returns a boolean if a field has been set.
-
-### GetIpv6
-
-`func (o *InlineObject115) GetIpv6() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6`
-
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
-
-### GetIpv6Ok
-
-`func (o *InlineObject115) GetIpv6Ok() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6, bool)`
-
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv6
-
-`func (o *InlineObject115) SetIpv6(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6)`
-
-SetIpv6 sets Ipv6 field to given value.
-
-### HasIpv6
-
-`func (o *InlineObject115) HasIpv6() bool`
-
-HasIpv6 returns a boolean if a field has been set.
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

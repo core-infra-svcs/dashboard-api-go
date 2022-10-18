@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
@@ -52,55 +52,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetPassphrase
+### GetSharedSecret
 
-`func (o *InlineObject143) GetPassphrase() string`
+`func (o *InlineObject143) GetSharedSecret() string`
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-### GetPassphraseOk
+### GetSharedSecretOk
 
-`func (o *InlineObject143) GetPassphraseOk() (*string, bool)`
+`func (o *InlineObject143) GetSharedSecretOk() (*string, bool)`
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetSharedSecret
 
-`func (o *InlineObject143) SetPassphrase(v string)`
+`func (o *InlineObject143) SetSharedSecret(v string)`
 
-SetPassphrase sets Passphrase field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasPassphrase
+### HasSharedSecret
 
-`func (o *InlineObject143) HasPassphrase() bool`
+`func (o *InlineObject143) HasSharedSecret() bool`
 
-HasPassphrase returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetPayloadTemplate
 
-`func (o *InlineObject143) GetGroupPolicyId() string`
+`func (o *InlineObject143) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetPayloadTemplateOk
 
-`func (o *InlineObject143) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineObject143) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetPayloadTemplate
 
-`func (o *InlineObject143) SetGroupPolicyId(v string)`
+`func (o *InlineObject143) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetPayloadTemplate sets PayloadTemplate field to given value.
 
-### HasGroupPolicyId
+### HasPayloadTemplate
 
-`func (o *InlineObject143) HasGroupPolicyId() bool`
+`func (o *InlineObject143) HasPayloadTemplate() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

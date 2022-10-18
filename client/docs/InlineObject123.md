@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
-**CustomPieChartItems** | Pointer to [**[]NetworksNetworkIdTrafficAnalysisCustomPieChartItems**](NetworksNetworkIdTrafficAnalysisCustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
+**RuleIds** | **[]string** | A list of quality of service rule IDs arranged in order in which they should be processed by the switch. | 
 
 ## Methods
 
 ### NewInlineObject123
 
-`func NewInlineObject123() *InlineObject123`
+`func NewInlineObject123(ruleIds []string, ) *InlineObject123`
 
 NewInlineObject123 instantiates a new InlineObject123 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject123WithDefaults instantiates a new InlineObject123 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetRuleIds
 
-`func (o *InlineObject123) GetMode() string`
+`func (o *InlineObject123) GetRuleIds() []string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetRuleIdsOk
 
-`func (o *InlineObject123) GetModeOk() (*string, bool)`
+`func (o *InlineObject123) GetRuleIdsOk() (*[]string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetRuleIds
 
-`func (o *InlineObject123) SetMode(v string)`
+`func (o *InlineObject123) SetRuleIds(v []string)`
 
-SetMode sets Mode field to given value.
+SetRuleIds sets RuleIds field to given value.
 
-### HasMode
-
-`func (o *InlineObject123) HasMode() bool`
-
-HasMode returns a boolean if a field has been set.
-
-### GetCustomPieChartItems
-
-`func (o *InlineObject123) GetCustomPieChartItems() []NetworksNetworkIdTrafficAnalysisCustomPieChartItems`
-
-GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
-
-### GetCustomPieChartItemsOk
-
-`func (o *InlineObject123) GetCustomPieChartItemsOk() (*[]NetworksNetworkIdTrafficAnalysisCustomPieChartItems, bool)`
-
-GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCustomPieChartItems
-
-`func (o *InlineObject123) SetCustomPieChartItems(v []NetworksNetworkIdTrafficAnalysisCustomPieChartItems)`
-
-SetCustomPieChartItems sets CustomPieChartItems field to given value.
-
-### HasCustomPieChartItems
-
-`func (o *InlineObject123) HasCustomPieChartItems() bool`
-
-HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

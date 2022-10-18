@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate.md) |  | [optional] 
+**DefaultSettings** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastDefaultSettings**](NetworksNetworkIdSwitchRoutingMulticastDefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]NetworksNetworkIdSwitchRoutingMulticastOverrides**](NetworksNetworkIdSwitchRoutingMulticastOverrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings. An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject125WithDefaults instantiates a new InlineObject125 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDefaultSettings
 
-`func (o *InlineObject125) GetName() string`
+`func (o *InlineObject125) GetDefaultSettings() NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDefaultSettingsOk
 
-`func (o *InlineObject125) GetNameOk() (*string, bool)`
+`func (o *InlineObject125) GetDefaultSettingsOk() (*NetworksNetworkIdSwitchRoutingMulticastDefaultSettings, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDefaultSettings
 
-`func (o *InlineObject125) SetName(v string)`
+`func (o *InlineObject125) SetDefaultSettings(v NetworksNetworkIdSwitchRoutingMulticastDefaultSettings)`
 
-SetName sets Name field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
-### HasName
+### HasDefaultSettings
 
-`func (o *InlineObject125) HasName() bool`
+`func (o *InlineObject125) HasDefaultSettings() bool`
 
-HasName returns a boolean if a field has been set.
+HasDefaultSettings returns a boolean if a field has been set.
 
-### GetSharedSecret
+### GetOverrides
 
-`func (o *InlineObject125) GetSharedSecret() string`
+`func (o *InlineObject125) GetOverrides() []NetworksNetworkIdSwitchRoutingMulticastOverrides`
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetSharedSecretOk
+### GetOverridesOk
 
-`func (o *InlineObject125) GetSharedSecretOk() (*string, bool)`
+`func (o *InlineObject125) GetOverridesOk() (*[]NetworksNetworkIdSwitchRoutingMulticastOverrides, bool)`
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetOverrides
 
-`func (o *InlineObject125) SetSharedSecret(v string)`
+`func (o *InlineObject125) SetOverrides(v []NetworksNetworkIdSwitchRoutingMulticastOverrides)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasSharedSecret
+### HasOverrides
 
-`func (o *InlineObject125) HasSharedSecret() bool`
+`func (o *InlineObject125) HasOverrides() bool`
 
-HasSharedSecret returns a boolean if a field has been set.
-
-### GetPayloadTemplate
-
-`func (o *InlineObject125) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate`
-
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateOk
-
-`func (o *InlineObject125) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplate
-
-`func (o *InlineObject125) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate)`
-
-SetPayloadTemplate sets PayloadTemplate field to given value.
-
-### HasPayloadTemplate
-
-`func (o *InlineObject125) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

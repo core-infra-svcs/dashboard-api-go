@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
-**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
-**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings.md) |  | [optional] 
-**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
+**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
+**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
 
 ## Methods
 
 ### NewInlineObject168
 
-`func NewInlineObject168() *InlineObject168`
+`func NewInlineObject168(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineObject168`
 
 NewInlineObject168 instantiates a new InlineObject168 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +27,75 @@ NewInlineObject168WithDefaults instantiates a new InlineObject168 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConfirmed
 
-`func (o *InlineObject168) GetName() string`
+`func (o *InlineObject168) GetConfirmed() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConfirmedOk
 
-`func (o *InlineObject168) GetNameOk() (*string, bool)`
+`func (o *InlineObject168) GetConfirmedOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConfirmed
 
-`func (o *InlineObject168) SetName(v string)`
+`func (o *InlineObject168) SetConfirmed(v bool)`
 
-SetName sets Name field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasName
+### HasConfirmed
 
-`func (o *InlineObject168) HasName() bool`
+`func (o *InlineObject168) HasConfirmed() bool`
 
-HasName returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
 
-### GetEnabled
+### GetSynchronous
 
-`func (o *InlineObject168) GetEnabled() bool`
+`func (o *InlineObject168) GetSynchronous() bool`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetSynchronousOk
 
-`func (o *InlineObject168) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject168) GetSynchronousOk() (*bool, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetSynchronous
 
-`func (o *InlineObject168) SetEnabled(v bool)`
+`func (o *InlineObject168) SetSynchronous(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetSynchronous sets Synchronous field to given value.
 
-### HasEnabled
+### HasSynchronous
 
-`func (o *InlineObject168) HasEnabled() bool`
+`func (o *InlineObject168) HasSynchronous() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasSynchronous returns a boolean if a field has been set.
 
-### GetAdminSettings
+### GetActions
 
-`func (o *InlineObject168) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
+`func (o *InlineObject168) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
 
-GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
+GetActions returns the Actions field if non-nil, zero value otherwise.
 
-### GetAdminSettingsOk
+### GetActionsOk
 
-`func (o *InlineObject168) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
+`func (o *InlineObject168) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
 
-GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminSettings
+### SetActions
 
-`func (o *InlineObject168) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
+`func (o *InlineObject168) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
 
-SetAdminSettings sets AdminSettings field to given value.
+SetActions sets Actions field to given value.
 
-### HasAdminSettings
-
-`func (o *InlineObject168) HasAdminSettings() bool`
-
-HasAdminSettings returns a boolean if a field has been set.
-
-### GetHelpSettings
-
-`func (o *InlineObject168) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings`
-
-GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
-
-### GetHelpSettingsOk
-
-`func (o *InlineObject168) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings, bool)`
-
-GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHelpSettings
-
-`func (o *InlineObject168) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings)`
-
-SetHelpSettings sets HelpSettings field to given value.
-
-### HasHelpSettings
-
-`func (o *InlineObject168) HasHelpSettings() bool`
-
-HasHelpSettings returns a boolean if a field has been set.
-
-### GetCustomLogo
-
-`func (o *InlineObject168) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
-
-GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
-
-### GetCustomLogoOk
-
-`func (o *InlineObject168) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
-
-GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCustomLogo
-
-`func (o *InlineObject168) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
-
-SetCustomLogo sets CustomLogo field to given value.
-
-### HasCustomLogo
-
-`func (o *InlineObject168) HasCustomLogo() bool`
-
-HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

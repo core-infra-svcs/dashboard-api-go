@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Subnet** | Pointer to **string** | The subnet of the single LAN configuration | [optional] 
-**ApplianceIp** | Pointer to **string** | The appliance IP address of the single LAN | [optional] 
+**Enabled** | Pointer to **bool** | The status of the port | [optional] 
+**DropUntaggedTraffic** | Pointer to **bool** | Trunk port can Drop all Untagged traffic. When true, no VLAN is required. Access ports cannot have dropUntaggedTraffic set to true. | [optional] 
+**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
+**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
+**AllowedVlans** | Pointer to **string** | Comma-delimited list of the VLAN ID&#39;s allowed on the port, or &#39;all&#39; to permit all VLAN&#39;s on the port. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. Valid values are: &#39;open&#39;, &#39;8021x-radius&#39;, &#39;mac-radius&#39;, &#39;hybris-radius&#39; for MX64 or Z3 or any MX supporting the per port authentication feature. Otherwise, &#39;open&#39; is the only valid value and &#39;open&#39; is the default value if the field is missing. | [optional] 
 
 ## Methods
 
@@ -26,55 +30,155 @@ NewInlineObject38WithDefaults instantiates a new InlineObject38 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubnet
+### GetEnabled
 
-`func (o *InlineObject38) GetSubnet() string`
+`func (o *InlineObject38) GetEnabled() bool`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetEnabledOk
 
-`func (o *InlineObject38) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject38) GetEnabledOk() (*bool, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetEnabled
 
-`func (o *InlineObject38) SetSubnet(v string)`
+`func (o *InlineObject38) SetEnabled(v bool)`
 
-SetSubnet sets Subnet field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasSubnet
+### HasEnabled
 
-`func (o *InlineObject38) HasSubnet() bool`
+`func (o *InlineObject38) HasEnabled() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetApplianceIp
+### GetDropUntaggedTraffic
 
-`func (o *InlineObject38) GetApplianceIp() string`
+`func (o *InlineObject38) GetDropUntaggedTraffic() bool`
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
 
-### GetApplianceIpOk
+### GetDropUntaggedTrafficOk
 
-`func (o *InlineObject38) GetApplianceIpOk() (*string, bool)`
+`func (o *InlineObject38) GetDropUntaggedTrafficOk() (*bool, bool)`
 
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetDropUntaggedTraffic
 
-`func (o *InlineObject38) SetApplianceIp(v string)`
+`func (o *InlineObject38) SetDropUntaggedTraffic(v bool)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
 
-### HasApplianceIp
+### HasDropUntaggedTraffic
 
-`func (o *InlineObject38) HasApplianceIp() bool`
+`func (o *InlineObject38) HasDropUntaggedTraffic() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
+HasDropUntaggedTraffic returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineObject38) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineObject38) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineObject38) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineObject38) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineObject38) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineObject38) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineObject38) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineObject38) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetAllowedVlans
+
+`func (o *InlineObject38) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineObject38) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineObject38) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineObject38) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetAccessPolicy
+
+`func (o *InlineObject38) GetAccessPolicy() string`
+
+GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
+
+### GetAccessPolicyOk
+
+`func (o *InlineObject38) GetAccessPolicyOk() (*string, bool)`
+
+GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicy
+
+`func (o *InlineObject38) SetAccessPolicy(v string)`
+
+SetAccessPolicy sets AccessPolicy field to given value.
+
+### HasAccessPolicy
+
+`func (o *InlineObject38) HasAccessPolicy() bool`
+
+HasAccessPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

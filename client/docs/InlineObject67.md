@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | **string** | The serial of a device | 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
 
 ## Methods
 
 ### NewInlineObject67
 
-`func NewInlineObject67(serial string, ) *InlineObject67`
+`func NewInlineObject67() *InlineObject67`
 
 NewInlineObject67 instantiates a new InlineObject67 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject67WithDefaults instantiates a new InlineObject67 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetMask
 
-`func (o *InlineObject67) GetSerial() string`
+`func (o *InlineObject67) GetMask() int32`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetMaskOk
 
-`func (o *InlineObject67) GetSerialOk() (*string, bool)`
+`func (o *InlineObject67) GetMaskOk() (*int32, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetMask
 
-`func (o *InlineObject67) SetSerial(v string)`
+`func (o *InlineObject67) SetMask(v int32)`
 
-SetSerial sets Serial field to given value.
+SetMask sets Mask field to given value.
 
+### HasMask
+
+`func (o *InlineObject67) HasMask() bool`
+
+HasMask returns a boolean if a field has been set.
+
+### GetCidr
+
+`func (o *InlineObject67) GetCidr() string`
+
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
+
+### GetCidrOk
+
+`func (o *InlineObject67) GetCidrOk() (*string, bool)`
+
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCidr
+
+`func (o *InlineObject67) SetCidr(v string)`
+
+SetCidr sets Cidr field to given value.
+
+### HasCidr
+
+`func (o *InlineObject67) HasCidr() bool`
+
+HasCidr returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

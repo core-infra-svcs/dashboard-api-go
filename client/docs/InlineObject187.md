@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the combined network | 
-**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
-**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
+**Name** | Pointer to **string** | Unique name of the artifact | [optional] 
 
 ## Methods
 
 ### NewInlineObject187
 
-`func NewInlineObject187(name string, networkIds []string, ) *InlineObject187`
+`func NewInlineObject187() *InlineObject187`
 
 NewInlineObject187 instantiates a new InlineObject187 object
 This constructor will assign default values to properties that have it defined,
@@ -46,51 +44,11 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetNetworkIds
+`func (o *InlineObject187) HasName() bool`
 
-`func (o *InlineObject187) GetNetworkIds() []string`
-
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
-
-### GetNetworkIdsOk
-
-`func (o *InlineObject187) GetNetworkIdsOk() (*[]string, bool)`
-
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkIds
-
-`func (o *InlineObject187) SetNetworkIds(v []string)`
-
-SetNetworkIds sets NetworkIds field to given value.
-
-
-### GetEnrollmentString
-
-`func (o *InlineObject187) GetEnrollmentString() string`
-
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
-
-### GetEnrollmentStringOk
-
-`func (o *InlineObject187) GetEnrollmentStringOk() (*string, bool)`
-
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrollmentString
-
-`func (o *InlineObject187) SetEnrollmentString(v string)`
-
-SetEnrollmentString sets EnrollmentString field to given value.
-
-### HasEnrollmentString
-
-`func (o *InlineObject187) HasEnrollmentString() bool`
-
-HasEnrollmentString returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

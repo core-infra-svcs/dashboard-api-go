@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | **string** | The site-to-site VPN mode. Can be one of &#39;none&#39;, &#39;spoke&#39; or &#39;hub&#39; | 
-**Hubs** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs.md) | The list of VPN hubs, in order of preference. In spoke mode, at least 1 hub is required. | [optional] 
-**Subnets** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets**](NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets.md) | The list of subnets and their VPN presence. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingRulesRules**](NetworksNetworkIdApplianceTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
 ### NewInlineObject51
 
-`func NewInlineObject51(mode string, ) *InlineObject51`
+`func NewInlineObject51() *InlineObject51`
 
 NewInlineObject51 instantiates a new InlineObject51 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +26,55 @@ NewInlineObject51WithDefaults instantiates a new InlineObject51 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject51) GetMode() string`
+`func (o *InlineObject51) GetDefaultRulesEnabled() bool`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject51) GetModeOk() (*string, bool)`
+`func (o *InlineObject51) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject51) SetMode(v string)`
+`func (o *InlineObject51) SetDefaultRulesEnabled(v bool)`
 
-SetMode sets Mode field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
+### HasDefaultRulesEnabled
 
-### GetHubs
+`func (o *InlineObject51) HasDefaultRulesEnabled() bool`
 
-`func (o *InlineObject51) GetHubs() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs`
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-GetHubs returns the Hubs field if non-nil, zero value otherwise.
+### GetRules
 
-### GetHubsOk
+`func (o *InlineObject51) GetRules() []NetworksNetworkIdApplianceTrafficShapingRulesRules`
 
-`func (o *InlineObject51) GetHubsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs, bool)`
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
+### GetRulesOk
+
+`func (o *InlineObject51) GetRulesOk() (*[]NetworksNetworkIdApplianceTrafficShapingRulesRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHubs
+### SetRules
 
-`func (o *InlineObject51) SetHubs(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs)`
+`func (o *InlineObject51) SetRules(v []NetworksNetworkIdApplianceTrafficShapingRulesRules)`
 
-SetHubs sets Hubs field to given value.
+SetRules sets Rules field to given value.
 
-### HasHubs
+### HasRules
 
-`func (o *InlineObject51) HasHubs() bool`
+`func (o *InlineObject51) HasRules() bool`
 
-HasHubs returns a boolean if a field has been set.
-
-### GetSubnets
-
-`func (o *InlineObject51) GetSubnets() []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets`
-
-GetSubnets returns the Subnets field if non-nil, zero value otherwise.
-
-### GetSubnetsOk
-
-`func (o *InlineObject51) GetSubnetsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets, bool)`
-
-GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubnets
-
-`func (o *InlineObject51) SetSubnets(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets)`
-
-SetSubnets sets Subnets field to given value.
-
-### HasSubnets
-
-`func (o *InlineObject51) HasSubnets() bool`
-
-HasSubnets returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

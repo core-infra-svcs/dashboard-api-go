@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**CreateDeviceLiveToolsPingDevice**](LiveToolsApi.md#CreateDeviceLiveToolsPingDevice) | **Post** /devices/{serial}/liveTools/pingDevice | Enqueue a job to check connectivity status to the device
 [**CycleDeviceSwitchPorts**](LiveToolsApi.md#CycleDeviceSwitchPorts) | **Post** /devices/{serial}/switch/ports/cycle | Cycle a set of switch ports
 [**GetDeviceLiveToolsPing**](LiveToolsApi.md#GetDeviceLiveToolsPing) | **Get** /devices/{serial}/liveTools/ping/{id} | Return a ping job
-[**GetDeviceLiveToolsPingDevice**](LiveToolsApi.md#GetDeviceLiveToolsPingDevice) | **Get** /devices/{serial}/liveTools/pingDevice/{id} | Return a ping job
+[**GetDeviceLiveToolsPingDevice**](LiveToolsApi.md#GetDeviceLiveToolsPingDevice) | **Get** /devices/{serial}/liveTools/pingDevice/{id} | Return a ping device job
 [**RebootDevice**](LiveToolsApi.md#RebootDevice) | **Post** /devices/{serial}/reboot | Reboot a device
 
 
@@ -36,7 +36,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    blinkDeviceLeds := *openapiclient.NewInlineObject1() // InlineObject1 |  (optional)
+    blinkDeviceLeds := *openapiclient.NewInlineObject2() // InlineObject2 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiBlinkDeviceLedsRequest str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **blinkDeviceLeds** | [**InlineObject1**](InlineObject1.md) |  | 
+ **blinkDeviceLeds** | [**InlineObject2**](InlineObject2.md) |  | 
 
 ### Return type
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsPing
 
-> map[string]interface{} CreateDeviceLiveToolsPing(ctx, serial).CreateDeviceLiveToolsPing(createDeviceLiveToolsPing).Execute()
+> InlineResponse2011 CreateDeviceLiveToolsPing(ctx, serial).CreateDeviceLiveToolsPing(createDeviceLiveToolsPing).Execute()
 
 Enqueue a job to ping a target host from the device
 
@@ -108,7 +108,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    createDeviceLiveToolsPing := *openapiclient.NewInlineObject10("Target_example") // InlineObject10 | 
+    createDeviceLiveToolsPing := *openapiclient.NewInlineObject11("Target_example") // InlineObject11 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -117,7 +117,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CreateDeviceLiveToolsPing``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsPing`: map[string]interface{}
+    // response from `CreateDeviceLiveToolsPing`: InlineResponse2011
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CreateDeviceLiveToolsPing`: %v\n", resp)
 }
 ```
@@ -138,11 +138,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPing** | [**InlineObject10**](InlineObject10.md) |  | 
+ **createDeviceLiveToolsPing** | [**InlineObject11**](InlineObject11.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse2011**](InlineResponse2011.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsPingDevice
 
-> map[string]interface{} CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
+> InlineResponse2011 CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
 
 Enqueue a job to check connectivity status to the device
 
@@ -180,7 +180,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    createDeviceLiveToolsPingDevice := *openapiclient.NewInlineObject11() // InlineObject11 |  (optional)
+    createDeviceLiveToolsPingDevice := *openapiclient.NewInlineObject12() // InlineObject12 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -189,7 +189,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CreateDeviceLiveToolsPingDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsPingDevice`: map[string]interface{}
+    // response from `CreateDeviceLiveToolsPingDevice`: InlineResponse2011
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CreateDeviceLiveToolsPingDevice`: %v\n", resp)
 }
 ```
@@ -210,11 +210,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingD
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPingDevice** | [**InlineObject11**](InlineObject11.md) |  | 
+ **createDeviceLiveToolsPingDevice** | [**InlineObject12**](InlineObject12.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse2011**](InlineResponse2011.md)
 
 ### Authorization
 
@@ -252,7 +252,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    cycleDeviceSwitchPorts := *openapiclient.NewInlineObject13([]string{"Ports_example"}) // InlineObject13 | 
+    cycleDeviceSwitchPorts := *openapiclient.NewInlineObject14([]string{"Ports_example"}) // InlineObject14 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -282,7 +282,7 @@ Other parameters are passed through a pointer to a apiCycleDeviceSwitchPortsRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cycleDeviceSwitchPorts** | [**InlineObject13**](InlineObject13.md) |  | 
+ **cycleDeviceSwitchPorts** | [**InlineObject14**](InlineObject14.md) |  | 
 
 ### Return type
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsPing
 
-> map[string]interface{} GetDeviceLiveToolsPing(ctx, serial, id).Execute()
+> InlineResponse2002 GetDeviceLiveToolsPing(ctx, serial, id).Execute()
 
 Return a ping job
 
@@ -333,7 +333,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.GetDeviceLiveToolsPing``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPing`: map[string]interface{}
+    // response from `GetDeviceLiveToolsPing`: InlineResponse2002
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.GetDeviceLiveToolsPing`: %v\n", resp)
 }
 ```
@@ -359,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -377,9 +377,9 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsPingDevice
 
-> map[string]interface{} GetDeviceLiveToolsPingDevice(ctx, serial, id).Execute()
+> InlineResponse2002 GetDeviceLiveToolsPingDevice(ctx, serial, id).Execute()
 
-Return a ping job
+Return a ping device job
 
 
 
@@ -406,7 +406,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.GetDeviceLiveToolsPingDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPingDevice`: map[string]interface{}
+    // response from `GetDeviceLiveToolsPingDevice`: InlineResponse2002
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.GetDeviceLiveToolsPingDevice`: %v\n", resp)
 }
 ```
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

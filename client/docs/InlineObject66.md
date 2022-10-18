@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, 100 | 
+**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG of the network. It can be &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39;. | [optional] 
+**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG of the network. It can take 4 different values: &#39;upstream_dns&#39;, &#39;google_dns&#39;, &#39;opendns&#39;, &#39;custom&#39;. | [optional] 
+**DnsCustomNameservers** | Pointer to **[]string** | list of fixed IP representing the the DNS Name servers when the mode is &#39;custom&#39; | [optional] 
 
 ## Methods
 
 ### NewInlineObject66
 
-`func NewInlineObject66(size string, ) *InlineObject66`
+`func NewInlineObject66() *InlineObject66`
 
 NewInlineObject66 instantiates a new InlineObject66 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,80 @@ NewInlineObject66WithDefaults instantiates a new InlineObject66 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSize
+### GetDhcpLeaseTime
 
-`func (o *InlineObject66) GetSize() string`
+`func (o *InlineObject66) GetDhcpLeaseTime() string`
 
-GetSize returns the Size field if non-nil, zero value otherwise.
+GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
 
-### GetSizeOk
+### GetDhcpLeaseTimeOk
 
-`func (o *InlineObject66) GetSizeOk() (*string, bool)`
+`func (o *InlineObject66) GetDhcpLeaseTimeOk() (*string, bool)`
 
-GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
+GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSize
+### SetDhcpLeaseTime
 
-`func (o *InlineObject66) SetSize(v string)`
+`func (o *InlineObject66) SetDhcpLeaseTime(v string)`
 
-SetSize sets Size field to given value.
+SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
 
+### HasDhcpLeaseTime
+
+`func (o *InlineObject66) HasDhcpLeaseTime() bool`
+
+HasDhcpLeaseTime returns a boolean if a field has been set.
+
+### GetDnsNameservers
+
+`func (o *InlineObject66) GetDnsNameservers() string`
+
+GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+
+### GetDnsNameserversOk
+
+`func (o *InlineObject66) GetDnsNameserversOk() (*string, bool)`
+
+GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsNameservers
+
+`func (o *InlineObject66) SetDnsNameservers(v string)`
+
+SetDnsNameservers sets DnsNameservers field to given value.
+
+### HasDnsNameservers
+
+`func (o *InlineObject66) HasDnsNameservers() bool`
+
+HasDnsNameservers returns a boolean if a field has been set.
+
+### GetDnsCustomNameservers
+
+`func (o *InlineObject66) GetDnsCustomNameservers() []string`
+
+GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+
+### GetDnsCustomNameserversOk
+
+`func (o *InlineObject66) GetDnsCustomNameserversOk() (*[]string, bool)`
+
+GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsCustomNameservers
+
+`func (o *InlineObject66) SetDnsCustomNameservers(v []string)`
+
+SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+
+### HasDnsCustomNameservers
+
+`func (o *InlineObject66) HasDnsCustomNameservers() bool`
+
+HasDnsCustomNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

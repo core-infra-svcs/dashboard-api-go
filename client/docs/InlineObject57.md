@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
-**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesSsid**](NetworksNetworkIdCameraWirelessProfilesSsid.md) |  | [optional] 
-**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
+**Enabled** | **bool** | Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured. | 
+**AsNumber** | Pointer to **int32** | An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512. | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The IBGP holdtimer in seconds. The IBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240. | [optional] 
+**Neighbors** | Pointer to [**[]NetworksNetworkIdApplianceVpnBgpNeighbors**](NetworksNetworkIdApplianceVpnBgpNeighbors.md) | List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated. | [optional] 
 
 ## Methods
 
 ### NewInlineObject57
 
-`func NewInlineObject57() *InlineObject57`
+`func NewInlineObject57(enabled bool, ) *InlineObject57`
 
 NewInlineObject57 instantiates a new InlineObject57 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +28,100 @@ NewInlineObject57WithDefaults instantiates a new InlineObject57 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject57) GetName() string`
+`func (o *InlineObject57) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject57) GetNameOk() (*string, bool)`
+`func (o *InlineObject57) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject57) SetName(v string)`
+`func (o *InlineObject57) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
 
-`func (o *InlineObject57) HasName() bool`
+### GetAsNumber
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject57) GetAsNumber() int32`
 
-### GetSsid
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-`func (o *InlineObject57) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid`
+### GetAsNumberOk
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+`func (o *InlineObject57) GetAsNumberOk() (*int32, bool)`
 
-### GetSsidOk
-
-`func (o *InlineObject57) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid, bool)`
-
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetAsNumber
 
-`func (o *InlineObject57) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid)`
+`func (o *InlineObject57) SetAsNumber(v int32)`
 
-SetSsid sets Ssid field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasSsid
+### HasAsNumber
 
-`func (o *InlineObject57) HasSsid() bool`
+`func (o *InlineObject57) HasAsNumber() bool`
 
-HasSsid returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
 
-### GetIdentity
+### GetIbgpHoldTimer
 
-`func (o *InlineObject57) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+`func (o *InlineObject57) GetIbgpHoldTimer() int32`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetIbgpHoldTimerOk
 
-`func (o *InlineObject57) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+`func (o *InlineObject57) GetIbgpHoldTimerOk() (*int32, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetIbgpHoldTimer
 
-`func (o *InlineObject57) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+`func (o *InlineObject57) SetIbgpHoldTimer(v int32)`
 
-SetIdentity sets Identity field to given value.
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
-### HasIdentity
+### HasIbgpHoldTimer
 
-`func (o *InlineObject57) HasIdentity() bool`
+`func (o *InlineObject57) HasIbgpHoldTimer() bool`
 
-HasIdentity returns a boolean if a field has been set.
+HasIbgpHoldTimer returns a boolean if a field has been set.
+
+### GetNeighbors
+
+`func (o *InlineObject57) GetNeighbors() []NetworksNetworkIdApplianceVpnBgpNeighbors`
+
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
+
+### GetNeighborsOk
+
+`func (o *InlineObject57) GetNeighborsOk() (*[]NetworksNetworkIdApplianceVpnBgpNeighbors, bool)`
+
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNeighbors
+
+`func (o *InlineObject57) SetNeighbors(v []NetworksNetworkIdApplianceVpnBgpNeighbors)`
+
+SetNeighbors sets Neighbors field to given value.
+
+### HasNeighbors
+
+`func (o *InlineObject57) HasNeighbors() bool`
+
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

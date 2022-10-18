@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the static route | [optional] 
-**Subnet** | Pointer to **string** | The subnet of the static route | [optional] 
-**GatewayIp** | Pointer to **string** | The gateway IP (next hop) of the static route | [optional] 
-**GatewayVlanId** | Pointer to **string** | The gateway IP (next hop) VLAN ID of the static route | [optional] 
-**Enabled** | Pointer to **bool** | The enabled state of the static route | [optional] 
-**FixedIpAssignments** | Pointer to **map[string]interface{}** | The DHCP fixed IP assignments on the static route. This should be an object that contains mappings from MAC addresses to objects that themselves each contain \&quot;ip\&quot; and \&quot;name\&quot; string fields. See the sample request/response for more details. | [optional] 
-**ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges.md) | The DHCP reserved IP ranges on the static route | [optional] 
+**Prefix** | Pointer to **string** | A static IPv6 prefix | [optional] 
+**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | [optional] 
+**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
 
 ## Methods
 
@@ -31,180 +27,80 @@ NewInlineObject40WithDefaults instantiates a new InlineObject40 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetPrefix
 
-`func (o *InlineObject40) GetName() string`
+`func (o *InlineObject40) GetPrefix() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPrefixOk
 
-`func (o *InlineObject40) GetNameOk() (*string, bool)`
+`func (o *InlineObject40) GetPrefixOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPrefix
 
-`func (o *InlineObject40) SetName(v string)`
+`func (o *InlineObject40) SetPrefix(v string)`
 
-SetName sets Name field to given value.
+SetPrefix sets Prefix field to given value.
 
-### HasName
+### HasPrefix
 
-`func (o *InlineObject40) HasName() bool`
+`func (o *InlineObject40) HasPrefix() bool`
 
-HasName returns a boolean if a field has been set.
+HasPrefix returns a boolean if a field has been set.
 
-### GetSubnet
+### GetOrigin
 
-`func (o *InlineObject40) GetSubnet() string`
+`func (o *InlineObject40) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetOriginOk
 
-`func (o *InlineObject40) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject40) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetOrigin
 
-`func (o *InlineObject40) SetSubnet(v string)`
+`func (o *InlineObject40) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
 
-SetSubnet sets Subnet field to given value.
+SetOrigin sets Origin field to given value.
 
-### HasSubnet
+### HasOrigin
 
-`func (o *InlineObject40) HasSubnet() bool`
+`func (o *InlineObject40) HasOrigin() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasOrigin returns a boolean if a field has been set.
 
-### GetGatewayIp
+### GetDescription
 
-`func (o *InlineObject40) GetGatewayIp() string`
+`func (o *InlineObject40) GetDescription() string`
 
-GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetGatewayIpOk
+### GetDescriptionOk
 
-`func (o *InlineObject40) GetGatewayIpOk() (*string, bool)`
+`func (o *InlineObject40) GetDescriptionOk() (*string, bool)`
 
-GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGatewayIp
+### SetDescription
 
-`func (o *InlineObject40) SetGatewayIp(v string)`
+`func (o *InlineObject40) SetDescription(v string)`
 
-SetGatewayIp sets GatewayIp field to given value.
+SetDescription sets Description field to given value.
 
-### HasGatewayIp
+### HasDescription
 
-`func (o *InlineObject40) HasGatewayIp() bool`
+`func (o *InlineObject40) HasDescription() bool`
 
-HasGatewayIp returns a boolean if a field has been set.
-
-### GetGatewayVlanId
-
-`func (o *InlineObject40) GetGatewayVlanId() string`
-
-GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
-
-### GetGatewayVlanIdOk
-
-`func (o *InlineObject40) GetGatewayVlanIdOk() (*string, bool)`
-
-GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGatewayVlanId
-
-`func (o *InlineObject40) SetGatewayVlanId(v string)`
-
-SetGatewayVlanId sets GatewayVlanId field to given value.
-
-### HasGatewayVlanId
-
-`func (o *InlineObject40) HasGatewayVlanId() bool`
-
-HasGatewayVlanId returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineObject40) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineObject40) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineObject40) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineObject40) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetFixedIpAssignments
-
-`func (o *InlineObject40) GetFixedIpAssignments() map[string]interface{}`
-
-GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
-
-### GetFixedIpAssignmentsOk
-
-`func (o *InlineObject40) GetFixedIpAssignmentsOk() (*map[string]interface{}, bool)`
-
-GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFixedIpAssignments
-
-`func (o *InlineObject40) SetFixedIpAssignments(v map[string]interface{})`
-
-SetFixedIpAssignments sets FixedIpAssignments field to given value.
-
-### HasFixedIpAssignments
-
-`func (o *InlineObject40) HasFixedIpAssignments() bool`
-
-HasFixedIpAssignments returns a boolean if a field has been set.
-
-### GetReservedIpRanges
-
-`func (o *InlineObject40) GetReservedIpRanges() []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges`
-
-GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
-
-### GetReservedIpRangesOk
-
-`func (o *InlineObject40) GetReservedIpRangesOk() (*[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges, bool)`
-
-GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReservedIpRanges
-
-`func (o *InlineObject40) SetReservedIpRanges(v []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges)`
-
-SetReservedIpRanges sets ReservedIpRanges field to given value.
-
-### HasReservedIpRanges
-
-`func (o *InlineObject40) HasReservedIpRanges() bool`
-
-HasReservedIpRanges returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

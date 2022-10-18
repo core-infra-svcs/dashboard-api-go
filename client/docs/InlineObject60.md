@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
-**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
+**ConfigTemplateId** | **string** | The ID of the template to which the network should be bound. | 
+**AutoBind** | Pointer to **bool** | Optional boolean indicating whether the network&#39;s switches should automatically bind to profiles of the same model. Defaults to false if left unspecified. This option only affects switch networks and switch templates. Auto-bind is not valid unless the switch template has at least one profile and has at most one profile per switch model. | [optional] 
 
 ## Methods
 
 ### NewInlineObject60
 
-`func NewInlineObject60() *InlineObject60`
+`func NewInlineObject60(configTemplateId string, ) *InlineObject60`
 
 NewInlineObject60 instantiates a new InlineObject60 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,50 @@ NewInlineObject60WithDefaults instantiates a new InlineObject60 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMask
+### GetConfigTemplateId
 
-`func (o *InlineObject60) GetMask() int32`
+`func (o *InlineObject60) GetConfigTemplateId() string`
 
-GetMask returns the Mask field if non-nil, zero value otherwise.
+GetConfigTemplateId returns the ConfigTemplateId field if non-nil, zero value otherwise.
 
-### GetMaskOk
+### GetConfigTemplateIdOk
 
-`func (o *InlineObject60) GetMaskOk() (*int32, bool)`
+`func (o *InlineObject60) GetConfigTemplateIdOk() (*string, bool)`
 
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+GetConfigTemplateIdOk returns a tuple with the ConfigTemplateId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMask
+### SetConfigTemplateId
 
-`func (o *InlineObject60) SetMask(v int32)`
+`func (o *InlineObject60) SetConfigTemplateId(v string)`
 
-SetMask sets Mask field to given value.
+SetConfigTemplateId sets ConfigTemplateId field to given value.
 
-### HasMask
 
-`func (o *InlineObject60) HasMask() bool`
+### GetAutoBind
 
-HasMask returns a boolean if a field has been set.
+`func (o *InlineObject60) GetAutoBind() bool`
 
-### GetCidr
+GetAutoBind returns the AutoBind field if non-nil, zero value otherwise.
 
-`func (o *InlineObject60) GetCidr() string`
+### GetAutoBindOk
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+`func (o *InlineObject60) GetAutoBindOk() (*bool, bool)`
 
-### GetCidrOk
-
-`func (o *InlineObject60) GetCidrOk() (*string, bool)`
-
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetAutoBindOk returns a tuple with the AutoBind field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetAutoBind
 
-`func (o *InlineObject60) SetCidr(v string)`
+`func (o *InlineObject60) SetAutoBind(v bool)`
 
-SetCidr sets Cidr field to given value.
+SetAutoBind sets AutoBind field to given value.
 
-### HasCidr
+### HasAutoBind
 
-`func (o *InlineObject60) HasCidr() bool`
+`func (o *InlineObject60) HasAutoBind() bool`
 
-HasCidr returns a boolean if a field has been set.
+HasAutoBind returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

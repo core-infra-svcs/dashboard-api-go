@@ -4,21 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new profile. Must be unique. This parameter is required. | 
-**MotionBasedRetentionEnabled** | Pointer to **bool** | Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras. | [optional] 
-**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras. | [optional] 
-**AudioRecordingEnabled** | Pointer to **bool** | Whether or not to record audio. Can be either true or false. Defaults to false. | [optional] 
-**CloudArchiveEnabled** | Pointer to **bool** | Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false. | [optional] 
-**MotionDetectorVersion** | Pointer to **int32** | The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2. | [optional] 
-**ScheduleId** | Pointer to **string** | Schedule for which this camera will record video, or &#39;null&#39; to always record. | [optional] 
-**MaxRetentionDays** | Pointer to **int32** | The maximum number of days for which the data will be stored, or &#39;null&#39; to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days. | [optional] 
-**VideoSettings** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings.md) |  | [optional] 
+**Id** | **string** | The VLAN ID of the new VLAN (must be between 1 and 4094) | 
+**Name** | **string** | The name of the new VLAN | 
+**Subnet** | Pointer to **string** | The subnet of the VLAN | [optional] 
+**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the VLAN | [optional] 
+**GroupPolicyId** | Pointer to **string** | The id of the desired group policy to apply to the VLAN | [optional] 
+**TemplateVlanType** | Pointer to **string** | Type of subnetting of the VLAN. Applicable only for template network. | [optional] [default to "same"]
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN. | [optional] 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all bound to the template networks. Applicable only for template network. | [optional] 
+**Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject54
 
-`func NewInlineObject54(name string, ) *InlineObject54`
+`func NewInlineObject54(id string, name string, ) *InlineObject54`
 
 NewInlineObject54 instantiates a new InlineObject54 object
 This constructor will assign default values to properties that have it defined,
@@ -32,6 +32,26 @@ will change when the set of required properties is changed
 NewInlineObject54WithDefaults instantiates a new InlineObject54 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineObject54) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineObject54) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineObject54) SetId(v string)`
+
+SetId sets Id field to given value.
+
 
 ### GetName
 
@@ -53,205 +73,180 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetMotionBasedRetentionEnabled
+### GetSubnet
 
-`func (o *InlineObject54) GetMotionBasedRetentionEnabled() bool`
+`func (o *InlineObject54) GetSubnet() string`
 
-GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetMotionBasedRetentionEnabledOk
+### GetSubnetOk
 
-`func (o *InlineObject54) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
+`func (o *InlineObject54) GetSubnetOk() (*string, bool)`
 
-GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMotionBasedRetentionEnabled
+### SetSubnet
 
-`func (o *InlineObject54) SetMotionBasedRetentionEnabled(v bool)`
+`func (o *InlineObject54) SetSubnet(v string)`
 
-SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasMotionBasedRetentionEnabled
+### HasSubnet
 
-`func (o *InlineObject54) HasMotionBasedRetentionEnabled() bool`
+`func (o *InlineObject54) HasSubnet() bool`
 
-HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetRestrictedBandwidthModeEnabled
+### GetApplianceIp
 
-`func (o *InlineObject54) GetRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineObject54) GetApplianceIp() string`
 
-GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
+GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
 
-### GetRestrictedBandwidthModeEnabledOk
+### GetApplianceIpOk
 
-`func (o *InlineObject54) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
+`func (o *InlineObject54) GetApplianceIpOk() (*string, bool)`
 
-GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
+GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRestrictedBandwidthModeEnabled
+### SetApplianceIp
 
-`func (o *InlineObject54) SetRestrictedBandwidthModeEnabled(v bool)`
+`func (o *InlineObject54) SetApplianceIp(v string)`
 
-SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
+SetApplianceIp sets ApplianceIp field to given value.
 
-### HasRestrictedBandwidthModeEnabled
+### HasApplianceIp
 
-`func (o *InlineObject54) HasRestrictedBandwidthModeEnabled() bool`
+`func (o *InlineObject54) HasApplianceIp() bool`
 
-HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
+HasApplianceIp returns a boolean if a field has been set.
 
-### GetAudioRecordingEnabled
+### GetGroupPolicyId
 
-`func (o *InlineObject54) GetAudioRecordingEnabled() bool`
+`func (o *InlineObject54) GetGroupPolicyId() string`
 
-GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetAudioRecordingEnabledOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineObject54) GetAudioRecordingEnabledOk() (*bool, bool)`
+`func (o *InlineObject54) GetGroupPolicyIdOk() (*string, bool)`
 
-GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAudioRecordingEnabled
+### SetGroupPolicyId
 
-`func (o *InlineObject54) SetAudioRecordingEnabled(v bool)`
+`func (o *InlineObject54) SetGroupPolicyId(v string)`
 
-SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasAudioRecordingEnabled
+### HasGroupPolicyId
 
-`func (o *InlineObject54) HasAudioRecordingEnabled() bool`
+`func (o *InlineObject54) HasGroupPolicyId() bool`
 
-HasAudioRecordingEnabled returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
-### GetCloudArchiveEnabled
+### GetTemplateVlanType
 
-`func (o *InlineObject54) GetCloudArchiveEnabled() bool`
+`func (o *InlineObject54) GetTemplateVlanType() string`
 
-GetCloudArchiveEnabled returns the CloudArchiveEnabled field if non-nil, zero value otherwise.
+GetTemplateVlanType returns the TemplateVlanType field if non-nil, zero value otherwise.
 
-### GetCloudArchiveEnabledOk
+### GetTemplateVlanTypeOk
 
-`func (o *InlineObject54) GetCloudArchiveEnabledOk() (*bool, bool)`
+`func (o *InlineObject54) GetTemplateVlanTypeOk() (*string, bool)`
 
-GetCloudArchiveEnabledOk returns a tuple with the CloudArchiveEnabled field if it's non-nil, zero value otherwise
+GetTemplateVlanTypeOk returns a tuple with the TemplateVlanType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCloudArchiveEnabled
+### SetTemplateVlanType
 
-`func (o *InlineObject54) SetCloudArchiveEnabled(v bool)`
+`func (o *InlineObject54) SetTemplateVlanType(v string)`
 
-SetCloudArchiveEnabled sets CloudArchiveEnabled field to given value.
+SetTemplateVlanType sets TemplateVlanType field to given value.
 
-### HasCloudArchiveEnabled
+### HasTemplateVlanType
 
-`func (o *InlineObject54) HasCloudArchiveEnabled() bool`
+`func (o *InlineObject54) HasTemplateVlanType() bool`
 
-HasCloudArchiveEnabled returns a boolean if a field has been set.
+HasTemplateVlanType returns a boolean if a field has been set.
 
-### GetMotionDetectorVersion
+### GetCidr
 
-`func (o *InlineObject54) GetMotionDetectorVersion() int32`
+`func (o *InlineObject54) GetCidr() string`
 
-GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetMotionDetectorVersionOk
+### GetCidrOk
 
-`func (o *InlineObject54) GetMotionDetectorVersionOk() (*int32, bool)`
+`func (o *InlineObject54) GetCidrOk() (*string, bool)`
 
-GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMotionDetectorVersion
+### SetCidr
 
-`func (o *InlineObject54) SetMotionDetectorVersion(v int32)`
+`func (o *InlineObject54) SetCidr(v string)`
 
-SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasMotionDetectorVersion
+### HasCidr
 
-`func (o *InlineObject54) HasMotionDetectorVersion() bool`
+`func (o *InlineObject54) HasCidr() bool`
 
-HasMotionDetectorVersion returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
 
-### GetScheduleId
+### GetMask
 
-`func (o *InlineObject54) GetScheduleId() string`
+`func (o *InlineObject54) GetMask() int32`
 
-GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetScheduleIdOk
+### GetMaskOk
 
-`func (o *InlineObject54) GetScheduleIdOk() (*string, bool)`
+`func (o *InlineObject54) GetMaskOk() (*int32, bool)`
 
-GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScheduleId
+### SetMask
 
-`func (o *InlineObject54) SetScheduleId(v string)`
+`func (o *InlineObject54) SetMask(v int32)`
 
-SetScheduleId sets ScheduleId field to given value.
+SetMask sets Mask field to given value.
 
-### HasScheduleId
+### HasMask
 
-`func (o *InlineObject54) HasScheduleId() bool`
+`func (o *InlineObject54) HasMask() bool`
 
-HasScheduleId returns a boolean if a field has been set.
+HasMask returns a boolean if a field has been set.
 
-### GetMaxRetentionDays
+### GetIpv6
 
-`func (o *InlineObject54) GetMaxRetentionDays() int32`
+`func (o *InlineObject54) GetIpv6() NetworksNetworkIdApplianceSingleLanIpv6`
 
-GetMaxRetentionDays returns the MaxRetentionDays field if non-nil, zero value otherwise.
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
 
-### GetMaxRetentionDaysOk
+### GetIpv6Ok
 
-`func (o *InlineObject54) GetMaxRetentionDaysOk() (*int32, bool)`
+`func (o *InlineObject54) GetIpv6Ok() (*NetworksNetworkIdApplianceSingleLanIpv6, bool)`
 
-GetMaxRetentionDaysOk returns a tuple with the MaxRetentionDays field if it's non-nil, zero value otherwise
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxRetentionDays
+### SetIpv6
 
-`func (o *InlineObject54) SetMaxRetentionDays(v int32)`
+`func (o *InlineObject54) SetIpv6(v NetworksNetworkIdApplianceSingleLanIpv6)`
 
-SetMaxRetentionDays sets MaxRetentionDays field to given value.
+SetIpv6 sets Ipv6 field to given value.
 
-### HasMaxRetentionDays
+### HasIpv6
 
-`func (o *InlineObject54) HasMaxRetentionDays() bool`
+`func (o *InlineObject54) HasIpv6() bool`
 
-HasMaxRetentionDays returns a boolean if a field has been set.
-
-### GetVideoSettings
-
-`func (o *InlineObject54) GetVideoSettings() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings`
-
-GetVideoSettings returns the VideoSettings field if non-nil, zero value otherwise.
-
-### GetVideoSettingsOk
-
-`func (o *InlineObject54) GetVideoSettingsOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings, bool)`
-
-GetVideoSettingsOk returns a tuple with the VideoSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVideoSettings
-
-`func (o *InlineObject54) SetVideoSettings(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings)`
-
-SetVideoSettings sets VideoSettings field to given value.
-
-### HasVideoSettings
-
-`func (o *InlineObject54) HasVideoSettings() bool`
-
-HasVideoSettings returns a boolean if a field has been set.
+HasIpv6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

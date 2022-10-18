@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Enable custom analytics | [optional] 
-**ArtifactId** | Pointer to **string** | The ID of the custom analytics artifact | [optional] 
-**Parameters** | Pointer to [**[]DevicesSerialCameraCustomAnalyticsParameters**](DevicesSerialCameraCustomAnalyticsParameters.md) | Parameters for the custom analytics workload | [optional] 
+**Duration** | Pointer to **int32** | The duration in seconds. Must be between 5 and 120. Default is 20 seconds | [optional] 
+**Period** | Pointer to **int32** | The period in milliseconds. Must be between 100 and 1000. Default is 160 milliseconds | [optional] 
+**Duty** | Pointer to **int32** | The duty cycle as the percent active. Must be between 10 and 90. Default is 50. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject2WithDefaults instantiates a new InlineObject2 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetDuration
 
-`func (o *InlineObject2) GetEnabled() bool`
+`func (o *InlineObject2) GetDuration() int32`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetDuration returns the Duration field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetDurationOk
 
-`func (o *InlineObject2) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject2) GetDurationOk() (*int32, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetDuration
 
-`func (o *InlineObject2) SetEnabled(v bool)`
+`func (o *InlineObject2) SetDuration(v int32)`
 
-SetEnabled sets Enabled field to given value.
+SetDuration sets Duration field to given value.
 
-### HasEnabled
+### HasDuration
 
-`func (o *InlineObject2) HasEnabled() bool`
+`func (o *InlineObject2) HasDuration() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasDuration returns a boolean if a field has been set.
 
-### GetArtifactId
+### GetPeriod
 
-`func (o *InlineObject2) GetArtifactId() string`
+`func (o *InlineObject2) GetPeriod() int32`
 
-GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
+GetPeriod returns the Period field if non-nil, zero value otherwise.
 
-### GetArtifactIdOk
+### GetPeriodOk
 
-`func (o *InlineObject2) GetArtifactIdOk() (*string, bool)`
+`func (o *InlineObject2) GetPeriodOk() (*int32, bool)`
 
-GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
+GetPeriodOk returns a tuple with the Period field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArtifactId
+### SetPeriod
 
-`func (o *InlineObject2) SetArtifactId(v string)`
+`func (o *InlineObject2) SetPeriod(v int32)`
 
-SetArtifactId sets ArtifactId field to given value.
+SetPeriod sets Period field to given value.
 
-### HasArtifactId
+### HasPeriod
 
-`func (o *InlineObject2) HasArtifactId() bool`
+`func (o *InlineObject2) HasPeriod() bool`
 
-HasArtifactId returns a boolean if a field has been set.
+HasPeriod returns a boolean if a field has been set.
 
-### GetParameters
+### GetDuty
 
-`func (o *InlineObject2) GetParameters() []DevicesSerialCameraCustomAnalyticsParameters`
+`func (o *InlineObject2) GetDuty() int32`
 
-GetParameters returns the Parameters field if non-nil, zero value otherwise.
+GetDuty returns the Duty field if non-nil, zero value otherwise.
 
-### GetParametersOk
+### GetDutyOk
 
-`func (o *InlineObject2) GetParametersOk() (*[]DevicesSerialCameraCustomAnalyticsParameters, bool)`
+`func (o *InlineObject2) GetDutyOk() (*int32, bool)`
 
-GetParametersOk returns a tuple with the Parameters field if it's non-nil, zero value otherwise
+GetDutyOk returns a tuple with the Duty field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetParameters
+### SetDuty
 
-`func (o *InlineObject2) SetParameters(v []DevicesSerialCameraCustomAnalyticsParameters)`
+`func (o *InlineObject2) SetDuty(v int32)`
 
-SetParameters sets Parameters field to given value.
+SetDuty sets Duty field to given value.
 
-### HasParameters
+### HasDuty
 
-`func (o *InlineObject2) HasParameters() bool`
+`func (o *InlineObject2) HasDuty() bool`
 
-HasParameters returns a boolean if a field has been set.
+HasDuty returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

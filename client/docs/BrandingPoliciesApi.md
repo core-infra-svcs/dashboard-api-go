@@ -36,7 +36,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationBrandingPolicy := *openapiclient.NewInlineObject166("Name_example", false, *openapiclient.NewOrganizationsOrganizationIdBrandingPoliciesAdminSettings()) // InlineObject166 | 
+    createOrganizationBrandingPolicy := *openapiclient.NewInlineObject184("Name_example", false, *openapiclient.NewOrganizationsOrganizationIdBrandingPoliciesAdminSettings()) // InlineObject184 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationBranding
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationBrandingPolicy** | [**InlineObject166**](InlineObject166.md) |  | 
+ **createOrganizationBrandingPolicy** | [**InlineObject184**](InlineObject184.md) |  | 
 
 ### Return type
 
@@ -392,7 +392,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    updateOrganizationBrandingPoliciesPriorities := *openapiclient.NewInlineObject167([]string{"BrandingPolicyIds_example"}) // InlineObject167 | 
+    updateOrganizationBrandingPoliciesPriorities := *openapiclient.NewInlineObject185([]string{"BrandingPolicyIds_example"}) // InlineObject185 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -422,7 +422,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationBranding
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationBrandingPoliciesPriorities** | [**InlineObject167**](InlineObject167.md) |  | 
+ **updateOrganizationBrandingPoliciesPriorities** | [**InlineObject185**](InlineObject185.md) |  | 
 
 ### Return type
 
@@ -465,7 +465,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | 
     brandingPolicyId := "brandingPolicyId_example" // string | 
-    updateOrganizationBrandingPolicy := *openapiclient.NewInlineObject168() // InlineObject168 |  (optional)
+    updateOrganizationBrandingPolicy := *openapiclient.NewInlineObject186() // InlineObject186 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationBrandingPolicy** | [**InlineObject168**](InlineObject168.md) |  | 
+ **updateOrganizationBrandingPolicy** | [**InlineObject186**](InlineObject186.md) |  | 
 
 ### Return type
 

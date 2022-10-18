@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlansEnabled** | Pointer to **bool** | Boolean indicating whether to enable (true) or disable (false) VLANs for the network | [optional] 
+**GlobalBandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineObject48WithDefaults instantiates a new InlineObject48 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlansEnabled
+### GetGlobalBandwidthLimits
 
-`func (o *InlineObject48) GetVlansEnabled() bool`
+`func (o *InlineObject48) GetGlobalBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits`
 
-GetVlansEnabled returns the VlansEnabled field if non-nil, zero value otherwise.
+GetGlobalBandwidthLimits returns the GlobalBandwidthLimits field if non-nil, zero value otherwise.
 
-### GetVlansEnabledOk
+### GetGlobalBandwidthLimitsOk
 
-`func (o *InlineObject48) GetVlansEnabledOk() (*bool, bool)`
+`func (o *InlineObject48) GetGlobalBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits, bool)`
 
-GetVlansEnabledOk returns a tuple with the VlansEnabled field if it's non-nil, zero value otherwise
+GetGlobalBandwidthLimitsOk returns a tuple with the GlobalBandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlansEnabled
+### SetGlobalBandwidthLimits
 
-`func (o *InlineObject48) SetVlansEnabled(v bool)`
+`func (o *InlineObject48) SetGlobalBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits)`
 
-SetVlansEnabled sets VlansEnabled field to given value.
+SetGlobalBandwidthLimits sets GlobalBandwidthLimits field to given value.
 
-### HasVlansEnabled
+### HasGlobalBandwidthLimits
 
-`func (o *InlineObject48) HasVlansEnabled() bool`
+`func (o *InlineObject48) HasGlobalBandwidthLimits() bool`
 
-HasVlansEnabled returns a boolean if a field has been set.
+HasGlobalBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules**](NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule) | [optional] 
-**AllowLanAccess** | Pointer to **bool** | Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional) | [optional] 
+**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
+**StpBridgePriority** | Pointer to [**[]NetworksNetworkIdSwitchStpStpBridgePriority**](NetworksNetworkIdSwitchStpStpBridgePriority.md) | STP bridge priority for switches/stacks or switch profiles. An empty array will clear the STP bridge priority settings. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject139WithDefaults instantiates a new InlineObject139 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetRstpEnabled
 
-`func (o *InlineObject139) GetRules() []NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules`
+`func (o *InlineObject139) GetRstpEnabled() bool`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetRstpEnabledOk
 
-`func (o *InlineObject139) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules, bool)`
+`func (o *InlineObject139) GetRstpEnabledOk() (*bool, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetRstpEnabled
 
-`func (o *InlineObject139) SetRules(v []NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules)`
+`func (o *InlineObject139) SetRstpEnabled(v bool)`
 
-SetRules sets Rules field to given value.
+SetRstpEnabled sets RstpEnabled field to given value.
 
-### HasRules
+### HasRstpEnabled
 
-`func (o *InlineObject139) HasRules() bool`
+`func (o *InlineObject139) HasRstpEnabled() bool`
 
-HasRules returns a boolean if a field has been set.
+HasRstpEnabled returns a boolean if a field has been set.
 
-### GetAllowLanAccess
+### GetStpBridgePriority
 
-`func (o *InlineObject139) GetAllowLanAccess() bool`
+`func (o *InlineObject139) GetStpBridgePriority() []NetworksNetworkIdSwitchStpStpBridgePriority`
 
-GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
+GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
 
-### GetAllowLanAccessOk
+### GetStpBridgePriorityOk
 
-`func (o *InlineObject139) GetAllowLanAccessOk() (*bool, bool)`
+`func (o *InlineObject139) GetStpBridgePriorityOk() (*[]NetworksNetworkIdSwitchStpStpBridgePriority, bool)`
 
-GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
+GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowLanAccess
+### SetStpBridgePriority
 
-`func (o *InlineObject139) SetAllowLanAccess(v bool)`
+`func (o *InlineObject139) SetStpBridgePriority(v []NetworksNetworkIdSwitchStpStpBridgePriority)`
 
-SetAllowLanAccess sets AllowLanAccess field to given value.
+SetStpBridgePriority sets StpBridgePriority field to given value.
 
-### HasAllowLanAccess
+### HasStpBridgePriority
 
-`func (o *InlineObject139) HasAllowLanAccess() bool`
+`func (o *InlineObject139) HasStpBridgePriority() bool`
 
-HasAllowLanAccess returns a boolean if a field has been set.
+HasStpBridgePriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

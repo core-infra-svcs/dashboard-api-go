@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of camera | [optional] 
-**WirelessCredentialsSent** | Pointer to **bool** | Note whether credentials were sent successfully | [optional] 
+**Name** | **string** | Name of the adaptive policy ACL | 
+**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] [default to ""]
+**Rules** | [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules. | 
+**IpVersion** | **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | 
 
 ## Methods
 
 ### NewInlineObject170
 
-`func NewInlineObject170() *InlineObject170`
+`func NewInlineObject170(name string, rules []OrganizationsOrganizationIdAdaptivePolicyAclsRules, ipVersion string, ) *InlineObject170`
 
 NewInlineObject170 instantiates a new InlineObject170 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,90 @@ NewInlineObject170WithDefaults instantiates a new InlineObject170 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetName
 
-`func (o *InlineObject170) GetSerial() string`
+`func (o *InlineObject170) GetName() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNameOk
 
-`func (o *InlineObject170) GetSerialOk() (*string, bool)`
+`func (o *InlineObject170) GetNameOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetName
 
-`func (o *InlineObject170) SetSerial(v string)`
+`func (o *InlineObject170) SetName(v string)`
 
-SetSerial sets Serial field to given value.
+SetName sets Name field to given value.
 
-### HasSerial
 
-`func (o *InlineObject170) HasSerial() bool`
+### GetDescription
 
-HasSerial returns a boolean if a field has been set.
+`func (o *InlineObject170) GetDescription() string`
 
-### GetWirelessCredentialsSent
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-`func (o *InlineObject170) GetWirelessCredentialsSent() bool`
+### GetDescriptionOk
 
-GetWirelessCredentialsSent returns the WirelessCredentialsSent field if non-nil, zero value otherwise.
+`func (o *InlineObject170) GetDescriptionOk() (*string, bool)`
 
-### GetWirelessCredentialsSentOk
-
-`func (o *InlineObject170) GetWirelessCredentialsSentOk() (*bool, bool)`
-
-GetWirelessCredentialsSentOk returns a tuple with the WirelessCredentialsSent field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWirelessCredentialsSent
+### SetDescription
 
-`func (o *InlineObject170) SetWirelessCredentialsSent(v bool)`
+`func (o *InlineObject170) SetDescription(v string)`
 
-SetWirelessCredentialsSent sets WirelessCredentialsSent field to given value.
+SetDescription sets Description field to given value.
 
-### HasWirelessCredentialsSent
+### HasDescription
 
-`func (o *InlineObject170) HasWirelessCredentialsSent() bool`
+`func (o *InlineObject170) HasDescription() bool`
 
-HasWirelessCredentialsSent returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject170) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject170) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject170) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
+
+SetRules sets Rules field to given value.
+
+
+### GetIpVersion
+
+`func (o *InlineObject170) GetIpVersion() string`
+
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+
+### GetIpVersionOk
+
+`func (o *InlineObject170) GetIpVersionOk() (*string, bool)`
+
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpVersion
+
+`func (o *InlineObject170) SetIpVersion(v string)`
+
+SetIpVersion sets IpVersion field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

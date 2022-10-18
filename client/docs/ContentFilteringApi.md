@@ -172,7 +172,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkApplianceContentFiltering := *openapiclient.NewInlineObject26() // InlineObject26 |  (optional)
+    updateNetworkApplianceContentFiltering := *openapiclient.NewInlineObject27() // InlineObject27 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -202,7 +202,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceCont
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceContentFiltering** | [**InlineObject26**](InlineObject26.md) |  | 
+ **updateNetworkApplianceContentFiltering** | [**InlineObject27**](InlineObject27.md) |  | 
 
 ### Return type
 

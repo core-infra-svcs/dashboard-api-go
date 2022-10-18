@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Unique name of the artifact | [optional] 
+**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
+**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject169WithDefaults instantiates a new InlineObject169 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConfirmed
 
-`func (o *InlineObject169) GetName() string`
+`func (o *InlineObject169) GetConfirmed() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConfirmedOk
 
-`func (o *InlineObject169) GetNameOk() (*string, bool)`
+`func (o *InlineObject169) GetConfirmedOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConfirmed
 
-`func (o *InlineObject169) SetName(v string)`
+`func (o *InlineObject169) SetConfirmed(v bool)`
 
-SetName sets Name field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasName
+### HasConfirmed
 
-`func (o *InlineObject169) HasName() bool`
+`func (o *InlineObject169) HasConfirmed() bool`
 
-HasName returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
+
+### GetSynchronous
+
+`func (o *InlineObject169) GetSynchronous() bool`
+
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+
+### GetSynchronousOk
+
+`func (o *InlineObject169) GetSynchronousOk() (*bool, bool)`
+
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSynchronous
+
+`func (o *InlineObject169) SetSynchronous(v bool)`
+
+SetSynchronous sets Synchronous field to given value.
+
+### HasSynchronous
+
+`func (o *InlineObject169) HasSynchronous() bool`
+
+HasSynchronous returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

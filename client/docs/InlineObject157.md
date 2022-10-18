@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup.md) |  | [optional] 
-**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup.md) |  | [optional] 
-**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy  | [optional] 
-**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL  | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules**](NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule) | [optional] 
+**AllowLanAccess** | Pointer to **bool** | Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional) | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineObject157WithDefaults instantiates a new InlineObject157 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceGroup
+### GetRules
 
-`func (o *InlineObject157) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup`
+`func (o *InlineObject157) GetRules() []NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules`
 
-GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetSourceGroupOk
+### GetRulesOk
 
-`func (o *InlineObject157) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, bool)`
+`func (o *InlineObject157) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules, bool)`
 
-GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceGroup
+### SetRules
 
-`func (o *InlineObject157) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup)`
+`func (o *InlineObject157) SetRules(v []NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules)`
 
-SetSourceGroup sets SourceGroup field to given value.
+SetRules sets Rules field to given value.
 
-### HasSourceGroup
+### HasRules
 
-`func (o *InlineObject157) HasSourceGroup() bool`
+`func (o *InlineObject157) HasRules() bool`
 
-HasSourceGroup returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetDestinationGroup
+### GetAllowLanAccess
 
-`func (o *InlineObject157) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup`
+`func (o *InlineObject157) GetAllowLanAccess() bool`
 
-GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
+GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
 
-### GetDestinationGroupOk
+### GetAllowLanAccessOk
 
-`func (o *InlineObject157) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, bool)`
+`func (o *InlineObject157) GetAllowLanAccessOk() (*bool, bool)`
 
-GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
+GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinationGroup
+### SetAllowLanAccess
 
-`func (o *InlineObject157) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup)`
+`func (o *InlineObject157) SetAllowLanAccess(v bool)`
 
-SetDestinationGroup sets DestinationGroup field to given value.
+SetAllowLanAccess sets AllowLanAccess field to given value.
 
-### HasDestinationGroup
+### HasAllowLanAccess
 
-`func (o *InlineObject157) HasDestinationGroup() bool`
+`func (o *InlineObject157) HasAllowLanAccess() bool`
 
-HasDestinationGroup returns a boolean if a field has been set.
-
-### GetAcls
-
-`func (o *InlineObject157) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls`
-
-GetAcls returns the Acls field if non-nil, zero value otherwise.
-
-### GetAclsOk
-
-`func (o *InlineObject157) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls, bool)`
-
-GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAcls
-
-`func (o *InlineObject157) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls)`
-
-SetAcls sets Acls field to given value.
-
-### HasAcls
-
-`func (o *InlineObject157) HasAcls() bool`
-
-HasAcls returns a boolean if a field has been set.
-
-### GetLastEntryRule
-
-`func (o *InlineObject157) GetLastEntryRule() string`
-
-GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
-
-### GetLastEntryRuleOk
-
-`func (o *InlineObject157) GetLastEntryRuleOk() (*string, bool)`
-
-GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastEntryRule
-
-`func (o *InlineObject157) SetLastEntryRule(v string)`
-
-SetLastEntryRule sets LastEntryRule field to given value.
-
-### HasLastEntryRule
-
-`func (o *InlineObject157) HasLastEntryRule() bool`
-
-HasLastEntryRule returns a boolean if a field has been set.
+HasAllowLanAccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

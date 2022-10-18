@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ActiveActiveAutoVpnEnabled** | Pointer to **bool** | Toggle for enabling or disabling active-active AutoVPN | [optional] 
-**DefaultUplink** | Pointer to **string** | The default uplink. Must be one of: &#39;wan1&#39; or &#39;wan2&#39; | [optional] 
-**LoadBalancingEnabled** | Pointer to **bool** | Toggle for enabling or disabling load balancing | [optional] 
-**WanTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences.md) | Array of uplink preference rules for WAN traffic | [optional] 
-**VpnTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences.md) | Array of uplink preference rules for VPN traffic | [optional] 
+**Name** | **string** | The name of the new static route | 
+**Subnet** | **string** | The subnet of the static route | 
+**GatewayIp** | **string** | The gateway IP (next hop) of the static route | 
+**GatewayVlanId** | Pointer to **string** | The gateway IP (next hop) VLAN ID of the static route | [optional] 
 
 ## Methods
 
 ### NewInlineObject46
 
-`func NewInlineObject46() *InlineObject46`
+`func NewInlineObject46(name string, subnet string, gatewayIp string, ) *InlineObject46`
 
 NewInlineObject46 instantiates a new InlineObject46 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +28,90 @@ NewInlineObject46WithDefaults instantiates a new InlineObject46 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetActiveActiveAutoVpnEnabled
+### GetName
 
-`func (o *InlineObject46) GetActiveActiveAutoVpnEnabled() bool`
+`func (o *InlineObject46) GetName() string`
 
-GetActiveActiveAutoVpnEnabled returns the ActiveActiveAutoVpnEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetActiveActiveAutoVpnEnabledOk
+### GetNameOk
 
-`func (o *InlineObject46) GetActiveActiveAutoVpnEnabledOk() (*bool, bool)`
+`func (o *InlineObject46) GetNameOk() (*string, bool)`
 
-GetActiveActiveAutoVpnEnabledOk returns a tuple with the ActiveActiveAutoVpnEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActiveActiveAutoVpnEnabled
+### SetName
 
-`func (o *InlineObject46) SetActiveActiveAutoVpnEnabled(v bool)`
+`func (o *InlineObject46) SetName(v string)`
 
-SetActiveActiveAutoVpnEnabled sets ActiveActiveAutoVpnEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasActiveActiveAutoVpnEnabled
 
-`func (o *InlineObject46) HasActiveActiveAutoVpnEnabled() bool`
+### GetSubnet
 
-HasActiveActiveAutoVpnEnabled returns a boolean if a field has been set.
+`func (o *InlineObject46) GetSubnet() string`
 
-### GetDefaultUplink
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-`func (o *InlineObject46) GetDefaultUplink() string`
+### GetSubnetOk
 
-GetDefaultUplink returns the DefaultUplink field if non-nil, zero value otherwise.
+`func (o *InlineObject46) GetSubnetOk() (*string, bool)`
 
-### GetDefaultUplinkOk
-
-`func (o *InlineObject46) GetDefaultUplinkOk() (*string, bool)`
-
-GetDefaultUplinkOk returns a tuple with the DefaultUplink field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultUplink
+### SetSubnet
 
-`func (o *InlineObject46) SetDefaultUplink(v string)`
+`func (o *InlineObject46) SetSubnet(v string)`
 
-SetDefaultUplink sets DefaultUplink field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasDefaultUplink
 
-`func (o *InlineObject46) HasDefaultUplink() bool`
+### GetGatewayIp
 
-HasDefaultUplink returns a boolean if a field has been set.
+`func (o *InlineObject46) GetGatewayIp() string`
 
-### GetLoadBalancingEnabled
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
 
-`func (o *InlineObject46) GetLoadBalancingEnabled() bool`
+### GetGatewayIpOk
 
-GetLoadBalancingEnabled returns the LoadBalancingEnabled field if non-nil, zero value otherwise.
+`func (o *InlineObject46) GetGatewayIpOk() (*string, bool)`
 
-### GetLoadBalancingEnabledOk
-
-`func (o *InlineObject46) GetLoadBalancingEnabledOk() (*bool, bool)`
-
-GetLoadBalancingEnabledOk returns a tuple with the LoadBalancingEnabled field if it's non-nil, zero value otherwise
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLoadBalancingEnabled
+### SetGatewayIp
 
-`func (o *InlineObject46) SetLoadBalancingEnabled(v bool)`
+`func (o *InlineObject46) SetGatewayIp(v string)`
 
-SetLoadBalancingEnabled sets LoadBalancingEnabled field to given value.
+SetGatewayIp sets GatewayIp field to given value.
 
-### HasLoadBalancingEnabled
 
-`func (o *InlineObject46) HasLoadBalancingEnabled() bool`
+### GetGatewayVlanId
 
-HasLoadBalancingEnabled returns a boolean if a field has been set.
+`func (o *InlineObject46) GetGatewayVlanId() string`
 
-### GetWanTrafficUplinkPreferences
+GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject46) GetWanTrafficUplinkPreferences() []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences`
+### GetGatewayVlanIdOk
 
-GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
+`func (o *InlineObject46) GetGatewayVlanIdOk() (*string, bool)`
 
-### GetWanTrafficUplinkPreferencesOk
-
-`func (o *InlineObject46) GetWanTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences, bool)`
-
-GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWanTrafficUplinkPreferences
+### SetGatewayVlanId
 
-`func (o *InlineObject46) SetWanTrafficUplinkPreferences(v []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences)`
+`func (o *InlineObject46) SetGatewayVlanId(v string)`
 
-SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
+SetGatewayVlanId sets GatewayVlanId field to given value.
 
-### HasWanTrafficUplinkPreferences
+### HasGatewayVlanId
 
-`func (o *InlineObject46) HasWanTrafficUplinkPreferences() bool`
+`func (o *InlineObject46) HasGatewayVlanId() bool`
 
-HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
-
-### GetVpnTrafficUplinkPreferences
-
-`func (o *InlineObject46) GetVpnTrafficUplinkPreferences() []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences`
-
-GetVpnTrafficUplinkPreferences returns the VpnTrafficUplinkPreferences field if non-nil, zero value otherwise.
-
-### GetVpnTrafficUplinkPreferencesOk
-
-`func (o *InlineObject46) GetVpnTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences, bool)`
-
-GetVpnTrafficUplinkPreferencesOk returns a tuple with the VpnTrafficUplinkPreferences field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVpnTrafficUplinkPreferences
-
-`func (o *InlineObject46) SetVpnTrafficUplinkPreferences(v []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences)`
-
-SetVpnTrafficUplinkPreferences sets VpnTrafficUplinkPreferences field to given value.
-
-### HasVpnTrafficUplinkPreferences
-
-`func (o *InlineObject46) HasVpnTrafficUplinkPreferences() bool`
-
-HasVpnTrafficUplinkPreferences returns a boolean if a field has been set.
+HasGatewayVlanId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

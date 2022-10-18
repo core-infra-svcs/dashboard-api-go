@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
-**Licenses** | Pointer to [**[]OrganizationsOrganizationIdClaimLicenses**](OrganizationsOrganizationIdClaimLicenses.md) | The licenses that should be claimed | [optional] 
+**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
+**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules. An empty array will clear the rules. | [optional] 
+**IpVersion** | Pointer to **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineObject171WithDefaults instantiates a new InlineObject171 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetName
 
-`func (o *InlineObject171) GetOrders() []string`
+`func (o *InlineObject171) GetName() string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetNameOk
 
-`func (o *InlineObject171) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineObject171) GetNameOk() (*string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetName
 
-`func (o *InlineObject171) SetOrders(v []string)`
+`func (o *InlineObject171) SetName(v string)`
 
-SetOrders sets Orders field to given value.
+SetName sets Name field to given value.
 
-### HasOrders
+### HasName
 
-`func (o *InlineObject171) HasOrders() bool`
+`func (o *InlineObject171) HasName() bool`
 
-HasOrders returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSerials
+### GetDescription
 
-`func (o *InlineObject171) GetSerials() []string`
+`func (o *InlineObject171) GetDescription() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetDescriptionOk
 
-`func (o *InlineObject171) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject171) GetDescriptionOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetDescription
 
-`func (o *InlineObject171) SetSerials(v []string)`
+`func (o *InlineObject171) SetDescription(v string)`
 
-SetSerials sets Serials field to given value.
+SetDescription sets Description field to given value.
 
-### HasSerials
+### HasDescription
 
-`func (o *InlineObject171) HasSerials() bool`
+`func (o *InlineObject171) HasDescription() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetLicenses
+### GetRules
 
-`func (o *InlineObject171) GetLicenses() []OrganizationsOrganizationIdClaimLicenses`
+`func (o *InlineObject171) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
 
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetLicensesOk
+### GetRulesOk
 
-`func (o *InlineObject171) GetLicensesOk() (*[]OrganizationsOrganizationIdClaimLicenses, bool)`
+`func (o *InlineObject171) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
 
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenses
+### SetRules
 
-`func (o *InlineObject171) SetLicenses(v []OrganizationsOrganizationIdClaimLicenses)`
+`func (o *InlineObject171) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
 
-SetLicenses sets Licenses field to given value.
+SetRules sets Rules field to given value.
 
-### HasLicenses
+### HasRules
 
-`func (o *InlineObject171) HasLicenses() bool`
+`func (o *InlineObject171) HasRules() bool`
 
-HasLicenses returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
+
+### GetIpVersion
+
+`func (o *InlineObject171) GetIpVersion() string`
+
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+
+### GetIpVersionOk
+
+`func (o *InlineObject171) GetIpVersionOk() (*string, bool)`
+
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpVersion
+
+`func (o *InlineObject171) SetIpVersion(v string)`
+
+SetIpVersion sets IpVersion field to given value.
+
+### HasIpVersion
+
+`func (o *InlineObject171) HasIpVersion() bool`
+
+HasIpVersion returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

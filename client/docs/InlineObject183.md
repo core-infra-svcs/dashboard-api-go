@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
-**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
 ### NewInlineObject183
 
-`func NewInlineObject183(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject183`
+`func NewInlineObject183() *InlineObject183`
 
 NewInlineObject183 instantiates a new InlineObject183 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,55 @@ NewInlineObject183WithDefaults instantiates a new InlineObject183 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseIdToRenew
+### GetRules
 
-`func (o *InlineObject183) GetLicenseIdToRenew() string`
+`func (o *InlineObject183) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
 
-GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetLicenseIdToRenewOk
+### GetRulesOk
 
-`func (o *InlineObject183) GetLicenseIdToRenewOk() (*string, bool)`
+`func (o *InlineObject183) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
 
-GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIdToRenew
+### SetRules
 
-`func (o *InlineObject183) SetLicenseIdToRenew(v string)`
+`func (o *InlineObject183) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
 
-SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetUnusedLicenseId
+`func (o *InlineObject183) HasRules() bool`
 
-`func (o *InlineObject183) GetUnusedLicenseId() string`
+HasRules returns a boolean if a field has been set.
 
-GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
+### GetSyslogDefaultRule
 
-### GetUnusedLicenseIdOk
+`func (o *InlineObject183) GetSyslogDefaultRule() bool`
 
-`func (o *InlineObject183) GetUnusedLicenseIdOk() (*string, bool)`
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
 
-GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
+### GetSyslogDefaultRuleOk
+
+`func (o *InlineObject183) GetSyslogDefaultRuleOk() (*bool, bool)`
+
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnusedLicenseId
+### SetSyslogDefaultRule
 
-`func (o *InlineObject183) SetUnusedLicenseId(v string)`
+`func (o *InlineObject183) SetSyslogDefaultRule(v bool)`
 
-SetUnusedLicenseId sets UnusedLicenseId field to given value.
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
 
+### HasSyslogDefaultRule
+
+`func (o *InlineObject183) HasSyslogDefaultRule() bool`
+
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

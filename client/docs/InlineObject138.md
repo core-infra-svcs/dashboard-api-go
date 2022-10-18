@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**Identity** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity**](NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity.md) |  | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**EapolKey** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey**](NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey.md) |  | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for broadcast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for multicast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for unknown unicast (dlf-destination lookup failure) traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject138WithDefaults instantiates a new InlineObject138 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetBroadcastThreshold
 
-`func (o *InlineObject138) GetTimeout() int32`
+`func (o *InlineObject138) GetBroadcastThreshold() int32`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineObject138) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineObject138) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetBroadcastThreshold
 
-`func (o *InlineObject138) SetTimeout(v int32)`
+`func (o *InlineObject138) SetBroadcastThreshold(v int32)`
 
-SetTimeout sets Timeout field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasTimeout
+### HasBroadcastThreshold
 
-`func (o *InlineObject138) HasTimeout() bool`
+`func (o *InlineObject138) HasBroadcastThreshold() bool`
 
-HasTimeout returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetIdentity
+### GetMulticastThreshold
 
-`func (o *InlineObject138) GetIdentity() NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity`
+`func (o *InlineObject138) GetMulticastThreshold() int32`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetMulticastThresholdOk
 
-`func (o *InlineObject138) GetIdentityOk() (*NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity, bool)`
+`func (o *InlineObject138) GetMulticastThresholdOk() (*int32, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetMulticastThreshold
 
-`func (o *InlineObject138) SetIdentity(v NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity)`
+`func (o *InlineObject138) SetMulticastThreshold(v int32)`
 
-SetIdentity sets Identity field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasIdentity
+### HasMulticastThreshold
 
-`func (o *InlineObject138) HasIdentity() bool`
+`func (o *InlineObject138) HasMulticastThreshold() bool`
 
-HasIdentity returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
 
-### GetMaxRetries
+### GetUnknownUnicastThreshold
 
-`func (o *InlineObject138) GetMaxRetries() int32`
+`func (o *InlineObject138) GetUnknownUnicastThreshold() int32`
 
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
 
-### GetMaxRetriesOk
+### GetUnknownUnicastThresholdOk
 
-`func (o *InlineObject138) GetMaxRetriesOk() (*int32, bool)`
+`func (o *InlineObject138) GetUnknownUnicastThresholdOk() (*int32, bool)`
 
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxRetries
+### SetUnknownUnicastThreshold
 
-`func (o *InlineObject138) SetMaxRetries(v int32)`
+`func (o *InlineObject138) SetUnknownUnicastThreshold(v int32)`
 
-SetMaxRetries sets MaxRetries field to given value.
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
 
-### HasMaxRetries
+### HasUnknownUnicastThreshold
 
-`func (o *InlineObject138) HasMaxRetries() bool`
+`func (o *InlineObject138) HasUnknownUnicastThreshold() bool`
 
-HasMaxRetries returns a boolean if a field has been set.
-
-### GetEapolKey
-
-`func (o *InlineObject138) GetEapolKey() NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey`
-
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
-
-### GetEapolKeyOk
-
-`func (o *InlineObject138) GetEapolKeyOk() (*NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey, bool)`
-
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEapolKey
-
-`func (o *InlineObject138) SetEapolKey(v NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey)`
-
-SetEapolKey sets EapolKey field to given value.
-
-### HasEapolKey
-
-`func (o *InlineObject138) HasEapolKey() bool`
-
-HasEapolKey returns a boolean if a field has been set.
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

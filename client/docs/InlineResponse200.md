@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
+**Name** | Pointer to **string** | Username | [optional] 
+**Email** | Pointer to **string** | User email | [optional] 
+**LastUsedDashboardAt** | Pointer to **time.Time** | Last seen active on Dashboard UI | [optional] 
+**Authentication** | Pointer to [**InlineResponse200Authentication**](InlineResponse200Authentication.md) |  | [optional] 
 
 ## Methods
 
@@ -52,55 +53,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetClientId
+### GetEmail
 
-`func (o *InlineResponse200) GetClientId() string`
+`func (o *InlineResponse200) GetEmail() string`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetEmailOk
 
-`func (o *InlineResponse200) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200) GetEmailOk() (*string, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetEmail
 
-`func (o *InlineResponse200) SetClientId(v string)`
+`func (o *InlineResponse200) SetEmail(v string)`
 
-SetClientId sets ClientId field to given value.
+SetEmail sets Email field to given value.
 
-### HasClientId
+### HasEmail
 
-`func (o *InlineResponse200) HasClientId() bool`
+`func (o *InlineResponse200) HasEmail() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetAssigned
+### GetLastUsedDashboardAt
 
-`func (o *InlineResponse200) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+`func (o *InlineResponse200) GetLastUsedDashboardAt() time.Time`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetLastUsedDashboardAt returns the LastUsedDashboardAt field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetLastUsedDashboardAtOk
 
-`func (o *InlineResponse200) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+`func (o *InlineResponse200) GetLastUsedDashboardAtOk() (*time.Time, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetLastUsedDashboardAtOk returns a tuple with the LastUsedDashboardAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetLastUsedDashboardAt
 
-`func (o *InlineResponse200) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+`func (o *InlineResponse200) SetLastUsedDashboardAt(v time.Time)`
 
-SetAssigned sets Assigned field to given value.
+SetLastUsedDashboardAt sets LastUsedDashboardAt field to given value.
 
-### HasAssigned
+### HasLastUsedDashboardAt
 
-`func (o *InlineResponse200) HasAssigned() bool`
+`func (o *InlineResponse200) HasLastUsedDashboardAt() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasLastUsedDashboardAt returns a boolean if a field has been set.
+
+### GetAuthentication
+
+`func (o *InlineResponse200) GetAuthentication() InlineResponse200Authentication`
+
+GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
+
+### GetAuthenticationOk
+
+`func (o *InlineResponse200) GetAuthenticationOk() (*InlineResponse200Authentication, bool)`
+
+GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthentication
+
+`func (o *InlineResponse200) SetAuthentication(v InlineResponse200Authentication)`
+
+SetAuthentication sets Authentication field to given value.
+
+### HasAuthentication
+
+`func (o *InlineResponse200) HasAuthentication() bool`
+
+HasAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

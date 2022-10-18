@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new static route | 
-**Subnet** | **string** | The subnet of the static route | 
-**GatewayIp** | **string** | The gateway IP (next hop) of the static route | 
-**GatewayVlanId** | Pointer to **string** | The gateway IP (next hop) VLAN ID of the static route | [optional] 
+**Prefix** | **string** | A static IPv6 prefix | 
+**Origin** | [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | 
+**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
 
 ## Methods
 
 ### NewInlineObject39
 
-`func NewInlineObject39(name string, subnet string, gatewayIp string, ) *InlineObject39`
+`func NewInlineObject39(prefix string, origin NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, ) *InlineObject39`
 
 NewInlineObject39 instantiates a new InlineObject39 object
 This constructor will assign default values to properties that have it defined,
@@ -28,90 +27,70 @@ NewInlineObject39WithDefaults instantiates a new InlineObject39 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetPrefix
 
-`func (o *InlineObject39) GetName() string`
+`func (o *InlineObject39) GetPrefix() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPrefixOk
 
-`func (o *InlineObject39) GetNameOk() (*string, bool)`
+`func (o *InlineObject39) GetPrefixOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPrefix
 
-`func (o *InlineObject39) SetName(v string)`
+`func (o *InlineObject39) SetPrefix(v string)`
 
-SetName sets Name field to given value.
+SetPrefix sets Prefix field to given value.
 
 
-### GetSubnet
+### GetOrigin
 
-`func (o *InlineObject39) GetSubnet() string`
+`func (o *InlineObject39) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetOriginOk
 
-`func (o *InlineObject39) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject39) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetOrigin
 
-`func (o *InlineObject39) SetSubnet(v string)`
+`func (o *InlineObject39) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
 
-SetSubnet sets Subnet field to given value.
+SetOrigin sets Origin field to given value.
 
 
-### GetGatewayIp
+### GetDescription
 
-`func (o *InlineObject39) GetGatewayIp() string`
+`func (o *InlineObject39) GetDescription() string`
 
-GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetGatewayIpOk
+### GetDescriptionOk
 
-`func (o *InlineObject39) GetGatewayIpOk() (*string, bool)`
+`func (o *InlineObject39) GetDescriptionOk() (*string, bool)`
 
-GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGatewayIp
+### SetDescription
 
-`func (o *InlineObject39) SetGatewayIp(v string)`
+`func (o *InlineObject39) SetDescription(v string)`
 
-SetGatewayIp sets GatewayIp field to given value.
+SetDescription sets Description field to given value.
 
+### HasDescription
 
-### GetGatewayVlanId
+`func (o *InlineObject39) HasDescription() bool`
 
-`func (o *InlineObject39) GetGatewayVlanId() string`
-
-GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
-
-### GetGatewayVlanIdOk
-
-`func (o *InlineObject39) GetGatewayVlanIdOk() (*string, bool)`
-
-GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGatewayVlanId
-
-`func (o *InlineObject39) SetGatewayVlanId(v string)`
-
-SetGatewayVlanId sets GatewayVlanId field to given value.
-
-### HasGatewayVlanId
-
-`func (o *InlineObject39) HasGatewayVlanId() bool`
-
-HasGatewayVlanId returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

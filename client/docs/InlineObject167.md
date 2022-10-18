@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BrandingPolicyIds** | **[]string** | A list of branding policy IDs arranged in ascending priority order (IDs later in the array have higher priority). | 
+**Name** | Pointer to **string** | The name of the organization | [optional] 
+**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject167
 
-`func NewInlineObject167(brandingPolicyIds []string, ) *InlineObject167`
+`func NewInlineObject167() *InlineObject167`
 
 NewInlineObject167 instantiates a new InlineObject167 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject167WithDefaults instantiates a new InlineObject167 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBrandingPolicyIds
+### GetName
 
-`func (o *InlineObject167) GetBrandingPolicyIds() []string`
+`func (o *InlineObject167) GetName() string`
 
-GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetBrandingPolicyIdsOk
+### GetNameOk
 
-`func (o *InlineObject167) GetBrandingPolicyIdsOk() (*[]string, bool)`
+`func (o *InlineObject167) GetNameOk() (*string, bool)`
 
-GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBrandingPolicyIds
+### SetName
 
-`func (o *InlineObject167) SetBrandingPolicyIds(v []string)`
+`func (o *InlineObject167) SetName(v string)`
 
-SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject167) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetApi
+
+`func (o *InlineObject167) GetApi() OrganizationsOrganizationIdApi`
+
+GetApi returns the Api field if non-nil, zero value otherwise.
+
+### GetApiOk
+
+`func (o *InlineObject167) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
+
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApi
+
+`func (o *InlineObject167) SetApi(v OrganizationsOrganizationIdApi)`
+
+SetApi sets Api field to given value.
+
+### HasApi
+
+`func (o *InlineObject167) HasApi() bool`
+
+HasApi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

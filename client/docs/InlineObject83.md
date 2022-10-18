@@ -4,16 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMac** | Pointer to **string** | The wifiMac of the device to be modified. | [optional] 
-**Id** | Pointer to **string** | The id of the device to be modified. | [optional] 
-**Serial** | Pointer to **string** | The serial of the device to be modified. | [optional] 
-**DeviceFields** | [**NetworksNetworkIdSmDevicesFieldsDeviceFields**](NetworksNetworkIdSmDevicesFieldsDeviceFields.md) |  | 
+**Name** | **string** | The name of your floor plan. | 
+**Center** | Pointer to [**NetworksNetworkIdFloorPlansCenter**](NetworksNetworkIdFloorPlansCenter.md) |  | [optional] 
+**BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner**](NetworksNetworkIdFloorPlansBottomLeftCorner.md) |  | [optional] 
+**BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
+**TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
+**TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
+**ImageContents** | **string** | The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. | 
 
 ## Methods
 
 ### NewInlineObject83
 
-`func NewInlineObject83(deviceFields NetworksNetworkIdSmDevicesFieldsDeviceFields, ) *InlineObject83`
+`func NewInlineObject83(name string, imageContents string, ) *InlineObject83`
 
 NewInlineObject83 instantiates a new InlineObject83 object
 This constructor will assign default values to properties that have it defined,
@@ -28,99 +31,169 @@ NewInlineObject83WithDefaults instantiates a new InlineObject83 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMac
+### GetName
 
-`func (o *InlineObject83) GetWifiMac() string`
+`func (o *InlineObject83) GetName() string`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetNameOk
 
-`func (o *InlineObject83) GetWifiMacOk() (*string, bool)`
+`func (o *InlineObject83) GetNameOk() (*string, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetName
 
-`func (o *InlineObject83) SetWifiMac(v string)`
+`func (o *InlineObject83) SetName(v string)`
 
-SetWifiMac sets WifiMac field to given value.
+SetName sets Name field to given value.
 
-### HasWifiMac
 
-`func (o *InlineObject83) HasWifiMac() bool`
+### GetCenter
 
-HasWifiMac returns a boolean if a field has been set.
+`func (o *InlineObject83) GetCenter() NetworksNetworkIdFloorPlansCenter`
 
-### GetId
+GetCenter returns the Center field if non-nil, zero value otherwise.
 
-`func (o *InlineObject83) GetId() string`
+### GetCenterOk
 
-GetId returns the Id field if non-nil, zero value otherwise.
+`func (o *InlineObject83) GetCenterOk() (*NetworksNetworkIdFloorPlansCenter, bool)`
 
-### GetIdOk
-
-`func (o *InlineObject83) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetCenter
 
-`func (o *InlineObject83) SetId(v string)`
+`func (o *InlineObject83) SetCenter(v NetworksNetworkIdFloorPlansCenter)`
 
-SetId sets Id field to given value.
+SetCenter sets Center field to given value.
 
-### HasId
+### HasCenter
 
-`func (o *InlineObject83) HasId() bool`
+`func (o *InlineObject83) HasCenter() bool`
 
-HasId returns a boolean if a field has been set.
+HasCenter returns a boolean if a field has been set.
 
-### GetSerial
+### GetBottomLeftCorner
 
-`func (o *InlineObject83) GetSerial() string`
+`func (o *InlineObject83) GetBottomLeftCorner() NetworksNetworkIdFloorPlansBottomLeftCorner`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetBottomLeftCorner returns the BottomLeftCorner field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetBottomLeftCornerOk
 
-`func (o *InlineObject83) GetSerialOk() (*string, bool)`
+`func (o *InlineObject83) GetBottomLeftCornerOk() (*NetworksNetworkIdFloorPlansBottomLeftCorner, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetBottomLeftCornerOk returns a tuple with the BottomLeftCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetBottomLeftCorner
 
-`func (o *InlineObject83) SetSerial(v string)`
+`func (o *InlineObject83) SetBottomLeftCorner(v NetworksNetworkIdFloorPlansBottomLeftCorner)`
 
-SetSerial sets Serial field to given value.
+SetBottomLeftCorner sets BottomLeftCorner field to given value.
 
-### HasSerial
+### HasBottomLeftCorner
 
-`func (o *InlineObject83) HasSerial() bool`
+`func (o *InlineObject83) HasBottomLeftCorner() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasBottomLeftCorner returns a boolean if a field has been set.
 
-### GetDeviceFields
+### GetBottomRightCorner
 
-`func (o *InlineObject83) GetDeviceFields() NetworksNetworkIdSmDevicesFieldsDeviceFields`
+`func (o *InlineObject83) GetBottomRightCorner() NetworksNetworkIdFloorPlansBottomRightCorner`
 
-GetDeviceFields returns the DeviceFields field if non-nil, zero value otherwise.
+GetBottomRightCorner returns the BottomRightCorner field if non-nil, zero value otherwise.
 
-### GetDeviceFieldsOk
+### GetBottomRightCornerOk
 
-`func (o *InlineObject83) GetDeviceFieldsOk() (*NetworksNetworkIdSmDevicesFieldsDeviceFields, bool)`
+`func (o *InlineObject83) GetBottomRightCornerOk() (*NetworksNetworkIdFloorPlansBottomRightCorner, bool)`
 
-GetDeviceFieldsOk returns a tuple with the DeviceFields field if it's non-nil, zero value otherwise
+GetBottomRightCornerOk returns a tuple with the BottomRightCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceFields
+### SetBottomRightCorner
 
-`func (o *InlineObject83) SetDeviceFields(v NetworksNetworkIdSmDevicesFieldsDeviceFields)`
+`func (o *InlineObject83) SetBottomRightCorner(v NetworksNetworkIdFloorPlansBottomRightCorner)`
 
-SetDeviceFields sets DeviceFields field to given value.
+SetBottomRightCorner sets BottomRightCorner field to given value.
+
+### HasBottomRightCorner
+
+`func (o *InlineObject83) HasBottomRightCorner() bool`
+
+HasBottomRightCorner returns a boolean if a field has been set.
+
+### GetTopLeftCorner
+
+`func (o *InlineObject83) GetTopLeftCorner() NetworksNetworkIdFloorPlansTopLeftCorner`
+
+GetTopLeftCorner returns the TopLeftCorner field if non-nil, zero value otherwise.
+
+### GetTopLeftCornerOk
+
+`func (o *InlineObject83) GetTopLeftCornerOk() (*NetworksNetworkIdFloorPlansTopLeftCorner, bool)`
+
+GetTopLeftCornerOk returns a tuple with the TopLeftCorner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTopLeftCorner
+
+`func (o *InlineObject83) SetTopLeftCorner(v NetworksNetworkIdFloorPlansTopLeftCorner)`
+
+SetTopLeftCorner sets TopLeftCorner field to given value.
+
+### HasTopLeftCorner
+
+`func (o *InlineObject83) HasTopLeftCorner() bool`
+
+HasTopLeftCorner returns a boolean if a field has been set.
+
+### GetTopRightCorner
+
+`func (o *InlineObject83) GetTopRightCorner() NetworksNetworkIdFloorPlansTopRightCorner`
+
+GetTopRightCorner returns the TopRightCorner field if non-nil, zero value otherwise.
+
+### GetTopRightCornerOk
+
+`func (o *InlineObject83) GetTopRightCornerOk() (*NetworksNetworkIdFloorPlansTopRightCorner, bool)`
+
+GetTopRightCornerOk returns a tuple with the TopRightCorner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTopRightCorner
+
+`func (o *InlineObject83) SetTopRightCorner(v NetworksNetworkIdFloorPlansTopRightCorner)`
+
+SetTopRightCorner sets TopRightCorner field to given value.
+
+### HasTopRightCorner
+
+`func (o *InlineObject83) HasTopRightCorner() bool`
+
+HasTopRightCorner returns a boolean if a field has been set.
+
+### GetImageContents
+
+`func (o *InlineObject83) GetImageContents() string`
+
+GetImageContents returns the ImageContents field if non-nil, zero value otherwise.
+
+### GetImageContentsOk
+
+`func (o *InlineObject83) GetImageContentsOk() (*string, bool)`
+
+GetImageContentsOk returns a tuple with the ImageContents field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImageContents
+
+`func (o *InlineObject83) SetImageContents(v string)`
+
+SetImageContents sets ImageContents field to given value.
 
 
 

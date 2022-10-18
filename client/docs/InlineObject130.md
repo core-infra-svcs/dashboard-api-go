@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]NetworksNetworkIdWirelessBillingPlans**](NetworksNetworkIdWirelessBillingPlans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**Name** | **string** | The name of the new stack | 
+**Serials** | **[]string** | An array of switch serials to be added into the new stack | 
 
 ## Methods
 
 ### NewInlineObject130
 
-`func NewInlineObject130() *InlineObject130`
+`func NewInlineObject130(name string, serials []string, ) *InlineObject130`
 
 NewInlineObject130 instantiates a new InlineObject130 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject130WithDefaults instantiates a new InlineObject130 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetName
 
-`func (o *InlineObject130) GetCurrency() string`
+`func (o *InlineObject130) GetName() string`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetNameOk
 
-`func (o *InlineObject130) GetCurrencyOk() (*string, bool)`
+`func (o *InlineObject130) GetNameOk() (*string, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetName
 
-`func (o *InlineObject130) SetCurrency(v string)`
+`func (o *InlineObject130) SetName(v string)`
 
-SetCurrency sets Currency field to given value.
+SetName sets Name field to given value.
 
-### HasCurrency
 
-`func (o *InlineObject130) HasCurrency() bool`
+### GetSerials
 
-HasCurrency returns a boolean if a field has been set.
+`func (o *InlineObject130) GetSerials() []string`
 
-### GetPlans
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-`func (o *InlineObject130) GetPlans() []NetworksNetworkIdWirelessBillingPlans`
+### GetSerialsOk
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+`func (o *InlineObject130) GetSerialsOk() (*[]string, bool)`
 
-### GetPlansOk
-
-`func (o *InlineObject130) GetPlansOk() (*[]NetworksNetworkIdWirelessBillingPlans, bool)`
-
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetSerials
 
-`func (o *InlineObject130) SetPlans(v []NetworksNetworkIdWirelessBillingPlans)`
+`func (o *InlineObject130) SetSerials(v []string)`
 
-SetPlans sets Plans field to given value.
+SetSerials sets Serials field to given value.
 
-### HasPlans
-
-`func (o *InlineObject130) HasPlans() bool`
-
-HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

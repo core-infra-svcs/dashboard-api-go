@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | [**[]NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules**](NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules.md) | An array of 1:1 nat rules | 
+**Rules** | Pointer to [**[]NetworksNetworkIdApplianceFirewallL7FirewallRulesRules**](NetworksNetworkIdApplianceFirewallL7FirewallRulesRules.md) | An ordered array of the MX L7 firewall rules | [optional] 
 
 ## Methods
 
 ### NewInlineObject33
 
-`func NewInlineObject33(rules []NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules, ) *InlineObject33`
+`func NewInlineObject33() *InlineObject33`
 
 NewInlineObject33 instantiates a new InlineObject33 object
 This constructor will assign default values to properties that have it defined,
@@ -27,23 +27,28 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetRules
 
-`func (o *InlineObject33) GetRules() []NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules`
+`func (o *InlineObject33) GetRules() []NetworksNetworkIdApplianceFirewallL7FirewallRulesRules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineObject33) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules, bool)`
+`func (o *InlineObject33) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallL7FirewallRulesRules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineObject33) SetRules(v []NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules)`
+`func (o *InlineObject33) SetRules(v []NetworksNetworkIdApplianceFirewallL7FirewallRulesRules)`
 
 SetRules sets Rules field to given value.
 
+### HasRules
+
+`func (o *InlineObject33) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

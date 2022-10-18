@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Name** | Pointer to **string** | Name of the appliance | [optional] 
-**Mac** | Pointer to **string** | Mac address of the appliance | [optional] 
-**Serial** | Pointer to **string** | Serial number of the appliance | [optional] 
-**Model** | Pointer to **string** | Model of the appliance | [optional] 
-**Utilization** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization.md) |  | [optional] 
+**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
 
 ## Methods
 
@@ -30,155 +27,80 @@ NewInlineResponse2005WithDefaults instantiates a new InlineResponse2005 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetUuid
 
-`func (o *InlineResponse2005) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse2005) GetUuid() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetUuidOk
 
-`func (o *InlineResponse2005) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse2005) GetUuidOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetUuid
 
-`func (o *InlineResponse2005) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse2005) SetUuid(v string)`
 
-SetNetwork sets Network field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasNetwork
+### HasUuid
 
-`func (o *InlineResponse2005) HasNetwork() bool`
+`func (o *InlineResponse2005) HasUuid() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
-### GetName
+### GetMajor
 
-`func (o *InlineResponse2005) GetName() string`
+`func (o *InlineResponse2005) GetMajor() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMajor returns the Major field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMajorOk
 
-`func (o *InlineResponse2005) GetNameOk() (*string, bool)`
+`func (o *InlineResponse2005) GetMajorOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMajor
 
-`func (o *InlineResponse2005) SetName(v string)`
+`func (o *InlineResponse2005) SetMajor(v int32)`
 
-SetName sets Name field to given value.
+SetMajor sets Major field to given value.
 
-### HasName
+### HasMajor
 
-`func (o *InlineResponse2005) HasName() bool`
+`func (o *InlineResponse2005) HasMajor() bool`
 
-HasName returns a boolean if a field has been set.
+HasMajor returns a boolean if a field has been set.
 
-### GetMac
+### GetMinor
 
-`func (o *InlineResponse2005) GetMac() string`
+`func (o *InlineResponse2005) GetMinor() int32`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetMinor returns the Minor field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetMinorOk
 
-`func (o *InlineResponse2005) GetMacOk() (*string, bool)`
+`func (o *InlineResponse2005) GetMinorOk() (*int32, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetMinor
 
-`func (o *InlineResponse2005) SetMac(v string)`
+`func (o *InlineResponse2005) SetMinor(v int32)`
 
-SetMac sets Mac field to given value.
+SetMinor sets Minor field to given value.
 
-### HasMac
+### HasMinor
 
-`func (o *InlineResponse2005) HasMac() bool`
+`func (o *InlineResponse2005) HasMinor() bool`
 
-HasMac returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse2005) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse2005) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse2005) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse2005) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse2005) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse2005) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse2005) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse2005) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetUtilization
-
-`func (o *InlineResponse2005) GetUtilization() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization`
-
-GetUtilization returns the Utilization field if non-nil, zero value otherwise.
-
-### GetUtilizationOk
-
-`func (o *InlineResponse2005) GetUtilizationOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization, bool)`
-
-GetUtilizationOk returns a tuple with the Utilization field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUtilization
-
-`func (o *InlineResponse2005) SetUtilization(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization)`
-
-SetUtilization sets Utilization field to given value.
-
-### HasUtilization
-
-`func (o *InlineResponse2005) HasUtilization() bool`
-
-HasUtilization returns a boolean if a field has been set.
+HasMinor returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

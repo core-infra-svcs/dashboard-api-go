@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**X509certSha1Fingerprint** | **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
+**Licenses** | Pointer to [**[]OrganizationsOrganizationIdClaimLicenses**](OrganizationsOrganizationIdClaimLicenses.md) | The licenses that should be claimed | [optional] 
 
 ## Methods
 
 ### NewInlineObject189
 
-`func NewInlineObject189(x509certSha1Fingerprint string, ) *InlineObject189`
+`func NewInlineObject189() *InlineObject189`
 
 NewInlineObject189 instantiates a new InlineObject189 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,80 @@ NewInlineObject189WithDefaults instantiates a new InlineObject189 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetX509certSha1Fingerprint
+### GetOrders
 
-`func (o *InlineObject189) GetX509certSha1Fingerprint() string`
+`func (o *InlineObject189) GetOrders() []string`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetOrdersOk
 
-`func (o *InlineObject189) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineObject189) GetOrdersOk() (*[]string, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetOrders
 
-`func (o *InlineObject189) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineObject189) SetOrders(v []string)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetOrders sets Orders field to given value.
 
+### HasOrders
 
-### GetSloLogoutUrl
+`func (o *InlineObject189) HasOrders() bool`
 
-`func (o *InlineObject189) GetSloLogoutUrl() string`
+HasOrders returns a boolean if a field has been set.
 
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+### GetSerials
 
-### GetSloLogoutUrlOk
+`func (o *InlineObject189) GetSerials() []string`
 
-`func (o *InlineObject189) GetSloLogoutUrlOk() (*string, bool)`
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+### GetSerialsOk
+
+`func (o *InlineObject189) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSloLogoutUrl
+### SetSerials
 
-`func (o *InlineObject189) SetSloLogoutUrl(v string)`
+`func (o *InlineObject189) SetSerials(v []string)`
 
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
+SetSerials sets Serials field to given value.
 
-### HasSloLogoutUrl
+### HasSerials
 
-`func (o *InlineObject189) HasSloLogoutUrl() bool`
+`func (o *InlineObject189) HasSerials() bool`
 
-HasSloLogoutUrl returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
+
+### GetLicenses
+
+`func (o *InlineObject189) GetLicenses() []OrganizationsOrganizationIdClaimLicenses`
+
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+
+### GetLicensesOk
+
+`func (o *InlineObject189) GetLicensesOk() (*[]OrganizationsOrganizationIdClaimLicenses, bool)`
+
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenses
+
+`func (o *InlineObject189) SetLicenses(v []OrganizationsOrganizationIdClaimLicenses)`
+
+SetLicenses sets Licenses field to given value.
+
+### HasLicenses
+
+`func (o *InlineObject189) HasLicenses() bool`
+
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

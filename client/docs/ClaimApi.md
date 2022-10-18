@@ -30,7 +30,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    vmxNetworkDevicesClaim := *openapiclient.NewInlineObject66("Size_example") // InlineObject66 | 
+    vmxNetworkDevicesClaim := *openapiclient.NewInlineObject73("Size_example") // InlineObject73 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -60,7 +60,7 @@ Other parameters are passed through a pointer to a apiVmxNetworkDevicesClaimRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **vmxNetworkDevicesClaim** | [**InlineObject66**](InlineObject66.md) |  | 
+ **vmxNetworkDevicesClaim** | [**InlineObject73**](InlineObject73.md) |  | 
 
 ### Return type
 

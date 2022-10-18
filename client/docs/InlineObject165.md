@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
+**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject165WithDefaults instantiates a new InlineObject165 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetConcentrator
 
-`func (o *InlineObject165) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
+`func (o *InlineObject165) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetConcentratorOk
 
-`func (o *InlineObject165) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
+`func (o *InlineObject165) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetConcentrator
 
-`func (o *InlineObject165) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
+`func (o *InlineObject165) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
 
-SetRules sets Rules field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasRules
+### HasConcentrator
 
-`func (o *InlineObject165) HasRules() bool`
+`func (o *InlineObject165) HasConcentrator() bool`
 
-HasRules returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetSyslogDefaultRule
+### GetSplitTunnel
 
-`func (o *InlineObject165) GetSyslogDefaultRule() bool`
+`func (o *InlineObject165) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
 
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetSyslogDefaultRuleOk
+### GetSplitTunnelOk
 
-`func (o *InlineObject165) GetSyslogDefaultRuleOk() (*bool, bool)`
+`func (o *InlineObject165) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
 
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSyslogDefaultRule
+### SetSplitTunnel
 
-`func (o *InlineObject165) SetSyslogDefaultRule(v bool)`
+`func (o *InlineObject165) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
 
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasSyslogDefaultRule
+### HasSplitTunnel
 
-`func (o *InlineObject165) HasSyslogDefaultRule() bool`
+`func (o *InlineObject165) HasSplitTunnel() bool`
 
-HasSyslogDefaultRule returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
+
+### GetFailover
+
+`func (o *InlineObject165) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
+
+GetFailover returns the Failover field if non-nil, zero value otherwise.
+
+### GetFailoverOk
+
+`func (o *InlineObject165) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
+
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFailover
+
+`func (o *InlineObject165) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
+
+SetFailover sets Failover field to given value.
+
+### HasFailover
+
+`func (o *InlineObject165) HasFailover() bool`
+
+HasFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

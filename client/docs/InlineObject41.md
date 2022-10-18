@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GlobalBandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits.md) |  | [optional] 
+**Mode** | Pointer to **string** | Set mode to &#39;disabled&#39;/&#39;detection&#39;/&#39;prevention&#39; (optional - omitting will leave current config unchanged) | [optional] 
+**IdsRulesets** | Pointer to **string** | Set the detection ruleset &#39;connectivity&#39;/&#39;balanced&#39;/&#39;security&#39; (optional - omitting will leave current config unchanged). Default value is &#39;balanced&#39; if none currently saved | [optional] 
+**ProtectedNetworks** | Pointer to [**NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks**](NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineObject41WithDefaults instantiates a new InlineObject41 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGlobalBandwidthLimits
+### GetMode
 
-`func (o *InlineObject41) GetGlobalBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits`
+`func (o *InlineObject41) GetMode() string`
 
-GetGlobalBandwidthLimits returns the GlobalBandwidthLimits field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetGlobalBandwidthLimitsOk
+### GetModeOk
 
-`func (o *InlineObject41) GetGlobalBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits, bool)`
+`func (o *InlineObject41) GetModeOk() (*string, bool)`
 
-GetGlobalBandwidthLimitsOk returns a tuple with the GlobalBandwidthLimits field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGlobalBandwidthLimits
+### SetMode
 
-`func (o *InlineObject41) SetGlobalBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits)`
+`func (o *InlineObject41) SetMode(v string)`
 
-SetGlobalBandwidthLimits sets GlobalBandwidthLimits field to given value.
+SetMode sets Mode field to given value.
 
-### HasGlobalBandwidthLimits
+### HasMode
 
-`func (o *InlineObject41) HasGlobalBandwidthLimits() bool`
+`func (o *InlineObject41) HasMode() bool`
 
-HasGlobalBandwidthLimits returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
+
+### GetIdsRulesets
+
+`func (o *InlineObject41) GetIdsRulesets() string`
+
+GetIdsRulesets returns the IdsRulesets field if non-nil, zero value otherwise.
+
+### GetIdsRulesetsOk
+
+`func (o *InlineObject41) GetIdsRulesetsOk() (*string, bool)`
+
+GetIdsRulesetsOk returns a tuple with the IdsRulesets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdsRulesets
+
+`func (o *InlineObject41) SetIdsRulesets(v string)`
+
+SetIdsRulesets sets IdsRulesets field to given value.
+
+### HasIdsRulesets
+
+`func (o *InlineObject41) HasIdsRulesets() bool`
+
+HasIdsRulesets returns a boolean if a field has been set.
+
+### GetProtectedNetworks
+
+`func (o *InlineObject41) GetProtectedNetworks() NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks`
+
+GetProtectedNetworks returns the ProtectedNetworks field if non-nil, zero value otherwise.
+
+### GetProtectedNetworksOk
+
+`func (o *InlineObject41) GetProtectedNetworksOk() (*NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks, bool)`
+
+GetProtectedNetworksOk returns a tuple with the ProtectedNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtectedNetworks
+
+`func (o *InlineObject41) SetProtectedNetworks(v NetworksNetworkIdApplianceSecurityIntrusionProtectedNetworks)`
+
+SetProtectedNetworks sets ProtectedNetworks field to given value.
+
+### HasProtectedNetworks
+
+`func (o *InlineObject41) HasProtectedNetworks() bool`
+
+HasProtectedNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

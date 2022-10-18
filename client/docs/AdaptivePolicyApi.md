@@ -7,20 +7,20 @@ Method | HTTP request | Description
 [**CreateOrganizationAdaptivePolicyAcl**](AdaptivePolicyApi.md#CreateOrganizationAdaptivePolicyAcl) | **Post** /organizations/{organizationId}/adaptivePolicy/acls | Creates new adaptive policy ACL
 [**CreateOrganizationAdaptivePolicyGroup**](AdaptivePolicyApi.md#CreateOrganizationAdaptivePolicyGroup) | **Post** /organizations/{organizationId}/adaptivePolicy/groups | Creates a new adaptive policy group
 [**CreateOrganizationAdaptivePolicyPolicy**](AdaptivePolicyApi.md#CreateOrganizationAdaptivePolicyPolicy) | **Post** /organizations/{organizationId}/adaptivePolicy/policies | Add an Adaptive Policy
-[**DeleteOrganizationAdaptivePolicyAcl**](AdaptivePolicyApi.md#DeleteOrganizationAdaptivePolicyAcl) | **Delete** /organizations/{organizationId}/adaptivePolicy/acls/{id} | Deletes the specified adaptive policy ACL
-[**DeleteOrganizationAdaptivePolicyGroup**](AdaptivePolicyApi.md#DeleteOrganizationAdaptivePolicyGroup) | **Delete** /organizations/{organizationId}/adaptivePolicy/groups/{groupId} | Deletes the specified adaptive policy group and any associated policies and references
-[**DeleteOrganizationAdaptivePolicyPolicy**](AdaptivePolicyApi.md#DeleteOrganizationAdaptivePolicyPolicy) | **Delete** /organizations/{organizationId}/adaptivePolicy/policies/{adaptivePolicyId} | Delete an Adaptive Policy
-[**GetOrganizationAdaptivePolicyAcl**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicyAcl) | **Get** /organizations/{organizationId}/adaptivePolicy/acls/{id} | Returns the adaptive policy ACL information
+[**DeleteOrganizationAdaptivePolicyAcl**](AdaptivePolicyApi.md#DeleteOrganizationAdaptivePolicyAcl) | **Delete** /organizations/{organizationId}/adaptivePolicy/acls/{aclId} | Deletes the specified adaptive policy ACL
+[**DeleteOrganizationAdaptivePolicyGroup**](AdaptivePolicyApi.md#DeleteOrganizationAdaptivePolicyGroup) | **Delete** /organizations/{organizationId}/adaptivePolicy/groups/{id} | Deletes the specified adaptive policy group and any associated policies and references
+[**DeleteOrganizationAdaptivePolicyPolicy**](AdaptivePolicyApi.md#DeleteOrganizationAdaptivePolicyPolicy) | **Delete** /organizations/{organizationId}/adaptivePolicy/policies/{id} | Delete an Adaptive Policy
+[**GetOrganizationAdaptivePolicyAcl**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicyAcl) | **Get** /organizations/{organizationId}/adaptivePolicy/acls/{aclId} | Returns the adaptive policy ACL information
 [**GetOrganizationAdaptivePolicyAcls**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicyAcls) | **Get** /organizations/{organizationId}/adaptivePolicy/acls | List adaptive policy ACLs in a organization
-[**GetOrganizationAdaptivePolicyGroup**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicyGroup) | **Get** /organizations/{organizationId}/adaptivePolicy/groups/{groupId} | Returns an adaptive policy group
+[**GetOrganizationAdaptivePolicyGroup**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicyGroup) | **Get** /organizations/{organizationId}/adaptivePolicy/groups/{id} | Returns an adaptive policy group
 [**GetOrganizationAdaptivePolicyGroups**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicyGroups) | **Get** /organizations/{organizationId}/adaptivePolicy/groups | List adaptive policy groups in a organization
 [**GetOrganizationAdaptivePolicyOverview**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicyOverview) | **Get** /organizations/{organizationId}/adaptivePolicy/overview | Returns adaptive policy aggregate statistics for an organization
 [**GetOrganizationAdaptivePolicyPolicies**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicyPolicies) | **Get** /organizations/{organizationId}/adaptivePolicy/policies | List adaptive policies in an organization
-[**GetOrganizationAdaptivePolicyPolicy**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicyPolicy) | **Get** /organizations/{organizationId}/adaptivePolicy/policies/{adaptivePolicyId} | Return an adaptive policy
+[**GetOrganizationAdaptivePolicyPolicy**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicyPolicy) | **Get** /organizations/{organizationId}/adaptivePolicy/policies/{id} | Return an adaptive policy
 [**GetOrganizationAdaptivePolicySettings**](AdaptivePolicyApi.md#GetOrganizationAdaptivePolicySettings) | **Get** /organizations/{organizationId}/adaptivePolicy/settings | Returns global adaptive policy settings in an organization
-[**UpdateOrganizationAdaptivePolicyAcl**](AdaptivePolicyApi.md#UpdateOrganizationAdaptivePolicyAcl) | **Put** /organizations/{organizationId}/adaptivePolicy/acls/{id} | Updates an adaptive policy ACL
-[**UpdateOrganizationAdaptivePolicyGroup**](AdaptivePolicyApi.md#UpdateOrganizationAdaptivePolicyGroup) | **Put** /organizations/{organizationId}/adaptivePolicy/groups/{groupId} | Updates an adaptive policy group
-[**UpdateOrganizationAdaptivePolicyPolicy**](AdaptivePolicyApi.md#UpdateOrganizationAdaptivePolicyPolicy) | **Put** /organizations/{organizationId}/adaptivePolicy/policies/{adaptivePolicyId} | Update an Adaptive Policy
+[**UpdateOrganizationAdaptivePolicyAcl**](AdaptivePolicyApi.md#UpdateOrganizationAdaptivePolicyAcl) | **Put** /organizations/{organizationId}/adaptivePolicy/acls/{aclId} | Updates an adaptive policy ACL
+[**UpdateOrganizationAdaptivePolicyGroup**](AdaptivePolicyApi.md#UpdateOrganizationAdaptivePolicyGroup) | **Put** /organizations/{organizationId}/adaptivePolicy/groups/{id} | Updates an adaptive policy group
+[**UpdateOrganizationAdaptivePolicyPolicy**](AdaptivePolicyApi.md#UpdateOrganizationAdaptivePolicyPolicy) | **Put** /organizations/{organizationId}/adaptivePolicy/policies/{id} | Update an Adaptive Policy
 [**UpdateOrganizationAdaptivePolicySettings**](AdaptivePolicyApi.md#UpdateOrganizationAdaptivePolicySettings) | **Put** /organizations/{organizationId}/adaptivePolicy/settings | Update global adaptive policy settings
 
 
@@ -47,7 +47,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject152("Name_example", []openapiclient.OrganizationsOrganizationIdAdaptivePolicyAclsRules{*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyAclsRules("Policy_example", "Protocol_example")}, "IpVersion_example") // InlineObject152 | 
+    createOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject170("Name_example", []openapiclient.OrganizationsOrganizationIdAdaptivePolicyAclsRules{*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyAclsRules("Policy_example", "Protocol_example")}, "IpVersion_example") // InlineObject170 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -77,7 +77,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyAcl** | [**InlineObject152**](InlineObject152.md) |  | 
+ **createOrganizationAdaptivePolicyAcl** | [**InlineObject170**](InlineObject170.md) |  | 
 
 ### Return type
 
@@ -119,7 +119,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject154("Name_example", int32(123)) // InlineObject154 | 
+    createOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject172("Name_example", int32(123)) // InlineObject172 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -149,7 +149,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyGroup** | [**InlineObject154**](InlineObject154.md) |  | 
+ **createOrganizationAdaptivePolicyGroup** | [**InlineObject172**](InlineObject172.md) |  | 
 
 ### Return type
 
@@ -191,7 +191,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject156(*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup(), *openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup()) // InlineObject156 | 
+    createOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject174(*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup(), *openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup()) // InlineObject174 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -221,7 +221,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyPolicy** | [**InlineObject156**](InlineObject156.md) |  | 
+ **createOrganizationAdaptivePolicyPolicy** | [**InlineObject174**](InlineObject174.md) |  | 
 
 ### Return type
 
@@ -243,7 +243,7 @@ Name | Type | Description  | Notes
 
 ## DeleteOrganizationAdaptivePolicyAcl
 
-> DeleteOrganizationAdaptivePolicyAcl(ctx, organizationId, id).Execute()
+> DeleteOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).Execute()
 
 Deletes the specified adaptive policy ACL
 
@@ -263,11 +263,11 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    id := "id_example" // string | 
+    aclId := "aclId_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AdaptivePolicyApi.DeleteOrganizationAdaptivePolicyAcl(context.Background(), organizationId, id).Execute()
+    resp, r, err := api_client.AdaptivePolicyApi.DeleteOrganizationAdaptivePolicyAcl(context.Background(), organizationId, aclId).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.DeleteOrganizationAdaptivePolicyAcl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **organizationId** | **string** |  | 
-**id** | **string** |  | 
+**aclId** | **string** |  | 
 
 ### Other Parameters
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ## DeleteOrganizationAdaptivePolicyGroup
 
-> DeleteOrganizationAdaptivePolicyGroup(ctx, organizationId, groupId).Execute()
+> DeleteOrganizationAdaptivePolicyGroup(ctx, organizationId, id).Execute()
 
 Deletes the specified adaptive policy group and any associated policies and references
 
@@ -334,11 +334,11 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    groupId := "groupId_example" // string | 
+    id := "id_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AdaptivePolicyApi.DeleteOrganizationAdaptivePolicyGroup(context.Background(), organizationId, groupId).Execute()
+    resp, r, err := api_client.AdaptivePolicyApi.DeleteOrganizationAdaptivePolicyGroup(context.Background(), organizationId, id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.DeleteOrganizationAdaptivePolicyGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **organizationId** | **string** |  | 
-**groupId** | **string** |  | 
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -385,7 +385,7 @@ Name | Type | Description  | Notes
 
 ## DeleteOrganizationAdaptivePolicyPolicy
 
-> DeleteOrganizationAdaptivePolicyPolicy(ctx, organizationId, adaptivePolicyId).Execute()
+> DeleteOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).Execute()
 
 Delete an Adaptive Policy
 
@@ -405,11 +405,11 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    adaptivePolicyId := "adaptivePolicyId_example" // string | 
+    id := "id_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AdaptivePolicyApi.DeleteOrganizationAdaptivePolicyPolicy(context.Background(), organizationId, adaptivePolicyId).Execute()
+    resp, r, err := api_client.AdaptivePolicyApi.DeleteOrganizationAdaptivePolicyPolicy(context.Background(), organizationId, id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.DeleteOrganizationAdaptivePolicyPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **organizationId** | **string** |  | 
-**adaptivePolicyId** | **string** |  | 
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyAcl
 
-> map[string]interface{} GetOrganizationAdaptivePolicyAcl(ctx, organizationId, id).Execute()
+> map[string]interface{} GetOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).Execute()
 
 Returns the adaptive policy ACL information
 
@@ -476,11 +476,11 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    id := "id_example" // string | 
+    aclId := "aclId_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AdaptivePolicyApi.GetOrganizationAdaptivePolicyAcl(context.Background(), organizationId, id).Execute()
+    resp, r, err := api_client.AdaptivePolicyApi.GetOrganizationAdaptivePolicyAcl(context.Background(), organizationId, aclId).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicyAcl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **organizationId** | **string** |  | 
-**id** | **string** |  | 
+**aclId** | **string** |  | 
 
 ### Other Parameters
 
@@ -599,7 +599,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyGroup
 
-> map[string]interface{} GetOrganizationAdaptivePolicyGroup(ctx, organizationId, groupId).Execute()
+> map[string]interface{} GetOrganizationAdaptivePolicyGroup(ctx, organizationId, id).Execute()
 
 Returns an adaptive policy group
 
@@ -619,11 +619,11 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    groupId := "groupId_example" // string | 
+    id := "id_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AdaptivePolicyApi.GetOrganizationAdaptivePolicyGroup(context.Background(), organizationId, groupId).Execute()
+    resp, r, err := api_client.AdaptivePolicyApi.GetOrganizationAdaptivePolicyGroup(context.Background(), organizationId, id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicyGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -640,7 +640,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **organizationId** | **string** |  | 
-**groupId** | **string** |  | 
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -882,7 +882,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyPolicy
 
-> map[string]interface{} GetOrganizationAdaptivePolicyPolicy(ctx, organizationId, adaptivePolicyId).Execute()
+> map[string]interface{} GetOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).Execute()
 
 Return an adaptive policy
 
@@ -902,11 +902,11 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    adaptivePolicyId := "adaptivePolicyId_example" // string | 
+    id := "id_example" // string | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AdaptivePolicyApi.GetOrganizationAdaptivePolicyPolicy(context.Background(), organizationId, adaptivePolicyId).Execute()
+    resp, r, err := api_client.AdaptivePolicyApi.GetOrganizationAdaptivePolicyPolicy(context.Background(), organizationId, id).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicyPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -923,7 +923,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **organizationId** | **string** |  | 
-**adaptivePolicyId** | **string** |  | 
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -1025,7 +1025,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdaptivePolicyAcl
 
-> map[string]interface{} UpdateOrganizationAdaptivePolicyAcl(ctx, organizationId, id).UpdateOrganizationAdaptivePolicyAcl(updateOrganizationAdaptivePolicyAcl).Execute()
+> map[string]interface{} UpdateOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).UpdateOrganizationAdaptivePolicyAcl(updateOrganizationAdaptivePolicyAcl).Execute()
 
 Updates an adaptive policy ACL
 
@@ -1045,12 +1045,12 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    id := "id_example" // string | 
-    updateOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject153() // InlineObject153 |  (optional)
+    aclId := "aclId_example" // string | 
+    updateOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject171() // InlineObject171 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyAcl(context.Background(), organizationId, id).UpdateOrganizationAdaptivePolicyAcl(updateOrganizationAdaptivePolicyAcl).Execute()
+    resp, r, err := api_client.AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyAcl(context.Background(), organizationId, aclId).UpdateOrganizationAdaptivePolicyAcl(updateOrganizationAdaptivePolicyAcl).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyAcl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1067,7 +1067,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **organizationId** | **string** |  | 
-**id** | **string** |  | 
+**aclId** | **string** |  | 
 
 ### Other Parameters
 
@@ -1078,7 +1078,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyAcl** | [**InlineObject153**](InlineObject153.md) |  | 
+ **updateOrganizationAdaptivePolicyAcl** | [**InlineObject171**](InlineObject171.md) |  | 
 
 ### Return type
 
@@ -1100,7 +1100,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdaptivePolicyGroup
 
-> map[string]interface{} UpdateOrganizationAdaptivePolicyGroup(ctx, organizationId, groupId).UpdateOrganizationAdaptivePolicyGroup(updateOrganizationAdaptivePolicyGroup).Execute()
+> map[string]interface{} UpdateOrganizationAdaptivePolicyGroup(ctx, organizationId, id).UpdateOrganizationAdaptivePolicyGroup(updateOrganizationAdaptivePolicyGroup).Execute()
 
 Updates an adaptive policy group
 
@@ -1120,12 +1120,12 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    groupId := "groupId_example" // string | 
-    updateOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject155() // InlineObject155 |  (optional)
+    id := "id_example" // string | 
+    updateOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject173() // InlineObject173 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyGroup(context.Background(), organizationId, groupId).UpdateOrganizationAdaptivePolicyGroup(updateOrganizationAdaptivePolicyGroup).Execute()
+    resp, r, err := api_client.AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyGroup(context.Background(), organizationId, id).UpdateOrganizationAdaptivePolicyGroup(updateOrganizationAdaptivePolicyGroup).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1142,7 +1142,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **organizationId** | **string** |  | 
-**groupId** | **string** |  | 
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -1153,7 +1153,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyGroup** | [**InlineObject155**](InlineObject155.md) |  | 
+ **updateOrganizationAdaptivePolicyGroup** | [**InlineObject173**](InlineObject173.md) |  | 
 
 ### Return type
 
@@ -1175,7 +1175,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdaptivePolicyPolicy
 
-> map[string]interface{} UpdateOrganizationAdaptivePolicyPolicy(ctx, organizationId, adaptivePolicyId).UpdateOrganizationAdaptivePolicyPolicy(updateOrganizationAdaptivePolicyPolicy).Execute()
+> map[string]interface{} UpdateOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).UpdateOrganizationAdaptivePolicyPolicy(updateOrganizationAdaptivePolicyPolicy).Execute()
 
 Update an Adaptive Policy
 
@@ -1195,12 +1195,12 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    adaptivePolicyId := "adaptivePolicyId_example" // string | 
-    updateOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
+    id := "id_example" // string | 
+    updateOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject175() // InlineObject175 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyPolicy(context.Background(), organizationId, adaptivePolicyId).UpdateOrganizationAdaptivePolicyPolicy(updateOrganizationAdaptivePolicyPolicy).Execute()
+    resp, r, err := api_client.AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyPolicy(context.Background(), organizationId, id).UpdateOrganizationAdaptivePolicyPolicy(updateOrganizationAdaptivePolicyPolicy).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1217,7 +1217,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **organizationId** | **string** |  | 
-**adaptivePolicyId** | **string** |  | 
+**id** | **string** |  | 
 
 ### Other Parameters
 
@@ -1228,7 +1228,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyPolicy** | [**InlineObject157**](InlineObject157.md) |  | 
+ **updateOrganizationAdaptivePolicyPolicy** | [**InlineObject175**](InlineObject175.md) |  | 
 
 ### Return type
 
@@ -1270,7 +1270,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    updateOrganizationAdaptivePolicySettings := *openapiclient.NewInlineObject158() // InlineObject158 |  (optional)
+    updateOrganizationAdaptivePolicySettings := *openapiclient.NewInlineObject176() // InlineObject176 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -1300,7 +1300,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationAdaptivePolicySettings** | [**InlineObject158**](InlineObject158.md) |  | 
+ **updateOrganizationAdaptivePolicySettings** | [**InlineObject176**](InlineObject176.md) |  | 
 
 ### Return type
 

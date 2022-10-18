@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges**](NetworksNetworkIdWirelessSsidsNumberSchedulesRanges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds**](NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Name** | **string** | The name of the new template | 
+**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
+**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
 
 ## Methods
 
 ### NewInlineObject144
 
-`func NewInlineObject144() *InlineObject144`
+`func NewInlineObject144(name string, ) *InlineObject144`
 
 NewInlineObject144 instantiates a new InlineObject144 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +29,125 @@ NewInlineObject144WithDefaults instantiates a new InlineObject144 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject144) GetEnabled() bool`
+`func (o *InlineObject144) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject144) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject144) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject144) SetEnabled(v bool)`
+`func (o *InlineObject144) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject144) HasEnabled() bool`
+### GetBody
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject144) GetBody() string`
 
-### GetRanges
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-`func (o *InlineObject144) GetRanges() []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges`
+### GetBodyOk
 
-GetRanges returns the Ranges field if non-nil, zero value otherwise.
+`func (o *InlineObject144) GetBodyOk() (*string, bool)`
 
-### GetRangesOk
-
-`func (o *InlineObject144) GetRangesOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges, bool)`
-
-GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRanges
+### SetBody
 
-`func (o *InlineObject144) SetRanges(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges)`
+`func (o *InlineObject144) SetBody(v string)`
 
-SetRanges sets Ranges field to given value.
+SetBody sets Body field to given value.
 
-### HasRanges
+### HasBody
 
-`func (o *InlineObject144) HasRanges() bool`
+`func (o *InlineObject144) HasBody() bool`
 
-HasRanges returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
 
-### GetRangesInSeconds
+### GetHeaders
 
-`func (o *InlineObject144) GetRangesInSeconds() []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds`
+`func (o *InlineObject144) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
 
-GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
 
-### GetRangesInSecondsOk
+### GetHeadersOk
 
-`func (o *InlineObject144) GetRangesInSecondsOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds, bool)`
+`func (o *InlineObject144) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
 
-GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRangesInSeconds
+### SetHeaders
 
-`func (o *InlineObject144) SetRangesInSeconds(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds)`
+`func (o *InlineObject144) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
 
-SetRangesInSeconds sets RangesInSeconds field to given value.
+SetHeaders sets Headers field to given value.
 
-### HasRangesInSeconds
+### HasHeaders
 
-`func (o *InlineObject144) HasRangesInSeconds() bool`
+`func (o *InlineObject144) HasHeaders() bool`
 
-HasRangesInSeconds returns a boolean if a field has been set.
+HasHeaders returns a boolean if a field has been set.
+
+### GetBodyFile
+
+`func (o *InlineObject144) GetBodyFile() string`
+
+GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
+
+### GetBodyFileOk
+
+`func (o *InlineObject144) GetBodyFileOk() (*string, bool)`
+
+GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBodyFile
+
+`func (o *InlineObject144) SetBodyFile(v string)`
+
+SetBodyFile sets BodyFile field to given value.
+
+### HasBodyFile
+
+`func (o *InlineObject144) HasBodyFile() bool`
+
+HasBodyFile returns a boolean if a field has been set.
+
+### GetHeadersFile
+
+`func (o *InlineObject144) GetHeadersFile() string`
+
+GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
+
+### GetHeadersFileOk
+
+`func (o *InlineObject144) GetHeadersFileOk() (*string, bool)`
+
+GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeadersFile
+
+`func (o *InlineObject144) SetHeadersFile(v string)`
+
+SetHeadersFile sets HeadersFile field to given value.
+
+### HasHeadersFile
+
+`func (o *InlineObject144) HasHeadersFile() bool`
+
+HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

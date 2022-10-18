@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ssids** | [**NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids**](NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids.md) |  | 
+**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
+**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesSsid**](NetworksNetworkIdCameraWirelessProfilesSsid.md) |  | [optional] 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject64
 
-`func NewInlineObject64(ssids NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, ) *InlineObject64`
+`func NewInlineObject64() *InlineObject64`
 
 NewInlineObject64 instantiates a new InlineObject64 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,80 @@ NewInlineObject64WithDefaults instantiates a new InlineObject64 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsids
+### GetName
 
-`func (o *InlineObject64) GetSsids() NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids`
+`func (o *InlineObject64) GetName() string`
 
-GetSsids returns the Ssids field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSsidsOk
+### GetNameOk
 
-`func (o *InlineObject64) GetSsidsOk() (*NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, bool)`
+`func (o *InlineObject64) GetNameOk() (*string, bool)`
 
-GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsids
+### SetName
 
-`func (o *InlineObject64) SetSsids(v NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids)`
+`func (o *InlineObject64) SetName(v string)`
 
-SetSsids sets Ssids field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject64) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetSsid
+
+`func (o *InlineObject64) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineObject64) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineObject64) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid)`
+
+SetSsid sets Ssid field to given value.
+
+### HasSsid
+
+`func (o *InlineObject64) HasSsid() bool`
+
+HasSsid returns a boolean if a field has been set.
+
+### GetIdentity
+
+`func (o *InlineObject64) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineObject64) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineObject64) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineObject64) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

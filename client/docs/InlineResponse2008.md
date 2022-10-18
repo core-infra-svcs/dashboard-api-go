@@ -4,14 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the device | [optional] 
-**Model** | Pointer to **string** | Model of the device | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Mac** | Pointer to **string** | Mac address of the device | [optional] 
-**ProductType** | Pointer to **string** | Product type of the device | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageClients**](OrganizationsOrganizationIdSummaryTopDevicesByUsageClients.md) |  | [optional] 
+**OccurredAt** | Pointer to **string** | time when the event that caused the alert occurred | [optional] 
+**AlertTypeId** | Pointer to **string** | type of alert | [optional] 
+**AlertType** | Pointer to **string** | user friendly alert type | [optional] 
+**Device** | Pointer to [**NetworksNetworkIdAlertsHistoryDevice**](NetworksNetworkIdAlertsHistoryDevice.md) |  | [optional] 
+**Destinations** | Pointer to [**NetworksNetworkIdAlertsHistoryDestinations**](NetworksNetworkIdAlertsHistoryDestinations.md) |  | [optional] 
+**AlertData** | Pointer to **map[string]interface{}** | relevant data about the event that caused the alert | [optional] 
 
 ## Methods
 
@@ -32,205 +30,155 @@ NewInlineResponse2008WithDefaults instantiates a new InlineResponse2008 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetOccurredAt
 
-`func (o *InlineResponse2008) GetName() string`
+`func (o *InlineResponse2008) GetOccurredAt() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetOccurredAt returns the OccurredAt field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetOccurredAtOk
 
-`func (o *InlineResponse2008) GetNameOk() (*string, bool)`
+`func (o *InlineResponse2008) GetOccurredAtOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetOccurredAtOk returns a tuple with the OccurredAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetOccurredAt
 
-`func (o *InlineResponse2008) SetName(v string)`
+`func (o *InlineResponse2008) SetOccurredAt(v string)`
 
-SetName sets Name field to given value.
+SetOccurredAt sets OccurredAt field to given value.
 
-### HasName
+### HasOccurredAt
 
-`func (o *InlineResponse2008) HasName() bool`
+`func (o *InlineResponse2008) HasOccurredAt() bool`
 
-HasName returns a boolean if a field has been set.
+HasOccurredAt returns a boolean if a field has been set.
 
-### GetModel
+### GetAlertTypeId
 
-`func (o *InlineResponse2008) GetModel() string`
+`func (o *InlineResponse2008) GetAlertTypeId() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetAlertTypeIdOk
 
-`func (o *InlineResponse2008) GetModelOk() (*string, bool)`
+`func (o *InlineResponse2008) GetAlertTypeIdOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetAlertTypeId
 
-`func (o *InlineResponse2008) SetModel(v string)`
+`func (o *InlineResponse2008) SetAlertTypeId(v string)`
 
-SetModel sets Model field to given value.
+SetAlertTypeId sets AlertTypeId field to given value.
 
-### HasModel
+### HasAlertTypeId
 
-`func (o *InlineResponse2008) HasModel() bool`
+`func (o *InlineResponse2008) HasAlertTypeId() bool`
 
-HasModel returns a boolean if a field has been set.
+HasAlertTypeId returns a boolean if a field has been set.
 
-### GetSerial
+### GetAlertType
 
-`func (o *InlineResponse2008) GetSerial() string`
+`func (o *InlineResponse2008) GetAlertType() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetAlertType returns the AlertType field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetAlertTypeOk
 
-`func (o *InlineResponse2008) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse2008) GetAlertTypeOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetAlertType
 
-`func (o *InlineResponse2008) SetSerial(v string)`
+`func (o *InlineResponse2008) SetAlertType(v string)`
 
-SetSerial sets Serial field to given value.
+SetAlertType sets AlertType field to given value.
 
-### HasSerial
+### HasAlertType
 
-`func (o *InlineResponse2008) HasSerial() bool`
+`func (o *InlineResponse2008) HasAlertType() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasAlertType returns a boolean if a field has been set.
 
-### GetMac
+### GetDevice
 
-`func (o *InlineResponse2008) GetMac() string`
+`func (o *InlineResponse2008) GetDevice() NetworksNetworkIdAlertsHistoryDevice`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetDeviceOk
 
-`func (o *InlineResponse2008) GetMacOk() (*string, bool)`
+`func (o *InlineResponse2008) GetDeviceOk() (*NetworksNetworkIdAlertsHistoryDevice, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetDevice
 
-`func (o *InlineResponse2008) SetMac(v string)`
+`func (o *InlineResponse2008) SetDevice(v NetworksNetworkIdAlertsHistoryDevice)`
 
-SetMac sets Mac field to given value.
+SetDevice sets Device field to given value.
 
-### HasMac
+### HasDevice
 
-`func (o *InlineResponse2008) HasMac() bool`
+`func (o *InlineResponse2008) HasDevice() bool`
 
-HasMac returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetProductType
+### GetDestinations
 
-`func (o *InlineResponse2008) GetProductType() string`
+`func (o *InlineResponse2008) GetDestinations() NetworksNetworkIdAlertsHistoryDestinations`
 
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
+GetDestinations returns the Destinations field if non-nil, zero value otherwise.
 
-### GetProductTypeOk
+### GetDestinationsOk
 
-`func (o *InlineResponse2008) GetProductTypeOk() (*string, bool)`
+`func (o *InlineResponse2008) GetDestinationsOk() (*NetworksNetworkIdAlertsHistoryDestinations, bool)`
 
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductType
+### SetDestinations
 
-`func (o *InlineResponse2008) SetProductType(v string)`
+`func (o *InlineResponse2008) SetDestinations(v NetworksNetworkIdAlertsHistoryDestinations)`
 
-SetProductType sets ProductType field to given value.
+SetDestinations sets Destinations field to given value.
 
-### HasProductType
+### HasDestinations
 
-`func (o *InlineResponse2008) HasProductType() bool`
+`func (o *InlineResponse2008) HasDestinations() bool`
 
-HasProductType returns a boolean if a field has been set.
+HasDestinations returns a boolean if a field has been set.
 
-### GetNetwork
+### GetAlertData
 
-`func (o *InlineResponse2008) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse2008) GetAlertData() map[string]interface{}`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetAlertData returns the AlertData field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetAlertDataOk
 
-`func (o *InlineResponse2008) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse2008) GetAlertDataOk() (*map[string]interface{}, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetAlertDataOk returns a tuple with the AlertData field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetAlertData
 
-`func (o *InlineResponse2008) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse2008) SetAlertData(v map[string]interface{})`
 
-SetNetwork sets Network field to given value.
+SetAlertData sets AlertData field to given value.
 
-### HasNetwork
+### HasAlertData
 
-`func (o *InlineResponse2008) HasNetwork() bool`
+`func (o *InlineResponse2008) HasAlertData() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse2008) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse2008) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse2008) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse2008) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
-
-### GetClients
-
-`func (o *InlineResponse2008) GetClients() OrganizationsOrganizationIdSummaryTopDevicesByUsageClients`
-
-GetClients returns the Clients field if non-nil, zero value otherwise.
-
-### GetClientsOk
-
-`func (o *InlineResponse2008) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageClients, bool)`
-
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClients
-
-`func (o *InlineResponse2008) SetClients(v OrganizationsOrganizationIdSummaryTopDevicesByUsageClients)`
-
-SetClients sets Clients field to given value.
-
-### HasClients
-
-`func (o *InlineResponse2008) HasClients() bool`
-
-HasClients returns a boolean if a field has been set.
+HasAlertData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

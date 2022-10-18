@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup.md) |  | 
-**DestinationGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup.md) |  | 
-**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])  | [optional] 
-**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL (default: \&quot;default\&quot;)  | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**Identity** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity**](NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity.md) |  | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**EapolKey** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey**](NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject156
 
-`func NewInlineObject156(sourceGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, destinationGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, ) *InlineObject156`
+`func NewInlineObject156() *InlineObject156`
 
 NewInlineObject156 instantiates a new InlineObject156 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +28,105 @@ NewInlineObject156WithDefaults instantiates a new InlineObject156 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceGroup
+### GetTimeout
 
-`func (o *InlineObject156) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup`
+`func (o *InlineObject156) GetTimeout() int32`
 
-GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetSourceGroupOk
+### GetTimeoutOk
 
-`func (o *InlineObject156) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, bool)`
+`func (o *InlineObject156) GetTimeoutOk() (*int32, bool)`
 
-GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceGroup
+### SetTimeout
 
-`func (o *InlineObject156) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup)`
+`func (o *InlineObject156) SetTimeout(v int32)`
 
-SetSourceGroup sets SourceGroup field to given value.
+SetTimeout sets Timeout field to given value.
 
+### HasTimeout
 
-### GetDestinationGroup
+`func (o *InlineObject156) HasTimeout() bool`
 
-`func (o *InlineObject156) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup`
+HasTimeout returns a boolean if a field has been set.
 
-GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
+### GetIdentity
 
-### GetDestinationGroupOk
+`func (o *InlineObject156) GetIdentity() NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity`
 
-`func (o *InlineObject156) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, bool)`
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
+### GetIdentityOk
+
+`func (o *InlineObject156) GetIdentityOk() (*NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinationGroup
+### SetIdentity
 
-`func (o *InlineObject156) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup)`
+`func (o *InlineObject156) SetIdentity(v NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity)`
 
-SetDestinationGroup sets DestinationGroup field to given value.
+SetIdentity sets Identity field to given value.
 
+### HasIdentity
 
-### GetAcls
+`func (o *InlineObject156) HasIdentity() bool`
 
-`func (o *InlineObject156) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls`
+HasIdentity returns a boolean if a field has been set.
 
-GetAcls returns the Acls field if non-nil, zero value otherwise.
+### GetMaxRetries
 
-### GetAclsOk
+`func (o *InlineObject156) GetMaxRetries() int32`
 
-`func (o *InlineObject156) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls, bool)`
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
 
-GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
+### GetMaxRetriesOk
+
+`func (o *InlineObject156) GetMaxRetriesOk() (*int32, bool)`
+
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAcls
+### SetMaxRetries
 
-`func (o *InlineObject156) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls)`
+`func (o *InlineObject156) SetMaxRetries(v int32)`
 
-SetAcls sets Acls field to given value.
+SetMaxRetries sets MaxRetries field to given value.
 
-### HasAcls
+### HasMaxRetries
 
-`func (o *InlineObject156) HasAcls() bool`
+`func (o *InlineObject156) HasMaxRetries() bool`
 
-HasAcls returns a boolean if a field has been set.
+HasMaxRetries returns a boolean if a field has been set.
 
-### GetLastEntryRule
+### GetEapolKey
 
-`func (o *InlineObject156) GetLastEntryRule() string`
+`func (o *InlineObject156) GetEapolKey() NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey`
 
-GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
 
-### GetLastEntryRuleOk
+### GetEapolKeyOk
 
-`func (o *InlineObject156) GetLastEntryRuleOk() (*string, bool)`
+`func (o *InlineObject156) GetEapolKeyOk() (*NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey, bool)`
 
-GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastEntryRule
+### SetEapolKey
 
-`func (o *InlineObject156) SetLastEntryRule(v string)`
+`func (o *InlineObject156) SetEapolKey(v NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey)`
 
-SetLastEntryRule sets LastEntryRule field to given value.
+SetEapolKey sets EapolKey field to given value.
 
-### HasLastEntryRule
+### HasEapolKey
 
-`func (o *InlineObject156) HasLastEntryRule() bool`
+`func (o *InlineObject156) HasEapolKey() bool`
 
-HasLastEntryRule returns a boolean if a field has been set.
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
-**Switches** | Pointer to [**[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches**](NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
+**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
+**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
+**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
+**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
+**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineObject94WithDefaults instantiates a new InlineObject94 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetReportingEnabled
 
-`func (o *InlineObject94) GetEnabled() bool`
+`func (o *InlineObject94) GetReportingEnabled() bool`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetReportingEnabledOk
 
-`func (o *InlineObject94) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject94) GetReportingEnabledOk() (*bool, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetReportingEnabled
 
-`func (o *InlineObject94) SetEnabled(v bool)`
+`func (o *InlineObject94) SetReportingEnabled(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetReportingEnabled sets ReportingEnabled field to given value.
 
-### HasEnabled
+### HasReportingEnabled
 
-`func (o *InlineObject94) HasEnabled() bool`
+`func (o *InlineObject94) HasReportingEnabled() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasReportingEnabled returns a boolean if a field has been set.
 
-### GetVlanId
+### GetCollectorIp
 
-`func (o *InlineObject94) GetVlanId() int32`
+`func (o *InlineObject94) GetCollectorIp() string`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetCollectorIpOk
 
-`func (o *InlineObject94) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineObject94) GetCollectorIpOk() (*string, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetCollectorIp
 
-`func (o *InlineObject94) SetVlanId(v int32)`
+`func (o *InlineObject94) SetCollectorIp(v string)`
 
-SetVlanId sets VlanId field to given value.
+SetCollectorIp sets CollectorIp field to given value.
 
-### HasVlanId
+### HasCollectorIp
 
-`func (o *InlineObject94) HasVlanId() bool`
+`func (o *InlineObject94) HasCollectorIp() bool`
 
-HasVlanId returns a boolean if a field has been set.
+HasCollectorIp returns a boolean if a field has been set.
 
-### GetProtocols
+### GetCollectorPort
 
-`func (o *InlineObject94) GetProtocols() []string`
+`func (o *InlineObject94) GetCollectorPort() int32`
 
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
 
-### GetProtocolsOk
+### GetCollectorPortOk
 
-`func (o *InlineObject94) GetProtocolsOk() (*[]string, bool)`
+`func (o *InlineObject94) GetCollectorPortOk() (*int32, bool)`
 
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocols
+### SetCollectorPort
 
-`func (o *InlineObject94) SetProtocols(v []string)`
+`func (o *InlineObject94) SetCollectorPort(v int32)`
 
-SetProtocols sets Protocols field to given value.
+SetCollectorPort sets CollectorPort field to given value.
 
-### HasProtocols
+### HasCollectorPort
 
-`func (o *InlineObject94) HasProtocols() bool`
+`func (o *InlineObject94) HasCollectorPort() bool`
 
-HasProtocols returns a boolean if a field has been set.
+HasCollectorPort returns a boolean if a field has been set.
 
-### GetSwitches
+### GetEtaEnabled
 
-`func (o *InlineObject94) GetSwitches() []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches`
+`func (o *InlineObject94) GetEtaEnabled() bool`
 
-GetSwitches returns the Switches field if non-nil, zero value otherwise.
+GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
 
-### GetSwitchesOk
+### GetEtaEnabledOk
 
-`func (o *InlineObject94) GetSwitchesOk() (*[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches, bool)`
+`func (o *InlineObject94) GetEtaEnabledOk() (*bool, bool)`
 
-GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
+GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitches
+### SetEtaEnabled
 
-`func (o *InlineObject94) SetSwitches(v []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches)`
+`func (o *InlineObject94) SetEtaEnabled(v bool)`
 
-SetSwitches sets Switches field to given value.
+SetEtaEnabled sets EtaEnabled field to given value.
 
-### HasSwitches
+### HasEtaEnabled
 
-`func (o *InlineObject94) HasSwitches() bool`
+`func (o *InlineObject94) HasEtaEnabled() bool`
 
-HasSwitches returns a boolean if a field has been set.
+HasEtaEnabled returns a boolean if a field has been set.
+
+### GetEtaDstPort
+
+`func (o *InlineObject94) GetEtaDstPort() int32`
+
+GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
+
+### GetEtaDstPortOk
+
+`func (o *InlineObject94) GetEtaDstPortOk() (*int32, bool)`
+
+GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEtaDstPort
+
+`func (o *InlineObject94) SetEtaDstPort(v int32)`
+
+SetEtaDstPort sets EtaDstPort field to given value.
+
+### HasEtaDstPort
+
+`func (o *InlineObject94) HasEtaDstPort() bool`
+
+HasEtaDstPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

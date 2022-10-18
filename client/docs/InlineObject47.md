@@ -4,17 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **string** | The VLAN ID of the new VLAN (must be between 1 and 4094) | 
-**Name** | **string** | The name of the new VLAN | 
-**Subnet** | Pointer to **string** | The subnet of the VLAN | [optional] 
-**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the VLAN | [optional] 
-**GroupPolicyId** | Pointer to **string** | The id of the desired group policy to apply to the VLAN | [optional] 
+**Name** | Pointer to **string** | The name of the static route | [optional] 
+**Subnet** | Pointer to **string** | The subnet of the static route | [optional] 
+**GatewayIp** | Pointer to **string** | The gateway IP (next hop) of the static route | [optional] 
+**GatewayVlanId** | Pointer to **string** | The gateway IP (next hop) VLAN ID of the static route | [optional] 
+**Enabled** | Pointer to **bool** | The enabled state of the static route | [optional] 
+**FixedIpAssignments** | Pointer to **map[string]interface{}** | The DHCP fixed IP assignments on the static route. This should be an object that contains mappings from MAC addresses to objects that themselves each contain \&quot;ip\&quot; and \&quot;name\&quot; string fields. See the sample request/response for more details. | [optional] 
+**ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges.md) | The DHCP reserved IP ranges on the static route | [optional] 
 
 ## Methods
 
 ### NewInlineObject47
 
-`func NewInlineObject47(id string, name string, ) *InlineObject47`
+`func NewInlineObject47() *InlineObject47`
 
 NewInlineObject47 instantiates a new InlineObject47 object
 This constructor will assign default values to properties that have it defined,
@@ -28,26 +30,6 @@ will change when the set of required properties is changed
 NewInlineObject47WithDefaults instantiates a new InlineObject47 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *InlineObject47) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineObject47) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineObject47) SetId(v string)`
-
-SetId sets Id field to given value.
-
 
 ### GetName
 
@@ -68,6 +50,11 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject47) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetSubnet
 
@@ -94,55 +81,130 @@ SetSubnet sets Subnet field to given value.
 
 HasSubnet returns a boolean if a field has been set.
 
-### GetApplianceIp
+### GetGatewayIp
 
-`func (o *InlineObject47) GetApplianceIp() string`
+`func (o *InlineObject47) GetGatewayIp() string`
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
 
-### GetApplianceIpOk
+### GetGatewayIpOk
 
-`func (o *InlineObject47) GetApplianceIpOk() (*string, bool)`
+`func (o *InlineObject47) GetGatewayIpOk() (*string, bool)`
 
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetGatewayIp
 
-`func (o *InlineObject47) SetApplianceIp(v string)`
+`func (o *InlineObject47) SetGatewayIp(v string)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetGatewayIp sets GatewayIp field to given value.
 
-### HasApplianceIp
+### HasGatewayIp
 
-`func (o *InlineObject47) HasApplianceIp() bool`
+`func (o *InlineObject47) HasGatewayIp() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
+HasGatewayIp returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetGatewayVlanId
 
-`func (o *InlineObject47) GetGroupPolicyId() string`
+`func (o *InlineObject47) GetGatewayVlanId() string`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetGatewayVlanIdOk
 
-`func (o *InlineObject47) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineObject47) GetGatewayVlanIdOk() (*string, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetGatewayVlanId
 
-`func (o *InlineObject47) SetGroupPolicyId(v string)`
+`func (o *InlineObject47) SetGatewayVlanId(v string)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetGatewayVlanId sets GatewayVlanId field to given value.
 
-### HasGroupPolicyId
+### HasGatewayVlanId
 
-`func (o *InlineObject47) HasGroupPolicyId() bool`
+`func (o *InlineObject47) HasGatewayVlanId() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasGatewayVlanId returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineObject47) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject47) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject47) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject47) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetFixedIpAssignments
+
+`func (o *InlineObject47) GetFixedIpAssignments() map[string]interface{}`
+
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+
+### GetFixedIpAssignmentsOk
+
+`func (o *InlineObject47) GetFixedIpAssignmentsOk() (*map[string]interface{}, bool)`
+
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFixedIpAssignments
+
+`func (o *InlineObject47) SetFixedIpAssignments(v map[string]interface{})`
+
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
+
+### HasFixedIpAssignments
+
+`func (o *InlineObject47) HasFixedIpAssignments() bool`
+
+HasFixedIpAssignments returns a boolean if a field has been set.
+
+### GetReservedIpRanges
+
+`func (o *InlineObject47) GetReservedIpRanges() []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges`
+
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+
+### GetReservedIpRangesOk
+
+`func (o *InlineObject47) GetReservedIpRangesOk() (*[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges, bool)`
+
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReservedIpRanges
+
+`func (o *InlineObject47) SetReservedIpRanges(v []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges)`
+
+SetReservedIpRanges sets ReservedIpRanges field to given value.
+
+### HasReservedIpRanges
+
+`func (o *InlineObject47) HasReservedIpRanges() bool`
+
+HasReservedIpRanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

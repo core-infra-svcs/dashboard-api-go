@@ -4,21 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
-**ClientBalancingEnabled** | Pointer to **bool** | Steers client to best available access point. Can be either true or false. | [optional] 
-**MinBitrateType** | Pointer to **string** | Minimum bitrate can be set to either &#39;band&#39; or &#39;ssid&#39;. | [optional] 
-**BandSelectionType** | Pointer to **string** | Band selection can be set to either &#39;ssid&#39; or &#39;ap&#39;. | [optional] 
-**ApBandSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings.md) |  | [optional] 
-**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
-**Transmission** | Pointer to [**NetworksNetworkIdWirelessRfProfilesTransmission**](NetworksNetworkIdWirelessRfProfilesTransmission.md) |  | [optional] 
-**PerSsidSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesPerSsidSettings**](NetworksNetworkIdWirelessRfProfilesPerSsidSettings.md) |  | [optional] 
+**Name** | **string** | A friendly name or description for the interface or VLAN. | 
+**Subnet** | Pointer to **string** | The network that this routed interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
+**InterfaceIp** | Pointer to **string** | The IP address this switch stack will use for layer 3 routing on this VLAN or subnet. This cannot be the same as the switch&#39;s management IP. | [optional] 
+**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are, &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
+**VlanId** | **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | 
+**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route. This IP address must exist in a subnet with a routed interface. | [optional] 
+**OspfSettings** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings.md) |  | [optional] 
+**Ipv6** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject133
 
-`func NewInlineObject133() *InlineObject133`
+`func NewInlineObject133(name string, vlanId int32, ) *InlineObject133`
 
 NewInlineObject133 instantiates a new InlineObject133 object
 This constructor will assign default values to properties that have it defined,
@@ -52,211 +51,176 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject133) HasName() bool`
+### GetSubnet
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject133) GetSubnet() string`
 
-### GetClientBalancingEnabled
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-`func (o *InlineObject133) GetClientBalancingEnabled() bool`
+### GetSubnetOk
 
-GetClientBalancingEnabled returns the ClientBalancingEnabled field if non-nil, zero value otherwise.
+`func (o *InlineObject133) GetSubnetOk() (*string, bool)`
 
-### GetClientBalancingEnabledOk
-
-`func (o *InlineObject133) GetClientBalancingEnabledOk() (*bool, bool)`
-
-GetClientBalancingEnabledOk returns a tuple with the ClientBalancingEnabled field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientBalancingEnabled
+### SetSubnet
 
-`func (o *InlineObject133) SetClientBalancingEnabled(v bool)`
+`func (o *InlineObject133) SetSubnet(v string)`
 
-SetClientBalancingEnabled sets ClientBalancingEnabled field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasClientBalancingEnabled
+### HasSubnet
 
-`func (o *InlineObject133) HasClientBalancingEnabled() bool`
+`func (o *InlineObject133) HasSubnet() bool`
 
-HasClientBalancingEnabled returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetMinBitrateType
+### GetInterfaceIp
 
-`func (o *InlineObject133) GetMinBitrateType() string`
+`func (o *InlineObject133) GetInterfaceIp() string`
 
-GetMinBitrateType returns the MinBitrateType field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetMinBitrateTypeOk
+### GetInterfaceIpOk
 
-`func (o *InlineObject133) GetMinBitrateTypeOk() (*string, bool)`
+`func (o *InlineObject133) GetInterfaceIpOk() (*string, bool)`
 
-GetMinBitrateTypeOk returns a tuple with the MinBitrateType field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMinBitrateType
+### SetInterfaceIp
 
-`func (o *InlineObject133) SetMinBitrateType(v string)`
+`func (o *InlineObject133) SetInterfaceIp(v string)`
 
-SetMinBitrateType sets MinBitrateType field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasMinBitrateType
+### HasInterfaceIp
 
-`func (o *InlineObject133) HasMinBitrateType() bool`
+`func (o *InlineObject133) HasInterfaceIp() bool`
 
-HasMinBitrateType returns a boolean if a field has been set.
+HasInterfaceIp returns a boolean if a field has been set.
 
-### GetBandSelectionType
+### GetMulticastRouting
 
-`func (o *InlineObject133) GetBandSelectionType() string`
+`func (o *InlineObject133) GetMulticastRouting() string`
 
-GetBandSelectionType returns the BandSelectionType field if non-nil, zero value otherwise.
+GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
 
-### GetBandSelectionTypeOk
+### GetMulticastRoutingOk
 
-`func (o *InlineObject133) GetBandSelectionTypeOk() (*string, bool)`
+`func (o *InlineObject133) GetMulticastRoutingOk() (*string, bool)`
 
-GetBandSelectionTypeOk returns a tuple with the BandSelectionType field if it's non-nil, zero value otherwise
+GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBandSelectionType
+### SetMulticastRouting
 
-`func (o *InlineObject133) SetBandSelectionType(v string)`
+`func (o *InlineObject133) SetMulticastRouting(v string)`
 
-SetBandSelectionType sets BandSelectionType field to given value.
+SetMulticastRouting sets MulticastRouting field to given value.
 
-### HasBandSelectionType
+### HasMulticastRouting
 
-`func (o *InlineObject133) HasBandSelectionType() bool`
+`func (o *InlineObject133) HasMulticastRouting() bool`
 
-HasBandSelectionType returns a boolean if a field has been set.
+HasMulticastRouting returns a boolean if a field has been set.
 
-### GetApBandSettings
+### GetVlanId
 
-`func (o *InlineObject133) GetApBandSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings`
+`func (o *InlineObject133) GetVlanId() int32`
 
-GetApBandSettings returns the ApBandSettings field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetApBandSettingsOk
+### GetVlanIdOk
 
-`func (o *InlineObject133) GetApBandSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings, bool)`
+`func (o *InlineObject133) GetVlanIdOk() (*int32, bool)`
 
-GetApBandSettingsOk returns a tuple with the ApBandSettings field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApBandSettings
+### SetVlanId
 
-`func (o *InlineObject133) SetApBandSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings)`
+`func (o *InlineObject133) SetVlanId(v int32)`
 
-SetApBandSettings sets ApBandSettings field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasApBandSettings
 
-`func (o *InlineObject133) HasApBandSettings() bool`
+### GetDefaultGateway
 
-HasApBandSettings returns a boolean if a field has been set.
+`func (o *InlineObject133) GetDefaultGateway() string`
 
-### GetTwoFourGhzSettings
+GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
 
-`func (o *InlineObject133) GetTwoFourGhzSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings`
+### GetDefaultGatewayOk
 
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+`func (o *InlineObject133) GetDefaultGatewayOk() (*string, bool)`
 
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineObject133) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetDefaultGateway
 
-`func (o *InlineObject133) SetTwoFourGhzSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings)`
+`func (o *InlineObject133) SetDefaultGateway(v string)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetDefaultGateway sets DefaultGateway field to given value.
 
-### HasTwoFourGhzSettings
+### HasDefaultGateway
 
-`func (o *InlineObject133) HasTwoFourGhzSettings() bool`
+`func (o *InlineObject133) HasDefaultGateway() bool`
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
+HasDefaultGateway returns a boolean if a field has been set.
 
-### GetFiveGhzSettings
+### GetOspfSettings
 
-`func (o *InlineObject133) GetFiveGhzSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings`
+`func (o *InlineObject133) GetOspfSettings() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings`
 
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
 
-### GetFiveGhzSettingsOk
+### GetOspfSettingsOk
 
-`func (o *InlineObject133) GetFiveGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings, bool)`
+`func (o *InlineObject133) GetOspfSettingsOk() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings, bool)`
 
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFiveGhzSettings
+### SetOspfSettings
 
-`func (o *InlineObject133) SetFiveGhzSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings)`
+`func (o *InlineObject133) SetOspfSettings(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings)`
 
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
+SetOspfSettings sets OspfSettings field to given value.
 
-### HasFiveGhzSettings
+### HasOspfSettings
 
-`func (o *InlineObject133) HasFiveGhzSettings() bool`
+`func (o *InlineObject133) HasOspfSettings() bool`
 
-HasFiveGhzSettings returns a boolean if a field has been set.
+HasOspfSettings returns a boolean if a field has been set.
 
-### GetTransmission
+### GetIpv6
 
-`func (o *InlineObject133) GetTransmission() NetworksNetworkIdWirelessRfProfilesTransmission`
+`func (o *InlineObject133) GetIpv6() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6`
 
-GetTransmission returns the Transmission field if non-nil, zero value otherwise.
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
 
-### GetTransmissionOk
+### GetIpv6Ok
 
-`func (o *InlineObject133) GetTransmissionOk() (*NetworksNetworkIdWirelessRfProfilesTransmission, bool)`
+`func (o *InlineObject133) GetIpv6Ok() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6, bool)`
 
-GetTransmissionOk returns a tuple with the Transmission field if it's non-nil, zero value otherwise
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTransmission
+### SetIpv6
 
-`func (o *InlineObject133) SetTransmission(v NetworksNetworkIdWirelessRfProfilesTransmission)`
+`func (o *InlineObject133) SetIpv6(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6)`
 
-SetTransmission sets Transmission field to given value.
+SetIpv6 sets Ipv6 field to given value.
 
-### HasTransmission
+### HasIpv6
 
-`func (o *InlineObject133) HasTransmission() bool`
+`func (o *InlineObject133) HasIpv6() bool`
 
-HasTransmission returns a boolean if a field has been set.
-
-### GetPerSsidSettings
-
-`func (o *InlineObject133) GetPerSsidSettings() NetworksNetworkIdWirelessRfProfilesPerSsidSettings`
-
-GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
-
-### GetPerSsidSettingsOk
-
-`func (o *InlineObject133) GetPerSsidSettingsOk() (*NetworksNetworkIdWirelessRfProfilesPerSsidSettings, bool)`
-
-GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPerSsidSettings
-
-`func (o *InlineObject133) SetPerSsidSettings(v NetworksNetworkIdWirelessRfProfilesPerSsidSettings)`
-
-SetPerSsidSettings sets PerSsidSettings field to given value.
-
-### HasPerSsidSettings
-
-`func (o *InlineObject133) HasPerSsidSettings() bool`
-
-HasPerSsidSettings returns a boolean if a field has been set.
+HasIpv6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

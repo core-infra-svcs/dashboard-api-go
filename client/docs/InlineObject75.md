@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the user | [optional] 
-**Password** | Pointer to **string** | The password for this user account | [optional] 
-**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
-**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations**](NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md) | Authorization zones and expiration dates for the user. | [optional] 
+**UpgradeWindow** | Pointer to [**InlineResponse20015UpgradeWindow**](InlineResponse20015UpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject75WithDefaults instantiates a new InlineObject75 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetUpgradeWindow
 
-`func (o *InlineObject75) GetName() string`
+`func (o *InlineObject75) GetUpgradeWindow() InlineResponse20015UpgradeWindow`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUpgradeWindowOk
 
-`func (o *InlineObject75) GetNameOk() (*string, bool)`
+`func (o *InlineObject75) GetUpgradeWindowOk() (*InlineResponse20015UpgradeWindow, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUpgradeWindow
 
-`func (o *InlineObject75) SetName(v string)`
+`func (o *InlineObject75) SetUpgradeWindow(v InlineResponse20015UpgradeWindow)`
 
-SetName sets Name field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
-### HasName
+### HasUpgradeWindow
 
-`func (o *InlineObject75) HasName() bool`
+`func (o *InlineObject75) HasUpgradeWindow() bool`
 
-HasName returns a boolean if a field has been set.
+HasUpgradeWindow returns a boolean if a field has been set.
 
-### GetPassword
+### GetTimezone
 
-`func (o *InlineObject75) GetPassword() string`
+`func (o *InlineObject75) GetTimezone() string`
 
-GetPassword returns the Password field if non-nil, zero value otherwise.
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
 
-### GetPasswordOk
+### GetTimezoneOk
 
-`func (o *InlineObject75) GetPasswordOk() (*string, bool)`
+`func (o *InlineObject75) GetTimezoneOk() (*string, bool)`
 
-GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassword
+### SetTimezone
 
-`func (o *InlineObject75) SetPassword(v string)`
+`func (o *InlineObject75) SetTimezone(v string)`
 
-SetPassword sets Password field to given value.
+SetTimezone sets Timezone field to given value.
 
-### HasPassword
+### HasTimezone
 
-`func (o *InlineObject75) HasPassword() bool`
+`func (o *InlineObject75) HasTimezone() bool`
 
-HasPassword returns a boolean if a field has been set.
+HasTimezone returns a boolean if a field has been set.
 
-### GetEmailPasswordToUser
+### GetProducts
 
-`func (o *InlineObject75) GetEmailPasswordToUser() bool`
+`func (o *InlineObject75) GetProducts() NetworksNetworkIdFirmwareUpgradesProducts`
 
-GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetEmailPasswordToUserOk
+### GetProductsOk
 
-`func (o *InlineObject75) GetEmailPasswordToUserOk() (*bool, bool)`
+`func (o *InlineObject75) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesProducts, bool)`
 
-GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmailPasswordToUser
+### SetProducts
 
-`func (o *InlineObject75) SetEmailPasswordToUser(v bool)`
+`func (o *InlineObject75) SetProducts(v NetworksNetworkIdFirmwareUpgradesProducts)`
 
-SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
+SetProducts sets Products field to given value.
 
-### HasEmailPasswordToUser
+### HasProducts
 
-`func (o *InlineObject75) HasEmailPasswordToUser() bool`
+`func (o *InlineObject75) HasProducts() bool`
 
-HasEmailPasswordToUser returns a boolean if a field has been set.
-
-### GetAuthorizations
-
-`func (o *InlineObject75) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations`
-
-GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
-
-### GetAuthorizationsOk
-
-`func (o *InlineObject75) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations, bool)`
-
-GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthorizations
-
-`func (o *InlineObject75) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations)`
-
-SetAuthorizations sets Authorizations field to given value.
-
-### HasAuthorizations
-
-`func (o *InlineObject75) HasAuthorizations() bool`
-
-HasAuthorizations returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

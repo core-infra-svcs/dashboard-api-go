@@ -4,19 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of your floor plan. | [optional] 
-**Center** | Pointer to [**NetworksNetworkIdFloorPlansFloorPlanIdCenter**](NetworksNetworkIdFloorPlansFloorPlanIdCenter.md) |  | [optional] 
-**BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner**](NetworksNetworkIdFloorPlansBottomLeftCorner.md) |  | [optional] 
-**BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
-**TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
-**TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
-**ImageContents** | Pointer to **string** | The file contents (a base 64 encoded string) of your new image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. If you upload a new image, and you do NOT specify any new geolocation fields (&#39;center, &#39;topLeftCorner&#39;, etc), the floor plan will be recentered with no rotation in order to maintain the aspect ratio of your new image. | [optional] 
+**Ssids** | [**NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids**](NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids.md) |  | 
 
 ## Methods
 
 ### NewInlineObject71
 
-`func NewInlineObject71() *InlineObject71`
+`func NewInlineObject71(ssids NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, ) *InlineObject71`
 
 NewInlineObject71 instantiates a new InlineObject71 object
 This constructor will assign default values to properties that have it defined,
@@ -31,180 +25,25 @@ NewInlineObject71WithDefaults instantiates a new InlineObject71 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSsids
 
-`func (o *InlineObject71) GetName() string`
+`func (o *InlineObject71) GetSsids() NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSsids returns the Ssids field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSsidsOk
 
-`func (o *InlineObject71) GetNameOk() (*string, bool)`
+`func (o *InlineObject71) GetSsidsOk() (*NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSsids
 
-`func (o *InlineObject71) SetName(v string)`
+`func (o *InlineObject71) SetSsids(v NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids)`
 
-SetName sets Name field to given value.
+SetSsids sets Ssids field to given value.
 
-### HasName
-
-`func (o *InlineObject71) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetCenter
-
-`func (o *InlineObject71) GetCenter() NetworksNetworkIdFloorPlansFloorPlanIdCenter`
-
-GetCenter returns the Center field if non-nil, zero value otherwise.
-
-### GetCenterOk
-
-`func (o *InlineObject71) GetCenterOk() (*NetworksNetworkIdFloorPlansFloorPlanIdCenter, bool)`
-
-GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCenter
-
-`func (o *InlineObject71) SetCenter(v NetworksNetworkIdFloorPlansFloorPlanIdCenter)`
-
-SetCenter sets Center field to given value.
-
-### HasCenter
-
-`func (o *InlineObject71) HasCenter() bool`
-
-HasCenter returns a boolean if a field has been set.
-
-### GetBottomLeftCorner
-
-`func (o *InlineObject71) GetBottomLeftCorner() NetworksNetworkIdFloorPlansBottomLeftCorner`
-
-GetBottomLeftCorner returns the BottomLeftCorner field if non-nil, zero value otherwise.
-
-### GetBottomLeftCornerOk
-
-`func (o *InlineObject71) GetBottomLeftCornerOk() (*NetworksNetworkIdFloorPlansBottomLeftCorner, bool)`
-
-GetBottomLeftCornerOk returns a tuple with the BottomLeftCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBottomLeftCorner
-
-`func (o *InlineObject71) SetBottomLeftCorner(v NetworksNetworkIdFloorPlansBottomLeftCorner)`
-
-SetBottomLeftCorner sets BottomLeftCorner field to given value.
-
-### HasBottomLeftCorner
-
-`func (o *InlineObject71) HasBottomLeftCorner() bool`
-
-HasBottomLeftCorner returns a boolean if a field has been set.
-
-### GetBottomRightCorner
-
-`func (o *InlineObject71) GetBottomRightCorner() NetworksNetworkIdFloorPlansBottomRightCorner`
-
-GetBottomRightCorner returns the BottomRightCorner field if non-nil, zero value otherwise.
-
-### GetBottomRightCornerOk
-
-`func (o *InlineObject71) GetBottomRightCornerOk() (*NetworksNetworkIdFloorPlansBottomRightCorner, bool)`
-
-GetBottomRightCornerOk returns a tuple with the BottomRightCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBottomRightCorner
-
-`func (o *InlineObject71) SetBottomRightCorner(v NetworksNetworkIdFloorPlansBottomRightCorner)`
-
-SetBottomRightCorner sets BottomRightCorner field to given value.
-
-### HasBottomRightCorner
-
-`func (o *InlineObject71) HasBottomRightCorner() bool`
-
-HasBottomRightCorner returns a boolean if a field has been set.
-
-### GetTopLeftCorner
-
-`func (o *InlineObject71) GetTopLeftCorner() NetworksNetworkIdFloorPlansTopLeftCorner`
-
-GetTopLeftCorner returns the TopLeftCorner field if non-nil, zero value otherwise.
-
-### GetTopLeftCornerOk
-
-`func (o *InlineObject71) GetTopLeftCornerOk() (*NetworksNetworkIdFloorPlansTopLeftCorner, bool)`
-
-GetTopLeftCornerOk returns a tuple with the TopLeftCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTopLeftCorner
-
-`func (o *InlineObject71) SetTopLeftCorner(v NetworksNetworkIdFloorPlansTopLeftCorner)`
-
-SetTopLeftCorner sets TopLeftCorner field to given value.
-
-### HasTopLeftCorner
-
-`func (o *InlineObject71) HasTopLeftCorner() bool`
-
-HasTopLeftCorner returns a boolean if a field has been set.
-
-### GetTopRightCorner
-
-`func (o *InlineObject71) GetTopRightCorner() NetworksNetworkIdFloorPlansTopRightCorner`
-
-GetTopRightCorner returns the TopRightCorner field if non-nil, zero value otherwise.
-
-### GetTopRightCornerOk
-
-`func (o *InlineObject71) GetTopRightCornerOk() (*NetworksNetworkIdFloorPlansTopRightCorner, bool)`
-
-GetTopRightCornerOk returns a tuple with the TopRightCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTopRightCorner
-
-`func (o *InlineObject71) SetTopRightCorner(v NetworksNetworkIdFloorPlansTopRightCorner)`
-
-SetTopRightCorner sets TopRightCorner field to given value.
-
-### HasTopRightCorner
-
-`func (o *InlineObject71) HasTopRightCorner() bool`
-
-HasTopRightCorner returns a boolean if a field has been set.
-
-### GetImageContents
-
-`func (o *InlineObject71) GetImageContents() string`
-
-GetImageContents returns the ImageContents field if non-nil, zero value otherwise.
-
-### GetImageContentsOk
-
-`func (o *InlineObject71) GetImageContentsOk() (*string, bool)`
-
-GetImageContentsOk returns a tuple with the ImageContents field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetImageContents
-
-`func (o *InlineObject71) SetImageContents(v string)`
-
-SetImageContents sets ImageContents field to given value.
-
-### HasImageContents
-
-`func (o *InlineObject71) HasImageContents() bool`
-
-HasImageContents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

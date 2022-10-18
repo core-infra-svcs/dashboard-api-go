@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    createNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject54("Name_example") // InlineObject54 | 
+    createNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject61("Name_example") // InlineObject61 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkCameraQuality
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkCameraQualityRetentionProfile** | [**InlineObject54**](InlineObject54.md) |  | 
+ **createNetworkCameraQualityRetentionProfile** | [**InlineObject61**](InlineObject61.md) |  | 
 
 ### Return type
 
@@ -321,7 +321,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     qualityRetentionProfileId := "qualityRetentionProfileId_example" // string | 
-    updateNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject55() // InlineObject55 |  (optional)
+    updateNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject62() // InlineObject62 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCameraQualityRetentionProfile** | [**InlineObject55**](InlineObject55.md) |  | 
+ **updateNetworkCameraQualityRetentionProfile** | [**InlineObject62**](InlineObject62.md) |  | 
 
 ### Return type
 

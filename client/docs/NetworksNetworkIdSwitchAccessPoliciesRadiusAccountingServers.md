@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Host** | **string** | Public IP address of the RADIUS accounting server | 
-**Port** | **int32** | UDP port that the RADIUS Accounting server listens on for access requests | 
-**Secret** | **string** | RADIUS client shared secret | 
+**Host** | Pointer to **string** | Public IP address of the RADIUS accounting server | [optional] 
+**Port** | Pointer to **int32** | UDP port that the RADIUS Accounting server listens on for access requests | [optional] 
 
 ## Methods
 
 ### NewNetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers
 
-`func NewNetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers(host string, port int32, secret string, ) *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers`
+`func NewNetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers() *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers`
 
 NewNetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers instantiates a new NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers object
 This constructor will assign default values to properties that have it defined,
@@ -46,6 +45,11 @@ and a boolean to check if the value has been set.
 
 SetHost sets Host field to given value.
 
+### HasHost
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers) HasHost() bool`
+
+HasHost returns a boolean if a field has been set.
 
 ### GetPort
 
@@ -66,26 +70,11 @@ and a boolean to check if the value has been set.
 
 SetPort sets Port field to given value.
 
+### HasPort
 
-### GetSecret
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers) HasPort() bool`
 
-`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers) GetSecret() string`
-
-GetSecret returns the Secret field if non-nil, zero value otherwise.
-
-### GetSecretOk
-
-`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers) GetSecretOk() (*string, bool)`
-
-GetSecretOk returns a tuple with the Secret field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecret
-
-`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers) SetSecret(v string)`
-
-SetSecret sets Secret field to given value.
-
+HasPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

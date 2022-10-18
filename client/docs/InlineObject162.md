@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Is the alert config enabled | [optional] 
-**Type** | Pointer to **string** | The alert type | [optional] 
-**AlertCondition** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesAlertCondition**](OrganizationsOrganizationIdAlertsProfilesAlertCondition.md) |  | [optional] 
-**Recipients** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | [optional] 
-**NetworkTags** | Pointer to **[]string** | Networks with these tags will be monitored for the alert | [optional] 
-**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges**](NetworksNetworkIdWirelessSsidsNumberSchedulesRanges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds**](NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -55,130 +52,55 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetType
+### GetRanges
 
-`func (o *InlineObject162) GetType() string`
+`func (o *InlineObject162) GetRanges() []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetRangesOk
 
-`func (o *InlineObject162) GetTypeOk() (*string, bool)`
+`func (o *InlineObject162) GetRangesOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetRanges
 
-`func (o *InlineObject162) SetType(v string)`
+`func (o *InlineObject162) SetRanges(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges)`
 
-SetType sets Type field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasType
+### HasRanges
 
-`func (o *InlineObject162) HasType() bool`
+`func (o *InlineObject162) HasRanges() bool`
 
-HasType returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetAlertCondition
+### GetRangesInSeconds
 
-`func (o *InlineObject162) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition`
+`func (o *InlineObject162) GetRangesInSeconds() []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds`
 
-GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetAlertConditionOk
+### GetRangesInSecondsOk
 
-`func (o *InlineObject162) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition, bool)`
+`func (o *InlineObject162) GetRangesInSecondsOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds, bool)`
 
-GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertCondition
+### SetRangesInSeconds
 
-`func (o *InlineObject162) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition)`
+`func (o *InlineObject162) SetRangesInSeconds(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds)`
 
-SetAlertCondition sets AlertCondition field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasAlertCondition
+### HasRangesInSeconds
 
-`func (o *InlineObject162) HasAlertCondition() bool`
+`func (o *InlineObject162) HasRangesInSeconds() bool`
 
-HasAlertCondition returns a boolean if a field has been set.
-
-### GetRecipients
-
-`func (o *InlineObject162) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
-
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
-
-### GetRecipientsOk
-
-`func (o *InlineObject162) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
-
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRecipients
-
-`func (o *InlineObject162) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
-
-SetRecipients sets Recipients field to given value.
-
-### HasRecipients
-
-`func (o *InlineObject162) HasRecipients() bool`
-
-HasRecipients returns a boolean if a field has been set.
-
-### GetNetworkTags
-
-`func (o *InlineObject162) GetNetworkTags() []string`
-
-GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
-
-### GetNetworkTagsOk
-
-`func (o *InlineObject162) GetNetworkTagsOk() (*[]string, bool)`
-
-GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkTags
-
-`func (o *InlineObject162) SetNetworkTags(v []string)`
-
-SetNetworkTags sets NetworkTags field to given value.
-
-### HasNetworkTags
-
-`func (o *InlineObject162) HasNetworkTags() bool`
-
-HasNetworkTags returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineObject162) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject162) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject162) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject162) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

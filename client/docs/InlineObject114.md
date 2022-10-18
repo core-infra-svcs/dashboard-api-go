@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | **string** | The serial of the switch to be removed | 
+**Mac** | **string** | The mac address of the trusted server being added | 
+**Vlan** | **int32** | The VLAN of the trusted server being added. It must be between 1 and 4094 | 
+**Ipv4** | [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41.md) |  | 
 
 ## Methods
 
 ### NewInlineObject114
 
-`func NewInlineObject114(serial string, ) *InlineObject114`
+`func NewInlineObject114(mac string, vlan int32, ipv4 NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41, ) *InlineObject114`
 
 NewInlineObject114 instantiates a new InlineObject114 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +27,64 @@ NewInlineObject114WithDefaults instantiates a new InlineObject114 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetMac
 
-`func (o *InlineObject114) GetSerial() string`
+`func (o *InlineObject114) GetMac() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetMacOk
 
-`func (o *InlineObject114) GetSerialOk() (*string, bool)`
+`func (o *InlineObject114) GetMacOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetMac
 
-`func (o *InlineObject114) SetSerial(v string)`
+`func (o *InlineObject114) SetMac(v string)`
 
-SetSerial sets Serial field to given value.
+SetMac sets Mac field to given value.
+
+
+### GetVlan
+
+`func (o *InlineObject114) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineObject114) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineObject114) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+
+### GetIpv4
+
+`func (o *InlineObject114) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41`
+
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+
+### GetIpv4Ok
+
+`func (o *InlineObject114) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41, bool)`
+
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv4
+
+`func (o *InlineObject114) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41)`
+
+SetIpv4 sets Ipv4 field to given value.
 
 
 

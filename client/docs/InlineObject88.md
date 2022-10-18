@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of this target group | [optional] 
-**Scope** | Pointer to **string** | The scope and tag options of the target group. Comma separated values beginning with one of withAny, withAll, withoutAny, withoutAll, all, none, followed by tags. Default to none if empty. | [optional] 
+**Url** | **string** | The URL where the test webhook will be sent | 
+**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to an empty string. | [optional] [default to ""]
 
 ## Methods
 
 ### NewInlineObject88
 
-`func NewInlineObject88() *InlineObject88`
+`func NewInlineObject88(url string, ) *InlineObject88`
 
 NewInlineObject88 instantiates a new InlineObject88 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,50 @@ NewInlineObject88WithDefaults instantiates a new InlineObject88 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetUrl
 
-`func (o *InlineObject88) GetName() string`
+`func (o *InlineObject88) GetUrl() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUrlOk
 
-`func (o *InlineObject88) GetNameOk() (*string, bool)`
+`func (o *InlineObject88) GetUrlOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUrl
 
-`func (o *InlineObject88) SetName(v string)`
+`func (o *InlineObject88) SetUrl(v string)`
 
-SetName sets Name field to given value.
+SetUrl sets Url field to given value.
 
-### HasName
 
-`func (o *InlineObject88) HasName() bool`
+### GetSharedSecret
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject88) GetSharedSecret() string`
 
-### GetScope
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-`func (o *InlineObject88) GetScope() string`
+### GetSharedSecretOk
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+`func (o *InlineObject88) GetSharedSecretOk() (*string, bool)`
 
-### GetScopeOk
-
-`func (o *InlineObject88) GetScopeOk() (*string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetSharedSecret
 
-`func (o *InlineObject88) SetScope(v string)`
+`func (o *InlineObject88) SetSharedSecret(v string)`
 
-SetScope sets Scope field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasScope
+### HasSharedSecret
 
-`func (o *InlineObject88) HasScope() bool`
+`func (o *InlineObject88) HasSharedSecret() bool`
 
-HasScope returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

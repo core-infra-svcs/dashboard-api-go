@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMac** | Pointer to **string** | The wifiMac of the device to be wiped. | [optional] 
-**Id** | Pointer to **string** | The id of the device to be wiped. | [optional] 
-**Serial** | Pointer to **string** | The serial of the device to be wiped. | [optional] 
-**Pin** | Pointer to **int32** | The pin number (a six digit value) for wiping a macOS device. Required only for macOS devices. | [optional] 
+**Name** | **string** | A name for easy reference to the HTTP server | 
+**Url** | **string** | The URL of the HTTP server | 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
 
 ## Methods
 
 ### NewInlineObject87
 
-`func NewInlineObject87() *InlineObject87`
+`func NewInlineObject87(name string, url string, ) *InlineObject87`
 
 NewInlineObject87 instantiates a new InlineObject87 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +27,70 @@ NewInlineObject87WithDefaults instantiates a new InlineObject87 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMac
+### GetName
 
-`func (o *InlineObject87) GetWifiMac() string`
+`func (o *InlineObject87) GetName() string`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetNameOk
 
-`func (o *InlineObject87) GetWifiMacOk() (*string, bool)`
+`func (o *InlineObject87) GetNameOk() (*string, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetName
 
-`func (o *InlineObject87) SetWifiMac(v string)`
+`func (o *InlineObject87) SetName(v string)`
 
-SetWifiMac sets WifiMac field to given value.
+SetName sets Name field to given value.
 
-### HasWifiMac
 
-`func (o *InlineObject87) HasWifiMac() bool`
+### GetUrl
 
-HasWifiMac returns a boolean if a field has been set.
+`func (o *InlineObject87) GetUrl() string`
 
-### GetId
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-`func (o *InlineObject87) GetId() string`
+### GetUrlOk
 
-GetId returns the Id field if non-nil, zero value otherwise.
+`func (o *InlineObject87) GetUrlOk() (*string, bool)`
 
-### GetIdOk
-
-`func (o *InlineObject87) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetUrl
 
-`func (o *InlineObject87) SetId(v string)`
+`func (o *InlineObject87) SetUrl(v string)`
 
-SetId sets Id field to given value.
+SetUrl sets Url field to given value.
 
-### HasId
 
-`func (o *InlineObject87) HasId() bool`
+### GetSharedSecret
 
-HasId returns a boolean if a field has been set.
+`func (o *InlineObject87) GetSharedSecret() string`
 
-### GetSerial
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-`func (o *InlineObject87) GetSerial() string`
+### GetSharedSecretOk
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+`func (o *InlineObject87) GetSharedSecretOk() (*string, bool)`
 
-### GetSerialOk
-
-`func (o *InlineObject87) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSharedSecret
 
-`func (o *InlineObject87) SetSerial(v string)`
+`func (o *InlineObject87) SetSharedSecret(v string)`
 
-SetSerial sets Serial field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasSerial
+### HasSharedSecret
 
-`func (o *InlineObject87) HasSerial() bool`
+`func (o *InlineObject87) HasSharedSecret() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetPin
-
-`func (o *InlineObject87) GetPin() int32`
-
-GetPin returns the Pin field if non-nil, zero value otherwise.
-
-### GetPinOk
-
-`func (o *InlineObject87) GetPinOk() (*int32, bool)`
-
-GetPinOk returns a tuple with the Pin field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPin
-
-`func (o *InlineObject87) SetPin(v int32)`
-
-SetPin sets Pin field to given value.
-
-### HasPin
-
-`func (o *InlineObject87) HasPin() bool`
-
-HasPin returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

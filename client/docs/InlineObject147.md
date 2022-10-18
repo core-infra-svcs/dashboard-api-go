@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
-**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
-**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
+**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineObject147WithDefaults instantiates a new InlineObject147 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConcentrator
+### GetEnabled
 
-`func (o *InlineObject147) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
+`func (o *InlineObject147) GetEnabled() bool`
 
-GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetConcentratorOk
+### GetEnabledOk
 
-`func (o *InlineObject147) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
+`func (o *InlineObject147) GetEnabledOk() (*bool, bool)`
 
-GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConcentrator
+### SetEnabled
 
-`func (o *InlineObject147) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
+`func (o *InlineObject147) SetEnabled(v bool)`
 
-SetConcentrator sets Concentrator field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasConcentrator
+### HasEnabled
 
-`func (o *InlineObject147) HasConcentrator() bool`
+`func (o *InlineObject147) HasEnabled() bool`
 
-HasConcentrator returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSplitTunnel
+### GetVlanId
 
-`func (o *InlineObject147) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
+`func (o *InlineObject147) GetVlanId() int32`
 
-GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetSplitTunnelOk
+### GetVlanIdOk
 
-`func (o *InlineObject147) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
+`func (o *InlineObject147) GetVlanIdOk() (*int32, bool)`
 
-GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplitTunnel
+### SetVlanId
 
-`func (o *InlineObject147) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
+`func (o *InlineObject147) SetVlanId(v int32)`
 
-SetSplitTunnel sets SplitTunnel field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasSplitTunnel
+### HasVlanId
 
-`func (o *InlineObject147) HasSplitTunnel() bool`
+`func (o *InlineObject147) HasVlanId() bool`
 
-HasSplitTunnel returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetFailover
+### GetProtocols
 
-`func (o *InlineObject147) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
+`func (o *InlineObject147) GetProtocols() []string`
 
-GetFailover returns the Failover field if non-nil, zero value otherwise.
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
 
-### GetFailoverOk
+### GetProtocolsOk
 
-`func (o *InlineObject147) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
+`func (o *InlineObject147) GetProtocolsOk() (*[]string, bool)`
 
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailover
+### SetProtocols
 
-`func (o *InlineObject147) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
+`func (o *InlineObject147) SetProtocols(v []string)`
 
-SetFailover sets Failover field to given value.
+SetProtocols sets Protocols field to given value.
 
-### HasFailover
+### HasProtocols
 
-`func (o *InlineObject147) HasFailover() bool`
+`func (o *InlineObject147) HasProtocols() bool`
 
-HasFailover returns a boolean if a field has been set.
+HasProtocols returns a boolean if a field has been set.
+
+### GetAccessPoints
+
+`func (o *InlineObject147) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
+
+GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
+
+### GetAccessPointsOk
+
+`func (o *InlineObject147) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
+
+GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPoints
+
+`func (o *InlineObject147) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
+
+SetAccessPoints sets AccessPoints field to given value.
+
+### HasAccessPoints
+
+`func (o *InlineObject147) HasAccessPoints() bool`
+
+HasAccessPoints returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

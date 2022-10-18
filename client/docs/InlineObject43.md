@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
-**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
+**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
+**DynamicDns** | Pointer to [**NetworksNetworkIdApplianceSettingsDynamicDns**](NetworksNetworkIdApplianceSettingsDynamicDns.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject43WithDefaults instantiates a new InlineObject43 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetClientTrackingMethod
 
-`func (o *InlineObject43) GetName() string`
+`func (o *InlineObject43) GetClientTrackingMethod() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetClientTrackingMethodOk
 
-`func (o *InlineObject43) GetNameOk() (*string, bool)`
+`func (o *InlineObject43) GetClientTrackingMethodOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetClientTrackingMethod
 
-`func (o *InlineObject43) SetName(v string)`
+`func (o *InlineObject43) SetClientTrackingMethod(v string)`
 
-SetName sets Name field to given value.
+SetClientTrackingMethod sets ClientTrackingMethod field to given value.
 
-### HasName
+### HasClientTrackingMethod
 
-`func (o *InlineObject43) HasName() bool`
+`func (o *InlineObject43) HasClientTrackingMethod() bool`
 
-HasName returns a boolean if a field has been set.
+HasClientTrackingMethod returns a boolean if a field has been set.
 
-### GetMaxLatency
+### GetDeploymentMode
 
-`func (o *InlineObject43) GetMaxLatency() int32`
+`func (o *InlineObject43) GetDeploymentMode() string`
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-### GetMaxLatencyOk
+### GetDeploymentModeOk
 
-`func (o *InlineObject43) GetMaxLatencyOk() (*int32, bool)`
+`func (o *InlineObject43) GetDeploymentModeOk() (*string, bool)`
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetDeploymentMode
 
-`func (o *InlineObject43) SetMaxLatency(v int32)`
+`func (o *InlineObject43) SetDeploymentMode(v string)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
-### HasMaxLatency
+### HasDeploymentMode
 
-`func (o *InlineObject43) HasMaxLatency() bool`
+`func (o *InlineObject43) HasDeploymentMode() bool`
 
-HasMaxLatency returns a boolean if a field has been set.
+HasDeploymentMode returns a boolean if a field has been set.
 
-### GetMaxJitter
+### GetDynamicDns
 
-`func (o *InlineObject43) GetMaxJitter() int32`
+`func (o *InlineObject43) GetDynamicDns() NetworksNetworkIdApplianceSettingsDynamicDns`
 
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
 
-### GetMaxJitterOk
+### GetDynamicDnsOk
 
-`func (o *InlineObject43) GetMaxJitterOk() (*int32, bool)`
+`func (o *InlineObject43) GetDynamicDnsOk() (*NetworksNetworkIdApplianceSettingsDynamicDns, bool)`
 
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxJitter
+### SetDynamicDns
 
-`func (o *InlineObject43) SetMaxJitter(v int32)`
+`func (o *InlineObject43) SetDynamicDns(v NetworksNetworkIdApplianceSettingsDynamicDns)`
 
-SetMaxJitter sets MaxJitter field to given value.
+SetDynamicDns sets DynamicDns field to given value.
 
-### HasMaxJitter
+### HasDynamicDns
 
-`func (o *InlineObject43) HasMaxJitter() bool`
+`func (o *InlineObject43) HasDynamicDns() bool`
 
-HasMaxJitter returns a boolean if a field has been set.
-
-### GetMaxLossPercentage
-
-`func (o *InlineObject43) GetMaxLossPercentage() int32`
-
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
-
-### GetMaxLossPercentageOk
-
-`func (o *InlineObject43) GetMaxLossPercentageOk() (*int32, bool)`
-
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxLossPercentage
-
-`func (o *InlineObject43) SetMaxLossPercentage(v int32)`
-
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
-
-### HasMaxLossPercentage
-
-`func (o *InlineObject43) HasMaxLossPercentage() bool`
-
-HasMaxLossPercentage returns a boolean if a field has been set.
+HasDynamicDns returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

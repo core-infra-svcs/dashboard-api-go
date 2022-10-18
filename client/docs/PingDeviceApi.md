@@ -5,13 +5,13 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CreateDeviceLiveToolsPingDevice**](PingDeviceApi.md#CreateDeviceLiveToolsPingDevice) | **Post** /devices/{serial}/liveTools/pingDevice | Enqueue a job to check connectivity status to the device
-[**GetDeviceLiveToolsPingDevice**](PingDeviceApi.md#GetDeviceLiveToolsPingDevice) | **Get** /devices/{serial}/liveTools/pingDevice/{id} | Return a ping job
+[**GetDeviceLiveToolsPingDevice**](PingDeviceApi.md#GetDeviceLiveToolsPingDevice) | **Get** /devices/{serial}/liveTools/pingDevice/{id} | Return a ping device job
 
 
 
 ## CreateDeviceLiveToolsPingDevice
 
-> map[string]interface{} CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
+> InlineResponse2011 CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
 
 Enqueue a job to check connectivity status to the device
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    createDeviceLiveToolsPingDevice := *openapiclient.NewInlineObject11() // InlineObject11 |  (optional)
+    createDeviceLiveToolsPingDevice := *openapiclient.NewInlineObject12() // InlineObject12 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PingDeviceApi.CreateDeviceLiveToolsPingDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsPingDevice`: map[string]interface{}
+    // response from `CreateDeviceLiveToolsPingDevice`: InlineResponse2011
     fmt.Fprintf(os.Stdout, "Response from `PingDeviceApi.CreateDeviceLiveToolsPingDevice`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingD
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPingDevice** | [**InlineObject11**](InlineObject11.md) |  | 
+ **createDeviceLiveToolsPingDevice** | [**InlineObject12**](InlineObject12.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse2011**](InlineResponse2011.md)
 
 ### Authorization
 
@@ -83,9 +83,9 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsPingDevice
 
-> map[string]interface{} GetDeviceLiveToolsPingDevice(ctx, serial, id).Execute()
+> InlineResponse2002 GetDeviceLiveToolsPingDevice(ctx, serial, id).Execute()
 
-Return a ping job
+Return a ping device job
 
 
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PingDeviceApi.GetDeviceLiveToolsPingDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPingDevice`: map[string]interface{}
+    // response from `GetDeviceLiveToolsPingDevice`: InlineResponse2002
     fmt.Fprintf(os.Stdout, "Response from `PingDeviceApi.GetDeviceLiveToolsPingDevice`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

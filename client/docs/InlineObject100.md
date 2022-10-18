@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | Array of switch or stack ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
-**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be checked-in. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the devices to be checked-in. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices to be checked-in. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be checked-in. | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineObject100WithDefaults instantiates a new InlineObject100 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchPorts
+### GetWifiMacs
 
-`func (o *InlineObject100) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
+`func (o *InlineObject100) GetWifiMacs() []string`
 
-GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
+GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
 
-### GetSwitchPortsOk
+### GetWifiMacsOk
 
-`func (o *InlineObject100) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
+`func (o *InlineObject100) GetWifiMacsOk() (*[]string, bool)`
 
-GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
+GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchPorts
+### SetWifiMacs
 
-`func (o *InlineObject100) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
+`func (o *InlineObject100) SetWifiMacs(v []string)`
 
-SetSwitchPorts sets SwitchPorts field to given value.
+SetWifiMacs sets WifiMacs field to given value.
 
-### HasSwitchPorts
+### HasWifiMacs
 
-`func (o *InlineObject100) HasSwitchPorts() bool`
+`func (o *InlineObject100) HasWifiMacs() bool`
 
-HasSwitchPorts returns a boolean if a field has been set.
+HasWifiMacs returns a boolean if a field has been set.
 
-### GetSwitchProfilePorts
+### GetIds
 
-`func (o *InlineObject100) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
+`func (o *InlineObject100) GetIds() []string`
 
-GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetSwitchProfilePortsOk
+### GetIdsOk
 
-`func (o *InlineObject100) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
+`func (o *InlineObject100) GetIdsOk() (*[]string, bool)`
 
-GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfilePorts
+### SetIds
 
-`func (o *InlineObject100) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
+`func (o *InlineObject100) SetIds(v []string)`
 
-SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
+SetIds sets Ids field to given value.
 
-### HasSwitchProfilePorts
+### HasIds
 
-`func (o *InlineObject100) HasSwitchProfilePorts() bool`
+`func (o *InlineObject100) HasIds() bool`
 
-HasSwitchProfilePorts returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineObject100) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineObject100) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineObject100) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineObject100) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetScope
+
+`func (o *InlineObject100) GetScope() []string`
+
+GetScope returns the Scope field if non-nil, zero value otherwise.
+
+### GetScopeOk
+
+`func (o *InlineObject100) GetScopeOk() (*[]string, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScope
+
+`func (o *InlineObject100) SetScope(v []string)`
+
+SetScope sets Scope field to given value.
+
+### HasScope
+
+`func (o *InlineObject100) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

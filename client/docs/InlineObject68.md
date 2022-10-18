@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**NetworksNetworkIdFirmwareUpgradesUpgradeWindow**](NetworksNetworkIdFirmwareUpgradesUpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
+**BandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular**](NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineObject68WithDefaults instantiates a new InlineObject68 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetBandwidthLimits
 
-`func (o *InlineObject68) GetUpgradeWindow() NetworksNetworkIdFirmwareUpgradesUpgradeWindow`
+`func (o *InlineObject68) GetBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineObject68) GetUpgradeWindowOk() (*NetworksNetworkIdFirmwareUpgradesUpgradeWindow, bool)`
+`func (o *InlineObject68) GetBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetBandwidthLimits
 
-`func (o *InlineObject68) SetUpgradeWindow(v NetworksNetworkIdFirmwareUpgradesUpgradeWindow)`
+`func (o *InlineObject68) SetBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
-### HasUpgradeWindow
+### HasBandwidthLimits
 
-`func (o *InlineObject68) HasUpgradeWindow() bool`
+`func (o *InlineObject68) HasBandwidthLimits() bool`
 
-HasUpgradeWindow returns a boolean if a field has been set.
-
-### GetTimezone
-
-`func (o *InlineObject68) GetTimezone() string`
-
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
-
-### GetTimezoneOk
-
-`func (o *InlineObject68) GetTimezoneOk() (*string, bool)`
-
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimezone
-
-`func (o *InlineObject68) SetTimezone(v string)`
-
-SetTimezone sets Timezone field to given value.
-
-### HasTimezone
-
-`func (o *InlineObject68) HasTimezone() bool`
-
-HasTimezone returns a boolean if a field has been set.
-
-### GetProducts
-
-`func (o *InlineObject68) GetProducts() NetworksNetworkIdFirmwareUpgradesProducts`
-
-GetProducts returns the Products field if non-nil, zero value otherwise.
-
-### GetProductsOk
-
-`func (o *InlineObject68) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesProducts, bool)`
-
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProducts
-
-`func (o *InlineObject68) SetProducts(v NetworksNetworkIdFirmwareUpgradesProducts)`
-
-SetProducts sets Products field to given value.
-
-### HasProducts
-
-`func (o *InlineObject68) HasProducts() bool`
-
-HasProducts returns a boolean if a field has been set.
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultSettings** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastDefaultSettings**](NetworksNetworkIdSwitchRoutingMulticastDefaultSettings.md) |  | [optional] 
-**Overrides** | Pointer to [**[]NetworksNetworkIdSwitchRoutingMulticastOverrides**](NetworksNetworkIdSwitchRoutingMulticastOverrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings. An empty array will clear the multicast settings. | [optional] 
+**Name** | Pointer to **string** | The name of this target group | [optional] 
+**Scope** | Pointer to **string** | The scope and tag options of the target group. Comma separated values beginning with one of withAny, withAll, withoutAny, withoutAll, all, none, followed by tags. Default to none if empty. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject107WithDefaults instantiates a new InlineObject107 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultSettings
+### GetName
 
-`func (o *InlineObject107) GetDefaultSettings() NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
+`func (o *InlineObject107) GetName() string`
 
-GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultSettingsOk
+### GetNameOk
 
-`func (o *InlineObject107) GetDefaultSettingsOk() (*NetworksNetworkIdSwitchRoutingMulticastDefaultSettings, bool)`
+`func (o *InlineObject107) GetNameOk() (*string, bool)`
 
-GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultSettings
+### SetName
 
-`func (o *InlineObject107) SetDefaultSettings(v NetworksNetworkIdSwitchRoutingMulticastDefaultSettings)`
+`func (o *InlineObject107) SetName(v string)`
 
-SetDefaultSettings sets DefaultSettings field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultSettings
+### HasName
 
-`func (o *InlineObject107) HasDefaultSettings() bool`
+`func (o *InlineObject107) HasName() bool`
 
-HasDefaultSettings returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetOverrides
+### GetScope
 
-`func (o *InlineObject107) GetOverrides() []NetworksNetworkIdSwitchRoutingMulticastOverrides`
+`func (o *InlineObject107) GetScope() string`
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetOverridesOk
+### GetScopeOk
 
-`func (o *InlineObject107) GetOverridesOk() (*[]NetworksNetworkIdSwitchRoutingMulticastOverrides, bool)`
+`func (o *InlineObject107) GetScopeOk() (*string, bool)`
 
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetScope
 
-`func (o *InlineObject107) SetOverrides(v []NetworksNetworkIdSwitchRoutingMulticastOverrides)`
+`func (o *InlineObject107) SetScope(v string)`
 
-SetOverrides sets Overrides field to given value.
+SetScope sets Scope field to given value.
 
-### HasOverrides
+### HasScope
 
-`func (o *InlineObject107) HasOverrides() bool`
+`func (o *InlineObject107) HasScope() bool`
 
-HasOverrides returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

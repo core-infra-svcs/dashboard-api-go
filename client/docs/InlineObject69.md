@@ -4,16 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Product** | Pointer to **string** | Product type to rollback (if the network is a combined network) | [optional] 
-**Time** | Pointer to **time.Time** | Scheduled time for the rollback | [optional] 
-**Reasons** | [**[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons**](NetworksNetworkIdFirmwareUpgradesRollbacksReasons.md) | Reasons for the rollback | 
-**ToVersion** | Pointer to [**NetworksNetworkIdFirmwareUpgradesRollbacksToVersion**](NetworksNetworkIdFirmwareUpgradesRollbacksToVersion.md) |  | [optional] 
+**Clients** | [**[]NetworksNetworkIdClientsProvisionClients**](NetworksNetworkIdClientsProvisionClients.md) | The array of clients to provision | 
+**DevicePolicy** | **string** | The policy to apply to the specified client. Can be &#39;Group policy&#39;, &#39;Allowed&#39;, &#39;Blocked&#39;, &#39;Per connection&#39; or &#39;Normal&#39;. Required. | 
+**GroupPolicyId** | Pointer to **string** | The ID of the desired group policy to apply to the client. Required if &#39;devicePolicy&#39; is set to \&quot;Group policy\&quot;. Otherwise this is ignored. | [optional] 
+**PoliciesBySecurityAppliance** | Pointer to [**NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance**](NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance.md) |  | [optional] 
+**PoliciesBySsid** | Pointer to [**NetworksNetworkIdClientsProvisionPoliciesBySsid**](NetworksNetworkIdClientsProvisionPoliciesBySsid.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject69
 
-`func NewInlineObject69(reasons []NetworksNetworkIdFirmwareUpgradesRollbacksReasons, ) *InlineObject69`
+`func NewInlineObject69(clients []NetworksNetworkIdClientsProvisionClients, devicePolicy string, ) *InlineObject69`
 
 NewInlineObject69 instantiates a new InlineObject69 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +29,120 @@ NewInlineObject69WithDefaults instantiates a new InlineObject69 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProduct
+### GetClients
 
-`func (o *InlineObject69) GetProduct() string`
+`func (o *InlineObject69) GetClients() []NetworksNetworkIdClientsProvisionClients`
 
-GetProduct returns the Product field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetProductOk
+### GetClientsOk
 
-`func (o *InlineObject69) GetProductOk() (*string, bool)`
+`func (o *InlineObject69) GetClientsOk() (*[]NetworksNetworkIdClientsProvisionClients, bool)`
 
-GetProductOk returns a tuple with the Product field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProduct
+### SetClients
 
-`func (o *InlineObject69) SetProduct(v string)`
+`func (o *InlineObject69) SetClients(v []NetworksNetworkIdClientsProvisionClients)`
 
-SetProduct sets Product field to given value.
+SetClients sets Clients field to given value.
 
-### HasProduct
 
-`func (o *InlineObject69) HasProduct() bool`
+### GetDevicePolicy
 
-HasProduct returns a boolean if a field has been set.
+`func (o *InlineObject69) GetDevicePolicy() string`
 
-### GetTime
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-`func (o *InlineObject69) GetTime() time.Time`
+### GetDevicePolicyOk
 
-GetTime returns the Time field if non-nil, zero value otherwise.
+`func (o *InlineObject69) GetDevicePolicyOk() (*string, bool)`
 
-### GetTimeOk
-
-`func (o *InlineObject69) GetTimeOk() (*time.Time, bool)`
-
-GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTime
+### SetDevicePolicy
 
-`func (o *InlineObject69) SetTime(v time.Time)`
+`func (o *InlineObject69) SetDevicePolicy(v string)`
 
-SetTime sets Time field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
-### HasTime
 
-`func (o *InlineObject69) HasTime() bool`
+### GetGroupPolicyId
 
-HasTime returns a boolean if a field has been set.
+`func (o *InlineObject69) GetGroupPolicyId() string`
 
-### GetReasons
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-`func (o *InlineObject69) GetReasons() []NetworksNetworkIdFirmwareUpgradesRollbacksReasons`
+### GetGroupPolicyIdOk
 
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
+`func (o *InlineObject69) GetGroupPolicyIdOk() (*string, bool)`
 
-### GetReasonsOk
-
-`func (o *InlineObject69) GetReasonsOk() (*[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons, bool)`
-
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReasons
+### SetGroupPolicyId
 
-`func (o *InlineObject69) SetReasons(v []NetworksNetworkIdFirmwareUpgradesRollbacksReasons)`
+`func (o *InlineObject69) SetGroupPolicyId(v string)`
 
-SetReasons sets Reasons field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
+### HasGroupPolicyId
 
-### GetToVersion
+`func (o *InlineObject69) HasGroupPolicyId() bool`
 
-`func (o *InlineObject69) GetToVersion() NetworksNetworkIdFirmwareUpgradesRollbacksToVersion`
+HasGroupPolicyId returns a boolean if a field has been set.
 
-GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
+### GetPoliciesBySecurityAppliance
 
-### GetToVersionOk
+`func (o *InlineObject69) GetPoliciesBySecurityAppliance() NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance`
 
-`func (o *InlineObject69) GetToVersionOk() (*NetworksNetworkIdFirmwareUpgradesRollbacksToVersion, bool)`
+GetPoliciesBySecurityAppliance returns the PoliciesBySecurityAppliance field if non-nil, zero value otherwise.
 
-GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
+### GetPoliciesBySecurityApplianceOk
+
+`func (o *InlineObject69) GetPoliciesBySecurityApplianceOk() (*NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance, bool)`
+
+GetPoliciesBySecurityApplianceOk returns a tuple with the PoliciesBySecurityAppliance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetToVersion
+### SetPoliciesBySecurityAppliance
 
-`func (o *InlineObject69) SetToVersion(v NetworksNetworkIdFirmwareUpgradesRollbacksToVersion)`
+`func (o *InlineObject69) SetPoliciesBySecurityAppliance(v NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance)`
 
-SetToVersion sets ToVersion field to given value.
+SetPoliciesBySecurityAppliance sets PoliciesBySecurityAppliance field to given value.
 
-### HasToVersion
+### HasPoliciesBySecurityAppliance
 
-`func (o *InlineObject69) HasToVersion() bool`
+`func (o *InlineObject69) HasPoliciesBySecurityAppliance() bool`
 
-HasToVersion returns a boolean if a field has been set.
+HasPoliciesBySecurityAppliance returns a boolean if a field has been set.
+
+### GetPoliciesBySsid
+
+`func (o *InlineObject69) GetPoliciesBySsid() NetworksNetworkIdClientsProvisionPoliciesBySsid`
+
+GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+
+### GetPoliciesBySsidOk
+
+`func (o *InlineObject69) GetPoliciesBySsidOk() (*NetworksNetworkIdClientsProvisionPoliciesBySsid, bool)`
+
+GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoliciesBySsid
+
+`func (o *InlineObject69) SetPoliciesBySsid(v NetworksNetworkIdClientsProvisionPoliciesBySsid)`
+
+SetPoliciesBySsid sets PoliciesBySsid field to given value.
+
+### HasPoliciesBySsid
+
+`func (o *InlineObject69) HasPoliciesBySsid() bool`
+
+HasPoliciesBySsid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

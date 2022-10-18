@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
-**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]NetworksNetworkIdSwitchSettingsPowerExceptions**](NetworksNetworkIdSwitchSettingsPowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject129WithDefaults instantiates a new InlineObject129 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetVlan
 
-`func (o *InlineObject129) GetEnabled() bool`
+`func (o *InlineObject129) GetVlan() int32`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetVlanOk
 
-`func (o *InlineObject129) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject129) GetVlanOk() (*int32, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetVlan
 
-`func (o *InlineObject129) SetEnabled(v bool)`
+`func (o *InlineObject129) SetVlan(v int32)`
 
-SetEnabled sets Enabled field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasEnabled
+### HasVlan
 
-`func (o *InlineObject129) HasEnabled() bool`
+`func (o *InlineObject129) HasVlan() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetVlanId
+### GetUseCombinedPower
 
-`func (o *InlineObject129) GetVlanId() int32`
+`func (o *InlineObject129) GetUseCombinedPower() bool`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetUseCombinedPowerOk
 
-`func (o *InlineObject129) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineObject129) GetUseCombinedPowerOk() (*bool, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetUseCombinedPower
 
-`func (o *InlineObject129) SetVlanId(v int32)`
+`func (o *InlineObject129) SetUseCombinedPower(v bool)`
 
-SetVlanId sets VlanId field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasVlanId
+### HasUseCombinedPower
 
-`func (o *InlineObject129) HasVlanId() bool`
+`func (o *InlineObject129) HasUseCombinedPower() bool`
 
-HasVlanId returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetProtocols
+### GetPowerExceptions
 
-`func (o *InlineObject129) GetProtocols() []string`
+`func (o *InlineObject129) GetPowerExceptions() []NetworksNetworkIdSwitchSettingsPowerExceptions`
 
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetProtocolsOk
+### GetPowerExceptionsOk
 
-`func (o *InlineObject129) GetProtocolsOk() (*[]string, bool)`
+`func (o *InlineObject129) GetPowerExceptionsOk() (*[]NetworksNetworkIdSwitchSettingsPowerExceptions, bool)`
 
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocols
+### SetPowerExceptions
 
-`func (o *InlineObject129) SetProtocols(v []string)`
+`func (o *InlineObject129) SetPowerExceptions(v []NetworksNetworkIdSwitchSettingsPowerExceptions)`
 
-SetProtocols sets Protocols field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasProtocols
+### HasPowerExceptions
 
-`func (o *InlineObject129) HasProtocols() bool`
+`func (o *InlineObject129) HasPowerExceptions() bool`
 
-HasProtocols returns a boolean if a field has been set.
-
-### GetAccessPoints
-
-`func (o *InlineObject129) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
-
-GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
-
-### GetAccessPointsOk
-
-`func (o *InlineObject129) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
-
-GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessPoints
-
-`func (o *InlineObject129) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
-
-SetAccessPoints sets AccessPoints field to given value.
-
-### HasAccessPoints
-
-`func (o *InlineObject129) HasAccessPoints() bool`
-
-HasAccessPoints returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,18 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new network | 
-**ProductTypes** | **[]string** | The product type(s) of the new network. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, environmental. If more than one type is included, the network will be a combined network. | 
-**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
-**CopyFromNetworkId** | Pointer to **string** | The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network&#39;s type exactly. | [optional] 
-**Notes** | Pointer to **string** | Add any notes or additional information about this network here. | [optional] 
+**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject186
 
-`func NewInlineObject186(name string, productTypes []string, ) *InlineObject186`
+`func NewInlineObject186() *InlineObject186`
 
 NewInlineObject186 instantiates a new InlineObject186 object
 This constructor will assign default values to properties that have it defined,
@@ -49,126 +48,111 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetProductTypes
+`func (o *InlineObject186) HasName() bool`
 
-`func (o *InlineObject186) GetProductTypes() []string`
+HasName returns a boolean if a field has been set.
 
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+### GetEnabled
 
-### GetProductTypesOk
+`func (o *InlineObject186) GetEnabled() bool`
 
-`func (o *InlineObject186) GetProductTypesOk() (*[]string, bool)`
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
+### GetEnabledOk
+
+`func (o *InlineObject186) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductTypes
+### SetEnabled
 
-`func (o *InlineObject186) SetProductTypes(v []string)`
+`func (o *InlineObject186) SetEnabled(v bool)`
 
-SetProductTypes sets ProductTypes field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetTags
+`func (o *InlineObject186) HasEnabled() bool`
 
-`func (o *InlineObject186) GetTags() []string`
+HasEnabled returns a boolean if a field has been set.
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+### GetAdminSettings
 
-### GetTagsOk
+`func (o *InlineObject186) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
 
-`func (o *InlineObject186) GetTagsOk() (*[]string, bool)`
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+### GetAdminSettingsOk
+
+`func (o *InlineObject186) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
+
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetAdminSettings
 
-`func (o *InlineObject186) SetTags(v []string)`
+`func (o *InlineObject186) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
 
-SetTags sets Tags field to given value.
+SetAdminSettings sets AdminSettings field to given value.
 
-### HasTags
+### HasAdminSettings
 
-`func (o *InlineObject186) HasTags() bool`
+`func (o *InlineObject186) HasAdminSettings() bool`
 
-HasTags returns a boolean if a field has been set.
+HasAdminSettings returns a boolean if a field has been set.
 
-### GetTimeZone
+### GetHelpSettings
 
-`func (o *InlineObject186) GetTimeZone() string`
+`func (o *InlineObject186) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings`
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
 
-### GetTimeZoneOk
+### GetHelpSettingsOk
 
-`func (o *InlineObject186) GetTimeZoneOk() (*string, bool)`
+`func (o *InlineObject186) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings, bool)`
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetHelpSettings
 
-`func (o *InlineObject186) SetTimeZone(v string)`
+`func (o *InlineObject186) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesBrandingPolicyIdHelpSettings)`
 
-SetTimeZone sets TimeZone field to given value.
+SetHelpSettings sets HelpSettings field to given value.
 
-### HasTimeZone
+### HasHelpSettings
 
-`func (o *InlineObject186) HasTimeZone() bool`
+`func (o *InlineObject186) HasHelpSettings() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasHelpSettings returns a boolean if a field has been set.
 
-### GetCopyFromNetworkId
+### GetCustomLogo
 
-`func (o *InlineObject186) GetCopyFromNetworkId() string`
+`func (o *InlineObject186) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
 
-GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
 
-### GetCopyFromNetworkIdOk
+### GetCustomLogoOk
 
-`func (o *InlineObject186) GetCopyFromNetworkIdOk() (*string, bool)`
+`func (o *InlineObject186) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
 
-GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCopyFromNetworkId
+### SetCustomLogo
 
-`func (o *InlineObject186) SetCopyFromNetworkId(v string)`
+`func (o *InlineObject186) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
 
-SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
+SetCustomLogo sets CustomLogo field to given value.
 
-### HasCopyFromNetworkId
+### HasCustomLogo
 
-`func (o *InlineObject186) HasCopyFromNetworkId() bool`
+`func (o *InlineObject186) HasCustomLogo() bool`
 
-HasCopyFromNetworkId returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject186) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject186) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject186) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject186) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

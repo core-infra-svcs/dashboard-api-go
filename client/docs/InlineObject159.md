@@ -4,18 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | **string** | The email of the dashboard administrator. This attribute can not be updated. | 
-**Name** | **string** | The name of the dashboard administrator | 
-**OrgAccess** | **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags**](OrganizationsOrganizationIdAdminsTags.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks**](OrganizationsOrganizationIdAdminsNetworks.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
-**AuthenticationMethod** | Pointer to **string** | The method of authentication the user will use to sign in to the Meraki dashboard. Can be one of &#39;Email&#39; or &#39;Cisco SecureX Sign-On&#39;. The default is Email authentication | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
+**Operator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20Operator**](NetworksNetworkIdWirelessSsidsNumberHotspot20Operator.md) |  | [optional] 
+**Venue** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20Venue**](NetworksNetworkIdWirelessSsidsNumberHotspot20Venue.md) |  | [optional] 
+**NetworkAccessType** | Pointer to **string** | The network type of this SSID (&#39;Private network&#39;, &#39;Private network with guest access&#39;, &#39;Chargeable public network&#39;, &#39;Free public network&#39;, &#39;Personal device network&#39;, &#39;Emergency services only network&#39;, &#39;Test or experimental&#39;, &#39;Wildcard&#39;) | [optional] 
+**Domains** | Pointer to **[]string** | An array of domain names | [optional] 
+**RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
+**MccMncs** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs**](NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs.md) | An array of MCC/MNC pairs | [optional] 
+**NaiRealms** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms**](NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms.md) | An array of NAI realms | [optional] 
 
 ## Methods
 
 ### NewInlineObject159
 
-`func NewInlineObject159(email string, name string, orgAccess string, ) *InlineObject159`
+`func NewInlineObject159() *InlineObject159`
 
 NewInlineObject159 instantiates a new InlineObject159 object
 This constructor will assign default values to properties that have it defined,
@@ -30,140 +32,205 @@ NewInlineObject159WithDefaults instantiates a new InlineObject159 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEmail
+### GetEnabled
 
-`func (o *InlineObject159) GetEmail() string`
+`func (o *InlineObject159) GetEnabled() bool`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetEnabledOk
 
-`func (o *InlineObject159) GetEmailOk() (*string, bool)`
+`func (o *InlineObject159) GetEnabledOk() (*bool, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetEnabled
 
-`func (o *InlineObject159) SetEmail(v string)`
+`func (o *InlineObject159) SetEnabled(v bool)`
 
-SetEmail sets Email field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetName
+`func (o *InlineObject159) HasEnabled() bool`
 
-`func (o *InlineObject159) GetName() string`
+HasEnabled returns a boolean if a field has been set.
 
-GetName returns the Name field if non-nil, zero value otherwise.
+### GetOperator
 
-### GetNameOk
+`func (o *InlineObject159) GetOperator() NetworksNetworkIdWirelessSsidsNumberHotspot20Operator`
 
-`func (o *InlineObject159) GetNameOk() (*string, bool)`
+GetOperator returns the Operator field if non-nil, zero value otherwise.
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+### GetOperatorOk
+
+`func (o *InlineObject159) GetOperatorOk() (*NetworksNetworkIdWirelessSsidsNumberHotspot20Operator, bool)`
+
+GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetOperator
 
-`func (o *InlineObject159) SetName(v string)`
+`func (o *InlineObject159) SetOperator(v NetworksNetworkIdWirelessSsidsNumberHotspot20Operator)`
 
-SetName sets Name field to given value.
+SetOperator sets Operator field to given value.
 
+### HasOperator
 
-### GetOrgAccess
+`func (o *InlineObject159) HasOperator() bool`
 
-`func (o *InlineObject159) GetOrgAccess() string`
+HasOperator returns a boolean if a field has been set.
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+### GetVenue
 
-### GetOrgAccessOk
+`func (o *InlineObject159) GetVenue() NetworksNetworkIdWirelessSsidsNumberHotspot20Venue`
 
-`func (o *InlineObject159) GetOrgAccessOk() (*string, bool)`
+GetVenue returns the Venue field if non-nil, zero value otherwise.
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+### GetVenueOk
+
+`func (o *InlineObject159) GetVenueOk() (*NetworksNetworkIdWirelessSsidsNumberHotspot20Venue, bool)`
+
+GetVenueOk returns a tuple with the Venue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetVenue
 
-`func (o *InlineObject159) SetOrgAccess(v string)`
+`func (o *InlineObject159) SetVenue(v NetworksNetworkIdWirelessSsidsNumberHotspot20Venue)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetVenue sets Venue field to given value.
 
+### HasVenue
 
-### GetTags
+`func (o *InlineObject159) HasVenue() bool`
 
-`func (o *InlineObject159) GetTags() []OrganizationsOrganizationIdAdminsTags`
+HasVenue returns a boolean if a field has been set.
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+### GetNetworkAccessType
 
-### GetTagsOk
+`func (o *InlineObject159) GetNetworkAccessType() string`
 
-`func (o *InlineObject159) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags, bool)`
+GetNetworkAccessType returns the NetworkAccessType field if non-nil, zero value otherwise.
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+### GetNetworkAccessTypeOk
+
+`func (o *InlineObject159) GetNetworkAccessTypeOk() (*string, bool)`
+
+GetNetworkAccessTypeOk returns a tuple with the NetworkAccessType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetNetworkAccessType
 
-`func (o *InlineObject159) SetTags(v []OrganizationsOrganizationIdAdminsTags)`
+`func (o *InlineObject159) SetNetworkAccessType(v string)`
 
-SetTags sets Tags field to given value.
+SetNetworkAccessType sets NetworkAccessType field to given value.
 
-### HasTags
+### HasNetworkAccessType
 
-`func (o *InlineObject159) HasTags() bool`
+`func (o *InlineObject159) HasNetworkAccessType() bool`
 
-HasTags returns a boolean if a field has been set.
+HasNetworkAccessType returns a boolean if a field has been set.
 
-### GetNetworks
+### GetDomains
 
-`func (o *InlineObject159) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks`
+`func (o *InlineObject159) GetDomains() []string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetDomains returns the Domains field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetDomainsOk
 
-`func (o *InlineObject159) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks, bool)`
+`func (o *InlineObject159) GetDomainsOk() (*[]string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetDomains
 
-`func (o *InlineObject159) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks)`
+`func (o *InlineObject159) SetDomains(v []string)`
 
-SetNetworks sets Networks field to given value.
+SetDomains sets Domains field to given value.
 
-### HasNetworks
+### HasDomains
 
-`func (o *InlineObject159) HasNetworks() bool`
+`func (o *InlineObject159) HasDomains() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasDomains returns a boolean if a field has been set.
 
-### GetAuthenticationMethod
+### GetRoamConsortOis
 
-`func (o *InlineObject159) GetAuthenticationMethod() string`
+`func (o *InlineObject159) GetRoamConsortOis() []string`
 
-GetAuthenticationMethod returns the AuthenticationMethod field if non-nil, zero value otherwise.
+GetRoamConsortOis returns the RoamConsortOis field if non-nil, zero value otherwise.
 
-### GetAuthenticationMethodOk
+### GetRoamConsortOisOk
 
-`func (o *InlineObject159) GetAuthenticationMethodOk() (*string, bool)`
+`func (o *InlineObject159) GetRoamConsortOisOk() (*[]string, bool)`
 
-GetAuthenticationMethodOk returns a tuple with the AuthenticationMethod field if it's non-nil, zero value otherwise
+GetRoamConsortOisOk returns a tuple with the RoamConsortOis field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthenticationMethod
+### SetRoamConsortOis
 
-`func (o *InlineObject159) SetAuthenticationMethod(v string)`
+`func (o *InlineObject159) SetRoamConsortOis(v []string)`
 
-SetAuthenticationMethod sets AuthenticationMethod field to given value.
+SetRoamConsortOis sets RoamConsortOis field to given value.
 
-### HasAuthenticationMethod
+### HasRoamConsortOis
 
-`func (o *InlineObject159) HasAuthenticationMethod() bool`
+`func (o *InlineObject159) HasRoamConsortOis() bool`
 
-HasAuthenticationMethod returns a boolean if a field has been set.
+HasRoamConsortOis returns a boolean if a field has been set.
+
+### GetMccMncs
+
+`func (o *InlineObject159) GetMccMncs() []NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs`
+
+GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
+
+### GetMccMncsOk
+
+`func (o *InlineObject159) GetMccMncsOk() (*[]NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs, bool)`
+
+GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMccMncs
+
+`func (o *InlineObject159) SetMccMncs(v []NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs)`
+
+SetMccMncs sets MccMncs field to given value.
+
+### HasMccMncs
+
+`func (o *InlineObject159) HasMccMncs() bool`
+
+HasMccMncs returns a boolean if a field has been set.
+
+### GetNaiRealms
+
+`func (o *InlineObject159) GetNaiRealms() []NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms`
+
+GetNaiRealms returns the NaiRealms field if non-nil, zero value otherwise.
+
+### GetNaiRealmsOk
+
+`func (o *InlineObject159) GetNaiRealmsOk() (*[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms, bool)`
+
+GetNaiRealmsOk returns a tuple with the NaiRealms field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNaiRealms
+
+`func (o *InlineObject159) SetNaiRealms(v []NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms)`
+
+SetNaiRealms sets NaiRealms field to given value.
+
+### HasNaiRealms
+
+`func (o *InlineObject159) HasNaiRealms() bool`
+
+HasNaiRealms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

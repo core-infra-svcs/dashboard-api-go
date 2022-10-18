@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Area** | Pointer to **string** | The OSPF area to which this interface should belong. Can be either &#39;disabled&#39; or the identifier of an existing OSPF area. Defaults to &#39;disabled&#39;. | [optional] 
-**Cost** | Pointer to **int32** | The path cost for this interface. Defaults to 1, but can be increased up to 65535 to give lower priority. | [optional] 
-**IsPassiveEnabled** | Pointer to **bool** | When enabled, OSPF will not run on the interface, but the subnet will still be advertised. | [optional] 
+**Area** | Pointer to **string** | Area id | [optional] 
+**Cost** | Pointer to **int32** | OSPF Cost | [optional] 
+**IsPassiveEnabled** | Pointer to **bool** | Disable sending Hello packets on this interface&#39;s IPv4 area | [optional] 
 
 ## Methods
 

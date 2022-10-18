@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the group | 
-**Sgt** | **int32** | SGT value of the group | 
-**Description** | Pointer to **string** | Description of the group (default: \&quot;\&quot;) | [optional] 
-**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) (default: []) | [optional] 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on this SSID. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules**](NetworksNetworkIdGroupPoliciesBonjourForwardingRules.md) | List of bonjour forwarding rules. | [optional] 
 
 ## Methods
 
 ### NewInlineObject154
 
-`func NewInlineObject154(name string, sgt int32, ) *InlineObject154`
+`func NewInlineObject154() *InlineObject154`
 
 NewInlineObject154 instantiates a new InlineObject154 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +26,55 @@ NewInlineObject154WithDefaults instantiates a new InlineObject154 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject154) GetName() string`
+`func (o *InlineObject154) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject154) GetNameOk() (*string, bool)`
+`func (o *InlineObject154) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject154) SetName(v string)`
+`func (o *InlineObject154) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetSgt
+`func (o *InlineObject154) HasEnabled() bool`
 
-`func (o *InlineObject154) GetSgt() int32`
+HasEnabled returns a boolean if a field has been set.
 
-GetSgt returns the Sgt field if non-nil, zero value otherwise.
+### GetRules
 
-### GetSgtOk
+`func (o *InlineObject154) GetRules() []NetworksNetworkIdGroupPoliciesBonjourForwardingRules`
 
-`func (o *InlineObject154) GetSgtOk() (*int32, bool)`
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+### GetRulesOk
+
+`func (o *InlineObject154) GetRulesOk() (*[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSgt
+### SetRules
 
-`func (o *InlineObject154) SetSgt(v int32)`
+`func (o *InlineObject154) SetRules(v []NetworksNetworkIdGroupPoliciesBonjourForwardingRules)`
 
-SetSgt sets Sgt field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetDescription
+`func (o *InlineObject154) HasRules() bool`
 
-`func (o *InlineObject154) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject154) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject154) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject154) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetPolicyObjects
-
-`func (o *InlineObject154) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
-
-GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
-
-### GetPolicyObjectsOk
-
-`func (o *InlineObject154) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
-
-GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPolicyObjects
-
-`func (o *InlineObject154) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
-
-SetPolicyObjects sets PolicyObjects field to given value.
-
-### HasPolicyObjects
-
-`func (o *InlineObject154) HasPolicyObjects() bool`
-
-HasPolicyObjects returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

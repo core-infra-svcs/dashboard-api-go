@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the configuration template | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
+**SourceGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup.md) |  | 
+**DestinationGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup.md) |  | 
+**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])  | [optional] 
+**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL (default: \&quot;default\&quot;)  | [optional] 
 
 ## Methods
 
 ### NewInlineObject174
 
-`func NewInlineObject174() *InlineObject174`
+`func NewInlineObject174(sourceGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, destinationGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, ) *InlineObject174`
 
 NewInlineObject174 instantiates a new InlineObject174 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,95 @@ NewInlineObject174WithDefaults instantiates a new InlineObject174 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSourceGroup
 
-`func (o *InlineObject174) GetName() string`
+`func (o *InlineObject174) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSourceGroupOk
 
-`func (o *InlineObject174) GetNameOk() (*string, bool)`
+`func (o *InlineObject174) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSourceGroup
 
-`func (o *InlineObject174) SetName(v string)`
+`func (o *InlineObject174) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup)`
 
-SetName sets Name field to given value.
+SetSourceGroup sets SourceGroup field to given value.
 
-### HasName
 
-`func (o *InlineObject174) HasName() bool`
+### GetDestinationGroup
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject174) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup`
 
-### GetTimeZone
+GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
 
-`func (o *InlineObject174) GetTimeZone() string`
+### GetDestinationGroupOk
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+`func (o *InlineObject174) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, bool)`
 
-### GetTimeZoneOk
-
-`func (o *InlineObject174) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetDestinationGroup
 
-`func (o *InlineObject174) SetTimeZone(v string)`
+`func (o *InlineObject174) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup)`
 
-SetTimeZone sets TimeZone field to given value.
+SetDestinationGroup sets DestinationGroup field to given value.
 
-### HasTimeZone
 
-`func (o *InlineObject174) HasTimeZone() bool`
+### GetAcls
 
-HasTimeZone returns a boolean if a field has been set.
+`func (o *InlineObject174) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls`
+
+GetAcls returns the Acls field if non-nil, zero value otherwise.
+
+### GetAclsOk
+
+`func (o *InlineObject174) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls, bool)`
+
+GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAcls
+
+`func (o *InlineObject174) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls)`
+
+SetAcls sets Acls field to given value.
+
+### HasAcls
+
+`func (o *InlineObject174) HasAcls() bool`
+
+HasAcls returns a boolean if a field has been set.
+
+### GetLastEntryRule
+
+`func (o *InlineObject174) GetLastEntryRule() string`
+
+GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
+
+### GetLastEntryRuleOk
+
+`func (o *InlineObject174) GetLastEntryRuleOk() (*string, bool)`
+
+GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastEntryRule
+
+`func (o *InlineObject174) SetLastEntryRule(v string)`
+
+SetLastEntryRule sets LastEntryRule field to given value.
+
+### HasLastEntryRule
+
+`func (o *InlineObject174) HasLastEntryRule() bool`
+
+HasLastEntryRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

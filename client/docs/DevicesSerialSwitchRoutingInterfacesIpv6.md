@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AssignmentMode** | Pointer to **string** | The IPv6 assignment mode for the interface. Can be either &#39;eui-64&#39; or &#39;static&#39;. | [optional] 
-**Prefix** | Pointer to **string** | The IPv6 prefix of the interface. Required if IPv6 object is included. | [optional] 
-**Address** | Pointer to **string** | The IPv6 address of the interface. Required if assignmentMode is &#39;static&#39;. Must not be included if assignmentMode is &#39;eui-64&#39;. | [optional] 
-**Gateway** | Pointer to **string** | The IPv6 default gateway of the interface. Required if prefix is defined and this is the first interface with IPv6 configured for the switch. | [optional] 
+**AssignmentMode** | Pointer to **string** | Assignment mode | [optional] 
+**Address** | Pointer to **string** | IPv6 address | [optional] 
+**Prefix** | Pointer to **string** | IPv6 subnet | [optional] 
+**Gateway** | Pointer to **string** | IPv6 gateway | [optional] 
 
 ## Methods
 
@@ -53,31 +53,6 @@ SetAssignmentMode sets AssignmentMode field to given value.
 
 HasAssignmentMode returns a boolean if a field has been set.
 
-### GetPrefix
-
-`func (o *DevicesSerialSwitchRoutingInterfacesIpv6) GetPrefix() string`
-
-GetPrefix returns the Prefix field if non-nil, zero value otherwise.
-
-### GetPrefixOk
-
-`func (o *DevicesSerialSwitchRoutingInterfacesIpv6) GetPrefixOk() (*string, bool)`
-
-GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPrefix
-
-`func (o *DevicesSerialSwitchRoutingInterfacesIpv6) SetPrefix(v string)`
-
-SetPrefix sets Prefix field to given value.
-
-### HasPrefix
-
-`func (o *DevicesSerialSwitchRoutingInterfacesIpv6) HasPrefix() bool`
-
-HasPrefix returns a boolean if a field has been set.
-
 ### GetAddress
 
 `func (o *DevicesSerialSwitchRoutingInterfacesIpv6) GetAddress() string`
@@ -102,6 +77,31 @@ SetAddress sets Address field to given value.
 `func (o *DevicesSerialSwitchRoutingInterfacesIpv6) HasAddress() bool`
 
 HasAddress returns a boolean if a field has been set.
+
+### GetPrefix
+
+`func (o *DevicesSerialSwitchRoutingInterfacesIpv6) GetPrefix() string`
+
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
+
+### GetPrefixOk
+
+`func (o *DevicesSerialSwitchRoutingInterfacesIpv6) GetPrefixOk() (*string, bool)`
+
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrefix
+
+`func (o *DevicesSerialSwitchRoutingInterfacesIpv6) SetPrefix(v string)`
+
+SetPrefix sets Prefix field to given value.
+
+### HasPrefix
+
+`func (o *DevicesSerialSwitchRoutingInterfacesIpv6) HasPrefix() bool`
+
+HasPrefix returns a boolean if a field has been set.
 
 ### GetGateway
 

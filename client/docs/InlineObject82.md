@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be checked-in. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be checked-in. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be checked-in. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be checked-in. | [optional] 
+**Json** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesStagedStagesJson**](NetworksNetworkIdFirmwareUpgradesStagedStagesJson.md) | Array of Staged Upgrade Groups | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineObject82WithDefaults instantiates a new InlineObject82 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetJson
 
-`func (o *InlineObject82) GetWifiMacs() []string`
+`func (o *InlineObject82) GetJson() []NetworksNetworkIdFirmwareUpgradesStagedStagesJson`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetJson returns the Json field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetJsonOk
 
-`func (o *InlineObject82) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject82) GetJsonOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedStagesJson, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetJsonOk returns a tuple with the Json field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetJson
 
-`func (o *InlineObject82) SetWifiMacs(v []string)`
+`func (o *InlineObject82) SetJson(v []NetworksNetworkIdFirmwareUpgradesStagedStagesJson)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetJson sets Json field to given value.
 
-### HasWifiMacs
+### HasJson
 
-`func (o *InlineObject82) HasWifiMacs() bool`
+`func (o *InlineObject82) HasJson() bool`
 
-HasWifiMacs returns a boolean if a field has been set.
-
-### GetIds
-
-`func (o *InlineObject82) GetIds() []string`
-
-GetIds returns the Ids field if non-nil, zero value otherwise.
-
-### GetIdsOk
-
-`func (o *InlineObject82) GetIdsOk() (*[]string, bool)`
-
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIds
-
-`func (o *InlineObject82) SetIds(v []string)`
-
-SetIds sets Ids field to given value.
-
-### HasIds
-
-`func (o *InlineObject82) HasIds() bool`
-
-HasIds returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineObject82) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineObject82) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineObject82) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineObject82) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineObject82) GetScope() []string`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineObject82) GetScopeOk() (*[]string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineObject82) SetScope(v []string)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineObject82) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
+HasJson returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

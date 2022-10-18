@@ -101,7 +101,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject8() // InlineObject8 |  (optional)
+    updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject9() // InlineObject9 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGatewa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGatewayLan** | [**InlineObject8**](InlineObject8.md) |  | 
+ **updateDeviceCellularGatewayLan** | [**InlineObject9**](InlineObject9.md) |  | 
 
 ### Return type
 

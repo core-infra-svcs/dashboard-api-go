@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG of the network. It can be &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39;. | [optional] 
-**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG of the network. It can take 4 different values: &#39;upstream_dns&#39;, &#39;google_dns&#39;, &#39;opendns&#39;, &#39;custom&#39;. | [optional] 
-**DnsCustomNameservers** | Pointer to **[]string** | list of fixed IP representing the the DNS Name servers when the mode is &#39;custom&#39; | [optional] 
+**Enabled** | **bool** | Enable warm spare | 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
+**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
+**VirtualIp1** | Pointer to **string** | The WAN 1 shared IP | [optional] 
+**VirtualIp2** | Pointer to **string** | The WAN 2 shared IP | [optional] 
 
 ## Methods
 
 ### NewInlineObject59
 
-`func NewInlineObject59() *InlineObject59`
+`func NewInlineObject59(enabled bool, ) *InlineObject59`
 
 NewInlineObject59 instantiates a new InlineObject59 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +29,125 @@ NewInlineObject59WithDefaults instantiates a new InlineObject59 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDhcpLeaseTime
+### GetEnabled
 
-`func (o *InlineObject59) GetDhcpLeaseTime() string`
+`func (o *InlineObject59) GetEnabled() bool`
 
-GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetDhcpLeaseTimeOk
+### GetEnabledOk
 
-`func (o *InlineObject59) GetDhcpLeaseTimeOk() (*string, bool)`
+`func (o *InlineObject59) GetEnabledOk() (*bool, bool)`
 
-GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcpLeaseTime
+### SetEnabled
 
-`func (o *InlineObject59) SetDhcpLeaseTime(v string)`
+`func (o *InlineObject59) SetEnabled(v bool)`
 
-SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasDhcpLeaseTime
 
-`func (o *InlineObject59) HasDhcpLeaseTime() bool`
+### GetSpareSerial
 
-HasDhcpLeaseTime returns a boolean if a field has been set.
+`func (o *InlineObject59) GetSpareSerial() string`
 
-### GetDnsNameservers
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-`func (o *InlineObject59) GetDnsNameservers() string`
+### GetSpareSerialOk
 
-GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+`func (o *InlineObject59) GetSpareSerialOk() (*string, bool)`
 
-### GetDnsNameserversOk
-
-`func (o *InlineObject59) GetDnsNameserversOk() (*string, bool)`
-
-GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsNameservers
+### SetSpareSerial
 
-`func (o *InlineObject59) SetDnsNameservers(v string)`
+`func (o *InlineObject59) SetSpareSerial(v string)`
 
-SetDnsNameservers sets DnsNameservers field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
-### HasDnsNameservers
+### HasSpareSerial
 
-`func (o *InlineObject59) HasDnsNameservers() bool`
+`func (o *InlineObject59) HasSpareSerial() bool`
 
-HasDnsNameservers returns a boolean if a field has been set.
+HasSpareSerial returns a boolean if a field has been set.
 
-### GetDnsCustomNameservers
+### GetUplinkMode
 
-`func (o *InlineObject59) GetDnsCustomNameservers() []string`
+`func (o *InlineObject59) GetUplinkMode() string`
 
-GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
 
-### GetDnsCustomNameserversOk
+### GetUplinkModeOk
 
-`func (o *InlineObject59) GetDnsCustomNameserversOk() (*[]string, bool)`
+`func (o *InlineObject59) GetUplinkModeOk() (*string, bool)`
 
-GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsCustomNameservers
+### SetUplinkMode
 
-`func (o *InlineObject59) SetDnsCustomNameservers(v []string)`
+`func (o *InlineObject59) SetUplinkMode(v string)`
 
-SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+SetUplinkMode sets UplinkMode field to given value.
 
-### HasDnsCustomNameservers
+### HasUplinkMode
 
-`func (o *InlineObject59) HasDnsCustomNameservers() bool`
+`func (o *InlineObject59) HasUplinkMode() bool`
 
-HasDnsCustomNameservers returns a boolean if a field has been set.
+HasUplinkMode returns a boolean if a field has been set.
+
+### GetVirtualIp1
+
+`func (o *InlineObject59) GetVirtualIp1() string`
+
+GetVirtualIp1 returns the VirtualIp1 field if non-nil, zero value otherwise.
+
+### GetVirtualIp1Ok
+
+`func (o *InlineObject59) GetVirtualIp1Ok() (*string, bool)`
+
+GetVirtualIp1Ok returns a tuple with the VirtualIp1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVirtualIp1
+
+`func (o *InlineObject59) SetVirtualIp1(v string)`
+
+SetVirtualIp1 sets VirtualIp1 field to given value.
+
+### HasVirtualIp1
+
+`func (o *InlineObject59) HasVirtualIp1() bool`
+
+HasVirtualIp1 returns a boolean if a field has been set.
+
+### GetVirtualIp2
+
+`func (o *InlineObject59) GetVirtualIp2() string`
+
+GetVirtualIp2 returns the VirtualIp2 field if non-nil, zero value otherwise.
+
+### GetVirtualIp2Ok
+
+`func (o *InlineObject59) GetVirtualIp2Ok() (*string, bool)`
+
+GetVirtualIp2Ok returns a tuple with the VirtualIp2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVirtualIp2
+
+`func (o *InlineObject59) SetVirtualIp2(v string)`
+
+SetVirtualIp2 sets VirtualIp2 field to given value.
+
+### HasVirtualIp2
+
+`func (o *InlineObject59) HasVirtualIp2() bool`
+
+HasVirtualIp2 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ConfigTemplateId** | **string** | The ID of the template to which the network should be bound. | 
-**AutoBind** | Pointer to **bool** | Optional boolean indicating whether the network&#39;s switches should automatically bind to profiles of the same model. Defaults to false if left unspecified. This option only affects switch networks and switch templates. Auto-bind is not valid unless the switch template has at least one profile and has at most one profile per switch model. | [optional] 
+**ActiveActiveAutoVpnEnabled** | Pointer to **bool** | Toggle for enabling or disabling active-active AutoVPN | [optional] 
+**DefaultUplink** | Pointer to **string** | The default uplink. Must be one of: &#39;wan1&#39; or &#39;wan2&#39; | [optional] 
+**LoadBalancingEnabled** | Pointer to **bool** | Toggle for enabling or disabling load balancing | [optional] 
+**WanTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences.md) | Array of uplink preference rules for WAN traffic | [optional] 
+**VpnTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences.md) | Array of uplink preference rules for VPN traffic | [optional] 
 
 ## Methods
 
 ### NewInlineObject53
 
-`func NewInlineObject53(configTemplateId string, ) *InlineObject53`
+`func NewInlineObject53() *InlineObject53`
 
 NewInlineObject53 instantiates a new InlineObject53 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +29,130 @@ NewInlineObject53WithDefaults instantiates a new InlineObject53 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfigTemplateId
+### GetActiveActiveAutoVpnEnabled
 
-`func (o *InlineObject53) GetConfigTemplateId() string`
+`func (o *InlineObject53) GetActiveActiveAutoVpnEnabled() bool`
 
-GetConfigTemplateId returns the ConfigTemplateId field if non-nil, zero value otherwise.
+GetActiveActiveAutoVpnEnabled returns the ActiveActiveAutoVpnEnabled field if non-nil, zero value otherwise.
 
-### GetConfigTemplateIdOk
+### GetActiveActiveAutoVpnEnabledOk
 
-`func (o *InlineObject53) GetConfigTemplateIdOk() (*string, bool)`
+`func (o *InlineObject53) GetActiveActiveAutoVpnEnabledOk() (*bool, bool)`
 
-GetConfigTemplateIdOk returns a tuple with the ConfigTemplateId field if it's non-nil, zero value otherwise
+GetActiveActiveAutoVpnEnabledOk returns a tuple with the ActiveActiveAutoVpnEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfigTemplateId
+### SetActiveActiveAutoVpnEnabled
 
-`func (o *InlineObject53) SetConfigTemplateId(v string)`
+`func (o *InlineObject53) SetActiveActiveAutoVpnEnabled(v bool)`
 
-SetConfigTemplateId sets ConfigTemplateId field to given value.
+SetActiveActiveAutoVpnEnabled sets ActiveActiveAutoVpnEnabled field to given value.
 
+### HasActiveActiveAutoVpnEnabled
 
-### GetAutoBind
+`func (o *InlineObject53) HasActiveActiveAutoVpnEnabled() bool`
 
-`func (o *InlineObject53) GetAutoBind() bool`
+HasActiveActiveAutoVpnEnabled returns a boolean if a field has been set.
 
-GetAutoBind returns the AutoBind field if non-nil, zero value otherwise.
+### GetDefaultUplink
 
-### GetAutoBindOk
+`func (o *InlineObject53) GetDefaultUplink() string`
 
-`func (o *InlineObject53) GetAutoBindOk() (*bool, bool)`
+GetDefaultUplink returns the DefaultUplink field if non-nil, zero value otherwise.
 
-GetAutoBindOk returns a tuple with the AutoBind field if it's non-nil, zero value otherwise
+### GetDefaultUplinkOk
+
+`func (o *InlineObject53) GetDefaultUplinkOk() (*string, bool)`
+
+GetDefaultUplinkOk returns a tuple with the DefaultUplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAutoBind
+### SetDefaultUplink
 
-`func (o *InlineObject53) SetAutoBind(v bool)`
+`func (o *InlineObject53) SetDefaultUplink(v string)`
 
-SetAutoBind sets AutoBind field to given value.
+SetDefaultUplink sets DefaultUplink field to given value.
 
-### HasAutoBind
+### HasDefaultUplink
 
-`func (o *InlineObject53) HasAutoBind() bool`
+`func (o *InlineObject53) HasDefaultUplink() bool`
 
-HasAutoBind returns a boolean if a field has been set.
+HasDefaultUplink returns a boolean if a field has been set.
+
+### GetLoadBalancingEnabled
+
+`func (o *InlineObject53) GetLoadBalancingEnabled() bool`
+
+GetLoadBalancingEnabled returns the LoadBalancingEnabled field if non-nil, zero value otherwise.
+
+### GetLoadBalancingEnabledOk
+
+`func (o *InlineObject53) GetLoadBalancingEnabledOk() (*bool, bool)`
+
+GetLoadBalancingEnabledOk returns a tuple with the LoadBalancingEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLoadBalancingEnabled
+
+`func (o *InlineObject53) SetLoadBalancingEnabled(v bool)`
+
+SetLoadBalancingEnabled sets LoadBalancingEnabled field to given value.
+
+### HasLoadBalancingEnabled
+
+`func (o *InlineObject53) HasLoadBalancingEnabled() bool`
+
+HasLoadBalancingEnabled returns a boolean if a field has been set.
+
+### GetWanTrafficUplinkPreferences
+
+`func (o *InlineObject53) GetWanTrafficUplinkPreferences() []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences`
+
+GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
+
+### GetWanTrafficUplinkPreferencesOk
+
+`func (o *InlineObject53) GetWanTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences, bool)`
+
+GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWanTrafficUplinkPreferences
+
+`func (o *InlineObject53) SetWanTrafficUplinkPreferences(v []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences)`
+
+SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
+
+### HasWanTrafficUplinkPreferences
+
+`func (o *InlineObject53) HasWanTrafficUplinkPreferences() bool`
+
+HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
+
+### GetVpnTrafficUplinkPreferences
+
+`func (o *InlineObject53) GetVpnTrafficUplinkPreferences() []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences`
+
+GetVpnTrafficUplinkPreferences returns the VpnTrafficUplinkPreferences field if non-nil, zero value otherwise.
+
+### GetVpnTrafficUplinkPreferencesOk
+
+`func (o *InlineObject53) GetVpnTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences, bool)`
+
+GetVpnTrafficUplinkPreferencesOk returns a tuple with the VpnTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVpnTrafficUplinkPreferences
+
+`func (o *InlineObject53) SetVpnTrafficUplinkPreferences(v []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences)`
+
+SetVpnTrafficUplinkPreferences sets VpnTrafficUplinkPreferences field to given value.
+
+### HasVpnTrafficUplinkPreferences
+
+`func (o *InlineObject53) HasVpnTrafficUplinkPreferences() bool`
+
+HasVpnTrafficUplinkPreferences returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

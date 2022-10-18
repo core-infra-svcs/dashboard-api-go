@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkCellularGatewaySubnetPool := *openapiclient.NewInlineObject60() // InlineObject60 |  (optional)
+    updateNetworkCellularGatewaySubnetPool := *openapiclient.NewInlineObject67() // InlineObject67 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewaySubnetPool** | [**InlineObject60**](InlineObject60.md) |  | 
+ **updateNetworkCellularGatewaySubnetPool** | [**InlineObject67**](InlineObject67.md) |  | 
 
 ### Return type
 

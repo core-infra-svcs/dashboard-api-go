@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
-**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
-**SecureConnect** | Pointer to [**NetworksNetworkIdSettingsSecureConnect**](NetworksNetworkIdSettingsSecureConnect.md) |  | [optional] 
-**LocalStatusPage** | Pointer to [**NetworksNetworkIdSettingsLocalStatusPage**](NetworksNetworkIdSettingsLocalStatusPage.md) |  | [optional] 
+**Name** | **string** | Name of the Staged Upgrade Group. Length must be 1 to 255 characters | 
+**Description** | Pointer to **string** | Description of the Staged Upgrade Group. Length must be 1 to 255 characters | [optional] 
+**IsDefault** | **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | 
+**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject80
 
-`func NewInlineObject80() *InlineObject80`
+`func NewInlineObject80(name string, isDefault bool, ) *InlineObject80`
 
 NewInlineObject80 instantiates a new InlineObject80 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +28,95 @@ NewInlineObject80WithDefaults instantiates a new InlineObject80 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLocalStatusPageEnabled
+### GetName
 
-`func (o *InlineObject80) GetLocalStatusPageEnabled() bool`
+`func (o *InlineObject80) GetName() string`
 
-GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageEnabledOk
+### GetNameOk
 
-`func (o *InlineObject80) GetLocalStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineObject80) GetNameOk() (*string, bool)`
 
-GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPageEnabled
+### SetName
 
-`func (o *InlineObject80) SetLocalStatusPageEnabled(v bool)`
+`func (o *InlineObject80) SetName(v string)`
 
-SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasLocalStatusPageEnabled
 
-`func (o *InlineObject80) HasLocalStatusPageEnabled() bool`
+### GetDescription
 
-HasLocalStatusPageEnabled returns a boolean if a field has been set.
+`func (o *InlineObject80) GetDescription() string`
 
-### GetRemoteStatusPageEnabled
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-`func (o *InlineObject80) GetRemoteStatusPageEnabled() bool`
+### GetDescriptionOk
 
-GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
+`func (o *InlineObject80) GetDescriptionOk() (*string, bool)`
 
-### GetRemoteStatusPageEnabledOk
-
-`func (o *InlineObject80) GetRemoteStatusPageEnabledOk() (*bool, bool)`
-
-GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemoteStatusPageEnabled
+### SetDescription
 
-`func (o *InlineObject80) SetRemoteStatusPageEnabled(v bool)`
+`func (o *InlineObject80) SetDescription(v string)`
 
-SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
+SetDescription sets Description field to given value.
 
-### HasRemoteStatusPageEnabled
+### HasDescription
 
-`func (o *InlineObject80) HasRemoteStatusPageEnabled() bool`
+`func (o *InlineObject80) HasDescription() bool`
 
-HasRemoteStatusPageEnabled returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetSecureConnect
+### GetIsDefault
 
-`func (o *InlineObject80) GetSecureConnect() NetworksNetworkIdSettingsSecureConnect`
+`func (o *InlineObject80) GetIsDefault() bool`
 
-GetSecureConnect returns the SecureConnect field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetSecureConnectOk
+### GetIsDefaultOk
 
-`func (o *InlineObject80) GetSecureConnectOk() (*NetworksNetworkIdSettingsSecureConnect, bool)`
+`func (o *InlineObject80) GetIsDefaultOk() (*bool, bool)`
 
-GetSecureConnectOk returns a tuple with the SecureConnect field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecureConnect
+### SetIsDefault
 
-`func (o *InlineObject80) SetSecureConnect(v NetworksNetworkIdSettingsSecureConnect)`
+`func (o *InlineObject80) SetIsDefault(v bool)`
 
-SetSecureConnect sets SecureConnect field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasSecureConnect
 
-`func (o *InlineObject80) HasSecureConnect() bool`
+### GetAssignedDevices
 
-HasSecureConnect returns a boolean if a field has been set.
+`func (o *InlineObject80) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1`
 
-### GetLocalStatusPage
+GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
 
-`func (o *InlineObject80) GetLocalStatusPage() NetworksNetworkIdSettingsLocalStatusPage`
+### GetAssignedDevicesOk
 
-GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
+`func (o *InlineObject80) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1, bool)`
 
-### GetLocalStatusPageOk
-
-`func (o *InlineObject80) GetLocalStatusPageOk() (*NetworksNetworkIdSettingsLocalStatusPage, bool)`
-
-GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
+GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPage
+### SetAssignedDevices
 
-`func (o *InlineObject80) SetLocalStatusPage(v NetworksNetworkIdSettingsLocalStatusPage)`
+`func (o *InlineObject80) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1)`
 
-SetLocalStatusPage sets LocalStatusPage field to given value.
+SetAssignedDevices sets AssignedDevices field to given value.
 
-### HasLocalStatusPage
+### HasAssignedDevices
 
-`func (o *InlineObject80) HasLocalStatusPage() bool`
+`func (o *InlineObject80) HasAssignedDevices() bool`
 
-HasLocalStatusPage returns a boolean if a field has been set.
+HasAssignedDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

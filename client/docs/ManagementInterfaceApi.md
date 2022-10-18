@@ -101,7 +101,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    updateDeviceManagementInterface := *openapiclient.NewInlineObject12() // InlineObject12 |  (optional)
+    updateDeviceManagementInterface := *openapiclient.NewInlineObject13() // InlineObject13 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceManagementInte
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceManagementInterface** | [**InlineObject12**](InlineObject12.md) |  | 
+ **updateDeviceManagementInterface** | [**InlineObject13**](InlineObject13.md) |  | 
 
 ### Return type
 

@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the custom performance class | 
-**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
+**Mode** | **string** | Set mode to &#39;enabled&#39; to enable malware prevention, otherwise &#39;disabled&#39; | 
+**AllowedUrls** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls**](NetworksNetworkIdApplianceSecurityMalwareAllowedUrls.md) | The urls that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
+**AllowedFiles** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles**](NetworksNetworkIdApplianceSecurityMalwareAllowedFiles.md) | The sha256 digests of files that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
 
 ## Methods
 
 ### NewInlineObject42
 
-`func NewInlineObject42(name string, ) *InlineObject42`
+`func NewInlineObject42(mode string, ) *InlineObject42`
 
 NewInlineObject42 instantiates a new InlineObject42 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +27,75 @@ NewInlineObject42WithDefaults instantiates a new InlineObject42 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetMode
 
-`func (o *InlineObject42) GetName() string`
+`func (o *InlineObject42) GetMode() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetModeOk
 
-`func (o *InlineObject42) GetNameOk() (*string, bool)`
+`func (o *InlineObject42) GetModeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMode
 
-`func (o *InlineObject42) SetName(v string)`
+`func (o *InlineObject42) SetMode(v string)`
 
-SetName sets Name field to given value.
+SetMode sets Mode field to given value.
 
 
-### GetMaxLatency
+### GetAllowedUrls
 
-`func (o *InlineObject42) GetMaxLatency() int32`
+`func (o *InlineObject42) GetAllowedUrls() []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls`
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
 
-### GetMaxLatencyOk
+### GetAllowedUrlsOk
 
-`func (o *InlineObject42) GetMaxLatencyOk() (*int32, bool)`
+`func (o *InlineObject42) GetAllowedUrlsOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls, bool)`
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetAllowedUrls
 
-`func (o *InlineObject42) SetMaxLatency(v int32)`
+`func (o *InlineObject42) SetAllowedUrls(v []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetAllowedUrls sets AllowedUrls field to given value.
 
-### HasMaxLatency
+### HasAllowedUrls
 
-`func (o *InlineObject42) HasMaxLatency() bool`
+`func (o *InlineObject42) HasAllowedUrls() bool`
 
-HasMaxLatency returns a boolean if a field has been set.
+HasAllowedUrls returns a boolean if a field has been set.
 
-### GetMaxJitter
+### GetAllowedFiles
 
-`func (o *InlineObject42) GetMaxJitter() int32`
+`func (o *InlineObject42) GetAllowedFiles() []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles`
 
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
 
-### GetMaxJitterOk
+### GetAllowedFilesOk
 
-`func (o *InlineObject42) GetMaxJitterOk() (*int32, bool)`
+`func (o *InlineObject42) GetAllowedFilesOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles, bool)`
 
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxJitter
+### SetAllowedFiles
 
-`func (o *InlineObject42) SetMaxJitter(v int32)`
+`func (o *InlineObject42) SetAllowedFiles(v []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles)`
 
-SetMaxJitter sets MaxJitter field to given value.
+SetAllowedFiles sets AllowedFiles field to given value.
 
-### HasMaxJitter
+### HasAllowedFiles
 
-`func (o *InlineObject42) HasMaxJitter() bool`
+`func (o *InlineObject42) HasAllowedFiles() bool`
 
-HasMaxJitter returns a boolean if a field has been set.
-
-### GetMaxLossPercentage
-
-`func (o *InlineObject42) GetMaxLossPercentage() int32`
-
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
-
-### GetMaxLossPercentageOk
-
-`func (o *InlineObject42) GetMaxLossPercentageOk() (*int32, bool)`
-
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxLossPercentage
-
-`func (o *InlineObject42) SetMaxLossPercentage(v int32)`
-
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
-
-### HasMaxLossPercentage
-
-`func (o *InlineObject42) HasMaxLossPercentage() bool`
-
-HasMaxLossPercentage returns a boolean if a field has been set.
+HasAllowedFiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

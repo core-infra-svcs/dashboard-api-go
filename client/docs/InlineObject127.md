@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the template | [optional] 
-**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. | [optional] 
-**Headers** | Pointer to **string** | The liquid template used with the webhook headers. | [optional] 
-**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. | [optional] 
-**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
+**InterfaceIp** | **string** | The IP address of the interface to use | 
+**MulticastGroup** | **string** | &#39;Any&#39;, or the IP address of a multicast group | 
 
 ## Methods
 
 ### NewInlineObject127
 
-`func NewInlineObject127() *InlineObject127`
+`func NewInlineObject127(interfaceIp string, multicastGroup string, ) *InlineObject127`
 
 NewInlineObject127 instantiates a new InlineObject127 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +26,45 @@ NewInlineObject127WithDefaults instantiates a new InlineObject127 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetInterfaceIp
 
-`func (o *InlineObject127) GetName() string`
+`func (o *InlineObject127) GetInterfaceIp() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetInterfaceIpOk
 
-`func (o *InlineObject127) GetNameOk() (*string, bool)`
+`func (o *InlineObject127) GetInterfaceIpOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetInterfaceIp
 
-`func (o *InlineObject127) SetName(v string)`
+`func (o *InlineObject127) SetInterfaceIp(v string)`
 
-SetName sets Name field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasName
 
-`func (o *InlineObject127) HasName() bool`
+### GetMulticastGroup
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject127) GetMulticastGroup() string`
 
-### GetBody
+GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
 
-`func (o *InlineObject127) GetBody() string`
+### GetMulticastGroupOk
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+`func (o *InlineObject127) GetMulticastGroupOk() (*string, bool)`
 
-### GetBodyOk
-
-`func (o *InlineObject127) GetBodyOk() (*string, bool)`
-
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetMulticastGroup
 
-`func (o *InlineObject127) SetBody(v string)`
+`func (o *InlineObject127) SetMulticastGroup(v string)`
 
-SetBody sets Body field to given value.
+SetMulticastGroup sets MulticastGroup field to given value.
 
-### HasBody
-
-`func (o *InlineObject127) HasBody() bool`
-
-HasBody returns a boolean if a field has been set.
-
-### GetHeaders
-
-`func (o *InlineObject127) GetHeaders() string`
-
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
-
-### GetHeadersOk
-
-`func (o *InlineObject127) GetHeadersOk() (*string, bool)`
-
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeaders
-
-`func (o *InlineObject127) SetHeaders(v string)`
-
-SetHeaders sets Headers field to given value.
-
-### HasHeaders
-
-`func (o *InlineObject127) HasHeaders() bool`
-
-HasHeaders returns a boolean if a field has been set.
-
-### GetBodyFile
-
-`func (o *InlineObject127) GetBodyFile() string`
-
-GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
-
-### GetBodyFileOk
-
-`func (o *InlineObject127) GetBodyFileOk() (*string, bool)`
-
-GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBodyFile
-
-`func (o *InlineObject127) SetBodyFile(v string)`
-
-SetBodyFile sets BodyFile field to given value.
-
-### HasBodyFile
-
-`func (o *InlineObject127) HasBodyFile() bool`
-
-HasBodyFile returns a boolean if a field has been set.
-
-### GetHeadersFile
-
-`func (o *InlineObject127) GetHeadersFile() string`
-
-GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
-
-### GetHeadersFileOk
-
-`func (o *InlineObject127) GetHeadersFileOk() (*string, bool)`
-
-GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeadersFile
-
-`func (o *InlineObject127) SetHeadersFile(v string)`
-
-SetHeadersFile sets HeadersFile field to given value.
-
-### HasHeadersFile
-
-`func (o *InlineObject127) HasHeadersFile() bool`
-
-HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be locked. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be locked. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be locked. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be wiped. | [optional] 
-**Pin** | Pointer to **int32** | The pin number for locking macOS devices (a six digit number). Required only for macOS devices. | [optional] 
+**Name** | Pointer to **string** | The name of your floor plan. | [optional] 
+**Center** | Pointer to [**NetworksNetworkIdFloorPlansFloorPlanIdCenter**](NetworksNetworkIdFloorPlansFloorPlanIdCenter.md) |  | [optional] 
+**BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner**](NetworksNetworkIdFloorPlansBottomLeftCorner.md) |  | [optional] 
+**BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
+**TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
+**TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
+**ImageContents** | Pointer to **string** | The file contents (a base 64 encoded string) of your new image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. If you upload a new image, and you do NOT specify any new geolocation fields (&#39;center, &#39;topLeftCorner&#39;, etc), the floor plan will be recentered with no rotation in order to maintain the aspect ratio of your new image. | [optional] 
 
 ## Methods
 
@@ -29,130 +31,180 @@ NewInlineObject84WithDefaults instantiates a new InlineObject84 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetName
 
-`func (o *InlineObject84) GetWifiMacs() []string`
+`func (o *InlineObject84) GetName() string`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetNameOk
 
-`func (o *InlineObject84) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject84) GetNameOk() (*string, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetName
 
-`func (o *InlineObject84) SetWifiMacs(v []string)`
+`func (o *InlineObject84) SetName(v string)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetName sets Name field to given value.
 
-### HasWifiMacs
+### HasName
 
-`func (o *InlineObject84) HasWifiMacs() bool`
+`func (o *InlineObject84) HasName() bool`
 
-HasWifiMacs returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetIds
+### GetCenter
 
-`func (o *InlineObject84) GetIds() []string`
+`func (o *InlineObject84) GetCenter() NetworksNetworkIdFloorPlansFloorPlanIdCenter`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetCenter returns the Center field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetCenterOk
 
-`func (o *InlineObject84) GetIdsOk() (*[]string, bool)`
+`func (o *InlineObject84) GetCenterOk() (*NetworksNetworkIdFloorPlansFloorPlanIdCenter, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetCenter
 
-`func (o *InlineObject84) SetIds(v []string)`
+`func (o *InlineObject84) SetCenter(v NetworksNetworkIdFloorPlansFloorPlanIdCenter)`
 
-SetIds sets Ids field to given value.
+SetCenter sets Center field to given value.
 
-### HasIds
+### HasCenter
 
-`func (o *InlineObject84) HasIds() bool`
+`func (o *InlineObject84) HasCenter() bool`
 
-HasIds returns a boolean if a field has been set.
+HasCenter returns a boolean if a field has been set.
 
-### GetSerials
+### GetBottomLeftCorner
 
-`func (o *InlineObject84) GetSerials() []string`
+`func (o *InlineObject84) GetBottomLeftCorner() NetworksNetworkIdFloorPlansBottomLeftCorner`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetBottomLeftCorner returns the BottomLeftCorner field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetBottomLeftCornerOk
 
-`func (o *InlineObject84) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject84) GetBottomLeftCornerOk() (*NetworksNetworkIdFloorPlansBottomLeftCorner, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetBottomLeftCornerOk returns a tuple with the BottomLeftCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetBottomLeftCorner
 
-`func (o *InlineObject84) SetSerials(v []string)`
+`func (o *InlineObject84) SetBottomLeftCorner(v NetworksNetworkIdFloorPlansBottomLeftCorner)`
 
-SetSerials sets Serials field to given value.
+SetBottomLeftCorner sets BottomLeftCorner field to given value.
 
-### HasSerials
+### HasBottomLeftCorner
 
-`func (o *InlineObject84) HasSerials() bool`
+`func (o *InlineObject84) HasBottomLeftCorner() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasBottomLeftCorner returns a boolean if a field has been set.
 
-### GetScope
+### GetBottomRightCorner
 
-`func (o *InlineObject84) GetScope() []string`
+`func (o *InlineObject84) GetBottomRightCorner() NetworksNetworkIdFloorPlansBottomRightCorner`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetBottomRightCorner returns the BottomRightCorner field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetBottomRightCornerOk
 
-`func (o *InlineObject84) GetScopeOk() (*[]string, bool)`
+`func (o *InlineObject84) GetBottomRightCornerOk() (*NetworksNetworkIdFloorPlansBottomRightCorner, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetBottomRightCornerOk returns a tuple with the BottomRightCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetBottomRightCorner
 
-`func (o *InlineObject84) SetScope(v []string)`
+`func (o *InlineObject84) SetBottomRightCorner(v NetworksNetworkIdFloorPlansBottomRightCorner)`
 
-SetScope sets Scope field to given value.
+SetBottomRightCorner sets BottomRightCorner field to given value.
 
-### HasScope
+### HasBottomRightCorner
 
-`func (o *InlineObject84) HasScope() bool`
+`func (o *InlineObject84) HasBottomRightCorner() bool`
 
-HasScope returns a boolean if a field has been set.
+HasBottomRightCorner returns a boolean if a field has been set.
 
-### GetPin
+### GetTopLeftCorner
 
-`func (o *InlineObject84) GetPin() int32`
+`func (o *InlineObject84) GetTopLeftCorner() NetworksNetworkIdFloorPlansTopLeftCorner`
 
-GetPin returns the Pin field if non-nil, zero value otherwise.
+GetTopLeftCorner returns the TopLeftCorner field if non-nil, zero value otherwise.
 
-### GetPinOk
+### GetTopLeftCornerOk
 
-`func (o *InlineObject84) GetPinOk() (*int32, bool)`
+`func (o *InlineObject84) GetTopLeftCornerOk() (*NetworksNetworkIdFloorPlansTopLeftCorner, bool)`
 
-GetPinOk returns a tuple with the Pin field if it's non-nil, zero value otherwise
+GetTopLeftCornerOk returns a tuple with the TopLeftCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPin
+### SetTopLeftCorner
 
-`func (o *InlineObject84) SetPin(v int32)`
+`func (o *InlineObject84) SetTopLeftCorner(v NetworksNetworkIdFloorPlansTopLeftCorner)`
 
-SetPin sets Pin field to given value.
+SetTopLeftCorner sets TopLeftCorner field to given value.
 
-### HasPin
+### HasTopLeftCorner
 
-`func (o *InlineObject84) HasPin() bool`
+`func (o *InlineObject84) HasTopLeftCorner() bool`
 
-HasPin returns a boolean if a field has been set.
+HasTopLeftCorner returns a boolean if a field has been set.
+
+### GetTopRightCorner
+
+`func (o *InlineObject84) GetTopRightCorner() NetworksNetworkIdFloorPlansTopRightCorner`
+
+GetTopRightCorner returns the TopRightCorner field if non-nil, zero value otherwise.
+
+### GetTopRightCornerOk
+
+`func (o *InlineObject84) GetTopRightCornerOk() (*NetworksNetworkIdFloorPlansTopRightCorner, bool)`
+
+GetTopRightCornerOk returns a tuple with the TopRightCorner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTopRightCorner
+
+`func (o *InlineObject84) SetTopRightCorner(v NetworksNetworkIdFloorPlansTopRightCorner)`
+
+SetTopRightCorner sets TopRightCorner field to given value.
+
+### HasTopRightCorner
+
+`func (o *InlineObject84) HasTopRightCorner() bool`
+
+HasTopRightCorner returns a boolean if a field has been set.
+
+### GetImageContents
+
+`func (o *InlineObject84) GetImageContents() string`
+
+GetImageContents returns the ImageContents field if non-nil, zero value otherwise.
+
+### GetImageContentsOk
+
+`func (o *InlineObject84) GetImageContentsOk() (*string, bool)`
+
+GetImageContentsOk returns a tuple with the ImageContents field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImageContents
+
+`func (o *InlineObject84) SetImageContents(v string)`
+
+SetImageContents sets ImageContents field to given value.
+
+### HasImageContents
+
+`func (o *InlineObject84) HasImageContents() bool`
+
+HasImageContents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

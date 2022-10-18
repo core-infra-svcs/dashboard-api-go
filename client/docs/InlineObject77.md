@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the MQTT broker. | [optional] 
-**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
-**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
-**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
-**Authentication** | Pointer to **map[string]interface{}** | Authentication settings of the MQTT broker | [optional] 
+**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
 
 ## Methods
 
 ### NewInlineObject77
 
-`func NewInlineObject77() *InlineObject77`
+`func NewInlineObject77(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject77`
 
 NewInlineObject77 instantiates a new InlineObject77 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +25,25 @@ NewInlineObject77WithDefaults instantiates a new InlineObject77 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetStages
 
-`func (o *InlineObject77) GetName() string`
+`func (o *InlineObject77) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStages returns the Stages field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStagesOk
 
-`func (o *InlineObject77) GetNameOk() (*string, bool)`
+`func (o *InlineObject77) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStages
 
-`func (o *InlineObject77) SetName(v string)`
+`func (o *InlineObject77) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
 
-SetName sets Name field to given value.
+SetStages sets Stages field to given value.
 
-### HasName
-
-`func (o *InlineObject77) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetHost
-
-`func (o *InlineObject77) GetHost() string`
-
-GetHost returns the Host field if non-nil, zero value otherwise.
-
-### GetHostOk
-
-`func (o *InlineObject77) GetHostOk() (*string, bool)`
-
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHost
-
-`func (o *InlineObject77) SetHost(v string)`
-
-SetHost sets Host field to given value.
-
-### HasHost
-
-`func (o *InlineObject77) HasHost() bool`
-
-HasHost returns a boolean if a field has been set.
-
-### GetPort
-
-`func (o *InlineObject77) GetPort() int32`
-
-GetPort returns the Port field if non-nil, zero value otherwise.
-
-### GetPortOk
-
-`func (o *InlineObject77) GetPortOk() (*int32, bool)`
-
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPort
-
-`func (o *InlineObject77) SetPort(v int32)`
-
-SetPort sets Port field to given value.
-
-### HasPort
-
-`func (o *InlineObject77) HasPort() bool`
-
-HasPort returns a boolean if a field has been set.
-
-### GetSecurity
-
-`func (o *InlineObject77) GetSecurity() NetworksNetworkIdMqttBrokersSecurity`
-
-GetSecurity returns the Security field if non-nil, zero value otherwise.
-
-### GetSecurityOk
-
-`func (o *InlineObject77) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity, bool)`
-
-GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecurity
-
-`func (o *InlineObject77) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity)`
-
-SetSecurity sets Security field to given value.
-
-### HasSecurity
-
-`func (o *InlineObject77) HasSecurity() bool`
-
-HasSecurity returns a boolean if a field has been set.
-
-### GetAuthentication
-
-`func (o *InlineObject77) GetAuthentication() map[string]interface{}`
-
-GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
-
-### GetAuthenticationOk
-
-`func (o *InlineObject77) GetAuthenticationOk() (*map[string]interface{}, bool)`
-
-GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthentication
-
-`func (o *InlineObject77) SetAuthentication(v map[string]interface{})`
-
-SetAuthentication sets Authentication field to given value.
-
-### HasAuthentication
-
-`func (o *InlineObject77) HasAuthentication() bool`
-
-HasAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

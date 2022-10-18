@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
-**StpBridgePriority** | Pointer to [**[]NetworksNetworkIdSwitchStpStpBridgePriority**](NetworksNetworkIdSwitchStpStpBridgePriority.md) | STP bridge priority for switches/stacks or switch profiles. An empty array will clear the STP bridge priority settings. | [optional] 
+**Name** | Pointer to **string** | The name for your port schedule. | [optional] 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule**](NetworksNetworkIdSwitchPortSchedulesPortSchedule.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject121WithDefaults instantiates a new InlineObject121 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRstpEnabled
+### GetName
 
-`func (o *InlineObject121) GetRstpEnabled() bool`
+`func (o *InlineObject121) GetName() string`
 
-GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRstpEnabledOk
+### GetNameOk
 
-`func (o *InlineObject121) GetRstpEnabledOk() (*bool, bool)`
+`func (o *InlineObject121) GetNameOk() (*string, bool)`
 
-GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRstpEnabled
+### SetName
 
-`func (o *InlineObject121) SetRstpEnabled(v bool)`
+`func (o *InlineObject121) SetName(v string)`
 
-SetRstpEnabled sets RstpEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasRstpEnabled
+### HasName
 
-`func (o *InlineObject121) HasRstpEnabled() bool`
+`func (o *InlineObject121) HasName() bool`
 
-HasRstpEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetStpBridgePriority
+### GetPortSchedule
 
-`func (o *InlineObject121) GetStpBridgePriority() []NetworksNetworkIdSwitchStpStpBridgePriority`
+`func (o *InlineObject121) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule`
 
-GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
+GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
 
-### GetStpBridgePriorityOk
+### GetPortScheduleOk
 
-`func (o *InlineObject121) GetStpBridgePriorityOk() (*[]NetworksNetworkIdSwitchStpStpBridgePriority, bool)`
+`func (o *InlineObject121) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule, bool)`
 
-GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
+GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStpBridgePriority
+### SetPortSchedule
 
-`func (o *InlineObject121) SetStpBridgePriority(v []NetworksNetworkIdSwitchStpStpBridgePriority)`
+`func (o *InlineObject121) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule)`
 
-SetStpBridgePriority sets StpBridgePriority field to given value.
+SetPortSchedule sets PortSchedule field to given value.
 
-### HasStpBridgePriority
+### HasPortSchedule
 
-`func (o *InlineObject121) HasStpBridgePriority() bool`
+`func (o *InlineObject121) HasPortSchedule() bool`
 
-HasStpBridgePriority returns a boolean if a field has been set.
+HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

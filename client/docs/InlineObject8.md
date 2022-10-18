@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ReservedIpRanges** | Pointer to [**[]DevicesSerialCellularGatewayLanReservedIpRanges**](DevicesSerialCellularGatewayLanReservedIpRanges.md) | list of all reserved IP ranges for a single MG | [optional] 
-**FixedIpAssignments** | Pointer to [**[]DevicesSerialCellularGatewayLanFixedIpAssignments**](DevicesSerialCellularGatewayLanFixedIpAssignments.md) | list of all fixed IP assignments for a single MG | [optional] 
+**Ids** | [**DevicesSerialCameraWirelessProfilesIds**](DevicesSerialCameraWirelessProfilesIds.md) |  | 
 
 ## Methods
 
 ### NewInlineObject8
 
-`func NewInlineObject8() *InlineObject8`
+`func NewInlineObject8(ids DevicesSerialCameraWirelessProfilesIds, ) *InlineObject8`
 
 NewInlineObject8 instantiates a new InlineObject8 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject8WithDefaults instantiates a new InlineObject8 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReservedIpRanges
+### GetIds
 
-`func (o *InlineObject8) GetReservedIpRanges() []DevicesSerialCellularGatewayLanReservedIpRanges`
+`func (o *InlineObject8) GetIds() DevicesSerialCameraWirelessProfilesIds`
 
-GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetReservedIpRangesOk
+### GetIdsOk
 
-`func (o *InlineObject8) GetReservedIpRangesOk() (*[]DevicesSerialCellularGatewayLanReservedIpRanges, bool)`
+`func (o *InlineObject8) GetIdsOk() (*DevicesSerialCameraWirelessProfilesIds, bool)`
 
-GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReservedIpRanges
+### SetIds
 
-`func (o *InlineObject8) SetReservedIpRanges(v []DevicesSerialCellularGatewayLanReservedIpRanges)`
+`func (o *InlineObject8) SetIds(v DevicesSerialCameraWirelessProfilesIds)`
 
-SetReservedIpRanges sets ReservedIpRanges field to given value.
+SetIds sets Ids field to given value.
 
-### HasReservedIpRanges
-
-`func (o *InlineObject8) HasReservedIpRanges() bool`
-
-HasReservedIpRanges returns a boolean if a field has been set.
-
-### GetFixedIpAssignments
-
-`func (o *InlineObject8) GetFixedIpAssignments() []DevicesSerialCellularGatewayLanFixedIpAssignments`
-
-GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
-
-### GetFixedIpAssignmentsOk
-
-`func (o *InlineObject8) GetFixedIpAssignmentsOk() (*[]DevicesSerialCellularGatewayLanFixedIpAssignments, bool)`
-
-GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFixedIpAssignments
-
-`func (o *InlineObject8) SetFixedIpAssignments(v []DevicesSerialCellularGatewayLanFixedIpAssignments)`
-
-SetFixedIpAssignments sets FixedIpAssignments field to given value.
-
-### HasFixedIpAssignments
-
-`func (o *InlineObject8) HasFixedIpAssignments() bool`
-
-HasFixedIpAssignments returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

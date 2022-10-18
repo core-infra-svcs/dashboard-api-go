@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the dashboard administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags**](OrganizationsOrganizationIdAdminsTags.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks**](OrganizationsOrganizationIdAdminsNetworks.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
 
 ## Methods
 
 ### NewInlineObject160
 
-`func NewInlineObject160() *InlineObject160`
+`func NewInlineObject160(name string, groupPolicyId string, ) *InlineObject160`
 
 NewInlineObject160 instantiates a new InlineObject160 object
 This constructor will assign default values to properties that have it defined,
@@ -47,86 +46,51 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject160) HasName() bool`
+### GetPassphrase
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject160) GetPassphrase() string`
 
-### GetOrgAccess
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-`func (o *InlineObject160) GetOrgAccess() string`
+### GetPassphraseOk
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+`func (o *InlineObject160) GetPassphraseOk() (*string, bool)`
 
-### GetOrgAccessOk
-
-`func (o *InlineObject160) GetOrgAccessOk() (*string, bool)`
-
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetPassphrase
 
-`func (o *InlineObject160) SetOrgAccess(v string)`
+`func (o *InlineObject160) SetPassphrase(v string)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasOrgAccess
+### HasPassphrase
 
-`func (o *InlineObject160) HasOrgAccess() bool`
+`func (o *InlineObject160) HasPassphrase() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetTags
+### GetGroupPolicyId
 
-`func (o *InlineObject160) GetTags() []OrganizationsOrganizationIdAdminsTags`
+`func (o *InlineObject160) GetGroupPolicyId() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineObject160) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags, bool)`
+`func (o *InlineObject160) GetGroupPolicyIdOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetGroupPolicyId
 
-`func (o *InlineObject160) SetTags(v []OrganizationsOrganizationIdAdminsTags)`
+`func (o *InlineObject160) SetGroupPolicyId(v string)`
 
-SetTags sets Tags field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasTags
-
-`func (o *InlineObject160) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineObject160) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineObject160) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineObject160) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineObject160) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

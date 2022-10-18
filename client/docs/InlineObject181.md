@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
-**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
+**AllowedRules** | [**[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules**](OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules.md) | Sets a list of specific SNORT signatures to allow | 
 
 ## Methods
 
 ### NewInlineObject181
 
-`func NewInlineObject181(destOrganizationId string, licenseIds []string, ) *InlineObject181`
+`func NewInlineObject181(allowedRules []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, ) *InlineObject181`
 
 NewInlineObject181 instantiates a new InlineObject181 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject181WithDefaults instantiates a new InlineObject181 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetAllowedRules
 
-`func (o *InlineObject181) GetDestOrganizationId() string`
+`func (o *InlineObject181) GetAllowedRules() []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetAllowedRulesOk
 
-`func (o *InlineObject181) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject181) GetAllowedRulesOk() (*[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetAllowedRules
 
-`func (o *InlineObject181) SetDestOrganizationId(v string)`
+`func (o *InlineObject181) SetAllowedRules(v []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
-
-
-### GetLicenseIds
-
-`func (o *InlineObject181) GetLicenseIds() []string`
-
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
-
-### GetLicenseIdsOk
-
-`func (o *InlineObject181) GetLicenseIdsOk() (*[]string, bool)`
-
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseIds
-
-`func (o *InlineObject181) SetLicenseIds(v []string)`
-
-SetLicenseIds sets LicenseIds field to given value.
+SetAllowedRules sets AllowedRules field to given value.
 
 
 

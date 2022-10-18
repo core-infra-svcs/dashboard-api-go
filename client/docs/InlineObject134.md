@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MeshingEnabled** | Pointer to **bool** | Toggle for enabling or disabling meshing in a network | [optional] 
-**Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
-**LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
-**UpgradeStrategy** | Pointer to **string** | The upgrade strategy to apply to the network. Must be one of &#39;minimizeUpgradeTime&#39; or &#39;minimizeClientDowntime&#39;. Requires firmware version MR 26.8 or higher&#39; | [optional] 
-**LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
+**Name** | Pointer to **string** | A friendly name or description for the interface or VLAN. | [optional] 
+**Subnet** | Pointer to **string** | The network that this routed interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
+**InterfaceIp** | Pointer to **string** | The IP address this switch stack will use for layer 3 routing on this VLAN or subnet. This cannot be the same as the switch&#39;s management IP. | [optional] 
+**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are, &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. | [optional] 
+**VlanId** | Pointer to **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | [optional] 
+**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route. This IP address must exist in a subnet with a routed interface. | [optional] 
+**OspfSettings** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdOspfSettings**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdOspfSettings.md) |  | [optional] 
+**Ipv6** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdIpv6**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdIpv6.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +32,205 @@ NewInlineObject134WithDefaults instantiates a new InlineObject134 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMeshingEnabled
+### GetName
 
-`func (o *InlineObject134) GetMeshingEnabled() bool`
+`func (o *InlineObject134) GetName() string`
 
-GetMeshingEnabled returns the MeshingEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMeshingEnabledOk
+### GetNameOk
 
-`func (o *InlineObject134) GetMeshingEnabledOk() (*bool, bool)`
+`func (o *InlineObject134) GetNameOk() (*string, bool)`
 
-GetMeshingEnabledOk returns a tuple with the MeshingEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshingEnabled
+### SetName
 
-`func (o *InlineObject134) SetMeshingEnabled(v bool)`
+`func (o *InlineObject134) SetName(v string)`
 
-SetMeshingEnabled sets MeshingEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasMeshingEnabled
+### HasName
 
-`func (o *InlineObject134) HasMeshingEnabled() bool`
+`func (o *InlineObject134) HasName() bool`
 
-HasMeshingEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetIpv6BridgeEnabled
+### GetSubnet
 
-`func (o *InlineObject134) GetIpv6BridgeEnabled() bool`
+`func (o *InlineObject134) GetSubnet() string`
 
-GetIpv6BridgeEnabled returns the Ipv6BridgeEnabled field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetIpv6BridgeEnabledOk
+### GetSubnetOk
 
-`func (o *InlineObject134) GetIpv6BridgeEnabledOk() (*bool, bool)`
+`func (o *InlineObject134) GetSubnetOk() (*string, bool)`
 
-GetIpv6BridgeEnabledOk returns a tuple with the Ipv6BridgeEnabled field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6BridgeEnabled
+### SetSubnet
 
-`func (o *InlineObject134) SetIpv6BridgeEnabled(v bool)`
+`func (o *InlineObject134) SetSubnet(v string)`
 
-SetIpv6BridgeEnabled sets Ipv6BridgeEnabled field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasIpv6BridgeEnabled
+### HasSubnet
 
-`func (o *InlineObject134) HasIpv6BridgeEnabled() bool`
+`func (o *InlineObject134) HasSubnet() bool`
 
-HasIpv6BridgeEnabled returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetLocationAnalyticsEnabled
+### GetInterfaceIp
 
-`func (o *InlineObject134) GetLocationAnalyticsEnabled() bool`
+`func (o *InlineObject134) GetInterfaceIp() string`
 
-GetLocationAnalyticsEnabled returns the LocationAnalyticsEnabled field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetLocationAnalyticsEnabledOk
+### GetInterfaceIpOk
 
-`func (o *InlineObject134) GetLocationAnalyticsEnabledOk() (*bool, bool)`
+`func (o *InlineObject134) GetInterfaceIpOk() (*string, bool)`
 
-GetLocationAnalyticsEnabledOk returns a tuple with the LocationAnalyticsEnabled field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocationAnalyticsEnabled
+### SetInterfaceIp
 
-`func (o *InlineObject134) SetLocationAnalyticsEnabled(v bool)`
+`func (o *InlineObject134) SetInterfaceIp(v string)`
 
-SetLocationAnalyticsEnabled sets LocationAnalyticsEnabled field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasLocationAnalyticsEnabled
+### HasInterfaceIp
 
-`func (o *InlineObject134) HasLocationAnalyticsEnabled() bool`
+`func (o *InlineObject134) HasInterfaceIp() bool`
 
-HasLocationAnalyticsEnabled returns a boolean if a field has been set.
+HasInterfaceIp returns a boolean if a field has been set.
 
-### GetUpgradeStrategy
+### GetMulticastRouting
 
-`func (o *InlineObject134) GetUpgradeStrategy() string`
+`func (o *InlineObject134) GetMulticastRouting() string`
 
-GetUpgradeStrategy returns the UpgradeStrategy field if non-nil, zero value otherwise.
+GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
 
-### GetUpgradeStrategyOk
+### GetMulticastRoutingOk
 
-`func (o *InlineObject134) GetUpgradeStrategyOk() (*string, bool)`
+`func (o *InlineObject134) GetMulticastRoutingOk() (*string, bool)`
 
-GetUpgradeStrategyOk returns a tuple with the UpgradeStrategy field if it's non-nil, zero value otherwise
+GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeStrategy
+### SetMulticastRouting
 
-`func (o *InlineObject134) SetUpgradeStrategy(v string)`
+`func (o *InlineObject134) SetMulticastRouting(v string)`
 
-SetUpgradeStrategy sets UpgradeStrategy field to given value.
+SetMulticastRouting sets MulticastRouting field to given value.
 
-### HasUpgradeStrategy
+### HasMulticastRouting
 
-`func (o *InlineObject134) HasUpgradeStrategy() bool`
+`func (o *InlineObject134) HasMulticastRouting() bool`
 
-HasUpgradeStrategy returns a boolean if a field has been set.
+HasMulticastRouting returns a boolean if a field has been set.
 
-### GetLedLightsOn
+### GetVlanId
 
-`func (o *InlineObject134) GetLedLightsOn() bool`
+`func (o *InlineObject134) GetVlanId() int32`
 
-GetLedLightsOn returns the LedLightsOn field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetLedLightsOnOk
+### GetVlanIdOk
 
-`func (o *InlineObject134) GetLedLightsOnOk() (*bool, bool)`
+`func (o *InlineObject134) GetVlanIdOk() (*int32, bool)`
 
-GetLedLightsOnOk returns a tuple with the LedLightsOn field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLedLightsOn
+### SetVlanId
 
-`func (o *InlineObject134) SetLedLightsOn(v bool)`
+`func (o *InlineObject134) SetVlanId(v int32)`
 
-SetLedLightsOn sets LedLightsOn field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasLedLightsOn
+### HasVlanId
 
-`func (o *InlineObject134) HasLedLightsOn() bool`
+`func (o *InlineObject134) HasVlanId() bool`
 
-HasLedLightsOn returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
+
+### GetDefaultGateway
+
+`func (o *InlineObject134) GetDefaultGateway() string`
+
+GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
+
+### GetDefaultGatewayOk
+
+`func (o *InlineObject134) GetDefaultGatewayOk() (*string, bool)`
+
+GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaultGateway
+
+`func (o *InlineObject134) SetDefaultGateway(v string)`
+
+SetDefaultGateway sets DefaultGateway field to given value.
+
+### HasDefaultGateway
+
+`func (o *InlineObject134) HasDefaultGateway() bool`
+
+HasDefaultGateway returns a boolean if a field has been set.
+
+### GetOspfSettings
+
+`func (o *InlineObject134) GetOspfSettings() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdOspfSettings`
+
+GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
+
+### GetOspfSettingsOk
+
+`func (o *InlineObject134) GetOspfSettingsOk() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdOspfSettings, bool)`
+
+GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfSettings
+
+`func (o *InlineObject134) SetOspfSettings(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdOspfSettings)`
+
+SetOspfSettings sets OspfSettings field to given value.
+
+### HasOspfSettings
+
+`func (o *InlineObject134) HasOspfSettings() bool`
+
+HasOspfSettings returns a boolean if a field has been set.
+
+### GetIpv6
+
+`func (o *InlineObject134) GetIpv6() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdIpv6`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineObject134) GetIpv6Ok() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdIpv6, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineObject134) SetIpv6(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdIpv6)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineObject134) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
-**Subnet** | **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | 
-**NextHopIp** | **string** | IP address of the next hop device to which the device sends its traffic for the subnet | 
-**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
-**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
+**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | Array of switch or stack ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
 
 ## Methods
 
 ### NewInlineObject118
 
-`func NewInlineObject118(subnet string, nextHopIp string, ) *InlineObject118`
+`func NewInlineObject118() *InlineObject118`
 
 NewInlineObject118 instantiates a new InlineObject118 object
 This constructor will assign default values to properties that have it defined,
@@ -29,120 +26,55 @@ NewInlineObject118WithDefaults instantiates a new InlineObject118 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSwitchPorts
 
-`func (o *InlineObject118) GetName() string`
+`func (o *InlineObject118) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSwitchPortsOk
 
-`func (o *InlineObject118) GetNameOk() (*string, bool)`
+`func (o *InlineObject118) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSwitchPorts
 
-`func (o *InlineObject118) SetName(v string)`
+`func (o *InlineObject118) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
 
-SetName sets Name field to given value.
+SetSwitchPorts sets SwitchPorts field to given value.
 
-### HasName
+### HasSwitchPorts
 
-`func (o *InlineObject118) HasName() bool`
+`func (o *InlineObject118) HasSwitchPorts() bool`
 
-HasName returns a boolean if a field has been set.
+HasSwitchPorts returns a boolean if a field has been set.
 
-### GetSubnet
+### GetSwitchProfilePorts
 
-`func (o *InlineObject118) GetSubnet() string`
+`func (o *InlineObject118) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetSwitchProfilePortsOk
 
-`func (o *InlineObject118) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject118) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetSwitchProfilePorts
 
-`func (o *InlineObject118) SetSubnet(v string)`
+`func (o *InlineObject118) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
 
-SetSubnet sets Subnet field to given value.
+SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
 
+### HasSwitchProfilePorts
 
-### GetNextHopIp
+`func (o *InlineObject118) HasSwitchProfilePorts() bool`
 
-`func (o *InlineObject118) GetNextHopIp() string`
-
-GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
-
-### GetNextHopIpOk
-
-`func (o *InlineObject118) GetNextHopIpOk() (*string, bool)`
-
-GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNextHopIp
-
-`func (o *InlineObject118) SetNextHopIp(v string)`
-
-SetNextHopIp sets NextHopIp field to given value.
-
-
-### GetAdvertiseViaOspfEnabled
-
-`func (o *InlineObject118) GetAdvertiseViaOspfEnabled() bool`
-
-GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
-
-### GetAdvertiseViaOspfEnabledOk
-
-`func (o *InlineObject118) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
-
-GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdvertiseViaOspfEnabled
-
-`func (o *InlineObject118) SetAdvertiseViaOspfEnabled(v bool)`
-
-SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
-
-### HasAdvertiseViaOspfEnabled
-
-`func (o *InlineObject118) HasAdvertiseViaOspfEnabled() bool`
-
-HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
-
-### GetPreferOverOspfRoutesEnabled
-
-`func (o *InlineObject118) GetPreferOverOspfRoutesEnabled() bool`
-
-GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
-
-### GetPreferOverOspfRoutesEnabledOk
-
-`func (o *InlineObject118) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
-
-GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPreferOverOspfRoutesEnabled
-
-`func (o *InlineObject118) SetPreferOverOspfRoutesEnabled(v bool)`
-
-SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
-
-### HasPreferOverOspfRoutesEnabled
-
-`func (o *InlineObject118) HasPreferOverOspfRoutesEnabled() bool`
-
-HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+HasSwitchProfilePorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

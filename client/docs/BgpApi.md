@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkApplianceVpnBgp := *openapiclient.NewInlineObject50(false) // InlineObject50 | 
+    updateNetworkApplianceVpnBgp := *openapiclient.NewInlineObject57(false) // InlineObject57 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceVpnB
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceVpnBgp** | [**InlineObject50**](InlineObject50.md) |  | 
+ **updateNetworkApplianceVpnBgp** | [**InlineObject57**](InlineObject57.md) |  | 
 
 ### Return type
 

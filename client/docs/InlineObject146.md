@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules**](NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Url** | **string** | The URL where the test webhook will be sent | 
+**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to an empty string. | [optional] [default to ""]
+**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
+**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
+**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
 
 ## Methods
 
 ### NewInlineObject146
 
-`func NewInlineObject146() *InlineObject146`
+`func NewInlineObject146(url string, ) *InlineObject146`
 
 NewInlineObject146 instantiates a new InlineObject146 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +29,125 @@ NewInlineObject146WithDefaults instantiates a new InlineObject146 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetUrl
 
-`func (o *InlineObject146) GetTrafficShapingEnabled() bool`
+`func (o *InlineObject146) GetUrl() string`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetUrlOk
 
-`func (o *InlineObject146) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineObject146) GetUrlOk() (*string, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetUrl
 
-`func (o *InlineObject146) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineObject146) SetUrl(v string)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetUrl sets Url field to given value.
 
-### HasTrafficShapingEnabled
 
-`func (o *InlineObject146) HasTrafficShapingEnabled() bool`
+### GetSharedSecret
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
+`func (o *InlineObject146) GetSharedSecret() string`
 
-### GetDefaultRulesEnabled
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-`func (o *InlineObject146) GetDefaultRulesEnabled() bool`
+### GetSharedSecretOk
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+`func (o *InlineObject146) GetSharedSecretOk() (*string, bool)`
 
-### GetDefaultRulesEnabledOk
-
-`func (o *InlineObject146) GetDefaultRulesEnabledOk() (*bool, bool)`
-
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetSharedSecret
 
-`func (o *InlineObject146) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineObject146) SetSharedSecret(v string)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasDefaultRulesEnabled
+### HasSharedSecret
 
-`func (o *InlineObject146) HasDefaultRulesEnabled() bool`
+`func (o *InlineObject146) HasSharedSecret() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
 
-### GetRules
+### GetPayloadTemplateId
 
-`func (o *InlineObject146) GetRules() []NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules`
+`func (o *InlineObject146) GetPayloadTemplateId() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetPayloadTemplateIdOk
 
-`func (o *InlineObject146) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules, bool)`
+`func (o *InlineObject146) GetPayloadTemplateIdOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetPayloadTemplateId
 
-`func (o *InlineObject146) SetRules(v []NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules)`
+`func (o *InlineObject146) SetPayloadTemplateId(v string)`
 
-SetRules sets Rules field to given value.
+SetPayloadTemplateId sets PayloadTemplateId field to given value.
 
-### HasRules
+### HasPayloadTemplateId
 
-`func (o *InlineObject146) HasRules() bool`
+`func (o *InlineObject146) HasPayloadTemplateId() bool`
 
-HasRules returns a boolean if a field has been set.
+HasPayloadTemplateId returns a boolean if a field has been set.
+
+### GetPayloadTemplateName
+
+`func (o *InlineObject146) GetPayloadTemplateName() string`
+
+GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateNameOk
+
+`func (o *InlineObject146) GetPayloadTemplateNameOk() (*string, bool)`
+
+GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplateName
+
+`func (o *InlineObject146) SetPayloadTemplateName(v string)`
+
+SetPayloadTemplateName sets PayloadTemplateName field to given value.
+
+### HasPayloadTemplateName
+
+`func (o *InlineObject146) HasPayloadTemplateName() bool`
+
+HasPayloadTemplateName returns a boolean if a field has been set.
+
+### GetAlertTypeId
+
+`func (o *InlineObject146) GetAlertTypeId() string`
+
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+
+### GetAlertTypeIdOk
+
+`func (o *InlineObject146) GetAlertTypeIdOk() (*string, bool)`
+
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertTypeId
+
+`func (o *InlineObject146) SetAlertTypeId(v string)`
+
+SetAlertTypeId sets AlertTypeId field to given value.
+
+### HasAlertTypeId
+
+`func (o *InlineObject146) HasAlertTypeId() bool`
+
+HasAlertTypeId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

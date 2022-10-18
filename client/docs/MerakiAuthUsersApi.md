@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    createNetworkMerakiAuthUser := *openapiclient.NewInlineObject74("Email_example", "Name_example", "Password_example", []openapiclient.NetworksNetworkIdMerakiAuthUsersAuthorizations{*openapiclient.NewNetworksNetworkIdMerakiAuthUsersAuthorizations()}) // InlineObject74 | 
+    createNetworkMerakiAuthUser := *openapiclient.NewInlineObject90("Email_example", []openapiclient.NetworksNetworkIdMerakiAuthUsersAuthorizations{*openapiclient.NewNetworksNetworkIdMerakiAuthUsersAuthorizations()}) // InlineObject90 | 
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkMerakiAuthUse
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkMerakiAuthUser** | [**InlineObject74**](InlineObject74.md) |  | 
+ **createNetworkMerakiAuthUser** | [**InlineObject90**](InlineObject90.md) |  | 
 
 ### Return type
 
@@ -321,7 +321,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     merakiAuthUserId := "merakiAuthUserId_example" // string | 
-    updateNetworkMerakiAuthUser := *openapiclient.NewInlineObject75() // InlineObject75 |  (optional)
+    updateNetworkMerakiAuthUser := *openapiclient.NewInlineObject91() // InlineObject91 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkMerakiAuthUser** | [**InlineObject75**](InlineObject75.md) |  | 
+ **updateNetworkMerakiAuthUser** | [**InlineObject91**](InlineObject91.md) |  | 
 
 ### Return type
 

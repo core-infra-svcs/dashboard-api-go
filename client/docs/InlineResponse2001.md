@@ -4,12 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Organization name | [optional] 
-**Url** | Pointer to **string** | Organization URL | [optional] 
-**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
-**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
-**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
+**Interfaces** | Pointer to [**InlineResponse2001Interfaces**](InlineResponse2001Interfaces.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +25,30 @@ NewInlineResponse2001WithDefaults instantiates a new InlineResponse2001 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetInterfaces
 
-`func (o *InlineResponse2001) GetId() string`
+`func (o *InlineResponse2001) GetInterfaces() InlineResponse2001Interfaces`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetInterfacesOk
 
-`func (o *InlineResponse2001) GetIdOk() (*string, bool)`
+`func (o *InlineResponse2001) GetInterfacesOk() (*InlineResponse2001Interfaces, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetInterfaces
 
-`func (o *InlineResponse2001) SetId(v string)`
+`func (o *InlineResponse2001) SetInterfaces(v InlineResponse2001Interfaces)`
 
-SetId sets Id field to given value.
+SetInterfaces sets Interfaces field to given value.
 
-### HasId
+### HasInterfaces
 
-`func (o *InlineResponse2001) HasId() bool`
+`func (o *InlineResponse2001) HasInterfaces() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse2001) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse2001) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse2001) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse2001) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse2001) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse2001) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse2001) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse2001) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
-
-### GetApi
-
-`func (o *InlineResponse2001) GetApi() OrganizationsApi`
-
-GetApi returns the Api field if non-nil, zero value otherwise.
-
-### GetApiOk
-
-`func (o *InlineResponse2001) GetApiOk() (*OrganizationsApi, bool)`
-
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApi
-
-`func (o *InlineResponse2001) SetApi(v OrganizationsApi)`
-
-SetApi sets Api field to given value.
-
-### HasApi
-
-`func (o *InlineResponse2001) HasApi() bool`
-
-HasApi returns a boolean if a field has been set.
-
-### GetLicensing
-
-`func (o *InlineResponse2001) GetLicensing() OrganizationsLicensing`
-
-GetLicensing returns the Licensing field if non-nil, zero value otherwise.
-
-### GetLicensingOk
-
-`func (o *InlineResponse2001) GetLicensingOk() (*OrganizationsLicensing, bool)`
-
-GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicensing
-
-`func (o *InlineResponse2001) SetLicensing(v OrganizationsLicensing)`
-
-SetLicensing sets Licensing field to given value.
-
-### HasLicensing
-
-`func (o *InlineResponse2001) HasLicensing() bool`
-
-HasLicensing returns a boolean if a field has been set.
-
-### GetCloud
-
-`func (o *InlineResponse2001) GetCloud() OrganizationsCloud`
-
-GetCloud returns the Cloud field if non-nil, zero value otherwise.
-
-### GetCloudOk
-
-`func (o *InlineResponse2001) GetCloudOk() (*OrganizationsCloud, bool)`
-
-GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCloud
-
-`func (o *InlineResponse2001) SetCloud(v OrganizationsCloud)`
-
-SetCloud sets Cloud field to given value.
-
-### HasCloud
-
-`func (o *InlineResponse2001) HasCloud() bool`
-
-HasCloud returns a boolean if a field has been set.
+HasInterfaces returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

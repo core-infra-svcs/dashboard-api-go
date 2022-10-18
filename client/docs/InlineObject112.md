@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new stack | 
-**Serials** | **[]string** | An array of switch serials to be added into the new stack | 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
+**Switches** | Pointer to [**[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches**](NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
 
 ## Methods
 
 ### NewInlineObject112
 
-`func NewInlineObject112(name string, serials []string, ) *InlineObject112`
+`func NewInlineObject112() *InlineObject112`
 
 NewInlineObject112 instantiates a new InlineObject112 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +28,105 @@ NewInlineObject112WithDefaults instantiates a new InlineObject112 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject112) GetName() string`
+`func (o *InlineObject112) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject112) GetNameOk() (*string, bool)`
+`func (o *InlineObject112) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject112) SetName(v string)`
+`func (o *InlineObject112) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetSerials
+`func (o *InlineObject112) HasEnabled() bool`
 
-`func (o *InlineObject112) GetSerials() []string`
+HasEnabled returns a boolean if a field has been set.
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+### GetVlanId
 
-### GetSerialsOk
+`func (o *InlineObject112) GetVlanId() int32`
 
-`func (o *InlineObject112) GetSerialsOk() (*[]string, bool)`
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+### GetVlanIdOk
+
+`func (o *InlineObject112) GetVlanIdOk() (*int32, bool)`
+
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetVlanId
 
-`func (o *InlineObject112) SetSerials(v []string)`
+`func (o *InlineObject112) SetVlanId(v int32)`
 
-SetSerials sets Serials field to given value.
+SetVlanId sets VlanId field to given value.
 
+### HasVlanId
+
+`func (o *InlineObject112) HasVlanId() bool`
+
+HasVlanId returns a boolean if a field has been set.
+
+### GetProtocols
+
+`func (o *InlineObject112) GetProtocols() []string`
+
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+
+### GetProtocolsOk
+
+`func (o *InlineObject112) GetProtocolsOk() (*[]string, bool)`
+
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtocols
+
+`func (o *InlineObject112) SetProtocols(v []string)`
+
+SetProtocols sets Protocols field to given value.
+
+### HasProtocols
+
+`func (o *InlineObject112) HasProtocols() bool`
+
+HasProtocols returns a boolean if a field has been set.
+
+### GetSwitches
+
+`func (o *InlineObject112) GetSwitches() []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches`
+
+GetSwitches returns the Switches field if non-nil, zero value otherwise.
+
+### GetSwitchesOk
+
+`func (o *InlineObject112) GetSwitchesOk() (*[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches, bool)`
+
+GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitches
+
+`func (o *InlineObject112) SetSwitches(v []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches)`
+
+SetSwitches sets Switches field to given value.
+
+### HasSwitches
+
+`func (o *InlineObject112) HasSwitches() bool`
+
+HasSwitches returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

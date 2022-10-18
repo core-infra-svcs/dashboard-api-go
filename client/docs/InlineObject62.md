@@ -4,17 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Clients** | [**[]NetworksNetworkIdClientsProvisionClients**](NetworksNetworkIdClientsProvisionClients.md) | The array of clients to provision | 
-**DevicePolicy** | **string** | The policy to apply to the specified client. Can be &#39;Group policy&#39;, &#39;Allowed&#39;, &#39;Blocked&#39;, &#39;Per connection&#39; or &#39;Normal&#39;. Required. | 
-**GroupPolicyId** | Pointer to **string** | The ID of the desired group policy to apply to the client. Required if &#39;devicePolicy&#39; is set to \&quot;Group policy\&quot;. Otherwise this is ignored. | [optional] 
-**PoliciesBySecurityAppliance** | Pointer to [**NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance**](NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance.md) |  | [optional] 
-**PoliciesBySsid** | Pointer to [**NetworksNetworkIdClientsProvisionPoliciesBySsid**](NetworksNetworkIdClientsProvisionPoliciesBySsid.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
+**MotionBasedRetentionEnabled** | Pointer to **bool** | Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras. | [optional] 
+**RestrictedBandwidthModeEnabled** | Pointer to **bool** | Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras. | [optional] 
+**AudioRecordingEnabled** | Pointer to **bool** | Whether or not to record audio. Can be either true or false. Defaults to false. | [optional] 
+**CloudArchiveEnabled** | Pointer to **bool** | Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false. | [optional] 
+**MotionDetectorVersion** | Pointer to **int32** | The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2. | [optional] 
+**ScheduleId** | Pointer to **string** | Schedule for which this camera will record video, or &#39;null&#39; to always record. | [optional] 
+**MaxRetentionDays** | Pointer to **int32** | The maximum number of days for which the data will be stored, or &#39;null&#39; to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days. | [optional] 
+**VideoSettings** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject62
 
-`func NewInlineObject62(clients []NetworksNetworkIdClientsProvisionClients, devicePolicy string, ) *InlineObject62`
+`func NewInlineObject62() *InlineObject62`
 
 NewInlineObject62 instantiates a new InlineObject62 object
 This constructor will assign default values to properties that have it defined,
@@ -29,120 +33,230 @@ NewInlineObject62WithDefaults instantiates a new InlineObject62 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClients
+### GetName
 
-`func (o *InlineObject62) GetClients() []NetworksNetworkIdClientsProvisionClients`
+`func (o *InlineObject62) GetName() string`
 
-GetClients returns the Clients field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetClientsOk
+### GetNameOk
 
-`func (o *InlineObject62) GetClientsOk() (*[]NetworksNetworkIdClientsProvisionClients, bool)`
+`func (o *InlineObject62) GetNameOk() (*string, bool)`
 
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClients
+### SetName
 
-`func (o *InlineObject62) SetClients(v []NetworksNetworkIdClientsProvisionClients)`
+`func (o *InlineObject62) SetName(v string)`
 
-SetClients sets Clients field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetDevicePolicy
+`func (o *InlineObject62) HasName() bool`
 
-`func (o *InlineObject62) GetDevicePolicy() string`
+HasName returns a boolean if a field has been set.
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+### GetMotionBasedRetentionEnabled
 
-### GetDevicePolicyOk
+`func (o *InlineObject62) GetMotionBasedRetentionEnabled() bool`
 
-`func (o *InlineObject62) GetDevicePolicyOk() (*string, bool)`
+GetMotionBasedRetentionEnabled returns the MotionBasedRetentionEnabled field if non-nil, zero value otherwise.
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+### GetMotionBasedRetentionEnabledOk
+
+`func (o *InlineObject62) GetMotionBasedRetentionEnabledOk() (*bool, bool)`
+
+GetMotionBasedRetentionEnabledOk returns a tuple with the MotionBasedRetentionEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetMotionBasedRetentionEnabled
 
-`func (o *InlineObject62) SetDevicePolicy(v string)`
+`func (o *InlineObject62) SetMotionBasedRetentionEnabled(v bool)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetMotionBasedRetentionEnabled sets MotionBasedRetentionEnabled field to given value.
 
+### HasMotionBasedRetentionEnabled
 
-### GetGroupPolicyId
+`func (o *InlineObject62) HasMotionBasedRetentionEnabled() bool`
 
-`func (o *InlineObject62) GetGroupPolicyId() string`
+HasMotionBasedRetentionEnabled returns a boolean if a field has been set.
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+### GetRestrictedBandwidthModeEnabled
 
-### GetGroupPolicyIdOk
+`func (o *InlineObject62) GetRestrictedBandwidthModeEnabled() bool`
 
-`func (o *InlineObject62) GetGroupPolicyIdOk() (*string, bool)`
+GetRestrictedBandwidthModeEnabled returns the RestrictedBandwidthModeEnabled field if non-nil, zero value otherwise.
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+### GetRestrictedBandwidthModeEnabledOk
+
+`func (o *InlineObject62) GetRestrictedBandwidthModeEnabledOk() (*bool, bool)`
+
+GetRestrictedBandwidthModeEnabledOk returns a tuple with the RestrictedBandwidthModeEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetRestrictedBandwidthModeEnabled
 
-`func (o *InlineObject62) SetGroupPolicyId(v string)`
+`func (o *InlineObject62) SetRestrictedBandwidthModeEnabled(v bool)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetRestrictedBandwidthModeEnabled sets RestrictedBandwidthModeEnabled field to given value.
 
-### HasGroupPolicyId
+### HasRestrictedBandwidthModeEnabled
 
-`func (o *InlineObject62) HasGroupPolicyId() bool`
+`func (o *InlineObject62) HasRestrictedBandwidthModeEnabled() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasRestrictedBandwidthModeEnabled returns a boolean if a field has been set.
 
-### GetPoliciesBySecurityAppliance
+### GetAudioRecordingEnabled
 
-`func (o *InlineObject62) GetPoliciesBySecurityAppliance() NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance`
+`func (o *InlineObject62) GetAudioRecordingEnabled() bool`
 
-GetPoliciesBySecurityAppliance returns the PoliciesBySecurityAppliance field if non-nil, zero value otherwise.
+GetAudioRecordingEnabled returns the AudioRecordingEnabled field if non-nil, zero value otherwise.
 
-### GetPoliciesBySecurityApplianceOk
+### GetAudioRecordingEnabledOk
 
-`func (o *InlineObject62) GetPoliciesBySecurityApplianceOk() (*NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance, bool)`
+`func (o *InlineObject62) GetAudioRecordingEnabledOk() (*bool, bool)`
 
-GetPoliciesBySecurityApplianceOk returns a tuple with the PoliciesBySecurityAppliance field if it's non-nil, zero value otherwise
+GetAudioRecordingEnabledOk returns a tuple with the AudioRecordingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPoliciesBySecurityAppliance
+### SetAudioRecordingEnabled
 
-`func (o *InlineObject62) SetPoliciesBySecurityAppliance(v NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance)`
+`func (o *InlineObject62) SetAudioRecordingEnabled(v bool)`
 
-SetPoliciesBySecurityAppliance sets PoliciesBySecurityAppliance field to given value.
+SetAudioRecordingEnabled sets AudioRecordingEnabled field to given value.
 
-### HasPoliciesBySecurityAppliance
+### HasAudioRecordingEnabled
 
-`func (o *InlineObject62) HasPoliciesBySecurityAppliance() bool`
+`func (o *InlineObject62) HasAudioRecordingEnabled() bool`
 
-HasPoliciesBySecurityAppliance returns a boolean if a field has been set.
+HasAudioRecordingEnabled returns a boolean if a field has been set.
 
-### GetPoliciesBySsid
+### GetCloudArchiveEnabled
 
-`func (o *InlineObject62) GetPoliciesBySsid() NetworksNetworkIdClientsProvisionPoliciesBySsid`
+`func (o *InlineObject62) GetCloudArchiveEnabled() bool`
 
-GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+GetCloudArchiveEnabled returns the CloudArchiveEnabled field if non-nil, zero value otherwise.
 
-### GetPoliciesBySsidOk
+### GetCloudArchiveEnabledOk
 
-`func (o *InlineObject62) GetPoliciesBySsidOk() (*NetworksNetworkIdClientsProvisionPoliciesBySsid, bool)`
+`func (o *InlineObject62) GetCloudArchiveEnabledOk() (*bool, bool)`
 
-GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+GetCloudArchiveEnabledOk returns a tuple with the CloudArchiveEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPoliciesBySsid
+### SetCloudArchiveEnabled
 
-`func (o *InlineObject62) SetPoliciesBySsid(v NetworksNetworkIdClientsProvisionPoliciesBySsid)`
+`func (o *InlineObject62) SetCloudArchiveEnabled(v bool)`
 
-SetPoliciesBySsid sets PoliciesBySsid field to given value.
+SetCloudArchiveEnabled sets CloudArchiveEnabled field to given value.
 
-### HasPoliciesBySsid
+### HasCloudArchiveEnabled
 
-`func (o *InlineObject62) HasPoliciesBySsid() bool`
+`func (o *InlineObject62) HasCloudArchiveEnabled() bool`
 
-HasPoliciesBySsid returns a boolean if a field has been set.
+HasCloudArchiveEnabled returns a boolean if a field has been set.
+
+### GetMotionDetectorVersion
+
+`func (o *InlineObject62) GetMotionDetectorVersion() int32`
+
+GetMotionDetectorVersion returns the MotionDetectorVersion field if non-nil, zero value otherwise.
+
+### GetMotionDetectorVersionOk
+
+`func (o *InlineObject62) GetMotionDetectorVersionOk() (*int32, bool)`
+
+GetMotionDetectorVersionOk returns a tuple with the MotionDetectorVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMotionDetectorVersion
+
+`func (o *InlineObject62) SetMotionDetectorVersion(v int32)`
+
+SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
+
+### HasMotionDetectorVersion
+
+`func (o *InlineObject62) HasMotionDetectorVersion() bool`
+
+HasMotionDetectorVersion returns a boolean if a field has been set.
+
+### GetScheduleId
+
+`func (o *InlineObject62) GetScheduleId() string`
+
+GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
+
+### GetScheduleIdOk
+
+`func (o *InlineObject62) GetScheduleIdOk() (*string, bool)`
+
+GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScheduleId
+
+`func (o *InlineObject62) SetScheduleId(v string)`
+
+SetScheduleId sets ScheduleId field to given value.
+
+### HasScheduleId
+
+`func (o *InlineObject62) HasScheduleId() bool`
+
+HasScheduleId returns a boolean if a field has been set.
+
+### GetMaxRetentionDays
+
+`func (o *InlineObject62) GetMaxRetentionDays() int32`
+
+GetMaxRetentionDays returns the MaxRetentionDays field if non-nil, zero value otherwise.
+
+### GetMaxRetentionDaysOk
+
+`func (o *InlineObject62) GetMaxRetentionDaysOk() (*int32, bool)`
+
+GetMaxRetentionDaysOk returns a tuple with the MaxRetentionDays field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxRetentionDays
+
+`func (o *InlineObject62) SetMaxRetentionDays(v int32)`
+
+SetMaxRetentionDays sets MaxRetentionDays field to given value.
+
+### HasMaxRetentionDays
+
+`func (o *InlineObject62) HasMaxRetentionDays() bool`
+
+HasMaxRetentionDays returns a boolean if a field has been set.
+
+### GetVideoSettings
+
+`func (o *InlineObject62) GetVideoSettings() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings`
+
+GetVideoSettings returns the VideoSettings field if non-nil, zero value otherwise.
+
+### GetVideoSettingsOk
+
+`func (o *InlineObject62) GetVideoSettingsOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings, bool)`
+
+GetVideoSettingsOk returns a tuple with the VideoSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVideoSettings
+
+`func (o *InlineObject62) SetVideoSettings(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings)`
+
+SetVideoSettings sets VideoSettings field to given value.
+
+### HasVideoSettings
+
+`func (o *InlineObject62) HasVideoSettings() bool`
+
+HasVideoSettings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

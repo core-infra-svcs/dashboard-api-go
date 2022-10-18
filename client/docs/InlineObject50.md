@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured. | 
-**AsNumber** | Pointer to **int32** | An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512. | [optional] 
-**IbgpHoldTimer** | Pointer to **int32** | The IBGP holdtimer in seconds. The IBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240. | [optional] 
-**Neighbors** | Pointer to [**[]NetworksNetworkIdApplianceVpnBgpNeighbors**](NetworksNetworkIdApplianceVpnBgpNeighbors.md) | List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated. | [optional] 
+**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
+**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
+**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
+**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
 
 ## Methods
 
 ### NewInlineObject50
 
-`func NewInlineObject50(enabled bool, ) *InlineObject50`
+`func NewInlineObject50() *InlineObject50`
 
 NewInlineObject50 instantiates a new InlineObject50 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +28,105 @@ NewInlineObject50WithDefaults instantiates a new InlineObject50 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject50) GetEnabled() bool`
+`func (o *InlineObject50) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject50) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject50) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject50) SetEnabled(v bool)`
+`func (o *InlineObject50) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetAsNumber
+`func (o *InlineObject50) HasName() bool`
 
-`func (o *InlineObject50) GetAsNumber() int32`
+HasName returns a boolean if a field has been set.
 
-GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
+### GetMaxLatency
 
-### GetAsNumberOk
+`func (o *InlineObject50) GetMaxLatency() int32`
 
-`func (o *InlineObject50) GetAsNumberOk() (*int32, bool)`
+GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
 
-GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
+### GetMaxLatencyOk
+
+`func (o *InlineObject50) GetMaxLatencyOk() (*int32, bool)`
+
+GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAsNumber
+### SetMaxLatency
 
-`func (o *InlineObject50) SetAsNumber(v int32)`
+`func (o *InlineObject50) SetMaxLatency(v int32)`
 
-SetAsNumber sets AsNumber field to given value.
+SetMaxLatency sets MaxLatency field to given value.
 
-### HasAsNumber
+### HasMaxLatency
 
-`func (o *InlineObject50) HasAsNumber() bool`
+`func (o *InlineObject50) HasMaxLatency() bool`
 
-HasAsNumber returns a boolean if a field has been set.
+HasMaxLatency returns a boolean if a field has been set.
 
-### GetIbgpHoldTimer
+### GetMaxJitter
 
-`func (o *InlineObject50) GetIbgpHoldTimer() int32`
+`func (o *InlineObject50) GetMaxJitter() int32`
 
-GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
+GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
 
-### GetIbgpHoldTimerOk
+### GetMaxJitterOk
 
-`func (o *InlineObject50) GetIbgpHoldTimerOk() (*int32, bool)`
+`func (o *InlineObject50) GetMaxJitterOk() (*int32, bool)`
 
-GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
+GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIbgpHoldTimer
+### SetMaxJitter
 
-`func (o *InlineObject50) SetIbgpHoldTimer(v int32)`
+`func (o *InlineObject50) SetMaxJitter(v int32)`
 
-SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
+SetMaxJitter sets MaxJitter field to given value.
 
-### HasIbgpHoldTimer
+### HasMaxJitter
 
-`func (o *InlineObject50) HasIbgpHoldTimer() bool`
+`func (o *InlineObject50) HasMaxJitter() bool`
 
-HasIbgpHoldTimer returns a boolean if a field has been set.
+HasMaxJitter returns a boolean if a field has been set.
 
-### GetNeighbors
+### GetMaxLossPercentage
 
-`func (o *InlineObject50) GetNeighbors() []NetworksNetworkIdApplianceVpnBgpNeighbors`
+`func (o *InlineObject50) GetMaxLossPercentage() int32`
 
-GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
+GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
 
-### GetNeighborsOk
+### GetMaxLossPercentageOk
 
-`func (o *InlineObject50) GetNeighborsOk() (*[]NetworksNetworkIdApplianceVpnBgpNeighbors, bool)`
+`func (o *InlineObject50) GetMaxLossPercentageOk() (*int32, bool)`
 
-GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
+GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNeighbors
+### SetMaxLossPercentage
 
-`func (o *InlineObject50) SetNeighbors(v []NetworksNetworkIdApplianceVpnBgpNeighbors)`
+`func (o *InlineObject50) SetMaxLossPercentage(v int32)`
 
-SetNeighbors sets Neighbors field to given value.
+SetMaxLossPercentage sets MaxLossPercentage field to given value.
 
-### HasNeighbors
+### HasMaxLossPercentage
 
-`func (o *InlineObject50) HasNeighbors() bool`
+`func (o *InlineObject50) HasMaxLossPercentage() bool`
 
-HasNeighbors returns a boolean if a field has been set.
+HasMaxLossPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

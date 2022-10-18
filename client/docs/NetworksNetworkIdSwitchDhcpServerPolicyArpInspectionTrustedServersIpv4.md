@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Address** | Pointer to **string** | The IPv4 address of the trusted server being added | [optional] 
+**Address** | Pointer to **string** | IPv4 address of the trusted server. | [optional] 
 
 ## Methods
 

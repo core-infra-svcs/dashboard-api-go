@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of this target group | [optional] 
-**Scope** | Pointer to **string** | The scope and tag options of the target group. Comma separated values beginning with one of withAny, withAll, withoutAny, withoutAll, all, none, followed by tags. Default to none if empty. | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**Url** | Pointer to **string** | The URL of the HTTP server | [optional] 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
 
 ## Methods
 
@@ -51,30 +52,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetScope
+### GetUrl
 
-`func (o *InlineObject89) GetScope() string`
+`func (o *InlineObject89) GetUrl() string`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetUrlOk
 
-`func (o *InlineObject89) GetScopeOk() (*string, bool)`
+`func (o *InlineObject89) GetUrlOk() (*string, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetUrl
 
-`func (o *InlineObject89) SetScope(v string)`
+`func (o *InlineObject89) SetUrl(v string)`
 
-SetScope sets Scope field to given value.
+SetUrl sets Url field to given value.
 
-### HasScope
+### HasUrl
 
-`func (o *InlineObject89) HasScope() bool`
+`func (o *InlineObject89) HasUrl() bool`
 
-HasScope returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetSharedSecret
+
+`func (o *InlineObject89) GetSharedSecret() string`
+
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+
+### GetSharedSecretOk
+
+`func (o *InlineObject89) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSharedSecret
+
+`func (o *InlineObject89) SetSharedSecret(v string)`
+
+SetSharedSecret sets SharedSecret field to given value.
+
+### HasSharedSecret
+
+`func (o *InlineObject89) HasSharedSecret() bool`
+
+HasSharedSecret returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

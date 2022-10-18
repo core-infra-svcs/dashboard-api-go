@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The updated mac address of the trusted server | [optional] 
-**Vlan** | Pointer to **int32** | The updated VLAN of the trusted server. It must be between 1 and 4094 | [optional] 
-**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
+**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
+**Conditions** | Pointer to [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | [optional] 
+**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineObject97WithDefaults instantiates a new InlineObject97 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetName
 
-`func (o *InlineObject97) GetMac() string`
+`func (o *InlineObject97) GetName() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetNameOk
 
-`func (o *InlineObject97) GetMacOk() (*string, bool)`
+`func (o *InlineObject97) GetNameOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetName
 
-`func (o *InlineObject97) SetMac(v string)`
+`func (o *InlineObject97) SetName(v string)`
 
-SetMac sets Mac field to given value.
+SetName sets Name field to given value.
 
-### HasMac
+### HasName
 
-`func (o *InlineObject97) HasMac() bool`
+`func (o *InlineObject97) HasName() bool`
 
-HasMac returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetVlan
+### GetSchedule
 
-`func (o *InlineObject97) GetVlan() int32`
+`func (o *InlineObject97) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule1`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetSchedule returns the Schedule field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetScheduleOk
 
-`func (o *InlineObject97) GetVlanOk() (*int32, bool)`
+`func (o *InlineObject97) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule1, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetSchedule
 
-`func (o *InlineObject97) SetVlan(v int32)`
+`func (o *InlineObject97) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule1)`
 
-SetVlan sets Vlan field to given value.
+SetSchedule sets Schedule field to given value.
 
-### HasVlan
+### HasSchedule
 
-`func (o *InlineObject97) HasVlan() bool`
+`func (o *InlineObject97) HasSchedule() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasSchedule returns a boolean if a field has been set.
 
-### GetIpv4
+### GetConditions
 
-`func (o *InlineObject97) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4`
+`func (o *InlineObject97) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
 
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+GetConditions returns the Conditions field if non-nil, zero value otherwise.
 
-### GetIpv4Ok
+### GetConditionsOk
 
-`func (o *InlineObject97) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4, bool)`
+`func (o *InlineObject97) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
 
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv4
+### SetConditions
 
-`func (o *InlineObject97) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4)`
+`func (o *InlineObject97) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
 
-SetIpv4 sets Ipv4 field to given value.
+SetConditions sets Conditions field to given value.
 
-### HasIpv4
+### HasConditions
 
-`func (o *InlineObject97) HasIpv4() bool`
+`func (o *InlineObject97) HasConditions() bool`
 
-HasIpv4 returns a boolean if a field has been set.
+HasConditions returns a boolean if a field has been set.
+
+### GetRecipients
+
+`func (o *InlineObject97) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+
+### GetRecipientsOk
+
+`func (o *InlineObject97) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecipients
+
+`func (o *InlineObject97) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+
+SetRecipients sets Recipients field to given value.
+
+### HasRecipients
+
+`func (o *InlineObject97) HasRecipients() bool`
+
+HasRecipients returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineObject97) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineObject97) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineObject97) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineObject97) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

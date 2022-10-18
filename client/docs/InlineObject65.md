@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to claim | 
+**Destinations** | Pointer to [**[]NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations**](NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations.md) | The list of connectivity monitoring destinations | [optional] 
 
 ## Methods
 
 ### NewInlineObject65
 
-`func NewInlineObject65(serials []string, ) *InlineObject65`
+`func NewInlineObject65() *InlineObject65`
 
 NewInlineObject65 instantiates a new InlineObject65 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject65WithDefaults instantiates a new InlineObject65 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetDestinations
 
-`func (o *InlineObject65) GetSerials() []string`
+`func (o *InlineObject65) GetDestinations() []NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetDestinations returns the Destinations field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetDestinationsOk
 
-`func (o *InlineObject65) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject65) GetDestinationsOk() (*[]NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetDestinations
 
-`func (o *InlineObject65) SetSerials(v []string)`
+`func (o *InlineObject65) SetDestinations(v []NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations)`
 
-SetSerials sets Serials field to given value.
+SetDestinations sets Destinations field to given value.
 
+### HasDestinations
+
+`func (o *InlineObject65) HasDestinations() bool`
+
+HasDestinations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

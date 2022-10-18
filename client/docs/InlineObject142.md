@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Identity PSK | 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
-**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**Name** | **string** | A name for easy reference to the HTTP server | 
+**Url** | **string** | The URL of the HTTP server. Once set, cannot be updated. | 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate1**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject142
 
-`func NewInlineObject142(name string, groupPolicyId string, ) *InlineObject142`
+`func NewInlineObject142(name string, url string, ) *InlineObject142`
 
 NewInlineObject142 instantiates a new InlineObject142 object
 This constructor will assign default values to properties that have it defined,
@@ -47,50 +48,75 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetPassphrase
+### GetUrl
 
-`func (o *InlineObject142) GetPassphrase() string`
+`func (o *InlineObject142) GetUrl() string`
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetPassphraseOk
+### GetUrlOk
 
-`func (o *InlineObject142) GetPassphraseOk() (*string, bool)`
+`func (o *InlineObject142) GetUrlOk() (*string, bool)`
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetUrl
 
-`func (o *InlineObject142) SetPassphrase(v string)`
+`func (o *InlineObject142) SetUrl(v string)`
 
-SetPassphrase sets Passphrase field to given value.
+SetUrl sets Url field to given value.
 
-### HasPassphrase
 
-`func (o *InlineObject142) HasPassphrase() bool`
+### GetSharedSecret
 
-HasPassphrase returns a boolean if a field has been set.
+`func (o *InlineObject142) GetSharedSecret() string`
 
-### GetGroupPolicyId
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-`func (o *InlineObject142) GetGroupPolicyId() string`
+### GetSharedSecretOk
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+`func (o *InlineObject142) GetSharedSecretOk() (*string, bool)`
 
-### GetGroupPolicyIdOk
-
-`func (o *InlineObject142) GetGroupPolicyIdOk() (*string, bool)`
-
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetSharedSecret
 
-`func (o *InlineObject142) SetGroupPolicyId(v string)`
+`func (o *InlineObject142) SetSharedSecret(v string)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
+### HasSharedSecret
+
+`func (o *InlineObject142) HasSharedSecret() bool`
+
+HasSharedSecret returns a boolean if a field has been set.
+
+### GetPayloadTemplate
+
+`func (o *InlineObject142) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate1`
+
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateOk
+
+`func (o *InlineObject142) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate1, bool)`
+
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplate
+
+`func (o *InlineObject142) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate1)`
+
+SetPayloadTemplate sets PayloadTemplate field to given value.
+
+### HasPayloadTemplate
+
+`func (o *InlineObject142) HasPayloadTemplate() bool`
+
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

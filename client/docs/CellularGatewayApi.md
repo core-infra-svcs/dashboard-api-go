@@ -544,7 +544,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject8() // InlineObject8 |  (optional)
+    updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject9() // InlineObject9 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -574,7 +574,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGatewa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGatewayLan** | [**InlineObject8**](InlineObject8.md) |  | 
+ **updateDeviceCellularGatewayLan** | [**InlineObject9**](InlineObject9.md) |  | 
 
 ### Return type
 
@@ -616,7 +616,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject9() // InlineObject9 |  (optional)
+    updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject10() // InlineObject10 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -646,7 +646,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGatewa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGatewayPortForwardingRules** | [**InlineObject9**](InlineObject9.md) |  | 
+ **updateDeviceCellularGatewayPortForwardingRules** | [**InlineObject10**](InlineObject10.md) |  | 
 
 ### Return type
 
@@ -688,7 +688,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkCellularGatewayConnectivityMonitoringDestinations := *openapiclient.NewInlineObject58() // InlineObject58 |  (optional)
+    updateNetworkCellularGatewayConnectivityMonitoringDestinations := *openapiclient.NewInlineObject65() // InlineObject65 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -718,7 +718,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayConnectivityMonitoringDestinations** | [**InlineObject58**](InlineObject58.md) |  | 
+ **updateNetworkCellularGatewayConnectivityMonitoringDestinations** | [**InlineObject65**](InlineObject65.md) |  | 
 
 ### Return type
 
@@ -760,7 +760,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkCellularGatewayDhcp := *openapiclient.NewInlineObject59() // InlineObject59 |  (optional)
+    updateNetworkCellularGatewayDhcp := *openapiclient.NewInlineObject66() // InlineObject66 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -790,7 +790,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayDhcp** | [**InlineObject59**](InlineObject59.md) |  | 
+ **updateNetworkCellularGatewayDhcp** | [**InlineObject66**](InlineObject66.md) |  | 
 
 ### Return type
 
@@ -832,7 +832,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkCellularGatewaySubnetPool := *openapiclient.NewInlineObject60() // InlineObject60 |  (optional)
+    updateNetworkCellularGatewaySubnetPool := *openapiclient.NewInlineObject67() // InlineObject67 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -862,7 +862,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewaySubnetPool** | [**InlineObject60**](InlineObject60.md) |  | 
+ **updateNetworkCellularGatewaySubnetPool** | [**InlineObject67**](InlineObject67.md) |  | 
 
 ### Return type
 
@@ -904,7 +904,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkCellularGatewayUplink := *openapiclient.NewInlineObject61() // InlineObject61 |  (optional)
+    updateNetworkCellularGatewayUplink := *openapiclient.NewInlineObject68() // InlineObject68 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -934,7 +934,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayUplink** | [**InlineObject61**](InlineObject61.md) |  | 
+ **updateNetworkCellularGatewayUplink** | [**InlineObject68**](InlineObject68.md) |  | 
 
 ### Return type
 

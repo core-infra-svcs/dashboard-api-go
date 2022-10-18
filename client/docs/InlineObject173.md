@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the configuration template | 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
-**CopyFromNetworkId** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
+**Name** | Pointer to **string** | Name of the group | [optional] 
+**Sgt** | Pointer to **int32** | SGT value of the group | [optional] 
+**Description** | Pointer to **string** | Description of the group | [optional] 
+**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) | [optional] 
 
 ## Methods
 
 ### NewInlineObject173
 
-`func NewInlineObject173(name string, ) *InlineObject173`
+`func NewInlineObject173() *InlineObject173`
 
 NewInlineObject173 instantiates a new InlineObject173 object
 This constructor will assign default values to properties that have it defined,
@@ -46,56 +47,86 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetTimeZone
+`func (o *InlineObject173) HasName() bool`
 
-`func (o *InlineObject173) GetTimeZone() string`
+HasName returns a boolean if a field has been set.
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+### GetSgt
 
-### GetTimeZoneOk
+`func (o *InlineObject173) GetSgt() int32`
 
-`func (o *InlineObject173) GetTimeZoneOk() (*string, bool)`
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+### GetSgtOk
+
+`func (o *InlineObject173) GetSgtOk() (*int32, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetSgt
 
-`func (o *InlineObject173) SetTimeZone(v string)`
+`func (o *InlineObject173) SetSgt(v int32)`
 
-SetTimeZone sets TimeZone field to given value.
+SetSgt sets Sgt field to given value.
 
-### HasTimeZone
+### HasSgt
 
-`func (o *InlineObject173) HasTimeZone() bool`
+`func (o *InlineObject173) HasSgt() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasSgt returns a boolean if a field has been set.
 
-### GetCopyFromNetworkId
+### GetDescription
 
-`func (o *InlineObject173) GetCopyFromNetworkId() string`
+`func (o *InlineObject173) GetDescription() string`
 
-GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetCopyFromNetworkIdOk
+### GetDescriptionOk
 
-`func (o *InlineObject173) GetCopyFromNetworkIdOk() (*string, bool)`
+`func (o *InlineObject173) GetDescriptionOk() (*string, bool)`
 
-GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCopyFromNetworkId
+### SetDescription
 
-`func (o *InlineObject173) SetCopyFromNetworkId(v string)`
+`func (o *InlineObject173) SetDescription(v string)`
 
-SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
+SetDescription sets Description field to given value.
 
-### HasCopyFromNetworkId
+### HasDescription
 
-`func (o *InlineObject173) HasCopyFromNetworkId() bool`
+`func (o *InlineObject173) HasDescription() bool`
 
-HasCopyFromNetworkId returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
+
+### GetPolicyObjects
+
+`func (o *InlineObject173) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
+
+GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
+
+### GetPolicyObjectsOk
+
+`func (o *InlineObject173) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
+
+GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPolicyObjects
+
+`func (o *InlineObject173) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
+
+SetPolicyObjects sets PolicyObjects field to given value.
+
+### HasPolicyObjects
+
+`func (o *InlineObject173) HasPolicyObjects() bool`
+
+HasPolicyObjects returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

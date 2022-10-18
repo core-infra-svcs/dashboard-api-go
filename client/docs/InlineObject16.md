@@ -6,12 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | A friendly name or description for the interface or VLAN. | [optional] 
 **Subnet** | Pointer to **string** | The network that this routed interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
-**InterfaceIp** | Pointer to **string** | The IP address this switch will use for layer 3 routing on this VLAN or subnet. This cannot be the same as the switch&#39;s management IP. | [optional] 
-**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are, &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. | [optional] 
+**InterfaceIp** | Pointer to **string** | The IP address this switch will use for layer 3 routing on this VLAN or subnet. This cannot be the same         as the switch&#39;s management IP. | [optional] 
+**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are:         &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
 **VlanId** | Pointer to **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | [optional] 
-**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route. This IP address must exist in a subnet with a routed interface. | [optional] 
-**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesInterfaceIdOspfSettings**](DevicesSerialSwitchRoutingInterfacesInterfaceIdOspfSettings.md) |  | [optional] 
-**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesInterfaceIdIpv6**](DevicesSerialSwitchRoutingInterfacesInterfaceIdIpv6.md) |  | [optional] 
+**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route.         This IP address must exist in a subnet with a routed interface. Required if this is the first IPv4 interface. | [optional] 
+**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings1**](DevicesSerialSwitchRoutingInterfacesOspfSettings1.md) |  | [optional] 
+**OspfV3** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfV31**](DevicesSerialSwitchRoutingInterfacesOspfV31.md) |  | [optional] 
+**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv61**](DevicesSerialSwitchRoutingInterfacesIpv61.md) |  | [optional] 
 
 ## Methods
 
@@ -184,20 +185,20 @@ HasDefaultGateway returns a boolean if a field has been set.
 
 ### GetOspfSettings
 
-`func (o *InlineObject16) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesInterfaceIdOspfSettings`
+`func (o *InlineObject16) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings1`
 
 GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
 
 ### GetOspfSettingsOk
 
-`func (o *InlineObject16) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesInterfaceIdOspfSettings, bool)`
+`func (o *InlineObject16) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings1, bool)`
 
 GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOspfSettings
 
-`func (o *InlineObject16) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesInterfaceIdOspfSettings)`
+`func (o *InlineObject16) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings1)`
 
 SetOspfSettings sets OspfSettings field to given value.
 
@@ -207,22 +208,47 @@ SetOspfSettings sets OspfSettings field to given value.
 
 HasOspfSettings returns a boolean if a field has been set.
 
+### GetOspfV3
+
+`func (o *InlineObject16) GetOspfV3() DevicesSerialSwitchRoutingInterfacesOspfV31`
+
+GetOspfV3 returns the OspfV3 field if non-nil, zero value otherwise.
+
+### GetOspfV3Ok
+
+`func (o *InlineObject16) GetOspfV3Ok() (*DevicesSerialSwitchRoutingInterfacesOspfV31, bool)`
+
+GetOspfV3Ok returns a tuple with the OspfV3 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfV3
+
+`func (o *InlineObject16) SetOspfV3(v DevicesSerialSwitchRoutingInterfacesOspfV31)`
+
+SetOspfV3 sets OspfV3 field to given value.
+
+### HasOspfV3
+
+`func (o *InlineObject16) HasOspfV3() bool`
+
+HasOspfV3 returns a boolean if a field has been set.
+
 ### GetIpv6
 
-`func (o *InlineObject16) GetIpv6() DevicesSerialSwitchRoutingInterfacesInterfaceIdIpv6`
+`func (o *InlineObject16) GetIpv6() DevicesSerialSwitchRoutingInterfacesIpv61`
 
 GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
 
 ### GetIpv6Ok
 
-`func (o *InlineObject16) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesInterfaceIdIpv6, bool)`
+`func (o *InlineObject16) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesIpv61, bool)`
 
 GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpv6
 
-`func (o *InlineObject16) SetIpv6(v DevicesSerialSwitchRoutingInterfacesInterfaceIdIpv6)`
+`func (o *InlineObject16) SetIpv6(v DevicesSerialSwitchRoutingInterfacesIpv61)`
 
 SetIpv6 sets Ipv6 field to given value.
 

@@ -4,17 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | **string** | The URL where the test webhook will be sent | 
-**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to an empty string. | [optional] [default to ""]
-**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
-**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
-**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default. | [optional] 
+**HelloTimerInSeconds** | Pointer to **int32** | Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds. | [optional] 
+**DeadTimerInSeconds** | Pointer to **int32** | Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535 | [optional] 
+**Areas** | Pointer to [**[]NetworksNetworkIdSwitchRoutingOspfAreas**](NetworksNetworkIdSwitchRoutingOspfAreas.md) | OSPF areas | [optional] 
+**V3** | Pointer to [**NetworksNetworkIdSwitchRoutingOspfV3**](NetworksNetworkIdSwitchRoutingOspfV3.md) |  | [optional] 
+**Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
+**Md5AuthenticationKey** | Pointer to [**NetworksNetworkIdSwitchRoutingOspfMd5AuthenticationKey**](NetworksNetworkIdSwitchRoutingOspfMd5AuthenticationKey.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject128
 
-`func NewInlineObject128(url string, ) *InlineObject128`
+`func NewInlineObject128() *InlineObject128`
 
 NewInlineObject128 instantiates a new InlineObject128 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +31,180 @@ NewInlineObject128WithDefaults instantiates a new InlineObject128 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetEnabled
 
-`func (o *InlineObject128) GetUrl() string`
+`func (o *InlineObject128) GetEnabled() bool`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetEnabledOk
 
-`func (o *InlineObject128) GetUrlOk() (*string, bool)`
+`func (o *InlineObject128) GetEnabledOk() (*bool, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetEnabled
 
-`func (o *InlineObject128) SetUrl(v string)`
+`func (o *InlineObject128) SetEnabled(v bool)`
 
-SetUrl sets Url field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetSharedSecret
+`func (o *InlineObject128) HasEnabled() bool`
 
-`func (o *InlineObject128) GetSharedSecret() string`
+HasEnabled returns a boolean if a field has been set.
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+### GetHelloTimerInSeconds
 
-### GetSharedSecretOk
+`func (o *InlineObject128) GetHelloTimerInSeconds() int32`
 
-`func (o *InlineObject128) GetSharedSecretOk() (*string, bool)`
+GetHelloTimerInSeconds returns the HelloTimerInSeconds field if non-nil, zero value otherwise.
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+### GetHelloTimerInSecondsOk
+
+`func (o *InlineObject128) GetHelloTimerInSecondsOk() (*int32, bool)`
+
+GetHelloTimerInSecondsOk returns a tuple with the HelloTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetHelloTimerInSeconds
 
-`func (o *InlineObject128) SetSharedSecret(v string)`
+`func (o *InlineObject128) SetHelloTimerInSeconds(v int32)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetHelloTimerInSeconds sets HelloTimerInSeconds field to given value.
 
-### HasSharedSecret
+### HasHelloTimerInSeconds
 
-`func (o *InlineObject128) HasSharedSecret() bool`
+`func (o *InlineObject128) HasHelloTimerInSeconds() bool`
 
-HasSharedSecret returns a boolean if a field has been set.
+HasHelloTimerInSeconds returns a boolean if a field has been set.
 
-### GetPayloadTemplateId
+### GetDeadTimerInSeconds
 
-`func (o *InlineObject128) GetPayloadTemplateId() string`
+`func (o *InlineObject128) GetDeadTimerInSeconds() int32`
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+GetDeadTimerInSeconds returns the DeadTimerInSeconds field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateIdOk
+### GetDeadTimerInSecondsOk
 
-`func (o *InlineObject128) GetPayloadTemplateIdOk() (*string, bool)`
+`func (o *InlineObject128) GetDeadTimerInSecondsOk() (*int32, bool)`
 
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetDeadTimerInSecondsOk returns a tuple with the DeadTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetDeadTimerInSeconds
 
-`func (o *InlineObject128) SetPayloadTemplateId(v string)`
+`func (o *InlineObject128) SetDeadTimerInSeconds(v int32)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetDeadTimerInSeconds sets DeadTimerInSeconds field to given value.
 
-### HasPayloadTemplateId
+### HasDeadTimerInSeconds
 
-`func (o *InlineObject128) HasPayloadTemplateId() bool`
+`func (o *InlineObject128) HasDeadTimerInSeconds() bool`
 
-HasPayloadTemplateId returns a boolean if a field has been set.
+HasDeadTimerInSeconds returns a boolean if a field has been set.
 
-### GetPayloadTemplateName
+### GetAreas
 
-`func (o *InlineObject128) GetPayloadTemplateName() string`
+`func (o *InlineObject128) GetAreas() []NetworksNetworkIdSwitchRoutingOspfAreas`
 
-GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
+GetAreas returns the Areas field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateNameOk
+### GetAreasOk
 
-`func (o *InlineObject128) GetPayloadTemplateNameOk() (*string, bool)`
+`func (o *InlineObject128) GetAreasOk() (*[]NetworksNetworkIdSwitchRoutingOspfAreas, bool)`
 
-GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
+GetAreasOk returns a tuple with the Areas field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateName
+### SetAreas
 
-`func (o *InlineObject128) SetPayloadTemplateName(v string)`
+`func (o *InlineObject128) SetAreas(v []NetworksNetworkIdSwitchRoutingOspfAreas)`
 
-SetPayloadTemplateName sets PayloadTemplateName field to given value.
+SetAreas sets Areas field to given value.
 
-### HasPayloadTemplateName
+### HasAreas
 
-`func (o *InlineObject128) HasPayloadTemplateName() bool`
+`func (o *InlineObject128) HasAreas() bool`
 
-HasPayloadTemplateName returns a boolean if a field has been set.
+HasAreas returns a boolean if a field has been set.
 
-### GetAlertTypeId
+### GetV3
 
-`func (o *InlineObject128) GetAlertTypeId() string`
+`func (o *InlineObject128) GetV3() NetworksNetworkIdSwitchRoutingOspfV3`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetV3 returns the V3 field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetV3Ok
 
-`func (o *InlineObject128) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineObject128) GetV3Ok() (*NetworksNetworkIdSwitchRoutingOspfV3, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetV3
 
-`func (o *InlineObject128) SetAlertTypeId(v string)`
+`func (o *InlineObject128) SetV3(v NetworksNetworkIdSwitchRoutingOspfV3)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetV3 sets V3 field to given value.
 
-### HasAlertTypeId
+### HasV3
 
-`func (o *InlineObject128) HasAlertTypeId() bool`
+`func (o *InlineObject128) HasV3() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasV3 returns a boolean if a field has been set.
+
+### GetMd5AuthenticationEnabled
+
+`func (o *InlineObject128) GetMd5AuthenticationEnabled() bool`
+
+GetMd5AuthenticationEnabled returns the Md5AuthenticationEnabled field if non-nil, zero value otherwise.
+
+### GetMd5AuthenticationEnabledOk
+
+`func (o *InlineObject128) GetMd5AuthenticationEnabledOk() (*bool, bool)`
+
+GetMd5AuthenticationEnabledOk returns a tuple with the Md5AuthenticationEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMd5AuthenticationEnabled
+
+`func (o *InlineObject128) SetMd5AuthenticationEnabled(v bool)`
+
+SetMd5AuthenticationEnabled sets Md5AuthenticationEnabled field to given value.
+
+### HasMd5AuthenticationEnabled
+
+`func (o *InlineObject128) HasMd5AuthenticationEnabled() bool`
+
+HasMd5AuthenticationEnabled returns a boolean if a field has been set.
+
+### GetMd5AuthenticationKey
+
+`func (o *InlineObject128) GetMd5AuthenticationKey() NetworksNetworkIdSwitchRoutingOspfMd5AuthenticationKey`
+
+GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
+
+### GetMd5AuthenticationKeyOk
+
+`func (o *InlineObject128) GetMd5AuthenticationKeyOk() (*NetworksNetworkIdSwitchRoutingOspfMd5AuthenticationKey, bool)`
+
+GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMd5AuthenticationKey
+
+`func (o *InlineObject128) SetMd5AuthenticationKey(v NetworksNetworkIdSwitchRoutingOspfMd5AuthenticationKey)`
+
+SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
+
+### HasMd5AuthenticationKey
+
+`func (o *InlineObject128) HasMd5AuthenticationKey() bool`
+
+HasMd5AuthenticationKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
