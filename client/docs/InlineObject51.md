@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingRulesRules**](NetworksNetworkIdApplianceTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
+**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
+**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
+**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineObject51WithDefaults instantiates a new InlineObject51 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultRulesEnabled
+### GetName
 
-`func (o *InlineObject51) GetDefaultRulesEnabled() bool`
+`func (o *InlineObject51) GetName() string`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetNameOk
 
-`func (o *InlineObject51) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineObject51) GetNameOk() (*string, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetName
 
-`func (o *InlineObject51) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineObject51) SetName(v string)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultRulesEnabled
+### HasName
 
-`func (o *InlineObject51) HasDefaultRulesEnabled() bool`
+`func (o *InlineObject51) HasName() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRules
+### GetMaxLatency
 
-`func (o *InlineObject51) GetRules() []NetworksNetworkIdApplianceTrafficShapingRulesRules`
+`func (o *InlineObject51) GetMaxLatency() int32`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetMaxLatencyOk
 
-`func (o *InlineObject51) GetRulesOk() (*[]NetworksNetworkIdApplianceTrafficShapingRulesRules, bool)`
+`func (o *InlineObject51) GetMaxLatencyOk() (*int32, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetMaxLatency
 
-`func (o *InlineObject51) SetRules(v []NetworksNetworkIdApplianceTrafficShapingRulesRules)`
+`func (o *InlineObject51) SetMaxLatency(v int32)`
 
-SetRules sets Rules field to given value.
+SetMaxLatency sets MaxLatency field to given value.
 
-### HasRules
+### HasMaxLatency
 
-`func (o *InlineObject51) HasRules() bool`
+`func (o *InlineObject51) HasMaxLatency() bool`
 
-HasRules returns a boolean if a field has been set.
+HasMaxLatency returns a boolean if a field has been set.
+
+### GetMaxJitter
+
+`func (o *InlineObject51) GetMaxJitter() int32`
+
+GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+
+### GetMaxJitterOk
+
+`func (o *InlineObject51) GetMaxJitterOk() (*int32, bool)`
+
+GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxJitter
+
+`func (o *InlineObject51) SetMaxJitter(v int32)`
+
+SetMaxJitter sets MaxJitter field to given value.
+
+### HasMaxJitter
+
+`func (o *InlineObject51) HasMaxJitter() bool`
+
+HasMaxJitter returns a boolean if a field has been set.
+
+### GetMaxLossPercentage
+
+`func (o *InlineObject51) GetMaxLossPercentage() int32`
+
+GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+
+### GetMaxLossPercentageOk
+
+`func (o *InlineObject51) GetMaxLossPercentageOk() (*int32, bool)`
+
+GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLossPercentage
+
+`func (o *InlineObject51) SetMaxLossPercentage(v int32)`
+
+SetMaxLossPercentage sets MaxLossPercentage field to given value.
+
+### HasMaxLossPercentage
+
+`func (o *InlineObject51) HasMaxLossPercentage() bool`
+
+HasMaxLossPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

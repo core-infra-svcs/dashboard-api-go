@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultSettings** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastDefaultSettings**](NetworksNetworkIdSwitchRoutingMulticastDefaultSettings.md) |  | [optional] 
-**Overrides** | Pointer to [**[]NetworksNetworkIdSwitchRoutingMulticastOverrides**](NetworksNetworkIdSwitchRoutingMulticastOverrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings. An empty array will clear the multicast settings. | [optional] 
+**InterfaceIp** | **string** | The IP address of the interface to use | 
+**MulticastGroup** | **string** | &#39;Any&#39;, or the IP address of a multicast group | 
 
 ## Methods
 
 ### NewInlineObject125
 
-`func NewInlineObject125() *InlineObject125`
+`func NewInlineObject125(interfaceIp string, multicastGroup string, ) *InlineObject125`
 
 NewInlineObject125 instantiates a new InlineObject125 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject125WithDefaults instantiates a new InlineObject125 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultSettings
+### GetInterfaceIp
 
-`func (o *InlineObject125) GetDefaultSettings() NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
+`func (o *InlineObject125) GetInterfaceIp() string`
 
-GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetDefaultSettingsOk
+### GetInterfaceIpOk
 
-`func (o *InlineObject125) GetDefaultSettingsOk() (*NetworksNetworkIdSwitchRoutingMulticastDefaultSettings, bool)`
+`func (o *InlineObject125) GetInterfaceIpOk() (*string, bool)`
 
-GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultSettings
+### SetInterfaceIp
 
-`func (o *InlineObject125) SetDefaultSettings(v NetworksNetworkIdSwitchRoutingMulticastDefaultSettings)`
+`func (o *InlineObject125) SetInterfaceIp(v string)`
 
-SetDefaultSettings sets DefaultSettings field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasDefaultSettings
 
-`func (o *InlineObject125) HasDefaultSettings() bool`
+### GetMulticastGroup
 
-HasDefaultSettings returns a boolean if a field has been set.
+`func (o *InlineObject125) GetMulticastGroup() string`
 
-### GetOverrides
+GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
 
-`func (o *InlineObject125) GetOverrides() []NetworksNetworkIdSwitchRoutingMulticastOverrides`
+### GetMulticastGroupOk
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+`func (o *InlineObject125) GetMulticastGroupOk() (*string, bool)`
 
-### GetOverridesOk
-
-`func (o *InlineObject125) GetOverridesOk() (*[]NetworksNetworkIdSwitchRoutingMulticastOverrides, bool)`
-
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetMulticastGroup
 
-`func (o *InlineObject125) SetOverrides(v []NetworksNetworkIdSwitchRoutingMulticastOverrides)`
+`func (o *InlineObject125) SetMulticastGroup(v string)`
 
-SetOverrides sets Overrides field to given value.
+SetMulticastGroup sets MulticastGroup field to given value.
 
-### HasOverrides
-
-`func (o *InlineObject125) HasOverrides() bool`
-
-HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

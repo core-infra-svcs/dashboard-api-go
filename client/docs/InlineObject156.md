@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**Identity** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity**](NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity.md) |  | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**EapolKey** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey**](NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey.md) |  | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules**](NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule) | [optional] 
+**AllowLanAccess** | Pointer to **bool** | Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional) | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineObject156WithDefaults instantiates a new InlineObject156 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetRules
 
-`func (o *InlineObject156) GetTimeout() int32`
+`func (o *InlineObject156) GetRules() []NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetRulesOk
 
-`func (o *InlineObject156) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineObject156) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetRules
 
-`func (o *InlineObject156) SetTimeout(v int32)`
+`func (o *InlineObject156) SetRules(v []NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules)`
 
-SetTimeout sets Timeout field to given value.
+SetRules sets Rules field to given value.
 
-### HasTimeout
+### HasRules
 
-`func (o *InlineObject156) HasTimeout() bool`
+`func (o *InlineObject156) HasRules() bool`
 
-HasTimeout returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetIdentity
+### GetAllowLanAccess
 
-`func (o *InlineObject156) GetIdentity() NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity`
+`func (o *InlineObject156) GetAllowLanAccess() bool`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetAllowLanAccessOk
 
-`func (o *InlineObject156) GetIdentityOk() (*NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity, bool)`
+`func (o *InlineObject156) GetAllowLanAccessOk() (*bool, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetAllowLanAccess
 
-`func (o *InlineObject156) SetIdentity(v NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity)`
+`func (o *InlineObject156) SetAllowLanAccess(v bool)`
 
-SetIdentity sets Identity field to given value.
+SetAllowLanAccess sets AllowLanAccess field to given value.
 
-### HasIdentity
+### HasAllowLanAccess
 
-`func (o *InlineObject156) HasIdentity() bool`
+`func (o *InlineObject156) HasAllowLanAccess() bool`
 
-HasIdentity returns a boolean if a field has been set.
-
-### GetMaxRetries
-
-`func (o *InlineObject156) GetMaxRetries() int32`
-
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
-
-### GetMaxRetriesOk
-
-`func (o *InlineObject156) GetMaxRetriesOk() (*int32, bool)`
-
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMaxRetries
-
-`func (o *InlineObject156) SetMaxRetries(v int32)`
-
-SetMaxRetries sets MaxRetries field to given value.
-
-### HasMaxRetries
-
-`func (o *InlineObject156) HasMaxRetries() bool`
-
-HasMaxRetries returns a boolean if a field has been set.
-
-### GetEapolKey
-
-`func (o *InlineObject156) GetEapolKey() NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey`
-
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
-
-### GetEapolKeyOk
-
-`func (o *InlineObject156) GetEapolKeyOk() (*NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey, bool)`
-
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEapolKey
-
-`func (o *InlineObject156) SetEapolKey(v NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey)`
-
-SetEapolKey sets EapolKey field to given value.
-
-### HasEapolKey
-
-`func (o *InlineObject156) HasEapolKey() bool`
-
-HasEapolKey returns a boolean if a field has been set.
+HasAllowLanAccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the MQTT broker. | 
-**Host** | **string** | Host name/IP address where the MQTT broker runs. | 
-**Port** | **int32** | Host port though which the MQTT broker can be reached. | 
-**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
-**Authentication** | Pointer to **map[string]interface{}** | Authentication settings of the MQTT broker | [optional] 
+**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
+**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
+**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
+**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
+**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
 
 ## Methods
 
 ### NewInlineObject92
 
-`func NewInlineObject92(name string, host string, port int32, ) *InlineObject92`
+`func NewInlineObject92() *InlineObject92`
 
 NewInlineObject92 instantiates a new InlineObject92 object
 This constructor will assign default values to properties that have it defined,
@@ -29,115 +29,130 @@ NewInlineObject92WithDefaults instantiates a new InlineObject92 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetReportingEnabled
 
-`func (o *InlineObject92) GetName() string`
+`func (o *InlineObject92) GetReportingEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetReportingEnabledOk
 
-`func (o *InlineObject92) GetNameOk() (*string, bool)`
+`func (o *InlineObject92) GetReportingEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetReportingEnabled
 
-`func (o *InlineObject92) SetName(v string)`
+`func (o *InlineObject92) SetReportingEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetReportingEnabled sets ReportingEnabled field to given value.
 
+### HasReportingEnabled
 
-### GetHost
+`func (o *InlineObject92) HasReportingEnabled() bool`
 
-`func (o *InlineObject92) GetHost() string`
+HasReportingEnabled returns a boolean if a field has been set.
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+### GetCollectorIp
 
-### GetHostOk
+`func (o *InlineObject92) GetCollectorIp() string`
 
-`func (o *InlineObject92) GetHostOk() (*string, bool)`
+GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
 
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+### GetCollectorIpOk
+
+`func (o *InlineObject92) GetCollectorIpOk() (*string, bool)`
+
+GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetCollectorIp
 
-`func (o *InlineObject92) SetHost(v string)`
+`func (o *InlineObject92) SetCollectorIp(v string)`
 
-SetHost sets Host field to given value.
+SetCollectorIp sets CollectorIp field to given value.
 
+### HasCollectorIp
 
-### GetPort
+`func (o *InlineObject92) HasCollectorIp() bool`
 
-`func (o *InlineObject92) GetPort() int32`
+HasCollectorIp returns a boolean if a field has been set.
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+### GetCollectorPort
 
-### GetPortOk
+`func (o *InlineObject92) GetCollectorPort() int32`
 
-`func (o *InlineObject92) GetPortOk() (*int32, bool)`
+GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+### GetCollectorPortOk
+
+`func (o *InlineObject92) GetCollectorPortOk() (*int32, bool)`
+
+GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetCollectorPort
 
-`func (o *InlineObject92) SetPort(v int32)`
+`func (o *InlineObject92) SetCollectorPort(v int32)`
 
-SetPort sets Port field to given value.
+SetCollectorPort sets CollectorPort field to given value.
 
+### HasCollectorPort
 
-### GetSecurity
+`func (o *InlineObject92) HasCollectorPort() bool`
 
-`func (o *InlineObject92) GetSecurity() NetworksNetworkIdMqttBrokersSecurity`
+HasCollectorPort returns a boolean if a field has been set.
 
-GetSecurity returns the Security field if non-nil, zero value otherwise.
+### GetEtaEnabled
 
-### GetSecurityOk
+`func (o *InlineObject92) GetEtaEnabled() bool`
 
-`func (o *InlineObject92) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity, bool)`
+GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
 
-GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
+### GetEtaEnabledOk
+
+`func (o *InlineObject92) GetEtaEnabledOk() (*bool, bool)`
+
+GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurity
+### SetEtaEnabled
 
-`func (o *InlineObject92) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity)`
+`func (o *InlineObject92) SetEtaEnabled(v bool)`
 
-SetSecurity sets Security field to given value.
+SetEtaEnabled sets EtaEnabled field to given value.
 
-### HasSecurity
+### HasEtaEnabled
 
-`func (o *InlineObject92) HasSecurity() bool`
+`func (o *InlineObject92) HasEtaEnabled() bool`
 
-HasSecurity returns a boolean if a field has been set.
+HasEtaEnabled returns a boolean if a field has been set.
 
-### GetAuthentication
+### GetEtaDstPort
 
-`func (o *InlineObject92) GetAuthentication() map[string]interface{}`
+`func (o *InlineObject92) GetEtaDstPort() int32`
 
-GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
+GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
 
-### GetAuthenticationOk
+### GetEtaDstPortOk
 
-`func (o *InlineObject92) GetAuthenticationOk() (*map[string]interface{}, bool)`
+`func (o *InlineObject92) GetEtaDstPortOk() (*int32, bool)`
 
-GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
+GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthentication
+### SetEtaDstPort
 
-`func (o *InlineObject92) SetAuthentication(v map[string]interface{})`
+`func (o *InlineObject92) SetEtaDstPort(v int32)`
 
-SetAuthentication sets Authentication field to given value.
+SetEtaDstPort sets EtaDstPort field to given value.
 
-### HasAuthentication
+### HasEtaDstPort
 
-`func (o *InlineObject92) HasAuthentication() bool`
+`func (o *InlineObject92) HasEtaDstPort() bool`
 
-HasAuthentication returns a boolean if a field has been set.
+HasEtaDstPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

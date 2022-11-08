@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
-**CustomPieChartItems** | Pointer to [**[]NetworksNetworkIdTrafficAnalysisCustomPieChartItems**](NetworksNetworkIdTrafficAnalysisCustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
+**Name** | **string** | A name for easy reference to the HTTP server | 
+**Url** | **string** | The URL of the HTTP server. Once set, cannot be updated. | 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate1**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject141
 
-`func NewInlineObject141() *InlineObject141`
+`func NewInlineObject141(name string, url string, ) *InlineObject141`
 
 NewInlineObject141 instantiates a new InlineObject141 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,95 @@ NewInlineObject141WithDefaults instantiates a new InlineObject141 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetName
 
-`func (o *InlineObject141) GetMode() string`
+`func (o *InlineObject141) GetName() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetNameOk
 
-`func (o *InlineObject141) GetModeOk() (*string, bool)`
+`func (o *InlineObject141) GetNameOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetName
 
-`func (o *InlineObject141) SetMode(v string)`
+`func (o *InlineObject141) SetName(v string)`
 
-SetMode sets Mode field to given value.
+SetName sets Name field to given value.
 
-### HasMode
 
-`func (o *InlineObject141) HasMode() bool`
+### GetUrl
 
-HasMode returns a boolean if a field has been set.
+`func (o *InlineObject141) GetUrl() string`
 
-### GetCustomPieChartItems
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-`func (o *InlineObject141) GetCustomPieChartItems() []NetworksNetworkIdTrafficAnalysisCustomPieChartItems`
+### GetUrlOk
 
-GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
+`func (o *InlineObject141) GetUrlOk() (*string, bool)`
 
-### GetCustomPieChartItemsOk
-
-`func (o *InlineObject141) GetCustomPieChartItemsOk() (*[]NetworksNetworkIdTrafficAnalysisCustomPieChartItems, bool)`
-
-GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPieChartItems
+### SetUrl
 
-`func (o *InlineObject141) SetCustomPieChartItems(v []NetworksNetworkIdTrafficAnalysisCustomPieChartItems)`
+`func (o *InlineObject141) SetUrl(v string)`
 
-SetCustomPieChartItems sets CustomPieChartItems field to given value.
+SetUrl sets Url field to given value.
 
-### HasCustomPieChartItems
 
-`func (o *InlineObject141) HasCustomPieChartItems() bool`
+### GetSharedSecret
 
-HasCustomPieChartItems returns a boolean if a field has been set.
+`func (o *InlineObject141) GetSharedSecret() string`
+
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+
+### GetSharedSecretOk
+
+`func (o *InlineObject141) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSharedSecret
+
+`func (o *InlineObject141) SetSharedSecret(v string)`
+
+SetSharedSecret sets SharedSecret field to given value.
+
+### HasSharedSecret
+
+`func (o *InlineObject141) HasSharedSecret() bool`
+
+HasSharedSecret returns a boolean if a field has been set.
+
+### GetPayloadTemplate
+
+`func (o *InlineObject141) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate1`
+
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateOk
+
+`func (o *InlineObject141) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate1, bool)`
+
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplate
+
+`func (o *InlineObject141) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate1)`
+
+SetPayloadTemplate sets PayloadTemplate field to given value.
+
+### HasPayloadTemplate
+
+`func (o *InlineObject141) HasPayloadTemplate() bool`
+
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

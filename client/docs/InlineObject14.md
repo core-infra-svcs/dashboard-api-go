@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ports** | **[]string** | List of switch ports. Example: [1, 2-5, 1_MA-MOD-8X10G_1, 1_MA-MOD-8X10G_2-1_MA-MOD-8X10G_8] | 
+**Wan1** | Pointer to [**DevicesSerialManagementInterfaceWan1**](DevicesSerialManagementInterfaceWan1.md) |  | [optional] 
+**Wan2** | Pointer to [**DevicesSerialManagementInterfaceWan2**](DevicesSerialManagementInterfaceWan2.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject14
 
-`func NewInlineObject14(ports []string, ) *InlineObject14`
+`func NewInlineObject14() *InlineObject14`
 
 NewInlineObject14 instantiates a new InlineObject14 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject14WithDefaults instantiates a new InlineObject14 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPorts
+### GetWan1
 
-`func (o *InlineObject14) GetPorts() []string`
+`func (o *InlineObject14) GetWan1() DevicesSerialManagementInterfaceWan1`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetWan1Ok
 
-`func (o *InlineObject14) GetPortsOk() (*[]string, bool)`
+`func (o *InlineObject14) GetWan1Ok() (*DevicesSerialManagementInterfaceWan1, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetWan1
 
-`func (o *InlineObject14) SetPorts(v []string)`
+`func (o *InlineObject14) SetWan1(v DevicesSerialManagementInterfaceWan1)`
 
-SetPorts sets Ports field to given value.
+SetWan1 sets Wan1 field to given value.
 
+### HasWan1
+
+`func (o *InlineObject14) HasWan1() bool`
+
+HasWan1 returns a boolean if a field has been set.
+
+### GetWan2
+
+`func (o *InlineObject14) GetWan2() DevicesSerialManagementInterfaceWan2`
+
+GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+
+### GetWan2Ok
+
+`func (o *InlineObject14) GetWan2Ok() (*DevicesSerialManagementInterfaceWan2, bool)`
+
+GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWan2
+
+`func (o *InlineObject14) SetWan2(v DevicesSerialManagementInterfaceWan2)`
+
+SetWan2 sets Wan2 field to given value.
+
+### HasWan2
+
+`func (o *InlineObject14) HasWan2() bool`
+
+HasWan2 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

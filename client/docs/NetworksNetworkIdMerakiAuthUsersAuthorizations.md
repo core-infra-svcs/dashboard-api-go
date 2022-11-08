@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SsidNumber** | Pointer to **int32** | Required for wireless networks. The SSID for which the user is being authorized, which must be configured for the user&#39;s given accountType. | [optional] 
-**ExpiresAt** | Pointer to **string** | Date for authorization to expire. Set to &#39;Never&#39; for the authorization to not expire, which is the default. | [optional] [default to "Never"]
+**SsidNumber** | Pointer to **int32** | SSID number | [optional] 
+**AuthorizedZone** | Pointer to **string** | Authorized zone of the user | [optional] 
+**ExpiresAt** | Pointer to **time.Time** | Authorization expiration time | [optional] 
+**AuthorizedByName** | Pointer to **string** | User is authorized by the account name | [optional] 
+**AuthorizedByEmail** | Pointer to **string** | User is authorized by the account email address | [optional] 
 
 ## Methods
 
@@ -51,22 +54,47 @@ SetSsidNumber sets SsidNumber field to given value.
 
 HasSsidNumber returns a boolean if a field has been set.
 
+### GetAuthorizedZone
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) GetAuthorizedZone() string`
+
+GetAuthorizedZone returns the AuthorizedZone field if non-nil, zero value otherwise.
+
+### GetAuthorizedZoneOk
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) GetAuthorizedZoneOk() (*string, bool)`
+
+GetAuthorizedZoneOk returns a tuple with the AuthorizedZone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizedZone
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) SetAuthorizedZone(v string)`
+
+SetAuthorizedZone sets AuthorizedZone field to given value.
+
+### HasAuthorizedZone
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) HasAuthorizedZone() bool`
+
+HasAuthorizedZone returns a boolean if a field has been set.
+
 ### GetExpiresAt
 
-`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) GetExpiresAt() string`
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) GetExpiresAt() time.Time`
 
 GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
 
 ### GetExpiresAtOk
 
-`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) GetExpiresAtOk() (*string, bool)`
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) GetExpiresAtOk() (*time.Time, bool)`
 
 GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetExpiresAt
 
-`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) SetExpiresAt(v string)`
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) SetExpiresAt(v time.Time)`
 
 SetExpiresAt sets ExpiresAt field to given value.
 
@@ -75,6 +103,56 @@ SetExpiresAt sets ExpiresAt field to given value.
 `func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) HasExpiresAt() bool`
 
 HasExpiresAt returns a boolean if a field has been set.
+
+### GetAuthorizedByName
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) GetAuthorizedByName() string`
+
+GetAuthorizedByName returns the AuthorizedByName field if non-nil, zero value otherwise.
+
+### GetAuthorizedByNameOk
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) GetAuthorizedByNameOk() (*string, bool)`
+
+GetAuthorizedByNameOk returns a tuple with the AuthorizedByName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizedByName
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) SetAuthorizedByName(v string)`
+
+SetAuthorizedByName sets AuthorizedByName field to given value.
+
+### HasAuthorizedByName
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) HasAuthorizedByName() bool`
+
+HasAuthorizedByName returns a boolean if a field has been set.
+
+### GetAuthorizedByEmail
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) GetAuthorizedByEmail() string`
+
+GetAuthorizedByEmail returns the AuthorizedByEmail field if non-nil, zero value otherwise.
+
+### GetAuthorizedByEmailOk
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) GetAuthorizedByEmailOk() (*string, bool)`
+
+GetAuthorizedByEmailOk returns a tuple with the AuthorizedByEmail field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizedByEmail
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) SetAuthorizedByEmail(v string)`
+
+SetAuthorizedByEmail sets AuthorizedByEmail field to given value.
+
+### HasAuthorizedByEmail
+
+`func (o *NetworksNetworkIdMerakiAuthUsersAuthorizations) HasAuthorizedByEmail() bool`
+
+HasAuthorizedByEmail returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

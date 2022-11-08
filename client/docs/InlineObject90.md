@@ -4,19 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | **string** | Email address of the user | 
-**Name** | Pointer to **string** | Name of the user. Only required If the user is not a Dashboard administrator. | [optional] 
-**Password** | Pointer to **string** | The password for this user account. Only required If the user is not a Dashboard administrator. | [optional] 
-**AccountType** | Pointer to **string** | Authorization type for user. Can be &#39;Guest&#39; or &#39;802.1X&#39; for wireless networks, or &#39;Client VPN&#39; for wired networks. Defaults to &#39;802.1X&#39;. | [optional] [default to "802.1X"]
-**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
-**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator. | [optional] 
-**Authorizations** | [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | Authorization zones and expiration dates for the user. | 
+**Name** | **string** | Name of the MQTT broker. | 
+**Host** | **string** | Host name/IP address where the MQTT broker runs. | 
+**Port** | **int32** | Host port though which the MQTT broker can be reached. | 
+**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
+**Authentication** | Pointer to **map[string]interface{}** | Authentication settings of the MQTT broker | [optional] 
 
 ## Methods
 
 ### NewInlineObject90
 
-`func NewInlineObject90(email string, authorizations []NetworksNetworkIdMerakiAuthUsersAuthorizations, ) *InlineObject90`
+`func NewInlineObject90(name string, host string, port int32, ) *InlineObject90`
 
 NewInlineObject90 instantiates a new InlineObject90 object
 This constructor will assign default values to properties that have it defined,
@@ -30,26 +28,6 @@ will change when the set of required properties is changed
 NewInlineObject90WithDefaults instantiates a new InlineObject90 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetEmail
-
-`func (o *InlineObject90) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineObject90) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineObject90) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
 
 ### GetName
 
@@ -70,131 +48,96 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject90) HasName() bool`
+### GetHost
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject90) GetHost() string`
 
-### GetPassword
+GetHost returns the Host field if non-nil, zero value otherwise.
 
-`func (o *InlineObject90) GetPassword() string`
+### GetHostOk
 
-GetPassword returns the Password field if non-nil, zero value otherwise.
+`func (o *InlineObject90) GetHostOk() (*string, bool)`
 
-### GetPasswordOk
-
-`func (o *InlineObject90) GetPasswordOk() (*string, bool)`
-
-GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
+GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassword
+### SetHost
 
-`func (o *InlineObject90) SetPassword(v string)`
+`func (o *InlineObject90) SetHost(v string)`
 
-SetPassword sets Password field to given value.
+SetHost sets Host field to given value.
 
-### HasPassword
 
-`func (o *InlineObject90) HasPassword() bool`
+### GetPort
 
-HasPassword returns a boolean if a field has been set.
+`func (o *InlineObject90) GetPort() int32`
 
-### GetAccountType
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-`func (o *InlineObject90) GetAccountType() string`
+### GetPortOk
 
-GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+`func (o *InlineObject90) GetPortOk() (*int32, bool)`
 
-### GetAccountTypeOk
-
-`func (o *InlineObject90) GetAccountTypeOk() (*string, bool)`
-
-GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountType
+### SetPort
 
-`func (o *InlineObject90) SetAccountType(v string)`
+`func (o *InlineObject90) SetPort(v int32)`
 
-SetAccountType sets AccountType field to given value.
+SetPort sets Port field to given value.
 
-### HasAccountType
 
-`func (o *InlineObject90) HasAccountType() bool`
+### GetSecurity
 
-HasAccountType returns a boolean if a field has been set.
+`func (o *InlineObject90) GetSecurity() NetworksNetworkIdMqttBrokersSecurity`
 
-### GetEmailPasswordToUser
+GetSecurity returns the Security field if non-nil, zero value otherwise.
 
-`func (o *InlineObject90) GetEmailPasswordToUser() bool`
+### GetSecurityOk
 
-GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
+`func (o *InlineObject90) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity, bool)`
 
-### GetEmailPasswordToUserOk
-
-`func (o *InlineObject90) GetEmailPasswordToUserOk() (*bool, bool)`
-
-GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
+GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmailPasswordToUser
+### SetSecurity
 
-`func (o *InlineObject90) SetEmailPasswordToUser(v bool)`
+`func (o *InlineObject90) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity)`
 
-SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
+SetSecurity sets Security field to given value.
 
-### HasEmailPasswordToUser
+### HasSecurity
 
-`func (o *InlineObject90) HasEmailPasswordToUser() bool`
+`func (o *InlineObject90) HasSecurity() bool`
 
-HasEmailPasswordToUser returns a boolean if a field has been set.
+HasSecurity returns a boolean if a field has been set.
 
-### GetIsAdmin
+### GetAuthentication
 
-`func (o *InlineObject90) GetIsAdmin() bool`
+`func (o *InlineObject90) GetAuthentication() map[string]interface{}`
 
-GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
+GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
 
-### GetIsAdminOk
+### GetAuthenticationOk
 
-`func (o *InlineObject90) GetIsAdminOk() (*bool, bool)`
+`func (o *InlineObject90) GetAuthenticationOk() (*map[string]interface{}, bool)`
 
-GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
+GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsAdmin
+### SetAuthentication
 
-`func (o *InlineObject90) SetIsAdmin(v bool)`
+`func (o *InlineObject90) SetAuthentication(v map[string]interface{})`
 
-SetIsAdmin sets IsAdmin field to given value.
+SetAuthentication sets Authentication field to given value.
 
-### HasIsAdmin
+### HasAuthentication
 
-`func (o *InlineObject90) HasIsAdmin() bool`
+`func (o *InlineObject90) HasAuthentication() bool`
 
-HasIsAdmin returns a boolean if a field has been set.
-
-### GetAuthorizations
-
-`func (o *InlineObject90) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
-
-GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
-
-### GetAuthorizationsOk
-
-`func (o *InlineObject90) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
-
-GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthorizations
-
-`func (o *InlineObject90) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
-
-SetAuthorizations sets Authorizations field to given value.
-
+HasAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

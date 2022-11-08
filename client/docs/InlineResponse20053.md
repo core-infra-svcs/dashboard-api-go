@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
-**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
-**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
-**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
-**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**Serial** | Pointer to **string** | Switch serial. | [optional] 
+**Name** | Pointer to **string** | Switch name. | [optional] 
+**Url** | Pointer to **string** | Url link to switch. | [optional] 
+**SupportsInspection** | Pointer to **bool** | Whether this switch supports Dynamic ARP Inspection. | [optional] 
+**HasTrustedPort** | Pointer to **bool** | Whether this switch has a trusted DAI port. Always false if supportsInspection is false. | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse20053WithDefaults instantiates a new InlineResponse20053 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScanningEnabled
+### GetSerial
 
-`func (o *InlineResponse20053) GetScanningEnabled() bool`
+`func (o *InlineResponse20053) GetSerial() string`
 
-GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetScanningEnabledOk
+### GetSerialOk
 
-`func (o *InlineResponse20053) GetScanningEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20053) GetSerialOk() (*string, bool)`
 
-GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScanningEnabled
+### SetSerial
 
-`func (o *InlineResponse20053) SetScanningEnabled(v bool)`
+`func (o *InlineResponse20053) SetSerial(v string)`
 
-SetScanningEnabled sets ScanningEnabled field to given value.
+SetSerial sets Serial field to given value.
 
-### HasScanningEnabled
+### HasSerial
 
-`func (o *InlineResponse20053) HasScanningEnabled() bool`
+`func (o *InlineResponse20053) HasSerial() bool`
 
-HasScanningEnabled returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetAdvertisingEnabled
+### GetName
 
-`func (o *InlineResponse20053) GetAdvertisingEnabled() bool`
+`func (o *InlineResponse20053) GetName() string`
 
-GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAdvertisingEnabledOk
+### GetNameOk
 
-`func (o *InlineResponse20053) GetAdvertisingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20053) GetNameOk() (*string, bool)`
 
-GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertisingEnabled
+### SetName
 
-`func (o *InlineResponse20053) SetAdvertisingEnabled(v bool)`
+`func (o *InlineResponse20053) SetName(v string)`
 
-SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasAdvertisingEnabled
+### HasName
 
-`func (o *InlineResponse20053) HasAdvertisingEnabled() bool`
+`func (o *InlineResponse20053) HasName() bool`
 
-HasAdvertisingEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUuid
+### GetUrl
 
-`func (o *InlineResponse20053) GetUuid() string`
+`func (o *InlineResponse20053) GetUrl() string`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetUrlOk
 
-`func (o *InlineResponse20053) GetUuidOk() (*string, bool)`
+`func (o *InlineResponse20053) GetUrlOk() (*string, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetUrl
 
-`func (o *InlineResponse20053) SetUuid(v string)`
+`func (o *InlineResponse20053) SetUrl(v string)`
 
-SetUuid sets Uuid field to given value.
+SetUrl sets Url field to given value.
 
-### HasUuid
+### HasUrl
 
-`func (o *InlineResponse20053) HasUuid() bool`
+`func (o *InlineResponse20053) HasUrl() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetMajorMinorAssignmentMode
+### GetSupportsInspection
 
-`func (o *InlineResponse20053) GetMajorMinorAssignmentMode() string`
+`func (o *InlineResponse20053) GetSupportsInspection() bool`
 
-GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
+GetSupportsInspection returns the SupportsInspection field if non-nil, zero value otherwise.
 
-### GetMajorMinorAssignmentModeOk
+### GetSupportsInspectionOk
 
-`func (o *InlineResponse20053) GetMajorMinorAssignmentModeOk() (*string, bool)`
+`func (o *InlineResponse20053) GetSupportsInspectionOk() (*bool, bool)`
 
-GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
+GetSupportsInspectionOk returns a tuple with the SupportsInspection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorMinorAssignmentMode
+### SetSupportsInspection
 
-`func (o *InlineResponse20053) SetMajorMinorAssignmentMode(v string)`
+`func (o *InlineResponse20053) SetSupportsInspection(v bool)`
 
-SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
+SetSupportsInspection sets SupportsInspection field to given value.
 
-### HasMajorMinorAssignmentMode
+### HasSupportsInspection
 
-`func (o *InlineResponse20053) HasMajorMinorAssignmentMode() bool`
+`func (o *InlineResponse20053) HasSupportsInspection() bool`
 
-HasMajorMinorAssignmentMode returns a boolean if a field has been set.
+HasSupportsInspection returns a boolean if a field has been set.
 
-### GetMajor
+### GetHasTrustedPort
 
-`func (o *InlineResponse20053) GetMajor() int32`
+`func (o *InlineResponse20053) GetHasTrustedPort() bool`
 
-GetMajor returns the Major field if non-nil, zero value otherwise.
+GetHasTrustedPort returns the HasTrustedPort field if non-nil, zero value otherwise.
 
-### GetMajorOk
+### GetHasTrustedPortOk
 
-`func (o *InlineResponse20053) GetMajorOk() (*int32, bool)`
+`func (o *InlineResponse20053) GetHasTrustedPortOk() (*bool, bool)`
 
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+GetHasTrustedPortOk returns a tuple with the HasTrustedPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajor
+### SetHasTrustedPort
 
-`func (o *InlineResponse20053) SetMajor(v int32)`
+`func (o *InlineResponse20053) SetHasTrustedPort(v bool)`
 
-SetMajor sets Major field to given value.
+SetHasTrustedPort sets HasTrustedPort field to given value.
 
-### HasMajor
+### HasHasTrustedPort
 
-`func (o *InlineResponse20053) HasMajor() bool`
+`func (o *InlineResponse20053) HasHasTrustedPort() bool`
 
-HasMajor returns a boolean if a field has been set.
-
-### GetMinor
-
-`func (o *InlineResponse20053) GetMinor() int32`
-
-GetMinor returns the Minor field if non-nil, zero value otherwise.
-
-### GetMinorOk
-
-`func (o *InlineResponse20053) GetMinorOk() (*int32, bool)`
-
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinor
-
-`func (o *InlineResponse20053) SetMinor(v int32)`
-
-SetMinor sets Minor field to given value.
-
-### HasMinor
-
-`func (o *InlineResponse20053) HasMinor() bool`
-
-HasMinor returns a boolean if a field has been set.
+HasHasTrustedPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

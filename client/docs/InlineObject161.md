@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges**](NetworksNetworkIdWirelessSsidsNumberSchedulesRanges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds**](NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject161WithDefaults instantiates a new InlineObject161 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject161) GetName() string`
+`func (o *InlineObject161) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject161) GetNameOk() (*string, bool)`
+`func (o *InlineObject161) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject161) SetName(v string)`
+`func (o *InlineObject161) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
+### HasEnabled
 
-`func (o *InlineObject161) HasName() bool`
+`func (o *InlineObject161) HasEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetPassphrase
+### GetRanges
 
-`func (o *InlineObject161) GetPassphrase() string`
+`func (o *InlineObject161) GetRanges() []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges`
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetPassphraseOk
+### GetRangesOk
 
-`func (o *InlineObject161) GetPassphraseOk() (*string, bool)`
+`func (o *InlineObject161) GetRangesOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges, bool)`
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetRanges
 
-`func (o *InlineObject161) SetPassphrase(v string)`
+`func (o *InlineObject161) SetRanges(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges)`
 
-SetPassphrase sets Passphrase field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasPassphrase
+### HasRanges
 
-`func (o *InlineObject161) HasPassphrase() bool`
+`func (o *InlineObject161) HasRanges() bool`
 
-HasPassphrase returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetRangesInSeconds
 
-`func (o *InlineObject161) GetGroupPolicyId() string`
+`func (o *InlineObject161) GetRangesInSeconds() []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetRangesInSecondsOk
 
-`func (o *InlineObject161) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineObject161) GetRangesInSecondsOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetRangesInSeconds
 
-`func (o *InlineObject161) SetGroupPolicyId(v string)`
+`func (o *InlineObject161) SetRangesInSeconds(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasGroupPolicyId
+### HasRangesInSeconds
 
-`func (o *InlineObject161) HasGroupPolicyId() bool`
+`func (o *InlineObject161) HasRangesInSeconds() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

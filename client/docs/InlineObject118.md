@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | Array of switch or stack ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
-**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**Name** | **string** | The name for your port schedule. Required | 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule**](NetworksNetworkIdSwitchPortSchedulesPortSchedule.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject118
 
-`func NewInlineObject118() *InlineObject118`
+`func NewInlineObject118(name string, ) *InlineObject118`
 
 NewInlineObject118 instantiates a new InlineObject118 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,50 @@ NewInlineObject118WithDefaults instantiates a new InlineObject118 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchPorts
+### GetName
 
-`func (o *InlineObject118) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
+`func (o *InlineObject118) GetName() string`
 
-GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSwitchPortsOk
+### GetNameOk
 
-`func (o *InlineObject118) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
+`func (o *InlineObject118) GetNameOk() (*string, bool)`
 
-GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchPorts
+### SetName
 
-`func (o *InlineObject118) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
+`func (o *InlineObject118) SetName(v string)`
 
-SetSwitchPorts sets SwitchPorts field to given value.
+SetName sets Name field to given value.
 
-### HasSwitchPorts
 
-`func (o *InlineObject118) HasSwitchPorts() bool`
+### GetPortSchedule
 
-HasSwitchPorts returns a boolean if a field has been set.
+`func (o *InlineObject118) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule`
 
-### GetSwitchProfilePorts
+GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
 
-`func (o *InlineObject118) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
+### GetPortScheduleOk
 
-GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
+`func (o *InlineObject118) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule, bool)`
 
-### GetSwitchProfilePortsOk
-
-`func (o *InlineObject118) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
-
-GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
+GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfilePorts
+### SetPortSchedule
 
-`func (o *InlineObject118) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
+`func (o *InlineObject118) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule)`
 
-SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
+SetPortSchedule sets PortSchedule field to given value.
 
-### HasSwitchProfilePorts
+### HasPortSchedule
 
-`func (o *InlineObject118) HasSwitchProfilePorts() bool`
+`func (o *InlineObject118) HasPortSchedule() bool`
 
-HasSwitchProfilePorts returns a boolean if a field has been set.
+HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

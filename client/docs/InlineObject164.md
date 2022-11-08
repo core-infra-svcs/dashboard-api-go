@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules**](NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
+**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject164WithDefaults instantiates a new InlineObject164 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetConcentrator
 
-`func (o *InlineObject164) GetTrafficShapingEnabled() bool`
+`func (o *InlineObject164) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetConcentratorOk
 
-`func (o *InlineObject164) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineObject164) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetConcentrator
 
-`func (o *InlineObject164) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineObject164) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasTrafficShapingEnabled
+### HasConcentrator
 
-`func (o *InlineObject164) HasTrafficShapingEnabled() bool`
+`func (o *InlineObject164) HasConcentrator() bool`
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetDefaultRulesEnabled
+### GetSplitTunnel
 
-`func (o *InlineObject164) GetDefaultRulesEnabled() bool`
+`func (o *InlineObject164) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetSplitTunnelOk
 
-`func (o *InlineObject164) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineObject164) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetSplitTunnel
 
-`func (o *InlineObject164) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineObject164) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasDefaultRulesEnabled
+### HasSplitTunnel
 
-`func (o *InlineObject164) HasDefaultRulesEnabled() bool`
+`func (o *InlineObject164) HasSplitTunnel() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
 
-### GetRules
+### GetFailover
 
-`func (o *InlineObject164) GetRules() []NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules`
+`func (o *InlineObject164) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetFailoverOk
 
-`func (o *InlineObject164) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules, bool)`
+`func (o *InlineObject164) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetFailover
 
-`func (o *InlineObject164) SetRules(v []NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules)`
+`func (o *InlineObject164) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
 
-SetRules sets Rules field to given value.
+SetFailover sets Failover field to given value.
 
-### HasRules
+### HasFailover
 
-`func (o *InlineObject164) HasRules() bool`
+`func (o *InlineObject164) HasFailover() bool`
 
-HasRules returns a boolean if a field has been set.
+HasFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

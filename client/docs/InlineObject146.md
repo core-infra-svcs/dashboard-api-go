@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | **string** | The URL where the test webhook will be sent | 
-**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to an empty string. | [optional] [default to ""]
-**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
-**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
-**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
+**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
 
 ## Methods
 
 ### NewInlineObject146
 
-`func NewInlineObject146(url string, ) *InlineObject146`
+`func NewInlineObject146() *InlineObject146`
 
 NewInlineObject146 instantiates a new InlineObject146 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +28,105 @@ NewInlineObject146WithDefaults instantiates a new InlineObject146 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetEnabled
 
-`func (o *InlineObject146) GetUrl() string`
+`func (o *InlineObject146) GetEnabled() bool`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetEnabledOk
 
-`func (o *InlineObject146) GetUrlOk() (*string, bool)`
+`func (o *InlineObject146) GetEnabledOk() (*bool, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetEnabled
 
-`func (o *InlineObject146) SetUrl(v string)`
+`func (o *InlineObject146) SetEnabled(v bool)`
 
-SetUrl sets Url field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetSharedSecret
+`func (o *InlineObject146) HasEnabled() bool`
 
-`func (o *InlineObject146) GetSharedSecret() string`
+HasEnabled returns a boolean if a field has been set.
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+### GetVlanId
 
-### GetSharedSecretOk
+`func (o *InlineObject146) GetVlanId() int32`
 
-`func (o *InlineObject146) GetSharedSecretOk() (*string, bool)`
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+### GetVlanIdOk
+
+`func (o *InlineObject146) GetVlanIdOk() (*int32, bool)`
+
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetVlanId
 
-`func (o *InlineObject146) SetSharedSecret(v string)`
+`func (o *InlineObject146) SetVlanId(v int32)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasSharedSecret
+### HasVlanId
 
-`func (o *InlineObject146) HasSharedSecret() bool`
+`func (o *InlineObject146) HasVlanId() bool`
 
-HasSharedSecret returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetPayloadTemplateId
+### GetProtocols
 
-`func (o *InlineObject146) GetPayloadTemplateId() string`
+`func (o *InlineObject146) GetProtocols() []string`
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateIdOk
+### GetProtocolsOk
 
-`func (o *InlineObject146) GetPayloadTemplateIdOk() (*string, bool)`
+`func (o *InlineObject146) GetProtocolsOk() (*[]string, bool)`
 
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetProtocols
 
-`func (o *InlineObject146) SetPayloadTemplateId(v string)`
+`func (o *InlineObject146) SetProtocols(v []string)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetProtocols sets Protocols field to given value.
 
-### HasPayloadTemplateId
+### HasProtocols
 
-`func (o *InlineObject146) HasPayloadTemplateId() bool`
+`func (o *InlineObject146) HasProtocols() bool`
 
-HasPayloadTemplateId returns a boolean if a field has been set.
+HasProtocols returns a boolean if a field has been set.
 
-### GetPayloadTemplateName
+### GetAccessPoints
 
-`func (o *InlineObject146) GetPayloadTemplateName() string`
+`func (o *InlineObject146) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
 
-GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
+GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateNameOk
+### GetAccessPointsOk
 
-`func (o *InlineObject146) GetPayloadTemplateNameOk() (*string, bool)`
+`func (o *InlineObject146) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
 
-GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
+GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateName
+### SetAccessPoints
 
-`func (o *InlineObject146) SetPayloadTemplateName(v string)`
+`func (o *InlineObject146) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
 
-SetPayloadTemplateName sets PayloadTemplateName field to given value.
+SetAccessPoints sets AccessPoints field to given value.
 
-### HasPayloadTemplateName
+### HasAccessPoints
 
-`func (o *InlineObject146) HasPayloadTemplateName() bool`
+`func (o *InlineObject146) HasAccessPoints() bool`
 
-HasPayloadTemplateName returns a boolean if a field has been set.
-
-### GetAlertTypeId
-
-`func (o *InlineObject146) GetAlertTypeId() string`
-
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
-
-### GetAlertTypeIdOk
-
-`func (o *InlineObject146) GetAlertTypeIdOk() (*string, bool)`
-
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAlertTypeId
-
-`func (o *InlineObject146) SetAlertTypeId(v string)`
-
-SetAlertTypeId sets AlertTypeId field to given value.
-
-### HasAlertTypeId
-
-`func (o *InlineObject146) HasAlertTypeId() bool`
-
-HasAlertTypeId returns a boolean if a field has been set.
+HasAccessPoints returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

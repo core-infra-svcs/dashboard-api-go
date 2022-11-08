@@ -34,8 +34,8 @@ func main() {
     timestamp := time.Now() // time.Time | [optional] The video link will start at this time. The timestamp should be a string in ISO8601 format. If no timestamp is specified, we will assume current time. (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.VideoLinkApi.GetDeviceCameraVideoLink(context.Background(), serial).Timestamp(timestamp).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.VideoLinkApi.GetDeviceCameraVideoLink(context.Background(), serial).Timestamp(timestamp).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `VideoLinkApi.GetDeviceCameraVideoLink``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)

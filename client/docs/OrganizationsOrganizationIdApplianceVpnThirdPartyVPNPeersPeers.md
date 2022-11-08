@@ -5,10 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | The name of the VPN peer | 
-**PublicIp** | **string** | The public IP of the VPN peer | 
-**RemoteId** | Pointer to **string** | [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN. | [optional] 
+**PublicIp** | Pointer to **string** | [optional] The public IP of the VPN peer | [optional] 
 **PrivateSubnets** | **[]string** | The list of the private subnets of the VPN peer | 
-**IpsecPolicies** | Pointer to [**OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersIpsecPolicies**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersIpsecPolicies.md) |  | [optional] 
+**LocalId** | Pointer to **string** | [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to. | [optional] 
+**RemoteId** | Pointer to **string** | [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN. | [optional] 
+**IpsecPolicies** | Pointer to [**InlineResponse20071IpsecPolicies**](InlineResponse20071IpsecPolicies.md) |  | [optional] 
 **IpsecPoliciesPreset** | Pointer to **string** | One of the following available presets: &#39;default&#39;, &#39;aws&#39;, &#39;azure&#39;. If this is provided, the &#39;ipsecPolicies&#39; parameter is ignored. | [optional] 
 **Secret** | **string** | The shared secret with the VPN peer | 
 **IkeVersion** | Pointer to **string** | [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to &#39;1&#39; when omitted. | [optional] [default to "1"]
@@ -18,7 +19,7 @@ Name | Type | Description | Notes
 
 ### NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers
 
-`func NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers(name string, publicIp string, privateSubnets []string, secret string, ) *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers`
+`func NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers(name string, privateSubnets []string, secret string, ) *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers`
 
 NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers instantiates a new OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers object
 This constructor will assign default values to properties that have it defined,
@@ -72,6 +73,56 @@ and a boolean to check if the value has been set.
 
 SetPublicIp sets PublicIp field to given value.
 
+### HasPublicIp
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) HasPublicIp() bool`
+
+HasPublicIp returns a boolean if a field has been set.
+
+### GetPrivateSubnets
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetPrivateSubnets() []string`
+
+GetPrivateSubnets returns the PrivateSubnets field if non-nil, zero value otherwise.
+
+### GetPrivateSubnetsOk
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetPrivateSubnetsOk() (*[]string, bool)`
+
+GetPrivateSubnetsOk returns a tuple with the PrivateSubnets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrivateSubnets
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetPrivateSubnets(v []string)`
+
+SetPrivateSubnets sets PrivateSubnets field to given value.
+
+
+### GetLocalId
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetLocalId() string`
+
+GetLocalId returns the LocalId field if non-nil, zero value otherwise.
+
+### GetLocalIdOk
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetLocalIdOk() (*string, bool)`
+
+GetLocalIdOk returns a tuple with the LocalId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocalId
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetLocalId(v string)`
+
+SetLocalId sets LocalId field to given value.
+
+### HasLocalId
+
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) HasLocalId() bool`
+
+HasLocalId returns a boolean if a field has been set.
 
 ### GetRemoteId
 
@@ -98,42 +149,22 @@ SetRemoteId sets RemoteId field to given value.
 
 HasRemoteId returns a boolean if a field has been set.
 
-### GetPrivateSubnets
-
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetPrivateSubnets() []string`
-
-GetPrivateSubnets returns the PrivateSubnets field if non-nil, zero value otherwise.
-
-### GetPrivateSubnetsOk
-
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetPrivateSubnetsOk() (*[]string, bool)`
-
-GetPrivateSubnetsOk returns a tuple with the PrivateSubnets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPrivateSubnets
-
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetPrivateSubnets(v []string)`
-
-SetPrivateSubnets sets PrivateSubnets field to given value.
-
-
 ### GetIpsecPolicies
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPolicies() OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersIpsecPolicies`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPolicies() InlineResponse20071IpsecPolicies`
 
 GetIpsecPolicies returns the IpsecPolicies field if non-nil, zero value otherwise.
 
 ### GetIpsecPoliciesOk
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPoliciesOk() (*OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersIpsecPolicies, bool)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) GetIpsecPoliciesOk() (*InlineResponse20071IpsecPolicies, bool)`
 
 GetIpsecPoliciesOk returns a tuple with the IpsecPolicies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpsecPolicies
 
-`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetIpsecPolicies(v OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersIpsecPolicies)`
+`func (o *OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers) SetIpsecPolicies(v InlineResponse20071IpsecPolicies)`
 
 SetIpsecPolicies sets IpsecPolicies field to given value.
 

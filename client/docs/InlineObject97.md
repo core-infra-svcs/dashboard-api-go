@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
-**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
-**Conditions** | Pointer to [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | [optional] 
-**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
+**Ids** | **[]string** | The ids of the devices to attempt activation lock bypass. | 
 
 ## Methods
 
 ### NewInlineObject97
 
-`func NewInlineObject97() *InlineObject97`
+`func NewInlineObject97(ids []string, ) *InlineObject97`
 
 NewInlineObject97 instantiates a new InlineObject97 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +25,25 @@ NewInlineObject97WithDefaults instantiates a new InlineObject97 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetIds
 
-`func (o *InlineObject97) GetName() string`
+`func (o *InlineObject97) GetIds() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetIdsOk
 
-`func (o *InlineObject97) GetNameOk() (*string, bool)`
+`func (o *InlineObject97) GetIdsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetIds
 
-`func (o *InlineObject97) SetName(v string)`
+`func (o *InlineObject97) SetIds(v []string)`
 
-SetName sets Name field to given value.
+SetIds sets Ids field to given value.
 
-### HasName
-
-`func (o *InlineObject97) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetSchedule
-
-`func (o *InlineObject97) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule1`
-
-GetSchedule returns the Schedule field if non-nil, zero value otherwise.
-
-### GetScheduleOk
-
-`func (o *InlineObject97) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule1, bool)`
-
-GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSchedule
-
-`func (o *InlineObject97) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule1)`
-
-SetSchedule sets Schedule field to given value.
-
-### HasSchedule
-
-`func (o *InlineObject97) HasSchedule() bool`
-
-HasSchedule returns a boolean if a field has been set.
-
-### GetConditions
-
-`func (o *InlineObject97) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
-
-GetConditions returns the Conditions field if non-nil, zero value otherwise.
-
-### GetConditionsOk
-
-`func (o *InlineObject97) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
-
-GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetConditions
-
-`func (o *InlineObject97) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
-
-SetConditions sets Conditions field to given value.
-
-### HasConditions
-
-`func (o *InlineObject97) HasConditions() bool`
-
-HasConditions returns a boolean if a field has been set.
-
-### GetRecipients
-
-`func (o *InlineObject97) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
-
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
-
-### GetRecipientsOk
-
-`func (o *InlineObject97) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
-
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRecipients
-
-`func (o *InlineObject97) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
-
-SetRecipients sets Recipients field to given value.
-
-### HasRecipients
-
-`func (o *InlineObject97) HasRecipients() bool`
-
-HasRecipients returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineObject97) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineObject97) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineObject97) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineObject97) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

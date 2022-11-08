@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**InlineResponse20015UpgradeWindow**](InlineResponse20015UpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**InlineResponse20015Products**](InlineResponse20015Products.md) |  | [optional] 
+**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG in the network. | [optional] 
+**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG in the network. | [optional] 
+**DnsCustomNameservers** | Pointer to **[]string** | List of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39;. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20015WithDefaults instantiates a new InlineResponse20015 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetDhcpLeaseTime
 
-`func (o *InlineResponse20015) GetUpgradeWindow() InlineResponse20015UpgradeWindow`
+`func (o *InlineResponse20015) GetDhcpLeaseTime() string`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetDhcpLeaseTimeOk
 
-`func (o *InlineResponse20015) GetUpgradeWindowOk() (*InlineResponse20015UpgradeWindow, bool)`
+`func (o *InlineResponse20015) GetDhcpLeaseTimeOk() (*string, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetDhcpLeaseTime
 
-`func (o *InlineResponse20015) SetUpgradeWindow(v InlineResponse20015UpgradeWindow)`
+`func (o *InlineResponse20015) SetDhcpLeaseTime(v string)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
 
-### HasUpgradeWindow
+### HasDhcpLeaseTime
 
-`func (o *InlineResponse20015) HasUpgradeWindow() bool`
+`func (o *InlineResponse20015) HasDhcpLeaseTime() bool`
 
-HasUpgradeWindow returns a boolean if a field has been set.
+HasDhcpLeaseTime returns a boolean if a field has been set.
 
-### GetTimezone
+### GetDnsNameservers
 
-`func (o *InlineResponse20015) GetTimezone() string`
+`func (o *InlineResponse20015) GetDnsNameservers() string`
 
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
 
-### GetTimezoneOk
+### GetDnsNameserversOk
 
-`func (o *InlineResponse20015) GetTimezoneOk() (*string, bool)`
+`func (o *InlineResponse20015) GetDnsNameserversOk() (*string, bool)`
 
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimezone
+### SetDnsNameservers
 
-`func (o *InlineResponse20015) SetTimezone(v string)`
+`func (o *InlineResponse20015) SetDnsNameservers(v string)`
 
-SetTimezone sets Timezone field to given value.
+SetDnsNameservers sets DnsNameservers field to given value.
 
-### HasTimezone
+### HasDnsNameservers
 
-`func (o *InlineResponse20015) HasTimezone() bool`
+`func (o *InlineResponse20015) HasDnsNameservers() bool`
 
-HasTimezone returns a boolean if a field has been set.
+HasDnsNameservers returns a boolean if a field has been set.
 
-### GetProducts
+### GetDnsCustomNameservers
 
-`func (o *InlineResponse20015) GetProducts() InlineResponse20015Products`
+`func (o *InlineResponse20015) GetDnsCustomNameservers() []string`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetDnsCustomNameserversOk
 
-`func (o *InlineResponse20015) GetProductsOk() (*InlineResponse20015Products, bool)`
+`func (o *InlineResponse20015) GetDnsCustomNameserversOk() (*[]string, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetDnsCustomNameservers
 
-`func (o *InlineResponse20015) SetProducts(v InlineResponse20015Products)`
+`func (o *InlineResponse20015) SetDnsCustomNameservers(v []string)`
 
-SetProducts sets Products field to given value.
+SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
 
-### HasProducts
+### HasDnsCustomNameservers
 
-`func (o *InlineResponse20015) HasProducts() bool`
+`func (o *InlineResponse20015) HasDnsCustomNameservers() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasDnsCustomNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

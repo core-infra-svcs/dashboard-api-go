@@ -4,17 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdminId** | Pointer to **string** | Database ID for the admin user who made the API request. | [optional] 
-**Method** | Pointer to **string** | HTTP method used in the API request. | [optional] 
-**Host** | Pointer to **string** | The host which the API request was directed at. | [optional] 
-**Path** | Pointer to **string** | The API request path. | [optional] 
-**QueryString** | Pointer to **string** | The query string sent with the API request. | [optional] 
-**UserAgent** | Pointer to **string** | The API request user agent. | [optional] 
-**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, indicating when the API request was made. | [optional] 
-**ResponseCode** | Pointer to **int32** | API request response code. | [optional] 
-**SourceIp** | Pointer to **string** | Public IP address from which the API request was made. | [optional] 
-**Version** | Pointer to **int32** | API version of the endpoint. | [optional] 
-**OperationId** | Pointer to **string** | Operation ID for the endpoint. | [optional] 
+**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
+**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
+**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
+**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
 
 ## Methods
 
@@ -35,280 +30,155 @@ NewInlineResponse20065WithDefaults instantiates a new InlineResponse20065 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAdminId
+### GetName
 
-`func (o *InlineResponse20065) GetAdminId() string`
+`func (o *InlineResponse20065) GetName() string`
 
-GetAdminId returns the AdminId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAdminIdOk
+### GetNameOk
 
-`func (o *InlineResponse20065) GetAdminIdOk() (*string, bool)`
+`func (o *InlineResponse20065) GetNameOk() (*string, bool)`
 
-GetAdminIdOk returns a tuple with the AdminId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminId
+### SetName
 
-`func (o *InlineResponse20065) SetAdminId(v string)`
+`func (o *InlineResponse20065) SetName(v string)`
 
-SetAdminId sets AdminId field to given value.
+SetName sets Name field to given value.
 
-### HasAdminId
+### HasName
 
-`func (o *InlineResponse20065) HasAdminId() bool`
+`func (o *InlineResponse20065) HasName() bool`
 
-HasAdminId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMethod
+### GetId
 
-`func (o *InlineResponse20065) GetMethod() string`
+`func (o *InlineResponse20065) GetId() string`
 
-GetMethod returns the Method field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetMethodOk
+### GetIdOk
 
-`func (o *InlineResponse20065) GetMethodOk() (*string, bool)`
+`func (o *InlineResponse20065) GetIdOk() (*string, bool)`
 
-GetMethodOk returns a tuple with the Method field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMethod
+### SetId
 
-`func (o *InlineResponse20065) SetMethod(v string)`
+`func (o *InlineResponse20065) SetId(v string)`
 
-SetMethod sets Method field to given value.
+SetId sets Id field to given value.
 
-### HasMethod
+### HasId
 
-`func (o *InlineResponse20065) HasMethod() bool`
+`func (o *InlineResponse20065) HasId() bool`
 
-HasMethod returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetHost
+### GetGroupPolicyId
 
-`func (o *InlineResponse20065) GetHost() string`
+`func (o *InlineResponse20065) GetGroupPolicyId() string`
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetHostOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse20065) GetHostOk() (*string, bool)`
+`func (o *InlineResponse20065) GetGroupPolicyIdOk() (*string, bool)`
 
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetGroupPolicyId
 
-`func (o *InlineResponse20065) SetHost(v string)`
+`func (o *InlineResponse20065) SetGroupPolicyId(v string)`
 
-SetHost sets Host field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasHost
+### HasGroupPolicyId
 
-`func (o *InlineResponse20065) HasHost() bool`
+`func (o *InlineResponse20065) HasGroupPolicyId() bool`
 
-HasHost returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
-### GetPath
+### GetPassphrase
 
-`func (o *InlineResponse20065) GetPath() string`
+`func (o *InlineResponse20065) GetPassphrase() string`
 
-GetPath returns the Path field if non-nil, zero value otherwise.
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-### GetPathOk
+### GetPassphraseOk
 
-`func (o *InlineResponse20065) GetPathOk() (*string, bool)`
+`func (o *InlineResponse20065) GetPassphraseOk() (*string, bool)`
 
-GetPathOk returns a tuple with the Path field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPath
+### SetPassphrase
 
-`func (o *InlineResponse20065) SetPath(v string)`
+`func (o *InlineResponse20065) SetPassphrase(v string)`
 
-SetPath sets Path field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasPath
+### HasPassphrase
 
-`func (o *InlineResponse20065) HasPath() bool`
+`func (o *InlineResponse20065) HasPassphrase() bool`
 
-HasPath returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetQueryString
+### GetWifiPersonalNetworkId
 
-`func (o *InlineResponse20065) GetQueryString() string`
+`func (o *InlineResponse20065) GetWifiPersonalNetworkId() string`
 
-GetQueryString returns the QueryString field if non-nil, zero value otherwise.
+GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
 
-### GetQueryStringOk
+### GetWifiPersonalNetworkIdOk
 
-`func (o *InlineResponse20065) GetQueryStringOk() (*string, bool)`
+`func (o *InlineResponse20065) GetWifiPersonalNetworkIdOk() (*string, bool)`
 
-GetQueryStringOk returns a tuple with the QueryString field if it's non-nil, zero value otherwise
+GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetQueryString
+### SetWifiPersonalNetworkId
 
-`func (o *InlineResponse20065) SetQueryString(v string)`
+`func (o *InlineResponse20065) SetWifiPersonalNetworkId(v string)`
 
-SetQueryString sets QueryString field to given value.
+SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
 
-### HasQueryString
+### HasWifiPersonalNetworkId
 
-`func (o *InlineResponse20065) HasQueryString() bool`
+`func (o *InlineResponse20065) HasWifiPersonalNetworkId() bool`
 
-HasQueryString returns a boolean if a field has been set.
+HasWifiPersonalNetworkId returns a boolean if a field has been set.
 
-### GetUserAgent
+### GetEmail
 
-`func (o *InlineResponse20065) GetUserAgent() string`
+`func (o *InlineResponse20065) GetEmail() string`
 
-GetUserAgent returns the UserAgent field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetUserAgentOk
+### GetEmailOk
 
-`func (o *InlineResponse20065) GetUserAgentOk() (*string, bool)`
+`func (o *InlineResponse20065) GetEmailOk() (*string, bool)`
 
-GetUserAgentOk returns a tuple with the UserAgent field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUserAgent
+### SetEmail
 
-`func (o *InlineResponse20065) SetUserAgent(v string)`
+`func (o *InlineResponse20065) SetEmail(v string)`
 
-SetUserAgent sets UserAgent field to given value.
+SetEmail sets Email field to given value.
 
-### HasUserAgent
+### HasEmail
 
-`func (o *InlineResponse20065) HasUserAgent() bool`
+`func (o *InlineResponse20065) HasEmail() bool`
 
-HasUserAgent returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse20065) GetTs() time.Time`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse20065) GetTsOk() (*time.Time, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse20065) SetTs(v time.Time)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse20065) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
-
-### GetResponseCode
-
-`func (o *InlineResponse20065) GetResponseCode() int32`
-
-GetResponseCode returns the ResponseCode field if non-nil, zero value otherwise.
-
-### GetResponseCodeOk
-
-`func (o *InlineResponse20065) GetResponseCodeOk() (*int32, bool)`
-
-GetResponseCodeOk returns a tuple with the ResponseCode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResponseCode
-
-`func (o *InlineResponse20065) SetResponseCode(v int32)`
-
-SetResponseCode sets ResponseCode field to given value.
-
-### HasResponseCode
-
-`func (o *InlineResponse20065) HasResponseCode() bool`
-
-HasResponseCode returns a boolean if a field has been set.
-
-### GetSourceIp
-
-`func (o *InlineResponse20065) GetSourceIp() string`
-
-GetSourceIp returns the SourceIp field if non-nil, zero value otherwise.
-
-### GetSourceIpOk
-
-`func (o *InlineResponse20065) GetSourceIpOk() (*string, bool)`
-
-GetSourceIpOk returns a tuple with the SourceIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSourceIp
-
-`func (o *InlineResponse20065) SetSourceIp(v string)`
-
-SetSourceIp sets SourceIp field to given value.
-
-### HasSourceIp
-
-`func (o *InlineResponse20065) HasSourceIp() bool`
-
-HasSourceIp returns a boolean if a field has been set.
-
-### GetVersion
-
-`func (o *InlineResponse20065) GetVersion() int32`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *InlineResponse20065) GetVersionOk() (*int32, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *InlineResponse20065) SetVersion(v int32)`
-
-SetVersion sets Version field to given value.
-
-### HasVersion
-
-`func (o *InlineResponse20065) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
-
-### GetOperationId
-
-`func (o *InlineResponse20065) GetOperationId() string`
-
-GetOperationId returns the OperationId field if non-nil, zero value otherwise.
-
-### GetOperationIdOk
-
-`func (o *InlineResponse20065) GetOperationIdOk() (*string, bool)`
-
-GetOperationIdOk returns a tuple with the OperationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOperationId
-
-`func (o *InlineResponse20065) SetOperationId(v string)`
-
-SetOperationId sets OperationId field to given value.
-
-### HasOperationId
-
-`func (o *InlineResponse20065) HasOperationId() bool`
-
-HasOperationId returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
-**Subnet** | Pointer to **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | [optional] 
-**NextHopIp** | Pointer to **string** | IP address of the next hop device to which the device sends its traffic for the subnet | [optional] 
-**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
-**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
+**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
+**StpBridgePriority** | Pointer to [**[]NetworksNetworkIdSwitchStpStpBridgePriority**](NetworksNetworkIdSwitchStpStpBridgePriority.md) | STP bridge priority for switches/stacks or switch profiles. An empty array will clear the STP bridge priority settings. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineObject137WithDefaults instantiates a new InlineObject137 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRstpEnabled
 
-`func (o *InlineObject137) GetName() string`
+`func (o *InlineObject137) GetRstpEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRstpEnabledOk
 
-`func (o *InlineObject137) GetNameOk() (*string, bool)`
+`func (o *InlineObject137) GetRstpEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRstpEnabled
 
-`func (o *InlineObject137) SetName(v string)`
+`func (o *InlineObject137) SetRstpEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetRstpEnabled sets RstpEnabled field to given value.
 
-### HasName
+### HasRstpEnabled
 
-`func (o *InlineObject137) HasName() bool`
+`func (o *InlineObject137) HasRstpEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasRstpEnabled returns a boolean if a field has been set.
 
-### GetSubnet
+### GetStpBridgePriority
 
-`func (o *InlineObject137) GetSubnet() string`
+`func (o *InlineObject137) GetStpBridgePriority() []NetworksNetworkIdSwitchStpStpBridgePriority`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetStpBridgePriorityOk
 
-`func (o *InlineObject137) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject137) GetStpBridgePriorityOk() (*[]NetworksNetworkIdSwitchStpStpBridgePriority, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetStpBridgePriority
 
-`func (o *InlineObject137) SetSubnet(v string)`
+`func (o *InlineObject137) SetStpBridgePriority(v []NetworksNetworkIdSwitchStpStpBridgePriority)`
 
-SetSubnet sets Subnet field to given value.
+SetStpBridgePriority sets StpBridgePriority field to given value.
 
-### HasSubnet
+### HasStpBridgePriority
 
-`func (o *InlineObject137) HasSubnet() bool`
+`func (o *InlineObject137) HasStpBridgePriority() bool`
 
-HasSubnet returns a boolean if a field has been set.
-
-### GetNextHopIp
-
-`func (o *InlineObject137) GetNextHopIp() string`
-
-GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
-
-### GetNextHopIpOk
-
-`func (o *InlineObject137) GetNextHopIpOk() (*string, bool)`
-
-GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNextHopIp
-
-`func (o *InlineObject137) SetNextHopIp(v string)`
-
-SetNextHopIp sets NextHopIp field to given value.
-
-### HasNextHopIp
-
-`func (o *InlineObject137) HasNextHopIp() bool`
-
-HasNextHopIp returns a boolean if a field has been set.
-
-### GetAdvertiseViaOspfEnabled
-
-`func (o *InlineObject137) GetAdvertiseViaOspfEnabled() bool`
-
-GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
-
-### GetAdvertiseViaOspfEnabledOk
-
-`func (o *InlineObject137) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
-
-GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdvertiseViaOspfEnabled
-
-`func (o *InlineObject137) SetAdvertiseViaOspfEnabled(v bool)`
-
-SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
-
-### HasAdvertiseViaOspfEnabled
-
-`func (o *InlineObject137) HasAdvertiseViaOspfEnabled() bool`
-
-HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
-
-### GetPreferOverOspfRoutesEnabled
-
-`func (o *InlineObject137) GetPreferOverOspfRoutesEnabled() bool`
-
-GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
-
-### GetPreferOverOspfRoutesEnabledOk
-
-`func (o *InlineObject137) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
-
-GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPreferOverOspfRoutesEnabled
-
-`func (o *InlineObject137) SetPreferOverOspfRoutesEnabled(v bool)`
-
-SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
-
-### HasPreferOverOspfRoutesEnabled
-
-`func (o *InlineObject137) HasPreferOverOspfRoutesEnabled() bool`
-
-HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+HasStpBridgePriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

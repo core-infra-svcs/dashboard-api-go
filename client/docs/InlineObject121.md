@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name for your port schedule. | [optional] 
-**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule**](NetworksNetworkIdSwitchPortSchedulesPortSchedule.md) |  | [optional] 
+**RuleIds** | **[]string** | A list of quality of service rule IDs arranged in order in which they should be processed by the switch. | 
 
 ## Methods
 
 ### NewInlineObject121
 
-`func NewInlineObject121() *InlineObject121`
+`func NewInlineObject121(ruleIds []string, ) *InlineObject121`
 
 NewInlineObject121 instantiates a new InlineObject121 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject121WithDefaults instantiates a new InlineObject121 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRuleIds
 
-`func (o *InlineObject121) GetName() string`
+`func (o *InlineObject121) GetRuleIds() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRuleIdsOk
 
-`func (o *InlineObject121) GetNameOk() (*string, bool)`
+`func (o *InlineObject121) GetRuleIdsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRuleIds
 
-`func (o *InlineObject121) SetName(v string)`
+`func (o *InlineObject121) SetRuleIds(v []string)`
 
-SetName sets Name field to given value.
+SetRuleIds sets RuleIds field to given value.
 
-### HasName
-
-`func (o *InlineObject121) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetPortSchedule
-
-`func (o *InlineObject121) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule`
-
-GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
-
-### GetPortScheduleOk
-
-`func (o *InlineObject121) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule, bool)`
-
-GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPortSchedule
-
-`func (o *InlineObject121) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule)`
-
-SetPortSchedule sets PortSchedule field to given value.
-
-### HasPortSchedule
-
-`func (o *InlineObject121) HasPortSchedule() bool`
-
-HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

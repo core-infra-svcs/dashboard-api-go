@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **SecondaryDns** | Pointer to **string** | Secondary DNS IP | [optional] 
 **IpAssignedBy** | Pointer to **string** | The way in which the IP is assigned | [optional] 
 **Provider** | Pointer to **string** | Network Provider | [optional] 
-**SignalStat** | Pointer to [**OrganizationsOrganizationIdUplinksStatusesSignalStat**](OrganizationsOrganizationIdUplinksStatusesSignalStat.md) |  | [optional] 
+**SignalStat** | Pointer to [**OrganizationsOrganizationIdCellularGatewayUplinkStatusesSignalStat**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesSignalStat.md) |  | [optional] 
 **ConnectionType** | Pointer to **string** | Connection Type | [optional] 
 **Apn** | Pointer to **string** | Access Point Name | [optional] 
 **Dns1** | Pointer to **string** | Primary DNS IP | [optional] 
@@ -267,20 +267,20 @@ HasProvider returns a boolean if a field has been set.
 
 ### GetSignalStat
 
-`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetSignalStat() OrganizationsOrganizationIdUplinksStatusesSignalStat`
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetSignalStat() OrganizationsOrganizationIdCellularGatewayUplinkStatusesSignalStat`
 
 GetSignalStat returns the SignalStat field if non-nil, zero value otherwise.
 
 ### GetSignalStatOk
 
-`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetSignalStatOk() (*OrganizationsOrganizationIdUplinksStatusesSignalStat, bool)`
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetSignalStatOk() (*OrganizationsOrganizationIdCellularGatewayUplinkStatusesSignalStat, bool)`
 
 GetSignalStatOk returns a tuple with the SignalStat field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSignalStat
 
-`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) SetSignalStat(v OrganizationsOrganizationIdUplinksStatusesSignalStat)`
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) SetSignalStat(v OrganizationsOrganizationIdCellularGatewayUplinkStatusesSignalStat)`
 
 SetSignalStat sets SignalStat field to given value.
 

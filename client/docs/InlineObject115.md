@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The updated mac address of the trusted server | [optional] 
-**Vlan** | Pointer to **int32** | The updated VLAN of the trusted server. It must be between 1 and 4094 | [optional] 
-**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4.md) |  | [optional] 
+**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject115WithDefaults instantiates a new InlineObject115 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetSwitchPorts
 
-`func (o *InlineObject115) GetMac() string`
+`func (o *InlineObject115) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetSwitchPortsOk
 
-`func (o *InlineObject115) GetMacOk() (*string, bool)`
+`func (o *InlineObject115) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetSwitchPorts
 
-`func (o *InlineObject115) SetMac(v string)`
+`func (o *InlineObject115) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
 
-SetMac sets Mac field to given value.
+SetSwitchPorts sets SwitchPorts field to given value.
 
-### HasMac
+### HasSwitchPorts
 
-`func (o *InlineObject115) HasMac() bool`
+`func (o *InlineObject115) HasSwitchPorts() bool`
 
-HasMac returns a boolean if a field has been set.
+HasSwitchPorts returns a boolean if a field has been set.
 
-### GetVlan
+### GetSwitchProfilePorts
 
-`func (o *InlineObject115) GetVlan() int32`
+`func (o *InlineObject115) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetSwitchProfilePortsOk
 
-`func (o *InlineObject115) GetVlanOk() (*int32, bool)`
+`func (o *InlineObject115) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetSwitchProfilePorts
 
-`func (o *InlineObject115) SetVlan(v int32)`
+`func (o *InlineObject115) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
 
-SetVlan sets Vlan field to given value.
+SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
 
-### HasVlan
+### HasSwitchProfilePorts
 
-`func (o *InlineObject115) HasVlan() bool`
+`func (o *InlineObject115) HasSwitchProfilePorts() bool`
 
-HasVlan returns a boolean if a field has been set.
-
-### GetIpv4
-
-`func (o *InlineObject115) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4`
-
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
-
-### GetIpv4Ok
-
-`func (o *InlineObject115) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4, bool)`
-
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv4
-
-`func (o *InlineObject115) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4)`
-
-SetIpv4 sets Ipv4 field to given value.
-
-### HasIpv4
-
-`func (o *InlineObject115) HasIpv4() bool`
-
-HasIpv4 returns a boolean if a field has been set.
+HasSwitchProfilePorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
-**StpBridgePriority** | Pointer to [**[]NetworksNetworkIdSwitchStpStpBridgePriority**](NetworksNetworkIdSwitchStpStpBridgePriority.md) | STP bridge priority for switches/stacks or switch profiles. An empty array will clear the STP bridge priority settings. | [optional] 
+**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
+**CustomPieChartItems** | Pointer to [**[]NetworksNetworkIdTrafficAnalysisCustomPieChartItems**](NetworksNetworkIdTrafficAnalysisCustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject139WithDefaults instantiates a new InlineObject139 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRstpEnabled
+### GetMode
 
-`func (o *InlineObject139) GetRstpEnabled() bool`
+`func (o *InlineObject139) GetMode() string`
 
-GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetRstpEnabledOk
+### GetModeOk
 
-`func (o *InlineObject139) GetRstpEnabledOk() (*bool, bool)`
+`func (o *InlineObject139) GetModeOk() (*string, bool)`
 
-GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRstpEnabled
+### SetMode
 
-`func (o *InlineObject139) SetRstpEnabled(v bool)`
+`func (o *InlineObject139) SetMode(v string)`
 
-SetRstpEnabled sets RstpEnabled field to given value.
+SetMode sets Mode field to given value.
 
-### HasRstpEnabled
+### HasMode
 
-`func (o *InlineObject139) HasRstpEnabled() bool`
+`func (o *InlineObject139) HasMode() bool`
 
-HasRstpEnabled returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetStpBridgePriority
+### GetCustomPieChartItems
 
-`func (o *InlineObject139) GetStpBridgePriority() []NetworksNetworkIdSwitchStpStpBridgePriority`
+`func (o *InlineObject139) GetCustomPieChartItems() []NetworksNetworkIdTrafficAnalysisCustomPieChartItems`
 
-GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
+GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
 
-### GetStpBridgePriorityOk
+### GetCustomPieChartItemsOk
 
-`func (o *InlineObject139) GetStpBridgePriorityOk() (*[]NetworksNetworkIdSwitchStpStpBridgePriority, bool)`
+`func (o *InlineObject139) GetCustomPieChartItemsOk() (*[]NetworksNetworkIdTrafficAnalysisCustomPieChartItems, bool)`
 
-GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
+GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStpBridgePriority
+### SetCustomPieChartItems
 
-`func (o *InlineObject139) SetStpBridgePriority(v []NetworksNetworkIdSwitchStpStpBridgePriority)`
+`func (o *InlineObject139) SetCustomPieChartItems(v []NetworksNetworkIdTrafficAnalysisCustomPieChartItems)`
 
-SetStpBridgePriority sets StpBridgePriority field to given value.
+SetCustomPieChartItems sets CustomPieChartItems field to given value.
 
-### HasStpBridgePriority
+### HasCustomPieChartItems
 
-`func (o *InlineObject139) HasStpBridgePriority() bool`
+`func (o *InlineObject139) HasCustomPieChartItems() bool`
 
-HasStpBridgePriority returns a boolean if a field has been set.
+HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

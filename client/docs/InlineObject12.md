@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Target** | **string** | FQDN, IPv4 or IPv6 address | 
 **Count** | Pointer to **int32** | Count parameter to pass to ping. [1..5], default 5 | [optional] 
 
 ## Methods
 
 ### NewInlineObject12
 
-`func NewInlineObject12() *InlineObject12`
+`func NewInlineObject12(target string, ) *InlineObject12`
 
 NewInlineObject12 instantiates a new InlineObject12 object
 This constructor will assign default values to properties that have it defined,
@@ -24,6 +25,26 @@ will change when the set of required properties is changed
 NewInlineObject12WithDefaults instantiates a new InlineObject12 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetTarget
+
+`func (o *InlineObject12) GetTarget() string`
+
+GetTarget returns the Target field if non-nil, zero value otherwise.
+
+### GetTargetOk
+
+`func (o *InlineObject12) GetTargetOk() (*string, bool)`
+
+GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTarget
+
+`func (o *InlineObject12) SetTarget(v string)`
+
+SetTarget sets Target field to given value.
+
 
 ### GetCount
 

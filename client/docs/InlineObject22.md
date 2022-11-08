@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Enabled** | **bool** | Enable or disable warm spare for a switch | 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare switch | [optional] 
 
 ## Methods
 
 ### NewInlineObject22
 
-`func NewInlineObject22() *InlineObject22`
+`func NewInlineObject22(enabled bool, ) *InlineObject22`
 
 NewInlineObject22 instantiates a new InlineObject22 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineObject22WithDefaults instantiates a new InlineObject22 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUuid
+### GetEnabled
 
-`func (o *InlineObject22) GetUuid() string`
+`func (o *InlineObject22) GetEnabled() bool`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetEnabledOk
 
-`func (o *InlineObject22) GetUuidOk() (*string, bool)`
+`func (o *InlineObject22) GetEnabledOk() (*bool, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetEnabled
 
-`func (o *InlineObject22) SetUuid(v string)`
+`func (o *InlineObject22) SetEnabled(v bool)`
 
-SetUuid sets Uuid field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasUuid
 
-`func (o *InlineObject22) HasUuid() bool`
+### GetSpareSerial
 
-HasUuid returns a boolean if a field has been set.
+`func (o *InlineObject22) GetSpareSerial() string`
 
-### GetMajor
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-`func (o *InlineObject22) GetMajor() int32`
+### GetSpareSerialOk
 
-GetMajor returns the Major field if non-nil, zero value otherwise.
+`func (o *InlineObject22) GetSpareSerialOk() (*string, bool)`
 
-### GetMajorOk
-
-`func (o *InlineObject22) GetMajorOk() (*int32, bool)`
-
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajor
+### SetSpareSerial
 
-`func (o *InlineObject22) SetMajor(v int32)`
+`func (o *InlineObject22) SetSpareSerial(v string)`
 
-SetMajor sets Major field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
-### HasMajor
+### HasSpareSerial
 
-`func (o *InlineObject22) HasMajor() bool`
+`func (o *InlineObject22) HasSpareSerial() bool`
 
-HasMajor returns a boolean if a field has been set.
-
-### GetMinor
-
-`func (o *InlineObject22) GetMinor() int32`
-
-GetMinor returns the Minor field if non-nil, zero value otherwise.
-
-### GetMinorOk
-
-`func (o *InlineObject22) GetMinorOk() (*int32, bool)`
-
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinor
-
-`func (o *InlineObject22) SetMinor(v int32)`
-
-SetMinor sets Minor field to given value.
-
-### HasMinor
-
-`func (o *InlineObject22) HasMinor() bool`
-
-HasMinor returns a boolean if a field has been set.
+HasSpareSerial returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

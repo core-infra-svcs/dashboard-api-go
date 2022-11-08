@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID device type group policies are enabled. | [optional] 
-**DeviceTypePolicies** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies**](NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies.md) | List of device type policies. | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**Identity** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity**](NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity.md) |  | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**EapolKey** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey**](NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineObject155WithDefaults instantiates a new InlineObject155 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetTimeout
 
-`func (o *InlineObject155) GetEnabled() bool`
+`func (o *InlineObject155) GetTimeout() int32`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetTimeoutOk
 
-`func (o *InlineObject155) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject155) GetTimeoutOk() (*int32, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetTimeout
 
-`func (o *InlineObject155) SetEnabled(v bool)`
+`func (o *InlineObject155) SetTimeout(v int32)`
 
-SetEnabled sets Enabled field to given value.
+SetTimeout sets Timeout field to given value.
 
-### HasEnabled
+### HasTimeout
 
-`func (o *InlineObject155) HasEnabled() bool`
+`func (o *InlineObject155) HasTimeout() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasTimeout returns a boolean if a field has been set.
 
-### GetDeviceTypePolicies
+### GetIdentity
 
-`func (o *InlineObject155) GetDeviceTypePolicies() []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies`
+`func (o *InlineObject155) GetIdentity() NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity`
 
-GetDeviceTypePolicies returns the DeviceTypePolicies field if non-nil, zero value otherwise.
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-### GetDeviceTypePoliciesOk
+### GetIdentityOk
 
-`func (o *InlineObject155) GetDeviceTypePoliciesOk() (*[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies, bool)`
+`func (o *InlineObject155) GetIdentityOk() (*NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity, bool)`
 
-GetDeviceTypePoliciesOk returns a tuple with the DeviceTypePolicies field if it's non-nil, zero value otherwise
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceTypePolicies
+### SetIdentity
 
-`func (o *InlineObject155) SetDeviceTypePolicies(v []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies)`
+`func (o *InlineObject155) SetIdentity(v NetworksNetworkIdWirelessSsidsNumberEapOverrideIdentity)`
 
-SetDeviceTypePolicies sets DeviceTypePolicies field to given value.
+SetIdentity sets Identity field to given value.
 
-### HasDeviceTypePolicies
+### HasIdentity
 
-`func (o *InlineObject155) HasDeviceTypePolicies() bool`
+`func (o *InlineObject155) HasIdentity() bool`
 
-HasDeviceTypePolicies returns a boolean if a field has been set.
+HasIdentity returns a boolean if a field has been set.
+
+### GetMaxRetries
+
+`func (o *InlineObject155) GetMaxRetries() int32`
+
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
+
+### GetMaxRetriesOk
+
+`func (o *InlineObject155) GetMaxRetriesOk() (*int32, bool)`
+
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxRetries
+
+`func (o *InlineObject155) SetMaxRetries(v int32)`
+
+SetMaxRetries sets MaxRetries field to given value.
+
+### HasMaxRetries
+
+`func (o *InlineObject155) HasMaxRetries() bool`
+
+HasMaxRetries returns a boolean if a field has been set.
+
+### GetEapolKey
+
+`func (o *InlineObject155) GetEapolKey() NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey`
+
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
+
+### GetEapolKeyOk
+
+`func (o *InlineObject155) GetEapolKeyOk() (*NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey, bool)`
+
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEapolKey
+
+`func (o *InlineObject155) SetEapolKey(v NetworksNetworkIdWirelessSsidsNumberEapOverrideEapolKey)`
+
+SetEapolKey sets EapolKey field to given value.
+
+### HasEapolKey
+
+`func (o *InlineObject155) HasEapolKey() bool`
+
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

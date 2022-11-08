@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Alerts** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyAlerts**](NetworksNetworkIdSwitchDhcpServerPolicyAlerts.md) |  | [optional] 
-**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
-**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set to block. An empty array will clear the entries. | [optional] 
-**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set to allow. An empty array will clear the entries. | [optional] 
-**ArpInspection** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspection**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspection.md) |  | [optional] 
+**Mac** | Pointer to **string** | The updated mac address of the trusted server | [optional] 
+**Vlan** | Pointer to **int32** | The updated VLAN of the trusted server. It must be between 1 and 4094 | [optional] 
+**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineObject113WithDefaults instantiates a new InlineObject113 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlerts
+### GetMac
 
-`func (o *InlineObject113) GetAlerts() NetworksNetworkIdSwitchDhcpServerPolicyAlerts`
+`func (o *InlineObject113) GetMac() string`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetMacOk
 
-`func (o *InlineObject113) GetAlertsOk() (*NetworksNetworkIdSwitchDhcpServerPolicyAlerts, bool)`
+`func (o *InlineObject113) GetMacOk() (*string, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetMac
 
-`func (o *InlineObject113) SetAlerts(v NetworksNetworkIdSwitchDhcpServerPolicyAlerts)`
+`func (o *InlineObject113) SetMac(v string)`
 
-SetAlerts sets Alerts field to given value.
+SetMac sets Mac field to given value.
 
-### HasAlerts
+### HasMac
 
-`func (o *InlineObject113) HasAlerts() bool`
+`func (o *InlineObject113) HasMac() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetVlan
 
-`func (o *InlineObject113) GetDefaultPolicy() string`
+`func (o *InlineObject113) GetVlan() int32`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetVlanOk
 
-`func (o *InlineObject113) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineObject113) GetVlanOk() (*int32, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetVlan
 
-`func (o *InlineObject113) SetDefaultPolicy(v string)`
+`func (o *InlineObject113) SetVlan(v int32)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasDefaultPolicy
+### HasVlan
 
-`func (o *InlineObject113) HasDefaultPolicy() bool`
+`func (o *InlineObject113) HasVlan() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetAllowedServers
+### GetIpv4
 
-`func (o *InlineObject113) GetAllowedServers() []string`
+`func (o *InlineObject113) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4`
 
-GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
 
-### GetAllowedServersOk
+### GetIpv4Ok
 
-`func (o *InlineObject113) GetAllowedServersOk() (*[]string, bool)`
+`func (o *InlineObject113) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4, bool)`
 
-GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedServers
+### SetIpv4
 
-`func (o *InlineObject113) SetAllowedServers(v []string)`
+`func (o *InlineObject113) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4)`
 
-SetAllowedServers sets AllowedServers field to given value.
+SetIpv4 sets Ipv4 field to given value.
 
-### HasAllowedServers
+### HasIpv4
 
-`func (o *InlineObject113) HasAllowedServers() bool`
+`func (o *InlineObject113) HasIpv4() bool`
 
-HasAllowedServers returns a boolean if a field has been set.
-
-### GetBlockedServers
-
-`func (o *InlineObject113) GetBlockedServers() []string`
-
-GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
-
-### GetBlockedServersOk
-
-`func (o *InlineObject113) GetBlockedServersOk() (*[]string, bool)`
-
-GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBlockedServers
-
-`func (o *InlineObject113) SetBlockedServers(v []string)`
-
-SetBlockedServers sets BlockedServers field to given value.
-
-### HasBlockedServers
-
-`func (o *InlineObject113) HasBlockedServers() bool`
-
-HasBlockedServers returns a boolean if a field has been set.
-
-### GetArpInspection
-
-`func (o *InlineObject113) GetArpInspection() NetworksNetworkIdSwitchDhcpServerPolicyArpInspection`
-
-GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
-
-### GetArpInspectionOk
-
-`func (o *InlineObject113) GetArpInspectionOk() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspection, bool)`
-
-GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetArpInspection
-
-`func (o *InlineObject113) SetArpInspection(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspection)`
-
-SetArpInspection sets ArpInspection field to given value.
-
-### HasArpInspection
-
-`func (o *InlineObject113) HasArpInspection() bool`
-
-HasArpInspection returns a boolean if a field has been set.
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

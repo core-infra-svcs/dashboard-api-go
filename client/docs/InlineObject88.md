@@ -4,14 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | **string** | The URL where the test webhook will be sent | 
-**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to an empty string. | [optional] [default to ""]
+**Email** | **string** | Email address of the user | 
+**Name** | Pointer to **string** | Name of the user. Only required If the user is not a Dashboard administrator. | [optional] 
+**Password** | Pointer to **string** | The password for this user account. Only required If the user is not a Dashboard administrator. | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. Can be &#39;Guest&#39; or &#39;802.1X&#39; for wireless networks, or &#39;Client VPN&#39; for wired networks. Defaults to &#39;802.1X&#39;. | [optional] [default to "802.1X"]
+**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator. | [optional] 
+**Authorizations** | [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations1**](NetworksNetworkIdMerakiAuthUsersAuthorizations1.md) | Authorization zones and expiration dates for the user. | 
 
 ## Methods
 
 ### NewInlineObject88
 
-`func NewInlineObject88(url string, ) *InlineObject88`
+`func NewInlineObject88(email string, authorizations []NetworksNetworkIdMerakiAuthUsersAuthorizations1, ) *InlineObject88`
 
 NewInlineObject88 instantiates a new InlineObject88 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +31,170 @@ NewInlineObject88WithDefaults instantiates a new InlineObject88 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetEmail
 
-`func (o *InlineObject88) GetUrl() string`
+`func (o *InlineObject88) GetEmail() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetEmailOk
 
-`func (o *InlineObject88) GetUrlOk() (*string, bool)`
+`func (o *InlineObject88) GetEmailOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetEmail
 
-`func (o *InlineObject88) SetUrl(v string)`
+`func (o *InlineObject88) SetEmail(v string)`
 
-SetUrl sets Url field to given value.
+SetEmail sets Email field to given value.
 
 
-### GetSharedSecret
+### GetName
 
-`func (o *InlineObject88) GetSharedSecret() string`
+`func (o *InlineObject88) GetName() string`
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSharedSecretOk
+### GetNameOk
 
-`func (o *InlineObject88) GetSharedSecretOk() (*string, bool)`
+`func (o *InlineObject88) GetNameOk() (*string, bool)`
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetName
 
-`func (o *InlineObject88) SetSharedSecret(v string)`
+`func (o *InlineObject88) SetName(v string)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetName sets Name field to given value.
 
-### HasSharedSecret
+### HasName
 
-`func (o *InlineObject88) HasSharedSecret() bool`
+`func (o *InlineObject88) HasName() bool`
 
-HasSharedSecret returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetPassword
+
+`func (o *InlineObject88) GetPassword() string`
+
+GetPassword returns the Password field if non-nil, zero value otherwise.
+
+### GetPasswordOk
+
+`func (o *InlineObject88) GetPasswordOk() (*string, bool)`
+
+GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPassword
+
+`func (o *InlineObject88) SetPassword(v string)`
+
+SetPassword sets Password field to given value.
+
+### HasPassword
+
+`func (o *InlineObject88) HasPassword() bool`
+
+HasPassword returns a boolean if a field has been set.
+
+### GetAccountType
+
+`func (o *InlineObject88) GetAccountType() string`
+
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+
+### GetAccountTypeOk
+
+`func (o *InlineObject88) GetAccountTypeOk() (*string, bool)`
+
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountType
+
+`func (o *InlineObject88) SetAccountType(v string)`
+
+SetAccountType sets AccountType field to given value.
+
+### HasAccountType
+
+`func (o *InlineObject88) HasAccountType() bool`
+
+HasAccountType returns a boolean if a field has been set.
+
+### GetEmailPasswordToUser
+
+`func (o *InlineObject88) GetEmailPasswordToUser() bool`
+
+GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
+
+### GetEmailPasswordToUserOk
+
+`func (o *InlineObject88) GetEmailPasswordToUserOk() (*bool, bool)`
+
+GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmailPasswordToUser
+
+`func (o *InlineObject88) SetEmailPasswordToUser(v bool)`
+
+SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
+
+### HasEmailPasswordToUser
+
+`func (o *InlineObject88) HasEmailPasswordToUser() bool`
+
+HasEmailPasswordToUser returns a boolean if a field has been set.
+
+### GetIsAdmin
+
+`func (o *InlineObject88) GetIsAdmin() bool`
+
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
+
+### GetIsAdminOk
+
+`func (o *InlineObject88) GetIsAdminOk() (*bool, bool)`
+
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsAdmin
+
+`func (o *InlineObject88) SetIsAdmin(v bool)`
+
+SetIsAdmin sets IsAdmin field to given value.
+
+### HasIsAdmin
+
+`func (o *InlineObject88) HasIsAdmin() bool`
+
+HasIsAdmin returns a boolean if a field has been set.
+
+### GetAuthorizations
+
+`func (o *InlineObject88) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations1`
+
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+
+### GetAuthorizationsOk
+
+`func (o *InlineObject88) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations1, bool)`
+
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizations
+
+`func (o *InlineObject88) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations1)`
+
+SetAuthorizations sets Authorizations field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

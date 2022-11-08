@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The device MAC address. | [optional] 
-**Name** | Pointer to **string** | The device name. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork**](OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork.md) |  | [optional] 
-**ProductType** | Pointer to **string** | Device product type. | [optional] 
-**Serial** | Pointer to **string** | The device serial number. | [optional] 
-**Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
-**Slots** | Pointer to [**[]OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots**](OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots.md) | Information for the device&#39;s AC power supplies. | [optional] 
+**AdminId** | Pointer to **string** | Database ID for the admin user who made the API request. | [optional] 
+**Method** | Pointer to **string** | HTTP method used in the API request. | [optional] 
+**Host** | Pointer to **string** | The host which the API request was directed at. | [optional] 
+**Path** | Pointer to **string** | The API request path. | [optional] 
+**QueryString** | Pointer to **string** | The query string sent with the API request. | [optional] 
+**UserAgent** | Pointer to **string** | The API request user agent. | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, indicating when the API request was made. | [optional] 
+**ResponseCode** | Pointer to **int32** | API request response code. | [optional] 
+**SourceIp** | Pointer to **string** | Public IP address from which the API request was made. | [optional] 
+**Version** | Pointer to **int32** | API version of the endpoint. | [optional] 
+**OperationId** | Pointer to **string** | Operation ID for the endpoint. | [optional] 
 
 ## Methods
 
@@ -31,180 +35,280 @@ NewInlineResponse20070WithDefaults instantiates a new InlineResponse20070 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetAdminId
 
-`func (o *InlineResponse20070) GetMac() string`
+`func (o *InlineResponse20070) GetAdminId() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetAdminId returns the AdminId field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetAdminIdOk
 
-`func (o *InlineResponse20070) GetMacOk() (*string, bool)`
+`func (o *InlineResponse20070) GetAdminIdOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetAdminIdOk returns a tuple with the AdminId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetAdminId
 
-`func (o *InlineResponse20070) SetMac(v string)`
+`func (o *InlineResponse20070) SetAdminId(v string)`
 
-SetMac sets Mac field to given value.
+SetAdminId sets AdminId field to given value.
 
-### HasMac
+### HasAdminId
 
-`func (o *InlineResponse20070) HasMac() bool`
+`func (o *InlineResponse20070) HasAdminId() bool`
 
-HasMac returns a boolean if a field has been set.
+HasAdminId returns a boolean if a field has been set.
 
-### GetName
+### GetMethod
 
-`func (o *InlineResponse20070) GetName() string`
+`func (o *InlineResponse20070) GetMethod() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMethod returns the Method field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMethodOk
 
-`func (o *InlineResponse20070) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20070) GetMethodOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMethodOk returns a tuple with the Method field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMethod
 
-`func (o *InlineResponse20070) SetName(v string)`
+`func (o *InlineResponse20070) SetMethod(v string)`
 
-SetName sets Name field to given value.
+SetMethod sets Method field to given value.
 
-### HasName
+### HasMethod
 
-`func (o *InlineResponse20070) HasName() bool`
+`func (o *InlineResponse20070) HasMethod() bool`
 
-HasName returns a boolean if a field has been set.
+HasMethod returns a boolean if a field has been set.
 
-### GetNetwork
+### GetHost
 
-`func (o *InlineResponse20070) GetNetwork() OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork`
+`func (o *InlineResponse20070) GetHost() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetHost returns the Host field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetHostOk
 
-`func (o *InlineResponse20070) GetNetworkOk() (*OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork, bool)`
+`func (o *InlineResponse20070) GetHostOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetHost
 
-`func (o *InlineResponse20070) SetNetwork(v OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork)`
+`func (o *InlineResponse20070) SetHost(v string)`
 
-SetNetwork sets Network field to given value.
+SetHost sets Host field to given value.
 
-### HasNetwork
+### HasHost
 
-`func (o *InlineResponse20070) HasNetwork() bool`
+`func (o *InlineResponse20070) HasHost() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasHost returns a boolean if a field has been set.
 
-### GetProductType
+### GetPath
 
-`func (o *InlineResponse20070) GetProductType() string`
+`func (o *InlineResponse20070) GetPath() string`
 
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
+GetPath returns the Path field if non-nil, zero value otherwise.
 
-### GetProductTypeOk
+### GetPathOk
 
-`func (o *InlineResponse20070) GetProductTypeOk() (*string, bool)`
+`func (o *InlineResponse20070) GetPathOk() (*string, bool)`
 
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+GetPathOk returns a tuple with the Path field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductType
+### SetPath
 
-`func (o *InlineResponse20070) SetProductType(v string)`
+`func (o *InlineResponse20070) SetPath(v string)`
 
-SetProductType sets ProductType field to given value.
+SetPath sets Path field to given value.
 
-### HasProductType
+### HasPath
 
-`func (o *InlineResponse20070) HasProductType() bool`
+`func (o *InlineResponse20070) HasPath() bool`
 
-HasProductType returns a boolean if a field has been set.
+HasPath returns a boolean if a field has been set.
 
-### GetSerial
+### GetQueryString
 
-`func (o *InlineResponse20070) GetSerial() string`
+`func (o *InlineResponse20070) GetQueryString() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetQueryString returns the QueryString field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetQueryStringOk
 
-`func (o *InlineResponse20070) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20070) GetQueryStringOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetQueryStringOk returns a tuple with the QueryString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetQueryString
 
-`func (o *InlineResponse20070) SetSerial(v string)`
+`func (o *InlineResponse20070) SetQueryString(v string)`
 
-SetSerial sets Serial field to given value.
+SetQueryString sets QueryString field to given value.
 
-### HasSerial
+### HasQueryString
 
-`func (o *InlineResponse20070) HasSerial() bool`
+`func (o *InlineResponse20070) HasQueryString() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasQueryString returns a boolean if a field has been set.
 
-### GetTags
+### GetUserAgent
 
-`func (o *InlineResponse20070) GetTags() []string`
+`func (o *InlineResponse20070) GetUserAgent() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetUserAgent returns the UserAgent field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetUserAgentOk
 
-`func (o *InlineResponse20070) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse20070) GetUserAgentOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetUserAgentOk returns a tuple with the UserAgent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetUserAgent
 
-`func (o *InlineResponse20070) SetTags(v []string)`
+`func (o *InlineResponse20070) SetUserAgent(v string)`
 
-SetTags sets Tags field to given value.
+SetUserAgent sets UserAgent field to given value.
 
-### HasTags
+### HasUserAgent
 
-`func (o *InlineResponse20070) HasTags() bool`
+`func (o *InlineResponse20070) HasUserAgent() bool`
 
-HasTags returns a boolean if a field has been set.
+HasUserAgent returns a boolean if a field has been set.
 
-### GetSlots
+### GetTs
 
-`func (o *InlineResponse20070) GetSlots() []OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots`
+`func (o *InlineResponse20070) GetTs() time.Time`
 
-GetSlots returns the Slots field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetSlotsOk
+### GetTsOk
 
-`func (o *InlineResponse20070) GetSlotsOk() (*[]OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots, bool)`
+`func (o *InlineResponse20070) GetTsOk() (*time.Time, bool)`
 
-GetSlotsOk returns a tuple with the Slots field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSlots
+### SetTs
 
-`func (o *InlineResponse20070) SetSlots(v []OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots)`
+`func (o *InlineResponse20070) SetTs(v time.Time)`
 
-SetSlots sets Slots field to given value.
+SetTs sets Ts field to given value.
 
-### HasSlots
+### HasTs
 
-`func (o *InlineResponse20070) HasSlots() bool`
+`func (o *InlineResponse20070) HasTs() bool`
 
-HasSlots returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
+
+### GetResponseCode
+
+`func (o *InlineResponse20070) GetResponseCode() int32`
+
+GetResponseCode returns the ResponseCode field if non-nil, zero value otherwise.
+
+### GetResponseCodeOk
+
+`func (o *InlineResponse20070) GetResponseCodeOk() (*int32, bool)`
+
+GetResponseCodeOk returns a tuple with the ResponseCode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResponseCode
+
+`func (o *InlineResponse20070) SetResponseCode(v int32)`
+
+SetResponseCode sets ResponseCode field to given value.
+
+### HasResponseCode
+
+`func (o *InlineResponse20070) HasResponseCode() bool`
+
+HasResponseCode returns a boolean if a field has been set.
+
+### GetSourceIp
+
+`func (o *InlineResponse20070) GetSourceIp() string`
+
+GetSourceIp returns the SourceIp field if non-nil, zero value otherwise.
+
+### GetSourceIpOk
+
+`func (o *InlineResponse20070) GetSourceIpOk() (*string, bool)`
+
+GetSourceIpOk returns a tuple with the SourceIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSourceIp
+
+`func (o *InlineResponse20070) SetSourceIp(v string)`
+
+SetSourceIp sets SourceIp field to given value.
+
+### HasSourceIp
+
+`func (o *InlineResponse20070) HasSourceIp() bool`
+
+HasSourceIp returns a boolean if a field has been set.
+
+### GetVersion
+
+`func (o *InlineResponse20070) GetVersion() int32`
+
+GetVersion returns the Version field if non-nil, zero value otherwise.
+
+### GetVersionOk
+
+`func (o *InlineResponse20070) GetVersionOk() (*int32, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVersion
+
+`func (o *InlineResponse20070) SetVersion(v int32)`
+
+SetVersion sets Version field to given value.
+
+### HasVersion
+
+`func (o *InlineResponse20070) HasVersion() bool`
+
+HasVersion returns a boolean if a field has been set.
+
+### GetOperationId
+
+`func (o *InlineResponse20070) GetOperationId() string`
+
+GetOperationId returns the OperationId field if non-nil, zero value otherwise.
+
+### GetOperationIdOk
+
+`func (o *InlineResponse20070) GetOperationIdOk() (*string, bool)`
+
+GetOperationIdOk returns a tuple with the OperationId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOperationId
+
+`func (o *InlineResponse20070) SetOperationId(v string)`
+
+SetOperationId sets OperationId field to given value.
+
+### HasOperationId
+
+`func (o *InlineResponse20070) HasOperationId() bool`
+
+HasOperationId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

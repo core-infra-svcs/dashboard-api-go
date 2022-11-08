@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
+**Group** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedStagesGroup**](NetworksNetworkIdFirmwareUpgradesStagedStagesGroup.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse20021WithDefaults instantiates a new InlineResponse20021 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetGroup
 
-`func (o *InlineResponse20021) GetName() string`
+`func (o *InlineResponse20021) GetGroup() NetworksNetworkIdFirmwareUpgradesStagedStagesGroup`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetGroup returns the Group field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetGroupOk
 
-`func (o *InlineResponse20021) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20021) GetGroupOk() (*NetworksNetworkIdFirmwareUpgradesStagedStagesGroup, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetGroup
 
-`func (o *InlineResponse20021) SetName(v string)`
+`func (o *InlineResponse20021) SetGroup(v NetworksNetworkIdFirmwareUpgradesStagedStagesGroup)`
 
-SetName sets Name field to given value.
+SetGroup sets Group field to given value.
 
-### HasName
+### HasGroup
 
-`func (o *InlineResponse20021) HasName() bool`
+`func (o *InlineResponse20021) HasGroup() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetClientId
-
-`func (o *InlineResponse20021) GetClientId() string`
-
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
-
-### GetClientIdOk
-
-`func (o *InlineResponse20021) GetClientIdOk() (*string, bool)`
-
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientId
-
-`func (o *InlineResponse20021) SetClientId(v string)`
-
-SetClientId sets ClientId field to given value.
-
-### HasClientId
-
-`func (o *InlineResponse20021) HasClientId() bool`
-
-HasClientId returns a boolean if a field has been set.
-
-### GetAssigned
-
-`func (o *InlineResponse20021) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
-
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
-
-### GetAssignedOk
-
-`func (o *InlineResponse20021) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
-
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAssigned
-
-`func (o *InlineResponse20021) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
-
-SetAssigned sets Assigned field to given value.
-
-### HasAssigned
-
-`func (o *InlineResponse20021) HasAssigned() bool`
-
-HasAssigned returns a boolean if a field has been set.
+HasGroup returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

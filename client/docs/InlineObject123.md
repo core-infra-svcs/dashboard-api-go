@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RuleIds** | **[]string** | A list of quality of service rule IDs arranged in order in which they should be processed by the switch. | 
+**DefaultSettings** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastDefaultSettings**](NetworksNetworkIdSwitchRoutingMulticastDefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]NetworksNetworkIdSwitchRoutingMulticastOverrides**](NetworksNetworkIdSwitchRoutingMulticastOverrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings. An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
 ### NewInlineObject123
 
-`func NewInlineObject123(ruleIds []string, ) *InlineObject123`
+`func NewInlineObject123() *InlineObject123`
 
 NewInlineObject123 instantiates a new InlineObject123 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject123WithDefaults instantiates a new InlineObject123 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRuleIds
+### GetDefaultSettings
 
-`func (o *InlineObject123) GetRuleIds() []string`
+`func (o *InlineObject123) GetDefaultSettings() NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
 
-GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetRuleIdsOk
+### GetDefaultSettingsOk
 
-`func (o *InlineObject123) GetRuleIdsOk() (*[]string, bool)`
+`func (o *InlineObject123) GetDefaultSettingsOk() (*NetworksNetworkIdSwitchRoutingMulticastDefaultSettings, bool)`
 
-GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRuleIds
+### SetDefaultSettings
 
-`func (o *InlineObject123) SetRuleIds(v []string)`
+`func (o *InlineObject123) SetDefaultSettings(v NetworksNetworkIdSwitchRoutingMulticastDefaultSettings)`
 
-SetRuleIds sets RuleIds field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
+### HasDefaultSettings
+
+`func (o *InlineObject123) HasDefaultSettings() bool`
+
+HasDefaultSettings returns a boolean if a field has been set.
+
+### GetOverrides
+
+`func (o *InlineObject123) GetOverrides() []NetworksNetworkIdSwitchRoutingMulticastOverrides`
+
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+
+### GetOverridesOk
+
+`func (o *InlineObject123) GetOverridesOk() (*[]NetworksNetworkIdSwitchRoutingMulticastOverrides, bool)`
+
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOverrides
+
+`func (o *InlineObject123) SetOverrides(v []NetworksNetworkIdSwitchRoutingMulticastOverrides)`
+
+SetOverrides sets Overrides field to given value.
+
+### HasOverrides
+
+`func (o *InlineObject123) HasOverrides() bool`
+
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

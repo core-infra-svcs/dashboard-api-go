@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the user. Only allowed If the user is not Dashboard administrator. | [optional] 
-**Password** | Pointer to **string** | The password for this user account. Only allowed If the user is not Dashboard administrator. | [optional] 
-**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
-**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations**](NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md) | Authorization zones and expiration dates for the user. | [optional] 
+**Name** | Pointer to **string** | Name of the MQTT broker. | [optional] 
+**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
+**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
+**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
+**Authentication** | Pointer to **map[string]interface{}** | Authentication settings of the MQTT broker | [optional] 
 
 ## Methods
 
@@ -53,80 +54,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetPassword
+### GetHost
 
-`func (o *InlineObject91) GetPassword() string`
+`func (o *InlineObject91) GetHost() string`
 
-GetPassword returns the Password field if non-nil, zero value otherwise.
+GetHost returns the Host field if non-nil, zero value otherwise.
 
-### GetPasswordOk
+### GetHostOk
 
-`func (o *InlineObject91) GetPasswordOk() (*string, bool)`
+`func (o *InlineObject91) GetHostOk() (*string, bool)`
 
-GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
+GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassword
+### SetHost
 
-`func (o *InlineObject91) SetPassword(v string)`
+`func (o *InlineObject91) SetHost(v string)`
 
-SetPassword sets Password field to given value.
+SetHost sets Host field to given value.
 
-### HasPassword
+### HasHost
 
-`func (o *InlineObject91) HasPassword() bool`
+`func (o *InlineObject91) HasHost() bool`
 
-HasPassword returns a boolean if a field has been set.
+HasHost returns a boolean if a field has been set.
 
-### GetEmailPasswordToUser
+### GetPort
 
-`func (o *InlineObject91) GetEmailPasswordToUser() bool`
+`func (o *InlineObject91) GetPort() int32`
 
-GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetEmailPasswordToUserOk
+### GetPortOk
 
-`func (o *InlineObject91) GetEmailPasswordToUserOk() (*bool, bool)`
+`func (o *InlineObject91) GetPortOk() (*int32, bool)`
 
-GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmailPasswordToUser
+### SetPort
 
-`func (o *InlineObject91) SetEmailPasswordToUser(v bool)`
+`func (o *InlineObject91) SetPort(v int32)`
 
-SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
+SetPort sets Port field to given value.
 
-### HasEmailPasswordToUser
+### HasPort
 
-`func (o *InlineObject91) HasEmailPasswordToUser() bool`
+`func (o *InlineObject91) HasPort() bool`
 
-HasEmailPasswordToUser returns a boolean if a field has been set.
+HasPort returns a boolean if a field has been set.
 
-### GetAuthorizations
+### GetSecurity
 
-`func (o *InlineObject91) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations`
+`func (o *InlineObject91) GetSecurity() NetworksNetworkIdMqttBrokersSecurity`
 
-GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+GetSecurity returns the Security field if non-nil, zero value otherwise.
 
-### GetAuthorizationsOk
+### GetSecurityOk
 
-`func (o *InlineObject91) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations, bool)`
+`func (o *InlineObject91) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity, bool)`
 
-GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthorizations
+### SetSecurity
 
-`func (o *InlineObject91) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations)`
+`func (o *InlineObject91) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity)`
 
-SetAuthorizations sets Authorizations field to given value.
+SetSecurity sets Security field to given value.
 
-### HasAuthorizations
+### HasSecurity
 
-`func (o *InlineObject91) HasAuthorizations() bool`
+`func (o *InlineObject91) HasSecurity() bool`
 
-HasAuthorizations returns a boolean if a field has been set.
+HasSecurity returns a boolean if a field has been set.
+
+### GetAuthentication
+
+`func (o *InlineObject91) GetAuthentication() map[string]interface{}`
+
+GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
+
+### GetAuthenticationOk
+
+`func (o *InlineObject91) GetAuthenticationOk() (*map[string]interface{}, bool)`
+
+GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthentication
+
+`func (o *InlineObject91) SetAuthentication(v map[string]interface{})`
+
+SetAuthentication sets Authentication field to given value.
+
+### HasAuthentication
+
+`func (o *InlineObject91) HasAuthentication() bool`
+
+HasAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

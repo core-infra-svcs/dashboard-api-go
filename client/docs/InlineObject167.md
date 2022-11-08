@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the organization | [optional] 
-**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
+**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
+**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
 
 ## Methods
 
 ### NewInlineObject167
 
-`func NewInlineObject167() *InlineObject167`
+`func NewInlineObject167(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineObject167`
 
 NewInlineObject167 instantiates a new InlineObject167 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,75 @@ NewInlineObject167WithDefaults instantiates a new InlineObject167 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConfirmed
 
-`func (o *InlineObject167) GetName() string`
+`func (o *InlineObject167) GetConfirmed() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConfirmedOk
 
-`func (o *InlineObject167) GetNameOk() (*string, bool)`
+`func (o *InlineObject167) GetConfirmedOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConfirmed
 
-`func (o *InlineObject167) SetName(v string)`
+`func (o *InlineObject167) SetConfirmed(v bool)`
 
-SetName sets Name field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasName
+### HasConfirmed
 
-`func (o *InlineObject167) HasName() bool`
+`func (o *InlineObject167) HasConfirmed() bool`
 
-HasName returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
 
-### GetApi
+### GetSynchronous
 
-`func (o *InlineObject167) GetApi() OrganizationsOrganizationIdApi`
+`func (o *InlineObject167) GetSynchronous() bool`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetSynchronousOk
 
-`func (o *InlineObject167) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
+`func (o *InlineObject167) GetSynchronousOk() (*bool, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetSynchronous
 
-`func (o *InlineObject167) SetApi(v OrganizationsOrganizationIdApi)`
+`func (o *InlineObject167) SetSynchronous(v bool)`
 
-SetApi sets Api field to given value.
+SetSynchronous sets Synchronous field to given value.
 
-### HasApi
+### HasSynchronous
 
-`func (o *InlineObject167) HasApi() bool`
+`func (o *InlineObject167) HasSynchronous() bool`
 
-HasApi returns a boolean if a field has been set.
+HasSynchronous returns a boolean if a field has been set.
+
+### GetActions
+
+`func (o *InlineObject167) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
+
+GetActions returns the Actions field if non-nil, zero value otherwise.
+
+### GetActionsOk
+
+`func (o *InlineObject167) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
+
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActions
+
+`func (o *InlineObject167) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
+
+SetActions sets Actions field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

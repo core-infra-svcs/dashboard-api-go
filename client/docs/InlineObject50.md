@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
+**Name** | **string** | Name of the custom performance class | 
 **MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
 **MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
 **MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject50
 
-`func NewInlineObject50() *InlineObject50`
+`func NewInlineObject50(name string, ) *InlineObject50`
 
 NewInlineObject50 instantiates a new InlineObject50 object
 This constructor will assign default values to properties that have it defined,
@@ -47,11 +47,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject50) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetMaxLatency
 

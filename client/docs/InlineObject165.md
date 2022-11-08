@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
-**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
-**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
+**Name** | **string** | The name of the organization | 
+**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject165
 
-`func NewInlineObject165() *InlineObject165`
+`func NewInlineObject165(name string, ) *InlineObject165`
 
 NewInlineObject165 instantiates a new InlineObject165 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineObject165WithDefaults instantiates a new InlineObject165 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConcentrator
+### GetName
 
-`func (o *InlineObject165) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
+`func (o *InlineObject165) GetName() string`
 
-GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetConcentratorOk
+### GetNameOk
 
-`func (o *InlineObject165) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
+`func (o *InlineObject165) GetNameOk() (*string, bool)`
 
-GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConcentrator
+### SetName
 
-`func (o *InlineObject165) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
+`func (o *InlineObject165) SetName(v string)`
 
-SetConcentrator sets Concentrator field to given value.
+SetName sets Name field to given value.
 
-### HasConcentrator
 
-`func (o *InlineObject165) HasConcentrator() bool`
+### GetManagement
 
-HasConcentrator returns a boolean if a field has been set.
+`func (o *InlineObject165) GetManagement() OrganizationsManagement`
 
-### GetSplitTunnel
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-`func (o *InlineObject165) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
+### GetManagementOk
 
-GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
+`func (o *InlineObject165) GetManagementOk() (*OrganizationsManagement, bool)`
 
-### GetSplitTunnelOk
-
-`func (o *InlineObject165) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
-
-GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplitTunnel
+### SetManagement
 
-`func (o *InlineObject165) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
+`func (o *InlineObject165) SetManagement(v OrganizationsManagement)`
 
-SetSplitTunnel sets SplitTunnel field to given value.
+SetManagement sets Management field to given value.
 
-### HasSplitTunnel
+### HasManagement
 
-`func (o *InlineObject165) HasSplitTunnel() bool`
+`func (o *InlineObject165) HasManagement() bool`
 
-HasSplitTunnel returns a boolean if a field has been set.
-
-### GetFailover
-
-`func (o *InlineObject165) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
-
-GetFailover returns the Failover field if non-nil, zero value otherwise.
-
-### GetFailoverOk
-
-`func (o *InlineObject165) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
-
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFailover
-
-`func (o *InlineObject165) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
-
-SetFailover sets Failover field to given value.
-
-### HasFailover
-
-`func (o *InlineObject165) HasFailover() bool`
-
-HasFailover returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

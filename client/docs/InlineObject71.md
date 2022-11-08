@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ssids** | [**NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids**](NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids.md) |  | 
+**DevicePolicy** | **string** | The policy to assign. Can be &#39;Whitelisted&#39;, &#39;Blocked&#39;, &#39;Normal&#39; or &#39;Group policy&#39;. Required. | 
+**GroupPolicyId** | Pointer to **string** | [optional] If &#39;devicePolicy&#39; is set to &#39;Group policy&#39; this param is used to specify the group policy ID. | [optional] 
 
 ## Methods
 
 ### NewInlineObject71
 
-`func NewInlineObject71(ssids NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, ) *InlineObject71`
+`func NewInlineObject71(devicePolicy string, ) *InlineObject71`
 
 NewInlineObject71 instantiates a new InlineObject71 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,50 @@ NewInlineObject71WithDefaults instantiates a new InlineObject71 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsids
+### GetDevicePolicy
 
-`func (o *InlineObject71) GetSsids() NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids`
+`func (o *InlineObject71) GetDevicePolicy() string`
 
-GetSsids returns the Ssids field if non-nil, zero value otherwise.
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-### GetSsidsOk
+### GetDevicePolicyOk
 
-`func (o *InlineObject71) GetSsidsOk() (*NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, bool)`
+`func (o *InlineObject71) GetDevicePolicyOk() (*string, bool)`
 
-GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsids
+### SetDevicePolicy
 
-`func (o *InlineObject71) SetSsids(v NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids)`
+`func (o *InlineObject71) SetDevicePolicy(v string)`
 
-SetSsids sets Ssids field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
+
+### GetGroupPolicyId
+
+`func (o *InlineObject71) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineObject71) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineObject71) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+### HasGroupPolicyId
+
+`func (o *InlineObject71) HasGroupPolicyId() bool`
+
+HasGroupPolicyId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

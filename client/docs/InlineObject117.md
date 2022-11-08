@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
-**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
+**Overrides** | Pointer to [**[]NetworksNetworkIdSwitchMtuOverrides**](NetworksNetworkIdSwitchMtuOverrides.md) | Override MTU size for individual switches or switch profiles. An empty array will clear overrides. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject117WithDefaults instantiates a new InlineObject117 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchPorts
+### GetDefaultMtuSize
 
-`func (o *InlineObject117) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
+`func (o *InlineObject117) GetDefaultMtuSize() int32`
 
-GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
+GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
 
-### GetSwitchPortsOk
+### GetDefaultMtuSizeOk
 
-`func (o *InlineObject117) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
+`func (o *InlineObject117) GetDefaultMtuSizeOk() (*int32, bool)`
 
-GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
+GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchPorts
+### SetDefaultMtuSize
 
-`func (o *InlineObject117) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
+`func (o *InlineObject117) SetDefaultMtuSize(v int32)`
 
-SetSwitchPorts sets SwitchPorts field to given value.
+SetDefaultMtuSize sets DefaultMtuSize field to given value.
 
-### HasSwitchPorts
+### HasDefaultMtuSize
 
-`func (o *InlineObject117) HasSwitchPorts() bool`
+`func (o *InlineObject117) HasDefaultMtuSize() bool`
 
-HasSwitchPorts returns a boolean if a field has been set.
+HasDefaultMtuSize returns a boolean if a field has been set.
 
-### GetSwitchProfilePorts
+### GetOverrides
 
-`func (o *InlineObject117) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
+`func (o *InlineObject117) GetOverrides() []NetworksNetworkIdSwitchMtuOverrides`
 
-GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetSwitchProfilePortsOk
+### GetOverridesOk
 
-`func (o *InlineObject117) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
+`func (o *InlineObject117) GetOverridesOk() (*[]NetworksNetworkIdSwitchMtuOverrides, bool)`
 
-GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfilePorts
+### SetOverrides
 
-`func (o *InlineObject117) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
+`func (o *InlineObject117) SetOverrides(v []NetworksNetworkIdSwitchMtuOverrides)`
 
-SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasSwitchProfilePorts
+### HasOverrides
 
-`func (o *InlineObject117) HasSwitchProfilePorts() bool`
+`func (o *InlineObject117) HasOverrides() bool`
 
-HasSwitchProfilePorts returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

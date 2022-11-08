@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
+**Name** | **string** | The name of the new profile. Must be unique. This parameter is required. | 
 **MotionBasedRetentionEnabled** | Pointer to **bool** | Deletes footage older than 3 days in which no motion was detected. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras. | [optional] 
 **RestrictedBandwidthModeEnabled** | Pointer to **bool** | Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras. | [optional] 
 **AudioRecordingEnabled** | Pointer to **bool** | Whether or not to record audio. Can be either true or false. Defaults to false. | [optional] 
@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject62
 
-`func NewInlineObject62() *InlineObject62`
+`func NewInlineObject62(name string, ) *InlineObject62`
 
 NewInlineObject62 instantiates a new InlineObject62 object
 This constructor will assign default values to properties that have it defined,
@@ -52,11 +52,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject62) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetMotionBasedRetentionEnabled
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
+**ResultingLicenses** | Pointer to [**[]InlineResponse20088**](InlineResponse20088.md) | Resulting licenses from the move | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20089WithDefaults instantiates a new InlineResponse20089 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificate
+### GetResultingLicenses
 
-`func (o *InlineResponse20089) GetCertificate() string`
+`func (o *InlineResponse20089) GetResultingLicenses() []InlineResponse20088`
 
-GetCertificate returns the Certificate field if non-nil, zero value otherwise.
+GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
 
-### GetCertificateOk
+### GetResultingLicensesOk
 
-`func (o *InlineResponse20089) GetCertificateOk() (*string, bool)`
+`func (o *InlineResponse20089) GetResultingLicensesOk() (*[]InlineResponse20088, bool)`
 
-GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
+GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificate
+### SetResultingLicenses
 
-`func (o *InlineResponse20089) SetCertificate(v string)`
+`func (o *InlineResponse20089) SetResultingLicenses(v []InlineResponse20088)`
 
-SetCertificate sets Certificate field to given value.
+SetResultingLicenses sets ResultingLicenses field to given value.
 
-### HasCertificate
+### HasResultingLicenses
 
-`func (o *InlineResponse20089) HasCertificate() bool`
+`func (o *InlineResponse20089) HasResultingLicenses() bool`
 
-HasCertificate returns a boolean if a field has been set.
+HasResultingLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

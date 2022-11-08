@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingLicenses** | Pointer to [**[]InlineResponse20078**](InlineResponse20078.md) | Resulting licenses from the move | [optional] 
+**Counts** | Pointer to [**InlineResponse20079Counts**](InlineResponse20079Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20079WithDefaults instantiates a new InlineResponse20079 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingLicenses
+### GetCounts
 
-`func (o *InlineResponse20079) GetResultingLicenses() []InlineResponse20078`
+`func (o *InlineResponse20079) GetCounts() InlineResponse20079Counts`
 
-GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetResultingLicensesOk
+### GetCountsOk
 
-`func (o *InlineResponse20079) GetResultingLicensesOk() (*[]InlineResponse20078, bool)`
+`func (o *InlineResponse20079) GetCountsOk() (*InlineResponse20079Counts, bool)`
 
-GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingLicenses
+### SetCounts
 
-`func (o *InlineResponse20079) SetResultingLicenses(v []InlineResponse20078)`
+`func (o *InlineResponse20079) SetCounts(v InlineResponse20079Counts)`
 
-SetResultingLicenses sets ResultingLicenses field to given value.
+SetCounts sets Counts field to given value.
 
-### HasResultingLicenses
+### HasCounts
 
-`func (o *InlineResponse20079) HasResultingLicenses() bool`
+`func (o *InlineResponse20079) HasCounts() bool`
 
-HasResultingLicenses returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

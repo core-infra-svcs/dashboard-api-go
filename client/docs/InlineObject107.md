@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of this target group | [optional] 
-**Scope** | Pointer to **string** | The scope and tag options of the target group. Comma separated values beginning with one of withAny, withAll, withoutAny, withoutAll, all, none, followed by tags. Default to none if empty. | [optional] 
+**Rules** | [**[]NetworksNetworkIdSwitchAccessControlListsRules**](NetworksNetworkIdSwitchAccessControlListsRules.md) | An ordered array of the access control list rules (not including the default rule). An empty array will clear the rules. | 
 
 ## Methods
 
 ### NewInlineObject107
 
-`func NewInlineObject107() *InlineObject107`
+`func NewInlineObject107(rules []NetworksNetworkIdSwitchAccessControlListsRules, ) *InlineObject107`
 
 NewInlineObject107 instantiates a new InlineObject107 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject107WithDefaults instantiates a new InlineObject107 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRules
 
-`func (o *InlineObject107) GetName() string`
+`func (o *InlineObject107) GetRules() []NetworksNetworkIdSwitchAccessControlListsRules`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesOk
 
-`func (o *InlineObject107) GetNameOk() (*string, bool)`
+`func (o *InlineObject107) GetRulesOk() (*[]NetworksNetworkIdSwitchAccessControlListsRules, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRules
 
-`func (o *InlineObject107) SetName(v string)`
+`func (o *InlineObject107) SetRules(v []NetworksNetworkIdSwitchAccessControlListsRules)`
 
-SetName sets Name field to given value.
+SetRules sets Rules field to given value.
 
-### HasName
-
-`func (o *InlineObject107) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineObject107) GetScope() string`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineObject107) GetScopeOk() (*string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineObject107) SetScope(v string)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineObject107) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

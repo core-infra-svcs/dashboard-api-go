@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
-**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
+**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
+**Plans** | Pointer to [**[]NetworksNetworkIdWirelessBillingPlans**](NetworksNetworkIdWirelessBillingPlans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineObject147WithDefaults instantiates a new InlineObject147 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetCurrency
 
-`func (o *InlineObject147) GetEnabled() bool`
+`func (o *InlineObject147) GetCurrency() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetCurrency returns the Currency field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetCurrencyOk
 
-`func (o *InlineObject147) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject147) GetCurrencyOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetCurrency
 
-`func (o *InlineObject147) SetEnabled(v bool)`
+`func (o *InlineObject147) SetCurrency(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetCurrency sets Currency field to given value.
 
-### HasEnabled
+### HasCurrency
 
-`func (o *InlineObject147) HasEnabled() bool`
+`func (o *InlineObject147) HasCurrency() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasCurrency returns a boolean if a field has been set.
 
-### GetVlanId
+### GetPlans
 
-`func (o *InlineObject147) GetVlanId() int32`
+`func (o *InlineObject147) GetPlans() []NetworksNetworkIdWirelessBillingPlans`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetPlans returns the Plans field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetPlansOk
 
-`func (o *InlineObject147) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineObject147) GetPlansOk() (*[]NetworksNetworkIdWirelessBillingPlans, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetPlans
 
-`func (o *InlineObject147) SetVlanId(v int32)`
+`func (o *InlineObject147) SetPlans(v []NetworksNetworkIdWirelessBillingPlans)`
 
-SetVlanId sets VlanId field to given value.
+SetPlans sets Plans field to given value.
 
-### HasVlanId
+### HasPlans
 
-`func (o *InlineObject147) HasVlanId() bool`
+`func (o *InlineObject147) HasPlans() bool`
 
-HasVlanId returns a boolean if a field has been set.
-
-### GetProtocols
-
-`func (o *InlineObject147) GetProtocols() []string`
-
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
-
-### GetProtocolsOk
-
-`func (o *InlineObject147) GetProtocolsOk() (*[]string, bool)`
-
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtocols
-
-`func (o *InlineObject147) SetProtocols(v []string)`
-
-SetProtocols sets Protocols field to given value.
-
-### HasProtocols
-
-`func (o *InlineObject147) HasProtocols() bool`
-
-HasProtocols returns a boolean if a field has been set.
-
-### GetAccessPoints
-
-`func (o *InlineObject147) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
-
-GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
-
-### GetAccessPointsOk
-
-`func (o *InlineObject147) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
-
-GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessPoints
-
-`func (o *InlineObject147) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
-
-SetAccessPoints sets AccessPoints field to given value.
-
-### HasAccessPoints
-
-`func (o *InlineObject147) HasAccessPoints() bool`
-
-HasAccessPoints returns a boolean if a field has been set.
+HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

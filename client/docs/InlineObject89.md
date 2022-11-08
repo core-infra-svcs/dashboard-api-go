@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server | [optional] 
-**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
+**Name** | Pointer to **string** | Name of the user. Only allowed If the user is not Dashboard administrator. | [optional] 
+**Password** | Pointer to **string** | The password for this user account. Only allowed If the user is not Dashboard administrator. | [optional] 
+**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations**](NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md) | Authorization zones and expiration dates for the user. | [optional] 
 
 ## Methods
 
@@ -52,55 +53,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetUrl
+### GetPassword
 
-`func (o *InlineObject89) GetUrl() string`
+`func (o *InlineObject89) GetPassword() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetPassword returns the Password field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetPasswordOk
 
-`func (o *InlineObject89) GetUrlOk() (*string, bool)`
+`func (o *InlineObject89) GetPasswordOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetPassword
 
-`func (o *InlineObject89) SetUrl(v string)`
+`func (o *InlineObject89) SetPassword(v string)`
 
-SetUrl sets Url field to given value.
+SetPassword sets Password field to given value.
 
-### HasUrl
+### HasPassword
 
-`func (o *InlineObject89) HasUrl() bool`
+`func (o *InlineObject89) HasPassword() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasPassword returns a boolean if a field has been set.
 
-### GetSharedSecret
+### GetEmailPasswordToUser
 
-`func (o *InlineObject89) GetSharedSecret() string`
+`func (o *InlineObject89) GetEmailPasswordToUser() bool`
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
 
-### GetSharedSecretOk
+### GetEmailPasswordToUserOk
 
-`func (o *InlineObject89) GetSharedSecretOk() (*string, bool)`
+`func (o *InlineObject89) GetEmailPasswordToUserOk() (*bool, bool)`
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetEmailPasswordToUser
 
-`func (o *InlineObject89) SetSharedSecret(v string)`
+`func (o *InlineObject89) SetEmailPasswordToUser(v bool)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
 
-### HasSharedSecret
+### HasEmailPasswordToUser
 
-`func (o *InlineObject89) HasSharedSecret() bool`
+`func (o *InlineObject89) HasEmailPasswordToUser() bool`
 
-HasSharedSecret returns a boolean if a field has been set.
+HasEmailPasswordToUser returns a boolean if a field has been set.
+
+### GetAuthorizations
+
+`func (o *InlineObject89) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations`
+
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+
+### GetAuthorizationsOk
+
+`func (o *InlineObject89) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations, bool)`
+
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizations
+
+`func (o *InlineObject89) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations)`
+
+SetAuthorizations sets Authorizations field to given value.
+
+### HasAuthorizations
+
+`func (o *InlineObject89) HasAuthorizations() bool`
+
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

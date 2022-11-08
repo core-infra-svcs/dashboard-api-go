@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the SSID | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
+**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
+**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
+**Networks** | Pointer to [**[]InlineResponse20096Networks**](InlineResponse20096Networks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Tags** | Pointer to [**[]InlineResponse20096Tags**](InlineResponse20096Tags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse20096WithDefaults instantiates a new InlineResponse20096 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetId
 
-`func (o *InlineResponse20096) GetName() string`
+`func (o *InlineResponse20096) GetId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetIdOk
 
-`func (o *InlineResponse20096) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20096) GetIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetId
 
-`func (o *InlineResponse20096) SetName(v string)`
+`func (o *InlineResponse20096) SetId(v string)`
 
-SetName sets Name field to given value.
+SetId sets Id field to given value.
 
-### HasName
+### HasId
 
-`func (o *InlineResponse20096) HasName() bool`
+`func (o *InlineResponse20096) HasId() bool`
 
-HasName returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUsage
+### GetRole
 
-`func (o *InlineResponse20096) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
+`func (o *InlineResponse20096) GetRole() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetRoleOk
 
-`func (o *InlineResponse20096) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
+`func (o *InlineResponse20096) GetRoleOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetRole
 
-`func (o *InlineResponse20096) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
+`func (o *InlineResponse20096) SetRole(v string)`
 
-SetUsage sets Usage field to given value.
+SetRole sets Role field to given value.
 
-### HasUsage
+### HasRole
 
-`func (o *InlineResponse20096) HasUsage() bool`
+`func (o *InlineResponse20096) HasRole() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasRole returns a boolean if a field has been set.
 
-### GetClients
+### GetOrgAccess
 
-`func (o *InlineResponse20096) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
+`func (o *InlineResponse20096) GetOrgAccess() string`
 
-GetClients returns the Clients field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetClientsOk
+### GetOrgAccessOk
 
-`func (o *InlineResponse20096) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
+`func (o *InlineResponse20096) GetOrgAccessOk() (*string, bool)`
 
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClients
+### SetOrgAccess
 
-`func (o *InlineResponse20096) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
+`func (o *InlineResponse20096) SetOrgAccess(v string)`
 
-SetClients sets Clients field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasClients
+### HasOrgAccess
 
-`func (o *InlineResponse20096) HasClients() bool`
+`func (o *InlineResponse20096) HasOrgAccess() bool`
 
-HasClients returns a boolean if a field has been set.
+HasOrgAccess returns a boolean if a field has been set.
+
+### GetNetworks
+
+`func (o *InlineResponse20096) GetNetworks() []InlineResponse20096Networks`
+
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
+
+### GetNetworksOk
+
+`func (o *InlineResponse20096) GetNetworksOk() (*[]InlineResponse20096Networks, bool)`
+
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworks
+
+`func (o *InlineResponse20096) SetNetworks(v []InlineResponse20096Networks)`
+
+SetNetworks sets Networks field to given value.
+
+### HasNetworks
+
+`func (o *InlineResponse20096) HasNetworks() bool`
+
+HasNetworks returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse20096) GetTags() []InlineResponse20096Tags`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse20096) GetTagsOk() (*[]InlineResponse20096Tags, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse20096) SetTags(v []InlineResponse20096Tags)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse20096) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

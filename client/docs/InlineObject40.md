@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Prefix** | Pointer to **string** | A static IPv6 prefix | [optional] 
-**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | [optional] 
+**Prefix** | **string** | A static IPv6 prefix | 
+**Origin** | [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | 
 **Description** | Pointer to **string** | A name or description for the prefix | [optional] 
 
 ## Methods
 
 ### NewInlineObject40
 
-`func NewInlineObject40() *InlineObject40`
+`func NewInlineObject40(prefix string, origin NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, ) *InlineObject40`
 
 NewInlineObject40 instantiates a new InlineObject40 object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetPrefix sets Prefix field to given value.
 
-### HasPrefix
-
-`func (o *InlineObject40) HasPrefix() bool`
-
-HasPrefix returns a boolean if a field has been set.
 
 ### GetOrigin
 
@@ -71,11 +66,6 @@ and a boolean to check if the value has been set.
 
 SetOrigin sets Origin field to given value.
 
-### HasOrigin
-
-`func (o *InlineObject40) HasOrigin() bool`
-
-HasOrigin returns a boolean if a field has been set.
 
 ### GetDescription
 
