@@ -13,7 +13,7 @@ The Meraki Dashboard API Golang library provides all current Meraki [dashboard A
 Clone the repository, set environmental variables
 
 ```shell
-go get github.com/meraki/dashboard-api-go/client
+go get github.com/core-infra-svcs/dashboard-api-go/client
 
 export MERAKI_DASHBOARD_API_KEY="0123456789"
 
@@ -28,7 +28,7 @@ Client API documentation is available in the /client/docs directory
 ```go
 package main
 
-import "github.com/meraki/dashboard-api-go/client"
+import "github.com/core-infra-svcs/dashboard-api-go/client"
 import "context"
 import "fmt"
 import "os"
