@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkInsightApplicationHealthByTime
 
-> []InlineResponse20022 GetNetworkInsightApplicationHealthByTime(ctx, networkId, applicationId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
+> []InlineResponse20025 GetNetworkInsightApplicationHealthByTime(ctx, networkId, applicationId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
 
 Get application health by time
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplicationsApi.GetNetworkInsightApplicationHealthByTime``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkInsightApplicationHealthByTime`: []InlineResponse20022
+    // response from `GetNetworkInsightApplicationHealthByTime`: []InlineResponse20025
     fmt.Fprintf(os.Stdout, "Response from `ApplicationsApi.GetNetworkInsightApplicationHealthByTime`: %v\n", resp)
 }
 ```
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20022**](InlineResponse20022.md)
+[**[]InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInsightApplications
 
-> []InlineResponse20084 GetOrganizationInsightApplications(ctx, organizationId).Execute()
+> []InlineResponse20089 GetOrganizationInsightApplications(ctx, organizationId).Execute()
 
 List all Insight tracked applications
 
@@ -120,7 +120,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplicationsApi.GetOrganizationInsightApplications``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInsightApplications`: []InlineResponse20084
+    // response from `GetOrganizationInsightApplications`: []InlineResponse20089
     fmt.Fprintf(os.Stdout, "Response from `ApplicationsApi.GetOrganizationInsightApplications`: %v\n", resp)
 }
 ```
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20084**](InlineResponse20084.md)
+[**[]InlineResponse20089**](InlineResponse20089.md)
 
 ### Authorization
 

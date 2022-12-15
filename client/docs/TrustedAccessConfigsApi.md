@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSmTrustedAccessConfigs
 
-> []InlineResponse20046 GetNetworkSmTrustedAccessConfigs(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20050 GetNetworkSmTrustedAccessConfigs(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Trusted Access Configs
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrustedAccessConfigsApi.GetNetworkSmTrustedAccessConfigs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmTrustedAccessConfigs`: []InlineResponse20046
+    // response from `GetNetworkSmTrustedAccessConfigs`: []InlineResponse20050
     fmt.Fprintf(os.Stdout, "Response from `TrustedAccessConfigsApi.GetNetworkSmTrustedAccessConfigs`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20046**](InlineResponse20046.md)
+[**[]InlineResponse20050**](InlineResponse20050.md)
 
 ### Authorization
 

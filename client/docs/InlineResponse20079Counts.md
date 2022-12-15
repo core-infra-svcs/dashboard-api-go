@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ByStatus** | Pointer to [**InlineResponse20079CountsByStatus**](InlineResponse20079CountsByStatus.md) |  | [optional] 
+**Total** | Pointer to **int32** | Total number of clients with data usage in organization | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20079CountsWithDefaults instantiates a new InlineResponse20079C
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetByStatus
+### GetTotal
 
-`func (o *InlineResponse20079Counts) GetByStatus() InlineResponse20079CountsByStatus`
+`func (o *InlineResponse20079Counts) GetTotal() int32`
 
-GetByStatus returns the ByStatus field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetByStatusOk
+### GetTotalOk
 
-`func (o *InlineResponse20079Counts) GetByStatusOk() (*InlineResponse20079CountsByStatus, bool)`
+`func (o *InlineResponse20079Counts) GetTotalOk() (*int32, bool)`
 
-GetByStatusOk returns a tuple with the ByStatus field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByStatus
+### SetTotal
 
-`func (o *InlineResponse20079Counts) SetByStatus(v InlineResponse20079CountsByStatus)`
+`func (o *InlineResponse20079Counts) SetTotal(v int32)`
 
-SetByStatus sets ByStatus field to given value.
+SetTotal sets Total field to given value.
 
-### HasByStatus
+### HasTotal
 
-`func (o *InlineResponse20079Counts) HasByStatus() bool`
+`func (o *InlineResponse20079Counts) HasTotal() bool`
 
-HasByStatus returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

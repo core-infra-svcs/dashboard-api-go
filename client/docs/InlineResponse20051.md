@@ -4,18 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | Mac address of the server. | [optional] 
-**Vlan** | Pointer to **int32** | Vlan id of the server. | [optional] 
-**ClientId** | Pointer to **string** | Client id of the server if available. | [optional] 
-**IsAllowed** | Pointer to **bool** | Whether the server is allowed or blocked. Always true for configured servers. | [optional] 
-**LastSeenAt** | Pointer to **time.Time** | Last time the server was seen. | [optional] 
-**SeenBy** | Pointer to [**[]NetworksNetworkIdSwitchDhcpV4ServersSeenSeenBy**](NetworksNetworkIdSwitchDhcpV4ServersSeenSeenBy.md) | Devices that saw the server. | [optional] 
-**Type** | Pointer to **string** | server type. Can be a &#39;device&#39;, &#39;stack&#39;, or &#39;discovered&#39; (i.e client). | [optional] 
-**Device** | Pointer to [**NetworksNetworkIdSwitchDhcpV4ServersSeenDevice**](NetworksNetworkIdSwitchDhcpV4ServersSeenDevice.md) |  | [optional] 
-**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpV4ServersSeenIpv4**](NetworksNetworkIdSwitchDhcpV4ServersSeenIpv4.md) |  | [optional] 
-**IsConfigured** | Pointer to **bool** | Whether the server is configured. | [optional] 
-**LastAck** | Pointer to [**NetworksNetworkIdSwitchDhcpV4ServersSeenLastAck**](NetworksNetworkIdSwitchDhcpV4ServersSeenLastAck.md) |  | [optional] 
-**LastPacket** | Pointer to [**NetworksNetworkIdSwitchDhcpV4ServersSeenLastPacket**](NetworksNetworkIdSwitchDhcpV4ServersSeenLastPacket.md) |  | [optional] 
+**Id** | Pointer to **string** | device ID | [optional] 
+**Name** | Pointer to **string** | device name | [optional] 
+**SystemType** | Pointer to **string** | system type | [optional] 
+**Mac** | Pointer to **string** | mac address | [optional] 
+**Username** | Pointer to **string** | username | [optional] 
+**Email** | Pointer to **string** | user email | [optional] 
+**Tags** | Pointer to **[]string** | device tags | [optional] 
+**TrustedAccessConnections** | Pointer to [**[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections**](NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections.md) | Array of trusted access configs | [optional] 
 
 ## Methods
 
@@ -35,6 +31,81 @@ will change when the set of required properties is changed
 NewInlineResponse20051WithDefaults instantiates a new InlineResponse20051 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineResponse20051) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse20051) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse20051) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse20051) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse20051) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse20051) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse20051) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse20051) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetSystemType
+
+`func (o *InlineResponse20051) GetSystemType() string`
+
+GetSystemType returns the SystemType field if non-nil, zero value otherwise.
+
+### GetSystemTypeOk
+
+`func (o *InlineResponse20051) GetSystemTypeOk() (*string, bool)`
+
+GetSystemTypeOk returns a tuple with the SystemType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSystemType
+
+`func (o *InlineResponse20051) SetSystemType(v string)`
+
+SetSystemType sets SystemType field to given value.
+
+### HasSystemType
+
+`func (o *InlineResponse20051) HasSystemType() bool`
+
+HasSystemType returns a boolean if a field has been set.
 
 ### GetMac
 
@@ -61,280 +132,105 @@ SetMac sets Mac field to given value.
 
 HasMac returns a boolean if a field has been set.
 
-### GetVlan
+### GetUsername
 
-`func (o *InlineResponse20051) GetVlan() int32`
+`func (o *InlineResponse20051) GetUsername() string`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetUsername returns the Username field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetUsernameOk
 
-`func (o *InlineResponse20051) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse20051) GetUsernameOk() (*string, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetUsername
 
-`func (o *InlineResponse20051) SetVlan(v int32)`
+`func (o *InlineResponse20051) SetUsername(v string)`
 
-SetVlan sets Vlan field to given value.
+SetUsername sets Username field to given value.
 
-### HasVlan
+### HasUsername
 
-`func (o *InlineResponse20051) HasVlan() bool`
+`func (o *InlineResponse20051) HasUsername() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasUsername returns a boolean if a field has been set.
 
-### GetClientId
+### GetEmail
 
-`func (o *InlineResponse20051) GetClientId() string`
+`func (o *InlineResponse20051) GetEmail() string`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetEmailOk
 
-`func (o *InlineResponse20051) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse20051) GetEmailOk() (*string, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetEmail
 
-`func (o *InlineResponse20051) SetClientId(v string)`
+`func (o *InlineResponse20051) SetEmail(v string)`
 
-SetClientId sets ClientId field to given value.
+SetEmail sets Email field to given value.
 
-### HasClientId
+### HasEmail
 
-`func (o *InlineResponse20051) HasClientId() bool`
+`func (o *InlineResponse20051) HasEmail() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetIsAllowed
+### GetTags
 
-`func (o *InlineResponse20051) GetIsAllowed() bool`
+`func (o *InlineResponse20051) GetTags() []string`
 
-GetIsAllowed returns the IsAllowed field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetIsAllowedOk
+### GetTagsOk
 
-`func (o *InlineResponse20051) GetIsAllowedOk() (*bool, bool)`
+`func (o *InlineResponse20051) GetTagsOk() (*[]string, bool)`
 
-GetIsAllowedOk returns a tuple with the IsAllowed field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsAllowed
+### SetTags
 
-`func (o *InlineResponse20051) SetIsAllowed(v bool)`
+`func (o *InlineResponse20051) SetTags(v []string)`
 
-SetIsAllowed sets IsAllowed field to given value.
+SetTags sets Tags field to given value.
 
-### HasIsAllowed
+### HasTags
 
-`func (o *InlineResponse20051) HasIsAllowed() bool`
+`func (o *InlineResponse20051) HasTags() bool`
 
-HasIsAllowed returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetLastSeenAt
+### GetTrustedAccessConnections
 
-`func (o *InlineResponse20051) GetLastSeenAt() time.Time`
+`func (o *InlineResponse20051) GetTrustedAccessConnections() []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections`
 
-GetLastSeenAt returns the LastSeenAt field if non-nil, zero value otherwise.
+GetTrustedAccessConnections returns the TrustedAccessConnections field if non-nil, zero value otherwise.
 
-### GetLastSeenAtOk
+### GetTrustedAccessConnectionsOk
 
-`func (o *InlineResponse20051) GetLastSeenAtOk() (*time.Time, bool)`
+`func (o *InlineResponse20051) GetTrustedAccessConnectionsOk() (*[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections, bool)`
 
-GetLastSeenAtOk returns a tuple with the LastSeenAt field if it's non-nil, zero value otherwise
+GetTrustedAccessConnectionsOk returns a tuple with the TrustedAccessConnections field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastSeenAt
+### SetTrustedAccessConnections
 
-`func (o *InlineResponse20051) SetLastSeenAt(v time.Time)`
+`func (o *InlineResponse20051) SetTrustedAccessConnections(v []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections)`
 
-SetLastSeenAt sets LastSeenAt field to given value.
+SetTrustedAccessConnections sets TrustedAccessConnections field to given value.
 
-### HasLastSeenAt
+### HasTrustedAccessConnections
 
-`func (o *InlineResponse20051) HasLastSeenAt() bool`
+`func (o *InlineResponse20051) HasTrustedAccessConnections() bool`
 
-HasLastSeenAt returns a boolean if a field has been set.
-
-### GetSeenBy
-
-`func (o *InlineResponse20051) GetSeenBy() []NetworksNetworkIdSwitchDhcpV4ServersSeenSeenBy`
-
-GetSeenBy returns the SeenBy field if non-nil, zero value otherwise.
-
-### GetSeenByOk
-
-`func (o *InlineResponse20051) GetSeenByOk() (*[]NetworksNetworkIdSwitchDhcpV4ServersSeenSeenBy, bool)`
-
-GetSeenByOk returns a tuple with the SeenBy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeenBy
-
-`func (o *InlineResponse20051) SetSeenBy(v []NetworksNetworkIdSwitchDhcpV4ServersSeenSeenBy)`
-
-SetSeenBy sets SeenBy field to given value.
-
-### HasSeenBy
-
-`func (o *InlineResponse20051) HasSeenBy() bool`
-
-HasSeenBy returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse20051) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse20051) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse20051) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse20051) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetDevice
-
-`func (o *InlineResponse20051) GetDevice() NetworksNetworkIdSwitchDhcpV4ServersSeenDevice`
-
-GetDevice returns the Device field if non-nil, zero value otherwise.
-
-### GetDeviceOk
-
-`func (o *InlineResponse20051) GetDeviceOk() (*NetworksNetworkIdSwitchDhcpV4ServersSeenDevice, bool)`
-
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevice
-
-`func (o *InlineResponse20051) SetDevice(v NetworksNetworkIdSwitchDhcpV4ServersSeenDevice)`
-
-SetDevice sets Device field to given value.
-
-### HasDevice
-
-`func (o *InlineResponse20051) HasDevice() bool`
-
-HasDevice returns a boolean if a field has been set.
-
-### GetIpv4
-
-`func (o *InlineResponse20051) GetIpv4() NetworksNetworkIdSwitchDhcpV4ServersSeenIpv4`
-
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
-
-### GetIpv4Ok
-
-`func (o *InlineResponse20051) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpV4ServersSeenIpv4, bool)`
-
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv4
-
-`func (o *InlineResponse20051) SetIpv4(v NetworksNetworkIdSwitchDhcpV4ServersSeenIpv4)`
-
-SetIpv4 sets Ipv4 field to given value.
-
-### HasIpv4
-
-`func (o *InlineResponse20051) HasIpv4() bool`
-
-HasIpv4 returns a boolean if a field has been set.
-
-### GetIsConfigured
-
-`func (o *InlineResponse20051) GetIsConfigured() bool`
-
-GetIsConfigured returns the IsConfigured field if non-nil, zero value otherwise.
-
-### GetIsConfiguredOk
-
-`func (o *InlineResponse20051) GetIsConfiguredOk() (*bool, bool)`
-
-GetIsConfiguredOk returns a tuple with the IsConfigured field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsConfigured
-
-`func (o *InlineResponse20051) SetIsConfigured(v bool)`
-
-SetIsConfigured sets IsConfigured field to given value.
-
-### HasIsConfigured
-
-`func (o *InlineResponse20051) HasIsConfigured() bool`
-
-HasIsConfigured returns a boolean if a field has been set.
-
-### GetLastAck
-
-`func (o *InlineResponse20051) GetLastAck() NetworksNetworkIdSwitchDhcpV4ServersSeenLastAck`
-
-GetLastAck returns the LastAck field if non-nil, zero value otherwise.
-
-### GetLastAckOk
-
-`func (o *InlineResponse20051) GetLastAckOk() (*NetworksNetworkIdSwitchDhcpV4ServersSeenLastAck, bool)`
-
-GetLastAckOk returns a tuple with the LastAck field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastAck
-
-`func (o *InlineResponse20051) SetLastAck(v NetworksNetworkIdSwitchDhcpV4ServersSeenLastAck)`
-
-SetLastAck sets LastAck field to given value.
-
-### HasLastAck
-
-`func (o *InlineResponse20051) HasLastAck() bool`
-
-HasLastAck returns a boolean if a field has been set.
-
-### GetLastPacket
-
-`func (o *InlineResponse20051) GetLastPacket() NetworksNetworkIdSwitchDhcpV4ServersSeenLastPacket`
-
-GetLastPacket returns the LastPacket field if non-nil, zero value otherwise.
-
-### GetLastPacketOk
-
-`func (o *InlineResponse20051) GetLastPacketOk() (*NetworksNetworkIdSwitchDhcpV4ServersSeenLastPacket, bool)`
-
-GetLastPacketOk returns a tuple with the LastPacket field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastPacket
-
-`func (o *InlineResponse20051) SetLastPacket(v NetworksNetworkIdSwitchDhcpV4ServersSeenLastPacket)`
-
-SetLastPacket sets LastPacket field to given value.
-
-### HasLastPacket
-
-`func (o *InlineResponse20051) HasLastPacket() bool`
-
-HasLastPacket returns a boolean if a field has been set.
+HasTrustedAccessConnections returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

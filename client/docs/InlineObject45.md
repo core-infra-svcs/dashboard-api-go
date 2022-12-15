@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Subnet** | Pointer to **string** | The subnet of the single LAN configuration | [optional] 
 **ApplianceIp** | Pointer to **string** | The appliance IP address of the single LAN | [optional] 
 **Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
+**MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceSingleLanMandatoryDhcp**](NetworksNetworkIdApplianceSingleLanMandatoryDhcp.md) |  | [optional] 
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetIpv6 sets Ipv6 field to given value.
 `func (o *InlineObject45) HasIpv6() bool`
 
 HasIpv6 returns a boolean if a field has been set.
+
+### GetMandatoryDhcp
+
+`func (o *InlineObject45) GetMandatoryDhcp() NetworksNetworkIdApplianceSingleLanMandatoryDhcp`
+
+GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
+
+### GetMandatoryDhcpOk
+
+`func (o *InlineObject45) GetMandatoryDhcpOk() (*NetworksNetworkIdApplianceSingleLanMandatoryDhcp, bool)`
+
+GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMandatoryDhcp
+
+`func (o *InlineObject45) SetMandatoryDhcp(v NetworksNetworkIdApplianceSingleLanMandatoryDhcp)`
+
+SetMandatoryDhcp sets MandatoryDhcp field to given value.
+
+### HasMandatoryDhcp
+
+`func (o *InlineObject45) HasMandatoryDhcp() bool`
+
+HasMandatoryDhcp returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

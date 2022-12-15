@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
-**Type** | Pointer to **string** | The type of the payload template | [optional] 
-**Name** | Pointer to **string** | The name of the payload template | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
-**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
+**TrustedServerId** | Pointer to **string** | ID of the trusted server. | [optional] 
+**Mac** | Pointer to **string** | Mac address of the trusted server. | [optional] 
+**Vlan** | Pointer to **int32** | Vlan ID of the trusted server. | [optional] 
+**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse20056WithDefaults instantiates a new InlineResponse20056 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPayloadTemplateId
+### GetTrustedServerId
 
-`func (o *InlineResponse20056) GetPayloadTemplateId() string`
+`func (o *InlineResponse20056) GetTrustedServerId() string`
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+GetTrustedServerId returns the TrustedServerId field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateIdOk
+### GetTrustedServerIdOk
 
-`func (o *InlineResponse20056) GetPayloadTemplateIdOk() (*string, bool)`
+`func (o *InlineResponse20056) GetTrustedServerIdOk() (*string, bool)`
 
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetTrustedServerIdOk returns a tuple with the TrustedServerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetTrustedServerId
 
-`func (o *InlineResponse20056) SetPayloadTemplateId(v string)`
+`func (o *InlineResponse20056) SetTrustedServerId(v string)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetTrustedServerId sets TrustedServerId field to given value.
 
-### HasPayloadTemplateId
+### HasTrustedServerId
 
-`func (o *InlineResponse20056) HasPayloadTemplateId() bool`
+`func (o *InlineResponse20056) HasTrustedServerId() bool`
 
-HasPayloadTemplateId returns a boolean if a field has been set.
+HasTrustedServerId returns a boolean if a field has been set.
 
-### GetType
+### GetMac
 
-`func (o *InlineResponse20056) GetType() string`
+`func (o *InlineResponse20056) GetMac() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetMacOk
 
-`func (o *InlineResponse20056) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse20056) GetMacOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetMac
 
-`func (o *InlineResponse20056) SetType(v string)`
+`func (o *InlineResponse20056) SetMac(v string)`
 
-SetType sets Type field to given value.
+SetMac sets Mac field to given value.
 
-### HasType
+### HasMac
 
-`func (o *InlineResponse20056) HasType() bool`
+`func (o *InlineResponse20056) HasMac() bool`
 
-HasType returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetName
+### GetVlan
 
-`func (o *InlineResponse20056) GetName() string`
+`func (o *InlineResponse20056) GetVlan() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetVlanOk
 
-`func (o *InlineResponse20056) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20056) GetVlanOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetVlan
 
-`func (o *InlineResponse20056) SetName(v string)`
+`func (o *InlineResponse20056) SetVlan(v int32)`
 
-SetName sets Name field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasName
+### HasVlan
 
-`func (o *InlineResponse20056) HasName() bool`
+`func (o *InlineResponse20056) HasVlan() bool`
 
-HasName returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetHeaders
+### GetIpv4
 
-`func (o *InlineResponse20056) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
+`func (o *InlineResponse20056) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4`
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
 
-### GetHeadersOk
+### GetIpv4Ok
 
-`func (o *InlineResponse20056) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
+`func (o *InlineResponse20056) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4, bool)`
 
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetIpv4
 
-`func (o *InlineResponse20056) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
+`func (o *InlineResponse20056) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4)`
 
-SetHeaders sets Headers field to given value.
+SetIpv4 sets Ipv4 field to given value.
 
-### HasHeaders
+### HasIpv4
 
-`func (o *InlineResponse20056) HasHeaders() bool`
+`func (o *InlineResponse20056) HasIpv4() bool`
 
-HasHeaders returns a boolean if a field has been set.
-
-### GetBody
-
-`func (o *InlineResponse20056) GetBody() string`
-
-GetBody returns the Body field if non-nil, zero value otherwise.
-
-### GetBodyOk
-
-`func (o *InlineResponse20056) GetBodyOk() (*string, bool)`
-
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBody
-
-`func (o *InlineResponse20056) SetBody(v string)`
-
-SetBody sets Body field to given value.
-
-### HasBody
-
-`func (o *InlineResponse20056) HasBody() bool`
-
-HasBody returns a boolean if a field has been set.
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

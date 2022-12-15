@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
-**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
+**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
+**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
+**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
+**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
+**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse20064WithDefaults instantiates a new InlineResponse20064 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetAssoc
 
-`func (o *InlineResponse20064) GetStartTs() time.Time`
+`func (o *InlineResponse20064) GetAssoc() int32`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetAssoc returns the Assoc field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetAssocOk
 
-`func (o *InlineResponse20064) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20064) GetAssocOk() (*int32, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetAssoc
 
-`func (o *InlineResponse20064) SetStartTs(v time.Time)`
+`func (o *InlineResponse20064) SetAssoc(v int32)`
 
-SetStartTs sets StartTs field to given value.
+SetAssoc sets Assoc field to given value.
 
-### HasStartTs
+### HasAssoc
 
-`func (o *InlineResponse20064) HasStartTs() bool`
+`func (o *InlineResponse20064) HasAssoc() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasAssoc returns a boolean if a field has been set.
 
-### GetEndTs
+### GetAuth
 
-`func (o *InlineResponse20064) GetEndTs() time.Time`
+`func (o *InlineResponse20064) GetAuth() int32`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetAuth returns the Auth field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetAuthOk
 
-`func (o *InlineResponse20064) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20064) GetAuthOk() (*int32, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetAuth
 
-`func (o *InlineResponse20064) SetEndTs(v time.Time)`
+`func (o *InlineResponse20064) SetAuth(v int32)`
 
-SetEndTs sets EndTs field to given value.
+SetAuth sets Auth field to given value.
 
-### HasEndTs
+### HasAuth
 
-`func (o *InlineResponse20064) HasEndTs() bool`
+`func (o *InlineResponse20064) HasAuth() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasAuth returns a boolean if a field has been set.
 
-### GetSnr
+### GetDhcp
 
-`func (o *InlineResponse20064) GetSnr() int32`
+`func (o *InlineResponse20064) GetDhcp() int32`
 
-GetSnr returns the Snr field if non-nil, zero value otherwise.
+GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
 
-### GetSnrOk
+### GetDhcpOk
 
-`func (o *InlineResponse20064) GetSnrOk() (*int32, bool)`
+`func (o *InlineResponse20064) GetDhcpOk() (*int32, bool)`
 
-GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
+GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSnr
+### SetDhcp
 
-`func (o *InlineResponse20064) SetSnr(v int32)`
+`func (o *InlineResponse20064) SetDhcp(v int32)`
 
-SetSnr sets Snr field to given value.
+SetDhcp sets Dhcp field to given value.
 
-### HasSnr
+### HasDhcp
 
-`func (o *InlineResponse20064) HasSnr() bool`
+`func (o *InlineResponse20064) HasDhcp() bool`
 
-HasSnr returns a boolean if a field has been set.
+HasDhcp returns a boolean if a field has been set.
 
-### GetRssi
+### GetDns
 
-`func (o *InlineResponse20064) GetRssi() int32`
+`func (o *InlineResponse20064) GetDns() int32`
 
-GetRssi returns the Rssi field if non-nil, zero value otherwise.
+GetDns returns the Dns field if non-nil, zero value otherwise.
 
-### GetRssiOk
+### GetDnsOk
 
-`func (o *InlineResponse20064) GetRssiOk() (*int32, bool)`
+`func (o *InlineResponse20064) GetDnsOk() (*int32, bool)`
 
-GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
+GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRssi
+### SetDns
 
-`func (o *InlineResponse20064) SetRssi(v int32)`
+`func (o *InlineResponse20064) SetDns(v int32)`
 
-SetRssi sets Rssi field to given value.
+SetDns sets Dns field to given value.
 
-### HasRssi
+### HasDns
 
-`func (o *InlineResponse20064) HasRssi() bool`
+`func (o *InlineResponse20064) HasDns() bool`
 
-HasRssi returns a boolean if a field has been set.
+HasDns returns a boolean if a field has been set.
+
+### GetSuccess
+
+`func (o *InlineResponse20064) GetSuccess() int32`
+
+GetSuccess returns the Success field if non-nil, zero value otherwise.
+
+### GetSuccessOk
+
+`func (o *InlineResponse20064) GetSuccessOk() (*int32, bool)`
+
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSuccess
+
+`func (o *InlineResponse20064) SetSuccess(v int32)`
+
+SetSuccess sets Success field to given value.
+
+### HasSuccess
+
+`func (o *InlineResponse20064) HasSuccess() bool`
+
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

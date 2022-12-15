@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Enables / disables the authentication on Local Status page(s). | [optional] 
-**Password** | Pointer to **string** | A password used for Local Status Page(s). Set this null to clear the password. | [optional] 
+**Password** | Pointer to **string** | The password used for Local Status Page(s). Set this to null to clear the password. | [optional] 
 
 ## Methods
 

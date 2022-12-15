@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Usage** | Pointer to [**InlineResponse20079Usage**](InlineResponse20079Usage.md) |  | [optional] 
 **Counts** | Pointer to [**InlineResponse20079Counts**](InlineResponse20079Counts.md) |  | [optional] 
 
 ## Methods
@@ -24,6 +25,31 @@ will change when the set of required properties is changed
 NewInlineResponse20079WithDefaults instantiates a new InlineResponse20079 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetUsage
+
+`func (o *InlineResponse20079) GetUsage() InlineResponse20079Usage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse20079) GetUsageOk() (*InlineResponse20079Usage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse20079) SetUsage(v InlineResponse20079Usage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse20079) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
 
 ### GetCounts
 

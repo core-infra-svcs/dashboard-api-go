@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the licenses to | [optional] 
-**LicenseIds** | Pointer to **[]string** | A list of IDs of licenses to move to the new organization | [optional] 
+**Id** | Pointer to **string** | Monitored media server id | [optional] 
+**Name** | Pointer to **string** | The name of the VoIP provider | [optional] 
+**Address** | Pointer to **string** | The IP address (IPv4 only) or hostname of the media server to monitor | [optional] 
+**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20090WithDefaults instantiates a new InlineResponse20090 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetId
 
-`func (o *InlineResponse20090) GetDestOrganizationId() string`
+`func (o *InlineResponse20090) GetId() string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetIdOk
 
-`func (o *InlineResponse20090) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse20090) GetIdOk() (*string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetId
 
-`func (o *InlineResponse20090) SetDestOrganizationId(v string)`
+`func (o *InlineResponse20090) SetId(v string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetId sets Id field to given value.
 
-### HasDestOrganizationId
+### HasId
 
-`func (o *InlineResponse20090) HasDestOrganizationId() bool`
+`func (o *InlineResponse20090) HasId() bool`
 
-HasDestOrganizationId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetLicenseIds
+### GetName
 
-`func (o *InlineResponse20090) GetLicenseIds() []string`
+`func (o *InlineResponse20090) GetName() string`
 
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLicenseIdsOk
+### GetNameOk
 
-`func (o *InlineResponse20090) GetLicenseIdsOk() (*[]string, bool)`
+`func (o *InlineResponse20090) GetNameOk() (*string, bool)`
 
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIds
+### SetName
 
-`func (o *InlineResponse20090) SetLicenseIds(v []string)`
+`func (o *InlineResponse20090) SetName(v string)`
 
-SetLicenseIds sets LicenseIds field to given value.
+SetName sets Name field to given value.
 
-### HasLicenseIds
+### HasName
 
-`func (o *InlineResponse20090) HasLicenseIds() bool`
+`func (o *InlineResponse20090) HasName() bool`
 
-HasLicenseIds returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetAddress
+
+`func (o *InlineResponse20090) GetAddress() string`
+
+GetAddress returns the Address field if non-nil, zero value otherwise.
+
+### GetAddressOk
+
+`func (o *InlineResponse20090) GetAddressOk() (*string, bool)`
+
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAddress
+
+`func (o *InlineResponse20090) SetAddress(v string)`
+
+SetAddress sets Address field to given value.
+
+### HasAddress
+
+`func (o *InlineResponse20090) HasAddress() bool`
+
+HasAddress returns a boolean if a field has been set.
+
+### GetBestEffortMonitoringEnabled
+
+`func (o *InlineResponse20090) GetBestEffortMonitoringEnabled() bool`
+
+GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
+
+### GetBestEffortMonitoringEnabledOk
+
+`func (o *InlineResponse20090) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
+
+GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBestEffortMonitoringEnabled
+
+`func (o *InlineResponse20090) SetBestEffortMonitoringEnabled(v bool)`
+
+SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
+
+### HasBestEffortMonitoringEnabled
+
+`func (o *InlineResponse20090) HasBestEffortMonitoringEnabled() bool`
+
+HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Md5** | Pointer to **string** | The MD5 value of the logo file. Setting this to null will remove the logo from the splash page. | [optional] 
 **Extension** | Pointer to **string** | The extension of the logo file. | [optional] 
+**Image** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogoImage**](NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogoImage.md) |  | [optional] 
 
 ## Methods
 
@@ -75,6 +76,31 @@ SetExtension sets Extension field to given value.
 `func (o *NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo) HasExtension() bool`
 
 HasExtension returns a boolean if a field has been set.
+
+### GetImage
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo) GetImage() NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogoImage`
+
+GetImage returns the Image field if non-nil, zero value otherwise.
+
+### GetImageOk
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo) GetImageOk() (*NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogoImage, bool)`
+
+GetImageOk returns a tuple with the Image field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImage
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo) SetImage(v NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogoImage)`
+
+SetImage sets Image field to given value.
+
+### HasImage
+
+`func (o *NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo) HasImage() bool`
+
+HasImage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

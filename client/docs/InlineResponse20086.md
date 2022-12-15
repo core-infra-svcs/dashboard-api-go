@@ -4,16 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | MAC address of the device | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Name** | Pointer to **string** | Name of the device | [optional] 
-**Model** | Pointer to **string** | Model type of the device | [optional] 
-**NetworkId** | Pointer to **string** | Network Id of the device | [optional] 
-**OrderNumber** | Pointer to **string** | Order number of the device | [optional] 
-**ClaimedAt** | Pointer to **time.Time** | Claimed time of the device | [optional] 
-**LicenseExpirationDate** | Pointer to **time.Time** | License expiration date of the device | [optional] 
-**Tags** | Pointer to **[]string** | Device tags | [optional] 
-**ProductType** | Pointer to **string** | Product type of the device | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Serial** | Pointer to **string** | Serial of MX device | [optional] 
+**Uplink** | Pointer to **string** | Uplink interface (wan1, wan2, or cellular) | [optional] 
+**Ip** | Pointer to **string** | IP address of uplink | [optional] 
+**TimeSeries** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries**](OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries.md) | Loss and latency timeseries data | [optional] 
 
 ## Methods
 
@@ -33,106 +28,6 @@ will change when the set of required properties is changed
 NewInlineResponse20086WithDefaults instantiates a new InlineResponse20086 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetMac
-
-`func (o *InlineResponse20086) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse20086) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse20086) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse20086) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse20086) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse20086) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse20086) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse20086) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse20086) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse20086) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse20086) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse20086) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse20086) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse20086) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse20086) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse20086) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
 
 ### GetNetworkId
 
@@ -159,130 +54,105 @@ SetNetworkId sets NetworkId field to given value.
 
 HasNetworkId returns a boolean if a field has been set.
 
-### GetOrderNumber
+### GetSerial
 
-`func (o *InlineResponse20086) GetOrderNumber() string`
+`func (o *InlineResponse20086) GetSerial() string`
 
-GetOrderNumber returns the OrderNumber field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetOrderNumberOk
+### GetSerialOk
 
-`func (o *InlineResponse20086) GetOrderNumberOk() (*string, bool)`
+`func (o *InlineResponse20086) GetSerialOk() (*string, bool)`
 
-GetOrderNumberOk returns a tuple with the OrderNumber field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrderNumber
+### SetSerial
 
-`func (o *InlineResponse20086) SetOrderNumber(v string)`
+`func (o *InlineResponse20086) SetSerial(v string)`
 
-SetOrderNumber sets OrderNumber field to given value.
+SetSerial sets Serial field to given value.
 
-### HasOrderNumber
+### HasSerial
 
-`func (o *InlineResponse20086) HasOrderNumber() bool`
+`func (o *InlineResponse20086) HasSerial() bool`
 
-HasOrderNumber returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetClaimedAt
+### GetUplink
 
-`func (o *InlineResponse20086) GetClaimedAt() time.Time`
+`func (o *InlineResponse20086) GetUplink() string`
 
-GetClaimedAt returns the ClaimedAt field if non-nil, zero value otherwise.
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
 
-### GetClaimedAtOk
+### GetUplinkOk
 
-`func (o *InlineResponse20086) GetClaimedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse20086) GetUplinkOk() (*string, bool)`
 
-GetClaimedAtOk returns a tuple with the ClaimedAt field if it's non-nil, zero value otherwise
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimedAt
+### SetUplink
 
-`func (o *InlineResponse20086) SetClaimedAt(v time.Time)`
+`func (o *InlineResponse20086) SetUplink(v string)`
 
-SetClaimedAt sets ClaimedAt field to given value.
+SetUplink sets Uplink field to given value.
 
-### HasClaimedAt
+### HasUplink
 
-`func (o *InlineResponse20086) HasClaimedAt() bool`
+`func (o *InlineResponse20086) HasUplink() bool`
 
-HasClaimedAt returns a boolean if a field has been set.
+HasUplink returns a boolean if a field has been set.
 
-### GetLicenseExpirationDate
+### GetIp
 
-`func (o *InlineResponse20086) GetLicenseExpirationDate() time.Time`
+`func (o *InlineResponse20086) GetIp() string`
 
-GetLicenseExpirationDate returns the LicenseExpirationDate field if non-nil, zero value otherwise.
+GetIp returns the Ip field if non-nil, zero value otherwise.
 
-### GetLicenseExpirationDateOk
+### GetIpOk
 
-`func (o *InlineResponse20086) GetLicenseExpirationDateOk() (*time.Time, bool)`
+`func (o *InlineResponse20086) GetIpOk() (*string, bool)`
 
-GetLicenseExpirationDateOk returns a tuple with the LicenseExpirationDate field if it's non-nil, zero value otherwise
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseExpirationDate
+### SetIp
 
-`func (o *InlineResponse20086) SetLicenseExpirationDate(v time.Time)`
+`func (o *InlineResponse20086) SetIp(v string)`
 
-SetLicenseExpirationDate sets LicenseExpirationDate field to given value.
+SetIp sets Ip field to given value.
 
-### HasLicenseExpirationDate
+### HasIp
 
-`func (o *InlineResponse20086) HasLicenseExpirationDate() bool`
+`func (o *InlineResponse20086) HasIp() bool`
 
-HasLicenseExpirationDate returns a boolean if a field has been set.
+HasIp returns a boolean if a field has been set.
 
-### GetTags
+### GetTimeSeries
 
-`func (o *InlineResponse20086) GetTags() []string`
+`func (o *InlineResponse20086) GetTimeSeries() []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetTimeSeries returns the TimeSeries field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetTimeSeriesOk
 
-`func (o *InlineResponse20086) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse20086) GetTimeSeriesOk() (*[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetTimeSeriesOk returns a tuple with the TimeSeries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetTimeSeries
 
-`func (o *InlineResponse20086) SetTags(v []string)`
+`func (o *InlineResponse20086) SetTimeSeries(v []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries)`
 
-SetTags sets Tags field to given value.
+SetTimeSeries sets TimeSeries field to given value.
 
-### HasTags
+### HasTimeSeries
 
-`func (o *InlineResponse20086) HasTags() bool`
+`func (o *InlineResponse20086) HasTimeSeries() bool`
 
-HasTags returns a boolean if a field has been set.
-
-### GetProductType
-
-`func (o *InlineResponse20086) GetProductType() string`
-
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
-
-### GetProductTypeOk
-
-`func (o *InlineResponse20086) GetProductTypeOk() (*string, bool)`
-
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductType
-
-`func (o *InlineResponse20086) SetProductType(v string)`
-
-SetProductType sets ProductType field to given value.
-
-### HasProductType
-
-`func (o *InlineResponse20086) HasProductType() bool`
-
-HasProductType returns a boolean if a field has been set.
+HasTimeSeries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of the device | [optional] 
-**Name** | Pointer to **string** | Name assigned to the device | [optional] 
-**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
-**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
+**Name** | Pointer to **string** | Device Name | [optional] 
+**Serial** | Pointer to **string** | Device Serial Number | [optional] 
+**Mac** | Pointer to **string** | MAC Address | [optional] 
+**PublicIp** | Pointer to **string** | Public IP Address | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Status** | Pointer to **string** | Device Status | [optional] 
+**LastReportedAt** | Pointer to **string** | Device Last Reported Location | [optional] 
+**LanIp** | Pointer to **string** | LAN IP Address | [optional] 
+**Gateway** | Pointer to **string** | IP Gateway | [optional] 
+**IpType** | Pointer to **string** | IP Type | [optional] 
+**PrimaryDns** | Pointer to **string** | Primary DNS | [optional] 
+**SecondaryDns** | Pointer to **string** | Secondary DNS | [optional] 
+**ProductType** | Pointer to **string** | Product Type | [optional] 
+**Components** | Pointer to [**InlineResponse20083Components**](InlineResponse20083Components.md) |  | [optional] 
+**Model** | Pointer to **string** | Model | [optional] 
+**Tags** | Pointer to **[]string** | Tags | [optional] 
 
 ## Methods
 
@@ -27,31 +39,6 @@ will change when the set of required properties is changed
 NewInlineResponse20083WithDefaults instantiates a new InlineResponse20083 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetSerial
-
-`func (o *InlineResponse20083) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse20083) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse20083) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse20083) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
 
 ### GetName
 
@@ -78,55 +65,380 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDeviceStatus
+### GetSerial
 
-`func (o *InlineResponse20083) GetDeviceStatus() string`
+`func (o *InlineResponse20083) GetSerial() string`
 
-GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetDeviceStatusOk
+### GetSerialOk
 
-`func (o *InlineResponse20083) GetDeviceStatusOk() (*string, bool)`
+`func (o *InlineResponse20083) GetSerialOk() (*string, bool)`
 
-GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceStatus
+### SetSerial
 
-`func (o *InlineResponse20083) SetDeviceStatus(v string)`
+`func (o *InlineResponse20083) SetSerial(v string)`
 
-SetDeviceStatus sets DeviceStatus field to given value.
+SetSerial sets Serial field to given value.
 
-### HasDeviceStatus
+### HasSerial
 
-`func (o *InlineResponse20083) HasDeviceStatus() bool`
+`func (o *InlineResponse20083) HasSerial() bool`
 
-HasDeviceStatus returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetUpgrade
+### GetMac
 
-`func (o *InlineResponse20083) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
+`func (o *InlineResponse20083) GetMac() string`
 
-GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetUpgradeOk
+### GetMacOk
 
-`func (o *InlineResponse20083) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
+`func (o *InlineResponse20083) GetMacOk() (*string, bool)`
 
-GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgrade
+### SetMac
 
-`func (o *InlineResponse20083) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
+`func (o *InlineResponse20083) SetMac(v string)`
 
-SetUpgrade sets Upgrade field to given value.
+SetMac sets Mac field to given value.
 
-### HasUpgrade
+### HasMac
 
-`func (o *InlineResponse20083) HasUpgrade() bool`
+`func (o *InlineResponse20083) HasMac() bool`
 
-HasUpgrade returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
+
+### GetPublicIp
+
+`func (o *InlineResponse20083) GetPublicIp() string`
+
+GetPublicIp returns the PublicIp field if non-nil, zero value otherwise.
+
+### GetPublicIpOk
+
+`func (o *InlineResponse20083) GetPublicIpOk() (*string, bool)`
+
+GetPublicIpOk returns a tuple with the PublicIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPublicIp
+
+`func (o *InlineResponse20083) SetPublicIp(v string)`
+
+SetPublicIp sets PublicIp field to given value.
+
+### HasPublicIp
+
+`func (o *InlineResponse20083) HasPublicIp() bool`
+
+HasPublicIp returns a boolean if a field has been set.
+
+### GetNetworkId
+
+`func (o *InlineResponse20083) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse20083) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse20083) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse20083) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20083) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20083) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20083) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse20083) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetLastReportedAt
+
+`func (o *InlineResponse20083) GetLastReportedAt() string`
+
+GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
+
+### GetLastReportedAtOk
+
+`func (o *InlineResponse20083) GetLastReportedAtOk() (*string, bool)`
+
+GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastReportedAt
+
+`func (o *InlineResponse20083) SetLastReportedAt(v string)`
+
+SetLastReportedAt sets LastReportedAt field to given value.
+
+### HasLastReportedAt
+
+`func (o *InlineResponse20083) HasLastReportedAt() bool`
+
+HasLastReportedAt returns a boolean if a field has been set.
+
+### GetLanIp
+
+`func (o *InlineResponse20083) GetLanIp() string`
+
+GetLanIp returns the LanIp field if non-nil, zero value otherwise.
+
+### GetLanIpOk
+
+`func (o *InlineResponse20083) GetLanIpOk() (*string, bool)`
+
+GetLanIpOk returns a tuple with the LanIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanIp
+
+`func (o *InlineResponse20083) SetLanIp(v string)`
+
+SetLanIp sets LanIp field to given value.
+
+### HasLanIp
+
+`func (o *InlineResponse20083) HasLanIp() bool`
+
+HasLanIp returns a boolean if a field has been set.
+
+### GetGateway
+
+`func (o *InlineResponse20083) GetGateway() string`
+
+GetGateway returns the Gateway field if non-nil, zero value otherwise.
+
+### GetGatewayOk
+
+`func (o *InlineResponse20083) GetGatewayOk() (*string, bool)`
+
+GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGateway
+
+`func (o *InlineResponse20083) SetGateway(v string)`
+
+SetGateway sets Gateway field to given value.
+
+### HasGateway
+
+`func (o *InlineResponse20083) HasGateway() bool`
+
+HasGateway returns a boolean if a field has been set.
+
+### GetIpType
+
+`func (o *InlineResponse20083) GetIpType() string`
+
+GetIpType returns the IpType field if non-nil, zero value otherwise.
+
+### GetIpTypeOk
+
+`func (o *InlineResponse20083) GetIpTypeOk() (*string, bool)`
+
+GetIpTypeOk returns a tuple with the IpType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpType
+
+`func (o *InlineResponse20083) SetIpType(v string)`
+
+SetIpType sets IpType field to given value.
+
+### HasIpType
+
+`func (o *InlineResponse20083) HasIpType() bool`
+
+HasIpType returns a boolean if a field has been set.
+
+### GetPrimaryDns
+
+`func (o *InlineResponse20083) GetPrimaryDns() string`
+
+GetPrimaryDns returns the PrimaryDns field if non-nil, zero value otherwise.
+
+### GetPrimaryDnsOk
+
+`func (o *InlineResponse20083) GetPrimaryDnsOk() (*string, bool)`
+
+GetPrimaryDnsOk returns a tuple with the PrimaryDns field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrimaryDns
+
+`func (o *InlineResponse20083) SetPrimaryDns(v string)`
+
+SetPrimaryDns sets PrimaryDns field to given value.
+
+### HasPrimaryDns
+
+`func (o *InlineResponse20083) HasPrimaryDns() bool`
+
+HasPrimaryDns returns a boolean if a field has been set.
+
+### GetSecondaryDns
+
+`func (o *InlineResponse20083) GetSecondaryDns() string`
+
+GetSecondaryDns returns the SecondaryDns field if non-nil, zero value otherwise.
+
+### GetSecondaryDnsOk
+
+`func (o *InlineResponse20083) GetSecondaryDnsOk() (*string, bool)`
+
+GetSecondaryDnsOk returns a tuple with the SecondaryDns field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecondaryDns
+
+`func (o *InlineResponse20083) SetSecondaryDns(v string)`
+
+SetSecondaryDns sets SecondaryDns field to given value.
+
+### HasSecondaryDns
+
+`func (o *InlineResponse20083) HasSecondaryDns() bool`
+
+HasSecondaryDns returns a boolean if a field has been set.
+
+### GetProductType
+
+`func (o *InlineResponse20083) GetProductType() string`
+
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
+
+### GetProductTypeOk
+
+`func (o *InlineResponse20083) GetProductTypeOk() (*string, bool)`
+
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductType
+
+`func (o *InlineResponse20083) SetProductType(v string)`
+
+SetProductType sets ProductType field to given value.
+
+### HasProductType
+
+`func (o *InlineResponse20083) HasProductType() bool`
+
+HasProductType returns a boolean if a field has been set.
+
+### GetComponents
+
+`func (o *InlineResponse20083) GetComponents() InlineResponse20083Components`
+
+GetComponents returns the Components field if non-nil, zero value otherwise.
+
+### GetComponentsOk
+
+`func (o *InlineResponse20083) GetComponentsOk() (*InlineResponse20083Components, bool)`
+
+GetComponentsOk returns a tuple with the Components field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetComponents
+
+`func (o *InlineResponse20083) SetComponents(v InlineResponse20083Components)`
+
+SetComponents sets Components field to given value.
+
+### HasComponents
+
+`func (o *InlineResponse20083) HasComponents() bool`
+
+HasComponents returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse20083) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse20083) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse20083) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse20083) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse20083) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse20083) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse20083) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse20083) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

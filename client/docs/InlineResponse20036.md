@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FirstSeenAt** | Pointer to **string** | When the device was first seen as connected to the internet in each connection. | [optional] 
-**LastSeenAt** | Pointer to **string** | When the device was last seen as connected to the internet in each connection. | [optional] 
+**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
+**NewNetwork** | Pointer to **string** | The network to which the devices was moved. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse20036WithDefaults instantiates a new InlineResponse20036 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetFirstSeenAt
+### GetIds
 
-`func (o *InlineResponse20036) GetFirstSeenAt() string`
+`func (o *InlineResponse20036) GetIds() []string`
 
-GetFirstSeenAt returns the FirstSeenAt field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetFirstSeenAtOk
+### GetIdsOk
 
-`func (o *InlineResponse20036) GetFirstSeenAtOk() (*string, bool)`
+`func (o *InlineResponse20036) GetIdsOk() (*[]string, bool)`
 
-GetFirstSeenAtOk returns a tuple with the FirstSeenAt field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFirstSeenAt
+### SetIds
 
-`func (o *InlineResponse20036) SetFirstSeenAt(v string)`
+`func (o *InlineResponse20036) SetIds(v []string)`
 
-SetFirstSeenAt sets FirstSeenAt field to given value.
+SetIds sets Ids field to given value.
 
-### HasFirstSeenAt
+### HasIds
 
-`func (o *InlineResponse20036) HasFirstSeenAt() bool`
+`func (o *InlineResponse20036) HasIds() bool`
 
-HasFirstSeenAt returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
 
-### GetLastSeenAt
+### GetNewNetwork
 
-`func (o *InlineResponse20036) GetLastSeenAt() string`
+`func (o *InlineResponse20036) GetNewNetwork() string`
 
-GetLastSeenAt returns the LastSeenAt field if non-nil, zero value otherwise.
+GetNewNetwork returns the NewNetwork field if non-nil, zero value otherwise.
 
-### GetLastSeenAtOk
+### GetNewNetworkOk
 
-`func (o *InlineResponse20036) GetLastSeenAtOk() (*string, bool)`
+`func (o *InlineResponse20036) GetNewNetworkOk() (*string, bool)`
 
-GetLastSeenAtOk returns a tuple with the LastSeenAt field if it's non-nil, zero value otherwise
+GetNewNetworkOk returns a tuple with the NewNetwork field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastSeenAt
+### SetNewNetwork
 
-`func (o *InlineResponse20036) SetLastSeenAt(v string)`
+`func (o *InlineResponse20036) SetNewNetwork(v string)`
 
-SetLastSeenAt sets LastSeenAt field to given value.
+SetNewNetwork sets NewNetwork field to given value.
 
-### HasLastSeenAt
+### HasNewNetwork
 
-`func (o *InlineResponse20036) HasLastSeenAt() bool`
+`func (o *InlineResponse20036) HasNewNetwork() bool`
 
-HasLastSeenAt returns a boolean if a field has been set.
+HasNewNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

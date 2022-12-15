@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**Id** | Pointer to **string** | The id of the VPP Account | [optional] 
+**VppServiceToken** | Pointer to **string** | The VPP Account&#39;s Service Token | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200105WithDefaults instantiates a new InlineResponse200105 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetId
 
-`func (o *InlineResponse200105) GetModel() string`
+`func (o *InlineResponse200105) GetId() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetIdOk
 
-`func (o *InlineResponse200105) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200105) GetIdOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetId
 
-`func (o *InlineResponse200105) SetModel(v string)`
+`func (o *InlineResponse200105) SetId(v string)`
 
-SetModel sets Model field to given value.
+SetId sets Id field to given value.
 
-### HasModel
+### HasId
 
-`func (o *InlineResponse200105) HasModel() bool`
+`func (o *InlineResponse200105) HasId() bool`
 
-HasModel returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCount
+### GetVppServiceToken
 
-`func (o *InlineResponse200105) GetCount() int32`
+`func (o *InlineResponse200105) GetVppServiceToken() string`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetVppServiceToken returns the VppServiceToken field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetVppServiceTokenOk
 
-`func (o *InlineResponse200105) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse200105) GetVppServiceTokenOk() (*string, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetVppServiceTokenOk returns a tuple with the VppServiceToken field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetVppServiceToken
 
-`func (o *InlineResponse200105) SetCount(v int32)`
+`func (o *InlineResponse200105) SetVppServiceToken(v string)`
 
-SetCount sets Count field to given value.
+SetVppServiceToken sets VppServiceToken field to given value.
 
-### HasCount
+### HasVppServiceToken
 
-`func (o *InlineResponse200105) HasCount() bool`
+`func (o *InlineResponse200105) HasVppServiceToken() bool`
 
-HasCount returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200105) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200105) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200105) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200105) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasVppServiceToken returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

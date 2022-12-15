@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **TemplateVlanType** | Pointer to **string** | Type of subnetting of the VLAN. Applicable only for template network. | [optional] [default to "same"]
 **Cidr** | Pointer to **string** | CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN. | [optional] 
 **Mask** | Pointer to **int32** | Mask used for the subnet of all bound to the template networks. Applicable only for template network. | [optional] 
+**MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceVlansMandatoryDhcp**](NetworksNetworkIdApplianceVlansMandatoryDhcp.md) |  | [optional] 
 **Ipv6** | Pointer to [**NetworksNetworkIdApplianceVlansIpv6**](NetworksNetworkIdApplianceVlansIpv6.md) |  | [optional] 
 
 ## Methods
@@ -258,6 +259,31 @@ SetMask sets Mask field to given value.
 `func (o *InlineResponse2012) HasMask() bool`
 
 HasMask returns a boolean if a field has been set.
+
+### GetMandatoryDhcp
+
+`func (o *InlineResponse2012) GetMandatoryDhcp() NetworksNetworkIdApplianceVlansMandatoryDhcp`
+
+GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
+
+### GetMandatoryDhcpOk
+
+`func (o *InlineResponse2012) GetMandatoryDhcpOk() (*NetworksNetworkIdApplianceVlansMandatoryDhcp, bool)`
+
+GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMandatoryDhcp
+
+`func (o *InlineResponse2012) SetMandatoryDhcp(v NetworksNetworkIdApplianceVlansMandatoryDhcp)`
+
+SetMandatoryDhcp sets MandatoryDhcp field to given value.
+
+### HasMandatoryDhcp
+
+`func (o *InlineResponse2012) HasMandatoryDhcp() bool`
+
+HasMandatoryDhcp returns a boolean if a field has been set.
 
 ### GetIpv6
 

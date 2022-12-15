@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID (&#39;wep&#39; or &#39;wpa&#39;). This param is only valid if the authMode is &#39;psk&#39;. | [optional] 
 **WpaEncryptionMode** | Pointer to **string** | The types of WPA encryption. (&#39;WPA1 and WPA2&#39;, &#39;WPA2 only&#39;, &#39;WPA3 Transition Mode&#39; or &#39;WPA3 only&#39;). This param is only valid if (1) the authMode is &#39;psk&#39; &amp; the encryptionMode is &#39;wpa&#39; OR (2) the authMode is &#39;8021x-meraki&#39; OR (3) the authMode is &#39;8021x-radius&#39; | [optional] 
 **Visible** | Pointer to **bool** | Boolean indicating whether the MX should advertise or hide this SSID. | [optional] 
+**DhcpEnforcedDeauthentication** | Pointer to [**NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication**](NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication.md) |  | [optional] 
 
 ## Methods
 
@@ -257,6 +258,31 @@ SetVisible sets Visible field to given value.
 `func (o *InlineObject46) HasVisible() bool`
 
 HasVisible returns a boolean if a field has been set.
+
+### GetDhcpEnforcedDeauthentication
+
+`func (o *InlineObject46) GetDhcpEnforcedDeauthentication() NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication`
+
+GetDhcpEnforcedDeauthentication returns the DhcpEnforcedDeauthentication field if non-nil, zero value otherwise.
+
+### GetDhcpEnforcedDeauthenticationOk
+
+`func (o *InlineObject46) GetDhcpEnforcedDeauthenticationOk() (*NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication, bool)`
+
+GetDhcpEnforcedDeauthenticationOk returns a tuple with the DhcpEnforcedDeauthentication field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpEnforcedDeauthentication
+
+`func (o *InlineObject46) SetDhcpEnforcedDeauthentication(v NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication)`
+
+SetDhcpEnforcedDeauthentication sets DhcpEnforcedDeauthentication field to given value.
+
+### HasDhcpEnforcedDeauthentication
+
+`func (o *InlineObject46) HasDhcpEnforcedDeauthentication() bool`
+
+HasDhcpEnforcedDeauthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

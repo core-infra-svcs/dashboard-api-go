@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse20074Usage**](InlineResponse20074Usage.md) |  | [optional] 
 **Counts** | Pointer to [**InlineResponse20074Counts**](InlineResponse20074Counts.md) |  | [optional] 
+**Limits** | Pointer to [**InlineResponse20074Limits**](InlineResponse20074Limits.md) |  | [optional] 
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewInlineResponse20074WithDefaults instantiates a new InlineResponse20074 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetUsage
-
-`func (o *InlineResponse20074) GetUsage() InlineResponse20074Usage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse20074) GetUsageOk() (*InlineResponse20074Usage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse20074) SetUsage(v InlineResponse20074Usage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse20074) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
 
 ### GetCounts
 
@@ -75,6 +50,31 @@ SetCounts sets Counts field to given value.
 `func (o *InlineResponse20074) HasCounts() bool`
 
 HasCounts returns a boolean if a field has been set.
+
+### GetLimits
+
+`func (o *InlineResponse20074) GetLimits() InlineResponse20074Limits`
+
+GetLimits returns the Limits field if non-nil, zero value otherwise.
+
+### GetLimitsOk
+
+`func (o *InlineResponse20074) GetLimitsOk() (*InlineResponse20074Limits, bool)`
+
+GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLimits
+
+`func (o *InlineResponse20074) SetLimits(v InlineResponse20074Limits)`
+
+SetLimits sets Limits field to given value.
+
+### HasLimits
+
+`func (o *InlineResponse20074) HasLimits() bool`
+
+HasLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

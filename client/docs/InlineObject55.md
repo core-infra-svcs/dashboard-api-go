@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **Cidr** | Pointer to **string** | CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN. | [optional] 
 **Mask** | Pointer to **int32** | Mask used for the subnet of all bound to the template networks. Applicable only for template network. | [optional] 
 **Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
+**MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceVlansMandatoryDhcp**](NetworksNetworkIdApplianceVlansMandatoryDhcp.md) |  | [optional] 
 
 ## Methods
 
@@ -247,6 +248,31 @@ SetIpv6 sets Ipv6 field to given value.
 `func (o *InlineObject55) HasIpv6() bool`
 
 HasIpv6 returns a boolean if a field has been set.
+
+### GetMandatoryDhcp
+
+`func (o *InlineObject55) GetMandatoryDhcp() NetworksNetworkIdApplianceVlansMandatoryDhcp`
+
+GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
+
+### GetMandatoryDhcpOk
+
+`func (o *InlineObject55) GetMandatoryDhcpOk() (*NetworksNetworkIdApplianceVlansMandatoryDhcp, bool)`
+
+GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMandatoryDhcp
+
+`func (o *InlineObject55) SetMandatoryDhcp(v NetworksNetworkIdApplianceVlansMandatoryDhcp)`
+
+SetMandatoryDhcp sets MandatoryDhcp field to given value.
+
+### HasMandatoryDhcp
+
+`func (o *InlineObject55) HasMandatoryDhcp() bool`
+
+HasMandatoryDhcp returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

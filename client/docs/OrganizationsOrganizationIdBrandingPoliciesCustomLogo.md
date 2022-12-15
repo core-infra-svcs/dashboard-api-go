@@ -5,9 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Whether or not there is a custom logo enabled. | [optional] 
-**Image** | Pointer to **map[string]interface{}** | Properties for setting the image. | [optional] 
-**Contents** | Pointer to **string** | The file contents (a base 64 encoded string) of your new logo. | [optional] 
-**Format** | Pointer to **string** | The format of the encoded contents.  Supported formats are &#39;png&#39;, &#39;gif&#39;, and jpg&#39;. Note that all images are saved as PNG files, regardless of the format they are uploaded in. | [optional] 
+**Image** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogoImage**](OrganizationsOrganizationIdBrandingPoliciesCustomLogoImage.md) |  | [optional] 
 
 ## Methods
 
@@ -55,20 +53,20 @@ HasEnabled returns a boolean if a field has been set.
 
 ### GetImage
 
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) GetImage() map[string]interface{}`
+`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) GetImage() OrganizationsOrganizationIdBrandingPoliciesCustomLogoImage`
 
 GetImage returns the Image field if non-nil, zero value otherwise.
 
 ### GetImageOk
 
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) GetImageOk() (*map[string]interface{}, bool)`
+`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) GetImageOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogoImage, bool)`
 
 GetImageOk returns a tuple with the Image field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetImage
 
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) SetImage(v map[string]interface{})`
+`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) SetImage(v OrganizationsOrganizationIdBrandingPoliciesCustomLogoImage)`
 
 SetImage sets Image field to given value.
 
@@ -77,56 +75,6 @@ SetImage sets Image field to given value.
 `func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) HasImage() bool`
 
 HasImage returns a boolean if a field has been set.
-
-### GetContents
-
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) GetContents() string`
-
-GetContents returns the Contents field if non-nil, zero value otherwise.
-
-### GetContentsOk
-
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) GetContentsOk() (*string, bool)`
-
-GetContentsOk returns a tuple with the Contents field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetContents
-
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) SetContents(v string)`
-
-SetContents sets Contents field to given value.
-
-### HasContents
-
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) HasContents() bool`
-
-HasContents returns a boolean if a field has been set.
-
-### GetFormat
-
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) GetFormat() string`
-
-GetFormat returns the Format field if non-nil, zero value otherwise.
-
-### GetFormatOk
-
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) GetFormatOk() (*string, bool)`
-
-GetFormatOk returns a tuple with the Format field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFormat
-
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) SetFormat(v string)`
-
-SetFormat sets Format field to given value.
-
-### HasFormat
-
-`func (o *OrganizationsOrganizationIdBrandingPoliciesCustomLogo) HasFormat() bool`
-
-HasFormat returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

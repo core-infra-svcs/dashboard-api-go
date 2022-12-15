@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
-**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
-**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
-**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
+**Id** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Organization name | [optional] 
+**Url** | Pointer to **string** | Organization URL | [optional] 
+**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
+**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
+**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
+**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +31,180 @@ NewInlineResponse20073WithDefaults instantiates a new InlineResponse20073 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetId
 
-`func (o *InlineResponse20073) GetTs() time.Time`
+`func (o *InlineResponse20073) GetId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetIdOk
 
-`func (o *InlineResponse20073) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20073) GetIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetId
 
-`func (o *InlineResponse20073) SetTs(v time.Time)`
+`func (o *InlineResponse20073) SetId(v string)`
 
-SetTs sets Ts field to given value.
+SetId sets Id field to given value.
 
-### HasTs
+### HasId
 
-`func (o *InlineResponse20073) HasTs() bool`
+`func (o *InlineResponse20073) HasId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetTotal
+### GetName
 
-`func (o *InlineResponse20073) GetTotal() int32`
+`func (o *InlineResponse20073) GetName() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetNameOk
 
-`func (o *InlineResponse20073) GetTotalOk() (*int32, bool)`
+`func (o *InlineResponse20073) GetNameOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetName
 
-`func (o *InlineResponse20073) SetTotal(v int32)`
+`func (o *InlineResponse20073) SetName(v string)`
 
-SetTotal sets Total field to given value.
+SetName sets Name field to given value.
 
-### HasTotal
+### HasName
 
-`func (o *InlineResponse20073) HasTotal() bool`
+`func (o *InlineResponse20073) HasName() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUpstream
+### GetUrl
 
-`func (o *InlineResponse20073) GetUpstream() int32`
+`func (o *InlineResponse20073) GetUrl() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetUrlOk
 
-`func (o *InlineResponse20073) GetUpstreamOk() (*int32, bool)`
+`func (o *InlineResponse20073) GetUrlOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetUrl
 
-`func (o *InlineResponse20073) SetUpstream(v int32)`
+`func (o *InlineResponse20073) SetUrl(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetUrl sets Url field to given value.
 
-### HasUpstream
+### HasUrl
 
-`func (o *InlineResponse20073) HasUpstream() bool`
+`func (o *InlineResponse20073) HasUrl() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetDownstream
+### GetApi
 
-`func (o *InlineResponse20073) GetDownstream() int32`
+`func (o *InlineResponse20073) GetApi() OrganizationsApi`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetApiOk
 
-`func (o *InlineResponse20073) GetDownstreamOk() (*int32, bool)`
+`func (o *InlineResponse20073) GetApiOk() (*OrganizationsApi, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetApi
 
-`func (o *InlineResponse20073) SetDownstream(v int32)`
+`func (o *InlineResponse20073) SetApi(v OrganizationsApi)`
 
-SetDownstream sets Downstream field to given value.
+SetApi sets Api field to given value.
 
-### HasDownstream
+### HasApi
 
-`func (o *InlineResponse20073) HasDownstream() bool`
+`func (o *InlineResponse20073) HasApi() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
+
+### GetLicensing
+
+`func (o *InlineResponse20073) GetLicensing() OrganizationsLicensing`
+
+GetLicensing returns the Licensing field if non-nil, zero value otherwise.
+
+### GetLicensingOk
+
+`func (o *InlineResponse20073) GetLicensingOk() (*OrganizationsLicensing, bool)`
+
+GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicensing
+
+`func (o *InlineResponse20073) SetLicensing(v OrganizationsLicensing)`
+
+SetLicensing sets Licensing field to given value.
+
+### HasLicensing
+
+`func (o *InlineResponse20073) HasLicensing() bool`
+
+HasLicensing returns a boolean if a field has been set.
+
+### GetCloud
+
+`func (o *InlineResponse20073) GetCloud() OrganizationsCloud`
+
+GetCloud returns the Cloud field if non-nil, zero value otherwise.
+
+### GetCloudOk
+
+`func (o *InlineResponse20073) GetCloudOk() (*OrganizationsCloud, bool)`
+
+GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCloud
+
+`func (o *InlineResponse20073) SetCloud(v OrganizationsCloud)`
+
+SetCloud sets Cloud field to given value.
+
+### HasCloud
+
+`func (o *InlineResponse20073) HasCloud() bool`
+
+HasCloud returns a boolean if a field has been set.
+
+### GetManagement
+
+`func (o *InlineResponse20073) GetManagement() OrganizationsManagement`
+
+GetManagement returns the Management field if non-nil, zero value otherwise.
+
+### GetManagementOk
+
+`func (o *InlineResponse20073) GetManagementOk() (*OrganizationsManagement, bool)`
+
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManagement
+
+`func (o *InlineResponse20073) SetManagement(v OrganizationsManagement)`
+
+SetManagement sets Management field to given value.
+
+### HasManagement
+
+`func (o *InlineResponse20073) HasManagement() bool`
+
+HasManagement returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

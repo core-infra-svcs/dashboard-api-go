@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
-**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
+**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
+**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse20065WithDefaults instantiates a new InlineResponse20065 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetStartTs
 
-`func (o *InlineResponse20065) GetName() string`
+`func (o *InlineResponse20065) GetStartTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStartTsOk
 
-`func (o *InlineResponse20065) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20065) GetStartTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStartTs
 
-`func (o *InlineResponse20065) SetName(v string)`
+`func (o *InlineResponse20065) SetStartTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasName
+### HasStartTs
 
-`func (o *InlineResponse20065) HasName() bool`
+`func (o *InlineResponse20065) HasStartTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetId
+### GetEndTs
 
-`func (o *InlineResponse20065) GetId() string`
+`func (o *InlineResponse20065) GetEndTs() time.Time`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEndTsOk
 
-`func (o *InlineResponse20065) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20065) GetEndTsOk() (*time.Time, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEndTs
 
-`func (o *InlineResponse20065) SetId(v string)`
+`func (o *InlineResponse20065) SetEndTs(v time.Time)`
 
-SetId sets Id field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasId
+### HasEndTs
 
-`func (o *InlineResponse20065) HasId() bool`
+`func (o *InlineResponse20065) HasEndTs() bool`
 
-HasId returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetAverageKbps
 
-`func (o *InlineResponse20065) GetGroupPolicyId() string`
+`func (o *InlineResponse20065) GetAverageKbps() int32`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetAverageKbpsOk
 
-`func (o *InlineResponse20065) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse20065) GetAverageKbpsOk() (*int32, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetAverageKbps
 
-`func (o *InlineResponse20065) SetGroupPolicyId(v string)`
+`func (o *InlineResponse20065) SetAverageKbps(v int32)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetAverageKbps sets AverageKbps field to given value.
 
-### HasGroupPolicyId
+### HasAverageKbps
 
-`func (o *InlineResponse20065) HasGroupPolicyId() bool`
+`func (o *InlineResponse20065) HasAverageKbps() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasAverageKbps returns a boolean if a field has been set.
 
-### GetPassphrase
+### GetDownloadKbps
 
-`func (o *InlineResponse20065) GetPassphrase() string`
+`func (o *InlineResponse20065) GetDownloadKbps() int32`
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
 
-### GetPassphraseOk
+### GetDownloadKbpsOk
 
-`func (o *InlineResponse20065) GetPassphraseOk() (*string, bool)`
+`func (o *InlineResponse20065) GetDownloadKbpsOk() (*int32, bool)`
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetDownloadKbps
 
-`func (o *InlineResponse20065) SetPassphrase(v string)`
+`func (o *InlineResponse20065) SetDownloadKbps(v int32)`
 
-SetPassphrase sets Passphrase field to given value.
+SetDownloadKbps sets DownloadKbps field to given value.
 
-### HasPassphrase
+### HasDownloadKbps
 
-`func (o *InlineResponse20065) HasPassphrase() bool`
+`func (o *InlineResponse20065) HasDownloadKbps() bool`
 
-HasPassphrase returns a boolean if a field has been set.
+HasDownloadKbps returns a boolean if a field has been set.
 
-### GetWifiPersonalNetworkId
+### GetUploadKbps
 
-`func (o *InlineResponse20065) GetWifiPersonalNetworkId() string`
+`func (o *InlineResponse20065) GetUploadKbps() int32`
 
-GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
+GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
 
-### GetWifiPersonalNetworkIdOk
+### GetUploadKbpsOk
 
-`func (o *InlineResponse20065) GetWifiPersonalNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20065) GetUploadKbpsOk() (*int32, bool)`
 
-GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
+GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiPersonalNetworkId
+### SetUploadKbps
 
-`func (o *InlineResponse20065) SetWifiPersonalNetworkId(v string)`
+`func (o *InlineResponse20065) SetUploadKbps(v int32)`
 
-SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
+SetUploadKbps sets UploadKbps field to given value.
 
-### HasWifiPersonalNetworkId
+### HasUploadKbps
 
-`func (o *InlineResponse20065) HasWifiPersonalNetworkId() bool`
+`func (o *InlineResponse20065) HasUploadKbps() bool`
 
-HasWifiPersonalNetworkId returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *InlineResponse20065) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineResponse20065) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineResponse20065) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *InlineResponse20065) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
+HasUploadKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
