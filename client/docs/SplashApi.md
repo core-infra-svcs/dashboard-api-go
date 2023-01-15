@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessSsidSplashSettings
 
-> InlineResponse20071 GetNetworkWirelessSsidSplashSettings(ctx, networkId, number).Execute()
+> InlineResponse20074 GetNetworkWirelessSsidSplashSettings(ctx, networkId, number).Execute()
 
 Display the splash page settings for the given SSID
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashApi.GetNetworkWirelessSsidSplashSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidSplashSettings`: InlineResponse20071
+    // response from `GetNetworkWirelessSsidSplashSettings`: InlineResponse20074
     fmt.Fprintf(os.Stdout, "Response from `SplashApi.GetNetworkWirelessSsidSplashSettings`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071**](InlineResponse20071.md)
+[**InlineResponse20074**](InlineResponse20074.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidSplashSettings
 
-> InlineResponse20071 UpdateNetworkWirelessSsidSplashSettings(ctx, networkId, number).UpdateNetworkWirelessSsidSplashSettings(updateNetworkWirelessSsidSplashSettings).Execute()
+> InlineResponse20074 UpdateNetworkWirelessSsidSplashSettings(ctx, networkId, number).UpdateNetworkWirelessSsidSplashSettings(updateNetworkWirelessSsidSplashSettings).Execute()
 
 Modify the splash page settings for the given SSID
 
@@ -114,7 +114,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashApi.UpdateNetworkWirelessSsidSplashSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidSplashSettings`: InlineResponse20071
+    // response from `UpdateNetworkWirelessSsidSplashSettings`: InlineResponse20074
     fmt.Fprintf(os.Stdout, "Response from `SplashApi.UpdateNetworkWirelessSsidSplashSettings`: %v\n", resp)
 }
 ```
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071**](InlineResponse20071.md)
+[**InlineResponse20074**](InlineResponse20074.md)
 
 ### Authorization
 

@@ -4,16 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | MAC address of the device | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Name** | Pointer to **string** | Name of the device | [optional] 
-**Model** | Pointer to **string** | Model type of the device | [optional] 
-**NetworkId** | Pointer to **string** | Network Id of the device | [optional] 
-**OrderNumber** | Pointer to **string** | Order number of the device | [optional] 
-**ClaimedAt** | Pointer to **time.Time** | Claimed time of the device | [optional] 
-**LicenseExpirationDate** | Pointer to **time.Time** | License expiration date of the device | [optional] 
-**Tags** | Pointer to **[]string** | Device tags | [optional] 
-**ProductType** | Pointer to **string** | Product type of the device | [optional] 
+**Serial** | Pointer to **string** | Serial of the device | [optional] 
+**Name** | Pointer to **string** | Name assigned to the device | [optional] 
+**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
+**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
 
 ## Methods
 
@@ -33,31 +27,6 @@ will change when the set of required properties is changed
 NewInlineResponse20091WithDefaults instantiates a new InlineResponse20091 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetMac
-
-`func (o *InlineResponse20091) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse20091) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse20091) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse20091) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
 
 ### GetSerial
 
@@ -109,180 +78,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetModel
+### GetDeviceStatus
 
-`func (o *InlineResponse20091) GetModel() string`
+`func (o *InlineResponse20091) GetDeviceStatus() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetDeviceStatusOk
 
-`func (o *InlineResponse20091) GetModelOk() (*string, bool)`
+`func (o *InlineResponse20091) GetDeviceStatusOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetDeviceStatus
 
-`func (o *InlineResponse20091) SetModel(v string)`
+`func (o *InlineResponse20091) SetDeviceStatus(v string)`
 
-SetModel sets Model field to given value.
+SetDeviceStatus sets DeviceStatus field to given value.
 
-### HasModel
+### HasDeviceStatus
 
-`func (o *InlineResponse20091) HasModel() bool`
+`func (o *InlineResponse20091) HasDeviceStatus() bool`
 
-HasModel returns a boolean if a field has been set.
+HasDeviceStatus returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetUpgrade
 
-`func (o *InlineResponse20091) GetNetworkId() string`
+`func (o *InlineResponse20091) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetUpgradeOk
 
-`func (o *InlineResponse20091) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20091) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetUpgrade
 
-`func (o *InlineResponse20091) SetNetworkId(v string)`
+`func (o *InlineResponse20091) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
 
-SetNetworkId sets NetworkId field to given value.
+SetUpgrade sets Upgrade field to given value.
 
-### HasNetworkId
+### HasUpgrade
 
-`func (o *InlineResponse20091) HasNetworkId() bool`
+`func (o *InlineResponse20091) HasUpgrade() bool`
 
-HasNetworkId returns a boolean if a field has been set.
-
-### GetOrderNumber
-
-`func (o *InlineResponse20091) GetOrderNumber() string`
-
-GetOrderNumber returns the OrderNumber field if non-nil, zero value otherwise.
-
-### GetOrderNumberOk
-
-`func (o *InlineResponse20091) GetOrderNumberOk() (*string, bool)`
-
-GetOrderNumberOk returns a tuple with the OrderNumber field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrderNumber
-
-`func (o *InlineResponse20091) SetOrderNumber(v string)`
-
-SetOrderNumber sets OrderNumber field to given value.
-
-### HasOrderNumber
-
-`func (o *InlineResponse20091) HasOrderNumber() bool`
-
-HasOrderNumber returns a boolean if a field has been set.
-
-### GetClaimedAt
-
-`func (o *InlineResponse20091) GetClaimedAt() time.Time`
-
-GetClaimedAt returns the ClaimedAt field if non-nil, zero value otherwise.
-
-### GetClaimedAtOk
-
-`func (o *InlineResponse20091) GetClaimedAtOk() (*time.Time, bool)`
-
-GetClaimedAtOk returns a tuple with the ClaimedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClaimedAt
-
-`func (o *InlineResponse20091) SetClaimedAt(v time.Time)`
-
-SetClaimedAt sets ClaimedAt field to given value.
-
-### HasClaimedAt
-
-`func (o *InlineResponse20091) HasClaimedAt() bool`
-
-HasClaimedAt returns a boolean if a field has been set.
-
-### GetLicenseExpirationDate
-
-`func (o *InlineResponse20091) GetLicenseExpirationDate() time.Time`
-
-GetLicenseExpirationDate returns the LicenseExpirationDate field if non-nil, zero value otherwise.
-
-### GetLicenseExpirationDateOk
-
-`func (o *InlineResponse20091) GetLicenseExpirationDateOk() (*time.Time, bool)`
-
-GetLicenseExpirationDateOk returns a tuple with the LicenseExpirationDate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseExpirationDate
-
-`func (o *InlineResponse20091) SetLicenseExpirationDate(v time.Time)`
-
-SetLicenseExpirationDate sets LicenseExpirationDate field to given value.
-
-### HasLicenseExpirationDate
-
-`func (o *InlineResponse20091) HasLicenseExpirationDate() bool`
-
-HasLicenseExpirationDate returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse20091) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse20091) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse20091) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse20091) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetProductType
-
-`func (o *InlineResponse20091) GetProductType() string`
-
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
-
-### GetProductTypeOk
-
-`func (o *InlineResponse20091) GetProductTypeOk() (*string, bool)`
-
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductType
-
-`func (o *InlineResponse20091) SetProductType(v string)`
-
-SetProductType sets ProductType field to given value.
-
-### HasProductType
-
-`func (o *InlineResponse20091) HasProductType() bool`
-
-HasProductType returns a boolean if a field has been set.
+HasUpgrade returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

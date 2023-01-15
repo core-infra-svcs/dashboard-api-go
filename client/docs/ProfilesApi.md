@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkSensorAlertsProfile
 
-> InlineResponse20030 CreateNetworkSensorAlertsProfile(ctx, networkId).CreateNetworkSensorAlertsProfile(createNetworkSensorAlertsProfile).Execute()
+> InlineResponse20032 CreateNetworkSensorAlertsProfile(ctx, networkId).CreateNetworkSensorAlertsProfile(createNetworkSensorAlertsProfile).Execute()
 
 Creates a sensor alert profile for a network.
 
@@ -52,7 +52,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.CreateNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSensorAlertsProfile`: InlineResponse20030
+    // response from `CreateNetworkSensorAlertsProfile`: InlineResponse20032
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.CreateNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20030**](InlineResponse20030.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsProfile
 
-> InlineResponse20030 GetNetworkSensorAlertsProfile(ctx, networkId, id).Execute()
+> InlineResponse20032 GetNetworkSensorAlertsProfile(ctx, networkId, id).Execute()
 
 Show details of a sensor alert profile for a network.
 
@@ -338,7 +338,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsProfile`: InlineResponse20030
+    // response from `GetNetworkSensorAlertsProfile`: InlineResponse20032
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -364,7 +364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20030**](InlineResponse20030.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsProfiles
 
-> []InlineResponse20030 GetNetworkSensorAlertsProfiles(ctx, networkId).Execute()
+> []InlineResponse20032 GetNetworkSensorAlertsProfiles(ctx, networkId).Execute()
 
 Lists all sensor alert profiles for a network.
 
@@ -410,7 +410,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetNetworkSensorAlertsProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsProfiles`: []InlineResponse20030
+    // response from `GetNetworkSensorAlertsProfiles`: []InlineResponse20032
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetNetworkSensorAlertsProfiles`: %v\n", resp)
 }
 ```
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20030**](InlineResponse20030.md)
+[**[]InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -452,7 +452,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmProfiles
 
-> []InlineResponse20049 GetNetworkSmProfiles(ctx, networkId).Execute()
+> []InlineResponse20051 GetNetworkSmProfiles(ctx, networkId).Execute()
 
 List all profiles in a network
 
@@ -480,7 +480,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetNetworkSmProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmProfiles`: []InlineResponse20049
+    // response from `GetNetworkSmProfiles`: []InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetNetworkSmProfiles`: %v\n", resp)
 }
 ```
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20049**](InlineResponse20049.md)
+[**[]InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -592,7 +592,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse20080 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
+> InlineResponse20083 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
 
 Return a switch profile port
 
@@ -623,7 +623,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse20080
+    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -653,7 +653,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20080**](InlineResponse20080.md)
+[**InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 
@@ -671,7 +671,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePorts
 
-> []InlineResponse20080 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
+> []InlineResponse20083 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
 
 Return all the ports of a switch profile
 
@@ -701,7 +701,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetOrganizationConfigTemplateSwitchProfilePorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse20080
+    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetOrganizationConfigTemplateSwitchProfilePorts`: %v\n", resp)
 }
 ```
@@ -729,7 +729,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20080**](InlineResponse20080.md)
+[**[]InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 
@@ -820,7 +820,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSensorAlertsProfile
 
-> InlineResponse20030 UpdateNetworkSensorAlertsProfile(ctx, networkId, id).UpdateNetworkSensorAlertsProfile(updateNetworkSensorAlertsProfile).Execute()
+> InlineResponse20032 UpdateNetworkSensorAlertsProfile(ctx, networkId, id).UpdateNetworkSensorAlertsProfile(updateNetworkSensorAlertsProfile).Execute()
 
 Updates a sensor alert profile for a network.
 
@@ -850,7 +850,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.UpdateNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSensorAlertsProfile`: InlineResponse20030
+    // response from `UpdateNetworkSensorAlertsProfile`: InlineResponse20032
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.UpdateNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -877,7 +877,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20030**](InlineResponse20030.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -970,7 +970,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse20080 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
+> InlineResponse20083 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
 
 Update a switch profile port
 
@@ -1002,7 +1002,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.UpdateOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse20080
+    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.UpdateOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -1033,7 +1033,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20080**](InlineResponse20080.md)
+[**InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 

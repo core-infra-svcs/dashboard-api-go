@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Name** | Pointer to **string** | Name of the appliance | [optional] 
-**Mac** | Pointer to **string** | Mac address of the appliance | [optional] 
-**Serial** | Pointer to **string** | Serial number of the appliance | [optional] 
-**Model** | Pointer to **string** | Model of the appliance | [optional] 
-**Utilization** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization.md) |  | [optional] 
+**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
+**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
+**Networks** | Pointer to [**[]InlineResponse200106Networks**](InlineResponse200106Networks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Tags** | Pointer to [**[]InlineResponse200106Tags**](InlineResponse200106Tags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse200106WithDefaults instantiates a new InlineResponse200106 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetId
 
-`func (o *InlineResponse200106) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse200106) GetId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetIdOk
 
-`func (o *InlineResponse200106) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse200106) GetIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetId
 
-`func (o *InlineResponse200106) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse200106) SetId(v string)`
 
-SetNetwork sets Network field to given value.
+SetId sets Id field to given value.
 
-### HasNetwork
+### HasId
 
-`func (o *InlineResponse200106) HasNetwork() bool`
+`func (o *InlineResponse200106) HasId() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetName
+### GetRole
 
-`func (o *InlineResponse200106) GetName() string`
+`func (o *InlineResponse200106) GetRole() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRoleOk
 
-`func (o *InlineResponse200106) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200106) GetRoleOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRole
 
-`func (o *InlineResponse200106) SetName(v string)`
+`func (o *InlineResponse200106) SetRole(v string)`
 
-SetName sets Name field to given value.
+SetRole sets Role field to given value.
 
-### HasName
+### HasRole
 
-`func (o *InlineResponse200106) HasName() bool`
+`func (o *InlineResponse200106) HasRole() bool`
 
-HasName returns a boolean if a field has been set.
+HasRole returns a boolean if a field has been set.
 
-### GetMac
+### GetOrgAccess
 
-`func (o *InlineResponse200106) GetMac() string`
+`func (o *InlineResponse200106) GetOrgAccess() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetOrgAccessOk
 
-`func (o *InlineResponse200106) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200106) GetOrgAccessOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetOrgAccess
 
-`func (o *InlineResponse200106) SetMac(v string)`
+`func (o *InlineResponse200106) SetOrgAccess(v string)`
 
-SetMac sets Mac field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasMac
+### HasOrgAccess
 
-`func (o *InlineResponse200106) HasMac() bool`
+`func (o *InlineResponse200106) HasOrgAccess() bool`
 
-HasMac returns a boolean if a field has been set.
+HasOrgAccess returns a boolean if a field has been set.
 
-### GetSerial
+### GetNetworks
 
-`func (o *InlineResponse200106) GetSerial() string`
+`func (o *InlineResponse200106) GetNetworks() []InlineResponse200106Networks`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNetworksOk
 
-`func (o *InlineResponse200106) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200106) GetNetworksOk() (*[]InlineResponse200106Networks, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetNetworks
 
-`func (o *InlineResponse200106) SetSerial(v string)`
+`func (o *InlineResponse200106) SetNetworks(v []InlineResponse200106Networks)`
 
-SetSerial sets Serial field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasSerial
+### HasNetworks
 
-`func (o *InlineResponse200106) HasSerial() bool`
+`func (o *InlineResponse200106) HasNetworks() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
-### GetModel
+### GetTags
 
-`func (o *InlineResponse200106) GetModel() string`
+`func (o *InlineResponse200106) GetTags() []InlineResponse200106Tags`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetTagsOk
 
-`func (o *InlineResponse200106) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200106) GetTagsOk() (*[]InlineResponse200106Tags, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetTags
 
-`func (o *InlineResponse200106) SetModel(v string)`
+`func (o *InlineResponse200106) SetTags(v []InlineResponse200106Tags)`
 
-SetModel sets Model field to given value.
+SetTags sets Tags field to given value.
 
-### HasModel
+### HasTags
 
-`func (o *InlineResponse200106) HasModel() bool`
+`func (o *InlineResponse200106) HasTags() bool`
 
-HasModel returns a boolean if a field has been set.
-
-### GetUtilization
-
-`func (o *InlineResponse200106) GetUtilization() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization`
-
-GetUtilization returns the Utilization field if non-nil, zero value otherwise.
-
-### GetUtilizationOk
-
-`func (o *InlineResponse200106) GetUtilizationOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization, bool)`
-
-GetUtilizationOk returns a tuple with the Utilization field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUtilization
-
-`func (o *InlineResponse200106) SetUtilization(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization)`
-
-SetUtilization sets Utilization field to given value.
-
-### HasUtilization
-
-`func (o *InlineResponse200106) HasUtilization() bool`
-
-HasUtilization returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

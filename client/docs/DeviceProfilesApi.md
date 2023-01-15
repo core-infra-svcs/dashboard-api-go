@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSmDeviceDeviceProfiles
 
-> []InlineResponse20043 GetNetworkSmDeviceDeviceProfiles(ctx, networkId, deviceId).Execute()
+> []InlineResponse20045 GetNetworkSmDeviceDeviceProfiles(ctx, networkId, deviceId).Execute()
 
 Get the installed profiles associated with a device
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DeviceProfilesApi.GetNetworkSmDeviceDeviceProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceDeviceProfiles`: []InlineResponse20043
+    // response from `GetNetworkSmDeviceDeviceProfiles`: []InlineResponse20045
     fmt.Fprintf(os.Stdout, "Response from `DeviceProfilesApi.GetNetworkSmDeviceDeviceProfiles`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20043**](InlineResponse20043.md)
+[**[]InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUserDeviceProfiles
 
-> []InlineResponse20043 GetNetworkSmUserDeviceProfiles(ctx, networkId, userId).Execute()
+> []InlineResponse20045 GetNetworkSmUserDeviceProfiles(ctx, networkId, userId).Execute()
 
 Get the profiles associated with a user
 
@@ -113,7 +113,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DeviceProfilesApi.GetNetworkSmUserDeviceProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUserDeviceProfiles`: []InlineResponse20043
+    // response from `GetNetworkSmUserDeviceProfiles`: []InlineResponse20045
     fmt.Fprintf(os.Stdout, "Response from `DeviceProfilesApi.GetNetworkSmUserDeviceProfiles`: %v\n", resp)
 }
 ```
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20043**](InlineResponse20043.md)
+[**[]InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 

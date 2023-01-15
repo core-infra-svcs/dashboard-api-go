@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
+**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
+**Type** | Pointer to **string** | The type of the payload template | [optional] 
+**Name** | Pointer to **string** | The name of the payload template | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
+**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse20063WithDefaults instantiates a new InlineResponse20063 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetPayloadTemplateId
 
-`func (o *InlineResponse20063) GetStartTs() time.Time`
+`func (o *InlineResponse20063) GetPayloadTemplateId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetPayloadTemplateIdOk
 
-`func (o *InlineResponse20063) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20063) GetPayloadTemplateIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetPayloadTemplateId
 
-`func (o *InlineResponse20063) SetStartTs(v time.Time)`
+`func (o *InlineResponse20063) SetPayloadTemplateId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetPayloadTemplateId sets PayloadTemplateId field to given value.
 
-### HasStartTs
+### HasPayloadTemplateId
 
-`func (o *InlineResponse20063) HasStartTs() bool`
+`func (o *InlineResponse20063) HasPayloadTemplateId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasPayloadTemplateId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetType
 
-`func (o *InlineResponse20063) GetEndTs() time.Time`
+`func (o *InlineResponse20063) GetType() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetTypeOk
 
-`func (o *InlineResponse20063) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20063) GetTypeOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetType
 
-`func (o *InlineResponse20063) SetEndTs(v time.Time)`
+`func (o *InlineResponse20063) SetType(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetType sets Type field to given value.
 
-### HasEndTs
+### HasType
 
-`func (o *InlineResponse20063) HasEndTs() bool`
+`func (o *InlineResponse20063) HasType() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetClientCount
+### GetName
 
-`func (o *InlineResponse20063) GetClientCount() int32`
+`func (o *InlineResponse20063) GetName() string`
 
-GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetClientCountOk
+### GetNameOk
 
-`func (o *InlineResponse20063) GetClientCountOk() (*int32, bool)`
+`func (o *InlineResponse20063) GetNameOk() (*string, bool)`
 
-GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientCount
+### SetName
 
-`func (o *InlineResponse20063) SetClientCount(v int32)`
+`func (o *InlineResponse20063) SetName(v string)`
 
-SetClientCount sets ClientCount field to given value.
+SetName sets Name field to given value.
 
-### HasClientCount
+### HasName
 
-`func (o *InlineResponse20063) HasClientCount() bool`
+`func (o *InlineResponse20063) HasName() bool`
 
-HasClientCount returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetHeaders
+
+`func (o *InlineResponse20063) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
+
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
+
+### GetHeadersOk
+
+`func (o *InlineResponse20063) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
+
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeaders
+
+`func (o *InlineResponse20063) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
+
+SetHeaders sets Headers field to given value.
+
+### HasHeaders
+
+`func (o *InlineResponse20063) HasHeaders() bool`
+
+HasHeaders returns a boolean if a field has been set.
+
+### GetBody
+
+`func (o *InlineResponse20063) GetBody() string`
+
+GetBody returns the Body field if non-nil, zero value otherwise.
+
+### GetBodyOk
+
+`func (o *InlineResponse20063) GetBodyOk() (*string, bool)`
+
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBody
+
+`func (o *InlineResponse20063) SetBody(v string)`
+
+SetBody sets Body field to given value.
+
+### HasBody
+
+`func (o *InlineResponse20063) HasBody() bool`
+
+HasBody returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

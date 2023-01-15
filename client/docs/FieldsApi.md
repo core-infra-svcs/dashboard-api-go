@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## UpdateNetworkSmDevicesFields
 
-> []InlineResponse20034 UpdateNetworkSmDevicesFields(ctx, networkId).UpdateNetworkSmDevicesFields(updateNetworkSmDevicesFields).Execute()
+> []InlineResponse20036 UpdateNetworkSmDevicesFields(ctx, networkId).UpdateNetworkSmDevicesFields(updateNetworkSmDevicesFields).Execute()
 
 Modify the fields of a device
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FieldsApi.UpdateNetworkSmDevicesFields``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSmDevicesFields`: []InlineResponse20034
+    // response from `UpdateNetworkSmDevicesFields`: []InlineResponse20036
     fmt.Fprintf(os.Stdout, "Response from `FieldsApi.UpdateNetworkSmDevicesFields`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20034**](InlineResponse20034.md)
+[**[]InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 

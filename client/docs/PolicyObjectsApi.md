@@ -39,7 +39,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationPolicyObject := *openapiclient.NewInlineObject209("Name_example", "Category_example", "Type_example") // InlineObject209 | 
+    createOrganizationPolicyObject := *openapiclient.NewInlineObject210("Name_example", "Category_example", "Type_example") // InlineObject210 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -69,7 +69,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicyOb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPolicyObject** | [**InlineObject209**](InlineObject209.md) |  | 
+ **createOrganizationPolicyObject** | [**InlineObject210**](InlineObject210.md) |  | 
 
 ### Return type
 
@@ -111,7 +111,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject210("Name_example") // InlineObject210 | 
+    createOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject211("Name_example") // InlineObject211 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -141,7 +141,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicyOb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPolicyObjectsGroup** | [**InlineObject210**](InlineObject210.md) |  | 
+ **createOrganizationPolicyObjectsGroup** | [**InlineObject211**](InlineObject211.md) |  | 
 
 ### Return type
 
@@ -624,7 +624,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | 
     policyObjectId := "policyObjectId_example" // string | 
-    updateOrganizationPolicyObject := *openapiclient.NewInlineObject212() // InlineObject212 |  (optional)
+    updateOrganizationPolicyObject := *openapiclient.NewInlineObject213() // InlineObject213 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -656,7 +656,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPolicyObject** | [**InlineObject212**](InlineObject212.md) |  | 
+ **updateOrganizationPolicyObject** | [**InlineObject213**](InlineObject213.md) |  | 
 
 ### Return type
 
@@ -699,7 +699,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | 
     policyObjectGroupId := "policyObjectGroupId_example" // string | 
-    updateOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject211() // InlineObject211 |  (optional)
+    updateOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject212() // InlineObject212 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -731,7 +731,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPolicyObjectsGroup** | [**InlineObject211**](InlineObject211.md) |  | 
+ **updateOrganizationPolicyObjectsGroup** | [**InlineObject212**](InlineObject212.md) |  | 
 
 ### Return type
 

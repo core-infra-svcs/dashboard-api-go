@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The id of the VPP Account | [optional] 
-**VppServiceToken** | Pointer to **string** | The VPP Account&#39;s Service Token | [optional] 
+**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
+**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200105WithDefaults instantiates a new InlineResponse200105 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetIdpId
 
-`func (o *InlineResponse200105) GetId() string`
+`func (o *InlineResponse200105) GetIdpId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetIdpId returns the IdpId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetIdpIdOk
 
-`func (o *InlineResponse200105) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200105) GetIdpIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetIdpId
 
-`func (o *InlineResponse200105) SetId(v string)`
+`func (o *InlineResponse200105) SetIdpId(v string)`
 
-SetId sets Id field to given value.
+SetIdpId sets IdpId field to given value.
 
-### HasId
+### HasIdpId
 
-`func (o *InlineResponse200105) HasId() bool`
+`func (o *InlineResponse200105) HasIdpId() bool`
 
-HasId returns a boolean if a field has been set.
+HasIdpId returns a boolean if a field has been set.
 
-### GetVppServiceToken
+### GetConsumerUrl
 
-`func (o *InlineResponse200105) GetVppServiceToken() string`
+`func (o *InlineResponse200105) GetConsumerUrl() string`
 
-GetVppServiceToken returns the VppServiceToken field if non-nil, zero value otherwise.
+GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
 
-### GetVppServiceTokenOk
+### GetConsumerUrlOk
 
-`func (o *InlineResponse200105) GetVppServiceTokenOk() (*string, bool)`
+`func (o *InlineResponse200105) GetConsumerUrlOk() (*string, bool)`
 
-GetVppServiceTokenOk returns a tuple with the VppServiceToken field if it's non-nil, zero value otherwise
+GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVppServiceToken
+### SetConsumerUrl
 
-`func (o *InlineResponse200105) SetVppServiceToken(v string)`
+`func (o *InlineResponse200105) SetConsumerUrl(v string)`
 
-SetVppServiceToken sets VppServiceToken field to given value.
+SetConsumerUrl sets ConsumerUrl field to given value.
 
-### HasVppServiceToken
+### HasConsumerUrl
 
-`func (o *InlineResponse200105) HasVppServiceToken() bool`
+`func (o *InlineResponse200105) HasConsumerUrl() bool`
 
-HasVppServiceToken returns a boolean if a field has been set.
+HasConsumerUrl returns a boolean if a field has been set.
+
+### GetX509certSha1Fingerprint
+
+`func (o *InlineResponse200105) GetX509certSha1Fingerprint() string`
+
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+
+### GetX509certSha1FingerprintOk
+
+`func (o *InlineResponse200105) GetX509certSha1FingerprintOk() (*string, bool)`
+
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetX509certSha1Fingerprint
+
+`func (o *InlineResponse200105) SetX509certSha1Fingerprint(v string)`
+
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+
+### HasX509certSha1Fingerprint
+
+`func (o *InlineResponse200105) HasX509certSha1Fingerprint() bool`
+
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
+
+### GetSloLogoutUrl
+
+`func (o *InlineResponse200105) GetSloLogoutUrl() string`
+
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+
+### GetSloLogoutUrlOk
+
+`func (o *InlineResponse200105) GetSloLogoutUrlOk() (*string, bool)`
+
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSloLogoutUrl
+
+`func (o *InlineResponse200105) SetSloLogoutUrl(v string)`
+
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
+
+### HasSloLogoutUrl
+
+`func (o *InlineResponse200105) HasSloLogoutUrl() bool`
+
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

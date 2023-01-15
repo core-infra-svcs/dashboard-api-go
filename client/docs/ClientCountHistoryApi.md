@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessClientCountHistory
 
-> []InlineResponse20063 GetNetworkWirelessClientCountHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
+> []InlineResponse20066 GetNetworkWirelessClientCountHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
 
 Return wireless client counts over time for a network, device, or network client
 
@@ -48,7 +48,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientCountHistoryApi.GetNetworkWirelessClientCountHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessClientCountHistory`: []InlineResponse20063
+    // response from `GetNetworkWirelessClientCountHistory`: []InlineResponse20066
     fmt.Fprintf(os.Stdout, "Response from `ClientCountHistoryApi.GetNetworkWirelessClientCountHistory`: %v\n", resp)
 }
 ```
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20063**](InlineResponse20063.md)
+[**[]InlineResponse20066**](InlineResponse20066.md)
 
 ### Authorization
 

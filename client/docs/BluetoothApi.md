@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessBluetoothSettings
 
-> InlineResponse20061 GetNetworkWirelessBluetoothSettings(ctx, networkId).Execute()
+> InlineResponse20064 GetNetworkWirelessBluetoothSettings(ctx, networkId).Execute()
 
 Return the Bluetooth settings for a network. <a href=\"https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)\">Bluetooth settings</a> must be enabled on the network.
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BluetoothApi.GetNetworkWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessBluetoothSettings`: InlineResponse20061
+    // response from `GetNetworkWirelessBluetoothSettings`: InlineResponse20064
     fmt.Fprintf(os.Stdout, "Response from `BluetoothApi.GetNetworkWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20061**](InlineResponse20061.md)
+[**InlineResponse20064**](InlineResponse20064.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessBluetoothSettings
 
-> InlineResponse20061 UpdateNetworkWirelessBluetoothSettings(ctx, networkId).UpdateNetworkWirelessBluetoothSettings(updateNetworkWirelessBluetoothSettings).Execute()
+> InlineResponse20064 UpdateNetworkWirelessBluetoothSettings(ctx, networkId).UpdateNetworkWirelessBluetoothSettings(updateNetworkWirelessBluetoothSettings).Execute()
 
 Update the Bluetooth settings for a network
 
@@ -254,7 +254,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BluetoothApi.UpdateNetworkWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessBluetoothSettings`: InlineResponse20061
+    // response from `UpdateNetworkWirelessBluetoothSettings`: InlineResponse20064
     fmt.Fprintf(os.Stdout, "Response from `BluetoothApi.UpdateNetworkWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20061**](InlineResponse20061.md)
+[**InlineResponse20064**](InlineResponse20064.md)
 
 ### Authorization
 

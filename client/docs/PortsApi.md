@@ -528,7 +528,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse20080 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
+> InlineResponse20083 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
 
 Return a switch profile port
 
@@ -559,7 +559,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse20080
+    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20080**](InlineResponse20080.md)
+[**InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePorts
 
-> []InlineResponse20080 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
+> []InlineResponse20083 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
 
 Return all the ports of a switch profile
 
@@ -637,7 +637,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationConfigTemplateSwitchProfilePorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse20080
+    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationConfigTemplateSwitchProfilePorts`: %v\n", resp)
 }
 ```
@@ -665,7 +665,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20080**](InlineResponse20080.md)
+[**[]InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 
@@ -683,7 +683,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsBySwitch
 
-> []InlineResponse200113 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).PortProfileIds(portProfileIds).Name(name).Mac(mac).Macs(macs).Serial(serial).Serials(serials).ConfigurationUpdatedAfter(configurationUpdatedAfter).Execute()
+> []InlineResponse200118 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).PortProfileIds(portProfileIds).Name(name).Mac(mac).Macs(macs).Serial(serial).Serials(serials).ConfigurationUpdatedAfter(configurationUpdatedAfter).Execute()
 
 List the switchports in an organization by switch
 
@@ -722,7 +722,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.GetOrganizationSwitchPortsBySwitch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsBySwitch`: []InlineResponse200113
+    // response from `GetOrganizationSwitchPortsBySwitch`: []InlineResponse200118
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.GetOrganizationSwitchPortsBySwitch`: %v\n", resp)
 }
 ```
@@ -757,7 +757,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200113**](InlineResponse200113.md)
+[**[]InlineResponse200118**](InlineResponse200118.md)
 
 ### Authorization
 
@@ -925,7 +925,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse20080 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
+> InlineResponse20083 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
 
 Update a switch profile port
 
@@ -957,7 +957,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortsApi.UpdateOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse20080
+    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `PortsApi.UpdateOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -988,7 +988,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20080**](InlineResponse20080.md)
+[**InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 

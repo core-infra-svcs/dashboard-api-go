@@ -4,17 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdminId** | Pointer to **string** | Database ID for the admin user who made the API request. | [optional] 
-**Method** | Pointer to **string** | HTTP method used in the API request. | [optional] 
-**Host** | Pointer to **string** | The host which the API request was directed at. | [optional] 
-**Path** | Pointer to **string** | The API request path. | [optional] 
-**QueryString** | Pointer to **string** | The query string sent with the API request. | [optional] 
-**UserAgent** | Pointer to **string** | The API request user agent. | [optional] 
-**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, indicating when the API request was made. | [optional] 
-**ResponseCode** | Pointer to **int32** | API request response code. | [optional] 
-**SourceIp** | Pointer to **string** | Public IP address from which the API request was made. | [optional] 
-**Version** | Pointer to **int32** | API version of the endpoint. | [optional] 
-**OperationId** | Pointer to **string** | Operation ID for the endpoint. | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
+**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -35,280 +29,130 @@ NewInlineResponse20075WithDefaults instantiates a new InlineResponse20075 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAdminId
+### GetStartTs
 
-`func (o *InlineResponse20075) GetAdminId() string`
+`func (o *InlineResponse20075) GetStartTs() time.Time`
 
-GetAdminId returns the AdminId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetAdminIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse20075) GetAdminIdOk() (*string, bool)`
+`func (o *InlineResponse20075) GetStartTsOk() (*time.Time, bool)`
 
-GetAdminIdOk returns a tuple with the AdminId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminId
+### SetStartTs
 
-`func (o *InlineResponse20075) SetAdminId(v string)`
+`func (o *InlineResponse20075) SetStartTs(v time.Time)`
 
-SetAdminId sets AdminId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasAdminId
+### HasStartTs
 
-`func (o *InlineResponse20075) HasAdminId() bool`
+`func (o *InlineResponse20075) HasStartTs() bool`
 
-HasAdminId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetMethod
+### GetEndTs
 
-`func (o *InlineResponse20075) GetMethod() string`
+`func (o *InlineResponse20075) GetEndTs() time.Time`
 
-GetMethod returns the Method field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetMethodOk
+### GetEndTsOk
 
-`func (o *InlineResponse20075) GetMethodOk() (*string, bool)`
+`func (o *InlineResponse20075) GetEndTsOk() (*time.Time, bool)`
 
-GetMethodOk returns a tuple with the Method field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMethod
+### SetEndTs
 
-`func (o *InlineResponse20075) SetMethod(v string)`
+`func (o *InlineResponse20075) SetEndTs(v time.Time)`
 
-SetMethod sets Method field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasMethod
+### HasEndTs
 
-`func (o *InlineResponse20075) HasMethod() bool`
+`func (o *InlineResponse20075) HasEndTs() bool`
 
-HasMethod returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetHost
+### GetTotalKbps
 
-`func (o *InlineResponse20075) GetHost() string`
+`func (o *InlineResponse20075) GetTotalKbps() int32`
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
 
-### GetHostOk
+### GetTotalKbpsOk
 
-`func (o *InlineResponse20075) GetHostOk() (*string, bool)`
+`func (o *InlineResponse20075) GetTotalKbpsOk() (*int32, bool)`
 
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetTotalKbps
 
-`func (o *InlineResponse20075) SetHost(v string)`
+`func (o *InlineResponse20075) SetTotalKbps(v int32)`
 
-SetHost sets Host field to given value.
+SetTotalKbps sets TotalKbps field to given value.
 
-### HasHost
+### HasTotalKbps
 
-`func (o *InlineResponse20075) HasHost() bool`
+`func (o *InlineResponse20075) HasTotalKbps() bool`
 
-HasHost returns a boolean if a field has been set.
+HasTotalKbps returns a boolean if a field has been set.
 
-### GetPath
+### GetSentKbps
 
-`func (o *InlineResponse20075) GetPath() string`
+`func (o *InlineResponse20075) GetSentKbps() int32`
 
-GetPath returns the Path field if non-nil, zero value otherwise.
+GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
 
-### GetPathOk
+### GetSentKbpsOk
 
-`func (o *InlineResponse20075) GetPathOk() (*string, bool)`
+`func (o *InlineResponse20075) GetSentKbpsOk() (*int32, bool)`
 
-GetPathOk returns a tuple with the Path field if it's non-nil, zero value otherwise
+GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPath
+### SetSentKbps
 
-`func (o *InlineResponse20075) SetPath(v string)`
+`func (o *InlineResponse20075) SetSentKbps(v int32)`
 
-SetPath sets Path field to given value.
+SetSentKbps sets SentKbps field to given value.
 
-### HasPath
+### HasSentKbps
 
-`func (o *InlineResponse20075) HasPath() bool`
+`func (o *InlineResponse20075) HasSentKbps() bool`
 
-HasPath returns a boolean if a field has been set.
+HasSentKbps returns a boolean if a field has been set.
 
-### GetQueryString
+### GetReceivedKbps
 
-`func (o *InlineResponse20075) GetQueryString() string`
+`func (o *InlineResponse20075) GetReceivedKbps() int32`
 
-GetQueryString returns the QueryString field if non-nil, zero value otherwise.
+GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
 
-### GetQueryStringOk
+### GetReceivedKbpsOk
 
-`func (o *InlineResponse20075) GetQueryStringOk() (*string, bool)`
+`func (o *InlineResponse20075) GetReceivedKbpsOk() (*int32, bool)`
 
-GetQueryStringOk returns a tuple with the QueryString field if it's non-nil, zero value otherwise
+GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetQueryString
+### SetReceivedKbps
 
-`func (o *InlineResponse20075) SetQueryString(v string)`
+`func (o *InlineResponse20075) SetReceivedKbps(v int32)`
 
-SetQueryString sets QueryString field to given value.
+SetReceivedKbps sets ReceivedKbps field to given value.
 
-### HasQueryString
+### HasReceivedKbps
 
-`func (o *InlineResponse20075) HasQueryString() bool`
+`func (o *InlineResponse20075) HasReceivedKbps() bool`
 
-HasQueryString returns a boolean if a field has been set.
-
-### GetUserAgent
-
-`func (o *InlineResponse20075) GetUserAgent() string`
-
-GetUserAgent returns the UserAgent field if non-nil, zero value otherwise.
-
-### GetUserAgentOk
-
-`func (o *InlineResponse20075) GetUserAgentOk() (*string, bool)`
-
-GetUserAgentOk returns a tuple with the UserAgent field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUserAgent
-
-`func (o *InlineResponse20075) SetUserAgent(v string)`
-
-SetUserAgent sets UserAgent field to given value.
-
-### HasUserAgent
-
-`func (o *InlineResponse20075) HasUserAgent() bool`
-
-HasUserAgent returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse20075) GetTs() time.Time`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse20075) GetTsOk() (*time.Time, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse20075) SetTs(v time.Time)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse20075) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
-
-### GetResponseCode
-
-`func (o *InlineResponse20075) GetResponseCode() int32`
-
-GetResponseCode returns the ResponseCode field if non-nil, zero value otherwise.
-
-### GetResponseCodeOk
-
-`func (o *InlineResponse20075) GetResponseCodeOk() (*int32, bool)`
-
-GetResponseCodeOk returns a tuple with the ResponseCode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResponseCode
-
-`func (o *InlineResponse20075) SetResponseCode(v int32)`
-
-SetResponseCode sets ResponseCode field to given value.
-
-### HasResponseCode
-
-`func (o *InlineResponse20075) HasResponseCode() bool`
-
-HasResponseCode returns a boolean if a field has been set.
-
-### GetSourceIp
-
-`func (o *InlineResponse20075) GetSourceIp() string`
-
-GetSourceIp returns the SourceIp field if non-nil, zero value otherwise.
-
-### GetSourceIpOk
-
-`func (o *InlineResponse20075) GetSourceIpOk() (*string, bool)`
-
-GetSourceIpOk returns a tuple with the SourceIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSourceIp
-
-`func (o *InlineResponse20075) SetSourceIp(v string)`
-
-SetSourceIp sets SourceIp field to given value.
-
-### HasSourceIp
-
-`func (o *InlineResponse20075) HasSourceIp() bool`
-
-HasSourceIp returns a boolean if a field has been set.
-
-### GetVersion
-
-`func (o *InlineResponse20075) GetVersion() int32`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *InlineResponse20075) GetVersionOk() (*int32, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *InlineResponse20075) SetVersion(v int32)`
-
-SetVersion sets Version field to given value.
-
-### HasVersion
-
-`func (o *InlineResponse20075) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
-
-### GetOperationId
-
-`func (o *InlineResponse20075) GetOperationId() string`
-
-GetOperationId returns the OperationId field if non-nil, zero value otherwise.
-
-### GetOperationIdOk
-
-`func (o *InlineResponse20075) GetOperationIdOk() (*string, bool)`
-
-GetOperationIdOk returns a tuple with the OperationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOperationId
-
-`func (o *InlineResponse20075) SetOperationId(v string)`
-
-SetOperationId sets OperationId field to given value.
-
-### HasOperationId
-
-`func (o *InlineResponse20075) HasOperationId() bool`
-
-HasOperationId returns a boolean if a field has been set.
+HasReceivedKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **AdaptivePolicyGroupId** | Pointer to **string** | The adaptive policy group ID that will be used to tag traffic through this switch port. This ID must pre-exist during the configuration, else needs to be created using adaptivePolicy/groups API. Cannot be applied to a port on a switch bound to profile. | [optional] 
 **PeerSgtCapable** | Pointer to **bool** | If true, Peer SGT is enabled for traffic through this switch port. Applicable to trunk port only, not access port. Cannot be applied to a port on a switch bound to profile. | [optional] 
 **FlexibleStackingEnabled** | Pointer to **bool** | For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled. | [optional] 
+**DaiTrusted** | Pointer to **bool** | If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic. | [optional] 
 
 ## Methods
 
@@ -621,6 +622,31 @@ SetFlexibleStackingEnabled sets FlexibleStackingEnabled field to given value.
 `func (o *InlineObject16) HasFlexibleStackingEnabled() bool`
 
 HasFlexibleStackingEnabled returns a boolean if a field has been set.
+
+### GetDaiTrusted
+
+`func (o *InlineObject16) GetDaiTrusted() bool`
+
+GetDaiTrusted returns the DaiTrusted field if non-nil, zero value otherwise.
+
+### GetDaiTrustedOk
+
+`func (o *InlineObject16) GetDaiTrustedOk() (*bool, bool)`
+
+GetDaiTrustedOk returns a tuple with the DaiTrusted field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDaiTrusted
+
+`func (o *InlineObject16) SetDaiTrusted(v bool)`
+
+SetDaiTrusted sets DaiTrusted field to given value.
+
+### HasDaiTrusted
+
+`func (o *InlineObject16) HasDaiTrusted() bool`
+
+HasDaiTrusted returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

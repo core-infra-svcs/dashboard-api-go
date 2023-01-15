@@ -4,14 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the device | [optional] 
-**Model** | Pointer to **string** | Model of the device | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Mac** | Pointer to **string** | Mac address of the device | [optional] 
-**ProductType** | Pointer to **string** | Product type of the device | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageClients**](OrganizationsOrganizationIdSummaryTopDevicesByUsageClients.md) |  | [optional] 
+**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
 
 ## Methods
 
@@ -32,205 +25,30 @@ NewInlineResponse200109WithDefaults instantiates a new InlineResponse200109 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetCertificate
 
-`func (o *InlineResponse200109) GetName() string`
+`func (o *InlineResponse200109) GetCertificate() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCertificate returns the Certificate field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCertificateOk
 
-`func (o *InlineResponse200109) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200109) GetCertificateOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCertificate
 
-`func (o *InlineResponse200109) SetName(v string)`
+`func (o *InlineResponse200109) SetCertificate(v string)`
 
-SetName sets Name field to given value.
+SetCertificate sets Certificate field to given value.
 
-### HasName
+### HasCertificate
 
-`func (o *InlineResponse200109) HasName() bool`
+`func (o *InlineResponse200109) HasCertificate() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200109) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200109) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200109) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200109) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200109) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200109) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200109) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200109) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineResponse200109) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200109) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200109) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse200109) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetProductType
-
-`func (o *InlineResponse200109) GetProductType() string`
-
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
-
-### GetProductTypeOk
-
-`func (o *InlineResponse200109) GetProductTypeOk() (*string, bool)`
-
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductType
-
-`func (o *InlineResponse200109) SetProductType(v string)`
-
-SetProductType sets ProductType field to given value.
-
-### HasProductType
-
-`func (o *InlineResponse200109) HasProductType() bool`
-
-HasProductType returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200109) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200109) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200109) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200109) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200109) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200109) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200109) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200109) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
-
-### GetClients
-
-`func (o *InlineResponse200109) GetClients() OrganizationsOrganizationIdSummaryTopDevicesByUsageClients`
-
-GetClients returns the Clients field if non-nil, zero value otherwise.
-
-### GetClientsOk
-
-`func (o *InlineResponse200109) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageClients, bool)`
-
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClients
-
-`func (o *InlineResponse200109) SetClients(v OrganizationsOrganizationIdSummaryTopDevicesByUsageClients)`
-
-SetClients sets Clients field to given value.
-
-### HasClients
-
-`func (o *InlineResponse200109) HasClients() bool`
-
-HasClients returns a boolean if a field has been set.
+HasCertificate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

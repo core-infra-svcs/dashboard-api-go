@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClient
 
-> InlineResponse20017 GetNetworkClient(ctx, networkId, clientId).Execute()
+> InlineResponse20018 GetNetworkClient(ctx, networkId, clientId).Execute()
 
 Return the client associated with the given identifier
 
@@ -225,7 +225,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetNetworkClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClient`: InlineResponse20017
+    // response from `GetNetworkClient`: InlineResponse20018
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetNetworkClient`: %v\n", resp)
 }
 ```
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20017**](InlineResponse20017.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -1519,7 +1519,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationClientsBandwidthUsageHistory
 
-> []InlineResponse20078 GetOrganizationClientsBandwidthUsageHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse20081 GetOrganizationClientsBandwidthUsageHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return data usage (in megabits per second) over time for all clients in the given organization within a given time range.
 
@@ -1550,7 +1550,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetOrganizationClientsBandwidthUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationClientsBandwidthUsageHistory`: []InlineResponse20078
+    // response from `GetOrganizationClientsBandwidthUsageHistory`: []InlineResponse20081
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetOrganizationClientsBandwidthUsageHistory`: %v\n", resp)
 }
 ```
@@ -1577,7 +1577,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20078**](InlineResponse20078.md)
+[**[]InlineResponse20081**](InlineResponse20081.md)
 
 ### Authorization
 
@@ -1595,7 +1595,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationClientsOverview
 
-> InlineResponse20079 GetOrganizationClientsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse20082 GetOrganizationClientsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return summary information around client data usage (in mb) across the given organization.
 
@@ -1626,7 +1626,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetOrganizationClientsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationClientsOverview`: InlineResponse20079
+    // response from `GetOrganizationClientsOverview`: InlineResponse20082
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetOrganizationClientsOverview`: %v\n", resp)
 }
 ```
@@ -1653,7 +1653,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20079**](InlineResponse20079.md)
+[**InlineResponse20082**](InlineResponse20082.md)
 
 ### Authorization
 
@@ -1749,7 +1749,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopClientsByUsage
 
-> []InlineResponse200107 GetOrganizationSummaryTopClientsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200112 GetOrganizationSummaryTopClientsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 clients by data usage (in mb) over given time range.
 
@@ -1780,7 +1780,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetOrganizationSummaryTopClientsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsByUsage`: []InlineResponse200107
+    // response from `GetOrganizationSummaryTopClientsByUsage`: []InlineResponse200112
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetOrganizationSummaryTopClientsByUsage`: %v\n", resp)
 }
 ```
@@ -1807,7 +1807,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200107**](InlineResponse200107.md)
+[**[]InlineResponse200112**](InlineResponse200112.md)
 
 ### Authorization
 
@@ -1825,7 +1825,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopClientsManufacturersByUsage
 
-> []InlineResponse200108 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200113 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top clients by data usage (in mb) over given time range, grouped by manufacturer.
 
@@ -1856,7 +1856,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetOrganizationSummaryTopClientsManufacturersByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200108
+    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200113
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetOrganizationSummaryTopClientsManufacturersByUsage`: %v\n", resp)
 }
 ```
@@ -1883,7 +1883,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200108**](InlineResponse200108.md)
+[**[]InlineResponse200113**](InlineResponse200113.md)
 
 ### Authorization
 

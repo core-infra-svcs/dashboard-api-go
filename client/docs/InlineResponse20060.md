@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
-**Type** | Pointer to **string** | The type of the payload template | [optional] 
-**Name** | Pointer to **string** | The name of the payload template | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
-**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]InlineResponse20060PowerExceptions**](InlineResponse20060PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20060WithDefaults instantiates a new InlineResponse20060 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPayloadTemplateId
+### GetVlan
 
-`func (o *InlineResponse20060) GetPayloadTemplateId() string`
+`func (o *InlineResponse20060) GetVlan() int32`
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateIdOk
+### GetVlanOk
 
-`func (o *InlineResponse20060) GetPayloadTemplateIdOk() (*string, bool)`
+`func (o *InlineResponse20060) GetVlanOk() (*int32, bool)`
 
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetVlan
 
-`func (o *InlineResponse20060) SetPayloadTemplateId(v string)`
+`func (o *InlineResponse20060) SetVlan(v int32)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasPayloadTemplateId
+### HasVlan
 
-`func (o *InlineResponse20060) HasPayloadTemplateId() bool`
+`func (o *InlineResponse20060) HasVlan() bool`
 
-HasPayloadTemplateId returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetType
+### GetUseCombinedPower
 
-`func (o *InlineResponse20060) GetType() string`
+`func (o *InlineResponse20060) GetUseCombinedPower() bool`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetUseCombinedPowerOk
 
-`func (o *InlineResponse20060) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse20060) GetUseCombinedPowerOk() (*bool, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetUseCombinedPower
 
-`func (o *InlineResponse20060) SetType(v string)`
+`func (o *InlineResponse20060) SetUseCombinedPower(v bool)`
 
-SetType sets Type field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasType
+### HasUseCombinedPower
 
-`func (o *InlineResponse20060) HasType() bool`
+`func (o *InlineResponse20060) HasUseCombinedPower() bool`
 
-HasType returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetName
+### GetPowerExceptions
 
-`func (o *InlineResponse20060) GetName() string`
+`func (o *InlineResponse20060) GetPowerExceptions() []InlineResponse20060PowerExceptions`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPowerExceptionsOk
 
-`func (o *InlineResponse20060) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20060) GetPowerExceptionsOk() (*[]InlineResponse20060PowerExceptions, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPowerExceptions
 
-`func (o *InlineResponse20060) SetName(v string)`
+`func (o *InlineResponse20060) SetPowerExceptions(v []InlineResponse20060PowerExceptions)`
 
-SetName sets Name field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasName
+### HasPowerExceptions
 
-`func (o *InlineResponse20060) HasName() bool`
+`func (o *InlineResponse20060) HasPowerExceptions() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetHeaders
-
-`func (o *InlineResponse20060) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
-
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
-
-### GetHeadersOk
-
-`func (o *InlineResponse20060) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
-
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeaders
-
-`func (o *InlineResponse20060) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
-
-SetHeaders sets Headers field to given value.
-
-### HasHeaders
-
-`func (o *InlineResponse20060) HasHeaders() bool`
-
-HasHeaders returns a boolean if a field has been set.
-
-### GetBody
-
-`func (o *InlineResponse20060) GetBody() string`
-
-GetBody returns the Body field if non-nil, zero value otherwise.
-
-### GetBodyOk
-
-`func (o *InlineResponse20060) GetBodyOk() (*string, bool)`
-
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBody
-
-`func (o *InlineResponse20060) SetBody(v string)`
-
-SetBody sets Body field to given value.
-
-### HasBody
-
-`func (o *InlineResponse20060) HasBody() bool`
-
-HasBody returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

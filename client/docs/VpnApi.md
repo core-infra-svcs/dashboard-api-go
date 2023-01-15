@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceVpnSiteToSiteVpn
 
-> InlineResponse20015 GetNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).Execute()
+> InlineResponse20016 GetNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).Execute()
 
 Return the site-to-site VPN settings of a network
 
@@ -119,7 +119,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.GetNetworkApplianceVpnSiteToSiteVpn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20015
+    // response from `GetNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20016
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.GetNetworkApplianceVpnSiteToSiteVpn`: %v\n", resp)
 }
 ```
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse20076 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
+> InlineResponse20079 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
 
 Return the third party VPN peers for an organization
 
@@ -424,7 +424,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.GetOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20076
+    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20079
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.GetOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20076**](InlineResponse20076.md)
+[**InlineResponse20079**](InlineResponse20079.md)
 
 ### Authorization
 
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceVpnSiteToSiteVpn
 
-> InlineResponse20015 UpdateNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).UpdateNetworkApplianceVpnSiteToSiteVpn(updateNetworkApplianceVpnSiteToSiteVpn).Execute()
+> InlineResponse20016 UpdateNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).UpdateNetworkApplianceVpnSiteToSiteVpn(updateNetworkApplianceVpnSiteToSiteVpn).Execute()
 
 Update the site-to-site VPN settings of a network
 
@@ -637,7 +637,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.UpdateNetworkApplianceVpnSiteToSiteVpn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20015
+    // response from `UpdateNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20016
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.UpdateNetworkApplianceVpnSiteToSiteVpn`: %v\n", resp)
 }
 ```
@@ -662,7 +662,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -755,7 +755,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse20076 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
+> InlineResponse20079 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
 
 Update the third party VPN peers for an organization
 
@@ -784,7 +784,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20076
+    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20079
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -809,7 +809,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20076**](InlineResponse20076.md)
+[**InlineResponse20079**](InlineResponse20079.md)
 
 ### Authorization
 

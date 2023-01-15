@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **StickyMacAllowListLimit** | Pointer to **int32** | The maximum number of MAC addresses for sticky MAC allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;Sticky MAC allow list&#39;. | [optional] 
 **StormControlEnabled** | Pointer to **bool** | The storm control status of the switch profile port. | [optional] 
 **FlexibleStackingEnabled** | Pointer to **bool** | For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled. | [optional] 
+**DaiTrusted** | Pointer to **bool** | If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic. | [optional] 
 
 ## Methods
 
@@ -569,6 +570,31 @@ SetFlexibleStackingEnabled sets FlexibleStackingEnabled field to given value.
 `func (o *InlineObject192) HasFlexibleStackingEnabled() bool`
 
 HasFlexibleStackingEnabled returns a boolean if a field has been set.
+
+### GetDaiTrusted
+
+`func (o *InlineObject192) GetDaiTrusted() bool`
+
+GetDaiTrusted returns the DaiTrusted field if non-nil, zero value otherwise.
+
+### GetDaiTrustedOk
+
+`func (o *InlineObject192) GetDaiTrustedOk() (*bool, bool)`
+
+GetDaiTrustedOk returns a tuple with the DaiTrusted field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDaiTrusted
+
+`func (o *InlineObject192) SetDaiTrusted(v bool)`
+
+SetDaiTrusted sets DaiTrusted field to given value.
+
+### HasDaiTrusted
+
+`func (o *InlineObject192) HasDaiTrusted() bool`
+
+HasDaiTrusted returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCellularGatewayDhcp
 
-> InlineResponse20016 GetNetworkCellularGatewayDhcp(ctx, networkId).Execute()
+> InlineResponse20017 GetNetworkCellularGatewayDhcp(ctx, networkId).Execute()
 
 List common DHCP settings of MGs
 
@@ -188,7 +188,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DhcpApi.GetNetworkCellularGatewayDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewayDhcp`: InlineResponse20016
+    // response from `GetNetworkCellularGatewayDhcp`: InlineResponse20017
     fmt.Fprintf(os.Stdout, "Response from `DhcpApi.GetNetworkCellularGatewayDhcp`: %v\n", resp)
 }
 ```
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpV4ServersSeen
 
-> []InlineResponse20055 GetNetworkSwitchDhcpV4ServersSeen(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20057 GetNetworkSwitchDhcpV4ServersSeen(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the network's DHCPv4 servers seen within the selected timeframe (default 1 day)
 
@@ -263,7 +263,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DhcpApi.GetNetworkSwitchDhcpV4ServersSeen``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpV4ServersSeen`: []InlineResponse20055
+    // response from `GetNetworkSwitchDhcpV4ServersSeen`: []InlineResponse20057
     fmt.Fprintf(os.Stdout, "Response from `DhcpApi.GetNetworkSwitchDhcpV4ServersSeen`: %v\n", resp)
 }
 ```
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20055**](InlineResponse20055.md)
+[**[]InlineResponse20057**](InlineResponse20057.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewayDhcp
 
-> InlineResponse20016 UpdateNetworkCellularGatewayDhcp(ctx, networkId).UpdateNetworkCellularGatewayDhcp(updateNetworkCellularGatewayDhcp).Execute()
+> InlineResponse20017 UpdateNetworkCellularGatewayDhcp(ctx, networkId).UpdateNetworkCellularGatewayDhcp(updateNetworkCellularGatewayDhcp).Execute()
 
 Update common DHCP settings of MGs
 
@@ -490,7 +490,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DhcpApi.UpdateNetworkCellularGatewayDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewayDhcp`: InlineResponse20016
+    // response from `UpdateNetworkCellularGatewayDhcp`: InlineResponse20017
     fmt.Fprintf(os.Stdout, "Response from `DhcpApi.UpdateNetworkCellularGatewayDhcp`: %v\n", resp)
 }
 ```
@@ -515,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 

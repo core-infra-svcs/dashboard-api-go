@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MeshingEnabled** | Pointer to **bool** | Toggle for enabling or disabling meshing in a network | [optional] 
-**Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
-**LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
-**UpgradeStrategy** | Pointer to **string** | The upgrade strategy to apply to the network. Must be one of &#39;minimizeUpgradeTime&#39; or &#39;minimizeClientDowntime&#39;. Requires firmware version MR 26.8 or higher&#39; | [optional] 
-**LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
-**NamedVlans** | Pointer to [**InlineResponse20068NamedVlans**](InlineResponse20068NamedVlans.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
+**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
+**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse20068WithDefaults instantiates a new InlineResponse20068 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMeshingEnabled
+### GetStartTs
 
-`func (o *InlineResponse20068) GetMeshingEnabled() bool`
+`func (o *InlineResponse20068) GetStartTs() time.Time`
 
-GetMeshingEnabled returns the MeshingEnabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetMeshingEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse20068) GetMeshingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20068) GetStartTsOk() (*time.Time, bool)`
 
-GetMeshingEnabledOk returns a tuple with the MeshingEnabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshingEnabled
+### SetStartTs
 
-`func (o *InlineResponse20068) SetMeshingEnabled(v bool)`
+`func (o *InlineResponse20068) SetStartTs(v time.Time)`
 
-SetMeshingEnabled sets MeshingEnabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasMeshingEnabled
+### HasStartTs
 
-`func (o *InlineResponse20068) HasMeshingEnabled() bool`
+`func (o *InlineResponse20068) HasStartTs() bool`
 
-HasMeshingEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetIpv6BridgeEnabled
+### GetEndTs
 
-`func (o *InlineResponse20068) GetIpv6BridgeEnabled() bool`
+`func (o *InlineResponse20068) GetEndTs() time.Time`
 
-GetIpv6BridgeEnabled returns the Ipv6BridgeEnabled field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetIpv6BridgeEnabledOk
+### GetEndTsOk
 
-`func (o *InlineResponse20068) GetIpv6BridgeEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20068) GetEndTsOk() (*time.Time, bool)`
 
-GetIpv6BridgeEnabledOk returns a tuple with the Ipv6BridgeEnabled field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6BridgeEnabled
+### SetEndTs
 
-`func (o *InlineResponse20068) SetIpv6BridgeEnabled(v bool)`
+`func (o *InlineResponse20068) SetEndTs(v time.Time)`
 
-SetIpv6BridgeEnabled sets Ipv6BridgeEnabled field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasIpv6BridgeEnabled
+### HasEndTs
 
-`func (o *InlineResponse20068) HasIpv6BridgeEnabled() bool`
+`func (o *InlineResponse20068) HasEndTs() bool`
 
-HasIpv6BridgeEnabled returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetLocationAnalyticsEnabled
+### GetAverageKbps
 
-`func (o *InlineResponse20068) GetLocationAnalyticsEnabled() bool`
+`func (o *InlineResponse20068) GetAverageKbps() int32`
 
-GetLocationAnalyticsEnabled returns the LocationAnalyticsEnabled field if non-nil, zero value otherwise.
+GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
 
-### GetLocationAnalyticsEnabledOk
+### GetAverageKbpsOk
 
-`func (o *InlineResponse20068) GetLocationAnalyticsEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20068) GetAverageKbpsOk() (*int32, bool)`
 
-GetLocationAnalyticsEnabledOk returns a tuple with the LocationAnalyticsEnabled field if it's non-nil, zero value otherwise
+GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocationAnalyticsEnabled
+### SetAverageKbps
 
-`func (o *InlineResponse20068) SetLocationAnalyticsEnabled(v bool)`
+`func (o *InlineResponse20068) SetAverageKbps(v int32)`
 
-SetLocationAnalyticsEnabled sets LocationAnalyticsEnabled field to given value.
+SetAverageKbps sets AverageKbps field to given value.
 
-### HasLocationAnalyticsEnabled
+### HasAverageKbps
 
-`func (o *InlineResponse20068) HasLocationAnalyticsEnabled() bool`
+`func (o *InlineResponse20068) HasAverageKbps() bool`
 
-HasLocationAnalyticsEnabled returns a boolean if a field has been set.
+HasAverageKbps returns a boolean if a field has been set.
 
-### GetUpgradeStrategy
+### GetDownloadKbps
 
-`func (o *InlineResponse20068) GetUpgradeStrategy() string`
+`func (o *InlineResponse20068) GetDownloadKbps() int32`
 
-GetUpgradeStrategy returns the UpgradeStrategy field if non-nil, zero value otherwise.
+GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
 
-### GetUpgradeStrategyOk
+### GetDownloadKbpsOk
 
-`func (o *InlineResponse20068) GetUpgradeStrategyOk() (*string, bool)`
+`func (o *InlineResponse20068) GetDownloadKbpsOk() (*int32, bool)`
 
-GetUpgradeStrategyOk returns a tuple with the UpgradeStrategy field if it's non-nil, zero value otherwise
+GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeStrategy
+### SetDownloadKbps
 
-`func (o *InlineResponse20068) SetUpgradeStrategy(v string)`
+`func (o *InlineResponse20068) SetDownloadKbps(v int32)`
 
-SetUpgradeStrategy sets UpgradeStrategy field to given value.
+SetDownloadKbps sets DownloadKbps field to given value.
 
-### HasUpgradeStrategy
+### HasDownloadKbps
 
-`func (o *InlineResponse20068) HasUpgradeStrategy() bool`
+`func (o *InlineResponse20068) HasDownloadKbps() bool`
 
-HasUpgradeStrategy returns a boolean if a field has been set.
+HasDownloadKbps returns a boolean if a field has been set.
 
-### GetLedLightsOn
+### GetUploadKbps
 
-`func (o *InlineResponse20068) GetLedLightsOn() bool`
+`func (o *InlineResponse20068) GetUploadKbps() int32`
 
-GetLedLightsOn returns the LedLightsOn field if non-nil, zero value otherwise.
+GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
 
-### GetLedLightsOnOk
+### GetUploadKbpsOk
 
-`func (o *InlineResponse20068) GetLedLightsOnOk() (*bool, bool)`
+`func (o *InlineResponse20068) GetUploadKbpsOk() (*int32, bool)`
 
-GetLedLightsOnOk returns a tuple with the LedLightsOn field if it's non-nil, zero value otherwise
+GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLedLightsOn
+### SetUploadKbps
 
-`func (o *InlineResponse20068) SetLedLightsOn(v bool)`
+`func (o *InlineResponse20068) SetUploadKbps(v int32)`
 
-SetLedLightsOn sets LedLightsOn field to given value.
+SetUploadKbps sets UploadKbps field to given value.
 
-### HasLedLightsOn
+### HasUploadKbps
 
-`func (o *InlineResponse20068) HasLedLightsOn() bool`
+`func (o *InlineResponse20068) HasUploadKbps() bool`
 
-HasLedLightsOn returns a boolean if a field has been set.
-
-### GetNamedVlans
-
-`func (o *InlineResponse20068) GetNamedVlans() InlineResponse20068NamedVlans`
-
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
-
-### GetNamedVlansOk
-
-`func (o *InlineResponse20068) GetNamedVlansOk() (*InlineResponse20068NamedVlans, bool)`
-
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNamedVlans
-
-`func (o *InlineResponse20068) SetNamedVlans(v InlineResponse20068NamedVlans)`
-
-SetNamedVlans sets NamedVlans field to given value.
-
-### HasNamedVlans
-
-`func (o *InlineResponse20068) HasNamedVlans() bool`
-
-HasNamedVlans returns a boolean if a field has been set.
+HasUploadKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

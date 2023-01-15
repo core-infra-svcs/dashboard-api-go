@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInsightMonitoredMediaServers
 
-> []InlineResponse20090 GetOrganizationInsightMonitoredMediaServers(ctx, organizationId).Execute()
+> []InlineResponse20093 GetOrganizationInsightMonitoredMediaServers(ctx, organizationId).Execute()
 
 List the monitored media servers for this organization
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitoredMediaServersApi.GetOrganizationInsightMonitoredMediaServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInsightMonitoredMediaServers`: []InlineResponse20090
+    // response from `GetOrganizationInsightMonitoredMediaServers`: []InlineResponse20093
     fmt.Fprintf(os.Stdout, "Response from `MonitoredMediaServersApi.GetOrganizationInsightMonitoredMediaServers`: %v\n", resp)
 }
 ```
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20090**](InlineResponse20090.md)
+[**[]InlineResponse20093**](InlineResponse20093.md)
 
 ### Authorization
 

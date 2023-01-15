@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Group** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedStagesGroup**](NetworksNetworkIdFirmwareUpgradesStagedStagesGroup.md) |  | [optional] 
+**Products** | Pointer to [**InlineResponse20023Products**](InlineResponse20023Products.md) |  | [optional] 
+**Stages** | Pointer to [**[]InlineResponse20023Stages**](InlineResponse20023Stages.md) | The ordered stages in the network | [optional] 
+**Reasons** | Pointer to [**[]InlineResponse20022Reasons**](InlineResponse20022Reasons.md) | Reasons for the rollback | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse20023WithDefaults instantiates a new InlineResponse20023 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroup
+### GetProducts
 
-`func (o *InlineResponse20023) GetGroup() NetworksNetworkIdFirmwareUpgradesStagedStagesGroup`
+`func (o *InlineResponse20023) GetProducts() InlineResponse20023Products`
 
-GetGroup returns the Group field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetGroupOk
+### GetProductsOk
 
-`func (o *InlineResponse20023) GetGroupOk() (*NetworksNetworkIdFirmwareUpgradesStagedStagesGroup, bool)`
+`func (o *InlineResponse20023) GetProductsOk() (*InlineResponse20023Products, bool)`
 
-GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroup
+### SetProducts
 
-`func (o *InlineResponse20023) SetGroup(v NetworksNetworkIdFirmwareUpgradesStagedStagesGroup)`
+`func (o *InlineResponse20023) SetProducts(v InlineResponse20023Products)`
 
-SetGroup sets Group field to given value.
+SetProducts sets Products field to given value.
 
-### HasGroup
+### HasProducts
 
-`func (o *InlineResponse20023) HasGroup() bool`
+`func (o *InlineResponse20023) HasProducts() bool`
 
-HasGroup returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
+
+### GetStages
+
+`func (o *InlineResponse20023) GetStages() []InlineResponse20023Stages`
+
+GetStages returns the Stages field if non-nil, zero value otherwise.
+
+### GetStagesOk
+
+`func (o *InlineResponse20023) GetStagesOk() (*[]InlineResponse20023Stages, bool)`
+
+GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStages
+
+`func (o *InlineResponse20023) SetStages(v []InlineResponse20023Stages)`
+
+SetStages sets Stages field to given value.
+
+### HasStages
+
+`func (o *InlineResponse20023) HasStages() bool`
+
+HasStages returns a boolean if a field has been set.
+
+### GetReasons
+
+`func (o *InlineResponse20023) GetReasons() []InlineResponse20022Reasons`
+
+GetReasons returns the Reasons field if non-nil, zero value otherwise.
+
+### GetReasonsOk
+
+`func (o *InlineResponse20023) GetReasonsOk() (*[]InlineResponse20022Reasons, bool)`
+
+GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReasons
+
+`func (o *InlineResponse20023) SetReasons(v []InlineResponse20022Reasons)`
+
+SetReasons sets Reasons field to given value.
+
+### HasReasons
+
+`func (o *InlineResponse20023) HasReasons() bool`
+
+HasReasons returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

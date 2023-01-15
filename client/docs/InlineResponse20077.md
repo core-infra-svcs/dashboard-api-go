@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network Id | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Model** | Pointer to **string** | Device model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks.md) | Uplinks info | [optional] 
+**Counts** | Pointer to [**InlineResponse20077Counts**](InlineResponse20077Counts.md) |  | [optional] 
+**Limits** | Pointer to [**InlineResponse20077Limits**](InlineResponse20077Limits.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse20077WithDefaults instantiates a new InlineResponse20077 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetCounts
 
-`func (o *InlineResponse20077) GetNetworkId() string`
+`func (o *InlineResponse20077) GetCounts() InlineResponse20077Counts`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetCountsOk
 
-`func (o *InlineResponse20077) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20077) GetCountsOk() (*InlineResponse20077Counts, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetCounts
 
-`func (o *InlineResponse20077) SetNetworkId(v string)`
+`func (o *InlineResponse20077) SetCounts(v InlineResponse20077Counts)`
 
-SetNetworkId sets NetworkId field to given value.
+SetCounts sets Counts field to given value.
 
-### HasNetworkId
+### HasCounts
 
-`func (o *InlineResponse20077) HasNetworkId() bool`
+`func (o *InlineResponse20077) HasCounts() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
-### GetSerial
+### GetLimits
 
-`func (o *InlineResponse20077) GetSerial() string`
+`func (o *InlineResponse20077) GetLimits() InlineResponse20077Limits`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetLimits returns the Limits field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetLimitsOk
 
-`func (o *InlineResponse20077) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20077) GetLimitsOk() (*InlineResponse20077Limits, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetLimits
 
-`func (o *InlineResponse20077) SetSerial(v string)`
+`func (o *InlineResponse20077) SetLimits(v InlineResponse20077Limits)`
 
-SetSerial sets Serial field to given value.
+SetLimits sets Limits field to given value.
 
-### HasSerial
+### HasLimits
 
-`func (o *InlineResponse20077) HasSerial() bool`
+`func (o *InlineResponse20077) HasLimits() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse20077) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse20077) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse20077) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse20077) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetLastReportedAt
-
-`func (o *InlineResponse20077) GetLastReportedAt() time.Time`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse20077) GetLastReportedAtOk() (*time.Time, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse20077) SetLastReportedAt(v time.Time)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-### HasLastReportedAt
-
-`func (o *InlineResponse20077) HasLastReportedAt() bool`
-
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse20077) GetUplinks() []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse20077) GetUplinksOk() (*[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse20077) SetUplinks(v []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse20077) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

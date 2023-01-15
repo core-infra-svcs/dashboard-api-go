@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationFirmwareUpgrades
 
-> []InlineResponse20087 GetOrganizationFirmwareUpgrades(ctx, organizationId).Status(status).ProductType(productType).Execute()
+> []InlineResponse20090 GetOrganizationFirmwareUpgrades(ctx, organizationId).Status(status).ProductType(productType).Execute()
 
 Get firmware upgrade information for an organization
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirmwareApi.GetOrganizationFirmwareUpgrades``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFirmwareUpgrades`: []InlineResponse20087
+    // response from `GetOrganizationFirmwareUpgrades`: []InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `FirmwareApi.GetOrganizationFirmwareUpgrades`: %v\n", resp)
 }
 ```
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20087**](InlineResponse20087.md)
+[**[]InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFirmwareUpgradesByDevice
 
-> []InlineResponse20088 GetOrganizationFirmwareUpgradesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Macs(macs).FirmwareUpgradeIds(firmwareUpgradeIds).FirmwareUpgradeBatchIds(firmwareUpgradeBatchIds).Execute()
+> []InlineResponse20091 GetOrganizationFirmwareUpgradesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Macs(macs).FirmwareUpgradeIds(firmwareUpgradeIds).FirmwareUpgradeBatchIds(firmwareUpgradeBatchIds).Execute()
 
 Get firmware upgrade status for the filtered devices
 
@@ -121,7 +121,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirmwareApi.GetOrganizationFirmwareUpgradesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFirmwareUpgradesByDevice`: []InlineResponse20088
+    // response from `GetOrganizationFirmwareUpgradesByDevice`: []InlineResponse20091
     fmt.Fprintf(os.Stdout, "Response from `FirmwareApi.GetOrganizationFirmwareUpgradesByDevice`: %v\n", resp)
 }
 ```
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20088**](InlineResponse20088.md)
+[**[]InlineResponse20091**](InlineResponse20091.md)
 
 ### Authorization
 

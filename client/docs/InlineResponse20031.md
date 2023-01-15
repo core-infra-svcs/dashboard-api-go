@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
-**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
-**LocalStatusPage** | Pointer to [**InlineResponse20031LocalStatusPage**](InlineResponse20031LocalStatusPage.md) |  | [optional] 
-**SecurePort** | Pointer to [**InlineResponse20031SecurePort**](InlineResponse20031SecurePort.md) |  | [optional] 
-**Fips** | Pointer to [**InlineResponse20031Fips**](InlineResponse20031Fips.md) |  | [optional] 
-**NamedVlans** | Pointer to [**InlineResponse20031NamedVlans**](InlineResponse20031NamedVlans.md) |  | [optional] 
-**ClientPrivacy** | Pointer to [**InlineResponse20031ClientPrivacy**](InlineResponse20031ClientPrivacy.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
+**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
+**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +27,80 @@ NewInlineResponse20031WithDefaults instantiates a new InlineResponse20031 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLocalStatusPageEnabled
+### GetStartTs
 
-`func (o *InlineResponse20031) GetLocalStatusPageEnabled() bool`
+`func (o *InlineResponse20031) GetStartTs() time.Time`
 
-GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse20031) GetLocalStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20031) GetStartTsOk() (*time.Time, bool)`
 
-GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPageEnabled
+### SetStartTs
 
-`func (o *InlineResponse20031) SetLocalStatusPageEnabled(v bool)`
+`func (o *InlineResponse20031) SetStartTs(v time.Time)`
 
-SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasLocalStatusPageEnabled
+### HasStartTs
 
-`func (o *InlineResponse20031) HasLocalStatusPageEnabled() bool`
+`func (o *InlineResponse20031) HasStartTs() bool`
 
-HasLocalStatusPageEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetRemoteStatusPageEnabled
+### GetEndTs
 
-`func (o *InlineResponse20031) GetRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse20031) GetEndTs() time.Time`
 
-GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetRemoteStatusPageEnabledOk
+### GetEndTsOk
 
-`func (o *InlineResponse20031) GetRemoteStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20031) GetEndTsOk() (*time.Time, bool)`
 
-GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemoteStatusPageEnabled
+### SetEndTs
 
-`func (o *InlineResponse20031) SetRemoteStatusPageEnabled(v bool)`
+`func (o *InlineResponse20031) SetEndTs(v time.Time)`
 
-SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasRemoteStatusPageEnabled
+### HasEndTs
 
-`func (o *InlineResponse20031) HasRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse20031) HasEndTs() bool`
 
-HasRemoteStatusPageEnabled returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetLocalStatusPage
+### GetCounts
 
-`func (o *InlineResponse20031) GetLocalStatusPage() InlineResponse20031LocalStatusPage`
+`func (o *InlineResponse20031) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
 
-GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageOk
+### GetCountsOk
 
-`func (o *InlineResponse20031) GetLocalStatusPageOk() (*InlineResponse20031LocalStatusPage, bool)`
+`func (o *InlineResponse20031) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
 
-GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPage
+### SetCounts
 
-`func (o *InlineResponse20031) SetLocalStatusPage(v InlineResponse20031LocalStatusPage)`
+`func (o *InlineResponse20031) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
 
-SetLocalStatusPage sets LocalStatusPage field to given value.
+SetCounts sets Counts field to given value.
 
-### HasLocalStatusPage
+### HasCounts
 
-`func (o *InlineResponse20031) HasLocalStatusPage() bool`
+`func (o *InlineResponse20031) HasCounts() bool`
 
-HasLocalStatusPage returns a boolean if a field has been set.
-
-### GetSecurePort
-
-`func (o *InlineResponse20031) GetSecurePort() InlineResponse20031SecurePort`
-
-GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
-
-### GetSecurePortOk
-
-`func (o *InlineResponse20031) GetSecurePortOk() (*InlineResponse20031SecurePort, bool)`
-
-GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecurePort
-
-`func (o *InlineResponse20031) SetSecurePort(v InlineResponse20031SecurePort)`
-
-SetSecurePort sets SecurePort field to given value.
-
-### HasSecurePort
-
-`func (o *InlineResponse20031) HasSecurePort() bool`
-
-HasSecurePort returns a boolean if a field has been set.
-
-### GetFips
-
-`func (o *InlineResponse20031) GetFips() InlineResponse20031Fips`
-
-GetFips returns the Fips field if non-nil, zero value otherwise.
-
-### GetFipsOk
-
-`func (o *InlineResponse20031) GetFipsOk() (*InlineResponse20031Fips, bool)`
-
-GetFipsOk returns a tuple with the Fips field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFips
-
-`func (o *InlineResponse20031) SetFips(v InlineResponse20031Fips)`
-
-SetFips sets Fips field to given value.
-
-### HasFips
-
-`func (o *InlineResponse20031) HasFips() bool`
-
-HasFips returns a boolean if a field has been set.
-
-### GetNamedVlans
-
-`func (o *InlineResponse20031) GetNamedVlans() InlineResponse20031NamedVlans`
-
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
-
-### GetNamedVlansOk
-
-`func (o *InlineResponse20031) GetNamedVlansOk() (*InlineResponse20031NamedVlans, bool)`
-
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNamedVlans
-
-`func (o *InlineResponse20031) SetNamedVlans(v InlineResponse20031NamedVlans)`
-
-SetNamedVlans sets NamedVlans field to given value.
-
-### HasNamedVlans
-
-`func (o *InlineResponse20031) HasNamedVlans() bool`
-
-HasNamedVlans returns a boolean if a field has been set.
-
-### GetClientPrivacy
-
-`func (o *InlineResponse20031) GetClientPrivacy() InlineResponse20031ClientPrivacy`
-
-GetClientPrivacy returns the ClientPrivacy field if non-nil, zero value otherwise.
-
-### GetClientPrivacyOk
-
-`func (o *InlineResponse20031) GetClientPrivacyOk() (*InlineResponse20031ClientPrivacy, bool)`
-
-GetClientPrivacyOk returns a tuple with the ClientPrivacy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientPrivacy
-
-`func (o *InlineResponse20031) SetClientPrivacy(v InlineResponse20031ClientPrivacy)`
-
-SetClientPrivacy sets ClientPrivacy field to given value.
-
-### HasClientPrivacy
-
-`func (o *InlineResponse20031) HasClientPrivacy() bool`
-
-HasClientPrivacy returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

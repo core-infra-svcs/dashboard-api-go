@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | The name of the dashboard administrator | [optional] 
 **OrgAccess** | Pointer to **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | [optional] 
 **Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags**](OrganizationsOrganizationIdAdminsTags.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks**](OrganizationsOrganizationIdAdminsNetworks.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsAdminIdNetworks**](OrganizationsOrganizationIdAdminsAdminIdNetworks.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
 
 ## Methods
 
@@ -105,20 +105,20 @@ HasTags returns a boolean if a field has been set.
 
 ### GetNetworks
 
-`func (o *InlineObject177) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks`
+`func (o *InlineObject177) GetNetworks() []OrganizationsOrganizationIdAdminsAdminIdNetworks`
 
 GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
 ### GetNetworksOk
 
-`func (o *InlineObject177) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks, bool)`
+`func (o *InlineObject177) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsAdminIdNetworks, bool)`
 
 GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetworks
 
-`func (o *InlineObject177) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks)`
+`func (o *InlineObject177) SetNetworks(v []OrganizationsOrganizationIdAdminsAdminIdNetworks)`
 
 SetNetworks sets Networks field to given value.
 

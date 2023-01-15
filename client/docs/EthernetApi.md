@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationWirelessDevicesEthernetStatuses
 
-> []InlineResponse200116 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200121 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Endpoint to see power status for wireless devices
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EthernetApi.GetOrganizationWirelessDevicesEthernetStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200116
+    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200121
     fmt.Fprintf(os.Stdout, "Response from `EthernetApi.GetOrganizationWirelessDevicesEthernetStatuses`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200116**](InlineResponse200116.md)
+[**[]InlineResponse200121**](InlineResponse200121.md)
 
 ### Authorization
 

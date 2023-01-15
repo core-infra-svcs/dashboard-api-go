@@ -4,22 +4,30 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Device Name | [optional] 
-**Serial** | Pointer to **string** | Device Serial Number | [optional] 
-**Mac** | Pointer to **string** | MAC Address | [optional] 
-**PublicIp** | Pointer to **string** | Public IP Address | [optional] 
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Status** | Pointer to **string** | Device Status | [optional] 
-**LastReportedAt** | Pointer to **string** | Device Last Reported Location | [optional] 
-**LanIp** | Pointer to **string** | LAN IP Address | [optional] 
-**Gateway** | Pointer to **string** | IP Gateway | [optional] 
-**IpType** | Pointer to **string** | IP Type | [optional] 
-**PrimaryDns** | Pointer to **string** | Primary DNS | [optional] 
-**SecondaryDns** | Pointer to **string** | Secondary DNS | [optional] 
-**ProductType** | Pointer to **string** | Product Type | [optional] 
-**Components** | Pointer to [**InlineResponse20083Components**](InlineResponse20083Components.md) |  | [optional] 
-**Model** | Pointer to **string** | Model | [optional] 
-**Tags** | Pointer to **[]string** | Tags | [optional] 
+**PortId** | Pointer to **string** | The identifier of the switch profile port. | [optional] 
+**Name** | Pointer to **string** | The name of the switch profile port. | [optional] 
+**Tags** | Pointer to **[]string** | The list of tags of the switch profile port. | [optional] 
+**Enabled** | Pointer to **bool** | The status of the switch profile port. | [optional] 
+**PoeEnabled** | Pointer to **bool** | The PoE status of the switch profile port. | [optional] 
+**Type** | Pointer to **string** | The type of the switch profile port (&#39;trunk&#39; or &#39;access&#39;). | [optional] 
+**Vlan** | Pointer to **int32** | The VLAN of the switch profile port. A null value will clear the value set for trunk ports. | [optional] 
+**VoiceVlan** | Pointer to **int32** | The voice VLAN of the switch profile port. Only applicable to access ports. | [optional] 
+**AllowedVlans** | Pointer to **string** | The VLANs allowed on the switch profile port. Only applicable to trunk ports. | [optional] 
+**IsolationEnabled** | Pointer to **bool** | The isolation status of the switch profile port. | [optional] 
+**RstpEnabled** | Pointer to **bool** | The rapid spanning tree protocol status. | [optional] 
+**StpGuard** | Pointer to **string** | The state of the STP guard (&#39;disabled&#39;, &#39;root guard&#39;, &#39;bpdu guard&#39; or &#39;loop guard&#39;). | [optional] 
+**LinkNegotiation** | Pointer to **string** | The link speed for the switch profile port. | [optional] 
+**LinkNegotiationCapabilities** | Pointer to **[]string** | Available link speeds for the switch profile port. | [optional] 
+**PortScheduleId** | Pointer to **string** | The ID of the port schedule. A value of null will clear the port schedule. | [optional] 
+**Udld** | Pointer to **string** | The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only. | [optional] 
+**AccessPolicyType** | Pointer to **string** | The type of the access policy of the switch profile port. Only applicable to access ports. Can be one of &#39;Open&#39;, &#39;Custom access policy&#39;, &#39;MAC allow list&#39; or &#39;Sticky MAC allow list&#39;. | [optional] 
+**AccessPolicyNumber** | Pointer to **int32** | The number of a custom access policy to configure on the switch profile port. Only applicable when &#39;accessPolicyType&#39; is &#39;Custom access policy&#39;. | [optional] 
+**MacAllowList** | Pointer to **[]string** | Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when &#39;accessPolicyType&#39; is &#39;MAC allow list&#39;. | [optional] 
+**StickyMacAllowList** | Pointer to **[]string** | The initial list of MAC addresses for sticky Mac allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;Sticky MAC allow list&#39;. | [optional] 
+**StickyMacAllowListLimit** | Pointer to **int32** | The maximum number of MAC addresses for sticky MAC allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;Sticky MAC allow list&#39;. | [optional] 
+**StormControlEnabled** | Pointer to **bool** | The storm control status of the switch profile port. | [optional] 
+**FlexibleStackingEnabled** | Pointer to **bool** | For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled. | [optional] 
+**DaiTrusted** | Pointer to **bool** | If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic. | [optional] 
 
 ## Methods
 
@@ -39,6 +47,31 @@ will change when the set of required properties is changed
 NewInlineResponse20083WithDefaults instantiates a new InlineResponse20083 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetPortId
+
+`func (o *InlineResponse20083) GetPortId() string`
+
+GetPortId returns the PortId field if non-nil, zero value otherwise.
+
+### GetPortIdOk
+
+`func (o *InlineResponse20083) GetPortIdOk() (*string, bool)`
+
+GetPortIdOk returns a tuple with the PortId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortId
+
+`func (o *InlineResponse20083) SetPortId(v string)`
+
+SetPortId sets PortId field to given value.
+
+### HasPortId
+
+`func (o *InlineResponse20083) HasPortId() bool`
+
+HasPortId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -65,356 +98,6 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSerial
-
-`func (o *InlineResponse20083) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse20083) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse20083) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse20083) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineResponse20083) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse20083) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse20083) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse20083) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetPublicIp
-
-`func (o *InlineResponse20083) GetPublicIp() string`
-
-GetPublicIp returns the PublicIp field if non-nil, zero value otherwise.
-
-### GetPublicIpOk
-
-`func (o *InlineResponse20083) GetPublicIpOk() (*string, bool)`
-
-GetPublicIpOk returns a tuple with the PublicIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPublicIp
-
-`func (o *InlineResponse20083) SetPublicIp(v string)`
-
-SetPublicIp sets PublicIp field to given value.
-
-### HasPublicIp
-
-`func (o *InlineResponse20083) HasPublicIp() bool`
-
-HasPublicIp returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse20083) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse20083) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse20083) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse20083) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse20083) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse20083) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse20083) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse20083) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetLastReportedAt
-
-`func (o *InlineResponse20083) GetLastReportedAt() string`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse20083) GetLastReportedAtOk() (*string, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse20083) SetLastReportedAt(v string)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-### HasLastReportedAt
-
-`func (o *InlineResponse20083) HasLastReportedAt() bool`
-
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetLanIp
-
-`func (o *InlineResponse20083) GetLanIp() string`
-
-GetLanIp returns the LanIp field if non-nil, zero value otherwise.
-
-### GetLanIpOk
-
-`func (o *InlineResponse20083) GetLanIpOk() (*string, bool)`
-
-GetLanIpOk returns a tuple with the LanIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLanIp
-
-`func (o *InlineResponse20083) SetLanIp(v string)`
-
-SetLanIp sets LanIp field to given value.
-
-### HasLanIp
-
-`func (o *InlineResponse20083) HasLanIp() bool`
-
-HasLanIp returns a boolean if a field has been set.
-
-### GetGateway
-
-`func (o *InlineResponse20083) GetGateway() string`
-
-GetGateway returns the Gateway field if non-nil, zero value otherwise.
-
-### GetGatewayOk
-
-`func (o *InlineResponse20083) GetGatewayOk() (*string, bool)`
-
-GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGateway
-
-`func (o *InlineResponse20083) SetGateway(v string)`
-
-SetGateway sets Gateway field to given value.
-
-### HasGateway
-
-`func (o *InlineResponse20083) HasGateway() bool`
-
-HasGateway returns a boolean if a field has been set.
-
-### GetIpType
-
-`func (o *InlineResponse20083) GetIpType() string`
-
-GetIpType returns the IpType field if non-nil, zero value otherwise.
-
-### GetIpTypeOk
-
-`func (o *InlineResponse20083) GetIpTypeOk() (*string, bool)`
-
-GetIpTypeOk returns a tuple with the IpType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpType
-
-`func (o *InlineResponse20083) SetIpType(v string)`
-
-SetIpType sets IpType field to given value.
-
-### HasIpType
-
-`func (o *InlineResponse20083) HasIpType() bool`
-
-HasIpType returns a boolean if a field has been set.
-
-### GetPrimaryDns
-
-`func (o *InlineResponse20083) GetPrimaryDns() string`
-
-GetPrimaryDns returns the PrimaryDns field if non-nil, zero value otherwise.
-
-### GetPrimaryDnsOk
-
-`func (o *InlineResponse20083) GetPrimaryDnsOk() (*string, bool)`
-
-GetPrimaryDnsOk returns a tuple with the PrimaryDns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPrimaryDns
-
-`func (o *InlineResponse20083) SetPrimaryDns(v string)`
-
-SetPrimaryDns sets PrimaryDns field to given value.
-
-### HasPrimaryDns
-
-`func (o *InlineResponse20083) HasPrimaryDns() bool`
-
-HasPrimaryDns returns a boolean if a field has been set.
-
-### GetSecondaryDns
-
-`func (o *InlineResponse20083) GetSecondaryDns() string`
-
-GetSecondaryDns returns the SecondaryDns field if non-nil, zero value otherwise.
-
-### GetSecondaryDnsOk
-
-`func (o *InlineResponse20083) GetSecondaryDnsOk() (*string, bool)`
-
-GetSecondaryDnsOk returns a tuple with the SecondaryDns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecondaryDns
-
-`func (o *InlineResponse20083) SetSecondaryDns(v string)`
-
-SetSecondaryDns sets SecondaryDns field to given value.
-
-### HasSecondaryDns
-
-`func (o *InlineResponse20083) HasSecondaryDns() bool`
-
-HasSecondaryDns returns a boolean if a field has been set.
-
-### GetProductType
-
-`func (o *InlineResponse20083) GetProductType() string`
-
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
-
-### GetProductTypeOk
-
-`func (o *InlineResponse20083) GetProductTypeOk() (*string, bool)`
-
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductType
-
-`func (o *InlineResponse20083) SetProductType(v string)`
-
-SetProductType sets ProductType field to given value.
-
-### HasProductType
-
-`func (o *InlineResponse20083) HasProductType() bool`
-
-HasProductType returns a boolean if a field has been set.
-
-### GetComponents
-
-`func (o *InlineResponse20083) GetComponents() InlineResponse20083Components`
-
-GetComponents returns the Components field if non-nil, zero value otherwise.
-
-### GetComponentsOk
-
-`func (o *InlineResponse20083) GetComponentsOk() (*InlineResponse20083Components, bool)`
-
-GetComponentsOk returns a tuple with the Components field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetComponents
-
-`func (o *InlineResponse20083) SetComponents(v InlineResponse20083Components)`
-
-SetComponents sets Components field to given value.
-
-### HasComponents
-
-`func (o *InlineResponse20083) HasComponents() bool`
-
-HasComponents returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse20083) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse20083) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse20083) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse20083) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
 ### GetTags
 
 `func (o *InlineResponse20083) GetTags() []string`
@@ -439,6 +122,531 @@ SetTags sets Tags field to given value.
 `func (o *InlineResponse20083) HasTags() bool`
 
 HasTags returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse20083) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse20083) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse20083) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse20083) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetPoeEnabled
+
+`func (o *InlineResponse20083) GetPoeEnabled() bool`
+
+GetPoeEnabled returns the PoeEnabled field if non-nil, zero value otherwise.
+
+### GetPoeEnabledOk
+
+`func (o *InlineResponse20083) GetPoeEnabledOk() (*bool, bool)`
+
+GetPoeEnabledOk returns a tuple with the PoeEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoeEnabled
+
+`func (o *InlineResponse20083) SetPoeEnabled(v bool)`
+
+SetPoeEnabled sets PoeEnabled field to given value.
+
+### HasPoeEnabled
+
+`func (o *InlineResponse20083) HasPoeEnabled() bool`
+
+HasPoeEnabled returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse20083) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse20083) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse20083) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse20083) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineResponse20083) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineResponse20083) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineResponse20083) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineResponse20083) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetVoiceVlan
+
+`func (o *InlineResponse20083) GetVoiceVlan() int32`
+
+GetVoiceVlan returns the VoiceVlan field if non-nil, zero value otherwise.
+
+### GetVoiceVlanOk
+
+`func (o *InlineResponse20083) GetVoiceVlanOk() (*int32, bool)`
+
+GetVoiceVlanOk returns a tuple with the VoiceVlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVoiceVlan
+
+`func (o *InlineResponse20083) SetVoiceVlan(v int32)`
+
+SetVoiceVlan sets VoiceVlan field to given value.
+
+### HasVoiceVlan
+
+`func (o *InlineResponse20083) HasVoiceVlan() bool`
+
+HasVoiceVlan returns a boolean if a field has been set.
+
+### GetAllowedVlans
+
+`func (o *InlineResponse20083) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineResponse20083) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineResponse20083) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineResponse20083) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetIsolationEnabled
+
+`func (o *InlineResponse20083) GetIsolationEnabled() bool`
+
+GetIsolationEnabled returns the IsolationEnabled field if non-nil, zero value otherwise.
+
+### GetIsolationEnabledOk
+
+`func (o *InlineResponse20083) GetIsolationEnabledOk() (*bool, bool)`
+
+GetIsolationEnabledOk returns a tuple with the IsolationEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsolationEnabled
+
+`func (o *InlineResponse20083) SetIsolationEnabled(v bool)`
+
+SetIsolationEnabled sets IsolationEnabled field to given value.
+
+### HasIsolationEnabled
+
+`func (o *InlineResponse20083) HasIsolationEnabled() bool`
+
+HasIsolationEnabled returns a boolean if a field has been set.
+
+### GetRstpEnabled
+
+`func (o *InlineResponse20083) GetRstpEnabled() bool`
+
+GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+
+### GetRstpEnabledOk
+
+`func (o *InlineResponse20083) GetRstpEnabledOk() (*bool, bool)`
+
+GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRstpEnabled
+
+`func (o *InlineResponse20083) SetRstpEnabled(v bool)`
+
+SetRstpEnabled sets RstpEnabled field to given value.
+
+### HasRstpEnabled
+
+`func (o *InlineResponse20083) HasRstpEnabled() bool`
+
+HasRstpEnabled returns a boolean if a field has been set.
+
+### GetStpGuard
+
+`func (o *InlineResponse20083) GetStpGuard() string`
+
+GetStpGuard returns the StpGuard field if non-nil, zero value otherwise.
+
+### GetStpGuardOk
+
+`func (o *InlineResponse20083) GetStpGuardOk() (*string, bool)`
+
+GetStpGuardOk returns a tuple with the StpGuard field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStpGuard
+
+`func (o *InlineResponse20083) SetStpGuard(v string)`
+
+SetStpGuard sets StpGuard field to given value.
+
+### HasStpGuard
+
+`func (o *InlineResponse20083) HasStpGuard() bool`
+
+HasStpGuard returns a boolean if a field has been set.
+
+### GetLinkNegotiation
+
+`func (o *InlineResponse20083) GetLinkNegotiation() string`
+
+GetLinkNegotiation returns the LinkNegotiation field if non-nil, zero value otherwise.
+
+### GetLinkNegotiationOk
+
+`func (o *InlineResponse20083) GetLinkNegotiationOk() (*string, bool)`
+
+GetLinkNegotiationOk returns a tuple with the LinkNegotiation field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLinkNegotiation
+
+`func (o *InlineResponse20083) SetLinkNegotiation(v string)`
+
+SetLinkNegotiation sets LinkNegotiation field to given value.
+
+### HasLinkNegotiation
+
+`func (o *InlineResponse20083) HasLinkNegotiation() bool`
+
+HasLinkNegotiation returns a boolean if a field has been set.
+
+### GetLinkNegotiationCapabilities
+
+`func (o *InlineResponse20083) GetLinkNegotiationCapabilities() []string`
+
+GetLinkNegotiationCapabilities returns the LinkNegotiationCapabilities field if non-nil, zero value otherwise.
+
+### GetLinkNegotiationCapabilitiesOk
+
+`func (o *InlineResponse20083) GetLinkNegotiationCapabilitiesOk() (*[]string, bool)`
+
+GetLinkNegotiationCapabilitiesOk returns a tuple with the LinkNegotiationCapabilities field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLinkNegotiationCapabilities
+
+`func (o *InlineResponse20083) SetLinkNegotiationCapabilities(v []string)`
+
+SetLinkNegotiationCapabilities sets LinkNegotiationCapabilities field to given value.
+
+### HasLinkNegotiationCapabilities
+
+`func (o *InlineResponse20083) HasLinkNegotiationCapabilities() bool`
+
+HasLinkNegotiationCapabilities returns a boolean if a field has been set.
+
+### GetPortScheduleId
+
+`func (o *InlineResponse20083) GetPortScheduleId() string`
+
+GetPortScheduleId returns the PortScheduleId field if non-nil, zero value otherwise.
+
+### GetPortScheduleIdOk
+
+`func (o *InlineResponse20083) GetPortScheduleIdOk() (*string, bool)`
+
+GetPortScheduleIdOk returns a tuple with the PortScheduleId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortScheduleId
+
+`func (o *InlineResponse20083) SetPortScheduleId(v string)`
+
+SetPortScheduleId sets PortScheduleId field to given value.
+
+### HasPortScheduleId
+
+`func (o *InlineResponse20083) HasPortScheduleId() bool`
+
+HasPortScheduleId returns a boolean if a field has been set.
+
+### GetUdld
+
+`func (o *InlineResponse20083) GetUdld() string`
+
+GetUdld returns the Udld field if non-nil, zero value otherwise.
+
+### GetUdldOk
+
+`func (o *InlineResponse20083) GetUdldOk() (*string, bool)`
+
+GetUdldOk returns a tuple with the Udld field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUdld
+
+`func (o *InlineResponse20083) SetUdld(v string)`
+
+SetUdld sets Udld field to given value.
+
+### HasUdld
+
+`func (o *InlineResponse20083) HasUdld() bool`
+
+HasUdld returns a boolean if a field has been set.
+
+### GetAccessPolicyType
+
+`func (o *InlineResponse20083) GetAccessPolicyType() string`
+
+GetAccessPolicyType returns the AccessPolicyType field if non-nil, zero value otherwise.
+
+### GetAccessPolicyTypeOk
+
+`func (o *InlineResponse20083) GetAccessPolicyTypeOk() (*string, bool)`
+
+GetAccessPolicyTypeOk returns a tuple with the AccessPolicyType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicyType
+
+`func (o *InlineResponse20083) SetAccessPolicyType(v string)`
+
+SetAccessPolicyType sets AccessPolicyType field to given value.
+
+### HasAccessPolicyType
+
+`func (o *InlineResponse20083) HasAccessPolicyType() bool`
+
+HasAccessPolicyType returns a boolean if a field has been set.
+
+### GetAccessPolicyNumber
+
+`func (o *InlineResponse20083) GetAccessPolicyNumber() int32`
+
+GetAccessPolicyNumber returns the AccessPolicyNumber field if non-nil, zero value otherwise.
+
+### GetAccessPolicyNumberOk
+
+`func (o *InlineResponse20083) GetAccessPolicyNumberOk() (*int32, bool)`
+
+GetAccessPolicyNumberOk returns a tuple with the AccessPolicyNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicyNumber
+
+`func (o *InlineResponse20083) SetAccessPolicyNumber(v int32)`
+
+SetAccessPolicyNumber sets AccessPolicyNumber field to given value.
+
+### HasAccessPolicyNumber
+
+`func (o *InlineResponse20083) HasAccessPolicyNumber() bool`
+
+HasAccessPolicyNumber returns a boolean if a field has been set.
+
+### GetMacAllowList
+
+`func (o *InlineResponse20083) GetMacAllowList() []string`
+
+GetMacAllowList returns the MacAllowList field if non-nil, zero value otherwise.
+
+### GetMacAllowListOk
+
+`func (o *InlineResponse20083) GetMacAllowListOk() (*[]string, bool)`
+
+GetMacAllowListOk returns a tuple with the MacAllowList field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMacAllowList
+
+`func (o *InlineResponse20083) SetMacAllowList(v []string)`
+
+SetMacAllowList sets MacAllowList field to given value.
+
+### HasMacAllowList
+
+`func (o *InlineResponse20083) HasMacAllowList() bool`
+
+HasMacAllowList returns a boolean if a field has been set.
+
+### GetStickyMacAllowList
+
+`func (o *InlineResponse20083) GetStickyMacAllowList() []string`
+
+GetStickyMacAllowList returns the StickyMacAllowList field if non-nil, zero value otherwise.
+
+### GetStickyMacAllowListOk
+
+`func (o *InlineResponse20083) GetStickyMacAllowListOk() (*[]string, bool)`
+
+GetStickyMacAllowListOk returns a tuple with the StickyMacAllowList field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStickyMacAllowList
+
+`func (o *InlineResponse20083) SetStickyMacAllowList(v []string)`
+
+SetStickyMacAllowList sets StickyMacAllowList field to given value.
+
+### HasStickyMacAllowList
+
+`func (o *InlineResponse20083) HasStickyMacAllowList() bool`
+
+HasStickyMacAllowList returns a boolean if a field has been set.
+
+### GetStickyMacAllowListLimit
+
+`func (o *InlineResponse20083) GetStickyMacAllowListLimit() int32`
+
+GetStickyMacAllowListLimit returns the StickyMacAllowListLimit field if non-nil, zero value otherwise.
+
+### GetStickyMacAllowListLimitOk
+
+`func (o *InlineResponse20083) GetStickyMacAllowListLimitOk() (*int32, bool)`
+
+GetStickyMacAllowListLimitOk returns a tuple with the StickyMacAllowListLimit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStickyMacAllowListLimit
+
+`func (o *InlineResponse20083) SetStickyMacAllowListLimit(v int32)`
+
+SetStickyMacAllowListLimit sets StickyMacAllowListLimit field to given value.
+
+### HasStickyMacAllowListLimit
+
+`func (o *InlineResponse20083) HasStickyMacAllowListLimit() bool`
+
+HasStickyMacAllowListLimit returns a boolean if a field has been set.
+
+### GetStormControlEnabled
+
+`func (o *InlineResponse20083) GetStormControlEnabled() bool`
+
+GetStormControlEnabled returns the StormControlEnabled field if non-nil, zero value otherwise.
+
+### GetStormControlEnabledOk
+
+`func (o *InlineResponse20083) GetStormControlEnabledOk() (*bool, bool)`
+
+GetStormControlEnabledOk returns a tuple with the StormControlEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStormControlEnabled
+
+`func (o *InlineResponse20083) SetStormControlEnabled(v bool)`
+
+SetStormControlEnabled sets StormControlEnabled field to given value.
+
+### HasStormControlEnabled
+
+`func (o *InlineResponse20083) HasStormControlEnabled() bool`
+
+HasStormControlEnabled returns a boolean if a field has been set.
+
+### GetFlexibleStackingEnabled
+
+`func (o *InlineResponse20083) GetFlexibleStackingEnabled() bool`
+
+GetFlexibleStackingEnabled returns the FlexibleStackingEnabled field if non-nil, zero value otherwise.
+
+### GetFlexibleStackingEnabledOk
+
+`func (o *InlineResponse20083) GetFlexibleStackingEnabledOk() (*bool, bool)`
+
+GetFlexibleStackingEnabledOk returns a tuple with the FlexibleStackingEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFlexibleStackingEnabled
+
+`func (o *InlineResponse20083) SetFlexibleStackingEnabled(v bool)`
+
+SetFlexibleStackingEnabled sets FlexibleStackingEnabled field to given value.
+
+### HasFlexibleStackingEnabled
+
+`func (o *InlineResponse20083) HasFlexibleStackingEnabled() bool`
+
+HasFlexibleStackingEnabled returns a boolean if a field has been set.
+
+### GetDaiTrusted
+
+`func (o *InlineResponse20083) GetDaiTrusted() bool`
+
+GetDaiTrusted returns the DaiTrusted field if non-nil, zero value otherwise.
+
+### GetDaiTrustedOk
+
+`func (o *InlineResponse20083) GetDaiTrustedOk() (*bool, bool)`
+
+GetDaiTrustedOk returns a tuple with the DaiTrusted field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDaiTrusted
+
+`func (o *InlineResponse20083) SetDaiTrusted(v bool)`
+
+SetDaiTrusted sets DaiTrusted field to given value.
+
+### HasDaiTrusted
+
+`func (o *InlineResponse20083) HasDaiTrusted() bool`
+
+HasDaiTrusted returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

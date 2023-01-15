@@ -4,15 +4,87 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**DeleteOrganizationUser**](UsersApi.md#DeleteOrganizationUser) | **Delete** /organizations/{organizationId}/users/{userId} | Delete a user and all of its authentication methods.
 [**GetNetworkSmUserDeviceProfiles**](UsersApi.md#GetNetworkSmUserDeviceProfiles) | **Get** /networks/{networkId}/sm/users/{userId}/deviceProfiles | Get the profiles associated with a user
 [**GetNetworkSmUserSoftwares**](UsersApi.md#GetNetworkSmUserSoftwares) | **Get** /networks/{networkId}/sm/users/{userId}/softwares | Get a list of softwares associated with a user
 [**GetNetworkSmUsers**](UsersApi.md#GetNetworkSmUsers) | **Get** /networks/{networkId}/sm/users | List the owners in an SM network with various specified fields and filters
 
 
 
+## DeleteOrganizationUser
+
+> DeleteOrganizationUser(ctx, organizationId, userId).Execute()
+
+Delete a user and all of its authentication methods.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | 
+    userId := "userId_example" // string | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.UsersApi.DeleteOrganizationUser(context.Background(), organizationId, userId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `UsersApi.DeleteOrganizationUser``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** |  | 
+**userId** | **string** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteOrganizationUserRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetNetworkSmUserDeviceProfiles
 
-> []InlineResponse20043 GetNetworkSmUserDeviceProfiles(ctx, networkId, userId).Execute()
+> []InlineResponse20045 GetNetworkSmUserDeviceProfiles(ctx, networkId, userId).Execute()
 
 Get the profiles associated with a user
 
@@ -41,7 +113,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsersApi.GetNetworkSmUserDeviceProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUserDeviceProfiles`: []InlineResponse20043
+    // response from `GetNetworkSmUserDeviceProfiles`: []InlineResponse20045
     fmt.Fprintf(os.Stdout, "Response from `UsersApi.GetNetworkSmUserDeviceProfiles`: %v\n", resp)
 }
 ```
@@ -67,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20043**](InlineResponse20043.md)
+[**[]InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -85,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUserSoftwares
 
-> []InlineResponse20047 GetNetworkSmUserSoftwares(ctx, networkId, userId).Execute()
+> []InlineResponse20049 GetNetworkSmUserSoftwares(ctx, networkId, userId).Execute()
 
 Get a list of softwares associated with a user
 
@@ -114,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsersApi.GetNetworkSmUserSoftwares``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUserSoftwares`: []InlineResponse20047
+    // response from `GetNetworkSmUserSoftwares`: []InlineResponse20049
     fmt.Fprintf(os.Stdout, "Response from `UsersApi.GetNetworkSmUserSoftwares`: %v\n", resp)
 }
 ```
@@ -140,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20047**](InlineResponse20047.md)
+[**[]InlineResponse20049**](InlineResponse20049.md)
 
 ### Authorization
 
@@ -158,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUsers
 
-> []InlineResponse20052 GetNetworkSmUsers(ctx, networkId).Ids(ids).Usernames(usernames).Emails(emails).Scope(scope).Execute()
+> []InlineResponse20054 GetNetworkSmUsers(ctx, networkId).Ids(ids).Usernames(usernames).Emails(emails).Scope(scope).Execute()
 
 List the owners in an SM network with various specified fields and filters
 
@@ -190,7 +262,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsersApi.GetNetworkSmUsers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUsers`: []InlineResponse20052
+    // response from `GetNetworkSmUsers`: []InlineResponse20054
     fmt.Fprintf(os.Stdout, "Response from `UsersApi.GetNetworkSmUsers`: %v\n", resp)
 }
 ```
@@ -218,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20052**](InlineResponse20052.md)
+[**[]InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 

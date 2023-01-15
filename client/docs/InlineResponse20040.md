@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FirstSeenAt** | Pointer to **string** | When the device was first seen as connected to the internet in each connection. | [optional] 
-**LastSeenAt** | Pointer to **string** | When the device was last seen as connected to the internet in each connection. | [optional] 
+**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
+**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
+**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20040WithDefaults instantiates a new InlineResponse20040 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetFirstSeenAt
+### GetReceived
 
-`func (o *InlineResponse20040) GetFirstSeenAt() string`
+`func (o *InlineResponse20040) GetReceived() float32`
 
-GetFirstSeenAt returns the FirstSeenAt field if non-nil, zero value otherwise.
+GetReceived returns the Received field if non-nil, zero value otherwise.
 
-### GetFirstSeenAtOk
+### GetReceivedOk
 
-`func (o *InlineResponse20040) GetFirstSeenAtOk() (*string, bool)`
+`func (o *InlineResponse20040) GetReceivedOk() (*float32, bool)`
 
-GetFirstSeenAtOk returns a tuple with the FirstSeenAt field if it's non-nil, zero value otherwise
+GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFirstSeenAt
+### SetReceived
 
-`func (o *InlineResponse20040) SetFirstSeenAt(v string)`
+`func (o *InlineResponse20040) SetReceived(v float32)`
 
-SetFirstSeenAt sets FirstSeenAt field to given value.
+SetReceived sets Received field to given value.
 
-### HasFirstSeenAt
+### HasReceived
 
-`func (o *InlineResponse20040) HasFirstSeenAt() bool`
+`func (o *InlineResponse20040) HasReceived() bool`
 
-HasFirstSeenAt returns a boolean if a field has been set.
+HasReceived returns a boolean if a field has been set.
 
-### GetLastSeenAt
+### GetSent
 
-`func (o *InlineResponse20040) GetLastSeenAt() string`
+`func (o *InlineResponse20040) GetSent() float32`
 
-GetLastSeenAt returns the LastSeenAt field if non-nil, zero value otherwise.
+GetSent returns the Sent field if non-nil, zero value otherwise.
 
-### GetLastSeenAtOk
+### GetSentOk
 
-`func (o *InlineResponse20040) GetLastSeenAtOk() (*string, bool)`
+`func (o *InlineResponse20040) GetSentOk() (*float32, bool)`
 
-GetLastSeenAtOk returns a tuple with the LastSeenAt field if it's non-nil, zero value otherwise
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastSeenAt
+### SetSent
 
-`func (o *InlineResponse20040) SetLastSeenAt(v string)`
+`func (o *InlineResponse20040) SetSent(v float32)`
 
-SetLastSeenAt sets LastSeenAt field to given value.
+SetSent sets Sent field to given value.
 
-### HasLastSeenAt
+### HasSent
 
-`func (o *InlineResponse20040) HasLastSeenAt() bool`
+`func (o *InlineResponse20040) HasSent() bool`
 
-HasLastSeenAt returns a boolean if a field has been set.
+HasSent returns a boolean if a field has been set.
+
+### GetTs
+
+`func (o *InlineResponse20040) GetTs() string`
+
+GetTs returns the Ts field if non-nil, zero value otherwise.
+
+### GetTsOk
+
+`func (o *InlineResponse20040) GetTsOk() (*string, bool)`
+
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTs
+
+`func (o *InlineResponse20040) SetTs(v string)`
+
+SetTs sets Ts field to given value.
+
+### HasTs
+
+`func (o *InlineResponse20040) HasTs() bool`
+
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

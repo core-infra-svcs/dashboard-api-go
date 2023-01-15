@@ -245,7 +245,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    updateOrganizationSnmp := *openapiclient.NewInlineObject218() // InlineObject218 |  (optional)
+    updateOrganizationSnmp := *openapiclient.NewInlineObject219() // InlineObject219 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -275,7 +275,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSnmpRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSnmp** | [**InlineObject218**](InlineObject218.md) |  | 
+ **updateOrganizationSnmp** | [**InlineObject219**](InlineObject219.md) |  | 
 
 ### Return type
 

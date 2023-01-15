@@ -188,7 +188,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject210("Name_example") // InlineObject210 | 
+    createOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject211("Name_example") // InlineObject211 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -218,7 +218,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicyOb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPolicyObjectsGroup** | [**InlineObject210**](InlineObject210.md) |  | 
+ **createOrganizationPolicyObjectsGroup** | [**InlineObject211**](InlineObject211.md) |  | 
 
 ### Return type
 
@@ -453,7 +453,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedGroup
 
-> InlineResponse20022 GetNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).Execute()
+> InlineResponse20024 GetNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).Execute()
 
 Get a Staged Upgrade Group from a network
 
@@ -482,7 +482,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `GroupsApi.GetNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedGroup`: InlineResponse20022
+    // response from `GetNetworkFirmwareUpgradesStagedGroup`: InlineResponse20024
     fmt.Fprintf(os.Stdout, "Response from `GroupsApi.GetNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
 }
 ```
@@ -508,7 +508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022**](InlineResponse20022.md)
+[**InlineResponse20024**](InlineResponse20024.md)
 
 ### Authorization
 
@@ -526,7 +526,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedGroups
 
-> []InlineResponse20022 GetNetworkFirmwareUpgradesStagedGroups(ctx, networkId).Execute()
+> []InlineResponse20024 GetNetworkFirmwareUpgradesStagedGroups(ctx, networkId).Execute()
 
 List of Staged Upgrade Groups in a network
 
@@ -554,7 +554,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `GroupsApi.GetNetworkFirmwareUpgradesStagedGroups``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedGroups`: []InlineResponse20022
+    // response from `GetNetworkFirmwareUpgradesStagedGroups`: []InlineResponse20024
     fmt.Fprintf(os.Stdout, "Response from `GroupsApi.GetNetworkFirmwareUpgradesStagedGroups`: %v\n", resp)
 }
 ```
@@ -578,7 +578,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20022**](InlineResponse20022.md)
+[**[]InlineResponse20024**](InlineResponse20024.md)
 
 ### Authorization
 
@@ -1059,7 +1059,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | 
     policyObjectGroupId := "policyObjectGroupId_example" // string | 
-    updateOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject211() // InlineObject211 |  (optional)
+    updateOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject212() // InlineObject212 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1091,7 +1091,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPolicyObjectsGroup** | [**InlineObject211**](InlineObject211.md) |  | 
+ **updateOrganizationPolicyObjectsGroup** | [**InlineObject212**](InlineObject212.md) |  | 
 
 ### Return type
 

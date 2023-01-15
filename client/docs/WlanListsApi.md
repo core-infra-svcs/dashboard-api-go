@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSmDeviceWlanLists
 
-> []InlineResponse20048 GetNetworkSmDeviceWlanLists(ctx, networkId, deviceId).Execute()
+> []InlineResponse20050 GetNetworkSmDeviceWlanLists(ctx, networkId, deviceId).Execute()
 
 List the saved SSID names on a device
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WlanListsApi.GetNetworkSmDeviceWlanLists``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceWlanLists`: []InlineResponse20048
+    // response from `GetNetworkSmDeviceWlanLists`: []InlineResponse20050
     fmt.Fprintf(os.Stdout, "Response from `WlanListsApi.GetNetworkSmDeviceWlanLists`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20048**](InlineResponse20048.md)
+[**[]InlineResponse20050**](InlineResponse20050.md)
 
 ### Authorization
 

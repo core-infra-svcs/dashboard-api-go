@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**InlineResponse20019UpgradeWindow**](InlineResponse20019UpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**InlineResponse20019Products**](InlineResponse20019Products.md) |  | [optional] 
+**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
+**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
+**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
+**Events** | Pointer to [**[]InlineResponse20019Events**](InlineResponse20019Events.md) | An array of events that took place in the network. | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse20019WithDefaults instantiates a new InlineResponse20019 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetMessage
 
-`func (o *InlineResponse20019) GetUpgradeWindow() InlineResponse20019UpgradeWindow`
+`func (o *InlineResponse20019) GetMessage() string`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetMessageOk
 
-`func (o *InlineResponse20019) GetUpgradeWindowOk() (*InlineResponse20019UpgradeWindow, bool)`
+`func (o *InlineResponse20019) GetMessageOk() (*string, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetMessage
 
-`func (o *InlineResponse20019) SetUpgradeWindow(v InlineResponse20019UpgradeWindow)`
+`func (o *InlineResponse20019) SetMessage(v string)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetMessage sets Message field to given value.
 
-### HasUpgradeWindow
+### HasMessage
 
-`func (o *InlineResponse20019) HasUpgradeWindow() bool`
+`func (o *InlineResponse20019) HasMessage() bool`
 
-HasUpgradeWindow returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
 
-### GetTimezone
+### GetPageStartAt
 
-`func (o *InlineResponse20019) GetTimezone() string`
+`func (o *InlineResponse20019) GetPageStartAt() string`
 
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
 
-### GetTimezoneOk
+### GetPageStartAtOk
 
-`func (o *InlineResponse20019) GetTimezoneOk() (*string, bool)`
+`func (o *InlineResponse20019) GetPageStartAtOk() (*string, bool)`
 
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimezone
+### SetPageStartAt
 
-`func (o *InlineResponse20019) SetTimezone(v string)`
+`func (o *InlineResponse20019) SetPageStartAt(v string)`
 
-SetTimezone sets Timezone field to given value.
+SetPageStartAt sets PageStartAt field to given value.
 
-### HasTimezone
+### HasPageStartAt
 
-`func (o *InlineResponse20019) HasTimezone() bool`
+`func (o *InlineResponse20019) HasPageStartAt() bool`
 
-HasTimezone returns a boolean if a field has been set.
+HasPageStartAt returns a boolean if a field has been set.
 
-### GetProducts
+### GetPageEndAt
 
-`func (o *InlineResponse20019) GetProducts() InlineResponse20019Products`
+`func (o *InlineResponse20019) GetPageEndAt() string`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetPageEndAtOk
 
-`func (o *InlineResponse20019) GetProductsOk() (*InlineResponse20019Products, bool)`
+`func (o *InlineResponse20019) GetPageEndAtOk() (*string, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetPageEndAt
 
-`func (o *InlineResponse20019) SetProducts(v InlineResponse20019Products)`
+`func (o *InlineResponse20019) SetPageEndAt(v string)`
 
-SetProducts sets Products field to given value.
+SetPageEndAt sets PageEndAt field to given value.
 
-### HasProducts
+### HasPageEndAt
 
-`func (o *InlineResponse20019) HasProducts() bool`
+`func (o *InlineResponse20019) HasPageEndAt() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasPageEndAt returns a boolean if a field has been set.
+
+### GetEvents
+
+`func (o *InlineResponse20019) GetEvents() []InlineResponse20019Events`
+
+GetEvents returns the Events field if non-nil, zero value otherwise.
+
+### GetEventsOk
+
+`func (o *InlineResponse20019) GetEventsOk() (*[]InlineResponse20019Events, bool)`
+
+GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEvents
+
+`func (o *InlineResponse20019) SetEvents(v []InlineResponse20019Events)`
+
+SetEvents sets Events field to given value.
+
+### HasEvents
+
+`func (o *InlineResponse20019) HasEvents() bool`
+
+HasEvents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

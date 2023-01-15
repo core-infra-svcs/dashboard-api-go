@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCellularGatewayDhcp
 
-> InlineResponse20016 GetNetworkCellularGatewayDhcp(ctx, networkId).Execute()
+> InlineResponse20017 GetNetworkCellularGatewayDhcp(ctx, networkId).Execute()
 
 List common DHCP settings of MGs
 
@@ -260,7 +260,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetNetworkCellularGatewayDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewayDhcp`: InlineResponse20016
+    // response from `GetNetworkCellularGatewayDhcp`: InlineResponse20017
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetNetworkCellularGatewayDhcp`: %v\n", resp)
 }
 ```
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayUplinkStatuses
 
-> []InlineResponse20077 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse20080 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MG cellular gateway in the organization
 
@@ -476,7 +476,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse20077
+    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse20080
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20077**](InlineResponse20077.md)
+[**[]InlineResponse20080**](InlineResponse20080.md)
 
 ### Authorization
 
@@ -740,7 +740,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewayDhcp
 
-> InlineResponse20016 UpdateNetworkCellularGatewayDhcp(ctx, networkId).UpdateNetworkCellularGatewayDhcp(updateNetworkCellularGatewayDhcp).Execute()
+> InlineResponse20017 UpdateNetworkCellularGatewayDhcp(ctx, networkId).UpdateNetworkCellularGatewayDhcp(updateNetworkCellularGatewayDhcp).Execute()
 
 Update common DHCP settings of MGs
 
@@ -769,7 +769,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateNetworkCellularGatewayDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewayDhcp`: InlineResponse20016
+    // response from `UpdateNetworkCellularGatewayDhcp`: InlineResponse20017
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateNetworkCellularGatewayDhcp`: %v\n", resp)
 }
 ```
@@ -794,7 +794,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 

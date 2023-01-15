@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**UpgradeWindow** | Pointer to [**InlineResponse20021UpgradeWindow**](InlineResponse20021UpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
 **Products** | Pointer to [**InlineResponse20021Products**](InlineResponse20021Products.md) |  | [optional] 
-**Stages** | Pointer to [**[]InlineResponse20021Stages**](InlineResponse20021Stages.md) | The ordered stages in the network | [optional] 
-**Reasons** | Pointer to [**[]InlineResponse20020Reasons**](InlineResponse20020Reasons.md) | Reasons for the rollback | [optional] 
 
 ## Methods
 
@@ -26,6 +26,56 @@ will change when the set of required properties is changed
 NewInlineResponse20021WithDefaults instantiates a new InlineResponse20021 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetUpgradeWindow
+
+`func (o *InlineResponse20021) GetUpgradeWindow() InlineResponse20021UpgradeWindow`
+
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+
+### GetUpgradeWindowOk
+
+`func (o *InlineResponse20021) GetUpgradeWindowOk() (*InlineResponse20021UpgradeWindow, bool)`
+
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpgradeWindow
+
+`func (o *InlineResponse20021) SetUpgradeWindow(v InlineResponse20021UpgradeWindow)`
+
+SetUpgradeWindow sets UpgradeWindow field to given value.
+
+### HasUpgradeWindow
+
+`func (o *InlineResponse20021) HasUpgradeWindow() bool`
+
+HasUpgradeWindow returns a boolean if a field has been set.
+
+### GetTimezone
+
+`func (o *InlineResponse20021) GetTimezone() string`
+
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+
+### GetTimezoneOk
+
+`func (o *InlineResponse20021) GetTimezoneOk() (*string, bool)`
+
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimezone
+
+`func (o *InlineResponse20021) SetTimezone(v string)`
+
+SetTimezone sets Timezone field to given value.
+
+### HasTimezone
+
+`func (o *InlineResponse20021) HasTimezone() bool`
+
+HasTimezone returns a boolean if a field has been set.
 
 ### GetProducts
 
@@ -51,56 +101,6 @@ SetProducts sets Products field to given value.
 `func (o *InlineResponse20021) HasProducts() bool`
 
 HasProducts returns a boolean if a field has been set.
-
-### GetStages
-
-`func (o *InlineResponse20021) GetStages() []InlineResponse20021Stages`
-
-GetStages returns the Stages field if non-nil, zero value otherwise.
-
-### GetStagesOk
-
-`func (o *InlineResponse20021) GetStagesOk() (*[]InlineResponse20021Stages, bool)`
-
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStages
-
-`func (o *InlineResponse20021) SetStages(v []InlineResponse20021Stages)`
-
-SetStages sets Stages field to given value.
-
-### HasStages
-
-`func (o *InlineResponse20021) HasStages() bool`
-
-HasStages returns a boolean if a field has been set.
-
-### GetReasons
-
-`func (o *InlineResponse20021) GetReasons() []InlineResponse20020Reasons`
-
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
-
-### GetReasonsOk
-
-`func (o *InlineResponse20021) GetReasonsOk() (*[]InlineResponse20020Reasons, bool)`
-
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReasons
-
-`func (o *InlineResponse20021) SetReasons(v []InlineResponse20020Reasons)`
-
-SetReasons sets Reasons field to given value.
-
-### HasReasons
-
-`func (o *InlineResponse20021) HasReasons() bool`
-
-HasReasons returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

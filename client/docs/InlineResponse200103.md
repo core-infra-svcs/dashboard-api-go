@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
-**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
+**ResultingNetwork** | Pointer to [**InlineResponse200103ResultingNetwork**](InlineResponse200103ResultingNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200103WithDefaults instantiates a new InlineResponse200103 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetResultingNetwork
 
-`func (o *InlineResponse200103) GetSerial() string`
+`func (o *InlineResponse200103) GetResultingNetwork() InlineResponse200103ResultingNetwork`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetResultingNetworkOk
 
-`func (o *InlineResponse200103) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200103) GetResultingNetworkOk() (*InlineResponse200103ResultingNetwork, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetResultingNetwork
 
-`func (o *InlineResponse200103) SetSerial(v string)`
+`func (o *InlineResponse200103) SetResultingNetwork(v InlineResponse200103ResultingNetwork)`
 
-SetSerial sets Serial field to given value.
+SetResultingNetwork sets ResultingNetwork field to given value.
 
-### HasSerial
+### HasResultingNetwork
 
-`func (o *InlineResponse200103) HasSerial() bool`
+`func (o *InlineResponse200103) HasResultingNetwork() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200103) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200103) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200103) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200103) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetReadings
-
-`func (o *InlineResponse200103) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
-
-GetReadings returns the Readings field if non-nil, zero value otherwise.
-
-### GetReadingsOk
-
-`func (o *InlineResponse200103) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
-
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReadings
-
-`func (o *InlineResponse200103) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
-
-SetReadings sets Readings field to given value.
-
-### HasReadings
-
-`func (o *InlineResponse200103) HasReadings() bool`
-
-HasReadings returns a boolean if a field has been set.
+HasResultingNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

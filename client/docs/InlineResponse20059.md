@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**Serial** | Pointer to **string** | Switch serial. | [optional] 
+**Name** | Pointer to **string** | Switch name. | [optional] 
+**Url** | Pointer to **string** | Url link to switch. | [optional] 
+**SupportsInspection** | Pointer to **bool** | Whether this switch supports Dynamic ARP Inspection. | [optional] 
+**HasTrustedPort** | Pointer to **bool** | Whether this switch has a trusted DAI port. Always false if supportsInspection is false. | [optional] 
 
 ## Methods
 
@@ -29,30 +29,30 @@ NewInlineResponse20059WithDefaults instantiates a new InlineResponse20059 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetSerial
 
-`func (o *InlineResponse20059) GetId() string`
+`func (o *InlineResponse20059) GetSerial() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetSerialOk
 
-`func (o *InlineResponse20059) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20059) GetSerialOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetSerial
 
-`func (o *InlineResponse20059) SetId(v string)`
+`func (o *InlineResponse20059) SetSerial(v string)`
 
-SetId sets Id field to given value.
+SetSerial sets Serial field to given value.
 
-### HasId
+### HasSerial
 
-`func (o *InlineResponse20059) HasId() bool`
+`func (o *InlineResponse20059) HasSerial() bool`
 
-HasId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
 ### GetName
 
@@ -104,55 +104,55 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetSupportsInspection
 
-`func (o *InlineResponse20059) GetNetworkId() string`
+`func (o *InlineResponse20059) GetSupportsInspection() bool`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetSupportsInspection returns the SupportsInspection field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetSupportsInspectionOk
 
-`func (o *InlineResponse20059) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20059) GetSupportsInspectionOk() (*bool, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetSupportsInspectionOk returns a tuple with the SupportsInspection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetSupportsInspection
 
-`func (o *InlineResponse20059) SetNetworkId(v string)`
+`func (o *InlineResponse20059) SetSupportsInspection(v bool)`
 
-SetNetworkId sets NetworkId field to given value.
+SetSupportsInspection sets SupportsInspection field to given value.
 
-### HasNetworkId
+### HasSupportsInspection
 
-`func (o *InlineResponse20059) HasNetworkId() bool`
+`func (o *InlineResponse20059) HasSupportsInspection() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasSupportsInspection returns a boolean if a field has been set.
 
-### GetPayloadTemplate
+### GetHasTrustedPort
 
-`func (o *InlineResponse20059) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
+`func (o *InlineResponse20059) GetHasTrustedPort() bool`
 
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+GetHasTrustedPort returns the HasTrustedPort field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateOk
+### GetHasTrustedPortOk
 
-`func (o *InlineResponse20059) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
+`func (o *InlineResponse20059) GetHasTrustedPortOk() (*bool, bool)`
 
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+GetHasTrustedPortOk returns a tuple with the HasTrustedPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplate
+### SetHasTrustedPort
 
-`func (o *InlineResponse20059) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
+`func (o *InlineResponse20059) SetHasTrustedPort(v bool)`
 
-SetPayloadTemplate sets PayloadTemplate field to given value.
+SetHasTrustedPort sets HasTrustedPort field to given value.
 
-### HasPayloadTemplate
+### HasHasTrustedPort
 
-`func (o *InlineResponse20059) HasPayloadTemplate() bool`
+`func (o *InlineResponse20059) HasHasTrustedPort() bool`
 
-HasPayloadTemplate returns a boolean if a field has been set.
+HasHasTrustedPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

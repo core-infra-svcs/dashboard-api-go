@@ -3528,7 +3528,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingUplinkSelection
 
-> map[string]interface{} GetNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).Execute()
+> InlineResponse20014 GetNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).Execute()
 
 Show uplink selection settings for an MX network
 
@@ -3556,7 +3556,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceTrafficShapingUplinkSelection``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingUplinkSelection`: map[string]interface{}
+    // response from `GetNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20014
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceTrafficShapingUplinkSelection`: %v\n", resp)
 }
 ```
@@ -3580,7 +3580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -3676,7 +3676,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceVlan
 
-> InlineResponse20014 GetNetworkApplianceVlan(ctx, networkId, vlanId).Execute()
+> InlineResponse20015 GetNetworkApplianceVlan(ctx, networkId, vlanId).Execute()
 
 Return a VLAN
 
@@ -3705,7 +3705,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVlan`: InlineResponse20014
+    // response from `GetNetworkApplianceVlan`: InlineResponse20015
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceVlan`: %v\n", resp)
 }
 ```
@@ -3731,7 +3731,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -3749,7 +3749,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceVlans
 
-> []InlineResponse20014 GetNetworkApplianceVlans(ctx, networkId).Execute()
+> []InlineResponse20015 GetNetworkApplianceVlans(ctx, networkId).Execute()
 
 List the VLANs for an MX network
 
@@ -3777,7 +3777,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceVlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVlans`: []InlineResponse20014
+    // response from `GetNetworkApplianceVlans`: []InlineResponse20015
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceVlans`: %v\n", resp)
 }
 ```
@@ -3801,7 +3801,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20014**](InlineResponse20014.md)
+[**[]InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -3959,7 +3959,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceVpnSiteToSiteVpn
 
-> InlineResponse20015 GetNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).Execute()
+> InlineResponse20016 GetNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).Execute()
 
 Return the site-to-site VPN settings of a network
 
@@ -3987,7 +3987,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceVpnSiteToSiteVpn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20015
+    // response from `GetNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20016
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceVpnSiteToSiteVpn`: %v\n", resp)
 }
 ```
@@ -4011,7 +4011,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -4497,7 +4497,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse20076 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
+> InlineResponse20079 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
 
 Return the third party VPN peers for an organization
 
@@ -4525,7 +4525,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20076
+    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20079
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -4549,7 +4549,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20076**](InlineResponse20076.md)
+[**InlineResponse20079**](InlineResponse20079.md)
 
 ### Authorization
 
@@ -6525,7 +6525,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingUplinkSelection
 
-> map[string]interface{} UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).UpdateNetworkApplianceTrafficShapingUplinkSelection(updateNetworkApplianceTrafficShapingUplinkSelection).Execute()
+> InlineResponse20014 UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).UpdateNetworkApplianceTrafficShapingUplinkSelection(updateNetworkApplianceTrafficShapingUplinkSelection).Execute()
 
 Update uplink selection settings for an MX network
 
@@ -6554,7 +6554,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceTrafficShapingUplinkSelection``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingUplinkSelection`: map[string]interface{}
+    // response from `UpdateNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20014
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceTrafficShapingUplinkSelection`: %v\n", resp)
 }
 ```
@@ -6579,7 +6579,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -6597,7 +6597,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceVlan
 
-> InlineResponse20014 UpdateNetworkApplianceVlan(ctx, networkId, vlanId).UpdateNetworkApplianceVlan(updateNetworkApplianceVlan).Execute()
+> InlineResponse20015 UpdateNetworkApplianceVlan(ctx, networkId, vlanId).UpdateNetworkApplianceVlan(updateNetworkApplianceVlan).Execute()
 
 Update a VLAN
 
@@ -6627,7 +6627,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceVlan`: InlineResponse20014
+    // response from `UpdateNetworkApplianceVlan`: InlineResponse20015
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceVlan`: %v\n", resp)
 }
 ```
@@ -6654,7 +6654,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -6816,7 +6816,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceVpnSiteToSiteVpn
 
-> InlineResponse20015 UpdateNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).UpdateNetworkApplianceVpnSiteToSiteVpn(updateNetworkApplianceVpnSiteToSiteVpn).Execute()
+> InlineResponse20016 UpdateNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).UpdateNetworkApplianceVpnSiteToSiteVpn(updateNetworkApplianceVpnSiteToSiteVpn).Execute()
 
 Update the site-to-site VPN settings of a network
 
@@ -6845,7 +6845,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceVpnSiteToSiteVpn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20015
+    // response from `UpdateNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20016
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceVpnSiteToSiteVpn`: %v\n", resp)
 }
 ```
@@ -6870,7 +6870,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20015**](InlineResponse20015.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -7032,7 +7032,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse20076 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
+> InlineResponse20079 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
 
 Update the third party VPN peers for an organization
 
@@ -7061,7 +7061,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20076
+    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20079
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -7086,7 +7086,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20076**](InlineResponse20076.md)
+[**InlineResponse20079**](InlineResponse20079.md)
 
 ### Authorization
 
