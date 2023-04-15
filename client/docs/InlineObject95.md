@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
+**Name** | **string** | Name of the sensor alert profile. | 
 **Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
-**Conditions** | Pointer to [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | [optional] 
+**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
 **Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
 **Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject95
 
-`func NewInlineObject95() *InlineObject95`
+`func NewInlineObject95(name string, conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineObject95`
 
 NewInlineObject95 instantiates a new InlineObject95 object
 This constructor will assign default values to properties that have it defined,
@@ -48,11 +48,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject95) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetSchedule
 
@@ -98,11 +93,6 @@ and a boolean to check if the value has been set.
 
 SetConditions sets Conditions field to given value.
 
-### HasConditions
-
-`func (o *InlineObject95) HasConditions() bool`
-
-HasConditions returns a boolean if a field has been set.
 
 ### GetRecipients
 

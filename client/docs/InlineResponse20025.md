@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Group** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedStagesGroup**](NetworksNetworkIdFirmwareUpgradesStagedStagesGroup.md) |  | [optional] 
+**Category** | Pointer to **string** | Event category | [optional] 
+**Type** | Pointer to **string** | Event type | [optional] 
+**Description** | Pointer to **string** | Description of the event | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse20025WithDefaults instantiates a new InlineResponse20025 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroup
+### GetCategory
 
-`func (o *InlineResponse20025) GetGroup() NetworksNetworkIdFirmwareUpgradesStagedStagesGroup`
+`func (o *InlineResponse20025) GetCategory() string`
 
-GetGroup returns the Group field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetGroupOk
+### GetCategoryOk
 
-`func (o *InlineResponse20025) GetGroupOk() (*NetworksNetworkIdFirmwareUpgradesStagedStagesGroup, bool)`
+`func (o *InlineResponse20025) GetCategoryOk() (*string, bool)`
 
-GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroup
+### SetCategory
 
-`func (o *InlineResponse20025) SetGroup(v NetworksNetworkIdFirmwareUpgradesStagedStagesGroup)`
+`func (o *InlineResponse20025) SetCategory(v string)`
 
-SetGroup sets Group field to given value.
+SetCategory sets Category field to given value.
 
-### HasGroup
+### HasCategory
 
-`func (o *InlineResponse20025) HasGroup() bool`
+`func (o *InlineResponse20025) HasCategory() bool`
 
-HasGroup returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse20025) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse20025) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse20025) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse20025) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse20025) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse20025) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse20025) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse20025) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

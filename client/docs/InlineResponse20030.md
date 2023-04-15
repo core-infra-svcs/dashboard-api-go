@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SupportedMetrics** | Pointer to **[]string** | List of metrics that are supported for alerts, based on available sensor devices in the network | [optional] 
-**Counts** | Pointer to [**InlineResponse20030Counts**](InlineResponse20030Counts.md) |  | [optional] 
+**Group** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedStagesGroup**](NetworksNetworkIdFirmwareUpgradesStagedStagesGroup.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse20030WithDefaults instantiates a new InlineResponse20030 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSupportedMetrics
+### GetGroup
 
-`func (o *InlineResponse20030) GetSupportedMetrics() []string`
+`func (o *InlineResponse20030) GetGroup() NetworksNetworkIdFirmwareUpgradesStagedStagesGroup`
 
-GetSupportedMetrics returns the SupportedMetrics field if non-nil, zero value otherwise.
+GetGroup returns the Group field if non-nil, zero value otherwise.
 
-### GetSupportedMetricsOk
+### GetGroupOk
 
-`func (o *InlineResponse20030) GetSupportedMetricsOk() (*[]string, bool)`
+`func (o *InlineResponse20030) GetGroupOk() (*NetworksNetworkIdFirmwareUpgradesStagedStagesGroup, bool)`
 
-GetSupportedMetricsOk returns a tuple with the SupportedMetrics field if it's non-nil, zero value otherwise
+GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSupportedMetrics
+### SetGroup
 
-`func (o *InlineResponse20030) SetSupportedMetrics(v []string)`
+`func (o *InlineResponse20030) SetGroup(v NetworksNetworkIdFirmwareUpgradesStagedStagesGroup)`
 
-SetSupportedMetrics sets SupportedMetrics field to given value.
+SetGroup sets Group field to given value.
 
-### HasSupportedMetrics
+### HasGroup
 
-`func (o *InlineResponse20030) HasSupportedMetrics() bool`
+`func (o *InlineResponse20030) HasGroup() bool`
 
-HasSupportedMetrics returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse20030) GetCounts() InlineResponse20030Counts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse20030) GetCountsOk() (*InlineResponse20030Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse20030) SetCounts(v InlineResponse20030Counts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse20030) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
+HasGroup returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

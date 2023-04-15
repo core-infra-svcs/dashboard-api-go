@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ImportId** | Pointer to **string** | Database ID for the new entity entry. | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
+**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
+**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
+**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20095WithDefaults instantiates a new InlineResponse20095 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetImportId
+### GetTs
 
-`func (o *InlineResponse20095) GetImportId() string`
+`func (o *InlineResponse20095) GetTs() time.Time`
 
-GetImportId returns the ImportId field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetImportIdOk
+### GetTsOk
 
-`func (o *InlineResponse20095) GetImportIdOk() (*string, bool)`
+`func (o *InlineResponse20095) GetTsOk() (*time.Time, bool)`
 
-GetImportIdOk returns a tuple with the ImportId field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImportId
+### SetTs
 
-`func (o *InlineResponse20095) SetImportId(v string)`
+`func (o *InlineResponse20095) SetTs(v time.Time)`
 
-SetImportId sets ImportId field to given value.
+SetTs sets Ts field to given value.
 
-### HasImportId
+### HasTs
 
-`func (o *InlineResponse20095) HasImportId() bool`
+`func (o *InlineResponse20095) HasTs() bool`
 
-HasImportId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetDevice
+### GetTotal
 
-`func (o *InlineResponse20095) GetDevice() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice`
+`func (o *InlineResponse20095) GetTotal() int32`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetTotalOk
 
-`func (o *InlineResponse20095) GetDeviceOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice, bool)`
+`func (o *InlineResponse20095) GetTotalOk() (*int32, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetTotal
 
-`func (o *InlineResponse20095) SetDevice(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice)`
+`func (o *InlineResponse20095) SetTotal(v int32)`
 
-SetDevice sets Device field to given value.
+SetTotal sets Total field to given value.
 
-### HasDevice
+### HasTotal
 
-`func (o *InlineResponse20095) HasDevice() bool`
+`func (o *InlineResponse20095) HasTotal() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
+
+### GetUpstream
+
+`func (o *InlineResponse20095) GetUpstream() int32`
+
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+
+### GetUpstreamOk
+
+`func (o *InlineResponse20095) GetUpstreamOk() (*int32, bool)`
+
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpstream
+
+`func (o *InlineResponse20095) SetUpstream(v int32)`
+
+SetUpstream sets Upstream field to given value.
+
+### HasUpstream
+
+`func (o *InlineResponse20095) HasUpstream() bool`
+
+HasUpstream returns a boolean if a field has been set.
+
+### GetDownstream
+
+`func (o *InlineResponse20095) GetDownstream() int32`
+
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+
+### GetDownstreamOk
+
+`func (o *InlineResponse20095) GetDownstreamOk() (*int32, bool)`
+
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownstream
+
+`func (o *InlineResponse20095) SetDownstream(v int32)`
+
+SetDownstream sets Downstream field to given value.
+
+### HasDownstream
+
+`func (o *InlineResponse20095) HasDownstream() bool`
+
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

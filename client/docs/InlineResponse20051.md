@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of a profile. | [optional] 
-**Name** | Pointer to **string** | Name of a profile. | [optional] 
-**Description** | Pointer to **string** | Description of a profile. | [optional] 
-**Scope** | Pointer to **string** | Scope of a profile. | [optional] 
-**Tags** | Pointer to **[]string** | Tags of a profile. | [optional] 
+**DeviceId** | Pointer to **string** | The Meraki managed device Id. | [optional] 
+**Id** | Pointer to **string** | The numerical Meraki Id of the profile. | [optional] 
+**IsEncrypted** | Pointer to **bool** | A boolean indicating if the profile is encrypted. | [optional] 
+**IsManaged** | Pointer to **bool** | Whether or not the profile is managed by Meraki. | [optional] 
+**ProfileData** | Pointer to **string** | A string containing a JSON object with the profile data. | [optional] 
+**ProfileIdentifier** | Pointer to **string** | The identifier of the profile. | [optional] 
+**Name** | Pointer to **string** | The name of the profile. | [optional] 
+**Version** | Pointer to **string** | The verison of the profile. | [optional] 
 
 ## Methods
 
@@ -28,6 +31,31 @@ will change when the set of required properties is changed
 NewInlineResponse20051WithDefaults instantiates a new InlineResponse20051 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetDeviceId
+
+`func (o *InlineResponse20051) GetDeviceId() string`
+
+GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
+
+### GetDeviceIdOk
+
+`func (o *InlineResponse20051) GetDeviceIdOk() (*string, bool)`
+
+GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceId
+
+`func (o *InlineResponse20051) SetDeviceId(v string)`
+
+SetDeviceId sets DeviceId field to given value.
+
+### HasDeviceId
+
+`func (o *InlineResponse20051) HasDeviceId() bool`
+
+HasDeviceId returns a boolean if a field has been set.
 
 ### GetId
 
@@ -54,6 +82,106 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
+### GetIsEncrypted
+
+`func (o *InlineResponse20051) GetIsEncrypted() bool`
+
+GetIsEncrypted returns the IsEncrypted field if non-nil, zero value otherwise.
+
+### GetIsEncryptedOk
+
+`func (o *InlineResponse20051) GetIsEncryptedOk() (*bool, bool)`
+
+GetIsEncryptedOk returns a tuple with the IsEncrypted field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsEncrypted
+
+`func (o *InlineResponse20051) SetIsEncrypted(v bool)`
+
+SetIsEncrypted sets IsEncrypted field to given value.
+
+### HasIsEncrypted
+
+`func (o *InlineResponse20051) HasIsEncrypted() bool`
+
+HasIsEncrypted returns a boolean if a field has been set.
+
+### GetIsManaged
+
+`func (o *InlineResponse20051) GetIsManaged() bool`
+
+GetIsManaged returns the IsManaged field if non-nil, zero value otherwise.
+
+### GetIsManagedOk
+
+`func (o *InlineResponse20051) GetIsManagedOk() (*bool, bool)`
+
+GetIsManagedOk returns a tuple with the IsManaged field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsManaged
+
+`func (o *InlineResponse20051) SetIsManaged(v bool)`
+
+SetIsManaged sets IsManaged field to given value.
+
+### HasIsManaged
+
+`func (o *InlineResponse20051) HasIsManaged() bool`
+
+HasIsManaged returns a boolean if a field has been set.
+
+### GetProfileData
+
+`func (o *InlineResponse20051) GetProfileData() string`
+
+GetProfileData returns the ProfileData field if non-nil, zero value otherwise.
+
+### GetProfileDataOk
+
+`func (o *InlineResponse20051) GetProfileDataOk() (*string, bool)`
+
+GetProfileDataOk returns a tuple with the ProfileData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfileData
+
+`func (o *InlineResponse20051) SetProfileData(v string)`
+
+SetProfileData sets ProfileData field to given value.
+
+### HasProfileData
+
+`func (o *InlineResponse20051) HasProfileData() bool`
+
+HasProfileData returns a boolean if a field has been set.
+
+### GetProfileIdentifier
+
+`func (o *InlineResponse20051) GetProfileIdentifier() string`
+
+GetProfileIdentifier returns the ProfileIdentifier field if non-nil, zero value otherwise.
+
+### GetProfileIdentifierOk
+
+`func (o *InlineResponse20051) GetProfileIdentifierOk() (*string, bool)`
+
+GetProfileIdentifierOk returns a tuple with the ProfileIdentifier field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfileIdentifier
+
+`func (o *InlineResponse20051) SetProfileIdentifier(v string)`
+
+SetProfileIdentifier sets ProfileIdentifier field to given value.
+
+### HasProfileIdentifier
+
+`func (o *InlineResponse20051) HasProfileIdentifier() bool`
+
+HasProfileIdentifier returns a boolean if a field has been set.
+
 ### GetName
 
 `func (o *InlineResponse20051) GetName() string`
@@ -79,80 +207,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDescription
+### GetVersion
 
-`func (o *InlineResponse20051) GetDescription() string`
+`func (o *InlineResponse20051) GetVersion() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetVersion returns the Version field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetVersionOk
 
-`func (o *InlineResponse20051) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse20051) GetVersionOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetVersion
 
-`func (o *InlineResponse20051) SetDescription(v string)`
+`func (o *InlineResponse20051) SetVersion(v string)`
 
-SetDescription sets Description field to given value.
+SetVersion sets Version field to given value.
 
-### HasDescription
+### HasVersion
 
-`func (o *InlineResponse20051) HasDescription() bool`
+`func (o *InlineResponse20051) HasVersion() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineResponse20051) GetScope() string`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineResponse20051) GetScopeOk() (*string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineResponse20051) SetScope(v string)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineResponse20051) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse20051) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse20051) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse20051) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse20051) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasVersion returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

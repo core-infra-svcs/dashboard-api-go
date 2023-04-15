@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApplicationId** | Pointer to **string** | Application identifier | [optional] 
-**Name** | Pointer to **string** | Application name | [optional] 
-**Thresholds** | Pointer to [**OrganizationsOrganizationIdInsightApplicationsThresholds**](OrganizationsOrganizationIdInsightApplicationsThresholds.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
 
 ## Methods
 
@@ -26,31 +28,6 @@ will change when the set of required properties is changed
 NewInlineResponse20092WithDefaults instantiates a new InlineResponse20092 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetApplicationId
-
-`func (o *InlineResponse20092) GetApplicationId() string`
-
-GetApplicationId returns the ApplicationId field if non-nil, zero value otherwise.
-
-### GetApplicationIdOk
-
-`func (o *InlineResponse20092) GetApplicationIdOk() (*string, bool)`
-
-GetApplicationIdOk returns a tuple with the ApplicationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApplicationId
-
-`func (o *InlineResponse20092) SetApplicationId(v string)`
-
-SetApplicationId sets ApplicationId field to given value.
-
-### HasApplicationId
-
-`func (o *InlineResponse20092) HasApplicationId() bool`
-
-HasApplicationId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -77,30 +54,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetThresholds
+### GetEnabled
 
-`func (o *InlineResponse20092) GetThresholds() OrganizationsOrganizationIdInsightApplicationsThresholds`
+`func (o *InlineResponse20092) GetEnabled() bool`
 
-GetThresholds returns the Thresholds field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetThresholdsOk
+### GetEnabledOk
 
-`func (o *InlineResponse20092) GetThresholdsOk() (*OrganizationsOrganizationIdInsightApplicationsThresholds, bool)`
+`func (o *InlineResponse20092) GetEnabledOk() (*bool, bool)`
 
-GetThresholdsOk returns a tuple with the Thresholds field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetThresholds
+### SetEnabled
 
-`func (o *InlineResponse20092) SetThresholds(v OrganizationsOrganizationIdInsightApplicationsThresholds)`
+`func (o *InlineResponse20092) SetEnabled(v bool)`
 
-SetThresholds sets Thresholds field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasThresholds
+### HasEnabled
 
-`func (o *InlineResponse20092) HasThresholds() bool`
+`func (o *InlineResponse20092) HasEnabled() bool`
 
-HasThresholds returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
+
+### GetAdminSettings
+
+`func (o *InlineResponse20092) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
+
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
+
+### GetAdminSettingsOk
+
+`func (o *InlineResponse20092) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
+
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdminSettings
+
+`func (o *InlineResponse20092) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
+
+SetAdminSettings sets AdminSettings field to given value.
+
+### HasAdminSettings
+
+`func (o *InlineResponse20092) HasAdminSettings() bool`
+
+HasAdminSettings returns a boolean if a field has been set.
+
+### GetHelpSettings
+
+`func (o *InlineResponse20092) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
+
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+
+### GetHelpSettingsOk
+
+`func (o *InlineResponse20092) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
+
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHelpSettings
+
+`func (o *InlineResponse20092) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
+
+SetHelpSettings sets HelpSettings field to given value.
+
+### HasHelpSettings
+
+`func (o *InlineResponse20092) HasHelpSettings() bool`
+
+HasHelpSettings returns a boolean if a field has been set.
+
+### GetCustomLogo
+
+`func (o *InlineResponse20092) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
+
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+
+### GetCustomLogoOk
+
+`func (o *InlineResponse20092) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
+
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomLogo
+
+`func (o *InlineResponse20092) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
+
+SetCustomLogo sets CustomLogo field to given value.
+
+### HasCustomLogo
+
+`func (o *InlineResponse20092) HasCustomLogo() bool`
+
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -33,7 +33,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject186() // InlineObject186 |  (optional)
+    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject187() // InlineObject187 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -63,7 +63,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraCu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject186**](InlineObject186.md) |  | 
+ **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject187**](InlineObject187.md) |  | 
 
 ### Return type
 

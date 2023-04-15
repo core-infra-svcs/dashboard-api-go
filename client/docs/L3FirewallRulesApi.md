@@ -176,7 +176,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkApplianceFirewallL3FirewallRules := *openapiclient.NewInlineObject33() // InlineObject33 |  (optional)
+    updateNetworkApplianceFirewallL3FirewallRules := *openapiclient.NewInlineObject34() // InlineObject34 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -206,7 +206,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallL3FirewallRules** | [**InlineObject33**](InlineObject33.md) |  | 
+ **updateNetworkApplianceFirewallL3FirewallRules** | [**InlineObject34**](InlineObject34.md) |  | 
 
 ### Return type
 
@@ -249,7 +249,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     number := "number_example" // string | 
-    updateNetworkWirelessSsidFirewallL3FirewallRules := *openapiclient.NewInlineObject156() // InlineObject156 |  (optional)
+    updateNetworkWirelessSsidFirewallL3FirewallRules := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidFirewallL3FirewallRules** | [**InlineObject156**](InlineObject156.md) |  | 
+ **updateNetworkWirelessSsidFirewallL3FirewallRules** | [**InlineObject157**](InlineObject157.md) |  | 
 
 ### Return type
 

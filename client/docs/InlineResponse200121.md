@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number of the AP | [optional] 
-**Name** | Pointer to **string** | The name of the AP | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork.md) |  | [optional] 
-**Power** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower.md) |  | [optional] 
-**Ports** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts.md) | List of port details | [optional] 
-**Aggregation** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation.md) |  | [optional] 
+**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
+**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineResponse200121WithDefaults instantiates a new InlineResponse200121 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetIdpId
 
-`func (o *InlineResponse200121) GetSerial() string`
+`func (o *InlineResponse200121) GetIdpId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetIdpId returns the IdpId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetIdpIdOk
 
-`func (o *InlineResponse200121) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200121) GetIdpIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetIdpId
 
-`func (o *InlineResponse200121) SetSerial(v string)`
+`func (o *InlineResponse200121) SetIdpId(v string)`
 
-SetSerial sets Serial field to given value.
+SetIdpId sets IdpId field to given value.
 
-### HasSerial
+### HasIdpId
 
-`func (o *InlineResponse200121) HasSerial() bool`
+`func (o *InlineResponse200121) HasIdpId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasIdpId returns a boolean if a field has been set.
 
-### GetName
+### GetConsumerUrl
 
-`func (o *InlineResponse200121) GetName() string`
+`func (o *InlineResponse200121) GetConsumerUrl() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConsumerUrlOk
 
-`func (o *InlineResponse200121) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200121) GetConsumerUrlOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConsumerUrl
 
-`func (o *InlineResponse200121) SetName(v string)`
+`func (o *InlineResponse200121) SetConsumerUrl(v string)`
 
-SetName sets Name field to given value.
+SetConsumerUrl sets ConsumerUrl field to given value.
 
-### HasName
+### HasConsumerUrl
 
-`func (o *InlineResponse200121) HasName() bool`
+`func (o *InlineResponse200121) HasConsumerUrl() bool`
 
-HasName returns a boolean if a field has been set.
+HasConsumerUrl returns a boolean if a field has been set.
 
-### GetNetwork
+### GetX509certSha1Fingerprint
 
-`func (o *InlineResponse200121) GetNetwork() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork`
+`func (o *InlineResponse200121) GetX509certSha1Fingerprint() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineResponse200121) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork, bool)`
+`func (o *InlineResponse200121) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetX509certSha1Fingerprint
 
-`func (o *InlineResponse200121) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork)`
+`func (o *InlineResponse200121) SetX509certSha1Fingerprint(v string)`
 
-SetNetwork sets Network field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
-### HasNetwork
+### HasX509certSha1Fingerprint
 
-`func (o *InlineResponse200121) HasNetwork() bool`
+`func (o *InlineResponse200121) HasX509certSha1Fingerprint() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
 
-### GetPower
+### GetSloLogoutUrl
 
-`func (o *InlineResponse200121) GetPower() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower`
+`func (o *InlineResponse200121) GetSloLogoutUrl() string`
 
-GetPower returns the Power field if non-nil, zero value otherwise.
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
 
-### GetPowerOk
+### GetSloLogoutUrlOk
 
-`func (o *InlineResponse200121) GetPowerOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower, bool)`
+`func (o *InlineResponse200121) GetSloLogoutUrlOk() (*string, bool)`
 
-GetPowerOk returns a tuple with the Power field if it's non-nil, zero value otherwise
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPower
+### SetSloLogoutUrl
 
-`func (o *InlineResponse200121) SetPower(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower)`
+`func (o *InlineResponse200121) SetSloLogoutUrl(v string)`
 
-SetPower sets Power field to given value.
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
 
-### HasPower
+### HasSloLogoutUrl
 
-`func (o *InlineResponse200121) HasPower() bool`
+`func (o *InlineResponse200121) HasSloLogoutUrl() bool`
 
-HasPower returns a boolean if a field has been set.
-
-### GetPorts
-
-`func (o *InlineResponse200121) GetPorts() []OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts`
-
-GetPorts returns the Ports field if non-nil, zero value otherwise.
-
-### GetPortsOk
-
-`func (o *InlineResponse200121) GetPortsOk() (*[]OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts, bool)`
-
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPorts
-
-`func (o *InlineResponse200121) SetPorts(v []OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts)`
-
-SetPorts sets Ports field to given value.
-
-### HasPorts
-
-`func (o *InlineResponse200121) HasPorts() bool`
-
-HasPorts returns a boolean if a field has been set.
-
-### GetAggregation
-
-`func (o *InlineResponse200121) GetAggregation() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation`
-
-GetAggregation returns the Aggregation field if non-nil, zero value otherwise.
-
-### GetAggregationOk
-
-`func (o *InlineResponse200121) GetAggregationOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation, bool)`
-
-GetAggregationOk returns a tuple with the Aggregation field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAggregation
-
-`func (o *InlineResponse200121) SetAggregation(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation)`
-
-SetAggregation sets Aggregation field to given value.
-
-### HasAggregation
-
-`func (o *InlineResponse200121) HasAggregation() bool`
-
-HasAggregation returns a boolean if a field has been set.
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

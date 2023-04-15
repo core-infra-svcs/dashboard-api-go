@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Name** | Pointer to **string** | Name of the switch | [optional] 
-**Mac** | Pointer to **string** | Mac address of the switch | [optional] 
-**Model** | Pointer to **string** | Model of the switch | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage**](OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage.md) |  | [optional] 
+**RemainderLicenses** | Pointer to [**[]InlineResponse200116**](InlineResponse200116.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
+**MovedLicenses** | Pointer to [**[]InlineResponse200116**](InlineResponse200116.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200117WithDefaults instantiates a new InlineResponse200117 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetRemainderLicenses
 
-`func (o *InlineResponse200117) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse200117) GetRemainderLicenses() []InlineResponse200116`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetRemainderLicensesOk
 
-`func (o *InlineResponse200117) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse200117) GetRemainderLicensesOk() (*[]InlineResponse200116, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetRemainderLicenses
 
-`func (o *InlineResponse200117) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse200117) SetRemainderLicenses(v []InlineResponse200116)`
 
-SetNetwork sets Network field to given value.
+SetRemainderLicenses sets RemainderLicenses field to given value.
 
-### HasNetwork
+### HasRemainderLicenses
 
-`func (o *InlineResponse200117) HasNetwork() bool`
+`func (o *InlineResponse200117) HasRemainderLicenses() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasRemainderLicenses returns a boolean if a field has been set.
 
-### GetName
+### GetMovedLicenses
 
-`func (o *InlineResponse200117) GetName() string`
+`func (o *InlineResponse200117) GetMovedLicenses() []InlineResponse200116`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMovedLicensesOk
 
-`func (o *InlineResponse200117) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200117) GetMovedLicensesOk() (*[]InlineResponse200116, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMovedLicenses
 
-`func (o *InlineResponse200117) SetName(v string)`
+`func (o *InlineResponse200117) SetMovedLicenses(v []InlineResponse200116)`
 
-SetName sets Name field to given value.
+SetMovedLicenses sets MovedLicenses field to given value.
 
-### HasName
+### HasMovedLicenses
 
-`func (o *InlineResponse200117) HasName() bool`
+`func (o *InlineResponse200117) HasMovedLicenses() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineResponse200117) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200117) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200117) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse200117) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200117) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200117) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200117) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200117) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200117) GetUsage() OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200117) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200117) SetUsage(v OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200117) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasMovedLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

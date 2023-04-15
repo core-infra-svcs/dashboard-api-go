@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkApplianceFirewallInboundFirewallRules := *openapiclient.NewInlineObject32() // InlineObject32 |  (optional)
+    updateNetworkApplianceFirewallInboundFirewallRules := *openapiclient.NewInlineObject33() // InlineObject33 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallInboundFirewallRules** | [**InlineObject32**](InlineObject32.md) |  | 
+ **updateNetworkApplianceFirewallInboundFirewallRules** | [**InlineObject33**](InlineObject33.md) |  | 
 
 ### Return type
 

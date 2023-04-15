@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FirstSeenAt** | Pointer to **string** | When the device was first seen as connected to the internet in each connection. | [optional] 
-**LastSeenAt** | Pointer to **string** | When the device was last seen as connected to the internet in each connection. | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
+**Name** | Pointer to **string** | The name of the device. | [optional] 
+**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
+**Serial** | Pointer to **string** | The device serial. | [optional] 
+**Notes** | Pointer to **string** | Notes associated with the device. | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse20042WithDefaults instantiates a new InlineResponse20042 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetFirstSeenAt
+### GetId
 
-`func (o *InlineResponse20042) GetFirstSeenAt() string`
+`func (o *InlineResponse20042) GetId() string`
 
-GetFirstSeenAt returns the FirstSeenAt field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetFirstSeenAtOk
+### GetIdOk
 
-`func (o *InlineResponse20042) GetFirstSeenAtOk() (*string, bool)`
+`func (o *InlineResponse20042) GetIdOk() (*string, bool)`
 
-GetFirstSeenAtOk returns a tuple with the FirstSeenAt field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFirstSeenAt
+### SetId
 
-`func (o *InlineResponse20042) SetFirstSeenAt(v string)`
+`func (o *InlineResponse20042) SetId(v string)`
 
-SetFirstSeenAt sets FirstSeenAt field to given value.
+SetId sets Id field to given value.
 
-### HasFirstSeenAt
+### HasId
 
-`func (o *InlineResponse20042) HasFirstSeenAt() bool`
+`func (o *InlineResponse20042) HasId() bool`
 
-HasFirstSeenAt returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetLastSeenAt
+### GetName
 
-`func (o *InlineResponse20042) GetLastSeenAt() string`
+`func (o *InlineResponse20042) GetName() string`
 
-GetLastSeenAt returns the LastSeenAt field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLastSeenAtOk
+### GetNameOk
 
-`func (o *InlineResponse20042) GetLastSeenAtOk() (*string, bool)`
+`func (o *InlineResponse20042) GetNameOk() (*string, bool)`
 
-GetLastSeenAtOk returns a tuple with the LastSeenAt field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastSeenAt
+### SetName
 
-`func (o *InlineResponse20042) SetLastSeenAt(v string)`
+`func (o *InlineResponse20042) SetName(v string)`
 
-SetLastSeenAt sets LastSeenAt field to given value.
+SetName sets Name field to given value.
 
-### HasLastSeenAt
+### HasName
 
-`func (o *InlineResponse20042) HasLastSeenAt() bool`
+`func (o *InlineResponse20042) HasName() bool`
 
-HasLastSeenAt returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetWifiMac
+
+`func (o *InlineResponse20042) GetWifiMac() string`
+
+GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+
+### GetWifiMacOk
+
+`func (o *InlineResponse20042) GetWifiMacOk() (*string, bool)`
+
+GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifiMac
+
+`func (o *InlineResponse20042) SetWifiMac(v string)`
+
+SetWifiMac sets WifiMac field to given value.
+
+### HasWifiMac
+
+`func (o *InlineResponse20042) HasWifiMac() bool`
+
+HasWifiMac returns a boolean if a field has been set.
+
+### GetSerial
+
+`func (o *InlineResponse20042) GetSerial() string`
+
+GetSerial returns the Serial field if non-nil, zero value otherwise.
+
+### GetSerialOk
+
+`func (o *InlineResponse20042) GetSerialOk() (*string, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerial
+
+`func (o *InlineResponse20042) SetSerial(v string)`
+
+SetSerial sets Serial field to given value.
+
+### HasSerial
+
+`func (o *InlineResponse20042) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse20042) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse20042) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse20042) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse20042) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

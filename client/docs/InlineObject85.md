@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of your floor plan. | [optional] 
-**Center** | Pointer to [**NetworksNetworkIdFloorPlansFloorPlanIdCenter**](NetworksNetworkIdFloorPlansFloorPlanIdCenter.md) |  | [optional] 
+**Name** | **string** | The name of your floor plan. | 
+**Center** | Pointer to [**NetworksNetworkIdFloorPlansCenter**](NetworksNetworkIdFloorPlansCenter.md) |  | [optional] 
 **BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner**](NetworksNetworkIdFloorPlansBottomLeftCorner.md) |  | [optional] 
 **BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
 **TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
 **TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
-**ImageContents** | Pointer to **string** | The file contents (a base 64 encoded string) of your new image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. If you upload a new image, and you do NOT specify any new geolocation fields (&#39;center, &#39;topLeftCorner&#39;, etc), the floor plan will be recentered with no rotation in order to maintain the aspect ratio of your new image. | [optional] 
+**ImageContents** | **string** | The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. | 
 
 ## Methods
 
 ### NewInlineObject85
 
-`func NewInlineObject85() *InlineObject85`
+`func NewInlineObject85(name string, imageContents string, ) *InlineObject85`
 
 NewInlineObject85 instantiates a new InlineObject85 object
 This constructor will assign default values to properties that have it defined,
@@ -50,28 +50,23 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject85) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetCenter
 
-`func (o *InlineObject85) GetCenter() NetworksNetworkIdFloorPlansFloorPlanIdCenter`
+`func (o *InlineObject85) GetCenter() NetworksNetworkIdFloorPlansCenter`
 
 GetCenter returns the Center field if non-nil, zero value otherwise.
 
 ### GetCenterOk
 
-`func (o *InlineObject85) GetCenterOk() (*NetworksNetworkIdFloorPlansFloorPlanIdCenter, bool)`
+`func (o *InlineObject85) GetCenterOk() (*NetworksNetworkIdFloorPlansCenter, bool)`
 
 GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCenter
 
-`func (o *InlineObject85) SetCenter(v NetworksNetworkIdFloorPlansFloorPlanIdCenter)`
+`func (o *InlineObject85) SetCenter(v NetworksNetworkIdFloorPlansCenter)`
 
 SetCenter sets Center field to given value.
 
@@ -200,11 +195,6 @@ and a boolean to check if the value has been set.
 
 SetImageContents sets ImageContents field to given value.
 
-### HasImageContents
-
-`func (o *InlineObject85) HasImageContents() bool`
-
-HasImageContents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

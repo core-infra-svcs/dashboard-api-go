@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
-**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
-**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
-**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
-**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
+**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse20067Overrides**](InlineResponse20067Overrides.md) | Override MTU size for individual switches or switch profiles.       An empty array will clear overrides. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse20067WithDefaults instantiates a new InlineResponse20067 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssoc
+### GetDefaultMtuSize
 
-`func (o *InlineResponse20067) GetAssoc() int32`
+`func (o *InlineResponse20067) GetDefaultMtuSize() int32`
 
-GetAssoc returns the Assoc field if non-nil, zero value otherwise.
+GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
 
-### GetAssocOk
+### GetDefaultMtuSizeOk
 
-`func (o *InlineResponse20067) GetAssocOk() (*int32, bool)`
+`func (o *InlineResponse20067) GetDefaultMtuSizeOk() (*int32, bool)`
 
-GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
+GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssoc
+### SetDefaultMtuSize
 
-`func (o *InlineResponse20067) SetAssoc(v int32)`
+`func (o *InlineResponse20067) SetDefaultMtuSize(v int32)`
 
-SetAssoc sets Assoc field to given value.
+SetDefaultMtuSize sets DefaultMtuSize field to given value.
 
-### HasAssoc
+### HasDefaultMtuSize
 
-`func (o *InlineResponse20067) HasAssoc() bool`
+`func (o *InlineResponse20067) HasDefaultMtuSize() bool`
 
-HasAssoc returns a boolean if a field has been set.
+HasDefaultMtuSize returns a boolean if a field has been set.
 
-### GetAuth
+### GetOverrides
 
-`func (o *InlineResponse20067) GetAuth() int32`
+`func (o *InlineResponse20067) GetOverrides() []InlineResponse20067Overrides`
 
-GetAuth returns the Auth field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetAuthOk
+### GetOverridesOk
 
-`func (o *InlineResponse20067) GetAuthOk() (*int32, bool)`
+`func (o *InlineResponse20067) GetOverridesOk() (*[]InlineResponse20067Overrides, bool)`
 
-GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuth
+### SetOverrides
 
-`func (o *InlineResponse20067) SetAuth(v int32)`
+`func (o *InlineResponse20067) SetOverrides(v []InlineResponse20067Overrides)`
 
-SetAuth sets Auth field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasAuth
+### HasOverrides
 
-`func (o *InlineResponse20067) HasAuth() bool`
+`func (o *InlineResponse20067) HasOverrides() bool`
 
-HasAuth returns a boolean if a field has been set.
-
-### GetDhcp
-
-`func (o *InlineResponse20067) GetDhcp() int32`
-
-GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
-
-### GetDhcpOk
-
-`func (o *InlineResponse20067) GetDhcpOk() (*int32, bool)`
-
-GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcp
-
-`func (o *InlineResponse20067) SetDhcp(v int32)`
-
-SetDhcp sets Dhcp field to given value.
-
-### HasDhcp
-
-`func (o *InlineResponse20067) HasDhcp() bool`
-
-HasDhcp returns a boolean if a field has been set.
-
-### GetDns
-
-`func (o *InlineResponse20067) GetDns() int32`
-
-GetDns returns the Dns field if non-nil, zero value otherwise.
-
-### GetDnsOk
-
-`func (o *InlineResponse20067) GetDnsOk() (*int32, bool)`
-
-GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDns
-
-`func (o *InlineResponse20067) SetDns(v int32)`
-
-SetDns sets Dns field to given value.
-
-### HasDns
-
-`func (o *InlineResponse20067) HasDns() bool`
-
-HasDns returns a boolean if a field has been set.
-
-### GetSuccess
-
-`func (o *InlineResponse20067) GetSuccess() int32`
-
-GetSuccess returns the Success field if non-nil, zero value otherwise.
-
-### GetSuccessOk
-
-`func (o *InlineResponse20067) GetSuccessOk() (*int32, bool)`
-
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSuccess
-
-`func (o *InlineResponse20067) SetSuccess(v int32)`
-
-SetSuccess sets Success field to given value.
-
-### HasSuccess
-
-`func (o *InlineResponse20067) HasSuccess() bool`
-
-HasSuccess returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

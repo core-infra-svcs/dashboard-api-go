@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
-**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
+**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
+**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse20072WithDefaults instantiates a new InlineResponse20072 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetId
 
-`func (o *InlineResponse20072) GetStartTs() time.Time`
+`func (o *InlineResponse20072) GetId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetIdOk
 
-`func (o *InlineResponse20072) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20072) GetIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetId
 
-`func (o *InlineResponse20072) SetStartTs(v time.Time)`
+`func (o *InlineResponse20072) SetId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetId sets Id field to given value.
 
-### HasStartTs
+### HasId
 
-`func (o *InlineResponse20072) HasStartTs() bool`
+`func (o *InlineResponse20072) HasId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetName
 
-`func (o *InlineResponse20072) GetEndTs() time.Time`
+`func (o *InlineResponse20072) GetName() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetNameOk
 
-`func (o *InlineResponse20072) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20072) GetNameOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetName
 
-`func (o *InlineResponse20072) SetEndTs(v time.Time)`
+`func (o *InlineResponse20072) SetName(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetName sets Name field to given value.
 
-### HasEndTs
+### HasName
 
-`func (o *InlineResponse20072) HasEndTs() bool`
+`func (o *InlineResponse20072) HasName() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSnr
+### GetUrl
 
-`func (o *InlineResponse20072) GetSnr() int32`
+`func (o *InlineResponse20072) GetUrl() string`
 
-GetSnr returns the Snr field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetSnrOk
+### GetUrlOk
 
-`func (o *InlineResponse20072) GetSnrOk() (*int32, bool)`
+`func (o *InlineResponse20072) GetUrlOk() (*string, bool)`
 
-GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSnr
+### SetUrl
 
-`func (o *InlineResponse20072) SetSnr(v int32)`
+`func (o *InlineResponse20072) SetUrl(v string)`
 
-SetSnr sets Snr field to given value.
+SetUrl sets Url field to given value.
 
-### HasSnr
+### HasUrl
 
-`func (o *InlineResponse20072) HasSnr() bool`
+`func (o *InlineResponse20072) HasUrl() bool`
 
-HasSnr returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetRssi
+### GetNetworkId
 
-`func (o *InlineResponse20072) GetRssi() int32`
+`func (o *InlineResponse20072) GetNetworkId() string`
 
-GetRssi returns the Rssi field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetRssiOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20072) GetRssiOk() (*int32, bool)`
+`func (o *InlineResponse20072) GetNetworkIdOk() (*string, bool)`
 
-GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRssi
+### SetNetworkId
 
-`func (o *InlineResponse20072) SetRssi(v int32)`
+`func (o *InlineResponse20072) SetNetworkId(v string)`
 
-SetRssi sets Rssi field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasRssi
+### HasNetworkId
 
-`func (o *InlineResponse20072) HasRssi() bool`
+`func (o *InlineResponse20072) HasNetworkId() bool`
 
-HasRssi returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
+
+### GetPayloadTemplate
+
+`func (o *InlineResponse20072) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
+
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateOk
+
+`func (o *InlineResponse20072) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
+
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplate
+
+`func (o *InlineResponse20072) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
+
+SetPayloadTemplate sets PayloadTemplate field to given value.
+
+### HasPayloadTemplate
+
+`func (o *InlineResponse20072) HasPayloadTemplate() bool`
+
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

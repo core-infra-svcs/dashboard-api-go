@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
-**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
-**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
+**TrustedServerId** | Pointer to **string** | ID of the trusted server. | [optional] 
+**Mac** | Pointer to **string** | Mac address of the trusted server. | [optional] 
+**Vlan** | Pointer to **int32** | Vlan ID of the trusted server. | [optional] 
+**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse20065WithDefaults instantiates a new InlineResponse20065 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetTrustedServerId
 
-`func (o *InlineResponse20065) GetStartTs() time.Time`
+`func (o *InlineResponse20065) GetTrustedServerId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetTrustedServerId returns the TrustedServerId field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetTrustedServerIdOk
 
-`func (o *InlineResponse20065) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20065) GetTrustedServerIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetTrustedServerIdOk returns a tuple with the TrustedServerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetTrustedServerId
 
-`func (o *InlineResponse20065) SetStartTs(v time.Time)`
+`func (o *InlineResponse20065) SetTrustedServerId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetTrustedServerId sets TrustedServerId field to given value.
 
-### HasStartTs
+### HasTrustedServerId
 
-`func (o *InlineResponse20065) HasStartTs() bool`
+`func (o *InlineResponse20065) HasTrustedServerId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasTrustedServerId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetMac
 
-`func (o *InlineResponse20065) GetEndTs() time.Time`
+`func (o *InlineResponse20065) GetMac() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetMacOk
 
-`func (o *InlineResponse20065) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20065) GetMacOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetMac
 
-`func (o *InlineResponse20065) SetEndTs(v time.Time)`
+`func (o *InlineResponse20065) SetMac(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetMac sets Mac field to given value.
 
-### HasEndTs
+### HasMac
 
-`func (o *InlineResponse20065) HasEndTs() bool`
+`func (o *InlineResponse20065) HasMac() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetUtilizationTotal
+### GetVlan
 
-`func (o *InlineResponse20065) GetUtilizationTotal() float32`
+`func (o *InlineResponse20065) GetVlan() int32`
 
-GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetUtilizationTotalOk
+### GetVlanOk
 
-`func (o *InlineResponse20065) GetUtilizationTotalOk() (*float32, bool)`
+`func (o *InlineResponse20065) GetVlanOk() (*int32, bool)`
 
-GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilizationTotal
+### SetVlan
 
-`func (o *InlineResponse20065) SetUtilizationTotal(v float32)`
+`func (o *InlineResponse20065) SetVlan(v int32)`
 
-SetUtilizationTotal sets UtilizationTotal field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasUtilizationTotal
+### HasVlan
 
-`func (o *InlineResponse20065) HasUtilizationTotal() bool`
+`func (o *InlineResponse20065) HasVlan() bool`
 
-HasUtilizationTotal returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetUtilization80211
+### GetIpv4
 
-`func (o *InlineResponse20065) GetUtilization80211() float32`
+`func (o *InlineResponse20065) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4`
 
-GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
 
-### GetUtilization80211Ok
+### GetIpv4Ok
 
-`func (o *InlineResponse20065) GetUtilization80211Ok() (*float32, bool)`
+`func (o *InlineResponse20065) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4, bool)`
 
-GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilization80211
+### SetIpv4
 
-`func (o *InlineResponse20065) SetUtilization80211(v float32)`
+`func (o *InlineResponse20065) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4)`
 
-SetUtilization80211 sets Utilization80211 field to given value.
+SetIpv4 sets Ipv4 field to given value.
 
-### HasUtilization80211
+### HasIpv4
 
-`func (o *InlineResponse20065) HasUtilization80211() bool`
+`func (o *InlineResponse20065) HasIpv4() bool`
 
-HasUtilization80211 returns a boolean if a field has been set.
-
-### GetUtilizationNon80211
-
-`func (o *InlineResponse20065) GetUtilizationNon80211() float32`
-
-GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
-
-### GetUtilizationNon80211Ok
-
-`func (o *InlineResponse20065) GetUtilizationNon80211Ok() (*float32, bool)`
-
-GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUtilizationNon80211
-
-`func (o *InlineResponse20065) SetUtilizationNon80211(v float32)`
-
-SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
-
-### HasUtilizationNon80211
-
-`func (o *InlineResponse20065) HasUtilizationNon80211() bool`
-
-HasUtilizationNon80211 returns a boolean if a field has been set.
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

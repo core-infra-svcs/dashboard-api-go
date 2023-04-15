@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
-**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
-**DynamicDns** | Pointer to [**InlineResponse20011DynamicDns**](InlineResponse20011DynamicDns.md) |  | [optional] 
+**OccurredAt** | Pointer to **string** | time when the event occurred | [optional] 
+**AlertTypeId** | Pointer to **string** | type of alert | [optional] 
+**AlertType** | Pointer to **string** | user friendly alert type | [optional] 
+**Device** | Pointer to [**NetworksNetworkIdAlertsHistoryDevice**](NetworksNetworkIdAlertsHistoryDevice.md) |  | [optional] 
+**Destinations** | Pointer to [**NetworksNetworkIdAlertsHistoryDestinations**](NetworksNetworkIdAlertsHistoryDestinations.md) |  | [optional] 
+**AlertData** | Pointer to **map[string]interface{}** | relevant data about the event that caused the alert | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse20011WithDefaults instantiates a new InlineResponse20011 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientTrackingMethod
+### GetOccurredAt
 
-`func (o *InlineResponse20011) GetClientTrackingMethod() string`
+`func (o *InlineResponse20011) GetOccurredAt() string`
 
-GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
+GetOccurredAt returns the OccurredAt field if non-nil, zero value otherwise.
 
-### GetClientTrackingMethodOk
+### GetOccurredAtOk
 
-`func (o *InlineResponse20011) GetClientTrackingMethodOk() (*string, bool)`
+`func (o *InlineResponse20011) GetOccurredAtOk() (*string, bool)`
 
-GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
+GetOccurredAtOk returns a tuple with the OccurredAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTrackingMethod
+### SetOccurredAt
 
-`func (o *InlineResponse20011) SetClientTrackingMethod(v string)`
+`func (o *InlineResponse20011) SetOccurredAt(v string)`
 
-SetClientTrackingMethod sets ClientTrackingMethod field to given value.
+SetOccurredAt sets OccurredAt field to given value.
 
-### HasClientTrackingMethod
+### HasOccurredAt
 
-`func (o *InlineResponse20011) HasClientTrackingMethod() bool`
+`func (o *InlineResponse20011) HasOccurredAt() bool`
 
-HasClientTrackingMethod returns a boolean if a field has been set.
+HasOccurredAt returns a boolean if a field has been set.
 
-### GetDeploymentMode
+### GetAlertTypeId
 
-`func (o *InlineResponse20011) GetDeploymentMode() string`
+`func (o *InlineResponse20011) GetAlertTypeId() string`
 
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
 
-### GetDeploymentModeOk
+### GetAlertTypeIdOk
 
-`func (o *InlineResponse20011) GetDeploymentModeOk() (*string, bool)`
+`func (o *InlineResponse20011) GetAlertTypeIdOk() (*string, bool)`
 
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeploymentMode
+### SetAlertTypeId
 
-`func (o *InlineResponse20011) SetDeploymentMode(v string)`
+`func (o *InlineResponse20011) SetAlertTypeId(v string)`
 
-SetDeploymentMode sets DeploymentMode field to given value.
+SetAlertTypeId sets AlertTypeId field to given value.
 
-### HasDeploymentMode
+### HasAlertTypeId
 
-`func (o *InlineResponse20011) HasDeploymentMode() bool`
+`func (o *InlineResponse20011) HasAlertTypeId() bool`
 
-HasDeploymentMode returns a boolean if a field has been set.
+HasAlertTypeId returns a boolean if a field has been set.
 
-### GetDynamicDns
+### GetAlertType
 
-`func (o *InlineResponse20011) GetDynamicDns() InlineResponse20011DynamicDns`
+`func (o *InlineResponse20011) GetAlertType() string`
 
-GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
+GetAlertType returns the AlertType field if non-nil, zero value otherwise.
 
-### GetDynamicDnsOk
+### GetAlertTypeOk
 
-`func (o *InlineResponse20011) GetDynamicDnsOk() (*InlineResponse20011DynamicDns, bool)`
+`func (o *InlineResponse20011) GetAlertTypeOk() (*string, bool)`
 
-GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
+GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDynamicDns
+### SetAlertType
 
-`func (o *InlineResponse20011) SetDynamicDns(v InlineResponse20011DynamicDns)`
+`func (o *InlineResponse20011) SetAlertType(v string)`
 
-SetDynamicDns sets DynamicDns field to given value.
+SetAlertType sets AlertType field to given value.
 
-### HasDynamicDns
+### HasAlertType
 
-`func (o *InlineResponse20011) HasDynamicDns() bool`
+`func (o *InlineResponse20011) HasAlertType() bool`
 
-HasDynamicDns returns a boolean if a field has been set.
+HasAlertType returns a boolean if a field has been set.
+
+### GetDevice
+
+`func (o *InlineResponse20011) GetDevice() NetworksNetworkIdAlertsHistoryDevice`
+
+GetDevice returns the Device field if non-nil, zero value otherwise.
+
+### GetDeviceOk
+
+`func (o *InlineResponse20011) GetDeviceOk() (*NetworksNetworkIdAlertsHistoryDevice, bool)`
+
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevice
+
+`func (o *InlineResponse20011) SetDevice(v NetworksNetworkIdAlertsHistoryDevice)`
+
+SetDevice sets Device field to given value.
+
+### HasDevice
+
+`func (o *InlineResponse20011) HasDevice() bool`
+
+HasDevice returns a boolean if a field has been set.
+
+### GetDestinations
+
+`func (o *InlineResponse20011) GetDestinations() NetworksNetworkIdAlertsHistoryDestinations`
+
+GetDestinations returns the Destinations field if non-nil, zero value otherwise.
+
+### GetDestinationsOk
+
+`func (o *InlineResponse20011) GetDestinationsOk() (*NetworksNetworkIdAlertsHistoryDestinations, bool)`
+
+GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDestinations
+
+`func (o *InlineResponse20011) SetDestinations(v NetworksNetworkIdAlertsHistoryDestinations)`
+
+SetDestinations sets Destinations field to given value.
+
+### HasDestinations
+
+`func (o *InlineResponse20011) HasDestinations() bool`
+
+HasDestinations returns a boolean if a field has been set.
+
+### GetAlertData
+
+`func (o *InlineResponse20011) GetAlertData() map[string]interface{}`
+
+GetAlertData returns the AlertData field if non-nil, zero value otherwise.
+
+### GetAlertDataOk
+
+`func (o *InlineResponse20011) GetAlertDataOk() (*map[string]interface{}, bool)`
+
+GetAlertDataOk returns a tuple with the AlertData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertData
+
+`func (o *InlineResponse20011) SetAlertData(v map[string]interface{})`
+
+SetAlertData sets AlertData field to given value.
+
+### HasAlertData
+
+`func (o *InlineResponse20011) HasAlertData() bool`
+
+HasAlertData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

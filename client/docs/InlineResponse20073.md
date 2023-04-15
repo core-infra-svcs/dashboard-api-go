@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
-**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
+**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
+**Type** | Pointer to **string** | The type of the payload template | [optional] 
+**Name** | Pointer to **string** | The name of the payload template | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
+**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
 
 ## Methods
 
@@ -29,6 +28,56 @@ will change when the set of required properties is changed
 NewInlineResponse20073WithDefaults instantiates a new InlineResponse20073 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetPayloadTemplateId
+
+`func (o *InlineResponse20073) GetPayloadTemplateId() string`
+
+GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateIdOk
+
+`func (o *InlineResponse20073) GetPayloadTemplateIdOk() (*string, bool)`
+
+GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplateId
+
+`func (o *InlineResponse20073) SetPayloadTemplateId(v string)`
+
+SetPayloadTemplateId sets PayloadTemplateId field to given value.
+
+### HasPayloadTemplateId
+
+`func (o *InlineResponse20073) HasPayloadTemplateId() bool`
+
+HasPayloadTemplateId returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse20073) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse20073) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse20073) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse20073) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 ### GetName
 
@@ -55,130 +104,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetId
+### GetHeaders
 
-`func (o *InlineResponse20073) GetId() string`
+`func (o *InlineResponse20073) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetHeadersOk
 
-`func (o *InlineResponse20073) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20073) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetHeaders
 
-`func (o *InlineResponse20073) SetId(v string)`
+`func (o *InlineResponse20073) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
 
-SetId sets Id field to given value.
+SetHeaders sets Headers field to given value.
 
-### HasId
+### HasHeaders
 
-`func (o *InlineResponse20073) HasId() bool`
+`func (o *InlineResponse20073) HasHeaders() bool`
 
-HasId returns a boolean if a field has been set.
+HasHeaders returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetBody
 
-`func (o *InlineResponse20073) GetGroupPolicyId() string`
+`func (o *InlineResponse20073) GetBody() string`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetBodyOk
 
-`func (o *InlineResponse20073) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse20073) GetBodyOk() (*string, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetBody
 
-`func (o *InlineResponse20073) SetGroupPolicyId(v string)`
+`func (o *InlineResponse20073) SetBody(v string)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetBody sets Body field to given value.
 
-### HasGroupPolicyId
+### HasBody
 
-`func (o *InlineResponse20073) HasGroupPolicyId() bool`
+`func (o *InlineResponse20073) HasBody() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
-
-### GetPassphrase
-
-`func (o *InlineResponse20073) GetPassphrase() string`
-
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
-
-### GetPassphraseOk
-
-`func (o *InlineResponse20073) GetPassphraseOk() (*string, bool)`
-
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPassphrase
-
-`func (o *InlineResponse20073) SetPassphrase(v string)`
-
-SetPassphrase sets Passphrase field to given value.
-
-### HasPassphrase
-
-`func (o *InlineResponse20073) HasPassphrase() bool`
-
-HasPassphrase returns a boolean if a field has been set.
-
-### GetWifiPersonalNetworkId
-
-`func (o *InlineResponse20073) GetWifiPersonalNetworkId() string`
-
-GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
-
-### GetWifiPersonalNetworkIdOk
-
-`func (o *InlineResponse20073) GetWifiPersonalNetworkIdOk() (*string, bool)`
-
-GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifiPersonalNetworkId
-
-`func (o *InlineResponse20073) SetWifiPersonalNetworkId(v string)`
-
-SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
-
-### HasWifiPersonalNetworkId
-
-`func (o *InlineResponse20073) HasWifiPersonalNetworkId() bool`
-
-HasWifiPersonalNetworkId returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *InlineResponse20073) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineResponse20073) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineResponse20073) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *InlineResponse20073) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

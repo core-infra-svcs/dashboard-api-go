@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
-**Category** | Pointer to **string** | Category of the alert | [optional] 
-**Type** | Pointer to **string** | Alert type | [optional] 
-**Severity** | Pointer to **string** | Severity of the alert | [optional] 
-**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
+**UpgradeWindow** | Pointer to [**InlineResponse20026UpgradeWindow**](InlineResponse20026UpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**InlineResponse20026Products**](InlineResponse20026Products.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20026WithDefaults instantiates a new InlineResponse20026 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetUpgradeWindow
 
-`func (o *InlineResponse20026) GetId() string`
+`func (o *InlineResponse20026) GetUpgradeWindow() InlineResponse20026UpgradeWindow`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetUpgradeWindowOk
 
-`func (o *InlineResponse20026) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20026) GetUpgradeWindowOk() (*InlineResponse20026UpgradeWindow, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetUpgradeWindow
 
-`func (o *InlineResponse20026) SetId(v string)`
+`func (o *InlineResponse20026) SetUpgradeWindow(v InlineResponse20026UpgradeWindow)`
 
-SetId sets Id field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
-### HasId
+### HasUpgradeWindow
 
-`func (o *InlineResponse20026) HasId() bool`
+`func (o *InlineResponse20026) HasUpgradeWindow() bool`
 
-HasId returns a boolean if a field has been set.
+HasUpgradeWindow returns a boolean if a field has been set.
 
-### GetCategory
+### GetTimezone
 
-`func (o *InlineResponse20026) GetCategory() string`
+`func (o *InlineResponse20026) GetTimezone() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetTimezoneOk
 
-`func (o *InlineResponse20026) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse20026) GetTimezoneOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetTimezone
 
-`func (o *InlineResponse20026) SetCategory(v string)`
+`func (o *InlineResponse20026) SetTimezone(v string)`
 
-SetCategory sets Category field to given value.
+SetTimezone sets Timezone field to given value.
 
-### HasCategory
+### HasTimezone
 
-`func (o *InlineResponse20026) HasCategory() bool`
+`func (o *InlineResponse20026) HasTimezone() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasTimezone returns a boolean if a field has been set.
 
-### GetType
+### GetProducts
 
-`func (o *InlineResponse20026) GetType() string`
+`func (o *InlineResponse20026) GetProducts() InlineResponse20026Products`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetProductsOk
 
-`func (o *InlineResponse20026) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse20026) GetProductsOk() (*InlineResponse20026Products, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetProducts
 
-`func (o *InlineResponse20026) SetType(v string)`
+`func (o *InlineResponse20026) SetProducts(v InlineResponse20026Products)`
 
-SetType sets Type field to given value.
+SetProducts sets Products field to given value.
 
-### HasType
+### HasProducts
 
-`func (o *InlineResponse20026) HasType() bool`
+`func (o *InlineResponse20026) HasProducts() bool`
 
-HasType returns a boolean if a field has been set.
-
-### GetSeverity
-
-`func (o *InlineResponse20026) GetSeverity() string`
-
-GetSeverity returns the Severity field if non-nil, zero value otherwise.
-
-### GetSeverityOk
-
-`func (o *InlineResponse20026) GetSeverityOk() (*string, bool)`
-
-GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeverity
-
-`func (o *InlineResponse20026) SetSeverity(v string)`
-
-SetSeverity sets Severity field to given value.
-
-### HasSeverity
-
-`func (o *InlineResponse20026) HasSeverity() bool`
-
-HasSeverity returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineResponse20026) GetScope() NetworksNetworkIdHealthAlertsScope`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineResponse20026) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineResponse20026) SetScope(v NetworksNetworkIdHealthAlertsScope)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineResponse20026) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

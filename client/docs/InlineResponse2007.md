@@ -4,22 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Network ID | [optional] 
-**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Network name | [optional] 
-**ProductTypes** | Pointer to **[]string** | List of the product types that the network supports | [optional] 
-**TimeZone** | Pointer to **string** | Timezone of the network | [optional] 
-**Tags** | Pointer to **[]string** | Network tags | [optional] 
-**EnrollmentString** | Pointer to **string** | Enrollment string for the network | [optional] 
-**Url** | Pointer to **string** | URL to the network Dashboard UI | [optional] 
-**Notes** | Pointer to **string** | Notes for the network | [optional] 
-**IsBoundToConfigTemplate** | Pointer to **bool** | If the network is bound to a config template | [optional] 
+**StaticRouteId** | Pointer to **string** | The identifier of a layer 3 static route | [optional] 
+**Name** | Pointer to **string** | The name or description of the layer 3 static route | [optional] 
+**Subnet** | **string** | The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24) | 
+**NextHopIp** | **string** |  The IP address of the router to which traffic for this destination network should be sent | 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static routes via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static routes over OSPF routes | [optional] 
 
 ## Methods
 
 ### NewInlineResponse2007
 
-`func NewInlineResponse2007() *InlineResponse2007`
+`func NewInlineResponse2007(subnet string, nextHopIp string, ) *InlineResponse2007`
 
 NewInlineResponse2007 instantiates a new InlineResponse2007 object
 This constructor will assign default values to properties that have it defined,
@@ -34,55 +30,30 @@ NewInlineResponse2007WithDefaults instantiates a new InlineResponse2007 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStaticRouteId
 
-`func (o *InlineResponse2007) GetId() string`
+`func (o *InlineResponse2007) GetStaticRouteId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStaticRouteId returns the StaticRouteId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStaticRouteIdOk
 
-`func (o *InlineResponse2007) GetIdOk() (*string, bool)`
+`func (o *InlineResponse2007) GetStaticRouteIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStaticRouteIdOk returns a tuple with the StaticRouteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStaticRouteId
 
-`func (o *InlineResponse2007) SetId(v string)`
+`func (o *InlineResponse2007) SetStaticRouteId(v string)`
 
-SetId sets Id field to given value.
+SetStaticRouteId sets StaticRouteId field to given value.
 
-### HasId
+### HasStaticRouteId
 
-`func (o *InlineResponse2007) HasId() bool`
+`func (o *InlineResponse2007) HasStaticRouteId() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetOrganizationId
-
-`func (o *InlineResponse2007) GetOrganizationId() string`
-
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
-
-### GetOrganizationIdOk
-
-`func (o *InlineResponse2007) GetOrganizationIdOk() (*string, bool)`
-
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrganizationId
-
-`func (o *InlineResponse2007) SetOrganizationId(v string)`
-
-SetOrganizationId sets OrganizationId field to given value.
-
-### HasOrganizationId
-
-`func (o *InlineResponse2007) HasOrganizationId() bool`
-
-HasOrganizationId returns a boolean if a field has been set.
+HasStaticRouteId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -109,180 +80,95 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetProductTypes
+### GetSubnet
 
-`func (o *InlineResponse2007) GetProductTypes() []string`
+`func (o *InlineResponse2007) GetSubnet() string`
 
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetProductTypesOk
+### GetSubnetOk
 
-`func (o *InlineResponse2007) GetProductTypesOk() (*[]string, bool)`
+`func (o *InlineResponse2007) GetSubnetOk() (*string, bool)`
 
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductTypes
+### SetSubnet
 
-`func (o *InlineResponse2007) SetProductTypes(v []string)`
+`func (o *InlineResponse2007) SetSubnet(v string)`
 
-SetProductTypes sets ProductTypes field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasProductTypes
 
-`func (o *InlineResponse2007) HasProductTypes() bool`
+### GetNextHopIp
 
-HasProductTypes returns a boolean if a field has been set.
+`func (o *InlineResponse2007) GetNextHopIp() string`
 
-### GetTimeZone
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse2007) GetTimeZone() string`
+### GetNextHopIpOk
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+`func (o *InlineResponse2007) GetNextHopIpOk() (*string, bool)`
 
-### GetTimeZoneOk
-
-`func (o *InlineResponse2007) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetNextHopIp
 
-`func (o *InlineResponse2007) SetTimeZone(v string)`
+`func (o *InlineResponse2007) SetNextHopIp(v string)`
 
-SetTimeZone sets TimeZone field to given value.
+SetNextHopIp sets NextHopIp field to given value.
 
-### HasTimeZone
 
-`func (o *InlineResponse2007) HasTimeZone() bool`
+### GetAdvertiseViaOspfEnabled
 
-HasTimeZone returns a boolean if a field has been set.
+`func (o *InlineResponse2007) GetAdvertiseViaOspfEnabled() bool`
 
-### GetTags
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse2007) GetTags() []string`
+### GetAdvertiseViaOspfEnabledOk
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+`func (o *InlineResponse2007) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
 
-### GetTagsOk
-
-`func (o *InlineResponse2007) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetAdvertiseViaOspfEnabled
 
-`func (o *InlineResponse2007) SetTags(v []string)`
+`func (o *InlineResponse2007) SetAdvertiseViaOspfEnabled(v bool)`
 
-SetTags sets Tags field to given value.
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
 
-### HasTags
+### HasAdvertiseViaOspfEnabled
 
-`func (o *InlineResponse2007) HasTags() bool`
+`func (o *InlineResponse2007) HasAdvertiseViaOspfEnabled() bool`
 
-HasTags returns a boolean if a field has been set.
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
 
-### GetEnrollmentString
+### GetPreferOverOspfRoutesEnabled
 
-`func (o *InlineResponse2007) GetEnrollmentString() string`
+`func (o *InlineResponse2007) GetPreferOverOspfRoutesEnabled() bool`
 
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
 
-### GetEnrollmentStringOk
+### GetPreferOverOspfRoutesEnabledOk
 
-`func (o *InlineResponse2007) GetEnrollmentStringOk() (*string, bool)`
+`func (o *InlineResponse2007) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
 
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnrollmentString
+### SetPreferOverOspfRoutesEnabled
 
-`func (o *InlineResponse2007) SetEnrollmentString(v string)`
+`func (o *InlineResponse2007) SetPreferOverOspfRoutesEnabled(v bool)`
 
-SetEnrollmentString sets EnrollmentString field to given value.
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
 
-### HasEnrollmentString
+### HasPreferOverOspfRoutesEnabled
 
-`func (o *InlineResponse2007) HasEnrollmentString() bool`
+`func (o *InlineResponse2007) HasPreferOverOspfRoutesEnabled() bool`
 
-HasEnrollmentString returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse2007) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse2007) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse2007) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse2007) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineResponse2007) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineResponse2007) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineResponse2007) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineResponse2007) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### GetIsBoundToConfigTemplate
-
-`func (o *InlineResponse2007) GetIsBoundToConfigTemplate() bool`
-
-GetIsBoundToConfigTemplate returns the IsBoundToConfigTemplate field if non-nil, zero value otherwise.
-
-### GetIsBoundToConfigTemplateOk
-
-`func (o *InlineResponse2007) GetIsBoundToConfigTemplateOk() (*bool, bool)`
-
-GetIsBoundToConfigTemplateOk returns a tuple with the IsBoundToConfigTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsBoundToConfigTemplate
-
-`func (o *InlineResponse2007) SetIsBoundToConfigTemplate(v bool)`
-
-SetIsBoundToConfigTemplate sets IsBoundToConfigTemplate field to given value.
-
-### HasIsBoundToConfigTemplate
-
-`func (o *InlineResponse2007) HasIsBoundToConfigTemplate() bool`
-
-HasIsBoundToConfigTemplate returns a boolean if a field has been set.
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

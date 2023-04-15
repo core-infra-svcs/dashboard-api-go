@@ -4,20 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**HelpTab** | Pointer to **string** |     The Help tab, under which all support information resides. If this tab is hidden, no other &#39;Help&#39; branding     customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
-**GetHelpSubtab** | Pointer to **string** |     The &#39;Help -&gt; Get Help&#39; subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note     that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,     and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
-**CommunitySubtab** | Pointer to **string** |     The &#39;Help -&gt; Community&#39; subtab which provides a link to Meraki Community. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
-**CasesSubtab** | Pointer to **string** |     The &#39;Help -&gt; Cases&#39; Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one     of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
-**DataProtectionRequestsSubtab** | Pointer to **string** |     The &#39;Help -&gt; Data protection requests&#39; Dashboard subtab on which requests to delete, restrict, or export end-user data can     be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
-**GetHelpSubtabKnowledgeBaseSearch** | Pointer to **string** |     The KB search box which appears on the Help page. Can be one of &#39;default or inherit&#39;, &#39;hide&#39;, &#39;show&#39;, or a replacement custom HTML string.  | [optional] 
-**UniversalSearchKnowledgeBaseSearch** | Pointer to **string** |     The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures     whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
-**CiscoMerakiProductDocumentation** | Pointer to **string** |     The &#39;Product Manuals&#39; section of the &#39;Help -&gt; Get Help&#39; subtab. Can be one of &#39;default or inherit&#39;, &#39;hide&#39;, &#39;show&#39;, or a replacement custom HTML string.  | [optional] 
-**SupportContactInfo** | Pointer to **string** |     The &#39;Contact Meraki Support&#39; section of the &#39;Help -&gt; Get Help&#39; subtab. Can be one of &#39;default or inherit&#39;, &#39;hide&#39;, &#39;show&#39;, or a replacement custom HTML string.  | [optional] 
-**NewFeaturesSubtab** | Pointer to **string** |     The &#39;Help -&gt; New features&#39; subtab where new Dashboard features are detailed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
-**FirewallInfoSubtab** | Pointer to **string** |     The &#39;Help -&gt; Firewall info&#39; subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are     listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
-**ApiDocsSubtab** | Pointer to **string** |     The &#39;Help -&gt; API docs&#39; subtab where a detailed description of the Dashboard API is listed. Can be one of     &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
-**HardwareReplacementsSubtab** | Pointer to **string** |     The &#39;Help -&gt; Replacement info&#39; subtab where important information regarding device replacements is detailed. Can be one of     &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
-**SmForums** | Pointer to **string** |     The &#39;SM Forums&#39; subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for     organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**HelpTab** | Pointer to **string** |       The Help tab, under which all support information resides. If this tab is hidden, no other &#39;Help&#39; branding       customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**GetHelpSubtab** | Pointer to **string** |       The &#39;Help -&gt; Get Help&#39; subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note       that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,       and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**CommunitySubtab** | Pointer to **string** |       The &#39;Help -&gt; Community&#39; subtab which provides a link to Meraki Community. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**CasesSubtab** | Pointer to **string** |       The &#39;Help -&gt; Cases&#39; Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one       of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**DataProtectionRequestsSubtab** | Pointer to **string** |       The &#39;Help -&gt; Data protection requests&#39; Dashboard subtab on which requests to delete, restrict, or export end-user data can       be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**GetHelpSubtabKnowledgeBaseSearch** | Pointer to **string** |       The KB search box which appears on the Help page. Can be one of &#39;default or inherit&#39;, &#39;hide&#39;, &#39;show&#39;, or a replacement custom HTML string.  | [optional] 
+**UniversalSearchKnowledgeBaseSearch** | Pointer to **string** |       The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures       whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**CiscoMerakiProductDocumentation** | Pointer to **string** |       The &#39;Product Manuals&#39; section of the &#39;Help -&gt; Get Help&#39; subtab. Can be one of &#39;default or inherit&#39;, &#39;hide&#39;, &#39;show&#39;, or a replacement custom HTML string.  | [optional] 
+**SupportContactInfo** | Pointer to **string** |       The &#39;Contact Meraki Support&#39; section of the &#39;Help -&gt; Get Help&#39; subtab. Can be one of &#39;default or inherit&#39;, &#39;hide&#39;, &#39;show&#39;, or a replacement custom HTML string.  | [optional] 
+**NewFeaturesSubtab** | Pointer to **string** |       The &#39;Help -&gt; New features&#39; subtab where new Dashboard features are detailed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**FirewallInfoSubtab** | Pointer to **string** |       The &#39;Help -&gt; Firewall info&#39; subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are       listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**ApiDocsSubtab** | Pointer to **string** |       The &#39;Help -&gt; API docs&#39; subtab where a detailed description of the Dashboard API is listed. Can be one of       &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**HardwareReplacementsSubtab** | Pointer to **string** |       The &#39;Help -&gt; Replacement info&#39; subtab where important information regarding device replacements is detailed. Can be one of       &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**SmForums** | Pointer to **string** |       The &#39;SM Forums&#39; subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for       organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
+**HelpWidget** | Pointer to **string** |       The &#39;Help Widget&#39; is a support widget which provides access to live chat, documentation links, Sales contact info,       and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.  | [optional] 
 
 ## Methods
 
@@ -387,6 +388,31 @@ SetSmForums sets SmForums field to given value.
 `func (o *OrganizationsOrganizationIdBrandingPoliciesHelpSettings) HasSmForums() bool`
 
 HasSmForums returns a boolean if a field has been set.
+
+### GetHelpWidget
+
+`func (o *OrganizationsOrganizationIdBrandingPoliciesHelpSettings) GetHelpWidget() string`
+
+GetHelpWidget returns the HelpWidget field if non-nil, zero value otherwise.
+
+### GetHelpWidgetOk
+
+`func (o *OrganizationsOrganizationIdBrandingPoliciesHelpSettings) GetHelpWidgetOk() (*string, bool)`
+
+GetHelpWidgetOk returns a tuple with the HelpWidget field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHelpWidget
+
+`func (o *OrganizationsOrganizationIdBrandingPoliciesHelpSettings) SetHelpWidget(v string)`
+
+SetHelpWidget sets HelpWidget field to given value.
+
+### HasHelpWidget
+
+`func (o *OrganizationsOrganizationIdBrandingPoliciesHelpSettings) HasHelpWidget() bool`
+
+HasHelpWidget returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

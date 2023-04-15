@@ -176,7 +176,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkApplianceTrafficShapingRules := *openapiclient.NewInlineObject52() // InlineObject52 |  (optional)
+    updateNetworkApplianceTrafficShapingRules := *openapiclient.NewInlineObject53() // InlineObject53 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -206,7 +206,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShapingRules** | [**InlineObject52**](InlineObject52.md) |  | 
+ **updateNetworkApplianceTrafficShapingRules** | [**InlineObject53**](InlineObject53.md) |  | 
 
 ### Return type
 
@@ -249,7 +249,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     number := "number_example" // string | 
-    updateNetworkWirelessSsidTrafficShapingRules := *openapiclient.NewInlineObject163() // InlineObject163 |  (optional)
+    updateNetworkWirelessSsidTrafficShapingRules := *openapiclient.NewInlineObject164() // InlineObject164 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidTrafficShapingRules** | [**InlineObject163**](InlineObject163.md) |  | 
+ **updateNetworkWirelessSsidTrafficShapingRules** | [**InlineObject164**](InlineObject164.md) |  | 
 
 ### Return type
 

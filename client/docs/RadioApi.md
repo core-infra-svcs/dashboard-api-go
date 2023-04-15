@@ -101,7 +101,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    updateDeviceWirelessRadioSettings := *openapiclient.NewInlineObject24() // InlineObject24 |  (optional)
+    updateDeviceWirelessRadioSettings := *openapiclient.NewInlineObject25() // InlineObject25 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceWirelessRadioS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceWirelessRadioSettings** | [**InlineObject24**](InlineObject24.md) |  | 
+ **updateDeviceWirelessRadioSettings** | [**InlineObject25**](InlineObject25.md) |  | 
 
 ### Return type
 

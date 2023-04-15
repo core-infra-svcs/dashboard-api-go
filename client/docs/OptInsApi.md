@@ -34,7 +34,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject193("ShortName_example") // InlineObject193 | 
+    createOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject194("ShortName_example") // InlineObject194 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationEarlyAcc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject193**](InlineObject193.md) |  | 
+ **createOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject194**](InlineObject194.md) |  | 
 
 ### Return type
 
@@ -321,7 +321,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | 
     optInId := "optInId_example" // string | 
-    updateOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject194() // InlineObject194 |  (optional)
+    updateOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject195() // InlineObject195 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject194**](InlineObject194.md) |  | 
+ **updateOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject195**](InlineObject195.md) |  | 
 
 ### Return type
 

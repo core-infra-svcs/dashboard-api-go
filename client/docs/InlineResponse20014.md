@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ActiveActiveAutoVpnEnabled** | Pointer to **bool** | Whether active-active AutoVPN is enabled | [optional] 
-**DefaultUplink** | Pointer to **string** | The default uplink. Must be one of: &#39;wan1&#39; or &#39;wan2&#39; | [optional] 
-**LoadBalancingEnabled** | Pointer to **bool** | Whether load balancing is enabled | [optional] 
-**FailoverAndFailback** | Pointer to [**InlineResponse20014FailoverAndFailback**](InlineResponse20014FailoverAndFailback.md) |  | [optional] 
-**WanTrafficUplinkPreferences** | Pointer to [**[]InlineResponse20014WanTrafficUplinkPreferences**](InlineResponse20014WanTrafficUplinkPreferences.md) | Uplink preference rules for WAN traffic | [optional] 
-**VpnTrafficUplinkPreferences** | Pointer to [**[]InlineResponse20014VpnTrafficUplinkPreferences**](InlineResponse20014VpnTrafficUplinkPreferences.md) | Uplink preference rules for VPN traffic | [optional] 
+**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
+**DynamicDns** | Pointer to [**InlineResponse20014DynamicDns**](InlineResponse20014DynamicDns.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +27,80 @@ NewInlineResponse20014WithDefaults instantiates a new InlineResponse20014 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetActiveActiveAutoVpnEnabled
+### GetClientTrackingMethod
 
-`func (o *InlineResponse20014) GetActiveActiveAutoVpnEnabled() bool`
+`func (o *InlineResponse20014) GetClientTrackingMethod() string`
 
-GetActiveActiveAutoVpnEnabled returns the ActiveActiveAutoVpnEnabled field if non-nil, zero value otherwise.
+GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
 
-### GetActiveActiveAutoVpnEnabledOk
+### GetClientTrackingMethodOk
 
-`func (o *InlineResponse20014) GetActiveActiveAutoVpnEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20014) GetClientTrackingMethodOk() (*string, bool)`
 
-GetActiveActiveAutoVpnEnabledOk returns a tuple with the ActiveActiveAutoVpnEnabled field if it's non-nil, zero value otherwise
+GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActiveActiveAutoVpnEnabled
+### SetClientTrackingMethod
 
-`func (o *InlineResponse20014) SetActiveActiveAutoVpnEnabled(v bool)`
+`func (o *InlineResponse20014) SetClientTrackingMethod(v string)`
 
-SetActiveActiveAutoVpnEnabled sets ActiveActiveAutoVpnEnabled field to given value.
+SetClientTrackingMethod sets ClientTrackingMethod field to given value.
 
-### HasActiveActiveAutoVpnEnabled
+### HasClientTrackingMethod
 
-`func (o *InlineResponse20014) HasActiveActiveAutoVpnEnabled() bool`
+`func (o *InlineResponse20014) HasClientTrackingMethod() bool`
 
-HasActiveActiveAutoVpnEnabled returns a boolean if a field has been set.
+HasClientTrackingMethod returns a boolean if a field has been set.
 
-### GetDefaultUplink
+### GetDeploymentMode
 
-`func (o *InlineResponse20014) GetDefaultUplink() string`
+`func (o *InlineResponse20014) GetDeploymentMode() string`
 
-GetDefaultUplink returns the DefaultUplink field if non-nil, zero value otherwise.
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-### GetDefaultUplinkOk
+### GetDeploymentModeOk
 
-`func (o *InlineResponse20014) GetDefaultUplinkOk() (*string, bool)`
+`func (o *InlineResponse20014) GetDeploymentModeOk() (*string, bool)`
 
-GetDefaultUplinkOk returns a tuple with the DefaultUplink field if it's non-nil, zero value otherwise
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultUplink
+### SetDeploymentMode
 
-`func (o *InlineResponse20014) SetDefaultUplink(v string)`
+`func (o *InlineResponse20014) SetDeploymentMode(v string)`
 
-SetDefaultUplink sets DefaultUplink field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
-### HasDefaultUplink
+### HasDeploymentMode
 
-`func (o *InlineResponse20014) HasDefaultUplink() bool`
+`func (o *InlineResponse20014) HasDeploymentMode() bool`
 
-HasDefaultUplink returns a boolean if a field has been set.
+HasDeploymentMode returns a boolean if a field has been set.
 
-### GetLoadBalancingEnabled
+### GetDynamicDns
 
-`func (o *InlineResponse20014) GetLoadBalancingEnabled() bool`
+`func (o *InlineResponse20014) GetDynamicDns() InlineResponse20014DynamicDns`
 
-GetLoadBalancingEnabled returns the LoadBalancingEnabled field if non-nil, zero value otherwise.
+GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
 
-### GetLoadBalancingEnabledOk
+### GetDynamicDnsOk
 
-`func (o *InlineResponse20014) GetLoadBalancingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20014) GetDynamicDnsOk() (*InlineResponse20014DynamicDns, bool)`
 
-GetLoadBalancingEnabledOk returns a tuple with the LoadBalancingEnabled field if it's non-nil, zero value otherwise
+GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLoadBalancingEnabled
+### SetDynamicDns
 
-`func (o *InlineResponse20014) SetLoadBalancingEnabled(v bool)`
+`func (o *InlineResponse20014) SetDynamicDns(v InlineResponse20014DynamicDns)`
 
-SetLoadBalancingEnabled sets LoadBalancingEnabled field to given value.
+SetDynamicDns sets DynamicDns field to given value.
 
-### HasLoadBalancingEnabled
+### HasDynamicDns
 
-`func (o *InlineResponse20014) HasLoadBalancingEnabled() bool`
+`func (o *InlineResponse20014) HasDynamicDns() bool`
 
-HasLoadBalancingEnabled returns a boolean if a field has been set.
-
-### GetFailoverAndFailback
-
-`func (o *InlineResponse20014) GetFailoverAndFailback() InlineResponse20014FailoverAndFailback`
-
-GetFailoverAndFailback returns the FailoverAndFailback field if non-nil, zero value otherwise.
-
-### GetFailoverAndFailbackOk
-
-`func (o *InlineResponse20014) GetFailoverAndFailbackOk() (*InlineResponse20014FailoverAndFailback, bool)`
-
-GetFailoverAndFailbackOk returns a tuple with the FailoverAndFailback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFailoverAndFailback
-
-`func (o *InlineResponse20014) SetFailoverAndFailback(v InlineResponse20014FailoverAndFailback)`
-
-SetFailoverAndFailback sets FailoverAndFailback field to given value.
-
-### HasFailoverAndFailback
-
-`func (o *InlineResponse20014) HasFailoverAndFailback() bool`
-
-HasFailoverAndFailback returns a boolean if a field has been set.
-
-### GetWanTrafficUplinkPreferences
-
-`func (o *InlineResponse20014) GetWanTrafficUplinkPreferences() []InlineResponse20014WanTrafficUplinkPreferences`
-
-GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
-
-### GetWanTrafficUplinkPreferencesOk
-
-`func (o *InlineResponse20014) GetWanTrafficUplinkPreferencesOk() (*[]InlineResponse20014WanTrafficUplinkPreferences, bool)`
-
-GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWanTrafficUplinkPreferences
-
-`func (o *InlineResponse20014) SetWanTrafficUplinkPreferences(v []InlineResponse20014WanTrafficUplinkPreferences)`
-
-SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
-
-### HasWanTrafficUplinkPreferences
-
-`func (o *InlineResponse20014) HasWanTrafficUplinkPreferences() bool`
-
-HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
-
-### GetVpnTrafficUplinkPreferences
-
-`func (o *InlineResponse20014) GetVpnTrafficUplinkPreferences() []InlineResponse20014VpnTrafficUplinkPreferences`
-
-GetVpnTrafficUplinkPreferences returns the VpnTrafficUplinkPreferences field if non-nil, zero value otherwise.
-
-### GetVpnTrafficUplinkPreferencesOk
-
-`func (o *InlineResponse20014) GetVpnTrafficUplinkPreferencesOk() (*[]InlineResponse20014VpnTrafficUplinkPreferences, bool)`
-
-GetVpnTrafficUplinkPreferencesOk returns a tuple with the VpnTrafficUplinkPreferences field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVpnTrafficUplinkPreferences
-
-`func (o *InlineResponse20014) SetVpnTrafficUplinkPreferences(v []InlineResponse20014VpnTrafficUplinkPreferences)`
-
-SetVpnTrafficUplinkPreferences sets VpnTrafficUplinkPreferences field to given value.
-
-### HasVpnTrafficUplinkPreferences
-
-`func (o *InlineResponse20014) HasVpnTrafficUplinkPreferences() bool`
-
-HasVpnTrafficUplinkPreferences returns a boolean if a field has been set.
+HasDynamicDns returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
-**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
-**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]InlineResponse20068PowerExceptions**](InlineResponse20068PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20068WithDefaults instantiates a new InlineResponse20068 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetVlan
 
-`func (o *InlineResponse20068) GetStartTs() time.Time`
+`func (o *InlineResponse20068) GetVlan() int32`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetVlanOk
 
-`func (o *InlineResponse20068) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20068) GetVlanOk() (*int32, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetVlan
 
-`func (o *InlineResponse20068) SetStartTs(v time.Time)`
+`func (o *InlineResponse20068) SetVlan(v int32)`
 
-SetStartTs sets StartTs field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasStartTs
+### HasVlan
 
-`func (o *InlineResponse20068) HasStartTs() bool`
+`func (o *InlineResponse20068) HasVlan() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetEndTs
+### GetUseCombinedPower
 
-`func (o *InlineResponse20068) GetEndTs() time.Time`
+`func (o *InlineResponse20068) GetUseCombinedPower() bool`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetUseCombinedPowerOk
 
-`func (o *InlineResponse20068) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20068) GetUseCombinedPowerOk() (*bool, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetUseCombinedPower
 
-`func (o *InlineResponse20068) SetEndTs(v time.Time)`
+`func (o *InlineResponse20068) SetUseCombinedPower(v bool)`
 
-SetEndTs sets EndTs field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasEndTs
+### HasUseCombinedPower
 
-`func (o *InlineResponse20068) HasEndTs() bool`
+`func (o *InlineResponse20068) HasUseCombinedPower() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetAverageKbps
+### GetPowerExceptions
 
-`func (o *InlineResponse20068) GetAverageKbps() int32`
+`func (o *InlineResponse20068) GetPowerExceptions() []InlineResponse20068PowerExceptions`
 
-GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetAverageKbpsOk
+### GetPowerExceptionsOk
 
-`func (o *InlineResponse20068) GetAverageKbpsOk() (*int32, bool)`
+`func (o *InlineResponse20068) GetPowerExceptionsOk() (*[]InlineResponse20068PowerExceptions, bool)`
 
-GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAverageKbps
+### SetPowerExceptions
 
-`func (o *InlineResponse20068) SetAverageKbps(v int32)`
+`func (o *InlineResponse20068) SetPowerExceptions(v []InlineResponse20068PowerExceptions)`
 
-SetAverageKbps sets AverageKbps field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasAverageKbps
+### HasPowerExceptions
 
-`func (o *InlineResponse20068) HasAverageKbps() bool`
+`func (o *InlineResponse20068) HasPowerExceptions() bool`
 
-HasAverageKbps returns a boolean if a field has been set.
-
-### GetDownloadKbps
-
-`func (o *InlineResponse20068) GetDownloadKbps() int32`
-
-GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
-
-### GetDownloadKbpsOk
-
-`func (o *InlineResponse20068) GetDownloadKbpsOk() (*int32, bool)`
-
-GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDownloadKbps
-
-`func (o *InlineResponse20068) SetDownloadKbps(v int32)`
-
-SetDownloadKbps sets DownloadKbps field to given value.
-
-### HasDownloadKbps
-
-`func (o *InlineResponse20068) HasDownloadKbps() bool`
-
-HasDownloadKbps returns a boolean if a field has been set.
-
-### GetUploadKbps
-
-`func (o *InlineResponse20068) GetUploadKbps() int32`
-
-GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
-
-### GetUploadKbpsOk
-
-`func (o *InlineResponse20068) GetUploadKbpsOk() (*int32, bool)`
-
-GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUploadKbps
-
-`func (o *InlineResponse20068) SetUploadKbps(v int32)`
-
-SetUploadKbps sets UploadKbps field to given value.
-
-### HasUploadKbps
-
-`func (o *InlineResponse20068) HasUploadKbps() bool`
-
-HasUploadKbps returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

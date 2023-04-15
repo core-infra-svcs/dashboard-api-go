@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CpuPercentUsed** | Pointer to **float32** | The percentage of CPU used as a decimal format. | [optional] 
-**MemFree** | Pointer to **int32** | Memory that is not yet in use by the system. | [optional] 
-**MemWired** | Pointer to **int32** | Memory used for core OS functions on the device. | [optional] 
-**MemActive** | Pointer to **int32** | The active RAM on the device. | [optional] 
-**MemInactive** | Pointer to **int32** | The inactive RAM on the device. | [optional] 
-**NetworkSent** | Pointer to **int32** | Network bandwith transmitted. | [optional] 
-**NetworkReceived** | Pointer to **int32** | Network bandwith received. | [optional] 
-**SwapUsed** | Pointer to **int32** | The amount of space being used on the startup disk to swap unused files to and from RAM. | [optional] 
-**DiskUsage** | Pointer to [**NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage**](NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage.md) |  | [optional] 
-**Ts** | Pointer to **string** | The time at which the performance was measured. | [optional] 
+**Name** | Pointer to **string** | The name of the certificate. | [optional] 
+**NotValidAfter** | Pointer to **string** | The date after which the certificate is no longer valid. | [optional] 
+**NotValidBefore** | Pointer to **string** | The date before which the certificate is not valid. | [optional] 
+**CertPem** | Pointer to **string** | The PEM of the certificate. | [optional] 
+**DeviceId** | Pointer to **string** | The Meraki managed device Id. | [optional] 
+**Issuer** | Pointer to **string** | The certificate issuer. | [optional] 
+**Subject** | Pointer to **string** | The subject of the certificate. | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the certificate record. | [optional] 
 
 ## Methods
 
@@ -34,255 +32,205 @@ NewInlineResponse20047WithDefaults instantiates a new InlineResponse20047 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCpuPercentUsed
+### GetName
 
-`func (o *InlineResponse20047) GetCpuPercentUsed() float32`
+`func (o *InlineResponse20047) GetName() string`
 
-GetCpuPercentUsed returns the CpuPercentUsed field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCpuPercentUsedOk
+### GetNameOk
 
-`func (o *InlineResponse20047) GetCpuPercentUsedOk() (*float32, bool)`
+`func (o *InlineResponse20047) GetNameOk() (*string, bool)`
 
-GetCpuPercentUsedOk returns a tuple with the CpuPercentUsed field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCpuPercentUsed
+### SetName
 
-`func (o *InlineResponse20047) SetCpuPercentUsed(v float32)`
+`func (o *InlineResponse20047) SetName(v string)`
 
-SetCpuPercentUsed sets CpuPercentUsed field to given value.
+SetName sets Name field to given value.
 
-### HasCpuPercentUsed
+### HasName
 
-`func (o *InlineResponse20047) HasCpuPercentUsed() bool`
+`func (o *InlineResponse20047) HasName() bool`
 
-HasCpuPercentUsed returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMemFree
+### GetNotValidAfter
 
-`func (o *InlineResponse20047) GetMemFree() int32`
+`func (o *InlineResponse20047) GetNotValidAfter() string`
 
-GetMemFree returns the MemFree field if non-nil, zero value otherwise.
+GetNotValidAfter returns the NotValidAfter field if non-nil, zero value otherwise.
 
-### GetMemFreeOk
+### GetNotValidAfterOk
 
-`func (o *InlineResponse20047) GetMemFreeOk() (*int32, bool)`
+`func (o *InlineResponse20047) GetNotValidAfterOk() (*string, bool)`
 
-GetMemFreeOk returns a tuple with the MemFree field if it's non-nil, zero value otherwise
+GetNotValidAfterOk returns a tuple with the NotValidAfter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemFree
+### SetNotValidAfter
 
-`func (o *InlineResponse20047) SetMemFree(v int32)`
+`func (o *InlineResponse20047) SetNotValidAfter(v string)`
 
-SetMemFree sets MemFree field to given value.
+SetNotValidAfter sets NotValidAfter field to given value.
 
-### HasMemFree
+### HasNotValidAfter
 
-`func (o *InlineResponse20047) HasMemFree() bool`
+`func (o *InlineResponse20047) HasNotValidAfter() bool`
 
-HasMemFree returns a boolean if a field has been set.
+HasNotValidAfter returns a boolean if a field has been set.
 
-### GetMemWired
+### GetNotValidBefore
 
-`func (o *InlineResponse20047) GetMemWired() int32`
+`func (o *InlineResponse20047) GetNotValidBefore() string`
 
-GetMemWired returns the MemWired field if non-nil, zero value otherwise.
+GetNotValidBefore returns the NotValidBefore field if non-nil, zero value otherwise.
 
-### GetMemWiredOk
+### GetNotValidBeforeOk
 
-`func (o *InlineResponse20047) GetMemWiredOk() (*int32, bool)`
+`func (o *InlineResponse20047) GetNotValidBeforeOk() (*string, bool)`
 
-GetMemWiredOk returns a tuple with the MemWired field if it's non-nil, zero value otherwise
+GetNotValidBeforeOk returns a tuple with the NotValidBefore field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemWired
+### SetNotValidBefore
 
-`func (o *InlineResponse20047) SetMemWired(v int32)`
+`func (o *InlineResponse20047) SetNotValidBefore(v string)`
 
-SetMemWired sets MemWired field to given value.
+SetNotValidBefore sets NotValidBefore field to given value.
 
-### HasMemWired
+### HasNotValidBefore
 
-`func (o *InlineResponse20047) HasMemWired() bool`
+`func (o *InlineResponse20047) HasNotValidBefore() bool`
 
-HasMemWired returns a boolean if a field has been set.
+HasNotValidBefore returns a boolean if a field has been set.
 
-### GetMemActive
+### GetCertPem
 
-`func (o *InlineResponse20047) GetMemActive() int32`
+`func (o *InlineResponse20047) GetCertPem() string`
 
-GetMemActive returns the MemActive field if non-nil, zero value otherwise.
+GetCertPem returns the CertPem field if non-nil, zero value otherwise.
 
-### GetMemActiveOk
+### GetCertPemOk
 
-`func (o *InlineResponse20047) GetMemActiveOk() (*int32, bool)`
+`func (o *InlineResponse20047) GetCertPemOk() (*string, bool)`
 
-GetMemActiveOk returns a tuple with the MemActive field if it's non-nil, zero value otherwise
+GetCertPemOk returns a tuple with the CertPem field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemActive
+### SetCertPem
 
-`func (o *InlineResponse20047) SetMemActive(v int32)`
+`func (o *InlineResponse20047) SetCertPem(v string)`
 
-SetMemActive sets MemActive field to given value.
+SetCertPem sets CertPem field to given value.
 
-### HasMemActive
+### HasCertPem
 
-`func (o *InlineResponse20047) HasMemActive() bool`
+`func (o *InlineResponse20047) HasCertPem() bool`
 
-HasMemActive returns a boolean if a field has been set.
+HasCertPem returns a boolean if a field has been set.
 
-### GetMemInactive
+### GetDeviceId
 
-`func (o *InlineResponse20047) GetMemInactive() int32`
+`func (o *InlineResponse20047) GetDeviceId() string`
 
-GetMemInactive returns the MemInactive field if non-nil, zero value otherwise.
+GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
 
-### GetMemInactiveOk
+### GetDeviceIdOk
 
-`func (o *InlineResponse20047) GetMemInactiveOk() (*int32, bool)`
+`func (o *InlineResponse20047) GetDeviceIdOk() (*string, bool)`
 
-GetMemInactiveOk returns a tuple with the MemInactive field if it's non-nil, zero value otherwise
+GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemInactive
+### SetDeviceId
 
-`func (o *InlineResponse20047) SetMemInactive(v int32)`
+`func (o *InlineResponse20047) SetDeviceId(v string)`
 
-SetMemInactive sets MemInactive field to given value.
+SetDeviceId sets DeviceId field to given value.
 
-### HasMemInactive
+### HasDeviceId
 
-`func (o *InlineResponse20047) HasMemInactive() bool`
+`func (o *InlineResponse20047) HasDeviceId() bool`
 
-HasMemInactive returns a boolean if a field has been set.
+HasDeviceId returns a boolean if a field has been set.
 
-### GetNetworkSent
+### GetIssuer
 
-`func (o *InlineResponse20047) GetNetworkSent() int32`
+`func (o *InlineResponse20047) GetIssuer() string`
 
-GetNetworkSent returns the NetworkSent field if non-nil, zero value otherwise.
+GetIssuer returns the Issuer field if non-nil, zero value otherwise.
 
-### GetNetworkSentOk
+### GetIssuerOk
 
-`func (o *InlineResponse20047) GetNetworkSentOk() (*int32, bool)`
+`func (o *InlineResponse20047) GetIssuerOk() (*string, bool)`
 
-GetNetworkSentOk returns a tuple with the NetworkSent field if it's non-nil, zero value otherwise
+GetIssuerOk returns a tuple with the Issuer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkSent
+### SetIssuer
 
-`func (o *InlineResponse20047) SetNetworkSent(v int32)`
+`func (o *InlineResponse20047) SetIssuer(v string)`
 
-SetNetworkSent sets NetworkSent field to given value.
+SetIssuer sets Issuer field to given value.
 
-### HasNetworkSent
+### HasIssuer
 
-`func (o *InlineResponse20047) HasNetworkSent() bool`
+`func (o *InlineResponse20047) HasIssuer() bool`
 
-HasNetworkSent returns a boolean if a field has been set.
+HasIssuer returns a boolean if a field has been set.
 
-### GetNetworkReceived
+### GetSubject
 
-`func (o *InlineResponse20047) GetNetworkReceived() int32`
+`func (o *InlineResponse20047) GetSubject() string`
 
-GetNetworkReceived returns the NetworkReceived field if non-nil, zero value otherwise.
+GetSubject returns the Subject field if non-nil, zero value otherwise.
 
-### GetNetworkReceivedOk
+### GetSubjectOk
 
-`func (o *InlineResponse20047) GetNetworkReceivedOk() (*int32, bool)`
+`func (o *InlineResponse20047) GetSubjectOk() (*string, bool)`
 
-GetNetworkReceivedOk returns a tuple with the NetworkReceived field if it's non-nil, zero value otherwise
+GetSubjectOk returns a tuple with the Subject field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkReceived
+### SetSubject
 
-`func (o *InlineResponse20047) SetNetworkReceived(v int32)`
+`func (o *InlineResponse20047) SetSubject(v string)`
 
-SetNetworkReceived sets NetworkReceived field to given value.
+SetSubject sets Subject field to given value.
 
-### HasNetworkReceived
+### HasSubject
 
-`func (o *InlineResponse20047) HasNetworkReceived() bool`
+`func (o *InlineResponse20047) HasSubject() bool`
 
-HasNetworkReceived returns a boolean if a field has been set.
+HasSubject returns a boolean if a field has been set.
 
-### GetSwapUsed
+### GetId
 
-`func (o *InlineResponse20047) GetSwapUsed() int32`
+`func (o *InlineResponse20047) GetId() string`
 
-GetSwapUsed returns the SwapUsed field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSwapUsedOk
+### GetIdOk
 
-`func (o *InlineResponse20047) GetSwapUsedOk() (*int32, bool)`
+`func (o *InlineResponse20047) GetIdOk() (*string, bool)`
 
-GetSwapUsedOk returns a tuple with the SwapUsed field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwapUsed
+### SetId
 
-`func (o *InlineResponse20047) SetSwapUsed(v int32)`
+`func (o *InlineResponse20047) SetId(v string)`
 
-SetSwapUsed sets SwapUsed field to given value.
+SetId sets Id field to given value.
 
-### HasSwapUsed
+### HasId
 
-`func (o *InlineResponse20047) HasSwapUsed() bool`
+`func (o *InlineResponse20047) HasId() bool`
 
-HasSwapUsed returns a boolean if a field has been set.
-
-### GetDiskUsage
-
-`func (o *InlineResponse20047) GetDiskUsage() NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage`
-
-GetDiskUsage returns the DiskUsage field if non-nil, zero value otherwise.
-
-### GetDiskUsageOk
-
-`func (o *InlineResponse20047) GetDiskUsageOk() (*NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage, bool)`
-
-GetDiskUsageOk returns a tuple with the DiskUsage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDiskUsage
-
-`func (o *InlineResponse20047) SetDiskUsage(v NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage)`
-
-SetDiskUsage sets DiskUsage field to given value.
-
-### HasDiskUsage
-
-`func (o *InlineResponse20047) HasDiskUsage() bool`
-
-HasDiskUsage returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse20047) GetTs() string`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse20047) GetTsOk() (*string, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse20047) SetTs(v string)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse20047) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

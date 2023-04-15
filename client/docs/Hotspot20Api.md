@@ -105,7 +105,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     number := "number_example" // string | 
-    updateNetworkWirelessSsidHotspot20 := *openapiclient.NewInlineObject158() // InlineObject158 |  (optional)
+    updateNetworkWirelessSsidHotspot20 := *openapiclient.NewInlineObject159() // InlineObject159 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidHotspot20** | [**InlineObject158**](InlineObject158.md) |  | 
+ **updateNetworkWirelessSsidHotspot20** | [**InlineObject159**](InlineObject159.md) |  | 
 
 ### Return type
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the SM seats to | [optional] 
+**LicenseId** | Pointer to **string** | The ID of the SM license to move the seats from | [optional] 
+**SeatCount** | Pointer to **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200115WithDefaults instantiates a new InlineResponse200115 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetDestOrganizationId
 
-`func (o *InlineResponse200115) GetModel() string`
+`func (o *InlineResponse200115) GetDestOrganizationId() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineResponse200115) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200115) GetDestOrganizationIdOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetDestOrganizationId
 
-`func (o *InlineResponse200115) SetModel(v string)`
+`func (o *InlineResponse200115) SetDestOrganizationId(v string)`
 
-SetModel sets Model field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasModel
+### HasDestOrganizationId
 
-`func (o *InlineResponse200115) HasModel() bool`
+`func (o *InlineResponse200115) HasDestOrganizationId() bool`
 
-HasModel returns a boolean if a field has been set.
+HasDestOrganizationId returns a boolean if a field has been set.
 
-### GetCount
+### GetLicenseId
 
-`func (o *InlineResponse200115) GetCount() int32`
+`func (o *InlineResponse200115) GetLicenseId() string`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetLicenseIdOk
 
-`func (o *InlineResponse200115) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse200115) GetLicenseIdOk() (*string, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetLicenseId
 
-`func (o *InlineResponse200115) SetCount(v int32)`
+`func (o *InlineResponse200115) SetLicenseId(v string)`
 
-SetCount sets Count field to given value.
+SetLicenseId sets LicenseId field to given value.
 
-### HasCount
+### HasLicenseId
 
-`func (o *InlineResponse200115) HasCount() bool`
+`func (o *InlineResponse200115) HasLicenseId() bool`
 
-HasCount returns a boolean if a field has been set.
+HasLicenseId returns a boolean if a field has been set.
 
-### GetUsage
+### GetSeatCount
 
-`func (o *InlineResponse200115) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
+`func (o *InlineResponse200115) GetSeatCount() int32`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetSeatCountOk
 
-`func (o *InlineResponse200115) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
+`func (o *InlineResponse200115) GetSeatCountOk() (*int32, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetSeatCount
 
-`func (o *InlineResponse200115) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
+`func (o *InlineResponse200115) SetSeatCount(v int32)`
 
-SetUsage sets Usage field to given value.
+SetSeatCount sets SeatCount field to given value.
 
-### HasUsage
+### HasSeatCount
 
-`func (o *InlineResponse200115) HasUsage() bool`
+`func (o *InlineResponse200115) HasSeatCount() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasSeatCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

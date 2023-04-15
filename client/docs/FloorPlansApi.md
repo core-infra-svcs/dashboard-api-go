@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    createNetworkFloorPlan := *openapiclient.NewInlineObject84("Name_example", "ImageContents_example") // InlineObject84 | 
+    createNetworkFloorPlan := *openapiclient.NewInlineObject85("Name_example", "ImageContents_example") // InlineObject85 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkFloorPlanRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFloorPlan** | [**InlineObject84**](InlineObject84.md) |  | 
+ **createNetworkFloorPlan** | [**InlineObject85**](InlineObject85.md) |  | 
 
 ### Return type
 
@@ -321,7 +321,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     floorPlanId := "floorPlanId_example" // string | 
-    updateNetworkFloorPlan := *openapiclient.NewInlineObject85() // InlineObject85 |  (optional)
+    updateNetworkFloorPlan := *openapiclient.NewInlineObject86() // InlineObject86 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkFloorPlan** | [**InlineObject85**](InlineObject85.md) |  | 
+ **updateNetworkFloorPlan** | [**InlineObject86**](InlineObject86.md) |  | 
 
 ### Return type
 

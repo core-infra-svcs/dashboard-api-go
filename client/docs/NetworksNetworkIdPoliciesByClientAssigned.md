@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | name of policy | [optional] 
 **Type** | Pointer to **string** | type of policy | [optional] 
+**GroupPolicyId** | Pointer to **string** | id of policy | [optional] 
 **Ssid** | Pointer to [**[]NetworksNetworkIdPoliciesByClientSsid**](NetworksNetworkIdPoliciesByClientSsid.md) | ssid | [optional] 
 
 ## Methods
@@ -76,6 +77,31 @@ SetType sets Type field to given value.
 `func (o *NetworksNetworkIdPoliciesByClientAssigned) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetGroupPolicyId
+
+`func (o *NetworksNetworkIdPoliciesByClientAssigned) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *NetworksNetworkIdPoliciesByClientAssigned) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *NetworksNetworkIdPoliciesByClientAssigned) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+### HasGroupPolicyId
+
+`func (o *NetworksNetworkIdPoliciesByClientAssigned) HasGroupPolicyId() bool`
+
+HasGroupPolicyId returns a boolean if a field has been set.
 
 ### GetSsid
 

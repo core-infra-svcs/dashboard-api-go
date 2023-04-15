@@ -36,7 +36,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    createNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject124("InterfaceIp_example", "MulticastGroup_example") // InlineObject124 | 
+    createNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject125("InterfaceIp_example", "MulticastGroup_example") // InlineObject125 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject124**](InlineObject124.md) |  | 
+ **createNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject125**](InlineObject125.md) |  | 
 
 ### Return type
 
@@ -392,7 +392,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkSwitchRoutingMulticast := *openapiclient.NewInlineObject123() // InlineObject123 |  (optional)
+    updateNetworkSwitchRoutingMulticast := *openapiclient.NewInlineObject124() // InlineObject124 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -422,7 +422,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchRoutingMulticast** | [**InlineObject123**](InlineObject123.md) |  | 
+ **updateNetworkSwitchRoutingMulticast** | [**InlineObject124**](InlineObject124.md) |  | 
 
 ### Return type
 
@@ -465,7 +465,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     rendezvousPointId := "rendezvousPointId_example" // string | 
-    updateNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject125("InterfaceIp_example", "MulticastGroup_example") // InlineObject125 | 
+    updateNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject126("InterfaceIp_example", "MulticastGroup_example") // InlineObject126 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject125**](InlineObject125.md) |  | 
+ **updateNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject126**](InlineObject126.md) |  | 
 
 ### Return type
 

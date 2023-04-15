@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
-**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
-**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
+**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
+**Category** | Pointer to **string** | Category of the alert | [optional] 
+**Type** | Pointer to **string** | Alert type | [optional] 
+**Severity** | Pointer to **string** | Severity of the alert | [optional] 
+**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse20031WithDefaults instantiates a new InlineResponse20031 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetId
 
-`func (o *InlineResponse20031) GetStartTs() time.Time`
+`func (o *InlineResponse20031) GetId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetIdOk
 
-`func (o *InlineResponse20031) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20031) GetIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetId
 
-`func (o *InlineResponse20031) SetStartTs(v time.Time)`
+`func (o *InlineResponse20031) SetId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetId sets Id field to given value.
 
-### HasStartTs
+### HasId
 
-`func (o *InlineResponse20031) HasStartTs() bool`
+`func (o *InlineResponse20031) HasId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetCategory
 
-`func (o *InlineResponse20031) GetEndTs() time.Time`
+`func (o *InlineResponse20031) GetCategory() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetCategoryOk
 
-`func (o *InlineResponse20031) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20031) GetCategoryOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetCategory
 
-`func (o *InlineResponse20031) SetEndTs(v time.Time)`
+`func (o *InlineResponse20031) SetCategory(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetCategory sets Category field to given value.
 
-### HasEndTs
+### HasCategory
 
-`func (o *InlineResponse20031) HasEndTs() bool`
+`func (o *InlineResponse20031) HasCategory() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetCounts
+### GetType
 
-`func (o *InlineResponse20031) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
+`func (o *InlineResponse20031) GetType() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetTypeOk
 
-`func (o *InlineResponse20031) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
+`func (o *InlineResponse20031) GetTypeOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetType
 
-`func (o *InlineResponse20031) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
+`func (o *InlineResponse20031) SetType(v string)`
 
-SetCounts sets Counts field to given value.
+SetType sets Type field to given value.
 
-### HasCounts
+### HasType
 
-`func (o *InlineResponse20031) HasCounts() bool`
+`func (o *InlineResponse20031) HasType() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetSeverity
+
+`func (o *InlineResponse20031) GetSeverity() string`
+
+GetSeverity returns the Severity field if non-nil, zero value otherwise.
+
+### GetSeverityOk
+
+`func (o *InlineResponse20031) GetSeverityOk() (*string, bool)`
+
+GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeverity
+
+`func (o *InlineResponse20031) SetSeverity(v string)`
+
+SetSeverity sets Severity field to given value.
+
+### HasSeverity
+
+`func (o *InlineResponse20031) HasSeverity() bool`
+
+HasSeverity returns a boolean if a field has been set.
+
+### GetScope
+
+`func (o *InlineResponse20031) GetScope() NetworksNetworkIdHealthAlertsScope`
+
+GetScope returns the Scope field if non-nil, zero value otherwise.
+
+### GetScopeOk
+
+`func (o *InlineResponse20031) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScope
+
+`func (o *InlineResponse20031) SetScope(v NetworksNetworkIdHealthAlertsScope)`
+
+SetScope sets Scope field to given value.
+
+### HasScope
+
+`func (o *InlineResponse20031) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

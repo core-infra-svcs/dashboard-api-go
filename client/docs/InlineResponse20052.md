@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | device ID | [optional] 
-**SsidName** | Pointer to **string** | SSID name | [optional] 
-**Name** | Pointer to **string** | device name | [optional] 
-**Scope** | Pointer to **string** | scope | [optional] 
-**Tags** | Pointer to **[]string** | device tags | [optional] 
-**TimeboundType** | Pointer to **string** | type of access period, either a static range or a dynamic period | [optional] 
-**AccessStartAt** | Pointer to **time.Time** | time that access starts | [optional] 
-**AccessEndAt** | Pointer to **time.Time** | time that access ends | [optional] 
+**DhcpServer** | Pointer to **string** | The IP address of the DCHP Server. | [optional] 
+**DnsServer** | Pointer to **string** | The IP address of the DNS Server. | [optional] 
+**Gateway** | Pointer to **string** | The IP address of the Gateway. | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the network adapter record. | [optional] 
+**Ip** | Pointer to **string** | The IP address of the network adapter. | [optional] 
+**Mac** | Pointer to **string** | The MAC associated with the network adapter. | [optional] 
+**Name** | Pointer to **string** | The name of the newtwork adapter. | [optional] 
+**Subnet** | Pointer to **string** | The subnet for the network adapter. | [optional] 
 
 ## Methods
 
@@ -31,6 +31,81 @@ will change when the set of required properties is changed
 NewInlineResponse20052WithDefaults instantiates a new InlineResponse20052 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetDhcpServer
+
+`func (o *InlineResponse20052) GetDhcpServer() string`
+
+GetDhcpServer returns the DhcpServer field if non-nil, zero value otherwise.
+
+### GetDhcpServerOk
+
+`func (o *InlineResponse20052) GetDhcpServerOk() (*string, bool)`
+
+GetDhcpServerOk returns a tuple with the DhcpServer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpServer
+
+`func (o *InlineResponse20052) SetDhcpServer(v string)`
+
+SetDhcpServer sets DhcpServer field to given value.
+
+### HasDhcpServer
+
+`func (o *InlineResponse20052) HasDhcpServer() bool`
+
+HasDhcpServer returns a boolean if a field has been set.
+
+### GetDnsServer
+
+`func (o *InlineResponse20052) GetDnsServer() string`
+
+GetDnsServer returns the DnsServer field if non-nil, zero value otherwise.
+
+### GetDnsServerOk
+
+`func (o *InlineResponse20052) GetDnsServerOk() (*string, bool)`
+
+GetDnsServerOk returns a tuple with the DnsServer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsServer
+
+`func (o *InlineResponse20052) SetDnsServer(v string)`
+
+SetDnsServer sets DnsServer field to given value.
+
+### HasDnsServer
+
+`func (o *InlineResponse20052) HasDnsServer() bool`
+
+HasDnsServer returns a boolean if a field has been set.
+
+### GetGateway
+
+`func (o *InlineResponse20052) GetGateway() string`
+
+GetGateway returns the Gateway field if non-nil, zero value otherwise.
+
+### GetGatewayOk
+
+`func (o *InlineResponse20052) GetGatewayOk() (*string, bool)`
+
+GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGateway
+
+`func (o *InlineResponse20052) SetGateway(v string)`
+
+SetGateway sets Gateway field to given value.
+
+### HasGateway
+
+`func (o *InlineResponse20052) HasGateway() bool`
+
+HasGateway returns a boolean if a field has been set.
 
 ### GetId
 
@@ -57,30 +132,55 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetSsidName
+### GetIp
 
-`func (o *InlineResponse20052) GetSsidName() string`
+`func (o *InlineResponse20052) GetIp() string`
 
-GetSsidName returns the SsidName field if non-nil, zero value otherwise.
+GetIp returns the Ip field if non-nil, zero value otherwise.
 
-### GetSsidNameOk
+### GetIpOk
 
-`func (o *InlineResponse20052) GetSsidNameOk() (*string, bool)`
+`func (o *InlineResponse20052) GetIpOk() (*string, bool)`
 
-GetSsidNameOk returns a tuple with the SsidName field if it's non-nil, zero value otherwise
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsidName
+### SetIp
 
-`func (o *InlineResponse20052) SetSsidName(v string)`
+`func (o *InlineResponse20052) SetIp(v string)`
 
-SetSsidName sets SsidName field to given value.
+SetIp sets Ip field to given value.
 
-### HasSsidName
+### HasIp
 
-`func (o *InlineResponse20052) HasSsidName() bool`
+`func (o *InlineResponse20052) HasIp() bool`
 
-HasSsidName returns a boolean if a field has been set.
+HasIp returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse20052) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse20052) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse20052) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse20052) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
 
 ### GetName
 
@@ -107,130 +207,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetScope
+### GetSubnet
 
-`func (o *InlineResponse20052) GetScope() string`
+`func (o *InlineResponse20052) GetSubnet() string`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetSubnetOk
 
-`func (o *InlineResponse20052) GetScopeOk() (*string, bool)`
+`func (o *InlineResponse20052) GetSubnetOk() (*string, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetSubnet
 
-`func (o *InlineResponse20052) SetScope(v string)`
+`func (o *InlineResponse20052) SetSubnet(v string)`
 
-SetScope sets Scope field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasScope
+### HasSubnet
 
-`func (o *InlineResponse20052) HasScope() bool`
+`func (o *InlineResponse20052) HasSubnet() bool`
 
-HasScope returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse20052) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse20052) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse20052) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse20052) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetTimeboundType
-
-`func (o *InlineResponse20052) GetTimeboundType() string`
-
-GetTimeboundType returns the TimeboundType field if non-nil, zero value otherwise.
-
-### GetTimeboundTypeOk
-
-`func (o *InlineResponse20052) GetTimeboundTypeOk() (*string, bool)`
-
-GetTimeboundTypeOk returns a tuple with the TimeboundType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeboundType
-
-`func (o *InlineResponse20052) SetTimeboundType(v string)`
-
-SetTimeboundType sets TimeboundType field to given value.
-
-### HasTimeboundType
-
-`func (o *InlineResponse20052) HasTimeboundType() bool`
-
-HasTimeboundType returns a boolean if a field has been set.
-
-### GetAccessStartAt
-
-`func (o *InlineResponse20052) GetAccessStartAt() time.Time`
-
-GetAccessStartAt returns the AccessStartAt field if non-nil, zero value otherwise.
-
-### GetAccessStartAtOk
-
-`func (o *InlineResponse20052) GetAccessStartAtOk() (*time.Time, bool)`
-
-GetAccessStartAtOk returns a tuple with the AccessStartAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessStartAt
-
-`func (o *InlineResponse20052) SetAccessStartAt(v time.Time)`
-
-SetAccessStartAt sets AccessStartAt field to given value.
-
-### HasAccessStartAt
-
-`func (o *InlineResponse20052) HasAccessStartAt() bool`
-
-HasAccessStartAt returns a boolean if a field has been set.
-
-### GetAccessEndAt
-
-`func (o *InlineResponse20052) GetAccessEndAt() time.Time`
-
-GetAccessEndAt returns the AccessEndAt field if non-nil, zero value otherwise.
-
-### GetAccessEndAtOk
-
-`func (o *InlineResponse20052) GetAccessEndAtOk() (*time.Time, bool)`
-
-GetAccessEndAtOk returns a tuple with the AccessEndAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessEndAt
-
-`func (o *InlineResponse20052) SetAccessEndAt(v time.Time)`
-
-SetAccessEndAt sets AccessEndAt field to given value.
-
-### HasAccessEndAt
-
-`func (o *InlineResponse20052) HasAccessEndAt() bool`
-
-HasAccessEndAt returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

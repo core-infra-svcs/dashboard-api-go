@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
 **EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
-**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
-**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
+**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
+**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
 
 ## Methods
 
@@ -79,80 +79,80 @@ SetEndTs sets EndTs field to given value.
 
 HasEndTs returns a boolean if a field has been set.
 
-### GetTotalKbps
+### GetUtilizationTotal
 
-`func (o *InlineResponse20075) GetTotalKbps() int32`
+`func (o *InlineResponse20075) GetUtilizationTotal() float32`
 
-GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
+GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
 
-### GetTotalKbpsOk
+### GetUtilizationTotalOk
 
-`func (o *InlineResponse20075) GetTotalKbpsOk() (*int32, bool)`
+`func (o *InlineResponse20075) GetUtilizationTotalOk() (*float32, bool)`
 
-GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
+GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotalKbps
+### SetUtilizationTotal
 
-`func (o *InlineResponse20075) SetTotalKbps(v int32)`
+`func (o *InlineResponse20075) SetUtilizationTotal(v float32)`
 
-SetTotalKbps sets TotalKbps field to given value.
+SetUtilizationTotal sets UtilizationTotal field to given value.
 
-### HasTotalKbps
+### HasUtilizationTotal
 
-`func (o *InlineResponse20075) HasTotalKbps() bool`
+`func (o *InlineResponse20075) HasUtilizationTotal() bool`
 
-HasTotalKbps returns a boolean if a field has been set.
+HasUtilizationTotal returns a boolean if a field has been set.
 
-### GetSentKbps
+### GetUtilization80211
 
-`func (o *InlineResponse20075) GetSentKbps() int32`
+`func (o *InlineResponse20075) GetUtilization80211() float32`
 
-GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
+GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
 
-### GetSentKbpsOk
+### GetUtilization80211Ok
 
-`func (o *InlineResponse20075) GetSentKbpsOk() (*int32, bool)`
+`func (o *InlineResponse20075) GetUtilization80211Ok() (*float32, bool)`
 
-GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
+GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSentKbps
+### SetUtilization80211
 
-`func (o *InlineResponse20075) SetSentKbps(v int32)`
+`func (o *InlineResponse20075) SetUtilization80211(v float32)`
 
-SetSentKbps sets SentKbps field to given value.
+SetUtilization80211 sets Utilization80211 field to given value.
 
-### HasSentKbps
+### HasUtilization80211
 
-`func (o *InlineResponse20075) HasSentKbps() bool`
+`func (o *InlineResponse20075) HasUtilization80211() bool`
 
-HasSentKbps returns a boolean if a field has been set.
+HasUtilization80211 returns a boolean if a field has been set.
 
-### GetReceivedKbps
+### GetUtilizationNon80211
 
-`func (o *InlineResponse20075) GetReceivedKbps() int32`
+`func (o *InlineResponse20075) GetUtilizationNon80211() float32`
 
-GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
+GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
 
-### GetReceivedKbpsOk
+### GetUtilizationNon80211Ok
 
-`func (o *InlineResponse20075) GetReceivedKbpsOk() (*int32, bool)`
+`func (o *InlineResponse20075) GetUtilizationNon80211Ok() (*float32, bool)`
 
-GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
+GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceivedKbps
+### SetUtilizationNon80211
 
-`func (o *InlineResponse20075) SetReceivedKbps(v int32)`
+`func (o *InlineResponse20075) SetUtilizationNon80211(v float32)`
 
-SetReceivedKbps sets ReceivedKbps field to given value.
+SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
 
-### HasReceivedKbps
+### HasUtilizationNon80211
 
-`func (o *InlineResponse20075) HasReceivedKbps() bool`
+`func (o *InlineResponse20075) HasUtilizationNon80211() bool`
 
-HasReceivedKbps returns a boolean if a field has been set.
+HasUtilizationNon80211 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

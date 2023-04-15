@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Event category | [optional] 
-**Type** | Pointer to **string** | Event type | [optional] 
-**Description** | Pointer to **string** | Description of the event | [optional] 
+**Mode** | Pointer to **string** | The site-to-site VPN mode. | [optional] 
+**Hubs** | Pointer to [**[]InlineResponse20020Hubs**](InlineResponse20020Hubs.md) | The list of VPN hubs, in order of preference. | [optional] 
+**Subnets** | Pointer to [**[]InlineResponse20020Subnets**](InlineResponse20020Subnets.md) | The list of subnets and their VPN presence. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20020WithDefaults instantiates a new InlineResponse20020 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetMode
 
-`func (o *InlineResponse20020) GetCategory() string`
+`func (o *InlineResponse20020) GetMode() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetModeOk
 
-`func (o *InlineResponse20020) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse20020) GetModeOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetMode
 
-`func (o *InlineResponse20020) SetCategory(v string)`
+`func (o *InlineResponse20020) SetMode(v string)`
 
-SetCategory sets Category field to given value.
+SetMode sets Mode field to given value.
 
-### HasCategory
+### HasMode
 
-`func (o *InlineResponse20020) HasCategory() bool`
+`func (o *InlineResponse20020) HasMode() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetType
+### GetHubs
 
-`func (o *InlineResponse20020) GetType() string`
+`func (o *InlineResponse20020) GetHubs() []InlineResponse20020Hubs`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetHubs returns the Hubs field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetHubsOk
 
-`func (o *InlineResponse20020) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse20020) GetHubsOk() (*[]InlineResponse20020Hubs, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetHubs
 
-`func (o *InlineResponse20020) SetType(v string)`
+`func (o *InlineResponse20020) SetHubs(v []InlineResponse20020Hubs)`
 
-SetType sets Type field to given value.
+SetHubs sets Hubs field to given value.
 
-### HasType
+### HasHubs
 
-`func (o *InlineResponse20020) HasType() bool`
+`func (o *InlineResponse20020) HasHubs() bool`
 
-HasType returns a boolean if a field has been set.
+HasHubs returns a boolean if a field has been set.
 
-### GetDescription
+### GetSubnets
 
-`func (o *InlineResponse20020) GetDescription() string`
+`func (o *InlineResponse20020) GetSubnets() []InlineResponse20020Subnets`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetSubnetsOk
 
-`func (o *InlineResponse20020) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse20020) GetSubnetsOk() (*[]InlineResponse20020Subnets, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetSubnets
 
-`func (o *InlineResponse20020) SetDescription(v string)`
+`func (o *InlineResponse20020) SetSubnets(v []InlineResponse20020Subnets)`
 
-SetDescription sets Description field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasDescription
+### HasSubnets
 
-`func (o *InlineResponse20020) HasDescription() bool`
+`func (o *InlineResponse20020) HasSubnets() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

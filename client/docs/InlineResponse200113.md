@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the manufacturer | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage.md) |  | [optional] 
+**ResultingLicenses** | Pointer to [**[]InlineResponse200112**](InlineResponse200112.md) | Resulting licenses from the move | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200113WithDefaults instantiates a new InlineResponse200113 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetResultingLicenses
 
-`func (o *InlineResponse200113) GetName() string`
+`func (o *InlineResponse200113) GetResultingLicenses() []InlineResponse200112`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetResultingLicensesOk
 
-`func (o *InlineResponse200113) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200113) GetResultingLicensesOk() (*[]InlineResponse200112, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetResultingLicenses
 
-`func (o *InlineResponse200113) SetName(v string)`
+`func (o *InlineResponse200113) SetResultingLicenses(v []InlineResponse200112)`
 
-SetName sets Name field to given value.
+SetResultingLicenses sets ResultingLicenses field to given value.
 
-### HasName
+### HasResultingLicenses
 
-`func (o *InlineResponse200113) HasName() bool`
+`func (o *InlineResponse200113) HasResultingLicenses() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetClients
-
-`func (o *InlineResponse200113) GetClients() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients`
-
-GetClients returns the Clients field if non-nil, zero value otherwise.
-
-### GetClientsOk
-
-`func (o *InlineResponse200113) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients, bool)`
-
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClients
-
-`func (o *InlineResponse200113) SetClients(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients)`
-
-SetClients sets Clients field to given value.
-
-### HasClients
-
-`func (o *InlineResponse200113) HasClients() bool`
-
-HasClients returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200113) GetUsage() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200113) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200113) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200113) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasResultingLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

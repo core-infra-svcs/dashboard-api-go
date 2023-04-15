@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    createNetworkSmTargetGroup := *openapiclient.NewInlineObject104() // InlineObject104 |  (optional)
+    createNetworkSmTargetGroup := *openapiclient.NewInlineObject105() // InlineObject105 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSmTargetGroup
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSmTargetGroup** | [**InlineObject104**](InlineObject104.md) |  | 
+ **createNetworkSmTargetGroup** | [**InlineObject105**](InlineObject105.md) |  | 
 
 ### Return type
 
@@ -325,7 +325,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     targetGroupId := "targetGroupId_example" // string | 
-    updateNetworkSmTargetGroup := *openapiclient.NewInlineObject105() // InlineObject105 |  (optional)
+    updateNetworkSmTargetGroup := *openapiclient.NewInlineObject106() // InlineObject106 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSmTargetGroup** | [**InlineObject105**](InlineObject105.md) |  | 
+ **updateNetworkSmTargetGroup** | [**InlineObject106**](InlineObject106.md) |  | 
 
 ### Return type
 

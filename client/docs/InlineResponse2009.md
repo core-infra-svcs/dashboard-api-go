@@ -4,13 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Number** | Pointer to **int32** | Number of the port | [optional] 
-**Enabled** | Pointer to **bool** | The status of the port | [optional] 
-**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
-**DropUntaggedTraffic** | Pointer to **bool** | Whether the trunk port can drop all untagged traffic. | [optional] 
-**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
-**AllowedVlans** | Pointer to **string** | Comma-delimited list of the VLAN ID&#39;s allowed on the port, or &#39;all&#39; to permit all VLAN&#39;s on the port. | [optional] 
-**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device | [optional] 
+**ConnectionStats** | Pointer to [**InlineResponse2009ConnectionStats**](InlineResponse2009ConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +26,55 @@ NewInlineResponse2009WithDefaults instantiates a new InlineResponse2009 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNumber
+### GetSerial
 
-`func (o *InlineResponse2009) GetNumber() int32`
+`func (o *InlineResponse2009) GetSerial() string`
 
-GetNumber returns the Number field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNumberOk
+### GetSerialOk
 
-`func (o *InlineResponse2009) GetNumberOk() (*int32, bool)`
+`func (o *InlineResponse2009) GetSerialOk() (*string, bool)`
 
-GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNumber
+### SetSerial
 
-`func (o *InlineResponse2009) SetNumber(v int32)`
+`func (o *InlineResponse2009) SetSerial(v string)`
 
-SetNumber sets Number field to given value.
+SetSerial sets Serial field to given value.
 
-### HasNumber
+### HasSerial
 
-`func (o *InlineResponse2009) HasNumber() bool`
+`func (o *InlineResponse2009) HasSerial() bool`
 
-HasNumber returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetEnabled
+### GetConnectionStats
 
-`func (o *InlineResponse2009) GetEnabled() bool`
+`func (o *InlineResponse2009) GetConnectionStats() InlineResponse2009ConnectionStats`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetConnectionStatsOk
 
-`func (o *InlineResponse2009) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse2009) GetConnectionStatsOk() (*InlineResponse2009ConnectionStats, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetConnectionStats
 
-`func (o *InlineResponse2009) SetEnabled(v bool)`
+`func (o *InlineResponse2009) SetConnectionStats(v InlineResponse2009ConnectionStats)`
 
-SetEnabled sets Enabled field to given value.
+SetConnectionStats sets ConnectionStats field to given value.
 
-### HasEnabled
+### HasConnectionStats
 
-`func (o *InlineResponse2009) HasEnabled() bool`
+`func (o *InlineResponse2009) HasConnectionStats() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse2009) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse2009) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse2009) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse2009) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetDropUntaggedTraffic
-
-`func (o *InlineResponse2009) GetDropUntaggedTraffic() bool`
-
-GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
-
-### GetDropUntaggedTrafficOk
-
-`func (o *InlineResponse2009) GetDropUntaggedTrafficOk() (*bool, bool)`
-
-GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDropUntaggedTraffic
-
-`func (o *InlineResponse2009) SetDropUntaggedTraffic(v bool)`
-
-SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
-
-### HasDropUntaggedTraffic
-
-`func (o *InlineResponse2009) HasDropUntaggedTraffic() bool`
-
-HasDropUntaggedTraffic returns a boolean if a field has been set.
-
-### GetVlan
-
-`func (o *InlineResponse2009) GetVlan() int32`
-
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
-
-### GetVlanOk
-
-`func (o *InlineResponse2009) GetVlanOk() (*int32, bool)`
-
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlan
-
-`func (o *InlineResponse2009) SetVlan(v int32)`
-
-SetVlan sets Vlan field to given value.
-
-### HasVlan
-
-`func (o *InlineResponse2009) HasVlan() bool`
-
-HasVlan returns a boolean if a field has been set.
-
-### GetAllowedVlans
-
-`func (o *InlineResponse2009) GetAllowedVlans() string`
-
-GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
-
-### GetAllowedVlansOk
-
-`func (o *InlineResponse2009) GetAllowedVlansOk() (*string, bool)`
-
-GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAllowedVlans
-
-`func (o *InlineResponse2009) SetAllowedVlans(v string)`
-
-SetAllowedVlans sets AllowedVlans field to given value.
-
-### HasAllowedVlans
-
-`func (o *InlineResponse2009) HasAllowedVlans() bool`
-
-HasAllowedVlans returns a boolean if a field has been set.
-
-### GetAccessPolicy
-
-`func (o *InlineResponse2009) GetAccessPolicy() string`
-
-GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
-
-### GetAccessPolicyOk
-
-`func (o *InlineResponse2009) GetAccessPolicyOk() (*string, bool)`
-
-GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessPolicy
-
-`func (o *InlineResponse2009) SetAccessPolicy(v string)`
-
-SetAccessPolicy sets AccessPolicy field to given value.
-
-### HasAccessPolicy
-
-`func (o *InlineResponse2009) HasAccessPolicy() bool`
-
-HasAccessPolicy returns a boolean if a field has been set.
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

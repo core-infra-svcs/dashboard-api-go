@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the adaptive policy ACL | 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] [default to ""]
-**Rules** | [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules. | 
-**IpVersion** | **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | 
+**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
+**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
 
 ## Methods
 
 ### NewInlineObject169
 
-`func NewInlineObject169(name string, rules []OrganizationsOrganizationIdAdaptivePolicyAclsRules, ipVersion string, ) *InlineObject169`
+`func NewInlineObject169() *InlineObject169`
 
 NewInlineObject169 instantiates a new InlineObject169 object
 This constructor will assign default values to properties that have it defined,
@@ -28,90 +26,55 @@ NewInlineObject169WithDefaults instantiates a new InlineObject169 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConfirmed
 
-`func (o *InlineObject169) GetName() string`
+`func (o *InlineObject169) GetConfirmed() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConfirmedOk
 
-`func (o *InlineObject169) GetNameOk() (*string, bool)`
+`func (o *InlineObject169) GetConfirmedOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConfirmed
 
-`func (o *InlineObject169) SetName(v string)`
+`func (o *InlineObject169) SetConfirmed(v bool)`
 
-SetName sets Name field to given value.
+SetConfirmed sets Confirmed field to given value.
 
+### HasConfirmed
 
-### GetDescription
+`func (o *InlineObject169) HasConfirmed() bool`
 
-`func (o *InlineObject169) GetDescription() string`
+HasConfirmed returns a boolean if a field has been set.
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+### GetSynchronous
 
-### GetDescriptionOk
+`func (o *InlineObject169) GetSynchronous() bool`
 
-`func (o *InlineObject169) GetDescriptionOk() (*string, bool)`
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+### GetSynchronousOk
+
+`func (o *InlineObject169) GetSynchronousOk() (*bool, bool)`
+
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetSynchronous
 
-`func (o *InlineObject169) SetDescription(v string)`
+`func (o *InlineObject169) SetSynchronous(v bool)`
 
-SetDescription sets Description field to given value.
+SetSynchronous sets Synchronous field to given value.
 
-### HasDescription
+### HasSynchronous
 
-`func (o *InlineObject169) HasDescription() bool`
+`func (o *InlineObject169) HasSynchronous() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineObject169) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineObject169) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineObject169) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
-
-SetRules sets Rules field to given value.
-
-
-### GetIpVersion
-
-`func (o *InlineObject169) GetIpVersion() string`
-
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
-
-### GetIpVersionOk
-
-`func (o *InlineObject169) GetIpVersionOk() (*string, bool)`
-
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpVersion
-
-`func (o *InlineObject169) SetIpVersion(v string)`
-
-SetIpVersion sets IpVersion field to given value.
-
+HasSynchronous returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

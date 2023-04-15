@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    createNetworkMqttBroker := *openapiclient.NewInlineObject90("Name_example", "Host_example", int32(123)) // InlineObject90 | 
+    createNetworkMqttBroker := *openapiclient.NewInlineObject91("Name_example", "Host_example", int32(123)) // InlineObject91 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkMqttBrokerReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkMqttBroker** | [**InlineObject90**](InlineObject90.md) |  | 
+ **createNetworkMqttBroker** | [**InlineObject91**](InlineObject91.md) |  | 
 
 ### Return type
 
@@ -321,7 +321,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     mqttBrokerId := "mqttBrokerId_example" // string | 
-    updateNetworkMqttBroker := *openapiclient.NewInlineObject91() // InlineObject91 |  (optional)
+    updateNetworkMqttBroker := *openapiclient.NewInlineObject92() // InlineObject92 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkMqttBroker** | [**InlineObject91**](InlineObject91.md) |  | 
+ **updateNetworkMqttBroker** | [**InlineObject92**](InlineObject92.md) |  | 
 
 ### Return type
 

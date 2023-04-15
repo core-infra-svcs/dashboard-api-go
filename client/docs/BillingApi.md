@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkWirelessBilling := *openapiclient.NewInlineObject147() // InlineObject147 |  (optional)
+    updateNetworkWirelessBilling := *openapiclient.NewInlineObject148() // InlineObject148 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessBilli
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessBilling** | [**InlineObject147**](InlineObject147.md) |  | 
+ **updateNetworkWirelessBilling** | [**InlineObject148**](InlineObject148.md) |  | 
 
 ### Return type
 

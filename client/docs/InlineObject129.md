@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | **string** | The serial of the switch to be added | 
+**Name** | **string** | The name of the new stack | 
+**Serials** | **[]string** | An array of switch serials to be added into the new stack | 
 
 ## Methods
 
 ### NewInlineObject129
 
-`func NewInlineObject129(serial string, ) *InlineObject129`
+`func NewInlineObject129(name string, serials []string, ) *InlineObject129`
 
 NewInlineObject129 instantiates a new InlineObject129 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +26,44 @@ NewInlineObject129WithDefaults instantiates a new InlineObject129 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetName
 
-`func (o *InlineObject129) GetSerial() string`
+`func (o *InlineObject129) GetName() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNameOk
 
-`func (o *InlineObject129) GetSerialOk() (*string, bool)`
+`func (o *InlineObject129) GetNameOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetName
 
-`func (o *InlineObject129) SetSerial(v string)`
+`func (o *InlineObject129) SetName(v string)`
 
-SetSerial sets Serial field to given value.
+SetName sets Name field to given value.
+
+
+### GetSerials
+
+`func (o *InlineObject129) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineObject129) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineObject129) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
 
 
 

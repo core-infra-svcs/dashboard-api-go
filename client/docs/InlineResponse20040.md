@@ -4,9 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
-**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
-**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
+**Name** | Pointer to **string** | The name of the device. | [optional] 
+**Tags** | Pointer to **[]string** | An array of tags associated with the device. | [optional] 
+**Ssid** | Pointer to **string** | The name of the SSID the device was last connected to. | [optional] 
+**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
+**OsName** | Pointer to **string** | The name of the device OS. | [optional] 
+**SystemModel** | Pointer to **string** | The device model. | [optional] 
+**Uuid** | Pointer to **string** | The UUID of the device. | [optional] 
+**SerialNumber** | Pointer to **string** | The device serial number. | [optional] 
+**Serial** | Pointer to **string** | The device serial. | [optional] 
+**Ip** | Pointer to **string** | The IP address of the device. | [optional] 
+**Notes** | Pointer to **string** | Notes associated with the device. | [optional] 
 
 ## Methods
 
@@ -27,80 +36,305 @@ NewInlineResponse20040WithDefaults instantiates a new InlineResponse20040 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReceived
+### GetId
 
-`func (o *InlineResponse20040) GetReceived() float32`
+`func (o *InlineResponse20040) GetId() string`
 
-GetReceived returns the Received field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetReceivedOk
+### GetIdOk
 
-`func (o *InlineResponse20040) GetReceivedOk() (*float32, bool)`
+`func (o *InlineResponse20040) GetIdOk() (*string, bool)`
 
-GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceived
+### SetId
 
-`func (o *InlineResponse20040) SetReceived(v float32)`
+`func (o *InlineResponse20040) SetId(v string)`
 
-SetReceived sets Received field to given value.
+SetId sets Id field to given value.
 
-### HasReceived
+### HasId
 
-`func (o *InlineResponse20040) HasReceived() bool`
+`func (o *InlineResponse20040) HasId() bool`
 
-HasReceived returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetSent
+### GetName
 
-`func (o *InlineResponse20040) GetSent() float32`
+`func (o *InlineResponse20040) GetName() string`
 
-GetSent returns the Sent field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSentOk
+### GetNameOk
 
-`func (o *InlineResponse20040) GetSentOk() (*float32, bool)`
+`func (o *InlineResponse20040) GetNameOk() (*string, bool)`
 
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSent
+### SetName
 
-`func (o *InlineResponse20040) SetSent(v float32)`
+`func (o *InlineResponse20040) SetName(v string)`
 
-SetSent sets Sent field to given value.
+SetName sets Name field to given value.
 
-### HasSent
+### HasName
 
-`func (o *InlineResponse20040) HasSent() bool`
+`func (o *InlineResponse20040) HasName() bool`
 
-HasSent returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetTs
+### GetTags
 
-`func (o *InlineResponse20040) GetTs() string`
+`func (o *InlineResponse20040) GetTags() []string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetTagsOk
 
-`func (o *InlineResponse20040) GetTsOk() (*string, bool)`
+`func (o *InlineResponse20040) GetTagsOk() (*[]string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetTags
 
-`func (o *InlineResponse20040) SetTs(v string)`
+`func (o *InlineResponse20040) SetTags(v []string)`
 
-SetTs sets Ts field to given value.
+SetTags sets Tags field to given value.
 
-### HasTs
+### HasTags
 
-`func (o *InlineResponse20040) HasTs() bool`
+`func (o *InlineResponse20040) HasTags() bool`
 
-HasTs returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetSsid
+
+`func (o *InlineResponse20040) GetSsid() string`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineResponse20040) GetSsidOk() (*string, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineResponse20040) SetSsid(v string)`
+
+SetSsid sets Ssid field to given value.
+
+### HasSsid
+
+`func (o *InlineResponse20040) HasSsid() bool`
+
+HasSsid returns a boolean if a field has been set.
+
+### GetWifiMac
+
+`func (o *InlineResponse20040) GetWifiMac() string`
+
+GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+
+### GetWifiMacOk
+
+`func (o *InlineResponse20040) GetWifiMacOk() (*string, bool)`
+
+GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifiMac
+
+`func (o *InlineResponse20040) SetWifiMac(v string)`
+
+SetWifiMac sets WifiMac field to given value.
+
+### HasWifiMac
+
+`func (o *InlineResponse20040) HasWifiMac() bool`
+
+HasWifiMac returns a boolean if a field has been set.
+
+### GetOsName
+
+`func (o *InlineResponse20040) GetOsName() string`
+
+GetOsName returns the OsName field if non-nil, zero value otherwise.
+
+### GetOsNameOk
+
+`func (o *InlineResponse20040) GetOsNameOk() (*string, bool)`
+
+GetOsNameOk returns a tuple with the OsName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOsName
+
+`func (o *InlineResponse20040) SetOsName(v string)`
+
+SetOsName sets OsName field to given value.
+
+### HasOsName
+
+`func (o *InlineResponse20040) HasOsName() bool`
+
+HasOsName returns a boolean if a field has been set.
+
+### GetSystemModel
+
+`func (o *InlineResponse20040) GetSystemModel() string`
+
+GetSystemModel returns the SystemModel field if non-nil, zero value otherwise.
+
+### GetSystemModelOk
+
+`func (o *InlineResponse20040) GetSystemModelOk() (*string, bool)`
+
+GetSystemModelOk returns a tuple with the SystemModel field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSystemModel
+
+`func (o *InlineResponse20040) SetSystemModel(v string)`
+
+SetSystemModel sets SystemModel field to given value.
+
+### HasSystemModel
+
+`func (o *InlineResponse20040) HasSystemModel() bool`
+
+HasSystemModel returns a boolean if a field has been set.
+
+### GetUuid
+
+`func (o *InlineResponse20040) GetUuid() string`
+
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
+
+### GetUuidOk
+
+`func (o *InlineResponse20040) GetUuidOk() (*string, bool)`
+
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUuid
+
+`func (o *InlineResponse20040) SetUuid(v string)`
+
+SetUuid sets Uuid field to given value.
+
+### HasUuid
+
+`func (o *InlineResponse20040) HasUuid() bool`
+
+HasUuid returns a boolean if a field has been set.
+
+### GetSerialNumber
+
+`func (o *InlineResponse20040) GetSerialNumber() string`
+
+GetSerialNumber returns the SerialNumber field if non-nil, zero value otherwise.
+
+### GetSerialNumberOk
+
+`func (o *InlineResponse20040) GetSerialNumberOk() (*string, bool)`
+
+GetSerialNumberOk returns a tuple with the SerialNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerialNumber
+
+`func (o *InlineResponse20040) SetSerialNumber(v string)`
+
+SetSerialNumber sets SerialNumber field to given value.
+
+### HasSerialNumber
+
+`func (o *InlineResponse20040) HasSerialNumber() bool`
+
+HasSerialNumber returns a boolean if a field has been set.
+
+### GetSerial
+
+`func (o *InlineResponse20040) GetSerial() string`
+
+GetSerial returns the Serial field if non-nil, zero value otherwise.
+
+### GetSerialOk
+
+`func (o *InlineResponse20040) GetSerialOk() (*string, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerial
+
+`func (o *InlineResponse20040) SetSerial(v string)`
+
+SetSerial sets Serial field to given value.
+
+### HasSerial
+
+`func (o *InlineResponse20040) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetIp
+
+`func (o *InlineResponse20040) GetIp() string`
+
+GetIp returns the Ip field if non-nil, zero value otherwise.
+
+### GetIpOk
+
+`func (o *InlineResponse20040) GetIpOk() (*string, bool)`
+
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIp
+
+`func (o *InlineResponse20040) SetIp(v string)`
+
+SetIp sets Ip field to given value.
+
+### HasIp
+
+`func (o *InlineResponse20040) HasIp() bool`
+
+HasIp returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse20040) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse20040) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse20040) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse20040) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

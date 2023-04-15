@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupId** | Pointer to **string** | Id of staged upgrade group | [optional] 
-**Name** | Pointer to **string** | Name of the Staged Upgrade Group | [optional] 
-**Description** | Pointer to **string** | Description of the Staged Upgrade Group | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | [optional] 
-**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices.md) |  | [optional] 
+**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
+**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
+**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
+**Events** | Pointer to [**[]InlineResponse20024Events**](InlineResponse20024Events.md) | An array of events that took place in the network. | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse20024WithDefaults instantiates a new InlineResponse20024 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroupId
+### GetMessage
 
-`func (o *InlineResponse20024) GetGroupId() string`
+`func (o *InlineResponse20024) GetMessage() string`
 
-GetGroupId returns the GroupId field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetGroupIdOk
+### GetMessageOk
 
-`func (o *InlineResponse20024) GetGroupIdOk() (*string, bool)`
+`func (o *InlineResponse20024) GetMessageOk() (*string, bool)`
 
-GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupId
+### SetMessage
 
-`func (o *InlineResponse20024) SetGroupId(v string)`
+`func (o *InlineResponse20024) SetMessage(v string)`
 
-SetGroupId sets GroupId field to given value.
+SetMessage sets Message field to given value.
 
-### HasGroupId
+### HasMessage
 
-`func (o *InlineResponse20024) HasGroupId() bool`
+`func (o *InlineResponse20024) HasMessage() bool`
 
-HasGroupId returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
 
-### GetName
+### GetPageStartAt
 
-`func (o *InlineResponse20024) GetName() string`
+`func (o *InlineResponse20024) GetPageStartAt() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPageStartAtOk
 
-`func (o *InlineResponse20024) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20024) GetPageStartAtOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPageStartAt
 
-`func (o *InlineResponse20024) SetName(v string)`
+`func (o *InlineResponse20024) SetPageStartAt(v string)`
 
-SetName sets Name field to given value.
+SetPageStartAt sets PageStartAt field to given value.
 
-### HasName
+### HasPageStartAt
 
-`func (o *InlineResponse20024) HasName() bool`
+`func (o *InlineResponse20024) HasPageStartAt() bool`
 
-HasName returns a boolean if a field has been set.
+HasPageStartAt returns a boolean if a field has been set.
 
-### GetDescription
+### GetPageEndAt
 
-`func (o *InlineResponse20024) GetDescription() string`
+`func (o *InlineResponse20024) GetPageEndAt() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetPageEndAtOk
 
-`func (o *InlineResponse20024) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse20024) GetPageEndAtOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetPageEndAt
 
-`func (o *InlineResponse20024) SetDescription(v string)`
+`func (o *InlineResponse20024) SetPageEndAt(v string)`
 
-SetDescription sets Description field to given value.
+SetPageEndAt sets PageEndAt field to given value.
 
-### HasDescription
+### HasPageEndAt
 
-`func (o *InlineResponse20024) HasDescription() bool`
+`func (o *InlineResponse20024) HasPageEndAt() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasPageEndAt returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetEvents
 
-`func (o *InlineResponse20024) GetIsDefault() bool`
+`func (o *InlineResponse20024) GetEvents() []InlineResponse20024Events`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetEvents returns the Events field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetEventsOk
 
-`func (o *InlineResponse20024) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse20024) GetEventsOk() (*[]InlineResponse20024Events, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetEvents
 
-`func (o *InlineResponse20024) SetIsDefault(v bool)`
+`func (o *InlineResponse20024) SetEvents(v []InlineResponse20024Events)`
 
-SetIsDefault sets IsDefault field to given value.
+SetEvents sets Events field to given value.
 
-### HasIsDefault
+### HasEvents
 
-`func (o *InlineResponse20024) HasIsDefault() bool`
+`func (o *InlineResponse20024) HasEvents() bool`
 
-HasIsDefault returns a boolean if a field has been set.
-
-### GetAssignedDevices
-
-`func (o *InlineResponse20024) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices`
-
-GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
-
-### GetAssignedDevicesOk
-
-`func (o *InlineResponse20024) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices, bool)`
-
-GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAssignedDevices
-
-`func (o *InlineResponse20024) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices)`
-
-SetAssignedDevices sets AssignedDevices field to given value.
-
-### HasAssignedDevices
-
-`func (o *InlineResponse20024) HasAssignedDevices() bool`
-
-HasAssignedDevices returns a boolean if a field has been set.
+HasEvents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

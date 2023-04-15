@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Servers** | Pointer to [**[]InlineResponse20061Servers**](InlineResponse20061Servers.md) | List of the syslog servers for this network | [optional] 
+**ResultingNetworks** | Pointer to [**[]InlineResponse20010**](InlineResponse20010.md) | Networks after the split | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20061WithDefaults instantiates a new InlineResponse20061 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetServers
+### GetResultingNetworks
 
-`func (o *InlineResponse20061) GetServers() []InlineResponse20061Servers`
+`func (o *InlineResponse20061) GetResultingNetworks() []InlineResponse20010`
 
-GetServers returns the Servers field if non-nil, zero value otherwise.
+GetResultingNetworks returns the ResultingNetworks field if non-nil, zero value otherwise.
 
-### GetServersOk
+### GetResultingNetworksOk
 
-`func (o *InlineResponse20061) GetServersOk() (*[]InlineResponse20061Servers, bool)`
+`func (o *InlineResponse20061) GetResultingNetworksOk() (*[]InlineResponse20010, bool)`
 
-GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
+GetResultingNetworksOk returns a tuple with the ResultingNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServers
+### SetResultingNetworks
 
-`func (o *InlineResponse20061) SetServers(v []InlineResponse20061Servers)`
+`func (o *InlineResponse20061) SetResultingNetworks(v []InlineResponse20010)`
 
-SetServers sets Servers field to given value.
+SetResultingNetworks sets ResultingNetworks field to given value.
 
-### HasServers
+### HasResultingNetworks
 
-`func (o *InlineResponse20061) HasServers() bool`
+`func (o *InlineResponse20061) HasResultingNetworks() bool`
 
-HasServers returns a boolean if a field has been set.
+HasResultingNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

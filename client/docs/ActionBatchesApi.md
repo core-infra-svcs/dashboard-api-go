@@ -34,7 +34,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationActionBatch := *openapiclient.NewInlineObject167([]openapiclient.OrganizationsOrganizationIdActionBatchesActions{*openapiclient.NewOrganizationsOrganizationIdActionBatchesActions("Resource_example", "Operation_example")}) // InlineObject167 | 
+    createOrganizationActionBatch := *openapiclient.NewInlineObject168([]openapiclient.OrganizationsOrganizationIdActionBatchesActions{*openapiclient.NewOrganizationsOrganizationIdActionBatchesActions("Resource_example", "Operation_example")}) // InlineObject168 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationActionBa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationActionBatch** | [**InlineObject167**](InlineObject167.md) |  | 
+ **createOrganizationActionBatch** | [**InlineObject168**](InlineObject168.md) |  | 
 
 ### Return type
 
@@ -323,7 +323,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | 
     actionBatchId := "actionBatchId_example" // string | 
-    updateOrganizationActionBatch := *openapiclient.NewInlineObject168() // InlineObject168 |  (optional)
+    updateOrganizationActionBatch := *openapiclient.NewInlineObject169() // InlineObject169 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationActionBatch** | [**InlineObject168**](InlineObject168.md) |  | 
+ **updateOrganizationActionBatch** | [**InlineObject169**](InlineObject169.md) |  | 
 
 ### Return type
 

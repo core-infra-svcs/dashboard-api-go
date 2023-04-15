@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network Id | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Model** | Pointer to **string** | Device model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks.md) | Uplinks info | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AvgLatencyMs** | Pointer to **int32** | Average latency in milliseconds | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20080WithDefaults instantiates a new InlineResponse20080 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetStartTs
 
-`func (o *InlineResponse20080) GetNetworkId() string`
+`func (o *InlineResponse20080) GetStartTs() time.Time`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse20080) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20080) GetStartTsOk() (*time.Time, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetStartTs
 
-`func (o *InlineResponse20080) SetNetworkId(v string)`
+`func (o *InlineResponse20080) SetStartTs(v time.Time)`
 
-SetNetworkId sets NetworkId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasNetworkId
+### HasStartTs
 
-`func (o *InlineResponse20080) HasNetworkId() bool`
+`func (o *InlineResponse20080) HasStartTs() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetSerial
+### GetEndTs
 
-`func (o *InlineResponse20080) GetSerial() string`
+`func (o *InlineResponse20080) GetEndTs() time.Time`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetEndTsOk
 
-`func (o *InlineResponse20080) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20080) GetEndTsOk() (*time.Time, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetEndTs
 
-`func (o *InlineResponse20080) SetSerial(v string)`
+`func (o *InlineResponse20080) SetEndTs(v time.Time)`
 
-SetSerial sets Serial field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasSerial
+### HasEndTs
 
-`func (o *InlineResponse20080) HasSerial() bool`
+`func (o *InlineResponse20080) HasEndTs() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetModel
+### GetAvgLatencyMs
 
-`func (o *InlineResponse20080) GetModel() string`
+`func (o *InlineResponse20080) GetAvgLatencyMs() int32`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetAvgLatencyMs returns the AvgLatencyMs field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetAvgLatencyMsOk
 
-`func (o *InlineResponse20080) GetModelOk() (*string, bool)`
+`func (o *InlineResponse20080) GetAvgLatencyMsOk() (*int32, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetAvgLatencyMsOk returns a tuple with the AvgLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetAvgLatencyMs
 
-`func (o *InlineResponse20080) SetModel(v string)`
+`func (o *InlineResponse20080) SetAvgLatencyMs(v int32)`
 
-SetModel sets Model field to given value.
+SetAvgLatencyMs sets AvgLatencyMs field to given value.
 
-### HasModel
+### HasAvgLatencyMs
 
-`func (o *InlineResponse20080) HasModel() bool`
+`func (o *InlineResponse20080) HasAvgLatencyMs() bool`
 
-HasModel returns a boolean if a field has been set.
-
-### GetLastReportedAt
-
-`func (o *InlineResponse20080) GetLastReportedAt() time.Time`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse20080) GetLastReportedAtOk() (*time.Time, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse20080) SetLastReportedAt(v time.Time)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-### HasLastReportedAt
-
-`func (o *InlineResponse20080) HasLastReportedAt() bool`
-
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse20080) GetUplinks() []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse20080) GetUplinksOk() (*[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse20080) SetUplinks(v []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse20080) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasAvgLatencyMs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

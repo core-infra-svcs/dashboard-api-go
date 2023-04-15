@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse20082Usage**](InlineResponse20082Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse20082Counts**](InlineResponse20082Counts.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
+**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20082WithDefaults instantiates a new InlineResponse20082 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetStartTs
 
-`func (o *InlineResponse20082) GetUsage() InlineResponse20082Usage`
+`func (o *InlineResponse20082) GetStartTs() time.Time`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetStartTsOk
 
-`func (o *InlineResponse20082) GetUsageOk() (*InlineResponse20082Usage, bool)`
+`func (o *InlineResponse20082) GetStartTsOk() (*time.Time, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetStartTs
 
-`func (o *InlineResponse20082) SetUsage(v InlineResponse20082Usage)`
+`func (o *InlineResponse20082) SetStartTs(v time.Time)`
 
-SetUsage sets Usage field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasUsage
+### HasStartTs
 
-`func (o *InlineResponse20082) HasUsage() bool`
+`func (o *InlineResponse20082) HasStartTs() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetCounts
+### GetEndTs
 
-`func (o *InlineResponse20082) GetCounts() InlineResponse20082Counts`
+`func (o *InlineResponse20082) GetEndTs() time.Time`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetEndTsOk
 
-`func (o *InlineResponse20082) GetCountsOk() (*InlineResponse20082Counts, bool)`
+`func (o *InlineResponse20082) GetEndTsOk() (*time.Time, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetEndTs
 
-`func (o *InlineResponse20082) SetCounts(v InlineResponse20082Counts)`
+`func (o *InlineResponse20082) SetEndTs(v time.Time)`
 
-SetCounts sets Counts field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasCounts
+### HasEndTs
 
-`func (o *InlineResponse20082) HasCounts() bool`
+`func (o *InlineResponse20082) HasEndTs() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetSnr
+
+`func (o *InlineResponse20082) GetSnr() int32`
+
+GetSnr returns the Snr field if non-nil, zero value otherwise.
+
+### GetSnrOk
+
+`func (o *InlineResponse20082) GetSnrOk() (*int32, bool)`
+
+GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSnr
+
+`func (o *InlineResponse20082) SetSnr(v int32)`
+
+SetSnr sets Snr field to given value.
+
+### HasSnr
+
+`func (o *InlineResponse20082) HasSnr() bool`
+
+HasSnr returns a boolean if a field has been set.
+
+### GetRssi
+
+`func (o *InlineResponse20082) GetRssi() int32`
+
+GetRssi returns the Rssi field if non-nil, zero value otherwise.
+
+### GetRssiOk
+
+`func (o *InlineResponse20082) GetRssiOk() (*int32, bool)`
+
+GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRssi
+
+`func (o *InlineResponse20082) SetRssi(v int32)`
+
+SetRssi sets Rssi field to given value.
+
+### HasRssi
+
+`func (o *InlineResponse20082) HasRssi() bool`
+
+HasRssi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

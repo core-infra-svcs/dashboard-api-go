@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destination** | [**OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination**](OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination.md) |  | 
-**Licenses** | [**[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses**](OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses.md) | The list of licenses to move | 
+**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
+**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
 
 ## Methods
 
 ### NewInlineObject206
 
-`func NewInlineObject206(destination OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, licenses []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, ) *InlineObject206`
+`func NewInlineObject206(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject206`
 
 NewInlineObject206 instantiates a new InlineObject206 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +26,44 @@ NewInlineObject206WithDefaults instantiates a new InlineObject206 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestination
+### GetLicenseIdToRenew
 
-`func (o *InlineObject206) GetDestination() OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
+`func (o *InlineObject206) GetLicenseIdToRenew() string`
 
-GetDestination returns the Destination field if non-nil, zero value otherwise.
+GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
 
-### GetDestinationOk
+### GetLicenseIdToRenewOk
 
-`func (o *InlineObject206) GetDestinationOk() (*OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, bool)`
+`func (o *InlineObject206) GetLicenseIdToRenewOk() (*string, bool)`
 
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestination
+### SetLicenseIdToRenew
 
-`func (o *InlineObject206) SetDestination(v OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination)`
+`func (o *InlineObject206) SetLicenseIdToRenew(v string)`
 
-SetDestination sets Destination field to given value.
+SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
 
 
-### GetLicenses
+### GetUnusedLicenseId
 
-`func (o *InlineObject206) GetLicenses() []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses`
+`func (o *InlineObject206) GetUnusedLicenseId() string`
 
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
 
-### GetLicensesOk
+### GetUnusedLicenseIdOk
 
-`func (o *InlineObject206) GetLicensesOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, bool)`
+`func (o *InlineObject206) GetUnusedLicenseIdOk() (*string, bool)`
 
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenses
+### SetUnusedLicenseId
 
-`func (o *InlineObject206) SetLicenses(v []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses)`
+`func (o *InlineObject206) SetUnusedLicenseId(v string)`
 
-SetLicenses sets Licenses field to given value.
+SetUnusedLicenseId sets UnusedLicenseId field to given value.
 
 
 

@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    updateNetworkTrafficAnalysis := *openapiclient.NewInlineObject139() // InlineObject139 |  (optional)
+    updateNetworkTrafficAnalysis := *openapiclient.NewInlineObject140() // InlineObject140 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkTrafficAnalys
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkTrafficAnalysis** | [**InlineObject139**](InlineObject139.md) |  | 
+ **updateNetworkTrafficAnalysis** | [**InlineObject140**](InlineObject140.md) |  | 
 
 ### Return type
 

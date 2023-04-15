@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**AvgLatencyMs** | Pointer to **int32** | Average latency in milliseconds | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20070WithDefaults instantiates a new InlineResponse20070 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetBroadcastThreshold
 
-`func (o *InlineResponse20070) GetStartTs() time.Time`
+`func (o *InlineResponse20070) GetBroadcastThreshold() int32`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineResponse20070) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20070) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetBroadcastThreshold
 
-`func (o *InlineResponse20070) SetStartTs(v time.Time)`
+`func (o *InlineResponse20070) SetBroadcastThreshold(v int32)`
 
-SetStartTs sets StartTs field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasStartTs
+### HasBroadcastThreshold
 
-`func (o *InlineResponse20070) HasStartTs() bool`
+`func (o *InlineResponse20070) HasBroadcastThreshold() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetEndTs
+### GetMulticastThreshold
 
-`func (o *InlineResponse20070) GetEndTs() time.Time`
+`func (o *InlineResponse20070) GetMulticastThreshold() int32`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetMulticastThresholdOk
 
-`func (o *InlineResponse20070) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20070) GetMulticastThresholdOk() (*int32, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetMulticastThreshold
 
-`func (o *InlineResponse20070) SetEndTs(v time.Time)`
+`func (o *InlineResponse20070) SetMulticastThreshold(v int32)`
 
-SetEndTs sets EndTs field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasEndTs
+### HasMulticastThreshold
 
-`func (o *InlineResponse20070) HasEndTs() bool`
+`func (o *InlineResponse20070) HasMulticastThreshold() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
 
-### GetAvgLatencyMs
+### GetUnknownUnicastThreshold
 
-`func (o *InlineResponse20070) GetAvgLatencyMs() int32`
+`func (o *InlineResponse20070) GetUnknownUnicastThreshold() int32`
 
-GetAvgLatencyMs returns the AvgLatencyMs field if non-nil, zero value otherwise.
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
 
-### GetAvgLatencyMsOk
+### GetUnknownUnicastThresholdOk
 
-`func (o *InlineResponse20070) GetAvgLatencyMsOk() (*int32, bool)`
+`func (o *InlineResponse20070) GetUnknownUnicastThresholdOk() (*int32, bool)`
 
-GetAvgLatencyMsOk returns a tuple with the AvgLatencyMs field if it's non-nil, zero value otherwise
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAvgLatencyMs
+### SetUnknownUnicastThreshold
 
-`func (o *InlineResponse20070) SetAvgLatencyMs(v int32)`
+`func (o *InlineResponse20070) SetUnknownUnicastThreshold(v int32)`
 
-SetAvgLatencyMs sets AvgLatencyMs field to given value.
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
 
-### HasAvgLatencyMs
+### HasUnknownUnicastThreshold
 
-`func (o *InlineResponse20070) HasAvgLatencyMs() bool`
+`func (o *InlineResponse20070) HasUnknownUnicastThreshold() bool`
 
-HasAvgLatencyMs returns a boolean if a field has been set.
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

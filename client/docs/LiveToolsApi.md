@@ -252,7 +252,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | 
-    cycleDeviceSwitchPorts := *openapiclient.NewInlineObject15([]string{"Ports_example"}) // InlineObject15 | 
+    cycleDeviceSwitchPorts := *openapiclient.NewInlineObject16([]string{"Ports_example"}) // InlineObject16 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -282,7 +282,7 @@ Other parameters are passed through a pointer to a apiCycleDeviceSwitchPortsRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cycleDeviceSwitchPorts** | [**InlineObject15**](InlineObject15.md) |  | 
+ **cycleDeviceSwitchPorts** | [**InlineObject16**](InlineObject16.md) |  | 
 
 ### Return type
 

@@ -4,16 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
-**Tags** | Pointer to **[]string** | An array of tags associated with the device. | [optional] 
-**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
-**Serial** | Pointer to **string** | The device serial. | [optional] 
+**ProfileId** | Pointer to **string** | ID of the sensor alert profile. | [optional] 
+**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
+**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule**](NetworksNetworkIdSensorAlertsProfilesSchedule.md) |  | [optional] 
+**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
+**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20037
 
-`func NewInlineResponse20037() *InlineResponse20037`
+`func NewInlineResponse20037(conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineResponse20037`
 
 NewInlineResponse20037 instantiates a new InlineResponse20037 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +30,150 @@ NewInlineResponse20037WithDefaults instantiates a new InlineResponse20037 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetProfileId
 
-`func (o *InlineResponse20037) GetId() string`
+`func (o *InlineResponse20037) GetProfileId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetProfileIdOk
 
-`func (o *InlineResponse20037) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20037) GetProfileIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetProfileId
 
-`func (o *InlineResponse20037) SetId(v string)`
+`func (o *InlineResponse20037) SetProfileId(v string)`
 
-SetId sets Id field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasId
+### HasProfileId
 
-`func (o *InlineResponse20037) HasId() bool`
+`func (o *InlineResponse20037) HasProfileId() bool`
 
-HasId returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
-### GetTags
+### GetName
 
-`func (o *InlineResponse20037) GetTags() []string`
+`func (o *InlineResponse20037) GetName() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetNameOk
 
-`func (o *InlineResponse20037) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse20037) GetNameOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetName
 
-`func (o *InlineResponse20037) SetTags(v []string)`
+`func (o *InlineResponse20037) SetName(v string)`
 
-SetTags sets Tags field to given value.
+SetName sets Name field to given value.
 
-### HasTags
+### HasName
 
-`func (o *InlineResponse20037) HasTags() bool`
+`func (o *InlineResponse20037) HasName() bool`
 
-HasTags returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetWifiMac
+### GetSchedule
 
-`func (o *InlineResponse20037) GetWifiMac() string`
+`func (o *InlineResponse20037) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetSchedule returns the Schedule field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetScheduleOk
 
-`func (o *InlineResponse20037) GetWifiMacOk() (*string, bool)`
+`func (o *InlineResponse20037) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetSchedule
 
-`func (o *InlineResponse20037) SetWifiMac(v string)`
+`func (o *InlineResponse20037) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule)`
 
-SetWifiMac sets WifiMac field to given value.
+SetSchedule sets Schedule field to given value.
 
-### HasWifiMac
+### HasSchedule
 
-`func (o *InlineResponse20037) HasWifiMac() bool`
+`func (o *InlineResponse20037) HasSchedule() bool`
 
-HasWifiMac returns a boolean if a field has been set.
+HasSchedule returns a boolean if a field has been set.
 
-### GetSerial
+### GetConditions
 
-`func (o *InlineResponse20037) GetSerial() string`
+`func (o *InlineResponse20037) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetConditions returns the Conditions field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetConditionsOk
 
-`func (o *InlineResponse20037) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20037) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetConditions
 
-`func (o *InlineResponse20037) SetSerial(v string)`
+`func (o *InlineResponse20037) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
 
-SetSerial sets Serial field to given value.
+SetConditions sets Conditions field to given value.
 
-### HasSerial
 
-`func (o *InlineResponse20037) HasSerial() bool`
+### GetRecipients
 
-HasSerial returns a boolean if a field has been set.
+`func (o *InlineResponse20037) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+
+### GetRecipientsOk
+
+`func (o *InlineResponse20037) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecipients
+
+`func (o *InlineResponse20037) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+
+SetRecipients sets Recipients field to given value.
+
+### HasRecipients
+
+`func (o *InlineResponse20037) HasRecipients() bool`
+
+HasRecipients returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse20037) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse20037) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse20037) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse20037) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

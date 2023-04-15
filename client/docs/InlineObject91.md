@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the MQTT broker. | [optional] 
-**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
-**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
+**Name** | **string** | Name of the MQTT broker. | 
+**Host** | **string** | Host name/IP address where the MQTT broker runs. | 
+**Port** | **int32** | Host port though which the MQTT broker can be reached. | 
 **Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
 **Authentication** | Pointer to **map[string]interface{}** | Authentication settings of the MQTT broker | [optional] 
 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject91
 
-`func NewInlineObject91() *InlineObject91`
+`func NewInlineObject91(name string, host string, port int32, ) *InlineObject91`
 
 NewInlineObject91 instantiates a new InlineObject91 object
 This constructor will assign default values to properties that have it defined,
@@ -48,11 +48,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject91) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetHost
 
@@ -73,11 +68,6 @@ and a boolean to check if the value has been set.
 
 SetHost sets Host field to given value.
 
-### HasHost
-
-`func (o *InlineObject91) HasHost() bool`
-
-HasHost returns a boolean if a field has been set.
 
 ### GetPort
 
@@ -98,11 +88,6 @@ and a boolean to check if the value has been set.
 
 SetPort sets Port field to given value.
 
-### HasPort
-
-`func (o *InlineObject91) HasPort() bool`
-
-HasPort returns a boolean if a field has been set.
 
 ### GetSecurity
 

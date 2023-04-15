@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ports** | **[]string** | List of switch ports. Example: [1, 2-5, 1_MA-MOD-8X10G_1, 1_MA-MOD-8X10G_2-1_MA-MOD-8X10G_8] | 
+**Livestream** | Pointer to [**DevicesSerialSensorRelationshipsLivestream1**](DevicesSerialSensorRelationshipsLivestream1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject15
 
-`func NewInlineObject15(ports []string, ) *InlineObject15`
+`func NewInlineObject15() *InlineObject15`
 
 NewInlineObject15 instantiates a new InlineObject15 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject15WithDefaults instantiates a new InlineObject15 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPorts
+### GetLivestream
 
-`func (o *InlineObject15) GetPorts() []string`
+`func (o *InlineObject15) GetLivestream() DevicesSerialSensorRelationshipsLivestream1`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetLivestream returns the Livestream field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetLivestreamOk
 
-`func (o *InlineObject15) GetPortsOk() (*[]string, bool)`
+`func (o *InlineObject15) GetLivestreamOk() (*DevicesSerialSensorRelationshipsLivestream1, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetLivestreamOk returns a tuple with the Livestream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetLivestream
 
-`func (o *InlineObject15) SetPorts(v []string)`
+`func (o *InlineObject15) SetLivestream(v DevicesSerialSensorRelationshipsLivestream1)`
 
-SetPorts sets Ports field to given value.
+SetLivestream sets Livestream field to given value.
 
+### HasLivestream
+
+`func (o *InlineObject15) HasLivestream() bool`
+
+HasLivestream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

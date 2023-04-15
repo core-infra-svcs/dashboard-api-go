@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
+**GroupId** | Pointer to **string** | Id of staged upgrade group | [optional] 
+**Name** | Pointer to **string** | Name of the Staged Upgrade Group | [optional] 
+**Description** | Pointer to **string** | Description of the Staged Upgrade Group | [optional] 
+**IsDefault** | Pointer to **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | [optional] 
+**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices.md) |  | [optional] 
 
 ## Methods
 
@@ -26,6 +28,31 @@ will change when the set of required properties is changed
 NewInlineResponse20029WithDefaults instantiates a new InlineResponse20029 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetGroupId
+
+`func (o *InlineResponse20029) GetGroupId() string`
+
+GetGroupId returns the GroupId field if non-nil, zero value otherwise.
+
+### GetGroupIdOk
+
+`func (o *InlineResponse20029) GetGroupIdOk() (*string, bool)`
+
+GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupId
+
+`func (o *InlineResponse20029) SetGroupId(v string)`
+
+SetGroupId sets GroupId field to given value.
+
+### HasGroupId
+
+`func (o *InlineResponse20029) HasGroupId() bool`
+
+HasGroupId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -52,55 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetClientId
+### GetDescription
 
-`func (o *InlineResponse20029) GetClientId() string`
+`func (o *InlineResponse20029) GetDescription() string`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetDescriptionOk
 
-`func (o *InlineResponse20029) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse20029) GetDescriptionOk() (*string, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetDescription
 
-`func (o *InlineResponse20029) SetClientId(v string)`
+`func (o *InlineResponse20029) SetDescription(v string)`
 
-SetClientId sets ClientId field to given value.
+SetDescription sets Description field to given value.
 
-### HasClientId
+### HasDescription
 
-`func (o *InlineResponse20029) HasClientId() bool`
+`func (o *InlineResponse20029) HasDescription() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetAssigned
+### GetIsDefault
 
-`func (o *InlineResponse20029) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+`func (o *InlineResponse20029) GetIsDefault() bool`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetIsDefaultOk
 
-`func (o *InlineResponse20029) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+`func (o *InlineResponse20029) GetIsDefaultOk() (*bool, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetIsDefault
 
-`func (o *InlineResponse20029) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+`func (o *InlineResponse20029) SetIsDefault(v bool)`
 
-SetAssigned sets Assigned field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasAssigned
+### HasIsDefault
 
-`func (o *InlineResponse20029) HasAssigned() bool`
+`func (o *InlineResponse20029) HasIsDefault() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasIsDefault returns a boolean if a field has been set.
+
+### GetAssignedDevices
+
+`func (o *InlineResponse20029) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices`
+
+GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
+
+### GetAssignedDevicesOk
+
+`func (o *InlineResponse20029) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices, bool)`
+
+GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssignedDevices
+
+`func (o *InlineResponse20029) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices)`
+
+SetAssignedDevices sets AssignedDevices field to given value.
+
+### HasAssignedDevices
+
+`func (o *InlineResponse20029) HasAssignedDevices() bool`
+
+HasAssignedDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

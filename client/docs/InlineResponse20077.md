@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse20077Counts**](InlineResponse20077Counts.md) |  | [optional] 
-**Limits** | Pointer to [**InlineResponse20077Limits**](InlineResponse20077Limits.md) |  | [optional] 
+**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
+**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
+**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
+**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
+**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse20077WithDefaults instantiates a new InlineResponse20077 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetAssoc
 
-`func (o *InlineResponse20077) GetCounts() InlineResponse20077Counts`
+`func (o *InlineResponse20077) GetAssoc() int32`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetAssoc returns the Assoc field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetAssocOk
 
-`func (o *InlineResponse20077) GetCountsOk() (*InlineResponse20077Counts, bool)`
+`func (o *InlineResponse20077) GetAssocOk() (*int32, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetAssoc
 
-`func (o *InlineResponse20077) SetCounts(v InlineResponse20077Counts)`
+`func (o *InlineResponse20077) SetAssoc(v int32)`
 
-SetCounts sets Counts field to given value.
+SetAssoc sets Assoc field to given value.
 
-### HasCounts
+### HasAssoc
 
-`func (o *InlineResponse20077) HasCounts() bool`
+`func (o *InlineResponse20077) HasAssoc() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasAssoc returns a boolean if a field has been set.
 
-### GetLimits
+### GetAuth
 
-`func (o *InlineResponse20077) GetLimits() InlineResponse20077Limits`
+`func (o *InlineResponse20077) GetAuth() int32`
 
-GetLimits returns the Limits field if non-nil, zero value otherwise.
+GetAuth returns the Auth field if non-nil, zero value otherwise.
 
-### GetLimitsOk
+### GetAuthOk
 
-`func (o *InlineResponse20077) GetLimitsOk() (*InlineResponse20077Limits, bool)`
+`func (o *InlineResponse20077) GetAuthOk() (*int32, bool)`
 
-GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimits
+### SetAuth
 
-`func (o *InlineResponse20077) SetLimits(v InlineResponse20077Limits)`
+`func (o *InlineResponse20077) SetAuth(v int32)`
 
-SetLimits sets Limits field to given value.
+SetAuth sets Auth field to given value.
 
-### HasLimits
+### HasAuth
 
-`func (o *InlineResponse20077) HasLimits() bool`
+`func (o *InlineResponse20077) HasAuth() bool`
 
-HasLimits returns a boolean if a field has been set.
+HasAuth returns a boolean if a field has been set.
+
+### GetDhcp
+
+`func (o *InlineResponse20077) GetDhcp() int32`
+
+GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
+
+### GetDhcpOk
+
+`func (o *InlineResponse20077) GetDhcpOk() (*int32, bool)`
+
+GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcp
+
+`func (o *InlineResponse20077) SetDhcp(v int32)`
+
+SetDhcp sets Dhcp field to given value.
+
+### HasDhcp
+
+`func (o *InlineResponse20077) HasDhcp() bool`
+
+HasDhcp returns a boolean if a field has been set.
+
+### GetDns
+
+`func (o *InlineResponse20077) GetDns() int32`
+
+GetDns returns the Dns field if non-nil, zero value otherwise.
+
+### GetDnsOk
+
+`func (o *InlineResponse20077) GetDnsOk() (*int32, bool)`
+
+GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDns
+
+`func (o *InlineResponse20077) SetDns(v int32)`
+
+SetDns sets Dns field to given value.
+
+### HasDns
+
+`func (o *InlineResponse20077) HasDns() bool`
+
+HasDns returns a boolean if a field has been set.
+
+### GetSuccess
+
+`func (o *InlineResponse20077) GetSuccess() int32`
+
+GetSuccess returns the Success field if non-nil, zero value otherwise.
+
+### GetSuccessOk
+
+`func (o *InlineResponse20077) GetSuccessOk() (*int32, bool)`
+
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSuccess
+
+`func (o *InlineResponse20077) SetSuccess(v int32)`
+
+SetSuccess sets Success field to given value.
+
+### HasSuccess
+
+`func (o *InlineResponse20077) HasSuccess() bool`
+
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

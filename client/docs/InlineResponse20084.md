@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The device MAC address. | [optional] 
-**Name** | Pointer to **string** | The device name. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesNetwork.md) |  | [optional] 
-**ProductType** | Pointer to **string** | Device product type. | [optional] 
-**Serial** | Pointer to **string** | The device serial number. | [optional] 
-**Status** | Pointer to **string** | Status of the device. Possible values are: online, alerting, offline, dormant. | [optional] 
-**Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
+**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
+**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
+**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
+**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
+**ExpiresAt** | Pointer to **string** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
 
 ## Methods
 
@@ -30,31 +30,6 @@ will change when the set of required properties is changed
 NewInlineResponse20084WithDefaults instantiates a new InlineResponse20084 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetMac
-
-`func (o *InlineResponse20084) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse20084) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse20084) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse20084) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
 
 ### GetName
 
@@ -81,130 +56,155 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetNetwork
+### GetId
 
-`func (o *InlineResponse20084) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesNetwork`
+`func (o *InlineResponse20084) GetId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetIdOk
 
-`func (o *InlineResponse20084) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesNetwork, bool)`
+`func (o *InlineResponse20084) GetIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetId
 
-`func (o *InlineResponse20084) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesNetwork)`
+`func (o *InlineResponse20084) SetId(v string)`
 
-SetNetwork sets Network field to given value.
+SetId sets Id field to given value.
 
-### HasNetwork
+### HasId
 
-`func (o *InlineResponse20084) HasNetwork() bool`
+`func (o *InlineResponse20084) HasId() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetProductType
+### GetGroupPolicyId
 
-`func (o *InlineResponse20084) GetProductType() string`
+`func (o *InlineResponse20084) GetGroupPolicyId() string`
 
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetProductTypeOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse20084) GetProductTypeOk() (*string, bool)`
+`func (o *InlineResponse20084) GetGroupPolicyIdOk() (*string, bool)`
 
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductType
+### SetGroupPolicyId
 
-`func (o *InlineResponse20084) SetProductType(v string)`
+`func (o *InlineResponse20084) SetGroupPolicyId(v string)`
 
-SetProductType sets ProductType field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasProductType
+### HasGroupPolicyId
 
-`func (o *InlineResponse20084) HasProductType() bool`
+`func (o *InlineResponse20084) HasGroupPolicyId() bool`
 
-HasProductType returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
-### GetSerial
+### GetPassphrase
 
-`func (o *InlineResponse20084) GetSerial() string`
+`func (o *InlineResponse20084) GetPassphrase() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetPassphraseOk
 
-`func (o *InlineResponse20084) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20084) GetPassphraseOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetPassphrase
 
-`func (o *InlineResponse20084) SetSerial(v string)`
+`func (o *InlineResponse20084) SetPassphrase(v string)`
 
-SetSerial sets Serial field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasSerial
+### HasPassphrase
 
-`func (o *InlineResponse20084) HasSerial() bool`
+`func (o *InlineResponse20084) HasPassphrase() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetStatus
+### GetWifiPersonalNetworkId
 
-`func (o *InlineResponse20084) GetStatus() string`
+`func (o *InlineResponse20084) GetWifiPersonalNetworkId() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetWifiPersonalNetworkIdOk
 
-`func (o *InlineResponse20084) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20084) GetWifiPersonalNetworkIdOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetWifiPersonalNetworkId
 
-`func (o *InlineResponse20084) SetStatus(v string)`
+`func (o *InlineResponse20084) SetWifiPersonalNetworkId(v string)`
 
-SetStatus sets Status field to given value.
+SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
 
-### HasStatus
+### HasWifiPersonalNetworkId
 
-`func (o *InlineResponse20084) HasStatus() bool`
+`func (o *InlineResponse20084) HasWifiPersonalNetworkId() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasWifiPersonalNetworkId returns a boolean if a field has been set.
 
-### GetTags
+### GetEmail
 
-`func (o *InlineResponse20084) GetTags() []string`
+`func (o *InlineResponse20084) GetEmail() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetEmailOk
 
-`func (o *InlineResponse20084) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse20084) GetEmailOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetEmail
 
-`func (o *InlineResponse20084) SetTags(v []string)`
+`func (o *InlineResponse20084) SetEmail(v string)`
 
-SetTags sets Tags field to given value.
+SetEmail sets Email field to given value.
 
-### HasTags
+### HasEmail
 
-`func (o *InlineResponse20084) HasTags() bool`
+`func (o *InlineResponse20084) HasEmail() bool`
 
-HasTags returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
+
+### GetExpiresAt
+
+`func (o *InlineResponse20084) GetExpiresAt() string`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineResponse20084) GetExpiresAtOk() (*string, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineResponse20084) SetExpiresAt(v string)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineResponse20084) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

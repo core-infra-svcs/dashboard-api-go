@@ -4,22 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Device Name | [optional] 
-**Serial** | Pointer to **string** | Device Serial Number | [optional] 
-**Mac** | Pointer to **string** | MAC Address | [optional] 
-**PublicIp** | Pointer to **string** | Public IP Address | [optional] 
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Status** | Pointer to **string** | Device Status | [optional] 
-**LastReportedAt** | Pointer to **string** | Device Last Reported Location | [optional] 
-**LanIp** | Pointer to **string** | LAN IP Address | [optional] 
-**Gateway** | Pointer to **string** | IP Gateway | [optional] 
-**IpType** | Pointer to **string** | IP Type | [optional] 
-**PrimaryDns** | Pointer to **string** | Primary DNS | [optional] 
-**SecondaryDns** | Pointer to **string** | Secondary DNS | [optional] 
-**ProductType** | Pointer to **string** | Product Type | [optional] 
-**Components** | Pointer to [**InlineResponse20086Components**](InlineResponse20086Components.md) |  | [optional] 
-**Model** | Pointer to **string** | Model | [optional] 
-**Tags** | Pointer to **[]string** | Tags | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
+**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -40,405 +29,130 @@ NewInlineResponse20086WithDefaults instantiates a new InlineResponse20086 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetStartTs
 
-`func (o *InlineResponse20086) GetName() string`
+`func (o *InlineResponse20086) GetStartTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStartTsOk
 
-`func (o *InlineResponse20086) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20086) GetStartTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStartTs
 
-`func (o *InlineResponse20086) SetName(v string)`
+`func (o *InlineResponse20086) SetStartTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasName
+### HasStartTs
 
-`func (o *InlineResponse20086) HasName() bool`
+`func (o *InlineResponse20086) HasStartTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetSerial
+### GetEndTs
 
-`func (o *InlineResponse20086) GetSerial() string`
+`func (o *InlineResponse20086) GetEndTs() time.Time`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetEndTsOk
 
-`func (o *InlineResponse20086) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20086) GetEndTsOk() (*time.Time, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetEndTs
 
-`func (o *InlineResponse20086) SetSerial(v string)`
+`func (o *InlineResponse20086) SetEndTs(v time.Time)`
 
-SetSerial sets Serial field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasSerial
+### HasEndTs
 
-`func (o *InlineResponse20086) HasSerial() bool`
+`func (o *InlineResponse20086) HasEndTs() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetMac
+### GetTotalKbps
 
-`func (o *InlineResponse20086) GetMac() string`
+`func (o *InlineResponse20086) GetTotalKbps() int32`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetTotalKbpsOk
 
-`func (o *InlineResponse20086) GetMacOk() (*string, bool)`
+`func (o *InlineResponse20086) GetTotalKbpsOk() (*int32, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetTotalKbps
 
-`func (o *InlineResponse20086) SetMac(v string)`
+`func (o *InlineResponse20086) SetTotalKbps(v int32)`
 
-SetMac sets Mac field to given value.
+SetTotalKbps sets TotalKbps field to given value.
 
-### HasMac
+### HasTotalKbps
 
-`func (o *InlineResponse20086) HasMac() bool`
+`func (o *InlineResponse20086) HasTotalKbps() bool`
 
-HasMac returns a boolean if a field has been set.
+HasTotalKbps returns a boolean if a field has been set.
 
-### GetPublicIp
+### GetSentKbps
 
-`func (o *InlineResponse20086) GetPublicIp() string`
+`func (o *InlineResponse20086) GetSentKbps() int32`
 
-GetPublicIp returns the PublicIp field if non-nil, zero value otherwise.
+GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
 
-### GetPublicIpOk
+### GetSentKbpsOk
 
-`func (o *InlineResponse20086) GetPublicIpOk() (*string, bool)`
+`func (o *InlineResponse20086) GetSentKbpsOk() (*int32, bool)`
 
-GetPublicIpOk returns a tuple with the PublicIp field if it's non-nil, zero value otherwise
+GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPublicIp
+### SetSentKbps
 
-`func (o *InlineResponse20086) SetPublicIp(v string)`
+`func (o *InlineResponse20086) SetSentKbps(v int32)`
 
-SetPublicIp sets PublicIp field to given value.
+SetSentKbps sets SentKbps field to given value.
 
-### HasPublicIp
+### HasSentKbps
 
-`func (o *InlineResponse20086) HasPublicIp() bool`
+`func (o *InlineResponse20086) HasSentKbps() bool`
 
-HasPublicIp returns a boolean if a field has been set.
+HasSentKbps returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetReceivedKbps
 
-`func (o *InlineResponse20086) GetNetworkId() string`
+`func (o *InlineResponse20086) GetReceivedKbps() int32`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetReceivedKbpsOk
 
-`func (o *InlineResponse20086) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20086) GetReceivedKbpsOk() (*int32, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetReceivedKbps
 
-`func (o *InlineResponse20086) SetNetworkId(v string)`
+`func (o *InlineResponse20086) SetReceivedKbps(v int32)`
 
-SetNetworkId sets NetworkId field to given value.
+SetReceivedKbps sets ReceivedKbps field to given value.
 
-### HasNetworkId
+### HasReceivedKbps
 
-`func (o *InlineResponse20086) HasNetworkId() bool`
+`func (o *InlineResponse20086) HasReceivedKbps() bool`
 
-HasNetworkId returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse20086) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse20086) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse20086) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse20086) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetLastReportedAt
-
-`func (o *InlineResponse20086) GetLastReportedAt() string`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse20086) GetLastReportedAtOk() (*string, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse20086) SetLastReportedAt(v string)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-### HasLastReportedAt
-
-`func (o *InlineResponse20086) HasLastReportedAt() bool`
-
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetLanIp
-
-`func (o *InlineResponse20086) GetLanIp() string`
-
-GetLanIp returns the LanIp field if non-nil, zero value otherwise.
-
-### GetLanIpOk
-
-`func (o *InlineResponse20086) GetLanIpOk() (*string, bool)`
-
-GetLanIpOk returns a tuple with the LanIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLanIp
-
-`func (o *InlineResponse20086) SetLanIp(v string)`
-
-SetLanIp sets LanIp field to given value.
-
-### HasLanIp
-
-`func (o *InlineResponse20086) HasLanIp() bool`
-
-HasLanIp returns a boolean if a field has been set.
-
-### GetGateway
-
-`func (o *InlineResponse20086) GetGateway() string`
-
-GetGateway returns the Gateway field if non-nil, zero value otherwise.
-
-### GetGatewayOk
-
-`func (o *InlineResponse20086) GetGatewayOk() (*string, bool)`
-
-GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGateway
-
-`func (o *InlineResponse20086) SetGateway(v string)`
-
-SetGateway sets Gateway field to given value.
-
-### HasGateway
-
-`func (o *InlineResponse20086) HasGateway() bool`
-
-HasGateway returns a boolean if a field has been set.
-
-### GetIpType
-
-`func (o *InlineResponse20086) GetIpType() string`
-
-GetIpType returns the IpType field if non-nil, zero value otherwise.
-
-### GetIpTypeOk
-
-`func (o *InlineResponse20086) GetIpTypeOk() (*string, bool)`
-
-GetIpTypeOk returns a tuple with the IpType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpType
-
-`func (o *InlineResponse20086) SetIpType(v string)`
-
-SetIpType sets IpType field to given value.
-
-### HasIpType
-
-`func (o *InlineResponse20086) HasIpType() bool`
-
-HasIpType returns a boolean if a field has been set.
-
-### GetPrimaryDns
-
-`func (o *InlineResponse20086) GetPrimaryDns() string`
-
-GetPrimaryDns returns the PrimaryDns field if non-nil, zero value otherwise.
-
-### GetPrimaryDnsOk
-
-`func (o *InlineResponse20086) GetPrimaryDnsOk() (*string, bool)`
-
-GetPrimaryDnsOk returns a tuple with the PrimaryDns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPrimaryDns
-
-`func (o *InlineResponse20086) SetPrimaryDns(v string)`
-
-SetPrimaryDns sets PrimaryDns field to given value.
-
-### HasPrimaryDns
-
-`func (o *InlineResponse20086) HasPrimaryDns() bool`
-
-HasPrimaryDns returns a boolean if a field has been set.
-
-### GetSecondaryDns
-
-`func (o *InlineResponse20086) GetSecondaryDns() string`
-
-GetSecondaryDns returns the SecondaryDns field if non-nil, zero value otherwise.
-
-### GetSecondaryDnsOk
-
-`func (o *InlineResponse20086) GetSecondaryDnsOk() (*string, bool)`
-
-GetSecondaryDnsOk returns a tuple with the SecondaryDns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecondaryDns
-
-`func (o *InlineResponse20086) SetSecondaryDns(v string)`
-
-SetSecondaryDns sets SecondaryDns field to given value.
-
-### HasSecondaryDns
-
-`func (o *InlineResponse20086) HasSecondaryDns() bool`
-
-HasSecondaryDns returns a boolean if a field has been set.
-
-### GetProductType
-
-`func (o *InlineResponse20086) GetProductType() string`
-
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
-
-### GetProductTypeOk
-
-`func (o *InlineResponse20086) GetProductTypeOk() (*string, bool)`
-
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductType
-
-`func (o *InlineResponse20086) SetProductType(v string)`
-
-SetProductType sets ProductType field to given value.
-
-### HasProductType
-
-`func (o *InlineResponse20086) HasProductType() bool`
-
-HasProductType returns a boolean if a field has been set.
-
-### GetComponents
-
-`func (o *InlineResponse20086) GetComponents() InlineResponse20086Components`
-
-GetComponents returns the Components field if non-nil, zero value otherwise.
-
-### GetComponentsOk
-
-`func (o *InlineResponse20086) GetComponentsOk() (*InlineResponse20086Components, bool)`
-
-GetComponentsOk returns a tuple with the Components field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetComponents
-
-`func (o *InlineResponse20086) SetComponents(v InlineResponse20086Components)`
-
-SetComponents sets Components field to given value.
-
-### HasComponents
-
-`func (o *InlineResponse20086) HasComponents() bool`
-
-HasComponents returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse20086) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse20086) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse20086) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse20086) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse20086) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse20086) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse20086) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse20086) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasReceivedKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

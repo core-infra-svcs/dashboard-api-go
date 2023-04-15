@@ -4,13 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** | One of \&quot;delete\&quot; or \&quot;restrict processing\&quot; | [optional] 
-**Datasets** | Pointer to **[]string** | The datasets related to the provided key that should be deleted. Only applies to \&quot;delete\&quot; requests. The value \&quot;all\&quot; will be expanded to all datasets applicable to this type. The datasets by applicable to each type are: mac (usage, events, traffic), email (users, loginAttempts), username (users, loginAttempts), bluetoothMac (client, connectivity), smDeviceId (device), smUserId (user) | [optional] 
-**Username** | Pointer to **string** | The username of a network log in. Only applies to \&quot;delete\&quot; requests. | [optional] 
-**Email** | Pointer to **string** | The email of a network user account. Only applies to \&quot;delete\&quot; requests. | [optional] 
-**Mac** | Pointer to **string** | The MAC of a network client device. Applies to both \&quot;restrict processing\&quot; and \&quot;delete\&quot; requests. | [optional] 
-**SmDeviceId** | Pointer to **string** | The sm_device_id of a Systems Manager device. The only way to \&quot;restrict processing\&quot; or \&quot;delete\&quot; a Systems Manager device. Must include \&quot;device\&quot; in the dataset for a \&quot;delete\&quot; request to destroy the device. | [optional] 
-**SmUserId** | Pointer to **string** | The sm_user_id of a Systems Manager user. The only way to \&quot;restrict processing\&quot; or \&quot;delete\&quot; a Systems Manager user. Must include \&quot;user\&quot; in the dataset for a \&quot;delete\&quot; request to destroy the user. | [optional] 
+**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
+**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
+**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
+**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
+**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
 
 ## Methods
 
@@ -31,180 +29,130 @@ NewInlineObject93WithDefaults instantiates a new InlineObject93 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetReportingEnabled
 
-`func (o *InlineObject93) GetType() string`
+`func (o *InlineObject93) GetReportingEnabled() bool`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetReportingEnabledOk
 
-`func (o *InlineObject93) GetTypeOk() (*string, bool)`
+`func (o *InlineObject93) GetReportingEnabledOk() (*bool, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetReportingEnabled
 
-`func (o *InlineObject93) SetType(v string)`
+`func (o *InlineObject93) SetReportingEnabled(v bool)`
 
-SetType sets Type field to given value.
+SetReportingEnabled sets ReportingEnabled field to given value.
 
-### HasType
+### HasReportingEnabled
 
-`func (o *InlineObject93) HasType() bool`
+`func (o *InlineObject93) HasReportingEnabled() bool`
 
-HasType returns a boolean if a field has been set.
+HasReportingEnabled returns a boolean if a field has been set.
 
-### GetDatasets
+### GetCollectorIp
 
-`func (o *InlineObject93) GetDatasets() []string`
+`func (o *InlineObject93) GetCollectorIp() string`
 
-GetDatasets returns the Datasets field if non-nil, zero value otherwise.
+GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
 
-### GetDatasetsOk
+### GetCollectorIpOk
 
-`func (o *InlineObject93) GetDatasetsOk() (*[]string, bool)`
+`func (o *InlineObject93) GetCollectorIpOk() (*string, bool)`
 
-GetDatasetsOk returns a tuple with the Datasets field if it's non-nil, zero value otherwise
+GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDatasets
+### SetCollectorIp
 
-`func (o *InlineObject93) SetDatasets(v []string)`
+`func (o *InlineObject93) SetCollectorIp(v string)`
 
-SetDatasets sets Datasets field to given value.
+SetCollectorIp sets CollectorIp field to given value.
 
-### HasDatasets
+### HasCollectorIp
 
-`func (o *InlineObject93) HasDatasets() bool`
+`func (o *InlineObject93) HasCollectorIp() bool`
 
-HasDatasets returns a boolean if a field has been set.
+HasCollectorIp returns a boolean if a field has been set.
 
-### GetUsername
+### GetCollectorPort
 
-`func (o *InlineObject93) GetUsername() string`
+`func (o *InlineObject93) GetCollectorPort() int32`
 
-GetUsername returns the Username field if non-nil, zero value otherwise.
+GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
 
-### GetUsernameOk
+### GetCollectorPortOk
 
-`func (o *InlineObject93) GetUsernameOk() (*string, bool)`
+`func (o *InlineObject93) GetCollectorPortOk() (*int32, bool)`
 
-GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsername
+### SetCollectorPort
 
-`func (o *InlineObject93) SetUsername(v string)`
+`func (o *InlineObject93) SetCollectorPort(v int32)`
 
-SetUsername sets Username field to given value.
+SetCollectorPort sets CollectorPort field to given value.
 
-### HasUsername
+### HasCollectorPort
 
-`func (o *InlineObject93) HasUsername() bool`
+`func (o *InlineObject93) HasCollectorPort() bool`
 
-HasUsername returns a boolean if a field has been set.
+HasCollectorPort returns a boolean if a field has been set.
 
-### GetEmail
+### GetEtaEnabled
 
-`func (o *InlineObject93) GetEmail() string`
+`func (o *InlineObject93) GetEtaEnabled() bool`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetEtaEnabledOk
 
-`func (o *InlineObject93) GetEmailOk() (*string, bool)`
+`func (o *InlineObject93) GetEtaEnabledOk() (*bool, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetEtaEnabled
 
-`func (o *InlineObject93) SetEmail(v string)`
+`func (o *InlineObject93) SetEtaEnabled(v bool)`
 
-SetEmail sets Email field to given value.
+SetEtaEnabled sets EtaEnabled field to given value.
 
-### HasEmail
+### HasEtaEnabled
 
-`func (o *InlineObject93) HasEmail() bool`
+`func (o *InlineObject93) HasEtaEnabled() bool`
 
-HasEmail returns a boolean if a field has been set.
+HasEtaEnabled returns a boolean if a field has been set.
 
-### GetMac
+### GetEtaDstPort
 
-`func (o *InlineObject93) GetMac() string`
+`func (o *InlineObject93) GetEtaDstPort() int32`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetEtaDstPortOk
 
-`func (o *InlineObject93) GetMacOk() (*string, bool)`
+`func (o *InlineObject93) GetEtaDstPortOk() (*int32, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetEtaDstPort
 
-`func (o *InlineObject93) SetMac(v string)`
+`func (o *InlineObject93) SetEtaDstPort(v int32)`
 
-SetMac sets Mac field to given value.
+SetEtaDstPort sets EtaDstPort field to given value.
 
-### HasMac
+### HasEtaDstPort
 
-`func (o *InlineObject93) HasMac() bool`
+`func (o *InlineObject93) HasEtaDstPort() bool`
 
-HasMac returns a boolean if a field has been set.
-
-### GetSmDeviceId
-
-`func (o *InlineObject93) GetSmDeviceId() string`
-
-GetSmDeviceId returns the SmDeviceId field if non-nil, zero value otherwise.
-
-### GetSmDeviceIdOk
-
-`func (o *InlineObject93) GetSmDeviceIdOk() (*string, bool)`
-
-GetSmDeviceIdOk returns a tuple with the SmDeviceId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSmDeviceId
-
-`func (o *InlineObject93) SetSmDeviceId(v string)`
-
-SetSmDeviceId sets SmDeviceId field to given value.
-
-### HasSmDeviceId
-
-`func (o *InlineObject93) HasSmDeviceId() bool`
-
-HasSmDeviceId returns a boolean if a field has been set.
-
-### GetSmUserId
-
-`func (o *InlineObject93) GetSmUserId() string`
-
-GetSmUserId returns the SmUserId field if non-nil, zero value otherwise.
-
-### GetSmUserIdOk
-
-`func (o *InlineObject93) GetSmUserIdOk() (*string, bool)`
-
-GetSmUserIdOk returns a tuple with the SmUserId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSmUserId
-
-`func (o *InlineObject93) SetSmUserId(v string)`
-
-SetSmUserId sets SmUserId field to given value.
-
-### HasSmUserId
-
-`func (o *InlineObject93) HasSmUserId() bool`
-
-HasSmUserId returns a boolean if a field has been set.
+HasEtaDstPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

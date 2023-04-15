@@ -4,12 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StaticDelegatedPrefixId** | Pointer to **string** | Static delegated prefix id. | [optional] 
-**Prefix** | Pointer to **string** | IPv6 prefix/prefix length. | [optional] 
-**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin.md) |  | [optional] 
-**Description** | Pointer to **string** | Identifying description for the prefix. | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Prefix creation time. | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | Prefix Updated time. | [optional] 
+**Id** | Pointer to **string** | Network ID | [optional] 
+**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Network name | [optional] 
+**ProductTypes** | Pointer to **[]string** | List of the product types that the network supports | [optional] 
+**TimeZone** | Pointer to **string** | Timezone of the network | [optional] 
+**Tags** | Pointer to **[]string** | Network tags | [optional] 
+**EnrollmentString** | Pointer to **string** | Enrollment string for the network | [optional] 
+**Url** | Pointer to **string** | URL to the network Dashboard UI | [optional] 
+**Notes** | Pointer to **string** | Notes for the network | [optional] 
+**IsBoundToConfigTemplate** | Pointer to **bool** | If the network is bound to a config template | [optional] 
 
 ## Methods
 
@@ -30,155 +34,255 @@ NewInlineResponse20010WithDefaults instantiates a new InlineResponse20010 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStaticDelegatedPrefixId
+### GetId
 
-`func (o *InlineResponse20010) GetStaticDelegatedPrefixId() string`
+`func (o *InlineResponse20010) GetId() string`
 
-GetStaticDelegatedPrefixId returns the StaticDelegatedPrefixId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetStaticDelegatedPrefixIdOk
+### GetIdOk
 
-`func (o *InlineResponse20010) GetStaticDelegatedPrefixIdOk() (*string, bool)`
+`func (o *InlineResponse20010) GetIdOk() (*string, bool)`
 
-GetStaticDelegatedPrefixIdOk returns a tuple with the StaticDelegatedPrefixId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStaticDelegatedPrefixId
+### SetId
 
-`func (o *InlineResponse20010) SetStaticDelegatedPrefixId(v string)`
+`func (o *InlineResponse20010) SetId(v string)`
 
-SetStaticDelegatedPrefixId sets StaticDelegatedPrefixId field to given value.
+SetId sets Id field to given value.
 
-### HasStaticDelegatedPrefixId
+### HasId
 
-`func (o *InlineResponse20010) HasStaticDelegatedPrefixId() bool`
+`func (o *InlineResponse20010) HasId() bool`
 
-HasStaticDelegatedPrefixId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetPrefix
+### GetOrganizationId
 
-`func (o *InlineResponse20010) GetPrefix() string`
+`func (o *InlineResponse20010) GetOrganizationId() string`
 
-GetPrefix returns the Prefix field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetPrefixOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse20010) GetPrefixOk() (*string, bool)`
+`func (o *InlineResponse20010) GetOrganizationIdOk() (*string, bool)`
 
-GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrefix
+### SetOrganizationId
 
-`func (o *InlineResponse20010) SetPrefix(v string)`
+`func (o *InlineResponse20010) SetOrganizationId(v string)`
 
-SetPrefix sets Prefix field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasPrefix
+### HasOrganizationId
 
-`func (o *InlineResponse20010) HasPrefix() bool`
+`func (o *InlineResponse20010) HasOrganizationId() bool`
 
-HasPrefix returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
 
-### GetOrigin
+### GetName
 
-`func (o *InlineResponse20010) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin`
+`func (o *InlineResponse20010) GetName() string`
 
-GetOrigin returns the Origin field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetOriginOk
+### GetNameOk
 
-`func (o *InlineResponse20010) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin, bool)`
+`func (o *InlineResponse20010) GetNameOk() (*string, bool)`
 
-GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrigin
+### SetName
 
-`func (o *InlineResponse20010) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin)`
+`func (o *InlineResponse20010) SetName(v string)`
 
-SetOrigin sets Origin field to given value.
+SetName sets Name field to given value.
 
-### HasOrigin
+### HasName
 
-`func (o *InlineResponse20010) HasOrigin() bool`
+`func (o *InlineResponse20010) HasName() bool`
 
-HasOrigin returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDescription
+### GetProductTypes
 
-`func (o *InlineResponse20010) GetDescription() string`
+`func (o *InlineResponse20010) GetProductTypes() []string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetProductTypesOk
 
-`func (o *InlineResponse20010) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse20010) GetProductTypesOk() (*[]string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetProductTypes
 
-`func (o *InlineResponse20010) SetDescription(v string)`
+`func (o *InlineResponse20010) SetProductTypes(v []string)`
 
-SetDescription sets Description field to given value.
+SetProductTypes sets ProductTypes field to given value.
 
-### HasDescription
+### HasProductTypes
 
-`func (o *InlineResponse20010) HasDescription() bool`
+`func (o *InlineResponse20010) HasProductTypes() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasProductTypes returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetTimeZone
 
-`func (o *InlineResponse20010) GetCreatedAt() time.Time`
+`func (o *InlineResponse20010) GetTimeZone() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetTimeZoneOk
 
-`func (o *InlineResponse20010) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse20010) GetTimeZoneOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetTimeZone
 
-`func (o *InlineResponse20010) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse20010) SetTimeZone(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasCreatedAt
+### HasTimeZone
 
-`func (o *InlineResponse20010) HasCreatedAt() bool`
+`func (o *InlineResponse20010) HasTimeZone() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
-### GetUpdatedAt
+### GetTags
 
-`func (o *InlineResponse20010) GetUpdatedAt() time.Time`
+`func (o *InlineResponse20010) GetTags() []string`
 
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetUpdatedAtOk
+### GetTagsOk
 
-`func (o *InlineResponse20010) GetUpdatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse20010) GetTagsOk() (*[]string, bool)`
 
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpdatedAt
+### SetTags
 
-`func (o *InlineResponse20010) SetUpdatedAt(v time.Time)`
+`func (o *InlineResponse20010) SetTags(v []string)`
 
-SetUpdatedAt sets UpdatedAt field to given value.
+SetTags sets Tags field to given value.
 
-### HasUpdatedAt
+### HasTags
 
-`func (o *InlineResponse20010) HasUpdatedAt() bool`
+`func (o *InlineResponse20010) HasTags() bool`
 
-HasUpdatedAt returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetEnrollmentString
+
+`func (o *InlineResponse20010) GetEnrollmentString() string`
+
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
+
+### GetEnrollmentStringOk
+
+`func (o *InlineResponse20010) GetEnrollmentStringOk() (*string, bool)`
+
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnrollmentString
+
+`func (o *InlineResponse20010) SetEnrollmentString(v string)`
+
+SetEnrollmentString sets EnrollmentString field to given value.
+
+### HasEnrollmentString
+
+`func (o *InlineResponse20010) HasEnrollmentString() bool`
+
+HasEnrollmentString returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse20010) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse20010) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse20010) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse20010) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse20010) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse20010) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse20010) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse20010) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetIsBoundToConfigTemplate
+
+`func (o *InlineResponse20010) GetIsBoundToConfigTemplate() bool`
+
+GetIsBoundToConfigTemplate returns the IsBoundToConfigTemplate field if non-nil, zero value otherwise.
+
+### GetIsBoundToConfigTemplateOk
+
+`func (o *InlineResponse20010) GetIsBoundToConfigTemplateOk() (*bool, bool)`
+
+GetIsBoundToConfigTemplateOk returns a tuple with the IsBoundToConfigTemplate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsBoundToConfigTemplate
+
+`func (o *InlineResponse20010) SetIsBoundToConfigTemplate(v bool)`
+
+SetIsBoundToConfigTemplate sets IsBoundToConfigTemplate field to given value.
+
+### HasIsBoundToConfigTemplate
+
+`func (o *InlineResponse20010) HasIsBoundToConfigTemplate() bool`
+
+HasIsBoundToConfigTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

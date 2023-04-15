@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the Dashboard branding policy. | 
-**Enabled** | **bool** | Boolean indicating whether this policy is enabled. | 
-**AdminSettings** | [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
-**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
 ### NewInlineObject183
 
-`func NewInlineObject183(name string, enabled bool, adminSettings OrganizationsOrganizationIdBrandingPoliciesAdminSettings, ) *InlineObject183`
+`func NewInlineObject183() *InlineObject183`
 
 NewInlineObject183 instantiates a new InlineObject183 object
 This constructor will assign default values to properties that have it defined,
@@ -29,115 +26,55 @@ NewInlineObject183WithDefaults instantiates a new InlineObject183 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRules
 
-`func (o *InlineObject183) GetName() string`
+`func (o *InlineObject183) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesOk
 
-`func (o *InlineObject183) GetNameOk() (*string, bool)`
+`func (o *InlineObject183) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRules
 
-`func (o *InlineObject183) SetName(v string)`
+`func (o *InlineObject183) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
 
-SetName sets Name field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetEnabled
+`func (o *InlineObject183) HasRules() bool`
 
-`func (o *InlineObject183) GetEnabled() bool`
+HasRules returns a boolean if a field has been set.
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+### GetSyslogDefaultRule
 
-### GetEnabledOk
+`func (o *InlineObject183) GetSyslogDefaultRule() bool`
 
-`func (o *InlineObject183) GetEnabledOk() (*bool, bool)`
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+### GetSyslogDefaultRuleOk
+
+`func (o *InlineObject183) GetSyslogDefaultRuleOk() (*bool, bool)`
+
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetSyslogDefaultRule
 
-`func (o *InlineObject183) SetEnabled(v bool)`
+`func (o *InlineObject183) SetSyslogDefaultRule(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
 
+### HasSyslogDefaultRule
 
-### GetAdminSettings
+`func (o *InlineObject183) HasSyslogDefaultRule() bool`
 
-`func (o *InlineObject183) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
-
-GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
-
-### GetAdminSettingsOk
-
-`func (o *InlineObject183) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
-
-GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdminSettings
-
-`func (o *InlineObject183) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
-
-SetAdminSettings sets AdminSettings field to given value.
-
-
-### GetHelpSettings
-
-`func (o *InlineObject183) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
-
-GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
-
-### GetHelpSettingsOk
-
-`func (o *InlineObject183) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
-
-GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHelpSettings
-
-`func (o *InlineObject183) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
-
-SetHelpSettings sets HelpSettings field to given value.
-
-### HasHelpSettings
-
-`func (o *InlineObject183) HasHelpSettings() bool`
-
-HasHelpSettings returns a boolean if a field has been set.
-
-### GetCustomLogo
-
-`func (o *InlineObject183) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
-
-GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
-
-### GetCustomLogoOk
-
-`func (o *InlineObject183) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
-
-GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCustomLogo
-
-`func (o *InlineObject183) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
-
-SetCustomLogo sets CustomLogo field to given value.
-
-### HasCustomLogo
-
-`func (o *InlineObject183) HasCustomLogo() bool`
-
-HasCustomLogo returns a boolean if a field has been set.
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

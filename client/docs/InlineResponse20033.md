@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
-**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
-**LocalStatusPage** | Pointer to [**InlineResponse20033LocalStatusPage**](InlineResponse20033LocalStatusPage.md) |  | [optional] 
-**SecurePort** | Pointer to [**InlineResponse20033SecurePort**](InlineResponse20033SecurePort.md) |  | [optional] 
-**Fips** | Pointer to [**InlineResponse20033Fips**](InlineResponse20033Fips.md) |  | [optional] 
-**NamedVlans** | Pointer to [**InlineResponse20033NamedVlans**](InlineResponse20033NamedVlans.md) |  | [optional] 
-**ClientPrivacy** | Pointer to [**InlineResponse20033ClientPrivacy**](InlineResponse20033ClientPrivacy.md) |  | [optional] 
+**Id** | Pointer to **string** | Meraki auth user id | [optional] 
+**Email** | Pointer to **string** | Email address of the user | [optional] 
+**Name** | Pointer to **string** | Name of the user | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
 
 ## Methods
 
@@ -31,180 +31,180 @@ NewInlineResponse20033WithDefaults instantiates a new InlineResponse20033 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLocalStatusPageEnabled
+### GetId
 
-`func (o *InlineResponse20033) GetLocalStatusPageEnabled() bool`
+`func (o *InlineResponse20033) GetId() string`
 
-GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse20033) GetLocalStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20033) GetIdOk() (*string, bool)`
 
-GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPageEnabled
+### SetId
 
-`func (o *InlineResponse20033) SetLocalStatusPageEnabled(v bool)`
+`func (o *InlineResponse20033) SetId(v string)`
 
-SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
+SetId sets Id field to given value.
 
-### HasLocalStatusPageEnabled
+### HasId
 
-`func (o *InlineResponse20033) HasLocalStatusPageEnabled() bool`
+`func (o *InlineResponse20033) HasId() bool`
 
-HasLocalStatusPageEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetRemoteStatusPageEnabled
+### GetEmail
 
-`func (o *InlineResponse20033) GetRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse20033) GetEmail() string`
 
-GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetRemoteStatusPageEnabledOk
+### GetEmailOk
 
-`func (o *InlineResponse20033) GetRemoteStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20033) GetEmailOk() (*string, bool)`
 
-GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemoteStatusPageEnabled
+### SetEmail
 
-`func (o *InlineResponse20033) SetRemoteStatusPageEnabled(v bool)`
+`func (o *InlineResponse20033) SetEmail(v string)`
 
-SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
+SetEmail sets Email field to given value.
 
-### HasRemoteStatusPageEnabled
+### HasEmail
 
-`func (o *InlineResponse20033) HasRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse20033) HasEmail() bool`
 
-HasRemoteStatusPageEnabled returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetLocalStatusPage
+### GetName
 
-`func (o *InlineResponse20033) GetLocalStatusPage() InlineResponse20033LocalStatusPage`
+`func (o *InlineResponse20033) GetName() string`
 
-GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageOk
+### GetNameOk
 
-`func (o *InlineResponse20033) GetLocalStatusPageOk() (*InlineResponse20033LocalStatusPage, bool)`
+`func (o *InlineResponse20033) GetNameOk() (*string, bool)`
 
-GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPage
+### SetName
 
-`func (o *InlineResponse20033) SetLocalStatusPage(v InlineResponse20033LocalStatusPage)`
+`func (o *InlineResponse20033) SetName(v string)`
 
-SetLocalStatusPage sets LocalStatusPage field to given value.
+SetName sets Name field to given value.
 
-### HasLocalStatusPage
+### HasName
 
-`func (o *InlineResponse20033) HasLocalStatusPage() bool`
+`func (o *InlineResponse20033) HasName() bool`
 
-HasLocalStatusPage returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSecurePort
+### GetCreatedAt
 
-`func (o *InlineResponse20033) GetSecurePort() InlineResponse20033SecurePort`
+`func (o *InlineResponse20033) GetCreatedAt() time.Time`
 
-GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetSecurePortOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse20033) GetSecurePortOk() (*InlineResponse20033SecurePort, bool)`
+`func (o *InlineResponse20033) GetCreatedAtOk() (*time.Time, bool)`
 
-GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurePort
+### SetCreatedAt
 
-`func (o *InlineResponse20033) SetSecurePort(v InlineResponse20033SecurePort)`
+`func (o *InlineResponse20033) SetCreatedAt(v time.Time)`
 
-SetSecurePort sets SecurePort field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasSecurePort
+### HasCreatedAt
 
-`func (o *InlineResponse20033) HasSecurePort() bool`
+`func (o *InlineResponse20033) HasCreatedAt() bool`
 
-HasSecurePort returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetFips
+### GetAccountType
 
-`func (o *InlineResponse20033) GetFips() InlineResponse20033Fips`
+`func (o *InlineResponse20033) GetAccountType() string`
 
-GetFips returns the Fips field if non-nil, zero value otherwise.
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
 
-### GetFipsOk
+### GetAccountTypeOk
 
-`func (o *InlineResponse20033) GetFipsOk() (*InlineResponse20033Fips, bool)`
+`func (o *InlineResponse20033) GetAccountTypeOk() (*string, bool)`
 
-GetFipsOk returns a tuple with the Fips field if it's non-nil, zero value otherwise
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFips
+### SetAccountType
 
-`func (o *InlineResponse20033) SetFips(v InlineResponse20033Fips)`
+`func (o *InlineResponse20033) SetAccountType(v string)`
 
-SetFips sets Fips field to given value.
+SetAccountType sets AccountType field to given value.
 
-### HasFips
+### HasAccountType
 
-`func (o *InlineResponse20033) HasFips() bool`
+`func (o *InlineResponse20033) HasAccountType() bool`
 
-HasFips returns a boolean if a field has been set.
+HasAccountType returns a boolean if a field has been set.
 
-### GetNamedVlans
+### GetIsAdmin
 
-`func (o *InlineResponse20033) GetNamedVlans() InlineResponse20033NamedVlans`
+`func (o *InlineResponse20033) GetIsAdmin() bool`
 
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
 
-### GetNamedVlansOk
+### GetIsAdminOk
 
-`func (o *InlineResponse20033) GetNamedVlansOk() (*InlineResponse20033NamedVlans, bool)`
+`func (o *InlineResponse20033) GetIsAdminOk() (*bool, bool)`
 
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNamedVlans
+### SetIsAdmin
 
-`func (o *InlineResponse20033) SetNamedVlans(v InlineResponse20033NamedVlans)`
+`func (o *InlineResponse20033) SetIsAdmin(v bool)`
 
-SetNamedVlans sets NamedVlans field to given value.
+SetIsAdmin sets IsAdmin field to given value.
 
-### HasNamedVlans
+### HasIsAdmin
 
-`func (o *InlineResponse20033) HasNamedVlans() bool`
+`func (o *InlineResponse20033) HasIsAdmin() bool`
 
-HasNamedVlans returns a boolean if a field has been set.
+HasIsAdmin returns a boolean if a field has been set.
 
-### GetClientPrivacy
+### GetAuthorizations
 
-`func (o *InlineResponse20033) GetClientPrivacy() InlineResponse20033ClientPrivacy`
+`func (o *InlineResponse20033) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
 
-GetClientPrivacy returns the ClientPrivacy field if non-nil, zero value otherwise.
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
 
-### GetClientPrivacyOk
+### GetAuthorizationsOk
 
-`func (o *InlineResponse20033) GetClientPrivacyOk() (*InlineResponse20033ClientPrivacy, bool)`
+`func (o *InlineResponse20033) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
 
-GetClientPrivacyOk returns a tuple with the ClientPrivacy field if it's non-nil, zero value otherwise
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientPrivacy
+### SetAuthorizations
 
-`func (o *InlineResponse20033) SetClientPrivacy(v InlineResponse20033ClientPrivacy)`
+`func (o *InlineResponse20033) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
 
-SetClientPrivacy sets ClientPrivacy field to given value.
+SetAuthorizations sets Authorizations field to given value.
 
-### HasClientPrivacy
+### HasAuthorizations
 
-`func (o *InlineResponse20033) HasClientPrivacy() bool`
+`func (o *InlineResponse20033) HasAuthorizations() bool`
 
-HasClientPrivacy returns a boolean if a field has been set.
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

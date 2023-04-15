@@ -64,7 +64,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    createNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject62("Name_example") // InlineObject62 | 
+    createNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject63("Name_example") // InlineObject63 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -94,7 +94,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkCameraQuality
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkCameraQualityRetentionProfile** | [**InlineObject62**](InlineObject62.md) |  | 
+ **createNetworkCameraQualityRetentionProfile** | [**InlineObject63**](InlineObject63.md) |  | 
 
 ### Return type
 
@@ -136,7 +136,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | 
-    createNetworkCameraWirelessProfile := *openapiclient.NewInlineObject64("Name_example", *openapiclient.NewNetworksNetworkIdCameraWirelessProfilesSsid()) // InlineObject64 | 
+    createNetworkCameraWirelessProfile := *openapiclient.NewInlineObject65("Name_example", *openapiclient.NewNetworksNetworkIdCameraWirelessProfilesSsid()) // InlineObject65 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -166,7 +166,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkCameraWireles
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkCameraWirelessProfile** | [**InlineObject64**](InlineObject64.md) |  | 
+ **createNetworkCameraWirelessProfile** | [**InlineObject65**](InlineObject65.md) |  | 
 
 ### Return type
 
@@ -208,7 +208,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject186() // InlineObject186 |  (optional)
+    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject187() // InlineObject187 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -238,7 +238,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraCu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject186**](InlineObject186.md) |  | 
+ **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject187**](InlineObject187.md) |  | 
 
 ### Return type
 
@@ -2365,7 +2365,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     qualityRetentionProfileId := "qualityRetentionProfileId_example" // string | 
-    updateNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject63() // InlineObject63 |  (optional)
+    updateNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject64() // InlineObject64 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2397,7 +2397,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCameraQualityRetentionProfile** | [**InlineObject63**](InlineObject63.md) |  | 
+ **updateNetworkCameraQualityRetentionProfile** | [**InlineObject64**](InlineObject64.md) |  | 
 
 ### Return type
 
@@ -2440,7 +2440,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | 
     wirelessProfileId := "wirelessProfileId_example" // string | 
-    updateNetworkCameraWirelessProfile := *openapiclient.NewInlineObject65() // InlineObject65 |  (optional)
+    updateNetworkCameraWirelessProfile := *openapiclient.NewInlineObject66() // InlineObject66 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2472,7 +2472,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCameraWirelessProfile** | [**InlineObject65**](InlineObject65.md) |  | 
+ **updateNetworkCameraWirelessProfile** | [**InlineObject66**](InlineObject66.md) |  | 
 
 ### Return type
 
@@ -2514,7 +2514,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject187() // InlineObject187 |  (optional)
+    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject188() // InlineObject188 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2544,7 +2544,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationCameraOn
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationCameraOnboardingStatuses** | [**InlineObject187**](InlineObject187.md) |  | 
+ **updateOrganizationCameraOnboardingStatuses** | [**InlineObject188**](InlineObject188.md) |  | 
 
 ### Return type
 

@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
-**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Serial** | Pointer to **string** | Serial of MX device | [optional] 
+**Uplink** | Pointer to **string** | Uplink interface (wan1, wan2, or cellular) | [optional] 
+**Ip** | Pointer to **string** | IP address of uplink | [optional] 
+**TimeSeries** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries**](OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries.md) | Loss and latency timeseries data | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200105WithDefaults instantiates a new InlineResponse200105 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIdpId
+### GetNetworkId
 
-`func (o *InlineResponse200105) GetIdpId() string`
+`func (o *InlineResponse200105) GetNetworkId() string`
 
-GetIdpId returns the IdpId field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetIdpIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200105) GetIdpIdOk() (*string, bool)`
+`func (o *InlineResponse200105) GetNetworkIdOk() (*string, bool)`
 
-GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdpId
+### SetNetworkId
 
-`func (o *InlineResponse200105) SetIdpId(v string)`
+`func (o *InlineResponse200105) SetNetworkId(v string)`
 
-SetIdpId sets IdpId field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasIdpId
+### HasNetworkId
 
-`func (o *InlineResponse200105) HasIdpId() bool`
+`func (o *InlineResponse200105) HasNetworkId() bool`
 
-HasIdpId returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetConsumerUrl
+### GetSerial
 
-`func (o *InlineResponse200105) GetConsumerUrl() string`
+`func (o *InlineResponse200105) GetSerial() string`
 
-GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetConsumerUrlOk
+### GetSerialOk
 
-`func (o *InlineResponse200105) GetConsumerUrlOk() (*string, bool)`
+`func (o *InlineResponse200105) GetSerialOk() (*string, bool)`
 
-GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConsumerUrl
+### SetSerial
 
-`func (o *InlineResponse200105) SetConsumerUrl(v string)`
+`func (o *InlineResponse200105) SetSerial(v string)`
 
-SetConsumerUrl sets ConsumerUrl field to given value.
+SetSerial sets Serial field to given value.
 
-### HasConsumerUrl
+### HasSerial
 
-`func (o *InlineResponse200105) HasConsumerUrl() bool`
+`func (o *InlineResponse200105) HasSerial() bool`
 
-HasConsumerUrl returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetX509certSha1Fingerprint
+### GetUplink
 
-`func (o *InlineResponse200105) GetX509certSha1Fingerprint() string`
+`func (o *InlineResponse200105) GetUplink() string`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetUplinkOk
 
-`func (o *InlineResponse200105) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineResponse200105) GetUplinkOk() (*string, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetUplink
 
-`func (o *InlineResponse200105) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineResponse200105) SetUplink(v string)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetUplink sets Uplink field to given value.
 
-### HasX509certSha1Fingerprint
+### HasUplink
 
-`func (o *InlineResponse200105) HasX509certSha1Fingerprint() bool`
+`func (o *InlineResponse200105) HasUplink() bool`
 
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
+HasUplink returns a boolean if a field has been set.
 
-### GetSloLogoutUrl
+### GetIp
 
-`func (o *InlineResponse200105) GetSloLogoutUrl() string`
+`func (o *InlineResponse200105) GetIp() string`
 
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+GetIp returns the Ip field if non-nil, zero value otherwise.
 
-### GetSloLogoutUrlOk
+### GetIpOk
 
-`func (o *InlineResponse200105) GetSloLogoutUrlOk() (*string, bool)`
+`func (o *InlineResponse200105) GetIpOk() (*string, bool)`
 
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSloLogoutUrl
+### SetIp
 
-`func (o *InlineResponse200105) SetSloLogoutUrl(v string)`
+`func (o *InlineResponse200105) SetIp(v string)`
 
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
+SetIp sets Ip field to given value.
 
-### HasSloLogoutUrl
+### HasIp
 
-`func (o *InlineResponse200105) HasSloLogoutUrl() bool`
+`func (o *InlineResponse200105) HasIp() bool`
 
-HasSloLogoutUrl returns a boolean if a field has been set.
+HasIp returns a boolean if a field has been set.
+
+### GetTimeSeries
+
+`func (o *InlineResponse200105) GetTimeSeries() []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries`
+
+GetTimeSeries returns the TimeSeries field if non-nil, zero value otherwise.
+
+### GetTimeSeriesOk
+
+`func (o *InlineResponse200105) GetTimeSeriesOk() (*[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries, bool)`
+
+GetTimeSeriesOk returns a tuple with the TimeSeries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimeSeries
+
+`func (o *InlineResponse200105) SetTimeSeries(v []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries)`
+
+SetTimeSeries sets TimeSeries field to given value.
+
+### HasTimeSeries
+
+`func (o *InlineResponse200105) HasTimeSeries() bool`
+
+HasTimeSeries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Number** | Pointer to **int32** | The number of the SSID. | [optional] 
-**Name** | Pointer to **string** | The name of the SSID. | [optional] 
-**Enabled** | Pointer to **bool** | Whether or not the SSID is enabled. | [optional] 
-**DefaultVlanId** | Pointer to **int32** | The VLAN ID of the VLAN associated to this SSID. | [optional] 
-**AuthMode** | Pointer to **string** | The association control method for the SSID. | [optional] 
-**RadiusServers** | Pointer to [**[]NetworksNetworkIdApplianceSsidsRadiusServers**](NetworksNetworkIdApplianceSsidsRadiusServers.md) | The RADIUS 802.1x servers to be used for authentication. | [optional] 
-**EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID. | [optional] 
-**WpaEncryptionMode** | Pointer to **string** | WPA encryption mode for the SSID. | [optional] 
-**Visible** | Pointer to **bool** | Boolean indicating whether the MX should advertise or hide this SSID. | [optional] 
+**StaticDelegatedPrefixId** | Pointer to **string** | Static delegated prefix id. | [optional] 
+**Prefix** | Pointer to **string** | IPv6 prefix/prefix length. | [optional] 
+**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin.md) |  | [optional] 
+**Description** | Pointer to **string** | Identifying description for the prefix. | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Prefix creation time. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Prefix Updated time. | [optional] 
 
 ## Methods
 
@@ -33,230 +30,155 @@ NewInlineResponse20013WithDefaults instantiates a new InlineResponse20013 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNumber
+### GetStaticDelegatedPrefixId
 
-`func (o *InlineResponse20013) GetNumber() int32`
+`func (o *InlineResponse20013) GetStaticDelegatedPrefixId() string`
 
-GetNumber returns the Number field if non-nil, zero value otherwise.
+GetStaticDelegatedPrefixId returns the StaticDelegatedPrefixId field if non-nil, zero value otherwise.
 
-### GetNumberOk
+### GetStaticDelegatedPrefixIdOk
 
-`func (o *InlineResponse20013) GetNumberOk() (*int32, bool)`
+`func (o *InlineResponse20013) GetStaticDelegatedPrefixIdOk() (*string, bool)`
 
-GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+GetStaticDelegatedPrefixIdOk returns a tuple with the StaticDelegatedPrefixId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNumber
+### SetStaticDelegatedPrefixId
 
-`func (o *InlineResponse20013) SetNumber(v int32)`
+`func (o *InlineResponse20013) SetStaticDelegatedPrefixId(v string)`
 
-SetNumber sets Number field to given value.
+SetStaticDelegatedPrefixId sets StaticDelegatedPrefixId field to given value.
 
-### HasNumber
+### HasStaticDelegatedPrefixId
 
-`func (o *InlineResponse20013) HasNumber() bool`
+`func (o *InlineResponse20013) HasStaticDelegatedPrefixId() bool`
 
-HasNumber returns a boolean if a field has been set.
+HasStaticDelegatedPrefixId returns a boolean if a field has been set.
 
-### GetName
+### GetPrefix
 
-`func (o *InlineResponse20013) GetName() string`
+`func (o *InlineResponse20013) GetPrefix() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPrefixOk
 
-`func (o *InlineResponse20013) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20013) GetPrefixOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPrefix
 
-`func (o *InlineResponse20013) SetName(v string)`
+`func (o *InlineResponse20013) SetPrefix(v string)`
 
-SetName sets Name field to given value.
+SetPrefix sets Prefix field to given value.
 
-### HasName
+### HasPrefix
 
-`func (o *InlineResponse20013) HasName() bool`
+`func (o *InlineResponse20013) HasPrefix() bool`
 
-HasName returns a boolean if a field has been set.
+HasPrefix returns a boolean if a field has been set.
 
-### GetEnabled
+### GetOrigin
 
-`func (o *InlineResponse20013) GetEnabled() bool`
+`func (o *InlineResponse20013) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetOriginOk
 
-`func (o *InlineResponse20013) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20013) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetOrigin
 
-`func (o *InlineResponse20013) SetEnabled(v bool)`
+`func (o *InlineResponse20013) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin)`
 
-SetEnabled sets Enabled field to given value.
+SetOrigin sets Origin field to given value.
 
-### HasEnabled
+### HasOrigin
 
-`func (o *InlineResponse20013) HasEnabled() bool`
+`func (o *InlineResponse20013) HasOrigin() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasOrigin returns a boolean if a field has been set.
 
-### GetDefaultVlanId
+### GetDescription
 
-`func (o *InlineResponse20013) GetDefaultVlanId() int32`
+`func (o *InlineResponse20013) GetDescription() string`
 
-GetDefaultVlanId returns the DefaultVlanId field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetDefaultVlanIdOk
+### GetDescriptionOk
 
-`func (o *InlineResponse20013) GetDefaultVlanIdOk() (*int32, bool)`
+`func (o *InlineResponse20013) GetDescriptionOk() (*string, bool)`
 
-GetDefaultVlanIdOk returns a tuple with the DefaultVlanId field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultVlanId
+### SetDescription
 
-`func (o *InlineResponse20013) SetDefaultVlanId(v int32)`
+`func (o *InlineResponse20013) SetDescription(v string)`
 
-SetDefaultVlanId sets DefaultVlanId field to given value.
+SetDescription sets Description field to given value.
 
-### HasDefaultVlanId
+### HasDescription
 
-`func (o *InlineResponse20013) HasDefaultVlanId() bool`
+`func (o *InlineResponse20013) HasDescription() bool`
 
-HasDefaultVlanId returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetAuthMode
+### GetCreatedAt
 
-`func (o *InlineResponse20013) GetAuthMode() string`
+`func (o *InlineResponse20013) GetCreatedAt() time.Time`
 
-GetAuthMode returns the AuthMode field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetAuthModeOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse20013) GetAuthModeOk() (*string, bool)`
+`func (o *InlineResponse20013) GetCreatedAtOk() (*time.Time, bool)`
 
-GetAuthModeOk returns a tuple with the AuthMode field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthMode
+### SetCreatedAt
 
-`func (o *InlineResponse20013) SetAuthMode(v string)`
+`func (o *InlineResponse20013) SetCreatedAt(v time.Time)`
 
-SetAuthMode sets AuthMode field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasAuthMode
+### HasCreatedAt
 
-`func (o *InlineResponse20013) HasAuthMode() bool`
+`func (o *InlineResponse20013) HasCreatedAt() bool`
 
-HasAuthMode returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetRadiusServers
+### GetUpdatedAt
 
-`func (o *InlineResponse20013) GetRadiusServers() []NetworksNetworkIdApplianceSsidsRadiusServers`
+`func (o *InlineResponse20013) GetUpdatedAt() time.Time`
 
-GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
-### GetRadiusServersOk
+### GetUpdatedAtOk
 
-`func (o *InlineResponse20013) GetRadiusServersOk() (*[]NetworksNetworkIdApplianceSsidsRadiusServers, bool)`
+`func (o *InlineResponse20013) GetUpdatedAtOk() (*time.Time, bool)`
 
-GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadiusServers
+### SetUpdatedAt
 
-`func (o *InlineResponse20013) SetRadiusServers(v []NetworksNetworkIdApplianceSsidsRadiusServers)`
+`func (o *InlineResponse20013) SetUpdatedAt(v time.Time)`
 
-SetRadiusServers sets RadiusServers field to given value.
+SetUpdatedAt sets UpdatedAt field to given value.
 
-### HasRadiusServers
+### HasUpdatedAt
 
-`func (o *InlineResponse20013) HasRadiusServers() bool`
+`func (o *InlineResponse20013) HasUpdatedAt() bool`
 
-HasRadiusServers returns a boolean if a field has been set.
-
-### GetEncryptionMode
-
-`func (o *InlineResponse20013) GetEncryptionMode() string`
-
-GetEncryptionMode returns the EncryptionMode field if non-nil, zero value otherwise.
-
-### GetEncryptionModeOk
-
-`func (o *InlineResponse20013) GetEncryptionModeOk() (*string, bool)`
-
-GetEncryptionModeOk returns a tuple with the EncryptionMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEncryptionMode
-
-`func (o *InlineResponse20013) SetEncryptionMode(v string)`
-
-SetEncryptionMode sets EncryptionMode field to given value.
-
-### HasEncryptionMode
-
-`func (o *InlineResponse20013) HasEncryptionMode() bool`
-
-HasEncryptionMode returns a boolean if a field has been set.
-
-### GetWpaEncryptionMode
-
-`func (o *InlineResponse20013) GetWpaEncryptionMode() string`
-
-GetWpaEncryptionMode returns the WpaEncryptionMode field if non-nil, zero value otherwise.
-
-### GetWpaEncryptionModeOk
-
-`func (o *InlineResponse20013) GetWpaEncryptionModeOk() (*string, bool)`
-
-GetWpaEncryptionModeOk returns a tuple with the WpaEncryptionMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWpaEncryptionMode
-
-`func (o *InlineResponse20013) SetWpaEncryptionMode(v string)`
-
-SetWpaEncryptionMode sets WpaEncryptionMode field to given value.
-
-### HasWpaEncryptionMode
-
-`func (o *InlineResponse20013) HasWpaEncryptionMode() bool`
-
-HasWpaEncryptionMode returns a boolean if a field has been set.
-
-### GetVisible
-
-`func (o *InlineResponse20013) GetVisible() bool`
-
-GetVisible returns the Visible field if non-nil, zero value otherwise.
-
-### GetVisibleOk
-
-`func (o *InlineResponse20013) GetVisibleOk() (*bool, bool)`
-
-GetVisibleOk returns a tuple with the Visible field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVisible
-
-`func (o *InlineResponse20013) SetVisible(v bool)`
-
-SetVisible sets Visible field to given value.
-
-### HasVisible
-
-`func (o *InlineResponse20013) HasVisible() bool`
-
-HasVisible returns a boolean if a field has been set.
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

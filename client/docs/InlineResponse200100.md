@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Key** | Pointer to **string** | The key of the license | [optional] 
-**OrganizationId** | Pointer to **string** | The ID of the organization that the license is claimed in | [optional] 
-**Duration** | Pointer to **int32** | The duration (term length) of the license, measured in days | [optional] 
-**Mode** | Pointer to **string** | The operation mode of the license when it was claimed | [optional] 
-**StartedAt** | Pointer to **time.Time** | When the license&#39;s term began (approximately the date when the license was created) | [optional] 
-**ClaimedAt** | Pointer to **time.Time** | When the license was claimed into the organization | [optional] 
-**Invalidated** | Pointer to **bool** | Flag to indicated that the license is invalidated | [optional] 
-**InvalidatedAt** | Pointer to **time.Time** | When the license was invalidated. Will be null for active licenses | [optional] 
-**Expired** | Pointer to **bool** | Flag to indicate if the license is expired | [optional] 
-**Editions** | Pointer to [**[]OrganizationsOrganizationIdLicensingCotermLicensesEditions**](OrganizationsOrganizationIdLicensingCotermLicensesEditions.md) | The editions of the license for each relevant product type | [optional] 
-**Counts** | Pointer to [**[]OrganizationsOrganizationIdLicensingCotermLicensesCounts**](OrganizationsOrganizationIdLicensingCotermLicensesCounts.md) | The counts of the license by model type | [optional] 
+**Mac** | Pointer to **string** | The device MAC address. | [optional] 
+**Name** | Pointer to **string** | The device name. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesNetwork.md) |  | [optional] 
+**ProductType** | Pointer to **string** | Device product type. | [optional] 
+**Serial** | Pointer to **string** | The device serial number. | [optional] 
+**Status** | Pointer to **string** | Status of the device. Possible values are: online, alerting, offline, dormant. | [optional] 
+**Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
 
 ## Methods
 
@@ -35,280 +31,180 @@ NewInlineResponse200100WithDefaults instantiates a new InlineResponse200100 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetKey
+### GetMac
 
-`func (o *InlineResponse200100) GetKey() string`
+`func (o *InlineResponse200100) GetMac() string`
 
-GetKey returns the Key field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetKeyOk
+### GetMacOk
 
-`func (o *InlineResponse200100) GetKeyOk() (*string, bool)`
+`func (o *InlineResponse200100) GetMacOk() (*string, bool)`
 
-GetKeyOk returns a tuple with the Key field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetKey
+### SetMac
 
-`func (o *InlineResponse200100) SetKey(v string)`
+`func (o *InlineResponse200100) SetMac(v string)`
 
-SetKey sets Key field to given value.
+SetMac sets Mac field to given value.
 
-### HasKey
+### HasMac
 
-`func (o *InlineResponse200100) HasKey() bool`
+`func (o *InlineResponse200100) HasMac() bool`
 
-HasKey returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetName
 
-`func (o *InlineResponse200100) GetOrganizationId() string`
+`func (o *InlineResponse200100) GetName() string`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetNameOk
 
-`func (o *InlineResponse200100) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200100) GetNameOk() (*string, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetName
 
-`func (o *InlineResponse200100) SetOrganizationId(v string)`
+`func (o *InlineResponse200100) SetName(v string)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetName sets Name field to given value.
 
-### HasOrganizationId
+### HasName
 
-`func (o *InlineResponse200100) HasOrganizationId() bool`
+`func (o *InlineResponse200100) HasName() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDuration
+### GetNetwork
 
-`func (o *InlineResponse200100) GetDuration() int32`
+`func (o *InlineResponse200100) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesNetwork`
 
-GetDuration returns the Duration field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetDurationOk
+### GetNetworkOk
 
-`func (o *InlineResponse200100) GetDurationOk() (*int32, bool)`
+`func (o *InlineResponse200100) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesNetwork, bool)`
 
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDuration
+### SetNetwork
 
-`func (o *InlineResponse200100) SetDuration(v int32)`
+`func (o *InlineResponse200100) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesNetwork)`
 
-SetDuration sets Duration field to given value.
+SetNetwork sets Network field to given value.
 
-### HasDuration
+### HasNetwork
 
-`func (o *InlineResponse200100) HasDuration() bool`
+`func (o *InlineResponse200100) HasNetwork() bool`
 
-HasDuration returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetMode
+### GetProductType
 
-`func (o *InlineResponse200100) GetMode() string`
+`func (o *InlineResponse200100) GetProductType() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetProductTypeOk
 
-`func (o *InlineResponse200100) GetModeOk() (*string, bool)`
+`func (o *InlineResponse200100) GetProductTypeOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetProductType
 
-`func (o *InlineResponse200100) SetMode(v string)`
+`func (o *InlineResponse200100) SetProductType(v string)`
 
-SetMode sets Mode field to given value.
+SetProductType sets ProductType field to given value.
 
-### HasMode
+### HasProductType
 
-`func (o *InlineResponse200100) HasMode() bool`
+`func (o *InlineResponse200100) HasProductType() bool`
 
-HasMode returns a boolean if a field has been set.
+HasProductType returns a boolean if a field has been set.
 
-### GetStartedAt
+### GetSerial
 
-`func (o *InlineResponse200100) GetStartedAt() time.Time`
+`func (o *InlineResponse200100) GetSerial() string`
 
-GetStartedAt returns the StartedAt field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetStartedAtOk
+### GetSerialOk
 
-`func (o *InlineResponse200100) GetStartedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200100) GetSerialOk() (*string, bool)`
 
-GetStartedAtOk returns a tuple with the StartedAt field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartedAt
+### SetSerial
 
-`func (o *InlineResponse200100) SetStartedAt(v time.Time)`
+`func (o *InlineResponse200100) SetSerial(v string)`
 
-SetStartedAt sets StartedAt field to given value.
+SetSerial sets Serial field to given value.
 
-### HasStartedAt
+### HasSerial
 
-`func (o *InlineResponse200100) HasStartedAt() bool`
+`func (o *InlineResponse200100) HasSerial() bool`
 
-HasStartedAt returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetClaimedAt
+### GetStatus
 
-`func (o *InlineResponse200100) GetClaimedAt() time.Time`
+`func (o *InlineResponse200100) GetStatus() string`
 
-GetClaimedAt returns the ClaimedAt field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetClaimedAtOk
+### GetStatusOk
 
-`func (o *InlineResponse200100) GetClaimedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200100) GetStatusOk() (*string, bool)`
 
-GetClaimedAtOk returns a tuple with the ClaimedAt field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClaimedAt
+### SetStatus
 
-`func (o *InlineResponse200100) SetClaimedAt(v time.Time)`
+`func (o *InlineResponse200100) SetStatus(v string)`
 
-SetClaimedAt sets ClaimedAt field to given value.
+SetStatus sets Status field to given value.
 
-### HasClaimedAt
+### HasStatus
 
-`func (o *InlineResponse200100) HasClaimedAt() bool`
+`func (o *InlineResponse200100) HasStatus() bool`
 
-HasClaimedAt returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetInvalidated
+### GetTags
 
-`func (o *InlineResponse200100) GetInvalidated() bool`
+`func (o *InlineResponse200100) GetTags() []string`
 
-GetInvalidated returns the Invalidated field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetInvalidatedOk
+### GetTagsOk
 
-`func (o *InlineResponse200100) GetInvalidatedOk() (*bool, bool)`
+`func (o *InlineResponse200100) GetTagsOk() (*[]string, bool)`
 
-GetInvalidatedOk returns a tuple with the Invalidated field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInvalidated
+### SetTags
 
-`func (o *InlineResponse200100) SetInvalidated(v bool)`
+`func (o *InlineResponse200100) SetTags(v []string)`
 
-SetInvalidated sets Invalidated field to given value.
+SetTags sets Tags field to given value.
 
-### HasInvalidated
+### HasTags
 
-`func (o *InlineResponse200100) HasInvalidated() bool`
+`func (o *InlineResponse200100) HasTags() bool`
 
-HasInvalidated returns a boolean if a field has been set.
-
-### GetInvalidatedAt
-
-`func (o *InlineResponse200100) GetInvalidatedAt() time.Time`
-
-GetInvalidatedAt returns the InvalidatedAt field if non-nil, zero value otherwise.
-
-### GetInvalidatedAtOk
-
-`func (o *InlineResponse200100) GetInvalidatedAtOk() (*time.Time, bool)`
-
-GetInvalidatedAtOk returns a tuple with the InvalidatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInvalidatedAt
-
-`func (o *InlineResponse200100) SetInvalidatedAt(v time.Time)`
-
-SetInvalidatedAt sets InvalidatedAt field to given value.
-
-### HasInvalidatedAt
-
-`func (o *InlineResponse200100) HasInvalidatedAt() bool`
-
-HasInvalidatedAt returns a boolean if a field has been set.
-
-### GetExpired
-
-`func (o *InlineResponse200100) GetExpired() bool`
-
-GetExpired returns the Expired field if non-nil, zero value otherwise.
-
-### GetExpiredOk
-
-`func (o *InlineResponse200100) GetExpiredOk() (*bool, bool)`
-
-GetExpiredOk returns a tuple with the Expired field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExpired
-
-`func (o *InlineResponse200100) SetExpired(v bool)`
-
-SetExpired sets Expired field to given value.
-
-### HasExpired
-
-`func (o *InlineResponse200100) HasExpired() bool`
-
-HasExpired returns a boolean if a field has been set.
-
-### GetEditions
-
-`func (o *InlineResponse200100) GetEditions() []OrganizationsOrganizationIdLicensingCotermLicensesEditions`
-
-GetEditions returns the Editions field if non-nil, zero value otherwise.
-
-### GetEditionsOk
-
-`func (o *InlineResponse200100) GetEditionsOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesEditions, bool)`
-
-GetEditionsOk returns a tuple with the Editions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEditions
-
-`func (o *InlineResponse200100) SetEditions(v []OrganizationsOrganizationIdLicensingCotermLicensesEditions)`
-
-SetEditions sets Editions field to given value.
-
-### HasEditions
-
-`func (o *InlineResponse200100) HasEditions() bool`
-
-HasEditions returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200100) GetCounts() []OrganizationsOrganizationIdLicensingCotermLicensesCounts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200100) GetCountsOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesCounts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200100) SetCounts(v []OrganizationsOrganizationIdLicensingCotermLicensesCounts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200100) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

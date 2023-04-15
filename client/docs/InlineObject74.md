@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, 100 | 
+**Serials** | **[]string** | A list of serials of devices to claim | 
 
 ## Methods
 
 ### NewInlineObject74
 
-`func NewInlineObject74(size string, ) *InlineObject74`
+`func NewInlineObject74(serials []string, ) *InlineObject74`
 
 NewInlineObject74 instantiates a new InlineObject74 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject74WithDefaults instantiates a new InlineObject74 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSize
+### GetSerials
 
-`func (o *InlineObject74) GetSize() string`
+`func (o *InlineObject74) GetSerials() []string`
 
-GetSize returns the Size field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetSizeOk
+### GetSerialsOk
 
-`func (o *InlineObject74) GetSizeOk() (*string, bool)`
+`func (o *InlineObject74) GetSerialsOk() (*[]string, bool)`
 
-GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSize
+### SetSerials
 
-`func (o *InlineObject74) SetSize(v string)`
+`func (o *InlineObject74) SetSerials(v []string)`
 
-SetSize sets Size field to given value.
+SetSerials sets Serials field to given value.
 
 
 

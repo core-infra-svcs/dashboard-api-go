@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OccurredAt** | Pointer to **string** | time when the event that caused the alert occurred | [optional] 
-**AlertTypeId** | Pointer to **string** | type of alert | [optional] 
-**AlertType** | Pointer to **string** | user friendly alert type | [optional] 
-**Device** | Pointer to [**NetworksNetworkIdAlertsHistoryDevice**](NetworksNetworkIdAlertsHistoryDevice.md) |  | [optional] 
-**Destinations** | Pointer to [**NetworksNetworkIdAlertsHistoryDestinations**](NetworksNetworkIdAlertsHistoryDestinations.md) |  | [optional] 
-**AlertData** | Pointer to **map[string]interface{}** | relevant data about the event that caused the alert | [optional] 
+**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
 
 ## Methods
 
@@ -30,155 +27,80 @@ NewInlineResponse2008WithDefaults instantiates a new InlineResponse2008 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOccurredAt
+### GetUuid
 
-`func (o *InlineResponse2008) GetOccurredAt() string`
+`func (o *InlineResponse2008) GetUuid() string`
 
-GetOccurredAt returns the OccurredAt field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetOccurredAtOk
+### GetUuidOk
 
-`func (o *InlineResponse2008) GetOccurredAtOk() (*string, bool)`
+`func (o *InlineResponse2008) GetUuidOk() (*string, bool)`
 
-GetOccurredAtOk returns a tuple with the OccurredAt field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOccurredAt
+### SetUuid
 
-`func (o *InlineResponse2008) SetOccurredAt(v string)`
+`func (o *InlineResponse2008) SetUuid(v string)`
 
-SetOccurredAt sets OccurredAt field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasOccurredAt
+### HasUuid
 
-`func (o *InlineResponse2008) HasOccurredAt() bool`
+`func (o *InlineResponse2008) HasUuid() bool`
 
-HasOccurredAt returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
-### GetAlertTypeId
+### GetMajor
 
-`func (o *InlineResponse2008) GetAlertTypeId() string`
+`func (o *InlineResponse2008) GetMajor() int32`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetMajor returns the Major field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetMajorOk
 
-`func (o *InlineResponse2008) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse2008) GetMajorOk() (*int32, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetMajor
 
-`func (o *InlineResponse2008) SetAlertTypeId(v string)`
+`func (o *InlineResponse2008) SetMajor(v int32)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetMajor sets Major field to given value.
 
-### HasAlertTypeId
+### HasMajor
 
-`func (o *InlineResponse2008) HasAlertTypeId() bool`
+`func (o *InlineResponse2008) HasMajor() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasMajor returns a boolean if a field has been set.
 
-### GetAlertType
+### GetMinor
 
-`func (o *InlineResponse2008) GetAlertType() string`
+`func (o *InlineResponse2008) GetMinor() int32`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetMinor returns the Minor field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetMinorOk
 
-`func (o *InlineResponse2008) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse2008) GetMinorOk() (*int32, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetMinor
 
-`func (o *InlineResponse2008) SetAlertType(v string)`
+`func (o *InlineResponse2008) SetMinor(v int32)`
 
-SetAlertType sets AlertType field to given value.
+SetMinor sets Minor field to given value.
 
-### HasAlertType
+### HasMinor
 
-`func (o *InlineResponse2008) HasAlertType() bool`
+`func (o *InlineResponse2008) HasMinor() bool`
 
-HasAlertType returns a boolean if a field has been set.
-
-### GetDevice
-
-`func (o *InlineResponse2008) GetDevice() NetworksNetworkIdAlertsHistoryDevice`
-
-GetDevice returns the Device field if non-nil, zero value otherwise.
-
-### GetDeviceOk
-
-`func (o *InlineResponse2008) GetDeviceOk() (*NetworksNetworkIdAlertsHistoryDevice, bool)`
-
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevice
-
-`func (o *InlineResponse2008) SetDevice(v NetworksNetworkIdAlertsHistoryDevice)`
-
-SetDevice sets Device field to given value.
-
-### HasDevice
-
-`func (o *InlineResponse2008) HasDevice() bool`
-
-HasDevice returns a boolean if a field has been set.
-
-### GetDestinations
-
-`func (o *InlineResponse2008) GetDestinations() NetworksNetworkIdAlertsHistoryDestinations`
-
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
-
-### GetDestinationsOk
-
-`func (o *InlineResponse2008) GetDestinationsOk() (*NetworksNetworkIdAlertsHistoryDestinations, bool)`
-
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestinations
-
-`func (o *InlineResponse2008) SetDestinations(v NetworksNetworkIdAlertsHistoryDestinations)`
-
-SetDestinations sets Destinations field to given value.
-
-### HasDestinations
-
-`func (o *InlineResponse2008) HasDestinations() bool`
-
-HasDestinations returns a boolean if a field has been set.
-
-### GetAlertData
-
-`func (o *InlineResponse2008) GetAlertData() map[string]interface{}`
-
-GetAlertData returns the AlertData field if non-nil, zero value otherwise.
-
-### GetAlertDataOk
-
-`func (o *InlineResponse2008) GetAlertDataOk() (*map[string]interface{}, bool)`
-
-GetAlertDataOk returns a tuple with the AlertData field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAlertData
-
-`func (o *InlineResponse2008) SetAlertData(v map[string]interface{})`
-
-SetAlertData sets AlertData field to given value.
-
-### HasAlertData
-
-`func (o *InlineResponse2008) HasAlertData() bool`
-
-HasAlertData returns a boolean if a field has been set.
+HasMinor returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

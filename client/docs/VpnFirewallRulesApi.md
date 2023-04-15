@@ -101,7 +101,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | 
-    updateOrganizationApplianceVpnVpnFirewallRules := *openapiclient.NewInlineObject182() // InlineObject182 |  (optional)
+    updateOrganizationApplianceVpnVpnFirewallRules := *openapiclient.NewInlineObject183() // InlineObject183 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceVpnVpnFirewallRules** | [**InlineObject182**](InlineObject182.md) |  | 
+ **updateOrganizationApplianceVpnVpnFirewallRules** | [**InlineObject183**](InlineObject183.md) |  | 
 
 ### Return type
 

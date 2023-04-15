@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
+**Serial** | Pointer to **string** | Switch serial. | [optional] 
+**Name** | Pointer to **string** | Switch name. | [optional] 
+**Url** | Pointer to **string** | Url link to switch. | [optional] 
+**SupportsInspection** | Pointer to **bool** | Whether this switch supports Dynamic ARP Inspection. | [optional] 
+**HasTrustedPort** | Pointer to **bool** | Whether this switch has a trusted DAI port. Always false if supportsInspection is false. | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse20066WithDefaults instantiates a new InlineResponse20066 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetSerial
 
-`func (o *InlineResponse20066) GetStartTs() time.Time`
+`func (o *InlineResponse20066) GetSerial() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetSerialOk
 
-`func (o *InlineResponse20066) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20066) GetSerialOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetSerial
 
-`func (o *InlineResponse20066) SetStartTs(v time.Time)`
+`func (o *InlineResponse20066) SetSerial(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetSerial sets Serial field to given value.
 
-### HasStartTs
+### HasSerial
 
-`func (o *InlineResponse20066) HasStartTs() bool`
+`func (o *InlineResponse20066) HasSerial() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetEndTs
+### GetName
 
-`func (o *InlineResponse20066) GetEndTs() time.Time`
+`func (o *InlineResponse20066) GetName() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetNameOk
 
-`func (o *InlineResponse20066) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20066) GetNameOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetName
 
-`func (o *InlineResponse20066) SetEndTs(v time.Time)`
+`func (o *InlineResponse20066) SetName(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetName sets Name field to given value.
 
-### HasEndTs
+### HasName
 
-`func (o *InlineResponse20066) HasEndTs() bool`
+`func (o *InlineResponse20066) HasName() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetClientCount
+### GetUrl
 
-`func (o *InlineResponse20066) GetClientCount() int32`
+`func (o *InlineResponse20066) GetUrl() string`
 
-GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetClientCountOk
+### GetUrlOk
 
-`func (o *InlineResponse20066) GetClientCountOk() (*int32, bool)`
+`func (o *InlineResponse20066) GetUrlOk() (*string, bool)`
 
-GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientCount
+### SetUrl
 
-`func (o *InlineResponse20066) SetClientCount(v int32)`
+`func (o *InlineResponse20066) SetUrl(v string)`
 
-SetClientCount sets ClientCount field to given value.
+SetUrl sets Url field to given value.
 
-### HasClientCount
+### HasUrl
 
-`func (o *InlineResponse20066) HasClientCount() bool`
+`func (o *InlineResponse20066) HasUrl() bool`
 
-HasClientCount returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetSupportsInspection
+
+`func (o *InlineResponse20066) GetSupportsInspection() bool`
+
+GetSupportsInspection returns the SupportsInspection field if non-nil, zero value otherwise.
+
+### GetSupportsInspectionOk
+
+`func (o *InlineResponse20066) GetSupportsInspectionOk() (*bool, bool)`
+
+GetSupportsInspectionOk returns a tuple with the SupportsInspection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSupportsInspection
+
+`func (o *InlineResponse20066) SetSupportsInspection(v bool)`
+
+SetSupportsInspection sets SupportsInspection field to given value.
+
+### HasSupportsInspection
+
+`func (o *InlineResponse20066) HasSupportsInspection() bool`
+
+HasSupportsInspection returns a boolean if a field has been set.
+
+### GetHasTrustedPort
+
+`func (o *InlineResponse20066) GetHasTrustedPort() bool`
+
+GetHasTrustedPort returns the HasTrustedPort field if non-nil, zero value otherwise.
+
+### GetHasTrustedPortOk
+
+`func (o *InlineResponse20066) GetHasTrustedPortOk() (*bool, bool)`
+
+GetHasTrustedPortOk returns a tuple with the HasTrustedPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHasTrustedPort
+
+`func (o *InlineResponse20066) SetHasTrustedPort(v bool)`
+
+SetHasTrustedPort sets HasTrustedPort field to given value.
+
+### HasHasTrustedPort
+
+`func (o *InlineResponse20066) HasHasTrustedPort() bool`
+
+HasHasTrustedPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
