@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Peers** | Pointer to [**[]InlineResponse20091Peers**](InlineResponse20091Peers.md) | The list of VPN peers | [optional] 
+**Counts** | Pointer to [**InlineResponse20091Counts**](InlineResponse20091Counts.md) |  | [optional] 
+**Limits** | Pointer to [**InlineResponse20091Limits**](InlineResponse20091Limits.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse20091WithDefaults instantiates a new InlineResponse20091 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPeers
+### GetCounts
 
-`func (o *InlineResponse20091) GetPeers() []InlineResponse20091Peers`
+`func (o *InlineResponse20091) GetCounts() InlineResponse20091Counts`
 
-GetPeers returns the Peers field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetPeersOk
+### GetCountsOk
 
-`func (o *InlineResponse20091) GetPeersOk() (*[]InlineResponse20091Peers, bool)`
+`func (o *InlineResponse20091) GetCountsOk() (*InlineResponse20091Counts, bool)`
 
-GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeers
+### SetCounts
 
-`func (o *InlineResponse20091) SetPeers(v []InlineResponse20091Peers)`
+`func (o *InlineResponse20091) SetCounts(v InlineResponse20091Counts)`
 
-SetPeers sets Peers field to given value.
+SetCounts sets Counts field to given value.
 
-### HasPeers
+### HasCounts
 
-`func (o *InlineResponse20091) HasPeers() bool`
+`func (o *InlineResponse20091) HasCounts() bool`
 
-HasPeers returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
+
+### GetLimits
+
+`func (o *InlineResponse20091) GetLimits() InlineResponse20091Limits`
+
+GetLimits returns the Limits field if non-nil, zero value otherwise.
+
+### GetLimitsOk
+
+`func (o *InlineResponse20091) GetLimitsOk() (*InlineResponse20091Limits, bool)`
+
+GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLimits
+
+`func (o *InlineResponse20091) SetLimits(v InlineResponse20091Limits)`
+
+SetLimits sets Limits field to given value.
+
+### HasLimits
+
+`func (o *InlineResponse20091) HasLimits() bool`
+
+HasLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

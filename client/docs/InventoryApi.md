@@ -37,8 +37,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    claimIntoOrganizationInventory := *openapiclient.NewInlineObject198() // InlineObject198 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    claimIntoOrganizationInventory := *openapiclient.NewInlineObject199() // InlineObject199 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -58,7 +58,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -68,7 +68,7 @@ Other parameters are passed through a pointer to a apiClaimIntoOrganizationInven
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **claimIntoOrganizationInventory** | [**InlineObject198**](InlineObject198.md) |  | 
+ **claimIntoOrganizationInventory** | [**InlineObject199**](InlineObject199.md) |  | 
 
 ### Return type
 
@@ -109,8 +109,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationInventoryOnboardingCloudMonitoringExportEvent := *openapiclient.NewInlineObject199("LogEvent_example", int32(123)) // InlineObject199 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationInventoryOnboardingCloudMonitoringExportEvent := *openapiclient.NewInlineObject200("LogEvent_example", int32(123)) // InlineObject200 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -130,7 +130,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -140,7 +140,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringExportEvent** | [**InlineObject199**](InlineObject199.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringExportEvent** | [**InlineObject200**](InlineObject200.md) |  | 
 
 ### Return type
 
@@ -181,8 +181,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationInventoryOnboardingCloudMonitoringImport := *openapiclient.NewInlineObject200([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices("DeviceId_example", "Udi_example", "NetworkId_example")}) // InlineObject200 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationInventoryOnboardingCloudMonitoringImport := *openapiclient.NewInlineObject201([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices("DeviceId_example", "Udi_example", "NetworkId_example")}) // InlineObject201 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -202,7 +202,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -212,7 +212,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringImport** | [**InlineObject200**](InlineObject200.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringImport** | [**InlineObject201**](InlineObject201.md) |  | 
 
 ### Return type
 
@@ -253,8 +253,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationInventoryOnboardingCloudMonitoringPrepare := *openapiclient.NewInlineObject201([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices("Sudi_example")}) // InlineObject201 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationInventoryOnboardingCloudMonitoringPrepare := *openapiclient.NewInlineObject202([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices("Sudi_example")}) // InlineObject202 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -274,7 +274,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -284,7 +284,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringPrepare** | [**InlineObject201**](InlineObject201.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringPrepare** | [**InlineObject202**](InlineObject202.md) |  | 
 
 ### Return type
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevice
 
-> InlineResponse200110 GetOrganizationInventoryDevice(ctx, organizationId, serial).Execute()
+> InlineResponse200116 GetOrganizationInventoryDevice(ctx, organizationId, serial).Execute()
 
 Return a single device from the inventory of an organization
 
@@ -325,8 +325,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    serial := "serial_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -335,7 +335,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetOrganizationInventoryDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevice`: InlineResponse200110
+    // response from `GetOrganizationInventoryDevice`: InlineResponse200116
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetOrganizationInventoryDevice`: %v\n", resp)
 }
 ```
@@ -346,8 +346,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**serial** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200110**](InlineResponse200110.md)
+[**InlineResponse200116**](InlineResponse200116.md)
 
 ### Authorization
 
@@ -379,7 +379,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevices
 
-> []InlineResponse200110 GetOrganizationInventoryDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).UsedState(usedState).Search(search).Macs(macs).NetworkIds(networkIds).Serials(serials).Models(models).OrderNumbers(orderNumbers).Tags(tags).TagsFilterType(tagsFilterType).ProductTypes(productTypes).Execute()
+> []InlineResponse200116 GetOrganizationInventoryDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).UsedState(usedState).Search(search).Macs(macs).NetworkIds(networkIds).Serials(serials).Models(models).OrderNumbers(orderNumbers).Tags(tags).TagsFilterType(tagsFilterType).ProductTypes(productTypes).Execute()
 
 Return the device inventory for an organization
 
@@ -398,7 +398,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -420,7 +420,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetOrganizationInventoryDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevices`: []InlineResponse200110
+    // response from `GetOrganizationInventoryDevices`: []InlineResponse200116
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetOrganizationInventoryDevices`: %v\n", resp)
 }
 ```
@@ -431,7 +431,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -457,7 +457,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200110**](InlineResponse200110.md)
+[**[]InlineResponse200116**](InlineResponse200116.md)
 
 ### Authorization
 
@@ -475,7 +475,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryOnboardingCloudMonitoringImports
 
-> []InlineResponse200111 GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx, organizationId).ImportIds(importIds).Execute()
+> []InlineResponse200117 GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx, organizationId).ImportIds(importIds).Execute()
 
 Check the status of a committed Import operation
 
@@ -494,7 +494,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     importIds := []string{"Inner_example"} // []string | import ids from an imports
 
     configuration := openapiclient.NewConfiguration()
@@ -504,7 +504,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetOrganizationInventoryOnboardingCloudMonitoringImports``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryOnboardingCloudMonitoringImports`: []InlineResponse200111
+    // response from `GetOrganizationInventoryOnboardingCloudMonitoringImports`: []InlineResponse200117
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetOrganizationInventoryOnboardingCloudMonitoringImports`: %v\n", resp)
 }
 ```
@@ -515,7 +515,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -529,7 +529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200111**](InlineResponse200111.md)
+[**[]InlineResponse200117**](InlineResponse200117.md)
 
 ### Authorization
 
@@ -547,7 +547,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryOnboardingCloudMonitoringNetworks
 
-> []InlineResponse20010 GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ctx, organizationId).DeviceType(deviceType).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20011 GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ctx, organizationId).DeviceType(deviceType).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns list of networks eligible for adding cloud monitored device
 
@@ -566,7 +566,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     deviceType := "deviceType_example" // string | Device Type switch or wireless controller
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 100000. Default is 1000. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -579,7 +579,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InventoryApi.GetOrganizationInventoryOnboardingCloudMonitoringNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryOnboardingCloudMonitoringNetworks`: []InlineResponse20010
+    // response from `GetOrganizationInventoryOnboardingCloudMonitoringNetworks`: []InlineResponse20011
     fmt.Fprintf(os.Stdout, "Response from `InventoryApi.GetOrganizationInventoryOnboardingCloudMonitoringNetworks`: %v\n", resp)
 }
 ```
@@ -590,7 +590,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20010**](InlineResponse20010.md)
+[**[]InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -644,8 +644,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    releaseFromOrganizationInventory := *openapiclient.NewInlineObject202() // InlineObject202 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    releaseFromOrganizationInventory := *openapiclient.NewInlineObject203() // InlineObject203 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -665,7 +665,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -675,7 +675,7 @@ Other parameters are passed through a pointer to a apiReleaseFromOrganizationInv
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **releaseFromOrganizationInventory** | [**InlineObject202**](InlineObject202.md) |  | 
+ **releaseFromOrganizationInventory** | [**InlineObject203**](InlineObject203.md) |  | 
 
 ### Return type
 

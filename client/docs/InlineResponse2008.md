@@ -4,15 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**StaticRouteId** | Pointer to **string** | The identifier of a layer 3 static route | [optional] 
+**Name** | Pointer to **string** | The name or description of the layer 3 static route | [optional] 
+**Subnet** | **string** | The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24) | 
+**NextHopIp** | **string** |  The IP address of the router to which traffic for this destination network should be sent | 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static routes via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static routes over OSPF routes | [optional] 
 
 ## Methods
 
 ### NewInlineResponse2008
 
-`func NewInlineResponse2008() *InlineResponse2008`
+`func NewInlineResponse2008(subnet string, nextHopIp string, ) *InlineResponse2008`
 
 NewInlineResponse2008 instantiates a new InlineResponse2008 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +30,145 @@ NewInlineResponse2008WithDefaults instantiates a new InlineResponse2008 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUuid
+### GetStaticRouteId
 
-`func (o *InlineResponse2008) GetUuid() string`
+`func (o *InlineResponse2008) GetStaticRouteId() string`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetStaticRouteId returns the StaticRouteId field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetStaticRouteIdOk
 
-`func (o *InlineResponse2008) GetUuidOk() (*string, bool)`
+`func (o *InlineResponse2008) GetStaticRouteIdOk() (*string, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetStaticRouteIdOk returns a tuple with the StaticRouteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetStaticRouteId
 
-`func (o *InlineResponse2008) SetUuid(v string)`
+`func (o *InlineResponse2008) SetStaticRouteId(v string)`
 
-SetUuid sets Uuid field to given value.
+SetStaticRouteId sets StaticRouteId field to given value.
 
-### HasUuid
+### HasStaticRouteId
 
-`func (o *InlineResponse2008) HasUuid() bool`
+`func (o *InlineResponse2008) HasStaticRouteId() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasStaticRouteId returns a boolean if a field has been set.
 
-### GetMajor
+### GetName
 
-`func (o *InlineResponse2008) GetMajor() int32`
+`func (o *InlineResponse2008) GetName() string`
 
-GetMajor returns the Major field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMajorOk
+### GetNameOk
 
-`func (o *InlineResponse2008) GetMajorOk() (*int32, bool)`
+`func (o *InlineResponse2008) GetNameOk() (*string, bool)`
 
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajor
+### SetName
 
-`func (o *InlineResponse2008) SetMajor(v int32)`
+`func (o *InlineResponse2008) SetName(v string)`
 
-SetMajor sets Major field to given value.
+SetName sets Name field to given value.
 
-### HasMajor
+### HasName
 
-`func (o *InlineResponse2008) HasMajor() bool`
+`func (o *InlineResponse2008) HasName() bool`
 
-HasMajor returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMinor
+### GetSubnet
 
-`func (o *InlineResponse2008) GetMinor() int32`
+`func (o *InlineResponse2008) GetSubnet() string`
 
-GetMinor returns the Minor field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetMinorOk
+### GetSubnetOk
 
-`func (o *InlineResponse2008) GetMinorOk() (*int32, bool)`
+`func (o *InlineResponse2008) GetSubnetOk() (*string, bool)`
 
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMinor
+### SetSubnet
 
-`func (o *InlineResponse2008) SetMinor(v int32)`
+`func (o *InlineResponse2008) SetSubnet(v string)`
 
-SetMinor sets Minor field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasMinor
 
-`func (o *InlineResponse2008) HasMinor() bool`
+### GetNextHopIp
 
-HasMinor returns a boolean if a field has been set.
+`func (o *InlineResponse2008) GetNextHopIp() string`
+
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
+
+### GetNextHopIpOk
+
+`func (o *InlineResponse2008) GetNextHopIpOk() (*string, bool)`
+
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNextHopIp
+
+`func (o *InlineResponse2008) SetNextHopIp(v string)`
+
+SetNextHopIp sets NextHopIp field to given value.
+
+
+### GetAdvertiseViaOspfEnabled
+
+`func (o *InlineResponse2008) GetAdvertiseViaOspfEnabled() bool`
+
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
+
+### GetAdvertiseViaOspfEnabledOk
+
+`func (o *InlineResponse2008) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
+
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdvertiseViaOspfEnabled
+
+`func (o *InlineResponse2008) SetAdvertiseViaOspfEnabled(v bool)`
+
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
+
+### HasAdvertiseViaOspfEnabled
+
+`func (o *InlineResponse2008) HasAdvertiseViaOspfEnabled() bool`
+
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+
+### GetPreferOverOspfRoutesEnabled
+
+`func (o *InlineResponse2008) GetPreferOverOspfRoutesEnabled() bool`
+
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+
+### GetPreferOverOspfRoutesEnabledOk
+
+`func (o *InlineResponse2008) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreferOverOspfRoutesEnabled
+
+`func (o *InlineResponse2008) SetPreferOverOspfRoutesEnabled(v bool)`
+
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+
+### HasPreferOverOspfRoutesEnabled
+
+`func (o *InlineResponse2008) HasPreferOverOspfRoutesEnabled() bool`
+
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
-**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
-**PowerExceptions** | Pointer to [**[]InlineResponse20068PowerExceptions**](InlineResponse20068PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
+**Serial** | Pointer to **string** | Switch serial. | [optional] 
+**Name** | Pointer to **string** | Switch name. | [optional] 
+**Url** | Pointer to **string** | Url link to switch. | [optional] 
+**SupportsInspection** | Pointer to **bool** | Whether this switch supports Dynamic ARP Inspection. | [optional] 
+**HasTrustedPort** | Pointer to **bool** | Whether this switch has a trusted DAI port. Always false if supportsInspection is false. | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse20068WithDefaults instantiates a new InlineResponse20068 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlan
+### GetSerial
 
-`func (o *InlineResponse20068) GetVlan() int32`
+`func (o *InlineResponse20068) GetSerial() string`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetSerialOk
 
-`func (o *InlineResponse20068) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse20068) GetSerialOk() (*string, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetSerial
 
-`func (o *InlineResponse20068) SetVlan(v int32)`
+`func (o *InlineResponse20068) SetSerial(v string)`
 
-SetVlan sets Vlan field to given value.
+SetSerial sets Serial field to given value.
 
-### HasVlan
+### HasSerial
 
-`func (o *InlineResponse20068) HasVlan() bool`
+`func (o *InlineResponse20068) HasSerial() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetUseCombinedPower
+### GetName
 
-`func (o *InlineResponse20068) GetUseCombinedPower() bool`
+`func (o *InlineResponse20068) GetName() string`
 
-GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUseCombinedPowerOk
+### GetNameOk
 
-`func (o *InlineResponse20068) GetUseCombinedPowerOk() (*bool, bool)`
+`func (o *InlineResponse20068) GetNameOk() (*string, bool)`
 
-GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUseCombinedPower
+### SetName
 
-`func (o *InlineResponse20068) SetUseCombinedPower(v bool)`
+`func (o *InlineResponse20068) SetName(v string)`
 
-SetUseCombinedPower sets UseCombinedPower field to given value.
+SetName sets Name field to given value.
 
-### HasUseCombinedPower
+### HasName
 
-`func (o *InlineResponse20068) HasUseCombinedPower() bool`
+`func (o *InlineResponse20068) HasName() bool`
 
-HasUseCombinedPower returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetPowerExceptions
+### GetUrl
 
-`func (o *InlineResponse20068) GetPowerExceptions() []InlineResponse20068PowerExceptions`
+`func (o *InlineResponse20068) GetUrl() string`
 
-GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetPowerExceptionsOk
+### GetUrlOk
 
-`func (o *InlineResponse20068) GetPowerExceptionsOk() (*[]InlineResponse20068PowerExceptions, bool)`
+`func (o *InlineResponse20068) GetUrlOk() (*string, bool)`
 
-GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPowerExceptions
+### SetUrl
 
-`func (o *InlineResponse20068) SetPowerExceptions(v []InlineResponse20068PowerExceptions)`
+`func (o *InlineResponse20068) SetUrl(v string)`
 
-SetPowerExceptions sets PowerExceptions field to given value.
+SetUrl sets Url field to given value.
 
-### HasPowerExceptions
+### HasUrl
 
-`func (o *InlineResponse20068) HasPowerExceptions() bool`
+`func (o *InlineResponse20068) HasUrl() bool`
 
-HasPowerExceptions returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetSupportsInspection
+
+`func (o *InlineResponse20068) GetSupportsInspection() bool`
+
+GetSupportsInspection returns the SupportsInspection field if non-nil, zero value otherwise.
+
+### GetSupportsInspectionOk
+
+`func (o *InlineResponse20068) GetSupportsInspectionOk() (*bool, bool)`
+
+GetSupportsInspectionOk returns a tuple with the SupportsInspection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSupportsInspection
+
+`func (o *InlineResponse20068) SetSupportsInspection(v bool)`
+
+SetSupportsInspection sets SupportsInspection field to given value.
+
+### HasSupportsInspection
+
+`func (o *InlineResponse20068) HasSupportsInspection() bool`
+
+HasSupportsInspection returns a boolean if a field has been set.
+
+### GetHasTrustedPort
+
+`func (o *InlineResponse20068) GetHasTrustedPort() bool`
+
+GetHasTrustedPort returns the HasTrustedPort field if non-nil, zero value otherwise.
+
+### GetHasTrustedPortOk
+
+`func (o *InlineResponse20068) GetHasTrustedPortOk() (*bool, bool)`
+
+GetHasTrustedPortOk returns a tuple with the HasTrustedPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHasTrustedPort
+
+`func (o *InlineResponse20068) SetHasTrustedPort(v bool)`
+
+SetHasTrustedPort sets HasTrustedPort field to given value.
+
+### HasHasTrustedPort
+
+`func (o *InlineResponse20068) HasHasTrustedPort() bool`
+
+HasHasTrustedPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

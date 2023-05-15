@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the SSID | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
+**Id** | Pointer to **string** | The id of the VPP Account | [optional] 
+**VppServiceToken** | Pointer to **string** | The VPP Account&#39;s Service Token | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200132WithDefaults instantiates a new InlineResponse200132 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetId
 
-`func (o *InlineResponse200132) GetName() string`
+`func (o *InlineResponse200132) GetId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetIdOk
 
-`func (o *InlineResponse200132) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200132) GetIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetId
 
-`func (o *InlineResponse200132) SetName(v string)`
+`func (o *InlineResponse200132) SetId(v string)`
 
-SetName sets Name field to given value.
+SetId sets Id field to given value.
 
-### HasName
+### HasId
 
-`func (o *InlineResponse200132) HasName() bool`
+`func (o *InlineResponse200132) HasId() bool`
 
-HasName returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUsage
+### GetVppServiceToken
 
-`func (o *InlineResponse200132) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
+`func (o *InlineResponse200132) GetVppServiceToken() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetVppServiceToken returns the VppServiceToken field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetVppServiceTokenOk
 
-`func (o *InlineResponse200132) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
+`func (o *InlineResponse200132) GetVppServiceTokenOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetVppServiceTokenOk returns a tuple with the VppServiceToken field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetVppServiceToken
 
-`func (o *InlineResponse200132) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
+`func (o *InlineResponse200132) SetVppServiceToken(v string)`
 
-SetUsage sets Usage field to given value.
+SetVppServiceToken sets VppServiceToken field to given value.
 
-### HasUsage
+### HasVppServiceToken
 
-`func (o *InlineResponse200132) HasUsage() bool`
+`func (o *InlineResponse200132) HasVppServiceToken() bool`
 
-HasUsage returns a boolean if a field has been set.
-
-### GetClients
-
-`func (o *InlineResponse200132) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
-
-GetClients returns the Clients field if non-nil, zero value otherwise.
-
-### GetClientsOk
-
-`func (o *InlineResponse200132) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
-
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClients
-
-`func (o *InlineResponse200132) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
-
-SetClients sets Clients field to given value.
-
-### HasClients
-
-`func (o *InlineResponse200132) HasClients() bool`
-
-HasClients returns a boolean if a field has been set.
+HasVppServiceToken returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

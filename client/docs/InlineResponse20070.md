@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]InlineResponse20070PowerExceptions**](InlineResponse20070PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20070WithDefaults instantiates a new InlineResponse20070 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetVlan
 
-`func (o *InlineResponse20070) GetBroadcastThreshold() int32`
+`func (o *InlineResponse20070) GetVlan() int32`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetVlanOk
 
-`func (o *InlineResponse20070) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse20070) GetVlanOk() (*int32, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetVlan
 
-`func (o *InlineResponse20070) SetBroadcastThreshold(v int32)`
+`func (o *InlineResponse20070) SetVlan(v int32)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasBroadcastThreshold
+### HasVlan
 
-`func (o *InlineResponse20070) HasBroadcastThreshold() bool`
+`func (o *InlineResponse20070) HasVlan() bool`
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetMulticastThreshold
+### GetUseCombinedPower
 
-`func (o *InlineResponse20070) GetMulticastThreshold() int32`
+`func (o *InlineResponse20070) GetUseCombinedPower() bool`
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-### GetMulticastThresholdOk
+### GetUseCombinedPowerOk
 
-`func (o *InlineResponse20070) GetMulticastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse20070) GetUseCombinedPowerOk() (*bool, bool)`
 
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetUseCombinedPower
 
-`func (o *InlineResponse20070) SetMulticastThreshold(v int32)`
+`func (o *InlineResponse20070) SetUseCombinedPower(v bool)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasMulticastThreshold
+### HasUseCombinedPower
 
-`func (o *InlineResponse20070) HasMulticastThreshold() bool`
+`func (o *InlineResponse20070) HasUseCombinedPower() bool`
 
-HasMulticastThreshold returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetUnknownUnicastThreshold
+### GetPowerExceptions
 
-`func (o *InlineResponse20070) GetUnknownUnicastThreshold() int32`
+`func (o *InlineResponse20070) GetPowerExceptions() []InlineResponse20070PowerExceptions`
 
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetUnknownUnicastThresholdOk
+### GetPowerExceptionsOk
 
-`func (o *InlineResponse20070) GetUnknownUnicastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse20070) GetPowerExceptionsOk() (*[]InlineResponse20070PowerExceptions, bool)`
 
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnknownUnicastThreshold
+### SetPowerExceptions
 
-`func (o *InlineResponse20070) SetUnknownUnicastThreshold(v int32)`
+`func (o *InlineResponse20070) SetPowerExceptions(v []InlineResponse20070PowerExceptions)`
 
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasUnknownUnicastThreshold
+### HasPowerExceptions
 
-`func (o *InlineResponse20070) HasUnknownUnicastThreshold() bool`
+`func (o *InlineResponse20070) HasPowerExceptions() bool`
 
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

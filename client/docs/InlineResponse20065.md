@@ -4,10 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrustedServerId** | Pointer to **string** | ID of the trusted server. | [optional] 
-**Mac** | Pointer to **string** | Mac address of the trusted server. | [optional] 
-**Vlan** | Pointer to **int32** | Vlan ID of the trusted server. | [optional] 
-**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the access policy | [optional] 
+**RadiusServers** | Pointer to [**[]NetworksNetworkIdSwitchAccessPoliciesRadiusServers**](NetworksNetworkIdSwitchAccessPoliciesRadiusServers.md) | List of RADIUS servers to require connecting devices to authenticate against before granting network access | [optional] 
+**Radius** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadius**](NetworksNetworkIdSwitchAccessPoliciesRadius.md) |  | [optional] 
+**GuestPortBouncing** | Pointer to **bool** | If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers | [optional] 
+**RadiusTestingEnabled** | Pointer to **bool** | If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers | [optional] 
+**RadiusCoaSupportEnabled** | Pointer to **bool** | Change of authentication for RADIUS re-authentication and disconnection | [optional] 
+**RadiusAccountingEnabled** | Pointer to **bool** | Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients | [optional] 
+**RadiusAccountingServers** | Pointer to [**[]NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers**](NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers.md) | List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access | [optional] 
+**RadiusGroupAttribute** | Pointer to **string** | Acceptable values are &#x60;\&quot;\&quot;&#x60; for None, or &#x60;\&quot;11\&quot;&#x60; for Group Policies ACL | [optional] 
+**HostMode** | Pointer to **string** | Choose the Host Mode for the access policy. | [optional] 
+**AccessPolicyType** | Pointer to **string** | Access Type of the policy. Automatically &#39;Hybrid authentication&#39; when hostMode is &#39;Multi-Domain&#39;. | [optional] 
+**IncreaseAccessSpeed** | Pointer to **bool** | Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is &#39;Hybrid Authentication. | [optional] 
+**GuestVlanId** | Pointer to **int32** | ID for the guest VLAN allow unauthorized devices access to limited network resources | [optional] 
+**Dot1x** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesDot1x**](NetworksNetworkIdSwitchAccessPoliciesDot1x.md) |  | [optional] 
+**VoiceVlanClients** | Pointer to **bool** | CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is &#39;Multi-Domain&#39;. | [optional] 
+**UrlRedirectWalledGardenEnabled** | Pointer to **bool** | Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication | [optional] 
+**UrlRedirectWalledGardenRanges** | Pointer to **[]string** | IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication | [optional] 
 
 ## Methods
 
@@ -28,105 +41,430 @@ NewInlineResponse20065WithDefaults instantiates a new InlineResponse20065 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrustedServerId
+### GetName
 
-`func (o *InlineResponse20065) GetTrustedServerId() string`
+`func (o *InlineResponse20065) GetName() string`
 
-GetTrustedServerId returns the TrustedServerId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTrustedServerIdOk
+### GetNameOk
 
-`func (o *InlineResponse20065) GetTrustedServerIdOk() (*string, bool)`
+`func (o *InlineResponse20065) GetNameOk() (*string, bool)`
 
-GetTrustedServerIdOk returns a tuple with the TrustedServerId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrustedServerId
+### SetName
 
-`func (o *InlineResponse20065) SetTrustedServerId(v string)`
+`func (o *InlineResponse20065) SetName(v string)`
 
-SetTrustedServerId sets TrustedServerId field to given value.
+SetName sets Name field to given value.
 
-### HasTrustedServerId
+### HasName
 
-`func (o *InlineResponse20065) HasTrustedServerId() bool`
+`func (o *InlineResponse20065) HasName() bool`
 
-HasTrustedServerId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMac
+### GetRadiusServers
 
-`func (o *InlineResponse20065) GetMac() string`
+`func (o *InlineResponse20065) GetRadiusServers() []NetworksNetworkIdSwitchAccessPoliciesRadiusServers`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetRadiusServersOk
 
-`func (o *InlineResponse20065) GetMacOk() (*string, bool)`
+`func (o *InlineResponse20065) GetRadiusServersOk() (*[]NetworksNetworkIdSwitchAccessPoliciesRadiusServers, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetRadiusServers
 
-`func (o *InlineResponse20065) SetMac(v string)`
+`func (o *InlineResponse20065) SetRadiusServers(v []NetworksNetworkIdSwitchAccessPoliciesRadiusServers)`
 
-SetMac sets Mac field to given value.
+SetRadiusServers sets RadiusServers field to given value.
 
-### HasMac
+### HasRadiusServers
 
-`func (o *InlineResponse20065) HasMac() bool`
+`func (o *InlineResponse20065) HasRadiusServers() bool`
 
-HasMac returns a boolean if a field has been set.
+HasRadiusServers returns a boolean if a field has been set.
 
-### GetVlan
+### GetRadius
 
-`func (o *InlineResponse20065) GetVlan() int32`
+`func (o *InlineResponse20065) GetRadius() NetworksNetworkIdSwitchAccessPoliciesRadius`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetRadius returns the Radius field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetRadiusOk
 
-`func (o *InlineResponse20065) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse20065) GetRadiusOk() (*NetworksNetworkIdSwitchAccessPoliciesRadius, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetRadiusOk returns a tuple with the Radius field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetRadius
 
-`func (o *InlineResponse20065) SetVlan(v int32)`
+`func (o *InlineResponse20065) SetRadius(v NetworksNetworkIdSwitchAccessPoliciesRadius)`
 
-SetVlan sets Vlan field to given value.
+SetRadius sets Radius field to given value.
 
-### HasVlan
+### HasRadius
 
-`func (o *InlineResponse20065) HasVlan() bool`
+`func (o *InlineResponse20065) HasRadius() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasRadius returns a boolean if a field has been set.
 
-### GetIpv4
+### GetGuestPortBouncing
 
-`func (o *InlineResponse20065) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4`
+`func (o *InlineResponse20065) GetGuestPortBouncing() bool`
 
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+GetGuestPortBouncing returns the GuestPortBouncing field if non-nil, zero value otherwise.
 
-### GetIpv4Ok
+### GetGuestPortBouncingOk
 
-`func (o *InlineResponse20065) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4, bool)`
+`func (o *InlineResponse20065) GetGuestPortBouncingOk() (*bool, bool)`
 
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+GetGuestPortBouncingOk returns a tuple with the GuestPortBouncing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv4
+### SetGuestPortBouncing
 
-`func (o *InlineResponse20065) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4)`
+`func (o *InlineResponse20065) SetGuestPortBouncing(v bool)`
 
-SetIpv4 sets Ipv4 field to given value.
+SetGuestPortBouncing sets GuestPortBouncing field to given value.
 
-### HasIpv4
+### HasGuestPortBouncing
 
-`func (o *InlineResponse20065) HasIpv4() bool`
+`func (o *InlineResponse20065) HasGuestPortBouncing() bool`
 
-HasIpv4 returns a boolean if a field has been set.
+HasGuestPortBouncing returns a boolean if a field has been set.
+
+### GetRadiusTestingEnabled
+
+`func (o *InlineResponse20065) GetRadiusTestingEnabled() bool`
+
+GetRadiusTestingEnabled returns the RadiusTestingEnabled field if non-nil, zero value otherwise.
+
+### GetRadiusTestingEnabledOk
+
+`func (o *InlineResponse20065) GetRadiusTestingEnabledOk() (*bool, bool)`
+
+GetRadiusTestingEnabledOk returns a tuple with the RadiusTestingEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusTestingEnabled
+
+`func (o *InlineResponse20065) SetRadiusTestingEnabled(v bool)`
+
+SetRadiusTestingEnabled sets RadiusTestingEnabled field to given value.
+
+### HasRadiusTestingEnabled
+
+`func (o *InlineResponse20065) HasRadiusTestingEnabled() bool`
+
+HasRadiusTestingEnabled returns a boolean if a field has been set.
+
+### GetRadiusCoaSupportEnabled
+
+`func (o *InlineResponse20065) GetRadiusCoaSupportEnabled() bool`
+
+GetRadiusCoaSupportEnabled returns the RadiusCoaSupportEnabled field if non-nil, zero value otherwise.
+
+### GetRadiusCoaSupportEnabledOk
+
+`func (o *InlineResponse20065) GetRadiusCoaSupportEnabledOk() (*bool, bool)`
+
+GetRadiusCoaSupportEnabledOk returns a tuple with the RadiusCoaSupportEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusCoaSupportEnabled
+
+`func (o *InlineResponse20065) SetRadiusCoaSupportEnabled(v bool)`
+
+SetRadiusCoaSupportEnabled sets RadiusCoaSupportEnabled field to given value.
+
+### HasRadiusCoaSupportEnabled
+
+`func (o *InlineResponse20065) HasRadiusCoaSupportEnabled() bool`
+
+HasRadiusCoaSupportEnabled returns a boolean if a field has been set.
+
+### GetRadiusAccountingEnabled
+
+`func (o *InlineResponse20065) GetRadiusAccountingEnabled() bool`
+
+GetRadiusAccountingEnabled returns the RadiusAccountingEnabled field if non-nil, zero value otherwise.
+
+### GetRadiusAccountingEnabledOk
+
+`func (o *InlineResponse20065) GetRadiusAccountingEnabledOk() (*bool, bool)`
+
+GetRadiusAccountingEnabledOk returns a tuple with the RadiusAccountingEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusAccountingEnabled
+
+`func (o *InlineResponse20065) SetRadiusAccountingEnabled(v bool)`
+
+SetRadiusAccountingEnabled sets RadiusAccountingEnabled field to given value.
+
+### HasRadiusAccountingEnabled
+
+`func (o *InlineResponse20065) HasRadiusAccountingEnabled() bool`
+
+HasRadiusAccountingEnabled returns a boolean if a field has been set.
+
+### GetRadiusAccountingServers
+
+`func (o *InlineResponse20065) GetRadiusAccountingServers() []NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers`
+
+GetRadiusAccountingServers returns the RadiusAccountingServers field if non-nil, zero value otherwise.
+
+### GetRadiusAccountingServersOk
+
+`func (o *InlineResponse20065) GetRadiusAccountingServersOk() (*[]NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers, bool)`
+
+GetRadiusAccountingServersOk returns a tuple with the RadiusAccountingServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusAccountingServers
+
+`func (o *InlineResponse20065) SetRadiusAccountingServers(v []NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers)`
+
+SetRadiusAccountingServers sets RadiusAccountingServers field to given value.
+
+### HasRadiusAccountingServers
+
+`func (o *InlineResponse20065) HasRadiusAccountingServers() bool`
+
+HasRadiusAccountingServers returns a boolean if a field has been set.
+
+### GetRadiusGroupAttribute
+
+`func (o *InlineResponse20065) GetRadiusGroupAttribute() string`
+
+GetRadiusGroupAttribute returns the RadiusGroupAttribute field if non-nil, zero value otherwise.
+
+### GetRadiusGroupAttributeOk
+
+`func (o *InlineResponse20065) GetRadiusGroupAttributeOk() (*string, bool)`
+
+GetRadiusGroupAttributeOk returns a tuple with the RadiusGroupAttribute field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusGroupAttribute
+
+`func (o *InlineResponse20065) SetRadiusGroupAttribute(v string)`
+
+SetRadiusGroupAttribute sets RadiusGroupAttribute field to given value.
+
+### HasRadiusGroupAttribute
+
+`func (o *InlineResponse20065) HasRadiusGroupAttribute() bool`
+
+HasRadiusGroupAttribute returns a boolean if a field has been set.
+
+### GetHostMode
+
+`func (o *InlineResponse20065) GetHostMode() string`
+
+GetHostMode returns the HostMode field if non-nil, zero value otherwise.
+
+### GetHostModeOk
+
+`func (o *InlineResponse20065) GetHostModeOk() (*string, bool)`
+
+GetHostModeOk returns a tuple with the HostMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHostMode
+
+`func (o *InlineResponse20065) SetHostMode(v string)`
+
+SetHostMode sets HostMode field to given value.
+
+### HasHostMode
+
+`func (o *InlineResponse20065) HasHostMode() bool`
+
+HasHostMode returns a boolean if a field has been set.
+
+### GetAccessPolicyType
+
+`func (o *InlineResponse20065) GetAccessPolicyType() string`
+
+GetAccessPolicyType returns the AccessPolicyType field if non-nil, zero value otherwise.
+
+### GetAccessPolicyTypeOk
+
+`func (o *InlineResponse20065) GetAccessPolicyTypeOk() (*string, bool)`
+
+GetAccessPolicyTypeOk returns a tuple with the AccessPolicyType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicyType
+
+`func (o *InlineResponse20065) SetAccessPolicyType(v string)`
+
+SetAccessPolicyType sets AccessPolicyType field to given value.
+
+### HasAccessPolicyType
+
+`func (o *InlineResponse20065) HasAccessPolicyType() bool`
+
+HasAccessPolicyType returns a boolean if a field has been set.
+
+### GetIncreaseAccessSpeed
+
+`func (o *InlineResponse20065) GetIncreaseAccessSpeed() bool`
+
+GetIncreaseAccessSpeed returns the IncreaseAccessSpeed field if non-nil, zero value otherwise.
+
+### GetIncreaseAccessSpeedOk
+
+`func (o *InlineResponse20065) GetIncreaseAccessSpeedOk() (*bool, bool)`
+
+GetIncreaseAccessSpeedOk returns a tuple with the IncreaseAccessSpeed field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIncreaseAccessSpeed
+
+`func (o *InlineResponse20065) SetIncreaseAccessSpeed(v bool)`
+
+SetIncreaseAccessSpeed sets IncreaseAccessSpeed field to given value.
+
+### HasIncreaseAccessSpeed
+
+`func (o *InlineResponse20065) HasIncreaseAccessSpeed() bool`
+
+HasIncreaseAccessSpeed returns a boolean if a field has been set.
+
+### GetGuestVlanId
+
+`func (o *InlineResponse20065) GetGuestVlanId() int32`
+
+GetGuestVlanId returns the GuestVlanId field if non-nil, zero value otherwise.
+
+### GetGuestVlanIdOk
+
+`func (o *InlineResponse20065) GetGuestVlanIdOk() (*int32, bool)`
+
+GetGuestVlanIdOk returns a tuple with the GuestVlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGuestVlanId
+
+`func (o *InlineResponse20065) SetGuestVlanId(v int32)`
+
+SetGuestVlanId sets GuestVlanId field to given value.
+
+### HasGuestVlanId
+
+`func (o *InlineResponse20065) HasGuestVlanId() bool`
+
+HasGuestVlanId returns a boolean if a field has been set.
+
+### GetDot1x
+
+`func (o *InlineResponse20065) GetDot1x() NetworksNetworkIdSwitchAccessPoliciesDot1x`
+
+GetDot1x returns the Dot1x field if non-nil, zero value otherwise.
+
+### GetDot1xOk
+
+`func (o *InlineResponse20065) GetDot1xOk() (*NetworksNetworkIdSwitchAccessPoliciesDot1x, bool)`
+
+GetDot1xOk returns a tuple with the Dot1x field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDot1x
+
+`func (o *InlineResponse20065) SetDot1x(v NetworksNetworkIdSwitchAccessPoliciesDot1x)`
+
+SetDot1x sets Dot1x field to given value.
+
+### HasDot1x
+
+`func (o *InlineResponse20065) HasDot1x() bool`
+
+HasDot1x returns a boolean if a field has been set.
+
+### GetVoiceVlanClients
+
+`func (o *InlineResponse20065) GetVoiceVlanClients() bool`
+
+GetVoiceVlanClients returns the VoiceVlanClients field if non-nil, zero value otherwise.
+
+### GetVoiceVlanClientsOk
+
+`func (o *InlineResponse20065) GetVoiceVlanClientsOk() (*bool, bool)`
+
+GetVoiceVlanClientsOk returns a tuple with the VoiceVlanClients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVoiceVlanClients
+
+`func (o *InlineResponse20065) SetVoiceVlanClients(v bool)`
+
+SetVoiceVlanClients sets VoiceVlanClients field to given value.
+
+### HasVoiceVlanClients
+
+`func (o *InlineResponse20065) HasVoiceVlanClients() bool`
+
+HasVoiceVlanClients returns a boolean if a field has been set.
+
+### GetUrlRedirectWalledGardenEnabled
+
+`func (o *InlineResponse20065) GetUrlRedirectWalledGardenEnabled() bool`
+
+GetUrlRedirectWalledGardenEnabled returns the UrlRedirectWalledGardenEnabled field if non-nil, zero value otherwise.
+
+### GetUrlRedirectWalledGardenEnabledOk
+
+`func (o *InlineResponse20065) GetUrlRedirectWalledGardenEnabledOk() (*bool, bool)`
+
+GetUrlRedirectWalledGardenEnabledOk returns a tuple with the UrlRedirectWalledGardenEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrlRedirectWalledGardenEnabled
+
+`func (o *InlineResponse20065) SetUrlRedirectWalledGardenEnabled(v bool)`
+
+SetUrlRedirectWalledGardenEnabled sets UrlRedirectWalledGardenEnabled field to given value.
+
+### HasUrlRedirectWalledGardenEnabled
+
+`func (o *InlineResponse20065) HasUrlRedirectWalledGardenEnabled() bool`
+
+HasUrlRedirectWalledGardenEnabled returns a boolean if a field has been set.
+
+### GetUrlRedirectWalledGardenRanges
+
+`func (o *InlineResponse20065) GetUrlRedirectWalledGardenRanges() []string`
+
+GetUrlRedirectWalledGardenRanges returns the UrlRedirectWalledGardenRanges field if non-nil, zero value otherwise.
+
+### GetUrlRedirectWalledGardenRangesOk
+
+`func (o *InlineResponse20065) GetUrlRedirectWalledGardenRangesOk() (*[]string, bool)`
+
+GetUrlRedirectWalledGardenRangesOk returns a tuple with the UrlRedirectWalledGardenRanges field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrlRedirectWalledGardenRanges
+
+`func (o *InlineResponse20065) SetUrlRedirectWalledGardenRanges(v []string)`
+
+SetUrlRedirectWalledGardenRanges sets UrlRedirectWalledGardenRanges field to given value.
+
+### HasUrlRedirectWalledGardenRanges
+
+`func (o *InlineResponse20065) HasUrlRedirectWalledGardenRanges() bool`
+
+HasUrlRedirectWalledGardenRanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

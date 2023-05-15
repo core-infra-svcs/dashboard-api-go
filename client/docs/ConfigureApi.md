@@ -217,6 +217,8 @@ Method | HTTP request | Description
 [**GetNetworkPoliciesByClient**](ConfigureApi.md#GetNetworkPoliciesByClient) | **Get** /networks/{networkId}/policies/byClient | Get policies for all clients with policies
 [**GetNetworkSensorAlertsProfile**](ConfigureApi.md#GetNetworkSensorAlertsProfile) | **Get** /networks/{networkId}/sensor/alerts/profiles/{id} | Show details of a sensor alert profile for a network.
 [**GetNetworkSensorAlertsProfiles**](ConfigureApi.md#GetNetworkSensorAlertsProfiles) | **Get** /networks/{networkId}/sensor/alerts/profiles | Lists all sensor alert profiles for a network.
+[**GetNetworkSensorMqttBroker**](ConfigureApi.md#GetNetworkSensorMqttBroker) | **Get** /networks/{networkId}/sensor/mqttBrokers/{mqttBrokerId} | Return the sensor settings of an MQTT broker
+[**GetNetworkSensorMqttBrokers**](ConfigureApi.md#GetNetworkSensorMqttBrokers) | **Get** /networks/{networkId}/sensor/mqttBrokers | List the sensor settings of all MQTT brokers for this network
 [**GetNetworkSensorRelationships**](ConfigureApi.md#GetNetworkSensorRelationships) | **Get** /networks/{networkId}/sensor/relationships | List the sensor roles for devices in a given network
 [**GetNetworkSettings**](ConfigureApi.md#GetNetworkSettings) | **Get** /networks/{networkId}/settings | Return the settings for a network
 [**GetNetworkSmBypassActivationLockAttempt**](ConfigureApi.md#GetNetworkSmBypassActivationLockAttempt) | **Get** /networks/{networkId}/sm/bypassActivationLockAttempts/{attemptId} | Bypass activation lock attempt status
@@ -354,7 +356,6 @@ Method | HTTP request | Description
 [**GetOrganizationSmVppAccounts**](ConfigureApi.md#GetOrganizationSmVppAccounts) | **Get** /organizations/{organizationId}/sm/vppAccounts | List the VPP accounts in the organization
 [**GetOrganizationSnmp**](ConfigureApi.md#GetOrganizationSnmp) | **Get** /organizations/{organizationId}/snmp | Return the SNMP settings for an organization
 [**GetOrganizationSwitchPortsBySwitch**](ConfigureApi.md#GetOrganizationSwitchPortsBySwitch) | **Get** /organizations/{organizationId}/switch/ports/bySwitch | List the switchports in an organization by switch
-[**GetOrganizationWirelessDevicesEthernetStatuses**](ConfigureApi.md#GetOrganizationWirelessDevicesEthernetStatuses) | **Get** /organizations/{organizationId}/wireless/devices/ethernet/statuses | Endpoint to see power status for wireless devices
 [**GetOrganizations**](ConfigureApi.md#GetOrganizations) | **Get** /organizations | List the organizations that the user has privileges on
 [**LockNetworkSmDevices**](ConfigureApi.md#LockNetworkSmDevices) | **Post** /networks/{networkId}/sm/devices/lock | Lock a set of devices
 [**ModifyNetworkSmDevicesTags**](ConfigureApi.md#ModifyNetworkSmDevicesTags) | **Post** /networks/{networkId}/sm/devices/modifyTags | Add, delete, or update the tags of a set of devices
@@ -442,6 +443,7 @@ Method | HTTP request | Description
 [**UpdateNetworkMqttBroker**](ConfigureApi.md#UpdateNetworkMqttBroker) | **Put** /networks/{networkId}/mqttBrokers/{mqttBrokerId} | Update an MQTT broker
 [**UpdateNetworkNetflow**](ConfigureApi.md#UpdateNetworkNetflow) | **Put** /networks/{networkId}/netflow | Update the NetFlow traffic reporting settings for a network
 [**UpdateNetworkSensorAlertsProfile**](ConfigureApi.md#UpdateNetworkSensorAlertsProfile) | **Put** /networks/{networkId}/sensor/alerts/profiles/{id} | Updates a sensor alert profile for a network.
+[**UpdateNetworkSensorMqttBroker**](ConfigureApi.md#UpdateNetworkSensorMqttBroker) | **Put** /networks/{networkId}/sensor/mqttBrokers/{mqttBrokerId} | Update the sensor settings of an MQTT broker
 [**UpdateNetworkSettings**](ConfigureApi.md#UpdateNetworkSettings) | **Put** /networks/{networkId}/settings | Update the settings for a network
 [**UpdateNetworkSmDevicesFields**](ConfigureApi.md#UpdateNetworkSmDevicesFields) | **Put** /networks/{networkId}/sm/devices/fields | Modify the fields of a device
 [**UpdateNetworkSmTargetGroup**](ConfigureApi.md#UpdateNetworkSmTargetGroup) | **Put** /networks/{networkId}/sm/targetGroups/{targetGroupId} | Update a target group
@@ -520,7 +522,7 @@ Method | HTTP request | Description
 
 ## AddNetworkSwitchStack
 
-> map[string]interface{} AddNetworkSwitchStack(ctx, networkId, switchStackId).AddNetworkSwitchStack(addNetworkSwitchStack).Execute()
+> InlineResponse20071 AddNetworkSwitchStack(ctx, networkId, switchStackId).AddNetworkSwitchStack(addNetworkSwitchStack).Execute()
 
 Add a switch to a stack
 
@@ -539,9 +541,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    addNetworkSwitchStack := *openapiclient.NewInlineObject130("Serial_example") // InlineObject130 | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    addNetworkSwitchStack := *openapiclient.NewInlineObject131("Serial_example") // InlineObject131 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -550,7 +552,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.AddNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `AddNetworkSwitchStack`: map[string]interface{}
+    // response from `AddNetworkSwitchStack`: InlineResponse20071
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.AddNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -561,8 +563,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
 
 ### Other Parameters
 
@@ -573,11 +575,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **addNetworkSwitchStack** | [**InlineObject130**](InlineObject130.md) |  | 
+ **addNetworkSwitchStack** | [**InlineObject131**](InlineObject131.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20071**](InlineResponse20071.md)
 
 ### Authorization
 
@@ -595,7 +597,7 @@ Name | Type | Description  | Notes
 
 ## AssignOrganizationLicensesSeats
 
-> InlineResponse200113 AssignOrganizationLicensesSeats(ctx, organizationId).AssignOrganizationLicensesSeats(assignOrganizationLicensesSeats).Execute()
+> InlineResponse200119 AssignOrganizationLicensesSeats(ctx, organizationId).AssignOrganizationLicensesSeats(assignOrganizationLicensesSeats).Execute()
 
 Assign SM seats to a network
 
@@ -614,8 +616,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    assignOrganizationLicensesSeats := *openapiclient.NewInlineObject203("LicenseId_example", "NetworkId_example", int32(123)) // InlineObject203 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    assignOrganizationLicensesSeats := *openapiclient.NewInlineObject204("LicenseId_example", "NetworkId_example", int32(123)) // InlineObject204 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -624,7 +626,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.AssignOrganizationLicensesSeats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `AssignOrganizationLicensesSeats`: InlineResponse200113
+    // response from `AssignOrganizationLicensesSeats`: InlineResponse200119
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.AssignOrganizationLicensesSeats`: %v\n", resp)
 }
 ```
@@ -635,7 +637,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -645,11 +647,11 @@ Other parameters are passed through a pointer to a apiAssignOrganizationLicenses
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **assignOrganizationLicensesSeats** | [**InlineObject203**](InlineObject203.md) |  | 
+ **assignOrganizationLicensesSeats** | [**InlineObject204**](InlineObject204.md) |  | 
 
 ### Return type
 
-[**InlineResponse200113**](InlineResponse200113.md)
+[**InlineResponse200119**](InlineResponse200119.md)
 
 ### Authorization
 
@@ -686,7 +688,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     bindNetwork := *openapiclient.NewInlineObject62("ConfigTemplateId_example") // InlineObject62 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -707,7 +709,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -739,7 +741,7 @@ Name | Type | Description  | Notes
 
 ## CheckinNetworkSmDevices
 
-> InlineResponse20041 CheckinNetworkSmDevices(ctx, networkId).CheckinNetworkSmDevices(checkinNetworkSmDevices).Execute()
+> InlineResponse20043 CheckinNetworkSmDevices(ctx, networkId).CheckinNetworkSmDevices(checkinNetworkSmDevices).Execute()
 
 Force check-in a set of devices
 
@@ -758,8 +760,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    checkinNetworkSmDevices := *openapiclient.NewInlineObject99() // InlineObject99 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    checkinNetworkSmDevices := *openapiclient.NewInlineObject100() // InlineObject100 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -768,7 +770,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CheckinNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CheckinNetworkSmDevices`: InlineResponse20041
+    // response from `CheckinNetworkSmDevices`: InlineResponse20043
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CheckinNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -779,7 +781,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -789,11 +791,11 @@ Other parameters are passed through a pointer to a apiCheckinNetworkSmDevicesReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **checkinNetworkSmDevices** | [**InlineObject99**](InlineObject99.md) |  | 
+ **checkinNetworkSmDevices** | [**InlineObject100**](InlineObject100.md) |  | 
 
 ### Return type
 
-[**InlineResponse20041**](InlineResponse20041.md)
+[**InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 
@@ -830,8 +832,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    claimIntoOrganization := *openapiclient.NewInlineObject189() // InlineObject189 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    claimIntoOrganization := *openapiclient.NewInlineObject190() // InlineObject190 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -851,7 +853,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -861,7 +863,7 @@ Other parameters are passed through a pointer to a apiClaimIntoOrganizationReque
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **claimIntoOrganization** | [**InlineObject189**](InlineObject189.md) |  | 
+ **claimIntoOrganization** | [**InlineObject190**](InlineObject190.md) |  | 
 
 ### Return type
 
@@ -902,8 +904,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    claimIntoOrganizationInventory := *openapiclient.NewInlineObject198() // InlineObject198 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    claimIntoOrganizationInventory := *openapiclient.NewInlineObject199() // InlineObject199 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -923,7 +925,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -933,7 +935,7 @@ Other parameters are passed through a pointer to a apiClaimIntoOrganizationInven
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **claimIntoOrganizationInventory** | [**InlineObject198**](InlineObject198.md) |  | 
+ **claimIntoOrganizationInventory** | [**InlineObject199**](InlineObject199.md) |  | 
 
 ### Return type
 
@@ -974,7 +976,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     claimNetworkDevices := *openapiclient.NewInlineObject74([]string{"Serials_example"}) // InlineObject74 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -993,7 +995,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -1025,7 +1027,7 @@ Name | Type | Description  | Notes
 
 ## CloneOrganization
 
-> InlineResponse20087 CloneOrganization(ctx, organizationId).CloneOrganization(cloneOrganization).Execute()
+> InlineResponse20089 CloneOrganization(ctx, organizationId).CloneOrganization(cloneOrganization).Execute()
 
 Create a new organization by cloning the addressed organization
 
@@ -1044,8 +1046,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    cloneOrganization := *openapiclient.NewInlineObject190("Name_example") // InlineObject190 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    cloneOrganization := *openapiclient.NewInlineObject191("Name_example") // InlineObject191 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1054,7 +1056,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CloneOrganization``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CloneOrganization`: InlineResponse20087
+    // response from `CloneOrganization`: InlineResponse20089
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CloneOrganization`: %v\n", resp)
 }
 ```
@@ -1065,7 +1067,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -1075,11 +1077,11 @@ Other parameters are passed through a pointer to a apiCloneOrganizationRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cloneOrganization** | [**InlineObject190**](InlineObject190.md) |  | 
+ **cloneOrganization** | [**InlineObject191**](InlineObject191.md) |  | 
 
 ### Return type
 
-[**InlineResponse20087**](InlineResponse20087.md)
+[**InlineResponse20089**](InlineResponse20089.md)
 
 ### Authorization
 
@@ -1116,8 +1118,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    cloneOrganizationSwitchDevices := *openapiclient.NewInlineObject222("SourceSerial_example", []string{"TargetSerials_example"}) // InlineObject222 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    cloneOrganizationSwitchDevices := *openapiclient.NewInlineObject223("SourceSerial_example", []string{"TargetSerials_example"}) // InlineObject223 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1137,7 +1139,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -1147,7 +1149,7 @@ Other parameters are passed through a pointer to a apiCloneOrganizationSwitchDev
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cloneOrganizationSwitchDevices** | [**InlineObject222**](InlineObject222.md) |  | 
+ **cloneOrganizationSwitchDevices** | [**InlineObject223**](InlineObject223.md) |  | 
 
 ### Return type
 
@@ -1169,7 +1171,7 @@ Name | Type | Description  | Notes
 
 ## CombineOrganizationNetworks
 
-> InlineResponse200119 CombineOrganizationNetworks(ctx, organizationId).CombineOrganizationNetworks(combineOrganizationNetworks).Execute()
+> InlineResponse200125 CombineOrganizationNetworks(ctx, organizationId).CombineOrganizationNetworks(combineOrganizationNetworks).Execute()
 
 Combine multiple networks into a single network
 
@@ -1188,8 +1190,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    combineOrganizationNetworks := *openapiclient.NewInlineObject211("Name_example", []string{"NetworkIds_example"}) // InlineObject211 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    combineOrganizationNetworks := *openapiclient.NewInlineObject212("Name_example", []string{"NetworkIds_example"}) // InlineObject212 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1198,7 +1200,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CombineOrganizationNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CombineOrganizationNetworks`: InlineResponse200119
+    // response from `CombineOrganizationNetworks`: InlineResponse200125
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CombineOrganizationNetworks`: %v\n", resp)
 }
 ```
@@ -1209,7 +1211,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -1219,11 +1221,11 @@ Other parameters are passed through a pointer to a apiCombineOrganizationNetwork
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **combineOrganizationNetworks** | [**InlineObject211**](InlineObject211.md) |  | 
+ **combineOrganizationNetworks** | [**InlineObject212**](InlineObject212.md) |  | 
 
 ### Return type
 
-[**InlineResponse200119**](InlineResponse200119.md)
+[**InlineResponse200125**](InlineResponse200125.md)
 
 ### Authorization
 
@@ -1260,7 +1262,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1280,7 +1282,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -1311,7 +1313,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceSwitchRoutingInterface
 
-> InlineResponse2006 CreateDeviceSwitchRoutingInterface(ctx, serial).CreateDeviceSwitchRoutingInterface(createDeviceSwitchRoutingInterface).Execute()
+> InlineResponse2007 CreateDeviceSwitchRoutingInterface(ctx, serial).CreateDeviceSwitchRoutingInterface(createDeviceSwitchRoutingInterface).Execute()
 
 Create a layer 3 interface for a switch
 
@@ -1330,7 +1332,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     createDeviceSwitchRoutingInterface := *openapiclient.NewInlineObject18() // InlineObject18 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -1340,7 +1342,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateDeviceSwitchRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceSwitchRoutingInterface`: InlineResponse2006
+    // response from `CreateDeviceSwitchRoutingInterface`: InlineResponse2007
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateDeviceSwitchRoutingInterface`: %v\n", resp)
 }
 ```
@@ -1351,7 +1353,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -1365,7 +1367,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -1402,7 +1404,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     createDeviceSwitchRoutingStaticRoute := *openapiclient.NewInlineObject21("Subnet_example", "NextHopIp_example") // InlineObject21 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -1423,7 +1425,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -1474,7 +1476,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkAppliancePrefixesDelegatedStatic := *openapiclient.NewInlineObject41("Prefix_example", *openapiclient.NewNetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1()) // InlineObject41 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -1495,7 +1497,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -1546,7 +1548,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkApplianceStaticRoute := *openapiclient.NewInlineObject48("Name_example", "Subnet_example", "GatewayIp_example") // InlineObject48 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -1567,7 +1569,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -1618,7 +1620,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject51("Name_example") // InlineObject51 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -1639,7 +1641,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -1690,7 +1692,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkApplianceVlan := *openapiclient.NewInlineObject56("Id_example", "Name_example") // InlineObject56 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -1711,7 +1713,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -1762,7 +1764,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject63("Name_example") // InlineObject63 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -1783,7 +1785,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -1834,7 +1836,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkCameraWirelessProfile := *openapiclient.NewInlineObject65("Name_example", *openapiclient.NewNetworksNetworkIdCameraWirelessProfilesSsid()) // InlineObject65 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -1855,7 +1857,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -1887,7 +1889,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkFirmwareUpgradesRollback
 
-> InlineResponse20027 CreateNetworkFirmwareUpgradesRollback(ctx, networkId).CreateNetworkFirmwareUpgradesRollback(createNetworkFirmwareUpgradesRollback).Execute()
+> InlineResponse20028 CreateNetworkFirmwareUpgradesRollback(ctx, networkId).CreateNetworkFirmwareUpgradesRollback(createNetworkFirmwareUpgradesRollback).Execute()
 
 Rollback a Firmware Upgrade For A Network
 
@@ -1906,7 +1908,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkFirmwareUpgradesRollback := *openapiclient.NewInlineObject78([]openapiclient.NetworksNetworkIdFirmwareUpgradesRollbacksReasons{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesRollbacksReasons("Category_example", "Comment_example")}) // InlineObject78 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -1916,7 +1918,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateNetworkFirmwareUpgradesRollback``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkFirmwareUpgradesRollback`: InlineResponse20027
+    // response from `CreateNetworkFirmwareUpgradesRollback`: InlineResponse20028
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateNetworkFirmwareUpgradesRollback`: %v\n", resp)
 }
 ```
@@ -1927,7 +1929,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -1941,7 +1943,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**InlineResponse20028**](InlineResponse20028.md)
 
 ### Authorization
 
@@ -1959,7 +1961,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkFirmwareUpgradesStagedEvent
 
-> InlineResponse20028 CreateNetworkFirmwareUpgradesStagedEvent(ctx, networkId).CreateNetworkFirmwareUpgradesStagedEvent(createNetworkFirmwareUpgradesStagedEvent).Execute()
+> InlineResponse20029 CreateNetworkFirmwareUpgradesStagedEvent(ctx, networkId).CreateNetworkFirmwareUpgradesStagedEvent(createNetworkFirmwareUpgradesStagedEvent).Execute()
 
 Create a Staged Upgrade Event for a network
 
@@ -1978,7 +1980,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkFirmwareUpgradesStagedEvent := *openapiclient.NewInlineObject80([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject80 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -1988,7 +1990,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateNetworkFirmwareUpgradesStagedEvent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkFirmwareUpgradesStagedEvent`: InlineResponse20028
+    // response from `CreateNetworkFirmwareUpgradesStagedEvent`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateNetworkFirmwareUpgradesStagedEvent`: %v\n", resp)
 }
 ```
@@ -1999,7 +2001,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2013,7 +2015,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -2050,7 +2052,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject82("Name_example", false) // InlineObject82 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -2071,7 +2073,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2122,7 +2124,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkFloorPlan := *openapiclient.NewInlineObject85("Name_example", "ImageContents_example") // InlineObject85 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -2143,7 +2145,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2194,7 +2196,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkGroupPolicy := *openapiclient.NewInlineObject87("Name_example") // InlineObject87 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -2215,7 +2217,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2247,7 +2249,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkMerakiAuthUser
 
-> InlineResponse20033 CreateNetworkMerakiAuthUser(ctx, networkId).CreateNetworkMerakiAuthUser(createNetworkMerakiAuthUser).Execute()
+> InlineResponse20034 CreateNetworkMerakiAuthUser(ctx, networkId).CreateNetworkMerakiAuthUser(createNetworkMerakiAuthUser).Execute()
 
 Authorize a user configured with Meraki Authentication for a network (currently supports 802.1X, splash guest, and client VPN users, and currently, organizations have a 50,000 user cap)
 
@@ -2266,7 +2268,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkMerakiAuthUser := *openapiclient.NewInlineObject89("Email_example", []openapiclient.NetworksNetworkIdMerakiAuthUsersAuthorizations1{*openapiclient.NewNetworksNetworkIdMerakiAuthUsersAuthorizations1()}) // InlineObject89 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -2276,7 +2278,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateNetworkMerakiAuthUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkMerakiAuthUser`: InlineResponse20033
+    // response from `CreateNetworkMerakiAuthUser`: InlineResponse20034
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateNetworkMerakiAuthUser`: %v\n", resp)
 }
 ```
@@ -2287,7 +2289,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2301,7 +2303,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -2338,7 +2340,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkMqttBroker := *openapiclient.NewInlineObject91("Name_example", "Host_example", int32(123)) // InlineObject91 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -2359,7 +2361,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2410,7 +2412,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkPiiRequest := *openapiclient.NewInlineObject94() // InlineObject94 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -2431,7 +2433,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2463,7 +2465,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSensorAlertsProfile
 
-> InlineResponse20037 CreateNetworkSensorAlertsProfile(ctx, networkId).CreateNetworkSensorAlertsProfile(createNetworkSensorAlertsProfile).Execute()
+> InlineResponse20038 CreateNetworkSensorAlertsProfile(ctx, networkId).CreateNetworkSensorAlertsProfile(createNetworkSensorAlertsProfile).Execute()
 
 Creates a sensor alert profile for a network.
 
@@ -2482,7 +2484,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     createNetworkSensorAlertsProfile := *openapiclient.NewInlineObject95("Name_example", []openapiclient.NetworksNetworkIdSensorAlertsProfilesConditions{*openapiclient.NewNetworksNetworkIdSensorAlertsProfilesConditions("Metric_example", *openapiclient.NewNetworksNetworkIdSensorAlertsProfilesThreshold())}) // InlineObject95 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -2492,7 +2494,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSensorAlertsProfile`: InlineResponse20037
+    // response from `CreateNetworkSensorAlertsProfile`: InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -2503,7 +2505,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2517,7 +2519,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -2554,8 +2556,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkSmBypassActivationLockAttempt := *openapiclient.NewInlineObject98([]string{"Ids_example"}) // InlineObject98 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkSmBypassActivationLockAttempt := *openapiclient.NewInlineObject99([]string{"Ids_example"}) // InlineObject99 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2575,7 +2577,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2585,7 +2587,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSmBypassActiv
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSmBypassActivationLockAttempt** | [**InlineObject98**](InlineObject98.md) |  | 
+ **createNetworkSmBypassActivationLockAttempt** | [**InlineObject99**](InlineObject99.md) |  | 
 
 ### Return type
 
@@ -2626,8 +2628,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkSmTargetGroup := *openapiclient.NewInlineObject105() // InlineObject105 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    createNetworkSmTargetGroup := *openapiclient.NewInlineObject106() // InlineObject106 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2647,7 +2649,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2657,7 +2659,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSmTargetGroup
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSmTargetGroup** | [**InlineObject105**](InlineObject105.md) |  | 
+ **createNetworkSmTargetGroup** | [**InlineObject106**](InlineObject106.md) |  | 
 
 ### Return type
 
@@ -2679,7 +2681,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchAccessPolicy
 
-> InlineResponse20063 CreateNetworkSwitchAccessPolicy(ctx, networkId).CreateNetworkSwitchAccessPolicy(createNetworkSwitchAccessPolicy).Execute()
+> InlineResponse20065 CreateNetworkSwitchAccessPolicy(ctx, networkId).CreateNetworkSwitchAccessPolicy(createNetworkSwitchAccessPolicy).Execute()
 
 Create an access policy for a switch network
 
@@ -2698,8 +2700,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkSwitchAccessPolicy := *openapiclient.NewInlineObject109("Name_example", []openapiclient.NetworksNetworkIdSwitchAccessPoliciesRadiusServers1{*openapiclient.NewNetworksNetworkIdSwitchAccessPoliciesRadiusServers1("Host_example", int32(123), "Secret_example")}, false, false, false, "HostMode_example", false) // InlineObject109 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkSwitchAccessPolicy := *openapiclient.NewInlineObject110("Name_example", []openapiclient.NetworksNetworkIdSwitchAccessPoliciesRadiusServers1{*openapiclient.NewNetworksNetworkIdSwitchAccessPoliciesRadiusServers1("Host_example", int32(123), "Secret_example")}, false, false, false, "HostMode_example", false) // InlineObject110 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2708,7 +2710,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateNetworkSwitchAccessPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchAccessPolicy`: InlineResponse20063
+    // response from `CreateNetworkSwitchAccessPolicy`: InlineResponse20065
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateNetworkSwitchAccessPolicy`: %v\n", resp)
 }
 ```
@@ -2719,7 +2721,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2729,11 +2731,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchAccessP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchAccessPolicy** | [**InlineObject109**](InlineObject109.md) |  | 
+ **createNetworkSwitchAccessPolicy** | [**InlineObject110**](InlineObject110.md) |  | 
 
 ### Return type
 
-[**InlineResponse20063**](InlineResponse20063.md)
+[**InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 
@@ -2751,7 +2753,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
 
-> InlineResponse20065 CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId).CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
+> InlineResponse20067 CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId).CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
 
 Add a server to be trusted by Dynamic ARP Inspection on this network
 
@@ -2770,8 +2772,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer := *openapiclient.NewInlineObject113("Mac_example", int32(123), *openapiclient.NewNetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41()) // InlineObject113 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer := *openapiclient.NewInlineObject114("Mac_example", int32(123), *openapiclient.NewNetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41()) // InlineObject114 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2780,7 +2782,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse20065
+    // response from `CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse20067
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: %v\n", resp)
 }
 ```
@@ -2791,7 +2793,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2801,11 +2803,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchDhcpSer
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer** | [**InlineObject113**](InlineObject113.md) |  | 
+ **createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer** | [**InlineObject114**](InlineObject114.md) |  | 
 
 ### Return type
 
-[**InlineResponse20065**](InlineResponse20065.md)
+[**InlineResponse20067**](InlineResponse20067.md)
 
 ### Authorization
 
@@ -2842,8 +2844,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject116() // InlineObject116 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    createNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject117() // InlineObject117 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2863,7 +2865,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2873,7 +2875,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchLinkAgg
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchLinkAggregation** | [**InlineObject116**](InlineObject116.md) |  | 
+ **createNetworkSwitchLinkAggregation** | [**InlineObject117**](InlineObject117.md) |  | 
 
 ### Return type
 
@@ -2914,8 +2916,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkSwitchPortSchedule := *openapiclient.NewInlineObject119("Name_example") // InlineObject119 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkSwitchPortSchedule := *openapiclient.NewInlineObject120("Name_example") // InlineObject120 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2935,7 +2937,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -2945,7 +2947,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchPortSch
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchPortSchedule** | [**InlineObject119**](InlineObject119.md) |  | 
+ **createNetworkSwitchPortSchedule** | [**InlineObject120**](InlineObject120.md) |  | 
 
 ### Return type
 
@@ -2986,8 +2988,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkSwitchQosRule := *openapiclient.NewInlineObject121(int32(123)) // InlineObject121 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkSwitchQosRule := *openapiclient.NewInlineObject122(int32(123)) // InlineObject122 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3007,7 +3009,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -3017,7 +3019,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchQosRule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchQosRule** | [**InlineObject121**](InlineObject121.md) |  | 
+ **createNetworkSwitchQosRule** | [**InlineObject122**](InlineObject122.md) |  | 
 
 ### Return type
 
@@ -3058,8 +3060,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject125("InterfaceIp_example", "MulticastGroup_example") // InlineObject125 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject126("InterfaceIp_example", "MulticastGroup_example") // InlineObject126 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3079,7 +3081,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -3089,7 +3091,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject125**](InlineObject125.md) |  | 
+ **createNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject126**](InlineObject126.md) |  | 
 
 ### Return type
 
@@ -3130,8 +3132,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkSwitchStack := *openapiclient.NewInlineObject129("Name_example", []string{"Serials_example"}) // InlineObject129 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkSwitchStack := *openapiclient.NewInlineObject130("Name_example", []string{"Serials_example"}) // InlineObject130 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3151,7 +3153,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -3161,7 +3163,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchStackRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchStack** | [**InlineObject129**](InlineObject129.md) |  | 
+ **createNetworkSwitchStack** | [**InlineObject130**](InlineObject130.md) |  | 
 
 ### Return type
 
@@ -3202,9 +3204,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    createNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject132("Name_example", int32(123)) // InlineObject132 | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    createNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject133("Name_example", int32(123)) // InlineObject133 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3224,8 +3226,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
 
 ### Other Parameters
 
@@ -3236,7 +3238,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingInterface** | [**InlineObject132**](InlineObject132.md) |  | 
+ **createNetworkSwitchStackRoutingInterface** | [**InlineObject133**](InlineObject133.md) |  | 
 
 ### Return type
 
@@ -3277,9 +3279,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject135("Subnet_example", "NextHopIp_example") // InlineObject135 | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject136("Subnet_example", "NextHopIp_example") // InlineObject136 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3299,8 +3301,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
 
 ### Other Parameters
 
@@ -3311,7 +3313,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject135**](InlineObject135.md) |  | 
+ **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject136**](InlineObject136.md) |  | 
 
 ### Return type
 
@@ -3333,7 +3335,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkWebhooksHttpServer
 
-> InlineResponse20072 CreateNetworkWebhooksHttpServer(ctx, networkId).CreateNetworkWebhooksHttpServer(createNetworkWebhooksHttpServer).Execute()
+> InlineResponse20074 CreateNetworkWebhooksHttpServer(ctx, networkId).CreateNetworkWebhooksHttpServer(createNetworkWebhooksHttpServer).Execute()
 
 Add an HTTP server to a network
 
@@ -3352,8 +3354,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkWebhooksHttpServer := *openapiclient.NewInlineObject142("Name_example", "Url_example") // InlineObject142 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkWebhooksHttpServer := *openapiclient.NewInlineObject143("Name_example", "Url_example") // InlineObject143 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3362,7 +3364,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWebhooksHttpServer`: InlineResponse20072
+    // response from `CreateNetworkWebhooksHttpServer`: InlineResponse20074
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -3373,7 +3375,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -3383,11 +3385,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksHttpS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksHttpServer** | [**InlineObject142**](InlineObject142.md) |  | 
+ **createNetworkWebhooksHttpServer** | [**InlineObject143**](InlineObject143.md) |  | 
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20074**](InlineResponse20074.md)
 
 ### Authorization
 
@@ -3405,7 +3407,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkWebhooksPayloadTemplate
 
-> InlineResponse20073 CreateNetworkWebhooksPayloadTemplate(ctx, networkId).CreateNetworkWebhooksPayloadTemplate(createNetworkWebhooksPayloadTemplate).Execute()
+> InlineResponse20075 CreateNetworkWebhooksPayloadTemplate(ctx, networkId).CreateNetworkWebhooksPayloadTemplate(createNetworkWebhooksPayloadTemplate).Execute()
 
 Create a webhook payload template for a network
 
@@ -3424,8 +3426,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject144("Name_example") // InlineObject144 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject145("Name_example") // InlineObject145 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3434,7 +3436,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateNetworkWebhooksPayloadTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWebhooksPayloadTemplate`: InlineResponse20073
+    // response from `CreateNetworkWebhooksPayloadTemplate`: InlineResponse20075
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateNetworkWebhooksPayloadTemplate`: %v\n", resp)
 }
 ```
@@ -3445,7 +3447,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -3455,11 +3457,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksPaylo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksPayloadTemplate** | [**InlineObject144**](InlineObject144.md) |  | 
+ **createNetworkWebhooksPayloadTemplate** | [**InlineObject145**](InlineObject145.md) |  | 
 
 ### Return type
 
-[**InlineResponse20073**](InlineResponse20073.md)
+[**InlineResponse20075**](InlineResponse20075.md)
 
 ### Authorization
 
@@ -3496,8 +3498,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkWebhooksWebhookTest := *openapiclient.NewInlineObject146("Url_example") // InlineObject146 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkWebhooksWebhookTest := *openapiclient.NewInlineObject147("Url_example") // InlineObject147 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3517,7 +3519,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -3527,7 +3529,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksWebho
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksWebhookTest** | [**InlineObject146**](InlineObject146.md) |  | 
+ **createNetworkWebhooksWebhookTest** | [**InlineObject147**](InlineObject147.md) |  | 
 
 ### Return type
 
@@ -3568,8 +3570,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    createNetworkWirelessRfProfile := *openapiclient.NewInlineObject150("Name_example", "BandSelectionType_example") // InlineObject150 | 
+    networkId := "networkId_example" // string | Network ID
+    createNetworkWirelessRfProfile := *openapiclient.NewInlineObject151("Name_example", "BandSelectionType_example") // InlineObject151 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3589,7 +3591,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -3599,7 +3601,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkWirelessRfPro
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWirelessRfProfile** | [**InlineObject150**](InlineObject150.md) |  | 
+ **createNetworkWirelessRfProfile** | [**InlineObject151**](InlineObject151.md) |  | 
 
 ### Return type
 
@@ -3640,9 +3642,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    createNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject160("Name_example", "GroupPolicyId_example") // InlineObject160 | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    createNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject161("Name_example", "GroupPolicyId_example") // InlineObject161 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3662,8 +3664,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -3674,7 +3676,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkWirelessSsidIdentityPsk** | [**InlineObject160**](InlineObject160.md) |  | 
+ **createNetworkWirelessSsidIdentityPsk** | [**InlineObject161**](InlineObject161.md) |  | 
 
 ### Return type
 
@@ -3696,7 +3698,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganization
 
-> InlineResponse20087 CreateOrganization(ctx).CreateOrganization(createOrganization).Execute()
+> InlineResponse20089 CreateOrganization(ctx).CreateOrganization(createOrganization).Execute()
 
 Create a new organization
 
@@ -3715,7 +3717,7 @@ import (
 )
 
 func main() {
-    createOrganization := *openapiclient.NewInlineObject166("Name_example") // InlineObject166 | 
+    createOrganization := *openapiclient.NewInlineObject167("Name_example") // InlineObject167 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3724,7 +3726,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateOrganization``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganization`: InlineResponse20087
+    // response from `CreateOrganization`: InlineResponse20089
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateOrganization`: %v\n", resp)
 }
 ```
@@ -3740,11 +3742,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationRequest 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createOrganization** | [**InlineObject166**](InlineObject166.md) |  | 
+ **createOrganization** | [**InlineObject167**](InlineObject167.md) |  | 
 
 ### Return type
 
-[**InlineResponse20087**](InlineResponse20087.md)
+[**InlineResponse20089**](InlineResponse20089.md)
 
 ### Authorization
 
@@ -3781,8 +3783,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationActionBatch := *openapiclient.NewInlineObject168([]openapiclient.OrganizationsOrganizationIdActionBatchesActions{*openapiclient.NewOrganizationsOrganizationIdActionBatchesActions("Resource_example", "Operation_example")}) // InlineObject168 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationActionBatch := *openapiclient.NewInlineObject169([]openapiclient.OrganizationsOrganizationIdActionBatchesActions{*openapiclient.NewOrganizationsOrganizationIdActionBatchesActions("Resource_example", "Operation_example")}) // InlineObject169 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3802,7 +3804,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -3812,7 +3814,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationActionBa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationActionBatch** | [**InlineObject168**](InlineObject168.md) |  | 
+ **createOrganizationActionBatch** | [**InlineObject169**](InlineObject169.md) |  | 
 
 ### Return type
 
@@ -3834,7 +3836,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationAdaptivePolicyAcl
 
-> map[string]interface{} CreateOrganizationAdaptivePolicyAcl(ctx, organizationId).CreateOrganizationAdaptivePolicyAcl(createOrganizationAdaptivePolicyAcl).Execute()
+> InlineResponse20090 CreateOrganizationAdaptivePolicyAcl(ctx, organizationId).CreateOrganizationAdaptivePolicyAcl(createOrganizationAdaptivePolicyAcl).Execute()
 
 Creates new adaptive policy ACL
 
@@ -3853,8 +3855,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject170("Name_example", []openapiclient.OrganizationsOrganizationIdAdaptivePolicyAclsRules{*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyAclsRules("Policy_example", "Protocol_example")}, "IpVersion_example") // InlineObject170 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject171("Name_example", []openapiclient.OrganizationsOrganizationIdAdaptivePolicyAclsRules1{*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyAclsRules1("Policy_example", "Protocol_example")}, "IpVersion_example") // InlineObject171 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3863,7 +3865,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateOrganizationAdaptivePolicyAcl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationAdaptivePolicyAcl`: map[string]interface{}
+    // response from `CreateOrganizationAdaptivePolicyAcl`: InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateOrganizationAdaptivePolicyAcl`: %v\n", resp)
 }
 ```
@@ -3874,7 +3876,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -3884,11 +3886,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyAcl** | [**InlineObject170**](InlineObject170.md) |  | 
+ **createOrganizationAdaptivePolicyAcl** | [**InlineObject171**](InlineObject171.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -3925,8 +3927,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject172("Name_example", int32(123)) // InlineObject172 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject173("Name_example", int32(123)) // InlineObject173 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3946,7 +3948,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -3956,7 +3958,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyGroup** | [**InlineObject172**](InlineObject172.md) |  | 
+ **createOrganizationAdaptivePolicyGroup** | [**InlineObject173**](InlineObject173.md) |  | 
 
 ### Return type
 
@@ -3997,8 +3999,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject174(*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup(), *openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup()) // InlineObject174 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject175(*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup(), *openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup()) // InlineObject175 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4018,7 +4020,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4028,7 +4030,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyPolicy** | [**InlineObject174**](InlineObject174.md) |  | 
+ **createOrganizationAdaptivePolicyPolicy** | [**InlineObject175**](InlineObject175.md) |  | 
 
 ### Return type
 
@@ -4069,8 +4071,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationAdmin := *openapiclient.NewInlineObject177("Email_example", "Name_example", "OrgAccess_example") // InlineObject177 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationAdmin := *openapiclient.NewInlineObject178("Email_example", "Name_example", "OrgAccess_example") // InlineObject178 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4090,7 +4092,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4100,7 +4102,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdminReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdmin** | [**InlineObject177**](InlineObject177.md) |  | 
+ **createOrganizationAdmin** | [**InlineObject178**](InlineObject178.md) |  | 
 
 ### Return type
 
@@ -4141,8 +4143,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationAlertsProfile := *openapiclient.NewInlineObject179("Type_example", *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesAlertCondition(), *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesRecipients(), []string{"NetworkTags_example"}) // InlineObject179 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationAlertsProfile := *openapiclient.NewInlineObject180("Type_example", *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesAlertCondition(), *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesRecipients(), []string{"NetworkTags_example"}) // InlineObject180 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4162,7 +4164,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4172,7 +4174,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAlertsPr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAlertsProfile** | [**InlineObject179**](InlineObject179.md) |  | 
+ **createOrganizationAlertsProfile** | [**InlineObject180**](InlineObject180.md) |  | 
 
 ### Return type
 
@@ -4213,8 +4215,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationBrandingPolicy := *openapiclient.NewInlineObject184() // InlineObject184 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationBrandingPolicy := *openapiclient.NewInlineObject185() // InlineObject185 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4234,7 +4236,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4244,7 +4246,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationBranding
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationBrandingPolicy** | [**InlineObject184**](InlineObject184.md) |  | 
+ **createOrganizationBrandingPolicy** | [**InlineObject185**](InlineObject185.md) |  | 
 
 ### Return type
 
@@ -4285,8 +4287,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject187() // InlineObject187 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject188() // InlineObject188 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4306,7 +4308,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4316,7 +4318,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraCu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject187**](InlineObject187.md) |  | 
+ **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject188**](InlineObject188.md) |  | 
 
 ### Return type
 
@@ -4357,8 +4359,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationConfigTemplate := *openapiclient.NewInlineObject191("Name_example") // InlineObject191 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationConfigTemplate := *openapiclient.NewInlineObject192("Name_example") // InlineObject192 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4378,7 +4380,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4388,7 +4390,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationConfigTe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationConfigTemplate** | [**InlineObject191**](InlineObject191.md) |  | 
+ **createOrganizationConfigTemplate** | [**InlineObject192**](InlineObject192.md) |  | 
 
 ### Return type
 
@@ -4429,8 +4431,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject194("ShortName_example") // InlineObject194 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject195("ShortName_example") // InlineObject195 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4450,7 +4452,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4460,7 +4462,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationEarlyAcc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject194**](InlineObject194.md) |  | 
+ **createOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject195**](InlineObject195.md) |  | 
 
 ### Return type
 
@@ -4501,8 +4503,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject196("Name_example", "Address_example") // InlineObject196 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject197("Name_example", "Address_example") // InlineObject197 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4522,7 +4524,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4532,7 +4534,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInsightM
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInsightMonitoredMediaServer** | [**InlineObject196**](InlineObject196.md) |  | 
+ **createOrganizationInsightMonitoredMediaServer** | [**InlineObject197**](InlineObject197.md) |  | 
 
 ### Return type
 
@@ -4573,8 +4575,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationInventoryOnboardingCloudMonitoringExportEvent := *openapiclient.NewInlineObject199("LogEvent_example", int32(123)) // InlineObject199 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationInventoryOnboardingCloudMonitoringExportEvent := *openapiclient.NewInlineObject200("LogEvent_example", int32(123)) // InlineObject200 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4594,7 +4596,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4604,7 +4606,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringExportEvent** | [**InlineObject199**](InlineObject199.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringExportEvent** | [**InlineObject200**](InlineObject200.md) |  | 
 
 ### Return type
 
@@ -4645,8 +4647,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationInventoryOnboardingCloudMonitoringImport := *openapiclient.NewInlineObject200([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices("DeviceId_example", "Udi_example", "NetworkId_example")}) // InlineObject200 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationInventoryOnboardingCloudMonitoringImport := *openapiclient.NewInlineObject201([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices("DeviceId_example", "Udi_example", "NetworkId_example")}) // InlineObject201 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4666,7 +4668,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4676,7 +4678,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringImport** | [**InlineObject200**](InlineObject200.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringImport** | [**InlineObject201**](InlineObject201.md) |  | 
 
 ### Return type
 
@@ -4717,8 +4719,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationInventoryOnboardingCloudMonitoringPrepare := *openapiclient.NewInlineObject201([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices("Sudi_example")}) // InlineObject201 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationInventoryOnboardingCloudMonitoringPrepare := *openapiclient.NewInlineObject202([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices("Sudi_example")}) // InlineObject202 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4738,7 +4740,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4748,7 +4750,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringPrepare** | [**InlineObject201**](InlineObject201.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringPrepare** | [**InlineObject202**](InlineObject202.md) |  | 
 
 ### Return type
 
@@ -4770,7 +4772,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationNetwork
 
-> InlineResponse20010 CreateOrganizationNetwork(ctx, organizationId).CreateOrganizationNetwork(createOrganizationNetwork).Execute()
+> InlineResponse20011 CreateOrganizationNetwork(ctx, organizationId).CreateOrganizationNetwork(createOrganizationNetwork).Execute()
 
 Create a network
 
@@ -4789,8 +4791,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationNetwork := *openapiclient.NewInlineObject210("Name_example", []string{"ProductTypes_example"}) // InlineObject210 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationNetwork := *openapiclient.NewInlineObject211("Name_example", []string{"ProductTypes_example"}) // InlineObject211 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4799,7 +4801,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateOrganizationNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationNetwork`: InlineResponse20010
+    // response from `CreateOrganizationNetwork`: InlineResponse20011
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateOrganizationNetwork`: %v\n", resp)
 }
 ```
@@ -4810,7 +4812,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4820,11 +4822,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationNetworkR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationNetwork** | [**InlineObject210**](InlineObject210.md) |  | 
+ **createOrganizationNetwork** | [**InlineObject211**](InlineObject211.md) |  | 
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -4861,8 +4863,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationPolicyObject := *openapiclient.NewInlineObject212("Name_example", "Category_example", "Type_example") // InlineObject212 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationPolicyObject := *openapiclient.NewInlineObject213("Name_example", "Category_example", "Type_example") // InlineObject213 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4882,7 +4884,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4892,7 +4894,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicyOb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPolicyObject** | [**InlineObject212**](InlineObject212.md) |  | 
+ **createOrganizationPolicyObject** | [**InlineObject213**](InlineObject213.md) |  | 
 
 ### Return type
 
@@ -4933,8 +4935,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject213("Name_example") // InlineObject213 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject214("Name_example") // InlineObject214 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -4954,7 +4956,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -4964,7 +4966,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicyOb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPolicyObjectsGroup** | [**InlineObject213**](InlineObject213.md) |  | 
+ **createOrganizationPolicyObjectsGroup** | [**InlineObject214**](InlineObject214.md) |  | 
 
 ### Return type
 
@@ -4986,7 +4988,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationSamlIdp
 
-> []InlineResponse200121 CreateOrganizationSamlIdp(ctx, organizationId).CreateOrganizationSamlIdp(createOrganizationSamlIdp).Execute()
+> []InlineResponse200127 CreateOrganizationSamlIdp(ctx, organizationId).CreateOrganizationSamlIdp(createOrganizationSamlIdp).Execute()
 
 Create a SAML IdP for your organization.
 
@@ -5005,8 +5007,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationSamlIdp := *openapiclient.NewInlineObject217("X509certSha1Fingerprint_example") // InlineObject217 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationSamlIdp := *openapiclient.NewInlineObject218("X509certSha1Fingerprint_example") // InlineObject218 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5015,7 +5017,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.CreateOrganizationSamlIdp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationSamlIdp`: []InlineResponse200121
+    // response from `CreateOrganizationSamlIdp`: []InlineResponse200127
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.CreateOrganizationSamlIdp`: %v\n", resp)
 }
 ```
@@ -5026,7 +5028,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -5036,11 +5038,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSamlIdpR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSamlIdp** | [**InlineObject217**](InlineObject217.md) |  | 
+ **createOrganizationSamlIdp** | [**InlineObject218**](InlineObject218.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse200121**](InlineResponse200121.md)
+[**[]InlineResponse200127**](InlineResponse200127.md)
 
 ### Authorization
 
@@ -5077,8 +5079,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    createOrganizationSamlRole := *openapiclient.NewInlineObject219("Role_example", "OrgAccess_example") // InlineObject219 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    createOrganizationSamlRole := *openapiclient.NewInlineObject220("Role_example", "OrgAccess_example") // InlineObject220 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5098,7 +5100,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -5108,7 +5110,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSamlRole
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSamlRole** | [**InlineObject219**](InlineObject219.md) |  | 
+ **createOrganizationSamlRole** | [**InlineObject220**](InlineObject220.md) |  | 
 
 ### Return type
 
@@ -5130,7 +5132,7 @@ Name | Type | Description  | Notes
 
 ## DeferNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20028 DeferNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
+> InlineResponse20029 DeferNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
 
 Postpone by 1 week all pending staged upgrade stages for a network
 
@@ -5149,7 +5151,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5158,7 +5160,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.DeferNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeferNetworkFirmwareUpgradesStagedEvents`: InlineResponse20028
+    // response from `DeferNetworkFirmwareUpgradesStagedEvents`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.DeferNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -5169,7 +5171,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -5182,7 +5184,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -5219,8 +5221,8 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
-    interfaceId := "interfaceId_example" // string | 
+    serial := "serial_example" // string | Serial
+    interfaceId := "interfaceId_example" // string | Interface ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5238,8 +5240,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
-**interfaceId** | **string** |  | 
+**serial** | **string** | Serial | 
+**interfaceId** | **string** | Interface ID | 
 
 ### Other Parameters
 
@@ -5290,8 +5292,8 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
-    staticRouteId := "staticRouteId_example" // string | 
+    serial := "serial_example" // string | Serial
+    staticRouteId := "staticRouteId_example" // string | Static route ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5309,8 +5311,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
-**staticRouteId** | **string** |  | 
+**serial** | **string** | Serial | 
+**staticRouteId** | **string** | Static route ID | 
 
 ### Other Parameters
 
@@ -5361,7 +5363,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5379,7 +5381,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -5429,8 +5431,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    staticDelegatedPrefixId := "staticDelegatedPrefixId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    staticDelegatedPrefixId := "staticDelegatedPrefixId_example" // string | Static delegated prefix ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5448,8 +5450,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**staticDelegatedPrefixId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**staticDelegatedPrefixId** | **string** | Static delegated prefix ID | 
 
 ### Other Parameters
 
@@ -5500,8 +5502,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    staticRouteId := "staticRouteId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    staticRouteId := "staticRouteId_example" // string | Static route ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5519,8 +5521,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**staticRouteId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**staticRouteId** | **string** | Static route ID | 
 
 ### Other Parameters
 
@@ -5571,8 +5573,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    customPerformanceClassId := "customPerformanceClassId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    customPerformanceClassId := "customPerformanceClassId_example" // string | Custom performance class ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5590,8 +5592,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**customPerformanceClassId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**customPerformanceClassId** | **string** | Custom performance class ID | 
 
 ### Other Parameters
 
@@ -5642,8 +5644,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    vlanId := "vlanId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    vlanId := "vlanId_example" // string | Vlan ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5661,8 +5663,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**vlanId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**vlanId** | **string** | Vlan ID | 
 
 ### Other Parameters
 
@@ -5713,8 +5715,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    qualityRetentionProfileId := "qualityRetentionProfileId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    qualityRetentionProfileId := "qualityRetentionProfileId_example" // string | Quality retention profile ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5732,8 +5734,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**qualityRetentionProfileId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**qualityRetentionProfileId** | **string** | Quality retention profile ID | 
 
 ### Other Parameters
 
@@ -5784,8 +5786,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    wirelessProfileId := "wirelessProfileId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    wirelessProfileId := "wirelessProfileId_example" // string | Wireless profile ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5803,8 +5805,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**wirelessProfileId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**wirelessProfileId** | **string** | Wireless profile ID | 
 
 ### Other Parameters
 
@@ -5855,8 +5857,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    groupId := "groupId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    groupId := "groupId_example" // string | Group ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5874,8 +5876,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**groupId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**groupId** | **string** | Group ID | 
 
 ### Other Parameters
 
@@ -5926,8 +5928,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    floorPlanId := "floorPlanId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    floorPlanId := "floorPlanId_example" // string | Floor plan ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5945,8 +5947,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**floorPlanId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**floorPlanId** | **string** | Floor plan ID | 
 
 ### Other Parameters
 
@@ -5997,8 +5999,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    groupPolicyId := "groupPolicyId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    groupPolicyId := "groupPolicyId_example" // string | Group policy ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6016,8 +6018,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**groupPolicyId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**groupPolicyId** | **string** | Group policy ID | 
 
 ### Other Parameters
 
@@ -6068,8 +6070,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    merakiAuthUserId := "merakiAuthUserId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    merakiAuthUserId := "merakiAuthUserId_example" // string | Meraki auth user ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6087,8 +6089,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**merakiAuthUserId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**merakiAuthUserId** | **string** | Meraki auth user ID | 
 
 ### Other Parameters
 
@@ -6139,8 +6141,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    mqttBrokerId := "mqttBrokerId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6158,8 +6160,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**mqttBrokerId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**mqttBrokerId** | **string** | Mqtt broker ID | 
 
 ### Other Parameters
 
@@ -6210,8 +6212,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    requestId := "requestId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    requestId := "requestId_example" // string | Request ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6229,8 +6231,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**requestId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**requestId** | **string** | Request ID | 
 
 ### Other Parameters
 
@@ -6281,8 +6283,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    id := "id_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    id := "id_example" // string | Id
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6300,8 +6302,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**id** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**id** | **string** | Id | 
 
 ### Other Parameters
 
@@ -6352,8 +6354,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    targetGroupId := "targetGroupId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    targetGroupId := "targetGroupId_example" // string | Target group ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6371,8 +6373,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**targetGroupId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**targetGroupId** | **string** | Target group ID | 
 
 ### Other Parameters
 
@@ -6423,8 +6425,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    userAccessDeviceId := "userAccessDeviceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    userAccessDeviceId := "userAccessDeviceId_example" // string | User access device ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6442,8 +6444,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**userAccessDeviceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**userAccessDeviceId** | **string** | User access device ID | 
 
 ### Other Parameters
 
@@ -6494,8 +6496,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    accessPolicyNumber := "accessPolicyNumber_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    accessPolicyNumber := "accessPolicyNumber_example" // string | Access policy number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6513,8 +6515,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**accessPolicyNumber** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**accessPolicyNumber** | **string** | Access policy number | 
 
 ### Other Parameters
 
@@ -6565,8 +6567,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    trustedServerId := "trustedServerId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    trustedServerId := "trustedServerId_example" // string | Trusted server ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6584,8 +6586,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**trustedServerId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**trustedServerId** | **string** | Trusted server ID | 
 
 ### Other Parameters
 
@@ -6636,8 +6638,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    linkAggregationId := "linkAggregationId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    linkAggregationId := "linkAggregationId_example" // string | Link aggregation ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6655,8 +6657,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**linkAggregationId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**linkAggregationId** | **string** | Link aggregation ID | 
 
 ### Other Parameters
 
@@ -6707,8 +6709,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    portScheduleId := "portScheduleId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    portScheduleId := "portScheduleId_example" // string | Port schedule ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6726,8 +6728,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**portScheduleId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**portScheduleId** | **string** | Port schedule ID | 
 
 ### Other Parameters
 
@@ -6778,8 +6780,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    qosRuleId := "qosRuleId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    qosRuleId := "qosRuleId_example" // string | Qos rule ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6797,8 +6799,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**qosRuleId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**qosRuleId** | **string** | Qos rule ID | 
 
 ### Other Parameters
 
@@ -6849,8 +6851,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    rendezvousPointId := "rendezvousPointId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    rendezvousPointId := "rendezvousPointId_example" // string | Rendezvous point ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6868,8 +6870,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**rendezvousPointId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**rendezvousPointId** | **string** | Rendezvous point ID | 
 
 ### Other Parameters
 
@@ -6920,8 +6922,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6939,8 +6941,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
 
 ### Other Parameters
 
@@ -6991,9 +6993,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    interfaceId := "interfaceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    interfaceId := "interfaceId_example" // string | Interface ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7011,9 +7013,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
-**interfaceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
+**interfaceId** | **string** | Interface ID | 
 
 ### Other Parameters
 
@@ -7065,9 +7067,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    staticRouteId := "staticRouteId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    staticRouteId := "staticRouteId_example" // string | Static route ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7085,9 +7087,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
-**staticRouteId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
+**staticRouteId** | **string** | Static route ID | 
 
 ### Other Parameters
 
@@ -7139,8 +7141,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    httpServerId := "httpServerId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    httpServerId := "httpServerId_example" // string | Http server ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7158,8 +7160,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**httpServerId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**httpServerId** | **string** | Http server ID | 
 
 ### Other Parameters
 
@@ -7210,8 +7212,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    payloadTemplateId := "payloadTemplateId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    payloadTemplateId := "payloadTemplateId_example" // string | Payload template ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7229,8 +7231,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**payloadTemplateId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**payloadTemplateId** | **string** | Payload template ID | 
 
 ### Other Parameters
 
@@ -7281,8 +7283,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    rfProfileId := "rfProfileId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    rfProfileId := "rfProfileId_example" // string | Rf profile ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7300,8 +7302,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**rfProfileId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**rfProfileId** | **string** | Rf profile ID | 
 
 ### Other Parameters
 
@@ -7352,9 +7354,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    identityPskId := "identityPskId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    identityPskId := "identityPskId_example" // string | Identity psk ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7372,9 +7374,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
-**identityPskId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
+**identityPskId** | **string** | Identity psk ID | 
 
 ### Other Parameters
 
@@ -7426,7 +7428,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7444,7 +7446,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -7494,8 +7496,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    actionBatchId := "actionBatchId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    actionBatchId := "actionBatchId_example" // string | Action batch ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7513,8 +7515,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**actionBatchId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**actionBatchId** | **string** | Action batch ID | 
 
 ### Other Parameters
 
@@ -7565,8 +7567,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    aclId := "aclId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    aclId := "aclId_example" // string | Acl ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7584,8 +7586,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**aclId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**aclId** | **string** | Acl ID | 
 
 ### Other Parameters
 
@@ -7636,8 +7638,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    id := "id_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    id := "id_example" // string | Id
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7655,8 +7657,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**id** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**id** | **string** | Id | 
 
 ### Other Parameters
 
@@ -7707,8 +7709,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    id := "id_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    id := "id_example" // string | Id
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7726,8 +7728,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**id** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**id** | **string** | Id | 
 
 ### Other Parameters
 
@@ -7778,8 +7780,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    adminId := "adminId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    adminId := "adminId_example" // string | Admin ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7797,8 +7799,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**adminId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**adminId** | **string** | Admin ID | 
 
 ### Other Parameters
 
@@ -7849,8 +7851,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    alertConfigId := "alertConfigId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    alertConfigId := "alertConfigId_example" // string | Alert config ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7868,8 +7870,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**alertConfigId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**alertConfigId** | **string** | Alert config ID | 
 
 ### Other Parameters
 
@@ -7920,8 +7922,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    brandingPolicyId := "brandingPolicyId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    brandingPolicyId := "brandingPolicyId_example" // string | Branding policy ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7939,8 +7941,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**brandingPolicyId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**brandingPolicyId** | **string** | Branding policy ID | 
 
 ### Other Parameters
 
@@ -7991,8 +7993,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    artifactId := "artifactId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    artifactId := "artifactId_example" // string | Artifact ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8010,8 +8012,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**artifactId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**artifactId** | **string** | Artifact ID | 
 
 ### Other Parameters
 
@@ -8062,8 +8064,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    configTemplateId := "configTemplateId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    configTemplateId := "configTemplateId_example" // string | Config template ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8081,8 +8083,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**configTemplateId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**configTemplateId** | **string** | Config template ID | 
 
 ### Other Parameters
 
@@ -8133,8 +8135,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    optInId := "optInId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    optInId := "optInId_example" // string | Opt in ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8152,8 +8154,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**optInId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**optInId** | **string** | Opt in ID | 
 
 ### Other Parameters
 
@@ -8204,8 +8206,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    monitoredMediaServerId := "monitoredMediaServerId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    monitoredMediaServerId := "monitoredMediaServerId_example" // string | Monitored media server ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8223,8 +8225,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**monitoredMediaServerId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**monitoredMediaServerId** | **string** | Monitored media server ID | 
 
 ### Other Parameters
 
@@ -8275,8 +8277,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    policyObjectId := "policyObjectId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    policyObjectId := "policyObjectId_example" // string | Policy object ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8294,8 +8296,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**policyObjectId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**policyObjectId** | **string** | Policy object ID | 
 
 ### Other Parameters
 
@@ -8346,8 +8348,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    policyObjectGroupId := "policyObjectGroupId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    policyObjectGroupId := "policyObjectGroupId_example" // string | Policy object group ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8365,8 +8367,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**policyObjectGroupId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**policyObjectGroupId** | **string** | Policy object group ID | 
 
 ### Other Parameters
 
@@ -8417,8 +8419,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    idpId := "idpId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    idpId := "idpId_example" // string | Idp ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8436,8 +8438,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**idpId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**idpId** | **string** | Idp ID | 
 
 ### Other Parameters
 
@@ -8488,8 +8490,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    samlRoleId := "samlRoleId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    samlRoleId := "samlRoleId_example" // string | Saml role ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8507,8 +8509,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**samlRoleId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**samlRoleId** | **string** | Saml role ID | 
 
 ### Other Parameters
 
@@ -8559,8 +8561,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    userId := "userId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    userId := "userId_example" // string | User ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8578,8 +8580,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**userId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**userId** | **string** | User ID | 
 
 ### Other Parameters
 
@@ -8630,7 +8632,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8650,7 +8652,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -8700,7 +8702,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8720,7 +8722,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -8770,7 +8772,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8790,7 +8792,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -8840,7 +8842,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8860,7 +8862,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -8910,7 +8912,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8930,7 +8932,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -8980,7 +8982,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9000,7 +9002,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9051,7 +9053,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     timestamp := time.Now() // time.Time | [optional] The video link will start at this time. The timestamp should be a string in ISO8601 format. If no timestamp is specified, we will assume current time. (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -9072,7 +9074,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9123,7 +9125,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9143,7 +9145,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9193,7 +9195,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9213,7 +9215,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9263,7 +9265,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9283,7 +9285,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9333,7 +9335,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9353,7 +9355,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9403,7 +9405,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9423,7 +9425,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9473,7 +9475,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9493,7 +9495,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9543,7 +9545,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9563,7 +9565,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9613,8 +9615,8 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
-    portId := "portId_example" // string | 
+    serial := "serial_example" // string | Serial
+    portId := "portId_example" // string | Port ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9634,8 +9636,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
-**portId** | **string** |  | 
+**serial** | **string** | Serial | 
+**portId** | **string** | Port ID | 
 
 ### Other Parameters
 
@@ -9686,7 +9688,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9706,7 +9708,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9737,7 +9739,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingInterface
 
-> InlineResponse2006 GetDeviceSwitchRoutingInterface(ctx, serial, interfaceId).Execute()
+> InlineResponse2007 GetDeviceSwitchRoutingInterface(ctx, serial, interfaceId).Execute()
 
 Return a layer 3 interface for a switch
 
@@ -9756,8 +9758,8 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
-    interfaceId := "interfaceId_example" // string | 
+    serial := "serial_example" // string | Serial
+    interfaceId := "interfaceId_example" // string | Interface ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9766,7 +9768,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetDeviceSwitchRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingInterface`: InlineResponse2006
+    // response from `GetDeviceSwitchRoutingInterface`: InlineResponse2007
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetDeviceSwitchRoutingInterface`: %v\n", resp)
 }
 ```
@@ -9777,8 +9779,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
-**interfaceId** | **string** |  | 
+**serial** | **string** | Serial | 
+**interfaceId** | **string** | Interface ID | 
 
 ### Other Parameters
 
@@ -9792,7 +9794,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -9829,8 +9831,8 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
-    interfaceId := "interfaceId_example" // string | 
+    serial := "serial_example" // string | Serial
+    interfaceId := "interfaceId_example" // string | Interface ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9850,8 +9852,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
-**interfaceId** | **string** |  | 
+**serial** | **string** | Serial | 
+**interfaceId** | **string** | Interface ID | 
 
 ### Other Parameters
 
@@ -9883,7 +9885,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingInterfaces
 
-> []InlineResponse2006 GetDeviceSwitchRoutingInterfaces(ctx, serial).Execute()
+> []InlineResponse2007 GetDeviceSwitchRoutingInterfaces(ctx, serial).Execute()
 
 List layer 3 interfaces for a switch
 
@@ -9902,7 +9904,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9911,7 +9913,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetDeviceSwitchRoutingInterfaces``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingInterfaces`: []InlineResponse2006
+    // response from `GetDeviceSwitchRoutingInterfaces`: []InlineResponse2007
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetDeviceSwitchRoutingInterfaces`: %v\n", resp)
 }
 ```
@@ -9922,7 +9924,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -9935,7 +9937,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse2006**](InlineResponse2006.md)
+[**[]InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -9953,7 +9955,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingStaticRoute
 
-> InlineResponse2007 GetDeviceSwitchRoutingStaticRoute(ctx, serial, staticRouteId).Execute()
+> InlineResponse2008 GetDeviceSwitchRoutingStaticRoute(ctx, serial, staticRouteId).Execute()
 
 Return a layer 3 static route for a switch
 
@@ -9972,8 +9974,8 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
-    staticRouteId := "staticRouteId_example" // string | 
+    serial := "serial_example" // string | Serial
+    staticRouteId := "staticRouteId_example" // string | Static route ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -9982,7 +9984,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetDeviceSwitchRoutingStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingStaticRoute`: InlineResponse2007
+    // response from `GetDeviceSwitchRoutingStaticRoute`: InlineResponse2008
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetDeviceSwitchRoutingStaticRoute`: %v\n", resp)
 }
 ```
@@ -9993,8 +9995,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
-**staticRouteId** | **string** |  | 
+**serial** | **string** | Serial | 
+**staticRouteId** | **string** | Static route ID | 
 
 ### Other Parameters
 
@@ -10008,7 +10010,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2007**](InlineResponse2007.md)
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -10045,7 +10047,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10065,7 +10067,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -10115,7 +10117,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10135,7 +10137,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -10166,7 +10168,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceWirelessBluetoothSettings
 
-> InlineResponse2008 GetDeviceWirelessBluetoothSettings(ctx, serial).Execute()
+> InlineResponse2009 GetDeviceWirelessBluetoothSettings(ctx, serial).Execute()
 
 Return the bluetooth settings for a wireless device
 
@@ -10185,7 +10187,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10194,7 +10196,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetDeviceWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceWirelessBluetoothSettings`: InlineResponse2008
+    // response from `GetDeviceWirelessBluetoothSettings`: InlineResponse2009
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetDeviceWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -10205,7 +10207,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -10218,7 +10220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -10255,7 +10257,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10275,7 +10277,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -10306,7 +10308,7 @@ Name | Type | Description  | Notes
 
 ## GetNetwork
 
-> InlineResponse20010 GetNetwork(ctx, networkId).Execute()
+> InlineResponse20011 GetNetwork(ctx, networkId).Execute()
 
 Return a network
 
@@ -10325,7 +10327,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10334,7 +10336,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetwork`: InlineResponse20010
+    // response from `GetNetwork`: InlineResponse20011
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetwork`: %v\n", resp)
 }
 ```
@@ -10345,7 +10347,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -10358,7 +10360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -10395,7 +10397,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10415,7 +10417,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -10465,7 +10467,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10485,7 +10487,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -10535,7 +10537,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10555,7 +10557,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -10605,7 +10607,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10625,7 +10627,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -10675,7 +10677,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10695,7 +10697,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -10745,8 +10747,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    service := "service_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    service := "service_example" // string | Service
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10766,8 +10768,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**service** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**service** | **string** | Service | 
 
 ### Other Parameters
 
@@ -10818,7 +10820,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10838,7 +10840,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -10888,7 +10890,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10908,7 +10910,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -10958,7 +10960,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -10978,7 +10980,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11028,7 +11030,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11048,7 +11050,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11098,7 +11100,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11118,7 +11120,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11168,7 +11170,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11188,7 +11190,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11238,7 +11240,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11258,7 +11260,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11308,7 +11310,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11328,7 +11330,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11378,7 +11380,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11398,7 +11400,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11448,7 +11450,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11468,7 +11470,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11499,7 +11501,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAppliancePort
 
-> InlineResponse20012 GetNetworkAppliancePort(ctx, networkId, portId).Execute()
+> InlineResponse20013 GetNetworkAppliancePort(ctx, networkId, portId).Execute()
 
 Return per-port VLAN settings for a single MX port.
 
@@ -11518,8 +11520,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    portId := "portId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    portId := "portId_example" // string | Port ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11528,7 +11530,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkAppliancePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAppliancePort`: InlineResponse20012
+    // response from `GetNetworkAppliancePort`: InlineResponse20013
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkAppliancePort`: %v\n", resp)
 }
 ```
@@ -11539,155 +11541,12 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**portId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**portId** | **string** | Port ID | 
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetNetworkAppliancePortRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-
-### Return type
-
-[**InlineResponse20012**](InlineResponse20012.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetNetworkAppliancePorts
-
-> []InlineResponse20012 GetNetworkAppliancePorts(ctx, networkId).Execute()
-
-List per-port VLAN settings for all ports of a MX.
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    networkId := "networkId_example" // string | 
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetNetworkAppliancePorts(context.Background(), networkId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkAppliancePorts``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetNetworkAppliancePorts`: []InlineResponse20012
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkAppliancePorts`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetNetworkAppliancePortsRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-### Return type
-
-[**[]InlineResponse20012**](InlineResponse20012.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetNetworkAppliancePrefixesDelegatedStatic
-
-> InlineResponse20013 GetNetworkAppliancePrefixesDelegatedStatic(ctx, networkId, staticDelegatedPrefixId).Execute()
-
-Return a static delegated prefix from a network
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    networkId := "networkId_example" // string | 
-    staticDelegatedPrefixId := "staticDelegatedPrefixId_example" // string | 
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetNetworkAppliancePrefixesDelegatedStatic(context.Background(), networkId, staticDelegatedPrefixId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkAppliancePrefixesDelegatedStatic``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetNetworkAppliancePrefixesDelegatedStatic`: InlineResponse20013
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkAppliancePrefixesDelegatedStatic`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**staticDelegatedPrefixId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetNetworkAppliancePrefixesDelegatedStaticRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -11713,9 +11572,152 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetNetworkAppliancePorts
+
+> []InlineResponse20013 GetNetworkAppliancePorts(ctx, networkId).Execute()
+
+List per-port VLAN settings for all ports of a MX.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetNetworkAppliancePorts(context.Background(), networkId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkAppliancePorts``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetNetworkAppliancePorts`: []InlineResponse20013
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkAppliancePorts`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetNetworkAppliancePortsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**[]InlineResponse20013**](InlineResponse20013.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetNetworkAppliancePrefixesDelegatedStatic
+
+> InlineResponse20014 GetNetworkAppliancePrefixesDelegatedStatic(ctx, networkId, staticDelegatedPrefixId).Execute()
+
+Return a static delegated prefix from a network
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    staticDelegatedPrefixId := "staticDelegatedPrefixId_example" // string | Static delegated prefix ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetNetworkAppliancePrefixesDelegatedStatic(context.Background(), networkId, staticDelegatedPrefixId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkAppliancePrefixesDelegatedStatic``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetNetworkAppliancePrefixesDelegatedStatic`: InlineResponse20014
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkAppliancePrefixesDelegatedStatic`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**staticDelegatedPrefixId** | **string** | Static delegated prefix ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetNetworkAppliancePrefixesDelegatedStaticRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20014**](InlineResponse20014.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetNetworkAppliancePrefixesDelegatedStatics
 
-> []InlineResponse20013 GetNetworkAppliancePrefixesDelegatedStatics(ctx, networkId).Execute()
+> []InlineResponse20014 GetNetworkAppliancePrefixesDelegatedStatics(ctx, networkId).Execute()
 
 List static delegated prefixes for a network
 
@@ -11734,7 +11736,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11743,7 +11745,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkAppliancePrefixesDelegatedStatics``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAppliancePrefixesDelegatedStatics`: []InlineResponse20013
+    // response from `GetNetworkAppliancePrefixesDelegatedStatics`: []InlineResponse20014
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkAppliancePrefixesDelegatedStatics`: %v\n", resp)
 }
 ```
@@ -11754,7 +11756,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11767,7 +11769,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20013**](InlineResponse20013.md)
+[**[]InlineResponse20014**](InlineResponse20014.md)
 
 ### Authorization
 
@@ -11804,7 +11806,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11824,7 +11826,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11874,7 +11876,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11894,7 +11896,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -11925,7 +11927,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceSettings
 
-> InlineResponse20014 GetNetworkApplianceSettings(ctx, networkId).Execute()
+> InlineResponse20015 GetNetworkApplianceSettings(ctx, networkId).Execute()
 
 Return the appliance settings for a network
 
@@ -11944,7 +11946,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -11953,7 +11955,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceSettings`: InlineResponse20014
+    // response from `GetNetworkApplianceSettings`: InlineResponse20015
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceSettings`: %v\n", resp)
 }
 ```
@@ -11964,81 +11966,11 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetNetworkApplianceSettingsRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-### Return type
-
-[**InlineResponse20014**](InlineResponse20014.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetNetworkApplianceSingleLan
-
-> InlineResponse20015 GetNetworkApplianceSingleLan(ctx, networkId).Execute()
-
-Return single LAN configuration
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    networkId := "networkId_example" // string | 
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetNetworkApplianceSingleLan(context.Background(), networkId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceSingleLan``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetNetworkApplianceSingleLan`: InlineResponse20015
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceSingleLan`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetNetworkApplianceSingleLanRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -12063,11 +11995,11 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## GetNetworkApplianceSsid
+## GetNetworkApplianceSingleLan
 
-> InlineResponse20016 GetNetworkApplianceSsid(ctx, networkId, number).Execute()
+> InlineResponse20016 GetNetworkApplianceSingleLan(ctx, networkId).Execute()
 
-Return a single MX SSID
+Return single LAN configuration
 
 
 
@@ -12084,18 +12016,17 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetNetworkApplianceSsid(context.Background(), networkId, number).Execute()
+    resp, r, err := apiClient.ConfigureApi.GetNetworkApplianceSingleLan(context.Background(), networkId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceSsid``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceSingleLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceSsid`: InlineResponse20016
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceSsid`: %v\n", resp)
+    // response from `GetNetworkApplianceSingleLan`: InlineResponse20016
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceSingleLan`: %v\n", resp)
 }
 ```
 
@@ -12105,17 +12036,15 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiGetNetworkApplianceSsidRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiGetNetworkApplianceSingleLanRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
 
 
 ### Return type
@@ -12136,9 +12065,82 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetNetworkApplianceSsid
+
+> InlineResponse20017 GetNetworkApplianceSsid(ctx, networkId, number).Execute()
+
+Return a single MX SSID
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetNetworkApplianceSsid(context.Background(), networkId, number).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceSsid``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetNetworkApplianceSsid`: InlineResponse20017
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceSsid`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetNetworkApplianceSsidRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20017**](InlineResponse20017.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetNetworkApplianceSsids
 
-> []InlineResponse20016 GetNetworkApplianceSsids(ctx, networkId).Execute()
+> []InlineResponse20017 GetNetworkApplianceSsids(ctx, networkId).Execute()
 
 List the MX SSIDs in a network
 
@@ -12157,7 +12159,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -12166,7 +12168,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceSsids``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceSsids`: []InlineResponse20016
+    // response from `GetNetworkApplianceSsids`: []InlineResponse20017
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceSsids`: %v\n", resp)
 }
 ```
@@ -12177,7 +12179,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -12190,7 +12192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20016**](InlineResponse20016.md)
+[**[]InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -12227,8 +12229,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    staticRouteId := "staticRouteId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    staticRouteId := "staticRouteId_example" // string | Static route ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -12248,8 +12250,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**staticRouteId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**staticRouteId** | **string** | Static route ID | 
 
 ### Other Parameters
 
@@ -12300,7 +12302,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -12320,7 +12322,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -12370,7 +12372,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -12390,7 +12392,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -12440,8 +12442,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    customPerformanceClassId := "customPerformanceClassId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    customPerformanceClassId := "customPerformanceClassId_example" // string | Custom performance class ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -12461,8 +12463,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**customPerformanceClassId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**customPerformanceClassId** | **string** | Custom performance class ID | 
 
 ### Other Parameters
 
@@ -12513,7 +12515,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -12533,7 +12535,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -12583,7 +12585,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -12603,7 +12605,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -12634,7 +12636,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingUplinkBandwidth
 
-> InlineResponse20017 GetNetworkApplianceTrafficShapingUplinkBandwidth(ctx, networkId).Execute()
+> InlineResponse20018 GetNetworkApplianceTrafficShapingUplinkBandwidth(ctx, networkId).Execute()
 
 Returns the uplink bandwidth limits for your MX network
 
@@ -12653,7 +12655,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -12662,7 +12664,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceTrafficShapingUplinkBandwidth``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingUplinkBandwidth`: InlineResponse20017
+    // response from `GetNetworkApplianceTrafficShapingUplinkBandwidth`: InlineResponse20018
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceTrafficShapingUplinkBandwidth`: %v\n", resp)
 }
 ```
@@ -12673,81 +12675,11 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetNetworkApplianceTrafficShapingUplinkBandwidthRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-### Return type
-
-[**InlineResponse20017**](InlineResponse20017.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetNetworkApplianceTrafficShapingUplinkSelection
-
-> InlineResponse20018 GetNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).Execute()
-
-Show uplink selection settings for an MX network
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    networkId := "networkId_example" // string | 
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetNetworkApplianceTrafficShapingUplinkSelection(context.Background(), networkId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceTrafficShapingUplinkSelection``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20018
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceTrafficShapingUplinkSelection`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetNetworkApplianceTrafficShapingUplinkSelectionRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -12772,11 +12704,11 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## GetNetworkApplianceVlan
+## GetNetworkApplianceTrafficShapingUplinkSelection
 
-> InlineResponse20019 GetNetworkApplianceVlan(ctx, networkId, vlanId).Execute()
+> InlineResponse20019 GetNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).Execute()
 
-Return a VLAN
+Show uplink selection settings for an MX network
 
 
 
@@ -12793,18 +12725,17 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    vlanId := "vlanId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetNetworkApplianceVlan(context.Background(), networkId, vlanId).Execute()
+    resp, r, err := apiClient.ConfigureApi.GetNetworkApplianceTrafficShapingUplinkSelection(context.Background(), networkId).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceVlan``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceTrafficShapingUplinkSelection``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVlan`: InlineResponse20019
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceVlan`: %v\n", resp)
+    // response from `GetNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20019
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceTrafficShapingUplinkSelection`: %v\n", resp)
 }
 ```
 
@@ -12814,17 +12745,15 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**vlanId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiGetNetworkApplianceVlanRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiGetNetworkApplianceTrafficShapingUplinkSelectionRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
 
 
 ### Return type
@@ -12845,9 +12774,82 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetNetworkApplianceVlan
+
+> InlineResponse20020 GetNetworkApplianceVlan(ctx, networkId, vlanId).Execute()
+
+Return a VLAN
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    vlanId := "vlanId_example" // string | Vlan ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetNetworkApplianceVlan(context.Background(), networkId, vlanId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceVlan``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetNetworkApplianceVlan`: InlineResponse20020
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceVlan`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**vlanId** | **string** | Vlan ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetNetworkApplianceVlanRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20020**](InlineResponse20020.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetNetworkApplianceVlans
 
-> []InlineResponse20019 GetNetworkApplianceVlans(ctx, networkId).Execute()
+> []InlineResponse20020 GetNetworkApplianceVlans(ctx, networkId).Execute()
 
 List the VLANs for an MX network
 
@@ -12866,7 +12868,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -12875,7 +12877,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceVlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVlans`: []InlineResponse20019
+    // response from `GetNetworkApplianceVlans`: []InlineResponse20020
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceVlans`: %v\n", resp)
 }
 ```
@@ -12886,7 +12888,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -12899,7 +12901,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20019**](InlineResponse20019.md)
+[**[]InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -12936,7 +12938,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -12956,7 +12958,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13006,7 +13008,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13026,7 +13028,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13057,7 +13059,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceVpnSiteToSiteVpn
 
-> InlineResponse20020 GetNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).Execute()
+> InlineResponse20021 GetNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).Execute()
 
 Return the site-to-site VPN settings of a network
 
@@ -13076,7 +13078,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13085,7 +13087,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkApplianceVpnSiteToSiteVpn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20020
+    // response from `GetNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20021
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkApplianceVpnSiteToSiteVpn`: %v\n", resp)
 }
 ```
@@ -13096,7 +13098,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13109,7 +13111,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 
@@ -13146,7 +13148,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13166,7 +13168,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13216,8 +13218,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    qualityRetentionProfileId := "qualityRetentionProfileId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    qualityRetentionProfileId := "qualityRetentionProfileId_example" // string | Quality retention profile ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13237,8 +13239,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**qualityRetentionProfileId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**qualityRetentionProfileId** | **string** | Quality retention profile ID | 
 
 ### Other Parameters
 
@@ -13289,7 +13291,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13309,7 +13311,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13359,7 +13361,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13379,7 +13381,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13429,8 +13431,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    wirelessProfileId := "wirelessProfileId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    wirelessProfileId := "wirelessProfileId_example" // string | Wireless profile ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13450,8 +13452,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**wirelessProfileId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**wirelessProfileId** | **string** | Wireless profile ID | 
 
 ### Other Parameters
 
@@ -13502,7 +13504,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13522,7 +13524,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13572,7 +13574,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13592,7 +13594,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13623,7 +13625,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCellularGatewayDhcp
 
-> InlineResponse20021 GetNetworkCellularGatewayDhcp(ctx, networkId).Execute()
+> InlineResponse20022 GetNetworkCellularGatewayDhcp(ctx, networkId).Execute()
 
 List common DHCP settings of MGs
 
@@ -13642,7 +13644,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13651,7 +13653,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkCellularGatewayDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewayDhcp`: InlineResponse20021
+    // response from `GetNetworkCellularGatewayDhcp`: InlineResponse20022
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkCellularGatewayDhcp`: %v\n", resp)
 }
 ```
@@ -13662,7 +13664,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13675,7 +13677,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -13712,7 +13714,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13732,7 +13734,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13782,7 +13784,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13802,7 +13804,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -13852,8 +13854,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    clientId := "clientId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    clientId := "clientId_example" // string | Client ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13873,8 +13875,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**clientId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**clientId** | **string** | Client ID | 
 
 ### Other Parameters
 
@@ -13925,8 +13927,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    clientId := "clientId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    clientId := "clientId_example" // string | Client ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -13946,8 +13948,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**clientId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**clientId** | **string** | Client ID | 
 
 ### Other Parameters
 
@@ -13998,7 +14000,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14018,7 +14020,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -14049,7 +14051,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgrades
 
-> InlineResponse20026 GetNetworkFirmwareUpgrades(ctx, networkId).Execute()
+> InlineResponse20027 GetNetworkFirmwareUpgrades(ctx, networkId).Execute()
 
 Get firmware upgrade information for a network
 
@@ -14068,7 +14070,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14077,7 +14079,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkFirmwareUpgrades``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgrades`: InlineResponse20026
+    // response from `GetNetworkFirmwareUpgrades`: InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkFirmwareUpgrades`: %v\n", resp)
 }
 ```
@@ -14088,7 +14090,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -14101,7 +14103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -14119,7 +14121,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20028 GetNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
+> InlineResponse20029 GetNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
 
 Get the Staged Upgrade Event from a network
 
@@ -14138,7 +14140,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14147,7 +14149,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedEvents`: InlineResponse20028
+    // response from `GetNetworkFirmwareUpgradesStagedEvents`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -14158,7 +14160,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -14167,79 +14169,6 @@ Other parameters are passed through a pointer to a apiGetNetworkFirmwareUpgrades
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
-
-### Return type
-
-[**InlineResponse20028**](InlineResponse20028.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetNetworkFirmwareUpgradesStagedGroup
-
-> InlineResponse20029 GetNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).Execute()
-
-Get a Staged Upgrade Group from a network
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    networkId := "networkId_example" // string | 
-    groupId := "groupId_example" // string | 
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetNetworkFirmwareUpgradesStagedGroup(context.Background(), networkId, groupId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetNetworkFirmwareUpgradesStagedGroup`: InlineResponse20029
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**groupId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetNetworkFirmwareUpgradesStagedGroupRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
 
 
 ### Return type
@@ -14260,9 +14189,82 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetNetworkFirmwareUpgradesStagedGroup
+
+> InlineResponse20030 GetNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).Execute()
+
+Get a Staged Upgrade Group from a network
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    groupId := "groupId_example" // string | Group ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetNetworkFirmwareUpgradesStagedGroup(context.Background(), networkId, groupId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetNetworkFirmwareUpgradesStagedGroup`: InlineResponse20030
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**groupId** | **string** | Group ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetNetworkFirmwareUpgradesStagedGroupRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20030**](InlineResponse20030.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetNetworkFirmwareUpgradesStagedGroups
 
-> []InlineResponse20029 GetNetworkFirmwareUpgradesStagedGroups(ctx, networkId).Execute()
+> []InlineResponse20030 GetNetworkFirmwareUpgradesStagedGroups(ctx, networkId).Execute()
 
 List of Staged Upgrade Groups in a network
 
@@ -14281,7 +14283,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14290,7 +14292,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkFirmwareUpgradesStagedGroups``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedGroups`: []InlineResponse20029
+    // response from `GetNetworkFirmwareUpgradesStagedGroups`: []InlineResponse20030
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkFirmwareUpgradesStagedGroups`: %v\n", resp)
 }
 ```
@@ -14301,7 +14303,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -14314,7 +14316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20029**](InlineResponse20029.md)
+[**[]InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 
@@ -14332,7 +14334,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedStages
 
-> []InlineResponse20030 GetNetworkFirmwareUpgradesStagedStages(ctx, networkId).Execute()
+> []InlineResponse20031 GetNetworkFirmwareUpgradesStagedStages(ctx, networkId).Execute()
 
 Order of Staged Upgrade Groups in a network
 
@@ -14351,7 +14353,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14360,7 +14362,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkFirmwareUpgradesStagedStages``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedStages`: []InlineResponse20030
+    // response from `GetNetworkFirmwareUpgradesStagedStages`: []InlineResponse20031
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkFirmwareUpgradesStagedStages`: %v\n", resp)
 }
 ```
@@ -14371,7 +14373,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -14384,7 +14386,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20030**](InlineResponse20030.md)
+[**[]InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -14421,8 +14423,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    floorPlanId := "floorPlanId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    floorPlanId := "floorPlanId_example" // string | Floor plan ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14442,8 +14444,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**floorPlanId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**floorPlanId** | **string** | Floor plan ID | 
 
 ### Other Parameters
 
@@ -14494,7 +14496,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14514,7 +14516,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -14564,7 +14566,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14584,7 +14586,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -14634,8 +14636,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    groupPolicyId := "groupPolicyId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    groupPolicyId := "groupPolicyId_example" // string | Group policy ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14655,8 +14657,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**groupPolicyId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**groupPolicyId** | **string** | Group policy ID | 
 
 ### Other Parameters
 
@@ -14688,7 +14690,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkHealthAlerts
 
-> []InlineResponse20031 GetNetworkHealthAlerts(ctx, networkId).Execute()
+> []InlineResponse20032 GetNetworkHealthAlerts(ctx, networkId).Execute()
 
 Return all global alerts on this network
 
@@ -14707,7 +14709,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14716,7 +14718,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkHealthAlerts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkHealthAlerts`: []InlineResponse20031
+    // response from `GetNetworkHealthAlerts`: []InlineResponse20032
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkHealthAlerts`: %v\n", resp)
 }
 ```
@@ -14727,7 +14729,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -14740,7 +14742,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20031**](InlineResponse20031.md)
+[**[]InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -14758,7 +14760,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkMerakiAuthUser
 
-> InlineResponse20033 GetNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).Execute()
+> InlineResponse20034 GetNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).Execute()
 
 Return the Meraki Auth splash guest, RADIUS, or client VPN user
 
@@ -14777,8 +14779,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    merakiAuthUserId := "merakiAuthUserId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    merakiAuthUserId := "merakiAuthUserId_example" // string | Meraki auth user ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14787,7 +14789,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkMerakiAuthUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkMerakiAuthUser`: InlineResponse20033
+    // response from `GetNetworkMerakiAuthUser`: InlineResponse20034
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkMerakiAuthUser`: %v\n", resp)
 }
 ```
@@ -14798,8 +14800,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**merakiAuthUserId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**merakiAuthUserId** | **string** | Meraki auth user ID | 
 
 ### Other Parameters
 
@@ -14813,7 +14815,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -14831,7 +14833,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkMerakiAuthUsers
 
-> []InlineResponse20033 GetNetworkMerakiAuthUsers(ctx, networkId).Execute()
+> []InlineResponse20034 GetNetworkMerakiAuthUsers(ctx, networkId).Execute()
 
 List the users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a wired network)
 
@@ -14850,7 +14852,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14859,7 +14861,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkMerakiAuthUsers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkMerakiAuthUsers`: []InlineResponse20033
+    // response from `GetNetworkMerakiAuthUsers`: []InlineResponse20034
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkMerakiAuthUsers`: %v\n", resp)
 }
 ```
@@ -14870,7 +14872,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -14883,7 +14885,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20033**](InlineResponse20033.md)
+[**[]InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -14920,8 +14922,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    mqttBrokerId := "mqttBrokerId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -14941,8 +14943,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**mqttBrokerId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**mqttBrokerId** | **string** | Mqtt broker ID | 
 
 ### Other Parameters
 
@@ -14993,7 +14995,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -15013,7 +15015,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -15063,7 +15065,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -15083,7 +15085,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -15133,7 +15135,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     username := "username_example" // string | The username of a Systems Manager user (optional)
     email := "email_example" // string | The email of a network user account or a Systems Manager device (optional)
     mac := "mac_example" // string | The MAC of a network client device or a Systems Manager device (optional)
@@ -15159,7 +15161,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -15215,8 +15217,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    requestId := "requestId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    requestId := "requestId_example" // string | Request ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -15236,8 +15238,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**requestId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**requestId** | **string** | Request ID | 
 
 ### Other Parameters
 
@@ -15288,7 +15290,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -15308,7 +15310,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -15358,7 +15360,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     username := "username_example" // string | The username of a Systems Manager user (optional)
     email := "email_example" // string | The email of a network user account or a Systems Manager device (optional)
     mac := "mac_example" // string | The MAC of a network client device or a Systems Manager device (optional)
@@ -15384,7 +15386,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -15440,7 +15442,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     username := "username_example" // string | The username of a Systems Manager user (optional)
     email := "email_example" // string | The email of a network user account or a Systems Manager device (optional)
     mac := "mac_example" // string | The MAC of a network client device or a Systems Manager device (optional)
@@ -15466,7 +15468,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -15503,7 +15505,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPoliciesByClient
 
-> []InlineResponse20034 GetNetworkPoliciesByClient(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).Execute()
+> []InlineResponse20035 GetNetworkPoliciesByClient(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).Execute()
 
 Get policies for all clients with policies
 
@@ -15522,7 +15524,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 50. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -15536,7 +15538,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkPoliciesByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPoliciesByClient`: []InlineResponse20034
+    // response from `GetNetworkPoliciesByClient`: []InlineResponse20035
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkPoliciesByClient`: %v\n", resp)
 }
 ```
@@ -15547,7 +15549,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -15565,7 +15567,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20034**](InlineResponse20034.md)
+[**[]InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 
@@ -15583,7 +15585,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsProfile
 
-> InlineResponse20037 GetNetworkSensorAlertsProfile(ctx, networkId, id).Execute()
+> InlineResponse20038 GetNetworkSensorAlertsProfile(ctx, networkId, id).Execute()
 
 Show details of a sensor alert profile for a network.
 
@@ -15602,8 +15604,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    id := "id_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    id := "id_example" // string | Id
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -15612,7 +15614,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsProfile`: InlineResponse20037
+    // response from `GetNetworkSensorAlertsProfile`: InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -15623,8 +15625,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**id** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**id** | **string** | Id | 
 
 ### Other Parameters
 
@@ -15638,7 +15640,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -15656,7 +15658,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsProfiles
 
-> []InlineResponse20037 GetNetworkSensorAlertsProfiles(ctx, networkId).Execute()
+> []InlineResponse20038 GetNetworkSensorAlertsProfiles(ctx, networkId).Execute()
 
 Lists all sensor alert profiles for a network.
 
@@ -15675,7 +15677,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -15684,7 +15686,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSensorAlertsProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsProfiles`: []InlineResponse20037
+    // response from `GetNetworkSensorAlertsProfiles`: []InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSensorAlertsProfiles`: %v\n", resp)
 }
 ```
@@ -15695,81 +15697,11 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetNetworkSensorAlertsProfilesRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-### Return type
-
-[**[]InlineResponse20037**](InlineResponse20037.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetNetworkSensorRelationships
-
-> []InlineResponse20038 GetNetworkSensorRelationships(ctx, networkId).Execute()
-
-List the sensor roles for devices in a given network
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    networkId := "networkId_example" // string | 
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetNetworkSensorRelationships(context.Background(), networkId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSensorRelationships``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetNetworkSensorRelationships`: []InlineResponse20038
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSensorRelationships`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetNetworkSensorRelationshipsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -15794,9 +15726,222 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetNetworkSensorMqttBroker
+
+> InlineResponse20039 GetNetworkSensorMqttBroker(ctx, networkId, mqttBrokerId).Execute()
+
+Return the sensor settings of an MQTT broker
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetNetworkSensorMqttBroker(context.Background(), networkId, mqttBrokerId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSensorMqttBroker``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetNetworkSensorMqttBroker`: InlineResponse20039
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSensorMqttBroker`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**mqttBrokerId** | **string** | Mqtt broker ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetNetworkSensorMqttBrokerRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20039**](InlineResponse20039.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetNetworkSensorMqttBrokers
+
+> []InlineResponse20039 GetNetworkSensorMqttBrokers(ctx, networkId).Execute()
+
+List the sensor settings of all MQTT brokers for this network
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetNetworkSensorMqttBrokers(context.Background(), networkId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSensorMqttBrokers``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetNetworkSensorMqttBrokers`: []InlineResponse20039
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSensorMqttBrokers`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetNetworkSensorMqttBrokersRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**[]InlineResponse20039**](InlineResponse20039.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetNetworkSensorRelationships
+
+> []InlineResponse20040 GetNetworkSensorRelationships(ctx, networkId).Execute()
+
+List the sensor roles for devices in a given network
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetNetworkSensorRelationships(context.Background(), networkId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSensorRelationships``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetNetworkSensorRelationships`: []InlineResponse20040
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSensorRelationships`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetNetworkSensorRelationshipsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**[]InlineResponse20040**](InlineResponse20040.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetNetworkSettings
 
-> InlineResponse20039 GetNetworkSettings(ctx, networkId).Execute()
+> InlineResponse20041 GetNetworkSettings(ctx, networkId).Execute()
 
 Return the settings for a network
 
@@ -15815,7 +15960,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -15824,7 +15969,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSettings`: InlineResponse20039
+    // response from `GetNetworkSettings`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSettings`: %v\n", resp)
 }
 ```
@@ -15835,7 +15980,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -15848,7 +15993,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -15885,8 +16030,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    attemptId := "attemptId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    attemptId := "attemptId_example" // string | Attempt ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -15906,8 +16051,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**attemptId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**attemptId** | **string** | Attempt ID | 
 
 ### Other Parameters
 
@@ -15939,7 +16084,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceCerts
 
-> []InlineResponse20047 GetNetworkSmDeviceCerts(ctx, networkId, deviceId).Execute()
+> []InlineResponse20049 GetNetworkSmDeviceCerts(ctx, networkId, deviceId).Execute()
 
 List the certs on a device
 
@@ -15958,8 +16103,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    deviceId := "deviceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    deviceId := "deviceId_example" // string | Device ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -15968,7 +16113,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmDeviceCerts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceCerts`: []InlineResponse20047
+    // response from `GetNetworkSmDeviceCerts`: []InlineResponse20049
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmDeviceCerts`: %v\n", resp)
 }
 ```
@@ -15979,8 +16124,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**deviceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**deviceId** | **string** | Device ID | 
 
 ### Other Parameters
 
@@ -15994,7 +16139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20047**](InlineResponse20047.md)
+[**[]InlineResponse20049**](InlineResponse20049.md)
 
 ### Authorization
 
@@ -16012,7 +16157,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceDeviceProfiles
 
-> []InlineResponse20051 GetNetworkSmDeviceDeviceProfiles(ctx, networkId, deviceId).Execute()
+> []InlineResponse20053 GetNetworkSmDeviceDeviceProfiles(ctx, networkId, deviceId).Execute()
 
 Get the installed profiles associated with a device
 
@@ -16031,8 +16176,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    deviceId := "deviceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    deviceId := "deviceId_example" // string | Device ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -16041,7 +16186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmDeviceDeviceProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceDeviceProfiles`: []InlineResponse20051
+    // response from `GetNetworkSmDeviceDeviceProfiles`: []InlineResponse20053
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmDeviceDeviceProfiles`: %v\n", resp)
 }
 ```
@@ -16052,8 +16197,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**deviceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**deviceId** | **string** | Device ID | 
 
 ### Other Parameters
 
@@ -16067,7 +16212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20051**](InlineResponse20051.md)
+[**[]InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 
@@ -16085,7 +16230,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceNetworkAdapters
 
-> []InlineResponse20052 GetNetworkSmDeviceNetworkAdapters(ctx, networkId, deviceId).Execute()
+> []InlineResponse20054 GetNetworkSmDeviceNetworkAdapters(ctx, networkId, deviceId).Execute()
 
 List the network adapters of a device
 
@@ -16104,8 +16249,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    deviceId := "deviceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    deviceId := "deviceId_example" // string | Device ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -16114,7 +16259,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmDeviceNetworkAdapters``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceNetworkAdapters`: []InlineResponse20052
+    // response from `GetNetworkSmDeviceNetworkAdapters`: []InlineResponse20054
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmDeviceNetworkAdapters`: %v\n", resp)
 }
 ```
@@ -16125,8 +16270,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**deviceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**deviceId** | **string** | Device ID | 
 
 ### Other Parameters
 
@@ -16140,7 +16285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20052**](InlineResponse20052.md)
+[**[]InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 
@@ -16177,8 +16322,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    deviceId := "deviceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    deviceId := "deviceId_example" // string | Device ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -16198,8 +16343,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**deviceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**deviceId** | **string** | Device ID | 
 
 ### Other Parameters
 
@@ -16231,7 +16376,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceSecurityCenters
 
-> []InlineResponse20054 GetNetworkSmDeviceSecurityCenters(ctx, networkId, deviceId).Execute()
+> []InlineResponse20056 GetNetworkSmDeviceSecurityCenters(ctx, networkId, deviceId).Execute()
 
 List the security centers on a device
 
@@ -16250,8 +16395,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    deviceId := "deviceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    deviceId := "deviceId_example" // string | Device ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -16260,7 +16405,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmDeviceSecurityCenters``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceSecurityCenters`: []InlineResponse20054
+    // response from `GetNetworkSmDeviceSecurityCenters`: []InlineResponse20056
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmDeviceSecurityCenters`: %v\n", resp)
 }
 ```
@@ -16271,158 +16416,12 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**deviceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**deviceId** | **string** | Device ID | 
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetNetworkSmDeviceSecurityCentersRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-
-### Return type
-
-[**[]InlineResponse20054**](InlineResponse20054.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetNetworkSmDeviceSoftwares
-
-> []InlineResponse20055 GetNetworkSmDeviceSoftwares(ctx, networkId, deviceId).Execute()
-
-Get a list of softwares associated with a device
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    networkId := "networkId_example" // string | 
-    deviceId := "deviceId_example" // string | 
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetNetworkSmDeviceSoftwares(context.Background(), networkId, deviceId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmDeviceSoftwares``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetNetworkSmDeviceSoftwares`: []InlineResponse20055
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmDeviceSoftwares`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**deviceId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetNetworkSmDeviceSoftwaresRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
-
-### Return type
-
-[**[]InlineResponse20055**](InlineResponse20055.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetNetworkSmDeviceWlanLists
-
-> []InlineResponse20056 GetNetworkSmDeviceWlanLists(ctx, networkId, deviceId).Execute()
-
-List the saved SSID names on a device
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    networkId := "networkId_example" // string | 
-    deviceId := "deviceId_example" // string | 
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetNetworkSmDeviceWlanLists(context.Background(), networkId, deviceId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmDeviceWlanLists``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetNetworkSmDeviceWlanLists`: []InlineResponse20056
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmDeviceWlanLists`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**deviceId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetNetworkSmDeviceWlanListsRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -16448,9 +16447,155 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetNetworkSmDeviceSoftwares
+
+> []InlineResponse20057 GetNetworkSmDeviceSoftwares(ctx, networkId, deviceId).Execute()
+
+Get a list of softwares associated with a device
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    deviceId := "deviceId_example" // string | Device ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetNetworkSmDeviceSoftwares(context.Background(), networkId, deviceId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmDeviceSoftwares``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetNetworkSmDeviceSoftwares`: []InlineResponse20057
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmDeviceSoftwares`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**deviceId** | **string** | Device ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetNetworkSmDeviceSoftwaresRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**[]InlineResponse20057**](InlineResponse20057.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetNetworkSmDeviceWlanLists
+
+> []InlineResponse20058 GetNetworkSmDeviceWlanLists(ctx, networkId, deviceId).Execute()
+
+List the saved SSID names on a device
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    deviceId := "deviceId_example" // string | Device ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetNetworkSmDeviceWlanLists(context.Background(), networkId, deviceId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmDeviceWlanLists``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetNetworkSmDeviceWlanLists`: []InlineResponse20058
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmDeviceWlanLists`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**deviceId** | **string** | Device ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetNetworkSmDeviceWlanListsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**[]InlineResponse20058**](InlineResponse20058.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetNetworkSmDevices
 
-> []InlineResponse20040 GetNetworkSmDevices(ctx, networkId).Fields(fields).WifiMacs(wifiMacs).Serials(serials).Ids(ids).Scope(scope).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20042 GetNetworkSmDevices(ctx, networkId).Fields(fields).WifiMacs(wifiMacs).Serials(serials).Ids(ids).Scope(scope).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the devices enrolled in an SM network with various specified fields and filters
 
@@ -16469,7 +16614,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     fields := []string{"Inner_example"} // []string | Additional fields that will be displayed for each device.     The default fields are: id, name, tags, ssid, wifiMac, osName, systemModel, uuid, and serialNumber. The additional fields are: ip,     systemType, availableDeviceCapacity, kioskAppName, biosVersion, lastConnected, missingAppsCount, userSuppliedAddress, location, lastUser,     ownerEmail, ownerUsername, osBuild, publicIp, phoneNumber, diskInfoJson, deviceCapacity, isManaged, hadMdm, isSupervised, meid, imei, iccid,     simCarrierNetwork, cellularDataUsed, isHotspotEnabled, createdAt, batteryEstCharge, quarantined, avName, avRunning, asName, fwName,     isRooted, loginRequired, screenLockEnabled, screenLockDelay, autoLoginDisabled, autoTags, hasMdm, hasDesktopAgent, diskEncryptionEnabled,     hardwareEncryptionCaps, passCodeLock, usesHardwareKeystore, androidSecurityPatchVersion, and url. (optional)
     wifiMacs := []string{"Inner_example"} // []string | Filter devices by wifi mac(s). (optional)
     serials := []string{"Inner_example"} // []string | Filter devices by serial(s). (optional)
@@ -16486,7 +16631,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDevices`: []InlineResponse20040
+    // response from `GetNetworkSmDevices`: []InlineResponse20042
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -16497,7 +16642,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -16518,7 +16663,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20040**](InlineResponse20040.md)
+[**[]InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -16536,7 +16681,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmProfiles
 
-> []InlineResponse20057 GetNetworkSmProfiles(ctx, networkId).Execute()
+> []InlineResponse20059 GetNetworkSmProfiles(ctx, networkId).Execute()
 
 List all profiles in a network
 
@@ -16555,7 +16700,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -16564,7 +16709,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmProfiles`: []InlineResponse20057
+    // response from `GetNetworkSmProfiles`: []InlineResponse20059
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmProfiles`: %v\n", resp)
 }
 ```
@@ -16575,7 +16720,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -16588,7 +16733,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20057**](InlineResponse20057.md)
+[**[]InlineResponse20059**](InlineResponse20059.md)
 
 ### Authorization
 
@@ -16625,8 +16770,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    targetGroupId := "targetGroupId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    targetGroupId := "targetGroupId_example" // string | Target group ID
     withDetails := true // bool | Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -16647,8 +16792,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**targetGroupId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**targetGroupId** | **string** | Target group ID | 
 
 ### Other Parameters
 
@@ -16700,7 +16845,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     withDetails := true // bool | Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -16721,7 +16866,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -16753,7 +16898,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmTrustedAccessConfigs
 
-> []InlineResponse20058 GetNetworkSmTrustedAccessConfigs(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20060 GetNetworkSmTrustedAccessConfigs(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List Trusted Access Configs
 
@@ -16772,7 +16917,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -16784,7 +16929,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmTrustedAccessConfigs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmTrustedAccessConfigs`: []InlineResponse20058
+    // response from `GetNetworkSmTrustedAccessConfigs`: []InlineResponse20060
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmTrustedAccessConfigs`: %v\n", resp)
 }
 ```
@@ -16795,7 +16940,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -16811,7 +16956,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20058**](InlineResponse20058.md)
+[**[]InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 
@@ -16829,7 +16974,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUserAccessDevices
 
-> []InlineResponse20059 GetNetworkSmUserAccessDevices(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20061 GetNetworkSmUserAccessDevices(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List User Access Devices and its Trusted Access Connections
 
@@ -16848,7 +16993,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -16860,7 +17005,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmUserAccessDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUserAccessDevices`: []InlineResponse20059
+    // response from `GetNetworkSmUserAccessDevices`: []InlineResponse20061
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmUserAccessDevices`: %v\n", resp)
 }
 ```
@@ -16871,7 +17016,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -16887,7 +17032,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20059**](InlineResponse20059.md)
+[**[]InlineResponse20061**](InlineResponse20061.md)
 
 ### Authorization
 
@@ -16905,7 +17050,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUserDeviceProfiles
 
-> []InlineResponse20051 GetNetworkSmUserDeviceProfiles(ctx, networkId, userId).Execute()
+> []InlineResponse20053 GetNetworkSmUserDeviceProfiles(ctx, networkId, userId).Execute()
 
 Get the profiles associated with a user
 
@@ -16924,8 +17069,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    userId := "userId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    userId := "userId_example" // string | User ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -16934,7 +17079,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmUserDeviceProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUserDeviceProfiles`: []InlineResponse20051
+    // response from `GetNetworkSmUserDeviceProfiles`: []InlineResponse20053
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmUserDeviceProfiles`: %v\n", resp)
 }
 ```
@@ -16945,8 +17090,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**userId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**userId** | **string** | User ID | 
 
 ### Other Parameters
 
@@ -16960,7 +17105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20051**](InlineResponse20051.md)
+[**[]InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 
@@ -16978,7 +17123,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUserSoftwares
 
-> []InlineResponse20055 GetNetworkSmUserSoftwares(ctx, networkId, userId).Execute()
+> []InlineResponse20057 GetNetworkSmUserSoftwares(ctx, networkId, userId).Execute()
 
 Get a list of softwares associated with a user
 
@@ -16997,8 +17142,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    userId := "userId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    userId := "userId_example" // string | User ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -17007,7 +17152,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmUserSoftwares``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUserSoftwares`: []InlineResponse20055
+    // response from `GetNetworkSmUserSoftwares`: []InlineResponse20057
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmUserSoftwares`: %v\n", resp)
 }
 ```
@@ -17018,8 +17163,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**userId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**userId** | **string** | User ID | 
 
 ### Other Parameters
 
@@ -17033,7 +17178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20055**](InlineResponse20055.md)
+[**[]InlineResponse20057**](InlineResponse20057.md)
 
 ### Authorization
 
@@ -17051,7 +17196,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUsers
 
-> []InlineResponse20060 GetNetworkSmUsers(ctx, networkId).Ids(ids).Usernames(usernames).Emails(emails).Scope(scope).Execute()
+> []InlineResponse20062 GetNetworkSmUsers(ctx, networkId).Ids(ids).Usernames(usernames).Emails(emails).Scope(scope).Execute()
 
 List the owners in an SM network with various specified fields and filters
 
@@ -17070,7 +17215,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     ids := []string{"Inner_example"} // []string | Filter users by id(s). (optional)
     usernames := []string{"Inner_example"} // []string | Filter users by username(s). (optional)
     emails := []string{"Inner_example"} // []string | Filter users by email(s). (optional)
@@ -17083,7 +17228,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSmUsers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUsers`: []InlineResponse20060
+    // response from `GetNetworkSmUsers`: []InlineResponse20062
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSmUsers`: %v\n", resp)
 }
 ```
@@ -17094,7 +17239,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17111,7 +17256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20060**](InlineResponse20060.md)
+[**[]InlineResponse20062**](InlineResponse20062.md)
 
 ### Authorization
 
@@ -17148,7 +17293,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -17168,7 +17313,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17199,7 +17344,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchAccessControlLists
 
-> InlineResponse20062 GetNetworkSwitchAccessControlLists(ctx, networkId).Execute()
+> InlineResponse20064 GetNetworkSwitchAccessControlLists(ctx, networkId).Execute()
 
 Return the access control lists for a MS network
 
@@ -17218,7 +17363,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -17227,7 +17372,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSwitchAccessControlLists``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAccessControlLists`: InlineResponse20062
+    // response from `GetNetworkSwitchAccessControlLists`: InlineResponse20064
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSwitchAccessControlLists`: %v\n", resp)
 }
 ```
@@ -17238,7 +17383,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17251,7 +17396,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20062**](InlineResponse20062.md)
+[**InlineResponse20064**](InlineResponse20064.md)
 
 ### Authorization
 
@@ -17269,7 +17414,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchAccessPolicies
 
-> []InlineResponse20063 GetNetworkSwitchAccessPolicies(ctx, networkId).Execute()
+> []InlineResponse20065 GetNetworkSwitchAccessPolicies(ctx, networkId).Execute()
 
 List the access policies for a switch network
 
@@ -17288,7 +17433,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -17297,7 +17442,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSwitchAccessPolicies``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAccessPolicies`: []InlineResponse20063
+    // response from `GetNetworkSwitchAccessPolicies`: []InlineResponse20065
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSwitchAccessPolicies`: %v\n", resp)
 }
 ```
@@ -17308,7 +17453,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17321,7 +17466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20063**](InlineResponse20063.md)
+[**[]InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 
@@ -17339,7 +17484,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchAccessPolicy
 
-> InlineResponse20063 GetNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).Execute()
+> InlineResponse20065 GetNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).Execute()
 
 Return a specific access policy for a switch network
 
@@ -17358,8 +17503,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    accessPolicyNumber := "accessPolicyNumber_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    accessPolicyNumber := "accessPolicyNumber_example" // string | Access policy number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -17368,7 +17513,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSwitchAccessPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAccessPolicy`: InlineResponse20063
+    // response from `GetNetworkSwitchAccessPolicy`: InlineResponse20065
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSwitchAccessPolicy`: %v\n", resp)
 }
 ```
@@ -17379,8 +17524,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**accessPolicyNumber** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**accessPolicyNumber** | **string** | Access policy number | 
 
 ### Other Parameters
 
@@ -17394,7 +17539,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20063**](InlineResponse20063.md)
+[**InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 
@@ -17431,7 +17576,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -17451,7 +17596,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17501,7 +17646,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -17521,7 +17666,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17552,7 +17697,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers
 
-> []InlineResponse20065 GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20067 GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the list of servers trusted by Dynamic ARP Inspection on this network
 
@@ -17571,7 +17716,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -17583,7 +17728,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers`: []InlineResponse20065
+    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers`: []InlineResponse20067
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers`: %v\n", resp)
 }
 ```
@@ -17594,7 +17739,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17610,7 +17755,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20065**](InlineResponse20065.md)
+[**[]InlineResponse20067**](InlineResponse20067.md)
 
 ### Authorization
 
@@ -17628,7 +17773,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice
 
-> []InlineResponse20066 GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20068 GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the devices that have a Dynamic ARP Inspection warning and their warnings
 
@@ -17647,7 +17792,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -17659,7 +17804,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: []InlineResponse20066
+    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: []InlineResponse20068
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: %v\n", resp)
 }
 ```
@@ -17670,7 +17815,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17686,7 +17831,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20066**](InlineResponse20066.md)
+[**[]InlineResponse20068**](InlineResponse20068.md)
 
 ### Authorization
 
@@ -17704,7 +17849,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpV4ServersSeen
 
-> []InlineResponse20064 GetNetworkSwitchDhcpV4ServersSeen(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20066 GetNetworkSwitchDhcpV4ServersSeen(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the network's DHCPv4 servers seen within the selected timeframe (default 1 day)
 
@@ -17723,7 +17868,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. (optional)
     timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day. (optional)
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
@@ -17737,7 +17882,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSwitchDhcpV4ServersSeen``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpV4ServersSeen`: []InlineResponse20064
+    // response from `GetNetworkSwitchDhcpV4ServersSeen`: []InlineResponse20066
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSwitchDhcpV4ServersSeen`: %v\n", resp)
 }
 ```
@@ -17748,7 +17893,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17766,7 +17911,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20064**](InlineResponse20064.md)
+[**[]InlineResponse20066**](InlineResponse20066.md)
 
 ### Authorization
 
@@ -17803,7 +17948,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -17823,7 +17968,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17873,7 +18018,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -17893,7 +18038,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17924,7 +18069,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchMtu
 
-> InlineResponse20067 GetNetworkSwitchMtu(ctx, networkId).Execute()
+> InlineResponse20069 GetNetworkSwitchMtu(ctx, networkId).Execute()
 
 Return the MTU configuration
 
@@ -17943,7 +18088,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -17952,7 +18097,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSwitchMtu``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchMtu`: InlineResponse20067
+    // response from `GetNetworkSwitchMtu`: InlineResponse20069
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSwitchMtu`: %v\n", resp)
 }
 ```
@@ -17963,7 +18108,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -17976,7 +18121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20067**](InlineResponse20067.md)
+[**InlineResponse20069**](InlineResponse20069.md)
 
 ### Authorization
 
@@ -18013,7 +18158,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18033,7 +18178,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -18083,8 +18228,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    qosRuleId := "qosRuleId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    qosRuleId := "qosRuleId_example" // string | Qos rule ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18104,8 +18249,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**qosRuleId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**qosRuleId** | **string** | Qos rule ID | 
 
 ### Other Parameters
 
@@ -18156,7 +18301,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18176,7 +18321,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -18226,7 +18371,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18246,7 +18391,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -18296,7 +18441,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18316,7 +18461,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -18366,8 +18511,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    rendezvousPointId := "rendezvousPointId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    rendezvousPointId := "rendezvousPointId_example" // string | Rendezvous point ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18387,8 +18532,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**rendezvousPointId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**rendezvousPointId** | **string** | Rendezvous point ID | 
 
 ### Other Parameters
 
@@ -18439,7 +18584,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18459,7 +18604,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -18509,7 +18654,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18529,7 +18674,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -18560,7 +18705,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchSettings
 
-> InlineResponse20068 GetNetworkSwitchSettings(ctx, networkId).Execute()
+> InlineResponse20070 GetNetworkSwitchSettings(ctx, networkId).Execute()
 
 Returns the switch network settings
 
@@ -18579,7 +18724,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18588,7 +18733,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSwitchSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchSettings`: InlineResponse20068
+    // response from `GetNetworkSwitchSettings`: InlineResponse20070
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSwitchSettings`: %v\n", resp)
 }
 ```
@@ -18599,7 +18744,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -18612,7 +18757,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20070**](InlineResponse20070.md)
 
 ### Authorization
 
@@ -18630,7 +18775,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStack
 
-> InlineResponse20069 GetNetworkSwitchStack(ctx, networkId, switchStackId).Execute()
+> InlineResponse20071 GetNetworkSwitchStack(ctx, networkId, switchStackId).Execute()
 
 Show a switch stack
 
@@ -18649,8 +18794,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18659,7 +18804,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStack`: InlineResponse20069
+    // response from `GetNetworkSwitchStack`: InlineResponse20071
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -18670,8 +18815,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
 
 ### Other Parameters
 
@@ -18685,7 +18830,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20069**](InlineResponse20069.md)
+[**InlineResponse20071**](InlineResponse20071.md)
 
 ### Authorization
 
@@ -18722,9 +18867,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    interfaceId := "interfaceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    interfaceId := "interfaceId_example" // string | Interface ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18744,9 +18889,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
-**interfaceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
+**interfaceId** | **string** | Interface ID | 
 
 ### Other Parameters
 
@@ -18798,9 +18943,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    interfaceId := "interfaceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    interfaceId := "interfaceId_example" // string | Interface ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18820,9 +18965,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
-**interfaceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
+**interfaceId** | **string** | Interface ID | 
 
 ### Other Parameters
 
@@ -18874,8 +19019,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18895,8 +19040,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
 
 ### Other Parameters
 
@@ -18947,9 +19092,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    staticRouteId := "staticRouteId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    staticRouteId := "staticRouteId_example" // string | Static route ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -18969,9 +19114,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
-**staticRouteId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
+**staticRouteId** | **string** | Static route ID | 
 
 ### Other Parameters
 
@@ -19023,8 +19168,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19044,8 +19189,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
 
 ### Other Parameters
 
@@ -19096,7 +19241,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19116,7 +19261,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -19147,7 +19292,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStormControl
 
-> InlineResponse20070 GetNetworkSwitchStormControl(ctx, networkId).Execute()
+> InlineResponse20072 GetNetworkSwitchStormControl(ctx, networkId).Execute()
 
 Return the storm control configuration for a switch network
 
@@ -19166,7 +19311,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19175,7 +19320,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSwitchStormControl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStormControl`: InlineResponse20070
+    // response from `GetNetworkSwitchStormControl`: InlineResponse20072
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSwitchStormControl`: %v\n", resp)
 }
 ```
@@ -19186,7 +19331,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -19199,7 +19344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20070**](InlineResponse20070.md)
+[**InlineResponse20072**](InlineResponse20072.md)
 
 ### Authorization
 
@@ -19236,7 +19381,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19256,7 +19401,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -19287,7 +19432,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSyslogServers
 
-> InlineResponse20071 GetNetworkSyslogServers(ctx, networkId).Execute()
+> InlineResponse20073 GetNetworkSyslogServers(ctx, networkId).Execute()
 
 List the syslog servers for a network
 
@@ -19306,7 +19451,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19315,7 +19460,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkSyslogServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSyslogServers`: InlineResponse20071
+    // response from `GetNetworkSyslogServers`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkSyslogServers`: %v\n", resp)
 }
 ```
@@ -19326,7 +19471,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -19339,7 +19484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20071**](InlineResponse20071.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -19376,7 +19521,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19396,7 +19541,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -19446,7 +19591,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19466,7 +19611,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -19516,7 +19661,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19536,7 +19681,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -19567,7 +19712,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksHttpServer
 
-> InlineResponse20072 GetNetworkWebhooksHttpServer(ctx, networkId, httpServerId).Execute()
+> InlineResponse20074 GetNetworkWebhooksHttpServer(ctx, networkId, httpServerId).Execute()
 
 Return an HTTP server for a network
 
@@ -19586,8 +19731,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    httpServerId := "httpServerId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    httpServerId := "httpServerId_example" // string | Http server ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19596,7 +19741,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksHttpServer`: InlineResponse20072
+    // response from `GetNetworkWebhooksHttpServer`: InlineResponse20074
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -19607,8 +19752,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**httpServerId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**httpServerId** | **string** | Http server ID | 
 
 ### Other Parameters
 
@@ -19622,7 +19767,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20074**](InlineResponse20074.md)
 
 ### Authorization
 
@@ -19640,7 +19785,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksHttpServers
 
-> []InlineResponse20072 GetNetworkWebhooksHttpServers(ctx, networkId).Execute()
+> []InlineResponse20074 GetNetworkWebhooksHttpServers(ctx, networkId).Execute()
 
 List the HTTP servers for a network
 
@@ -19659,7 +19804,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19668,7 +19813,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkWebhooksHttpServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksHttpServers`: []InlineResponse20072
+    // response from `GetNetworkWebhooksHttpServers`: []InlineResponse20074
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkWebhooksHttpServers`: %v\n", resp)
 }
 ```
@@ -19679,7 +19824,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -19692,7 +19837,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20072**](InlineResponse20072.md)
+[**[]InlineResponse20074**](InlineResponse20074.md)
 
 ### Authorization
 
@@ -19710,7 +19855,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksPayloadTemplate
 
-> InlineResponse20073 GetNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).Execute()
+> InlineResponse20075 GetNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).Execute()
 
 Get the webhook payload template for a network
 
@@ -19729,8 +19874,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    payloadTemplateId := "payloadTemplateId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    payloadTemplateId := "payloadTemplateId_example" // string | Payload template ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19739,7 +19884,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkWebhooksPayloadTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksPayloadTemplate`: InlineResponse20073
+    // response from `GetNetworkWebhooksPayloadTemplate`: InlineResponse20075
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkWebhooksPayloadTemplate`: %v\n", resp)
 }
 ```
@@ -19750,8 +19895,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**payloadTemplateId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**payloadTemplateId** | **string** | Payload template ID | 
 
 ### Other Parameters
 
@@ -19765,7 +19910,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20073**](InlineResponse20073.md)
+[**InlineResponse20075**](InlineResponse20075.md)
 
 ### Authorization
 
@@ -19783,7 +19928,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksPayloadTemplates
 
-> []InlineResponse20073 GetNetworkWebhooksPayloadTemplates(ctx, networkId).Execute()
+> []InlineResponse20075 GetNetworkWebhooksPayloadTemplates(ctx, networkId).Execute()
 
 List the webhook payload templates for a network
 
@@ -19802,7 +19947,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19811,7 +19956,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkWebhooksPayloadTemplates``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksPayloadTemplates`: []InlineResponse20073
+    // response from `GetNetworkWebhooksPayloadTemplates`: []InlineResponse20075
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkWebhooksPayloadTemplates`: %v\n", resp)
 }
 ```
@@ -19822,7 +19967,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -19835,7 +19980,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20073**](InlineResponse20073.md)
+[**[]InlineResponse20075**](InlineResponse20075.md)
 
 ### Authorization
 
@@ -19872,8 +20017,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    webhookTestId := "webhookTestId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    webhookTestId := "webhookTestId_example" // string | Webhook test ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19893,8 +20038,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**webhookTestId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**webhookTestId** | **string** | Webhook test ID | 
 
 ### Other Parameters
 
@@ -19945,7 +20090,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -19965,7 +20110,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -20015,7 +20160,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20035,7 +20180,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -20066,7 +20211,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessBluetoothSettings
 
-> InlineResponse20074 GetNetworkWirelessBluetoothSettings(ctx, networkId).Execute()
+> InlineResponse20076 GetNetworkWirelessBluetoothSettings(ctx, networkId).Execute()
 
 Return the Bluetooth settings for a network. <a href=\"https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)\">Bluetooth settings</a> must be enabled on the network.
 
@@ -20085,7 +20230,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20094,7 +20239,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessBluetoothSettings`: InlineResponse20074
+    // response from `GetNetworkWirelessBluetoothSettings`: InlineResponse20076
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -20105,7 +20250,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -20118,7 +20263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20074**](InlineResponse20074.md)
+[**InlineResponse20076**](InlineResponse20076.md)
 
 ### Authorization
 
@@ -20155,8 +20300,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    rfProfileId := "rfProfileId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    rfProfileId := "rfProfileId_example" // string | Rf profile ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20176,8 +20321,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**rfProfileId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**rfProfileId** | **string** | Rf profile ID | 
 
 ### Other Parameters
 
@@ -20228,7 +20373,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     includeTemplateProfiles := true // bool | If the network is bound to a template, this parameter controls whether or not the non-basic RF profiles defined on the template should be included in the response alongside the non-basic profiles defined on the bound network. Defaults to false. (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -20249,7 +20394,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -20281,7 +20426,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSettings
 
-> InlineResponse20081 GetNetworkWirelessSettings(ctx, networkId).Execute()
+> InlineResponse20083 GetNetworkWirelessSettings(ctx, networkId).Execute()
 
 Return the wireless settings for a network
 
@@ -20300,7 +20445,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20309,7 +20454,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkWirelessSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSettings`: InlineResponse20081
+    // response from `GetNetworkWirelessSettings`: InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkWirelessSettings`: %v\n", resp)
 }
 ```
@@ -20320,7 +20465,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -20333,7 +20478,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20081**](InlineResponse20081.md)
+[**InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 
@@ -20370,8 +20515,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20391,8 +20536,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -20443,8 +20588,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20464,8 +20609,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -20516,8 +20661,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20537,8 +20682,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -20570,7 +20715,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidEapOverride
 
-> InlineResponse20083 GetNetworkWirelessSsidEapOverride(ctx, networkId, number).Execute()
+> InlineResponse20085 GetNetworkWirelessSsidEapOverride(ctx, networkId, number).Execute()
 
 Return the EAP overridden parameters for an SSID
 
@@ -20589,8 +20734,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20599,7 +20744,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkWirelessSsidEapOverride``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidEapOverride`: InlineResponse20083
+    // response from `GetNetworkWirelessSsidEapOverride`: InlineResponse20085
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkWirelessSsidEapOverride`: %v\n", resp)
 }
 ```
@@ -20610,8 +20755,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -20625,7 +20770,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20083**](InlineResponse20083.md)
+[**InlineResponse20085**](InlineResponse20085.md)
 
 ### Authorization
 
@@ -20662,8 +20807,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20683,8 +20828,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -20735,8 +20880,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20756,8 +20901,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -20808,8 +20953,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20829,8 +20974,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -20862,7 +21007,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidIdentityPsk
 
-> InlineResponse20084 GetNetworkWirelessSsidIdentityPsk(ctx, networkId, number, identityPskId).Execute()
+> InlineResponse20086 GetNetworkWirelessSsidIdentityPsk(ctx, networkId, number, identityPskId).Execute()
 
 Return an Identity PSK
 
@@ -20881,9 +21026,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    identityPskId := "identityPskId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    identityPskId := "identityPskId_example" // string | Identity psk ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20892,7 +21037,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkWirelessSsidIdentityPsk``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidIdentityPsk`: InlineResponse20084
+    // response from `GetNetworkWirelessSsidIdentityPsk`: InlineResponse20086
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkWirelessSsidIdentityPsk`: %v\n", resp)
 }
 ```
@@ -20903,9 +21048,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
-**identityPskId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
+**identityPskId** | **string** | Identity psk ID | 
 
 ### Other Parameters
 
@@ -20920,7 +21065,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20084**](InlineResponse20084.md)
+[**InlineResponse20086**](InlineResponse20086.md)
 
 ### Authorization
 
@@ -20938,7 +21083,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidIdentityPsks
 
-> []InlineResponse20084 GetNetworkWirelessSsidIdentityPsks(ctx, networkId, number).Execute()
+> []InlineResponse20086 GetNetworkWirelessSsidIdentityPsks(ctx, networkId, number).Execute()
 
 List all Identity PSKs in a wireless network
 
@@ -20957,8 +21102,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -20967,7 +21112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkWirelessSsidIdentityPsks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidIdentityPsks`: []InlineResponse20084
+    // response from `GetNetworkWirelessSsidIdentityPsks`: []InlineResponse20086
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkWirelessSsidIdentityPsks`: %v\n", resp)
 }
 ```
@@ -20978,8 +21123,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -20993,7 +21138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20084**](InlineResponse20084.md)
+[**[]InlineResponse20086**](InlineResponse20086.md)
 
 ### Authorization
 
@@ -21030,8 +21175,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21051,8 +21196,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -21084,7 +21229,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidSplashSettings
 
-> InlineResponse20085 GetNetworkWirelessSsidSplashSettings(ctx, networkId, number).Execute()
+> InlineResponse20087 GetNetworkWirelessSsidSplashSettings(ctx, networkId, number).Execute()
 
 Display the splash page settings for the given SSID
 
@@ -21103,8 +21248,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21113,7 +21258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetNetworkWirelessSsidSplashSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidSplashSettings`: InlineResponse20085
+    // response from `GetNetworkWirelessSsidSplashSettings`: InlineResponse20087
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetNetworkWirelessSsidSplashSettings`: %v\n", resp)
 }
 ```
@@ -21124,8 +21269,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -21139,7 +21284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20085**](InlineResponse20085.md)
+[**InlineResponse20087**](InlineResponse20087.md)
 
 ### Authorization
 
@@ -21176,8 +21321,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21197,8 +21342,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -21249,8 +21394,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21270,8 +21415,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -21322,7 +21467,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21342,7 +21487,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -21373,7 +21518,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganization
 
-> InlineResponse20087 GetOrganization(ctx, organizationId).Execute()
+> InlineResponse20089 GetOrganization(ctx, organizationId).Execute()
 
 Return an organization
 
@@ -21392,7 +21537,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21401,7 +21546,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganization``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganization`: InlineResponse20087
+    // response from `GetOrganization`: InlineResponse20089
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganization`: %v\n", resp)
 }
 ```
@@ -21412,7 +21557,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -21425,7 +21570,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20087**](InlineResponse20087.md)
+[**InlineResponse20089**](InlineResponse20089.md)
 
 ### Authorization
 
@@ -21462,8 +21607,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    actionBatchId := "actionBatchId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    actionBatchId := "actionBatchId_example" // string | Action batch ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21483,8 +21628,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**actionBatchId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**actionBatchId** | **string** | Action batch ID | 
 
 ### Other Parameters
 
@@ -21535,7 +21680,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     status := "status_example" // string | Filter batches by status. Valid types are pending, completed, and failed. (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -21556,7 +21701,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -21588,7 +21733,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyAcl
 
-> map[string]interface{} GetOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).Execute()
+> InlineResponse20090 GetOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).Execute()
 
 Returns the adaptive policy ACL information
 
@@ -21607,8 +21752,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    aclId := "aclId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    aclId := "aclId_example" // string | Acl ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21617,7 +21762,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationAdaptivePolicyAcl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyAcl`: map[string]interface{}
+    // response from `GetOrganizationAdaptivePolicyAcl`: InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationAdaptivePolicyAcl`: %v\n", resp)
 }
 ```
@@ -21628,8 +21773,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**aclId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**aclId** | **string** | Acl ID | 
 
 ### Other Parameters
 
@@ -21643,7 +21788,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -21661,7 +21806,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyAcls
 
-> []map[string]interface{} GetOrganizationAdaptivePolicyAcls(ctx, organizationId).Execute()
+> []InlineResponse20090 GetOrganizationAdaptivePolicyAcls(ctx, organizationId).Execute()
 
 List adaptive policy ACLs in a organization
 
@@ -21680,7 +21825,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21689,7 +21834,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationAdaptivePolicyAcls``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyAcls`: []map[string]interface{}
+    // response from `GetOrganizationAdaptivePolicyAcls`: []InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationAdaptivePolicyAcls`: %v\n", resp)
 }
 ```
@@ -21700,7 +21845,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -21713,7 +21858,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -21750,8 +21895,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    id := "id_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    id := "id_example" // string | Id
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21771,8 +21916,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**id** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**id** | **string** | Id | 
 
 ### Other Parameters
 
@@ -21823,7 +21968,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21843,7 +21988,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -21893,7 +22038,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21913,7 +22058,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -21963,8 +22108,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    id := "id_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    id := "id_example" // string | Id
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -21984,8 +22129,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**id** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**id** | **string** | Id | 
 
 ### Other Parameters
 
@@ -22036,7 +22181,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22056,7 +22201,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22106,7 +22251,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22126,7 +22271,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22176,7 +22321,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22196,7 +22341,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22246,7 +22391,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22266,7 +22411,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22297,7 +22442,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse20091 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
+> InlineResponse20094 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
 
 Return the third party VPN peers for an organization
 
@@ -22316,7 +22461,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22325,7 +22470,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20091
+    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20094
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -22336,7 +22481,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22349,7 +22494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20091**](InlineResponse20091.md)
+[**InlineResponse20094**](InlineResponse20094.md)
 
 ### Authorization
 
@@ -22386,7 +22531,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22406,7 +22551,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22437,7 +22582,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationBrandingPolicies
 
-> []InlineResponse20092 GetOrganizationBrandingPolicies(ctx, organizationId).Execute()
+> []InlineResponse20096 GetOrganizationBrandingPolicies(ctx, organizationId).Execute()
 
 List the branding policies of an organization
 
@@ -22456,7 +22601,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22465,7 +22610,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationBrandingPolicies``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationBrandingPolicies`: []InlineResponse20092
+    // response from `GetOrganizationBrandingPolicies`: []InlineResponse20096
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationBrandingPolicies`: %v\n", resp)
 }
 ```
@@ -22476,7 +22621,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22489,7 +22634,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20092**](InlineResponse20092.md)
+[**[]InlineResponse20096**](InlineResponse20096.md)
 
 ### Authorization
 
@@ -22507,7 +22652,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationBrandingPoliciesPriorities
 
-> InlineResponse20093 GetOrganizationBrandingPoliciesPriorities(ctx, organizationId).Execute()
+> InlineResponse20097 GetOrganizationBrandingPoliciesPriorities(ctx, organizationId).Execute()
 
 Return the branding policy IDs of an organization in priority order
 
@@ -22526,7 +22671,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22535,7 +22680,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationBrandingPoliciesPriorities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationBrandingPoliciesPriorities`: InlineResponse20093
+    // response from `GetOrganizationBrandingPoliciesPriorities`: InlineResponse20097
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationBrandingPoliciesPriorities`: %v\n", resp)
 }
 ```
@@ -22546,7 +22691,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22559,7 +22704,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20093**](InlineResponse20093.md)
+[**InlineResponse20097**](InlineResponse20097.md)
 
 ### Authorization
 
@@ -22577,7 +22722,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationBrandingPolicy
 
-> InlineResponse20092 GetOrganizationBrandingPolicy(ctx, organizationId, brandingPolicyId).Execute()
+> InlineResponse20096 GetOrganizationBrandingPolicy(ctx, organizationId, brandingPolicyId).Execute()
 
 Return a branding policy
 
@@ -22596,8 +22741,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    brandingPolicyId := "brandingPolicyId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    brandingPolicyId := "brandingPolicyId_example" // string | Branding policy ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22606,7 +22751,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationBrandingPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationBrandingPolicy`: InlineResponse20092
+    // response from `GetOrganizationBrandingPolicy`: InlineResponse20096
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationBrandingPolicy`: %v\n", resp)
 }
 ```
@@ -22617,8 +22762,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**brandingPolicyId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**brandingPolicyId** | **string** | Branding policy ID | 
 
 ### Other Parameters
 
@@ -22632,7 +22777,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20092**](InlineResponse20092.md)
+[**InlineResponse20096**](InlineResponse20096.md)
 
 ### Authorization
 
@@ -22669,8 +22814,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    artifactId := "artifactId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    artifactId := "artifactId_example" // string | Artifact ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22690,8 +22835,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**artifactId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**artifactId** | **string** | Artifact ID | 
 
 ### Other Parameters
 
@@ -22742,7 +22887,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22762,7 +22907,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22812,7 +22957,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     serials := []string{"Inner_example"} // []string | A list of serial numbers. The returned cameras will be filtered to only include these serials. (optional)
     networkIds := []string{"Inner_example"} // []string | A list of network IDs. The returned cameras will be filtered to only include these networks. (optional)
 
@@ -22834,7 +22979,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22886,7 +23031,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     mac := "mac_example" // string | The MAC address of the client. Required.
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 5. Default is 5. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -22910,7 +23055,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -22964,8 +23109,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    configTemplateId := "configTemplateId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    configTemplateId := "configTemplateId_example" // string | Config template ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -22985,8 +23130,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**configTemplateId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**configTemplateId** | **string** | Config template ID | 
 
 ### Other Parameters
 
@@ -23018,7 +23163,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse20098 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
+> InlineResponse200102 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
 
 Return a switch profile port
 
@@ -23037,10 +23182,10 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    configTemplateId := "configTemplateId_example" // string | 
-    profileId := "profileId_example" // string | 
-    portId := "portId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    configTemplateId := "configTemplateId_example" // string | Config template ID
+    profileId := "profileId_example" // string | Profile ID
+    portId := "portId_example" // string | Port ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -23049,7 +23194,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse20098
+    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200102
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -23060,10 +23205,10 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**configTemplateId** | **string** |  | 
-**profileId** | **string** |  | 
-**portId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**configTemplateId** | **string** | Config template ID | 
+**profileId** | **string** | Profile ID | 
+**portId** | **string** | Port ID | 
 
 ### Other Parameters
 
@@ -23079,7 +23224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20098**](InlineResponse20098.md)
+[**InlineResponse200102**](InlineResponse200102.md)
 
 ### Authorization
 
@@ -23097,7 +23242,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePorts
 
-> []InlineResponse20098 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
+> []InlineResponse200102 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
 
 Return all the ports of a switch profile
 
@@ -23116,9 +23261,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    configTemplateId := "configTemplateId_example" // string | 
-    profileId := "profileId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    configTemplateId := "configTemplateId_example" // string | Config template ID
+    profileId := "profileId_example" // string | Profile ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -23127,7 +23272,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationConfigTemplateSwitchProfilePorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse20098
+    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200102
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationConfigTemplateSwitchProfilePorts`: %v\n", resp)
 }
 ```
@@ -23138,9 +23283,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**configTemplateId** | **string** |  | 
-**profileId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**configTemplateId** | **string** | Config template ID | 
+**profileId** | **string** | Profile ID | 
 
 ### Other Parameters
 
@@ -23155,7 +23300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20098**](InlineResponse20098.md)
+[**[]InlineResponse200102**](InlineResponse200102.md)
 
 ### Authorization
 
@@ -23173,7 +23318,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfiles
 
-> InlineResponse20097 GetOrganizationConfigTemplateSwitchProfiles(ctx, organizationId, configTemplateId).Execute()
+> InlineResponse200101 GetOrganizationConfigTemplateSwitchProfiles(ctx, organizationId, configTemplateId).Execute()
 
 List the switch profiles for your switch template configuration
 
@@ -23192,8 +23337,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    configTemplateId := "configTemplateId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    configTemplateId := "configTemplateId_example" // string | Config template ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -23202,7 +23347,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationConfigTemplateSwitchProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfiles`: InlineResponse20097
+    // response from `GetOrganizationConfigTemplateSwitchProfiles`: InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationConfigTemplateSwitchProfiles`: %v\n", resp)
 }
 ```
@@ -23213,8 +23358,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**configTemplateId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**configTemplateId** | **string** | Config template ID | 
 
 ### Other Parameters
 
@@ -23228,7 +23373,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20097**](InlineResponse20097.md)
+[**InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 
@@ -23265,7 +23410,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -23285,7 +23430,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -23316,7 +23461,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevices
 
-> []InlineResponse20099 GetOrganizationDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).NetworkIds(networkIds).ProductTypes(productTypes).Tags(tags).TagsFilterType(tagsFilterType).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).SensorMetrics(sensorMetrics).SensorAlertProfileIds(sensorAlertProfileIds).Models(models).Execute()
+> []InlineResponse200103 GetOrganizationDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).NetworkIds(networkIds).ProductTypes(productTypes).Tags(tags).TagsFilterType(tagsFilterType).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).SensorMetrics(sensorMetrics).SensorAlertProfileIds(sensorAlertProfileIds).Models(models).Execute()
 
 List the devices in an organization
 
@@ -23335,7 +23480,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -23361,7 +23506,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevices`: []InlineResponse20099
+    // response from `GetOrganizationDevices`: []InlineResponse200103
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationDevices`: %v\n", resp)
 }
 ```
@@ -23372,7 +23517,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -23402,7 +23547,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20099**](InlineResponse20099.md)
+[**[]InlineResponse200103**](InlineResponse200103.md)
 
 ### Authorization
 
@@ -23420,7 +23565,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationEarlyAccessFeatures
 
-> []map[string]interface{} GetOrganizationEarlyAccessFeatures(ctx, organizationId).Execute()
+> []InlineResponse200111 GetOrganizationEarlyAccessFeatures(ctx, organizationId).Execute()
 
 List the available early access features for organization
 
@@ -23439,7 +23584,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -23448,7 +23593,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationEarlyAccessFeatures``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationEarlyAccessFeatures`: []map[string]interface{}
+    // response from `GetOrganizationEarlyAccessFeatures`: []InlineResponse200111
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationEarlyAccessFeatures`: %v\n", resp)
 }
 ```
@@ -23459,7 +23604,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -23472,7 +23617,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse200111**](InlineResponse200111.md)
 
 ### Authorization
 
@@ -23509,8 +23654,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    optInId := "optInId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    optInId := "optInId_example" // string | Opt in ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -23530,8 +23675,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**optInId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**optInId** | **string** | Opt in ID | 
 
 ### Other Parameters
 
@@ -23582,7 +23727,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -23602,7 +23747,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -23633,7 +23778,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFirmwareUpgrades
 
-> []InlineResponse200106 GetOrganizationFirmwareUpgrades(ctx, organizationId).Status(status).ProductType(productType).Execute()
+> []InlineResponse200112 GetOrganizationFirmwareUpgrades(ctx, organizationId).Status(status).ProductType(productType).Execute()
 
 Get firmware upgrade information for an organization
 
@@ -23652,7 +23797,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     status := []string{"Inner_example"} // []string | The status of an upgrade  (optional)
     productType := []string{"Inner_example"} // []string | The product type in a given upgrade ID (optional)
 
@@ -23663,7 +23808,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationFirmwareUpgrades``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFirmwareUpgrades`: []InlineResponse200106
+    // response from `GetOrganizationFirmwareUpgrades`: []InlineResponse200112
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationFirmwareUpgrades`: %v\n", resp)
 }
 ```
@@ -23674,7 +23819,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -23689,7 +23834,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200106**](InlineResponse200106.md)
+[**[]InlineResponse200112**](InlineResponse200112.md)
 
 ### Authorization
 
@@ -23707,7 +23852,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFirmwareUpgradesByDevice
 
-> []InlineResponse200107 GetOrganizationFirmwareUpgradesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Macs(macs).FirmwareUpgradeIds(firmwareUpgradeIds).FirmwareUpgradeBatchIds(firmwareUpgradeBatchIds).Execute()
+> []InlineResponse200113 GetOrganizationFirmwareUpgradesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Macs(macs).FirmwareUpgradeIds(firmwareUpgradeIds).FirmwareUpgradeBatchIds(firmwareUpgradeBatchIds).Execute()
 
 Get firmware upgrade status for the filtered devices
 
@@ -23726,7 +23871,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 50. Default is 50. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -23743,7 +23888,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationFirmwareUpgradesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFirmwareUpgradesByDevice`: []InlineResponse200107
+    // response from `GetOrganizationFirmwareUpgradesByDevice`: []InlineResponse200113
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationFirmwareUpgradesByDevice`: %v\n", resp)
 }
 ```
@@ -23754,7 +23899,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -23775,7 +23920,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200107**](InlineResponse200107.md)
+[**[]InlineResponse200113**](InlineResponse200113.md)
 
 ### Authorization
 
@@ -23793,7 +23938,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInsightApplications
 
-> []InlineResponse200108 GetOrganizationInsightApplications(ctx, organizationId).Execute()
+> []InlineResponse200114 GetOrganizationInsightApplications(ctx, organizationId).Execute()
 
 List all Insight tracked applications
 
@@ -23812,7 +23957,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -23821,7 +23966,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationInsightApplications``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInsightApplications`: []InlineResponse200108
+    // response from `GetOrganizationInsightApplications`: []InlineResponse200114
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationInsightApplications`: %v\n", resp)
 }
 ```
@@ -23832,7 +23977,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -23845,7 +23990,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200108**](InlineResponse200108.md)
+[**[]InlineResponse200114**](InlineResponse200114.md)
 
 ### Authorization
 
@@ -23882,8 +24027,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    monitoredMediaServerId := "monitoredMediaServerId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    monitoredMediaServerId := "monitoredMediaServerId_example" // string | Monitored media server ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -23903,8 +24048,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**monitoredMediaServerId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**monitoredMediaServerId** | **string** | Monitored media server ID | 
 
 ### Other Parameters
 
@@ -23936,7 +24081,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInsightMonitoredMediaServers
 
-> []InlineResponse200109 GetOrganizationInsightMonitoredMediaServers(ctx, organizationId).Execute()
+> []InlineResponse200115 GetOrganizationInsightMonitoredMediaServers(ctx, organizationId).Execute()
 
 List the monitored media servers for this organization
 
@@ -23955,7 +24100,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -23964,7 +24109,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationInsightMonitoredMediaServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInsightMonitoredMediaServers`: []InlineResponse200109
+    // response from `GetOrganizationInsightMonitoredMediaServers`: []InlineResponse200115
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationInsightMonitoredMediaServers`: %v\n", resp)
 }
 ```
@@ -23975,7 +24120,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -23988,7 +24133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200109**](InlineResponse200109.md)
+[**[]InlineResponse200115**](InlineResponse200115.md)
 
 ### Authorization
 
@@ -24006,7 +24151,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevice
 
-> InlineResponse200110 GetOrganizationInventoryDevice(ctx, organizationId, serial).Execute()
+> InlineResponse200116 GetOrganizationInventoryDevice(ctx, organizationId, serial).Execute()
 
 Return a single device from the inventory of an organization
 
@@ -24025,8 +24170,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    serial := "serial_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    serial := "serial_example" // string | Serial
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -24035,7 +24180,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationInventoryDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevice`: InlineResponse200110
+    // response from `GetOrganizationInventoryDevice`: InlineResponse200116
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationInventoryDevice`: %v\n", resp)
 }
 ```
@@ -24046,8 +24191,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**serial** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -24061,7 +24206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200110**](InlineResponse200110.md)
+[**InlineResponse200116**](InlineResponse200116.md)
 
 ### Authorization
 
@@ -24079,7 +24224,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevices
 
-> []InlineResponse200110 GetOrganizationInventoryDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).UsedState(usedState).Search(search).Macs(macs).NetworkIds(networkIds).Serials(serials).Models(models).OrderNumbers(orderNumbers).Tags(tags).TagsFilterType(tagsFilterType).ProductTypes(productTypes).Execute()
+> []InlineResponse200116 GetOrganizationInventoryDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).UsedState(usedState).Search(search).Macs(macs).NetworkIds(networkIds).Serials(serials).Models(models).OrderNumbers(orderNumbers).Tags(tags).TagsFilterType(tagsFilterType).ProductTypes(productTypes).Execute()
 
 Return the device inventory for an organization
 
@@ -24098,7 +24243,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -24120,7 +24265,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationInventoryDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevices`: []InlineResponse200110
+    // response from `GetOrganizationInventoryDevices`: []InlineResponse200116
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationInventoryDevices`: %v\n", resp)
 }
 ```
@@ -24131,7 +24276,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -24157,7 +24302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200110**](InlineResponse200110.md)
+[**[]InlineResponse200116**](InlineResponse200116.md)
 
 ### Authorization
 
@@ -24175,7 +24320,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryOnboardingCloudMonitoringImports
 
-> []InlineResponse200111 GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx, organizationId).ImportIds(importIds).Execute()
+> []InlineResponse200117 GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx, organizationId).ImportIds(importIds).Execute()
 
 Check the status of a committed Import operation
 
@@ -24194,7 +24339,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     importIds := []string{"Inner_example"} // []string | import ids from an imports
 
     configuration := openapiclient.NewConfiguration()
@@ -24204,7 +24349,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationInventoryOnboardingCloudMonitoringImports``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryOnboardingCloudMonitoringImports`: []InlineResponse200111
+    // response from `GetOrganizationInventoryOnboardingCloudMonitoringImports`: []InlineResponse200117
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationInventoryOnboardingCloudMonitoringImports`: %v\n", resp)
 }
 ```
@@ -24215,7 +24360,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -24229,7 +24374,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200111**](InlineResponse200111.md)
+[**[]InlineResponse200117**](InlineResponse200117.md)
 
 ### Authorization
 
@@ -24247,7 +24392,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryOnboardingCloudMonitoringNetworks
 
-> []InlineResponse20010 GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ctx, organizationId).DeviceType(deviceType).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20011 GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ctx, organizationId).DeviceType(deviceType).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns list of networks eligible for adding cloud monitored device
 
@@ -24266,7 +24411,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     deviceType := "deviceType_example" // string | Device Type switch or wireless controller
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 100000. Default is 1000. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -24279,7 +24424,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationInventoryOnboardingCloudMonitoringNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryOnboardingCloudMonitoringNetworks`: []InlineResponse20010
+    // response from `GetOrganizationInventoryOnboardingCloudMonitoringNetworks`: []InlineResponse20011
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationInventoryOnboardingCloudMonitoringNetworks`: %v\n", resp)
 }
 ```
@@ -24290,7 +24435,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -24307,7 +24452,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20010**](InlineResponse20010.md)
+[**[]InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -24325,7 +24470,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicense
 
-> InlineResponse200112 GetOrganizationLicense(ctx, organizationId, licenseId).Execute()
+> InlineResponse200118 GetOrganizationLicense(ctx, organizationId, licenseId).Execute()
 
 Display a license
 
@@ -24344,8 +24489,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    licenseId := "licenseId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    licenseId := "licenseId_example" // string | License ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -24354,7 +24499,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationLicense``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicense`: InlineResponse200112
+    // response from `GetOrganizationLicense`: InlineResponse200118
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationLicense`: %v\n", resp)
 }
 ```
@@ -24365,8 +24510,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**licenseId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**licenseId** | **string** | License ID | 
 
 ### Other Parameters
 
@@ -24376,238 +24521,6 @@ Other parameters are passed through a pointer to a apiGetOrganizationLicenseRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
-
-
-### Return type
-
-[**InlineResponse200112**](InlineResponse200112.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetOrganizationLicenses
-
-> []InlineResponse200112 GetOrganizationLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).DeviceSerial(deviceSerial).NetworkId(networkId).State(state).Execute()
-
-List the licenses for an organization
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    organizationId := "organizationId_example" // string | 
-    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
-    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
-    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
-    deviceSerial := "deviceSerial_example" // string | Filter the licenses to those assigned to a particular device. Returned in the same order that they are queued to the device. (optional)
-    networkId := "networkId_example" // string | Filter the licenses to those assigned in a particular network (optional)
-    state := "state_example" // string | Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive' (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetOrganizationLicenses(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).DeviceSerial(deviceSerial).NetworkId(networkId).State(state).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationLicenses``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetOrganizationLicenses`: []InlineResponse200112
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationLicenses`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetOrganizationLicensesRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
- **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
- **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
- **deviceSerial** | **string** | Filter the licenses to those assigned to a particular device. Returned in the same order that they are queued to the device. | 
- **networkId** | **string** | Filter the licenses to those assigned in a particular network | 
- **state** | **string** | Filter the licenses to those in a particular state. Can be one of &#39;active&#39;, &#39;expired&#39;, &#39;expiring&#39;, &#39;recentlyQueued&#39;, &#39;unused&#39; or &#39;unusedActive&#39; | 
-
-### Return type
-
-[**[]InlineResponse200112**](InlineResponse200112.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetOrganizationLicensingCotermLicenses
-
-> []InlineResponse200116 GetOrganizationLicensingCotermLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
-
-List the licenses in a coterm organization
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    organizationId := "organizationId_example" // string | 
-    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
-    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
-    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
-    invalidated := true // bool | Filter for licenses that are invalidated (optional)
-    expired := true // bool | Filter for licenses that are expired (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetOrganizationLicensingCotermLicenses(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationLicensingCotermLicenses``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetOrganizationLicensingCotermLicenses`: []InlineResponse200116
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationLicensingCotermLicenses`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetOrganizationLicensingCotermLicensesRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
- **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
- **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
- **invalidated** | **bool** | Filter for licenses that are invalidated | 
- **expired** | **bool** | Filter for licenses that are expired | 
-
-### Return type
-
-[**[]InlineResponse200116**](InlineResponse200116.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetOrganizationLoginSecurity
-
-> InlineResponse200118 GetOrganizationLoginSecurity(ctx, organizationId).Execute()
-
-Returns the login security settings for an organization.
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    organizationId := "organizationId_example" // string | 
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetOrganizationLoginSecurity(context.Background(), organizationId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationLoginSecurity``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetOrganizationLoginSecurity`: InlineResponse200118
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationLoginSecurity`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetOrganizationLoginSecurityRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
 
 
 ### Return type
@@ -24628,9 +24541,241 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetOrganizationLicenses
+
+> []InlineResponse200118 GetOrganizationLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).DeviceSerial(deviceSerial).NetworkId(networkId).State(state).Execute()
+
+List the licenses for an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    deviceSerial := "deviceSerial_example" // string | Filter the licenses to those assigned to a particular device. Returned in the same order that they are queued to the device. (optional)
+    networkId := "networkId_example" // string | Filter the licenses to those assigned in a particular network (optional)
+    state := "state_example" // string | Filter the licenses to those in a particular state. Can be one of 'active', 'expired', 'expiring', 'recentlyQueued', 'unused' or 'unusedActive' (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetOrganizationLicenses(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).DeviceSerial(deviceSerial).NetworkId(networkId).State(state).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationLicenses``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationLicenses`: []InlineResponse200118
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationLicenses`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationLicensesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **deviceSerial** | **string** | Filter the licenses to those assigned to a particular device. Returned in the same order that they are queued to the device. | 
+ **networkId** | **string** | Filter the licenses to those assigned in a particular network | 
+ **state** | **string** | Filter the licenses to those in a particular state. Can be one of &#39;active&#39;, &#39;expired&#39;, &#39;expiring&#39;, &#39;recentlyQueued&#39;, &#39;unused&#39; or &#39;unusedActive&#39; | 
+
+### Return type
+
+[**[]InlineResponse200118**](InlineResponse200118.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationLicensingCotermLicenses
+
+> []InlineResponse200122 GetOrganizationLicensingCotermLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
+
+List the licenses in a coterm organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    invalidated := true // bool | Filter for licenses that are invalidated (optional)
+    expired := true // bool | Filter for licenses that are expired (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetOrganizationLicensingCotermLicenses(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationLicensingCotermLicenses``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationLicensingCotermLicenses`: []InlineResponse200122
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationLicensingCotermLicenses`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationLicensingCotermLicensesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **invalidated** | **bool** | Filter for licenses that are invalidated | 
+ **expired** | **bool** | Filter for licenses that are expired | 
+
+### Return type
+
+[**[]InlineResponse200122**](InlineResponse200122.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationLoginSecurity
+
+> InlineResponse200124 GetOrganizationLoginSecurity(ctx, organizationId).Execute()
+
+Returns the login security settings for an organization.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.GetOrganizationLoginSecurity(context.Background(), organizationId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationLoginSecurity``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationLoginSecurity`: InlineResponse200124
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationLoginSecurity`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationLoginSecurityRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+[**InlineResponse200124**](InlineResponse200124.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetOrganizationNetworks
 
-> []InlineResponse20010 GetOrganizationNetworks(ctx, organizationId).ConfigTemplateId(configTemplateId).IsBoundToConfigTemplate(isBoundToConfigTemplate).Tags(tags).TagsFilterType(tagsFilterType).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20011 GetOrganizationNetworks(ctx, organizationId).ConfigTemplateId(configTemplateId).IsBoundToConfigTemplate(isBoundToConfigTemplate).Tags(tags).TagsFilterType(tagsFilterType).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the networks that the user has privileges on in an organization
 
@@ -24649,7 +24794,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     configTemplateId := "configTemplateId_example" // string | An optional parameter that is the ID of a config template. Will return all networks bound to that template. (optional)
     isBoundToConfigTemplate := true // bool | An optional parameter to filter config template bound networks. If configTemplateId is set, this cannot be false. (optional)
     tags := []string{"Inner_example"} // []string | An optional parameter to filter networks by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below). (optional)
@@ -24665,7 +24810,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationNetworks`: []InlineResponse20010
+    // response from `GetOrganizationNetworks`: []InlineResponse20011
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationNetworks`: %v\n", resp)
 }
 ```
@@ -24676,7 +24821,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -24696,7 +24841,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20010**](InlineResponse20010.md)
+[**[]InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -24733,8 +24878,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    policyObjectId := "policyObjectId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    policyObjectId := "policyObjectId_example" // string | Policy object ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -24754,8 +24899,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**policyObjectId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**policyObjectId** | **string** | Policy object ID | 
 
 ### Other Parameters
 
@@ -24806,7 +24951,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 10 - 5000. Default is 5000. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -24829,7 +24974,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -24882,8 +25027,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    policyObjectGroupId := "policyObjectGroupId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    policyObjectGroupId := "policyObjectGroupId_example" // string | Policy object group ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -24903,8 +25048,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**policyObjectGroupId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**policyObjectGroupId** | **string** | Policy object group ID | 
 
 ### Other Parameters
 
@@ -24955,7 +25100,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 10 - 1000. Default is 1000. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -24978,7 +25123,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -25012,7 +25157,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSaml
 
-> InlineResponse200120 GetOrganizationSaml(ctx, organizationId).Execute()
+> InlineResponse200126 GetOrganizationSaml(ctx, organizationId).Execute()
 
 Returns the SAML SSO enabled settings for an organization.
 
@@ -25031,7 +25176,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25040,7 +25185,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationSaml``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSaml`: InlineResponse200120
+    // response from `GetOrganizationSaml`: InlineResponse200126
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationSaml`: %v\n", resp)
 }
 ```
@@ -25051,7 +25196,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -25064,7 +25209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200120**](InlineResponse200120.md)
+[**InlineResponse200126**](InlineResponse200126.md)
 
 ### Authorization
 
@@ -25082,7 +25227,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSamlIdp
 
-> InlineResponse200121 GetOrganizationSamlIdp(ctx, organizationId, idpId).Execute()
+> InlineResponse200127 GetOrganizationSamlIdp(ctx, organizationId, idpId).Execute()
 
 Get a SAML IdP from your organization.
 
@@ -25101,8 +25246,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    idpId := "idpId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    idpId := "idpId_example" // string | Idp ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25111,7 +25256,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationSamlIdp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSamlIdp`: InlineResponse200121
+    // response from `GetOrganizationSamlIdp`: InlineResponse200127
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationSamlIdp`: %v\n", resp)
 }
 ```
@@ -25122,8 +25267,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**idpId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**idpId** | **string** | Idp ID | 
 
 ### Other Parameters
 
@@ -25137,7 +25282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200121**](InlineResponse200121.md)
+[**InlineResponse200127**](InlineResponse200127.md)
 
 ### Authorization
 
@@ -25155,7 +25300,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSamlIdps
 
-> []InlineResponse200121 GetOrganizationSamlIdps(ctx, organizationId).Execute()
+> []InlineResponse200127 GetOrganizationSamlIdps(ctx, organizationId).Execute()
 
 List the SAML IdPs in your organization.
 
@@ -25174,7 +25319,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25183,7 +25328,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationSamlIdps``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSamlIdps`: []InlineResponse200121
+    // response from `GetOrganizationSamlIdps`: []InlineResponse200127
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationSamlIdps`: %v\n", resp)
 }
 ```
@@ -25194,7 +25339,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -25207,7 +25352,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200121**](InlineResponse200121.md)
+[**[]InlineResponse200127**](InlineResponse200127.md)
 
 ### Authorization
 
@@ -25244,8 +25389,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    samlRoleId := "samlRoleId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    samlRoleId := "samlRoleId_example" // string | Saml role ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25265,8 +25410,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**samlRoleId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**samlRoleId** | **string** | Saml role ID | 
 
 ### Other Parameters
 
@@ -25317,7 +25462,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25337,7 +25482,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -25368,7 +25513,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmApnsCert
 
-> InlineResponse200125 GetOrganizationSmApnsCert(ctx, organizationId).Execute()
+> InlineResponse200131 GetOrganizationSmApnsCert(ctx, organizationId).Execute()
 
 Get the organization's APNS certificate
 
@@ -25387,7 +25532,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25396,7 +25541,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationSmApnsCert``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmApnsCert`: InlineResponse200125
+    // response from `GetOrganizationSmApnsCert`: InlineResponse200131
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationSmApnsCert`: %v\n", resp)
 }
 ```
@@ -25407,7 +25552,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -25420,7 +25565,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200125**](InlineResponse200125.md)
+[**InlineResponse200131**](InlineResponse200131.md)
 
 ### Authorization
 
@@ -25438,7 +25583,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmVppAccount
 
-> InlineResponse200126 GetOrganizationSmVppAccount(ctx, organizationId, vppAccountId).Execute()
+> InlineResponse200132 GetOrganizationSmVppAccount(ctx, organizationId, vppAccountId).Execute()
 
 Get a hash containing the unparsed token of the VPP account with the given ID
 
@@ -25457,8 +25602,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    vppAccountId := "vppAccountId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
+    vppAccountId := "vppAccountId_example" // string | Vpp account ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25467,7 +25612,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationSmVppAccount``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmVppAccount`: InlineResponse200126
+    // response from `GetOrganizationSmVppAccount`: InlineResponse200132
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationSmVppAccount`: %v\n", resp)
 }
 ```
@@ -25478,8 +25623,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**vppAccountId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**vppAccountId** | **string** | Vpp account ID | 
 
 ### Other Parameters
 
@@ -25493,7 +25638,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200126**](InlineResponse200126.md)
+[**InlineResponse200132**](InlineResponse200132.md)
 
 ### Authorization
 
@@ -25511,7 +25656,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmVppAccounts
 
-> []InlineResponse200126 GetOrganizationSmVppAccounts(ctx, organizationId).Execute()
+> []InlineResponse200132 GetOrganizationSmVppAccounts(ctx, organizationId).Execute()
 
 List the VPP accounts in the organization
 
@@ -25530,7 +25675,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25539,7 +25684,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationSmVppAccounts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmVppAccounts`: []InlineResponse200126
+    // response from `GetOrganizationSmVppAccounts`: []InlineResponse200132
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationSmVppAccounts`: %v\n", resp)
 }
 ```
@@ -25550,7 +25695,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -25563,7 +25708,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200126**](InlineResponse200126.md)
+[**[]InlineResponse200132**](InlineResponse200132.md)
 
 ### Authorization
 
@@ -25600,7 +25745,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25620,7 +25765,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -25651,7 +25796,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsBySwitch
 
-> []InlineResponse200134 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).PortProfileIds(portProfileIds).Name(name).Mac(mac).Macs(macs).Serial(serial).Serials(serials).ConfigurationUpdatedAfter(configurationUpdatedAfter).Execute()
+> []InlineResponse200140 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).PortProfileIds(portProfileIds).Name(name).Mac(mac).Macs(macs).Serial(serial).Serials(serials).ConfigurationUpdatedAfter(configurationUpdatedAfter).Execute()
 
 List the switchports in an organization by switch
 
@@ -25670,12 +25815,12 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 50. Default is 50. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     networkIds := []string{"Inner_example"} // []string | Optional parameter to filter switchports by network. (optional)
-    portProfileIds := []string{"Inner_example"} // []string | Optional parameter to filter switchports belonging to the specified switchport profiles. (optional)
+    portProfileIds := []string{"Inner_example"} // []string | Optional parameter to filter switchports belonging to the specified port profiles. (optional)
     name := "name_example" // string | Optional parameter to filter switchports belonging to switches by name. All returned switches will have a name that contains the search term or is an exact match. (optional)
     mac := "mac_example" // string | Optional parameter to filter switchports belonging to switches by MAC address. All returned switches will have a MAC address that contains the search term or is an exact match. (optional)
     macs := []string{"Inner_example"} // []string | Optional parameter to filter switchports by one or more MAC addresses belonging to devices. All switchports returned belong to MAC addresses of switches that are an exact match. (optional)
@@ -25690,7 +25835,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationSwitchPortsBySwitch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsBySwitch`: []InlineResponse200134
+    // response from `GetOrganizationSwitchPortsBySwitch`: []InlineResponse200140
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationSwitchPortsBySwitch`: %v\n", resp)
 }
 ```
@@ -25701,7 +25846,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -25715,7 +25860,7 @@ Name | Type | Description  | Notes
  **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **networkIds** | **[]string** | Optional parameter to filter switchports by network. | 
- **portProfileIds** | **[]string** | Optional parameter to filter switchports belonging to the specified switchport profiles. | 
+ **portProfileIds** | **[]string** | Optional parameter to filter switchports belonging to the specified port profiles. | 
  **name** | **string** | Optional parameter to filter switchports belonging to switches by name. All returned switches will have a name that contains the search term or is an exact match. | 
  **mac** | **string** | Optional parameter to filter switchports belonging to switches by MAC address. All returned switches will have a MAC address that contains the search term or is an exact match. | 
  **macs** | **[]string** | Optional parameter to filter switchports by one or more MAC addresses belonging to devices. All switchports returned belong to MAC addresses of switches that are an exact match. | 
@@ -25725,85 +25870,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200134**](InlineResponse200134.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## GetOrganizationWirelessDevicesEthernetStatuses
-
-> []InlineResponse200137 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
-
-Endpoint to see power status for wireless devices
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    organizationId := "organizationId_example" // string | 
-    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
-    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
-    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
-    networkIds := []string{"Inner_example"} // []string | A list of Meraki network IDs to filter results to contain only specified networks. E.g.: networkIds[]=N_12345678&networkIds[]=L_3456 (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.GetOrganizationWirelessDevicesEthernetStatuses(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizationWirelessDevicesEthernetStatuses``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200137
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizationWirelessDevicesEthernetStatuses`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiGetOrganizationWirelessDevicesEthernetStatusesRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. | 
- **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
- **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
- **networkIds** | **[]string** | A list of Meraki network IDs to filter results to contain only specified networks. E.g.: networkIds[]&#x3D;N_12345678&amp;networkIds[]&#x3D;L_3456 | 
-
-### Return type
-
-[**[]InlineResponse200137**](InlineResponse200137.md)
+[**[]InlineResponse200140**](InlineResponse200140.md)
 
 ### Authorization
 
@@ -25821,7 +25888,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizations
 
-> []InlineResponse20087 GetOrganizations(ctx).Execute()
+> []InlineResponse20089 GetOrganizations(ctx).Execute()
 
 List the organizations that the user has privileges on
 
@@ -25848,7 +25915,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.GetOrganizations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizations`: []InlineResponse20087
+    // response from `GetOrganizations`: []InlineResponse20089
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.GetOrganizations`: %v\n", resp)
 }
 ```
@@ -25864,7 +25931,7 @@ Other parameters are passed through a pointer to a apiGetOrganizationsRequest st
 
 ### Return type
 
-[**[]InlineResponse20087**](InlineResponse20087.md)
+[**[]InlineResponse20089**](InlineResponse20089.md)
 
 ### Authorization
 
@@ -25882,7 +25949,7 @@ Other parameters are passed through a pointer to a apiGetOrganizationsRequest st
 
 ## LockNetworkSmDevices
 
-> InlineResponse20041 LockNetworkSmDevices(ctx, networkId).LockNetworkSmDevices(lockNetworkSmDevices).Execute()
+> InlineResponse20043 LockNetworkSmDevices(ctx, networkId).LockNetworkSmDevices(lockNetworkSmDevices).Execute()
 
 Lock a set of devices
 
@@ -25901,8 +25968,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    lockNetworkSmDevices := *openapiclient.NewInlineObject101() // InlineObject101 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    lockNetworkSmDevices := *openapiclient.NewInlineObject102() // InlineObject102 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25911,7 +25978,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.LockNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `LockNetworkSmDevices`: InlineResponse20041
+    // response from `LockNetworkSmDevices`: InlineResponse20043
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.LockNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -25922,7 +25989,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -25932,11 +25999,11 @@ Other parameters are passed through a pointer to a apiLockNetworkSmDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **lockNetworkSmDevices** | [**InlineObject101**](InlineObject101.md) |  | 
+ **lockNetworkSmDevices** | [**InlineObject102**](InlineObject102.md) |  | 
 
 ### Return type
 
-[**InlineResponse20041**](InlineResponse20041.md)
+[**InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 
@@ -25954,7 +26021,7 @@ Name | Type | Description  | Notes
 
 ## ModifyNetworkSmDevicesTags
 
-> []InlineResponse20043 ModifyNetworkSmDevicesTags(ctx, networkId).ModifyNetworkSmDevicesTags(modifyNetworkSmDevicesTags).Execute()
+> []InlineResponse20045 ModifyNetworkSmDevicesTags(ctx, networkId).ModifyNetworkSmDevicesTags(modifyNetworkSmDevicesTags).Execute()
 
 Add, delete, or update the tags of a set of devices
 
@@ -25973,8 +26040,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    modifyNetworkSmDevicesTags := *openapiclient.NewInlineObject102([]string{"Tags_example"}, "UpdateAction_example") // InlineObject102 | 
+    networkId := "networkId_example" // string | Network ID
+    modifyNetworkSmDevicesTags := *openapiclient.NewInlineObject103([]string{"Tags_example"}, "UpdateAction_example") // InlineObject103 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -25983,7 +26050,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.ModifyNetworkSmDevicesTags``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ModifyNetworkSmDevicesTags`: []InlineResponse20043
+    // response from `ModifyNetworkSmDevicesTags`: []InlineResponse20045
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.ModifyNetworkSmDevicesTags`: %v\n", resp)
 }
 ```
@@ -25994,7 +26061,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -26004,11 +26071,11 @@ Other parameters are passed through a pointer to a apiModifyNetworkSmDevicesTags
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **modifyNetworkSmDevicesTags** | [**InlineObject102**](InlineObject102.md) |  | 
+ **modifyNetworkSmDevicesTags** | [**InlineObject103**](InlineObject103.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse20043**](InlineResponse20043.md)
+[**[]InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -26026,7 +26093,7 @@ Name | Type | Description  | Notes
 
 ## MoveNetworkSmDevices
 
-> InlineResponse20044 MoveNetworkSmDevices(ctx, networkId).MoveNetworkSmDevices(moveNetworkSmDevices).Execute()
+> InlineResponse20046 MoveNetworkSmDevices(ctx, networkId).MoveNetworkSmDevices(moveNetworkSmDevices).Execute()
 
 Move a set of devices to a new network
 
@@ -26045,8 +26112,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    moveNetworkSmDevices := *openapiclient.NewInlineObject103("NewNetwork_example") // InlineObject103 | 
+    networkId := "networkId_example" // string | Network ID
+    moveNetworkSmDevices := *openapiclient.NewInlineObject104("NewNetwork_example") // InlineObject104 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26055,7 +26122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.MoveNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveNetworkSmDevices`: InlineResponse20044
+    // response from `MoveNetworkSmDevices`: InlineResponse20046
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.MoveNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -26066,7 +26133,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -26076,11 +26143,11 @@ Other parameters are passed through a pointer to a apiMoveNetworkSmDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveNetworkSmDevices** | [**InlineObject103**](InlineObject103.md) |  | 
+ **moveNetworkSmDevices** | [**InlineObject104**](InlineObject104.md) |  | 
 
 ### Return type
 
-[**InlineResponse20044**](InlineResponse20044.md)
+[**InlineResponse20046**](InlineResponse20046.md)
 
 ### Authorization
 
@@ -26098,7 +26165,7 @@ Name | Type | Description  | Notes
 
 ## MoveOrganizationLicenses
 
-> InlineResponse200114 MoveOrganizationLicenses(ctx, organizationId).MoveOrganizationLicenses(moveOrganizationLicenses).Execute()
+> InlineResponse200120 MoveOrganizationLicenses(ctx, organizationId).MoveOrganizationLicenses(moveOrganizationLicenses).Execute()
 
 Move licenses to another organization
 
@@ -26117,8 +26184,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    moveOrganizationLicenses := *openapiclient.NewInlineObject204("DestOrganizationId_example", []string{"LicenseIds_example"}) // InlineObject204 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    moveOrganizationLicenses := *openapiclient.NewInlineObject205("DestOrganizationId_example", []string{"LicenseIds_example"}) // InlineObject205 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26127,7 +26194,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.MoveOrganizationLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveOrganizationLicenses`: InlineResponse200114
+    // response from `MoveOrganizationLicenses`: InlineResponse200120
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.MoveOrganizationLicenses`: %v\n", resp)
 }
 ```
@@ -26138,7 +26205,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -26148,11 +26215,11 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensesRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicenses** | [**InlineObject204**](InlineObject204.md) |  | 
+ **moveOrganizationLicenses** | [**InlineObject205**](InlineObject205.md) |  | 
 
 ### Return type
 
-[**InlineResponse200114**](InlineResponse200114.md)
+[**InlineResponse200120**](InlineResponse200120.md)
 
 ### Authorization
 
@@ -26170,7 +26237,7 @@ Name | Type | Description  | Notes
 
 ## MoveOrganizationLicensesSeats
 
-> InlineResponse200115 MoveOrganizationLicensesSeats(ctx, organizationId).MoveOrganizationLicensesSeats(moveOrganizationLicensesSeats).Execute()
+> InlineResponse200121 MoveOrganizationLicensesSeats(ctx, organizationId).MoveOrganizationLicensesSeats(moveOrganizationLicensesSeats).Execute()
 
 Move SM seats to another organization
 
@@ -26189,8 +26256,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    moveOrganizationLicensesSeats := *openapiclient.NewInlineObject205("DestOrganizationId_example", "LicenseId_example", int32(123)) // InlineObject205 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    moveOrganizationLicensesSeats := *openapiclient.NewInlineObject206("DestOrganizationId_example", "LicenseId_example", int32(123)) // InlineObject206 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26199,7 +26266,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.MoveOrganizationLicensesSeats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveOrganizationLicensesSeats`: InlineResponse200115
+    // response from `MoveOrganizationLicensesSeats`: InlineResponse200121
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.MoveOrganizationLicensesSeats`: %v\n", resp)
 }
 ```
@@ -26210,7 +26277,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -26220,11 +26287,11 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensesSe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicensesSeats** | [**InlineObject205**](InlineObject205.md) |  | 
+ **moveOrganizationLicensesSeats** | [**InlineObject206**](InlineObject206.md) |  | 
 
 ### Return type
 
-[**InlineResponse200115**](InlineResponse200115.md)
+[**InlineResponse200121**](InlineResponse200121.md)
 
 ### Authorization
 
@@ -26242,7 +26309,7 @@ Name | Type | Description  | Notes
 
 ## MoveOrganizationLicensingCotermLicenses
 
-> InlineResponse200117 MoveOrganizationLicensingCotermLicenses(ctx, organizationId).MoveOrganizationLicensingCotermLicenses(moveOrganizationLicensingCotermLicenses).Execute()
+> InlineResponse200123 MoveOrganizationLicensingCotermLicenses(ctx, organizationId).MoveOrganizationLicensingCotermLicenses(moveOrganizationLicensingCotermLicenses).Execute()
 
 Moves a license to a different organization (coterm only)
 
@@ -26261,8 +26328,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    moveOrganizationLicensingCotermLicenses := *openapiclient.NewInlineObject208(*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(), []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses("Key_example", []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveCounts{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveCounts("Model_example", int32(123))})}) // InlineObject208 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    moveOrganizationLicensingCotermLicenses := *openapiclient.NewInlineObject209(*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(), []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses("Key_example", []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveCounts{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveCounts("Model_example", int32(123))})}) // InlineObject209 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26271,7 +26338,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.MoveOrganizationLicensingCotermLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveOrganizationLicensingCotermLicenses`: InlineResponse200117
+    // response from `MoveOrganizationLicensingCotermLicenses`: InlineResponse200123
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.MoveOrganizationLicensingCotermLicenses`: %v\n", resp)
 }
 ```
@@ -26282,7 +26349,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -26292,11 +26359,11 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensingC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicensingCotermLicenses** | [**InlineObject208**](InlineObject208.md) |  | 
+ **moveOrganizationLicensingCotermLicenses** | [**InlineObject209**](InlineObject209.md) |  | 
 
 ### Return type
 
-[**InlineResponse200117**](InlineResponse200117.md)
+[**InlineResponse200123**](InlineResponse200123.md)
 
 ### Authorization
 
@@ -26333,7 +26400,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     provisionNetworkClients := *openapiclient.NewInlineObject71([]openapiclient.NetworksNetworkIdClientsProvisionClients{*openapiclient.NewNetworksNetworkIdClientsProvisionClients("Mac_example")}, "DevicePolicy_example") // InlineObject71 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -26354,7 +26421,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -26405,8 +26472,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    deviceId := "deviceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    deviceId := "deviceId_example" // string | Device ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26424,8 +26491,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**deviceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**deviceId** | **string** | Device ID | 
 
 ### Other Parameters
 
@@ -26476,8 +26543,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    releaseFromOrganizationInventory := *openapiclient.NewInlineObject202() // InlineObject202 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    releaseFromOrganizationInventory := *openapiclient.NewInlineObject203() // InlineObject203 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26497,7 +26564,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -26507,7 +26574,7 @@ Other parameters are passed through a pointer to a apiReleaseFromOrganizationInv
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **releaseFromOrganizationInventory** | [**InlineObject202**](InlineObject202.md) |  | 
+ **releaseFromOrganizationInventory** | [**InlineObject203**](InlineObject203.md) |  | 
 
 ### Return type
 
@@ -26548,7 +26615,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     removeNetworkDevices := *openapiclient.NewInlineObject76("Serial_example") // InlineObject76 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -26567,7 +26634,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -26618,9 +26685,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    removeNetworkSwitchStack := *openapiclient.NewInlineObject131("Serial_example") // InlineObject131 | 
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    removeNetworkSwitchStack := *openapiclient.NewInlineObject132("Serial_example") // InlineObject132 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26640,8 +26707,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
 
 ### Other Parameters
 
@@ -26652,7 +26719,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **removeNetworkSwitchStack** | [**InlineObject131**](InlineObject131.md) |  | 
+ **removeNetworkSwitchStack** | [**InlineObject132**](InlineObject132.md) |  | 
 
 ### Return type
 
@@ -26674,7 +26741,7 @@ Name | Type | Description  | Notes
 
 ## RenewOrganizationLicensesSeats
 
-> InlineResponse200113 RenewOrganizationLicensesSeats(ctx, organizationId).RenewOrganizationLicensesSeats(renewOrganizationLicensesSeats).Execute()
+> InlineResponse200119 RenewOrganizationLicensesSeats(ctx, organizationId).RenewOrganizationLicensesSeats(renewOrganizationLicensesSeats).Execute()
 
 Renew SM seats of a license
 
@@ -26693,8 +26760,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    renewOrganizationLicensesSeats := *openapiclient.NewInlineObject206("LicenseIdToRenew_example", "UnusedLicenseId_example") // InlineObject206 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    renewOrganizationLicensesSeats := *openapiclient.NewInlineObject207("LicenseIdToRenew_example", "UnusedLicenseId_example") // InlineObject207 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26703,7 +26770,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.RenewOrganizationLicensesSeats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RenewOrganizationLicensesSeats`: InlineResponse200113
+    // response from `RenewOrganizationLicensesSeats`: InlineResponse200119
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.RenewOrganizationLicensesSeats`: %v\n", resp)
 }
 ```
@@ -26714,7 +26781,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -26724,11 +26791,11 @@ Other parameters are passed through a pointer to a apiRenewOrganizationLicensesS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **renewOrganizationLicensesSeats** | [**InlineObject206**](InlineObject206.md) |  | 
+ **renewOrganizationLicensesSeats** | [**InlineObject207**](InlineObject207.md) |  | 
 
 ### Return type
 
-[**InlineResponse200113**](InlineResponse200113.md)
+[**InlineResponse200119**](InlineResponse200119.md)
 
 ### Authorization
 
@@ -26746,7 +26813,7 @@ Name | Type | Description  | Notes
 
 ## RollbacksNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20028 RollbacksNetworkFirmwareUpgradesStagedEvents(ctx, networkId).RollbacksNetworkFirmwareUpgradesStagedEvents(rollbacksNetworkFirmwareUpgradesStagedEvents).Execute()
+> InlineResponse20029 RollbacksNetworkFirmwareUpgradesStagedEvents(ctx, networkId).RollbacksNetworkFirmwareUpgradesStagedEvents(rollbacksNetworkFirmwareUpgradesStagedEvents).Execute()
 
 Rollback a Staged Upgrade Event for a network
 
@@ -26765,7 +26832,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     rollbacksNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject81([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject81 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -26775,7 +26842,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.RollbacksNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RollbacksNetworkFirmwareUpgradesStagedEvents`: InlineResponse20028
+    // response from `RollbacksNetworkFirmwareUpgradesStagedEvents`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.RollbacksNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -26786,7 +26853,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -26800,7 +26867,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -26818,7 +26885,7 @@ Name | Type | Description  | Notes
 
 ## SplitNetwork
 
-> InlineResponse20061 SplitNetwork(ctx, networkId).Execute()
+> InlineResponse20063 SplitNetwork(ctx, networkId).Execute()
 
 Split a combined network into individual networks for each type of device
 
@@ -26837,7 +26904,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26846,7 +26913,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.SplitNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SplitNetwork`: InlineResponse20061
+    // response from `SplitNetwork`: InlineResponse20063
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.SplitNetwork`: %v\n", resp)
 }
 ```
@@ -26857,7 +26924,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -26870,7 +26937,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20061**](InlineResponse20061.md)
+[**InlineResponse20063**](InlineResponse20063.md)
 
 ### Authorization
 
@@ -26907,7 +26974,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26927,7 +26994,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -26958,7 +27025,7 @@ Name | Type | Description  | Notes
 
 ## UnbindNetwork
 
-> InlineResponse20010 UnbindNetwork(ctx, networkId).UnbindNetwork(unbindNetwork).Execute()
+> InlineResponse20011 UnbindNetwork(ctx, networkId).UnbindNetwork(unbindNetwork).Execute()
 
 Unbind a network from a template.
 
@@ -26977,8 +27044,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    unbindNetwork := *openapiclient.NewInlineObject141() // InlineObject141 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    unbindNetwork := *openapiclient.NewInlineObject142() // InlineObject142 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -26987,7 +27054,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UnbindNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UnbindNetwork`: InlineResponse20010
+    // response from `UnbindNetwork`: InlineResponse20011
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UnbindNetwork`: %v\n", resp)
 }
 ```
@@ -26998,7 +27065,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -27008,11 +27075,11 @@ Other parameters are passed through a pointer to a apiUnbindNetworkRequest struc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **unbindNetwork** | [**InlineObject141**](InlineObject141.md) |  | 
+ **unbindNetwork** | [**InlineObject142**](InlineObject142.md) |  | 
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -27049,8 +27116,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    deviceId := "deviceId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    deviceId := "deviceId_example" // string | Device ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -27070,8 +27137,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**deviceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**deviceId** | **string** | Device ID | 
 
 ### Other Parameters
 
@@ -27122,7 +27189,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDevice := *openapiclient.NewInlineObject() // InlineObject |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -27143,7 +27210,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27194,7 +27261,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceApplianceUplinksSettings := *openapiclient.NewInlineObject1(*openapiclient.NewDevicesSerialApplianceUplinksSettingsInterfaces()) // InlineObject1 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -27215,7 +27282,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27266,7 +27333,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceCameraCustomAnalytics := *openapiclient.NewInlineObject3() // InlineObject3 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -27287,7 +27354,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27338,7 +27405,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceCameraQualityAndRetention := *openapiclient.NewInlineObject5() // InlineObject5 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -27359,7 +27426,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27410,7 +27477,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceCameraSense := *openapiclient.NewInlineObject6() // InlineObject6 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -27431,7 +27498,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27482,7 +27549,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceCameraVideoSettings := *openapiclient.NewInlineObject7() // InlineObject7 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -27503,7 +27570,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27554,7 +27621,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceCameraWirelessProfiles := *openapiclient.NewInlineObject8(*openapiclient.NewDevicesSerialCameraWirelessProfilesIds()) // InlineObject8 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -27575,7 +27642,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27626,7 +27693,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject10() // InlineObject10 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -27647,7 +27714,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27698,7 +27765,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject11() // InlineObject11 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -27719,7 +27786,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27770,7 +27837,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceCellularSims := *openapiclient.NewInlineObject9() // InlineObject9 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -27791,7 +27858,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27842,7 +27909,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceManagementInterface := *openapiclient.NewInlineObject14() // InlineObject14 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -27863,7 +27930,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27914,7 +27981,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceSensorRelationships := *openapiclient.NewInlineObject15() // InlineObject15 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -27935,7 +28002,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -27986,8 +28053,8 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
-    portId := "portId_example" // string | 
+    serial := "serial_example" // string | Serial
+    portId := "portId_example" // string | Port ID
     updateDeviceSwitchPort := *openapiclient.NewInlineObject17() // InlineObject17 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28008,8 +28075,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
-**portId** | **string** |  | 
+**serial** | **string** | Serial | 
+**portId** | **string** | Port ID | 
 
 ### Other Parameters
 
@@ -28042,7 +28109,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceSwitchRoutingInterface
 
-> InlineResponse2006 UpdateDeviceSwitchRoutingInterface(ctx, serial, interfaceId).UpdateDeviceSwitchRoutingInterface(updateDeviceSwitchRoutingInterface).Execute()
+> InlineResponse2007 UpdateDeviceSwitchRoutingInterface(ctx, serial, interfaceId).UpdateDeviceSwitchRoutingInterface(updateDeviceSwitchRoutingInterface).Execute()
 
 Update a layer 3 interface for a switch
 
@@ -28061,8 +28128,8 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
-    interfaceId := "interfaceId_example" // string | 
+    serial := "serial_example" // string | Serial
+    interfaceId := "interfaceId_example" // string | Interface ID
     updateDeviceSwitchRoutingInterface := *openapiclient.NewInlineObject19() // InlineObject19 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28072,7 +28139,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateDeviceSwitchRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceSwitchRoutingInterface`: InlineResponse2006
+    // response from `UpdateDeviceSwitchRoutingInterface`: InlineResponse2007
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateDeviceSwitchRoutingInterface`: %v\n", resp)
 }
 ```
@@ -28083,8 +28150,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
-**interfaceId** | **string** |  | 
+**serial** | **string** | Serial | 
+**interfaceId** | **string** | Interface ID | 
 
 ### Other Parameters
 
@@ -28099,7 +28166,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2006**](InlineResponse2006.md)
+[**InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 
@@ -28136,8 +28203,8 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
-    interfaceId := "interfaceId_example" // string | 
+    serial := "serial_example" // string | Serial
+    interfaceId := "interfaceId_example" // string | Interface ID
     updateDeviceSwitchRoutingInterfaceDhcp := *openapiclient.NewInlineObject20() // InlineObject20 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28158,8 +28225,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
-**interfaceId** | **string** |  | 
+**serial** | **string** | Serial | 
+**interfaceId** | **string** | Interface ID | 
 
 ### Other Parameters
 
@@ -28211,8 +28278,8 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
-    staticRouteId := "staticRouteId_example" // string | 
+    serial := "serial_example" // string | Serial
+    staticRouteId := "staticRouteId_example" // string | Static route ID
     updateDeviceSwitchRoutingStaticRoute := *openapiclient.NewInlineObject22() // InlineObject22 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28233,8 +28300,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
-**staticRouteId** | **string** |  | 
+**serial** | **string** | Serial | 
+**staticRouteId** | **string** | Static route ID | 
 
 ### Other Parameters
 
@@ -28286,7 +28353,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceSwitchWarmSpare := *openapiclient.NewInlineObject23(false) // InlineObject23 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -28307,7 +28374,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -28339,7 +28406,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceWirelessBluetoothSettings
 
-> InlineResponse2008 UpdateDeviceWirelessBluetoothSettings(ctx, serial).UpdateDeviceWirelessBluetoothSettings(updateDeviceWirelessBluetoothSettings).Execute()
+> InlineResponse2009 UpdateDeviceWirelessBluetoothSettings(ctx, serial).UpdateDeviceWirelessBluetoothSettings(updateDeviceWirelessBluetoothSettings).Execute()
 
 Update the bluetooth settings for a wireless device
 
@@ -28358,7 +28425,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceWirelessBluetoothSettings := *openapiclient.NewInlineObject24() // InlineObject24 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28368,7 +28435,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateDeviceWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceWirelessBluetoothSettings`: InlineResponse2008
+    // response from `UpdateDeviceWirelessBluetoothSettings`: InlineResponse2009
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateDeviceWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -28379,7 +28446,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -28393,7 +28460,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -28430,7 +28497,7 @@ import (
 )
 
 func main() {
-    serial := "serial_example" // string | 
+    serial := "serial_example" // string | Serial
     updateDeviceWirelessRadioSettings := *openapiclient.NewInlineObject25() // InlineObject25 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28451,7 +28518,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**serial** | **string** |  | 
+**serial** | **string** | Serial | 
 
 ### Other Parameters
 
@@ -28483,7 +28550,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetwork
 
-> InlineResponse20010 UpdateNetwork(ctx, networkId).UpdateNetwork(updateNetwork).Execute()
+> InlineResponse20011 UpdateNetwork(ctx, networkId).UpdateNetwork(updateNetwork).Execute()
 
 Update a network
 
@@ -28502,7 +28569,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetwork := *openapiclient.NewInlineObject26() // InlineObject26 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28512,7 +28579,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetwork`: InlineResponse20010
+    // response from `UpdateNetwork`: InlineResponse20011
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetwork`: %v\n", resp)
 }
 ```
@@ -28523,7 +28590,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -28537,7 +28604,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -28574,7 +28641,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkAlertsSettings := *openapiclient.NewInlineObject27() // InlineObject27 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28595,7 +28662,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -28646,7 +28713,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceConnectivityMonitoringDestinations := *openapiclient.NewInlineObject28() // InlineObject28 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28667,7 +28734,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -28718,7 +28785,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceContentFiltering := *openapiclient.NewInlineObject29() // InlineObject29 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28739,7 +28806,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -28790,7 +28857,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceFirewallCellularFirewallRules := *openapiclient.NewInlineObject30() // InlineObject30 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28811,7 +28878,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -28862,8 +28929,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    service := "service_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    service := "service_example" // string | Service
     updateNetworkApplianceFirewallFirewalledService := *openapiclient.NewInlineObject31("Access_example") // InlineObject31 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -28884,8 +28951,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**service** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**service** | **string** | Service | 
 
 ### Other Parameters
 
@@ -28937,7 +29004,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceFirewallInboundCellularFirewallRules := *openapiclient.NewInlineObject32() // InlineObject32 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -28958,7 +29025,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29009,7 +29076,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceFirewallInboundFirewallRules := *openapiclient.NewInlineObject33() // InlineObject33 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -29030,7 +29097,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29081,7 +29148,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceFirewallL3FirewallRules := *openapiclient.NewInlineObject34() // InlineObject34 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -29102,7 +29169,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29153,7 +29220,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceFirewallL7FirewallRules := *openapiclient.NewInlineObject35() // InlineObject35 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -29174,7 +29241,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29225,7 +29292,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceFirewallOneToManyNatRules := *openapiclient.NewInlineObject36([]openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules("PublicIp_example", "Uplink_example", []openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules()})}) // InlineObject36 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -29246,7 +29313,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29297,7 +29364,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceFirewallOneToOneNatRules := *openapiclient.NewInlineObject37([]openapiclient.NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToOneNatRulesRules("LanIp_example")}) // InlineObject37 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -29318,7 +29385,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29369,7 +29436,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject38([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject38 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -29390,7 +29457,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29441,7 +29508,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceFirewallSettings := *openapiclient.NewInlineObject39() // InlineObject39 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -29462,7 +29529,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29494,7 +29561,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkAppliancePort
 
-> InlineResponse20012 UpdateNetworkAppliancePort(ctx, networkId, portId).UpdateNetworkAppliancePort(updateNetworkAppliancePort).Execute()
+> InlineResponse20013 UpdateNetworkAppliancePort(ctx, networkId, portId).UpdateNetworkAppliancePort(updateNetworkAppliancePort).Execute()
 
 Update the per-port VLAN settings for a single MX port.
 
@@ -29513,8 +29580,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    portId := "portId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    portId := "portId_example" // string | Port ID
     updateNetworkAppliancePort := *openapiclient.NewInlineObject40() // InlineObject40 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -29524,7 +29591,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkAppliancePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkAppliancePort`: InlineResponse20012
+    // response from `UpdateNetworkAppliancePort`: InlineResponse20013
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkAppliancePort`: %v\n", resp)
 }
 ```
@@ -29535,8 +29602,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**portId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**portId** | **string** | Port ID | 
 
 ### Other Parameters
 
@@ -29551,7 +29618,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -29588,8 +29655,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    staticDelegatedPrefixId := "staticDelegatedPrefixId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    staticDelegatedPrefixId := "staticDelegatedPrefixId_example" // string | Static delegated prefix ID
     updateNetworkAppliancePrefixesDelegatedStatic := *openapiclient.NewInlineObject42() // InlineObject42 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -29610,8 +29677,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**staticDelegatedPrefixId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**staticDelegatedPrefixId** | **string** | Static delegated prefix ID | 
 
 ### Other Parameters
 
@@ -29663,7 +29730,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceSecurityIntrusion := *openapiclient.NewInlineObject43() // InlineObject43 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -29684,7 +29751,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29735,7 +29802,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceSecurityMalware := *openapiclient.NewInlineObject44("Mode_example") // InlineObject44 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -29756,7 +29823,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29788,7 +29855,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceSettings
 
-> InlineResponse20014 UpdateNetworkApplianceSettings(ctx, networkId).UpdateNetworkApplianceSettings(updateNetworkApplianceSettings).Execute()
+> InlineResponse20015 UpdateNetworkApplianceSettings(ctx, networkId).UpdateNetworkApplianceSettings(updateNetworkApplianceSettings).Execute()
 
 Update the appliance settings for a network
 
@@ -29807,7 +29874,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceSettings := *openapiclient.NewInlineObject45() // InlineObject45 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -29817,7 +29884,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkApplianceSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceSettings`: InlineResponse20014
+    // response from `UpdateNetworkApplianceSettings`: InlineResponse20015
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkApplianceSettings`: %v\n", resp)
 }
 ```
@@ -29828,7 +29895,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -29839,78 +29906,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
  **updateNetworkApplianceSettings** | [**InlineObject45**](InlineObject45.md) |  | 
-
-### Return type
-
-[**InlineResponse20014**](InlineResponse20014.md)
-
-### Authorization
-
-[meraki_api_key](../README.md#meraki_api_key)
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
-
-
-## UpdateNetworkApplianceSingleLan
-
-> InlineResponse20015 UpdateNetworkApplianceSingleLan(ctx, networkId).UpdateNetworkApplianceSingleLan(updateNetworkApplianceSingleLan).Execute()
-
-Update single LAN configuration
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkApplianceSingleLan := *openapiclient.NewInlineObject46() // InlineObject46 |  (optional)
-
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.UpdateNetworkApplianceSingleLan(context.Background(), networkId).UpdateNetworkApplianceSingleLan(updateNetworkApplianceSingleLan).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkApplianceSingleLan``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `UpdateNetworkApplianceSingleLan`: InlineResponse20015
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkApplianceSingleLan`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSingleLanRequest struct via the builder pattern
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **updateNetworkApplianceSingleLan** | [**InlineObject46**](InlineObject46.md) |  | 
 
 ### Return type
 
@@ -29930,9 +29925,81 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## UpdateNetworkApplianceSingleLan
+
+> InlineResponse20016 UpdateNetworkApplianceSingleLan(ctx, networkId).UpdateNetworkApplianceSingleLan(updateNetworkApplianceSingleLan).Execute()
+
+Update single LAN configuration
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkApplianceSingleLan := *openapiclient.NewInlineObject46() // InlineObject46 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.UpdateNetworkApplianceSingleLan(context.Background(), networkId).UpdateNetworkApplianceSingleLan(updateNetworkApplianceSingleLan).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkApplianceSingleLan``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateNetworkApplianceSingleLan`: InlineResponse20016
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkApplianceSingleLan`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSingleLanRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **updateNetworkApplianceSingleLan** | [**InlineObject46**](InlineObject46.md) |  | 
+
+### Return type
+
+[**InlineResponse20016**](InlineResponse20016.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateNetworkApplianceSsid
 
-> InlineResponse20016 UpdateNetworkApplianceSsid(ctx, networkId, number).UpdateNetworkApplianceSsid(updateNetworkApplianceSsid).Execute()
+> InlineResponse20017 UpdateNetworkApplianceSsid(ctx, networkId, number).UpdateNetworkApplianceSsid(updateNetworkApplianceSsid).Execute()
 
 Update the attributes of an MX SSID
 
@@ -29951,8 +30018,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
     updateNetworkApplianceSsid := *openapiclient.NewInlineObject47() // InlineObject47 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -29962,7 +30029,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkApplianceSsid``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceSsid`: InlineResponse20016
+    // response from `UpdateNetworkApplianceSsid`: InlineResponse20017
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkApplianceSsid`: %v\n", resp)
 }
 ```
@@ -29973,8 +30040,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -29989,7 +30056,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20017**](InlineResponse20017.md)
 
 ### Authorization
 
@@ -30026,8 +30093,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    staticRouteId := "staticRouteId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    staticRouteId := "staticRouteId_example" // string | Static route ID
     updateNetworkApplianceStaticRoute := *openapiclient.NewInlineObject49() // InlineObject49 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30048,8 +30115,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**staticRouteId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**staticRouteId** | **string** | Static route ID | 
 
 ### Other Parameters
 
@@ -30101,7 +30168,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceTrafficShaping := *openapiclient.NewInlineObject50() // InlineObject50 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30122,7 +30189,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -30173,8 +30240,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    customPerformanceClassId := "customPerformanceClassId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    customPerformanceClassId := "customPerformanceClassId_example" // string | Custom performance class ID
     updateNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject52() // InlineObject52 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30195,8 +30262,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**customPerformanceClassId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**customPerformanceClassId** | **string** | Custom performance class ID | 
 
 ### Other Parameters
 
@@ -30248,7 +30315,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceTrafficShapingRules := *openapiclient.NewInlineObject53() // InlineObject53 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30269,7 +30336,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -30320,7 +30387,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceTrafficShapingUplinkBandwidth := *openapiclient.NewInlineObject54() // InlineObject54 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30341,7 +30408,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -30373,7 +30440,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingUplinkSelection
 
-> InlineResponse20018 UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).UpdateNetworkApplianceTrafficShapingUplinkSelection(updateNetworkApplianceTrafficShapingUplinkSelection).Execute()
+> InlineResponse20019 UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).UpdateNetworkApplianceTrafficShapingUplinkSelection(updateNetworkApplianceTrafficShapingUplinkSelection).Execute()
 
 Update uplink selection settings for an MX network
 
@@ -30392,7 +30459,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceTrafficShapingUplinkSelection := *openapiclient.NewInlineObject55() // InlineObject55 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30402,7 +30469,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkApplianceTrafficShapingUplinkSelection``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20018
+    // response from `UpdateNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20019
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkApplianceTrafficShapingUplinkSelection`: %v\n", resp)
 }
 ```
@@ -30413,7 +30480,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -30427,7 +30494,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -30445,7 +30512,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceVlan
 
-> InlineResponse20019 UpdateNetworkApplianceVlan(ctx, networkId, vlanId).UpdateNetworkApplianceVlan(updateNetworkApplianceVlan).Execute()
+> InlineResponse20020 UpdateNetworkApplianceVlan(ctx, networkId, vlanId).UpdateNetworkApplianceVlan(updateNetworkApplianceVlan).Execute()
 
 Update a VLAN
 
@@ -30464,8 +30531,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    vlanId := "vlanId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    vlanId := "vlanId_example" // string | Vlan ID
     updateNetworkApplianceVlan := *openapiclient.NewInlineObject58() // InlineObject58 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30475,7 +30542,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkApplianceVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceVlan`: InlineResponse20019
+    // response from `UpdateNetworkApplianceVlan`: InlineResponse20020
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkApplianceVlan`: %v\n", resp)
 }
 ```
@@ -30486,8 +30553,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**vlanId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**vlanId** | **string** | Vlan ID | 
 
 ### Other Parameters
 
@@ -30502,7 +30569,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -30539,7 +30606,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceVlansSettings := *openapiclient.NewInlineObject57() // InlineObject57 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30560,7 +30627,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -30611,7 +30678,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceVpnBgp := *openapiclient.NewInlineObject59(false) // InlineObject59 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -30632,7 +30699,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -30664,7 +30731,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceVpnSiteToSiteVpn
 
-> InlineResponse20020 UpdateNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).UpdateNetworkApplianceVpnSiteToSiteVpn(updateNetworkApplianceVpnSiteToSiteVpn).Execute()
+> InlineResponse20021 UpdateNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).UpdateNetworkApplianceVpnSiteToSiteVpn(updateNetworkApplianceVpnSiteToSiteVpn).Execute()
 
 Update the site-to-site VPN settings of a network
 
@@ -30683,7 +30750,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceVpnSiteToSiteVpn := *openapiclient.NewInlineObject60("Mode_example") // InlineObject60 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -30693,7 +30760,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkApplianceVpnSiteToSiteVpn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20020
+    // response from `UpdateNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20021
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkApplianceVpnSiteToSiteVpn`: %v\n", resp)
 }
 ```
@@ -30704,7 +30771,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -30718,7 +30785,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 
@@ -30755,7 +30822,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkApplianceWarmSpare := *openapiclient.NewInlineObject61(false) // InlineObject61 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -30776,7 +30843,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -30827,8 +30894,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    qualityRetentionProfileId := "qualityRetentionProfileId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    qualityRetentionProfileId := "qualityRetentionProfileId_example" // string | Quality retention profile ID
     updateNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject64() // InlineObject64 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30849,8 +30916,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**qualityRetentionProfileId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**qualityRetentionProfileId** | **string** | Quality retention profile ID | 
 
 ### Other Parameters
 
@@ -30902,8 +30969,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    wirelessProfileId := "wirelessProfileId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    wirelessProfileId := "wirelessProfileId_example" // string | Wireless profile ID
     updateNetworkCameraWirelessProfile := *openapiclient.NewInlineObject66() // InlineObject66 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30924,8 +30991,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**wirelessProfileId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**wirelessProfileId** | **string** | Wireless profile ID | 
 
 ### Other Parameters
 
@@ -30977,7 +31044,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkCellularGatewayConnectivityMonitoringDestinations := *openapiclient.NewInlineObject67() // InlineObject67 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -30998,7 +31065,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -31030,7 +31097,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewayDhcp
 
-> InlineResponse20021 UpdateNetworkCellularGatewayDhcp(ctx, networkId).UpdateNetworkCellularGatewayDhcp(updateNetworkCellularGatewayDhcp).Execute()
+> InlineResponse20022 UpdateNetworkCellularGatewayDhcp(ctx, networkId).UpdateNetworkCellularGatewayDhcp(updateNetworkCellularGatewayDhcp).Execute()
 
 Update common DHCP settings of MGs
 
@@ -31049,7 +31116,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkCellularGatewayDhcp := *openapiclient.NewInlineObject68() // InlineObject68 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -31059,7 +31126,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkCellularGatewayDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewayDhcp`: InlineResponse20021
+    // response from `UpdateNetworkCellularGatewayDhcp`: InlineResponse20022
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkCellularGatewayDhcp`: %v\n", resp)
 }
 ```
@@ -31070,7 +31137,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -31084,7 +31151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -31121,7 +31188,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkCellularGatewaySubnetPool := *openapiclient.NewInlineObject69() // InlineObject69 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -31142,7 +31209,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -31193,7 +31260,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkCellularGatewayUplink := *openapiclient.NewInlineObject70() // InlineObject70 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -31214,7 +31281,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -31265,8 +31332,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    clientId := "clientId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    clientId := "clientId_example" // string | Client ID
     updateNetworkClientPolicy := *openapiclient.NewInlineObject72("DevicePolicy_example") // InlineObject72 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -31287,8 +31354,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**clientId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**clientId** | **string** | Client ID | 
 
 ### Other Parameters
 
@@ -31340,8 +31407,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    clientId := "clientId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    clientId := "clientId_example" // string | Client ID
     updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject73(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject73 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -31362,8 +31429,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**clientId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**clientId** | **string** | Client ID | 
 
 ### Other Parameters
 
@@ -31396,7 +31463,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgrades
 
-> InlineResponse20026 UpdateNetworkFirmwareUpgrades(ctx, networkId).UpdateNetworkFirmwareUpgrades(updateNetworkFirmwareUpgrades).Execute()
+> InlineResponse20027 UpdateNetworkFirmwareUpgrades(ctx, networkId).UpdateNetworkFirmwareUpgrades(updateNetworkFirmwareUpgrades).Execute()
 
 Update firmware upgrade information for a network
 
@@ -31415,7 +31482,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkFirmwareUpgrades := *openapiclient.NewInlineObject77() // InlineObject77 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -31425,7 +31492,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkFirmwareUpgrades``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgrades`: InlineResponse20026
+    // response from `UpdateNetworkFirmwareUpgrades`: InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkFirmwareUpgrades`: %v\n", resp)
 }
 ```
@@ -31436,7 +31503,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -31450,7 +31517,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -31468,7 +31535,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20028 UpdateNetworkFirmwareUpgradesStagedEvents(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedEvents(updateNetworkFirmwareUpgradesStagedEvents).Execute()
+> InlineResponse20029 UpdateNetworkFirmwareUpgradesStagedEvents(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedEvents(updateNetworkFirmwareUpgradesStagedEvents).Execute()
 
 Update the Staged Upgrade Event for a network
 
@@ -31487,7 +31554,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject79([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject79 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -31497,7 +31564,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedEvents`: InlineResponse20028
+    // response from `UpdateNetworkFirmwareUpgradesStagedEvents`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -31508,7 +31575,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -31522,7 +31589,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -31559,8 +31626,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    groupId := "groupId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    groupId := "groupId_example" // string | Group ID
     updateNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject83("Name_example", false) // InlineObject83 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -31581,8 +31648,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**groupId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**groupId** | **string** | Group ID | 
 
 ### Other Parameters
 
@@ -31615,7 +31682,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedStages
 
-> []InlineResponse20030 UpdateNetworkFirmwareUpgradesStagedStages(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedStages(updateNetworkFirmwareUpgradesStagedStages).Execute()
+> []InlineResponse20031 UpdateNetworkFirmwareUpgradesStagedStages(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedStages(updateNetworkFirmwareUpgradesStagedStages).Execute()
 
 Assign Staged Upgrade Group order in the sequence.
 
@@ -31634,7 +31701,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkFirmwareUpgradesStagedStages := *openapiclient.NewInlineObject84() // InlineObject84 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -31644,7 +31711,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkFirmwareUpgradesStagedStages``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedStages`: []InlineResponse20030
+    // response from `UpdateNetworkFirmwareUpgradesStagedStages`: []InlineResponse20031
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkFirmwareUpgradesStagedStages`: %v\n", resp)
 }
 ```
@@ -31655,7 +31722,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -31669,7 +31736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20030**](InlineResponse20030.md)
+[**[]InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -31706,8 +31773,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    floorPlanId := "floorPlanId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    floorPlanId := "floorPlanId_example" // string | Floor plan ID
     updateNetworkFloorPlan := *openapiclient.NewInlineObject86() // InlineObject86 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -31728,8 +31795,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**floorPlanId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**floorPlanId** | **string** | Floor plan ID | 
 
 ### Other Parameters
 
@@ -31781,8 +31848,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    groupPolicyId := "groupPolicyId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    groupPolicyId := "groupPolicyId_example" // string | Group policy ID
     updateNetworkGroupPolicy := *openapiclient.NewInlineObject88() // InlineObject88 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -31803,8 +31870,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**groupPolicyId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**groupPolicyId** | **string** | Group policy ID | 
 
 ### Other Parameters
 
@@ -31837,7 +31904,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkMerakiAuthUser
 
-> InlineResponse20033 UpdateNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).UpdateNetworkMerakiAuthUser(updateNetworkMerakiAuthUser).Execute()
+> InlineResponse20034 UpdateNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).UpdateNetworkMerakiAuthUser(updateNetworkMerakiAuthUser).Execute()
 
 Update a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be updated)
 
@@ -31856,8 +31923,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    merakiAuthUserId := "merakiAuthUserId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    merakiAuthUserId := "merakiAuthUserId_example" // string | Meraki auth user ID
     updateNetworkMerakiAuthUser := *openapiclient.NewInlineObject90() // InlineObject90 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -31867,7 +31934,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkMerakiAuthUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkMerakiAuthUser`: InlineResponse20033
+    // response from `UpdateNetworkMerakiAuthUser`: InlineResponse20034
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkMerakiAuthUser`: %v\n", resp)
 }
 ```
@@ -31878,8 +31945,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**merakiAuthUserId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**merakiAuthUserId** | **string** | Meraki auth user ID | 
 
 ### Other Parameters
 
@@ -31894,7 +31961,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -31931,8 +31998,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    mqttBrokerId := "mqttBrokerId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
     updateNetworkMqttBroker := *openapiclient.NewInlineObject92() // InlineObject92 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -31953,8 +32020,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**mqttBrokerId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**mqttBrokerId** | **string** | Mqtt broker ID | 
 
 ### Other Parameters
 
@@ -32006,7 +32073,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     updateNetworkNetflow := *openapiclient.NewInlineObject93() // InlineObject93 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -32027,7 +32094,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -32059,7 +32126,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSensorAlertsProfile
 
-> InlineResponse20037 UpdateNetworkSensorAlertsProfile(ctx, networkId, id).UpdateNetworkSensorAlertsProfile(updateNetworkSensorAlertsProfile).Execute()
+> InlineResponse20038 UpdateNetworkSensorAlertsProfile(ctx, networkId, id).UpdateNetworkSensorAlertsProfile(updateNetworkSensorAlertsProfile).Execute()
 
 Updates a sensor alert profile for a network.
 
@@ -32078,8 +32145,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    id := "id_example" // string | 
+    networkId := "networkId_example" // string | Network ID
+    id := "id_example" // string | Id
     updateNetworkSensorAlertsProfile := *openapiclient.NewInlineObject96() // InlineObject96 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -32089,7 +32156,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSensorAlertsProfile`: InlineResponse20037
+    // response from `UpdateNetworkSensorAlertsProfile`: InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -32100,8 +32167,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**id** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**id** | **string** | Id | 
 
 ### Other Parameters
 
@@ -32116,7 +32183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -32132,11 +32199,11 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
-## UpdateNetworkSettings
+## UpdateNetworkSensorMqttBroker
 
-> InlineResponse20039 UpdateNetworkSettings(ctx, networkId).UpdateNetworkSettings(updateNetworkSettings).Execute()
+> InlineResponse20039 UpdateNetworkSensorMqttBroker(ctx, networkId, mqttBrokerId).UpdateNetworkSensorMqttBroker(updateNetworkSensorMqttBroker).Execute()
 
-Update the settings for a network
+Update the sensor settings of an MQTT broker
 
 
 
@@ -32153,18 +32220,19 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSettings := *openapiclient.NewInlineObject97() // InlineObject97 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
+    updateNetworkSensorMqttBroker := *openapiclient.NewInlineObject97(false) // InlineObject97 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ConfigureApi.UpdateNetworkSettings(context.Background(), networkId).UpdateNetworkSettings(updateNetworkSettings).Execute()
+    resp, r, err := apiClient.ConfigureApi.UpdateNetworkSensorMqttBroker(context.Background(), networkId, mqttBrokerId).UpdateNetworkSensorMqttBroker(updateNetworkSensorMqttBroker).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkSettings``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkSensorMqttBroker``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSettings`: InlineResponse20039
-    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkSettings`: %v\n", resp)
+    // response from `UpdateNetworkSensorMqttBroker`: InlineResponse20039
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkSensorMqttBroker`: %v\n", resp)
 }
 ```
 
@@ -32174,17 +32242,19 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**mqttBrokerId** | **string** | Mqtt broker ID | 
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiUpdateNetworkSettingsRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiUpdateNetworkSensorMqttBrokerRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSettings** | [**InlineObject97**](InlineObject97.md) |  | 
+
+ **updateNetworkSensorMqttBroker** | [**InlineObject97**](InlineObject97.md) |  | 
 
 ### Return type
 
@@ -32204,9 +32274,81 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## UpdateNetworkSettings
+
+> InlineResponse20041 UpdateNetworkSettings(ctx, networkId).UpdateNetworkSettings(updateNetworkSettings).Execute()
+
+Update the settings for a network
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSettings := *openapiclient.NewInlineObject98() // InlineObject98 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.ConfigureApi.UpdateNetworkSettings(context.Background(), networkId).UpdateNetworkSettings(updateNetworkSettings).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkSettings``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateNetworkSettings`: InlineResponse20041
+    fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkSettings`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateNetworkSettingsRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **updateNetworkSettings** | [**InlineObject98**](InlineObject98.md) |  | 
+
+### Return type
+
+[**InlineResponse20041**](InlineResponse20041.md)
+
+### Authorization
+
+[meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateNetworkSmDevicesFields
 
-> []InlineResponse20042 UpdateNetworkSmDevicesFields(ctx, networkId).UpdateNetworkSmDevicesFields(updateNetworkSmDevicesFields).Execute()
+> []InlineResponse20044 UpdateNetworkSmDevicesFields(ctx, networkId).UpdateNetworkSmDevicesFields(updateNetworkSmDevicesFields).Execute()
 
 Modify the fields of a device
 
@@ -32225,8 +32367,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSmDevicesFields := *openapiclient.NewInlineObject100(*openapiclient.NewNetworksNetworkIdSmDevicesFieldsDeviceFields()) // InlineObject100 | 
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSmDevicesFields := *openapiclient.NewInlineObject101(*openapiclient.NewNetworksNetworkIdSmDevicesFieldsDeviceFields()) // InlineObject101 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32235,7 +32377,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkSmDevicesFields``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSmDevicesFields`: []InlineResponse20042
+    // response from `UpdateNetworkSmDevicesFields`: []InlineResponse20044
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkSmDevicesFields`: %v\n", resp)
 }
 ```
@@ -32246,7 +32388,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -32256,11 +32398,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSmDevicesFiel
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSmDevicesFields** | [**InlineObject100**](InlineObject100.md) |  | 
+ **updateNetworkSmDevicesFields** | [**InlineObject101**](InlineObject101.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse20042**](InlineResponse20042.md)
+[**[]InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -32297,9 +32439,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    targetGroupId := "targetGroupId_example" // string | 
-    updateNetworkSmTargetGroup := *openapiclient.NewInlineObject106() // InlineObject106 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    targetGroupId := "targetGroupId_example" // string | Target group ID
+    updateNetworkSmTargetGroup := *openapiclient.NewInlineObject107() // InlineObject107 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32319,8 +32461,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**targetGroupId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**targetGroupId** | **string** | Target group ID | 
 
 ### Other Parameters
 
@@ -32331,7 +32473,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSmTargetGroup** | [**InlineObject106**](InlineObject106.md) |  | 
+ **updateNetworkSmTargetGroup** | [**InlineObject107**](InlineObject107.md) |  | 
 
 ### Return type
 
@@ -32372,8 +32514,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSnmp := *openapiclient.NewInlineObject107() // InlineObject107 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSnmp := *openapiclient.NewInlineObject108() // InlineObject108 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32393,7 +32535,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -32403,7 +32545,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSnmpRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSnmp** | [**InlineObject107**](InlineObject107.md) |  | 
+ **updateNetworkSnmp** | [**InlineObject108**](InlineObject108.md) |  | 
 
 ### Return type
 
@@ -32425,7 +32567,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchAccessControlLists
 
-> InlineResponse20062 UpdateNetworkSwitchAccessControlLists(ctx, networkId).UpdateNetworkSwitchAccessControlLists(updateNetworkSwitchAccessControlLists).Execute()
+> InlineResponse20064 UpdateNetworkSwitchAccessControlLists(ctx, networkId).UpdateNetworkSwitchAccessControlLists(updateNetworkSwitchAccessControlLists).Execute()
 
 Update the access control lists for a MS network
 
@@ -32444,8 +32586,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchAccessControlLists := *openapiclient.NewInlineObject108([]openapiclient.NetworksNetworkIdSwitchAccessControlListsRules{*openapiclient.NewNetworksNetworkIdSwitchAccessControlListsRules("Policy_example", "Protocol_example", "SrcCidr_example", "DstCidr_example")}) // InlineObject108 | 
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchAccessControlLists := *openapiclient.NewInlineObject109([]openapiclient.NetworksNetworkIdSwitchAccessControlListsRules{*openapiclient.NewNetworksNetworkIdSwitchAccessControlListsRules("Policy_example", "Protocol_example", "SrcCidr_example", "DstCidr_example")}) // InlineObject109 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32454,7 +32596,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkSwitchAccessControlLists``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchAccessControlLists`: InlineResponse20062
+    // response from `UpdateNetworkSwitchAccessControlLists`: InlineResponse20064
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkSwitchAccessControlLists`: %v\n", resp)
 }
 ```
@@ -32465,7 +32607,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -32475,11 +32617,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchAccessC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchAccessControlLists** | [**InlineObject108**](InlineObject108.md) |  | 
+ **updateNetworkSwitchAccessControlLists** | [**InlineObject109**](InlineObject109.md) |  | 
 
 ### Return type
 
-[**InlineResponse20062**](InlineResponse20062.md)
+[**InlineResponse20064**](InlineResponse20064.md)
 
 ### Authorization
 
@@ -32497,7 +32639,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchAccessPolicy
 
-> InlineResponse20063 UpdateNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).UpdateNetworkSwitchAccessPolicy(updateNetworkSwitchAccessPolicy).Execute()
+> InlineResponse20065 UpdateNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).UpdateNetworkSwitchAccessPolicy(updateNetworkSwitchAccessPolicy).Execute()
 
 Update an access policy for a switch network
 
@@ -32516,9 +32658,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    accessPolicyNumber := "accessPolicyNumber_example" // string | 
-    updateNetworkSwitchAccessPolicy := *openapiclient.NewInlineObject110() // InlineObject110 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    accessPolicyNumber := "accessPolicyNumber_example" // string | Access policy number
+    updateNetworkSwitchAccessPolicy := *openapiclient.NewInlineObject111() // InlineObject111 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32527,7 +32669,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkSwitchAccessPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchAccessPolicy`: InlineResponse20063
+    // response from `UpdateNetworkSwitchAccessPolicy`: InlineResponse20065
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkSwitchAccessPolicy`: %v\n", resp)
 }
 ```
@@ -32538,8 +32680,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**accessPolicyNumber** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**accessPolicyNumber** | **string** | Access policy number | 
 
 ### Other Parameters
 
@@ -32550,11 +32692,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchAccessPolicy** | [**InlineObject110**](InlineObject110.md) |  | 
+ **updateNetworkSwitchAccessPolicy** | [**InlineObject111**](InlineObject111.md) |  | 
 
 ### Return type
 
-[**InlineResponse20063**](InlineResponse20063.md)
+[**InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 
@@ -32591,8 +32733,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchAlternateManagementInterface := *openapiclient.NewInlineObject111() // InlineObject111 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchAlternateManagementInterface := *openapiclient.NewInlineObject112() // InlineObject112 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32612,7 +32754,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -32622,7 +32764,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchAlterna
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchAlternateManagementInterface** | [**InlineObject111**](InlineObject111.md) |  | 
+ **updateNetworkSwitchAlternateManagementInterface** | [**InlineObject112**](InlineObject112.md) |  | 
 
 ### Return type
 
@@ -32663,8 +32805,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchDhcpServerPolicy := *openapiclient.NewInlineObject112() // InlineObject112 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchDhcpServerPolicy := *openapiclient.NewInlineObject113() // InlineObject113 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32684,7 +32826,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -32694,7 +32836,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchDhcpSer
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchDhcpServerPolicy** | [**InlineObject112**](InlineObject112.md) |  | 
+ **updateNetworkSwitchDhcpServerPolicy** | [**InlineObject113**](InlineObject113.md) |  | 
 
 ### Return type
 
@@ -32716,7 +32858,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
 
-> InlineResponse20065 UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId, trustedServerId).UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
+> InlineResponse20067 UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId, trustedServerId).UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
 
 Update a server that is trusted by Dynamic ARP Inspection on this network
 
@@ -32735,9 +32877,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    trustedServerId := "trustedServerId_example" // string | 
-    updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer := *openapiclient.NewInlineObject114() // InlineObject114 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    trustedServerId := "trustedServerId_example" // string | Trusted server ID
+    updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer := *openapiclient.NewInlineObject115() // InlineObject115 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32746,7 +32888,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse20065
+    // response from `UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse20067
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: %v\n", resp)
 }
 ```
@@ -32757,8 +32899,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**trustedServerId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**trustedServerId** | **string** | Trusted server ID | 
 
 ### Other Parameters
 
@@ -32769,11 +32911,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer** | [**InlineObject114**](InlineObject114.md) |  | 
+ **updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer** | [**InlineObject115**](InlineObject115.md) |  | 
 
 ### Return type
 
-[**InlineResponse20065**](InlineResponse20065.md)
+[**InlineResponse20067**](InlineResponse20067.md)
 
 ### Authorization
 
@@ -32810,8 +32952,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchDscpToCosMappings := *openapiclient.NewInlineObject115([]openapiclient.NetworksNetworkIdSwitchDscpToCosMappingsMappings{*openapiclient.NewNetworksNetworkIdSwitchDscpToCosMappingsMappings(int32(123), int32(123))}) // InlineObject115 | 
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchDscpToCosMappings := *openapiclient.NewInlineObject116([]openapiclient.NetworksNetworkIdSwitchDscpToCosMappingsMappings{*openapiclient.NewNetworksNetworkIdSwitchDscpToCosMappingsMappings(int32(123), int32(123))}) // InlineObject116 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32831,7 +32973,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -32841,7 +32983,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchDscpToC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchDscpToCosMappings** | [**InlineObject115**](InlineObject115.md) |  | 
+ **updateNetworkSwitchDscpToCosMappings** | [**InlineObject116**](InlineObject116.md) |  | 
 
 ### Return type
 
@@ -32882,9 +33024,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    linkAggregationId := "linkAggregationId_example" // string | 
-    updateNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject117() // InlineObject117 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    linkAggregationId := "linkAggregationId_example" // string | Link aggregation ID
+    updateNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject118() // InlineObject118 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32904,8 +33046,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**linkAggregationId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**linkAggregationId** | **string** | Link aggregation ID | 
 
 ### Other Parameters
 
@@ -32916,7 +33058,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchLinkAggregation** | [**InlineObject117**](InlineObject117.md) |  | 
+ **updateNetworkSwitchLinkAggregation** | [**InlineObject118**](InlineObject118.md) |  | 
 
 ### Return type
 
@@ -32957,8 +33099,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchMtu := *openapiclient.NewInlineObject118() // InlineObject118 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchMtu := *openapiclient.NewInlineObject119() // InlineObject119 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -32978,7 +33120,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -32988,7 +33130,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchMtuRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchMtu** | [**InlineObject118**](InlineObject118.md) |  | 
+ **updateNetworkSwitchMtu** | [**InlineObject119**](InlineObject119.md) |  | 
 
 ### Return type
 
@@ -33029,9 +33171,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    portScheduleId := "portScheduleId_example" // string | 
-    updateNetworkSwitchPortSchedule := *openapiclient.NewInlineObject120() // InlineObject120 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    portScheduleId := "portScheduleId_example" // string | Port schedule ID
+    updateNetworkSwitchPortSchedule := *openapiclient.NewInlineObject121() // InlineObject121 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33051,8 +33193,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**portScheduleId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**portScheduleId** | **string** | Port schedule ID | 
 
 ### Other Parameters
 
@@ -33063,7 +33205,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchPortSchedule** | [**InlineObject120**](InlineObject120.md) |  | 
+ **updateNetworkSwitchPortSchedule** | [**InlineObject121**](InlineObject121.md) |  | 
 
 ### Return type
 
@@ -33104,9 +33246,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    qosRuleId := "qosRuleId_example" // string | 
-    updateNetworkSwitchQosRule := *openapiclient.NewInlineObject123() // InlineObject123 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    qosRuleId := "qosRuleId_example" // string | Qos rule ID
+    updateNetworkSwitchQosRule := *openapiclient.NewInlineObject124() // InlineObject124 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33126,8 +33268,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**qosRuleId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**qosRuleId** | **string** | Qos rule ID | 
 
 ### Other Parameters
 
@@ -33138,7 +33280,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchQosRule** | [**InlineObject123**](InlineObject123.md) |  | 
+ **updateNetworkSwitchQosRule** | [**InlineObject124**](InlineObject124.md) |  | 
 
 ### Return type
 
@@ -33179,8 +33321,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchQosRulesOrder := *openapiclient.NewInlineObject122([]string{"RuleIds_example"}) // InlineObject122 | 
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchQosRulesOrder := *openapiclient.NewInlineObject123([]string{"RuleIds_example"}) // InlineObject123 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33200,7 +33342,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -33210,7 +33352,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchQosRule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchQosRulesOrder** | [**InlineObject122**](InlineObject122.md) |  | 
+ **updateNetworkSwitchQosRulesOrder** | [**InlineObject123**](InlineObject123.md) |  | 
 
 ### Return type
 
@@ -33251,8 +33393,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchRoutingMulticast := *openapiclient.NewInlineObject124() // InlineObject124 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchRoutingMulticast := *openapiclient.NewInlineObject125() // InlineObject125 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33272,7 +33414,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -33282,7 +33424,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchRoutingMulticast** | [**InlineObject124**](InlineObject124.md) |  | 
+ **updateNetworkSwitchRoutingMulticast** | [**InlineObject125**](InlineObject125.md) |  | 
 
 ### Return type
 
@@ -33323,9 +33465,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    rendezvousPointId := "rendezvousPointId_example" // string | 
-    updateNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject126("InterfaceIp_example", "MulticastGroup_example") // InlineObject126 | 
+    networkId := "networkId_example" // string | Network ID
+    rendezvousPointId := "rendezvousPointId_example" // string | Rendezvous point ID
+    updateNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject127("InterfaceIp_example", "MulticastGroup_example") // InlineObject127 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33345,8 +33487,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**rendezvousPointId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**rendezvousPointId** | **string** | Rendezvous point ID | 
 
 ### Other Parameters
 
@@ -33357,7 +33499,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject126**](InlineObject126.md) |  | 
+ **updateNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject127**](InlineObject127.md) |  | 
 
 ### Return type
 
@@ -33398,8 +33540,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchRoutingOspf := *openapiclient.NewInlineObject127() // InlineObject127 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchRoutingOspf := *openapiclient.NewInlineObject128() // InlineObject128 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33419,7 +33561,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -33429,7 +33571,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchRoutingOspf** | [**InlineObject127**](InlineObject127.md) |  | 
+ **updateNetworkSwitchRoutingOspf** | [**InlineObject128**](InlineObject128.md) |  | 
 
 ### Return type
 
@@ -33451,7 +33593,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchSettings
 
-> InlineResponse20068 UpdateNetworkSwitchSettings(ctx, networkId).UpdateNetworkSwitchSettings(updateNetworkSwitchSettings).Execute()
+> InlineResponse20070 UpdateNetworkSwitchSettings(ctx, networkId).UpdateNetworkSwitchSettings(updateNetworkSwitchSettings).Execute()
 
 Update switch network settings
 
@@ -33470,8 +33612,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchSettings := *openapiclient.NewInlineObject128() // InlineObject128 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchSettings := *openapiclient.NewInlineObject129() // InlineObject129 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33480,7 +33622,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkSwitchSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchSettings`: InlineResponse20068
+    // response from `UpdateNetworkSwitchSettings`: InlineResponse20070
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkSwitchSettings`: %v\n", resp)
 }
 ```
@@ -33491,7 +33633,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -33501,11 +33643,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchSetting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchSettings** | [**InlineObject128**](InlineObject128.md) |  | 
+ **updateNetworkSwitchSettings** | [**InlineObject129**](InlineObject129.md) |  | 
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20070**](InlineResponse20070.md)
 
 ### Authorization
 
@@ -33542,10 +33684,10 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    interfaceId := "interfaceId_example" // string | 
-    updateNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject133() // InlineObject133 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    interfaceId := "interfaceId_example" // string | Interface ID
+    updateNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject134() // InlineObject134 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33565,9 +33707,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
-**interfaceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
+**interfaceId** | **string** | Interface ID | 
 
 ### Other Parameters
 
@@ -33579,7 +33721,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterface** | [**InlineObject133**](InlineObject133.md) |  | 
+ **updateNetworkSwitchStackRoutingInterface** | [**InlineObject134**](InlineObject134.md) |  | 
 
 ### Return type
 
@@ -33620,10 +33762,10 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    interfaceId := "interfaceId_example" // string | 
-    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject134() // InlineObject134 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    interfaceId := "interfaceId_example" // string | Interface ID
+    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject135() // InlineObject135 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33643,9 +33785,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
-**interfaceId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
+**interfaceId** | **string** | Interface ID | 
 
 ### Other Parameters
 
@@ -33657,7 +33799,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject134**](InlineObject134.md) |  | 
+ **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject135**](InlineObject135.md) |  | 
 
 ### Return type
 
@@ -33698,10 +33840,10 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    switchStackId := "switchStackId_example" // string | 
-    staticRouteId := "staticRouteId_example" // string | 
-    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject136() // InlineObject136 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    switchStackId := "switchStackId_example" // string | Switch stack ID
+    staticRouteId := "staticRouteId_example" // string | Static route ID
+    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject137() // InlineObject137 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33721,9 +33863,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**switchStackId** | **string** |  | 
-**staticRouteId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**switchStackId** | **string** | Switch stack ID | 
+**staticRouteId** | **string** | Static route ID | 
 
 ### Other Parameters
 
@@ -33735,7 +33877,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject136**](InlineObject136.md) |  | 
+ **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject137**](InlineObject137.md) |  | 
 
 ### Return type
 
@@ -33776,8 +33918,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchStormControl := *openapiclient.NewInlineObject137() // InlineObject137 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchStormControl := *openapiclient.NewInlineObject138() // InlineObject138 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33797,7 +33939,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -33807,7 +33949,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchStormCo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchStormControl** | [**InlineObject137**](InlineObject137.md) |  | 
+ **updateNetworkSwitchStormControl** | [**InlineObject138**](InlineObject138.md) |  | 
 
 ### Return type
 
@@ -33848,8 +33990,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSwitchStp := *openapiclient.NewInlineObject138() // InlineObject138 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSwitchStp := *openapiclient.NewInlineObject139() // InlineObject139 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33869,7 +34011,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -33879,7 +34021,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchStpRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchStp** | [**InlineObject138**](InlineObject138.md) |  | 
+ **updateNetworkSwitchStp** | [**InlineObject139**](InlineObject139.md) |  | 
 
 ### Return type
 
@@ -33901,7 +34043,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSyslogServers
 
-> InlineResponse20071 UpdateNetworkSyslogServers(ctx, networkId).UpdateNetworkSyslogServers(updateNetworkSyslogServers).Execute()
+> InlineResponse20073 UpdateNetworkSyslogServers(ctx, networkId).UpdateNetworkSyslogServers(updateNetworkSyslogServers).Execute()
 
 Update the syslog servers for a network
 
@@ -33920,8 +34062,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkSyslogServers := *openapiclient.NewInlineObject139([]openapiclient.NetworksNetworkIdSyslogServersServers{*openapiclient.NewNetworksNetworkIdSyslogServersServers("Host_example", int32(123), []string{"Roles_example"})}) // InlineObject139 | 
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkSyslogServers := *openapiclient.NewInlineObject140([]openapiclient.NetworksNetworkIdSyslogServersServers{*openapiclient.NewNetworksNetworkIdSyslogServersServers("Host_example", int32(123), []string{"Roles_example"})}) // InlineObject140 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -33930,7 +34072,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkSyslogServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSyslogServers`: InlineResponse20071
+    // response from `UpdateNetworkSyslogServers`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkSyslogServers`: %v\n", resp)
 }
 ```
@@ -33941,7 +34083,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -33951,11 +34093,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSyslogServers
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSyslogServers** | [**InlineObject139**](InlineObject139.md) |  | 
+ **updateNetworkSyslogServers** | [**InlineObject140**](InlineObject140.md) |  | 
 
 ### Return type
 
-[**InlineResponse20071**](InlineResponse20071.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -33992,8 +34134,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkTrafficAnalysis := *openapiclient.NewInlineObject140() // InlineObject140 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkTrafficAnalysis := *openapiclient.NewInlineObject141() // InlineObject141 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34013,7 +34155,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -34023,7 +34165,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkTrafficAnalys
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkTrafficAnalysis** | [**InlineObject140**](InlineObject140.md) |  | 
+ **updateNetworkTrafficAnalysis** | [**InlineObject141**](InlineObject141.md) |  | 
 
 ### Return type
 
@@ -34045,7 +34187,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWebhooksHttpServer
 
-> InlineResponse20072 UpdateNetworkWebhooksHttpServer(ctx, networkId, httpServerId).UpdateNetworkWebhooksHttpServer(updateNetworkWebhooksHttpServer).Execute()
+> InlineResponse20074 UpdateNetworkWebhooksHttpServer(ctx, networkId, httpServerId).UpdateNetworkWebhooksHttpServer(updateNetworkWebhooksHttpServer).Execute()
 
 Update an HTTP server
 
@@ -34064,9 +34206,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    httpServerId := "httpServerId_example" // string | 
-    updateNetworkWebhooksHttpServer := *openapiclient.NewInlineObject143() // InlineObject143 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    httpServerId := "httpServerId_example" // string | Http server ID
+    updateNetworkWebhooksHttpServer := *openapiclient.NewInlineObject144() // InlineObject144 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34075,7 +34217,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWebhooksHttpServer`: InlineResponse20072
+    // response from `UpdateNetworkWebhooksHttpServer`: InlineResponse20074
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -34086,8 +34228,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**httpServerId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**httpServerId** | **string** | Http server ID | 
 
 ### Other Parameters
 
@@ -34098,11 +34240,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWebhooksHttpServer** | [**InlineObject143**](InlineObject143.md) |  | 
+ **updateNetworkWebhooksHttpServer** | [**InlineObject144**](InlineObject144.md) |  | 
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20074**](InlineResponse20074.md)
 
 ### Authorization
 
@@ -34120,7 +34262,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWebhooksPayloadTemplate
 
-> InlineResponse20073 UpdateNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).UpdateNetworkWebhooksPayloadTemplate(updateNetworkWebhooksPayloadTemplate).Execute()
+> InlineResponse20075 UpdateNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).UpdateNetworkWebhooksPayloadTemplate(updateNetworkWebhooksPayloadTemplate).Execute()
 
 Update a webhook payload template for a network
 
@@ -34139,9 +34281,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    payloadTemplateId := "payloadTemplateId_example" // string | 
-    updateNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject145() // InlineObject145 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    payloadTemplateId := "payloadTemplateId_example" // string | Payload template ID
+    updateNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject146() // InlineObject146 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34150,7 +34292,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkWebhooksPayloadTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWebhooksPayloadTemplate`: InlineResponse20073
+    // response from `UpdateNetworkWebhooksPayloadTemplate`: InlineResponse20075
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkWebhooksPayloadTemplate`: %v\n", resp)
 }
 ```
@@ -34161,8 +34303,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**payloadTemplateId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**payloadTemplateId** | **string** | Payload template ID | 
 
 ### Other Parameters
 
@@ -34173,11 +34315,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWebhooksPayloadTemplate** | [**InlineObject145**](InlineObject145.md) |  | 
+ **updateNetworkWebhooksPayloadTemplate** | [**InlineObject146**](InlineObject146.md) |  | 
 
 ### Return type
 
-[**InlineResponse20073**](InlineResponse20073.md)
+[**InlineResponse20075**](InlineResponse20075.md)
 
 ### Authorization
 
@@ -34214,8 +34356,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkWirelessAlternateManagementInterface := *openapiclient.NewInlineObject147() // InlineObject147 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkWirelessAlternateManagementInterface := *openapiclient.NewInlineObject148() // InlineObject148 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34235,7 +34377,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -34245,7 +34387,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessAlter
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessAlternateManagementInterface** | [**InlineObject147**](InlineObject147.md) |  | 
+ **updateNetworkWirelessAlternateManagementInterface** | [**InlineObject148**](InlineObject148.md) |  | 
 
 ### Return type
 
@@ -34286,8 +34428,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkWirelessBilling := *openapiclient.NewInlineObject148() // InlineObject148 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkWirelessBilling := *openapiclient.NewInlineObject149() // InlineObject149 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34307,7 +34449,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -34317,7 +34459,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessBilli
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessBilling** | [**InlineObject148**](InlineObject148.md) |  | 
+ **updateNetworkWirelessBilling** | [**InlineObject149**](InlineObject149.md) |  | 
 
 ### Return type
 
@@ -34339,7 +34481,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessBluetoothSettings
 
-> InlineResponse20074 UpdateNetworkWirelessBluetoothSettings(ctx, networkId).UpdateNetworkWirelessBluetoothSettings(updateNetworkWirelessBluetoothSettings).Execute()
+> InlineResponse20076 UpdateNetworkWirelessBluetoothSettings(ctx, networkId).UpdateNetworkWirelessBluetoothSettings(updateNetworkWirelessBluetoothSettings).Execute()
 
 Update the Bluetooth settings for a network
 
@@ -34358,8 +34500,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkWirelessBluetoothSettings := *openapiclient.NewInlineObject149() // InlineObject149 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkWirelessBluetoothSettings := *openapiclient.NewInlineObject150() // InlineObject150 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34368,7 +34510,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessBluetoothSettings`: InlineResponse20074
+    // response from `UpdateNetworkWirelessBluetoothSettings`: InlineResponse20076
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -34379,7 +34521,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -34389,11 +34531,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessBluet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessBluetoothSettings** | [**InlineObject149**](InlineObject149.md) |  | 
+ **updateNetworkWirelessBluetoothSettings** | [**InlineObject150**](InlineObject150.md) |  | 
 
 ### Return type
 
-[**InlineResponse20074**](InlineResponse20074.md)
+[**InlineResponse20076**](InlineResponse20076.md)
 
 ### Authorization
 
@@ -34430,9 +34572,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    rfProfileId := "rfProfileId_example" // string | 
-    updateNetworkWirelessRfProfile := *openapiclient.NewInlineObject151() // InlineObject151 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    rfProfileId := "rfProfileId_example" // string | Rf profile ID
+    updateNetworkWirelessRfProfile := *openapiclient.NewInlineObject152() // InlineObject152 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34452,8 +34594,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**rfProfileId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**rfProfileId** | **string** | Rf profile ID | 
 
 ### Other Parameters
 
@@ -34464,7 +34606,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessRfProfile** | [**InlineObject151**](InlineObject151.md) |  | 
+ **updateNetworkWirelessRfProfile** | [**InlineObject152**](InlineObject152.md) |  | 
 
 ### Return type
 
@@ -34486,7 +34628,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSettings
 
-> InlineResponse20081 UpdateNetworkWirelessSettings(ctx, networkId).UpdateNetworkWirelessSettings(updateNetworkWirelessSettings).Execute()
+> InlineResponse20083 UpdateNetworkWirelessSettings(ctx, networkId).UpdateNetworkWirelessSettings(updateNetworkWirelessSettings).Execute()
 
 Update the wireless settings for a network
 
@@ -34505,8 +34647,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    updateNetworkWirelessSettings := *openapiclient.NewInlineObject152() // InlineObject152 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    updateNetworkWirelessSettings := *openapiclient.NewInlineObject153() // InlineObject153 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34515,7 +34657,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkWirelessSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSettings`: InlineResponse20081
+    // response from `UpdateNetworkWirelessSettings`: InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkWirelessSettings`: %v\n", resp)
 }
 ```
@@ -34526,7 +34668,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -34536,11 +34678,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessSetti
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessSettings** | [**InlineObject152**](InlineObject152.md) |  | 
+ **updateNetworkWirelessSettings** | [**InlineObject153**](InlineObject153.md) |  | 
 
 ### Return type
 
-[**InlineResponse20081**](InlineResponse20081.md)
+[**InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 
@@ -34577,9 +34719,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsid := *openapiclient.NewInlineObject153() // InlineObject153 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsid := *openapiclient.NewInlineObject154() // InlineObject154 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34599,8 +34741,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -34611,7 +34753,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsid** | [**InlineObject153**](InlineObject153.md) |  | 
+ **updateNetworkWirelessSsid** | [**InlineObject154**](InlineObject154.md) |  | 
 
 ### Return type
 
@@ -34652,9 +34794,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsidBonjourForwarding := *openapiclient.NewInlineObject154() // InlineObject154 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsidBonjourForwarding := *openapiclient.NewInlineObject155() // InlineObject155 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34674,8 +34816,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -34686,7 +34828,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidBonjourForwarding** | [**InlineObject154**](InlineObject154.md) |  | 
+ **updateNetworkWirelessSsidBonjourForwarding** | [**InlineObject155**](InlineObject155.md) |  | 
 
 ### Return type
 
@@ -34727,9 +34869,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsidDeviceTypeGroupPolicies := *openapiclient.NewInlineObject155() // InlineObject155 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsidDeviceTypeGroupPolicies := *openapiclient.NewInlineObject156() // InlineObject156 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34749,8 +34891,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -34761,7 +34903,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidDeviceTypeGroupPolicies** | [**InlineObject155**](InlineObject155.md) |  | 
+ **updateNetworkWirelessSsidDeviceTypeGroupPolicies** | [**InlineObject156**](InlineObject156.md) |  | 
 
 ### Return type
 
@@ -34783,7 +34925,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidEapOverride
 
-> InlineResponse20083 UpdateNetworkWirelessSsidEapOverride(ctx, networkId, number).UpdateNetworkWirelessSsidEapOverride(updateNetworkWirelessSsidEapOverride).Execute()
+> InlineResponse20085 UpdateNetworkWirelessSsidEapOverride(ctx, networkId, number).UpdateNetworkWirelessSsidEapOverride(updateNetworkWirelessSsidEapOverride).Execute()
 
 Update the EAP overridden parameters for an SSID.
 
@@ -34802,9 +34944,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsidEapOverride := *openapiclient.NewInlineObject156() // InlineObject156 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsidEapOverride := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34813,7 +34955,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkWirelessSsidEapOverride``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidEapOverride`: InlineResponse20083
+    // response from `UpdateNetworkWirelessSsidEapOverride`: InlineResponse20085
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkWirelessSsidEapOverride`: %v\n", resp)
 }
 ```
@@ -34824,8 +34966,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -34836,11 +34978,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidEapOverride** | [**InlineObject156**](InlineObject156.md) |  | 
+ **updateNetworkWirelessSsidEapOverride** | [**InlineObject157**](InlineObject157.md) |  | 
 
 ### Return type
 
-[**InlineResponse20083**](InlineResponse20083.md)
+[**InlineResponse20085**](InlineResponse20085.md)
 
 ### Authorization
 
@@ -34877,9 +35019,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsidFirewallL3FirewallRules := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsidFirewallL3FirewallRules := *openapiclient.NewInlineObject158() // InlineObject158 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34899,8 +35041,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -34911,7 +35053,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidFirewallL3FirewallRules** | [**InlineObject157**](InlineObject157.md) |  | 
+ **updateNetworkWirelessSsidFirewallL3FirewallRules** | [**InlineObject158**](InlineObject158.md) |  | 
 
 ### Return type
 
@@ -34952,9 +35094,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsidFirewallL7FirewallRules := *openapiclient.NewInlineObject158() // InlineObject158 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsidFirewallL7FirewallRules := *openapiclient.NewInlineObject159() // InlineObject159 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -34974,8 +35116,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -34986,7 +35128,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidFirewallL7FirewallRules** | [**InlineObject158**](InlineObject158.md) |  | 
+ **updateNetworkWirelessSsidFirewallL7FirewallRules** | [**InlineObject159**](InlineObject159.md) |  | 
 
 ### Return type
 
@@ -35027,9 +35169,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsidHotspot20 := *openapiclient.NewInlineObject159() // InlineObject159 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsidHotspot20 := *openapiclient.NewInlineObject160() // InlineObject160 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35049,8 +35191,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -35061,7 +35203,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidHotspot20** | [**InlineObject159**](InlineObject159.md) |  | 
+ **updateNetworkWirelessSsidHotspot20** | [**InlineObject160**](InlineObject160.md) |  | 
 
 ### Return type
 
@@ -35102,10 +35244,10 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    identityPskId := "identityPskId_example" // string | 
-    updateNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject161() // InlineObject161 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    identityPskId := "identityPskId_example" // string | Identity psk ID
+    updateNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject162() // InlineObject162 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35125,9 +35267,9 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
-**identityPskId** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
+**identityPskId** | **string** | Identity psk ID | 
 
 ### Other Parameters
 
@@ -35139,7 +35281,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkWirelessSsidIdentityPsk** | [**InlineObject161**](InlineObject161.md) |  | 
+ **updateNetworkWirelessSsidIdentityPsk** | [**InlineObject162**](InlineObject162.md) |  | 
 
 ### Return type
 
@@ -35180,9 +35322,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsidSchedules := *openapiclient.NewInlineObject162() // InlineObject162 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsidSchedules := *openapiclient.NewInlineObject163() // InlineObject163 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35202,8 +35344,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -35214,7 +35356,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidSchedules** | [**InlineObject162**](InlineObject162.md) |  | 
+ **updateNetworkWirelessSsidSchedules** | [**InlineObject163**](InlineObject163.md) |  | 
 
 ### Return type
 
@@ -35236,7 +35378,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidSplashSettings
 
-> InlineResponse20085 UpdateNetworkWirelessSsidSplashSettings(ctx, networkId, number).UpdateNetworkWirelessSsidSplashSettings(updateNetworkWirelessSsidSplashSettings).Execute()
+> InlineResponse20087 UpdateNetworkWirelessSsidSplashSettings(ctx, networkId, number).UpdateNetworkWirelessSsidSplashSettings(updateNetworkWirelessSsidSplashSettings).Execute()
 
 Modify the splash page settings for the given SSID
 
@@ -35255,9 +35397,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsidSplashSettings := *openapiclient.NewInlineObject163() // InlineObject163 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsidSplashSettings := *openapiclient.NewInlineObject164() // InlineObject164 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35266,7 +35408,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateNetworkWirelessSsidSplashSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidSplashSettings`: InlineResponse20085
+    // response from `UpdateNetworkWirelessSsidSplashSettings`: InlineResponse20087
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateNetworkWirelessSsidSplashSettings`: %v\n", resp)
 }
 ```
@@ -35277,8 +35419,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -35289,11 +35431,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidSplashSettings** | [**InlineObject163**](InlineObject163.md) |  | 
+ **updateNetworkWirelessSsidSplashSettings** | [**InlineObject164**](InlineObject164.md) |  | 
 
 ### Return type
 
-[**InlineResponse20085**](InlineResponse20085.md)
+[**InlineResponse20087**](InlineResponse20087.md)
 
 ### Authorization
 
@@ -35330,9 +35472,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsidTrafficShapingRules := *openapiclient.NewInlineObject164() // InlineObject164 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsidTrafficShapingRules := *openapiclient.NewInlineObject165() // InlineObject165 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35352,8 +35494,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -35364,7 +35506,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidTrafficShapingRules** | [**InlineObject164**](InlineObject164.md) |  | 
+ **updateNetworkWirelessSsidTrafficShapingRules** | [**InlineObject165**](InlineObject165.md) |  | 
 
 ### Return type
 
@@ -35405,9 +35547,9 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    number := "number_example" // string | 
-    updateNetworkWirelessSsidVpn := *openapiclient.NewInlineObject165() // InlineObject165 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    number := "number_example" // string | Number
+    updateNetworkWirelessSsidVpn := *openapiclient.NewInlineObject166() // InlineObject166 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35427,8 +35569,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
-**number** | **string** |  | 
+**networkId** | **string** | Network ID | 
+**number** | **string** | Number | 
 
 ### Other Parameters
 
@@ -35439,7 +35581,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidVpn** | [**InlineObject165**](InlineObject165.md) |  | 
+ **updateNetworkWirelessSsidVpn** | [**InlineObject166**](InlineObject166.md) |  | 
 
 ### Return type
 
@@ -35461,7 +35603,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganization
 
-> InlineResponse20087 UpdateOrganization(ctx, organizationId).UpdateOrganization(updateOrganization).Execute()
+> InlineResponse20089 UpdateOrganization(ctx, organizationId).UpdateOrganization(updateOrganization).Execute()
 
 Update an organization
 
@@ -35480,8 +35622,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganization := *openapiclient.NewInlineObject167() // InlineObject167 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganization := *openapiclient.NewInlineObject168() // InlineObject168 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35490,7 +35632,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganization``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganization`: InlineResponse20087
+    // response from `UpdateOrganization`: InlineResponse20089
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganization`: %v\n", resp)
 }
 ```
@@ -35501,7 +35643,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -35511,11 +35653,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationRequest 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganization** | [**InlineObject167**](InlineObject167.md) |  | 
+ **updateOrganization** | [**InlineObject168**](InlineObject168.md) |  | 
 
 ### Return type
 
-[**InlineResponse20087**](InlineResponse20087.md)
+[**InlineResponse20089**](InlineResponse20089.md)
 
 ### Authorization
 
@@ -35552,9 +35694,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    actionBatchId := "actionBatchId_example" // string | 
-    updateOrganizationActionBatch := *openapiclient.NewInlineObject169() // InlineObject169 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    actionBatchId := "actionBatchId_example" // string | Action batch ID
+    updateOrganizationActionBatch := *openapiclient.NewInlineObject170() // InlineObject170 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35574,8 +35716,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**actionBatchId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**actionBatchId** | **string** | Action batch ID | 
 
 ### Other Parameters
 
@@ -35586,7 +35728,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationActionBatch** | [**InlineObject169**](InlineObject169.md) |  | 
+ **updateOrganizationActionBatch** | [**InlineObject170**](InlineObject170.md) |  | 
 
 ### Return type
 
@@ -35608,7 +35750,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdaptivePolicyAcl
 
-> map[string]interface{} UpdateOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).UpdateOrganizationAdaptivePolicyAcl(updateOrganizationAdaptivePolicyAcl).Execute()
+> InlineResponse20090 UpdateOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).UpdateOrganizationAdaptivePolicyAcl(updateOrganizationAdaptivePolicyAcl).Execute()
 
 Updates an adaptive policy ACL
 
@@ -35627,9 +35769,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    aclId := "aclId_example" // string | 
-    updateOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject171() // InlineObject171 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    aclId := "aclId_example" // string | Acl ID
+    updateOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject172() // InlineObject172 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35638,7 +35780,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationAdaptivePolicyAcl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationAdaptivePolicyAcl`: map[string]interface{}
+    // response from `UpdateOrganizationAdaptivePolicyAcl`: InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationAdaptivePolicyAcl`: %v\n", resp)
 }
 ```
@@ -35649,8 +35791,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**aclId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**aclId** | **string** | Acl ID | 
 
 ### Other Parameters
 
@@ -35661,11 +35803,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyAcl** | [**InlineObject171**](InlineObject171.md) |  | 
+ **updateOrganizationAdaptivePolicyAcl** | [**InlineObject172**](InlineObject172.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -35702,9 +35844,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    id := "id_example" // string | 
-    updateOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject173() // InlineObject173 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    id := "id_example" // string | Id
+    updateOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject174() // InlineObject174 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35724,8 +35866,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**id** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**id** | **string** | Id | 
 
 ### Other Parameters
 
@@ -35736,7 +35878,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyGroup** | [**InlineObject173**](InlineObject173.md) |  | 
+ **updateOrganizationAdaptivePolicyGroup** | [**InlineObject174**](InlineObject174.md) |  | 
 
 ### Return type
 
@@ -35777,9 +35919,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    id := "id_example" // string | 
-    updateOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject175() // InlineObject175 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    id := "id_example" // string | Id
+    updateOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject176() // InlineObject176 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35799,8 +35941,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**id** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**id** | **string** | Id | 
 
 ### Other Parameters
 
@@ -35811,7 +35953,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyPolicy** | [**InlineObject175**](InlineObject175.md) |  | 
+ **updateOrganizationAdaptivePolicyPolicy** | [**InlineObject176**](InlineObject176.md) |  | 
 
 ### Return type
 
@@ -35852,8 +35994,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganizationAdaptivePolicySettings := *openapiclient.NewInlineObject176() // InlineObject176 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganizationAdaptivePolicySettings := *openapiclient.NewInlineObject177() // InlineObject177 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35873,7 +36015,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -35883,7 +36025,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationAdaptivePolicySettings** | [**InlineObject176**](InlineObject176.md) |  | 
+ **updateOrganizationAdaptivePolicySettings** | [**InlineObject177**](InlineObject177.md) |  | 
 
 ### Return type
 
@@ -35924,9 +36066,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    adminId := "adminId_example" // string | 
-    updateOrganizationAdmin := *openapiclient.NewInlineObject178() // InlineObject178 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    adminId := "adminId_example" // string | Admin ID
+    updateOrganizationAdmin := *openapiclient.NewInlineObject179() // InlineObject179 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -35946,8 +36088,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**adminId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**adminId** | **string** | Admin ID | 
 
 ### Other Parameters
 
@@ -35958,7 +36100,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdmin** | [**InlineObject178**](InlineObject178.md) |  | 
+ **updateOrganizationAdmin** | [**InlineObject179**](InlineObject179.md) |  | 
 
 ### Return type
 
@@ -35999,9 +36141,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    alertConfigId := "alertConfigId_example" // string | 
-    updateOrganizationAlertsProfile := *openapiclient.NewInlineObject180() // InlineObject180 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    alertConfigId := "alertConfigId_example" // string | Alert config ID
+    updateOrganizationAlertsProfile := *openapiclient.NewInlineObject181() // InlineObject181 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36021,8 +36163,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**alertConfigId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**alertConfigId** | **string** | Alert config ID | 
 
 ### Other Parameters
 
@@ -36033,7 +36175,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAlertsProfile** | [**InlineObject180**](InlineObject180.md) |  | 
+ **updateOrganizationAlertsProfile** | [**InlineObject181**](InlineObject181.md) |  | 
 
 ### Return type
 
@@ -36074,8 +36216,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject181([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject181 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject182([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject182 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36095,7 +36237,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -36105,7 +36247,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject181**](InlineObject181.md) |  | 
+ **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject182**](InlineObject182.md) |  | 
 
 ### Return type
 
@@ -36127,7 +36269,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse20091 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
+> InlineResponse20094 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
 
 Update the third party VPN peers for an organization
 
@@ -36146,8 +36288,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganizationApplianceVpnThirdPartyVPNPeers := *openapiclient.NewInlineObject182([]openapiclient.OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers{*openapiclient.NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers("Name_example", []string{"PrivateSubnets_example"}, "Secret_example")}) // InlineObject182 | 
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganizationApplianceVpnThirdPartyVPNPeers := *openapiclient.NewInlineObject183([]openapiclient.OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers{*openapiclient.NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers("Name_example", []string{"PrivateSubnets_example"}, "Secret_example")}) // InlineObject183 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36156,7 +36298,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20091
+    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse20094
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -36167,7 +36309,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -36177,11 +36319,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceVpnThirdPartyVPNPeers** | [**InlineObject182**](InlineObject182.md) |  | 
+ **updateOrganizationApplianceVpnThirdPartyVPNPeers** | [**InlineObject183**](InlineObject183.md) |  | 
 
 ### Return type
 
-[**InlineResponse20091**](InlineResponse20091.md)
+[**InlineResponse20094**](InlineResponse20094.md)
 
 ### Authorization
 
@@ -36199,7 +36341,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnVpnFirewallRules
 
-> map[string]interface{} UpdateOrganizationApplianceVpnVpnFirewallRules(ctx, organizationId).UpdateOrganizationApplianceVpnVpnFirewallRules(updateOrganizationApplianceVpnVpnFirewallRules).Execute()
+> InlineResponse20095 UpdateOrganizationApplianceVpnVpnFirewallRules(ctx, organizationId).UpdateOrganizationApplianceVpnVpnFirewallRules(updateOrganizationApplianceVpnVpnFirewallRules).Execute()
 
 Update the firewall rules of an organization's site-to-site VPN
 
@@ -36218,8 +36360,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganizationApplianceVpnVpnFirewallRules := *openapiclient.NewInlineObject183() // InlineObject183 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganizationApplianceVpnVpnFirewallRules := *openapiclient.NewInlineObject184() // InlineObject184 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36228,7 +36370,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationApplianceVpnVpnFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnVpnFirewallRules`: map[string]interface{}
+    // response from `UpdateOrganizationApplianceVpnVpnFirewallRules`: InlineResponse20095
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationApplianceVpnVpnFirewallRules`: %v\n", resp)
 }
 ```
@@ -36239,7 +36381,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -36249,11 +36391,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceVpnVpnFirewallRules** | [**InlineObject183**](InlineObject183.md) |  | 
+ **updateOrganizationApplianceVpnVpnFirewallRules** | [**InlineObject184**](InlineObject184.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20095**](InlineResponse20095.md)
 
 ### Authorization
 
@@ -36271,7 +36413,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationBrandingPoliciesPriorities
 
-> InlineResponse20093 UpdateOrganizationBrandingPoliciesPriorities(ctx, organizationId).UpdateOrganizationBrandingPoliciesPriorities(updateOrganizationBrandingPoliciesPriorities).Execute()
+> InlineResponse20097 UpdateOrganizationBrandingPoliciesPriorities(ctx, organizationId).UpdateOrganizationBrandingPoliciesPriorities(updateOrganizationBrandingPoliciesPriorities).Execute()
 
 Update the priority ordering of an organization's branding policies.
 
@@ -36290,8 +36432,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganizationBrandingPoliciesPriorities := *openapiclient.NewInlineObject185() // InlineObject185 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganizationBrandingPoliciesPriorities := *openapiclient.NewInlineObject186() // InlineObject186 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36300,7 +36442,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationBrandingPoliciesPriorities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationBrandingPoliciesPriorities`: InlineResponse20093
+    // response from `UpdateOrganizationBrandingPoliciesPriorities`: InlineResponse20097
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationBrandingPoliciesPriorities`: %v\n", resp)
 }
 ```
@@ -36311,7 +36453,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -36321,11 +36463,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationBranding
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationBrandingPoliciesPriorities** | [**InlineObject185**](InlineObject185.md) |  | 
+ **updateOrganizationBrandingPoliciesPriorities** | [**InlineObject186**](InlineObject186.md) |  | 
 
 ### Return type
 
-[**InlineResponse20093**](InlineResponse20093.md)
+[**InlineResponse20097**](InlineResponse20097.md)
 
 ### Authorization
 
@@ -36343,7 +36485,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationBrandingPolicy
 
-> InlineResponse20092 UpdateOrganizationBrandingPolicy(ctx, organizationId, brandingPolicyId).UpdateOrganizationBrandingPolicy(updateOrganizationBrandingPolicy).Execute()
+> InlineResponse20096 UpdateOrganizationBrandingPolicy(ctx, organizationId, brandingPolicyId).UpdateOrganizationBrandingPolicy(updateOrganizationBrandingPolicy).Execute()
 
 Update a branding policy
 
@@ -36362,9 +36504,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    brandingPolicyId := "brandingPolicyId_example" // string | 
-    updateOrganizationBrandingPolicy := *openapiclient.NewInlineObject186() // InlineObject186 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    brandingPolicyId := "brandingPolicyId_example" // string | Branding policy ID
+    updateOrganizationBrandingPolicy := *openapiclient.NewInlineObject187() // InlineObject187 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36373,7 +36515,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationBrandingPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationBrandingPolicy`: InlineResponse20092
+    // response from `UpdateOrganizationBrandingPolicy`: InlineResponse20096
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationBrandingPolicy`: %v\n", resp)
 }
 ```
@@ -36384,8 +36526,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**brandingPolicyId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**brandingPolicyId** | **string** | Branding policy ID | 
 
 ### Other Parameters
 
@@ -36396,11 +36538,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationBrandingPolicy** | [**InlineObject186**](InlineObject186.md) |  | 
+ **updateOrganizationBrandingPolicy** | [**InlineObject187**](InlineObject187.md) |  | 
 
 ### Return type
 
-[**InlineResponse20092**](InlineResponse20092.md)
+[**InlineResponse20096**](InlineResponse20096.md)
 
 ### Authorization
 
@@ -36437,8 +36579,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject188() // InlineObject188 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject189() // InlineObject189 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36458,7 +36600,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -36468,7 +36610,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationCameraOn
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationCameraOnboardingStatuses** | [**InlineObject188**](InlineObject188.md) |  | 
+ **updateOrganizationCameraOnboardingStatuses** | [**InlineObject189**](InlineObject189.md) |  | 
 
 ### Return type
 
@@ -36509,9 +36651,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    configTemplateId := "configTemplateId_example" // string | 
-    updateOrganizationConfigTemplate := *openapiclient.NewInlineObject192() // InlineObject192 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    configTemplateId := "configTemplateId_example" // string | Config template ID
+    updateOrganizationConfigTemplate := *openapiclient.NewInlineObject193() // InlineObject193 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36531,8 +36673,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**configTemplateId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**configTemplateId** | **string** | Config template ID | 
 
 ### Other Parameters
 
@@ -36543,7 +36685,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationConfigTemplate** | [**InlineObject192**](InlineObject192.md) |  | 
+ **updateOrganizationConfigTemplate** | [**InlineObject193**](InlineObject193.md) |  | 
 
 ### Return type
 
@@ -36565,7 +36707,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse20098 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
+> InlineResponse200102 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
 
 Update a switch profile port
 
@@ -36584,11 +36726,11 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    configTemplateId := "configTemplateId_example" // string | 
-    profileId := "profileId_example" // string | 
-    portId := "portId_example" // string | 
-    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject193() // InlineObject193 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    configTemplateId := "configTemplateId_example" // string | Config template ID
+    profileId := "profileId_example" // string | Profile ID
+    portId := "portId_example" // string | Port ID
+    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject194() // InlineObject194 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36597,7 +36739,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse20098
+    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200102
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -36608,10 +36750,10 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**configTemplateId** | **string** |  | 
-**profileId** | **string** |  | 
-**portId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**configTemplateId** | **string** | Config template ID | 
+**profileId** | **string** | Profile ID | 
+**portId** | **string** | Port ID | 
 
 ### Other Parameters
 
@@ -36624,11 +36766,11 @@ Name | Type | Description  | Notes
 
 
 
- **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject193**](InlineObject193.md) |  | 
+ **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject194**](InlineObject194.md) |  | 
 
 ### Return type
 
-[**InlineResponse20098**](InlineResponse20098.md)
+[**InlineResponse200102**](InlineResponse200102.md)
 
 ### Authorization
 
@@ -36665,9 +36807,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    optInId := "optInId_example" // string | 
-    updateOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject195() // InlineObject195 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    optInId := "optInId_example" // string | Opt in ID
+    updateOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject196() // InlineObject196 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36687,8 +36829,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**optInId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**optInId** | **string** | Opt in ID | 
 
 ### Other Parameters
 
@@ -36699,7 +36841,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject195**](InlineObject195.md) |  | 
+ **updateOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject196**](InlineObject196.md) |  | 
 
 ### Return type
 
@@ -36740,9 +36882,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    monitoredMediaServerId := "monitoredMediaServerId_example" // string | 
-    updateOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject197() // InlineObject197 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    monitoredMediaServerId := "monitoredMediaServerId_example" // string | Monitored media server ID
+    updateOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject198() // InlineObject198 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36762,8 +36904,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**monitoredMediaServerId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**monitoredMediaServerId** | **string** | Monitored media server ID | 
 
 ### Other Parameters
 
@@ -36774,7 +36916,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationInsightMonitoredMediaServer** | [**InlineObject197**](InlineObject197.md) |  | 
+ **updateOrganizationInsightMonitoredMediaServer** | [**InlineObject198**](InlineObject198.md) |  | 
 
 ### Return type
 
@@ -36796,7 +36938,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationLicense
 
-> InlineResponse200112 UpdateOrganizationLicense(ctx, organizationId, licenseId).UpdateOrganizationLicense(updateOrganizationLicense).Execute()
+> InlineResponse200118 UpdateOrganizationLicense(ctx, organizationId, licenseId).UpdateOrganizationLicense(updateOrganizationLicense).Execute()
 
 Update a license
 
@@ -36815,9 +36957,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    licenseId := "licenseId_example" // string | 
-    updateOrganizationLicense := *openapiclient.NewInlineObject207() // InlineObject207 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    licenseId := "licenseId_example" // string | License ID
+    updateOrganizationLicense := *openapiclient.NewInlineObject208() // InlineObject208 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36826,7 +36968,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationLicense``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationLicense`: InlineResponse200112
+    // response from `UpdateOrganizationLicense`: InlineResponse200118
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationLicense`: %v\n", resp)
 }
 ```
@@ -36837,8 +36979,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**licenseId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**licenseId** | **string** | License ID | 
 
 ### Other Parameters
 
@@ -36849,11 +36991,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationLicense** | [**InlineObject207**](InlineObject207.md) |  | 
+ **updateOrganizationLicense** | [**InlineObject208**](InlineObject208.md) |  | 
 
 ### Return type
 
-[**InlineResponse200112**](InlineResponse200112.md)
+[**InlineResponse200118**](InlineResponse200118.md)
 
 ### Authorization
 
@@ -36871,7 +37013,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationLoginSecurity
 
-> InlineResponse200118 UpdateOrganizationLoginSecurity(ctx, organizationId).UpdateOrganizationLoginSecurity(updateOrganizationLoginSecurity).Execute()
+> InlineResponse200124 UpdateOrganizationLoginSecurity(ctx, organizationId).UpdateOrganizationLoginSecurity(updateOrganizationLoginSecurity).Execute()
 
 Update the login security settings for an organization
 
@@ -36890,8 +37032,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganizationLoginSecurity := *openapiclient.NewInlineObject209() // InlineObject209 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganizationLoginSecurity := *openapiclient.NewInlineObject210() // InlineObject210 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36900,7 +37042,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationLoginSecurity``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationLoginSecurity`: InlineResponse200118
+    // response from `UpdateOrganizationLoginSecurity`: InlineResponse200124
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationLoginSecurity`: %v\n", resp)
 }
 ```
@@ -36911,7 +37053,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -36921,11 +37063,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationLoginSec
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationLoginSecurity** | [**InlineObject209**](InlineObject209.md) |  | 
+ **updateOrganizationLoginSecurity** | [**InlineObject210**](InlineObject210.md) |  | 
 
 ### Return type
 
-[**InlineResponse200118**](InlineResponse200118.md)
+[**InlineResponse200124**](InlineResponse200124.md)
 
 ### Authorization
 
@@ -36962,9 +37104,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    policyObjectId := "policyObjectId_example" // string | 
-    updateOrganizationPolicyObject := *openapiclient.NewInlineObject215() // InlineObject215 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    policyObjectId := "policyObjectId_example" // string | Policy object ID
+    updateOrganizationPolicyObject := *openapiclient.NewInlineObject216() // InlineObject216 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -36984,8 +37126,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**policyObjectId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**policyObjectId** | **string** | Policy object ID | 
 
 ### Other Parameters
 
@@ -36996,7 +37138,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPolicyObject** | [**InlineObject215**](InlineObject215.md) |  | 
+ **updateOrganizationPolicyObject** | [**InlineObject216**](InlineObject216.md) |  | 
 
 ### Return type
 
@@ -37037,9 +37179,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    policyObjectGroupId := "policyObjectGroupId_example" // string | 
-    updateOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject214() // InlineObject214 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    policyObjectGroupId := "policyObjectGroupId_example" // string | Policy object group ID
+    updateOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject215() // InlineObject215 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -37059,8 +37201,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**policyObjectGroupId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**policyObjectGroupId** | **string** | Policy object group ID | 
 
 ### Other Parameters
 
@@ -37071,7 +37213,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPolicyObjectsGroup** | [**InlineObject214**](InlineObject214.md) |  | 
+ **updateOrganizationPolicyObjectsGroup** | [**InlineObject215**](InlineObject215.md) |  | 
 
 ### Return type
 
@@ -37093,7 +37235,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSaml
 
-> InlineResponse200120 UpdateOrganizationSaml(ctx, organizationId).UpdateOrganizationSaml(updateOrganizationSaml).Execute()
+> InlineResponse200126 UpdateOrganizationSaml(ctx, organizationId).UpdateOrganizationSaml(updateOrganizationSaml).Execute()
 
 Updates the SAML SSO enabled settings for an organization.
 
@@ -37112,8 +37254,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganizationSaml := *openapiclient.NewInlineObject216() // InlineObject216 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganizationSaml := *openapiclient.NewInlineObject217() // InlineObject217 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -37122,7 +37264,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationSaml``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSaml`: InlineResponse200120
+    // response from `UpdateOrganizationSaml`: InlineResponse200126
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationSaml`: %v\n", resp)
 }
 ```
@@ -37133,7 +37275,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -37143,11 +37285,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSamlRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSaml** | [**InlineObject216**](InlineObject216.md) |  | 
+ **updateOrganizationSaml** | [**InlineObject217**](InlineObject217.md) |  | 
 
 ### Return type
 
-[**InlineResponse200120**](InlineResponse200120.md)
+[**InlineResponse200126**](InlineResponse200126.md)
 
 ### Authorization
 
@@ -37165,7 +37307,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSamlIdp
 
-> []InlineResponse200121 UpdateOrganizationSamlIdp(ctx, organizationId, idpId).UpdateOrganizationSamlIdp(updateOrganizationSamlIdp).Execute()
+> []InlineResponse200127 UpdateOrganizationSamlIdp(ctx, organizationId, idpId).UpdateOrganizationSamlIdp(updateOrganizationSamlIdp).Execute()
 
 Update a SAML IdP in your organization
 
@@ -37184,9 +37326,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    idpId := "idpId_example" // string | 
-    updateOrganizationSamlIdp := *openapiclient.NewInlineObject218() // InlineObject218 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    idpId := "idpId_example" // string | Idp ID
+    updateOrganizationSamlIdp := *openapiclient.NewInlineObject219() // InlineObject219 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -37195,7 +37337,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationSamlIdp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSamlIdp`: []InlineResponse200121
+    // response from `UpdateOrganizationSamlIdp`: []InlineResponse200127
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationSamlIdp`: %v\n", resp)
 }
 ```
@@ -37206,8 +37348,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**idpId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**idpId** | **string** | Idp ID | 
 
 ### Other Parameters
 
@@ -37218,11 +37360,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationSamlIdp** | [**InlineObject218**](InlineObject218.md) |  | 
+ **updateOrganizationSamlIdp** | [**InlineObject219**](InlineObject219.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse200121**](InlineResponse200121.md)
+[**[]InlineResponse200127**](InlineResponse200127.md)
 
 ### Authorization
 
@@ -37240,7 +37382,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSamlRole
 
-> InlineResponse200122 UpdateOrganizationSamlRole(ctx, organizationId, samlRoleId).UpdateOrganizationSamlRole(updateOrganizationSamlRole).Execute()
+> InlineResponse200128 UpdateOrganizationSamlRole(ctx, organizationId, samlRoleId).UpdateOrganizationSamlRole(updateOrganizationSamlRole).Execute()
 
 Update a SAML role
 
@@ -37259,9 +37401,9 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    samlRoleId := "samlRoleId_example" // string | 
-    updateOrganizationSamlRole := *openapiclient.NewInlineObject220() // InlineObject220 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    samlRoleId := "samlRoleId_example" // string | Saml role ID
+    updateOrganizationSamlRole := *openapiclient.NewInlineObject221() // InlineObject221 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -37270,7 +37412,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.UpdateOrganizationSamlRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSamlRole`: InlineResponse200122
+    // response from `UpdateOrganizationSamlRole`: InlineResponse200128
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.UpdateOrganizationSamlRole`: %v\n", resp)
 }
 ```
@@ -37281,8 +37423,8 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
-**samlRoleId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
+**samlRoleId** | **string** | Saml role ID | 
 
 ### Other Parameters
 
@@ -37293,11 +37435,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationSamlRole** | [**InlineObject220**](InlineObject220.md) |  | 
+ **updateOrganizationSamlRole** | [**InlineObject221**](InlineObject221.md) |  | 
 
 ### Return type
 
-[**InlineResponse200122**](InlineResponse200122.md)
+[**InlineResponse200128**](InlineResponse200128.md)
 
 ### Authorization
 
@@ -37334,8 +37476,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganizationSnmp := *openapiclient.NewInlineObject221() // InlineObject221 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganizationSnmp := *openapiclient.NewInlineObject222() // InlineObject222 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -37355,7 +37497,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -37365,7 +37507,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSnmpRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSnmp** | [**InlineObject221**](InlineObject221.md) |  | 
+ **updateOrganizationSnmp** | [**InlineObject222**](InlineObject222.md) |  | 
 
 ### Return type
 
@@ -37406,7 +37548,7 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
+    networkId := "networkId_example" // string | Network ID
     vmxNetworkDevicesClaim := *openapiclient.NewInlineObject75("Size_example") // InlineObject75 | 
 
     configuration := openapiclient.NewConfiguration()
@@ -37427,7 +37569,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -37459,7 +37601,7 @@ Name | Type | Description  | Notes
 
 ## WipeNetworkSmDevices
 
-> InlineResponse20045 WipeNetworkSmDevices(ctx, networkId).WipeNetworkSmDevices(wipeNetworkSmDevices).Execute()
+> InlineResponse20047 WipeNetworkSmDevices(ctx, networkId).WipeNetworkSmDevices(wipeNetworkSmDevices).Execute()
 
 Wipe a device
 
@@ -37478,8 +37620,8 @@ import (
 )
 
 func main() {
-    networkId := "networkId_example" // string | 
-    wipeNetworkSmDevices := *openapiclient.NewInlineObject104() // InlineObject104 |  (optional)
+    networkId := "networkId_example" // string | Network ID
+    wipeNetworkSmDevices := *openapiclient.NewInlineObject105() // InlineObject105 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -37488,7 +37630,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigureApi.WipeNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `WipeNetworkSmDevices`: InlineResponse20045
+    // response from `WipeNetworkSmDevices`: InlineResponse20047
     fmt.Fprintf(os.Stdout, "Response from `ConfigureApi.WipeNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -37499,7 +37641,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**networkId** | **string** |  | 
+**networkId** | **string** | Network ID | 
 
 ### Other Parameters
 
@@ -37509,11 +37651,11 @@ Other parameters are passed through a pointer to a apiWipeNetworkSmDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **wipeNetworkSmDevices** | [**InlineObject104**](InlineObject104.md) |  | 
+ **wipeNetworkSmDevices** | [**InlineObject105**](InlineObject105.md) |  | 
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 

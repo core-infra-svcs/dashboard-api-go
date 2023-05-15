@@ -4,18 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StaticRouteId** | Pointer to **string** | The identifier of a layer 3 static route | [optional] 
-**Name** | Pointer to **string** | The name or description of the layer 3 static route | [optional] 
-**Subnet** | **string** | The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24) | 
-**NextHopIp** | **string** |  The IP address of the router to which traffic for this destination network should be sent | 
-**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static routes via OSPF | [optional] 
-**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static routes over OSPF routes | [optional] 
+**InterfaceId** | Pointer to **string** | The id | [optional] 
+**Name** | Pointer to **string** | The name | [optional] 
+**Subnet** | Pointer to **string** | IPv4 subnet | [optional] 
+**InterfaceIp** | Pointer to **string** | IPv4 address | [optional] 
+**MulticastRouting** | Pointer to **string** | Multicast routing status | [optional] 
+**VlanId** | Pointer to **int32** | VLAN id | [optional] 
+**DefaultGateway** | Pointer to **string** | IPv4 default gateway | [optional] 
+**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings**](DevicesSerialSwitchRoutingInterfacesOspfSettings.md) |  | [optional] 
+**OspfV3** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfV3**](DevicesSerialSwitchRoutingInterfacesOspfV3.md) |  | [optional] 
+**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv6**](DevicesSerialSwitchRoutingInterfacesIpv6.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse2007
 
-`func NewInlineResponse2007(subnet string, nextHopIp string, ) *InlineResponse2007`
+`func NewInlineResponse2007() *InlineResponse2007`
 
 NewInlineResponse2007 instantiates a new InlineResponse2007 object
 This constructor will assign default values to properties that have it defined,
@@ -30,30 +34,30 @@ NewInlineResponse2007WithDefaults instantiates a new InlineResponse2007 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStaticRouteId
+### GetInterfaceId
 
-`func (o *InlineResponse2007) GetStaticRouteId() string`
+`func (o *InlineResponse2007) GetInterfaceId() string`
 
-GetStaticRouteId returns the StaticRouteId field if non-nil, zero value otherwise.
+GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
 
-### GetStaticRouteIdOk
+### GetInterfaceIdOk
 
-`func (o *InlineResponse2007) GetStaticRouteIdOk() (*string, bool)`
+`func (o *InlineResponse2007) GetInterfaceIdOk() (*string, bool)`
 
-GetStaticRouteIdOk returns a tuple with the StaticRouteId field if it's non-nil, zero value otherwise
+GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStaticRouteId
+### SetInterfaceId
 
-`func (o *InlineResponse2007) SetStaticRouteId(v string)`
+`func (o *InlineResponse2007) SetInterfaceId(v string)`
 
-SetStaticRouteId sets StaticRouteId field to given value.
+SetInterfaceId sets InterfaceId field to given value.
 
-### HasStaticRouteId
+### HasInterfaceId
 
-`func (o *InlineResponse2007) HasStaticRouteId() bool`
+`func (o *InlineResponse2007) HasInterfaceId() bool`
 
-HasStaticRouteId returns a boolean if a field has been set.
+HasInterfaceId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -99,76 +103,186 @@ and a boolean to check if the value has been set.
 
 SetSubnet sets Subnet field to given value.
 
+### HasSubnet
 
-### GetNextHopIp
+`func (o *InlineResponse2007) HasSubnet() bool`
 
-`func (o *InlineResponse2007) GetNextHopIp() string`
+HasSubnet returns a boolean if a field has been set.
 
-GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
+### GetInterfaceIp
 
-### GetNextHopIpOk
+`func (o *InlineResponse2007) GetInterfaceIp() string`
 
-`func (o *InlineResponse2007) GetNextHopIpOk() (*string, bool)`
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
+### GetInterfaceIpOk
+
+`func (o *InlineResponse2007) GetInterfaceIpOk() (*string, bool)`
+
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNextHopIp
+### SetInterfaceIp
 
-`func (o *InlineResponse2007) SetNextHopIp(v string)`
+`func (o *InlineResponse2007) SetInterfaceIp(v string)`
 
-SetNextHopIp sets NextHopIp field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
+### HasInterfaceIp
 
-### GetAdvertiseViaOspfEnabled
+`func (o *InlineResponse2007) HasInterfaceIp() bool`
 
-`func (o *InlineResponse2007) GetAdvertiseViaOspfEnabled() bool`
+HasInterfaceIp returns a boolean if a field has been set.
 
-GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
+### GetMulticastRouting
 
-### GetAdvertiseViaOspfEnabledOk
+`func (o *InlineResponse2007) GetMulticastRouting() string`
 
-`func (o *InlineResponse2007) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
+GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
 
-GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
+### GetMulticastRoutingOk
+
+`func (o *InlineResponse2007) GetMulticastRoutingOk() (*string, bool)`
+
+GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertiseViaOspfEnabled
+### SetMulticastRouting
 
-`func (o *InlineResponse2007) SetAdvertiseViaOspfEnabled(v bool)`
+`func (o *InlineResponse2007) SetMulticastRouting(v string)`
 
-SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
+SetMulticastRouting sets MulticastRouting field to given value.
 
-### HasAdvertiseViaOspfEnabled
+### HasMulticastRouting
 
-`func (o *InlineResponse2007) HasAdvertiseViaOspfEnabled() bool`
+`func (o *InlineResponse2007) HasMulticastRouting() bool`
 
-HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+HasMulticastRouting returns a boolean if a field has been set.
 
-### GetPreferOverOspfRoutesEnabled
+### GetVlanId
 
-`func (o *InlineResponse2007) GetPreferOverOspfRoutesEnabled() bool`
+`func (o *InlineResponse2007) GetVlanId() int32`
 
-GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetPreferOverOspfRoutesEnabledOk
+### GetVlanIdOk
 
-`func (o *InlineResponse2007) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+`func (o *InlineResponse2007) GetVlanIdOk() (*int32, bool)`
 
-GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPreferOverOspfRoutesEnabled
+### SetVlanId
 
-`func (o *InlineResponse2007) SetPreferOverOspfRoutesEnabled(v bool)`
+`func (o *InlineResponse2007) SetVlanId(v int32)`
 
-SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasPreferOverOspfRoutesEnabled
+### HasVlanId
 
-`func (o *InlineResponse2007) HasPreferOverOspfRoutesEnabled() bool`
+`func (o *InlineResponse2007) HasVlanId() bool`
 
-HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
+
+### GetDefaultGateway
+
+`func (o *InlineResponse2007) GetDefaultGateway() string`
+
+GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
+
+### GetDefaultGatewayOk
+
+`func (o *InlineResponse2007) GetDefaultGatewayOk() (*string, bool)`
+
+GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaultGateway
+
+`func (o *InlineResponse2007) SetDefaultGateway(v string)`
+
+SetDefaultGateway sets DefaultGateway field to given value.
+
+### HasDefaultGateway
+
+`func (o *InlineResponse2007) HasDefaultGateway() bool`
+
+HasDefaultGateway returns a boolean if a field has been set.
+
+### GetOspfSettings
+
+`func (o *InlineResponse2007) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings`
+
+GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
+
+### GetOspfSettingsOk
+
+`func (o *InlineResponse2007) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings, bool)`
+
+GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfSettings
+
+`func (o *InlineResponse2007) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings)`
+
+SetOspfSettings sets OspfSettings field to given value.
+
+### HasOspfSettings
+
+`func (o *InlineResponse2007) HasOspfSettings() bool`
+
+HasOspfSettings returns a boolean if a field has been set.
+
+### GetOspfV3
+
+`func (o *InlineResponse2007) GetOspfV3() DevicesSerialSwitchRoutingInterfacesOspfV3`
+
+GetOspfV3 returns the OspfV3 field if non-nil, zero value otherwise.
+
+### GetOspfV3Ok
+
+`func (o *InlineResponse2007) GetOspfV3Ok() (*DevicesSerialSwitchRoutingInterfacesOspfV3, bool)`
+
+GetOspfV3Ok returns a tuple with the OspfV3 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfV3
+
+`func (o *InlineResponse2007) SetOspfV3(v DevicesSerialSwitchRoutingInterfacesOspfV3)`
+
+SetOspfV3 sets OspfV3 field to given value.
+
+### HasOspfV3
+
+`func (o *InlineResponse2007) HasOspfV3() bool`
+
+HasOspfV3 returns a boolean if a field has been set.
+
+### GetIpv6
+
+`func (o *InlineResponse2007) GetIpv6() DevicesSerialSwitchRoutingInterfacesIpv6`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineResponse2007) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesIpv6, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineResponse2007) SetIpv6(v DevicesSerialSwitchRoutingInterfacesIpv6)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineResponse2007) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

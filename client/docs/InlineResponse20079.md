@@ -4,13 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SsidNumber** | Pointer to **int32** | SSID Number | [optional] 
-**Vlan** | Pointer to **int32** | LAN | [optional] 
-**ClientMac** | Pointer to **string** | Client Mac | [optional] 
-**Serial** | Pointer to **string** | Serial Number | [optional] 
-**FailureStep** | Pointer to **string** | The failed onboarding step. One of: assoc, auth, dhcp, dns. | [optional] 
-**Type** | Pointer to **string** | The failure type in the onboarding step | [optional] 
-**Ts** | Pointer to **time.Time** | The timestamp when the client mac failed | [optional] 
+**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
+**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
+**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
+**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
+**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
 
 ## Methods
 
@@ -31,180 +29,130 @@ NewInlineResponse20079WithDefaults instantiates a new InlineResponse20079 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsidNumber
+### GetAssoc
 
-`func (o *InlineResponse20079) GetSsidNumber() int32`
+`func (o *InlineResponse20079) GetAssoc() int32`
 
-GetSsidNumber returns the SsidNumber field if non-nil, zero value otherwise.
+GetAssoc returns the Assoc field if non-nil, zero value otherwise.
 
-### GetSsidNumberOk
+### GetAssocOk
 
-`func (o *InlineResponse20079) GetSsidNumberOk() (*int32, bool)`
+`func (o *InlineResponse20079) GetAssocOk() (*int32, bool)`
 
-GetSsidNumberOk returns a tuple with the SsidNumber field if it's non-nil, zero value otherwise
+GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsidNumber
+### SetAssoc
 
-`func (o *InlineResponse20079) SetSsidNumber(v int32)`
+`func (o *InlineResponse20079) SetAssoc(v int32)`
 
-SetSsidNumber sets SsidNumber field to given value.
+SetAssoc sets Assoc field to given value.
 
-### HasSsidNumber
+### HasAssoc
 
-`func (o *InlineResponse20079) HasSsidNumber() bool`
+`func (o *InlineResponse20079) HasAssoc() bool`
 
-HasSsidNumber returns a boolean if a field has been set.
+HasAssoc returns a boolean if a field has been set.
 
-### GetVlan
+### GetAuth
 
-`func (o *InlineResponse20079) GetVlan() int32`
+`func (o *InlineResponse20079) GetAuth() int32`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetAuth returns the Auth field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetAuthOk
 
-`func (o *InlineResponse20079) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse20079) GetAuthOk() (*int32, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetAuth
 
-`func (o *InlineResponse20079) SetVlan(v int32)`
+`func (o *InlineResponse20079) SetAuth(v int32)`
 
-SetVlan sets Vlan field to given value.
+SetAuth sets Auth field to given value.
 
-### HasVlan
+### HasAuth
 
-`func (o *InlineResponse20079) HasVlan() bool`
+`func (o *InlineResponse20079) HasAuth() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasAuth returns a boolean if a field has been set.
 
-### GetClientMac
+### GetDhcp
 
-`func (o *InlineResponse20079) GetClientMac() string`
+`func (o *InlineResponse20079) GetDhcp() int32`
 
-GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
+GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
 
-### GetClientMacOk
+### GetDhcpOk
 
-`func (o *InlineResponse20079) GetClientMacOk() (*string, bool)`
+`func (o *InlineResponse20079) GetDhcpOk() (*int32, bool)`
 
-GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
+GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientMac
+### SetDhcp
 
-`func (o *InlineResponse20079) SetClientMac(v string)`
+`func (o *InlineResponse20079) SetDhcp(v int32)`
 
-SetClientMac sets ClientMac field to given value.
+SetDhcp sets Dhcp field to given value.
 
-### HasClientMac
+### HasDhcp
 
-`func (o *InlineResponse20079) HasClientMac() bool`
+`func (o *InlineResponse20079) HasDhcp() bool`
 
-HasClientMac returns a boolean if a field has been set.
+HasDhcp returns a boolean if a field has been set.
 
-### GetSerial
+### GetDns
 
-`func (o *InlineResponse20079) GetSerial() string`
+`func (o *InlineResponse20079) GetDns() int32`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetDns returns the Dns field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetDnsOk
 
-`func (o *InlineResponse20079) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20079) GetDnsOk() (*int32, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetDns
 
-`func (o *InlineResponse20079) SetSerial(v string)`
+`func (o *InlineResponse20079) SetDns(v int32)`
 
-SetSerial sets Serial field to given value.
+SetDns sets Dns field to given value.
 
-### HasSerial
+### HasDns
 
-`func (o *InlineResponse20079) HasSerial() bool`
+`func (o *InlineResponse20079) HasDns() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasDns returns a boolean if a field has been set.
 
-### GetFailureStep
+### GetSuccess
 
-`func (o *InlineResponse20079) GetFailureStep() string`
+`func (o *InlineResponse20079) GetSuccess() int32`
 
-GetFailureStep returns the FailureStep field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetFailureStepOk
+### GetSuccessOk
 
-`func (o *InlineResponse20079) GetFailureStepOk() (*string, bool)`
+`func (o *InlineResponse20079) GetSuccessOk() (*int32, bool)`
 
-GetFailureStepOk returns a tuple with the FailureStep field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailureStep
+### SetSuccess
 
-`func (o *InlineResponse20079) SetFailureStep(v string)`
+`func (o *InlineResponse20079) SetSuccess(v int32)`
 
-SetFailureStep sets FailureStep field to given value.
+SetSuccess sets Success field to given value.
 
-### HasFailureStep
+### HasSuccess
 
-`func (o *InlineResponse20079) HasFailureStep() bool`
+`func (o *InlineResponse20079) HasSuccess() bool`
 
-HasFailureStep returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse20079) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse20079) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse20079) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse20079) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse20079) GetTs() time.Time`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse20079) GetTsOk() (*time.Time, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse20079) SetTs(v time.Time)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse20079) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Action** | Pointer to **string** | The type of command sent to the device. | [optional] 
-**Name** | Pointer to **string** | The name of the device to which the command is sent. | [optional] 
-**Details** | Pointer to **string** | A JSON string object containing command details. | [optional] 
-**DashboardUser** | Pointer to **string** | The Meraki dashboard user who initiated the command. | [optional] 
-**Ts** | Pointer to **string** | The time the command was sent to the device. | [optional] 
+**FirstSeenAt** | Pointer to **string** | When the device was first seen as connected to the internet in each connection. | [optional] 
+**LastSeenAt** | Pointer to **string** | When the device was last seen as connected to the internet in each connection. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse20050WithDefaults instantiates a new InlineResponse20050 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAction
+### GetFirstSeenAt
 
-`func (o *InlineResponse20050) GetAction() string`
+`func (o *InlineResponse20050) GetFirstSeenAt() string`
 
-GetAction returns the Action field if non-nil, zero value otherwise.
+GetFirstSeenAt returns the FirstSeenAt field if non-nil, zero value otherwise.
 
-### GetActionOk
+### GetFirstSeenAtOk
 
-`func (o *InlineResponse20050) GetActionOk() (*string, bool)`
+`func (o *InlineResponse20050) GetFirstSeenAtOk() (*string, bool)`
 
-GetActionOk returns a tuple with the Action field if it's non-nil, zero value otherwise
+GetFirstSeenAtOk returns a tuple with the FirstSeenAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAction
+### SetFirstSeenAt
 
-`func (o *InlineResponse20050) SetAction(v string)`
+`func (o *InlineResponse20050) SetFirstSeenAt(v string)`
 
-SetAction sets Action field to given value.
+SetFirstSeenAt sets FirstSeenAt field to given value.
 
-### HasAction
+### HasFirstSeenAt
 
-`func (o *InlineResponse20050) HasAction() bool`
+`func (o *InlineResponse20050) HasFirstSeenAt() bool`
 
-HasAction returns a boolean if a field has been set.
+HasFirstSeenAt returns a boolean if a field has been set.
 
-### GetName
+### GetLastSeenAt
 
-`func (o *InlineResponse20050) GetName() string`
+`func (o *InlineResponse20050) GetLastSeenAt() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLastSeenAt returns the LastSeenAt field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLastSeenAtOk
 
-`func (o *InlineResponse20050) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20050) GetLastSeenAtOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLastSeenAtOk returns a tuple with the LastSeenAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLastSeenAt
 
-`func (o *InlineResponse20050) SetName(v string)`
+`func (o *InlineResponse20050) SetLastSeenAt(v string)`
 
-SetName sets Name field to given value.
+SetLastSeenAt sets LastSeenAt field to given value.
 
-### HasName
+### HasLastSeenAt
 
-`func (o *InlineResponse20050) HasName() bool`
+`func (o *InlineResponse20050) HasLastSeenAt() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetDetails
-
-`func (o *InlineResponse20050) GetDetails() string`
-
-GetDetails returns the Details field if non-nil, zero value otherwise.
-
-### GetDetailsOk
-
-`func (o *InlineResponse20050) GetDetailsOk() (*string, bool)`
-
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetails
-
-`func (o *InlineResponse20050) SetDetails(v string)`
-
-SetDetails sets Details field to given value.
-
-### HasDetails
-
-`func (o *InlineResponse20050) HasDetails() bool`
-
-HasDetails returns a boolean if a field has been set.
-
-### GetDashboardUser
-
-`func (o *InlineResponse20050) GetDashboardUser() string`
-
-GetDashboardUser returns the DashboardUser field if non-nil, zero value otherwise.
-
-### GetDashboardUserOk
-
-`func (o *InlineResponse20050) GetDashboardUserOk() (*string, bool)`
-
-GetDashboardUserOk returns a tuple with the DashboardUser field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDashboardUser
-
-`func (o *InlineResponse20050) SetDashboardUser(v string)`
-
-SetDashboardUser sets DashboardUser field to given value.
-
-### HasDashboardUser
-
-`func (o *InlineResponse20050) HasDashboardUser() bool`
-
-HasDashboardUser returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse20050) GetTs() string`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse20050) GetTsOk() (*string, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse20050) SetTs(v string)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse20050) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasLastSeenAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

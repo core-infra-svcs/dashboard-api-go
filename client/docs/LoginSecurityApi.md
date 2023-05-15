@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationLoginSecurity
 
-> InlineResponse200118 GetOrganizationLoginSecurity(ctx, organizationId).Execute()
+> InlineResponse200124 GetOrganizationLoginSecurity(ctx, organizationId).Execute()
 
 Returns the login security settings for an organization.
 
@@ -30,7 +30,7 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
+    organizationId := "organizationId_example" // string | Organization ID
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LoginSecurityApi.GetOrganizationLoginSecurity``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLoginSecurity`: InlineResponse200118
+    // response from `GetOrganizationLoginSecurity`: InlineResponse200124
     fmt.Fprintf(os.Stdout, "Response from `LoginSecurityApi.GetOrganizationLoginSecurity`: %v\n", resp)
 }
 ```
@@ -50,7 +50,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200118**](InlineResponse200118.md)
+[**InlineResponse200124**](InlineResponse200124.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationLoginSecurity
 
-> InlineResponse200118 UpdateOrganizationLoginSecurity(ctx, organizationId).UpdateOrganizationLoginSecurity(updateOrganizationLoginSecurity).Execute()
+> InlineResponse200124 UpdateOrganizationLoginSecurity(ctx, organizationId).UpdateOrganizationLoginSecurity(updateOrganizationLoginSecurity).Execute()
 
 Update the login security settings for an organization
 
@@ -100,8 +100,8 @@ import (
 )
 
 func main() {
-    organizationId := "organizationId_example" // string | 
-    updateOrganizationLoginSecurity := *openapiclient.NewInlineObject209() // InlineObject209 |  (optional)
+    organizationId := "organizationId_example" // string | Organization ID
+    updateOrganizationLoginSecurity := *openapiclient.NewInlineObject210() // InlineObject210 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LoginSecurityApi.UpdateOrganizationLoginSecurity``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationLoginSecurity`: InlineResponse200118
+    // response from `UpdateOrganizationLoginSecurity`: InlineResponse200124
     fmt.Fprintf(os.Stdout, "Response from `LoginSecurityApi.UpdateOrganizationLoginSecurity`: %v\n", resp)
 }
 ```
@@ -121,7 +121,7 @@ func main() {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**organizationId** | **string** |  | 
+**organizationId** | **string** | Organization ID | 
 
 ### Other Parameters
 
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationLoginSec
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationLoginSecurity** | [**InlineObject209**](InlineObject209.md) |  | 
+ **updateOrganizationLoginSecurity** | [**InlineObject210**](InlineObject210.md) |  | 
 
 ### Return type
 
-[**InlineResponse200118**](InlineResponse200118.md)
+[**InlineResponse200124**](InlineResponse200124.md)
 
 ### Authorization
 

@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Name** | Pointer to **string** | Name of the appliance | [optional] 
-**Mac** | Pointer to **string** | Mac address of the appliance | [optional] 
-**Serial** | Pointer to **string** | Serial number of the appliance | [optional] 
-**Model** | Pointer to **string** | Model of the appliance | [optional] 
-**Utilization** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization.md) |  | [optional] 
+**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
+**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineResponse200127WithDefaults instantiates a new InlineResponse200127 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetIdpId
 
-`func (o *InlineResponse200127) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse200127) GetIdpId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetIdpId returns the IdpId field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetIdpIdOk
 
-`func (o *InlineResponse200127) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse200127) GetIdpIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetIdpId
 
-`func (o *InlineResponse200127) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse200127) SetIdpId(v string)`
 
-SetNetwork sets Network field to given value.
+SetIdpId sets IdpId field to given value.
 
-### HasNetwork
+### HasIdpId
 
-`func (o *InlineResponse200127) HasNetwork() bool`
+`func (o *InlineResponse200127) HasIdpId() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasIdpId returns a boolean if a field has been set.
 
-### GetName
+### GetConsumerUrl
 
-`func (o *InlineResponse200127) GetName() string`
+`func (o *InlineResponse200127) GetConsumerUrl() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConsumerUrlOk
 
-`func (o *InlineResponse200127) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200127) GetConsumerUrlOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConsumerUrl
 
-`func (o *InlineResponse200127) SetName(v string)`
+`func (o *InlineResponse200127) SetConsumerUrl(v string)`
 
-SetName sets Name field to given value.
+SetConsumerUrl sets ConsumerUrl field to given value.
 
-### HasName
+### HasConsumerUrl
 
-`func (o *InlineResponse200127) HasName() bool`
+`func (o *InlineResponse200127) HasConsumerUrl() bool`
 
-HasName returns a boolean if a field has been set.
+HasConsumerUrl returns a boolean if a field has been set.
 
-### GetMac
+### GetX509certSha1Fingerprint
 
-`func (o *InlineResponse200127) GetMac() string`
+`func (o *InlineResponse200127) GetX509certSha1Fingerprint() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineResponse200127) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200127) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetX509certSha1Fingerprint
 
-`func (o *InlineResponse200127) SetMac(v string)`
+`func (o *InlineResponse200127) SetX509certSha1Fingerprint(v string)`
 
-SetMac sets Mac field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
-### HasMac
+### HasX509certSha1Fingerprint
 
-`func (o *InlineResponse200127) HasMac() bool`
+`func (o *InlineResponse200127) HasX509certSha1Fingerprint() bool`
 
-HasMac returns a boolean if a field has been set.
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
 
-### GetSerial
+### GetSloLogoutUrl
 
-`func (o *InlineResponse200127) GetSerial() string`
+`func (o *InlineResponse200127) GetSloLogoutUrl() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSloLogoutUrlOk
 
-`func (o *InlineResponse200127) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200127) GetSloLogoutUrlOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSloLogoutUrl
 
-`func (o *InlineResponse200127) SetSerial(v string)`
+`func (o *InlineResponse200127) SetSloLogoutUrl(v string)`
 
-SetSerial sets Serial field to given value.
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
 
-### HasSerial
+### HasSloLogoutUrl
 
-`func (o *InlineResponse200127) HasSerial() bool`
+`func (o *InlineResponse200127) HasSloLogoutUrl() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200127) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200127) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200127) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200127) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetUtilization
-
-`func (o *InlineResponse200127) GetUtilization() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization`
-
-GetUtilization returns the Utilization field if non-nil, zero value otherwise.
-
-### GetUtilizationOk
-
-`func (o *InlineResponse200127) GetUtilizationOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization, bool)`
-
-GetUtilizationOk returns a tuple with the Utilization field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUtilization
-
-`func (o *InlineResponse200127) SetUtilization(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization)`
-
-SetUtilization sets Utilization field to given value.
-
-### HasUtilization
-
-`func (o *InlineResponse200127) HasUtilization() bool`
-
-HasUtilization returns a boolean if a field has been set.
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

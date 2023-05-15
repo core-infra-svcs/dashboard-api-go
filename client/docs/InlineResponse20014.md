@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
-**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
-**DynamicDns** | Pointer to [**InlineResponse20014DynamicDns**](InlineResponse20014DynamicDns.md) |  | [optional] 
+**StaticDelegatedPrefixId** | Pointer to **string** | Static delegated prefix id. | [optional] 
+**Prefix** | Pointer to **string** | IPv6 prefix/prefix length. | [optional] 
+**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin.md) |  | [optional] 
+**Description** | Pointer to **string** | Identifying description for the prefix. | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Prefix creation time. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Prefix Updated time. | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse20014WithDefaults instantiates a new InlineResponse20014 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientTrackingMethod
+### GetStaticDelegatedPrefixId
 
-`func (o *InlineResponse20014) GetClientTrackingMethod() string`
+`func (o *InlineResponse20014) GetStaticDelegatedPrefixId() string`
 
-GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
+GetStaticDelegatedPrefixId returns the StaticDelegatedPrefixId field if non-nil, zero value otherwise.
 
-### GetClientTrackingMethodOk
+### GetStaticDelegatedPrefixIdOk
 
-`func (o *InlineResponse20014) GetClientTrackingMethodOk() (*string, bool)`
+`func (o *InlineResponse20014) GetStaticDelegatedPrefixIdOk() (*string, bool)`
 
-GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
+GetStaticDelegatedPrefixIdOk returns a tuple with the StaticDelegatedPrefixId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTrackingMethod
+### SetStaticDelegatedPrefixId
 
-`func (o *InlineResponse20014) SetClientTrackingMethod(v string)`
+`func (o *InlineResponse20014) SetStaticDelegatedPrefixId(v string)`
 
-SetClientTrackingMethod sets ClientTrackingMethod field to given value.
+SetStaticDelegatedPrefixId sets StaticDelegatedPrefixId field to given value.
 
-### HasClientTrackingMethod
+### HasStaticDelegatedPrefixId
 
-`func (o *InlineResponse20014) HasClientTrackingMethod() bool`
+`func (o *InlineResponse20014) HasStaticDelegatedPrefixId() bool`
 
-HasClientTrackingMethod returns a boolean if a field has been set.
+HasStaticDelegatedPrefixId returns a boolean if a field has been set.
 
-### GetDeploymentMode
+### GetPrefix
 
-`func (o *InlineResponse20014) GetDeploymentMode() string`
+`func (o *InlineResponse20014) GetPrefix() string`
 
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
 
-### GetDeploymentModeOk
+### GetPrefixOk
 
-`func (o *InlineResponse20014) GetDeploymentModeOk() (*string, bool)`
+`func (o *InlineResponse20014) GetPrefixOk() (*string, bool)`
 
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeploymentMode
+### SetPrefix
 
-`func (o *InlineResponse20014) SetDeploymentMode(v string)`
+`func (o *InlineResponse20014) SetPrefix(v string)`
 
-SetDeploymentMode sets DeploymentMode field to given value.
+SetPrefix sets Prefix field to given value.
 
-### HasDeploymentMode
+### HasPrefix
 
-`func (o *InlineResponse20014) HasDeploymentMode() bool`
+`func (o *InlineResponse20014) HasPrefix() bool`
 
-HasDeploymentMode returns a boolean if a field has been set.
+HasPrefix returns a boolean if a field has been set.
 
-### GetDynamicDns
+### GetOrigin
 
-`func (o *InlineResponse20014) GetDynamicDns() InlineResponse20014DynamicDns`
+`func (o *InlineResponse20014) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin`
 
-GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-### GetDynamicDnsOk
+### GetOriginOk
 
-`func (o *InlineResponse20014) GetDynamicDnsOk() (*InlineResponse20014DynamicDns, bool)`
+`func (o *InlineResponse20014) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin, bool)`
 
-GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDynamicDns
+### SetOrigin
 
-`func (o *InlineResponse20014) SetDynamicDns(v InlineResponse20014DynamicDns)`
+`func (o *InlineResponse20014) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin)`
 
-SetDynamicDns sets DynamicDns field to given value.
+SetOrigin sets Origin field to given value.
 
-### HasDynamicDns
+### HasOrigin
 
-`func (o *InlineResponse20014) HasDynamicDns() bool`
+`func (o *InlineResponse20014) HasOrigin() bool`
 
-HasDynamicDns returns a boolean if a field has been set.
+HasOrigin returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse20014) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse20014) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse20014) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse20014) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse20014) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse20014) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse20014) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse20014) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse20014) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse20014) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse20014) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse20014) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

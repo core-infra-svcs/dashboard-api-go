@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
-**Type** | Pointer to **string** | The type of the payload template | [optional] 
-**Name** | Pointer to **string** | The name of the payload template | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
-**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
+**Servers** | Pointer to [**[]InlineResponse20073Servers**](InlineResponse20073Servers.md) | List of the syslog servers for this network | [optional] 
 
 ## Methods
 
@@ -29,130 +25,30 @@ NewInlineResponse20073WithDefaults instantiates a new InlineResponse20073 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPayloadTemplateId
+### GetServers
 
-`func (o *InlineResponse20073) GetPayloadTemplateId() string`
+`func (o *InlineResponse20073) GetServers() []InlineResponse20073Servers`
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+GetServers returns the Servers field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateIdOk
+### GetServersOk
 
-`func (o *InlineResponse20073) GetPayloadTemplateIdOk() (*string, bool)`
+`func (o *InlineResponse20073) GetServersOk() (*[]InlineResponse20073Servers, bool)`
 
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetServers
 
-`func (o *InlineResponse20073) SetPayloadTemplateId(v string)`
+`func (o *InlineResponse20073) SetServers(v []InlineResponse20073Servers)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetServers sets Servers field to given value.
 
-### HasPayloadTemplateId
+### HasServers
 
-`func (o *InlineResponse20073) HasPayloadTemplateId() bool`
+`func (o *InlineResponse20073) HasServers() bool`
 
-HasPayloadTemplateId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse20073) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse20073) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse20073) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse20073) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse20073) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse20073) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse20073) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse20073) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetHeaders
-
-`func (o *InlineResponse20073) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
-
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
-
-### GetHeadersOk
-
-`func (o *InlineResponse20073) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
-
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeaders
-
-`func (o *InlineResponse20073) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
-
-SetHeaders sets Headers field to given value.
-
-### HasHeaders
-
-`func (o *InlineResponse20073) HasHeaders() bool`
-
-HasHeaders returns a boolean if a field has been set.
-
-### GetBody
-
-`func (o *InlineResponse20073) GetBody() string`
-
-GetBody returns the Body field if non-nil, zero value otherwise.
-
-### GetBodyOk
-
-`func (o *InlineResponse20073) GetBodyOk() (*string, bool)`
-
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBody
-
-`func (o *InlineResponse20073) SetBody(v string)`
-
-SetBody sets Body field to given value.
-
-### HasBody
-
-`func (o *InlineResponse20073) HasBody() bool`
-
-HasBody returns a boolean if a field has been set.
+HasServers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

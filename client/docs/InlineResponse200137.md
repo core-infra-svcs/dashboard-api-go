@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number of the AP | [optional] 
-**Name** | Pointer to **string** | The name of the AP | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork.md) |  | [optional] 
-**Power** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower.md) |  | [optional] 
-**Ports** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts.md) | List of port details | [optional] 
-**Aggregation** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation.md) |  | [optional] 
+**Model** | Pointer to **string** | The device model | [optional] 
+**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +27,80 @@ NewInlineResponse200137WithDefaults instantiates a new InlineResponse200137 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetModel
 
-`func (o *InlineResponse200137) GetSerial() string`
+`func (o *InlineResponse200137) GetModel() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetModelOk
 
-`func (o *InlineResponse200137) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200137) GetModelOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetModel
 
-`func (o *InlineResponse200137) SetSerial(v string)`
+`func (o *InlineResponse200137) SetModel(v string)`
 
-SetSerial sets Serial field to given value.
+SetModel sets Model field to given value.
 
-### HasSerial
+### HasModel
 
-`func (o *InlineResponse200137) HasSerial() bool`
+`func (o *InlineResponse200137) HasModel() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetName
+### GetCount
 
-`func (o *InlineResponse200137) GetName() string`
+`func (o *InlineResponse200137) GetCount() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCountOk
 
-`func (o *InlineResponse200137) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200137) GetCountOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCount
 
-`func (o *InlineResponse200137) SetName(v string)`
+`func (o *InlineResponse200137) SetCount(v int32)`
 
-SetName sets Name field to given value.
+SetCount sets Count field to given value.
 
-### HasName
+### HasCount
 
-`func (o *InlineResponse200137) HasName() bool`
+`func (o *InlineResponse200137) HasCount() bool`
 
-HasName returns a boolean if a field has been set.
+HasCount returns a boolean if a field has been set.
 
-### GetNetwork
+### GetUsage
 
-`func (o *InlineResponse200137) GetNetwork() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork`
+`func (o *InlineResponse200137) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetUsageOk
 
-`func (o *InlineResponse200137) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork, bool)`
+`func (o *InlineResponse200137) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetUsage
 
-`func (o *InlineResponse200137) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork)`
+`func (o *InlineResponse200137) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
 
-SetNetwork sets Network field to given value.
+SetUsage sets Usage field to given value.
 
-### HasNetwork
+### HasUsage
 
-`func (o *InlineResponse200137) HasNetwork() bool`
+`func (o *InlineResponse200137) HasUsage() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetPower
-
-`func (o *InlineResponse200137) GetPower() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower`
-
-GetPower returns the Power field if non-nil, zero value otherwise.
-
-### GetPowerOk
-
-`func (o *InlineResponse200137) GetPowerOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower, bool)`
-
-GetPowerOk returns a tuple with the Power field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPower
-
-`func (o *InlineResponse200137) SetPower(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower)`
-
-SetPower sets Power field to given value.
-
-### HasPower
-
-`func (o *InlineResponse200137) HasPower() bool`
-
-HasPower returns a boolean if a field has been set.
-
-### GetPorts
-
-`func (o *InlineResponse200137) GetPorts() []OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts`
-
-GetPorts returns the Ports field if non-nil, zero value otherwise.
-
-### GetPortsOk
-
-`func (o *InlineResponse200137) GetPortsOk() (*[]OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts, bool)`
-
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPorts
-
-`func (o *InlineResponse200137) SetPorts(v []OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts)`
-
-SetPorts sets Ports field to given value.
-
-### HasPorts
-
-`func (o *InlineResponse200137) HasPorts() bool`
-
-HasPorts returns a boolean if a field has been set.
-
-### GetAggregation
-
-`func (o *InlineResponse200137) GetAggregation() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation`
-
-GetAggregation returns the Aggregation field if non-nil, zero value otherwise.
-
-### GetAggregationOk
-
-`func (o *InlineResponse200137) GetAggregationOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation, bool)`
-
-GetAggregationOk returns a tuple with the Aggregation field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAggregation
-
-`func (o *InlineResponse200137) SetAggregation(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation)`
-
-SetAggregation sets Aggregation field to given value.
-
-### HasAggregation
-
-`func (o *InlineResponse200137) HasAggregation() bool`
-
-HasAggregation returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
