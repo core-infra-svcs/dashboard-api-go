@@ -4,17 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Admin&#39;s ID | [optional] 
-**Name** | Pointer to **string** | Admin&#39;s username | [optional] 
-**Email** | Pointer to **string** | Admin&#39;s email address | [optional] 
-**OrgAccess** | Pointer to **string** | Admin&#39;s level of access to the organization | [optional] 
-**AccountStatus** | Pointer to **string** | Status of the admin&#39;s account | [optional] 
-**TwoFactorAuthEnabled** | Pointer to **bool** | Indicates whether two-factor authentication is enabled | [optional] 
-**HasApiKey** | Pointer to **bool** | Indicates whether the admin has an API key | [optional] 
-**LastActive** | Pointer to **time.Time** | Time when the admin was last active | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags**](OrganizationsOrganizationIdAdminsTags.md) | Admin tag information | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks**](OrganizationsOrganizationIdAdminsNetworks.md) | Admin network access information | [optional] 
-**AuthenticationMethod** | Pointer to **string** | Admin&#39;s authentication method | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
+**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -35,280 +29,130 @@ NewInlineResponse200102WithDefaults instantiates a new InlineResponse200102 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStartTs
 
-`func (o *InlineResponse200102) GetId() string`
+`func (o *InlineResponse200102) GetStartTs() time.Time`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse200102) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200102) GetStartTsOk() (*time.Time, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStartTs
 
-`func (o *InlineResponse200102) SetId(v string)`
+`func (o *InlineResponse200102) SetStartTs(v time.Time)`
 
-SetId sets Id field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasId
+### HasStartTs
 
-`func (o *InlineResponse200102) HasId() bool`
+`func (o *InlineResponse200102) HasStartTs() bool`
 
-HasId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetName
+### GetEndTs
 
-`func (o *InlineResponse200102) GetName() string`
+`func (o *InlineResponse200102) GetEndTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEndTsOk
 
-`func (o *InlineResponse200102) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200102) GetEndTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEndTs
 
-`func (o *InlineResponse200102) SetName(v string)`
+`func (o *InlineResponse200102) SetEndTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasName
+### HasEndTs
 
-`func (o *InlineResponse200102) HasName() bool`
+`func (o *InlineResponse200102) HasEndTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetEmail
+### GetTotalKbps
 
-`func (o *InlineResponse200102) GetEmail() string`
+`func (o *InlineResponse200102) GetTotalKbps() int32`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetTotalKbpsOk
 
-`func (o *InlineResponse200102) GetEmailOk() (*string, bool)`
+`func (o *InlineResponse200102) GetTotalKbpsOk() (*int32, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetTotalKbps
 
-`func (o *InlineResponse200102) SetEmail(v string)`
+`func (o *InlineResponse200102) SetTotalKbps(v int32)`
 
-SetEmail sets Email field to given value.
+SetTotalKbps sets TotalKbps field to given value.
 
-### HasEmail
+### HasTotalKbps
 
-`func (o *InlineResponse200102) HasEmail() bool`
+`func (o *InlineResponse200102) HasTotalKbps() bool`
 
-HasEmail returns a boolean if a field has been set.
+HasTotalKbps returns a boolean if a field has been set.
 
-### GetOrgAccess
+### GetSentKbps
 
-`func (o *InlineResponse200102) GetOrgAccess() string`
+`func (o *InlineResponse200102) GetSentKbps() int32`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetSentKbpsOk
 
-`func (o *InlineResponse200102) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineResponse200102) GetSentKbpsOk() (*int32, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetSentKbps
 
-`func (o *InlineResponse200102) SetOrgAccess(v string)`
+`func (o *InlineResponse200102) SetSentKbps(v int32)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetSentKbps sets SentKbps field to given value.
 
-### HasOrgAccess
+### HasSentKbps
 
-`func (o *InlineResponse200102) HasOrgAccess() bool`
+`func (o *InlineResponse200102) HasSentKbps() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasSentKbps returns a boolean if a field has been set.
 
-### GetAccountStatus
+### GetReceivedKbps
 
-`func (o *InlineResponse200102) GetAccountStatus() string`
+`func (o *InlineResponse200102) GetReceivedKbps() int32`
 
-GetAccountStatus returns the AccountStatus field if non-nil, zero value otherwise.
+GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
 
-### GetAccountStatusOk
+### GetReceivedKbpsOk
 
-`func (o *InlineResponse200102) GetAccountStatusOk() (*string, bool)`
+`func (o *InlineResponse200102) GetReceivedKbpsOk() (*int32, bool)`
 
-GetAccountStatusOk returns a tuple with the AccountStatus field if it's non-nil, zero value otherwise
+GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountStatus
+### SetReceivedKbps
 
-`func (o *InlineResponse200102) SetAccountStatus(v string)`
+`func (o *InlineResponse200102) SetReceivedKbps(v int32)`
 
-SetAccountStatus sets AccountStatus field to given value.
+SetReceivedKbps sets ReceivedKbps field to given value.
 
-### HasAccountStatus
+### HasReceivedKbps
 
-`func (o *InlineResponse200102) HasAccountStatus() bool`
+`func (o *InlineResponse200102) HasReceivedKbps() bool`
 
-HasAccountStatus returns a boolean if a field has been set.
-
-### GetTwoFactorAuthEnabled
-
-`func (o *InlineResponse200102) GetTwoFactorAuthEnabled() bool`
-
-GetTwoFactorAuthEnabled returns the TwoFactorAuthEnabled field if non-nil, zero value otherwise.
-
-### GetTwoFactorAuthEnabledOk
-
-`func (o *InlineResponse200102) GetTwoFactorAuthEnabledOk() (*bool, bool)`
-
-GetTwoFactorAuthEnabledOk returns a tuple with the TwoFactorAuthEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTwoFactorAuthEnabled
-
-`func (o *InlineResponse200102) SetTwoFactorAuthEnabled(v bool)`
-
-SetTwoFactorAuthEnabled sets TwoFactorAuthEnabled field to given value.
-
-### HasTwoFactorAuthEnabled
-
-`func (o *InlineResponse200102) HasTwoFactorAuthEnabled() bool`
-
-HasTwoFactorAuthEnabled returns a boolean if a field has been set.
-
-### GetHasApiKey
-
-`func (o *InlineResponse200102) GetHasApiKey() bool`
-
-GetHasApiKey returns the HasApiKey field if non-nil, zero value otherwise.
-
-### GetHasApiKeyOk
-
-`func (o *InlineResponse200102) GetHasApiKeyOk() (*bool, bool)`
-
-GetHasApiKeyOk returns a tuple with the HasApiKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHasApiKey
-
-`func (o *InlineResponse200102) SetHasApiKey(v bool)`
-
-SetHasApiKey sets HasApiKey field to given value.
-
-### HasHasApiKey
-
-`func (o *InlineResponse200102) HasHasApiKey() bool`
-
-HasHasApiKey returns a boolean if a field has been set.
-
-### GetLastActive
-
-`func (o *InlineResponse200102) GetLastActive() time.Time`
-
-GetLastActive returns the LastActive field if non-nil, zero value otherwise.
-
-### GetLastActiveOk
-
-`func (o *InlineResponse200102) GetLastActiveOk() (*time.Time, bool)`
-
-GetLastActiveOk returns a tuple with the LastActive field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastActive
-
-`func (o *InlineResponse200102) SetLastActive(v time.Time)`
-
-SetLastActive sets LastActive field to given value.
-
-### HasLastActive
-
-`func (o *InlineResponse200102) HasLastActive() bool`
-
-HasLastActive returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200102) GetTags() []OrganizationsOrganizationIdAdminsTags`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200102) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200102) SetTags(v []OrganizationsOrganizationIdAdminsTags)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200102) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineResponse200102) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineResponse200102) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineResponse200102) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineResponse200102) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
-
-### GetAuthenticationMethod
-
-`func (o *InlineResponse200102) GetAuthenticationMethod() string`
-
-GetAuthenticationMethod returns the AuthenticationMethod field if non-nil, zero value otherwise.
-
-### GetAuthenticationMethodOk
-
-`func (o *InlineResponse200102) GetAuthenticationMethodOk() (*string, bool)`
-
-GetAuthenticationMethodOk returns a tuple with the AuthenticationMethod field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthenticationMethod
-
-`func (o *InlineResponse200102) SetAuthenticationMethod(v string)`
-
-SetAuthenticationMethod sets AuthenticationMethod field to given value.
-
-### HasAuthenticationMethod
-
-`func (o *InlineResponse200102) HasAuthenticationMethod() bool`
-
-HasAuthenticationMethod returns a boolean if a field has been set.
+HasReceivedKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

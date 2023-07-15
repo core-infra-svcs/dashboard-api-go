@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20083WithDefaults instantiates a new InlineResponse20083 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetBroadcastThreshold
 
-`func (o *InlineResponse20083) GetId() string`
+`func (o *InlineResponse20083) GetBroadcastThreshold() int32`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineResponse20083) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20083) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetBroadcastThreshold
 
-`func (o *InlineResponse20083) SetId(v string)`
+`func (o *InlineResponse20083) SetBroadcastThreshold(v int32)`
 
-SetId sets Id field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasId
+### HasBroadcastThreshold
 
-`func (o *InlineResponse20083) HasId() bool`
+`func (o *InlineResponse20083) HasBroadcastThreshold() bool`
 
-HasId returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetName
+### GetMulticastThreshold
 
-`func (o *InlineResponse20083) GetName() string`
+`func (o *InlineResponse20083) GetMulticastThreshold() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMulticastThresholdOk
 
-`func (o *InlineResponse20083) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20083) GetMulticastThresholdOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMulticastThreshold
 
-`func (o *InlineResponse20083) SetName(v string)`
+`func (o *InlineResponse20083) SetMulticastThreshold(v int32)`
 
-SetName sets Name field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasName
+### HasMulticastThreshold
 
-`func (o *InlineResponse20083) HasName() bool`
+`func (o *InlineResponse20083) HasMulticastThreshold() bool`
 
-HasName returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
 
-### GetUrl
+### GetUnknownUnicastThreshold
 
-`func (o *InlineResponse20083) GetUrl() string`
+`func (o *InlineResponse20083) GetUnknownUnicastThreshold() int32`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetUnknownUnicastThresholdOk
 
-`func (o *InlineResponse20083) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20083) GetUnknownUnicastThresholdOk() (*int32, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetUnknownUnicastThreshold
 
-`func (o *InlineResponse20083) SetUrl(v string)`
+`func (o *InlineResponse20083) SetUnknownUnicastThreshold(v int32)`
 
-SetUrl sets Url field to given value.
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
 
-### HasUrl
+### HasUnknownUnicastThreshold
 
-`func (o *InlineResponse20083) HasUrl() bool`
+`func (o *InlineResponse20083) HasUnknownUnicastThreshold() bool`
 
-HasUrl returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse20083) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse20083) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse20083) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse20083) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetPayloadTemplate
-
-`func (o *InlineResponse20083) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
-
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateOk
-
-`func (o *InlineResponse20083) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplate
-
-`func (o *InlineResponse20083) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
-
-SetPayloadTemplate sets PayloadTemplate field to given value.
-
-### HasPayloadTemplate
-
-`func (o *InlineResponse20083) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

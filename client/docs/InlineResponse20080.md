@@ -4,16 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DhcpMode** | Pointer to **string** | The DHCP mode options for the switch stack interface (&#39;dhcpDisabled&#39;, &#39;dhcpRelay&#39; or &#39;dhcpServer&#39;) | [optional] 
-**DhcpLeaseTime** | Pointer to **string** | The DHCP lease time config for the dhcp server running on the switch stack interface (&#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39;) | [optional] 
-**DnsNameserversOption** | Pointer to **string** | The DHCP name server option for the dhcp server running on the switch stack interface (&#39;googlePublicDns&#39;, &#39;openDns&#39; or &#39;custom&#39;) | [optional] 
-**DnsCustomNameservers** | Pointer to **[]string** | The DHCP name server IPs when DHCP name server option is &#39;custom&#39; | [optional] 
-**BootOptionsEnabled** | Pointer to **bool** | Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface | [optional] 
-**BootNextServer** | Pointer to **string** | The PXE boot server IP for the DHCP server running on the switch stack interface | [optional] 
-**BootFileName** | Pointer to **string** | The PXE boot server file name for the DHCP server running on the switch stack interface | [optional] 
-**DhcpOptions** | Pointer to [**[]InlineResponse20080DhcpOptions**](InlineResponse20080DhcpOptions.md) | Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface | [optional] 
-**ReservedIpRanges** | Pointer to [**[]InlineResponse20080ReservedIpRanges**](InlineResponse20080ReservedIpRanges.md) | Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface | [optional] 
-**FixedIpAssignments** | Pointer to [**[]InlineResponse20080FixedIpAssignments**](InlineResponse20080FixedIpAssignments.md) | Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]InlineResponse20080PowerExceptions**](InlineResponse20080PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
+**UplinkClientSampling** | Pointer to [**InlineResponse20080UplinkClientSampling**](InlineResponse20080UplinkClientSampling.md) |  | [optional] 
 
 ## Methods
 
@@ -34,255 +28,105 @@ NewInlineResponse20080WithDefaults instantiates a new InlineResponse20080 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDhcpMode
+### GetVlan
 
-`func (o *InlineResponse20080) GetDhcpMode() string`
+`func (o *InlineResponse20080) GetVlan() int32`
 
-GetDhcpMode returns the DhcpMode field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetDhcpModeOk
+### GetVlanOk
 
-`func (o *InlineResponse20080) GetDhcpModeOk() (*string, bool)`
+`func (o *InlineResponse20080) GetVlanOk() (*int32, bool)`
 
-GetDhcpModeOk returns a tuple with the DhcpMode field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcpMode
+### SetVlan
 
-`func (o *InlineResponse20080) SetDhcpMode(v string)`
+`func (o *InlineResponse20080) SetVlan(v int32)`
 
-SetDhcpMode sets DhcpMode field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasDhcpMode
+### HasVlan
 
-`func (o *InlineResponse20080) HasDhcpMode() bool`
+`func (o *InlineResponse20080) HasVlan() bool`
 
-HasDhcpMode returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetDhcpLeaseTime
+### GetUseCombinedPower
 
-`func (o *InlineResponse20080) GetDhcpLeaseTime() string`
+`func (o *InlineResponse20080) GetUseCombinedPower() bool`
 
-GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-### GetDhcpLeaseTimeOk
+### GetUseCombinedPowerOk
 
-`func (o *InlineResponse20080) GetDhcpLeaseTimeOk() (*string, bool)`
+`func (o *InlineResponse20080) GetUseCombinedPowerOk() (*bool, bool)`
 
-GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcpLeaseTime
+### SetUseCombinedPower
 
-`func (o *InlineResponse20080) SetDhcpLeaseTime(v string)`
+`func (o *InlineResponse20080) SetUseCombinedPower(v bool)`
 
-SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasDhcpLeaseTime
+### HasUseCombinedPower
 
-`func (o *InlineResponse20080) HasDhcpLeaseTime() bool`
+`func (o *InlineResponse20080) HasUseCombinedPower() bool`
 
-HasDhcpLeaseTime returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetDnsNameserversOption
+### GetPowerExceptions
 
-`func (o *InlineResponse20080) GetDnsNameserversOption() string`
+`func (o *InlineResponse20080) GetPowerExceptions() []InlineResponse20080PowerExceptions`
 
-GetDnsNameserversOption returns the DnsNameserversOption field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetDnsNameserversOptionOk
+### GetPowerExceptionsOk
 
-`func (o *InlineResponse20080) GetDnsNameserversOptionOk() (*string, bool)`
+`func (o *InlineResponse20080) GetPowerExceptionsOk() (*[]InlineResponse20080PowerExceptions, bool)`
 
-GetDnsNameserversOptionOk returns a tuple with the DnsNameserversOption field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsNameserversOption
+### SetPowerExceptions
 
-`func (o *InlineResponse20080) SetDnsNameserversOption(v string)`
+`func (o *InlineResponse20080) SetPowerExceptions(v []InlineResponse20080PowerExceptions)`
 
-SetDnsNameserversOption sets DnsNameserversOption field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasDnsNameserversOption
+### HasPowerExceptions
 
-`func (o *InlineResponse20080) HasDnsNameserversOption() bool`
+`func (o *InlineResponse20080) HasPowerExceptions() bool`
 
-HasDnsNameserversOption returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
-### GetDnsCustomNameservers
+### GetUplinkClientSampling
 
-`func (o *InlineResponse20080) GetDnsCustomNameservers() []string`
+`func (o *InlineResponse20080) GetUplinkClientSampling() InlineResponse20080UplinkClientSampling`
 
-GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
 
-### GetDnsCustomNameserversOk
+### GetUplinkClientSamplingOk
 
-`func (o *InlineResponse20080) GetDnsCustomNameserversOk() (*[]string, bool)`
+`func (o *InlineResponse20080) GetUplinkClientSamplingOk() (*InlineResponse20080UplinkClientSampling, bool)`
 
-GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsCustomNameservers
+### SetUplinkClientSampling
 
-`func (o *InlineResponse20080) SetDnsCustomNameservers(v []string)`
+`func (o *InlineResponse20080) SetUplinkClientSampling(v InlineResponse20080UplinkClientSampling)`
 
-SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+SetUplinkClientSampling sets UplinkClientSampling field to given value.
 
-### HasDnsCustomNameservers
+### HasUplinkClientSampling
 
-`func (o *InlineResponse20080) HasDnsCustomNameservers() bool`
+`func (o *InlineResponse20080) HasUplinkClientSampling() bool`
 
-HasDnsCustomNameservers returns a boolean if a field has been set.
-
-### GetBootOptionsEnabled
-
-`func (o *InlineResponse20080) GetBootOptionsEnabled() bool`
-
-GetBootOptionsEnabled returns the BootOptionsEnabled field if non-nil, zero value otherwise.
-
-### GetBootOptionsEnabledOk
-
-`func (o *InlineResponse20080) GetBootOptionsEnabledOk() (*bool, bool)`
-
-GetBootOptionsEnabledOk returns a tuple with the BootOptionsEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBootOptionsEnabled
-
-`func (o *InlineResponse20080) SetBootOptionsEnabled(v bool)`
-
-SetBootOptionsEnabled sets BootOptionsEnabled field to given value.
-
-### HasBootOptionsEnabled
-
-`func (o *InlineResponse20080) HasBootOptionsEnabled() bool`
-
-HasBootOptionsEnabled returns a boolean if a field has been set.
-
-### GetBootNextServer
-
-`func (o *InlineResponse20080) GetBootNextServer() string`
-
-GetBootNextServer returns the BootNextServer field if non-nil, zero value otherwise.
-
-### GetBootNextServerOk
-
-`func (o *InlineResponse20080) GetBootNextServerOk() (*string, bool)`
-
-GetBootNextServerOk returns a tuple with the BootNextServer field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBootNextServer
-
-`func (o *InlineResponse20080) SetBootNextServer(v string)`
-
-SetBootNextServer sets BootNextServer field to given value.
-
-### HasBootNextServer
-
-`func (o *InlineResponse20080) HasBootNextServer() bool`
-
-HasBootNextServer returns a boolean if a field has been set.
-
-### GetBootFileName
-
-`func (o *InlineResponse20080) GetBootFileName() string`
-
-GetBootFileName returns the BootFileName field if non-nil, zero value otherwise.
-
-### GetBootFileNameOk
-
-`func (o *InlineResponse20080) GetBootFileNameOk() (*string, bool)`
-
-GetBootFileNameOk returns a tuple with the BootFileName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBootFileName
-
-`func (o *InlineResponse20080) SetBootFileName(v string)`
-
-SetBootFileName sets BootFileName field to given value.
-
-### HasBootFileName
-
-`func (o *InlineResponse20080) HasBootFileName() bool`
-
-HasBootFileName returns a boolean if a field has been set.
-
-### GetDhcpOptions
-
-`func (o *InlineResponse20080) GetDhcpOptions() []InlineResponse20080DhcpOptions`
-
-GetDhcpOptions returns the DhcpOptions field if non-nil, zero value otherwise.
-
-### GetDhcpOptionsOk
-
-`func (o *InlineResponse20080) GetDhcpOptionsOk() (*[]InlineResponse20080DhcpOptions, bool)`
-
-GetDhcpOptionsOk returns a tuple with the DhcpOptions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcpOptions
-
-`func (o *InlineResponse20080) SetDhcpOptions(v []InlineResponse20080DhcpOptions)`
-
-SetDhcpOptions sets DhcpOptions field to given value.
-
-### HasDhcpOptions
-
-`func (o *InlineResponse20080) HasDhcpOptions() bool`
-
-HasDhcpOptions returns a boolean if a field has been set.
-
-### GetReservedIpRanges
-
-`func (o *InlineResponse20080) GetReservedIpRanges() []InlineResponse20080ReservedIpRanges`
-
-GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
-
-### GetReservedIpRangesOk
-
-`func (o *InlineResponse20080) GetReservedIpRangesOk() (*[]InlineResponse20080ReservedIpRanges, bool)`
-
-GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReservedIpRanges
-
-`func (o *InlineResponse20080) SetReservedIpRanges(v []InlineResponse20080ReservedIpRanges)`
-
-SetReservedIpRanges sets ReservedIpRanges field to given value.
-
-### HasReservedIpRanges
-
-`func (o *InlineResponse20080) HasReservedIpRanges() bool`
-
-HasReservedIpRanges returns a boolean if a field has been set.
-
-### GetFixedIpAssignments
-
-`func (o *InlineResponse20080) GetFixedIpAssignments() []InlineResponse20080FixedIpAssignments`
-
-GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
-
-### GetFixedIpAssignmentsOk
-
-`func (o *InlineResponse20080) GetFixedIpAssignmentsOk() (*[]InlineResponse20080FixedIpAssignments, bool)`
-
-GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFixedIpAssignments
-
-`func (o *InlineResponse20080) SetFixedIpAssignments(v []InlineResponse20080FixedIpAssignments)`
-
-SetFixedIpAssignments sets FixedIpAssignments field to given value.
-
-### HasFixedIpAssignments
-
-`func (o *InlineResponse20080) HasFixedIpAssignments() bool`
-
-HasFixedIpAssignments returns a boolean if a field has been set.
+HasUplinkClientSampling returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

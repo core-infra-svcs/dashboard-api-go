@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
 **AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set to block. An empty array will clear the entries. | [optional] 
 **BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set to allow. An empty array will clear the entries. | [optional] 
-**ArpInspection** | Pointer to [**InlineResponse20071ArpInspection**](InlineResponse20071ArpInspection.md) |  | [optional] 
+**ArpInspection** | Pointer to [**InlineResponse20073ArpInspection**](InlineResponse20073ArpInspection.md) |  | [optional] 
 
 ## Methods
 
@@ -131,20 +131,20 @@ HasBlockedServers returns a boolean if a field has been set.
 
 ### GetArpInspection
 
-`func (o *InlineObject116) GetArpInspection() InlineResponse20071ArpInspection`
+`func (o *InlineObject116) GetArpInspection() InlineResponse20073ArpInspection`
 
 GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
 
 ### GetArpInspectionOk
 
-`func (o *InlineObject116) GetArpInspectionOk() (*InlineResponse20071ArpInspection, bool)`
+`func (o *InlineObject116) GetArpInspectionOk() (*InlineResponse20073ArpInspection, bool)`
 
 GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetArpInspection
 
-`func (o *InlineObject116) SetArpInspection(v InlineResponse20071ArpInspection)`
+`func (o *InlineObject116) SetArpInspection(v InlineResponse20073ArpInspection)`
 
 SetArpInspection sets ArpInspection field to given value.
 

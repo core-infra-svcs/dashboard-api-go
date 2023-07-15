@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the device. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**Model** | Pointer to **string** | The device model | [optional] 
+**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200155WithDefaults instantiates a new InlineResponse200155 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetModel
 
-`func (o *InlineResponse200155) GetSerial() string`
+`func (o *InlineResponse200155) GetModel() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetModelOk
 
-`func (o *InlineResponse200155) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200155) GetModelOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetModel
 
-`func (o *InlineResponse200155) SetSerial(v string)`
+`func (o *InlineResponse200155) SetModel(v string)`
 
-SetSerial sets Serial field to given value.
+SetModel sets Model field to given value.
 
-### HasSerial
+### HasModel
 
-`func (o *InlineResponse200155) HasSerial() bool`
+`func (o *InlineResponse200155) HasModel() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetMac
+### GetCount
 
-`func (o *InlineResponse200155) GetMac() string`
+`func (o *InlineResponse200155) GetCount() int32`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetCountOk
 
-`func (o *InlineResponse200155) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200155) GetCountOk() (*int32, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetCount
 
-`func (o *InlineResponse200155) SetMac(v string)`
+`func (o *InlineResponse200155) SetCount(v int32)`
 
-SetMac sets Mac field to given value.
+SetCount sets Count field to given value.
 
-### HasMac
+### HasCount
 
-`func (o *InlineResponse200155) HasMac() bool`
+`func (o *InlineResponse200155) HasCount() bool`
 
-HasMac returns a boolean if a field has been set.
+HasCount returns a boolean if a field has been set.
 
-### GetNetwork
+### GetUsage
 
-`func (o *InlineResponse200155) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200155) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetUsageOk
 
-`func (o *InlineResponse200155) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200155) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetUsage
 
-`func (o *InlineResponse200155) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200155) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
 
-SetNetwork sets Network field to given value.
+SetUsage sets Usage field to given value.
 
-### HasNetwork
+### HasUsage
 
-`func (o *InlineResponse200155) HasNetwork() bool`
+`func (o *InlineResponse200155) HasUsage() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetByBand
-
-`func (o *InlineResponse200155) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
-
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
-
-### GetByBandOk
-
-`func (o *InlineResponse200155) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
-
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByBand
-
-`func (o *InlineResponse200155) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
-
-SetByBand sets ByBand field to given value.
-
-### HasByBand
-
-`func (o *InlineResponse200155) HasByBand() bool`
-
-HasByBand returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

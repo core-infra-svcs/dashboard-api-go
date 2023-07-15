@@ -4,20 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The Meraki managed Id of the user record. | [optional] 
-**Email** | Pointer to **string** | User email. | [optional] 
-**FullName** | Pointer to **string** | User full name. | [optional] 
-**Username** | Pointer to **string** | The users username. | [optional] 
-**HasPassword** | Pointer to **bool** | A boolean denoting if the user has a password associated with the record. | [optional] 
-**Tags** | Pointer to **string** | The set of tags the user is scoped to. | [optional] 
-**AdGroups** | Pointer to **[]string** | Active Directory Groups the user belongs to. | [optional] 
-**AzureAdGroups** | Pointer to **[]string** | Azure Active Directory Groups the user belongs to. | [optional] 
-**SamlGroups** | Pointer to **[]string** | SAML Groups the user belongs to. | [optional] 
-**AsmGroups** | Pointer to **[]string** | Apple School Manager Groups the user belongs to. | [optional] 
-**IsExternal** | Pointer to **bool** | Whether the user was created using an external integration, or via the Meraki Dashboard. | [optional] 
-**DisplayName** | Pointer to **string** | The user display name. | [optional] 
-**HasIdentityCertificate** | Pointer to **bool** | A boolean indicating if the user has an associated identity certificate.. | [optional] 
-**UserThumbnail** | Pointer to **string** | The url where the users thumbnail is hosted. | [optional] 
+**Id** | Pointer to **string** | device ID | [optional] 
+**SsidName** | Pointer to **string** | SSID name | [optional] 
+**Name** | Pointer to **string** | device name | [optional] 
+**Scope** | Pointer to **string** | scope | [optional] 
+**Tags** | Pointer to **[]string** | device tags | [optional] 
+**TimeboundType** | Pointer to **string** | type of access period, either a static range or a dynamic period | [optional] 
+**SendExpirationEmails** | Pointer to **bool** | Send Email Notifications | [optional] 
+**NotifyTimeBeforeAccessEnds** | Pointer to **int32** | Time before access expiration reminder email sends | [optional] 
+**AdditionalEmailText** | Pointer to **string** | Optional email text | [optional] 
+**AccessStartAt** | Pointer to **time.Time** | time that access starts | [optional] 
+**AccessEndAt** | Pointer to **time.Time** | time that access ends | [optional] 
 
 ## Methods
 
@@ -63,122 +60,97 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetEmail
+### GetSsidName
 
-`func (o *InlineResponse20065) GetEmail() string`
+`func (o *InlineResponse20065) GetSsidName() string`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetSsidName returns the SsidName field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetSsidNameOk
 
-`func (o *InlineResponse20065) GetEmailOk() (*string, bool)`
+`func (o *InlineResponse20065) GetSsidNameOk() (*string, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetSsidNameOk returns a tuple with the SsidName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetSsidName
 
-`func (o *InlineResponse20065) SetEmail(v string)`
+`func (o *InlineResponse20065) SetSsidName(v string)`
 
-SetEmail sets Email field to given value.
+SetSsidName sets SsidName field to given value.
 
-### HasEmail
+### HasSsidName
 
-`func (o *InlineResponse20065) HasEmail() bool`
+`func (o *InlineResponse20065) HasSsidName() bool`
 
-HasEmail returns a boolean if a field has been set.
+HasSsidName returns a boolean if a field has been set.
 
-### GetFullName
+### GetName
 
-`func (o *InlineResponse20065) GetFullName() string`
+`func (o *InlineResponse20065) GetName() string`
 
-GetFullName returns the FullName field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetFullNameOk
+### GetNameOk
 
-`func (o *InlineResponse20065) GetFullNameOk() (*string, bool)`
+`func (o *InlineResponse20065) GetNameOk() (*string, bool)`
 
-GetFullNameOk returns a tuple with the FullName field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFullName
+### SetName
 
-`func (o *InlineResponse20065) SetFullName(v string)`
+`func (o *InlineResponse20065) SetName(v string)`
 
-SetFullName sets FullName field to given value.
+SetName sets Name field to given value.
 
-### HasFullName
+### HasName
 
-`func (o *InlineResponse20065) HasFullName() bool`
+`func (o *InlineResponse20065) HasName() bool`
 
-HasFullName returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUsername
+### GetScope
 
-`func (o *InlineResponse20065) GetUsername() string`
+`func (o *InlineResponse20065) GetScope() string`
 
-GetUsername returns the Username field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetUsernameOk
+### GetScopeOk
 
-`func (o *InlineResponse20065) GetUsernameOk() (*string, bool)`
+`func (o *InlineResponse20065) GetScopeOk() (*string, bool)`
 
-GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsername
+### SetScope
 
-`func (o *InlineResponse20065) SetUsername(v string)`
+`func (o *InlineResponse20065) SetScope(v string)`
 
-SetUsername sets Username field to given value.
+SetScope sets Scope field to given value.
 
-### HasUsername
+### HasScope
 
-`func (o *InlineResponse20065) HasUsername() bool`
+`func (o *InlineResponse20065) HasScope() bool`
 
-HasUsername returns a boolean if a field has been set.
-
-### GetHasPassword
-
-`func (o *InlineResponse20065) GetHasPassword() bool`
-
-GetHasPassword returns the HasPassword field if non-nil, zero value otherwise.
-
-### GetHasPasswordOk
-
-`func (o *InlineResponse20065) GetHasPasswordOk() (*bool, bool)`
-
-GetHasPasswordOk returns a tuple with the HasPassword field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHasPassword
-
-`func (o *InlineResponse20065) SetHasPassword(v bool)`
-
-SetHasPassword sets HasPassword field to given value.
-
-### HasHasPassword
-
-`func (o *InlineResponse20065) HasHasPassword() bool`
-
-HasHasPassword returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
 ### GetTags
 
-`func (o *InlineResponse20065) GetTags() string`
+`func (o *InlineResponse20065) GetTags() []string`
 
 GetTags returns the Tags field if non-nil, zero value otherwise.
 
 ### GetTagsOk
 
-`func (o *InlineResponse20065) GetTagsOk() (*string, bool)`
+`func (o *InlineResponse20065) GetTagsOk() (*[]string, bool)`
 
 GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTags
 
-`func (o *InlineResponse20065) SetTags(v string)`
+`func (o *InlineResponse20065) SetTags(v []string)`
 
 SetTags sets Tags field to given value.
 
@@ -188,205 +160,155 @@ SetTags sets Tags field to given value.
 
 HasTags returns a boolean if a field has been set.
 
-### GetAdGroups
+### GetTimeboundType
 
-`func (o *InlineResponse20065) GetAdGroups() []string`
+`func (o *InlineResponse20065) GetTimeboundType() string`
 
-GetAdGroups returns the AdGroups field if non-nil, zero value otherwise.
+GetTimeboundType returns the TimeboundType field if non-nil, zero value otherwise.
 
-### GetAdGroupsOk
+### GetTimeboundTypeOk
 
-`func (o *InlineResponse20065) GetAdGroupsOk() (*[]string, bool)`
+`func (o *InlineResponse20065) GetTimeboundTypeOk() (*string, bool)`
 
-GetAdGroupsOk returns a tuple with the AdGroups field if it's non-nil, zero value otherwise
+GetTimeboundTypeOk returns a tuple with the TimeboundType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdGroups
+### SetTimeboundType
 
-`func (o *InlineResponse20065) SetAdGroups(v []string)`
+`func (o *InlineResponse20065) SetTimeboundType(v string)`
 
-SetAdGroups sets AdGroups field to given value.
+SetTimeboundType sets TimeboundType field to given value.
 
-### HasAdGroups
+### HasTimeboundType
 
-`func (o *InlineResponse20065) HasAdGroups() bool`
+`func (o *InlineResponse20065) HasTimeboundType() bool`
 
-HasAdGroups returns a boolean if a field has been set.
+HasTimeboundType returns a boolean if a field has been set.
 
-### GetAzureAdGroups
+### GetSendExpirationEmails
 
-`func (o *InlineResponse20065) GetAzureAdGroups() []string`
+`func (o *InlineResponse20065) GetSendExpirationEmails() bool`
 
-GetAzureAdGroups returns the AzureAdGroups field if non-nil, zero value otherwise.
+GetSendExpirationEmails returns the SendExpirationEmails field if non-nil, zero value otherwise.
 
-### GetAzureAdGroupsOk
+### GetSendExpirationEmailsOk
 
-`func (o *InlineResponse20065) GetAzureAdGroupsOk() (*[]string, bool)`
+`func (o *InlineResponse20065) GetSendExpirationEmailsOk() (*bool, bool)`
 
-GetAzureAdGroupsOk returns a tuple with the AzureAdGroups field if it's non-nil, zero value otherwise
+GetSendExpirationEmailsOk returns a tuple with the SendExpirationEmails field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAzureAdGroups
+### SetSendExpirationEmails
 
-`func (o *InlineResponse20065) SetAzureAdGroups(v []string)`
+`func (o *InlineResponse20065) SetSendExpirationEmails(v bool)`
 
-SetAzureAdGroups sets AzureAdGroups field to given value.
+SetSendExpirationEmails sets SendExpirationEmails field to given value.
 
-### HasAzureAdGroups
+### HasSendExpirationEmails
 
-`func (o *InlineResponse20065) HasAzureAdGroups() bool`
+`func (o *InlineResponse20065) HasSendExpirationEmails() bool`
 
-HasAzureAdGroups returns a boolean if a field has been set.
+HasSendExpirationEmails returns a boolean if a field has been set.
 
-### GetSamlGroups
+### GetNotifyTimeBeforeAccessEnds
 
-`func (o *InlineResponse20065) GetSamlGroups() []string`
+`func (o *InlineResponse20065) GetNotifyTimeBeforeAccessEnds() int32`
 
-GetSamlGroups returns the SamlGroups field if non-nil, zero value otherwise.
+GetNotifyTimeBeforeAccessEnds returns the NotifyTimeBeforeAccessEnds field if non-nil, zero value otherwise.
 
-### GetSamlGroupsOk
+### GetNotifyTimeBeforeAccessEndsOk
 
-`func (o *InlineResponse20065) GetSamlGroupsOk() (*[]string, bool)`
+`func (o *InlineResponse20065) GetNotifyTimeBeforeAccessEndsOk() (*int32, bool)`
 
-GetSamlGroupsOk returns a tuple with the SamlGroups field if it's non-nil, zero value otherwise
+GetNotifyTimeBeforeAccessEndsOk returns a tuple with the NotifyTimeBeforeAccessEnds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSamlGroups
+### SetNotifyTimeBeforeAccessEnds
 
-`func (o *InlineResponse20065) SetSamlGroups(v []string)`
+`func (o *InlineResponse20065) SetNotifyTimeBeforeAccessEnds(v int32)`
 
-SetSamlGroups sets SamlGroups field to given value.
+SetNotifyTimeBeforeAccessEnds sets NotifyTimeBeforeAccessEnds field to given value.
 
-### HasSamlGroups
+### HasNotifyTimeBeforeAccessEnds
 
-`func (o *InlineResponse20065) HasSamlGroups() bool`
+`func (o *InlineResponse20065) HasNotifyTimeBeforeAccessEnds() bool`
 
-HasSamlGroups returns a boolean if a field has been set.
+HasNotifyTimeBeforeAccessEnds returns a boolean if a field has been set.
 
-### GetAsmGroups
+### GetAdditionalEmailText
 
-`func (o *InlineResponse20065) GetAsmGroups() []string`
+`func (o *InlineResponse20065) GetAdditionalEmailText() string`
 
-GetAsmGroups returns the AsmGroups field if non-nil, zero value otherwise.
+GetAdditionalEmailText returns the AdditionalEmailText field if non-nil, zero value otherwise.
 
-### GetAsmGroupsOk
+### GetAdditionalEmailTextOk
 
-`func (o *InlineResponse20065) GetAsmGroupsOk() (*[]string, bool)`
+`func (o *InlineResponse20065) GetAdditionalEmailTextOk() (*string, bool)`
 
-GetAsmGroupsOk returns a tuple with the AsmGroups field if it's non-nil, zero value otherwise
+GetAdditionalEmailTextOk returns a tuple with the AdditionalEmailText field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAsmGroups
+### SetAdditionalEmailText
 
-`func (o *InlineResponse20065) SetAsmGroups(v []string)`
+`func (o *InlineResponse20065) SetAdditionalEmailText(v string)`
 
-SetAsmGroups sets AsmGroups field to given value.
+SetAdditionalEmailText sets AdditionalEmailText field to given value.
 
-### HasAsmGroups
+### HasAdditionalEmailText
 
-`func (o *InlineResponse20065) HasAsmGroups() bool`
+`func (o *InlineResponse20065) HasAdditionalEmailText() bool`
 
-HasAsmGroups returns a boolean if a field has been set.
+HasAdditionalEmailText returns a boolean if a field has been set.
 
-### GetIsExternal
+### GetAccessStartAt
 
-`func (o *InlineResponse20065) GetIsExternal() bool`
+`func (o *InlineResponse20065) GetAccessStartAt() time.Time`
 
-GetIsExternal returns the IsExternal field if non-nil, zero value otherwise.
+GetAccessStartAt returns the AccessStartAt field if non-nil, zero value otherwise.
 
-### GetIsExternalOk
+### GetAccessStartAtOk
 
-`func (o *InlineResponse20065) GetIsExternalOk() (*bool, bool)`
+`func (o *InlineResponse20065) GetAccessStartAtOk() (*time.Time, bool)`
 
-GetIsExternalOk returns a tuple with the IsExternal field if it's non-nil, zero value otherwise
+GetAccessStartAtOk returns a tuple with the AccessStartAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsExternal
+### SetAccessStartAt
 
-`func (o *InlineResponse20065) SetIsExternal(v bool)`
+`func (o *InlineResponse20065) SetAccessStartAt(v time.Time)`
 
-SetIsExternal sets IsExternal field to given value.
+SetAccessStartAt sets AccessStartAt field to given value.
 
-### HasIsExternal
+### HasAccessStartAt
 
-`func (o *InlineResponse20065) HasIsExternal() bool`
+`func (o *InlineResponse20065) HasAccessStartAt() bool`
 
-HasIsExternal returns a boolean if a field has been set.
+HasAccessStartAt returns a boolean if a field has been set.
 
-### GetDisplayName
+### GetAccessEndAt
 
-`func (o *InlineResponse20065) GetDisplayName() string`
+`func (o *InlineResponse20065) GetAccessEndAt() time.Time`
 
-GetDisplayName returns the DisplayName field if non-nil, zero value otherwise.
+GetAccessEndAt returns the AccessEndAt field if non-nil, zero value otherwise.
 
-### GetDisplayNameOk
+### GetAccessEndAtOk
 
-`func (o *InlineResponse20065) GetDisplayNameOk() (*string, bool)`
+`func (o *InlineResponse20065) GetAccessEndAtOk() (*time.Time, bool)`
 
-GetDisplayNameOk returns a tuple with the DisplayName field if it's non-nil, zero value otherwise
+GetAccessEndAtOk returns a tuple with the AccessEndAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDisplayName
+### SetAccessEndAt
 
-`func (o *InlineResponse20065) SetDisplayName(v string)`
+`func (o *InlineResponse20065) SetAccessEndAt(v time.Time)`
 
-SetDisplayName sets DisplayName field to given value.
+SetAccessEndAt sets AccessEndAt field to given value.
 
-### HasDisplayName
+### HasAccessEndAt
 
-`func (o *InlineResponse20065) HasDisplayName() bool`
+`func (o *InlineResponse20065) HasAccessEndAt() bool`
 
-HasDisplayName returns a boolean if a field has been set.
-
-### GetHasIdentityCertificate
-
-`func (o *InlineResponse20065) GetHasIdentityCertificate() bool`
-
-GetHasIdentityCertificate returns the HasIdentityCertificate field if non-nil, zero value otherwise.
-
-### GetHasIdentityCertificateOk
-
-`func (o *InlineResponse20065) GetHasIdentityCertificateOk() (*bool, bool)`
-
-GetHasIdentityCertificateOk returns a tuple with the HasIdentityCertificate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHasIdentityCertificate
-
-`func (o *InlineResponse20065) SetHasIdentityCertificate(v bool)`
-
-SetHasIdentityCertificate sets HasIdentityCertificate field to given value.
-
-### HasHasIdentityCertificate
-
-`func (o *InlineResponse20065) HasHasIdentityCertificate() bool`
-
-HasHasIdentityCertificate returns a boolean if a field has been set.
-
-### GetUserThumbnail
-
-`func (o *InlineResponse20065) GetUserThumbnail() string`
-
-GetUserThumbnail returns the UserThumbnail field if non-nil, zero value otherwise.
-
-### GetUserThumbnailOk
-
-`func (o *InlineResponse20065) GetUserThumbnailOk() (*string, bool)`
-
-GetUserThumbnailOk returns a tuple with the UserThumbnail field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUserThumbnail
-
-`func (o *InlineResponse20065) SetUserThumbnail(v string)`
-
-SetUserThumbnail sets UserThumbnail field to given value.
-
-### HasUserThumbnail
-
-`func (o *InlineResponse20065) HasUserThumbnail() bool`
-
-HasUserThumbnail returns a boolean if a field has been set.
+HasAccessEndAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

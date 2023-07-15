@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
-**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
-**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
-**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
-**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
+**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
+**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
+**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
+**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
+**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**EslEnabled** | Pointer to **bool** | Whether ESL is enabled on this network. | [optional] 
 
 ## Methods
 
@@ -29,130 +31,180 @@ NewInlineResponse20088WithDefaults instantiates a new InlineResponse20088 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssoc
+### GetScanningEnabled
 
-`func (o *InlineResponse20088) GetAssoc() int32`
+`func (o *InlineResponse20088) GetScanningEnabled() bool`
 
-GetAssoc returns the Assoc field if non-nil, zero value otherwise.
+GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
 
-### GetAssocOk
+### GetScanningEnabledOk
 
-`func (o *InlineResponse20088) GetAssocOk() (*int32, bool)`
+`func (o *InlineResponse20088) GetScanningEnabledOk() (*bool, bool)`
 
-GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
+GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssoc
+### SetScanningEnabled
 
-`func (o *InlineResponse20088) SetAssoc(v int32)`
+`func (o *InlineResponse20088) SetScanningEnabled(v bool)`
 
-SetAssoc sets Assoc field to given value.
+SetScanningEnabled sets ScanningEnabled field to given value.
 
-### HasAssoc
+### HasScanningEnabled
 
-`func (o *InlineResponse20088) HasAssoc() bool`
+`func (o *InlineResponse20088) HasScanningEnabled() bool`
 
-HasAssoc returns a boolean if a field has been set.
+HasScanningEnabled returns a boolean if a field has been set.
 
-### GetAuth
+### GetAdvertisingEnabled
 
-`func (o *InlineResponse20088) GetAuth() int32`
+`func (o *InlineResponse20088) GetAdvertisingEnabled() bool`
 
-GetAuth returns the Auth field if non-nil, zero value otherwise.
+GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
 
-### GetAuthOk
+### GetAdvertisingEnabledOk
 
-`func (o *InlineResponse20088) GetAuthOk() (*int32, bool)`
+`func (o *InlineResponse20088) GetAdvertisingEnabledOk() (*bool, bool)`
 
-GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
+GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuth
+### SetAdvertisingEnabled
 
-`func (o *InlineResponse20088) SetAuth(v int32)`
+`func (o *InlineResponse20088) SetAdvertisingEnabled(v bool)`
 
-SetAuth sets Auth field to given value.
+SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
 
-### HasAuth
+### HasAdvertisingEnabled
 
-`func (o *InlineResponse20088) HasAuth() bool`
+`func (o *InlineResponse20088) HasAdvertisingEnabled() bool`
 
-HasAuth returns a boolean if a field has been set.
+HasAdvertisingEnabled returns a boolean if a field has been set.
 
-### GetDhcp
+### GetUuid
 
-`func (o *InlineResponse20088) GetDhcp() int32`
+`func (o *InlineResponse20088) GetUuid() string`
 
-GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetDhcpOk
+### GetUuidOk
 
-`func (o *InlineResponse20088) GetDhcpOk() (*int32, bool)`
+`func (o *InlineResponse20088) GetUuidOk() (*string, bool)`
 
-GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcp
+### SetUuid
 
-`func (o *InlineResponse20088) SetDhcp(v int32)`
+`func (o *InlineResponse20088) SetUuid(v string)`
 
-SetDhcp sets Dhcp field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasDhcp
+### HasUuid
 
-`func (o *InlineResponse20088) HasDhcp() bool`
+`func (o *InlineResponse20088) HasUuid() bool`
 
-HasDhcp returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
-### GetDns
+### GetMajorMinorAssignmentMode
 
-`func (o *InlineResponse20088) GetDns() int32`
+`func (o *InlineResponse20088) GetMajorMinorAssignmentMode() string`
 
-GetDns returns the Dns field if non-nil, zero value otherwise.
+GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
 
-### GetDnsOk
+### GetMajorMinorAssignmentModeOk
 
-`func (o *InlineResponse20088) GetDnsOk() (*int32, bool)`
+`func (o *InlineResponse20088) GetMajorMinorAssignmentModeOk() (*string, bool)`
 
-GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
+GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDns
+### SetMajorMinorAssignmentMode
 
-`func (o *InlineResponse20088) SetDns(v int32)`
+`func (o *InlineResponse20088) SetMajorMinorAssignmentMode(v string)`
 
-SetDns sets Dns field to given value.
+SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
 
-### HasDns
+### HasMajorMinorAssignmentMode
 
-`func (o *InlineResponse20088) HasDns() bool`
+`func (o *InlineResponse20088) HasMajorMinorAssignmentMode() bool`
 
-HasDns returns a boolean if a field has been set.
+HasMajorMinorAssignmentMode returns a boolean if a field has been set.
 
-### GetSuccess
+### GetMajor
 
-`func (o *InlineResponse20088) GetSuccess() int32`
+`func (o *InlineResponse20088) GetMajor() int32`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetMajor returns the Major field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetMajorOk
 
-`func (o *InlineResponse20088) GetSuccessOk() (*int32, bool)`
+`func (o *InlineResponse20088) GetMajorOk() (*int32, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetMajor
 
-`func (o *InlineResponse20088) SetSuccess(v int32)`
+`func (o *InlineResponse20088) SetMajor(v int32)`
 
-SetSuccess sets Success field to given value.
+SetMajor sets Major field to given value.
 
-### HasSuccess
+### HasMajor
 
-`func (o *InlineResponse20088) HasSuccess() bool`
+`func (o *InlineResponse20088) HasMajor() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasMajor returns a boolean if a field has been set.
+
+### GetMinor
+
+`func (o *InlineResponse20088) GetMinor() int32`
+
+GetMinor returns the Minor field if non-nil, zero value otherwise.
+
+### GetMinorOk
+
+`func (o *InlineResponse20088) GetMinorOk() (*int32, bool)`
+
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMinor
+
+`func (o *InlineResponse20088) SetMinor(v int32)`
+
+SetMinor sets Minor field to given value.
+
+### HasMinor
+
+`func (o *InlineResponse20088) HasMinor() bool`
+
+HasMinor returns a boolean if a field has been set.
+
+### GetEslEnabled
+
+`func (o *InlineResponse20088) GetEslEnabled() bool`
+
+GetEslEnabled returns the EslEnabled field if non-nil, zero value otherwise.
+
+### GetEslEnabledOk
+
+`func (o *InlineResponse20088) GetEslEnabledOk() (*bool, bool)`
+
+GetEslEnabledOk returns a tuple with the EslEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEslEnabled
+
+`func (o *InlineResponse20088) SetEslEnabled(v bool)`
+
+SetEslEnabled sets EslEnabled field to given value.
+
+### HasEslEnabled
+
+`func (o *InlineResponse20088) HasEslEnabled() bool`
+
+HasEslEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

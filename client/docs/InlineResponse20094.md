@@ -6,8 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
 **EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
-**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
+**AvgLatencyMs** | Pointer to **int32** | Average latency in milliseconds | [optional] 
 
 ## Methods
 
@@ -78,55 +77,30 @@ SetEndTs sets EndTs field to given value.
 
 HasEndTs returns a boolean if a field has been set.
 
-### GetSnr
+### GetAvgLatencyMs
 
-`func (o *InlineResponse20094) GetSnr() int32`
+`func (o *InlineResponse20094) GetAvgLatencyMs() int32`
 
-GetSnr returns the Snr field if non-nil, zero value otherwise.
+GetAvgLatencyMs returns the AvgLatencyMs field if non-nil, zero value otherwise.
 
-### GetSnrOk
+### GetAvgLatencyMsOk
 
-`func (o *InlineResponse20094) GetSnrOk() (*int32, bool)`
+`func (o *InlineResponse20094) GetAvgLatencyMsOk() (*int32, bool)`
 
-GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
+GetAvgLatencyMsOk returns a tuple with the AvgLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSnr
+### SetAvgLatencyMs
 
-`func (o *InlineResponse20094) SetSnr(v int32)`
+`func (o *InlineResponse20094) SetAvgLatencyMs(v int32)`
 
-SetSnr sets Snr field to given value.
+SetAvgLatencyMs sets AvgLatencyMs field to given value.
 
-### HasSnr
+### HasAvgLatencyMs
 
-`func (o *InlineResponse20094) HasSnr() bool`
+`func (o *InlineResponse20094) HasAvgLatencyMs() bool`
 
-HasSnr returns a boolean if a field has been set.
-
-### GetRssi
-
-`func (o *InlineResponse20094) GetRssi() int32`
-
-GetRssi returns the Rssi field if non-nil, zero value otherwise.
-
-### GetRssiOk
-
-`func (o *InlineResponse20094) GetRssiOk() (*int32, bool)`
-
-GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRssi
-
-`func (o *InlineResponse20094) SetRssi(v int32)`
-
-SetRssi sets Rssi field to given value.
-
-### HasRssi
-
-`func (o *InlineResponse20094) HasRssi() bool`
-
-HasRssi returns a boolean if a field has been set.
+HasAvgLatencyMs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

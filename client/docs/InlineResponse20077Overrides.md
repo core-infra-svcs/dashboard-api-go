@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Switches** | Pointer to **[]string** | (optional) List of switch serials for non-template network | [optional] 
-**Stacks** | Pointer to **[]string** | (optional) List of switch stack ids for non-template network | [optional] 
-**SwitchProfiles** | Pointer to **[]string** | (optional) List of switch profiles ids for template network | [optional] 
-**IgmpSnoopingEnabled** | Pointer to **bool** | IGMP snooping enabled for switches, switch stacks or switch profiles | [optional] 
-**FloodUnknownMulticastTrafficEnabled** | Pointer to **bool** | Flood unknown multicast traffic enabled for switches, switch stacks or switch profiles | [optional] 
+**Switches** | Pointer to **[]string** | List of switch serials. Applicable only for switch network. | [optional] 
+**SwitchProfiles** | Pointer to **[]string** | List of switch template IDs. Applicable only for template network. | [optional] 
+**MtuSize** | **int32** | MTU size for the switches or switch templates. | 
 
 ## Methods
 
 ### NewInlineResponse20077Overrides
 
-`func NewInlineResponse20077Overrides() *InlineResponse20077Overrides`
+`func NewInlineResponse20077Overrides(mtuSize int32, ) *InlineResponse20077Overrides`
 
 NewInlineResponse20077Overrides instantiates a new InlineResponse20077Overrides object
 This constructor will assign default values to properties that have it defined,
@@ -54,31 +52,6 @@ SetSwitches sets Switches field to given value.
 
 HasSwitches returns a boolean if a field has been set.
 
-### GetStacks
-
-`func (o *InlineResponse20077Overrides) GetStacks() []string`
-
-GetStacks returns the Stacks field if non-nil, zero value otherwise.
-
-### GetStacksOk
-
-`func (o *InlineResponse20077Overrides) GetStacksOk() (*[]string, bool)`
-
-GetStacksOk returns a tuple with the Stacks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStacks
-
-`func (o *InlineResponse20077Overrides) SetStacks(v []string)`
-
-SetStacks sets Stacks field to given value.
-
-### HasStacks
-
-`func (o *InlineResponse20077Overrides) HasStacks() bool`
-
-HasStacks returns a boolean if a field has been set.
-
 ### GetSwitchProfiles
 
 `func (o *InlineResponse20077Overrides) GetSwitchProfiles() []string`
@@ -104,55 +77,25 @@ SetSwitchProfiles sets SwitchProfiles field to given value.
 
 HasSwitchProfiles returns a boolean if a field has been set.
 
-### GetIgmpSnoopingEnabled
+### GetMtuSize
 
-`func (o *InlineResponse20077Overrides) GetIgmpSnoopingEnabled() bool`
+`func (o *InlineResponse20077Overrides) GetMtuSize() int32`
 
-GetIgmpSnoopingEnabled returns the IgmpSnoopingEnabled field if non-nil, zero value otherwise.
+GetMtuSize returns the MtuSize field if non-nil, zero value otherwise.
 
-### GetIgmpSnoopingEnabledOk
+### GetMtuSizeOk
 
-`func (o *InlineResponse20077Overrides) GetIgmpSnoopingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20077Overrides) GetMtuSizeOk() (*int32, bool)`
 
-GetIgmpSnoopingEnabledOk returns a tuple with the IgmpSnoopingEnabled field if it's non-nil, zero value otherwise
+GetMtuSizeOk returns a tuple with the MtuSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIgmpSnoopingEnabled
+### SetMtuSize
 
-`func (o *InlineResponse20077Overrides) SetIgmpSnoopingEnabled(v bool)`
+`func (o *InlineResponse20077Overrides) SetMtuSize(v int32)`
 
-SetIgmpSnoopingEnabled sets IgmpSnoopingEnabled field to given value.
+SetMtuSize sets MtuSize field to given value.
 
-### HasIgmpSnoopingEnabled
-
-`func (o *InlineResponse20077Overrides) HasIgmpSnoopingEnabled() bool`
-
-HasIgmpSnoopingEnabled returns a boolean if a field has been set.
-
-### GetFloodUnknownMulticastTrafficEnabled
-
-`func (o *InlineResponse20077Overrides) GetFloodUnknownMulticastTrafficEnabled() bool`
-
-GetFloodUnknownMulticastTrafficEnabled returns the FloodUnknownMulticastTrafficEnabled field if non-nil, zero value otherwise.
-
-### GetFloodUnknownMulticastTrafficEnabledOk
-
-`func (o *InlineResponse20077Overrides) GetFloodUnknownMulticastTrafficEnabledOk() (*bool, bool)`
-
-GetFloodUnknownMulticastTrafficEnabledOk returns a tuple with the FloodUnknownMulticastTrafficEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFloodUnknownMulticastTrafficEnabled
-
-`func (o *InlineResponse20077Overrides) SetFloodUnknownMulticastTrafficEnabled(v bool)`
-
-SetFloodUnknownMulticastTrafficEnabled sets FloodUnknownMulticastTrafficEnabled field to given value.
-
-### HasFloodUnknownMulticastTrafficEnabled
-
-`func (o *InlineResponse20077Overrides) HasFloodUnknownMulticastTrafficEnabled() bool`
-
-HasFloodUnknownMulticastTrafficEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

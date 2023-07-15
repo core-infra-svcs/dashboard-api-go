@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The id of the VPP Account | [optional] 
-**VppServiceToken** | Pointer to **string** | The VPP Account&#39;s Service Token | [optional] 
+**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200144WithDefaults instantiates a new InlineResponse200144 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEnabled
 
-`func (o *InlineResponse200144) GetId() string`
+`func (o *InlineResponse200144) GetEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200144) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200144) GetEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEnabled
 
-`func (o *InlineResponse200144) SetId(v string)`
+`func (o *InlineResponse200144) SetEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasId
+### HasEnabled
 
-`func (o *InlineResponse200144) HasId() bool`
+`func (o *InlineResponse200144) HasEnabled() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetVppServiceToken
-
-`func (o *InlineResponse200144) GetVppServiceToken() string`
-
-GetVppServiceToken returns the VppServiceToken field if non-nil, zero value otherwise.
-
-### GetVppServiceTokenOk
-
-`func (o *InlineResponse200144) GetVppServiceTokenOk() (*string, bool)`
-
-GetVppServiceTokenOk returns a tuple with the VppServiceToken field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVppServiceToken
-
-`func (o *InlineResponse200144) SetVppServiceToken(v string)`
-
-SetVppServiceToken sets VppServiceToken field to given value.
-
-### HasVppServiceToken
-
-`func (o *InlineResponse200144) HasVppServiceToken() bool`
-
-HasVppServiceToken returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

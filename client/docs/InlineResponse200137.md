@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingNetwork** | Pointer to [**InlineResponse200137ResultingNetwork**](InlineResponse200137ResultingNetwork.md) |  | [optional] 
+**ResultingLicenses** | Pointer to [**[]InlineResponse200136**](InlineResponse200136.md) | Resulting licenses from the move | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200137WithDefaults instantiates a new InlineResponse200137 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingNetwork
+### GetResultingLicenses
 
-`func (o *InlineResponse200137) GetResultingNetwork() InlineResponse200137ResultingNetwork`
+`func (o *InlineResponse200137) GetResultingLicenses() []InlineResponse200136`
 
-GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
+GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
 
-### GetResultingNetworkOk
+### GetResultingLicensesOk
 
-`func (o *InlineResponse200137) GetResultingNetworkOk() (*InlineResponse200137ResultingNetwork, bool)`
+`func (o *InlineResponse200137) GetResultingLicensesOk() (*[]InlineResponse200136, bool)`
 
-GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
+GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingNetwork
+### SetResultingLicenses
 
-`func (o *InlineResponse200137) SetResultingNetwork(v InlineResponse200137ResultingNetwork)`
+`func (o *InlineResponse200137) SetResultingLicenses(v []InlineResponse200136)`
 
-SetResultingNetwork sets ResultingNetwork field to given value.
+SetResultingLicenses sets ResultingLicenses field to given value.
 
-### HasResultingNetwork
+### HasResultingLicenses
 
-`func (o *InlineResponse200137) HasResultingNetwork() bool`
+`func (o *InlineResponse200137) HasResultingLicenses() bool`
 
-HasResultingNetwork returns a boolean if a field has been set.
+HasResultingLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG in the network. | [optional] 
-**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG in the network. | [optional] 
-**DnsCustomNameservers** | Pointer to **[]string** | List of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39;. | [optional] 
+**Mode** | Pointer to **string** | The site-to-site VPN mode. | [optional] 
+**Hubs** | Pointer to [**[]InlineResponse20025Hubs**](InlineResponse20025Hubs.md) | The list of VPN hubs, in order of preference. | [optional] 
+**Subnets** | Pointer to [**[]InlineResponse20025Subnets**](InlineResponse20025Subnets.md) | The list of subnets and their VPN presence. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20025WithDefaults instantiates a new InlineResponse20025 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDhcpLeaseTime
+### GetMode
 
-`func (o *InlineResponse20025) GetDhcpLeaseTime() string`
+`func (o *InlineResponse20025) GetMode() string`
 
-GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetDhcpLeaseTimeOk
+### GetModeOk
 
-`func (o *InlineResponse20025) GetDhcpLeaseTimeOk() (*string, bool)`
+`func (o *InlineResponse20025) GetModeOk() (*string, bool)`
 
-GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcpLeaseTime
+### SetMode
 
-`func (o *InlineResponse20025) SetDhcpLeaseTime(v string)`
+`func (o *InlineResponse20025) SetMode(v string)`
 
-SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+SetMode sets Mode field to given value.
 
-### HasDhcpLeaseTime
+### HasMode
 
-`func (o *InlineResponse20025) HasDhcpLeaseTime() bool`
+`func (o *InlineResponse20025) HasMode() bool`
 
-HasDhcpLeaseTime returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetDnsNameservers
+### GetHubs
 
-`func (o *InlineResponse20025) GetDnsNameservers() string`
+`func (o *InlineResponse20025) GetHubs() []InlineResponse20025Hubs`
 
-GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+GetHubs returns the Hubs field if non-nil, zero value otherwise.
 
-### GetDnsNameserversOk
+### GetHubsOk
 
-`func (o *InlineResponse20025) GetDnsNameserversOk() (*string, bool)`
+`func (o *InlineResponse20025) GetHubsOk() (*[]InlineResponse20025Hubs, bool)`
 
-GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsNameservers
+### SetHubs
 
-`func (o *InlineResponse20025) SetDnsNameservers(v string)`
+`func (o *InlineResponse20025) SetHubs(v []InlineResponse20025Hubs)`
 
-SetDnsNameservers sets DnsNameservers field to given value.
+SetHubs sets Hubs field to given value.
 
-### HasDnsNameservers
+### HasHubs
 
-`func (o *InlineResponse20025) HasDnsNameservers() bool`
+`func (o *InlineResponse20025) HasHubs() bool`
 
-HasDnsNameservers returns a boolean if a field has been set.
+HasHubs returns a boolean if a field has been set.
 
-### GetDnsCustomNameservers
+### GetSubnets
 
-`func (o *InlineResponse20025) GetDnsCustomNameservers() []string`
+`func (o *InlineResponse20025) GetSubnets() []InlineResponse20025Subnets`
 
-GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetDnsCustomNameserversOk
+### GetSubnetsOk
 
-`func (o *InlineResponse20025) GetDnsCustomNameserversOk() (*[]string, bool)`
+`func (o *InlineResponse20025) GetSubnetsOk() (*[]InlineResponse20025Subnets, bool)`
 
-GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsCustomNameservers
+### SetSubnets
 
-`func (o *InlineResponse20025) SetDnsCustomNameservers(v []string)`
+`func (o *InlineResponse20025) SetSubnets(v []InlineResponse20025Subnets)`
 
-SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasDnsCustomNameservers
+### HasSubnets
 
-`func (o *InlineResponse20025) HasDnsCustomNameservers() bool`
+`func (o *InlineResponse20025) HasSubnets() bool`
 
-HasDnsCustomNameservers returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

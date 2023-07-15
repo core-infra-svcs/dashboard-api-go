@@ -4,11 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
+**Key** | Pointer to **string** | The key of the license | [optional] 
+**OrganizationId** | Pointer to **string** | The ID of the organization that the license is claimed in | [optional] 
+**Duration** | Pointer to **int32** | The duration (term length) of the license, measured in days | [optional] 
+**Mode** | Pointer to **string** | The operation mode of the license when it was claimed | [optional] 
+**StartedAt** | Pointer to **time.Time** | When the license&#39;s term began (approximately the date when the license was created) | [optional] 
+**ClaimedAt** | Pointer to **time.Time** | When the license was claimed into the organization | [optional] 
+**Invalidated** | Pointer to **bool** | Flag to indicated that the license is invalidated | [optional] 
+**InvalidatedAt** | Pointer to **time.Time** | When the license was invalidated. Will be null for active licenses | [optional] 
+**Expired** | Pointer to **bool** | Flag to indicate if the license is expired | [optional] 
+**Editions** | Pointer to [**[]OrganizationsOrganizationIdLicensingCotermLicensesEditions**](OrganizationsOrganizationIdLicensingCotermLicensesEditions.md) | The editions of the license for each relevant product type | [optional] 
+**Counts** | Pointer to [**[]OrganizationsOrganizationIdLicensingCotermLicensesCounts**](OrganizationsOrganizationIdLicensingCotermLicensesCounts.md) | The counts of the license by model type | [optional] 
 
 ## Methods
 
@@ -29,130 +35,280 @@ NewInlineResponse200140WithDefaults instantiates a new InlineResponse200140 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetKey
 
-`func (o *InlineResponse200140) GetId() string`
+`func (o *InlineResponse200140) GetKey() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetKey returns the Key field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetKeyOk
 
-`func (o *InlineResponse200140) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200140) GetKeyOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetKeyOk returns a tuple with the Key field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetKey
 
-`func (o *InlineResponse200140) SetId(v string)`
+`func (o *InlineResponse200140) SetKey(v string)`
 
-SetId sets Id field to given value.
+SetKey sets Key field to given value.
 
-### HasId
+### HasKey
 
-`func (o *InlineResponse200140) HasId() bool`
+`func (o *InlineResponse200140) HasKey() bool`
 
-HasId returns a boolean if a field has been set.
+HasKey returns a boolean if a field has been set.
 
-### GetRole
+### GetOrganizationId
 
-`func (o *InlineResponse200140) GetRole() string`
+`func (o *InlineResponse200140) GetOrganizationId() string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse200140) GetRoleOk() (*string, bool)`
+`func (o *InlineResponse200140) GetOrganizationIdOk() (*string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetOrganizationId
 
-`func (o *InlineResponse200140) SetRole(v string)`
+`func (o *InlineResponse200140) SetOrganizationId(v string)`
 
-SetRole sets Role field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasRole
+### HasOrganizationId
 
-`func (o *InlineResponse200140) HasRole() bool`
+`func (o *InlineResponse200140) HasOrganizationId() bool`
 
-HasRole returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
 
-### GetOrgAccess
+### GetDuration
 
-`func (o *InlineResponse200140) GetOrgAccess() string`
+`func (o *InlineResponse200140) GetDuration() int32`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetDuration returns the Duration field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetDurationOk
 
-`func (o *InlineResponse200140) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineResponse200140) GetDurationOk() (*int32, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetDuration
 
-`func (o *InlineResponse200140) SetOrgAccess(v string)`
+`func (o *InlineResponse200140) SetDuration(v int32)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetDuration sets Duration field to given value.
 
-### HasOrgAccess
+### HasDuration
 
-`func (o *InlineResponse200140) HasOrgAccess() bool`
+`func (o *InlineResponse200140) HasDuration() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasDuration returns a boolean if a field has been set.
 
-### GetNetworks
+### GetMode
 
-`func (o *InlineResponse200140) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
+`func (o *InlineResponse200140) GetMode() string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetModeOk
 
-`func (o *InlineResponse200140) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
+`func (o *InlineResponse200140) GetModeOk() (*string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetMode
 
-`func (o *InlineResponse200140) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
+`func (o *InlineResponse200140) SetMode(v string)`
 
-SetNetworks sets Networks field to given value.
+SetMode sets Mode field to given value.
 
-### HasNetworks
+### HasMode
 
-`func (o *InlineResponse200140) HasNetworks() bool`
+`func (o *InlineResponse200140) HasMode() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetTags
+### GetStartedAt
 
-`func (o *InlineResponse200140) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
+`func (o *InlineResponse200140) GetStartedAt() time.Time`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetStartedAt returns the StartedAt field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetStartedAtOk
 
-`func (o *InlineResponse200140) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
+`func (o *InlineResponse200140) GetStartedAtOk() (*time.Time, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetStartedAtOk returns a tuple with the StartedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetStartedAt
 
-`func (o *InlineResponse200140) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
+`func (o *InlineResponse200140) SetStartedAt(v time.Time)`
 
-SetTags sets Tags field to given value.
+SetStartedAt sets StartedAt field to given value.
 
-### HasTags
+### HasStartedAt
 
-`func (o *InlineResponse200140) HasTags() bool`
+`func (o *InlineResponse200140) HasStartedAt() bool`
 
-HasTags returns a boolean if a field has been set.
+HasStartedAt returns a boolean if a field has been set.
+
+### GetClaimedAt
+
+`func (o *InlineResponse200140) GetClaimedAt() time.Time`
+
+GetClaimedAt returns the ClaimedAt field if non-nil, zero value otherwise.
+
+### GetClaimedAtOk
+
+`func (o *InlineResponse200140) GetClaimedAtOk() (*time.Time, bool)`
+
+GetClaimedAtOk returns a tuple with the ClaimedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClaimedAt
+
+`func (o *InlineResponse200140) SetClaimedAt(v time.Time)`
+
+SetClaimedAt sets ClaimedAt field to given value.
+
+### HasClaimedAt
+
+`func (o *InlineResponse200140) HasClaimedAt() bool`
+
+HasClaimedAt returns a boolean if a field has been set.
+
+### GetInvalidated
+
+`func (o *InlineResponse200140) GetInvalidated() bool`
+
+GetInvalidated returns the Invalidated field if non-nil, zero value otherwise.
+
+### GetInvalidatedOk
+
+`func (o *InlineResponse200140) GetInvalidatedOk() (*bool, bool)`
+
+GetInvalidatedOk returns a tuple with the Invalidated field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInvalidated
+
+`func (o *InlineResponse200140) SetInvalidated(v bool)`
+
+SetInvalidated sets Invalidated field to given value.
+
+### HasInvalidated
+
+`func (o *InlineResponse200140) HasInvalidated() bool`
+
+HasInvalidated returns a boolean if a field has been set.
+
+### GetInvalidatedAt
+
+`func (o *InlineResponse200140) GetInvalidatedAt() time.Time`
+
+GetInvalidatedAt returns the InvalidatedAt field if non-nil, zero value otherwise.
+
+### GetInvalidatedAtOk
+
+`func (o *InlineResponse200140) GetInvalidatedAtOk() (*time.Time, bool)`
+
+GetInvalidatedAtOk returns a tuple with the InvalidatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInvalidatedAt
+
+`func (o *InlineResponse200140) SetInvalidatedAt(v time.Time)`
+
+SetInvalidatedAt sets InvalidatedAt field to given value.
+
+### HasInvalidatedAt
+
+`func (o *InlineResponse200140) HasInvalidatedAt() bool`
+
+HasInvalidatedAt returns a boolean if a field has been set.
+
+### GetExpired
+
+`func (o *InlineResponse200140) GetExpired() bool`
+
+GetExpired returns the Expired field if non-nil, zero value otherwise.
+
+### GetExpiredOk
+
+`func (o *InlineResponse200140) GetExpiredOk() (*bool, bool)`
+
+GetExpiredOk returns a tuple with the Expired field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpired
+
+`func (o *InlineResponse200140) SetExpired(v bool)`
+
+SetExpired sets Expired field to given value.
+
+### HasExpired
+
+`func (o *InlineResponse200140) HasExpired() bool`
+
+HasExpired returns a boolean if a field has been set.
+
+### GetEditions
+
+`func (o *InlineResponse200140) GetEditions() []OrganizationsOrganizationIdLicensingCotermLicensesEditions`
+
+GetEditions returns the Editions field if non-nil, zero value otherwise.
+
+### GetEditionsOk
+
+`func (o *InlineResponse200140) GetEditionsOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesEditions, bool)`
+
+GetEditionsOk returns a tuple with the Editions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEditions
+
+`func (o *InlineResponse200140) SetEditions(v []OrganizationsOrganizationIdLicensingCotermLicensesEditions)`
+
+SetEditions sets Editions field to given value.
+
+### HasEditions
+
+`func (o *InlineResponse200140) HasEditions() bool`
+
+HasEditions returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse200140) GetCounts() []OrganizationsOrganizationIdLicensingCotermLicensesCounts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200140) GetCountsOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesCounts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200140) SetCounts(v []OrganizationsOrganizationIdLicensingCotermLicensesCounts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse200140) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

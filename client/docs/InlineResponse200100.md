@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AclId** | Pointer to **string** | ID of the adaptive policy ACL | [optional] 
-**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
-**IpVersion** | Pointer to **string** | IP version of adpative policy ACL | [optional] 
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules | [optional] 
-**CreatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was created | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was last updated | [optional] 
+**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
+**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
+**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
+**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
 
 ## Methods
 
@@ -30,31 +30,6 @@ will change when the set of required properties is changed
 NewInlineResponse200100WithDefaults instantiates a new InlineResponse200100 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetAclId
-
-`func (o *InlineResponse200100) GetAclId() string`
-
-GetAclId returns the AclId field if non-nil, zero value otherwise.
-
-### GetAclIdOk
-
-`func (o *InlineResponse200100) GetAclIdOk() (*string, bool)`
-
-GetAclIdOk returns a tuple with the AclId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAclId
-
-`func (o *InlineResponse200100) SetAclId(v string)`
-
-SetAclId sets AclId field to given value.
-
-### HasAclId
-
-`func (o *InlineResponse200100) HasAclId() bool`
-
-HasAclId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -81,130 +56,155 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDescription
+### GetId
 
-`func (o *InlineResponse200100) GetDescription() string`
+`func (o *InlineResponse200100) GetId() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetIdOk
 
-`func (o *InlineResponse200100) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200100) GetIdOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetId
 
-`func (o *InlineResponse200100) SetDescription(v string)`
+`func (o *InlineResponse200100) SetId(v string)`
 
-SetDescription sets Description field to given value.
+SetId sets Id field to given value.
 
-### HasDescription
+### HasId
 
-`func (o *InlineResponse200100) HasDescription() bool`
+`func (o *InlineResponse200100) HasId() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetIpVersion
+### GetGroupPolicyId
 
-`func (o *InlineResponse200100) GetIpVersion() string`
+`func (o *InlineResponse200100) GetGroupPolicyId() string`
 
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetIpVersionOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse200100) GetIpVersionOk() (*string, bool)`
+`func (o *InlineResponse200100) GetGroupPolicyIdOk() (*string, bool)`
 
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpVersion
+### SetGroupPolicyId
 
-`func (o *InlineResponse200100) SetIpVersion(v string)`
+`func (o *InlineResponse200100) SetGroupPolicyId(v string)`
 
-SetIpVersion sets IpVersion field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasIpVersion
+### HasGroupPolicyId
 
-`func (o *InlineResponse200100) HasIpVersion() bool`
+`func (o *InlineResponse200100) HasGroupPolicyId() bool`
 
-HasIpVersion returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
-### GetRules
+### GetPassphrase
 
-`func (o *InlineResponse200100) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
+`func (o *InlineResponse200100) GetPassphrase() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetPassphraseOk
 
-`func (o *InlineResponse200100) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
+`func (o *InlineResponse200100) GetPassphraseOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetPassphrase
 
-`func (o *InlineResponse200100) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
+`func (o *InlineResponse200100) SetPassphrase(v string)`
 
-SetRules sets Rules field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasRules
+### HasPassphrase
 
-`func (o *InlineResponse200100) HasRules() bool`
+`func (o *InlineResponse200100) HasPassphrase() bool`
 
-HasRules returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetWifiPersonalNetworkId
 
-`func (o *InlineResponse200100) GetCreatedAt() time.Time`
+`func (o *InlineResponse200100) GetWifiPersonalNetworkId() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetWifiPersonalNetworkIdOk
 
-`func (o *InlineResponse200100) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200100) GetWifiPersonalNetworkIdOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetWifiPersonalNetworkId
 
-`func (o *InlineResponse200100) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200100) SetWifiPersonalNetworkId(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
 
-### HasCreatedAt
+### HasWifiPersonalNetworkId
 
-`func (o *InlineResponse200100) HasCreatedAt() bool`
+`func (o *InlineResponse200100) HasWifiPersonalNetworkId() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasWifiPersonalNetworkId returns a boolean if a field has been set.
 
-### GetUpdatedAt
+### GetEmail
 
-`func (o *InlineResponse200100) GetUpdatedAt() time.Time`
+`func (o *InlineResponse200100) GetEmail() string`
 
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetUpdatedAtOk
+### GetEmailOk
 
-`func (o *InlineResponse200100) GetUpdatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200100) GetEmailOk() (*string, bool)`
 
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpdatedAt
+### SetEmail
 
-`func (o *InlineResponse200100) SetUpdatedAt(v time.Time)`
+`func (o *InlineResponse200100) SetEmail(v string)`
 
-SetUpdatedAt sets UpdatedAt field to given value.
+SetEmail sets Email field to given value.
 
-### HasUpdatedAt
+### HasEmail
 
-`func (o *InlineResponse200100) HasUpdatedAt() bool`
+`func (o *InlineResponse200100) HasEmail() bool`
 
-HasUpdatedAt returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
+
+### GetExpiresAt
+
+`func (o *InlineResponse200100) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineResponse200100) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineResponse200100) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineResponse200100) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

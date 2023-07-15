@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
+**ResultingNetwork** | Pointer to [**InlineResponse200143ResultingNetwork**](InlineResponse200143ResultingNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200143WithDefaults instantiates a new InlineResponse200143 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificate
+### GetResultingNetwork
 
-`func (o *InlineResponse200143) GetCertificate() string`
+`func (o *InlineResponse200143) GetResultingNetwork() InlineResponse200143ResultingNetwork`
 
-GetCertificate returns the Certificate field if non-nil, zero value otherwise.
+GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
 
-### GetCertificateOk
+### GetResultingNetworkOk
 
-`func (o *InlineResponse200143) GetCertificateOk() (*string, bool)`
+`func (o *InlineResponse200143) GetResultingNetworkOk() (*InlineResponse200143ResultingNetwork, bool)`
 
-GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
+GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificate
+### SetResultingNetwork
 
-`func (o *InlineResponse200143) SetCertificate(v string)`
+`func (o *InlineResponse200143) SetResultingNetwork(v InlineResponse200143ResultingNetwork)`
 
-SetCertificate sets Certificate field to given value.
+SetResultingNetwork sets ResultingNetwork field to given value.
 
-### HasCertificate
+### HasResultingNetwork
 
-`func (o *InlineResponse200143) HasCertificate() bool`
+`func (o *InlineResponse200143) HasResultingNetwork() bool`
 
-HasCertificate returns a boolean if a field has been set.
+HasResultingNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

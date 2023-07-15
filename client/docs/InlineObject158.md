@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on this SSID. | [optional] 
 **Rules** | Pointer to [**[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules**](NetworksNetworkIdGroupPoliciesBonjourForwardingRules.md) | List of bonjour forwarding rules. | [optional] 
+**Exception** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException**](NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException.md) |  | [optional] 
 
 ## Methods
 
@@ -75,6 +76,31 @@ SetRules sets Rules field to given value.
 `func (o *InlineObject158) HasRules() bool`
 
 HasRules returns a boolean if a field has been set.
+
+### GetException
+
+`func (o *InlineObject158) GetException() NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException`
+
+GetException returns the Exception field if non-nil, zero value otherwise.
+
+### GetExceptionOk
+
+`func (o *InlineObject158) GetExceptionOk() (*NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException, bool)`
+
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetException
+
+`func (o *InlineObject158) SetException(v NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException)`
+
+SetException sets Exception field to given value.
+
+### HasException
+
+`func (o *InlineObject158) HasException() bool`
+
+HasException returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
