@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSummaryTopClientsManufacturersByUsage
 
-> []InlineResponse200153 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200155 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top clients by data usage (in mb) over given time range, grouped by manufacturer.
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ManufacturersApi.GetOrganizationSummaryTopClientsManufacturersByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200153
+    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200155
     fmt.Fprintf(os.Stdout, "Response from `ManufacturersApi.GetOrganizationSummaryTopClientsManufacturersByUsage`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200153**](InlineResponse200153.md)
+[**[]InlineResponse200155**](InlineResponse200155.md)
 
 ### Authorization
 

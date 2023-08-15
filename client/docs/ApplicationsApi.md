@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInsightApplications
 
-> []InlineResponse200132 GetOrganizationInsightApplications(ctx, organizationId).Execute()
+> []InlineResponse200134 GetOrganizationInsightApplications(ctx, organizationId).Execute()
 
 List all Insight tracked applications
 
@@ -120,7 +120,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplicationsApi.GetOrganizationInsightApplications``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInsightApplications`: []InlineResponse200132
+    // response from `GetOrganizationInsightApplications`: []InlineResponse200134
     fmt.Fprintf(os.Stdout, "Response from `ApplicationsApi.GetOrganizationInsightApplications`: %v\n", resp)
 }
 ```
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200132**](InlineResponse200132.md)
+[**[]InlineResponse200134**](InlineResponse200134.md)
 
 ### Authorization
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | The name for your port schedule. Required | 
-**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule**](NetworksNetworkIdSwitchPortSchedulesPortSchedule.md) |  | [optional] 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule1**](NetworksNetworkIdSwitchPortSchedulesPortSchedule1.md) |  | [optional] 
 
 ## Methods
 
@@ -48,20 +48,20 @@ SetName sets Name field to given value.
 
 ### GetPortSchedule
 
-`func (o *InlineObject123) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule`
+`func (o *InlineObject123) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule1`
 
 GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
 
 ### GetPortScheduleOk
 
-`func (o *InlineObject123) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule, bool)`
+`func (o *InlineObject123) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule1, bool)`
 
 GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPortSchedule
 
-`func (o *InlineObject123) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule)`
+`func (o *InlineObject123) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule1)`
 
 SetPortSchedule sets PortSchedule field to given value.
 

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The id of the VPP Account | [optional] 
-**VppServiceToken** | Pointer to **string** | The VPP Account&#39;s Service Token | [optional] 
+**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
+**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200150WithDefaults instantiates a new InlineResponse200150 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetSerial
 
-`func (o *InlineResponse200150) GetId() string`
+`func (o *InlineResponse200150) GetSerial() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200150) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200150) GetSerialOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetSerial
 
-`func (o *InlineResponse200150) SetId(v string)`
+`func (o *InlineResponse200150) SetSerial(v string)`
 
-SetId sets Id field to given value.
+SetSerial sets Serial field to given value.
 
-### HasId
+### HasSerial
 
-`func (o *InlineResponse200150) HasId() bool`
+`func (o *InlineResponse200150) HasSerial() bool`
 
-HasId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetVppServiceToken
+### GetNetwork
 
-`func (o *InlineResponse200150) GetVppServiceToken() string`
+`func (o *InlineResponse200150) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
 
-GetVppServiceToken returns the VppServiceToken field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetVppServiceTokenOk
+### GetNetworkOk
 
-`func (o *InlineResponse200150) GetVppServiceTokenOk() (*string, bool)`
+`func (o *InlineResponse200150) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
 
-GetVppServiceTokenOk returns a tuple with the VppServiceToken field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVppServiceToken
+### SetNetwork
 
-`func (o *InlineResponse200150) SetVppServiceToken(v string)`
+`func (o *InlineResponse200150) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
 
-SetVppServiceToken sets VppServiceToken field to given value.
+SetNetwork sets Network field to given value.
 
-### HasVppServiceToken
+### HasNetwork
 
-`func (o *InlineResponse200150) HasVppServiceToken() bool`
+`func (o *InlineResponse200150) HasNetwork() bool`
 
-HasVppServiceToken returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
+
+### GetReadings
+
+`func (o *InlineResponse200150) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
+
+GetReadings returns the Readings field if non-nil, zero value otherwise.
+
+### GetReadingsOk
+
+`func (o *InlineResponse200150) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
+
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReadings
+
+`func (o *InlineResponse200150) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
+
+SetReadings sets Readings field to given value.
+
+### HasReadings
+
+`func (o *InlineResponse200150) HasReadings() bool`
+
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

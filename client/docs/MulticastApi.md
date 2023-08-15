@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingMulticast
 
-> InlineResponse20079 GetNetworkSwitchRoutingMulticast(ctx, networkId).Execute()
+> InlineResponse20080 GetNetworkSwitchRoutingMulticast(ctx, networkId).Execute()
 
 Return multicast settings for a network
 
@@ -187,7 +187,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MulticastApi.GetNetworkSwitchRoutingMulticast``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingMulticast`: InlineResponse20079
+    // response from `GetNetworkSwitchRoutingMulticast`: InlineResponse20080
     fmt.Fprintf(os.Stdout, "Response from `MulticastApi.GetNetworkSwitchRoutingMulticast`: %v\n", resp)
 }
 ```
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20079**](InlineResponse20079.md)
+[**InlineResponse20080**](InlineResponse20080.md)
 
 ### Authorization
 

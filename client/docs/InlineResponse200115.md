@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network Id | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Model** | Pointer to **string** | Device model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks.md) | Uplinks info | [optional] 
+**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
 
 ## Methods
 
@@ -29,130 +25,30 @@ NewInlineResponse200115WithDefaults instantiates a new InlineResponse200115 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetBrandingPolicyIds
 
-`func (o *InlineResponse200115) GetNetworkId() string`
+`func (o *InlineResponse200115) GetBrandingPolicyIds() []string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetBrandingPolicyIdsOk
 
-`func (o *InlineResponse200115) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200115) GetBrandingPolicyIdsOk() (*[]string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetBrandingPolicyIds
 
-`func (o *InlineResponse200115) SetNetworkId(v string)`
+`func (o *InlineResponse200115) SetBrandingPolicyIds(v []string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
 
-### HasNetworkId
+### HasBrandingPolicyIds
 
-`func (o *InlineResponse200115) HasNetworkId() bool`
+`func (o *InlineResponse200115) HasBrandingPolicyIds() bool`
 
-HasNetworkId returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200115) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200115) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200115) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200115) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200115) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200115) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200115) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200115) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetLastReportedAt
-
-`func (o *InlineResponse200115) GetLastReportedAt() time.Time`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse200115) GetLastReportedAtOk() (*time.Time, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse200115) SetLastReportedAt(v time.Time)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-### HasLastReportedAt
-
-`func (o *InlineResponse200115) HasLastReportedAt() bool`
-
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse200115) GetUplinks() []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse200115) GetUplinksOk() (*[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse200115) SetUplinks(v []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse200115) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasBrandingPolicyIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

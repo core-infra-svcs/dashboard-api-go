@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
-**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
-**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
-**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
+**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
+**Licenses** | Pointer to [**[]InlineResponse200117Licenses**](InlineResponse200117Licenses.md) | The licenses claimed | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200117WithDefaults instantiates a new InlineResponse200117 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetOrders
 
-`func (o *InlineResponse200117) GetTs() time.Time`
+`func (o *InlineResponse200117) GetOrders() []string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetOrdersOk
 
-`func (o *InlineResponse200117) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200117) GetOrdersOk() (*[]string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetOrders
 
-`func (o *InlineResponse200117) SetTs(v time.Time)`
+`func (o *InlineResponse200117) SetOrders(v []string)`
 
-SetTs sets Ts field to given value.
+SetOrders sets Orders field to given value.
 
-### HasTs
+### HasOrders
 
-`func (o *InlineResponse200117) HasTs() bool`
+`func (o *InlineResponse200117) HasOrders() bool`
 
-HasTs returns a boolean if a field has been set.
+HasOrders returns a boolean if a field has been set.
 
-### GetTotal
+### GetSerials
 
-`func (o *InlineResponse200117) GetTotal() int32`
+`func (o *InlineResponse200117) GetSerials() []string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetSerialsOk
 
-`func (o *InlineResponse200117) GetTotalOk() (*int32, bool)`
+`func (o *InlineResponse200117) GetSerialsOk() (*[]string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetSerials
 
-`func (o *InlineResponse200117) SetTotal(v int32)`
+`func (o *InlineResponse200117) SetSerials(v []string)`
 
-SetTotal sets Total field to given value.
+SetSerials sets Serials field to given value.
 
-### HasTotal
+### HasSerials
 
-`func (o *InlineResponse200117) HasTotal() bool`
+`func (o *InlineResponse200117) HasSerials() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetUpstream
+### GetLicenses
 
-`func (o *InlineResponse200117) GetUpstream() int32`
+`func (o *InlineResponse200117) GetLicenses() []InlineResponse200117Licenses`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetLicensesOk
 
-`func (o *InlineResponse200117) GetUpstreamOk() (*int32, bool)`
+`func (o *InlineResponse200117) GetLicensesOk() (*[]InlineResponse200117Licenses, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetLicenses
 
-`func (o *InlineResponse200117) SetUpstream(v int32)`
+`func (o *InlineResponse200117) SetLicenses(v []InlineResponse200117Licenses)`
 
-SetUpstream sets Upstream field to given value.
+SetLicenses sets Licenses field to given value.
 
-### HasUpstream
+### HasLicenses
 
-`func (o *InlineResponse200117) HasUpstream() bool`
+`func (o *InlineResponse200117) HasLicenses() bool`
 
-HasUpstream returns a boolean if a field has been set.
-
-### GetDownstream
-
-`func (o *InlineResponse200117) GetDownstream() int32`
-
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
-
-### GetDownstreamOk
-
-`func (o *InlineResponse200117) GetDownstreamOk() (*int32, bool)`
-
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDownstream
-
-`func (o *InlineResponse200117) SetDownstream(v int32)`
-
-SetDownstream sets Downstream field to given value.
-
-### HasDownstream
-
-`func (o *InlineResponse200117) HasDownstream() bool`
-
-HasDownstream returns a boolean if a field has been set.
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

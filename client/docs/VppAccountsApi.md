@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSmVppAccount
 
-> InlineResponse200150 GetOrganizationSmVppAccount(ctx, organizationId, vppAccountId).Execute()
+> InlineResponse200152 GetOrganizationSmVppAccount(ctx, organizationId, vppAccountId).Execute()
 
 Get a hash containing the unparsed token of the VPP account with the given ID
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VppAccountsApi.GetOrganizationSmVppAccount``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmVppAccount`: InlineResponse200150
+    // response from `GetOrganizationSmVppAccount`: InlineResponse200152
     fmt.Fprintf(os.Stdout, "Response from `VppAccountsApi.GetOrganizationSmVppAccount`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200150**](InlineResponse200150.md)
+[**InlineResponse200152**](InlineResponse200152.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmVppAccounts
 
-> []InlineResponse200150 GetOrganizationSmVppAccounts(ctx, organizationId).Execute()
+> []InlineResponse200152 GetOrganizationSmVppAccounts(ctx, organizationId).Execute()
 
 List the VPP accounts in the organization
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VppAccountsApi.GetOrganizationSmVppAccounts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmVppAccounts`: []InlineResponse200150
+    // response from `GetOrganizationSmVppAccounts`: []InlineResponse200152
     fmt.Fprintf(os.Stdout, "Response from `VppAccountsApi.GetOrganizationSmVppAccounts`: %v\n", resp)
 }
 ```
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200150**](InlineResponse200150.md)
+[**[]InlineResponse200152**](InlineResponse200152.md)
 
 ### Authorization
 

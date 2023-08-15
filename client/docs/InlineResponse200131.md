@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of the device | [optional] 
-**Name** | Pointer to **string** | Name assigned to the device | [optional] 
-**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
-**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
+**ShortName** | Pointer to **string** | Short name of the early access feature | [optional] 
+**Name** | Pointer to **string** | Name of the early access feature | [optional] 
+**Descriptions** | Pointer to [**OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions**](OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions.md) |  | [optional] 
+**Topic** | Pointer to **string** | Topic of the early access feature | [optional] 
+**IsOrgScopedOnly** | Pointer to **bool** | If this early access feature can only be opted in for the entire organization | [optional] 
+**DocumentationLink** | Pointer to **string** | Link to the documentation of this early access feature | [optional] 
+**SupportLink** | Pointer to **string** | Link to get support for this early access feature | [optional] 
 
 ## Methods
 
@@ -28,30 +31,30 @@ NewInlineResponse200131WithDefaults instantiates a new InlineResponse200131 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetShortName
 
-`func (o *InlineResponse200131) GetSerial() string`
+`func (o *InlineResponse200131) GetShortName() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetShortNameOk
 
-`func (o *InlineResponse200131) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200131) GetShortNameOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetShortName
 
-`func (o *InlineResponse200131) SetSerial(v string)`
+`func (o *InlineResponse200131) SetShortName(v string)`
 
-SetSerial sets Serial field to given value.
+SetShortName sets ShortName field to given value.
 
-### HasSerial
+### HasShortName
 
-`func (o *InlineResponse200131) HasSerial() bool`
+`func (o *InlineResponse200131) HasShortName() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasShortName returns a boolean if a field has been set.
 
 ### GetName
 
@@ -78,55 +81,130 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDeviceStatus
+### GetDescriptions
 
-`func (o *InlineResponse200131) GetDeviceStatus() string`
+`func (o *InlineResponse200131) GetDescriptions() OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions`
 
-GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
+GetDescriptions returns the Descriptions field if non-nil, zero value otherwise.
 
-### GetDeviceStatusOk
+### GetDescriptionsOk
 
-`func (o *InlineResponse200131) GetDeviceStatusOk() (*string, bool)`
+`func (o *InlineResponse200131) GetDescriptionsOk() (*OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions, bool)`
 
-GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
+GetDescriptionsOk returns a tuple with the Descriptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceStatus
+### SetDescriptions
 
-`func (o *InlineResponse200131) SetDeviceStatus(v string)`
+`func (o *InlineResponse200131) SetDescriptions(v OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions)`
 
-SetDeviceStatus sets DeviceStatus field to given value.
+SetDescriptions sets Descriptions field to given value.
 
-### HasDeviceStatus
+### HasDescriptions
 
-`func (o *InlineResponse200131) HasDeviceStatus() bool`
+`func (o *InlineResponse200131) HasDescriptions() bool`
 
-HasDeviceStatus returns a boolean if a field has been set.
+HasDescriptions returns a boolean if a field has been set.
 
-### GetUpgrade
+### GetTopic
 
-`func (o *InlineResponse200131) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
+`func (o *InlineResponse200131) GetTopic() string`
 
-GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
+GetTopic returns the Topic field if non-nil, zero value otherwise.
 
-### GetUpgradeOk
+### GetTopicOk
 
-`func (o *InlineResponse200131) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
+`func (o *InlineResponse200131) GetTopicOk() (*string, bool)`
 
-GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
+GetTopicOk returns a tuple with the Topic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgrade
+### SetTopic
 
-`func (o *InlineResponse200131) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
+`func (o *InlineResponse200131) SetTopic(v string)`
 
-SetUpgrade sets Upgrade field to given value.
+SetTopic sets Topic field to given value.
 
-### HasUpgrade
+### HasTopic
 
-`func (o *InlineResponse200131) HasUpgrade() bool`
+`func (o *InlineResponse200131) HasTopic() bool`
 
-HasUpgrade returns a boolean if a field has been set.
+HasTopic returns a boolean if a field has been set.
+
+### GetIsOrgScopedOnly
+
+`func (o *InlineResponse200131) GetIsOrgScopedOnly() bool`
+
+GetIsOrgScopedOnly returns the IsOrgScopedOnly field if non-nil, zero value otherwise.
+
+### GetIsOrgScopedOnlyOk
+
+`func (o *InlineResponse200131) GetIsOrgScopedOnlyOk() (*bool, bool)`
+
+GetIsOrgScopedOnlyOk returns a tuple with the IsOrgScopedOnly field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsOrgScopedOnly
+
+`func (o *InlineResponse200131) SetIsOrgScopedOnly(v bool)`
+
+SetIsOrgScopedOnly sets IsOrgScopedOnly field to given value.
+
+### HasIsOrgScopedOnly
+
+`func (o *InlineResponse200131) HasIsOrgScopedOnly() bool`
+
+HasIsOrgScopedOnly returns a boolean if a field has been set.
+
+### GetDocumentationLink
+
+`func (o *InlineResponse200131) GetDocumentationLink() string`
+
+GetDocumentationLink returns the DocumentationLink field if non-nil, zero value otherwise.
+
+### GetDocumentationLinkOk
+
+`func (o *InlineResponse200131) GetDocumentationLinkOk() (*string, bool)`
+
+GetDocumentationLinkOk returns a tuple with the DocumentationLink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDocumentationLink
+
+`func (o *InlineResponse200131) SetDocumentationLink(v string)`
+
+SetDocumentationLink sets DocumentationLink field to given value.
+
+### HasDocumentationLink
+
+`func (o *InlineResponse200131) HasDocumentationLink() bool`
+
+HasDocumentationLink returns a boolean if a field has been set.
+
+### GetSupportLink
+
+`func (o *InlineResponse200131) GetSupportLink() string`
+
+GetSupportLink returns the SupportLink field if non-nil, zero value otherwise.
+
+### GetSupportLinkOk
+
+`func (o *InlineResponse200131) GetSupportLinkOk() (*string, bool)`
+
+GetSupportLinkOk returns a tuple with the SupportLink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSupportLink
+
+`func (o *InlineResponse200131) SetSupportLink(v string)`
+
+SetSupportLink sets SupportLink field to given value.
+
+### HasSupportLink
+
+`func (o *InlineResponse200131) HasSupportLink() bool`
+
+HasSupportLink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

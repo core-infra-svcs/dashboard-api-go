@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
-**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
-**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
-**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
-**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20091WithDefaults instantiates a new InlineResponse20091 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssoc
+### GetStartTs
 
-`func (o *InlineResponse20091) GetAssoc() int32`
+`func (o *InlineResponse20091) GetStartTs() time.Time`
 
-GetAssoc returns the Assoc field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetAssocOk
+### GetStartTsOk
 
-`func (o *InlineResponse20091) GetAssocOk() (*int32, bool)`
+`func (o *InlineResponse20091) GetStartTsOk() (*time.Time, bool)`
 
-GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssoc
+### SetStartTs
 
-`func (o *InlineResponse20091) SetAssoc(v int32)`
+`func (o *InlineResponse20091) SetStartTs(v time.Time)`
 
-SetAssoc sets Assoc field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasAssoc
+### HasStartTs
 
-`func (o *InlineResponse20091) HasAssoc() bool`
+`func (o *InlineResponse20091) HasStartTs() bool`
 
-HasAssoc returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetAuth
+### GetEndTs
 
-`func (o *InlineResponse20091) GetAuth() int32`
+`func (o *InlineResponse20091) GetEndTs() time.Time`
 
-GetAuth returns the Auth field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetAuthOk
+### GetEndTsOk
 
-`func (o *InlineResponse20091) GetAuthOk() (*int32, bool)`
+`func (o *InlineResponse20091) GetEndTsOk() (*time.Time, bool)`
 
-GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuth
+### SetEndTs
 
-`func (o *InlineResponse20091) SetAuth(v int32)`
+`func (o *InlineResponse20091) SetEndTs(v time.Time)`
 
-SetAuth sets Auth field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasAuth
+### HasEndTs
 
-`func (o *InlineResponse20091) HasAuth() bool`
+`func (o *InlineResponse20091) HasEndTs() bool`
 
-HasAuth returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetDhcp
+### GetClientCount
 
-`func (o *InlineResponse20091) GetDhcp() int32`
+`func (o *InlineResponse20091) GetClientCount() int32`
 
-GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
+GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
 
-### GetDhcpOk
+### GetClientCountOk
 
-`func (o *InlineResponse20091) GetDhcpOk() (*int32, bool)`
+`func (o *InlineResponse20091) GetClientCountOk() (*int32, bool)`
 
-GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
+GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcp
+### SetClientCount
 
-`func (o *InlineResponse20091) SetDhcp(v int32)`
+`func (o *InlineResponse20091) SetClientCount(v int32)`
 
-SetDhcp sets Dhcp field to given value.
+SetClientCount sets ClientCount field to given value.
 
-### HasDhcp
+### HasClientCount
 
-`func (o *InlineResponse20091) HasDhcp() bool`
+`func (o *InlineResponse20091) HasClientCount() bool`
 
-HasDhcp returns a boolean if a field has been set.
-
-### GetDns
-
-`func (o *InlineResponse20091) GetDns() int32`
-
-GetDns returns the Dns field if non-nil, zero value otherwise.
-
-### GetDnsOk
-
-`func (o *InlineResponse20091) GetDnsOk() (*int32, bool)`
-
-GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDns
-
-`func (o *InlineResponse20091) SetDns(v int32)`
-
-SetDns sets Dns field to given value.
-
-### HasDns
-
-`func (o *InlineResponse20091) HasDns() bool`
-
-HasDns returns a boolean if a field has been set.
-
-### GetSuccess
-
-`func (o *InlineResponse20091) GetSuccess() int32`
-
-GetSuccess returns the Success field if non-nil, zero value otherwise.
-
-### GetSuccessOk
-
-`func (o *InlineResponse20091) GetSuccessOk() (*int32, bool)`
-
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSuccess
-
-`func (o *InlineResponse20091) SetSuccess(v int32)`
-
-SetSuccess sets Success field to given value.
-
-### HasSuccess
-
-`func (o *InlineResponse20091) HasSuccess() bool`
-
-HasSuccess returns a boolean if a field has been set.
+HasClientCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

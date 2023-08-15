@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**Identity** | Pointer to [**InlineResponse20099Identity**](InlineResponse20099Identity.md) |  | [optional] 
+**Identity** | Pointer to [**InlineResponse200100Identity**](InlineResponse200100Identity.md) |  | [optional] 
 **MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**EapolKey** | Pointer to [**InlineResponse20099EapolKey**](InlineResponse20099EapolKey.md) |  | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200100EapolKey**](InlineResponse200100EapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -55,20 +55,20 @@ HasTimeout returns a boolean if a field has been set.
 
 ### GetIdentity
 
-`func (o *InlineObject160) GetIdentity() InlineResponse20099Identity`
+`func (o *InlineObject160) GetIdentity() InlineResponse200100Identity`
 
 GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
 ### GetIdentityOk
 
-`func (o *InlineObject160) GetIdentityOk() (*InlineResponse20099Identity, bool)`
+`func (o *InlineObject160) GetIdentityOk() (*InlineResponse200100Identity, bool)`
 
 GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIdentity
 
-`func (o *InlineObject160) SetIdentity(v InlineResponse20099Identity)`
+`func (o *InlineObject160) SetIdentity(v InlineResponse200100Identity)`
 
 SetIdentity sets Identity field to given value.
 
@@ -105,20 +105,20 @@ HasMaxRetries returns a boolean if a field has been set.
 
 ### GetEapolKey
 
-`func (o *InlineObject160) GetEapolKey() InlineResponse20099EapolKey`
+`func (o *InlineObject160) GetEapolKey() InlineResponse200100EapolKey`
 
 GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
 
 ### GetEapolKeyOk
 
-`func (o *InlineObject160) GetEapolKeyOk() (*InlineResponse20099EapolKey, bool)`
+`func (o *InlineObject160) GetEapolKeyOk() (*InlineResponse200100EapolKey, bool)`
 
 GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEapolKey
 
-`func (o *InlineObject160) SetEapolKey(v InlineResponse20099EapolKey)`
+`func (o *InlineObject160) SetEapolKey(v InlineResponse200100EapolKey)`
 
 SetEapolKey sets EapolKey field to given value.
 

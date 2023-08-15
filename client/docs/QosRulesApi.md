@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchQosRule
 
-> InlineResponse20078 GetNetworkSwitchQosRule(ctx, networkId, qosRuleId).Execute()
+> InlineResponse20079 GetNetworkSwitchQosRule(ctx, networkId, qosRuleId).Execute()
 
 Return a quality of service rule
 
@@ -188,7 +188,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QosRulesApi.GetNetworkSwitchQosRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchQosRule`: InlineResponse20078
+    // response from `GetNetworkSwitchQosRule`: InlineResponse20079
     fmt.Fprintf(os.Stdout, "Response from `QosRulesApi.GetNetworkSwitchQosRule`: %v\n", resp)
 }
 ```
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20078**](InlineResponse20078.md)
+[**InlineResponse20079**](InlineResponse20079.md)
 
 ### Authorization
 

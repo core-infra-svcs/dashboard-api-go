@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BandOperationMode** | Pointer to **string** | Choice between &#39;dual&#39;, &#39;2.4ghz&#39; or &#39;5ghz&#39;. Defaults to dual. | [optional] 
+**BandOperationMode** | Pointer to **string** | Choice between &#39;dual&#39;, &#39;2.4ghz&#39;, &#39;5ghz&#39;, &#39;6ghz&#39; or &#39;multi&#39;. Defaults to dual. | [optional] 
+**Bands** | Pointer to [**NetworksNetworkIdWirelessRfProfilesApBandSettingsBands**](NetworksNetworkIdWirelessRfProfilesApBandSettingsBands.md) |  | [optional] 
 **BandSteeringEnabled** | Pointer to **bool** | Steers client to most open band. Can be either true or false. Defaults to true. | [optional] 
 
 ## Methods
@@ -50,6 +51,31 @@ SetBandOperationMode sets BandOperationMode field to given value.
 `func (o *NetworksNetworkIdWirelessRfProfilesApBandSettings) HasBandOperationMode() bool`
 
 HasBandOperationMode returns a boolean if a field has been set.
+
+### GetBands
+
+`func (o *NetworksNetworkIdWirelessRfProfilesApBandSettings) GetBands() NetworksNetworkIdWirelessRfProfilesApBandSettingsBands`
+
+GetBands returns the Bands field if non-nil, zero value otherwise.
+
+### GetBandsOk
+
+`func (o *NetworksNetworkIdWirelessRfProfilesApBandSettings) GetBandsOk() (*NetworksNetworkIdWirelessRfProfilesApBandSettingsBands, bool)`
+
+GetBandsOk returns a tuple with the Bands field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBands
+
+`func (o *NetworksNetworkIdWirelessRfProfilesApBandSettings) SetBands(v NetworksNetworkIdWirelessRfProfilesApBandSettingsBands)`
+
+SetBands sets Bands field to given value.
+
+### HasBands
+
+`func (o *NetworksNetworkIdWirelessRfProfilesApBandSettings) HasBands() bool`
+
+HasBands returns a boolean if a field has been set.
 
 ### GetBandSteeringEnabled
 

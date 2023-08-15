@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationEarlyAccessFeatures
 
-> []InlineResponse200129 GetOrganizationEarlyAccessFeatures(ctx, organizationId).Execute()
+> []InlineResponse200131 GetOrganizationEarlyAccessFeatures(ctx, organizationId).Execute()
 
 List the available early access features for organization
 
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EarlyAccessApi.GetOrganizationEarlyAccessFeatures``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationEarlyAccessFeatures`: []InlineResponse200129
+    // response from `GetOrganizationEarlyAccessFeatures`: []InlineResponse200131
     fmt.Fprintf(os.Stdout, "Response from `EarlyAccessApi.GetOrganizationEarlyAccessFeatures`: %v\n", resp)
 }
 ```
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200129**](InlineResponse200129.md)
+[**[]InlineResponse200131**](InlineResponse200131.md)
 
 ### Authorization
 
