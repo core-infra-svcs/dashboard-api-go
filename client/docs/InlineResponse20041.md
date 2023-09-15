@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SupportedMetrics** | Pointer to **[]string** | List of metrics that are supported for alerts, based on available sensor devices in the network | [optional] 
-**Counts** | Pointer to [**InlineResponse20041Counts**](InlineResponse20041Counts.md) |  | [optional] 
+**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
+**Category** | Pointer to **string** | Category of the alert | [optional] 
+**Type** | Pointer to **string** | Alert type | [optional] 
+**Severity** | Pointer to **string** | Severity of the alert | [optional] 
+**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse20041WithDefaults instantiates a new InlineResponse20041 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSupportedMetrics
+### GetId
 
-`func (o *InlineResponse20041) GetSupportedMetrics() []string`
+`func (o *InlineResponse20041) GetId() string`
 
-GetSupportedMetrics returns the SupportedMetrics field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSupportedMetricsOk
+### GetIdOk
 
-`func (o *InlineResponse20041) GetSupportedMetricsOk() (*[]string, bool)`
+`func (o *InlineResponse20041) GetIdOk() (*string, bool)`
 
-GetSupportedMetricsOk returns a tuple with the SupportedMetrics field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSupportedMetrics
+### SetId
 
-`func (o *InlineResponse20041) SetSupportedMetrics(v []string)`
+`func (o *InlineResponse20041) SetId(v string)`
 
-SetSupportedMetrics sets SupportedMetrics field to given value.
+SetId sets Id field to given value.
 
-### HasSupportedMetrics
+### HasId
 
-`func (o *InlineResponse20041) HasSupportedMetrics() bool`
+`func (o *InlineResponse20041) HasId() bool`
 
-HasSupportedMetrics returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCounts
+### GetCategory
 
-`func (o *InlineResponse20041) GetCounts() InlineResponse20041Counts`
+`func (o *InlineResponse20041) GetCategory() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetCategoryOk
 
-`func (o *InlineResponse20041) GetCountsOk() (*InlineResponse20041Counts, bool)`
+`func (o *InlineResponse20041) GetCategoryOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetCategory
 
-`func (o *InlineResponse20041) SetCounts(v InlineResponse20041Counts)`
+`func (o *InlineResponse20041) SetCategory(v string)`
 
-SetCounts sets Counts field to given value.
+SetCategory sets Category field to given value.
 
-### HasCounts
+### HasCategory
 
-`func (o *InlineResponse20041) HasCounts() bool`
+`func (o *InlineResponse20041) HasCategory() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse20041) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse20041) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse20041) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse20041) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetSeverity
+
+`func (o *InlineResponse20041) GetSeverity() string`
+
+GetSeverity returns the Severity field if non-nil, zero value otherwise.
+
+### GetSeverityOk
+
+`func (o *InlineResponse20041) GetSeverityOk() (*string, bool)`
+
+GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeverity
+
+`func (o *InlineResponse20041) SetSeverity(v string)`
+
+SetSeverity sets Severity field to given value.
+
+### HasSeverity
+
+`func (o *InlineResponse20041) HasSeverity() bool`
+
+HasSeverity returns a boolean if a field has been set.
+
+### GetScope
+
+`func (o *InlineResponse20041) GetScope() NetworksNetworkIdHealthAlertsScope`
+
+GetScope returns the Scope field if non-nil, zero value otherwise.
+
+### GetScopeOk
+
+`func (o *InlineResponse20041) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScope
+
+`func (o *InlineResponse20041) SetScope(v NetworksNetworkIdHealthAlertsScope)`
+
+SetScope sets Scope field to given value.
+
+### HasScope
+
+`func (o *InlineResponse20041) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

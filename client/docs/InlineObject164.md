@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Identity PSK | 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
-**GroupPolicyId** | **string** | The group policy to be applied to clients | 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on this SSID. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules**](NetworksNetworkIdGroupPoliciesBonjourForwardingRules.md) | List of bonjour forwarding rules. | [optional] 
+**Exception** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException**](NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject164
 
-`func NewInlineObject164(name string, groupPolicyId string, ) *InlineObject164`
+`func NewInlineObject164() *InlineObject164`
 
 NewInlineObject164 instantiates a new InlineObject164 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +27,80 @@ NewInlineObject164WithDefaults instantiates a new InlineObject164 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject164) GetName() string`
+`func (o *InlineObject164) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject164) GetNameOk() (*string, bool)`
+`func (o *InlineObject164) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject164) SetName(v string)`
+`func (o *InlineObject164) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetPassphrase
+`func (o *InlineObject164) HasEnabled() bool`
 
-`func (o *InlineObject164) GetPassphrase() string`
+HasEnabled returns a boolean if a field has been set.
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+### GetRules
 
-### GetPassphraseOk
+`func (o *InlineObject164) GetRules() []NetworksNetworkIdGroupPoliciesBonjourForwardingRules`
 
-`func (o *InlineObject164) GetPassphraseOk() (*string, bool)`
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+### GetRulesOk
+
+`func (o *InlineObject164) GetRulesOk() (*[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetRules
 
-`func (o *InlineObject164) SetPassphrase(v string)`
+`func (o *InlineObject164) SetRules(v []NetworksNetworkIdGroupPoliciesBonjourForwardingRules)`
 
-SetPassphrase sets Passphrase field to given value.
+SetRules sets Rules field to given value.
 
-### HasPassphrase
+### HasRules
 
-`func (o *InlineObject164) HasPassphrase() bool`
+`func (o *InlineObject164) HasRules() bool`
 
-HasPassphrase returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetException
 
-`func (o *InlineObject164) GetGroupPolicyId() string`
+`func (o *InlineObject164) GetException() NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetException returns the Exception field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetExceptionOk
 
-`func (o *InlineObject164) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineObject164) GetExceptionOk() (*NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetException
 
-`func (o *InlineObject164) SetGroupPolicyId(v string)`
+`func (o *InlineObject164) SetException(v NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetException sets Exception field to given value.
 
+### HasException
 
-### GetExpiresAt
+`func (o *InlineObject164) HasException() bool`
 
-`func (o *InlineObject164) GetExpiresAt() time.Time`
-
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
-
-### GetExpiresAtOk
-
-`func (o *InlineObject164) GetExpiresAtOk() (*time.Time, bool)`
-
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExpiresAt
-
-`func (o *InlineObject164) SetExpiresAt(v time.Time)`
-
-SetExpiresAt sets ExpiresAt field to given value.
-
-### HasExpiresAt
-
-`func (o *InlineObject164) HasExpiresAt() bool`
-
-HasExpiresAt returns a boolean if a field has been set.
+HasException returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the licenses to | [optional] 
-**LicenseIds** | Pointer to **[]string** | A list of IDs of licenses to move to the new organization | [optional] 
+**Serial** | Pointer to **string** | Serial of the device | [optional] 
+**Name** | Pointer to **string** | Name assigned to the device | [optional] 
+**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
+**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200140WithDefaults instantiates a new InlineResponse200140 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetSerial
 
-`func (o *InlineResponse200140) GetDestOrganizationId() string`
+`func (o *InlineResponse200140) GetSerial() string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200140) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200140) GetSerialOk() (*string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetSerial
 
-`func (o *InlineResponse200140) SetDestOrganizationId(v string)`
+`func (o *InlineResponse200140) SetSerial(v string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetSerial sets Serial field to given value.
 
-### HasDestOrganizationId
+### HasSerial
 
-`func (o *InlineResponse200140) HasDestOrganizationId() bool`
+`func (o *InlineResponse200140) HasSerial() bool`
 
-HasDestOrganizationId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetLicenseIds
+### GetName
 
-`func (o *InlineResponse200140) GetLicenseIds() []string`
+`func (o *InlineResponse200140) GetName() string`
 
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLicenseIdsOk
+### GetNameOk
 
-`func (o *InlineResponse200140) GetLicenseIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200140) GetNameOk() (*string, bool)`
 
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIds
+### SetName
 
-`func (o *InlineResponse200140) SetLicenseIds(v []string)`
+`func (o *InlineResponse200140) SetName(v string)`
 
-SetLicenseIds sets LicenseIds field to given value.
+SetName sets Name field to given value.
 
-### HasLicenseIds
+### HasName
 
-`func (o *InlineResponse200140) HasLicenseIds() bool`
+`func (o *InlineResponse200140) HasName() bool`
 
-HasLicenseIds returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetDeviceStatus
+
+`func (o *InlineResponse200140) GetDeviceStatus() string`
+
+GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
+
+### GetDeviceStatusOk
+
+`func (o *InlineResponse200140) GetDeviceStatusOk() (*string, bool)`
+
+GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceStatus
+
+`func (o *InlineResponse200140) SetDeviceStatus(v string)`
+
+SetDeviceStatus sets DeviceStatus field to given value.
+
+### HasDeviceStatus
+
+`func (o *InlineResponse200140) HasDeviceStatus() bool`
+
+HasDeviceStatus returns a boolean if a field has been set.
+
+### GetUpgrade
+
+`func (o *InlineResponse200140) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
+
+GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
+
+### GetUpgradeOk
+
+`func (o *InlineResponse200140) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
+
+GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpgrade
+
+`func (o *InlineResponse200140) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
+
+SetUpgrade sets Upgrade field to given value.
+
+### HasUpgrade
+
+`func (o *InlineResponse200140) HasUpgrade() bool`
+
+HasUpgrade returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

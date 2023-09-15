@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be moved. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be moved. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be moved. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be moved. | [optional] 
-**NewNetwork** | **string** | The new network to which the devices will be moved. | 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be locked. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the devices to be locked. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices to be locked. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be wiped. | [optional] 
+**Pin** | Pointer to **int32** | The pin number for locking macOS devices (a six digit number). Required only for macOS devices. | [optional] 
 
 ## Methods
 
 ### NewInlineObject107
 
-`func NewInlineObject107(newNetwork string, ) *InlineObject107`
+`func NewInlineObject107() *InlineObject107`
 
 NewInlineObject107 instantiates a new InlineObject107 object
 This constructor will assign default values to properties that have it defined,
@@ -129,25 +129,30 @@ SetScope sets Scope field to given value.
 
 HasScope returns a boolean if a field has been set.
 
-### GetNewNetwork
+### GetPin
 
-`func (o *InlineObject107) GetNewNetwork() string`
+`func (o *InlineObject107) GetPin() int32`
 
-GetNewNetwork returns the NewNetwork field if non-nil, zero value otherwise.
+GetPin returns the Pin field if non-nil, zero value otherwise.
 
-### GetNewNetworkOk
+### GetPinOk
 
-`func (o *InlineObject107) GetNewNetworkOk() (*string, bool)`
+`func (o *InlineObject107) GetPinOk() (*int32, bool)`
 
-GetNewNetworkOk returns a tuple with the NewNetwork field if it's non-nil, zero value otherwise
+GetPinOk returns a tuple with the Pin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNewNetwork
+### SetPin
 
-`func (o *InlineObject107) SetNewNetwork(v string)`
+`func (o *InlineObject107) SetPin(v int32)`
 
-SetNewNetwork sets NewNetwork field to given value.
+SetPin sets Pin field to given value.
 
+### HasPin
+
+`func (o *InlineObject107) HasPin() bool`
+
+HasPin returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

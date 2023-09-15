@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | Pointer to **string** | Short name of the early access feature | [optional] 
-**Name** | Pointer to **string** | Name of the early access feature | [optional] 
-**Descriptions** | Pointer to [**OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions**](OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions.md) |  | [optional] 
-**Topic** | Pointer to **string** | Topic of the early access feature | [optional] 
-**IsOrgScopedOnly** | Pointer to **bool** | If this early access feature can only be opted in for the entire organization | [optional] 
-**DocumentationLink** | Pointer to **string** | Link to the documentation of this early access feature | [optional] 
-**SupportLink** | Pointer to **string** | Link to get support for this early access feature | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, at which the event happened | [optional] 
+**Device** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice.md) |  | [optional] 
+**Details** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +28,105 @@ NewInlineResponse200131WithDefaults instantiates a new InlineResponse200131 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetShortName
+### GetTs
 
-`func (o *InlineResponse200131) GetShortName() string`
+`func (o *InlineResponse200131) GetTs() time.Time`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetTsOk
 
-`func (o *InlineResponse200131) GetShortNameOk() (*string, bool)`
+`func (o *InlineResponse200131) GetTsOk() (*time.Time, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetTs
 
-`func (o *InlineResponse200131) SetShortName(v string)`
+`func (o *InlineResponse200131) SetTs(v time.Time)`
 
-SetShortName sets ShortName field to given value.
+SetTs sets Ts field to given value.
 
-### HasShortName
+### HasTs
 
-`func (o *InlineResponse200131) HasShortName() bool`
+`func (o *InlineResponse200131) HasTs() bool`
 
-HasShortName returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetName
+### GetDevice
 
-`func (o *InlineResponse200131) GetName() string`
+`func (o *InlineResponse200131) GetDevice() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDeviceOk
 
-`func (o *InlineResponse200131) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200131) GetDeviceOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDevice
 
-`func (o *InlineResponse200131) SetName(v string)`
+`func (o *InlineResponse200131) SetDevice(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice)`
 
-SetName sets Name field to given value.
+SetDevice sets Device field to given value.
 
-### HasName
+### HasDevice
 
-`func (o *InlineResponse200131) HasName() bool`
+`func (o *InlineResponse200131) HasDevice() bool`
 
-HasName returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetDescriptions
+### GetDetails
 
-`func (o *InlineResponse200131) GetDescriptions() OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions`
+`func (o *InlineResponse200131) GetDetails() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails`
 
-GetDescriptions returns the Descriptions field if non-nil, zero value otherwise.
+GetDetails returns the Details field if non-nil, zero value otherwise.
 
-### GetDescriptionsOk
+### GetDetailsOk
 
-`func (o *InlineResponse200131) GetDescriptionsOk() (*OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions, bool)`
+`func (o *InlineResponse200131) GetDetailsOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails, bool)`
 
-GetDescriptionsOk returns a tuple with the Descriptions field if it's non-nil, zero value otherwise
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescriptions
+### SetDetails
 
-`func (o *InlineResponse200131) SetDescriptions(v OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions)`
+`func (o *InlineResponse200131) SetDetails(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails)`
 
-SetDescriptions sets Descriptions field to given value.
+SetDetails sets Details field to given value.
 
-### HasDescriptions
+### HasDetails
 
-`func (o *InlineResponse200131) HasDescriptions() bool`
+`func (o *InlineResponse200131) HasDetails() bool`
 
-HasDescriptions returns a boolean if a field has been set.
+HasDetails returns a boolean if a field has been set.
 
-### GetTopic
+### GetNetwork
 
-`func (o *InlineResponse200131) GetTopic() string`
+`func (o *InlineResponse200131) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork`
 
-GetTopic returns the Topic field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetTopicOk
+### GetNetworkOk
 
-`func (o *InlineResponse200131) GetTopicOk() (*string, bool)`
+`func (o *InlineResponse200131) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork, bool)`
 
-GetTopicOk returns a tuple with the Topic field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTopic
+### SetNetwork
 
-`func (o *InlineResponse200131) SetTopic(v string)`
+`func (o *InlineResponse200131) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork)`
 
-SetTopic sets Topic field to given value.
+SetNetwork sets Network field to given value.
 
-### HasTopic
+### HasNetwork
 
-`func (o *InlineResponse200131) HasTopic() bool`
+`func (o *InlineResponse200131) HasNetwork() bool`
 
-HasTopic returns a boolean if a field has been set.
-
-### GetIsOrgScopedOnly
-
-`func (o *InlineResponse200131) GetIsOrgScopedOnly() bool`
-
-GetIsOrgScopedOnly returns the IsOrgScopedOnly field if non-nil, zero value otherwise.
-
-### GetIsOrgScopedOnlyOk
-
-`func (o *InlineResponse200131) GetIsOrgScopedOnlyOk() (*bool, bool)`
-
-GetIsOrgScopedOnlyOk returns a tuple with the IsOrgScopedOnly field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsOrgScopedOnly
-
-`func (o *InlineResponse200131) SetIsOrgScopedOnly(v bool)`
-
-SetIsOrgScopedOnly sets IsOrgScopedOnly field to given value.
-
-### HasIsOrgScopedOnly
-
-`func (o *InlineResponse200131) HasIsOrgScopedOnly() bool`
-
-HasIsOrgScopedOnly returns a boolean if a field has been set.
-
-### GetDocumentationLink
-
-`func (o *InlineResponse200131) GetDocumentationLink() string`
-
-GetDocumentationLink returns the DocumentationLink field if non-nil, zero value otherwise.
-
-### GetDocumentationLinkOk
-
-`func (o *InlineResponse200131) GetDocumentationLinkOk() (*string, bool)`
-
-GetDocumentationLinkOk returns a tuple with the DocumentationLink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDocumentationLink
-
-`func (o *InlineResponse200131) SetDocumentationLink(v string)`
-
-SetDocumentationLink sets DocumentationLink field to given value.
-
-### HasDocumentationLink
-
-`func (o *InlineResponse200131) HasDocumentationLink() bool`
-
-HasDocumentationLink returns a boolean if a field has been set.
-
-### GetSupportLink
-
-`func (o *InlineResponse200131) GetSupportLink() string`
-
-GetSupportLink returns the SupportLink field if non-nil, zero value otherwise.
-
-### GetSupportLinkOk
-
-`func (o *InlineResponse200131) GetSupportLinkOk() (*string, bool)`
-
-GetSupportLinkOk returns a tuple with the SupportLink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSupportLink
-
-`func (o *InlineResponse200131) SetSupportLink(v string)`
-
-SetSupportLink sets SupportLink field to given value.
-
-### HasSupportLink
-
-`func (o *InlineResponse200131) HasSupportLink() bool`
-
-HasSupportLink returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

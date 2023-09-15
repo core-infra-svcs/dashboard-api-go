@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
+**ShortName** | **string** | Short name of the early access feature | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject206
 
-`func NewInlineObject206() *InlineObject206`
+`func NewInlineObject206(shortName string, ) *InlineObject206`
 
 NewInlineObject206 instantiates a new InlineObject206 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,50 @@ NewInlineObject206WithDefaults instantiates a new InlineObject206 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetShortName
 
-`func (o *InlineObject206) GetSerials() []string`
+`func (o *InlineObject206) GetShortName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetShortNameOk
 
-`func (o *InlineObject206) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject206) GetShortNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetShortName
 
-`func (o *InlineObject206) SetSerials(v []string)`
+`func (o *InlineObject206) SetShortName(v string)`
 
-SetSerials sets Serials field to given value.
+SetShortName sets ShortName field to given value.
 
-### HasSerials
 
-`func (o *InlineObject206) HasSerials() bool`
+### GetLimitScopeToNetworks
 
-HasSerials returns a boolean if a field has been set.
+`func (o *InlineObject206) GetLimitScopeToNetworks() []string`
+
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+
+### GetLimitScopeToNetworksOk
+
+`func (o *InlineObject206) GetLimitScopeToNetworksOk() (*[]string, bool)`
+
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLimitScopeToNetworks
+
+`func (o *InlineObject206) SetLimitScopeToNetworks(v []string)`
+
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+
+### HasLimitScopeToNetworks
+
+`func (o *InlineObject206) HasLimitScopeToNetworks() bool`
+
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

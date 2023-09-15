@@ -4,18 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | ID of the sensor alert profile. | [optional] 
-**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
-**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule**](NetworksNetworkIdSensorAlertsProfilesSchedule.md) |  | [optional] 
-**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
-**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
+**Id** | Pointer to **string** | Meraki auth user id | [optional] 
+**Email** | Pointer to **string** | Email address of the user | [optional] 
+**Name** | Pointer to **string** | Name of the user | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20043
 
-`func NewInlineResponse20043(conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineResponse20043`
+`func NewInlineResponse20043() *InlineResponse20043`
 
 NewInlineResponse20043 instantiates a new InlineResponse20043 object
 This constructor will assign default values to properties that have it defined,
@@ -30,30 +31,55 @@ NewInlineResponse20043WithDefaults instantiates a new InlineResponse20043 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetId
 
-`func (o *InlineResponse20043) GetProfileId() string`
+`func (o *InlineResponse20043) GetId() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetIdOk
 
-`func (o *InlineResponse20043) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse20043) GetIdOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetId
 
-`func (o *InlineResponse20043) SetProfileId(v string)`
+`func (o *InlineResponse20043) SetId(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetId sets Id field to given value.
 
-### HasProfileId
+### HasId
 
-`func (o *InlineResponse20043) HasProfileId() bool`
+`func (o *InlineResponse20043) HasId() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
+
+### GetEmail
+
+`func (o *InlineResponse20043) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *InlineResponse20043) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *InlineResponse20043) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *InlineResponse20043) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
 
 ### GetName
 
@@ -80,100 +106,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSchedule
+### GetCreatedAt
 
-`func (o *InlineResponse20043) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule`
+`func (o *InlineResponse20043) GetCreatedAt() time.Time`
 
-GetSchedule returns the Schedule field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetScheduleOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse20043) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule, bool)`
+`func (o *InlineResponse20043) GetCreatedAtOk() (*time.Time, bool)`
 
-GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSchedule
+### SetCreatedAt
 
-`func (o *InlineResponse20043) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule)`
+`func (o *InlineResponse20043) SetCreatedAt(v time.Time)`
 
-SetSchedule sets Schedule field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasSchedule
+### HasCreatedAt
 
-`func (o *InlineResponse20043) HasSchedule() bool`
+`func (o *InlineResponse20043) HasCreatedAt() bool`
 
-HasSchedule returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetConditions
+### GetAccountType
 
-`func (o *InlineResponse20043) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
+`func (o *InlineResponse20043) GetAccountType() string`
 
-GetConditions returns the Conditions field if non-nil, zero value otherwise.
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
 
-### GetConditionsOk
+### GetAccountTypeOk
 
-`func (o *InlineResponse20043) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
+`func (o *InlineResponse20043) GetAccountTypeOk() (*string, bool)`
 
-GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConditions
+### SetAccountType
 
-`func (o *InlineResponse20043) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
+`func (o *InlineResponse20043) SetAccountType(v string)`
 
-SetConditions sets Conditions field to given value.
+SetAccountType sets AccountType field to given value.
 
+### HasAccountType
 
-### GetRecipients
+`func (o *InlineResponse20043) HasAccountType() bool`
 
-`func (o *InlineResponse20043) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+HasAccountType returns a boolean if a field has been set.
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+### GetIsAdmin
 
-### GetRecipientsOk
+`func (o *InlineResponse20043) GetIsAdmin() bool`
 
-`func (o *InlineResponse20043) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+### GetIsAdminOk
+
+`func (o *InlineResponse20043) GetIsAdminOk() (*bool, bool)`
+
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetIsAdmin
 
-`func (o *InlineResponse20043) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+`func (o *InlineResponse20043) SetIsAdmin(v bool)`
 
-SetRecipients sets Recipients field to given value.
+SetIsAdmin sets IsAdmin field to given value.
 
-### HasRecipients
+### HasIsAdmin
 
-`func (o *InlineResponse20043) HasRecipients() bool`
+`func (o *InlineResponse20043) HasIsAdmin() bool`
 
-HasRecipients returns a boolean if a field has been set.
+HasIsAdmin returns a boolean if a field has been set.
 
-### GetSerials
+### GetAuthorizations
 
-`func (o *InlineResponse20043) GetSerials() []string`
+`func (o *InlineResponse20043) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetAuthorizationsOk
 
-`func (o *InlineResponse20043) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse20043) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetAuthorizations
 
-`func (o *InlineResponse20043) SetSerials(v []string)`
+`func (o *InlineResponse20043) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
 
-SetSerials sets Serials field to given value.
+SetAuthorizations sets Authorizations field to given value.
 
-### HasSerials
+### HasAuthorizations
 
-`func (o *InlineResponse20043) HasSerials() bool`
+`func (o *InlineResponse20043) HasAuthorizations() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

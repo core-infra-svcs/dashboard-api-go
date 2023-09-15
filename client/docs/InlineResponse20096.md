@@ -4,18 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
-**NetworkId** | Pointer to **string** | The network ID of the RF Profile | [optional] 
-**Name** | Pointer to **string** | The name of the new profile. Must be unique. This param is required on creation. | [optional] 
-**ClientBalancingEnabled** | Pointer to **bool** | Steers client to best available access point. Can be either true or false. Defaults to true. | [optional] 
-**MinBitrateType** | Pointer to **string** | Minimum bitrate can be set to either &#39;band&#39; or &#39;ssid&#39;. Defaults to band. | [optional] 
-**BandSelectionType** | Pointer to **string** | Band selection can be set to either &#39;ssid&#39; or &#39;ap&#39;. This param is required on creation. | [optional] 
-**ApBandSettings** | Pointer to [**InlineResponse20096ApBandSettings**](InlineResponse20096ApBandSettings.md) |  | [optional] 
-**TwoFourGhzSettings** | Pointer to [**InlineResponse20096TwoFourGhzSettings**](InlineResponse20096TwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**InlineResponse20096FiveGhzSettings**](InlineResponse20096FiveGhzSettings.md) |  | [optional] 
-**SixGhzSettings** | Pointer to [**InlineResponse20096SixGhzSettings**](InlineResponse20096SixGhzSettings.md) |  | [optional] 
-**Transmission** | Pointer to [**InlineResponse20096Transmission**](InlineResponse20096Transmission.md) |  | [optional] 
-**PerSsidSettings** | Pointer to [**InlineResponse20096PerSsidSettings**](InlineResponse20096PerSsidSettings.md) |  | [optional] 
+**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
+**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
+**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
+**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
+**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
 
 ## Methods
 
@@ -36,305 +29,130 @@ NewInlineResponse20096WithDefaults instantiates a new InlineResponse20096 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetAssoc
 
-`func (o *InlineResponse20096) GetId() string`
+`func (o *InlineResponse20096) GetAssoc() int32`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetAssoc returns the Assoc field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetAssocOk
 
-`func (o *InlineResponse20096) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20096) GetAssocOk() (*int32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetAssoc
 
-`func (o *InlineResponse20096) SetId(v string)`
+`func (o *InlineResponse20096) SetAssoc(v int32)`
 
-SetId sets Id field to given value.
+SetAssoc sets Assoc field to given value.
 
-### HasId
+### HasAssoc
 
-`func (o *InlineResponse20096) HasId() bool`
+`func (o *InlineResponse20096) HasAssoc() bool`
 
-HasId returns a boolean if a field has been set.
+HasAssoc returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetAuth
 
-`func (o *InlineResponse20096) GetNetworkId() string`
+`func (o *InlineResponse20096) GetAuth() int32`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetAuth returns the Auth field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetAuthOk
 
-`func (o *InlineResponse20096) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20096) GetAuthOk() (*int32, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetAuth
 
-`func (o *InlineResponse20096) SetNetworkId(v string)`
+`func (o *InlineResponse20096) SetAuth(v int32)`
 
-SetNetworkId sets NetworkId field to given value.
+SetAuth sets Auth field to given value.
 
-### HasNetworkId
+### HasAuth
 
-`func (o *InlineResponse20096) HasNetworkId() bool`
+`func (o *InlineResponse20096) HasAuth() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasAuth returns a boolean if a field has been set.
 
-### GetName
+### GetDhcp
 
-`func (o *InlineResponse20096) GetName() string`
+`func (o *InlineResponse20096) GetDhcp() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDhcpOk
 
-`func (o *InlineResponse20096) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20096) GetDhcpOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDhcp
 
-`func (o *InlineResponse20096) SetName(v string)`
+`func (o *InlineResponse20096) SetDhcp(v int32)`
 
-SetName sets Name field to given value.
+SetDhcp sets Dhcp field to given value.
 
-### HasName
+### HasDhcp
 
-`func (o *InlineResponse20096) HasName() bool`
+`func (o *InlineResponse20096) HasDhcp() bool`
 
-HasName returns a boolean if a field has been set.
+HasDhcp returns a boolean if a field has been set.
 
-### GetClientBalancingEnabled
+### GetDns
 
-`func (o *InlineResponse20096) GetClientBalancingEnabled() bool`
+`func (o *InlineResponse20096) GetDns() int32`
 
-GetClientBalancingEnabled returns the ClientBalancingEnabled field if non-nil, zero value otherwise.
+GetDns returns the Dns field if non-nil, zero value otherwise.
 
-### GetClientBalancingEnabledOk
+### GetDnsOk
 
-`func (o *InlineResponse20096) GetClientBalancingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20096) GetDnsOk() (*int32, bool)`
 
-GetClientBalancingEnabledOk returns a tuple with the ClientBalancingEnabled field if it's non-nil, zero value otherwise
+GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientBalancingEnabled
+### SetDns
 
-`func (o *InlineResponse20096) SetClientBalancingEnabled(v bool)`
+`func (o *InlineResponse20096) SetDns(v int32)`
 
-SetClientBalancingEnabled sets ClientBalancingEnabled field to given value.
+SetDns sets Dns field to given value.
 
-### HasClientBalancingEnabled
+### HasDns
 
-`func (o *InlineResponse20096) HasClientBalancingEnabled() bool`
+`func (o *InlineResponse20096) HasDns() bool`
 
-HasClientBalancingEnabled returns a boolean if a field has been set.
+HasDns returns a boolean if a field has been set.
 
-### GetMinBitrateType
+### GetSuccess
 
-`func (o *InlineResponse20096) GetMinBitrateType() string`
+`func (o *InlineResponse20096) GetSuccess() int32`
 
-GetMinBitrateType returns the MinBitrateType field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetMinBitrateTypeOk
+### GetSuccessOk
 
-`func (o *InlineResponse20096) GetMinBitrateTypeOk() (*string, bool)`
+`func (o *InlineResponse20096) GetSuccessOk() (*int32, bool)`
 
-GetMinBitrateTypeOk returns a tuple with the MinBitrateType field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMinBitrateType
+### SetSuccess
 
-`func (o *InlineResponse20096) SetMinBitrateType(v string)`
+`func (o *InlineResponse20096) SetSuccess(v int32)`
 
-SetMinBitrateType sets MinBitrateType field to given value.
+SetSuccess sets Success field to given value.
 
-### HasMinBitrateType
+### HasSuccess
 
-`func (o *InlineResponse20096) HasMinBitrateType() bool`
+`func (o *InlineResponse20096) HasSuccess() bool`
 
-HasMinBitrateType returns a boolean if a field has been set.
-
-### GetBandSelectionType
-
-`func (o *InlineResponse20096) GetBandSelectionType() string`
-
-GetBandSelectionType returns the BandSelectionType field if non-nil, zero value otherwise.
-
-### GetBandSelectionTypeOk
-
-`func (o *InlineResponse20096) GetBandSelectionTypeOk() (*string, bool)`
-
-GetBandSelectionTypeOk returns a tuple with the BandSelectionType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBandSelectionType
-
-`func (o *InlineResponse20096) SetBandSelectionType(v string)`
-
-SetBandSelectionType sets BandSelectionType field to given value.
-
-### HasBandSelectionType
-
-`func (o *InlineResponse20096) HasBandSelectionType() bool`
-
-HasBandSelectionType returns a boolean if a field has been set.
-
-### GetApBandSettings
-
-`func (o *InlineResponse20096) GetApBandSettings() InlineResponse20096ApBandSettings`
-
-GetApBandSettings returns the ApBandSettings field if non-nil, zero value otherwise.
-
-### GetApBandSettingsOk
-
-`func (o *InlineResponse20096) GetApBandSettingsOk() (*InlineResponse20096ApBandSettings, bool)`
-
-GetApBandSettingsOk returns a tuple with the ApBandSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApBandSettings
-
-`func (o *InlineResponse20096) SetApBandSettings(v InlineResponse20096ApBandSettings)`
-
-SetApBandSettings sets ApBandSettings field to given value.
-
-### HasApBandSettings
-
-`func (o *InlineResponse20096) HasApBandSettings() bool`
-
-HasApBandSettings returns a boolean if a field has been set.
-
-### GetTwoFourGhzSettings
-
-`func (o *InlineResponse20096) GetTwoFourGhzSettings() InlineResponse20096TwoFourGhzSettings`
-
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
-
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineResponse20096) GetTwoFourGhzSettingsOk() (*InlineResponse20096TwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTwoFourGhzSettings
-
-`func (o *InlineResponse20096) SetTwoFourGhzSettings(v InlineResponse20096TwoFourGhzSettings)`
-
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
-
-### HasTwoFourGhzSettings
-
-`func (o *InlineResponse20096) HasTwoFourGhzSettings() bool`
-
-HasTwoFourGhzSettings returns a boolean if a field has been set.
-
-### GetFiveGhzSettings
-
-`func (o *InlineResponse20096) GetFiveGhzSettings() InlineResponse20096FiveGhzSettings`
-
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
-
-### GetFiveGhzSettingsOk
-
-`func (o *InlineResponse20096) GetFiveGhzSettingsOk() (*InlineResponse20096FiveGhzSettings, bool)`
-
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFiveGhzSettings
-
-`func (o *InlineResponse20096) SetFiveGhzSettings(v InlineResponse20096FiveGhzSettings)`
-
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
-
-### HasFiveGhzSettings
-
-`func (o *InlineResponse20096) HasFiveGhzSettings() bool`
-
-HasFiveGhzSettings returns a boolean if a field has been set.
-
-### GetSixGhzSettings
-
-`func (o *InlineResponse20096) GetSixGhzSettings() InlineResponse20096SixGhzSettings`
-
-GetSixGhzSettings returns the SixGhzSettings field if non-nil, zero value otherwise.
-
-### GetSixGhzSettingsOk
-
-`func (o *InlineResponse20096) GetSixGhzSettingsOk() (*InlineResponse20096SixGhzSettings, bool)`
-
-GetSixGhzSettingsOk returns a tuple with the SixGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSixGhzSettings
-
-`func (o *InlineResponse20096) SetSixGhzSettings(v InlineResponse20096SixGhzSettings)`
-
-SetSixGhzSettings sets SixGhzSettings field to given value.
-
-### HasSixGhzSettings
-
-`func (o *InlineResponse20096) HasSixGhzSettings() bool`
-
-HasSixGhzSettings returns a boolean if a field has been set.
-
-### GetTransmission
-
-`func (o *InlineResponse20096) GetTransmission() InlineResponse20096Transmission`
-
-GetTransmission returns the Transmission field if non-nil, zero value otherwise.
-
-### GetTransmissionOk
-
-`func (o *InlineResponse20096) GetTransmissionOk() (*InlineResponse20096Transmission, bool)`
-
-GetTransmissionOk returns a tuple with the Transmission field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTransmission
-
-`func (o *InlineResponse20096) SetTransmission(v InlineResponse20096Transmission)`
-
-SetTransmission sets Transmission field to given value.
-
-### HasTransmission
-
-`func (o *InlineResponse20096) HasTransmission() bool`
-
-HasTransmission returns a boolean if a field has been set.
-
-### GetPerSsidSettings
-
-`func (o *InlineResponse20096) GetPerSsidSettings() InlineResponse20096PerSsidSettings`
-
-GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
-
-### GetPerSsidSettingsOk
-
-`func (o *InlineResponse20096) GetPerSsidSettingsOk() (*InlineResponse20096PerSsidSettings, bool)`
-
-GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPerSsidSettings
-
-`func (o *InlineResponse20096) SetPerSsidSettings(v InlineResponse20096PerSsidSettings)`
-
-SetPerSsidSettings sets PerSsidSettings field to given value.
-
-### HasPerSsidSettings
-
-`func (o *InlineResponse20096) HasPerSsidSettings() bool`
-
-HasPerSsidSettings returns a boolean if a field has been set.
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

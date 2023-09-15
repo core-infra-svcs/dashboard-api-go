@@ -4,20 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name for your group policy. Required. | 
-**Scheduling** | Pointer to [**NetworksNetworkIdGroupPoliciesScheduling**](NetworksNetworkIdGroupPoliciesScheduling.md) |  | [optional] 
-**Bandwidth** | Pointer to [**NetworksNetworkIdGroupPoliciesBandwidth**](NetworksNetworkIdGroupPoliciesBandwidth.md) |  | [optional] 
-**FirewallAndTrafficShaping** | Pointer to [**NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping**](NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping.md) |  | [optional] 
-**ContentFiltering** | Pointer to [**NetworksNetworkIdGroupPoliciesContentFiltering**](NetworksNetworkIdGroupPoliciesContentFiltering.md) |  | [optional] 
-**SplashAuthSettings** | Pointer to **string** | Whether clients bound to your policy will bypass splash authorization or behave according to the network&#39;s rules. Can be one of &#39;network default&#39; or &#39;bypass&#39;. Only available if your network has a wireless configuration. | [optional] 
-**VlanTagging** | Pointer to [**NetworksNetworkIdGroupPoliciesVlanTagging**](NetworksNetworkIdGroupPoliciesVlanTagging.md) |  | [optional] 
-**BonjourForwarding** | Pointer to [**NetworksNetworkIdGroupPoliciesBonjourForwarding**](NetworksNetworkIdGroupPoliciesBonjourForwarding.md) |  | [optional] 
+**Name** | **string** | The name of your floor plan. | 
+**Center** | Pointer to [**NetworksNetworkIdFloorPlansCenter**](NetworksNetworkIdFloorPlansCenter.md) |  | [optional] 
+**BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner**](NetworksNetworkIdFloorPlansBottomLeftCorner.md) |  | [optional] 
+**BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
+**TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
+**TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
+**ImageContents** | **string** | The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. | 
 
 ## Methods
 
 ### NewInlineObject90
 
-`func NewInlineObject90(name string, ) *InlineObject90`
+`func NewInlineObject90(name string, imageContents string, ) *InlineObject90`
 
 NewInlineObject90 instantiates a new InlineObject90 object
 This constructor will assign default values to properties that have it defined,
@@ -52,180 +51,150 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetScheduling
+### GetCenter
 
-`func (o *InlineObject90) GetScheduling() NetworksNetworkIdGroupPoliciesScheduling`
+`func (o *InlineObject90) GetCenter() NetworksNetworkIdFloorPlansCenter`
 
-GetScheduling returns the Scheduling field if non-nil, zero value otherwise.
+GetCenter returns the Center field if non-nil, zero value otherwise.
 
-### GetSchedulingOk
+### GetCenterOk
 
-`func (o *InlineObject90) GetSchedulingOk() (*NetworksNetworkIdGroupPoliciesScheduling, bool)`
+`func (o *InlineObject90) GetCenterOk() (*NetworksNetworkIdFloorPlansCenter, bool)`
 
-GetSchedulingOk returns a tuple with the Scheduling field if it's non-nil, zero value otherwise
+GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScheduling
+### SetCenter
 
-`func (o *InlineObject90) SetScheduling(v NetworksNetworkIdGroupPoliciesScheduling)`
+`func (o *InlineObject90) SetCenter(v NetworksNetworkIdFloorPlansCenter)`
 
-SetScheduling sets Scheduling field to given value.
+SetCenter sets Center field to given value.
 
-### HasScheduling
+### HasCenter
 
-`func (o *InlineObject90) HasScheduling() bool`
+`func (o *InlineObject90) HasCenter() bool`
 
-HasScheduling returns a boolean if a field has been set.
+HasCenter returns a boolean if a field has been set.
 
-### GetBandwidth
+### GetBottomLeftCorner
 
-`func (o *InlineObject90) GetBandwidth() NetworksNetworkIdGroupPoliciesBandwidth`
+`func (o *InlineObject90) GetBottomLeftCorner() NetworksNetworkIdFloorPlansBottomLeftCorner`
 
-GetBandwidth returns the Bandwidth field if non-nil, zero value otherwise.
+GetBottomLeftCorner returns the BottomLeftCorner field if non-nil, zero value otherwise.
 
-### GetBandwidthOk
+### GetBottomLeftCornerOk
 
-`func (o *InlineObject90) GetBandwidthOk() (*NetworksNetworkIdGroupPoliciesBandwidth, bool)`
+`func (o *InlineObject90) GetBottomLeftCornerOk() (*NetworksNetworkIdFloorPlansBottomLeftCorner, bool)`
 
-GetBandwidthOk returns a tuple with the Bandwidth field if it's non-nil, zero value otherwise
+GetBottomLeftCornerOk returns a tuple with the BottomLeftCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBandwidth
+### SetBottomLeftCorner
 
-`func (o *InlineObject90) SetBandwidth(v NetworksNetworkIdGroupPoliciesBandwidth)`
+`func (o *InlineObject90) SetBottomLeftCorner(v NetworksNetworkIdFloorPlansBottomLeftCorner)`
 
-SetBandwidth sets Bandwidth field to given value.
+SetBottomLeftCorner sets BottomLeftCorner field to given value.
 
-### HasBandwidth
+### HasBottomLeftCorner
 
-`func (o *InlineObject90) HasBandwidth() bool`
+`func (o *InlineObject90) HasBottomLeftCorner() bool`
 
-HasBandwidth returns a boolean if a field has been set.
+HasBottomLeftCorner returns a boolean if a field has been set.
 
-### GetFirewallAndTrafficShaping
+### GetBottomRightCorner
 
-`func (o *InlineObject90) GetFirewallAndTrafficShaping() NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping`
+`func (o *InlineObject90) GetBottomRightCorner() NetworksNetworkIdFloorPlansBottomRightCorner`
 
-GetFirewallAndTrafficShaping returns the FirewallAndTrafficShaping field if non-nil, zero value otherwise.
+GetBottomRightCorner returns the BottomRightCorner field if non-nil, zero value otherwise.
 
-### GetFirewallAndTrafficShapingOk
+### GetBottomRightCornerOk
 
-`func (o *InlineObject90) GetFirewallAndTrafficShapingOk() (*NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping, bool)`
+`func (o *InlineObject90) GetBottomRightCornerOk() (*NetworksNetworkIdFloorPlansBottomRightCorner, bool)`
 
-GetFirewallAndTrafficShapingOk returns a tuple with the FirewallAndTrafficShaping field if it's non-nil, zero value otherwise
+GetBottomRightCornerOk returns a tuple with the BottomRightCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFirewallAndTrafficShaping
+### SetBottomRightCorner
 
-`func (o *InlineObject90) SetFirewallAndTrafficShaping(v NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping)`
+`func (o *InlineObject90) SetBottomRightCorner(v NetworksNetworkIdFloorPlansBottomRightCorner)`
 
-SetFirewallAndTrafficShaping sets FirewallAndTrafficShaping field to given value.
+SetBottomRightCorner sets BottomRightCorner field to given value.
 
-### HasFirewallAndTrafficShaping
+### HasBottomRightCorner
 
-`func (o *InlineObject90) HasFirewallAndTrafficShaping() bool`
+`func (o *InlineObject90) HasBottomRightCorner() bool`
 
-HasFirewallAndTrafficShaping returns a boolean if a field has been set.
+HasBottomRightCorner returns a boolean if a field has been set.
 
-### GetContentFiltering
+### GetTopLeftCorner
 
-`func (o *InlineObject90) GetContentFiltering() NetworksNetworkIdGroupPoliciesContentFiltering`
+`func (o *InlineObject90) GetTopLeftCorner() NetworksNetworkIdFloorPlansTopLeftCorner`
 
-GetContentFiltering returns the ContentFiltering field if non-nil, zero value otherwise.
+GetTopLeftCorner returns the TopLeftCorner field if non-nil, zero value otherwise.
 
-### GetContentFilteringOk
+### GetTopLeftCornerOk
 
-`func (o *InlineObject90) GetContentFilteringOk() (*NetworksNetworkIdGroupPoliciesContentFiltering, bool)`
+`func (o *InlineObject90) GetTopLeftCornerOk() (*NetworksNetworkIdFloorPlansTopLeftCorner, bool)`
 
-GetContentFilteringOk returns a tuple with the ContentFiltering field if it's non-nil, zero value otherwise
+GetTopLeftCornerOk returns a tuple with the TopLeftCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetContentFiltering
+### SetTopLeftCorner
 
-`func (o *InlineObject90) SetContentFiltering(v NetworksNetworkIdGroupPoliciesContentFiltering)`
+`func (o *InlineObject90) SetTopLeftCorner(v NetworksNetworkIdFloorPlansTopLeftCorner)`
 
-SetContentFiltering sets ContentFiltering field to given value.
+SetTopLeftCorner sets TopLeftCorner field to given value.
 
-### HasContentFiltering
+### HasTopLeftCorner
 
-`func (o *InlineObject90) HasContentFiltering() bool`
+`func (o *InlineObject90) HasTopLeftCorner() bool`
 
-HasContentFiltering returns a boolean if a field has been set.
+HasTopLeftCorner returns a boolean if a field has been set.
 
-### GetSplashAuthSettings
+### GetTopRightCorner
 
-`func (o *InlineObject90) GetSplashAuthSettings() string`
+`func (o *InlineObject90) GetTopRightCorner() NetworksNetworkIdFloorPlansTopRightCorner`
 
-GetSplashAuthSettings returns the SplashAuthSettings field if non-nil, zero value otherwise.
+GetTopRightCorner returns the TopRightCorner field if non-nil, zero value otherwise.
 
-### GetSplashAuthSettingsOk
+### GetTopRightCornerOk
 
-`func (o *InlineObject90) GetSplashAuthSettingsOk() (*string, bool)`
+`func (o *InlineObject90) GetTopRightCornerOk() (*NetworksNetworkIdFloorPlansTopRightCorner, bool)`
 
-GetSplashAuthSettingsOk returns a tuple with the SplashAuthSettings field if it's non-nil, zero value otherwise
+GetTopRightCornerOk returns a tuple with the TopRightCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplashAuthSettings
+### SetTopRightCorner
 
-`func (o *InlineObject90) SetSplashAuthSettings(v string)`
+`func (o *InlineObject90) SetTopRightCorner(v NetworksNetworkIdFloorPlansTopRightCorner)`
 
-SetSplashAuthSettings sets SplashAuthSettings field to given value.
+SetTopRightCorner sets TopRightCorner field to given value.
 
-### HasSplashAuthSettings
+### HasTopRightCorner
 
-`func (o *InlineObject90) HasSplashAuthSettings() bool`
+`func (o *InlineObject90) HasTopRightCorner() bool`
 
-HasSplashAuthSettings returns a boolean if a field has been set.
+HasTopRightCorner returns a boolean if a field has been set.
 
-### GetVlanTagging
+### GetImageContents
 
-`func (o *InlineObject90) GetVlanTagging() NetworksNetworkIdGroupPoliciesVlanTagging`
+`func (o *InlineObject90) GetImageContents() string`
 
-GetVlanTagging returns the VlanTagging field if non-nil, zero value otherwise.
+GetImageContents returns the ImageContents field if non-nil, zero value otherwise.
 
-### GetVlanTaggingOk
+### GetImageContentsOk
 
-`func (o *InlineObject90) GetVlanTaggingOk() (*NetworksNetworkIdGroupPoliciesVlanTagging, bool)`
+`func (o *InlineObject90) GetImageContentsOk() (*string, bool)`
 
-GetVlanTaggingOk returns a tuple with the VlanTagging field if it's non-nil, zero value otherwise
+GetImageContentsOk returns a tuple with the ImageContents field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanTagging
+### SetImageContents
 
-`func (o *InlineObject90) SetVlanTagging(v NetworksNetworkIdGroupPoliciesVlanTagging)`
+`func (o *InlineObject90) SetImageContents(v string)`
 
-SetVlanTagging sets VlanTagging field to given value.
+SetImageContents sets ImageContents field to given value.
 
-### HasVlanTagging
-
-`func (o *InlineObject90) HasVlanTagging() bool`
-
-HasVlanTagging returns a boolean if a field has been set.
-
-### GetBonjourForwarding
-
-`func (o *InlineObject90) GetBonjourForwarding() NetworksNetworkIdGroupPoliciesBonjourForwarding`
-
-GetBonjourForwarding returns the BonjourForwarding field if non-nil, zero value otherwise.
-
-### GetBonjourForwardingOk
-
-`func (o *InlineObject90) GetBonjourForwardingOk() (*NetworksNetworkIdGroupPoliciesBonjourForwarding, bool)`
-
-GetBonjourForwardingOk returns a tuple with the BonjourForwarding field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBonjourForwarding
-
-`func (o *InlineObject90) SetBonjourForwarding(v NetworksNetworkIdGroupPoliciesBonjourForwarding)`
-
-SetBonjourForwarding sets BonjourForwarding field to given value.
-
-### HasBonjourForwarding
-
-`func (o *InlineObject90) HasBonjourForwarding() bool`
-
-HasBonjourForwarding returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

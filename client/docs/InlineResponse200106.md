@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200106Counts**](InlineResponse200106Counts.md) |  | [optional] 
-**Limits** | Pointer to [**InlineResponse200106Limits**](InlineResponse200106Limits.md) |  | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**Identity** | Pointer to [**InlineResponse200106Identity**](InlineResponse200106Identity.md) |  | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200106EapolKey**](InlineResponse200106EapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200106WithDefaults instantiates a new InlineResponse200106 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetTimeout
 
-`func (o *InlineResponse200106) GetCounts() InlineResponse200106Counts`
+`func (o *InlineResponse200106) GetTimeout() int32`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetTimeoutOk
 
-`func (o *InlineResponse200106) GetCountsOk() (*InlineResponse200106Counts, bool)`
+`func (o *InlineResponse200106) GetTimeoutOk() (*int32, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetTimeout
 
-`func (o *InlineResponse200106) SetCounts(v InlineResponse200106Counts)`
+`func (o *InlineResponse200106) SetTimeout(v int32)`
 
-SetCounts sets Counts field to given value.
+SetTimeout sets Timeout field to given value.
 
-### HasCounts
+### HasTimeout
 
-`func (o *InlineResponse200106) HasCounts() bool`
+`func (o *InlineResponse200106) HasTimeout() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasTimeout returns a boolean if a field has been set.
 
-### GetLimits
+### GetMaxRetries
 
-`func (o *InlineResponse200106) GetLimits() InlineResponse200106Limits`
+`func (o *InlineResponse200106) GetMaxRetries() int32`
 
-GetLimits returns the Limits field if non-nil, zero value otherwise.
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
 
-### GetLimitsOk
+### GetMaxRetriesOk
 
-`func (o *InlineResponse200106) GetLimitsOk() (*InlineResponse200106Limits, bool)`
+`func (o *InlineResponse200106) GetMaxRetriesOk() (*int32, bool)`
 
-GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimits
+### SetMaxRetries
 
-`func (o *InlineResponse200106) SetLimits(v InlineResponse200106Limits)`
+`func (o *InlineResponse200106) SetMaxRetries(v int32)`
 
-SetLimits sets Limits field to given value.
+SetMaxRetries sets MaxRetries field to given value.
 
-### HasLimits
+### HasMaxRetries
 
-`func (o *InlineResponse200106) HasLimits() bool`
+`func (o *InlineResponse200106) HasMaxRetries() bool`
 
-HasLimits returns a boolean if a field has been set.
+HasMaxRetries returns a boolean if a field has been set.
+
+### GetIdentity
+
+`func (o *InlineResponse200106) GetIdentity() InlineResponse200106Identity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineResponse200106) GetIdentityOk() (*InlineResponse200106Identity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineResponse200106) SetIdentity(v InlineResponse200106Identity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineResponse200106) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
+
+### GetEapolKey
+
+`func (o *InlineResponse200106) GetEapolKey() InlineResponse200106EapolKey`
+
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
+
+### GetEapolKeyOk
+
+`func (o *InlineResponse200106) GetEapolKeyOk() (*InlineResponse200106EapolKey, bool)`
+
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEapolKey
+
+`func (o *InlineResponse200106) SetEapolKey(v InlineResponse200106EapolKey)`
+
+SetEapolKey sets EapolKey field to given value.
+
+### HasEapolKey
+
+`func (o *InlineResponse200106) HasEapolKey() bool`
+
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

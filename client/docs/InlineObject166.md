@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges**](NetworksNetworkIdWirelessSsidsNumberSchedulesRanges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds**](NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**Identity** | Pointer to [**InlineResponse200106Identity**](InlineResponse200106Identity.md) |  | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200106EapolKey**](InlineResponse200106EapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineObject166WithDefaults instantiates a new InlineObject166 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetTimeout
 
-`func (o *InlineObject166) GetEnabled() bool`
+`func (o *InlineObject166) GetTimeout() int32`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetTimeoutOk
 
-`func (o *InlineObject166) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject166) GetTimeoutOk() (*int32, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetTimeout
 
-`func (o *InlineObject166) SetEnabled(v bool)`
+`func (o *InlineObject166) SetTimeout(v int32)`
 
-SetEnabled sets Enabled field to given value.
+SetTimeout sets Timeout field to given value.
 
-### HasEnabled
+### HasTimeout
 
-`func (o *InlineObject166) HasEnabled() bool`
+`func (o *InlineObject166) HasTimeout() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasTimeout returns a boolean if a field has been set.
 
-### GetRanges
+### GetIdentity
 
-`func (o *InlineObject166) GetRanges() []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges`
+`func (o *InlineObject166) GetIdentity() InlineResponse200106Identity`
 
-GetRanges returns the Ranges field if non-nil, zero value otherwise.
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-### GetRangesOk
+### GetIdentityOk
 
-`func (o *InlineObject166) GetRangesOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges, bool)`
+`func (o *InlineObject166) GetIdentityOk() (*InlineResponse200106Identity, bool)`
 
-GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRanges
+### SetIdentity
 
-`func (o *InlineObject166) SetRanges(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges)`
+`func (o *InlineObject166) SetIdentity(v InlineResponse200106Identity)`
 
-SetRanges sets Ranges field to given value.
+SetIdentity sets Identity field to given value.
 
-### HasRanges
+### HasIdentity
 
-`func (o *InlineObject166) HasRanges() bool`
+`func (o *InlineObject166) HasIdentity() bool`
 
-HasRanges returns a boolean if a field has been set.
+HasIdentity returns a boolean if a field has been set.
 
-### GetRangesInSeconds
+### GetMaxRetries
 
-`func (o *InlineObject166) GetRangesInSeconds() []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds`
+`func (o *InlineObject166) GetMaxRetries() int32`
 
-GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
 
-### GetRangesInSecondsOk
+### GetMaxRetriesOk
 
-`func (o *InlineObject166) GetRangesInSecondsOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds, bool)`
+`func (o *InlineObject166) GetMaxRetriesOk() (*int32, bool)`
 
-GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRangesInSeconds
+### SetMaxRetries
 
-`func (o *InlineObject166) SetRangesInSeconds(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds)`
+`func (o *InlineObject166) SetMaxRetries(v int32)`
 
-SetRangesInSeconds sets RangesInSeconds field to given value.
+SetMaxRetries sets MaxRetries field to given value.
 
-### HasRangesInSeconds
+### HasMaxRetries
 
-`func (o *InlineObject166) HasRangesInSeconds() bool`
+`func (o *InlineObject166) HasMaxRetries() bool`
 
-HasRangesInSeconds returns a boolean if a field has been set.
+HasMaxRetries returns a boolean if a field has been set.
+
+### GetEapolKey
+
+`func (o *InlineObject166) GetEapolKey() InlineResponse200106EapolKey`
+
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
+
+### GetEapolKeyOk
+
+`func (o *InlineObject166) GetEapolKeyOk() (*InlineResponse200106EapolKey, bool)`
+
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEapolKey
+
+`func (o *InlineObject166) SetEapolKey(v InlineResponse200106EapolKey)`
+
+SetEapolKey sets EapolKey field to given value.
+
+### HasEapolKey
+
+`func (o *InlineObject166) HasEapolKey() bool`
+
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

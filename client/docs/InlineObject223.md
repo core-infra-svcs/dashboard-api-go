@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | **string** | The role of the SAML administrator | 
-**OrgAccess** | **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; | 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Name** | **string** | The name of the combined network | 
+**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
+**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
 
 ## Methods
 
 ### NewInlineObject223
 
-`func NewInlineObject223(role string, orgAccess string, ) *InlineObject223`
+`func NewInlineObject223(name string, networkIds []string, ) *InlineObject223`
 
 NewInlineObject223 instantiates a new InlineObject223 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +27,70 @@ NewInlineObject223WithDefaults instantiates a new InlineObject223 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRole
+### GetName
 
-`func (o *InlineObject223) GetRole() string`
+`func (o *InlineObject223) GetName() string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetNameOk
 
-`func (o *InlineObject223) GetRoleOk() (*string, bool)`
+`func (o *InlineObject223) GetNameOk() (*string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetName
 
-`func (o *InlineObject223) SetRole(v string)`
+`func (o *InlineObject223) SetName(v string)`
 
-SetRole sets Role field to given value.
+SetName sets Name field to given value.
 
 
-### GetOrgAccess
+### GetNetworkIds
 
-`func (o *InlineObject223) GetOrgAccess() string`
+`func (o *InlineObject223) GetNetworkIds() []string`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject223) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineObject223) GetNetworkIdsOk() (*[]string, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetNetworkIds
 
-`func (o *InlineObject223) SetOrgAccess(v string)`
+`func (o *InlineObject223) SetNetworkIds(v []string)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
 
-### GetTags
+### GetEnrollmentString
 
-`func (o *InlineObject223) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
+`func (o *InlineObject223) GetEnrollmentString() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetEnrollmentStringOk
 
-`func (o *InlineObject223) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
+`func (o *InlineObject223) GetEnrollmentStringOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetEnrollmentString
 
-`func (o *InlineObject223) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
+`func (o *InlineObject223) SetEnrollmentString(v string)`
 
-SetTags sets Tags field to given value.
+SetEnrollmentString sets EnrollmentString field to given value.
 
-### HasTags
+### HasEnrollmentString
 
-`func (o *InlineObject223) HasTags() bool`
+`func (o *InlineObject223) HasEnrollmentString() bool`
 
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineObject223) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineObject223) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineObject223) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineObject223) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
+HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

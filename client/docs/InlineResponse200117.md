@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
-**Licenses** | Pointer to [**[]InlineResponse200117Licenses**](InlineResponse200117Licenses.md) | The licenses claimed | [optional] 
+**NetworkId** | Pointer to **string** | Network identifier | [optional] 
+**Name** | Pointer to **string** | Network name | [optional] 
+**ByUplink** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink**](OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink.md) | Uplink usage | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200117WithDefaults instantiates a new InlineResponse200117 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetNetworkId
 
-`func (o *InlineResponse200117) GetOrders() []string`
+`func (o *InlineResponse200117) GetNetworkId() string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200117) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineResponse200117) GetNetworkIdOk() (*string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetNetworkId
 
-`func (o *InlineResponse200117) SetOrders(v []string)`
+`func (o *InlineResponse200117) SetNetworkId(v string)`
 
-SetOrders sets Orders field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasOrders
+### HasNetworkId
 
-`func (o *InlineResponse200117) HasOrders() bool`
+`func (o *InlineResponse200117) HasNetworkId() bool`
 
-HasOrders returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetSerials
+### GetName
 
-`func (o *InlineResponse200117) GetSerials() []string`
+`func (o *InlineResponse200117) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineResponse200117) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200117) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineResponse200117) SetSerials(v []string)`
+`func (o *InlineResponse200117) SetName(v string)`
 
-SetSerials sets Serials field to given value.
+SetName sets Name field to given value.
 
-### HasSerials
+### HasName
 
-`func (o *InlineResponse200117) HasSerials() bool`
+`func (o *InlineResponse200117) HasName() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetLicenses
+### GetByUplink
 
-`func (o *InlineResponse200117) GetLicenses() []InlineResponse200117Licenses`
+`func (o *InlineResponse200117) GetByUplink() []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink`
 
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+GetByUplink returns the ByUplink field if non-nil, zero value otherwise.
 
-### GetLicensesOk
+### GetByUplinkOk
 
-`func (o *InlineResponse200117) GetLicensesOk() (*[]InlineResponse200117Licenses, bool)`
+`func (o *InlineResponse200117) GetByUplinkOk() (*[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink, bool)`
 
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+GetByUplinkOk returns a tuple with the ByUplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenses
+### SetByUplink
 
-`func (o *InlineResponse200117) SetLicenses(v []InlineResponse200117Licenses)`
+`func (o *InlineResponse200117) SetByUplink(v []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink)`
 
-SetLicenses sets Licenses field to given value.
+SetByUplink sets ByUplink field to given value.
 
-### HasLicenses
+### HasByUplink
 
-`func (o *InlineResponse200117) HasLicenses() bool`
+`func (o *InlineResponse200117) HasByUplink() bool`
 
-HasLicenses returns a boolean if a field has been set.
+HasByUplink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

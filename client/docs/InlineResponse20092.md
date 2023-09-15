@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
-**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
-**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
-**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
-**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
+**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
+**Plans** | Pointer to [**[]InlineResponse20092Plans**](InlineResponse20092Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse20092WithDefaults instantiates a new InlineResponse20092 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssoc
+### GetCurrency
 
-`func (o *InlineResponse20092) GetAssoc() int32`
+`func (o *InlineResponse20092) GetCurrency() string`
 
-GetAssoc returns the Assoc field if non-nil, zero value otherwise.
+GetCurrency returns the Currency field if non-nil, zero value otherwise.
 
-### GetAssocOk
+### GetCurrencyOk
 
-`func (o *InlineResponse20092) GetAssocOk() (*int32, bool)`
+`func (o *InlineResponse20092) GetCurrencyOk() (*string, bool)`
 
-GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
+GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssoc
+### SetCurrency
 
-`func (o *InlineResponse20092) SetAssoc(v int32)`
+`func (o *InlineResponse20092) SetCurrency(v string)`
 
-SetAssoc sets Assoc field to given value.
+SetCurrency sets Currency field to given value.
 
-### HasAssoc
+### HasCurrency
 
-`func (o *InlineResponse20092) HasAssoc() bool`
+`func (o *InlineResponse20092) HasCurrency() bool`
 
-HasAssoc returns a boolean if a field has been set.
+HasCurrency returns a boolean if a field has been set.
 
-### GetAuth
+### GetPlans
 
-`func (o *InlineResponse20092) GetAuth() int32`
+`func (o *InlineResponse20092) GetPlans() []InlineResponse20092Plans`
 
-GetAuth returns the Auth field if non-nil, zero value otherwise.
+GetPlans returns the Plans field if non-nil, zero value otherwise.
 
-### GetAuthOk
+### GetPlansOk
 
-`func (o *InlineResponse20092) GetAuthOk() (*int32, bool)`
+`func (o *InlineResponse20092) GetPlansOk() (*[]InlineResponse20092Plans, bool)`
 
-GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
+GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuth
+### SetPlans
 
-`func (o *InlineResponse20092) SetAuth(v int32)`
+`func (o *InlineResponse20092) SetPlans(v []InlineResponse20092Plans)`
 
-SetAuth sets Auth field to given value.
+SetPlans sets Plans field to given value.
 
-### HasAuth
+### HasPlans
 
-`func (o *InlineResponse20092) HasAuth() bool`
+`func (o *InlineResponse20092) HasPlans() bool`
 
-HasAuth returns a boolean if a field has been set.
-
-### GetDhcp
-
-`func (o *InlineResponse20092) GetDhcp() int32`
-
-GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
-
-### GetDhcpOk
-
-`func (o *InlineResponse20092) GetDhcpOk() (*int32, bool)`
-
-GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcp
-
-`func (o *InlineResponse20092) SetDhcp(v int32)`
-
-SetDhcp sets Dhcp field to given value.
-
-### HasDhcp
-
-`func (o *InlineResponse20092) HasDhcp() bool`
-
-HasDhcp returns a boolean if a field has been set.
-
-### GetDns
-
-`func (o *InlineResponse20092) GetDns() int32`
-
-GetDns returns the Dns field if non-nil, zero value otherwise.
-
-### GetDnsOk
-
-`func (o *InlineResponse20092) GetDnsOk() (*int32, bool)`
-
-GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDns
-
-`func (o *InlineResponse20092) SetDns(v int32)`
-
-SetDns sets Dns field to given value.
-
-### HasDns
-
-`func (o *InlineResponse20092) HasDns() bool`
-
-HasDns returns a boolean if a field has been set.
-
-### GetSuccess
-
-`func (o *InlineResponse20092) GetSuccess() int32`
-
-GetSuccess returns the Success field if non-nil, zero value otherwise.
-
-### GetSuccessOk
-
-`func (o *InlineResponse20092) GetSuccessOk() (*int32, bool)`
-
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSuccess
-
-`func (o *InlineResponse20092) SetSuccess(v int32)`
-
-SetSuccess sets Success field to given value.
-
-### HasSuccess
-
-`func (o *InlineResponse20092) HasSuccess() bool`
-
-HasSuccess returns a boolean if a field has been set.
+HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

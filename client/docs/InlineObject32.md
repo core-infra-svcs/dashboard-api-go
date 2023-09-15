@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Access** | **string** | A string indicating the rule for which IPs are allowed to use the specified service. Acceptable values are \&quot;blocked\&quot; (no remote IPs can access the service), \&quot;restricted\&quot; (only allowed IPs can access the service), and \&quot;unrestriced\&quot; (any remote IP can access the service). This field is required | 
-**AllowedIps** | Pointer to **[]string** | An array of allowed IPs that can access the service. This field is required if \&quot;access\&quot; is set to \&quot;restricted\&quot;. Otherwise this field is ignored | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules**](NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
 
 ## Methods
 
 ### NewInlineObject32
 
-`func NewInlineObject32(access string, ) *InlineObject32`
+`func NewInlineObject32() *InlineObject32`
 
 NewInlineObject32 instantiates a new InlineObject32 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,30 @@ NewInlineObject32WithDefaults instantiates a new InlineObject32 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccess
+### GetRules
 
-`func (o *InlineObject32) GetAccess() string`
+`func (o *InlineObject32) GetRules() []NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules`
 
-GetAccess returns the Access field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetAccessOk
+### GetRulesOk
 
-`func (o *InlineObject32) GetAccessOk() (*string, bool)`
+`func (o *InlineObject32) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules, bool)`
 
-GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccess
+### SetRules
 
-`func (o *InlineObject32) SetAccess(v string)`
+`func (o *InlineObject32) SetRules(v []NetworksNetworkIdApplianceFirewallCellularFirewallRulesRules)`
 
-SetAccess sets Access field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetAllowedIps
+`func (o *InlineObject32) HasRules() bool`
 
-`func (o *InlineObject32) GetAllowedIps() []string`
-
-GetAllowedIps returns the AllowedIps field if non-nil, zero value otherwise.
-
-### GetAllowedIpsOk
-
-`func (o *InlineObject32) GetAllowedIpsOk() (*[]string, bool)`
-
-GetAllowedIpsOk returns a tuple with the AllowedIps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAllowedIps
-
-`func (o *InlineObject32) SetAllowedIps(v []string)`
-
-SetAllowedIps sets AllowedIps field to given value.
-
-### HasAllowedIps
-
-`func (o *InlineObject32) HasAllowedIps() bool`
-
-HasAllowedIps returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

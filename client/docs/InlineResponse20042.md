@@ -4,9 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
-**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
-**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**WanGoodput** | Pointer to **int32** | WAN goodput (Number of useful information bits delivered over a WAN per unit of time) | [optional] 
+**LanGoodput** | Pointer to **int32** | LAN goodput (Number of useful information bits delivered over a LAN per unit of time) | [optional] 
+**WanLatencyMs** | Pointer to **float32** | WAN latency in milliseconds | [optional] 
+**LanLatencyMs** | Pointer to **float32** | LAN latency in milliseconds | [optional] 
+**WanLossPercent** | Pointer to **float32** | WAN loss percentage | [optional] 
+**LanLossPercent** | Pointer to **float32** | LAN loss percentage | [optional] 
+**ResponseDuration** | Pointer to **int32** | Duration of the response, in milliseconds | [optional] 
+**Sent** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**Recv** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**NumClients** | Pointer to **int32** | Number of clients | [optional] 
 
 ## Methods
 
@@ -77,30 +86,255 @@ SetEndTs sets EndTs field to given value.
 
 HasEndTs returns a boolean if a field has been set.
 
-### GetCounts
+### GetWanGoodput
 
-`func (o *InlineResponse20042) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
+`func (o *InlineResponse20042) GetWanGoodput() int32`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetWanGoodput returns the WanGoodput field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetWanGoodputOk
 
-`func (o *InlineResponse20042) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
+`func (o *InlineResponse20042) GetWanGoodputOk() (*int32, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetWanGoodputOk returns a tuple with the WanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetWanGoodput
 
-`func (o *InlineResponse20042) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
+`func (o *InlineResponse20042) SetWanGoodput(v int32)`
 
-SetCounts sets Counts field to given value.
+SetWanGoodput sets WanGoodput field to given value.
 
-### HasCounts
+### HasWanGoodput
 
-`func (o *InlineResponse20042) HasCounts() bool`
+`func (o *InlineResponse20042) HasWanGoodput() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasWanGoodput returns a boolean if a field has been set.
+
+### GetLanGoodput
+
+`func (o *InlineResponse20042) GetLanGoodput() int32`
+
+GetLanGoodput returns the LanGoodput field if non-nil, zero value otherwise.
+
+### GetLanGoodputOk
+
+`func (o *InlineResponse20042) GetLanGoodputOk() (*int32, bool)`
+
+GetLanGoodputOk returns a tuple with the LanGoodput field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanGoodput
+
+`func (o *InlineResponse20042) SetLanGoodput(v int32)`
+
+SetLanGoodput sets LanGoodput field to given value.
+
+### HasLanGoodput
+
+`func (o *InlineResponse20042) HasLanGoodput() bool`
+
+HasLanGoodput returns a boolean if a field has been set.
+
+### GetWanLatencyMs
+
+`func (o *InlineResponse20042) GetWanLatencyMs() float32`
+
+GetWanLatencyMs returns the WanLatencyMs field if non-nil, zero value otherwise.
+
+### GetWanLatencyMsOk
+
+`func (o *InlineResponse20042) GetWanLatencyMsOk() (*float32, bool)`
+
+GetWanLatencyMsOk returns a tuple with the WanLatencyMs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWanLatencyMs
+
+`func (o *InlineResponse20042) SetWanLatencyMs(v float32)`
+
+SetWanLatencyMs sets WanLatencyMs field to given value.
+
+### HasWanLatencyMs
+
+`func (o *InlineResponse20042) HasWanLatencyMs() bool`
+
+HasWanLatencyMs returns a boolean if a field has been set.
+
+### GetLanLatencyMs
+
+`func (o *InlineResponse20042) GetLanLatencyMs() float32`
+
+GetLanLatencyMs returns the LanLatencyMs field if non-nil, zero value otherwise.
+
+### GetLanLatencyMsOk
+
+`func (o *InlineResponse20042) GetLanLatencyMsOk() (*float32, bool)`
+
+GetLanLatencyMsOk returns a tuple with the LanLatencyMs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanLatencyMs
+
+`func (o *InlineResponse20042) SetLanLatencyMs(v float32)`
+
+SetLanLatencyMs sets LanLatencyMs field to given value.
+
+### HasLanLatencyMs
+
+`func (o *InlineResponse20042) HasLanLatencyMs() bool`
+
+HasLanLatencyMs returns a boolean if a field has been set.
+
+### GetWanLossPercent
+
+`func (o *InlineResponse20042) GetWanLossPercent() float32`
+
+GetWanLossPercent returns the WanLossPercent field if non-nil, zero value otherwise.
+
+### GetWanLossPercentOk
+
+`func (o *InlineResponse20042) GetWanLossPercentOk() (*float32, bool)`
+
+GetWanLossPercentOk returns a tuple with the WanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWanLossPercent
+
+`func (o *InlineResponse20042) SetWanLossPercent(v float32)`
+
+SetWanLossPercent sets WanLossPercent field to given value.
+
+### HasWanLossPercent
+
+`func (o *InlineResponse20042) HasWanLossPercent() bool`
+
+HasWanLossPercent returns a boolean if a field has been set.
+
+### GetLanLossPercent
+
+`func (o *InlineResponse20042) GetLanLossPercent() float32`
+
+GetLanLossPercent returns the LanLossPercent field if non-nil, zero value otherwise.
+
+### GetLanLossPercentOk
+
+`func (o *InlineResponse20042) GetLanLossPercentOk() (*float32, bool)`
+
+GetLanLossPercentOk returns a tuple with the LanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanLossPercent
+
+`func (o *InlineResponse20042) SetLanLossPercent(v float32)`
+
+SetLanLossPercent sets LanLossPercent field to given value.
+
+### HasLanLossPercent
+
+`func (o *InlineResponse20042) HasLanLossPercent() bool`
+
+HasLanLossPercent returns a boolean if a field has been set.
+
+### GetResponseDuration
+
+`func (o *InlineResponse20042) GetResponseDuration() int32`
+
+GetResponseDuration returns the ResponseDuration field if non-nil, zero value otherwise.
+
+### GetResponseDurationOk
+
+`func (o *InlineResponse20042) GetResponseDurationOk() (*int32, bool)`
+
+GetResponseDurationOk returns a tuple with the ResponseDuration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResponseDuration
+
+`func (o *InlineResponse20042) SetResponseDuration(v int32)`
+
+SetResponseDuration sets ResponseDuration field to given value.
+
+### HasResponseDuration
+
+`func (o *InlineResponse20042) HasResponseDuration() bool`
+
+HasResponseDuration returns a boolean if a field has been set.
+
+### GetSent
+
+`func (o *InlineResponse20042) GetSent() int32`
+
+GetSent returns the Sent field if non-nil, zero value otherwise.
+
+### GetSentOk
+
+`func (o *InlineResponse20042) GetSentOk() (*int32, bool)`
+
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSent
+
+`func (o *InlineResponse20042) SetSent(v int32)`
+
+SetSent sets Sent field to given value.
+
+### HasSent
+
+`func (o *InlineResponse20042) HasSent() bool`
+
+HasSent returns a boolean if a field has been set.
+
+### GetRecv
+
+`func (o *InlineResponse20042) GetRecv() int32`
+
+GetRecv returns the Recv field if non-nil, zero value otherwise.
+
+### GetRecvOk
+
+`func (o *InlineResponse20042) GetRecvOk() (*int32, bool)`
+
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecv
+
+`func (o *InlineResponse20042) SetRecv(v int32)`
+
+SetRecv sets Recv field to given value.
+
+### HasRecv
+
+`func (o *InlineResponse20042) HasRecv() bool`
+
+HasRecv returns a boolean if a field has been set.
+
+### GetNumClients
+
+`func (o *InlineResponse20042) GetNumClients() int32`
+
+GetNumClients returns the NumClients field if non-nil, zero value otherwise.
+
+### GetNumClientsOk
+
+`func (o *InlineResponse20042) GetNumClientsOk() (*int32, bool)`
+
+GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumClients
+
+`func (o *InlineResponse20042) SetNumClients(v int32)`
+
+SetNumClients sets NumClients field to given value.
+
+### HasNumClients
+
+`func (o *InlineResponse20042) HasNumClients() bool`
+
+HasNumClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Group** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedStagesGroup**](NetworksNetworkIdFirmwareUpgradesStagedStagesGroup.md) |  | [optional] 
+**UpgradeWindow** | Pointer to [**InlineResponse20035UpgradeWindow**](InlineResponse20035UpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**InlineResponse20035Products**](InlineResponse20035Products.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse20035WithDefaults instantiates a new InlineResponse20035 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroup
+### GetUpgradeWindow
 
-`func (o *InlineResponse20035) GetGroup() NetworksNetworkIdFirmwareUpgradesStagedStagesGroup`
+`func (o *InlineResponse20035) GetUpgradeWindow() InlineResponse20035UpgradeWindow`
 
-GetGroup returns the Group field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetGroupOk
+### GetUpgradeWindowOk
 
-`func (o *InlineResponse20035) GetGroupOk() (*NetworksNetworkIdFirmwareUpgradesStagedStagesGroup, bool)`
+`func (o *InlineResponse20035) GetUpgradeWindowOk() (*InlineResponse20035UpgradeWindow, bool)`
 
-GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroup
+### SetUpgradeWindow
 
-`func (o *InlineResponse20035) SetGroup(v NetworksNetworkIdFirmwareUpgradesStagedStagesGroup)`
+`func (o *InlineResponse20035) SetUpgradeWindow(v InlineResponse20035UpgradeWindow)`
 
-SetGroup sets Group field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
-### HasGroup
+### HasUpgradeWindow
 
-`func (o *InlineResponse20035) HasGroup() bool`
+`func (o *InlineResponse20035) HasUpgradeWindow() bool`
 
-HasGroup returns a boolean if a field has been set.
+HasUpgradeWindow returns a boolean if a field has been set.
+
+### GetTimezone
+
+`func (o *InlineResponse20035) GetTimezone() string`
+
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+
+### GetTimezoneOk
+
+`func (o *InlineResponse20035) GetTimezoneOk() (*string, bool)`
+
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimezone
+
+`func (o *InlineResponse20035) SetTimezone(v string)`
+
+SetTimezone sets Timezone field to given value.
+
+### HasTimezone
+
+`func (o *InlineResponse20035) HasTimezone() bool`
+
+HasTimezone returns a boolean if a field has been set.
+
+### GetProducts
+
+`func (o *InlineResponse20035) GetProducts() InlineResponse20035Products`
+
+GetProducts returns the Products field if non-nil, zero value otherwise.
+
+### GetProductsOk
+
+`func (o *InlineResponse20035) GetProductsOk() (*InlineResponse20035Products, bool)`
+
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProducts
+
+`func (o *InlineResponse20035) SetProducts(v InlineResponse20035Products)`
+
+SetProducts sets Products field to given value.
+
+### HasProducts
+
+`func (o *InlineResponse20035) HasProducts() bool`
+
+HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

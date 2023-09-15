@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the VoIP provider | 
-**Address** | **string** | The IP address (IPv4 only) or hostname of the media server to monitor | 
-**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
+**Name** | Pointer to **string** | The name of the new role. Must be unique. | [optional] 
+**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices.md) | Device tag on which this specified permission is applied. | [optional] 
+**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks**](OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks.md) | Network tag on which this specified permission is applied. | [optional] 
+**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide.md) | Permissions to be applied org wide. | [optional] 
 
 ## Methods
 
 ### NewInlineObject200
 
-`func NewInlineObject200(name string, address string, ) *InlineObject200`
+`func NewInlineObject200() *InlineObject200`
 
 NewInlineObject200 instantiates a new InlineObject200 object
 This constructor will assign default values to properties that have it defined,
@@ -46,51 +47,86 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetAddress
+`func (o *InlineObject200) HasName() bool`
 
-`func (o *InlineObject200) GetAddress() string`
+HasName returns a boolean if a field has been set.
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+### GetAppliedOnDevices
 
-### GetAddressOk
+`func (o *InlineObject200) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices`
 
-`func (o *InlineObject200) GetAddressOk() (*string, bool)`
+GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
 
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+### GetAppliedOnDevicesOk
+
+`func (o *InlineObject200) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices, bool)`
+
+GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetAppliedOnDevices
 
-`func (o *InlineObject200) SetAddress(v string)`
+`func (o *InlineObject200) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices)`
 
-SetAddress sets Address field to given value.
+SetAppliedOnDevices sets AppliedOnDevices field to given value.
 
+### HasAppliedOnDevices
 
-### GetBestEffortMonitoringEnabled
+`func (o *InlineObject200) HasAppliedOnDevices() bool`
 
-`func (o *InlineObject200) GetBestEffortMonitoringEnabled() bool`
+HasAppliedOnDevices returns a boolean if a field has been set.
 
-GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
+### GetAppliedOnNetworks
 
-### GetBestEffortMonitoringEnabledOk
+`func (o *InlineObject200) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks`
 
-`func (o *InlineObject200) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
+GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
 
-GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
+### GetAppliedOnNetworksOk
+
+`func (o *InlineObject200) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks, bool)`
+
+GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBestEffortMonitoringEnabled
+### SetAppliedOnNetworks
 
-`func (o *InlineObject200) SetBestEffortMonitoringEnabled(v bool)`
+`func (o *InlineObject200) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks)`
 
-SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
+SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
 
-### HasBestEffortMonitoringEnabled
+### HasAppliedOnNetworks
 
-`func (o *InlineObject200) HasBestEffortMonitoringEnabled() bool`
+`func (o *InlineObject200) HasAppliedOnNetworks() bool`
 
-HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
+HasAppliedOnNetworks returns a boolean if a field has been set.
+
+### GetAppliedOrgWide
+
+`func (o *InlineObject200) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide`
+
+GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
+
+### GetAppliedOrgWideOk
+
+`func (o *InlineObject200) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide, bool)`
+
+GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppliedOrgWide
+
+`func (o *InlineObject200) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide)`
+
+SetAppliedOrgWide sets AppliedOrgWide field to given value.
+
+### HasAppliedOrgWide
+
+`func (o *InlineObject200) HasAppliedOrgWide() bool`
+
+HasAppliedOrgWide returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

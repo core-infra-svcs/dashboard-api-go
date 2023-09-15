@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ConfigTemplateId** | **string** | The ID of the template to which the network should be bound. | 
-**AutoBind** | Pointer to **bool** | Optional boolean indicating whether the network&#39;s switches should automatically bind to profiles of the same model. Defaults to false if left unspecified. This option only affects switch networks and switch templates. Auto-bind is not valid unless the switch template has at least one profile and has at most one profile per switch model. | [optional] 
+**Mode** | **string** | The site-to-site VPN mode. Can be one of &#39;none&#39;, &#39;spoke&#39; or &#39;hub&#39; | 
+**Hubs** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs.md) | The list of VPN hubs, in order of preference. In spoke mode, at least 1 hub is required. | [optional] 
+**Subnets** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets**](NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets.md) | The list of subnets and their VPN presence. | [optional] 
 
 ## Methods
 
 ### NewInlineObject65
 
-`func NewInlineObject65(configTemplateId string, ) *InlineObject65`
+`func NewInlineObject65(mode string, ) *InlineObject65`
 
 NewInlineObject65 instantiates a new InlineObject65 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,75 @@ NewInlineObject65WithDefaults instantiates a new InlineObject65 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfigTemplateId
+### GetMode
 
-`func (o *InlineObject65) GetConfigTemplateId() string`
+`func (o *InlineObject65) GetMode() string`
 
-GetConfigTemplateId returns the ConfigTemplateId field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetConfigTemplateIdOk
+### GetModeOk
 
-`func (o *InlineObject65) GetConfigTemplateIdOk() (*string, bool)`
+`func (o *InlineObject65) GetModeOk() (*string, bool)`
 
-GetConfigTemplateIdOk returns a tuple with the ConfigTemplateId field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfigTemplateId
+### SetMode
 
-`func (o *InlineObject65) SetConfigTemplateId(v string)`
+`func (o *InlineObject65) SetMode(v string)`
 
-SetConfigTemplateId sets ConfigTemplateId field to given value.
+SetMode sets Mode field to given value.
 
 
-### GetAutoBind
+### GetHubs
 
-`func (o *InlineObject65) GetAutoBind() bool`
+`func (o *InlineObject65) GetHubs() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs`
 
-GetAutoBind returns the AutoBind field if non-nil, zero value otherwise.
+GetHubs returns the Hubs field if non-nil, zero value otherwise.
 
-### GetAutoBindOk
+### GetHubsOk
 
-`func (o *InlineObject65) GetAutoBindOk() (*bool, bool)`
+`func (o *InlineObject65) GetHubsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs, bool)`
 
-GetAutoBindOk returns a tuple with the AutoBind field if it's non-nil, zero value otherwise
+GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAutoBind
+### SetHubs
 
-`func (o *InlineObject65) SetAutoBind(v bool)`
+`func (o *InlineObject65) SetHubs(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs)`
 
-SetAutoBind sets AutoBind field to given value.
+SetHubs sets Hubs field to given value.
 
-### HasAutoBind
+### HasHubs
 
-`func (o *InlineObject65) HasAutoBind() bool`
+`func (o *InlineObject65) HasHubs() bool`
 
-HasAutoBind returns a boolean if a field has been set.
+HasHubs returns a boolean if a field has been set.
+
+### GetSubnets
+
+`func (o *InlineObject65) GetSubnets() []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets`
+
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
+
+### GetSubnetsOk
+
+`func (o *InlineObject65) GetSubnetsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets, bool)`
+
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnets
+
+`func (o *InlineObject65) SetSubnets(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets)`
+
+SetSubnets sets Subnets field to given value.
+
+### HasSubnets
+
+`func (o *InlineObject65) HasSubnets() bool`
+
+HasSubnets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

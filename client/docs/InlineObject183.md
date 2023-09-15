@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | The alert type | 
-**AlertCondition** | [**OrganizationsOrganizationIdAlertsProfilesAlertCondition**](OrganizationsOrganizationIdAlertsProfilesAlertCondition.md) |  | 
-**Recipients** | [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | 
-**NetworkTags** | **[]string** | Networks with these tags will be monitored for the alert | 
-**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
+**Name** | Pointer to **string** | Name of the group | [optional] 
+**Sgt** | Pointer to **int32** | SGT value of the group | [optional] 
+**Description** | Pointer to **string** | Description of the group | [optional] 
+**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) | [optional] 
 
 ## Methods
 
 ### NewInlineObject183
 
-`func NewInlineObject183(type_ string, alertCondition OrganizationsOrganizationIdAlertsProfilesAlertCondition, recipients OrganizationsOrganizationIdAlertsProfilesRecipients, networkTags []string, ) *InlineObject183`
+`func NewInlineObject183() *InlineObject183`
 
 NewInlineObject183 instantiates a new InlineObject183 object
 This constructor will assign default values to properties that have it defined,
@@ -29,85 +28,55 @@ NewInlineObject183WithDefaults instantiates a new InlineObject183 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetName
 
-`func (o *InlineObject183) GetType() string`
+`func (o *InlineObject183) GetName() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetNameOk
 
-`func (o *InlineObject183) GetTypeOk() (*string, bool)`
+`func (o *InlineObject183) GetNameOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetName
 
-`func (o *InlineObject183) SetType(v string)`
+`func (o *InlineObject183) SetName(v string)`
 
-SetType sets Type field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetAlertCondition
+`func (o *InlineObject183) HasName() bool`
 
-`func (o *InlineObject183) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition`
+HasName returns a boolean if a field has been set.
 
-GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+### GetSgt
 
-### GetAlertConditionOk
+`func (o *InlineObject183) GetSgt() int32`
 
-`func (o *InlineObject183) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition, bool)`
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
 
-GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+### GetSgtOk
+
+`func (o *InlineObject183) GetSgtOk() (*int32, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertCondition
+### SetSgt
 
-`func (o *InlineObject183) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition)`
+`func (o *InlineObject183) SetSgt(v int32)`
 
-SetAlertCondition sets AlertCondition field to given value.
+SetSgt sets Sgt field to given value.
 
+### HasSgt
 
-### GetRecipients
+`func (o *InlineObject183) HasSgt() bool`
 
-`func (o *InlineObject183) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
-
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
-
-### GetRecipientsOk
-
-`func (o *InlineObject183) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
-
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRecipients
-
-`func (o *InlineObject183) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
-
-SetRecipients sets Recipients field to given value.
-
-
-### GetNetworkTags
-
-`func (o *InlineObject183) GetNetworkTags() []string`
-
-GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
-
-### GetNetworkTagsOk
-
-`func (o *InlineObject183) GetNetworkTagsOk() (*[]string, bool)`
-
-GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkTags
-
-`func (o *InlineObject183) SetNetworkTags(v []string)`
-
-SetNetworkTags sets NetworkTags field to given value.
-
+HasSgt returns a boolean if a field has been set.
 
 ### GetDescription
 
@@ -133,6 +102,31 @@ SetDescription sets Description field to given value.
 `func (o *InlineObject183) HasDescription() bool`
 
 HasDescription returns a boolean if a field has been set.
+
+### GetPolicyObjects
+
+`func (o *InlineObject183) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
+
+GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
+
+### GetPolicyObjectsOk
+
+`func (o *InlineObject183) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
+
+GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPolicyObjects
+
+`func (o *InlineObject183) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
+
+SetPolicyObjects sets PolicyObjects field to given value.
+
+### HasPolicyObjects
+
+`func (o *InlineObject183) HasPolicyObjects() bool`
+
+HasPolicyObjects returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

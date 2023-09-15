@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
+**UpgradeWindow** | Pointer to [**InlineResponse20035UpgradeWindow**](InlineResponse20035UpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject82
 
-`func NewInlineObject82(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject82`
+`func NewInlineObject82() *InlineObject82`
 
 NewInlineObject82 instantiates a new InlineObject82 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,80 @@ NewInlineObject82WithDefaults instantiates a new InlineObject82 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStages
+### GetUpgradeWindow
 
-`func (o *InlineObject82) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
+`func (o *InlineObject82) GetUpgradeWindow() InlineResponse20035UpgradeWindow`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetUpgradeWindowOk
 
-`func (o *InlineObject82) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
+`func (o *InlineObject82) GetUpgradeWindowOk() (*InlineResponse20035UpgradeWindow, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetUpgradeWindow
 
-`func (o *InlineObject82) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
+`func (o *InlineObject82) SetUpgradeWindow(v InlineResponse20035UpgradeWindow)`
 
-SetStages sets Stages field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
+### HasUpgradeWindow
+
+`func (o *InlineObject82) HasUpgradeWindow() bool`
+
+HasUpgradeWindow returns a boolean if a field has been set.
+
+### GetTimezone
+
+`func (o *InlineObject82) GetTimezone() string`
+
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+
+### GetTimezoneOk
+
+`func (o *InlineObject82) GetTimezoneOk() (*string, bool)`
+
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimezone
+
+`func (o *InlineObject82) SetTimezone(v string)`
+
+SetTimezone sets Timezone field to given value.
+
+### HasTimezone
+
+`func (o *InlineObject82) HasTimezone() bool`
+
+HasTimezone returns a boolean if a field has been set.
+
+### GetProducts
+
+`func (o *InlineObject82) GetProducts() NetworksNetworkIdFirmwareUpgradesProducts`
+
+GetProducts returns the Products field if non-nil, zero value otherwise.
+
+### GetProductsOk
+
+`func (o *InlineObject82) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesProducts, bool)`
+
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProducts
+
+`func (o *InlineObject82) SetProducts(v NetworksNetworkIdFirmwareUpgradesProducts)`
+
+SetProducts sets Products field to given value.
+
+### HasProducts
+
+`func (o *InlineObject82) HasProducts() bool`
+
+HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

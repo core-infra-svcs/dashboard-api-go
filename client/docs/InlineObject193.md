@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
-**Licenses** | Pointer to [**[]OrganizationsOrganizationIdClaimLicenses**](OrganizationsOrganizationIdClaimLicenses.md) | The licenses that should be claimed | [optional] 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject193WithDefaults instantiates a new InlineObject193 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetRules
 
-`func (o *InlineObject193) GetOrders() []string`
+`func (o *InlineObject193) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetRulesOk
 
-`func (o *InlineObject193) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineObject193) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetRules
 
-`func (o *InlineObject193) SetOrders(v []string)`
+`func (o *InlineObject193) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
 
-SetOrders sets Orders field to given value.
+SetRules sets Rules field to given value.
 
-### HasOrders
+### HasRules
 
-`func (o *InlineObject193) HasOrders() bool`
+`func (o *InlineObject193) HasRules() bool`
 
-HasOrders returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetSerials
+### GetSyslogDefaultRule
 
-`func (o *InlineObject193) GetSerials() []string`
+`func (o *InlineObject193) GetSyslogDefaultRule() bool`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetSyslogDefaultRuleOk
 
-`func (o *InlineObject193) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject193) GetSyslogDefaultRuleOk() (*bool, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetSyslogDefaultRule
 
-`func (o *InlineObject193) SetSerials(v []string)`
+`func (o *InlineObject193) SetSyslogDefaultRule(v bool)`
 
-SetSerials sets Serials field to given value.
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
 
-### HasSerials
+### HasSyslogDefaultRule
 
-`func (o *InlineObject193) HasSerials() bool`
+`func (o *InlineObject193) HasSyslogDefaultRule() bool`
 
-HasSerials returns a boolean if a field has been set.
-
-### GetLicenses
-
-`func (o *InlineObject193) GetLicenses() []OrganizationsOrganizationIdClaimLicenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineObject193) GetLicensesOk() (*[]OrganizationsOrganizationIdClaimLicenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineObject193) SetLicenses(v []OrganizationsOrganizationIdClaimLicenses)`
-
-SetLicenses sets Licenses field to given value.
-
-### HasLicenses
-
-`func (o *InlineObject193) HasLicenses() bool`
-
-HasLicenses returns a boolean if a field has been set.
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

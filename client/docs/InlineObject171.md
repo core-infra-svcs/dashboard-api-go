@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the organization | [optional] 
-**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
-**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
 
 ## Methods
 
@@ -52,55 +53,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetManagement
+### GetPassphrase
 
-`func (o *InlineObject171) GetManagement() OrganizationsManagement`
+`func (o *InlineObject171) GetPassphrase() string`
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-### GetManagementOk
+### GetPassphraseOk
 
-`func (o *InlineObject171) GetManagementOk() (*OrganizationsManagement, bool)`
+`func (o *InlineObject171) GetPassphraseOk() (*string, bool)`
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetPassphrase
 
-`func (o *InlineObject171) SetManagement(v OrganizationsManagement)`
+`func (o *InlineObject171) SetPassphrase(v string)`
 
-SetManagement sets Management field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasManagement
+### HasPassphrase
 
-`func (o *InlineObject171) HasManagement() bool`
+`func (o *InlineObject171) HasPassphrase() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetApi
+### GetGroupPolicyId
 
-`func (o *InlineObject171) GetApi() OrganizationsOrganizationIdApi`
+`func (o *InlineObject171) GetGroupPolicyId() string`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineObject171) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
+`func (o *InlineObject171) GetGroupPolicyIdOk() (*string, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetGroupPolicyId
 
-`func (o *InlineObject171) SetApi(v OrganizationsOrganizationIdApi)`
+`func (o *InlineObject171) SetGroupPolicyId(v string)`
 
-SetApi sets Api field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasApi
+### HasGroupPolicyId
 
-`func (o *InlineObject171) HasApi() bool`
+`func (o *InlineObject171) HasGroupPolicyId() bool`
 
-HasApi returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
+
+### GetExpiresAt
+
+`func (o *InlineObject171) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineObject171) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineObject171) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineObject171) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

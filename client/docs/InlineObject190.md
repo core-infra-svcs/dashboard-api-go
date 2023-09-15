@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
-**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
-**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
-**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo1**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo1.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Is the alert config enabled | [optional] 
+**Type** | Pointer to **string** | The alert type | [optional] 
+**AlertCondition** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesAlertCondition**](OrganizationsOrganizationIdAlertsProfilesAlertCondition.md) |  | [optional] 
+**Recipients** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | [optional] 
+**NetworkTags** | Pointer to **[]string** | Networks with these tags will be monitored for the alert | [optional] 
+**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
 
 ## Methods
 
@@ -28,31 +29,6 @@ will change when the set of required properties is changed
 NewInlineObject190WithDefaults instantiates a new InlineObject190 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetName
-
-`func (o *InlineObject190) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineObject190) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineObject190) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineObject190) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetEnabled
 
@@ -79,80 +55,130 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetAdminSettings
+### GetType
 
-`func (o *InlineObject190) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
+`func (o *InlineObject190) GetType() string`
 
-GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetAdminSettingsOk
+### GetTypeOk
 
-`func (o *InlineObject190) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
+`func (o *InlineObject190) GetTypeOk() (*string, bool)`
 
-GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminSettings
+### SetType
 
-`func (o *InlineObject190) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
+`func (o *InlineObject190) SetType(v string)`
 
-SetAdminSettings sets AdminSettings field to given value.
+SetType sets Type field to given value.
 
-### HasAdminSettings
+### HasType
 
-`func (o *InlineObject190) HasAdminSettings() bool`
+`func (o *InlineObject190) HasType() bool`
 
-HasAdminSettings returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetHelpSettings
+### GetAlertCondition
 
-`func (o *InlineObject190) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
+`func (o *InlineObject190) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition`
 
-GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
 
-### GetHelpSettingsOk
+### GetAlertConditionOk
 
-`func (o *InlineObject190) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
+`func (o *InlineObject190) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition, bool)`
 
-GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHelpSettings
+### SetAlertCondition
 
-`func (o *InlineObject190) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
+`func (o *InlineObject190) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition)`
 
-SetHelpSettings sets HelpSettings field to given value.
+SetAlertCondition sets AlertCondition field to given value.
 
-### HasHelpSettings
+### HasAlertCondition
 
-`func (o *InlineObject190) HasHelpSettings() bool`
+`func (o *InlineObject190) HasAlertCondition() bool`
 
-HasHelpSettings returns a boolean if a field has been set.
+HasAlertCondition returns a boolean if a field has been set.
 
-### GetCustomLogo
+### GetRecipients
 
-`func (o *InlineObject190) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo1`
+`func (o *InlineObject190) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
 
-GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
 
-### GetCustomLogoOk
+### GetRecipientsOk
 
-`func (o *InlineObject190) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo1, bool)`
+`func (o *InlineObject190) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
 
-GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomLogo
+### SetRecipients
 
-`func (o *InlineObject190) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo1)`
+`func (o *InlineObject190) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
 
-SetCustomLogo sets CustomLogo field to given value.
+SetRecipients sets Recipients field to given value.
 
-### HasCustomLogo
+### HasRecipients
 
-`func (o *InlineObject190) HasCustomLogo() bool`
+`func (o *InlineObject190) HasRecipients() bool`
 
-HasCustomLogo returns a boolean if a field has been set.
+HasRecipients returns a boolean if a field has been set.
+
+### GetNetworkTags
+
+`func (o *InlineObject190) GetNetworkTags() []string`
+
+GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
+
+### GetNetworkTagsOk
+
+`func (o *InlineObject190) GetNetworkTagsOk() (*[]string, bool)`
+
+GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkTags
+
+`func (o *InlineObject190) SetNetworkTags(v []string)`
+
+SetNetworkTags sets NetworkTags field to given value.
+
+### HasNetworkTags
+
+`func (o *InlineObject190) HasNetworkTags() bool`
+
+HasNetworkTags returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineObject190) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject190) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject190) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineObject190) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

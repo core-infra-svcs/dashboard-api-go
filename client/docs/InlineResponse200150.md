@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
-**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
+**RemainderLicenses** | Pointer to [**[]InlineResponse200149**](InlineResponse200149.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
+**MovedLicenses** | Pointer to [**[]InlineResponse200149**](InlineResponse200149.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200150WithDefaults instantiates a new InlineResponse200150 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetRemainderLicenses
 
-`func (o *InlineResponse200150) GetSerial() string`
+`func (o *InlineResponse200150) GetRemainderLicenses() []InlineResponse200149`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetRemainderLicensesOk
 
-`func (o *InlineResponse200150) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200150) GetRemainderLicensesOk() (*[]InlineResponse200149, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetRemainderLicenses
 
-`func (o *InlineResponse200150) SetSerial(v string)`
+`func (o *InlineResponse200150) SetRemainderLicenses(v []InlineResponse200149)`
 
-SetSerial sets Serial field to given value.
+SetRemainderLicenses sets RemainderLicenses field to given value.
 
-### HasSerial
+### HasRemainderLicenses
 
-`func (o *InlineResponse200150) HasSerial() bool`
+`func (o *InlineResponse200150) HasRemainderLicenses() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasRemainderLicenses returns a boolean if a field has been set.
 
-### GetNetwork
+### GetMovedLicenses
 
-`func (o *InlineResponse200150) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
+`func (o *InlineResponse200150) GetMovedLicenses() []InlineResponse200149`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetMovedLicensesOk
 
-`func (o *InlineResponse200150) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
+`func (o *InlineResponse200150) GetMovedLicensesOk() (*[]InlineResponse200149, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetMovedLicenses
 
-`func (o *InlineResponse200150) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
+`func (o *InlineResponse200150) SetMovedLicenses(v []InlineResponse200149)`
 
-SetNetwork sets Network field to given value.
+SetMovedLicenses sets MovedLicenses field to given value.
 
-### HasNetwork
+### HasMovedLicenses
 
-`func (o *InlineResponse200150) HasNetwork() bool`
+`func (o *InlineResponse200150) HasMovedLicenses() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetReadings
-
-`func (o *InlineResponse200150) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
-
-GetReadings returns the Readings field if non-nil, zero value otherwise.
-
-### GetReadingsOk
-
-`func (o *InlineResponse200150) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
-
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReadings
-
-`func (o *InlineResponse200150) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
-
-SetReadings sets Readings field to given value.
-
-### HasReadings
-
-`func (o *InlineResponse200150) HasReadings() bool`
-
-HasReadings returns a boolean if a field has been set.
+HasMovedLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

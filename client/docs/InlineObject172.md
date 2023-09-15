@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges**](NetworksNetworkIdWirelessSsidsNumberSchedulesRanges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds**](NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
 ### NewInlineObject172
 
-`func NewInlineObject172(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineObject172`
+`func NewInlineObject172() *InlineObject172`
 
 NewInlineObject172 instantiates a new InlineObject172 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +27,80 @@ NewInlineObject172WithDefaults instantiates a new InlineObject172 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetEnabled
 
-`func (o *InlineObject172) GetConfirmed() bool`
+`func (o *InlineObject172) GetEnabled() bool`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetEnabledOk
 
-`func (o *InlineObject172) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject172) GetEnabledOk() (*bool, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetEnabled
 
-`func (o *InlineObject172) SetConfirmed(v bool)`
+`func (o *InlineObject172) SetEnabled(v bool)`
 
-SetConfirmed sets Confirmed field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasConfirmed
+### HasEnabled
 
-`func (o *InlineObject172) HasConfirmed() bool`
+`func (o *InlineObject172) HasEnabled() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetRanges
 
-`func (o *InlineObject172) GetSynchronous() bool`
+`func (o *InlineObject172) GetRanges() []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetRangesOk
 
-`func (o *InlineObject172) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject172) GetRangesOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetRanges
 
-`func (o *InlineObject172) SetSynchronous(v bool)`
+`func (o *InlineObject172) SetRanges(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges)`
 
-SetSynchronous sets Synchronous field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasSynchronous
+### HasRanges
 
-`func (o *InlineObject172) HasSynchronous() bool`
+`func (o *InlineObject172) HasRanges() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetActions
+### GetRangesInSeconds
 
-`func (o *InlineObject172) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
+`func (o *InlineObject172) GetRangesInSeconds() []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds`
 
-GetActions returns the Actions field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetActionsOk
+### GetRangesInSecondsOk
 
-`func (o *InlineObject172) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
+`func (o *InlineObject172) GetRangesInSecondsOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds, bool)`
 
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActions
+### SetRangesInSeconds
 
-`func (o *InlineObject172) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
+`func (o *InlineObject172) SetRangesInSeconds(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds)`
 
-SetActions sets Actions field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
+### HasRangesInSeconds
+
+`func (o *InlineObject172) HasRangesInSeconds() bool`
+
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

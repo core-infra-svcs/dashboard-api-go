@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | **string** | The serial of a device | 
+**Serials** | **[]string** | A list of serials of devices to claim | 
 
 ## Methods
 
 ### NewInlineObject79
 
-`func NewInlineObject79(serial string, ) *InlineObject79`
+`func NewInlineObject79(serials []string, ) *InlineObject79`
 
 NewInlineObject79 instantiates a new InlineObject79 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject79WithDefaults instantiates a new InlineObject79 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetSerials
 
-`func (o *InlineObject79) GetSerial() string`
+`func (o *InlineObject79) GetSerials() []string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSerialsOk
 
-`func (o *InlineObject79) GetSerialOk() (*string, bool)`
+`func (o *InlineObject79) GetSerialsOk() (*[]string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSerials
 
-`func (o *InlineObject79) SetSerial(v string)`
+`func (o *InlineObject79) SetSerials(v []string)`
 
-SetSerial sets Serial field to given value.
+SetSerials sets Serials field to given value.
 
 
 

@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200128Counts**](InlineResponse200128Counts.md) |  | [optional] 
+**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
+**Name** | Pointer to **string** | Switch template name | [optional] 
+**Model** | Pointer to **string** | Switch model | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200128WithDefaults instantiates a new InlineResponse200128 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetSwitchProfileId
 
-`func (o *InlineResponse200128) GetCounts() InlineResponse200128Counts`
+`func (o *InlineResponse200128) GetSwitchProfileId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetSwitchProfileIdOk
 
-`func (o *InlineResponse200128) GetCountsOk() (*InlineResponse200128Counts, bool)`
+`func (o *InlineResponse200128) GetSwitchProfileIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetSwitchProfileId
 
-`func (o *InlineResponse200128) SetCounts(v InlineResponse200128Counts)`
+`func (o *InlineResponse200128) SetSwitchProfileId(v string)`
 
-SetCounts sets Counts field to given value.
+SetSwitchProfileId sets SwitchProfileId field to given value.
 
-### HasCounts
+### HasSwitchProfileId
 
-`func (o *InlineResponse200128) HasCounts() bool`
+`func (o *InlineResponse200128) HasSwitchProfileId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasSwitchProfileId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200128) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200128) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200128) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200128) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200128) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200128) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200128) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200128) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

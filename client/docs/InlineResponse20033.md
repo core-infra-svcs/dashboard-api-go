@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**InlineResponse20033Products**](InlineResponse20033Products.md) |  | [optional] 
-**Stages** | Pointer to [**[]InlineResponse20033Stages**](InlineResponse20033Stages.md) | The ordered stages in the network | [optional] 
-**Reasons** | Pointer to [**[]InlineResponse20032Reasons**](InlineResponse20032Reasons.md) | Reasons for the rollback | [optional] 
+**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
+**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
+**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
+**Events** | Pointer to [**[]InlineResponse20033Events**](InlineResponse20033Events.md) | An array of events that took place in the network. | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse20033WithDefaults instantiates a new InlineResponse20033 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProducts
+### GetMessage
 
-`func (o *InlineResponse20033) GetProducts() InlineResponse20033Products`
+`func (o *InlineResponse20033) GetMessage() string`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetMessageOk
 
-`func (o *InlineResponse20033) GetProductsOk() (*InlineResponse20033Products, bool)`
+`func (o *InlineResponse20033) GetMessageOk() (*string, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetMessage
 
-`func (o *InlineResponse20033) SetProducts(v InlineResponse20033Products)`
+`func (o *InlineResponse20033) SetMessage(v string)`
 
-SetProducts sets Products field to given value.
+SetMessage sets Message field to given value.
 
-### HasProducts
+### HasMessage
 
-`func (o *InlineResponse20033) HasProducts() bool`
+`func (o *InlineResponse20033) HasMessage() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
 
-### GetStages
+### GetPageStartAt
 
-`func (o *InlineResponse20033) GetStages() []InlineResponse20033Stages`
+`func (o *InlineResponse20033) GetPageStartAt() string`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetPageStartAtOk
 
-`func (o *InlineResponse20033) GetStagesOk() (*[]InlineResponse20033Stages, bool)`
+`func (o *InlineResponse20033) GetPageStartAtOk() (*string, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetPageStartAt
 
-`func (o *InlineResponse20033) SetStages(v []InlineResponse20033Stages)`
+`func (o *InlineResponse20033) SetPageStartAt(v string)`
 
-SetStages sets Stages field to given value.
+SetPageStartAt sets PageStartAt field to given value.
 
-### HasStages
+### HasPageStartAt
 
-`func (o *InlineResponse20033) HasStages() bool`
+`func (o *InlineResponse20033) HasPageStartAt() bool`
 
-HasStages returns a boolean if a field has been set.
+HasPageStartAt returns a boolean if a field has been set.
 
-### GetReasons
+### GetPageEndAt
 
-`func (o *InlineResponse20033) GetReasons() []InlineResponse20032Reasons`
+`func (o *InlineResponse20033) GetPageEndAt() string`
 
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
+GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
 
-### GetReasonsOk
+### GetPageEndAtOk
 
-`func (o *InlineResponse20033) GetReasonsOk() (*[]InlineResponse20032Reasons, bool)`
+`func (o *InlineResponse20033) GetPageEndAtOk() (*string, bool)`
 
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
+GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReasons
+### SetPageEndAt
 
-`func (o *InlineResponse20033) SetReasons(v []InlineResponse20032Reasons)`
+`func (o *InlineResponse20033) SetPageEndAt(v string)`
 
-SetReasons sets Reasons field to given value.
+SetPageEndAt sets PageEndAt field to given value.
 
-### HasReasons
+### HasPageEndAt
 
-`func (o *InlineResponse20033) HasReasons() bool`
+`func (o *InlineResponse20033) HasPageEndAt() bool`
 
-HasReasons returns a boolean if a field has been set.
+HasPageEndAt returns a boolean if a field has been set.
+
+### GetEvents
+
+`func (o *InlineResponse20033) GetEvents() []InlineResponse20033Events`
+
+GetEvents returns the Events field if non-nil, zero value otherwise.
+
+### GetEventsOk
+
+`func (o *InlineResponse20033) GetEventsOk() (*[]InlineResponse20033Events, bool)`
+
+GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEvents
+
+`func (o *InlineResponse20033) SetEvents(v []InlineResponse20033Events)`
+
+SetEvents sets Events field to given value.
+
+### HasEvents
+
+`func (o *InlineResponse20033) HasEvents() bool`
+
+HasEvents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

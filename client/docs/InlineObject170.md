@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the organization | 
-**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
 
 ## Methods
 
 ### NewInlineObject170
 
-`func NewInlineObject170(name string, ) *InlineObject170`
+`func NewInlineObject170(name string, groupPolicyId string, ) *InlineObject170`
 
 NewInlineObject170 instantiates a new InlineObject170 object
 This constructor will assign default values to properties that have it defined,
@@ -46,30 +48,75 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetManagement
+### GetPassphrase
 
-`func (o *InlineObject170) GetManagement() OrganizationsManagement`
+`func (o *InlineObject170) GetPassphrase() string`
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-### GetManagementOk
+### GetPassphraseOk
 
-`func (o *InlineObject170) GetManagementOk() (*OrganizationsManagement, bool)`
+`func (o *InlineObject170) GetPassphraseOk() (*string, bool)`
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetPassphrase
 
-`func (o *InlineObject170) SetManagement(v OrganizationsManagement)`
+`func (o *InlineObject170) SetPassphrase(v string)`
 
-SetManagement sets Management field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasManagement
+### HasPassphrase
 
-`func (o *InlineObject170) HasManagement() bool`
+`func (o *InlineObject170) HasPassphrase() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
+
+### GetGroupPolicyId
+
+`func (o *InlineObject170) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineObject170) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineObject170) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+
+### GetExpiresAt
+
+`func (o *InlineObject170) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineObject170) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineObject170) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineObject170) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**Email** | **string** | The email of the dashboard administrator. This attribute can not be updated. | 
+**Name** | **string** | The name of the dashboard administrator | 
+**OrgAccess** | **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
+**AuthenticationMethod** | Pointer to **string** | The method of authentication the user will use to sign in to the Meraki dashboard. Can be one of &#39;Email&#39; or &#39;Cisco SecureX Sign-On&#39;. The default is Email authentication | [optional] 
 
 ## Methods
 
 ### NewInlineObject187
 
-`func NewInlineObject187() *InlineObject187`
+`func NewInlineObject187(email string, name string, orgAccess string, ) *InlineObject187`
 
 NewInlineObject187 instantiates a new InlineObject187 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +30,140 @@ NewInlineObject187WithDefaults instantiates a new InlineObject187 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetEmail
 
-`func (o *InlineObject187) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
+`func (o *InlineObject187) GetEmail() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetEmailOk
 
-`func (o *InlineObject187) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
+`func (o *InlineObject187) GetEmailOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetEmail
 
-`func (o *InlineObject187) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
+`func (o *InlineObject187) SetEmail(v string)`
 
-SetRules sets Rules field to given value.
+SetEmail sets Email field to given value.
 
-### HasRules
 
-`func (o *InlineObject187) HasRules() bool`
+### GetName
 
-HasRules returns a boolean if a field has been set.
+`func (o *InlineObject187) GetName() string`
 
-### GetSyslogDefaultRule
+GetName returns the Name field if non-nil, zero value otherwise.
 
-`func (o *InlineObject187) GetSyslogDefaultRule() bool`
+### GetNameOk
 
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+`func (o *InlineObject187) GetNameOk() (*string, bool)`
 
-### GetSyslogDefaultRuleOk
-
-`func (o *InlineObject187) GetSyslogDefaultRuleOk() (*bool, bool)`
-
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSyslogDefaultRule
+### SetName
 
-`func (o *InlineObject187) SetSyslogDefaultRule(v bool)`
+`func (o *InlineObject187) SetName(v string)`
 
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+SetName sets Name field to given value.
 
-### HasSyslogDefaultRule
 
-`func (o *InlineObject187) HasSyslogDefaultRule() bool`
+### GetOrgAccess
 
-HasSyslogDefaultRule returns a boolean if a field has been set.
+`func (o *InlineObject187) GetOrgAccess() string`
+
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+
+### GetOrgAccessOk
+
+`func (o *InlineObject187) GetOrgAccessOk() (*string, bool)`
+
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrgAccess
+
+`func (o *InlineObject187) SetOrgAccess(v string)`
+
+SetOrgAccess sets OrgAccess field to given value.
+
+
+### GetTags
+
+`func (o *InlineObject187) GetTags() []OrganizationsOrganizationIdAdminsTags1`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject187) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject187) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject187) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetNetworks
+
+`func (o *InlineObject187) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
+
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
+
+### GetNetworksOk
+
+`func (o *InlineObject187) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
+
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworks
+
+`func (o *InlineObject187) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
+
+SetNetworks sets Networks field to given value.
+
+### HasNetworks
+
+`func (o *InlineObject187) HasNetworks() bool`
+
+HasNetworks returns a boolean if a field has been set.
+
+### GetAuthenticationMethod
+
+`func (o *InlineObject187) GetAuthenticationMethod() string`
+
+GetAuthenticationMethod returns the AuthenticationMethod field if non-nil, zero value otherwise.
+
+### GetAuthenticationMethodOk
+
+`func (o *InlineObject187) GetAuthenticationMethodOk() (*string, bool)`
+
+GetAuthenticationMethodOk returns a tuple with the AuthenticationMethod field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthenticationMethod
+
+`func (o *InlineObject187) SetAuthenticationMethod(v string)`
+
+SetAuthenticationMethod sets AuthenticationMethod field to given value.
+
+### HasAuthenticationMethod
+
+`func (o *InlineObject187) HasAuthenticationMethod() bool`
+
+HasAuthenticationMethod returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

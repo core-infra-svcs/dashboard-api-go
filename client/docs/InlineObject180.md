@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
+**Name** | **string** | Name of the adaptive policy ACL | 
+**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] [default to ""]
+**Rules** | [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. | 
+**IpVersion** | **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | 
 
 ## Methods
 
 ### NewInlineObject180
 
-`func NewInlineObject180() *InlineObject180`
+`func NewInlineObject180(name string, rules []OrganizationsOrganizationIdAdaptivePolicyAclsRules1, ipVersion string, ) *InlineObject180`
 
 NewInlineObject180 instantiates a new InlineObject180 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +28,90 @@ NewInlineObject180WithDefaults instantiates a new InlineObject180 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabledNetworks
+### GetName
 
-`func (o *InlineObject180) GetEnabledNetworks() []string`
+`func (o *InlineObject180) GetName() string`
 
-GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledNetworksOk
+### GetNameOk
 
-`func (o *InlineObject180) GetEnabledNetworksOk() (*[]string, bool)`
+`func (o *InlineObject180) GetNameOk() (*string, bool)`
 
-GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabledNetworks
+### SetName
 
-`func (o *InlineObject180) SetEnabledNetworks(v []string)`
+`func (o *InlineObject180) SetName(v string)`
 
-SetEnabledNetworks sets EnabledNetworks field to given value.
+SetName sets Name field to given value.
 
-### HasEnabledNetworks
 
-`func (o *InlineObject180) HasEnabledNetworks() bool`
+### GetDescription
 
-HasEnabledNetworks returns a boolean if a field has been set.
+`func (o *InlineObject180) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject180) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject180) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineObject180) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject180) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules1`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject180) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject180) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules1)`
+
+SetRules sets Rules field to given value.
+
+
+### GetIpVersion
+
+`func (o *InlineObject180) GetIpVersion() string`
+
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+
+### GetIpVersionOk
+
+`func (o *InlineObject180) GetIpVersionOk() (*string, bool)`
+
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpVersion
+
+`func (o *InlineObject180) SetIpVersion(v string)`
+
+SetIpVersion sets IpVersion field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network identifier | [optional] 
-**Serial** | Pointer to **string** | The uplink serial | [optional] 
-**Model** | Pointer to **string** | The uplink model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdUplinksStatusesUplinks**](OrganizationsOrganizationIdUplinksStatusesUplinks.md) | Uplinks | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**Mac** | Pointer to **string** | MAC address of client | [optional] 
+**Id** | Pointer to **string** | ID of client | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork**](OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork.md) |  | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200161WithDefaults instantiates a new InlineResponse200161 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetName
 
-`func (o *InlineResponse200161) GetNetworkId() string`
+`func (o *InlineResponse200161) GetName() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetNameOk
 
-`func (o *InlineResponse200161) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200161) GetNameOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetName
 
-`func (o *InlineResponse200161) SetNetworkId(v string)`
+`func (o *InlineResponse200161) SetName(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetName sets Name field to given value.
 
-### HasNetworkId
+### HasName
 
-`func (o *InlineResponse200161) HasNetworkId() bool`
+`func (o *InlineResponse200161) HasName() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSerial
+### GetMac
 
-`func (o *InlineResponse200161) GetSerial() string`
+`func (o *InlineResponse200161) GetMac() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetMacOk
 
-`func (o *InlineResponse200161) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200161) GetMacOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetMac
 
-`func (o *InlineResponse200161) SetSerial(v string)`
+`func (o *InlineResponse200161) SetMac(v string)`
 
-SetSerial sets Serial field to given value.
+SetMac sets Mac field to given value.
 
-### HasSerial
+### HasMac
 
-`func (o *InlineResponse200161) HasSerial() bool`
+`func (o *InlineResponse200161) HasMac() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetModel
+### GetId
 
-`func (o *InlineResponse200161) GetModel() string`
+`func (o *InlineResponse200161) GetId() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetIdOk
 
-`func (o *InlineResponse200161) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200161) GetIdOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetId
 
-`func (o *InlineResponse200161) SetModel(v string)`
+`func (o *InlineResponse200161) SetId(v string)`
 
-SetModel sets Model field to given value.
+SetId sets Id field to given value.
 
-### HasModel
+### HasId
 
-`func (o *InlineResponse200161) HasModel() bool`
+`func (o *InlineResponse200161) HasId() bool`
 
-HasModel returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetLastReportedAt
+### GetNetwork
 
-`func (o *InlineResponse200161) GetLastReportedAt() time.Time`
+`func (o *InlineResponse200161) GetNetwork() OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork`
 
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetLastReportedAtOk
+### GetNetworkOk
 
-`func (o *InlineResponse200161) GetLastReportedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200161) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork, bool)`
 
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastReportedAt
+### SetNetwork
 
-`func (o *InlineResponse200161) SetLastReportedAt(v time.Time)`
+`func (o *InlineResponse200161) SetNetwork(v OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork)`
 
-SetLastReportedAt sets LastReportedAt field to given value.
+SetNetwork sets Network field to given value.
 
-### HasLastReportedAt
+### HasNetwork
 
-`func (o *InlineResponse200161) HasLastReportedAt() bool`
+`func (o *InlineResponse200161) HasNetwork() bool`
 
-HasLastReportedAt returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetUplinks
+### GetUsage
 
-`func (o *InlineResponse200161) GetUplinks() []OrganizationsOrganizationIdUplinksStatusesUplinks`
+`func (o *InlineResponse200161) GetUsage() OrganizationsOrganizationIdSummaryTopClientsByUsageUsage`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetUsageOk
 
-`func (o *InlineResponse200161) GetUplinksOk() (*[]OrganizationsOrganizationIdUplinksStatusesUplinks, bool)`
+`func (o *InlineResponse200161) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageUsage, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetUsage
 
-`func (o *InlineResponse200161) SetUplinks(v []OrganizationsOrganizationIdUplinksStatusesUplinks)`
+`func (o *InlineResponse200161) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsByUsageUsage)`
 
-SetUplinks sets Uplinks field to given value.
+SetUsage sets Usage field to given value.
 
-### HasUplinks
+### HasUsage
 
-`func (o *InlineResponse200161) HasUplinks() bool`
+`func (o *InlineResponse200161) HasUsage() bool`
 
-HasUplinks returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

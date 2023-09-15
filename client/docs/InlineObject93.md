@@ -4,10 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the user. Only allowed If the user is not Dashboard administrator. | [optional] 
-**Password** | Pointer to **string** | The password for this user account. Only allowed If the user is not Dashboard administrator. | [optional] 
-**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
-**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations**](NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md) | Authorization zones and expiration dates for the user. | [optional] 
+**Name** | Pointer to **string** | The name for your group policy. | [optional] 
+**Scheduling** | Pointer to [**NetworksNetworkIdGroupPoliciesScheduling**](NetworksNetworkIdGroupPoliciesScheduling.md) |  | [optional] 
+**Bandwidth** | Pointer to [**NetworksNetworkIdGroupPoliciesBandwidth**](NetworksNetworkIdGroupPoliciesBandwidth.md) |  | [optional] 
+**FirewallAndTrafficShaping** | Pointer to [**NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping**](NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping.md) |  | [optional] 
+**ContentFiltering** | Pointer to [**NetworksNetworkIdGroupPoliciesContentFiltering**](NetworksNetworkIdGroupPoliciesContentFiltering.md) |  | [optional] 
+**SplashAuthSettings** | Pointer to **string** | Whether clients bound to your policy will bypass splash authorization or behave according to the network&#39;s rules. Can be one of &#39;network default&#39; or &#39;bypass&#39;. Only available if your network has a wireless configuration. | [optional] 
+**VlanTagging** | Pointer to [**NetworksNetworkIdGroupPoliciesVlanTagging**](NetworksNetworkIdGroupPoliciesVlanTagging.md) |  | [optional] 
+**BonjourForwarding** | Pointer to [**NetworksNetworkIdGroupPoliciesBonjourForwarding**](NetworksNetworkIdGroupPoliciesBonjourForwarding.md) |  | [optional] 
 
 ## Methods
 
@@ -53,80 +57,180 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetPassword
+### GetScheduling
 
-`func (o *InlineObject93) GetPassword() string`
+`func (o *InlineObject93) GetScheduling() NetworksNetworkIdGroupPoliciesScheduling`
 
-GetPassword returns the Password field if non-nil, zero value otherwise.
+GetScheduling returns the Scheduling field if non-nil, zero value otherwise.
 
-### GetPasswordOk
+### GetSchedulingOk
 
-`func (o *InlineObject93) GetPasswordOk() (*string, bool)`
+`func (o *InlineObject93) GetSchedulingOk() (*NetworksNetworkIdGroupPoliciesScheduling, bool)`
 
-GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
+GetSchedulingOk returns a tuple with the Scheduling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassword
+### SetScheduling
 
-`func (o *InlineObject93) SetPassword(v string)`
+`func (o *InlineObject93) SetScheduling(v NetworksNetworkIdGroupPoliciesScheduling)`
 
-SetPassword sets Password field to given value.
+SetScheduling sets Scheduling field to given value.
 
-### HasPassword
+### HasScheduling
 
-`func (o *InlineObject93) HasPassword() bool`
+`func (o *InlineObject93) HasScheduling() bool`
 
-HasPassword returns a boolean if a field has been set.
+HasScheduling returns a boolean if a field has been set.
 
-### GetEmailPasswordToUser
+### GetBandwidth
 
-`func (o *InlineObject93) GetEmailPasswordToUser() bool`
+`func (o *InlineObject93) GetBandwidth() NetworksNetworkIdGroupPoliciesBandwidth`
 
-GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
+GetBandwidth returns the Bandwidth field if non-nil, zero value otherwise.
 
-### GetEmailPasswordToUserOk
+### GetBandwidthOk
 
-`func (o *InlineObject93) GetEmailPasswordToUserOk() (*bool, bool)`
+`func (o *InlineObject93) GetBandwidthOk() (*NetworksNetworkIdGroupPoliciesBandwidth, bool)`
 
-GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
+GetBandwidthOk returns a tuple with the Bandwidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmailPasswordToUser
+### SetBandwidth
 
-`func (o *InlineObject93) SetEmailPasswordToUser(v bool)`
+`func (o *InlineObject93) SetBandwidth(v NetworksNetworkIdGroupPoliciesBandwidth)`
 
-SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
+SetBandwidth sets Bandwidth field to given value.
 
-### HasEmailPasswordToUser
+### HasBandwidth
 
-`func (o *InlineObject93) HasEmailPasswordToUser() bool`
+`func (o *InlineObject93) HasBandwidth() bool`
 
-HasEmailPasswordToUser returns a boolean if a field has been set.
+HasBandwidth returns a boolean if a field has been set.
 
-### GetAuthorizations
+### GetFirewallAndTrafficShaping
 
-`func (o *InlineObject93) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations`
+`func (o *InlineObject93) GetFirewallAndTrafficShaping() NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping`
 
-GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+GetFirewallAndTrafficShaping returns the FirewallAndTrafficShaping field if non-nil, zero value otherwise.
 
-### GetAuthorizationsOk
+### GetFirewallAndTrafficShapingOk
 
-`func (o *InlineObject93) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations, bool)`
+`func (o *InlineObject93) GetFirewallAndTrafficShapingOk() (*NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping, bool)`
 
-GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+GetFirewallAndTrafficShapingOk returns a tuple with the FirewallAndTrafficShaping field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthorizations
+### SetFirewallAndTrafficShaping
 
-`func (o *InlineObject93) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations)`
+`func (o *InlineObject93) SetFirewallAndTrafficShaping(v NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping)`
 
-SetAuthorizations sets Authorizations field to given value.
+SetFirewallAndTrafficShaping sets FirewallAndTrafficShaping field to given value.
 
-### HasAuthorizations
+### HasFirewallAndTrafficShaping
 
-`func (o *InlineObject93) HasAuthorizations() bool`
+`func (o *InlineObject93) HasFirewallAndTrafficShaping() bool`
 
-HasAuthorizations returns a boolean if a field has been set.
+HasFirewallAndTrafficShaping returns a boolean if a field has been set.
+
+### GetContentFiltering
+
+`func (o *InlineObject93) GetContentFiltering() NetworksNetworkIdGroupPoliciesContentFiltering`
+
+GetContentFiltering returns the ContentFiltering field if non-nil, zero value otherwise.
+
+### GetContentFilteringOk
+
+`func (o *InlineObject93) GetContentFilteringOk() (*NetworksNetworkIdGroupPoliciesContentFiltering, bool)`
+
+GetContentFilteringOk returns a tuple with the ContentFiltering field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContentFiltering
+
+`func (o *InlineObject93) SetContentFiltering(v NetworksNetworkIdGroupPoliciesContentFiltering)`
+
+SetContentFiltering sets ContentFiltering field to given value.
+
+### HasContentFiltering
+
+`func (o *InlineObject93) HasContentFiltering() bool`
+
+HasContentFiltering returns a boolean if a field has been set.
+
+### GetSplashAuthSettings
+
+`func (o *InlineObject93) GetSplashAuthSettings() string`
+
+GetSplashAuthSettings returns the SplashAuthSettings field if non-nil, zero value otherwise.
+
+### GetSplashAuthSettingsOk
+
+`func (o *InlineObject93) GetSplashAuthSettingsOk() (*string, bool)`
+
+GetSplashAuthSettingsOk returns a tuple with the SplashAuthSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplashAuthSettings
+
+`func (o *InlineObject93) SetSplashAuthSettings(v string)`
+
+SetSplashAuthSettings sets SplashAuthSettings field to given value.
+
+### HasSplashAuthSettings
+
+`func (o *InlineObject93) HasSplashAuthSettings() bool`
+
+HasSplashAuthSettings returns a boolean if a field has been set.
+
+### GetVlanTagging
+
+`func (o *InlineObject93) GetVlanTagging() NetworksNetworkIdGroupPoliciesVlanTagging`
+
+GetVlanTagging returns the VlanTagging field if non-nil, zero value otherwise.
+
+### GetVlanTaggingOk
+
+`func (o *InlineObject93) GetVlanTaggingOk() (*NetworksNetworkIdGroupPoliciesVlanTagging, bool)`
+
+GetVlanTaggingOk returns a tuple with the VlanTagging field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanTagging
+
+`func (o *InlineObject93) SetVlanTagging(v NetworksNetworkIdGroupPoliciesVlanTagging)`
+
+SetVlanTagging sets VlanTagging field to given value.
+
+### HasVlanTagging
+
+`func (o *InlineObject93) HasVlanTagging() bool`
+
+HasVlanTagging returns a boolean if a field has been set.
+
+### GetBonjourForwarding
+
+`func (o *InlineObject93) GetBonjourForwarding() NetworksNetworkIdGroupPoliciesBonjourForwarding`
+
+GetBonjourForwarding returns the BonjourForwarding field if non-nil, zero value otherwise.
+
+### GetBonjourForwardingOk
+
+`func (o *InlineObject93) GetBonjourForwardingOk() (*NetworksNetworkIdGroupPoliciesBonjourForwarding, bool)`
+
+GetBonjourForwardingOk returns a tuple with the BonjourForwarding field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBonjourForwarding
+
+`func (o *InlineObject93) SetBonjourForwarding(v NetworksNetworkIdGroupPoliciesBonjourForwarding)`
+
+SetBonjourForwarding sets BonjourForwarding field to given value.
+
+### HasBonjourForwarding
+
+`func (o *InlineObject93) HasBonjourForwarding() bool`
+
+HasBonjourForwarding returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

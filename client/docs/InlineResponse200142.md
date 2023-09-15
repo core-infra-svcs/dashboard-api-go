@@ -4,17 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Key** | Pointer to **string** | The key of the license | [optional] 
-**OrganizationId** | Pointer to **string** | The ID of the organization that the license is claimed in | [optional] 
-**Duration** | Pointer to **int32** | The duration (term length) of the license, measured in days | [optional] 
-**Mode** | Pointer to **string** | The operation mode of the license when it was claimed | [optional] 
-**StartedAt** | Pointer to **time.Time** | When the license&#39;s term began (approximately the date when the license was created) | [optional] 
-**ClaimedAt** | Pointer to **time.Time** | When the license was claimed into the organization | [optional] 
-**Invalidated** | Pointer to **bool** | Flag to indicated that the license is invalidated | [optional] 
-**InvalidatedAt** | Pointer to **time.Time** | When the license was invalidated. Will be null for active licenses | [optional] 
-**Expired** | Pointer to **bool** | Flag to indicate if the license is expired | [optional] 
-**Editions** | Pointer to [**[]OrganizationsOrganizationIdLicensingCotermLicensesEditions**](OrganizationsOrganizationIdLicensingCotermLicensesEditions.md) | The editions of the license for each relevant product type | [optional] 
-**Counts** | Pointer to [**[]OrganizationsOrganizationIdLicensingCotermLicensesCounts**](OrganizationsOrganizationIdLicensingCotermLicensesCounts.md) | The counts of the license by model type | [optional] 
+**Id** | Pointer to **string** | Monitored media server id | [optional] 
+**Name** | Pointer to **string** | The name of the VoIP provider | [optional] 
+**Address** | Pointer to **string** | The IP address (IPv4 only) or hostname of the media server to monitor | [optional] 
+**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead | [optional] 
 
 ## Methods
 
@@ -35,280 +28,105 @@ NewInlineResponse200142WithDefaults instantiates a new InlineResponse200142 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetKey
+### GetId
 
-`func (o *InlineResponse200142) GetKey() string`
+`func (o *InlineResponse200142) GetId() string`
 
-GetKey returns the Key field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetKeyOk
+### GetIdOk
 
-`func (o *InlineResponse200142) GetKeyOk() (*string, bool)`
+`func (o *InlineResponse200142) GetIdOk() (*string, bool)`
 
-GetKeyOk returns a tuple with the Key field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetKey
+### SetId
 
-`func (o *InlineResponse200142) SetKey(v string)`
+`func (o *InlineResponse200142) SetId(v string)`
 
-SetKey sets Key field to given value.
+SetId sets Id field to given value.
 
-### HasKey
+### HasId
 
-`func (o *InlineResponse200142) HasKey() bool`
+`func (o *InlineResponse200142) HasId() bool`
 
-HasKey returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetName
 
-`func (o *InlineResponse200142) GetOrganizationId() string`
+`func (o *InlineResponse200142) GetName() string`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetNameOk
 
-`func (o *InlineResponse200142) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200142) GetNameOk() (*string, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetName
 
-`func (o *InlineResponse200142) SetOrganizationId(v string)`
+`func (o *InlineResponse200142) SetName(v string)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetName sets Name field to given value.
 
-### HasOrganizationId
+### HasName
 
-`func (o *InlineResponse200142) HasOrganizationId() bool`
+`func (o *InlineResponse200142) HasName() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDuration
+### GetAddress
 
-`func (o *InlineResponse200142) GetDuration() int32`
+`func (o *InlineResponse200142) GetAddress() string`
 
-GetDuration returns the Duration field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetDurationOk
+### GetAddressOk
 
-`func (o *InlineResponse200142) GetDurationOk() (*int32, bool)`
+`func (o *InlineResponse200142) GetAddressOk() (*string, bool)`
 
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDuration
+### SetAddress
 
-`func (o *InlineResponse200142) SetDuration(v int32)`
+`func (o *InlineResponse200142) SetAddress(v string)`
 
-SetDuration sets Duration field to given value.
+SetAddress sets Address field to given value.
 
-### HasDuration
+### HasAddress
 
-`func (o *InlineResponse200142) HasDuration() bool`
+`func (o *InlineResponse200142) HasAddress() bool`
 
-HasDuration returns a boolean if a field has been set.
+HasAddress returns a boolean if a field has been set.
 
-### GetMode
+### GetBestEffortMonitoringEnabled
 
-`func (o *InlineResponse200142) GetMode() string`
+`func (o *InlineResponse200142) GetBestEffortMonitoringEnabled() bool`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetBestEffortMonitoringEnabledOk
 
-`func (o *InlineResponse200142) GetModeOk() (*string, bool)`
+`func (o *InlineResponse200142) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetBestEffortMonitoringEnabled
 
-`func (o *InlineResponse200142) SetMode(v string)`
+`func (o *InlineResponse200142) SetBestEffortMonitoringEnabled(v bool)`
 
-SetMode sets Mode field to given value.
+SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
 
-### HasMode
+### HasBestEffortMonitoringEnabled
 
-`func (o *InlineResponse200142) HasMode() bool`
+`func (o *InlineResponse200142) HasBestEffortMonitoringEnabled() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetStartedAt
-
-`func (o *InlineResponse200142) GetStartedAt() time.Time`
-
-GetStartedAt returns the StartedAt field if non-nil, zero value otherwise.
-
-### GetStartedAtOk
-
-`func (o *InlineResponse200142) GetStartedAtOk() (*time.Time, bool)`
-
-GetStartedAtOk returns a tuple with the StartedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStartedAt
-
-`func (o *InlineResponse200142) SetStartedAt(v time.Time)`
-
-SetStartedAt sets StartedAt field to given value.
-
-### HasStartedAt
-
-`func (o *InlineResponse200142) HasStartedAt() bool`
-
-HasStartedAt returns a boolean if a field has been set.
-
-### GetClaimedAt
-
-`func (o *InlineResponse200142) GetClaimedAt() time.Time`
-
-GetClaimedAt returns the ClaimedAt field if non-nil, zero value otherwise.
-
-### GetClaimedAtOk
-
-`func (o *InlineResponse200142) GetClaimedAtOk() (*time.Time, bool)`
-
-GetClaimedAtOk returns a tuple with the ClaimedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClaimedAt
-
-`func (o *InlineResponse200142) SetClaimedAt(v time.Time)`
-
-SetClaimedAt sets ClaimedAt field to given value.
-
-### HasClaimedAt
-
-`func (o *InlineResponse200142) HasClaimedAt() bool`
-
-HasClaimedAt returns a boolean if a field has been set.
-
-### GetInvalidated
-
-`func (o *InlineResponse200142) GetInvalidated() bool`
-
-GetInvalidated returns the Invalidated field if non-nil, zero value otherwise.
-
-### GetInvalidatedOk
-
-`func (o *InlineResponse200142) GetInvalidatedOk() (*bool, bool)`
-
-GetInvalidatedOk returns a tuple with the Invalidated field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInvalidated
-
-`func (o *InlineResponse200142) SetInvalidated(v bool)`
-
-SetInvalidated sets Invalidated field to given value.
-
-### HasInvalidated
-
-`func (o *InlineResponse200142) HasInvalidated() bool`
-
-HasInvalidated returns a boolean if a field has been set.
-
-### GetInvalidatedAt
-
-`func (o *InlineResponse200142) GetInvalidatedAt() time.Time`
-
-GetInvalidatedAt returns the InvalidatedAt field if non-nil, zero value otherwise.
-
-### GetInvalidatedAtOk
-
-`func (o *InlineResponse200142) GetInvalidatedAtOk() (*time.Time, bool)`
-
-GetInvalidatedAtOk returns a tuple with the InvalidatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInvalidatedAt
-
-`func (o *InlineResponse200142) SetInvalidatedAt(v time.Time)`
-
-SetInvalidatedAt sets InvalidatedAt field to given value.
-
-### HasInvalidatedAt
-
-`func (o *InlineResponse200142) HasInvalidatedAt() bool`
-
-HasInvalidatedAt returns a boolean if a field has been set.
-
-### GetExpired
-
-`func (o *InlineResponse200142) GetExpired() bool`
-
-GetExpired returns the Expired field if non-nil, zero value otherwise.
-
-### GetExpiredOk
-
-`func (o *InlineResponse200142) GetExpiredOk() (*bool, bool)`
-
-GetExpiredOk returns a tuple with the Expired field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExpired
-
-`func (o *InlineResponse200142) SetExpired(v bool)`
-
-SetExpired sets Expired field to given value.
-
-### HasExpired
-
-`func (o *InlineResponse200142) HasExpired() bool`
-
-HasExpired returns a boolean if a field has been set.
-
-### GetEditions
-
-`func (o *InlineResponse200142) GetEditions() []OrganizationsOrganizationIdLicensingCotermLicensesEditions`
-
-GetEditions returns the Editions field if non-nil, zero value otherwise.
-
-### GetEditionsOk
-
-`func (o *InlineResponse200142) GetEditionsOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesEditions, bool)`
-
-GetEditionsOk returns a tuple with the Editions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEditions
-
-`func (o *InlineResponse200142) SetEditions(v []OrganizationsOrganizationIdLicensingCotermLicensesEditions)`
-
-SetEditions sets Editions field to given value.
-
-### HasEditions
-
-`func (o *InlineResponse200142) HasEditions() bool`
-
-HasEditions returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200142) GetCounts() []OrganizationsOrganizationIdLicensingCotermLicensesCounts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200142) GetCountsOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesCounts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200142) SetCounts(v []OrganizationsOrganizationIdLicensingCotermLicensesCounts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200142) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
+HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the adaptive policy ACL | 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] [default to ""]
-**Rules** | [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. | 
-**IpVersion** | **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules**](NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
 ### NewInlineObject174
 
-`func NewInlineObject174(name string, rules []OrganizationsOrganizationIdAdaptivePolicyAclsRules1, ipVersion string, ) *InlineObject174`
+`func NewInlineObject174() *InlineObject174`
 
 NewInlineObject174 instantiates a new InlineObject174 object
 This constructor will assign default values to properties that have it defined,
@@ -28,90 +27,80 @@ NewInlineObject174WithDefaults instantiates a new InlineObject174 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetTrafficShapingEnabled
 
-`func (o *InlineObject174) GetName() string`
+`func (o *InlineObject174) GetTrafficShapingEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineObject174) GetNameOk() (*string, bool)`
+`func (o *InlineObject174) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTrafficShapingEnabled
 
-`func (o *InlineObject174) SetName(v string)`
+`func (o *InlineObject174) SetTrafficShapingEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
+### HasTrafficShapingEnabled
 
-### GetDescription
+`func (o *InlineObject174) HasTrafficShapingEnabled() bool`
 
-`func (o *InlineObject174) GetDescription() string`
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+### GetDefaultRulesEnabled
 
-### GetDescriptionOk
+`func (o *InlineObject174) GetDefaultRulesEnabled() bool`
 
-`func (o *InlineObject174) GetDescriptionOk() (*string, bool)`
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+### GetDefaultRulesEnabledOk
+
+`func (o *InlineObject174) GetDefaultRulesEnabledOk() (*bool, bool)`
+
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject174) SetDescription(v string)`
+`func (o *InlineObject174) SetDefaultRulesEnabled(v bool)`
 
-SetDescription sets Description field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasDescription
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject174) HasDescription() bool`
+`func (o *InlineObject174) HasDefaultRulesEnabled() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
 ### GetRules
 
-`func (o *InlineObject174) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules1`
+`func (o *InlineObject174) GetRules() []NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineObject174) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1, bool)`
+`func (o *InlineObject174) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineObject174) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules1)`
+`func (o *InlineObject174) SetRules(v []NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules)`
 
 SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetIpVersion
+`func (o *InlineObject174) HasRules() bool`
 
-`func (o *InlineObject174) GetIpVersion() string`
-
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
-
-### GetIpVersionOk
-
-`func (o *InlineObject174) GetIpVersionOk() (*string, bool)`
-
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpVersion
-
-`func (o *InlineObject174) SetIpVersion(v string)`
-
-SetIpVersion sets IpVersion field to given value.
-
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

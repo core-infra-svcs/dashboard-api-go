@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**Id** | Pointer to **string** | Switch stacks id | [optional] 
+**Name** | Pointer to **string** | Switch stacks name | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
 
 ## Methods
 
@@ -79,80 +77,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetUrl
+### GetSerials
 
-`func (o *InlineResponse20086) GetUrl() string`
+`func (o *InlineResponse20086) GetSerials() []string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetSerialsOk
 
-`func (o *InlineResponse20086) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20086) GetSerialsOk() (*[]string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetSerials
 
-`func (o *InlineResponse20086) SetUrl(v string)`
+`func (o *InlineResponse20086) SetSerials(v []string)`
 
-SetUrl sets Url field to given value.
+SetSerials sets Serials field to given value.
 
-### HasUrl
+### HasSerials
 
-`func (o *InlineResponse20086) HasUrl() bool`
+`func (o *InlineResponse20086) HasSerials() bool`
 
-HasUrl returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse20086) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse20086) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse20086) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse20086) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetPayloadTemplate
-
-`func (o *InlineResponse20086) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
-
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateOk
-
-`func (o *InlineResponse20086) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplate
-
-`func (o *InlineResponse20086) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
-
-SetPayloadTemplate sets PayloadTemplate field to given value.
-
-### HasPayloadTemplate
-
-`func (o *InlineResponse20086) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

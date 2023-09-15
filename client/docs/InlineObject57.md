@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits.md) |  | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingRulesRules**](NetworksNetworkIdApplianceTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject57WithDefaults instantiates a new InlineObject57 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBandwidthLimits
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject57) GetBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits`
+`func (o *InlineObject57) GetDefaultRulesEnabled() bool`
 
-GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetBandwidthLimitsOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject57) GetBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits, bool)`
+`func (o *InlineObject57) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBandwidthLimits
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject57) SetBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits)`
+`func (o *InlineObject57) SetDefaultRulesEnabled(v bool)`
 
-SetBandwidthLimits sets BandwidthLimits field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasBandwidthLimits
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject57) HasBandwidthLimits() bool`
+`func (o *InlineObject57) HasDefaultRulesEnabled() bool`
 
-HasBandwidthLimits returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject57) GetRules() []NetworksNetworkIdApplianceTrafficShapingRulesRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject57) GetRulesOk() (*[]NetworksNetworkIdApplianceTrafficShapingRulesRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject57) SetRules(v []NetworksNetworkIdApplianceTrafficShapingRulesRules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineObject57) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the group | [optional] 
-**Sgt** | Pointer to **int32** | SGT value of the group | [optional] 
-**Description** | Pointer to **string** | Description of the group | [optional] 
-**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) | [optional] 
+**Name** | Pointer to **string** | The name of the organization | [optional] 
+**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
+**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
 
 ## Methods
 
@@ -53,80 +52,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSgt
+### GetManagement
 
-`func (o *InlineObject177) GetSgt() int32`
+`func (o *InlineObject177) GetManagement() OrganizationsManagement`
 
-GetSgt returns the Sgt field if non-nil, zero value otherwise.
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-### GetSgtOk
+### GetManagementOk
 
-`func (o *InlineObject177) GetSgtOk() (*int32, bool)`
+`func (o *InlineObject177) GetManagementOk() (*OrganizationsManagement, bool)`
 
-GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSgt
+### SetManagement
 
-`func (o *InlineObject177) SetSgt(v int32)`
+`func (o *InlineObject177) SetManagement(v OrganizationsManagement)`
 
-SetSgt sets Sgt field to given value.
+SetManagement sets Management field to given value.
 
-### HasSgt
+### HasManagement
 
-`func (o *InlineObject177) HasSgt() bool`
+`func (o *InlineObject177) HasManagement() bool`
 
-HasSgt returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
 
-### GetDescription
+### GetApi
 
-`func (o *InlineObject177) GetDescription() string`
+`func (o *InlineObject177) GetApi() OrganizationsOrganizationIdApi`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetApiOk
 
-`func (o *InlineObject177) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject177) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetApi
 
-`func (o *InlineObject177) SetDescription(v string)`
+`func (o *InlineObject177) SetApi(v OrganizationsOrganizationIdApi)`
 
-SetDescription sets Description field to given value.
+SetApi sets Api field to given value.
 
-### HasDescription
+### HasApi
 
-`func (o *InlineObject177) HasDescription() bool`
+`func (o *InlineObject177) HasApi() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetPolicyObjects
-
-`func (o *InlineObject177) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
-
-GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
-
-### GetPolicyObjectsOk
-
-`func (o *InlineObject177) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
-
-GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPolicyObjects
-
-`func (o *InlineObject177) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
-
-SetPolicyObjects sets PolicyObjects field to given value.
-
-### HasPolicyObjects
-
-`func (o *InlineObject177) HasPolicyObjects() bool`
-
-HasPolicyObjects returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

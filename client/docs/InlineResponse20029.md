@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
-**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
-**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
-**Events** | Pointer to [**[]InlineResponse20029Events**](InlineResponse20029Events.md) | An array of events that took place in the network. | [optional] 
+**Id** | Pointer to **string** | Schedule id | [optional] 
+**Name** | Pointer to **string** | Schedule name | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse20029WithDefaults instantiates a new InlineResponse20029 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMessage
+### GetId
 
-`func (o *InlineResponse20029) GetMessage() string`
+`func (o *InlineResponse20029) GetId() string`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetIdOk
 
-`func (o *InlineResponse20029) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse20029) GetIdOk() (*string, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetId
 
-`func (o *InlineResponse20029) SetMessage(v string)`
+`func (o *InlineResponse20029) SetId(v string)`
 
-SetMessage sets Message field to given value.
+SetId sets Id field to given value.
 
-### HasMessage
+### HasId
 
-`func (o *InlineResponse20029) HasMessage() bool`
+`func (o *InlineResponse20029) HasId() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetPageStartAt
+### GetName
 
-`func (o *InlineResponse20029) GetPageStartAt() string`
+`func (o *InlineResponse20029) GetName() string`
 
-GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetPageStartAtOk
+### GetNameOk
 
-`func (o *InlineResponse20029) GetPageStartAtOk() (*string, bool)`
+`func (o *InlineResponse20029) GetNameOk() (*string, bool)`
 
-GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageStartAt
+### SetName
 
-`func (o *InlineResponse20029) SetPageStartAt(v string)`
+`func (o *InlineResponse20029) SetName(v string)`
 
-SetPageStartAt sets PageStartAt field to given value.
+SetName sets Name field to given value.
 
-### HasPageStartAt
+### HasName
 
-`func (o *InlineResponse20029) HasPageStartAt() bool`
+`func (o *InlineResponse20029) HasName() bool`
 
-HasPageStartAt returns a boolean if a field has been set.
-
-### GetPageEndAt
-
-`func (o *InlineResponse20029) GetPageEndAt() string`
-
-GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
-
-### GetPageEndAtOk
-
-`func (o *InlineResponse20029) GetPageEndAtOk() (*string, bool)`
-
-GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPageEndAt
-
-`func (o *InlineResponse20029) SetPageEndAt(v string)`
-
-SetPageEndAt sets PageEndAt field to given value.
-
-### HasPageEndAt
-
-`func (o *InlineResponse20029) HasPageEndAt() bool`
-
-HasPageEndAt returns a boolean if a field has been set.
-
-### GetEvents
-
-`func (o *InlineResponse20029) GetEvents() []InlineResponse20029Events`
-
-GetEvents returns the Events field if non-nil, zero value otherwise.
-
-### GetEventsOk
-
-`func (o *InlineResponse20029) GetEventsOk() (*[]InlineResponse20029Events, bool)`
-
-GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEvents
-
-`func (o *InlineResponse20029) SetEvents(v []InlineResponse20029Events)`
-
-SetEvents sets Events field to given value.
-
-### HasEvents
-
-`func (o *InlineResponse20029) HasEvents() bool`
-
-HasEvents returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
-**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
-**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
-**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
-**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
+**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineObject153WithDefaults instantiates a new InlineObject153 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScanningEnabled
+### GetEnabled
 
-`func (o *InlineObject153) GetScanningEnabled() bool`
+`func (o *InlineObject153) GetEnabled() bool`
 
-GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetScanningEnabledOk
+### GetEnabledOk
 
-`func (o *InlineObject153) GetScanningEnabledOk() (*bool, bool)`
+`func (o *InlineObject153) GetEnabledOk() (*bool, bool)`
 
-GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScanningEnabled
+### SetEnabled
 
-`func (o *InlineObject153) SetScanningEnabled(v bool)`
+`func (o *InlineObject153) SetEnabled(v bool)`
 
-SetScanningEnabled sets ScanningEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasScanningEnabled
+### HasEnabled
 
-`func (o *InlineObject153) HasScanningEnabled() bool`
+`func (o *InlineObject153) HasEnabled() bool`
 
-HasScanningEnabled returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetAdvertisingEnabled
+### GetVlanId
 
-`func (o *InlineObject153) GetAdvertisingEnabled() bool`
+`func (o *InlineObject153) GetVlanId() int32`
 
-GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetAdvertisingEnabledOk
+### GetVlanIdOk
 
-`func (o *InlineObject153) GetAdvertisingEnabledOk() (*bool, bool)`
+`func (o *InlineObject153) GetVlanIdOk() (*int32, bool)`
 
-GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertisingEnabled
+### SetVlanId
 
-`func (o *InlineObject153) SetAdvertisingEnabled(v bool)`
+`func (o *InlineObject153) SetVlanId(v int32)`
 
-SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasAdvertisingEnabled
+### HasVlanId
 
-`func (o *InlineObject153) HasAdvertisingEnabled() bool`
+`func (o *InlineObject153) HasVlanId() bool`
 
-HasAdvertisingEnabled returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetUuid
+### GetProtocols
 
-`func (o *InlineObject153) GetUuid() string`
+`func (o *InlineObject153) GetProtocols() []string`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetProtocolsOk
 
-`func (o *InlineObject153) GetUuidOk() (*string, bool)`
+`func (o *InlineObject153) GetProtocolsOk() (*[]string, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetProtocols
 
-`func (o *InlineObject153) SetUuid(v string)`
+`func (o *InlineObject153) SetProtocols(v []string)`
 
-SetUuid sets Uuid field to given value.
+SetProtocols sets Protocols field to given value.
 
-### HasUuid
+### HasProtocols
 
-`func (o *InlineObject153) HasUuid() bool`
+`func (o *InlineObject153) HasProtocols() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasProtocols returns a boolean if a field has been set.
 
-### GetMajorMinorAssignmentMode
+### GetAccessPoints
 
-`func (o *InlineObject153) GetMajorMinorAssignmentMode() string`
+`func (o *InlineObject153) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
 
-GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
+GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
 
-### GetMajorMinorAssignmentModeOk
+### GetAccessPointsOk
 
-`func (o *InlineObject153) GetMajorMinorAssignmentModeOk() (*string, bool)`
+`func (o *InlineObject153) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
 
-GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
+GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorMinorAssignmentMode
+### SetAccessPoints
 
-`func (o *InlineObject153) SetMajorMinorAssignmentMode(v string)`
+`func (o *InlineObject153) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
 
-SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
+SetAccessPoints sets AccessPoints field to given value.
 
-### HasMajorMinorAssignmentMode
+### HasAccessPoints
 
-`func (o *InlineObject153) HasMajorMinorAssignmentMode() bool`
+`func (o *InlineObject153) HasAccessPoints() bool`
 
-HasMajorMinorAssignmentMode returns a boolean if a field has been set.
-
-### GetMajor
-
-`func (o *InlineObject153) GetMajor() int32`
-
-GetMajor returns the Major field if non-nil, zero value otherwise.
-
-### GetMajorOk
-
-`func (o *InlineObject153) GetMajorOk() (*int32, bool)`
-
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMajor
-
-`func (o *InlineObject153) SetMajor(v int32)`
-
-SetMajor sets Major field to given value.
-
-### HasMajor
-
-`func (o *InlineObject153) HasMajor() bool`
-
-HasMajor returns a boolean if a field has been set.
-
-### GetMinor
-
-`func (o *InlineObject153) GetMinor() int32`
-
-GetMinor returns the Minor field if non-nil, zero value otherwise.
-
-### GetMinorOk
-
-`func (o *InlineObject153) GetMinorOk() (*int32, bool)`
-
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinor
-
-`func (o *InlineObject153) SetMinor(v int32)`
-
-SetMinor sets Minor field to given value.
-
-### HasMinor
-
-`func (o *InlineObject153) HasMinor() bool`
-
-HasMinor returns a boolean if a field has been set.
+HasAccessPoints returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

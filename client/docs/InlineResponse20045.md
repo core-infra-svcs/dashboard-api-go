@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Device** | Pointer to [**NetworksNetworkIdSensorRelationshipsDevice**](NetworksNetworkIdSensorRelationshipsDevice.md) |  | [optional] 
-**Relationships** | Pointer to [**NetworksNetworkIdSensorRelationshipsRelationships**](NetworksNetworkIdSensorRelationshipsRelationships.md) |  | [optional] 
+**SupportedMetrics** | Pointer to **[]string** | List of metrics that are supported for alerts, based on available sensor devices in the network | [optional] 
+**Counts** | Pointer to [**InlineResponse20045Counts**](InlineResponse20045Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse20045WithDefaults instantiates a new InlineResponse20045 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevice
+### GetSupportedMetrics
 
-`func (o *InlineResponse20045) GetDevice() NetworksNetworkIdSensorRelationshipsDevice`
+`func (o *InlineResponse20045) GetSupportedMetrics() []string`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetSupportedMetrics returns the SupportedMetrics field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetSupportedMetricsOk
 
-`func (o *InlineResponse20045) GetDeviceOk() (*NetworksNetworkIdSensorRelationshipsDevice, bool)`
+`func (o *InlineResponse20045) GetSupportedMetricsOk() (*[]string, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetSupportedMetricsOk returns a tuple with the SupportedMetrics field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetSupportedMetrics
 
-`func (o *InlineResponse20045) SetDevice(v NetworksNetworkIdSensorRelationshipsDevice)`
+`func (o *InlineResponse20045) SetSupportedMetrics(v []string)`
 
-SetDevice sets Device field to given value.
+SetSupportedMetrics sets SupportedMetrics field to given value.
 
-### HasDevice
+### HasSupportedMetrics
 
-`func (o *InlineResponse20045) HasDevice() bool`
+`func (o *InlineResponse20045) HasSupportedMetrics() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasSupportedMetrics returns a boolean if a field has been set.
 
-### GetRelationships
+### GetCounts
 
-`func (o *InlineResponse20045) GetRelationships() NetworksNetworkIdSensorRelationshipsRelationships`
+`func (o *InlineResponse20045) GetCounts() InlineResponse20045Counts`
 
-GetRelationships returns the Relationships field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetRelationshipsOk
+### GetCountsOk
 
-`func (o *InlineResponse20045) GetRelationshipsOk() (*NetworksNetworkIdSensorRelationshipsRelationships, bool)`
+`func (o *InlineResponse20045) GetCountsOk() (*InlineResponse20045Counts, bool)`
 
-GetRelationshipsOk returns a tuple with the Relationships field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRelationships
+### SetCounts
 
-`func (o *InlineResponse20045) SetRelationships(v NetworksNetworkIdSensorRelationshipsRelationships)`
+`func (o *InlineResponse20045) SetCounts(v InlineResponse20045Counts)`
 
-SetRelationships sets Relationships field to given value.
+SetCounts sets Counts field to given value.
 
-### HasRelationships
+### HasCounts
 
-`func (o *InlineResponse20045) HasRelationships() bool`
+`func (o *InlineResponse20045) HasCounts() bool`
 
-HasRelationships returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
-**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
-**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
+**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
+**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse20090WithDefaults instantiates a new InlineResponse20090 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetId
 
-`func (o *InlineResponse20090) GetStartTs() time.Time`
+`func (o *InlineResponse20090) GetId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetIdOk
 
-`func (o *InlineResponse20090) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20090) GetIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetId
 
-`func (o *InlineResponse20090) SetStartTs(v time.Time)`
+`func (o *InlineResponse20090) SetId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetId sets Id field to given value.
 
-### HasStartTs
+### HasId
 
-`func (o *InlineResponse20090) HasStartTs() bool`
+`func (o *InlineResponse20090) HasId() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetEndTs
+### GetName
 
-`func (o *InlineResponse20090) GetEndTs() time.Time`
+`func (o *InlineResponse20090) GetName() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetNameOk
 
-`func (o *InlineResponse20090) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20090) GetNameOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetName
 
-`func (o *InlineResponse20090) SetEndTs(v time.Time)`
+`func (o *InlineResponse20090) SetName(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetName sets Name field to given value.
 
-### HasEndTs
+### HasName
 
-`func (o *InlineResponse20090) HasEndTs() bool`
+`func (o *InlineResponse20090) HasName() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUtilizationTotal
+### GetUrl
 
-`func (o *InlineResponse20090) GetUtilizationTotal() float32`
+`func (o *InlineResponse20090) GetUrl() string`
 
-GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetUtilizationTotalOk
+### GetUrlOk
 
-`func (o *InlineResponse20090) GetUtilizationTotalOk() (*float32, bool)`
+`func (o *InlineResponse20090) GetUrlOk() (*string, bool)`
 
-GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilizationTotal
+### SetUrl
 
-`func (o *InlineResponse20090) SetUtilizationTotal(v float32)`
+`func (o *InlineResponse20090) SetUrl(v string)`
 
-SetUtilizationTotal sets UtilizationTotal field to given value.
+SetUrl sets Url field to given value.
 
-### HasUtilizationTotal
+### HasUrl
 
-`func (o *InlineResponse20090) HasUtilizationTotal() bool`
+`func (o *InlineResponse20090) HasUrl() bool`
 
-HasUtilizationTotal returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetUtilization80211
+### GetNetworkId
 
-`func (o *InlineResponse20090) GetUtilization80211() float32`
+`func (o *InlineResponse20090) GetNetworkId() string`
 
-GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetUtilization80211Ok
+### GetNetworkIdOk
 
-`func (o *InlineResponse20090) GetUtilization80211Ok() (*float32, bool)`
+`func (o *InlineResponse20090) GetNetworkIdOk() (*string, bool)`
 
-GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilization80211
+### SetNetworkId
 
-`func (o *InlineResponse20090) SetUtilization80211(v float32)`
+`func (o *InlineResponse20090) SetNetworkId(v string)`
 
-SetUtilization80211 sets Utilization80211 field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasUtilization80211
+### HasNetworkId
 
-`func (o *InlineResponse20090) HasUtilization80211() bool`
+`func (o *InlineResponse20090) HasNetworkId() bool`
 
-HasUtilization80211 returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetUtilizationNon80211
+### GetPayloadTemplate
 
-`func (o *InlineResponse20090) GetUtilizationNon80211() float32`
+`func (o *InlineResponse20090) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
 
-GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
 
-### GetUtilizationNon80211Ok
+### GetPayloadTemplateOk
 
-`func (o *InlineResponse20090) GetUtilizationNon80211Ok() (*float32, bool)`
+`func (o *InlineResponse20090) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
 
-GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilizationNon80211
+### SetPayloadTemplate
 
-`func (o *InlineResponse20090) SetUtilizationNon80211(v float32)`
+`func (o *InlineResponse20090) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
 
-SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
+SetPayloadTemplate sets PayloadTemplate field to given value.
 
-### HasUtilizationNon80211
+### HasPayloadTemplate
 
-`func (o *InlineResponse20090) HasUtilizationNon80211() bool`
+`func (o *InlineResponse20090) HasPayloadTemplate() bool`
 
-HasUtilizationNon80211 returns a boolean if a field has been set.
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

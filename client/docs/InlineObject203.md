@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LogEvent** | **string** | The type of log event this is recording, e.g. download or opening a banner | 
-**Timestamp** | **int32** | A JavaScript UTC datetime stamp for when the even occurred | 
-**TargetOS** | Pointer to **string** | The name of the onboarding distro being downloaded | [optional] 
-**Request** | Pointer to **string** | Used to describe if this event was the result of a redirect. E.g. a query param if an info banner is being used | [optional] 
+**Name** | **string** | The name of the configuration template | 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
+**CopyFromNetworkId** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
 
 ## Methods
 
 ### NewInlineObject203
 
-`func NewInlineObject203(logEvent string, timestamp int32, ) *InlineObject203`
+`func NewInlineObject203(name string, ) *InlineObject203`
 
 NewInlineObject203 instantiates a new InlineObject203 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +27,75 @@ NewInlineObject203WithDefaults instantiates a new InlineObject203 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLogEvent
+### GetName
 
-`func (o *InlineObject203) GetLogEvent() string`
+`func (o *InlineObject203) GetName() string`
 
-GetLogEvent returns the LogEvent field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLogEventOk
+### GetNameOk
 
-`func (o *InlineObject203) GetLogEventOk() (*string, bool)`
+`func (o *InlineObject203) GetNameOk() (*string, bool)`
 
-GetLogEventOk returns a tuple with the LogEvent field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLogEvent
+### SetName
 
-`func (o *InlineObject203) SetLogEvent(v string)`
+`func (o *InlineObject203) SetName(v string)`
 
-SetLogEvent sets LogEvent field to given value.
+SetName sets Name field to given value.
 
 
-### GetTimestamp
+### GetTimeZone
 
-`func (o *InlineObject203) GetTimestamp() int32`
+`func (o *InlineObject203) GetTimeZone() string`
 
-GetTimestamp returns the Timestamp field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetTimestampOk
+### GetTimeZoneOk
 
-`func (o *InlineObject203) GetTimestampOk() (*int32, bool)`
+`func (o *InlineObject203) GetTimeZoneOk() (*string, bool)`
 
-GetTimestampOk returns a tuple with the Timestamp field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimestamp
+### SetTimeZone
 
-`func (o *InlineObject203) SetTimestamp(v int32)`
+`func (o *InlineObject203) SetTimeZone(v string)`
 
-SetTimestamp sets Timestamp field to given value.
+SetTimeZone sets TimeZone field to given value.
 
+### HasTimeZone
 
-### GetTargetOS
+`func (o *InlineObject203) HasTimeZone() bool`
 
-`func (o *InlineObject203) GetTargetOS() string`
+HasTimeZone returns a boolean if a field has been set.
 
-GetTargetOS returns the TargetOS field if non-nil, zero value otherwise.
+### GetCopyFromNetworkId
 
-### GetTargetOSOk
+`func (o *InlineObject203) GetCopyFromNetworkId() string`
 
-`func (o *InlineObject203) GetTargetOSOk() (*string, bool)`
+GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
 
-GetTargetOSOk returns a tuple with the TargetOS field if it's non-nil, zero value otherwise
+### GetCopyFromNetworkIdOk
+
+`func (o *InlineObject203) GetCopyFromNetworkIdOk() (*string, bool)`
+
+GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetOS
+### SetCopyFromNetworkId
 
-`func (o *InlineObject203) SetTargetOS(v string)`
+`func (o *InlineObject203) SetCopyFromNetworkId(v string)`
 
-SetTargetOS sets TargetOS field to given value.
+SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
 
-### HasTargetOS
+### HasCopyFromNetworkId
 
-`func (o *InlineObject203) HasTargetOS() bool`
+`func (o *InlineObject203) HasCopyFromNetworkId() bool`
 
-HasTargetOS returns a boolean if a field has been set.
-
-### GetRequest
-
-`func (o *InlineObject203) GetRequest() string`
-
-GetRequest returns the Request field if non-nil, zero value otherwise.
-
-### GetRequestOk
-
-`func (o *InlineObject203) GetRequestOk() (*string, bool)`
-
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequest
-
-`func (o *InlineObject203) SetRequest(v string)`
-
-SetRequest sets Request field to given value.
-
-### HasRequest
-
-`func (o *InlineObject203) HasRequest() bool`
-
-HasRequest returns a boolean if a field has been set.
+HasCopyFromNetworkId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

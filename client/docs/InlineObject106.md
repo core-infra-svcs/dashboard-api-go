@@ -4,18 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be modified. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be modified. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be modified. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be modified. | [optional] 
-**Tags** | **[]string** | The tags to be added, deleted, or updated. | 
-**UpdateAction** | **string** | One of add, delete, or update. Only devices that have been modified will be returned. | 
+**WifiMac** | Pointer to **string** | The wifiMac of the device to be modified. | [optional] 
+**Id** | Pointer to **string** | The id of the device to be modified. | [optional] 
+**Serial** | Pointer to **string** | The serial of the device to be modified. | [optional] 
+**DeviceFields** | [**NetworksNetworkIdSmDevicesFieldsDeviceFields**](NetworksNetworkIdSmDevicesFieldsDeviceFields.md) |  | 
 
 ## Methods
 
 ### NewInlineObject106
 
-`func NewInlineObject106(tags []string, updateAction string, ) *InlineObject106`
+`func NewInlineObject106(deviceFields NetworksNetworkIdSmDevicesFieldsDeviceFields, ) *InlineObject106`
 
 NewInlineObject106 instantiates a new InlineObject106 object
 This constructor will assign default values to properties that have it defined,
@@ -30,144 +28,99 @@ NewInlineObject106WithDefaults instantiates a new InlineObject106 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetWifiMac
 
-`func (o *InlineObject106) GetWifiMacs() []string`
+`func (o *InlineObject106) GetWifiMac() string`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetWifiMacOk
 
-`func (o *InlineObject106) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject106) GetWifiMacOk() (*string, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetWifiMac
 
-`func (o *InlineObject106) SetWifiMacs(v []string)`
+`func (o *InlineObject106) SetWifiMac(v string)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetWifiMac sets WifiMac field to given value.
 
-### HasWifiMacs
+### HasWifiMac
 
-`func (o *InlineObject106) HasWifiMacs() bool`
+`func (o *InlineObject106) HasWifiMac() bool`
 
-HasWifiMacs returns a boolean if a field has been set.
+HasWifiMac returns a boolean if a field has been set.
 
-### GetIds
+### GetId
 
-`func (o *InlineObject106) GetIds() []string`
+`func (o *InlineObject106) GetId() string`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetIdOk
 
-`func (o *InlineObject106) GetIdsOk() (*[]string, bool)`
+`func (o *InlineObject106) GetIdOk() (*string, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetId
 
-`func (o *InlineObject106) SetIds(v []string)`
+`func (o *InlineObject106) SetId(v string)`
 
-SetIds sets Ids field to given value.
+SetId sets Id field to given value.
 
-### HasIds
+### HasId
 
-`func (o *InlineObject106) HasIds() bool`
+`func (o *InlineObject106) HasId() bool`
 
-HasIds returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetSerials
+### GetSerial
 
-`func (o *InlineObject106) GetSerials() []string`
+`func (o *InlineObject106) GetSerial() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetSerialOk
 
-`func (o *InlineObject106) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject106) GetSerialOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetSerial
 
-`func (o *InlineObject106) SetSerials(v []string)`
+`func (o *InlineObject106) SetSerial(v string)`
 
-SetSerials sets Serials field to given value.
+SetSerial sets Serial field to given value.
 
-### HasSerials
+### HasSerial
 
-`func (o *InlineObject106) HasSerials() bool`
+`func (o *InlineObject106) HasSerial() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetScope
+### GetDeviceFields
 
-`func (o *InlineObject106) GetScope() []string`
+`func (o *InlineObject106) GetDeviceFields() NetworksNetworkIdSmDevicesFieldsDeviceFields`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetDeviceFields returns the DeviceFields field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetDeviceFieldsOk
 
-`func (o *InlineObject106) GetScopeOk() (*[]string, bool)`
+`func (o *InlineObject106) GetDeviceFieldsOk() (*NetworksNetworkIdSmDevicesFieldsDeviceFields, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetDeviceFieldsOk returns a tuple with the DeviceFields field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetDeviceFields
 
-`func (o *InlineObject106) SetScope(v []string)`
+`func (o *InlineObject106) SetDeviceFields(v NetworksNetworkIdSmDevicesFieldsDeviceFields)`
 
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineObject106) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineObject106) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject106) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject106) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-
-### GetUpdateAction
-
-`func (o *InlineObject106) GetUpdateAction() string`
-
-GetUpdateAction returns the UpdateAction field if non-nil, zero value otherwise.
-
-### GetUpdateActionOk
-
-`func (o *InlineObject106) GetUpdateActionOk() (*string, bool)`
-
-GetUpdateActionOk returns a tuple with the UpdateAction field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdateAction
-
-`func (o *InlineObject106) SetUpdateAction(v string)`
-
-SetUpdateAction sets UpdateAction field to given value.
+SetDeviceFields sets DeviceFields field to given value.
 
 
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
-**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
+**Name** | Pointer to **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**ObjectIds** | Pointer to **[]int32** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
 
 ## Methods
 
 ### NewInlineObject226
 
-`func NewInlineObject226(sourceSerial string, targetSerials []string, ) *InlineObject226`
+`func NewInlineObject226() *InlineObject226`
 
 NewInlineObject226 instantiates a new InlineObject226 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,55 @@ NewInlineObject226WithDefaults instantiates a new InlineObject226 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetName
 
-`func (o *InlineObject226) GetSourceSerial() string`
+`func (o *InlineObject226) GetName() string`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetNameOk
 
-`func (o *InlineObject226) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineObject226) GetNameOk() (*string, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetName
 
-`func (o *InlineObject226) SetSourceSerial(v string)`
+`func (o *InlineObject226) SetName(v string)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetTargetSerials
+`func (o *InlineObject226) HasName() bool`
 
-`func (o *InlineObject226) GetTargetSerials() []string`
+HasName returns a boolean if a field has been set.
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+### GetObjectIds
 
-### GetTargetSerialsOk
+`func (o *InlineObject226) GetObjectIds() []int32`
 
-`func (o *InlineObject226) GetTargetSerialsOk() (*[]string, bool)`
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+### GetObjectIdsOk
+
+`func (o *InlineObject226) GetObjectIdsOk() (*[]int32, bool)`
+
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetObjectIds
 
-`func (o *InlineObject226) SetTargetSerials(v []string)`
+`func (o *InlineObject226) SetObjectIds(v []int32)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetObjectIds sets ObjectIds field to given value.
 
+### HasObjectIds
+
+`func (o *InlineObject226) HasObjectIds() bool`
+
+HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
-**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
+**Name** | **string** | The name of the VoIP provider | 
+**Address** | **string** | The IP address (IPv4 only) or hostname of the media server to monitor | 
+**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
 
 ## Methods
 
 ### NewInlineObject208
 
-`func NewInlineObject208(destOrganizationId string, licenseIds []string, ) *InlineObject208`
+`func NewInlineObject208(name string, address string, ) *InlineObject208`
 
 NewInlineObject208 instantiates a new InlineObject208 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,70 @@ NewInlineObject208WithDefaults instantiates a new InlineObject208 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetName
 
-`func (o *InlineObject208) GetDestOrganizationId() string`
+`func (o *InlineObject208) GetName() string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetNameOk
 
-`func (o *InlineObject208) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject208) GetNameOk() (*string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetName
 
-`func (o *InlineObject208) SetDestOrganizationId(v string)`
+`func (o *InlineObject208) SetName(v string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetName sets Name field to given value.
 
 
-### GetLicenseIds
+### GetAddress
 
-`func (o *InlineObject208) GetLicenseIds() []string`
+`func (o *InlineObject208) GetAddress() string`
 
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetLicenseIdsOk
+### GetAddressOk
 
-`func (o *InlineObject208) GetLicenseIdsOk() (*[]string, bool)`
+`func (o *InlineObject208) GetAddressOk() (*string, bool)`
 
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIds
+### SetAddress
 
-`func (o *InlineObject208) SetLicenseIds(v []string)`
+`func (o *InlineObject208) SetAddress(v string)`
 
-SetLicenseIds sets LicenseIds field to given value.
+SetAddress sets Address field to given value.
 
+
+### GetBestEffortMonitoringEnabled
+
+`func (o *InlineObject208) GetBestEffortMonitoringEnabled() bool`
+
+GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
+
+### GetBestEffortMonitoringEnabledOk
+
+`func (o *InlineObject208) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
+
+GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBestEffortMonitoringEnabled
+
+`func (o *InlineObject208) SetBestEffortMonitoringEnabled(v bool)`
+
+SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
+
+### HasBestEffortMonitoringEnabled
+
+`func (o *InlineObject208) HasBestEffortMonitoringEnabled() bool`
+
+HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

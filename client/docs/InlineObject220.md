@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
+**Destination** | [**OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination**](OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination.md) |  | 
+**Licenses** | [**[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses**](OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses.md) | The list of licenses to move | 
 
 ## Methods
 
 ### NewInlineObject220
 
-`func NewInlineObject220() *InlineObject220`
+`func NewInlineObject220(destination OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, licenses []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, ) *InlineObject220`
 
 NewInlineObject220 instantiates a new InlineObject220 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,45 @@ NewInlineObject220WithDefaults instantiates a new InlineObject220 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetDestination
 
-`func (o *InlineObject220) GetEnabled() bool`
+`func (o *InlineObject220) GetDestination() OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetDestination returns the Destination field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetDestinationOk
 
-`func (o *InlineObject220) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject220) GetDestinationOk() (*OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetDestination
 
-`func (o *InlineObject220) SetEnabled(v bool)`
+`func (o *InlineObject220) SetDestination(v OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination)`
 
-SetEnabled sets Enabled field to given value.
+SetDestination sets Destination field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject220) HasEnabled() bool`
+### GetLicenses
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject220) GetLicenses() []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses`
+
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+
+### GetLicensesOk
+
+`func (o *InlineObject220) GetLicensesOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, bool)`
+
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenses
+
+`func (o *InlineObject220) SetLicenses(v []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses)`
+
+SetLicenses sets Licenses field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

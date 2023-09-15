@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup.md) |  | 
-**DestinationGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup.md) |  | 
-**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: []) | [optional] 
-**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL (default: \&quot;default\&quot;) | [optional] 
+**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
+**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
 
 ## Methods
 
 ### NewInlineObject178
 
-`func NewInlineObject178(sourceGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, destinationGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, ) *InlineObject178`
+`func NewInlineObject178(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineObject178`
 
 NewInlineObject178 instantiates a new InlineObject178 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +27,75 @@ NewInlineObject178WithDefaults instantiates a new InlineObject178 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceGroup
+### GetConfirmed
 
-`func (o *InlineObject178) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup`
+`func (o *InlineObject178) GetConfirmed() bool`
 
-GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetSourceGroupOk
+### GetConfirmedOk
 
-`func (o *InlineObject178) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, bool)`
+`func (o *InlineObject178) GetConfirmedOk() (*bool, bool)`
 
-GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceGroup
+### SetConfirmed
 
-`func (o *InlineObject178) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup)`
+`func (o *InlineObject178) SetConfirmed(v bool)`
 
-SetSourceGroup sets SourceGroup field to given value.
+SetConfirmed sets Confirmed field to given value.
 
+### HasConfirmed
 
-### GetDestinationGroup
+`func (o *InlineObject178) HasConfirmed() bool`
 
-`func (o *InlineObject178) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup`
+HasConfirmed returns a boolean if a field has been set.
 
-GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
+### GetSynchronous
 
-### GetDestinationGroupOk
+`func (o *InlineObject178) GetSynchronous() bool`
 
-`func (o *InlineObject178) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, bool)`
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
+### GetSynchronousOk
+
+`func (o *InlineObject178) GetSynchronousOk() (*bool, bool)`
+
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinationGroup
+### SetSynchronous
 
-`func (o *InlineObject178) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup)`
+`func (o *InlineObject178) SetSynchronous(v bool)`
 
-SetDestinationGroup sets DestinationGroup field to given value.
+SetSynchronous sets Synchronous field to given value.
 
+### HasSynchronous
 
-### GetAcls
+`func (o *InlineObject178) HasSynchronous() bool`
 
-`func (o *InlineObject178) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls`
+HasSynchronous returns a boolean if a field has been set.
 
-GetAcls returns the Acls field if non-nil, zero value otherwise.
+### GetActions
 
-### GetAclsOk
+`func (o *InlineObject178) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
 
-`func (o *InlineObject178) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls, bool)`
+GetActions returns the Actions field if non-nil, zero value otherwise.
 
-GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
+### GetActionsOk
+
+`func (o *InlineObject178) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
+
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAcls
+### SetActions
 
-`func (o *InlineObject178) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls)`
+`func (o *InlineObject178) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
 
-SetAcls sets Acls field to given value.
+SetActions sets Actions field to given value.
 
-### HasAcls
-
-`func (o *InlineObject178) HasAcls() bool`
-
-HasAcls returns a boolean if a field has been set.
-
-### GetLastEntryRule
-
-`func (o *InlineObject178) GetLastEntryRule() string`
-
-GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
-
-### GetLastEntryRuleOk
-
-`func (o *InlineObject178) GetLastEntryRuleOk() (*string, bool)`
-
-GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastEntryRule
-
-`func (o *InlineObject178) SetLastEntryRule(v string)`
-
-SetLastEntryRule sets LastEntryRule field to given value.
-
-### HasLastEntryRule
-
-`func (o *InlineObject178) HasLastEntryRule() bool`
-
-HasLastEntryRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

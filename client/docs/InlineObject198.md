@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | **string** | Short name of the early access feature | 
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**Serial** | Pointer to **string** | Serial of camera | [optional] 
+**WirelessCredentialsSent** | Pointer to **bool** | Note whether credentials were sent successfully | [optional] 
 
 ## Methods
 
 ### NewInlineObject198
 
-`func NewInlineObject198(shortName string, ) *InlineObject198`
+`func NewInlineObject198() *InlineObject198`
 
 NewInlineObject198 instantiates a new InlineObject198 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject198WithDefaults instantiates a new InlineObject198 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetShortName
+### GetSerial
 
-`func (o *InlineObject198) GetShortName() string`
+`func (o *InlineObject198) GetSerial() string`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetSerialOk
 
-`func (o *InlineObject198) GetShortNameOk() (*string, bool)`
+`func (o *InlineObject198) GetSerialOk() (*string, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetSerial
 
-`func (o *InlineObject198) SetShortName(v string)`
+`func (o *InlineObject198) SetSerial(v string)`
 
-SetShortName sets ShortName field to given value.
+SetSerial sets Serial field to given value.
 
+### HasSerial
 
-### GetLimitScopeToNetworks
+`func (o *InlineObject198) HasSerial() bool`
 
-`func (o *InlineObject198) GetLimitScopeToNetworks() []string`
+HasSerial returns a boolean if a field has been set.
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+### GetWirelessCredentialsSent
 
-### GetLimitScopeToNetworksOk
+`func (o *InlineObject198) GetWirelessCredentialsSent() bool`
 
-`func (o *InlineObject198) GetLimitScopeToNetworksOk() (*[]string, bool)`
+GetWirelessCredentialsSent returns the WirelessCredentialsSent field if non-nil, zero value otherwise.
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+### GetWirelessCredentialsSentOk
+
+`func (o *InlineObject198) GetWirelessCredentialsSentOk() (*bool, bool)`
+
+GetWirelessCredentialsSentOk returns a tuple with the WirelessCredentialsSent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetWirelessCredentialsSent
 
-`func (o *InlineObject198) SetLimitScopeToNetworks(v []string)`
+`func (o *InlineObject198) SetWirelessCredentialsSent(v bool)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetWirelessCredentialsSent sets WirelessCredentialsSent field to given value.
 
-### HasLimitScopeToNetworks
+### HasWirelessCredentialsSent
 
-`func (o *InlineObject198) HasLimitScopeToNetworks() bool`
+`func (o *InlineObject198) HasWirelessCredentialsSent() bool`
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+HasWirelessCredentialsSent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

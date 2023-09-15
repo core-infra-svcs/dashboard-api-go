@@ -4,19 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**V2cEnabled** | Pointer to **bool** | Boolean indicating whether SNMP version 2c is enabled for the organization. | [optional] 
-**V3Enabled** | Pointer to **bool** | Boolean indicating whether SNMP version 3 is enabled for the organization. | [optional] 
-**V3AuthMode** | Pointer to **string** | The SNMP version 3 authentication mode. Can be either &#39;MD5&#39; or &#39;SHA&#39;. | [optional] 
-**V3AuthPass** | Pointer to **string** | The SNMP version 3 authentication password. Must be at least 8 characters if specified. | [optional] 
-**V3PrivMode** | Pointer to **string** | The SNMP version 3 privacy mode. Can be either &#39;DES&#39; or &#39;AES128&#39;. | [optional] 
-**V3PrivPass** | Pointer to **string** | The SNMP version 3 privacy password. Must be at least 8 characters if specified. | [optional] 
-**PeerIps** | Pointer to **[]string** | The list of IPv4 addresses that are allowed to access the SNMP server. | [optional] 
+**Name** | **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
+**Category** | Pointer to **string** | Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
+**ObjectIds** | Pointer to **[]int32** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
 
 ## Methods
 
 ### NewInlineObject225
 
-`func NewInlineObject225() *InlineObject225`
+`func NewInlineObject225(name string, ) *InlineObject225`
 
 NewInlineObject225 instantiates a new InlineObject225 object
 This constructor will assign default values to properties that have it defined,
@@ -31,180 +27,75 @@ NewInlineObject225WithDefaults instantiates a new InlineObject225 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetV2cEnabled
+### GetName
 
-`func (o *InlineObject225) GetV2cEnabled() bool`
+`func (o *InlineObject225) GetName() string`
 
-GetV2cEnabled returns the V2cEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetV2cEnabledOk
+### GetNameOk
 
-`func (o *InlineObject225) GetV2cEnabledOk() (*bool, bool)`
+`func (o *InlineObject225) GetNameOk() (*string, bool)`
 
-GetV2cEnabledOk returns a tuple with the V2cEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV2cEnabled
+### SetName
 
-`func (o *InlineObject225) SetV2cEnabled(v bool)`
+`func (o *InlineObject225) SetName(v string)`
 
-SetV2cEnabled sets V2cEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasV2cEnabled
 
-`func (o *InlineObject225) HasV2cEnabled() bool`
+### GetCategory
 
-HasV2cEnabled returns a boolean if a field has been set.
+`func (o *InlineObject225) GetCategory() string`
 
-### GetV3Enabled
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-`func (o *InlineObject225) GetV3Enabled() bool`
+### GetCategoryOk
 
-GetV3Enabled returns the V3Enabled field if non-nil, zero value otherwise.
+`func (o *InlineObject225) GetCategoryOk() (*string, bool)`
 
-### GetV3EnabledOk
-
-`func (o *InlineObject225) GetV3EnabledOk() (*bool, bool)`
-
-GetV3EnabledOk returns a tuple with the V3Enabled field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3Enabled
+### SetCategory
 
-`func (o *InlineObject225) SetV3Enabled(v bool)`
+`func (o *InlineObject225) SetCategory(v string)`
 
-SetV3Enabled sets V3Enabled field to given value.
+SetCategory sets Category field to given value.
 
-### HasV3Enabled
+### HasCategory
 
-`func (o *InlineObject225) HasV3Enabled() bool`
+`func (o *InlineObject225) HasCategory() bool`
 
-HasV3Enabled returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetV3AuthMode
+### GetObjectIds
 
-`func (o *InlineObject225) GetV3AuthMode() string`
+`func (o *InlineObject225) GetObjectIds() []int32`
 
-GetV3AuthMode returns the V3AuthMode field if non-nil, zero value otherwise.
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
 
-### GetV3AuthModeOk
+### GetObjectIdsOk
 
-`func (o *InlineObject225) GetV3AuthModeOk() (*string, bool)`
+`func (o *InlineObject225) GetObjectIdsOk() (*[]int32, bool)`
 
-GetV3AuthModeOk returns a tuple with the V3AuthMode field if it's non-nil, zero value otherwise
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3AuthMode
+### SetObjectIds
 
-`func (o *InlineObject225) SetV3AuthMode(v string)`
+`func (o *InlineObject225) SetObjectIds(v []int32)`
 
-SetV3AuthMode sets V3AuthMode field to given value.
+SetObjectIds sets ObjectIds field to given value.
 
-### HasV3AuthMode
+### HasObjectIds
 
-`func (o *InlineObject225) HasV3AuthMode() bool`
+`func (o *InlineObject225) HasObjectIds() bool`
 
-HasV3AuthMode returns a boolean if a field has been set.
-
-### GetV3AuthPass
-
-`func (o *InlineObject225) GetV3AuthPass() string`
-
-GetV3AuthPass returns the V3AuthPass field if non-nil, zero value otherwise.
-
-### GetV3AuthPassOk
-
-`func (o *InlineObject225) GetV3AuthPassOk() (*string, bool)`
-
-GetV3AuthPassOk returns a tuple with the V3AuthPass field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3AuthPass
-
-`func (o *InlineObject225) SetV3AuthPass(v string)`
-
-SetV3AuthPass sets V3AuthPass field to given value.
-
-### HasV3AuthPass
-
-`func (o *InlineObject225) HasV3AuthPass() bool`
-
-HasV3AuthPass returns a boolean if a field has been set.
-
-### GetV3PrivMode
-
-`func (o *InlineObject225) GetV3PrivMode() string`
-
-GetV3PrivMode returns the V3PrivMode field if non-nil, zero value otherwise.
-
-### GetV3PrivModeOk
-
-`func (o *InlineObject225) GetV3PrivModeOk() (*string, bool)`
-
-GetV3PrivModeOk returns a tuple with the V3PrivMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3PrivMode
-
-`func (o *InlineObject225) SetV3PrivMode(v string)`
-
-SetV3PrivMode sets V3PrivMode field to given value.
-
-### HasV3PrivMode
-
-`func (o *InlineObject225) HasV3PrivMode() bool`
-
-HasV3PrivMode returns a boolean if a field has been set.
-
-### GetV3PrivPass
-
-`func (o *InlineObject225) GetV3PrivPass() string`
-
-GetV3PrivPass returns the V3PrivPass field if non-nil, zero value otherwise.
-
-### GetV3PrivPassOk
-
-`func (o *InlineObject225) GetV3PrivPassOk() (*string, bool)`
-
-GetV3PrivPassOk returns a tuple with the V3PrivPass field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3PrivPass
-
-`func (o *InlineObject225) SetV3PrivPass(v string)`
-
-SetV3PrivPass sets V3PrivPass field to given value.
-
-### HasV3PrivPass
-
-`func (o *InlineObject225) HasV3PrivPass() bool`
-
-HasV3PrivPass returns a boolean if a field has been set.
-
-### GetPeerIps
-
-`func (o *InlineObject225) GetPeerIps() []string`
-
-GetPeerIps returns the PeerIps field if non-nil, zero value otherwise.
-
-### GetPeerIpsOk
-
-`func (o *InlineObject225) GetPeerIpsOk() (*[]string, bool)`
-
-GetPeerIpsOk returns a tuple with the PeerIps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPeerIps
-
-`func (o *InlineObject225) SetPeerIps(v []string)`
-
-SetPeerIps sets PeerIps field to given value.
-
-### HasPeerIps
-
-`func (o *InlineObject225) HasPeerIps() bool`
-
-HasPeerIps returns a boolean if a field has been set.
+HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

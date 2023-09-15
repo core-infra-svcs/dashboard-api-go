@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlansEnabled** | Pointer to **bool** | Boolean indicating whether to enable (true) or disable (false) VLANs for the network | [optional] 
+**Custom** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom.md) | Custom VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
+**MajorApplications** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications.md) | Major Application based VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject60WithDefaults instantiates a new InlineObject60 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlansEnabled
+### GetCustom
 
-`func (o *InlineObject60) GetVlansEnabled() bool`
+`func (o *InlineObject60) GetCustom() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom`
 
-GetVlansEnabled returns the VlansEnabled field if non-nil, zero value otherwise.
+GetCustom returns the Custom field if non-nil, zero value otherwise.
 
-### GetVlansEnabledOk
+### GetCustomOk
 
-`func (o *InlineObject60) GetVlansEnabledOk() (*bool, bool)`
+`func (o *InlineObject60) GetCustomOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom, bool)`
 
-GetVlansEnabledOk returns a tuple with the VlansEnabled field if it's non-nil, zero value otherwise
+GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlansEnabled
+### SetCustom
 
-`func (o *InlineObject60) SetVlansEnabled(v bool)`
+`func (o *InlineObject60) SetCustom(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom)`
 
-SetVlansEnabled sets VlansEnabled field to given value.
+SetCustom sets Custom field to given value.
 
-### HasVlansEnabled
+### HasCustom
 
-`func (o *InlineObject60) HasVlansEnabled() bool`
+`func (o *InlineObject60) HasCustom() bool`
 
-HasVlansEnabled returns a boolean if a field has been set.
+HasCustom returns a boolean if a field has been set.
+
+### GetMajorApplications
+
+`func (o *InlineObject60) GetMajorApplications() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications`
+
+GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+
+### GetMajorApplicationsOk
+
+`func (o *InlineObject60) GetMajorApplicationsOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications, bool)`
+
+GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajorApplications
+
+`func (o *InlineObject60) SetMajorApplications(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications)`
+
+SetMajorApplications sets MajorApplications field to given value.
+
+### HasMajorApplications
+
+`func (o *InlineObject60) HasMajorApplications() bool`
+
+HasMajorApplications returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

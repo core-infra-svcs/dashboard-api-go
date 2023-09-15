@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device | [optional] 
-**ConnectionStats** | Pointer to [**InlineResponse20011ConnectionStats**](InlineResponse20011ConnectionStats.md) |  | [optional] 
+**Addresses** | Pointer to [**[]InlineResponse20011Addresses**](InlineResponse20011Addresses.md) | configured alternate management interface addresses | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse20011WithDefaults instantiates a new InlineResponse20011 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetAddresses
 
-`func (o *InlineResponse20011) GetSerial() string`
+`func (o *InlineResponse20011) GetAddresses() []InlineResponse20011Addresses`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetAddresses returns the Addresses field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetAddressesOk
 
-`func (o *InlineResponse20011) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20011) GetAddressesOk() (*[]InlineResponse20011Addresses, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetAddressesOk returns a tuple with the Addresses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetAddresses
 
-`func (o *InlineResponse20011) SetSerial(v string)`
+`func (o *InlineResponse20011) SetAddresses(v []InlineResponse20011Addresses)`
 
-SetSerial sets Serial field to given value.
+SetAddresses sets Addresses field to given value.
 
-### HasSerial
+### HasAddresses
 
-`func (o *InlineResponse20011) HasSerial() bool`
+`func (o *InlineResponse20011) HasAddresses() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetConnectionStats
-
-`func (o *InlineResponse20011) GetConnectionStats() InlineResponse20011ConnectionStats`
-
-GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
-
-### GetConnectionStatsOk
-
-`func (o *InlineResponse20011) GetConnectionStatsOk() (*InlineResponse20011ConnectionStats, bool)`
-
-GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetConnectionStats
-
-`func (o *InlineResponse20011) SetConnectionStats(v InlineResponse20011ConnectionStats)`
-
-SetConnectionStats sets ConnectionStats field to given value.
-
-### HasConnectionStats
-
-`func (o *InlineResponse20011) HasConnectionStats() bool`
-
-HasConnectionStats returns a boolean if a field has been set.
+HasAddresses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

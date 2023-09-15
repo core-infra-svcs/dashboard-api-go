@@ -4,16 +4,23 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**Identity** | Pointer to [**InlineResponse200100Identity**](InlineResponse200100Identity.md) |  | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**EapolKey** | Pointer to [**InlineResponse200100EapolKey**](InlineResponse200100EapolKey.md) |  | [optional] 
+**Name** | **string** | The name of the new profile. Must be unique. This param is required on creation. | 
+**ClientBalancingEnabled** | Pointer to **bool** | Steers client to best available access point. Can be either true or false. Defaults to true. | [optional] 
+**MinBitrateType** | Pointer to **string** | Minimum bitrate can be set to either &#39;band&#39; or &#39;ssid&#39;. Defaults to band. | [optional] 
+**BandSelectionType** | **string** | Band selection can be set to either &#39;ssid&#39; or &#39;ap&#39;. This param is required on creation. | 
+**ApBandSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesApBandSettings**](NetworksNetworkIdWirelessRfProfilesApBandSettings.md) |  | [optional] 
+**TwoFourGhzSettings** | Pointer to [**InlineResponse200102TwoFourGhzSettings**](InlineResponse200102TwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**InlineResponse200102FiveGhzSettings**](InlineResponse200102FiveGhzSettings.md) |  | [optional] 
+**SixGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesSixGhzSettings**](NetworksNetworkIdWirelessRfProfilesSixGhzSettings.md) |  | [optional] 
+**Transmission** | Pointer to [**InlineResponse200102Transmission**](InlineResponse200102Transmission.md) |  | [optional] 
+**PerSsidSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesPerSsidSettings**](NetworksNetworkIdWirelessRfProfilesPerSsidSettings.md) |  | [optional] 
+**FlexRadios** | Pointer to [**NetworksNetworkIdWirelessRfProfilesFlexRadios**](NetworksNetworkIdWirelessRfProfilesFlexRadios.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject160
 
-`func NewInlineObject160() *InlineObject160`
+`func NewInlineObject160(name string, bandSelectionType string, ) *InlineObject160`
 
 NewInlineObject160 instantiates a new InlineObject160 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +35,270 @@ NewInlineObject160WithDefaults instantiates a new InlineObject160 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetName
 
-`func (o *InlineObject160) GetTimeout() int32`
+`func (o *InlineObject160) GetName() string`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetNameOk
 
-`func (o *InlineObject160) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineObject160) GetNameOk() (*string, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetName
 
-`func (o *InlineObject160) SetTimeout(v int32)`
+`func (o *InlineObject160) SetName(v string)`
 
-SetTimeout sets Timeout field to given value.
+SetName sets Name field to given value.
 
-### HasTimeout
 
-`func (o *InlineObject160) HasTimeout() bool`
+### GetClientBalancingEnabled
 
-HasTimeout returns a boolean if a field has been set.
+`func (o *InlineObject160) GetClientBalancingEnabled() bool`
 
-### GetIdentity
+GetClientBalancingEnabled returns the ClientBalancingEnabled field if non-nil, zero value otherwise.
 
-`func (o *InlineObject160) GetIdentity() InlineResponse200100Identity`
+### GetClientBalancingEnabledOk
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+`func (o *InlineObject160) GetClientBalancingEnabledOk() (*bool, bool)`
 
-### GetIdentityOk
-
-`func (o *InlineObject160) GetIdentityOk() (*InlineResponse200100Identity, bool)`
-
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetClientBalancingEnabledOk returns a tuple with the ClientBalancingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetClientBalancingEnabled
 
-`func (o *InlineObject160) SetIdentity(v InlineResponse200100Identity)`
+`func (o *InlineObject160) SetClientBalancingEnabled(v bool)`
 
-SetIdentity sets Identity field to given value.
+SetClientBalancingEnabled sets ClientBalancingEnabled field to given value.
 
-### HasIdentity
+### HasClientBalancingEnabled
 
-`func (o *InlineObject160) HasIdentity() bool`
+`func (o *InlineObject160) HasClientBalancingEnabled() bool`
 
-HasIdentity returns a boolean if a field has been set.
+HasClientBalancingEnabled returns a boolean if a field has been set.
 
-### GetMaxRetries
+### GetMinBitrateType
 
-`func (o *InlineObject160) GetMaxRetries() int32`
+`func (o *InlineObject160) GetMinBitrateType() string`
 
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
+GetMinBitrateType returns the MinBitrateType field if non-nil, zero value otherwise.
 
-### GetMaxRetriesOk
+### GetMinBitrateTypeOk
 
-`func (o *InlineObject160) GetMaxRetriesOk() (*int32, bool)`
+`func (o *InlineObject160) GetMinBitrateTypeOk() (*string, bool)`
 
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
+GetMinBitrateTypeOk returns a tuple with the MinBitrateType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxRetries
+### SetMinBitrateType
 
-`func (o *InlineObject160) SetMaxRetries(v int32)`
+`func (o *InlineObject160) SetMinBitrateType(v string)`
 
-SetMaxRetries sets MaxRetries field to given value.
+SetMinBitrateType sets MinBitrateType field to given value.
 
-### HasMaxRetries
+### HasMinBitrateType
 
-`func (o *InlineObject160) HasMaxRetries() bool`
+`func (o *InlineObject160) HasMinBitrateType() bool`
 
-HasMaxRetries returns a boolean if a field has been set.
+HasMinBitrateType returns a boolean if a field has been set.
 
-### GetEapolKey
+### GetBandSelectionType
 
-`func (o *InlineObject160) GetEapolKey() InlineResponse200100EapolKey`
+`func (o *InlineObject160) GetBandSelectionType() string`
 
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
+GetBandSelectionType returns the BandSelectionType field if non-nil, zero value otherwise.
 
-### GetEapolKeyOk
+### GetBandSelectionTypeOk
 
-`func (o *InlineObject160) GetEapolKeyOk() (*InlineResponse200100EapolKey, bool)`
+`func (o *InlineObject160) GetBandSelectionTypeOk() (*string, bool)`
 
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
+GetBandSelectionTypeOk returns a tuple with the BandSelectionType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEapolKey
+### SetBandSelectionType
 
-`func (o *InlineObject160) SetEapolKey(v InlineResponse200100EapolKey)`
+`func (o *InlineObject160) SetBandSelectionType(v string)`
 
-SetEapolKey sets EapolKey field to given value.
+SetBandSelectionType sets BandSelectionType field to given value.
 
-### HasEapolKey
 
-`func (o *InlineObject160) HasEapolKey() bool`
+### GetApBandSettings
 
-HasEapolKey returns a boolean if a field has been set.
+`func (o *InlineObject160) GetApBandSettings() NetworksNetworkIdWirelessRfProfilesApBandSettings`
+
+GetApBandSettings returns the ApBandSettings field if non-nil, zero value otherwise.
+
+### GetApBandSettingsOk
+
+`func (o *InlineObject160) GetApBandSettingsOk() (*NetworksNetworkIdWirelessRfProfilesApBandSettings, bool)`
+
+GetApBandSettingsOk returns a tuple with the ApBandSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApBandSettings
+
+`func (o *InlineObject160) SetApBandSettings(v NetworksNetworkIdWirelessRfProfilesApBandSettings)`
+
+SetApBandSettings sets ApBandSettings field to given value.
+
+### HasApBandSettings
+
+`func (o *InlineObject160) HasApBandSettings() bool`
+
+HasApBandSettings returns a boolean if a field has been set.
+
+### GetTwoFourGhzSettings
+
+`func (o *InlineObject160) GetTwoFourGhzSettings() InlineResponse200102TwoFourGhzSettings`
+
+GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+
+### GetTwoFourGhzSettingsOk
+
+`func (o *InlineObject160) GetTwoFourGhzSettingsOk() (*InlineResponse200102TwoFourGhzSettings, bool)`
+
+GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTwoFourGhzSettings
+
+`func (o *InlineObject160) SetTwoFourGhzSettings(v InlineResponse200102TwoFourGhzSettings)`
+
+SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+
+### HasTwoFourGhzSettings
+
+`func (o *InlineObject160) HasTwoFourGhzSettings() bool`
+
+HasTwoFourGhzSettings returns a boolean if a field has been set.
+
+### GetFiveGhzSettings
+
+`func (o *InlineObject160) GetFiveGhzSettings() InlineResponse200102FiveGhzSettings`
+
+GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+
+### GetFiveGhzSettingsOk
+
+`func (o *InlineObject160) GetFiveGhzSettingsOk() (*InlineResponse200102FiveGhzSettings, bool)`
+
+GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFiveGhzSettings
+
+`func (o *InlineObject160) SetFiveGhzSettings(v InlineResponse200102FiveGhzSettings)`
+
+SetFiveGhzSettings sets FiveGhzSettings field to given value.
+
+### HasFiveGhzSettings
+
+`func (o *InlineObject160) HasFiveGhzSettings() bool`
+
+HasFiveGhzSettings returns a boolean if a field has been set.
+
+### GetSixGhzSettings
+
+`func (o *InlineObject160) GetSixGhzSettings() NetworksNetworkIdWirelessRfProfilesSixGhzSettings`
+
+GetSixGhzSettings returns the SixGhzSettings field if non-nil, zero value otherwise.
+
+### GetSixGhzSettingsOk
+
+`func (o *InlineObject160) GetSixGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesSixGhzSettings, bool)`
+
+GetSixGhzSettingsOk returns a tuple with the SixGhzSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSixGhzSettings
+
+`func (o *InlineObject160) SetSixGhzSettings(v NetworksNetworkIdWirelessRfProfilesSixGhzSettings)`
+
+SetSixGhzSettings sets SixGhzSettings field to given value.
+
+### HasSixGhzSettings
+
+`func (o *InlineObject160) HasSixGhzSettings() bool`
+
+HasSixGhzSettings returns a boolean if a field has been set.
+
+### GetTransmission
+
+`func (o *InlineObject160) GetTransmission() InlineResponse200102Transmission`
+
+GetTransmission returns the Transmission field if non-nil, zero value otherwise.
+
+### GetTransmissionOk
+
+`func (o *InlineObject160) GetTransmissionOk() (*InlineResponse200102Transmission, bool)`
+
+GetTransmissionOk returns a tuple with the Transmission field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTransmission
+
+`func (o *InlineObject160) SetTransmission(v InlineResponse200102Transmission)`
+
+SetTransmission sets Transmission field to given value.
+
+### HasTransmission
+
+`func (o *InlineObject160) HasTransmission() bool`
+
+HasTransmission returns a boolean if a field has been set.
+
+### GetPerSsidSettings
+
+`func (o *InlineObject160) GetPerSsidSettings() NetworksNetworkIdWirelessRfProfilesPerSsidSettings`
+
+GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
+
+### GetPerSsidSettingsOk
+
+`func (o *InlineObject160) GetPerSsidSettingsOk() (*NetworksNetworkIdWirelessRfProfilesPerSsidSettings, bool)`
+
+GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPerSsidSettings
+
+`func (o *InlineObject160) SetPerSsidSettings(v NetworksNetworkIdWirelessRfProfilesPerSsidSettings)`
+
+SetPerSsidSettings sets PerSsidSettings field to given value.
+
+### HasPerSsidSettings
+
+`func (o *InlineObject160) HasPerSsidSettings() bool`
+
+HasPerSsidSettings returns a boolean if a field has been set.
+
+### GetFlexRadios
+
+`func (o *InlineObject160) GetFlexRadios() NetworksNetworkIdWirelessRfProfilesFlexRadios`
+
+GetFlexRadios returns the FlexRadios field if non-nil, zero value otherwise.
+
+### GetFlexRadiosOk
+
+`func (o *InlineObject160) GetFlexRadiosOk() (*NetworksNetworkIdWirelessRfProfilesFlexRadios, bool)`
+
+GetFlexRadiosOk returns a tuple with the FlexRadios field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFlexRadios
+
+`func (o *InlineObject160) SetFlexRadios(v NetworksNetworkIdWirelessRfProfilesFlexRadios)`
+
+SetFlexRadios sets FlexRadios field to given value.
+
+### HasFlexRadios
+
+`func (o *InlineObject160) HasFlexRadios() bool`
+
+HasFlexRadios returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

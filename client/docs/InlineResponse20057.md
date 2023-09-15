@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Action** | Pointer to **string** | The type of command sent to the device. | [optional] 
-**Name** | Pointer to **string** | The name of the device to which the command is sent. | [optional] 
-**Details** | Pointer to **string** | A JSON string object containing command details. | [optional] 
-**DashboardUser** | Pointer to **string** | The Meraki dashboard user who initiated the command. | [optional] 
-**Ts** | Pointer to **string** | The time the command was sent to the device. | [optional] 
+**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
+**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
+**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
 
 ## Methods
 
@@ -29,105 +27,55 @@ NewInlineResponse20057WithDefaults instantiates a new InlineResponse20057 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAction
+### GetReceived
 
-`func (o *InlineResponse20057) GetAction() string`
+`func (o *InlineResponse20057) GetReceived() float32`
 
-GetAction returns the Action field if non-nil, zero value otherwise.
+GetReceived returns the Received field if non-nil, zero value otherwise.
 
-### GetActionOk
+### GetReceivedOk
 
-`func (o *InlineResponse20057) GetActionOk() (*string, bool)`
+`func (o *InlineResponse20057) GetReceivedOk() (*float32, bool)`
 
-GetActionOk returns a tuple with the Action field if it's non-nil, zero value otherwise
+GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAction
+### SetReceived
 
-`func (o *InlineResponse20057) SetAction(v string)`
+`func (o *InlineResponse20057) SetReceived(v float32)`
 
-SetAction sets Action field to given value.
+SetReceived sets Received field to given value.
 
-### HasAction
+### HasReceived
 
-`func (o *InlineResponse20057) HasAction() bool`
+`func (o *InlineResponse20057) HasReceived() bool`
 
-HasAction returns a boolean if a field has been set.
+HasReceived returns a boolean if a field has been set.
 
-### GetName
+### GetSent
 
-`func (o *InlineResponse20057) GetName() string`
+`func (o *InlineResponse20057) GetSent() float32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSent returns the Sent field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSentOk
 
-`func (o *InlineResponse20057) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20057) GetSentOk() (*float32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSent
 
-`func (o *InlineResponse20057) SetName(v string)`
+`func (o *InlineResponse20057) SetSent(v float32)`
 
-SetName sets Name field to given value.
+SetSent sets Sent field to given value.
 
-### HasName
+### HasSent
 
-`func (o *InlineResponse20057) HasName() bool`
+`func (o *InlineResponse20057) HasSent() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetDetails
-
-`func (o *InlineResponse20057) GetDetails() string`
-
-GetDetails returns the Details field if non-nil, zero value otherwise.
-
-### GetDetailsOk
-
-`func (o *InlineResponse20057) GetDetailsOk() (*string, bool)`
-
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetails
-
-`func (o *InlineResponse20057) SetDetails(v string)`
-
-SetDetails sets Details field to given value.
-
-### HasDetails
-
-`func (o *InlineResponse20057) HasDetails() bool`
-
-HasDetails returns a boolean if a field has been set.
-
-### GetDashboardUser
-
-`func (o *InlineResponse20057) GetDashboardUser() string`
-
-GetDashboardUser returns the DashboardUser field if non-nil, zero value otherwise.
-
-### GetDashboardUserOk
-
-`func (o *InlineResponse20057) GetDashboardUserOk() (*string, bool)`
-
-GetDashboardUserOk returns a tuple with the DashboardUser field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDashboardUser
-
-`func (o *InlineResponse20057) SetDashboardUser(v string)`
-
-SetDashboardUser sets DashboardUser field to given value.
-
-### HasDashboardUser
-
-`func (o *InlineResponse20057) HasDashboardUser() bool`
-
-HasDashboardUser returns a boolean if a field has been set.
+HasSent returns a boolean if a field has been set.
 
 ### GetTs
 

@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The id of the VPP Account | [optional] 
-**VppServiceToken** | Pointer to **string** | The VPP Account&#39;s Service Token | [optional] 
+**ResultingNetwork** | Pointer to [**InlineResponse200152ResultingNetwork**](InlineResponse200152ResultingNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200152WithDefaults instantiates a new InlineResponse200152 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetResultingNetwork
 
-`func (o *InlineResponse200152) GetId() string`
+`func (o *InlineResponse200152) GetResultingNetwork() InlineResponse200152ResultingNetwork`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetResultingNetworkOk
 
-`func (o *InlineResponse200152) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200152) GetResultingNetworkOk() (*InlineResponse200152ResultingNetwork, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetResultingNetwork
 
-`func (o *InlineResponse200152) SetId(v string)`
+`func (o *InlineResponse200152) SetResultingNetwork(v InlineResponse200152ResultingNetwork)`
 
-SetId sets Id field to given value.
+SetResultingNetwork sets ResultingNetwork field to given value.
 
-### HasId
+### HasResultingNetwork
 
-`func (o *InlineResponse200152) HasId() bool`
+`func (o *InlineResponse200152) HasResultingNetwork() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetVppServiceToken
-
-`func (o *InlineResponse200152) GetVppServiceToken() string`
-
-GetVppServiceToken returns the VppServiceToken field if non-nil, zero value otherwise.
-
-### GetVppServiceTokenOk
-
-`func (o *InlineResponse200152) GetVppServiceTokenOk() (*string, bool)`
-
-GetVppServiceTokenOk returns a tuple with the VppServiceToken field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVppServiceToken
-
-`func (o *InlineResponse200152) SetVppServiceToken(v string)`
-
-SetVppServiceToken sets VppServiceToken field to given value.
-
-### HasVppServiceToken
-
-`func (o *InlineResponse200152) HasVppServiceToken() bool`
-
-HasVppServiceToken returns a boolean if a field has been set.
+HasResultingNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
