@@ -4,24 +4,37 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SsidNumber** | Pointer to **int32** | SSID number | [optional] 
-**SplashPage** | Pointer to **string** | The type of splash page for this SSID | [optional] 
-**UseSplashUrl** | Pointer to **bool** | Boolean indicating whether the users will be redirected to the custom splash url | [optional] 
-**SplashUrl** | Pointer to **string** | The custom splash URL of the click-through splash page. | [optional] 
-**SplashTimeout** | Pointer to **int32** | Splash timeout in minutes. | [optional] 
-**RedirectUrl** | Pointer to **string** | The custom redirect URL where the users will go after the splash page. | [optional] 
-**UseRedirectUrl** | Pointer to **bool** | The Boolean indicating whether the the user will be redirected to the custom redirect URL after the splash page. | [optional] 
-**WelcomeMessage** | Pointer to **string** | The welcome message for the users on the splash page. | [optional] 
-**SplashLogo** | Pointer to [**InlineResponse200108SplashLogo**](InlineResponse200108SplashLogo.md) |  | [optional] 
-**SplashImage** | Pointer to [**InlineResponse200108SplashImage**](InlineResponse200108SplashImage.md) |  | [optional] 
-**SplashPrepaidFront** | Pointer to [**InlineResponse200108SplashPrepaidFront**](InlineResponse200108SplashPrepaidFront.md) |  | [optional] 
-**GuestSponsorship** | Pointer to [**InlineResponse200108GuestSponsorship**](InlineResponse200108GuestSponsorship.md) |  | [optional] 
-**BlockAllTrafficBeforeSignOn** | Pointer to **bool** | How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged. | [optional] 
-**ControllerDisconnectionBehavior** | Pointer to **string** | How login attempts should be handled when the controller is unreachable. | [optional] 
-**AllowSimultaneousLogins** | Pointer to **bool** | Whether or not to allow simultaneous logins from different devices. | [optional] 
-**Billing** | Pointer to [**InlineResponse200108Billing**](InlineResponse200108Billing.md) |  | [optional] 
-**SentryEnrollment** | Pointer to [**InlineResponse200108SentryEnrollment**](InlineResponse200108SentryEnrollment.md) |  | [optional] 
-**SelfRegistration** | Pointer to [**InlineResponse200108SelfRegistration**](InlineResponse200108SelfRegistration.md) |  | [optional] 
+**Number** | Pointer to **int32** | Unique identifier of the SSID | [optional] 
+**Name** | Pointer to **string** | The name of the SSID | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not the SSID is enabled | [optional] 
+**SplashPage** | Pointer to **string** | The type of splash page for the SSID | [optional] 
+**SsidAdminAccessible** | Pointer to **bool** | SSID Administrator access status | [optional] 
+**LocalAuth** | Pointer to **bool** | Extended local auth flag for Enterprise NAC | [optional] 
+**AuthMode** | Pointer to **string** | The association control method for the SSID | [optional] 
+**EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID | [optional] 
+**WpaEncryptionMode** | Pointer to **string** | The types of WPA encryption | [optional] 
+**RadiusServers** | Pointer to [**[]NetworksNetworkIdWirelessSsidsRadiusServers**](NetworksNetworkIdWirelessSsidsRadiusServers.md) | List of RADIUS 802.1X servers to be used for authentication | [optional] 
+**RadiusAccountingServers** | Pointer to [**[]NetworksNetworkIdWirelessSsidsRadiusAccountingServers**](NetworksNetworkIdWirelessSsidsRadiusAccountingServers.md) | List of RADIUS accounting 802.1X servers to be used for authentication | [optional] 
+**RadiusAccountingEnabled** | Pointer to **bool** | Whether or not RADIUS accounting is enabled | [optional] 
+**RadiusEnabled** | Pointer to **bool** | Whether RADIUS authentication is enabled | [optional] 
+**RadiusAttributeForGroupPolicies** | Pointer to **string** | RADIUS attribute used to look up group policies | [optional] 
+**RadiusFailoverPolicy** | Pointer to **string** | Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable | [optional] 
+**RadiusLoadBalancingPolicy** | Pointer to **string** | Policy which determines which RADIUS server will be contacted first in an authentication attempt, and the ordering of any necessary retry attempts | [optional] 
+**IpAssignmentMode** | Pointer to **string** | The client IP assignment mode | [optional] 
+**AdminSplashUrl** | Pointer to **string** | URL for the admin splash page | [optional] 
+**SplashTimeout** | Pointer to **string** | Splash page timeout | [optional] 
+**WalledGardenEnabled** | Pointer to **bool** | Allow users to access a configurable list of IP ranges prior to sign-on | [optional] 
+**WalledGardenRanges** | Pointer to **[]string** | Domain names and IP address ranges available in Walled Garden mode | [optional] 
+**MinBitrate** | Pointer to **int32** | The minimum bitrate in Mbps of this SSID in the default indoor RF profile | [optional] 
+**BandSelection** | Pointer to **string** | The client-serving radio frequencies of this SSID in the default indoor RF profile | [optional] 
+**PerClientBandwidthLimitUp** | Pointer to **int32** | The upload bandwidth limit in Kbps. (0 represents no limit.) | [optional] 
+**PerClientBandwidthLimitDown** | Pointer to **int32** | The download bandwidth limit in Kbps. (0 represents no limit.) | [optional] 
+**Visible** | Pointer to **bool** | Whether the SSID is advertised or hidden by the AP | [optional] 
+**AvailableOnAllAps** | Pointer to **bool** | Whether all APs broadcast the SSID or if it&#39;s restricted to APs matching any availability tags | [optional] 
+**AvailabilityTags** | Pointer to **[]string** | List of tags for this SSID. If availableOnAllAps is false, then the SSID is only broadcast by APs with tags matching any of the tags in this list | [optional] 
+**PerSsidBandwidthLimitUp** | Pointer to **int32** | The total upload bandwidth limit in Kbps (0 represents no limit) | [optional] 
+**PerSsidBandwidthLimitDown** | Pointer to **int32** | The total download bandwidth limit in Kbps (0 represents no limit) | [optional] 
+**MandatoryDhcpEnabled** | Pointer to **bool** | Whether clients connecting to this SSID must use the IP address assigned by the DHCP server | [optional] 
 
 ## Methods
 
@@ -42,30 +55,80 @@ NewInlineResponse200108WithDefaults instantiates a new InlineResponse200108 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsidNumber
+### GetNumber
 
-`func (o *InlineResponse200108) GetSsidNumber() int32`
+`func (o *InlineResponse200108) GetNumber() int32`
 
-GetSsidNumber returns the SsidNumber field if non-nil, zero value otherwise.
+GetNumber returns the Number field if non-nil, zero value otherwise.
 
-### GetSsidNumberOk
+### GetNumberOk
 
-`func (o *InlineResponse200108) GetSsidNumberOk() (*int32, bool)`
+`func (o *InlineResponse200108) GetNumberOk() (*int32, bool)`
 
-GetSsidNumberOk returns a tuple with the SsidNumber field if it's non-nil, zero value otherwise
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsidNumber
+### SetNumber
 
-`func (o *InlineResponse200108) SetSsidNumber(v int32)`
+`func (o *InlineResponse200108) SetNumber(v int32)`
 
-SetSsidNumber sets SsidNumber field to given value.
+SetNumber sets Number field to given value.
 
-### HasSsidNumber
+### HasNumber
 
-`func (o *InlineResponse200108) HasSsidNumber() bool`
+`func (o *InlineResponse200108) HasNumber() bool`
 
-HasSsidNumber returns a boolean if a field has been set.
+HasNumber returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200108) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200108) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200108) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200108) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse200108) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse200108) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse200108) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse200108) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
 
 ### GetSplashPage
 
@@ -92,72 +155,372 @@ SetSplashPage sets SplashPage field to given value.
 
 HasSplashPage returns a boolean if a field has been set.
 
-### GetUseSplashUrl
+### GetSsidAdminAccessible
 
-`func (o *InlineResponse200108) GetUseSplashUrl() bool`
+`func (o *InlineResponse200108) GetSsidAdminAccessible() bool`
 
-GetUseSplashUrl returns the UseSplashUrl field if non-nil, zero value otherwise.
+GetSsidAdminAccessible returns the SsidAdminAccessible field if non-nil, zero value otherwise.
 
-### GetUseSplashUrlOk
+### GetSsidAdminAccessibleOk
 
-`func (o *InlineResponse200108) GetUseSplashUrlOk() (*bool, bool)`
+`func (o *InlineResponse200108) GetSsidAdminAccessibleOk() (*bool, bool)`
 
-GetUseSplashUrlOk returns a tuple with the UseSplashUrl field if it's non-nil, zero value otherwise
+GetSsidAdminAccessibleOk returns a tuple with the SsidAdminAccessible field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUseSplashUrl
+### SetSsidAdminAccessible
 
-`func (o *InlineResponse200108) SetUseSplashUrl(v bool)`
+`func (o *InlineResponse200108) SetSsidAdminAccessible(v bool)`
 
-SetUseSplashUrl sets UseSplashUrl field to given value.
+SetSsidAdminAccessible sets SsidAdminAccessible field to given value.
 
-### HasUseSplashUrl
+### HasSsidAdminAccessible
 
-`func (o *InlineResponse200108) HasUseSplashUrl() bool`
+`func (o *InlineResponse200108) HasSsidAdminAccessible() bool`
 
-HasUseSplashUrl returns a boolean if a field has been set.
+HasSsidAdminAccessible returns a boolean if a field has been set.
 
-### GetSplashUrl
+### GetLocalAuth
 
-`func (o *InlineResponse200108) GetSplashUrl() string`
+`func (o *InlineResponse200108) GetLocalAuth() bool`
 
-GetSplashUrl returns the SplashUrl field if non-nil, zero value otherwise.
+GetLocalAuth returns the LocalAuth field if non-nil, zero value otherwise.
 
-### GetSplashUrlOk
+### GetLocalAuthOk
 
-`func (o *InlineResponse200108) GetSplashUrlOk() (*string, bool)`
+`func (o *InlineResponse200108) GetLocalAuthOk() (*bool, bool)`
 
-GetSplashUrlOk returns a tuple with the SplashUrl field if it's non-nil, zero value otherwise
+GetLocalAuthOk returns a tuple with the LocalAuth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplashUrl
+### SetLocalAuth
 
-`func (o *InlineResponse200108) SetSplashUrl(v string)`
+`func (o *InlineResponse200108) SetLocalAuth(v bool)`
 
-SetSplashUrl sets SplashUrl field to given value.
+SetLocalAuth sets LocalAuth field to given value.
 
-### HasSplashUrl
+### HasLocalAuth
 
-`func (o *InlineResponse200108) HasSplashUrl() bool`
+`func (o *InlineResponse200108) HasLocalAuth() bool`
 
-HasSplashUrl returns a boolean if a field has been set.
+HasLocalAuth returns a boolean if a field has been set.
+
+### GetAuthMode
+
+`func (o *InlineResponse200108) GetAuthMode() string`
+
+GetAuthMode returns the AuthMode field if non-nil, zero value otherwise.
+
+### GetAuthModeOk
+
+`func (o *InlineResponse200108) GetAuthModeOk() (*string, bool)`
+
+GetAuthModeOk returns a tuple with the AuthMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthMode
+
+`func (o *InlineResponse200108) SetAuthMode(v string)`
+
+SetAuthMode sets AuthMode field to given value.
+
+### HasAuthMode
+
+`func (o *InlineResponse200108) HasAuthMode() bool`
+
+HasAuthMode returns a boolean if a field has been set.
+
+### GetEncryptionMode
+
+`func (o *InlineResponse200108) GetEncryptionMode() string`
+
+GetEncryptionMode returns the EncryptionMode field if non-nil, zero value otherwise.
+
+### GetEncryptionModeOk
+
+`func (o *InlineResponse200108) GetEncryptionModeOk() (*string, bool)`
+
+GetEncryptionModeOk returns a tuple with the EncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEncryptionMode
+
+`func (o *InlineResponse200108) SetEncryptionMode(v string)`
+
+SetEncryptionMode sets EncryptionMode field to given value.
+
+### HasEncryptionMode
+
+`func (o *InlineResponse200108) HasEncryptionMode() bool`
+
+HasEncryptionMode returns a boolean if a field has been set.
+
+### GetWpaEncryptionMode
+
+`func (o *InlineResponse200108) GetWpaEncryptionMode() string`
+
+GetWpaEncryptionMode returns the WpaEncryptionMode field if non-nil, zero value otherwise.
+
+### GetWpaEncryptionModeOk
+
+`func (o *InlineResponse200108) GetWpaEncryptionModeOk() (*string, bool)`
+
+GetWpaEncryptionModeOk returns a tuple with the WpaEncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWpaEncryptionMode
+
+`func (o *InlineResponse200108) SetWpaEncryptionMode(v string)`
+
+SetWpaEncryptionMode sets WpaEncryptionMode field to given value.
+
+### HasWpaEncryptionMode
+
+`func (o *InlineResponse200108) HasWpaEncryptionMode() bool`
+
+HasWpaEncryptionMode returns a boolean if a field has been set.
+
+### GetRadiusServers
+
+`func (o *InlineResponse200108) GetRadiusServers() []NetworksNetworkIdWirelessSsidsRadiusServers`
+
+GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
+
+### GetRadiusServersOk
+
+`func (o *InlineResponse200108) GetRadiusServersOk() (*[]NetworksNetworkIdWirelessSsidsRadiusServers, bool)`
+
+GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusServers
+
+`func (o *InlineResponse200108) SetRadiusServers(v []NetworksNetworkIdWirelessSsidsRadiusServers)`
+
+SetRadiusServers sets RadiusServers field to given value.
+
+### HasRadiusServers
+
+`func (o *InlineResponse200108) HasRadiusServers() bool`
+
+HasRadiusServers returns a boolean if a field has been set.
+
+### GetRadiusAccountingServers
+
+`func (o *InlineResponse200108) GetRadiusAccountingServers() []NetworksNetworkIdWirelessSsidsRadiusAccountingServers`
+
+GetRadiusAccountingServers returns the RadiusAccountingServers field if non-nil, zero value otherwise.
+
+### GetRadiusAccountingServersOk
+
+`func (o *InlineResponse200108) GetRadiusAccountingServersOk() (*[]NetworksNetworkIdWirelessSsidsRadiusAccountingServers, bool)`
+
+GetRadiusAccountingServersOk returns a tuple with the RadiusAccountingServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusAccountingServers
+
+`func (o *InlineResponse200108) SetRadiusAccountingServers(v []NetworksNetworkIdWirelessSsidsRadiusAccountingServers)`
+
+SetRadiusAccountingServers sets RadiusAccountingServers field to given value.
+
+### HasRadiusAccountingServers
+
+`func (o *InlineResponse200108) HasRadiusAccountingServers() bool`
+
+HasRadiusAccountingServers returns a boolean if a field has been set.
+
+### GetRadiusAccountingEnabled
+
+`func (o *InlineResponse200108) GetRadiusAccountingEnabled() bool`
+
+GetRadiusAccountingEnabled returns the RadiusAccountingEnabled field if non-nil, zero value otherwise.
+
+### GetRadiusAccountingEnabledOk
+
+`func (o *InlineResponse200108) GetRadiusAccountingEnabledOk() (*bool, bool)`
+
+GetRadiusAccountingEnabledOk returns a tuple with the RadiusAccountingEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusAccountingEnabled
+
+`func (o *InlineResponse200108) SetRadiusAccountingEnabled(v bool)`
+
+SetRadiusAccountingEnabled sets RadiusAccountingEnabled field to given value.
+
+### HasRadiusAccountingEnabled
+
+`func (o *InlineResponse200108) HasRadiusAccountingEnabled() bool`
+
+HasRadiusAccountingEnabled returns a boolean if a field has been set.
+
+### GetRadiusEnabled
+
+`func (o *InlineResponse200108) GetRadiusEnabled() bool`
+
+GetRadiusEnabled returns the RadiusEnabled field if non-nil, zero value otherwise.
+
+### GetRadiusEnabledOk
+
+`func (o *InlineResponse200108) GetRadiusEnabledOk() (*bool, bool)`
+
+GetRadiusEnabledOk returns a tuple with the RadiusEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusEnabled
+
+`func (o *InlineResponse200108) SetRadiusEnabled(v bool)`
+
+SetRadiusEnabled sets RadiusEnabled field to given value.
+
+### HasRadiusEnabled
+
+`func (o *InlineResponse200108) HasRadiusEnabled() bool`
+
+HasRadiusEnabled returns a boolean if a field has been set.
+
+### GetRadiusAttributeForGroupPolicies
+
+`func (o *InlineResponse200108) GetRadiusAttributeForGroupPolicies() string`
+
+GetRadiusAttributeForGroupPolicies returns the RadiusAttributeForGroupPolicies field if non-nil, zero value otherwise.
+
+### GetRadiusAttributeForGroupPoliciesOk
+
+`func (o *InlineResponse200108) GetRadiusAttributeForGroupPoliciesOk() (*string, bool)`
+
+GetRadiusAttributeForGroupPoliciesOk returns a tuple with the RadiusAttributeForGroupPolicies field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusAttributeForGroupPolicies
+
+`func (o *InlineResponse200108) SetRadiusAttributeForGroupPolicies(v string)`
+
+SetRadiusAttributeForGroupPolicies sets RadiusAttributeForGroupPolicies field to given value.
+
+### HasRadiusAttributeForGroupPolicies
+
+`func (o *InlineResponse200108) HasRadiusAttributeForGroupPolicies() bool`
+
+HasRadiusAttributeForGroupPolicies returns a boolean if a field has been set.
+
+### GetRadiusFailoverPolicy
+
+`func (o *InlineResponse200108) GetRadiusFailoverPolicy() string`
+
+GetRadiusFailoverPolicy returns the RadiusFailoverPolicy field if non-nil, zero value otherwise.
+
+### GetRadiusFailoverPolicyOk
+
+`func (o *InlineResponse200108) GetRadiusFailoverPolicyOk() (*string, bool)`
+
+GetRadiusFailoverPolicyOk returns a tuple with the RadiusFailoverPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusFailoverPolicy
+
+`func (o *InlineResponse200108) SetRadiusFailoverPolicy(v string)`
+
+SetRadiusFailoverPolicy sets RadiusFailoverPolicy field to given value.
+
+### HasRadiusFailoverPolicy
+
+`func (o *InlineResponse200108) HasRadiusFailoverPolicy() bool`
+
+HasRadiusFailoverPolicy returns a boolean if a field has been set.
+
+### GetRadiusLoadBalancingPolicy
+
+`func (o *InlineResponse200108) GetRadiusLoadBalancingPolicy() string`
+
+GetRadiusLoadBalancingPolicy returns the RadiusLoadBalancingPolicy field if non-nil, zero value otherwise.
+
+### GetRadiusLoadBalancingPolicyOk
+
+`func (o *InlineResponse200108) GetRadiusLoadBalancingPolicyOk() (*string, bool)`
+
+GetRadiusLoadBalancingPolicyOk returns a tuple with the RadiusLoadBalancingPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusLoadBalancingPolicy
+
+`func (o *InlineResponse200108) SetRadiusLoadBalancingPolicy(v string)`
+
+SetRadiusLoadBalancingPolicy sets RadiusLoadBalancingPolicy field to given value.
+
+### HasRadiusLoadBalancingPolicy
+
+`func (o *InlineResponse200108) HasRadiusLoadBalancingPolicy() bool`
+
+HasRadiusLoadBalancingPolicy returns a boolean if a field has been set.
+
+### GetIpAssignmentMode
+
+`func (o *InlineResponse200108) GetIpAssignmentMode() string`
+
+GetIpAssignmentMode returns the IpAssignmentMode field if non-nil, zero value otherwise.
+
+### GetIpAssignmentModeOk
+
+`func (o *InlineResponse200108) GetIpAssignmentModeOk() (*string, bool)`
+
+GetIpAssignmentModeOk returns a tuple with the IpAssignmentMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpAssignmentMode
+
+`func (o *InlineResponse200108) SetIpAssignmentMode(v string)`
+
+SetIpAssignmentMode sets IpAssignmentMode field to given value.
+
+### HasIpAssignmentMode
+
+`func (o *InlineResponse200108) HasIpAssignmentMode() bool`
+
+HasIpAssignmentMode returns a boolean if a field has been set.
+
+### GetAdminSplashUrl
+
+`func (o *InlineResponse200108) GetAdminSplashUrl() string`
+
+GetAdminSplashUrl returns the AdminSplashUrl field if non-nil, zero value otherwise.
+
+### GetAdminSplashUrlOk
+
+`func (o *InlineResponse200108) GetAdminSplashUrlOk() (*string, bool)`
+
+GetAdminSplashUrlOk returns a tuple with the AdminSplashUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdminSplashUrl
+
+`func (o *InlineResponse200108) SetAdminSplashUrl(v string)`
+
+SetAdminSplashUrl sets AdminSplashUrl field to given value.
+
+### HasAdminSplashUrl
+
+`func (o *InlineResponse200108) HasAdminSplashUrl() bool`
+
+HasAdminSplashUrl returns a boolean if a field has been set.
 
 ### GetSplashTimeout
 
-`func (o *InlineResponse200108) GetSplashTimeout() int32`
+`func (o *InlineResponse200108) GetSplashTimeout() string`
 
 GetSplashTimeout returns the SplashTimeout field if non-nil, zero value otherwise.
 
 ### GetSplashTimeoutOk
 
-`func (o *InlineResponse200108) GetSplashTimeoutOk() (*int32, bool)`
+`func (o *InlineResponse200108) GetSplashTimeoutOk() (*string, bool)`
 
 GetSplashTimeoutOk returns a tuple with the SplashTimeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSplashTimeout
 
-`func (o *InlineResponse200108) SetSplashTimeout(v int32)`
+`func (o *InlineResponse200108) SetSplashTimeout(v string)`
 
 SetSplashTimeout sets SplashTimeout field to given value.
 
@@ -167,330 +530,305 @@ SetSplashTimeout sets SplashTimeout field to given value.
 
 HasSplashTimeout returns a boolean if a field has been set.
 
-### GetRedirectUrl
+### GetWalledGardenEnabled
 
-`func (o *InlineResponse200108) GetRedirectUrl() string`
+`func (o *InlineResponse200108) GetWalledGardenEnabled() bool`
 
-GetRedirectUrl returns the RedirectUrl field if non-nil, zero value otherwise.
+GetWalledGardenEnabled returns the WalledGardenEnabled field if non-nil, zero value otherwise.
 
-### GetRedirectUrlOk
+### GetWalledGardenEnabledOk
 
-`func (o *InlineResponse200108) GetRedirectUrlOk() (*string, bool)`
+`func (o *InlineResponse200108) GetWalledGardenEnabledOk() (*bool, bool)`
 
-GetRedirectUrlOk returns a tuple with the RedirectUrl field if it's non-nil, zero value otherwise
+GetWalledGardenEnabledOk returns a tuple with the WalledGardenEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRedirectUrl
+### SetWalledGardenEnabled
 
-`func (o *InlineResponse200108) SetRedirectUrl(v string)`
+`func (o *InlineResponse200108) SetWalledGardenEnabled(v bool)`
 
-SetRedirectUrl sets RedirectUrl field to given value.
+SetWalledGardenEnabled sets WalledGardenEnabled field to given value.
 
-### HasRedirectUrl
+### HasWalledGardenEnabled
 
-`func (o *InlineResponse200108) HasRedirectUrl() bool`
+`func (o *InlineResponse200108) HasWalledGardenEnabled() bool`
 
-HasRedirectUrl returns a boolean if a field has been set.
+HasWalledGardenEnabled returns a boolean if a field has been set.
 
-### GetUseRedirectUrl
+### GetWalledGardenRanges
 
-`func (o *InlineResponse200108) GetUseRedirectUrl() bool`
+`func (o *InlineResponse200108) GetWalledGardenRanges() []string`
 
-GetUseRedirectUrl returns the UseRedirectUrl field if non-nil, zero value otherwise.
+GetWalledGardenRanges returns the WalledGardenRanges field if non-nil, zero value otherwise.
 
-### GetUseRedirectUrlOk
+### GetWalledGardenRangesOk
 
-`func (o *InlineResponse200108) GetUseRedirectUrlOk() (*bool, bool)`
+`func (o *InlineResponse200108) GetWalledGardenRangesOk() (*[]string, bool)`
 
-GetUseRedirectUrlOk returns a tuple with the UseRedirectUrl field if it's non-nil, zero value otherwise
+GetWalledGardenRangesOk returns a tuple with the WalledGardenRanges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUseRedirectUrl
+### SetWalledGardenRanges
 
-`func (o *InlineResponse200108) SetUseRedirectUrl(v bool)`
+`func (o *InlineResponse200108) SetWalledGardenRanges(v []string)`
 
-SetUseRedirectUrl sets UseRedirectUrl field to given value.
+SetWalledGardenRanges sets WalledGardenRanges field to given value.
 
-### HasUseRedirectUrl
+### HasWalledGardenRanges
 
-`func (o *InlineResponse200108) HasUseRedirectUrl() bool`
+`func (o *InlineResponse200108) HasWalledGardenRanges() bool`
 
-HasUseRedirectUrl returns a boolean if a field has been set.
+HasWalledGardenRanges returns a boolean if a field has been set.
 
-### GetWelcomeMessage
+### GetMinBitrate
 
-`func (o *InlineResponse200108) GetWelcomeMessage() string`
+`func (o *InlineResponse200108) GetMinBitrate() int32`
 
-GetWelcomeMessage returns the WelcomeMessage field if non-nil, zero value otherwise.
+GetMinBitrate returns the MinBitrate field if non-nil, zero value otherwise.
 
-### GetWelcomeMessageOk
+### GetMinBitrateOk
 
-`func (o *InlineResponse200108) GetWelcomeMessageOk() (*string, bool)`
+`func (o *InlineResponse200108) GetMinBitrateOk() (*int32, bool)`
 
-GetWelcomeMessageOk returns a tuple with the WelcomeMessage field if it's non-nil, zero value otherwise
+GetMinBitrateOk returns a tuple with the MinBitrate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWelcomeMessage
+### SetMinBitrate
 
-`func (o *InlineResponse200108) SetWelcomeMessage(v string)`
+`func (o *InlineResponse200108) SetMinBitrate(v int32)`
 
-SetWelcomeMessage sets WelcomeMessage field to given value.
+SetMinBitrate sets MinBitrate field to given value.
 
-### HasWelcomeMessage
+### HasMinBitrate
 
-`func (o *InlineResponse200108) HasWelcomeMessage() bool`
+`func (o *InlineResponse200108) HasMinBitrate() bool`
 
-HasWelcomeMessage returns a boolean if a field has been set.
+HasMinBitrate returns a boolean if a field has been set.
 
-### GetSplashLogo
+### GetBandSelection
 
-`func (o *InlineResponse200108) GetSplashLogo() InlineResponse200108SplashLogo`
+`func (o *InlineResponse200108) GetBandSelection() string`
 
-GetSplashLogo returns the SplashLogo field if non-nil, zero value otherwise.
+GetBandSelection returns the BandSelection field if non-nil, zero value otherwise.
 
-### GetSplashLogoOk
+### GetBandSelectionOk
 
-`func (o *InlineResponse200108) GetSplashLogoOk() (*InlineResponse200108SplashLogo, bool)`
+`func (o *InlineResponse200108) GetBandSelectionOk() (*string, bool)`
 
-GetSplashLogoOk returns a tuple with the SplashLogo field if it's non-nil, zero value otherwise
+GetBandSelectionOk returns a tuple with the BandSelection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplashLogo
+### SetBandSelection
 
-`func (o *InlineResponse200108) SetSplashLogo(v InlineResponse200108SplashLogo)`
+`func (o *InlineResponse200108) SetBandSelection(v string)`
 
-SetSplashLogo sets SplashLogo field to given value.
+SetBandSelection sets BandSelection field to given value.
 
-### HasSplashLogo
+### HasBandSelection
 
-`func (o *InlineResponse200108) HasSplashLogo() bool`
+`func (o *InlineResponse200108) HasBandSelection() bool`
 
-HasSplashLogo returns a boolean if a field has been set.
+HasBandSelection returns a boolean if a field has been set.
 
-### GetSplashImage
+### GetPerClientBandwidthLimitUp
 
-`func (o *InlineResponse200108) GetSplashImage() InlineResponse200108SplashImage`
+`func (o *InlineResponse200108) GetPerClientBandwidthLimitUp() int32`
 
-GetSplashImage returns the SplashImage field if non-nil, zero value otherwise.
+GetPerClientBandwidthLimitUp returns the PerClientBandwidthLimitUp field if non-nil, zero value otherwise.
 
-### GetSplashImageOk
+### GetPerClientBandwidthLimitUpOk
 
-`func (o *InlineResponse200108) GetSplashImageOk() (*InlineResponse200108SplashImage, bool)`
+`func (o *InlineResponse200108) GetPerClientBandwidthLimitUpOk() (*int32, bool)`
 
-GetSplashImageOk returns a tuple with the SplashImage field if it's non-nil, zero value otherwise
+GetPerClientBandwidthLimitUpOk returns a tuple with the PerClientBandwidthLimitUp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplashImage
+### SetPerClientBandwidthLimitUp
 
-`func (o *InlineResponse200108) SetSplashImage(v InlineResponse200108SplashImage)`
+`func (o *InlineResponse200108) SetPerClientBandwidthLimitUp(v int32)`
 
-SetSplashImage sets SplashImage field to given value.
+SetPerClientBandwidthLimitUp sets PerClientBandwidthLimitUp field to given value.
 
-### HasSplashImage
+### HasPerClientBandwidthLimitUp
 
-`func (o *InlineResponse200108) HasSplashImage() bool`
+`func (o *InlineResponse200108) HasPerClientBandwidthLimitUp() bool`
 
-HasSplashImage returns a boolean if a field has been set.
+HasPerClientBandwidthLimitUp returns a boolean if a field has been set.
 
-### GetSplashPrepaidFront
+### GetPerClientBandwidthLimitDown
 
-`func (o *InlineResponse200108) GetSplashPrepaidFront() InlineResponse200108SplashPrepaidFront`
+`func (o *InlineResponse200108) GetPerClientBandwidthLimitDown() int32`
 
-GetSplashPrepaidFront returns the SplashPrepaidFront field if non-nil, zero value otherwise.
+GetPerClientBandwidthLimitDown returns the PerClientBandwidthLimitDown field if non-nil, zero value otherwise.
 
-### GetSplashPrepaidFrontOk
+### GetPerClientBandwidthLimitDownOk
 
-`func (o *InlineResponse200108) GetSplashPrepaidFrontOk() (*InlineResponse200108SplashPrepaidFront, bool)`
+`func (o *InlineResponse200108) GetPerClientBandwidthLimitDownOk() (*int32, bool)`
 
-GetSplashPrepaidFrontOk returns a tuple with the SplashPrepaidFront field if it's non-nil, zero value otherwise
+GetPerClientBandwidthLimitDownOk returns a tuple with the PerClientBandwidthLimitDown field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplashPrepaidFront
+### SetPerClientBandwidthLimitDown
 
-`func (o *InlineResponse200108) SetSplashPrepaidFront(v InlineResponse200108SplashPrepaidFront)`
+`func (o *InlineResponse200108) SetPerClientBandwidthLimitDown(v int32)`
 
-SetSplashPrepaidFront sets SplashPrepaidFront field to given value.
+SetPerClientBandwidthLimitDown sets PerClientBandwidthLimitDown field to given value.
 
-### HasSplashPrepaidFront
+### HasPerClientBandwidthLimitDown
 
-`func (o *InlineResponse200108) HasSplashPrepaidFront() bool`
+`func (o *InlineResponse200108) HasPerClientBandwidthLimitDown() bool`
 
-HasSplashPrepaidFront returns a boolean if a field has been set.
+HasPerClientBandwidthLimitDown returns a boolean if a field has been set.
 
-### GetGuestSponsorship
+### GetVisible
 
-`func (o *InlineResponse200108) GetGuestSponsorship() InlineResponse200108GuestSponsorship`
+`func (o *InlineResponse200108) GetVisible() bool`
 
-GetGuestSponsorship returns the GuestSponsorship field if non-nil, zero value otherwise.
+GetVisible returns the Visible field if non-nil, zero value otherwise.
 
-### GetGuestSponsorshipOk
+### GetVisibleOk
 
-`func (o *InlineResponse200108) GetGuestSponsorshipOk() (*InlineResponse200108GuestSponsorship, bool)`
+`func (o *InlineResponse200108) GetVisibleOk() (*bool, bool)`
 
-GetGuestSponsorshipOk returns a tuple with the GuestSponsorship field if it's non-nil, zero value otherwise
+GetVisibleOk returns a tuple with the Visible field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGuestSponsorship
+### SetVisible
 
-`func (o *InlineResponse200108) SetGuestSponsorship(v InlineResponse200108GuestSponsorship)`
+`func (o *InlineResponse200108) SetVisible(v bool)`
 
-SetGuestSponsorship sets GuestSponsorship field to given value.
+SetVisible sets Visible field to given value.
 
-### HasGuestSponsorship
+### HasVisible
 
-`func (o *InlineResponse200108) HasGuestSponsorship() bool`
+`func (o *InlineResponse200108) HasVisible() bool`
 
-HasGuestSponsorship returns a boolean if a field has been set.
+HasVisible returns a boolean if a field has been set.
 
-### GetBlockAllTrafficBeforeSignOn
+### GetAvailableOnAllAps
 
-`func (o *InlineResponse200108) GetBlockAllTrafficBeforeSignOn() bool`
+`func (o *InlineResponse200108) GetAvailableOnAllAps() bool`
 
-GetBlockAllTrafficBeforeSignOn returns the BlockAllTrafficBeforeSignOn field if non-nil, zero value otherwise.
+GetAvailableOnAllAps returns the AvailableOnAllAps field if non-nil, zero value otherwise.
 
-### GetBlockAllTrafficBeforeSignOnOk
+### GetAvailableOnAllApsOk
 
-`func (o *InlineResponse200108) GetBlockAllTrafficBeforeSignOnOk() (*bool, bool)`
+`func (o *InlineResponse200108) GetAvailableOnAllApsOk() (*bool, bool)`
 
-GetBlockAllTrafficBeforeSignOnOk returns a tuple with the BlockAllTrafficBeforeSignOn field if it's non-nil, zero value otherwise
+GetAvailableOnAllApsOk returns a tuple with the AvailableOnAllAps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockAllTrafficBeforeSignOn
+### SetAvailableOnAllAps
 
-`func (o *InlineResponse200108) SetBlockAllTrafficBeforeSignOn(v bool)`
+`func (o *InlineResponse200108) SetAvailableOnAllAps(v bool)`
 
-SetBlockAllTrafficBeforeSignOn sets BlockAllTrafficBeforeSignOn field to given value.
+SetAvailableOnAllAps sets AvailableOnAllAps field to given value.
 
-### HasBlockAllTrafficBeforeSignOn
+### HasAvailableOnAllAps
 
-`func (o *InlineResponse200108) HasBlockAllTrafficBeforeSignOn() bool`
+`func (o *InlineResponse200108) HasAvailableOnAllAps() bool`
 
-HasBlockAllTrafficBeforeSignOn returns a boolean if a field has been set.
+HasAvailableOnAllAps returns a boolean if a field has been set.
 
-### GetControllerDisconnectionBehavior
+### GetAvailabilityTags
 
-`func (o *InlineResponse200108) GetControllerDisconnectionBehavior() string`
+`func (o *InlineResponse200108) GetAvailabilityTags() []string`
 
-GetControllerDisconnectionBehavior returns the ControllerDisconnectionBehavior field if non-nil, zero value otherwise.
+GetAvailabilityTags returns the AvailabilityTags field if non-nil, zero value otherwise.
 
-### GetControllerDisconnectionBehaviorOk
+### GetAvailabilityTagsOk
 
-`func (o *InlineResponse200108) GetControllerDisconnectionBehaviorOk() (*string, bool)`
+`func (o *InlineResponse200108) GetAvailabilityTagsOk() (*[]string, bool)`
 
-GetControllerDisconnectionBehaviorOk returns a tuple with the ControllerDisconnectionBehavior field if it's non-nil, zero value otherwise
+GetAvailabilityTagsOk returns a tuple with the AvailabilityTags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetControllerDisconnectionBehavior
+### SetAvailabilityTags
 
-`func (o *InlineResponse200108) SetControllerDisconnectionBehavior(v string)`
+`func (o *InlineResponse200108) SetAvailabilityTags(v []string)`
 
-SetControllerDisconnectionBehavior sets ControllerDisconnectionBehavior field to given value.
+SetAvailabilityTags sets AvailabilityTags field to given value.
 
-### HasControllerDisconnectionBehavior
+### HasAvailabilityTags
 
-`func (o *InlineResponse200108) HasControllerDisconnectionBehavior() bool`
+`func (o *InlineResponse200108) HasAvailabilityTags() bool`
 
-HasControllerDisconnectionBehavior returns a boolean if a field has been set.
+HasAvailabilityTags returns a boolean if a field has been set.
 
-### GetAllowSimultaneousLogins
+### GetPerSsidBandwidthLimitUp
 
-`func (o *InlineResponse200108) GetAllowSimultaneousLogins() bool`
+`func (o *InlineResponse200108) GetPerSsidBandwidthLimitUp() int32`
 
-GetAllowSimultaneousLogins returns the AllowSimultaneousLogins field if non-nil, zero value otherwise.
+GetPerSsidBandwidthLimitUp returns the PerSsidBandwidthLimitUp field if non-nil, zero value otherwise.
 
-### GetAllowSimultaneousLoginsOk
+### GetPerSsidBandwidthLimitUpOk
 
-`func (o *InlineResponse200108) GetAllowSimultaneousLoginsOk() (*bool, bool)`
+`func (o *InlineResponse200108) GetPerSsidBandwidthLimitUpOk() (*int32, bool)`
 
-GetAllowSimultaneousLoginsOk returns a tuple with the AllowSimultaneousLogins field if it's non-nil, zero value otherwise
+GetPerSsidBandwidthLimitUpOk returns a tuple with the PerSsidBandwidthLimitUp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowSimultaneousLogins
+### SetPerSsidBandwidthLimitUp
 
-`func (o *InlineResponse200108) SetAllowSimultaneousLogins(v bool)`
+`func (o *InlineResponse200108) SetPerSsidBandwidthLimitUp(v int32)`
 
-SetAllowSimultaneousLogins sets AllowSimultaneousLogins field to given value.
+SetPerSsidBandwidthLimitUp sets PerSsidBandwidthLimitUp field to given value.
 
-### HasAllowSimultaneousLogins
+### HasPerSsidBandwidthLimitUp
 
-`func (o *InlineResponse200108) HasAllowSimultaneousLogins() bool`
+`func (o *InlineResponse200108) HasPerSsidBandwidthLimitUp() bool`
 
-HasAllowSimultaneousLogins returns a boolean if a field has been set.
+HasPerSsidBandwidthLimitUp returns a boolean if a field has been set.
 
-### GetBilling
+### GetPerSsidBandwidthLimitDown
 
-`func (o *InlineResponse200108) GetBilling() InlineResponse200108Billing`
+`func (o *InlineResponse200108) GetPerSsidBandwidthLimitDown() int32`
 
-GetBilling returns the Billing field if non-nil, zero value otherwise.
+GetPerSsidBandwidthLimitDown returns the PerSsidBandwidthLimitDown field if non-nil, zero value otherwise.
 
-### GetBillingOk
+### GetPerSsidBandwidthLimitDownOk
 
-`func (o *InlineResponse200108) GetBillingOk() (*InlineResponse200108Billing, bool)`
+`func (o *InlineResponse200108) GetPerSsidBandwidthLimitDownOk() (*int32, bool)`
 
-GetBillingOk returns a tuple with the Billing field if it's non-nil, zero value otherwise
+GetPerSsidBandwidthLimitDownOk returns a tuple with the PerSsidBandwidthLimitDown field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBilling
+### SetPerSsidBandwidthLimitDown
 
-`func (o *InlineResponse200108) SetBilling(v InlineResponse200108Billing)`
+`func (o *InlineResponse200108) SetPerSsidBandwidthLimitDown(v int32)`
 
-SetBilling sets Billing field to given value.
+SetPerSsidBandwidthLimitDown sets PerSsidBandwidthLimitDown field to given value.
 
-### HasBilling
+### HasPerSsidBandwidthLimitDown
 
-`func (o *InlineResponse200108) HasBilling() bool`
+`func (o *InlineResponse200108) HasPerSsidBandwidthLimitDown() bool`
 
-HasBilling returns a boolean if a field has been set.
+HasPerSsidBandwidthLimitDown returns a boolean if a field has been set.
 
-### GetSentryEnrollment
+### GetMandatoryDhcpEnabled
 
-`func (o *InlineResponse200108) GetSentryEnrollment() InlineResponse200108SentryEnrollment`
+`func (o *InlineResponse200108) GetMandatoryDhcpEnabled() bool`
 
-GetSentryEnrollment returns the SentryEnrollment field if non-nil, zero value otherwise.
+GetMandatoryDhcpEnabled returns the MandatoryDhcpEnabled field if non-nil, zero value otherwise.
 
-### GetSentryEnrollmentOk
+### GetMandatoryDhcpEnabledOk
 
-`func (o *InlineResponse200108) GetSentryEnrollmentOk() (*InlineResponse200108SentryEnrollment, bool)`
+`func (o *InlineResponse200108) GetMandatoryDhcpEnabledOk() (*bool, bool)`
 
-GetSentryEnrollmentOk returns a tuple with the SentryEnrollment field if it's non-nil, zero value otherwise
+GetMandatoryDhcpEnabledOk returns a tuple with the MandatoryDhcpEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSentryEnrollment
+### SetMandatoryDhcpEnabled
 
-`func (o *InlineResponse200108) SetSentryEnrollment(v InlineResponse200108SentryEnrollment)`
+`func (o *InlineResponse200108) SetMandatoryDhcpEnabled(v bool)`
 
-SetSentryEnrollment sets SentryEnrollment field to given value.
+SetMandatoryDhcpEnabled sets MandatoryDhcpEnabled field to given value.
 
-### HasSentryEnrollment
+### HasMandatoryDhcpEnabled
 
-`func (o *InlineResponse200108) HasSentryEnrollment() bool`
+`func (o *InlineResponse200108) HasMandatoryDhcpEnabled() bool`
 
-HasSentryEnrollment returns a boolean if a field has been set.
-
-### GetSelfRegistration
-
-`func (o *InlineResponse200108) GetSelfRegistration() InlineResponse200108SelfRegistration`
-
-GetSelfRegistration returns the SelfRegistration field if non-nil, zero value otherwise.
-
-### GetSelfRegistrationOk
-
-`func (o *InlineResponse200108) GetSelfRegistrationOk() (*InlineResponse200108SelfRegistration, bool)`
-
-GetSelfRegistrationOk returns a tuple with the SelfRegistration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSelfRegistration
-
-`func (o *InlineResponse200108) SetSelfRegistration(v InlineResponse200108SelfRegistration)`
-
-SetSelfRegistration sets SelfRegistration field to given value.
-
-### HasSelfRegistration
-
-`func (o *InlineResponse200108) HasSelfRegistration() bool`
-
-HasSelfRegistration returns a boolean if a field has been set.
+HasMandatoryDhcpEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

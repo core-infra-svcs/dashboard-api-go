@@ -4,9 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules**](NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
+**Operator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20Operator**](NetworksNetworkIdWirelessSsidsNumberHotspot20Operator.md) |  | [optional] 
+**Venue** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20Venue**](NetworksNetworkIdWirelessSsidsNumberHotspot20Venue.md) |  | [optional] 
+**NetworkAccessType** | Pointer to **string** | The network type of this SSID (&#39;Private network&#39;, &#39;Private network with guest access&#39;, &#39;Chargeable public network&#39;, &#39;Free public network&#39;, &#39;Personal device network&#39;, &#39;Emergency services only network&#39;, &#39;Test or experimental&#39;, &#39;Wildcard&#39;) | [optional] 
+**Domains** | Pointer to **[]string** | An array of domain names | [optional] 
+**RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
+**MccMncs** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs**](NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs.md) | An array of MCC/MNC pairs | [optional] 
+**NaiRealms** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms**](NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms.md) | An array of NAI realms | [optional] 
 
 ## Methods
 
@@ -27,80 +32,205 @@ NewInlineObject174WithDefaults instantiates a new InlineObject174 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetEnabled
 
-`func (o *InlineObject174) GetTrafficShapingEnabled() bool`
+`func (o *InlineObject174) GetEnabled() bool`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetEnabledOk
 
-`func (o *InlineObject174) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineObject174) GetEnabledOk() (*bool, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetEnabled
 
-`func (o *InlineObject174) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineObject174) SetEnabled(v bool)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTrafficShapingEnabled
+### HasEnabled
 
-`func (o *InlineObject174) HasTrafficShapingEnabled() bool`
+`func (o *InlineObject174) HasEnabled() bool`
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetDefaultRulesEnabled
+### GetOperator
 
-`func (o *InlineObject174) GetDefaultRulesEnabled() bool`
+`func (o *InlineObject174) GetOperator() NetworksNetworkIdWirelessSsidsNumberHotspot20Operator`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetOperator returns the Operator field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetOperatorOk
 
-`func (o *InlineObject174) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineObject174) GetOperatorOk() (*NetworksNetworkIdWirelessSsidsNumberHotspot20Operator, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetOperator
 
-`func (o *InlineObject174) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineObject174) SetOperator(v NetworksNetworkIdWirelessSsidsNumberHotspot20Operator)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetOperator sets Operator field to given value.
 
-### HasDefaultRulesEnabled
+### HasOperator
 
-`func (o *InlineObject174) HasDefaultRulesEnabled() bool`
+`func (o *InlineObject174) HasOperator() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasOperator returns a boolean if a field has been set.
 
-### GetRules
+### GetVenue
 
-`func (o *InlineObject174) GetRules() []NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules`
+`func (o *InlineObject174) GetVenue() NetworksNetworkIdWirelessSsidsNumberHotspot20Venue`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetVenue returns the Venue field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetVenueOk
 
-`func (o *InlineObject174) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules, bool)`
+`func (o *InlineObject174) GetVenueOk() (*NetworksNetworkIdWirelessSsidsNumberHotspot20Venue, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetVenueOk returns a tuple with the Venue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetVenue
 
-`func (o *InlineObject174) SetRules(v []NetworksNetworkIdWirelessSsidsNumberTrafficShapingRulesRules)`
+`func (o *InlineObject174) SetVenue(v NetworksNetworkIdWirelessSsidsNumberHotspot20Venue)`
 
-SetRules sets Rules field to given value.
+SetVenue sets Venue field to given value.
 
-### HasRules
+### HasVenue
 
-`func (o *InlineObject174) HasRules() bool`
+`func (o *InlineObject174) HasVenue() bool`
 
-HasRules returns a boolean if a field has been set.
+HasVenue returns a boolean if a field has been set.
+
+### GetNetworkAccessType
+
+`func (o *InlineObject174) GetNetworkAccessType() string`
+
+GetNetworkAccessType returns the NetworkAccessType field if non-nil, zero value otherwise.
+
+### GetNetworkAccessTypeOk
+
+`func (o *InlineObject174) GetNetworkAccessTypeOk() (*string, bool)`
+
+GetNetworkAccessTypeOk returns a tuple with the NetworkAccessType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkAccessType
+
+`func (o *InlineObject174) SetNetworkAccessType(v string)`
+
+SetNetworkAccessType sets NetworkAccessType field to given value.
+
+### HasNetworkAccessType
+
+`func (o *InlineObject174) HasNetworkAccessType() bool`
+
+HasNetworkAccessType returns a boolean if a field has been set.
+
+### GetDomains
+
+`func (o *InlineObject174) GetDomains() []string`
+
+GetDomains returns the Domains field if non-nil, zero value otherwise.
+
+### GetDomainsOk
+
+`func (o *InlineObject174) GetDomainsOk() (*[]string, bool)`
+
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDomains
+
+`func (o *InlineObject174) SetDomains(v []string)`
+
+SetDomains sets Domains field to given value.
+
+### HasDomains
+
+`func (o *InlineObject174) HasDomains() bool`
+
+HasDomains returns a boolean if a field has been set.
+
+### GetRoamConsortOis
+
+`func (o *InlineObject174) GetRoamConsortOis() []string`
+
+GetRoamConsortOis returns the RoamConsortOis field if non-nil, zero value otherwise.
+
+### GetRoamConsortOisOk
+
+`func (o *InlineObject174) GetRoamConsortOisOk() (*[]string, bool)`
+
+GetRoamConsortOisOk returns a tuple with the RoamConsortOis field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRoamConsortOis
+
+`func (o *InlineObject174) SetRoamConsortOis(v []string)`
+
+SetRoamConsortOis sets RoamConsortOis field to given value.
+
+### HasRoamConsortOis
+
+`func (o *InlineObject174) HasRoamConsortOis() bool`
+
+HasRoamConsortOis returns a boolean if a field has been set.
+
+### GetMccMncs
+
+`func (o *InlineObject174) GetMccMncs() []NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs`
+
+GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
+
+### GetMccMncsOk
+
+`func (o *InlineObject174) GetMccMncsOk() (*[]NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs, bool)`
+
+GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMccMncs
+
+`func (o *InlineObject174) SetMccMncs(v []NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs)`
+
+SetMccMncs sets MccMncs field to given value.
+
+### HasMccMncs
+
+`func (o *InlineObject174) HasMccMncs() bool`
+
+HasMccMncs returns a boolean if a field has been set.
+
+### GetNaiRealms
+
+`func (o *InlineObject174) GetNaiRealms() []NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms`
+
+GetNaiRealms returns the NaiRealms field if non-nil, zero value otherwise.
+
+### GetNaiRealmsOk
+
+`func (o *InlineObject174) GetNaiRealmsOk() (*[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms, bool)`
+
+GetNaiRealmsOk returns a tuple with the NaiRealms field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNaiRealms
+
+`func (o *InlineObject174) SetNaiRealms(v []NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms)`
+
+SetNaiRealms sets NaiRealms field to given value.
+
+### HasNaiRealms
+
+`func (o *InlineObject174) HasNaiRealms() bool`
+
+HasNaiRealms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

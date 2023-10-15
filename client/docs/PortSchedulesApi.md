@@ -33,7 +33,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchPortSchedule := *openapiclient.NewInlineObject125("Name_example") // InlineObject125 | 
+    createNetworkSwitchPortSchedule := *openapiclient.NewInlineObject127("Name_example") // InlineObject127 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -63,7 +63,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchPortSch
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchPortSchedule** | [**InlineObject125**](InlineObject125.md) |  | 
+ **createNetworkSwitchPortSchedule** | [**InlineObject127**](InlineObject127.md) |  | 
 
 ### Return type
 
@@ -247,7 +247,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     portScheduleId := "portScheduleId_example" // string | Port schedule ID
-    updateNetworkSwitchPortSchedule := *openapiclient.NewInlineObject126() // InlineObject126 |  (optional)
+    updateNetworkSwitchPortSchedule := *openapiclient.NewInlineObject128() // InlineObject128 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchPortSchedule** | [**InlineObject126**](InlineObject126.md) |  | 
+ **updateNetworkSwitchPortSchedule** | [**InlineObject128**](InlineObject128.md) |  | 
 
 ### Return type
 

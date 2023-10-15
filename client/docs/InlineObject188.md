@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the dashboard administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
+**Name** | Pointer to **string** | Name of the group | [optional] 
+**Sgt** | Pointer to **int32** | SGT value of the group | [optional] 
+**Description** | Pointer to **string** | Description of the group | [optional] 
+**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) | [optional] 
 
 ## Methods
 
@@ -53,80 +53,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetOrgAccess
+### GetSgt
 
-`func (o *InlineObject188) GetOrgAccess() string`
+`func (o *InlineObject188) GetSgt() int32`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetSgtOk
 
-`func (o *InlineObject188) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineObject188) GetSgtOk() (*int32, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetSgt
 
-`func (o *InlineObject188) SetOrgAccess(v string)`
+`func (o *InlineObject188) SetSgt(v int32)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetSgt sets Sgt field to given value.
 
-### HasOrgAccess
+### HasSgt
 
-`func (o *InlineObject188) HasOrgAccess() bool`
+`func (o *InlineObject188) HasSgt() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasSgt returns a boolean if a field has been set.
 
-### GetTags
+### GetDescription
 
-`func (o *InlineObject188) GetTags() []OrganizationsOrganizationIdAdminsTags1`
+`func (o *InlineObject188) GetDescription() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetDescriptionOk
 
-`func (o *InlineObject188) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
+`func (o *InlineObject188) GetDescriptionOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetDescription
 
-`func (o *InlineObject188) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
+`func (o *InlineObject188) SetDescription(v string)`
 
-SetTags sets Tags field to given value.
+SetDescription sets Description field to given value.
 
-### HasTags
+### HasDescription
 
-`func (o *InlineObject188) HasTags() bool`
+`func (o *InlineObject188) HasDescription() bool`
 
-HasTags returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetNetworks
+### GetPolicyObjects
 
-`func (o *InlineObject188) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
+`func (o *InlineObject188) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetPolicyObjectsOk
 
-`func (o *InlineObject188) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
+`func (o *InlineObject188) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetPolicyObjects
 
-`func (o *InlineObject188) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
+`func (o *InlineObject188) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
 
-SetNetworks sets Networks field to given value.
+SetPolicyObjects sets PolicyObjects field to given value.
 
-### HasNetworks
+### HasPolicyObjects
 
-`func (o *InlineObject188) HasNetworks() bool`
+`func (o *InlineObject188) HasPolicyObjects() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasPolicyObjects returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

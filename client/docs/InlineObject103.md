@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
 **LocalStatusPage** | Pointer to [**NetworksNetworkIdSettingsLocalStatusPage**](NetworksNetworkIdSettingsLocalStatusPage.md) |  | [optional] 
 **SecurePort** | Pointer to [**InlineResponse20050SecurePort**](InlineResponse20050SecurePort.md) |  | [optional] 
+**NamedVlans** | Pointer to [**NetworksNetworkIdSettingsNamedVlans**](NetworksNetworkIdSettingsNamedVlans.md) |  | [optional] 
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetSecurePort sets SecurePort field to given value.
 `func (o *InlineObject103) HasSecurePort() bool`
 
 HasSecurePort returns a boolean if a field has been set.
+
+### GetNamedVlans
+
+`func (o *InlineObject103) GetNamedVlans() NetworksNetworkIdSettingsNamedVlans`
+
+GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
+
+### GetNamedVlansOk
+
+`func (o *InlineObject103) GetNamedVlansOk() (*NetworksNetworkIdSettingsNamedVlans, bool)`
+
+GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNamedVlans
+
+`func (o *InlineObject103) SetNamedVlans(v NetworksNetworkIdSettingsNamedVlans)`
+
+SetNamedVlans sets NamedVlans field to given value.
+
+### HasNamedVlans
+
+`func (o *InlineObject103) HasNamedVlans() bool`
+
+HasNamedVlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

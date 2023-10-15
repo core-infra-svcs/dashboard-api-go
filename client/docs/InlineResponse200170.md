@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the device. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the switch | [optional] 
+**Mac** | Pointer to **string** | Mac address of the switch | [optional] 
+**Model** | Pointer to **string** | Model of the switch | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage**](OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -28,30 +29,55 @@ NewInlineResponse200170WithDefaults instantiates a new InlineResponse200170 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetNetwork
 
-`func (o *InlineResponse200170) GetSerial() string`
+`func (o *InlineResponse200170) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNetworkOk
 
-`func (o *InlineResponse200170) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200170) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetNetwork
 
-`func (o *InlineResponse200170) SetSerial(v string)`
+`func (o *InlineResponse200170) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
 
-SetSerial sets Serial field to given value.
+SetNetwork sets Network field to given value.
 
-### HasSerial
+### HasNetwork
 
-`func (o *InlineResponse200170) HasSerial() bool`
+`func (o *InlineResponse200170) HasNetwork() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200170) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200170) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200170) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200170) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetMac
 
@@ -78,55 +104,55 @@ SetMac sets Mac field to given value.
 
 HasMac returns a boolean if a field has been set.
 
-### GetNetwork
+### GetModel
 
-`func (o *InlineResponse200170) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200170) GetModel() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetModelOk
 
-`func (o *InlineResponse200170) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200170) GetModelOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetModel
 
-`func (o *InlineResponse200170) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200170) SetModel(v string)`
 
-SetNetwork sets Network field to given value.
+SetModel sets Model field to given value.
 
-### HasNetwork
+### HasModel
 
-`func (o *InlineResponse200170) HasNetwork() bool`
+`func (o *InlineResponse200170) HasModel() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetByBand
+### GetUsage
 
-`func (o *InlineResponse200170) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
+`func (o *InlineResponse200170) GetUsage() OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage`
 
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetByBandOk
+### GetUsageOk
 
-`func (o *InlineResponse200170) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
+`func (o *InlineResponse200170) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage, bool)`
 
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByBand
+### SetUsage
 
-`func (o *InlineResponse200170) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
+`func (o *InlineResponse200170) SetUsage(v OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage)`
 
-SetByBand sets ByBand field to given value.
+SetUsage sets Usage field to given value.
 
-### HasByBand
+### HasUsage
 
-`func (o *InlineResponse200170) HasByBand() bool`
+`func (o *InlineResponse200170) HasUsage() bool`
 
-HasByBand returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

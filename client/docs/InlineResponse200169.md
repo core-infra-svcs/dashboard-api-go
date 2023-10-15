@@ -4,14 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertType** | Pointer to **string** | Type of alert that the webhook is delivering | [optional] 
-**LoggedAt** | Pointer to **time.Time** | When the webhook log was created, in ISO8601 format | [optional] 
-**NetworkId** | Pointer to **string** | Network ID for the webhook log | [optional] 
-**OrganizationId** | Pointer to **string** | ID for the webhook log&#39;s organization | [optional] 
-**ResponseCode** | Pointer to **int32** | Response code from the webhook | [optional] 
-**ResponseDuration** | Pointer to **int32** | Duration of the response, in milliseconds | [optional] 
-**SentAt** | Pointer to **time.Time** | When the webhook was sent, in ISO8601 format | [optional] 
-**Url** | Pointer to **string** | URL where the webhook was sent | [optional] 
+**Name** | Pointer to **string** | Name of the SSID | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
+**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
 
 ## Methods
 
@@ -32,205 +27,80 @@ NewInlineResponse200169WithDefaults instantiates a new InlineResponse200169 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertType
+### GetName
 
-`func (o *InlineResponse200169) GetAlertType() string`
+`func (o *InlineResponse200169) GetName() string`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetNameOk
 
-`func (o *InlineResponse200169) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200169) GetNameOk() (*string, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetName
 
-`func (o *InlineResponse200169) SetAlertType(v string)`
+`func (o *InlineResponse200169) SetName(v string)`
 
-SetAlertType sets AlertType field to given value.
+SetName sets Name field to given value.
 
-### HasAlertType
+### HasName
 
-`func (o *InlineResponse200169) HasAlertType() bool`
+`func (o *InlineResponse200169) HasName() bool`
 
-HasAlertType returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetLoggedAt
+### GetUsage
 
-`func (o *InlineResponse200169) GetLoggedAt() time.Time`
+`func (o *InlineResponse200169) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
 
-GetLoggedAt returns the LoggedAt field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetLoggedAtOk
+### GetUsageOk
 
-`func (o *InlineResponse200169) GetLoggedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200169) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
 
-GetLoggedAtOk returns a tuple with the LoggedAt field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLoggedAt
+### SetUsage
 
-`func (o *InlineResponse200169) SetLoggedAt(v time.Time)`
+`func (o *InlineResponse200169) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
 
-SetLoggedAt sets LoggedAt field to given value.
+SetUsage sets Usage field to given value.
 
-### HasLoggedAt
+### HasUsage
 
-`func (o *InlineResponse200169) HasLoggedAt() bool`
+`func (o *InlineResponse200169) HasUsage() bool`
 
-HasLoggedAt returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetClients
 
-`func (o *InlineResponse200169) GetNetworkId() string`
+`func (o *InlineResponse200169) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetClientsOk
 
-`func (o *InlineResponse200169) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200169) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetClients
 
-`func (o *InlineResponse200169) SetNetworkId(v string)`
+`func (o *InlineResponse200169) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
 
-SetNetworkId sets NetworkId field to given value.
+SetClients sets Clients field to given value.
 
-### HasNetworkId
+### HasClients
 
-`func (o *InlineResponse200169) HasNetworkId() bool`
+`func (o *InlineResponse200169) HasClients() bool`
 
-HasNetworkId returns a boolean if a field has been set.
-
-### GetOrganizationId
-
-`func (o *InlineResponse200169) GetOrganizationId() string`
-
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
-
-### GetOrganizationIdOk
-
-`func (o *InlineResponse200169) GetOrganizationIdOk() (*string, bool)`
-
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrganizationId
-
-`func (o *InlineResponse200169) SetOrganizationId(v string)`
-
-SetOrganizationId sets OrganizationId field to given value.
-
-### HasOrganizationId
-
-`func (o *InlineResponse200169) HasOrganizationId() bool`
-
-HasOrganizationId returns a boolean if a field has been set.
-
-### GetResponseCode
-
-`func (o *InlineResponse200169) GetResponseCode() int32`
-
-GetResponseCode returns the ResponseCode field if non-nil, zero value otherwise.
-
-### GetResponseCodeOk
-
-`func (o *InlineResponse200169) GetResponseCodeOk() (*int32, bool)`
-
-GetResponseCodeOk returns a tuple with the ResponseCode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResponseCode
-
-`func (o *InlineResponse200169) SetResponseCode(v int32)`
-
-SetResponseCode sets ResponseCode field to given value.
-
-### HasResponseCode
-
-`func (o *InlineResponse200169) HasResponseCode() bool`
-
-HasResponseCode returns a boolean if a field has been set.
-
-### GetResponseDuration
-
-`func (o *InlineResponse200169) GetResponseDuration() int32`
-
-GetResponseDuration returns the ResponseDuration field if non-nil, zero value otherwise.
-
-### GetResponseDurationOk
-
-`func (o *InlineResponse200169) GetResponseDurationOk() (*int32, bool)`
-
-GetResponseDurationOk returns a tuple with the ResponseDuration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResponseDuration
-
-`func (o *InlineResponse200169) SetResponseDuration(v int32)`
-
-SetResponseDuration sets ResponseDuration field to given value.
-
-### HasResponseDuration
-
-`func (o *InlineResponse200169) HasResponseDuration() bool`
-
-HasResponseDuration returns a boolean if a field has been set.
-
-### GetSentAt
-
-`func (o *InlineResponse200169) GetSentAt() time.Time`
-
-GetSentAt returns the SentAt field if non-nil, zero value otherwise.
-
-### GetSentAtOk
-
-`func (o *InlineResponse200169) GetSentAtOk() (*time.Time, bool)`
-
-GetSentAtOk returns a tuple with the SentAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSentAt
-
-`func (o *InlineResponse200169) SetSentAt(v time.Time)`
-
-SetSentAt sets SentAt field to given value.
-
-### HasSentAt
-
-`func (o *InlineResponse200169) HasSentAt() bool`
-
-HasSentAt returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse200169) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200169) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200169) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse200169) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
+HasClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

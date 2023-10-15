@@ -4,13 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SsidNumber** | Pointer to **int32** | SSID Number | [optional] 
-**Vlan** | Pointer to **int32** | LAN | [optional] 
-**ClientMac** | Pointer to **string** | Client Mac | [optional] 
-**Serial** | Pointer to **string** | Serial Number | [optional] 
-**FailureStep** | Pointer to **string** | The failed onboarding step. One of: assoc, auth, dhcp, dns. | [optional] 
-**Type** | Pointer to **string** | The failure type in the onboarding step | [optional] 
-**Ts** | Pointer to **time.Time** | The timestamp when the client mac failed | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
+**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
+**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -31,180 +29,130 @@ NewInlineResponse200100WithDefaults instantiates a new InlineResponse200100 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsidNumber
+### GetStartTs
 
-`func (o *InlineResponse200100) GetSsidNumber() int32`
+`func (o *InlineResponse200100) GetStartTs() time.Time`
 
-GetSsidNumber returns the SsidNumber field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetSsidNumberOk
+### GetStartTsOk
 
-`func (o *InlineResponse200100) GetSsidNumberOk() (*int32, bool)`
+`func (o *InlineResponse200100) GetStartTsOk() (*time.Time, bool)`
 
-GetSsidNumberOk returns a tuple with the SsidNumber field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsidNumber
+### SetStartTs
 
-`func (o *InlineResponse200100) SetSsidNumber(v int32)`
+`func (o *InlineResponse200100) SetStartTs(v time.Time)`
 
-SetSsidNumber sets SsidNumber field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasSsidNumber
+### HasStartTs
 
-`func (o *InlineResponse200100) HasSsidNumber() bool`
+`func (o *InlineResponse200100) HasStartTs() bool`
 
-HasSsidNumber returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetVlan
+### GetEndTs
 
-`func (o *InlineResponse200100) GetVlan() int32`
+`func (o *InlineResponse200100) GetEndTs() time.Time`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetEndTsOk
 
-`func (o *InlineResponse200100) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse200100) GetEndTsOk() (*time.Time, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetEndTs
 
-`func (o *InlineResponse200100) SetVlan(v int32)`
+`func (o *InlineResponse200100) SetEndTs(v time.Time)`
 
-SetVlan sets Vlan field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasVlan
+### HasEndTs
 
-`func (o *InlineResponse200100) HasVlan() bool`
+`func (o *InlineResponse200100) HasEndTs() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetClientMac
+### GetAverageKbps
 
-`func (o *InlineResponse200100) GetClientMac() string`
+`func (o *InlineResponse200100) GetAverageKbps() int32`
 
-GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
+GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
 
-### GetClientMacOk
+### GetAverageKbpsOk
 
-`func (o *InlineResponse200100) GetClientMacOk() (*string, bool)`
+`func (o *InlineResponse200100) GetAverageKbpsOk() (*int32, bool)`
 
-GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
+GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientMac
+### SetAverageKbps
 
-`func (o *InlineResponse200100) SetClientMac(v string)`
+`func (o *InlineResponse200100) SetAverageKbps(v int32)`
 
-SetClientMac sets ClientMac field to given value.
+SetAverageKbps sets AverageKbps field to given value.
 
-### HasClientMac
+### HasAverageKbps
 
-`func (o *InlineResponse200100) HasClientMac() bool`
+`func (o *InlineResponse200100) HasAverageKbps() bool`
 
-HasClientMac returns a boolean if a field has been set.
+HasAverageKbps returns a boolean if a field has been set.
 
-### GetSerial
+### GetDownloadKbps
 
-`func (o *InlineResponse200100) GetSerial() string`
+`func (o *InlineResponse200100) GetDownloadKbps() int32`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetDownloadKbpsOk
 
-`func (o *InlineResponse200100) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200100) GetDownloadKbpsOk() (*int32, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetDownloadKbps
 
-`func (o *InlineResponse200100) SetSerial(v string)`
+`func (o *InlineResponse200100) SetDownloadKbps(v int32)`
 
-SetSerial sets Serial field to given value.
+SetDownloadKbps sets DownloadKbps field to given value.
 
-### HasSerial
+### HasDownloadKbps
 
-`func (o *InlineResponse200100) HasSerial() bool`
+`func (o *InlineResponse200100) HasDownloadKbps() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasDownloadKbps returns a boolean if a field has been set.
 
-### GetFailureStep
+### GetUploadKbps
 
-`func (o *InlineResponse200100) GetFailureStep() string`
+`func (o *InlineResponse200100) GetUploadKbps() int32`
 
-GetFailureStep returns the FailureStep field if non-nil, zero value otherwise.
+GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
 
-### GetFailureStepOk
+### GetUploadKbpsOk
 
-`func (o *InlineResponse200100) GetFailureStepOk() (*string, bool)`
+`func (o *InlineResponse200100) GetUploadKbpsOk() (*int32, bool)`
 
-GetFailureStepOk returns a tuple with the FailureStep field if it's non-nil, zero value otherwise
+GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailureStep
+### SetUploadKbps
 
-`func (o *InlineResponse200100) SetFailureStep(v string)`
+`func (o *InlineResponse200100) SetUploadKbps(v int32)`
 
-SetFailureStep sets FailureStep field to given value.
+SetUploadKbps sets UploadKbps field to given value.
 
-### HasFailureStep
+### HasUploadKbps
 
-`func (o *InlineResponse200100) HasFailureStep() bool`
+`func (o *InlineResponse200100) HasUploadKbps() bool`
 
-HasFailureStep returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200100) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200100) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200100) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse200100) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse200100) GetTs() time.Time`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse200100) GetTsOk() (*time.Time, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse200100) SetTs(v time.Time)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse200100) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasUploadKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

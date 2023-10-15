@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | AP port profile name | 
-**Ports** | [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts1.md) | AP ports configuration | 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
+**Name** | Pointer to **string** | The name of the template | [optional] 
+**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
+**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. | [optional] 
+**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
 
 ## Methods
 
 ### NewInlineObject156
 
-`func NewInlineObject156(name string, ports []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, ) *InlineObject156`
+`func NewInlineObject156() *InlineObject156`
 
 NewInlineObject156 instantiates a new InlineObject156 object
 This constructor will assign default values to properties that have it defined,
@@ -46,51 +48,111 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetPorts
+`func (o *InlineObject156) HasName() bool`
 
-`func (o *InlineObject156) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1`
+HasName returns a boolean if a field has been set.
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+### GetBody
 
-### GetPortsOk
+`func (o *InlineObject156) GetBody() string`
 
-`func (o *InlineObject156) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, bool)`
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+### GetBodyOk
+
+`func (o *InlineObject156) GetBodyOk() (*string, bool)`
+
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetBody
 
-`func (o *InlineObject156) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1)`
+`func (o *InlineObject156) SetBody(v string)`
 
-SetPorts sets Ports field to given value.
+SetBody sets Body field to given value.
 
+### HasBody
 
-### GetUsbPorts
+`func (o *InlineObject156) HasBody() bool`
 
-`func (o *InlineObject156) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
+HasBody returns a boolean if a field has been set.
 
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+### GetHeaders
 
-### GetUsbPortsOk
+`func (o *InlineObject156) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
 
-`func (o *InlineObject156) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
 
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+### GetHeadersOk
+
+`func (o *InlineObject156) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
+
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsbPorts
+### SetHeaders
 
-`func (o *InlineObject156) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
+`func (o *InlineObject156) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
 
-SetUsbPorts sets UsbPorts field to given value.
+SetHeaders sets Headers field to given value.
 
-### HasUsbPorts
+### HasHeaders
 
-`func (o *InlineObject156) HasUsbPorts() bool`
+`func (o *InlineObject156) HasHeaders() bool`
 
-HasUsbPorts returns a boolean if a field has been set.
+HasHeaders returns a boolean if a field has been set.
+
+### GetBodyFile
+
+`func (o *InlineObject156) GetBodyFile() string`
+
+GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
+
+### GetBodyFileOk
+
+`func (o *InlineObject156) GetBodyFileOk() (*string, bool)`
+
+GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBodyFile
+
+`func (o *InlineObject156) SetBodyFile(v string)`
+
+SetBodyFile sets BodyFile field to given value.
+
+### HasBodyFile
+
+`func (o *InlineObject156) HasBodyFile() bool`
+
+HasBodyFile returns a boolean if a field has been set.
+
+### GetHeadersFile
+
+`func (o *InlineObject156) GetHeadersFile() string`
+
+GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
+
+### GetHeadersFileOk
+
+`func (o *InlineObject156) GetHeadersFileOk() (*string, bool)`
+
+GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeadersFile
+
+`func (o *InlineObject156) SetHeadersFile(v string)`
+
+SetHeadersFile sets HeadersFile field to given value.
+
+### HasHeadersFile
+
+`func (o *InlineObject156) HasHeadersFile() bool`
+
+HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

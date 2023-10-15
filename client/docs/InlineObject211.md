@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LogEvent** | **string** | The type of log event this is recording, e.g. download or opening a banner | 
-**Timestamp** | **int32** | A JavaScript UTC datetime stamp for when the even occurred | 
-**TargetOS** | Pointer to **string** | The name of the onboarding distro being downloaded | [optional] 
-**Request** | Pointer to **string** | Used to describe if this event was the result of a redirect. E.g. a query param if an info banner is being used | [optional] 
+**ShortName** | **string** | Short name of the early access feature | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject211
 
-`func NewInlineObject211(logEvent string, timestamp int32, ) *InlineObject211`
+`func NewInlineObject211(shortName string, ) *InlineObject211`
 
 NewInlineObject211 instantiates a new InlineObject211 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +26,50 @@ NewInlineObject211WithDefaults instantiates a new InlineObject211 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLogEvent
+### GetShortName
 
-`func (o *InlineObject211) GetLogEvent() string`
+`func (o *InlineObject211) GetShortName() string`
 
-GetLogEvent returns the LogEvent field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetLogEventOk
+### GetShortNameOk
 
-`func (o *InlineObject211) GetLogEventOk() (*string, bool)`
+`func (o *InlineObject211) GetShortNameOk() (*string, bool)`
 
-GetLogEventOk returns a tuple with the LogEvent field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLogEvent
+### SetShortName
 
-`func (o *InlineObject211) SetLogEvent(v string)`
+`func (o *InlineObject211) SetShortName(v string)`
 
-SetLogEvent sets LogEvent field to given value.
+SetShortName sets ShortName field to given value.
 
 
-### GetTimestamp
+### GetLimitScopeToNetworks
 
-`func (o *InlineObject211) GetTimestamp() int32`
+`func (o *InlineObject211) GetLimitScopeToNetworks() []string`
 
-GetTimestamp returns the Timestamp field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetTimestampOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineObject211) GetTimestampOk() (*int32, bool)`
+`func (o *InlineObject211) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-GetTimestampOk returns a tuple with the Timestamp field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimestamp
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject211) SetTimestamp(v int32)`
+`func (o *InlineObject211) SetLimitScopeToNetworks(v []string)`
 
-SetTimestamp sets Timestamp field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
+### HasLimitScopeToNetworks
 
-### GetTargetOS
+`func (o *InlineObject211) HasLimitScopeToNetworks() bool`
 
-`func (o *InlineObject211) GetTargetOS() string`
-
-GetTargetOS returns the TargetOS field if non-nil, zero value otherwise.
-
-### GetTargetOSOk
-
-`func (o *InlineObject211) GetTargetOSOk() (*string, bool)`
-
-GetTargetOSOk returns a tuple with the TargetOS field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTargetOS
-
-`func (o *InlineObject211) SetTargetOS(v string)`
-
-SetTargetOS sets TargetOS field to given value.
-
-### HasTargetOS
-
-`func (o *InlineObject211) HasTargetOS() bool`
-
-HasTargetOS returns a boolean if a field has been set.
-
-### GetRequest
-
-`func (o *InlineObject211) GetRequest() string`
-
-GetRequest returns the Request field if non-nil, zero value otherwise.
-
-### GetRequestOk
-
-`func (o *InlineObject211) GetRequestOk() (*string, bool)`
-
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequest
-
-`func (o *InlineObject211) SetRequest(v string)`
-
-SetRequest sets Request field to given value.
-
-### HasRequest
-
-`func (o *InlineObject211) HasRequest() bool`
-
-HasRequest returns a boolean if a field has been set.
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

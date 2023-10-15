@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the access period | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the access period | [optional] 
-**Counts** | Pointer to [**[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts**](OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts.md) | list of response codes and a count of how many requests had that code in the given time period | [optional] 
+**Counts** | Pointer to [**InlineResponse200116Counts**](InlineResponse200116Counts.md) |  | [optional] 
+**Limits** | Pointer to [**InlineResponse200116Limits**](InlineResponse200116Limits.md) |  | [optional] 
 
 ## Methods
 
@@ -27,72 +26,22 @@ NewInlineResponse200116WithDefaults instantiates a new InlineResponse200116 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
-
-`func (o *InlineResponse200116) GetStartTs() time.Time`
-
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
-
-### GetStartTsOk
-
-`func (o *InlineResponse200116) GetStartTsOk() (*time.Time, bool)`
-
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStartTs
-
-`func (o *InlineResponse200116) SetStartTs(v time.Time)`
-
-SetStartTs sets StartTs field to given value.
-
-### HasStartTs
-
-`func (o *InlineResponse200116) HasStartTs() bool`
-
-HasStartTs returns a boolean if a field has been set.
-
-### GetEndTs
-
-`func (o *InlineResponse200116) GetEndTs() time.Time`
-
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
-
-### GetEndTsOk
-
-`func (o *InlineResponse200116) GetEndTsOk() (*time.Time, bool)`
-
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEndTs
-
-`func (o *InlineResponse200116) SetEndTs(v time.Time)`
-
-SetEndTs sets EndTs field to given value.
-
-### HasEndTs
-
-`func (o *InlineResponse200116) HasEndTs() bool`
-
-HasEndTs returns a boolean if a field has been set.
-
 ### GetCounts
 
-`func (o *InlineResponse200116) GetCounts() []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts`
+`func (o *InlineResponse200116) GetCounts() InlineResponse200116Counts`
 
 GetCounts returns the Counts field if non-nil, zero value otherwise.
 
 ### GetCountsOk
 
-`func (o *InlineResponse200116) GetCountsOk() (*[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts, bool)`
+`func (o *InlineResponse200116) GetCountsOk() (*InlineResponse200116Counts, bool)`
 
 GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCounts
 
-`func (o *InlineResponse200116) SetCounts(v []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts)`
+`func (o *InlineResponse200116) SetCounts(v InlineResponse200116Counts)`
 
 SetCounts sets Counts field to given value.
 
@@ -101,6 +50,31 @@ SetCounts sets Counts field to given value.
 `func (o *InlineResponse200116) HasCounts() bool`
 
 HasCounts returns a boolean if a field has been set.
+
+### GetLimits
+
+`func (o *InlineResponse200116) GetLimits() InlineResponse200116Limits`
+
+GetLimits returns the Limits field if non-nil, zero value otherwise.
+
+### GetLimitsOk
+
+`func (o *InlineResponse200116) GetLimitsOk() (*InlineResponse200116Limits, bool)`
+
+GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLimits
+
+`func (o *InlineResponse200116) SetLimits(v InlineResponse200116Limits)`
+
+SetLimits sets Limits field to given value.
+
+### HasLimits
+
+`func (o *InlineResponse200116) HasLimits() bool`
+
+HasLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

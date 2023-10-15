@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceSerial** | Pointer to **string** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineObject219WithDefaults instantiates a new InlineObject219 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeviceSerial
+### GetSerials
 
-`func (o *InlineObject219) GetDeviceSerial() string`
+`func (o *InlineObject219) GetSerials() []string`
 
-GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDeviceSerialOk
+### GetSerialsOk
 
-`func (o *InlineObject219) GetDeviceSerialOk() (*string, bool)`
+`func (o *InlineObject219) GetSerialsOk() (*[]string, bool)`
 
-GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceSerial
+### SetSerials
 
-`func (o *InlineObject219) SetDeviceSerial(v string)`
+`func (o *InlineObject219) SetSerials(v []string)`
 
-SetDeviceSerial sets DeviceSerial field to given value.
+SetSerials sets Serials field to given value.
 
-### HasDeviceSerial
+### HasSerials
 
-`func (o *InlineObject219) HasDeviceSerial() bool`
+`func (o *InlineObject219) HasSerials() bool`
 
-HasDeviceSerial returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

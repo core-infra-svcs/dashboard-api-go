@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
-**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
+**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200157WithDefaults instantiates a new InlineResponse200157 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetEnabled
 
-`func (o *InlineResponse200157) GetSerial() string`
+`func (o *InlineResponse200157) GetEnabled() bool`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetEnabledOk
 
-`func (o *InlineResponse200157) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200157) GetEnabledOk() (*bool, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetEnabled
 
-`func (o *InlineResponse200157) SetSerial(v string)`
+`func (o *InlineResponse200157) SetEnabled(v bool)`
 
-SetSerial sets Serial field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasSerial
+### HasEnabled
 
-`func (o *InlineResponse200157) HasSerial() bool`
+`func (o *InlineResponse200157) HasEnabled() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200157) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200157) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200157) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200157) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetReadings
-
-`func (o *InlineResponse200157) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
-
-GetReadings returns the Readings field if non-nil, zero value otherwise.
-
-### GetReadingsOk
-
-`func (o *InlineResponse200157) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
-
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReadings
-
-`func (o *InlineResponse200157) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
-
-SetReadings sets Readings field to given value.
-
-### HasReadings
-
-`func (o *InlineResponse200157) HasReadings() bool`
-
-HasReadings returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

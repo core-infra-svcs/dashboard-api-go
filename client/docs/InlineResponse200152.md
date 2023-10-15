@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingNetwork** | Pointer to [**InlineResponse200152ResultingNetwork**](InlineResponse200152ResultingNetwork.md) |  | [optional] 
+**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the SM seats to | [optional] 
+**LicenseId** | Pointer to **string** | The ID of the SM license to move the seats from | [optional] 
+**SeatCount** | Pointer to **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200152WithDefaults instantiates a new InlineResponse200152 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingNetwork
+### GetDestOrganizationId
 
-`func (o *InlineResponse200152) GetResultingNetwork() InlineResponse200152ResultingNetwork`
+`func (o *InlineResponse200152) GetDestOrganizationId() string`
 
-GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetResultingNetworkOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineResponse200152) GetResultingNetworkOk() (*InlineResponse200152ResultingNetwork, bool)`
+`func (o *InlineResponse200152) GetDestOrganizationIdOk() (*string, bool)`
 
-GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingNetwork
+### SetDestOrganizationId
 
-`func (o *InlineResponse200152) SetResultingNetwork(v InlineResponse200152ResultingNetwork)`
+`func (o *InlineResponse200152) SetDestOrganizationId(v string)`
 
-SetResultingNetwork sets ResultingNetwork field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasResultingNetwork
+### HasDestOrganizationId
 
-`func (o *InlineResponse200152) HasResultingNetwork() bool`
+`func (o *InlineResponse200152) HasDestOrganizationId() bool`
 
-HasResultingNetwork returns a boolean if a field has been set.
+HasDestOrganizationId returns a boolean if a field has been set.
+
+### GetLicenseId
+
+`func (o *InlineResponse200152) GetLicenseId() string`
+
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+
+### GetLicenseIdOk
+
+`func (o *InlineResponse200152) GetLicenseIdOk() (*string, bool)`
+
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenseId
+
+`func (o *InlineResponse200152) SetLicenseId(v string)`
+
+SetLicenseId sets LicenseId field to given value.
+
+### HasLicenseId
+
+`func (o *InlineResponse200152) HasLicenseId() bool`
+
+HasLicenseId returns a boolean if a field has been set.
+
+### GetSeatCount
+
+`func (o *InlineResponse200152) GetSeatCount() int32`
+
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+
+### GetSeatCountOk
+
+`func (o *InlineResponse200152) GetSeatCountOk() (*int32, bool)`
+
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeatCount
+
+`func (o *InlineResponse200152) SetSeatCount(v int32)`
+
+SetSeatCount sets SeatCount field to given value.
+
+### HasSeatCount
+
+`func (o *InlineResponse200152) HasSeatCount() bool`
+
+HasSeatCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Unique name of the artifact | [optional] 
+**Peers** | [**[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers.md) | The list of VPN peers | 
 
 ## Methods
 
 ### NewInlineObject197
 
-`func NewInlineObject197() *InlineObject197`
+`func NewInlineObject197(peers []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, ) *InlineObject197`
 
 NewInlineObject197 instantiates a new InlineObject197 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject197WithDefaults instantiates a new InlineObject197 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetPeers
 
-`func (o *InlineObject197) GetName() string`
+`func (o *InlineObject197) GetPeers() []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPeersOk
 
-`func (o *InlineObject197) GetNameOk() (*string, bool)`
+`func (o *InlineObject197) GetPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPeers
 
-`func (o *InlineObject197) SetName(v string)`
+`func (o *InlineObject197) SetPeers(v []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers)`
 
-SetName sets Name field to given value.
+SetPeers sets Peers field to given value.
 
-### HasName
-
-`func (o *InlineObject197) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

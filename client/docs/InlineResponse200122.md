@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Permission scope id | [optional] 
-**Name** | Pointer to **string** | Name of permission scope | [optional] 
-**Level** | Pointer to **string** | Permission scope level | [optional] 
+**Peers** | Pointer to [**[]InlineResponse200122Peers**](InlineResponse200122Peers.md) | The list of VPN peers | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200122WithDefaults instantiates a new InlineResponse200122 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetPeers
 
-`func (o *InlineResponse200122) GetId() string`
+`func (o *InlineResponse200122) GetPeers() []InlineResponse200122Peers`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetPeersOk
 
-`func (o *InlineResponse200122) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200122) GetPeersOk() (*[]InlineResponse200122Peers, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetPeers
 
-`func (o *InlineResponse200122) SetId(v string)`
+`func (o *InlineResponse200122) SetPeers(v []InlineResponse200122Peers)`
 
-SetId sets Id field to given value.
+SetPeers sets Peers field to given value.
 
-### HasId
+### HasPeers
 
-`func (o *InlineResponse200122) HasId() bool`
+`func (o *InlineResponse200122) HasPeers() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200122) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200122) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200122) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200122) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetLevel
-
-`func (o *InlineResponse200122) GetLevel() string`
-
-GetLevel returns the Level field if non-nil, zero value otherwise.
-
-### GetLevelOk
-
-`func (o *InlineResponse200122) GetLevelOk() (*string, bool)`
-
-GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLevel
-
-`func (o *InlineResponse200122) SetLevel(v string)`
-
-SetLevel sets Level field to given value.
-
-### HasLevel
-
-`func (o *InlineResponse200122) HasLevel() bool`
-
-HasLevel returns a boolean if a field has been set.
+HasPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

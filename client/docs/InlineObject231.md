@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | **string** | The role of the SAML administrator | 
-**OrgAccess** | **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; | 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Name** | Pointer to **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**ObjectIds** | Pointer to **[]int32** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
 
 ## Methods
 
 ### NewInlineObject231
 
-`func NewInlineObject231(role string, orgAccess string, ) *InlineObject231`
+`func NewInlineObject231() *InlineObject231`
 
 NewInlineObject231 instantiates a new InlineObject231 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +26,55 @@ NewInlineObject231WithDefaults instantiates a new InlineObject231 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRole
+### GetName
 
-`func (o *InlineObject231) GetRole() string`
+`func (o *InlineObject231) GetName() string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetNameOk
 
-`func (o *InlineObject231) GetRoleOk() (*string, bool)`
+`func (o *InlineObject231) GetNameOk() (*string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetName
 
-`func (o *InlineObject231) SetRole(v string)`
+`func (o *InlineObject231) SetName(v string)`
 
-SetRole sets Role field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetOrgAccess
+`func (o *InlineObject231) HasName() bool`
 
-`func (o *InlineObject231) GetOrgAccess() string`
+HasName returns a boolean if a field has been set.
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+### GetObjectIds
 
-### GetOrgAccessOk
+`func (o *InlineObject231) GetObjectIds() []int32`
 
-`func (o *InlineObject231) GetOrgAccessOk() (*string, bool)`
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+### GetObjectIdsOk
+
+`func (o *InlineObject231) GetObjectIdsOk() (*[]int32, bool)`
+
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetObjectIds
 
-`func (o *InlineObject231) SetOrgAccess(v string)`
+`func (o *InlineObject231) SetObjectIds(v []int32)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetObjectIds sets ObjectIds field to given value.
 
+### HasObjectIds
 
-### GetTags
+`func (o *InlineObject231) HasObjectIds() bool`
 
-`func (o *InlineObject231) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject231) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject231) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject231) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineObject231) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineObject231) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineObject231) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineObject231) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
+HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

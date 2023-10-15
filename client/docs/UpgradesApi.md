@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationFirmwareUpgrades
 
-> []InlineResponse200139 GetOrganizationFirmwareUpgrades(ctx, organizationId).Status(status).ProductTypes(productTypes).Execute()
+> []InlineResponse200143 GetOrganizationFirmwareUpgrades(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Status(status).ProductTypes(productTypes).Execute()
 
 Get firmware upgrade information for an organization
 
@@ -31,17 +31,20 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    status := []string{"Inner_example"} // []string | The status of an upgrade  (optional)
-    productTypes := []string{"Inner_example"} // []string | The product type in a given upgrade ID (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    status := []string{"Inner_example"} // []string | Optional parameter to filter the upgrade by status. (optional)
+    productTypes := []string{"Inner_example"} // []string | Optional parameter to filter the upgrade by product type. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.UpgradesApi.GetOrganizationFirmwareUpgrades(context.Background(), organizationId).Status(status).ProductTypes(productTypes).Execute()
+    resp, r, err := apiClient.UpgradesApi.GetOrganizationFirmwareUpgrades(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Status(status).ProductTypes(productTypes).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `UpgradesApi.GetOrganizationFirmwareUpgrades``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFirmwareUpgrades`: []InlineResponse200139
+    // response from `GetOrganizationFirmwareUpgrades`: []InlineResponse200143
     fmt.Fprintf(os.Stdout, "Response from `UpgradesApi.GetOrganizationFirmwareUpgrades`: %v\n", resp)
 }
 ```
@@ -62,12 +65,15 @@ Other parameters are passed through a pointer to a apiGetOrganizationFirmwareUpg
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **status** | **[]string** | The status of an upgrade  | 
- **productTypes** | **[]string** | The product type in a given upgrade ID | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **status** | **[]string** | Optional parameter to filter the upgrade by status. | 
+ **productTypes** | **[]string** | Optional parameter to filter the upgrade by product type. | 
 
 ### Return type
 
-[**[]InlineResponse200139**](InlineResponse200139.md)
+[**[]InlineResponse200143**](InlineResponse200143.md)
 
 ### Authorization
 
@@ -85,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFirmwareUpgradesByDevice
 
-> []InlineResponse200140 GetOrganizationFirmwareUpgradesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Macs(macs).FirmwareUpgradeBatchIds(firmwareUpgradeBatchIds).UpgradeStatuses(upgradeStatuses).Execute()
+> []InlineResponse200144 GetOrganizationFirmwareUpgradesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Macs(macs).FirmwareUpgradeBatchIds(firmwareUpgradeBatchIds).UpgradeStatuses(upgradeStatuses).Execute()
 
 Get firmware upgrade status for the filtered devices
 
@@ -121,7 +127,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UpgradesApi.GetOrganizationFirmwareUpgradesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFirmwareUpgradesByDevice`: []InlineResponse200140
+    // response from `GetOrganizationFirmwareUpgradesByDevice`: []InlineResponse200144
     fmt.Fprintf(os.Stdout, "Response from `UpgradesApi.GetOrganizationFirmwareUpgradesByDevice`: %v\n", resp)
 }
 ```
@@ -153,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200140**](InlineResponse200140.md)
+[**[]InlineResponse200144**](InlineResponse200144.md)
 
 ### Authorization
 

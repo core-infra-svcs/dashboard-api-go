@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]InlineResponse20092Plans**](InlineResponse20092Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**VlanProfile** | Pointer to [**InlineResponse20092VlanProfile**](InlineResponse20092VlanProfile.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | Array of Device Serials | [optional] 
+**StackIds** | Pointer to **[]string** | Array of Switch Stack IDs | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20092WithDefaults instantiates a new InlineResponse20092 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetVlanProfile
 
-`func (o *InlineResponse20092) GetCurrency() string`
+`func (o *InlineResponse20092) GetVlanProfile() InlineResponse20092VlanProfile`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetVlanProfileOk
 
-`func (o *InlineResponse20092) GetCurrencyOk() (*string, bool)`
+`func (o *InlineResponse20092) GetVlanProfileOk() (*InlineResponse20092VlanProfile, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetVlanProfile
 
-`func (o *InlineResponse20092) SetCurrency(v string)`
+`func (o *InlineResponse20092) SetVlanProfile(v InlineResponse20092VlanProfile)`
 
-SetCurrency sets Currency field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
-### HasCurrency
+### HasVlanProfile
 
-`func (o *InlineResponse20092) HasCurrency() bool`
+`func (o *InlineResponse20092) HasVlanProfile() bool`
 
-HasCurrency returns a boolean if a field has been set.
+HasVlanProfile returns a boolean if a field has been set.
 
-### GetPlans
+### GetSerials
 
-`func (o *InlineResponse20092) GetPlans() []InlineResponse20092Plans`
+`func (o *InlineResponse20092) GetSerials() []string`
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetPlansOk
+### GetSerialsOk
 
-`func (o *InlineResponse20092) GetPlansOk() (*[]InlineResponse20092Plans, bool)`
+`func (o *InlineResponse20092) GetSerialsOk() (*[]string, bool)`
 
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetSerials
 
-`func (o *InlineResponse20092) SetPlans(v []InlineResponse20092Plans)`
+`func (o *InlineResponse20092) SetSerials(v []string)`
 
-SetPlans sets Plans field to given value.
+SetSerials sets Serials field to given value.
 
-### HasPlans
+### HasSerials
 
-`func (o *InlineResponse20092) HasPlans() bool`
+`func (o *InlineResponse20092) HasSerials() bool`
 
-HasPlans returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
+
+### GetStackIds
+
+`func (o *InlineResponse20092) GetStackIds() []string`
+
+GetStackIds returns the StackIds field if non-nil, zero value otherwise.
+
+### GetStackIdsOk
+
+`func (o *InlineResponse20092) GetStackIdsOk() (*[]string, bool)`
+
+GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStackIds
+
+`func (o *InlineResponse20092) SetStackIds(v []string)`
+
+SetStackIds sets StackIds field to given value.
+
+### HasStackIds
+
+`func (o *InlineResponse20092) HasStackIds() bool`
+
+HasStackIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

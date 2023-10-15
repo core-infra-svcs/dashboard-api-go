@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges**](NetworksNetworkIdWirelessSsidsNumberSchedulesRanges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds**](NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules**](NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule) | [optional] 
+**AllowLanAccess** | Pointer to **bool** | Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional) | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject172WithDefaults instantiates a new InlineObject172 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetRules
 
-`func (o *InlineObject172) GetEnabled() bool`
+`func (o *InlineObject172) GetRules() []NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetRulesOk
 
-`func (o *InlineObject172) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject172) GetRulesOk() (*[]NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetRules
 
-`func (o *InlineObject172) SetEnabled(v bool)`
+`func (o *InlineObject172) SetRules(v []NetworksNetworkIdWirelessSsidsNumberFirewallL3FirewallRulesRules)`
 
-SetEnabled sets Enabled field to given value.
+SetRules sets Rules field to given value.
 
-### HasEnabled
+### HasRules
 
-`func (o *InlineObject172) HasEnabled() bool`
+`func (o *InlineObject172) HasRules() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetRanges
+### GetAllowLanAccess
 
-`func (o *InlineObject172) GetRanges() []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges`
+`func (o *InlineObject172) GetAllowLanAccess() bool`
 
-GetRanges returns the Ranges field if non-nil, zero value otherwise.
+GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
 
-### GetRangesOk
+### GetAllowLanAccessOk
 
-`func (o *InlineObject172) GetRangesOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges, bool)`
+`func (o *InlineObject172) GetAllowLanAccessOk() (*bool, bool)`
 
-GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
+GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRanges
+### SetAllowLanAccess
 
-`func (o *InlineObject172) SetRanges(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges)`
+`func (o *InlineObject172) SetAllowLanAccess(v bool)`
 
-SetRanges sets Ranges field to given value.
+SetAllowLanAccess sets AllowLanAccess field to given value.
 
-### HasRanges
+### HasAllowLanAccess
 
-`func (o *InlineObject172) HasRanges() bool`
+`func (o *InlineObject172) HasAllowLanAccess() bool`
 
-HasRanges returns a boolean if a field has been set.
-
-### GetRangesInSeconds
-
-`func (o *InlineObject172) GetRangesInSeconds() []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds`
-
-GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
-
-### GetRangesInSecondsOk
-
-`func (o *InlineObject172) GetRangesInSecondsOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds, bool)`
-
-GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRangesInSeconds
-
-`func (o *InlineObject172) SetRangesInSeconds(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds)`
-
-SetRangesInSeconds sets RangesInSeconds field to given value.
-
-### HasRangesInSeconds
-
-`func (o *InlineObject172) HasRangesInSeconds() bool`
-
-HasRangesInSeconds returns a boolean if a field has been set.
+HasAllowLanAccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

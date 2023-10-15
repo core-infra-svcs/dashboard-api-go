@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200119Rules**](InlineResponse200119Rules.md) | List of firewall rules | [optional] 
+**ResponseCodeCounts** | Pointer to [**InlineResponse200119ResponseCodeCounts**](InlineResponse200119ResponseCodeCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200119WithDefaults instantiates a new InlineResponse200119 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetResponseCodeCounts
 
-`func (o *InlineResponse200119) GetRules() []InlineResponse200119Rules`
+`func (o *InlineResponse200119) GetResponseCodeCounts() InlineResponse200119ResponseCodeCounts`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetResponseCodeCounts returns the ResponseCodeCounts field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetResponseCodeCountsOk
 
-`func (o *InlineResponse200119) GetRulesOk() (*[]InlineResponse200119Rules, bool)`
+`func (o *InlineResponse200119) GetResponseCodeCountsOk() (*InlineResponse200119ResponseCodeCounts, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetResponseCodeCountsOk returns a tuple with the ResponseCodeCounts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetResponseCodeCounts
 
-`func (o *InlineResponse200119) SetRules(v []InlineResponse200119Rules)`
+`func (o *InlineResponse200119) SetResponseCodeCounts(v InlineResponse200119ResponseCodeCounts)`
 
-SetRules sets Rules field to given value.
+SetResponseCodeCounts sets ResponseCodeCounts field to given value.
 
-### HasRules
+### HasResponseCodeCounts
 
-`func (o *InlineResponse200119) HasRules() bool`
+`func (o *InlineResponse200119) HasResponseCodeCounts() bool`
 
-HasRules returns a boolean if a field has been set.
+HasResponseCodeCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

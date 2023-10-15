@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**Name** | Pointer to **string** | The name of the dashboard administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineObject193WithDefaults instantiates a new InlineObject193 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetName
 
-`func (o *InlineObject193) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
+`func (o *InlineObject193) GetName() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetNameOk
 
-`func (o *InlineObject193) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
+`func (o *InlineObject193) GetNameOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetName
 
-`func (o *InlineObject193) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
+`func (o *InlineObject193) SetName(v string)`
 
-SetRules sets Rules field to given value.
+SetName sets Name field to given value.
 
-### HasRules
+### HasName
 
-`func (o *InlineObject193) HasRules() bool`
+`func (o *InlineObject193) HasName() bool`
 
-HasRules returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSyslogDefaultRule
+### GetOrgAccess
 
-`func (o *InlineObject193) GetSyslogDefaultRule() bool`
+`func (o *InlineObject193) GetOrgAccess() string`
 
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetSyslogDefaultRuleOk
+### GetOrgAccessOk
 
-`func (o *InlineObject193) GetSyslogDefaultRuleOk() (*bool, bool)`
+`func (o *InlineObject193) GetOrgAccessOk() (*string, bool)`
 
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSyslogDefaultRule
+### SetOrgAccess
 
-`func (o *InlineObject193) SetSyslogDefaultRule(v bool)`
+`func (o *InlineObject193) SetOrgAccess(v string)`
 
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasSyslogDefaultRule
+### HasOrgAccess
 
-`func (o *InlineObject193) HasSyslogDefaultRule() bool`
+`func (o *InlineObject193) HasOrgAccess() bool`
 
-HasSyslogDefaultRule returns a boolean if a field has been set.
+HasOrgAccess returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject193) GetTags() []OrganizationsOrganizationIdAdminsTags1`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject193) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject193) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject193) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetNetworks
+
+`func (o *InlineObject193) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
+
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
+
+### GetNetworksOk
+
+`func (o *InlineObject193) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
+
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworks
+
+`func (o *InlineObject193) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
+
+SetNetworks sets Networks field to given value.
+
+### HasNetworks
+
+`func (o *InlineObject193) HasNetworks() bool`
+
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

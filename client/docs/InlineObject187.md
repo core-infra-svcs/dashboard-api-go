@@ -4,18 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | **string** | The email of the dashboard administrator. This attribute can not be updated. | 
-**Name** | **string** | The name of the dashboard administrator | 
-**OrgAccess** | **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
-**AuthenticationMethod** | Pointer to **string** | The method of authentication the user will use to sign in to the Meraki dashboard. Can be one of &#39;Email&#39; or &#39;Cisco SecureX Sign-On&#39;. The default is Email authentication | [optional] 
+**Name** | **string** | Name of the group | 
+**Sgt** | **int32** | SGT value of the group | 
+**Description** | Pointer to **string** | Description of the group (default: \&quot;\&quot;) | [optional] 
+**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) (default: []) | [optional] 
 
 ## Methods
 
 ### NewInlineObject187
 
-`func NewInlineObject187(email string, name string, orgAccess string, ) *InlineObject187`
+`func NewInlineObject187(name string, sgt int32, ) *InlineObject187`
 
 NewInlineObject187 instantiates a new InlineObject187 object
 This constructor will assign default values to properties that have it defined,
@@ -29,26 +27,6 @@ will change when the set of required properties is changed
 NewInlineObject187WithDefaults instantiates a new InlineObject187 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetEmail
-
-`func (o *InlineObject187) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineObject187) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineObject187) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
 
 ### GetName
 
@@ -70,100 +48,75 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetOrgAccess
+### GetSgt
 
-`func (o *InlineObject187) GetOrgAccess() string`
+`func (o *InlineObject187) GetSgt() int32`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetSgtOk
 
-`func (o *InlineObject187) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineObject187) GetSgtOk() (*int32, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetSgt
 
-`func (o *InlineObject187) SetOrgAccess(v string)`
+`func (o *InlineObject187) SetSgt(v int32)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetSgt sets Sgt field to given value.
 
 
-### GetTags
+### GetDescription
 
-`func (o *InlineObject187) GetTags() []OrganizationsOrganizationIdAdminsTags1`
+`func (o *InlineObject187) GetDescription() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetDescriptionOk
 
-`func (o *InlineObject187) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
+`func (o *InlineObject187) GetDescriptionOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetDescription
 
-`func (o *InlineObject187) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
+`func (o *InlineObject187) SetDescription(v string)`
 
-SetTags sets Tags field to given value.
+SetDescription sets Description field to given value.
 
-### HasTags
+### HasDescription
 
-`func (o *InlineObject187) HasTags() bool`
+`func (o *InlineObject187) HasDescription() bool`
 
-HasTags returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetNetworks
+### GetPolicyObjects
 
-`func (o *InlineObject187) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
+`func (o *InlineObject187) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetPolicyObjectsOk
 
-`func (o *InlineObject187) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
+`func (o *InlineObject187) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetPolicyObjects
 
-`func (o *InlineObject187) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
+`func (o *InlineObject187) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
 
-SetNetworks sets Networks field to given value.
+SetPolicyObjects sets PolicyObjects field to given value.
 
-### HasNetworks
+### HasPolicyObjects
 
-`func (o *InlineObject187) HasNetworks() bool`
+`func (o *InlineObject187) HasPolicyObjects() bool`
 
-HasNetworks returns a boolean if a field has been set.
-
-### GetAuthenticationMethod
-
-`func (o *InlineObject187) GetAuthenticationMethod() string`
-
-GetAuthenticationMethod returns the AuthenticationMethod field if non-nil, zero value otherwise.
-
-### GetAuthenticationMethodOk
-
-`func (o *InlineObject187) GetAuthenticationMethodOk() (*string, bool)`
-
-GetAuthenticationMethodOk returns a tuple with the AuthenticationMethod field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthenticationMethod
-
-`func (o *InlineObject187) SetAuthenticationMethod(v string)`
-
-SetAuthenticationMethod sets AuthenticationMethod field to given value.
-
-### HasAuthenticationMethod
-
-`func (o *InlineObject187) HasAuthenticationMethod() bool`
-
-HasAuthenticationMethod returns a boolean if a field has been set.
+HasPolicyObjects returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

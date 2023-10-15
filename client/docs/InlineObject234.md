@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
-**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
+**X509certSha1Fingerprint** | **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
 ### NewInlineObject234
 
-`func NewInlineObject234(sourceSerial string, targetSerials []string, ) *InlineObject234`
+`func NewInlineObject234(x509certSha1Fingerprint string, ) *InlineObject234`
 
 NewInlineObject234 instantiates a new InlineObject234 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,50 @@ NewInlineObject234WithDefaults instantiates a new InlineObject234 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetX509certSha1Fingerprint
 
-`func (o *InlineObject234) GetSourceSerial() string`
+`func (o *InlineObject234) GetX509certSha1Fingerprint() string`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineObject234) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineObject234) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetX509certSha1Fingerprint
 
-`func (o *InlineObject234) SetSourceSerial(v string)`
+`func (o *InlineObject234) SetX509certSha1Fingerprint(v string)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
 
-### GetTargetSerials
+### GetSloLogoutUrl
 
-`func (o *InlineObject234) GetTargetSerials() []string`
+`func (o *InlineObject234) GetSloLogoutUrl() string`
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
 
-### GetTargetSerialsOk
+### GetSloLogoutUrlOk
 
-`func (o *InlineObject234) GetTargetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject234) GetSloLogoutUrlOk() (*string, bool)`
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetSloLogoutUrl
 
-`func (o *InlineObject234) SetTargetSerials(v []string)`
+`func (o *InlineObject234) SetSloLogoutUrl(v string)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
 
+### HasSloLogoutUrl
+
+`func (o *InlineObject234) HasSloLogoutUrl() bool`
+
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

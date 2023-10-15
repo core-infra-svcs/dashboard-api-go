@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse200126Usage**](InlineResponse200126Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200126Counts**](InlineResponse200126Counts.md) |  | [optional] 
+**Id** | Pointer to **string** | Permission scope id | [optional] 
+**Name** | Pointer to **string** | Name of permission scope | [optional] 
+**Level** | Pointer to **string** | Permission scope level | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200126WithDefaults instantiates a new InlineResponse200126 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetId
 
-`func (o *InlineResponse200126) GetUsage() InlineResponse200126Usage`
+`func (o *InlineResponse200126) GetId() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetIdOk
 
-`func (o *InlineResponse200126) GetUsageOk() (*InlineResponse200126Usage, bool)`
+`func (o *InlineResponse200126) GetIdOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetId
 
-`func (o *InlineResponse200126) SetUsage(v InlineResponse200126Usage)`
+`func (o *InlineResponse200126) SetId(v string)`
 
-SetUsage sets Usage field to given value.
+SetId sets Id field to given value.
 
-### HasUsage
+### HasId
 
-`func (o *InlineResponse200126) HasUsage() bool`
+`func (o *InlineResponse200126) HasId() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCounts
+### GetName
 
-`func (o *InlineResponse200126) GetCounts() InlineResponse200126Counts`
+`func (o *InlineResponse200126) GetName() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetNameOk
 
-`func (o *InlineResponse200126) GetCountsOk() (*InlineResponse200126Counts, bool)`
+`func (o *InlineResponse200126) GetNameOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetName
 
-`func (o *InlineResponse200126) SetCounts(v InlineResponse200126Counts)`
+`func (o *InlineResponse200126) SetName(v string)`
 
-SetCounts sets Counts field to given value.
+SetName sets Name field to given value.
 
-### HasCounts
+### HasName
 
-`func (o *InlineResponse200126) HasCounts() bool`
+`func (o *InlineResponse200126) HasName() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetLevel
+
+`func (o *InlineResponse200126) GetLevel() string`
+
+GetLevel returns the Level field if non-nil, zero value otherwise.
+
+### GetLevelOk
+
+`func (o *InlineResponse200126) GetLevelOk() (*string, bool)`
+
+GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLevel
+
+`func (o *InlineResponse200126) SetLevel(v string)`
+
+SetLevel sets Level field to given value.
+
+### HasLevel
+
+`func (o *InlineResponse200126) HasLevel() bool`
+
+HasLevel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

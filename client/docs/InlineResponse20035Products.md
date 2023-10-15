@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **Camera** | Pointer to [**InlineResponse20035ProductsWireless**](InlineResponse20035ProductsWireless.md) |  | [optional] 
 **CellularGateway** | Pointer to [**InlineResponse20035ProductsWireless**](InlineResponse20035ProductsWireless.md) |  | [optional] 
 **Sensor** | Pointer to [**InlineResponse20035ProductsWireless**](InlineResponse20035ProductsWireless.md) |  | [optional] 
-**CloudGateway** | Pointer to [**InlineResponse20035ProductsWireless**](InlineResponse20035ProductsWireless.md) |  | [optional] 
 
 ## Methods
 
@@ -180,31 +179,6 @@ SetSensor sets Sensor field to given value.
 `func (o *InlineResponse20035Products) HasSensor() bool`
 
 HasSensor returns a boolean if a field has been set.
-
-### GetCloudGateway
-
-`func (o *InlineResponse20035Products) GetCloudGateway() InlineResponse20035ProductsWireless`
-
-GetCloudGateway returns the CloudGateway field if non-nil, zero value otherwise.
-
-### GetCloudGatewayOk
-
-`func (o *InlineResponse20035Products) GetCloudGatewayOk() (*InlineResponse20035ProductsWireless, bool)`
-
-GetCloudGatewayOk returns a tuple with the CloudGateway field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCloudGateway
-
-`func (o *InlineResponse20035Products) SetCloudGateway(v InlineResponse20035ProductsWireless)`
-
-SetCloudGateway sets CloudGateway field to given value.
-
-### HasCloudGateway
-
-`func (o *InlineResponse20035Products) HasCloudGateway() bool`
-
-HasCloudGateway returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

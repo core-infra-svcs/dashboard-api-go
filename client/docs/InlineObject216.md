@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
-**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
+**LogEvent** | **string** | The type of log event this is recording, e.g. download or opening a banner | 
+**Timestamp** | **int32** | A JavaScript UTC datetime stamp for when the even occurred | 
+**TargetOS** | Pointer to **string** | The name of the onboarding distro being downloaded | [optional] 
+**Request** | Pointer to **string** | Used to describe if this event was the result of a redirect. E.g. a query param if an info banner is being used | [optional] 
 
 ## Methods
 
 ### NewInlineObject216
 
-`func NewInlineObject216(destOrganizationId string, licenseIds []string, ) *InlineObject216`
+`func NewInlineObject216(logEvent string, timestamp int32, ) *InlineObject216`
 
 NewInlineObject216 instantiates a new InlineObject216 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +28,95 @@ NewInlineObject216WithDefaults instantiates a new InlineObject216 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetLogEvent
 
-`func (o *InlineObject216) GetDestOrganizationId() string`
+`func (o *InlineObject216) GetLogEvent() string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetLogEvent returns the LogEvent field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetLogEventOk
 
-`func (o *InlineObject216) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject216) GetLogEventOk() (*string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetLogEventOk returns a tuple with the LogEvent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetLogEvent
 
-`func (o *InlineObject216) SetDestOrganizationId(v string)`
+`func (o *InlineObject216) SetLogEvent(v string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetLogEvent sets LogEvent field to given value.
 
 
-### GetLicenseIds
+### GetTimestamp
 
-`func (o *InlineObject216) GetLicenseIds() []string`
+`func (o *InlineObject216) GetTimestamp() int32`
 
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
+GetTimestamp returns the Timestamp field if non-nil, zero value otherwise.
 
-### GetLicenseIdsOk
+### GetTimestampOk
 
-`func (o *InlineObject216) GetLicenseIdsOk() (*[]string, bool)`
+`func (o *InlineObject216) GetTimestampOk() (*int32, bool)`
 
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
+GetTimestampOk returns a tuple with the Timestamp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIds
+### SetTimestamp
 
-`func (o *InlineObject216) SetLicenseIds(v []string)`
+`func (o *InlineObject216) SetTimestamp(v int32)`
 
-SetLicenseIds sets LicenseIds field to given value.
+SetTimestamp sets Timestamp field to given value.
 
+
+### GetTargetOS
+
+`func (o *InlineObject216) GetTargetOS() string`
+
+GetTargetOS returns the TargetOS field if non-nil, zero value otherwise.
+
+### GetTargetOSOk
+
+`func (o *InlineObject216) GetTargetOSOk() (*string, bool)`
+
+GetTargetOSOk returns a tuple with the TargetOS field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTargetOS
+
+`func (o *InlineObject216) SetTargetOS(v string)`
+
+SetTargetOS sets TargetOS field to given value.
+
+### HasTargetOS
+
+`func (o *InlineObject216) HasTargetOS() bool`
+
+HasTargetOS returns a boolean if a field has been set.
+
+### GetRequest
+
+`func (o *InlineObject216) GetRequest() string`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineObject216) GetRequestOk() (*string, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineObject216) SetRequest(v string)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineObject216) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

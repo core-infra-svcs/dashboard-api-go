@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Organization name | [optional] 
-**Url** | Pointer to **string** | Organization URL | [optional] 
-**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
-**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
-**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
-**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
+**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
+**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
+**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
 
 ## Methods
 
@@ -30,31 +30,6 @@ will change when the set of required properties is changed
 NewInlineResponse200110WithDefaults instantiates a new InlineResponse200110 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *InlineResponse200110) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200110) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200110) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200110) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -81,130 +56,155 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetUrl
+### GetId
 
-`func (o *InlineResponse200110) GetUrl() string`
+`func (o *InlineResponse200110) GetId() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetIdOk
 
-`func (o *InlineResponse200110) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200110) GetIdOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetId
 
-`func (o *InlineResponse200110) SetUrl(v string)`
+`func (o *InlineResponse200110) SetId(v string)`
 
-SetUrl sets Url field to given value.
+SetId sets Id field to given value.
 
-### HasUrl
+### HasId
 
-`func (o *InlineResponse200110) HasUrl() bool`
+`func (o *InlineResponse200110) HasId() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetApi
+### GetGroupPolicyId
 
-`func (o *InlineResponse200110) GetApi() OrganizationsApi`
+`func (o *InlineResponse200110) GetGroupPolicyId() string`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse200110) GetApiOk() (*OrganizationsApi, bool)`
+`func (o *InlineResponse200110) GetGroupPolicyIdOk() (*string, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetGroupPolicyId
 
-`func (o *InlineResponse200110) SetApi(v OrganizationsApi)`
+`func (o *InlineResponse200110) SetGroupPolicyId(v string)`
 
-SetApi sets Api field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasApi
+### HasGroupPolicyId
 
-`func (o *InlineResponse200110) HasApi() bool`
+`func (o *InlineResponse200110) HasGroupPolicyId() bool`
 
-HasApi returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
-### GetLicensing
+### GetPassphrase
 
-`func (o *InlineResponse200110) GetLicensing() OrganizationsLicensing`
+`func (o *InlineResponse200110) GetPassphrase() string`
 
-GetLicensing returns the Licensing field if non-nil, zero value otherwise.
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-### GetLicensingOk
+### GetPassphraseOk
 
-`func (o *InlineResponse200110) GetLicensingOk() (*OrganizationsLicensing, bool)`
+`func (o *InlineResponse200110) GetPassphraseOk() (*string, bool)`
 
-GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicensing
+### SetPassphrase
 
-`func (o *InlineResponse200110) SetLicensing(v OrganizationsLicensing)`
+`func (o *InlineResponse200110) SetPassphrase(v string)`
 
-SetLicensing sets Licensing field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasLicensing
+### HasPassphrase
 
-`func (o *InlineResponse200110) HasLicensing() bool`
+`func (o *InlineResponse200110) HasPassphrase() bool`
 
-HasLicensing returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetCloud
+### GetWifiPersonalNetworkId
 
-`func (o *InlineResponse200110) GetCloud() OrganizationsCloud`
+`func (o *InlineResponse200110) GetWifiPersonalNetworkId() string`
 
-GetCloud returns the Cloud field if non-nil, zero value otherwise.
+GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
 
-### GetCloudOk
+### GetWifiPersonalNetworkIdOk
 
-`func (o *InlineResponse200110) GetCloudOk() (*OrganizationsCloud, bool)`
+`func (o *InlineResponse200110) GetWifiPersonalNetworkIdOk() (*string, bool)`
 
-GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
+GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCloud
+### SetWifiPersonalNetworkId
 
-`func (o *InlineResponse200110) SetCloud(v OrganizationsCloud)`
+`func (o *InlineResponse200110) SetWifiPersonalNetworkId(v string)`
 
-SetCloud sets Cloud field to given value.
+SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
 
-### HasCloud
+### HasWifiPersonalNetworkId
 
-`func (o *InlineResponse200110) HasCloud() bool`
+`func (o *InlineResponse200110) HasWifiPersonalNetworkId() bool`
 
-HasCloud returns a boolean if a field has been set.
+HasWifiPersonalNetworkId returns a boolean if a field has been set.
 
-### GetManagement
+### GetEmail
 
-`func (o *InlineResponse200110) GetManagement() OrganizationsManagement`
+`func (o *InlineResponse200110) GetEmail() string`
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetManagementOk
+### GetEmailOk
 
-`func (o *InlineResponse200110) GetManagementOk() (*OrganizationsManagement, bool)`
+`func (o *InlineResponse200110) GetEmailOk() (*string, bool)`
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetEmail
 
-`func (o *InlineResponse200110) SetManagement(v OrganizationsManagement)`
+`func (o *InlineResponse200110) SetEmail(v string)`
 
-SetManagement sets Management field to given value.
+SetEmail sets Email field to given value.
 
-### HasManagement
+### HasEmail
 
-`func (o *InlineResponse200110) HasManagement() bool`
+`func (o *InlineResponse200110) HasEmail() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
+
+### GetExpiresAt
+
+`func (o *InlineResponse200110) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineResponse200110) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineResponse200110) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineResponse200110) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

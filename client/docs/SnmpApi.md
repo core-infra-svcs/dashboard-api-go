@@ -173,7 +173,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSnmp := *openapiclient.NewInlineObject113() // InlineObject113 |  (optional)
+    updateNetworkSnmp := *openapiclient.NewInlineObject115() // InlineObject115 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -203,7 +203,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSnmpRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSnmp** | [**InlineObject113**](InlineObject113.md) |  | 
+ **updateNetworkSnmp** | [**InlineObject115**](InlineObject115.md) |  | 
 
 ### Return type
 
@@ -245,7 +245,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationSnmp := *openapiclient.NewInlineObject233() // InlineObject233 |  (optional)
+    updateOrganizationSnmp := *openapiclient.NewInlineObject238() // InlineObject238 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -275,7 +275,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSnmpRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSnmp** | [**InlineObject233**](InlineObject233.md) |  | 
+ **updateOrganizationSnmp** | [**InlineObject238**](InlineObject238.md) |  | 
 
 ### Return type
 

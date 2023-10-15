@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. An empty array will clear the rules. | [optional] 
-**IpVersion** | Pointer to **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | [optional] 
+**Name** | **string** | The name of the organization | 
+**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject181
 
-`func NewInlineObject181() *InlineObject181`
+`func NewInlineObject181(name string, ) *InlineObject181`
 
 NewInlineObject181 instantiates a new InlineObject181 object
 This constructor will assign default values to properties that have it defined,
@@ -47,86 +45,31 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject181) HasName() bool`
+### GetManagement
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject181) GetManagement() OrganizationsManagement`
 
-### GetDescription
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-`func (o *InlineObject181) GetDescription() string`
+### GetManagementOk
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+`func (o *InlineObject181) GetManagementOk() (*OrganizationsManagement, bool)`
 
-### GetDescriptionOk
-
-`func (o *InlineObject181) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetManagement
 
-`func (o *InlineObject181) SetDescription(v string)`
+`func (o *InlineObject181) SetManagement(v OrganizationsManagement)`
 
-SetDescription sets Description field to given value.
+SetManagement sets Management field to given value.
 
-### HasDescription
+### HasManagement
 
-`func (o *InlineObject181) HasDescription() bool`
+`func (o *InlineObject181) HasManagement() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineObject181) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules1`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineObject181) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineObject181) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules1)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *InlineObject181) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
-
-### GetIpVersion
-
-`func (o *InlineObject181) GetIpVersion() string`
-
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
-
-### GetIpVersionOk
-
-`func (o *InlineObject181) GetIpVersionOk() (*string, bool)`
-
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpVersion
-
-`func (o *InlineObject181) SetIpVersion(v string)`
-
-SetIpVersion sets IpVersion field to given value.
-
-### HasIpVersion
-
-`func (o *InlineObject181) HasIpVersion() bool`
-
-HasIpVersion returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

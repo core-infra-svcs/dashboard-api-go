@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the adaptive policy ACL | 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] [default to ""]
-**Rules** | [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. | 
-**IpVersion** | **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | 
+**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
+**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject180
 
-`func NewInlineObject180(name string, rules []OrganizationsOrganizationIdAdaptivePolicyAclsRules1, ipVersion string, ) *InlineObject180`
+`func NewInlineObject180() *InlineObject180`
 
 NewInlineObject180 instantiates a new InlineObject180 object
 This constructor will assign default values to properties that have it defined,
@@ -28,90 +27,80 @@ NewInlineObject180WithDefaults instantiates a new InlineObject180 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConcentrator
 
-`func (o *InlineObject180) GetName() string`
+`func (o *InlineObject180) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConcentratorOk
 
-`func (o *InlineObject180) GetNameOk() (*string, bool)`
+`func (o *InlineObject180) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConcentrator
 
-`func (o *InlineObject180) SetName(v string)`
+`func (o *InlineObject180) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
 
-SetName sets Name field to given value.
+SetConcentrator sets Concentrator field to given value.
 
+### HasConcentrator
 
-### GetDescription
+`func (o *InlineObject180) HasConcentrator() bool`
 
-`func (o *InlineObject180) GetDescription() string`
+HasConcentrator returns a boolean if a field has been set.
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+### GetSplitTunnel
 
-### GetDescriptionOk
+`func (o *InlineObject180) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
 
-`func (o *InlineObject180) GetDescriptionOk() (*string, bool)`
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+### GetSplitTunnelOk
+
+`func (o *InlineObject180) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
+
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetSplitTunnel
 
-`func (o *InlineObject180) SetDescription(v string)`
+`func (o *InlineObject180) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
 
-SetDescription sets Description field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasDescription
+### HasSplitTunnel
 
-`func (o *InlineObject180) HasDescription() bool`
+`func (o *InlineObject180) HasSplitTunnel() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
 
-### GetRules
+### GetFailover
 
-`func (o *InlineObject180) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules1`
+`func (o *InlineObject180) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetFailoverOk
 
-`func (o *InlineObject180) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1, bool)`
+`func (o *InlineObject180) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetFailover
 
-`func (o *InlineObject180) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules1)`
+`func (o *InlineObject180) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
 
-SetRules sets Rules field to given value.
+SetFailover sets Failover field to given value.
 
+### HasFailover
 
-### GetIpVersion
+`func (o *InlineObject180) HasFailover() bool`
 
-`func (o *InlineObject180) GetIpVersion() string`
-
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
-
-### GetIpVersionOk
-
-`func (o *InlineObject180) GetIpVersionOk() (*string, bool)`
-
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpVersion
-
-`func (o *InlineObject180) SetIpVersion(v string)`
-
-SetIpVersion sets IpVersion field to given value.
-
+HasFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

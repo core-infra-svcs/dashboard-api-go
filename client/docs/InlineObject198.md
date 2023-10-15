@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of camera | [optional] 
-**WirelessCredentialsSent** | Pointer to **bool** | Note whether credentials were sent successfully | [optional] 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject198WithDefaults instantiates a new InlineObject198 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetRules
 
-`func (o *InlineObject198) GetSerial() string`
+`func (o *InlineObject198) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetRulesOk
 
-`func (o *InlineObject198) GetSerialOk() (*string, bool)`
+`func (o *InlineObject198) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetRules
 
-`func (o *InlineObject198) SetSerial(v string)`
+`func (o *InlineObject198) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
 
-SetSerial sets Serial field to given value.
+SetRules sets Rules field to given value.
 
-### HasSerial
+### HasRules
 
-`func (o *InlineObject198) HasSerial() bool`
+`func (o *InlineObject198) HasRules() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetWirelessCredentialsSent
+### GetSyslogDefaultRule
 
-`func (o *InlineObject198) GetWirelessCredentialsSent() bool`
+`func (o *InlineObject198) GetSyslogDefaultRule() bool`
 
-GetWirelessCredentialsSent returns the WirelessCredentialsSent field if non-nil, zero value otherwise.
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
 
-### GetWirelessCredentialsSentOk
+### GetSyslogDefaultRuleOk
 
-`func (o *InlineObject198) GetWirelessCredentialsSentOk() (*bool, bool)`
+`func (o *InlineObject198) GetSyslogDefaultRuleOk() (*bool, bool)`
 
-GetWirelessCredentialsSentOk returns a tuple with the WirelessCredentialsSent field if it's non-nil, zero value otherwise
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWirelessCredentialsSent
+### SetSyslogDefaultRule
 
-`func (o *InlineObject198) SetWirelessCredentialsSent(v bool)`
+`func (o *InlineObject198) SetSyslogDefaultRule(v bool)`
 
-SetWirelessCredentialsSent sets WirelessCredentialsSent field to given value.
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
 
-### HasWirelessCredentialsSent
+### HasSyslogDefaultRule
 
-`func (o *InlineObject198) HasWirelessCredentialsSent() bool`
+`func (o *InlineObject198) HasSyslogDefaultRule() bool`
 
-HasWirelessCredentialsSent returns a boolean if a field has been set.
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

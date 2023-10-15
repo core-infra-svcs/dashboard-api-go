@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The id of the VPP Account | [optional] 
-**VppServiceToken** | Pointer to **string** | The VPP Account&#39;s Service Token | [optional] 
+**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
+**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
 
 ## Methods
 
@@ -51,30 +54,105 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetVppServiceToken
+### GetRole
 
-`func (o *InlineResponse200159) GetVppServiceToken() string`
+`func (o *InlineResponse200159) GetRole() string`
 
-GetVppServiceToken returns the VppServiceToken field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetVppServiceTokenOk
+### GetRoleOk
 
-`func (o *InlineResponse200159) GetVppServiceTokenOk() (*string, bool)`
+`func (o *InlineResponse200159) GetRoleOk() (*string, bool)`
 
-GetVppServiceTokenOk returns a tuple with the VppServiceToken field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVppServiceToken
+### SetRole
 
-`func (o *InlineResponse200159) SetVppServiceToken(v string)`
+`func (o *InlineResponse200159) SetRole(v string)`
 
-SetVppServiceToken sets VppServiceToken field to given value.
+SetRole sets Role field to given value.
 
-### HasVppServiceToken
+### HasRole
 
-`func (o *InlineResponse200159) HasVppServiceToken() bool`
+`func (o *InlineResponse200159) HasRole() bool`
 
-HasVppServiceToken returns a boolean if a field has been set.
+HasRole returns a boolean if a field has been set.
+
+### GetOrgAccess
+
+`func (o *InlineResponse200159) GetOrgAccess() string`
+
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+
+### GetOrgAccessOk
+
+`func (o *InlineResponse200159) GetOrgAccessOk() (*string, bool)`
+
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrgAccess
+
+`func (o *InlineResponse200159) SetOrgAccess(v string)`
+
+SetOrgAccess sets OrgAccess field to given value.
+
+### HasOrgAccess
+
+`func (o *InlineResponse200159) HasOrgAccess() bool`
+
+HasOrgAccess returns a boolean if a field has been set.
+
+### GetNetworks
+
+`func (o *InlineResponse200159) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
+
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
+
+### GetNetworksOk
+
+`func (o *InlineResponse200159) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
+
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworks
+
+`func (o *InlineResponse200159) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
+
+SetNetworks sets Networks field to given value.
+
+### HasNetworks
+
+`func (o *InlineResponse200159) HasNetworks() bool`
+
+HasNetworks returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200159) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200159) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200159) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200159) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

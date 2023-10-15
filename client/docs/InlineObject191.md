@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedRules** | [**[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules**](OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules.md) | Sets a list of specific SNORT signatures to allow | 
+**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
 
 ## Methods
 
 ### NewInlineObject191
 
-`func NewInlineObject191(allowedRules []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, ) *InlineObject191`
+`func NewInlineObject191() *InlineObject191`
 
 NewInlineObject191 instantiates a new InlineObject191 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject191WithDefaults instantiates a new InlineObject191 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedRules
+### GetEnabledNetworks
 
-`func (o *InlineObject191) GetAllowedRules() []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules`
+`func (o *InlineObject191) GetEnabledNetworks() []string`
 
-GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
+GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
 
-### GetAllowedRulesOk
+### GetEnabledNetworksOk
 
-`func (o *InlineObject191) GetAllowedRulesOk() (*[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, bool)`
+`func (o *InlineObject191) GetEnabledNetworksOk() (*[]string, bool)`
 
-GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
+GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedRules
+### SetEnabledNetworks
 
-`func (o *InlineObject191) SetAllowedRules(v []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules)`
+`func (o *InlineObject191) SetEnabledNetworks(v []string)`
 
-SetAllowedRules sets AllowedRules field to given value.
+SetEnabledNetworks sets EnabledNetworks field to given value.
 
+### HasEnabledNetworks
+
+`func (o *InlineObject191) HasEnabledNetworks() bool`
+
+HasEnabledNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

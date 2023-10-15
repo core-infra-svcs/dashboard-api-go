@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | AP port profile ID | [optional] 
-**Name** | Pointer to **string** | AP port profile name | [optional] 
-**IsDefault** | Pointer to **bool** | Is default profile | [optional] 
-**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts.md) | Ports config | [optional] 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts.md) | Usb ports config | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20098WithDefaults instantiates a new InlineResponse20098 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetStartTs
 
-`func (o *InlineResponse20098) GetProfileId() string`
+`func (o *InlineResponse20098) GetStartTs() time.Time`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse20098) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse20098) GetStartTsOk() (*time.Time, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetStartTs
 
-`func (o *InlineResponse20098) SetProfileId(v string)`
+`func (o *InlineResponse20098) SetStartTs(v time.Time)`
 
-SetProfileId sets ProfileId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasProfileId
+### HasStartTs
 
-`func (o *InlineResponse20098) HasProfileId() bool`
+`func (o *InlineResponse20098) HasStartTs() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetName
+### GetEndTs
 
-`func (o *InlineResponse20098) GetName() string`
+`func (o *InlineResponse20098) GetEndTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEndTsOk
 
-`func (o *InlineResponse20098) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20098) GetEndTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEndTs
 
-`func (o *InlineResponse20098) SetName(v string)`
+`func (o *InlineResponse20098) SetEndTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasName
+### HasEndTs
 
-`func (o *InlineResponse20098) HasName() bool`
+`func (o *InlineResponse20098) HasEndTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetClientCount
 
-`func (o *InlineResponse20098) GetIsDefault() bool`
+`func (o *InlineResponse20098) GetClientCount() int32`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetClientCountOk
 
-`func (o *InlineResponse20098) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse20098) GetClientCountOk() (*int32, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetClientCount
 
-`func (o *InlineResponse20098) SetIsDefault(v bool)`
+`func (o *InlineResponse20098) SetClientCount(v int32)`
 
-SetIsDefault sets IsDefault field to given value.
+SetClientCount sets ClientCount field to given value.
 
-### HasIsDefault
+### HasClientCount
 
-`func (o *InlineResponse20098) HasIsDefault() bool`
+`func (o *InlineResponse20098) HasClientCount() bool`
 
-HasIsDefault returns a boolean if a field has been set.
-
-### GetPorts
-
-`func (o *InlineResponse20098) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts`
-
-GetPorts returns the Ports field if non-nil, zero value otherwise.
-
-### GetPortsOk
-
-`func (o *InlineResponse20098) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts, bool)`
-
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPorts
-
-`func (o *InlineResponse20098) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts)`
-
-SetPorts sets Ports field to given value.
-
-### HasPorts
-
-`func (o *InlineResponse20098) HasPorts() bool`
-
-HasPorts returns a boolean if a field has been set.
-
-### GetUsbPorts
-
-`func (o *InlineResponse20098) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts`
-
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
-
-### GetUsbPortsOk
-
-`func (o *InlineResponse20098) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts, bool)`
-
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsbPorts
-
-`func (o *InlineResponse20098) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts)`
-
-SetUsbPorts sets UsbPorts field to given value.
-
-### HasUsbPorts
-
-`func (o *InlineResponse20098) HasUsbPorts() bool`
-
-HasUsbPorts returns a boolean if a field has been set.
+HasClientCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

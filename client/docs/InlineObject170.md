@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Identity PSK | 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
-**GroupPolicyId** | **string** | The group policy to be applied to clients | 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID device type group policies are enabled. | [optional] 
+**DeviceTypePolicies** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies**](NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies.md) | List of device type policies. | [optional] 
 
 ## Methods
 
 ### NewInlineObject170
 
-`func NewInlineObject170(name string, groupPolicyId string, ) *InlineObject170`
+`func NewInlineObject170() *InlineObject170`
 
 NewInlineObject170 instantiates a new InlineObject170 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +26,55 @@ NewInlineObject170WithDefaults instantiates a new InlineObject170 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject170) GetName() string`
+`func (o *InlineObject170) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject170) GetNameOk() (*string, bool)`
+`func (o *InlineObject170) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject170) SetName(v string)`
+`func (o *InlineObject170) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetPassphrase
+`func (o *InlineObject170) HasEnabled() bool`
 
-`func (o *InlineObject170) GetPassphrase() string`
+HasEnabled returns a boolean if a field has been set.
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+### GetDeviceTypePolicies
 
-### GetPassphraseOk
+`func (o *InlineObject170) GetDeviceTypePolicies() []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies`
 
-`func (o *InlineObject170) GetPassphraseOk() (*string, bool)`
+GetDeviceTypePolicies returns the DeviceTypePolicies field if non-nil, zero value otherwise.
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+### GetDeviceTypePoliciesOk
+
+`func (o *InlineObject170) GetDeviceTypePoliciesOk() (*[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies, bool)`
+
+GetDeviceTypePoliciesOk returns a tuple with the DeviceTypePolicies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetDeviceTypePolicies
 
-`func (o *InlineObject170) SetPassphrase(v string)`
+`func (o *InlineObject170) SetDeviceTypePolicies(v []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies)`
 
-SetPassphrase sets Passphrase field to given value.
+SetDeviceTypePolicies sets DeviceTypePolicies field to given value.
 
-### HasPassphrase
+### HasDeviceTypePolicies
 
-`func (o *InlineObject170) HasPassphrase() bool`
+`func (o *InlineObject170) HasDeviceTypePolicies() bool`
 
-HasPassphrase returns a boolean if a field has been set.
-
-### GetGroupPolicyId
-
-`func (o *InlineObject170) GetGroupPolicyId() string`
-
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
-
-### GetGroupPolicyIdOk
-
-`func (o *InlineObject170) GetGroupPolicyIdOk() (*string, bool)`
-
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupPolicyId
-
-`func (o *InlineObject170) SetGroupPolicyId(v string)`
-
-SetGroupPolicyId sets GroupPolicyId field to given value.
-
-
-### GetExpiresAt
-
-`func (o *InlineObject170) GetExpiresAt() time.Time`
-
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
-
-### GetExpiresAtOk
-
-`func (o *InlineObject170) GetExpiresAtOk() (*time.Time, bool)`
-
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExpiresAt
-
-`func (o *InlineObject170) SetExpiresAt(v time.Time)`
-
-SetExpiresAt sets ExpiresAt field to given value.
-
-### HasExpiresAt
-
-`func (o *InlineObject170) HasExpiresAt() bool`
-
-HasExpiresAt returns a boolean if a field has been set.
+HasDeviceTypePolicies returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
