@@ -20,10 +20,18 @@ Name | Type | Description | Notes
 **WirelessCapabilities** | Pointer to **string** | Wireless capabilities of the client | [optional] 
 **SmInstalled** | Pointer to **bool** | Status of SM for the client | [optional] 
 **RecentDeviceMac** | Pointer to **string** | The MAC address of the node that the device was last connected to | [optional] 
-**ClientVpnConnections** | Pointer to [**[]InlineResponse20032ClientVpnConnections**](InlineResponse20032ClientVpnConnections.md) | VPN connections associated with the client | [optional] 
-**Lldp** | Pointer to **[][]string** | The link layer discover protocol settings for the client | [optional] 
-**Cdp** | Pointer to **[][]string** | The Cisco discover protocol settings for the client | [optional] 
 **Status** | Pointer to **string** | The connection status of the client | [optional] 
+**Usage** | Pointer to [**InlineResponse20032Usage**](InlineResponse20032Usage.md) |  | [optional] 
+**NamedVlan** | Pointer to **string** | Named VLAN of the client | [optional] 
+**AdaptivePolicyGroup** | Pointer to **string** | The adaptive policy group of the client | [optional] 
+**DeviceTypePrediction** | Pointer to **string** | Prediction of the client&#39;s device type | [optional] 
+**RecentDeviceSerial** | Pointer to **string** | The serial of the node the device was last connected to | [optional] 
+**RecentDeviceName** | Pointer to **string** | The name of the node the device was last connected to | [optional] 
+**RecentDeviceConnection** | Pointer to **string** | Client&#39;s most recent connection type | [optional] 
+**Notes** | Pointer to **string** | Notes on the client | [optional] 
+**Ip6Local** | Pointer to **string** | Local IPv6 address of the client | [optional] 
+**GroupPolicy8021x** | Pointer to **string** | 802.1x group policy of the client | [optional] 
+**PskGroup** | Pointer to **string** | iPSK name of the client | [optional] 
 
 ## Methods
 
@@ -444,81 +452,6 @@ SetRecentDeviceMac sets RecentDeviceMac field to given value.
 
 HasRecentDeviceMac returns a boolean if a field has been set.
 
-### GetClientVpnConnections
-
-`func (o *InlineResponse20032) GetClientVpnConnections() []InlineResponse20032ClientVpnConnections`
-
-GetClientVpnConnections returns the ClientVpnConnections field if non-nil, zero value otherwise.
-
-### GetClientVpnConnectionsOk
-
-`func (o *InlineResponse20032) GetClientVpnConnectionsOk() (*[]InlineResponse20032ClientVpnConnections, bool)`
-
-GetClientVpnConnectionsOk returns a tuple with the ClientVpnConnections field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientVpnConnections
-
-`func (o *InlineResponse20032) SetClientVpnConnections(v []InlineResponse20032ClientVpnConnections)`
-
-SetClientVpnConnections sets ClientVpnConnections field to given value.
-
-### HasClientVpnConnections
-
-`func (o *InlineResponse20032) HasClientVpnConnections() bool`
-
-HasClientVpnConnections returns a boolean if a field has been set.
-
-### GetLldp
-
-`func (o *InlineResponse20032) GetLldp() [][]string`
-
-GetLldp returns the Lldp field if non-nil, zero value otherwise.
-
-### GetLldpOk
-
-`func (o *InlineResponse20032) GetLldpOk() (*[][]string, bool)`
-
-GetLldpOk returns a tuple with the Lldp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLldp
-
-`func (o *InlineResponse20032) SetLldp(v [][]string)`
-
-SetLldp sets Lldp field to given value.
-
-### HasLldp
-
-`func (o *InlineResponse20032) HasLldp() bool`
-
-HasLldp returns a boolean if a field has been set.
-
-### GetCdp
-
-`func (o *InlineResponse20032) GetCdp() [][]string`
-
-GetCdp returns the Cdp field if non-nil, zero value otherwise.
-
-### GetCdpOk
-
-`func (o *InlineResponse20032) GetCdpOk() (*[][]string, bool)`
-
-GetCdpOk returns a tuple with the Cdp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCdp
-
-`func (o *InlineResponse20032) SetCdp(v [][]string)`
-
-SetCdp sets Cdp field to given value.
-
-### HasCdp
-
-`func (o *InlineResponse20032) HasCdp() bool`
-
-HasCdp returns a boolean if a field has been set.
-
 ### GetStatus
 
 `func (o *InlineResponse20032) GetStatus() string`
@@ -543,6 +476,281 @@ SetStatus sets Status field to given value.
 `func (o *InlineResponse20032) HasStatus() bool`
 
 HasStatus returns a boolean if a field has been set.
+
+### GetUsage
+
+`func (o *InlineResponse20032) GetUsage() InlineResponse20032Usage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse20032) GetUsageOk() (*InlineResponse20032Usage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse20032) SetUsage(v InlineResponse20032Usage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse20032) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
+
+### GetNamedVlan
+
+`func (o *InlineResponse20032) GetNamedVlan() string`
+
+GetNamedVlan returns the NamedVlan field if non-nil, zero value otherwise.
+
+### GetNamedVlanOk
+
+`func (o *InlineResponse20032) GetNamedVlanOk() (*string, bool)`
+
+GetNamedVlanOk returns a tuple with the NamedVlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNamedVlan
+
+`func (o *InlineResponse20032) SetNamedVlan(v string)`
+
+SetNamedVlan sets NamedVlan field to given value.
+
+### HasNamedVlan
+
+`func (o *InlineResponse20032) HasNamedVlan() bool`
+
+HasNamedVlan returns a boolean if a field has been set.
+
+### GetAdaptivePolicyGroup
+
+`func (o *InlineResponse20032) GetAdaptivePolicyGroup() string`
+
+GetAdaptivePolicyGroup returns the AdaptivePolicyGroup field if non-nil, zero value otherwise.
+
+### GetAdaptivePolicyGroupOk
+
+`func (o *InlineResponse20032) GetAdaptivePolicyGroupOk() (*string, bool)`
+
+GetAdaptivePolicyGroupOk returns a tuple with the AdaptivePolicyGroup field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdaptivePolicyGroup
+
+`func (o *InlineResponse20032) SetAdaptivePolicyGroup(v string)`
+
+SetAdaptivePolicyGroup sets AdaptivePolicyGroup field to given value.
+
+### HasAdaptivePolicyGroup
+
+`func (o *InlineResponse20032) HasAdaptivePolicyGroup() bool`
+
+HasAdaptivePolicyGroup returns a boolean if a field has been set.
+
+### GetDeviceTypePrediction
+
+`func (o *InlineResponse20032) GetDeviceTypePrediction() string`
+
+GetDeviceTypePrediction returns the DeviceTypePrediction field if non-nil, zero value otherwise.
+
+### GetDeviceTypePredictionOk
+
+`func (o *InlineResponse20032) GetDeviceTypePredictionOk() (*string, bool)`
+
+GetDeviceTypePredictionOk returns a tuple with the DeviceTypePrediction field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceTypePrediction
+
+`func (o *InlineResponse20032) SetDeviceTypePrediction(v string)`
+
+SetDeviceTypePrediction sets DeviceTypePrediction field to given value.
+
+### HasDeviceTypePrediction
+
+`func (o *InlineResponse20032) HasDeviceTypePrediction() bool`
+
+HasDeviceTypePrediction returns a boolean if a field has been set.
+
+### GetRecentDeviceSerial
+
+`func (o *InlineResponse20032) GetRecentDeviceSerial() string`
+
+GetRecentDeviceSerial returns the RecentDeviceSerial field if non-nil, zero value otherwise.
+
+### GetRecentDeviceSerialOk
+
+`func (o *InlineResponse20032) GetRecentDeviceSerialOk() (*string, bool)`
+
+GetRecentDeviceSerialOk returns a tuple with the RecentDeviceSerial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecentDeviceSerial
+
+`func (o *InlineResponse20032) SetRecentDeviceSerial(v string)`
+
+SetRecentDeviceSerial sets RecentDeviceSerial field to given value.
+
+### HasRecentDeviceSerial
+
+`func (o *InlineResponse20032) HasRecentDeviceSerial() bool`
+
+HasRecentDeviceSerial returns a boolean if a field has been set.
+
+### GetRecentDeviceName
+
+`func (o *InlineResponse20032) GetRecentDeviceName() string`
+
+GetRecentDeviceName returns the RecentDeviceName field if non-nil, zero value otherwise.
+
+### GetRecentDeviceNameOk
+
+`func (o *InlineResponse20032) GetRecentDeviceNameOk() (*string, bool)`
+
+GetRecentDeviceNameOk returns a tuple with the RecentDeviceName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecentDeviceName
+
+`func (o *InlineResponse20032) SetRecentDeviceName(v string)`
+
+SetRecentDeviceName sets RecentDeviceName field to given value.
+
+### HasRecentDeviceName
+
+`func (o *InlineResponse20032) HasRecentDeviceName() bool`
+
+HasRecentDeviceName returns a boolean if a field has been set.
+
+### GetRecentDeviceConnection
+
+`func (o *InlineResponse20032) GetRecentDeviceConnection() string`
+
+GetRecentDeviceConnection returns the RecentDeviceConnection field if non-nil, zero value otherwise.
+
+### GetRecentDeviceConnectionOk
+
+`func (o *InlineResponse20032) GetRecentDeviceConnectionOk() (*string, bool)`
+
+GetRecentDeviceConnectionOk returns a tuple with the RecentDeviceConnection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecentDeviceConnection
+
+`func (o *InlineResponse20032) SetRecentDeviceConnection(v string)`
+
+SetRecentDeviceConnection sets RecentDeviceConnection field to given value.
+
+### HasRecentDeviceConnection
+
+`func (o *InlineResponse20032) HasRecentDeviceConnection() bool`
+
+HasRecentDeviceConnection returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse20032) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse20032) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse20032) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse20032) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetIp6Local
+
+`func (o *InlineResponse20032) GetIp6Local() string`
+
+GetIp6Local returns the Ip6Local field if non-nil, zero value otherwise.
+
+### GetIp6LocalOk
+
+`func (o *InlineResponse20032) GetIp6LocalOk() (*string, bool)`
+
+GetIp6LocalOk returns a tuple with the Ip6Local field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIp6Local
+
+`func (o *InlineResponse20032) SetIp6Local(v string)`
+
+SetIp6Local sets Ip6Local field to given value.
+
+### HasIp6Local
+
+`func (o *InlineResponse20032) HasIp6Local() bool`
+
+HasIp6Local returns a boolean if a field has been set.
+
+### GetGroupPolicy8021x
+
+`func (o *InlineResponse20032) GetGroupPolicy8021x() string`
+
+GetGroupPolicy8021x returns the GroupPolicy8021x field if non-nil, zero value otherwise.
+
+### GetGroupPolicy8021xOk
+
+`func (o *InlineResponse20032) GetGroupPolicy8021xOk() (*string, bool)`
+
+GetGroupPolicy8021xOk returns a tuple with the GroupPolicy8021x field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicy8021x
+
+`func (o *InlineResponse20032) SetGroupPolicy8021x(v string)`
+
+SetGroupPolicy8021x sets GroupPolicy8021x field to given value.
+
+### HasGroupPolicy8021x
+
+`func (o *InlineResponse20032) HasGroupPolicy8021x() bool`
+
+HasGroupPolicy8021x returns a boolean if a field has been set.
+
+### GetPskGroup
+
+`func (o *InlineResponse20032) GetPskGroup() string`
+
+GetPskGroup returns the PskGroup field if non-nil, zero value otherwise.
+
+### GetPskGroupOk
+
+`func (o *InlineResponse20032) GetPskGroupOk() (*string, bool)`
+
+GetPskGroupOk returns a tuple with the PskGroup field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPskGroup
+
+`func (o *InlineResponse20032) SetPskGroup(v string)`
+
+SetPskGroup sets PskGroup field to given value.
+
+### HasPskGroup
+
+`func (o *InlineResponse20032) HasPskGroup() bool`
+
+HasPskGroup returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

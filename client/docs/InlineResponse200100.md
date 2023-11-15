@@ -6,9 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
 **EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
-**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
-**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
+**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
 
 ## Methods
 
@@ -79,80 +77,30 @@ SetEndTs sets EndTs field to given value.
 
 HasEndTs returns a boolean if a field has been set.
 
-### GetAverageKbps
+### GetClientCount
 
-`func (o *InlineResponse200100) GetAverageKbps() int32`
+`func (o *InlineResponse200100) GetClientCount() int32`
 
-GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
+GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
 
-### GetAverageKbpsOk
+### GetClientCountOk
 
-`func (o *InlineResponse200100) GetAverageKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200100) GetClientCountOk() (*int32, bool)`
 
-GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
+GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAverageKbps
+### SetClientCount
 
-`func (o *InlineResponse200100) SetAverageKbps(v int32)`
+`func (o *InlineResponse200100) SetClientCount(v int32)`
 
-SetAverageKbps sets AverageKbps field to given value.
+SetClientCount sets ClientCount field to given value.
 
-### HasAverageKbps
+### HasClientCount
 
-`func (o *InlineResponse200100) HasAverageKbps() bool`
+`func (o *InlineResponse200100) HasClientCount() bool`
 
-HasAverageKbps returns a boolean if a field has been set.
-
-### GetDownloadKbps
-
-`func (o *InlineResponse200100) GetDownloadKbps() int32`
-
-GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
-
-### GetDownloadKbpsOk
-
-`func (o *InlineResponse200100) GetDownloadKbpsOk() (*int32, bool)`
-
-GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDownloadKbps
-
-`func (o *InlineResponse200100) SetDownloadKbps(v int32)`
-
-SetDownloadKbps sets DownloadKbps field to given value.
-
-### HasDownloadKbps
-
-`func (o *InlineResponse200100) HasDownloadKbps() bool`
-
-HasDownloadKbps returns a boolean if a field has been set.
-
-### GetUploadKbps
-
-`func (o *InlineResponse200100) GetUploadKbps() int32`
-
-GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
-
-### GetUploadKbpsOk
-
-`func (o *InlineResponse200100) GetUploadKbpsOk() (*int32, bool)`
-
-GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUploadKbps
-
-`func (o *InlineResponse200100) SetUploadKbps(v int32)`
-
-SetUploadKbps sets UploadKbps field to given value.
-
-### HasUploadKbps
-
-`func (o *InlineResponse200100) HasUploadKbps() bool`
-
-HasUploadKbps returns a boolean if a field has been set.
+HasClientCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

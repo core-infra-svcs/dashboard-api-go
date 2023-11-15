@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IsRooted** | Pointer to **bool** | Boolean indicating if the device is rooted. | [optional] 
-**HasAntiVirus** | Pointer to **bool** | Boolean indicating if the device has Antivirus. | [optional] 
-**AntiVirusName** | Pointer to **string** | The name of the Antivirus. | [optional] 
-**IsFireWallEnabled** | Pointer to **bool** | Boolean indicating if the device has a Firewall enabled. | [optional] 
-**HasFireWallInstalled** | Pointer to **bool** | Boolean indicating if the device has a Firewall installed. | [optional] 
-**FireWallName** | Pointer to **string** | The name of the Firewall. | [optional] 
-**IsDiskEncrypted** | Pointer to **bool** | Boolean indicating if the device has disk encryption. | [optional] 
-**IsAutoLoginDisabled** | Pointer to **bool** | Boolean indicating if the device has auto login disabled. | [optional] 
-**Id** | Pointer to **string** | The Meraki identifier for the security center record. | [optional] 
-**RunningProcs** | Pointer to **string** | A comma seperated list of procs running on the device. | [optional] 
+**CpuPercentUsed** | Pointer to **float32** | The percentage of CPU used as a decimal format. | [optional] 
+**MemFree** | Pointer to **int32** | Memory that is not yet in use by the system. | [optional] 
+**MemWired** | Pointer to **int32** | Memory used for core OS functions on the device. | [optional] 
+**MemActive** | Pointer to **int32** | The active RAM on the device. | [optional] 
+**MemInactive** | Pointer to **int32** | The inactive RAM on the device. | [optional] 
+**NetworkSent** | Pointer to **int32** | Network bandwith transmitted. | [optional] 
+**NetworkReceived** | Pointer to **int32** | Network bandwith received. | [optional] 
+**SwapUsed** | Pointer to **int32** | The amount of space being used on the startup disk to swap unused files to and from RAM. | [optional] 
+**DiskUsage** | Pointer to [**NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage**](NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage.md) |  | [optional] 
+**Ts** | Pointer to **string** | The time at which the performance was measured. | [optional] 
 
 ## Methods
 
@@ -34,255 +34,255 @@ NewInlineResponse20065WithDefaults instantiates a new InlineResponse20065 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIsRooted
+### GetCpuPercentUsed
 
-`func (o *InlineResponse20065) GetIsRooted() bool`
+`func (o *InlineResponse20065) GetCpuPercentUsed() float32`
 
-GetIsRooted returns the IsRooted field if non-nil, zero value otherwise.
+GetCpuPercentUsed returns the CpuPercentUsed field if non-nil, zero value otherwise.
 
-### GetIsRootedOk
+### GetCpuPercentUsedOk
 
-`func (o *InlineResponse20065) GetIsRootedOk() (*bool, bool)`
+`func (o *InlineResponse20065) GetCpuPercentUsedOk() (*float32, bool)`
 
-GetIsRootedOk returns a tuple with the IsRooted field if it's non-nil, zero value otherwise
+GetCpuPercentUsedOk returns a tuple with the CpuPercentUsed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsRooted
+### SetCpuPercentUsed
 
-`func (o *InlineResponse20065) SetIsRooted(v bool)`
+`func (o *InlineResponse20065) SetCpuPercentUsed(v float32)`
 
-SetIsRooted sets IsRooted field to given value.
+SetCpuPercentUsed sets CpuPercentUsed field to given value.
 
-### HasIsRooted
+### HasCpuPercentUsed
 
-`func (o *InlineResponse20065) HasIsRooted() bool`
+`func (o *InlineResponse20065) HasCpuPercentUsed() bool`
 
-HasIsRooted returns a boolean if a field has been set.
+HasCpuPercentUsed returns a boolean if a field has been set.
 
-### GetHasAntiVirus
+### GetMemFree
 
-`func (o *InlineResponse20065) GetHasAntiVirus() bool`
+`func (o *InlineResponse20065) GetMemFree() int32`
 
-GetHasAntiVirus returns the HasAntiVirus field if non-nil, zero value otherwise.
+GetMemFree returns the MemFree field if non-nil, zero value otherwise.
 
-### GetHasAntiVirusOk
+### GetMemFreeOk
 
-`func (o *InlineResponse20065) GetHasAntiVirusOk() (*bool, bool)`
+`func (o *InlineResponse20065) GetMemFreeOk() (*int32, bool)`
 
-GetHasAntiVirusOk returns a tuple with the HasAntiVirus field if it's non-nil, zero value otherwise
+GetMemFreeOk returns a tuple with the MemFree field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHasAntiVirus
+### SetMemFree
 
-`func (o *InlineResponse20065) SetHasAntiVirus(v bool)`
+`func (o *InlineResponse20065) SetMemFree(v int32)`
 
-SetHasAntiVirus sets HasAntiVirus field to given value.
+SetMemFree sets MemFree field to given value.
 
-### HasHasAntiVirus
+### HasMemFree
 
-`func (o *InlineResponse20065) HasHasAntiVirus() bool`
+`func (o *InlineResponse20065) HasMemFree() bool`
 
-HasHasAntiVirus returns a boolean if a field has been set.
+HasMemFree returns a boolean if a field has been set.
 
-### GetAntiVirusName
+### GetMemWired
 
-`func (o *InlineResponse20065) GetAntiVirusName() string`
+`func (o *InlineResponse20065) GetMemWired() int32`
 
-GetAntiVirusName returns the AntiVirusName field if non-nil, zero value otherwise.
+GetMemWired returns the MemWired field if non-nil, zero value otherwise.
 
-### GetAntiVirusNameOk
+### GetMemWiredOk
 
-`func (o *InlineResponse20065) GetAntiVirusNameOk() (*string, bool)`
+`func (o *InlineResponse20065) GetMemWiredOk() (*int32, bool)`
 
-GetAntiVirusNameOk returns a tuple with the AntiVirusName field if it's non-nil, zero value otherwise
+GetMemWiredOk returns a tuple with the MemWired field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAntiVirusName
+### SetMemWired
 
-`func (o *InlineResponse20065) SetAntiVirusName(v string)`
+`func (o *InlineResponse20065) SetMemWired(v int32)`
 
-SetAntiVirusName sets AntiVirusName field to given value.
+SetMemWired sets MemWired field to given value.
 
-### HasAntiVirusName
+### HasMemWired
 
-`func (o *InlineResponse20065) HasAntiVirusName() bool`
+`func (o *InlineResponse20065) HasMemWired() bool`
 
-HasAntiVirusName returns a boolean if a field has been set.
+HasMemWired returns a boolean if a field has been set.
 
-### GetIsFireWallEnabled
+### GetMemActive
 
-`func (o *InlineResponse20065) GetIsFireWallEnabled() bool`
+`func (o *InlineResponse20065) GetMemActive() int32`
 
-GetIsFireWallEnabled returns the IsFireWallEnabled field if non-nil, zero value otherwise.
+GetMemActive returns the MemActive field if non-nil, zero value otherwise.
 
-### GetIsFireWallEnabledOk
+### GetMemActiveOk
 
-`func (o *InlineResponse20065) GetIsFireWallEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20065) GetMemActiveOk() (*int32, bool)`
 
-GetIsFireWallEnabledOk returns a tuple with the IsFireWallEnabled field if it's non-nil, zero value otherwise
+GetMemActiveOk returns a tuple with the MemActive field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsFireWallEnabled
+### SetMemActive
 
-`func (o *InlineResponse20065) SetIsFireWallEnabled(v bool)`
+`func (o *InlineResponse20065) SetMemActive(v int32)`
 
-SetIsFireWallEnabled sets IsFireWallEnabled field to given value.
+SetMemActive sets MemActive field to given value.
 
-### HasIsFireWallEnabled
+### HasMemActive
 
-`func (o *InlineResponse20065) HasIsFireWallEnabled() bool`
+`func (o *InlineResponse20065) HasMemActive() bool`
 
-HasIsFireWallEnabled returns a boolean if a field has been set.
+HasMemActive returns a boolean if a field has been set.
 
-### GetHasFireWallInstalled
+### GetMemInactive
 
-`func (o *InlineResponse20065) GetHasFireWallInstalled() bool`
+`func (o *InlineResponse20065) GetMemInactive() int32`
 
-GetHasFireWallInstalled returns the HasFireWallInstalled field if non-nil, zero value otherwise.
+GetMemInactive returns the MemInactive field if non-nil, zero value otherwise.
 
-### GetHasFireWallInstalledOk
+### GetMemInactiveOk
 
-`func (o *InlineResponse20065) GetHasFireWallInstalledOk() (*bool, bool)`
+`func (o *InlineResponse20065) GetMemInactiveOk() (*int32, bool)`
 
-GetHasFireWallInstalledOk returns a tuple with the HasFireWallInstalled field if it's non-nil, zero value otherwise
+GetMemInactiveOk returns a tuple with the MemInactive field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHasFireWallInstalled
+### SetMemInactive
 
-`func (o *InlineResponse20065) SetHasFireWallInstalled(v bool)`
+`func (o *InlineResponse20065) SetMemInactive(v int32)`
 
-SetHasFireWallInstalled sets HasFireWallInstalled field to given value.
+SetMemInactive sets MemInactive field to given value.
 
-### HasHasFireWallInstalled
+### HasMemInactive
 
-`func (o *InlineResponse20065) HasHasFireWallInstalled() bool`
+`func (o *InlineResponse20065) HasMemInactive() bool`
 
-HasHasFireWallInstalled returns a boolean if a field has been set.
+HasMemInactive returns a boolean if a field has been set.
 
-### GetFireWallName
+### GetNetworkSent
 
-`func (o *InlineResponse20065) GetFireWallName() string`
+`func (o *InlineResponse20065) GetNetworkSent() int32`
 
-GetFireWallName returns the FireWallName field if non-nil, zero value otherwise.
+GetNetworkSent returns the NetworkSent field if non-nil, zero value otherwise.
 
-### GetFireWallNameOk
+### GetNetworkSentOk
 
-`func (o *InlineResponse20065) GetFireWallNameOk() (*string, bool)`
+`func (o *InlineResponse20065) GetNetworkSentOk() (*int32, bool)`
 
-GetFireWallNameOk returns a tuple with the FireWallName field if it's non-nil, zero value otherwise
+GetNetworkSentOk returns a tuple with the NetworkSent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFireWallName
+### SetNetworkSent
 
-`func (o *InlineResponse20065) SetFireWallName(v string)`
+`func (o *InlineResponse20065) SetNetworkSent(v int32)`
 
-SetFireWallName sets FireWallName field to given value.
+SetNetworkSent sets NetworkSent field to given value.
 
-### HasFireWallName
+### HasNetworkSent
 
-`func (o *InlineResponse20065) HasFireWallName() bool`
+`func (o *InlineResponse20065) HasNetworkSent() bool`
 
-HasFireWallName returns a boolean if a field has been set.
+HasNetworkSent returns a boolean if a field has been set.
 
-### GetIsDiskEncrypted
+### GetNetworkReceived
 
-`func (o *InlineResponse20065) GetIsDiskEncrypted() bool`
+`func (o *InlineResponse20065) GetNetworkReceived() int32`
 
-GetIsDiskEncrypted returns the IsDiskEncrypted field if non-nil, zero value otherwise.
+GetNetworkReceived returns the NetworkReceived field if non-nil, zero value otherwise.
 
-### GetIsDiskEncryptedOk
+### GetNetworkReceivedOk
 
-`func (o *InlineResponse20065) GetIsDiskEncryptedOk() (*bool, bool)`
+`func (o *InlineResponse20065) GetNetworkReceivedOk() (*int32, bool)`
 
-GetIsDiskEncryptedOk returns a tuple with the IsDiskEncrypted field if it's non-nil, zero value otherwise
+GetNetworkReceivedOk returns a tuple with the NetworkReceived field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDiskEncrypted
+### SetNetworkReceived
 
-`func (o *InlineResponse20065) SetIsDiskEncrypted(v bool)`
+`func (o *InlineResponse20065) SetNetworkReceived(v int32)`
 
-SetIsDiskEncrypted sets IsDiskEncrypted field to given value.
+SetNetworkReceived sets NetworkReceived field to given value.
 
-### HasIsDiskEncrypted
+### HasNetworkReceived
 
-`func (o *InlineResponse20065) HasIsDiskEncrypted() bool`
+`func (o *InlineResponse20065) HasNetworkReceived() bool`
 
-HasIsDiskEncrypted returns a boolean if a field has been set.
+HasNetworkReceived returns a boolean if a field has been set.
 
-### GetIsAutoLoginDisabled
+### GetSwapUsed
 
-`func (o *InlineResponse20065) GetIsAutoLoginDisabled() bool`
+`func (o *InlineResponse20065) GetSwapUsed() int32`
 
-GetIsAutoLoginDisabled returns the IsAutoLoginDisabled field if non-nil, zero value otherwise.
+GetSwapUsed returns the SwapUsed field if non-nil, zero value otherwise.
 
-### GetIsAutoLoginDisabledOk
+### GetSwapUsedOk
 
-`func (o *InlineResponse20065) GetIsAutoLoginDisabledOk() (*bool, bool)`
+`func (o *InlineResponse20065) GetSwapUsedOk() (*int32, bool)`
 
-GetIsAutoLoginDisabledOk returns a tuple with the IsAutoLoginDisabled field if it's non-nil, zero value otherwise
+GetSwapUsedOk returns a tuple with the SwapUsed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsAutoLoginDisabled
+### SetSwapUsed
 
-`func (o *InlineResponse20065) SetIsAutoLoginDisabled(v bool)`
+`func (o *InlineResponse20065) SetSwapUsed(v int32)`
 
-SetIsAutoLoginDisabled sets IsAutoLoginDisabled field to given value.
+SetSwapUsed sets SwapUsed field to given value.
 
-### HasIsAutoLoginDisabled
+### HasSwapUsed
 
-`func (o *InlineResponse20065) HasIsAutoLoginDisabled() bool`
+`func (o *InlineResponse20065) HasSwapUsed() bool`
 
-HasIsAutoLoginDisabled returns a boolean if a field has been set.
+HasSwapUsed returns a boolean if a field has been set.
 
-### GetId
+### GetDiskUsage
 
-`func (o *InlineResponse20065) GetId() string`
+`func (o *InlineResponse20065) GetDiskUsage() NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetDiskUsage returns the DiskUsage field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetDiskUsageOk
 
-`func (o *InlineResponse20065) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20065) GetDiskUsageOk() (*NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetDiskUsageOk returns a tuple with the DiskUsage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetDiskUsage
 
-`func (o *InlineResponse20065) SetId(v string)`
+`func (o *InlineResponse20065) SetDiskUsage(v NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage)`
 
-SetId sets Id field to given value.
+SetDiskUsage sets DiskUsage field to given value.
 
-### HasId
+### HasDiskUsage
 
-`func (o *InlineResponse20065) HasId() bool`
+`func (o *InlineResponse20065) HasDiskUsage() bool`
 
-HasId returns a boolean if a field has been set.
+HasDiskUsage returns a boolean if a field has been set.
 
-### GetRunningProcs
+### GetTs
 
-`func (o *InlineResponse20065) GetRunningProcs() string`
+`func (o *InlineResponse20065) GetTs() string`
 
-GetRunningProcs returns the RunningProcs field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetRunningProcsOk
+### GetTsOk
 
-`func (o *InlineResponse20065) GetRunningProcsOk() (*string, bool)`
+`func (o *InlineResponse20065) GetTsOk() (*string, bool)`
 
-GetRunningProcsOk returns a tuple with the RunningProcs field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRunningProcs
+### SetTs
 
-`func (o *InlineResponse20065) SetRunningProcs(v string)`
+`func (o *InlineResponse20065) SetTs(v string)`
 
-SetRunningProcs sets RunningProcs field to given value.
+SetTs sets Ts field to given value.
 
-### HasRunningProcs
+### HasTs
 
-`func (o *InlineResponse20065) HasRunningProcs() bool`
+`func (o *InlineResponse20065) HasTs() bool`
 
-HasRunningProcs returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

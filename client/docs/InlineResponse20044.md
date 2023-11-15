@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
+**Id** | Pointer to **string** | Meraki auth user id | [optional] 
+**Email** | Pointer to **string** | Email address of the user | [optional] 
+**Name** | Pointer to **string** | Name of the user | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
 
 ## Methods
 
@@ -26,6 +30,56 @@ will change when the set of required properties is changed
 NewInlineResponse20044WithDefaults instantiates a new InlineResponse20044 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineResponse20044) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse20044) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse20044) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse20044) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### GetEmail
+
+`func (o *InlineResponse20044) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *InlineResponse20044) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *InlineResponse20044) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *InlineResponse20044) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
 
 ### GetName
 
@@ -52,55 +106,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetClientId
+### GetCreatedAt
 
-`func (o *InlineResponse20044) GetClientId() string`
+`func (o *InlineResponse20044) GetCreatedAt() time.Time`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse20044) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse20044) GetCreatedAtOk() (*time.Time, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetCreatedAt
 
-`func (o *InlineResponse20044) SetClientId(v string)`
+`func (o *InlineResponse20044) SetCreatedAt(v time.Time)`
 
-SetClientId sets ClientId field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasClientId
+### HasCreatedAt
 
-`func (o *InlineResponse20044) HasClientId() bool`
+`func (o *InlineResponse20044) HasCreatedAt() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetAssigned
+### GetAccountType
 
-`func (o *InlineResponse20044) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+`func (o *InlineResponse20044) GetAccountType() string`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetAccountTypeOk
 
-`func (o *InlineResponse20044) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+`func (o *InlineResponse20044) GetAccountTypeOk() (*string, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetAccountType
 
-`func (o *InlineResponse20044) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+`func (o *InlineResponse20044) SetAccountType(v string)`
 
-SetAssigned sets Assigned field to given value.
+SetAccountType sets AccountType field to given value.
 
-### HasAssigned
+### HasAccountType
 
-`func (o *InlineResponse20044) HasAssigned() bool`
+`func (o *InlineResponse20044) HasAccountType() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasAccountType returns a boolean if a field has been set.
+
+### GetIsAdmin
+
+`func (o *InlineResponse20044) GetIsAdmin() bool`
+
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
+
+### GetIsAdminOk
+
+`func (o *InlineResponse20044) GetIsAdminOk() (*bool, bool)`
+
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsAdmin
+
+`func (o *InlineResponse20044) SetIsAdmin(v bool)`
+
+SetIsAdmin sets IsAdmin field to given value.
+
+### HasIsAdmin
+
+`func (o *InlineResponse20044) HasIsAdmin() bool`
+
+HasIsAdmin returns a boolean if a field has been set.
+
+### GetAuthorizations
+
+`func (o *InlineResponse20044) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
+
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+
+### GetAuthorizationsOk
+
+`func (o *InlineResponse20044) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
+
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizations
+
+`func (o *InlineResponse20044) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
+
+SetAuthorizations sets Authorizations field to given value.
+
+### HasAuthorizations
+
+`func (o *InlineResponse20044) HasAuthorizations() bool`
+
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

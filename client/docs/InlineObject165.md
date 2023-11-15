@@ -9,10 +9,10 @@ Name | Type | Description | Notes
 **MinBitrateType** | Pointer to **string** | Minimum bitrate can be set to either &#39;band&#39; or &#39;ssid&#39;. Defaults to band. | [optional] 
 **BandSelectionType** | **string** | Band selection can be set to either &#39;ssid&#39; or &#39;ap&#39;. This param is required on creation. | 
 **ApBandSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesApBandSettings**](NetworksNetworkIdWirelessRfProfilesApBandSettings.md) |  | [optional] 
-**TwoFourGhzSettings** | Pointer to [**InlineResponse200105TwoFourGhzSettings**](InlineResponse200105TwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**InlineResponse200105FiveGhzSettings**](InlineResponse200105FiveGhzSettings.md) |  | [optional] 
+**TwoFourGhzSettings** | Pointer to [**InlineResponse200107TwoFourGhzSettings**](InlineResponse200107TwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**InlineResponse200107FiveGhzSettings**](InlineResponse200107FiveGhzSettings.md) |  | [optional] 
 **SixGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesSixGhzSettings**](NetworksNetworkIdWirelessRfProfilesSixGhzSettings.md) |  | [optional] 
-**Transmission** | Pointer to [**InlineResponse200105Transmission**](InlineResponse200105Transmission.md) |  | [optional] 
+**Transmission** | Pointer to [**InlineResponse200107Transmission**](InlineResponse200107Transmission.md) |  | [optional] 
 **PerSsidSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesPerSsidSettings**](NetworksNetworkIdWirelessRfProfilesPerSsidSettings.md) |  | [optional] 
 **FlexRadios** | Pointer to [**NetworksNetworkIdWirelessRfProfilesFlexRadios**](NetworksNetworkIdWirelessRfProfilesFlexRadios.md) |  | [optional] 
 
@@ -152,20 +152,20 @@ HasApBandSettings returns a boolean if a field has been set.
 
 ### GetTwoFourGhzSettings
 
-`func (o *InlineObject165) GetTwoFourGhzSettings() InlineResponse200105TwoFourGhzSettings`
+`func (o *InlineObject165) GetTwoFourGhzSettings() InlineResponse200107TwoFourGhzSettings`
 
 GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
 
 ### GetTwoFourGhzSettingsOk
 
-`func (o *InlineObject165) GetTwoFourGhzSettingsOk() (*InlineResponse200105TwoFourGhzSettings, bool)`
+`func (o *InlineObject165) GetTwoFourGhzSettingsOk() (*InlineResponse200107TwoFourGhzSettings, bool)`
 
 GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTwoFourGhzSettings
 
-`func (o *InlineObject165) SetTwoFourGhzSettings(v InlineResponse200105TwoFourGhzSettings)`
+`func (o *InlineObject165) SetTwoFourGhzSettings(v InlineResponse200107TwoFourGhzSettings)`
 
 SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
 
@@ -177,20 +177,20 @@ HasTwoFourGhzSettings returns a boolean if a field has been set.
 
 ### GetFiveGhzSettings
 
-`func (o *InlineObject165) GetFiveGhzSettings() InlineResponse200105FiveGhzSettings`
+`func (o *InlineObject165) GetFiveGhzSettings() InlineResponse200107FiveGhzSettings`
 
 GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
 
 ### GetFiveGhzSettingsOk
 
-`func (o *InlineObject165) GetFiveGhzSettingsOk() (*InlineResponse200105FiveGhzSettings, bool)`
+`func (o *InlineObject165) GetFiveGhzSettingsOk() (*InlineResponse200107FiveGhzSettings, bool)`
 
 GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFiveGhzSettings
 
-`func (o *InlineObject165) SetFiveGhzSettings(v InlineResponse200105FiveGhzSettings)`
+`func (o *InlineObject165) SetFiveGhzSettings(v InlineResponse200107FiveGhzSettings)`
 
 SetFiveGhzSettings sets FiveGhzSettings field to given value.
 
@@ -227,20 +227,20 @@ HasSixGhzSettings returns a boolean if a field has been set.
 
 ### GetTransmission
 
-`func (o *InlineObject165) GetTransmission() InlineResponse200105Transmission`
+`func (o *InlineObject165) GetTransmission() InlineResponse200107Transmission`
 
 GetTransmission returns the Transmission field if non-nil, zero value otherwise.
 
 ### GetTransmissionOk
 
-`func (o *InlineObject165) GetTransmissionOk() (*InlineResponse200105Transmission, bool)`
+`func (o *InlineObject165) GetTransmissionOk() (*InlineResponse200107Transmission, bool)`
 
 GetTransmissionOk returns a tuple with the Transmission field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTransmission
 
-`func (o *InlineObject165) SetTransmission(v InlineResponse200105Transmission)`
+`func (o *InlineObject165) SetTransmission(v InlineResponse200107Transmission)`
 
 SetTransmission sets Transmission field to given value.
 

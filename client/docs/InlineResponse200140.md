@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesNetwork.md) |  | [optional] 
 **ProductType** | Pointer to **string** | Device product type. | [optional] 
 **Serial** | Pointer to **string** | The device serial number. | [optional] 
+**Status** | Pointer to **string** | The device provisioning status. Possible statuses: unprovisioned, incomplete, complete. | [optional] 
 **Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks**](OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks.md) | List of device uplink addresses information. | [optional] 
 
 ## Methods
 
@@ -156,6 +156,31 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
+### GetStatus
+
+`func (o *InlineResponse200140) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse200140) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse200140) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse200140) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
 ### GetTags
 
 `func (o *InlineResponse200140) GetTags() []string`
@@ -180,31 +205,6 @@ SetTags sets Tags field to given value.
 `func (o *InlineResponse200140) HasTags() bool`
 
 HasTags returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse200140) GetUplinks() []OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse200140) GetUplinksOk() (*[]OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse200140) SetUplinks(v []OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse200140) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

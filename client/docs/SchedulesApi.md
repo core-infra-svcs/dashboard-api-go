@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetNetworkCameraSchedules
 
-> []InlineResponse20029 GetNetworkCameraSchedules(ctx, networkId).Execute()
+> []InlineResponse20030 GetNetworkCameraSchedules(ctx, networkId).Execute()
 
 Returns a list of all camera recording schedules.
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SchedulesApi.GetNetworkCameraSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCameraSchedules`: []InlineResponse20029
+    // response from `GetNetworkCameraSchedules`: []InlineResponse20030
     fmt.Fprintf(os.Stdout, "Response from `SchedulesApi.GetNetworkCameraSchedules`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20029**](InlineResponse20029.md)
+[**[]InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 

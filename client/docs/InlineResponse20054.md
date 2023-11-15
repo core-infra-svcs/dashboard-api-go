@@ -5,9 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
-**Tags** | Pointer to **[]string** | An array of tags associated with the device. | [optional] 
+**Name** | Pointer to **string** | The name of the device. | [optional] 
 **WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
 **Serial** | Pointer to **string** | The device serial. | [optional] 
+**Notes** | Pointer to **string** | Notes associated with the device. | [optional] 
 
 ## Methods
 
@@ -53,30 +54,30 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetTags
+### GetName
 
-`func (o *InlineResponse20054) GetTags() []string`
+`func (o *InlineResponse20054) GetName() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetNameOk
 
-`func (o *InlineResponse20054) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse20054) GetNameOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetName
 
-`func (o *InlineResponse20054) SetTags(v []string)`
+`func (o *InlineResponse20054) SetName(v string)`
 
-SetTags sets Tags field to given value.
+SetName sets Name field to given value.
 
-### HasTags
+### HasName
 
-`func (o *InlineResponse20054) HasTags() bool`
+`func (o *InlineResponse20054) HasName() bool`
 
-HasTags returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 ### GetWifiMac
 
@@ -127,6 +128,31 @@ SetSerial sets Serial field to given value.
 `func (o *InlineResponse20054) HasSerial() bool`
 
 HasSerial returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse20054) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse20054) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse20054) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse20054) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

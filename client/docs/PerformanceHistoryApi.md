@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSmDevicePerformanceHistory
 
-> []InlineResponse20064 GetNetworkSmDevicePerformanceHistory(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20065 GetNetworkSmDevicePerformanceHistory(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return historical records of various Systems Manager client metrics for desktop devices.
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PerformanceHistoryApi.GetNetworkSmDevicePerformanceHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDevicePerformanceHistory`: []InlineResponse20064
+    // response from `GetNetworkSmDevicePerformanceHistory`: []InlineResponse20065
     fmt.Fprintf(os.Stdout, "Response from `PerformanceHistoryApi.GetNetworkSmDevicePerformanceHistory`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20064**](InlineResponse20064.md)
+[**[]InlineResponse20065**](InlineResponse20065.md)
 
 ### Authorization
 

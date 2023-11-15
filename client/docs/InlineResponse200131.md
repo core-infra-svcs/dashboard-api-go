@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
-**Name** | Pointer to **string** | The name of the configuration template | [optional] 
-**ProductTypes** | Pointer to **[]string** | The product types of the configuration template | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
+**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
+**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
+**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200131WithDefaults instantiates a new InlineResponse200131 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetTs
 
-`func (o *InlineResponse200131) GetId() string`
+`func (o *InlineResponse200131) GetTs() time.Time`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetTsOk
 
-`func (o *InlineResponse200131) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200131) GetTsOk() (*time.Time, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetTs
 
-`func (o *InlineResponse200131) SetId(v string)`
+`func (o *InlineResponse200131) SetTs(v time.Time)`
 
-SetId sets Id field to given value.
+SetTs sets Ts field to given value.
 
-### HasId
+### HasTs
 
-`func (o *InlineResponse200131) HasId() bool`
+`func (o *InlineResponse200131) HasTs() bool`
 
-HasId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetName
+### GetTotal
 
-`func (o *InlineResponse200131) GetName() string`
+`func (o *InlineResponse200131) GetTotal() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTotalOk
 
-`func (o *InlineResponse200131) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200131) GetTotalOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTotal
 
-`func (o *InlineResponse200131) SetName(v string)`
+`func (o *InlineResponse200131) SetTotal(v int32)`
 
-SetName sets Name field to given value.
+SetTotal sets Total field to given value.
 
-### HasName
+### HasTotal
 
-`func (o *InlineResponse200131) HasName() bool`
+`func (o *InlineResponse200131) HasTotal() bool`
 
-HasName returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetProductTypes
+### GetUpstream
 
-`func (o *InlineResponse200131) GetProductTypes() []string`
+`func (o *InlineResponse200131) GetUpstream() int32`
 
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetProductTypesOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200131) GetProductTypesOk() (*[]string, bool)`
+`func (o *InlineResponse200131) GetUpstreamOk() (*int32, bool)`
 
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductTypes
+### SetUpstream
 
-`func (o *InlineResponse200131) SetProductTypes(v []string)`
+`func (o *InlineResponse200131) SetUpstream(v int32)`
 
-SetProductTypes sets ProductTypes field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasProductTypes
+### HasUpstream
 
-`func (o *InlineResponse200131) HasProductTypes() bool`
+`func (o *InlineResponse200131) HasUpstream() bool`
 
-HasProductTypes returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetTimeZone
+### GetDownstream
 
-`func (o *InlineResponse200131) GetTimeZone() string`
+`func (o *InlineResponse200131) GetDownstream() int32`
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetTimeZoneOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200131) GetTimeZoneOk() (*string, bool)`
+`func (o *InlineResponse200131) GetDownstreamOk() (*int32, bool)`
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetDownstream
 
-`func (o *InlineResponse200131) SetTimeZone(v string)`
+`func (o *InlineResponse200131) SetDownstream(v int32)`
 
-SetTimeZone sets TimeZone field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasTimeZone
+### HasDownstream
 
-`func (o *InlineResponse200131) HasTimeZone() bool`
+`func (o *InlineResponse200131) HasDownstream() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

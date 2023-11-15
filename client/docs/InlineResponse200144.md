@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of the device | [optional] 
-**Name** | Pointer to **string** | Name assigned to the device | [optional] 
-**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
-**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Serial** | Pointer to **string** | Serial of MX device | [optional] 
+**Uplink** | Pointer to **string** | Uplink interface (wan1, wan2, or cellular) | [optional] 
+**Ip** | Pointer to **string** | IP address of uplink | [optional] 
+**TimeSeries** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries**](OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries.md) | Loss and latency timeseries data | [optional] 
 
 ## Methods
 
@@ -27,6 +28,31 @@ will change when the set of required properties is changed
 NewInlineResponse200144WithDefaults instantiates a new InlineResponse200144 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetNetworkId
+
+`func (o *InlineResponse200144) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse200144) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse200144) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse200144) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
 
 ### GetSerial
 
@@ -53,80 +79,80 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetName
+### GetUplink
 
-`func (o *InlineResponse200144) GetName() string`
+`func (o *InlineResponse200144) GetUplink() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUplinkOk
 
-`func (o *InlineResponse200144) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200144) GetUplinkOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUplink
 
-`func (o *InlineResponse200144) SetName(v string)`
+`func (o *InlineResponse200144) SetUplink(v string)`
 
-SetName sets Name field to given value.
+SetUplink sets Uplink field to given value.
 
-### HasName
+### HasUplink
 
-`func (o *InlineResponse200144) HasName() bool`
+`func (o *InlineResponse200144) HasUplink() bool`
 
-HasName returns a boolean if a field has been set.
+HasUplink returns a boolean if a field has been set.
 
-### GetDeviceStatus
+### GetIp
 
-`func (o *InlineResponse200144) GetDeviceStatus() string`
+`func (o *InlineResponse200144) GetIp() string`
 
-GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
+GetIp returns the Ip field if non-nil, zero value otherwise.
 
-### GetDeviceStatusOk
+### GetIpOk
 
-`func (o *InlineResponse200144) GetDeviceStatusOk() (*string, bool)`
+`func (o *InlineResponse200144) GetIpOk() (*string, bool)`
 
-GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceStatus
+### SetIp
 
-`func (o *InlineResponse200144) SetDeviceStatus(v string)`
+`func (o *InlineResponse200144) SetIp(v string)`
 
-SetDeviceStatus sets DeviceStatus field to given value.
+SetIp sets Ip field to given value.
 
-### HasDeviceStatus
+### HasIp
 
-`func (o *InlineResponse200144) HasDeviceStatus() bool`
+`func (o *InlineResponse200144) HasIp() bool`
 
-HasDeviceStatus returns a boolean if a field has been set.
+HasIp returns a boolean if a field has been set.
 
-### GetUpgrade
+### GetTimeSeries
 
-`func (o *InlineResponse200144) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
+`func (o *InlineResponse200144) GetTimeSeries() []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries`
 
-GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
+GetTimeSeries returns the TimeSeries field if non-nil, zero value otherwise.
 
-### GetUpgradeOk
+### GetTimeSeriesOk
 
-`func (o *InlineResponse200144) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
+`func (o *InlineResponse200144) GetTimeSeriesOk() (*[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries, bool)`
 
-GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
+GetTimeSeriesOk returns a tuple with the TimeSeries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgrade
+### SetTimeSeries
 
-`func (o *InlineResponse200144) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
+`func (o *InlineResponse200144) SetTimeSeries(v []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries)`
 
-SetUpgrade sets Upgrade field to given value.
+SetTimeSeries sets TimeSeries field to given value.
 
-### HasUpgrade
+### HasTimeSeries
 
-`func (o *InlineResponse200144) HasUpgrade() bool`
+`func (o *InlineResponse200144) HasTimeSeries() bool`
 
-HasUpgrade returns a boolean if a field has been set.
+HasTimeSeries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

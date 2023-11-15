@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the switch. | [optional] 
-**Serial** | Pointer to **string** | The serial number of the switch. | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the switch. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSwitchPortsBySwitchNetwork**](OrganizationsOrganizationIdSwitchPortsBySwitchNetwork.md) |  | [optional] 
-**Model** | Pointer to **string** | The model of the switch. | [optional] 
-**Ports** | Pointer to [**[]OrganizationsOrganizationIdSwitchPortsBySwitchPorts**](OrganizationsOrganizationIdSwitchPortsBySwitchPorts.md) | Ports belonging to the switch | [optional] 
+**Model** | Pointer to **string** | The device model | [optional] 
+**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -29,106 +26,6 @@ will change when the set of required properties is changed
 NewInlineResponse200171WithDefaults instantiates a new InlineResponse200171 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetName
-
-`func (o *InlineResponse200171) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200171) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200171) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200171) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200171) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200171) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200171) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200171) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineResponse200171) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200171) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200171) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse200171) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200171) GetNetwork() OrganizationsOrganizationIdSwitchPortsBySwitchNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200171) GetNetworkOk() (*OrganizationsOrganizationIdSwitchPortsBySwitchNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200171) SetNetwork(v OrganizationsOrganizationIdSwitchPortsBySwitchNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200171) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
 
 ### GetModel
 
@@ -155,30 +52,55 @@ SetModel sets Model field to given value.
 
 HasModel returns a boolean if a field has been set.
 
-### GetPorts
+### GetCount
 
-`func (o *InlineResponse200171) GetPorts() []OrganizationsOrganizationIdSwitchPortsBySwitchPorts`
+`func (o *InlineResponse200171) GetCount() int32`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetCountOk
 
-`func (o *InlineResponse200171) GetPortsOk() (*[]OrganizationsOrganizationIdSwitchPortsBySwitchPorts, bool)`
+`func (o *InlineResponse200171) GetCountOk() (*int32, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetCount
 
-`func (o *InlineResponse200171) SetPorts(v []OrganizationsOrganizationIdSwitchPortsBySwitchPorts)`
+`func (o *InlineResponse200171) SetCount(v int32)`
 
-SetPorts sets Ports field to given value.
+SetCount sets Count field to given value.
 
-### HasPorts
+### HasCount
 
-`func (o *InlineResponse200171) HasPorts() bool`
+`func (o *InlineResponse200171) HasCount() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasCount returns a boolean if a field has been set.
+
+### GetUsage
+
+`func (o *InlineResponse200171) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse200171) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse200171) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse200171) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

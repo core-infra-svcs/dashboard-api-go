@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Switch serial. | [optional] 
-**Name** | Pointer to **string** | Switch name. | [optional] 
-**Url** | Pointer to **string** | Url link to switch. | [optional] 
-**SupportsInspection** | Pointer to **bool** | Whether this switch supports Dynamic ARP Inspection. | [optional] 
-**HasTrustedPort** | Pointer to **bool** | Whether this switch has a trusted DAI port. Always false if supportsInspection is false. | [optional] 
+**Alerts** | Pointer to [**InlineResponse20079Alerts**](InlineResponse20079Alerts.md) |  | [optional] 
+**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
+**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set       to allow.An empty array will clear the entries. | [optional] 
+**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set       to block.An empty array will clear the entries. | [optional] 
+**ArpInspection** | Pointer to [**InlineResponse20079ArpInspection**](InlineResponse20079ArpInspection.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse20079WithDefaults instantiates a new InlineResponse20079 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetAlerts
 
-`func (o *InlineResponse20079) GetSerial() string`
+`func (o *InlineResponse20079) GetAlerts() InlineResponse20079Alerts`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetAlertsOk
 
-`func (o *InlineResponse20079) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20079) GetAlertsOk() (*InlineResponse20079Alerts, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetAlerts
 
-`func (o *InlineResponse20079) SetSerial(v string)`
+`func (o *InlineResponse20079) SetAlerts(v InlineResponse20079Alerts)`
 
-SetSerial sets Serial field to given value.
+SetAlerts sets Alerts field to given value.
 
-### HasSerial
+### HasAlerts
 
-`func (o *InlineResponse20079) HasSerial() bool`
+`func (o *InlineResponse20079) HasAlerts() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasAlerts returns a boolean if a field has been set.
 
-### GetName
+### GetDefaultPolicy
 
-`func (o *InlineResponse20079) GetName() string`
+`func (o *InlineResponse20079) GetDefaultPolicy() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDefaultPolicyOk
 
-`func (o *InlineResponse20079) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20079) GetDefaultPolicyOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDefaultPolicy
 
-`func (o *InlineResponse20079) SetName(v string)`
+`func (o *InlineResponse20079) SetDefaultPolicy(v string)`
 
-SetName sets Name field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasName
+### HasDefaultPolicy
 
-`func (o *InlineResponse20079) HasName() bool`
+`func (o *InlineResponse20079) HasDefaultPolicy() bool`
 
-HasName returns a boolean if a field has been set.
+HasDefaultPolicy returns a boolean if a field has been set.
 
-### GetUrl
+### GetBlockedServers
 
-`func (o *InlineResponse20079) GetUrl() string`
+`func (o *InlineResponse20079) GetBlockedServers() []string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetBlockedServersOk
 
-`func (o *InlineResponse20079) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20079) GetBlockedServersOk() (*[]string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetBlockedServers
 
-`func (o *InlineResponse20079) SetUrl(v string)`
+`func (o *InlineResponse20079) SetBlockedServers(v []string)`
 
-SetUrl sets Url field to given value.
+SetBlockedServers sets BlockedServers field to given value.
 
-### HasUrl
+### HasBlockedServers
 
-`func (o *InlineResponse20079) HasUrl() bool`
+`func (o *InlineResponse20079) HasBlockedServers() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasBlockedServers returns a boolean if a field has been set.
 
-### GetSupportsInspection
+### GetAllowedServers
 
-`func (o *InlineResponse20079) GetSupportsInspection() bool`
+`func (o *InlineResponse20079) GetAllowedServers() []string`
 
-GetSupportsInspection returns the SupportsInspection field if non-nil, zero value otherwise.
+GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
 
-### GetSupportsInspectionOk
+### GetAllowedServersOk
 
-`func (o *InlineResponse20079) GetSupportsInspectionOk() (*bool, bool)`
+`func (o *InlineResponse20079) GetAllowedServersOk() (*[]string, bool)`
 
-GetSupportsInspectionOk returns a tuple with the SupportsInspection field if it's non-nil, zero value otherwise
+GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSupportsInspection
+### SetAllowedServers
 
-`func (o *InlineResponse20079) SetSupportsInspection(v bool)`
+`func (o *InlineResponse20079) SetAllowedServers(v []string)`
 
-SetSupportsInspection sets SupportsInspection field to given value.
+SetAllowedServers sets AllowedServers field to given value.
 
-### HasSupportsInspection
+### HasAllowedServers
 
-`func (o *InlineResponse20079) HasSupportsInspection() bool`
+`func (o *InlineResponse20079) HasAllowedServers() bool`
 
-HasSupportsInspection returns a boolean if a field has been set.
+HasAllowedServers returns a boolean if a field has been set.
 
-### GetHasTrustedPort
+### GetArpInspection
 
-`func (o *InlineResponse20079) GetHasTrustedPort() bool`
+`func (o *InlineResponse20079) GetArpInspection() InlineResponse20079ArpInspection`
 
-GetHasTrustedPort returns the HasTrustedPort field if non-nil, zero value otherwise.
+GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
 
-### GetHasTrustedPortOk
+### GetArpInspectionOk
 
-`func (o *InlineResponse20079) GetHasTrustedPortOk() (*bool, bool)`
+`func (o *InlineResponse20079) GetArpInspectionOk() (*InlineResponse20079ArpInspection, bool)`
 
-GetHasTrustedPortOk returns a tuple with the HasTrustedPort field if it's non-nil, zero value otherwise
+GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHasTrustedPort
+### SetArpInspection
 
-`func (o *InlineResponse20079) SetHasTrustedPort(v bool)`
+`func (o *InlineResponse20079) SetArpInspection(v InlineResponse20079ArpInspection)`
 
-SetHasTrustedPort sets HasTrustedPort field to given value.
+SetArpInspection sets ArpInspection field to given value.
 
-### HasHasTrustedPort
+### HasArpInspection
 
-`func (o *InlineResponse20079) HasHasTrustedPort() bool`
+`func (o *InlineResponse20079) HasArpInspection() bool`
 
-HasHasTrustedPort returns a boolean if a field has been set.
+HasArpInspection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RemainderLicenses** | Pointer to [**[]InlineResponse200153**](InlineResponse200153.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
-**MovedLicenses** | Pointer to [**[]InlineResponse200153**](InlineResponse200153.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
+**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the licenses to | [optional] 
+**LicenseIds** | Pointer to **[]string** | A list of IDs of licenses to move to the new organization | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200154WithDefaults instantiates a new InlineResponse200154 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRemainderLicenses
+### GetDestOrganizationId
 
-`func (o *InlineResponse200154) GetRemainderLicenses() []InlineResponse200153`
+`func (o *InlineResponse200154) GetDestOrganizationId() string`
 
-GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetRemainderLicensesOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineResponse200154) GetRemainderLicensesOk() (*[]InlineResponse200153, bool)`
+`func (o *InlineResponse200154) GetDestOrganizationIdOk() (*string, bool)`
 
-GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemainderLicenses
+### SetDestOrganizationId
 
-`func (o *InlineResponse200154) SetRemainderLicenses(v []InlineResponse200153)`
+`func (o *InlineResponse200154) SetDestOrganizationId(v string)`
 
-SetRemainderLicenses sets RemainderLicenses field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasRemainderLicenses
+### HasDestOrganizationId
 
-`func (o *InlineResponse200154) HasRemainderLicenses() bool`
+`func (o *InlineResponse200154) HasDestOrganizationId() bool`
 
-HasRemainderLicenses returns a boolean if a field has been set.
+HasDestOrganizationId returns a boolean if a field has been set.
 
-### GetMovedLicenses
+### GetLicenseIds
 
-`func (o *InlineResponse200154) GetMovedLicenses() []InlineResponse200153`
+`func (o *InlineResponse200154) GetLicenseIds() []string`
 
-GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
+GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
 
-### GetMovedLicensesOk
+### GetLicenseIdsOk
 
-`func (o *InlineResponse200154) GetMovedLicensesOk() (*[]InlineResponse200153, bool)`
+`func (o *InlineResponse200154) GetLicenseIdsOk() (*[]string, bool)`
 
-GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
+GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMovedLicenses
+### SetLicenseIds
 
-`func (o *InlineResponse200154) SetMovedLicenses(v []InlineResponse200153)`
+`func (o *InlineResponse200154) SetLicenseIds(v []string)`
 
-SetMovedLicenses sets MovedLicenses field to given value.
+SetLicenseIds sets LicenseIds field to given value.
 
-### HasMovedLicenses
+### HasLicenseIds
 
-`func (o *InlineResponse200154) HasMovedLicenses() bool`
+`func (o *InlineResponse200154) HasLicenseIds() bool`
 
-HasMovedLicenses returns a boolean if a field has been set.
+HasLicenseIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

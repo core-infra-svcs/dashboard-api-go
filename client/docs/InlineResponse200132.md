@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
-**Name** | Pointer to **string** | Switch template name | [optional] 
-**Model** | Pointer to **string** | Switch model | [optional] 
+**Usage** | Pointer to [**InlineResponse200132Usage**](InlineResponse200132Usage.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200132Counts**](InlineResponse200132Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200132WithDefaults instantiates a new InlineResponse200132 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchProfileId
+### GetUsage
 
-`func (o *InlineResponse200132) GetSwitchProfileId() string`
+`func (o *InlineResponse200132) GetUsage() InlineResponse200132Usage`
 
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetSwitchProfileIdOk
+### GetUsageOk
 
-`func (o *InlineResponse200132) GetSwitchProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200132) GetUsageOk() (*InlineResponse200132Usage, bool)`
 
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfileId
+### SetUsage
 
-`func (o *InlineResponse200132) SetSwitchProfileId(v string)`
+`func (o *InlineResponse200132) SetUsage(v InlineResponse200132Usage)`
 
-SetSwitchProfileId sets SwitchProfileId field to given value.
+SetUsage sets Usage field to given value.
 
-### HasSwitchProfileId
+### HasUsage
 
-`func (o *InlineResponse200132) HasSwitchProfileId() bool`
+`func (o *InlineResponse200132) HasUsage() bool`
 
-HasSwitchProfileId returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
-### GetName
+### GetCounts
 
-`func (o *InlineResponse200132) GetName() string`
+`func (o *InlineResponse200132) GetCounts() InlineResponse200132Counts`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCountsOk
 
-`func (o *InlineResponse200132) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200132) GetCountsOk() (*InlineResponse200132Counts, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCounts
 
-`func (o *InlineResponse200132) SetName(v string)`
+`func (o *InlineResponse200132) SetCounts(v InlineResponse200132Counts)`
 
-SetName sets Name field to given value.
+SetCounts sets Counts field to given value.
 
-### HasName
+### HasCounts
 
-`func (o *InlineResponse200132) HasName() bool`
+`func (o *InlineResponse200132) HasCounts() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200132) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200132) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200132) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200132) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

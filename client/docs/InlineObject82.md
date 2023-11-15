@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**InlineResponse20035UpgradeWindow**](InlineResponse20035UpgradeWindow.md) |  | [optional] 
+**UpgradeWindow** | Pointer to [**InlineResponse20036UpgradeWindow**](InlineResponse20036UpgradeWindow.md) |  | [optional] 
 **Timezone** | Pointer to **string** | The timezone for the network | [optional] 
 **Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetUpgradeWindow
 
-`func (o *InlineObject82) GetUpgradeWindow() InlineResponse20035UpgradeWindow`
+`func (o *InlineObject82) GetUpgradeWindow() InlineResponse20036UpgradeWindow`
 
 GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
 ### GetUpgradeWindowOk
 
-`func (o *InlineObject82) GetUpgradeWindowOk() (*InlineResponse20035UpgradeWindow, bool)`
+`func (o *InlineObject82) GetUpgradeWindowOk() (*InlineResponse20036UpgradeWindow, bool)`
 
 GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpgradeWindow
 
-`func (o *InlineObject82) SetUpgradeWindow(v InlineResponse20035UpgradeWindow)`
+`func (o *InlineObject82) SetUpgradeWindow(v InlineResponse20036UpgradeWindow)`
 
 SetUpgradeWindow sets UpgradeWindow field to given value.
 

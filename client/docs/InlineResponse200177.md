@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the channel utilization interval. | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the channel utilization interval. | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the device. | [optional] 
 **Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
 **ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
 
@@ -28,55 +28,55 @@ NewInlineResponse200177WithDefaults instantiates a new InlineResponse200177 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetSerial
 
-`func (o *InlineResponse200177) GetStartTs() time.Time`
+`func (o *InlineResponse200177) GetSerial() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetSerialOk
 
-`func (o *InlineResponse200177) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200177) GetSerialOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetSerial
 
-`func (o *InlineResponse200177) SetStartTs(v time.Time)`
+`func (o *InlineResponse200177) SetSerial(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetSerial sets Serial field to given value.
 
-### HasStartTs
+### HasSerial
 
-`func (o *InlineResponse200177) HasStartTs() bool`
+`func (o *InlineResponse200177) HasSerial() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetEndTs
+### GetMac
 
-`func (o *InlineResponse200177) GetEndTs() time.Time`
+`func (o *InlineResponse200177) GetMac() string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetMacOk
 
-`func (o *InlineResponse200177) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200177) GetMacOk() (*string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetMac
 
-`func (o *InlineResponse200177) SetEndTs(v time.Time)`
+`func (o *InlineResponse200177) SetMac(v string)`
 
-SetEndTs sets EndTs field to given value.
+SetMac sets Mac field to given value.
 
-### HasEndTs
+### HasMac
 
-`func (o *InlineResponse200177) HasEndTs() bool`
+`func (o *InlineResponse200177) HasMac() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
 ### GetNetwork
 

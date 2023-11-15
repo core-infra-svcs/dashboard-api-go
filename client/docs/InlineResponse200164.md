@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Name** | Pointer to **string** | Name of the appliance | [optional] 
-**Mac** | Pointer to **string** | Mac address of the appliance | [optional] 
-**Serial** | Pointer to **string** | Serial number of the appliance | [optional] 
-**Model** | Pointer to **string** | Model of the appliance | [optional] 
-**Utilization** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization.md) |  | [optional] 
+**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
+**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
 
 ## Methods
 
@@ -29,81 +26,6 @@ will change when the set of required properties is changed
 NewInlineResponse200164WithDefaults instantiates a new InlineResponse200164 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetNetwork
-
-`func (o *InlineResponse200164) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200164) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200164) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200164) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200164) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200164) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200164) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200164) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineResponse200164) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200164) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200164) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse200164) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
 
 ### GetSerial
 
@@ -130,55 +52,55 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetModel
+### GetNetwork
 
-`func (o *InlineResponse200164) GetModel() string`
+`func (o *InlineResponse200164) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetNetworkOk
 
-`func (o *InlineResponse200164) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200164) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetNetwork
 
-`func (o *InlineResponse200164) SetModel(v string)`
+`func (o *InlineResponse200164) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
 
-SetModel sets Model field to given value.
+SetNetwork sets Network field to given value.
 
-### HasModel
+### HasNetwork
 
-`func (o *InlineResponse200164) HasModel() bool`
+`func (o *InlineResponse200164) HasNetwork() bool`
 
-HasModel returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetUtilization
+### GetReadings
 
-`func (o *InlineResponse200164) GetUtilization() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization`
+`func (o *InlineResponse200164) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
 
-GetUtilization returns the Utilization field if non-nil, zero value otherwise.
+GetReadings returns the Readings field if non-nil, zero value otherwise.
 
-### GetUtilizationOk
+### GetReadingsOk
 
-`func (o *InlineResponse200164) GetUtilizationOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization, bool)`
+`func (o *InlineResponse200164) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
 
-GetUtilizationOk returns a tuple with the Utilization field if it's non-nil, zero value otherwise
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilization
+### SetReadings
 
-`func (o *InlineResponse200164) SetUtilization(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization)`
+`func (o *InlineResponse200164) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
 
-SetUtilization sets Utilization field to given value.
+SetReadings sets Readings field to given value.
 
-### HasUtilization
+### HasReadings
 
-`func (o *InlineResponse200164) HasUtilization() bool`
+`func (o *InlineResponse200164) HasReadings() bool`
 
-HasUtilization returns a boolean if a field has been set.
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

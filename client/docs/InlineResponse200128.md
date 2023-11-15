@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
-**Licenses** | Pointer to [**[]InlineResponse200128Licenses**](InlineResponse200128Licenses.md) | The licenses claimed | [optional] 
+**Id** | Pointer to **string** | Permission scope id | [optional] 
+**Name** | Pointer to **string** | Name of permission scope | [optional] 
+**Level** | Pointer to **string** | Permission scope level | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200128WithDefaults instantiates a new InlineResponse200128 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetId
 
-`func (o *InlineResponse200128) GetOrders() []string`
+`func (o *InlineResponse200128) GetId() string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetIdOk
 
-`func (o *InlineResponse200128) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineResponse200128) GetIdOk() (*string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetId
 
-`func (o *InlineResponse200128) SetOrders(v []string)`
+`func (o *InlineResponse200128) SetId(v string)`
 
-SetOrders sets Orders field to given value.
+SetId sets Id field to given value.
 
-### HasOrders
+### HasId
 
-`func (o *InlineResponse200128) HasOrders() bool`
+`func (o *InlineResponse200128) HasId() bool`
 
-HasOrders returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetSerials
+### GetName
 
-`func (o *InlineResponse200128) GetSerials() []string`
+`func (o *InlineResponse200128) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineResponse200128) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200128) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineResponse200128) SetSerials(v []string)`
+`func (o *InlineResponse200128) SetName(v string)`
 
-SetSerials sets Serials field to given value.
+SetName sets Name field to given value.
 
-### HasSerials
+### HasName
 
-`func (o *InlineResponse200128) HasSerials() bool`
+`func (o *InlineResponse200128) HasName() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetLicenses
+### GetLevel
 
-`func (o *InlineResponse200128) GetLicenses() []InlineResponse200128Licenses`
+`func (o *InlineResponse200128) GetLevel() string`
 
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+GetLevel returns the Level field if non-nil, zero value otherwise.
 
-### GetLicensesOk
+### GetLevelOk
 
-`func (o *InlineResponse200128) GetLicensesOk() (*[]InlineResponse200128Licenses, bool)`
+`func (o *InlineResponse200128) GetLevelOk() (*string, bool)`
 
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenses
+### SetLevel
 
-`func (o *InlineResponse200128) SetLicenses(v []InlineResponse200128Licenses)`
+`func (o *InlineResponse200128) SetLevel(v string)`
 
-SetLicenses sets Licenses field to given value.
+SetLevel sets Level field to given value.
 
-### HasLicenses
+### HasLevel
 
-`func (o *InlineResponse200128) HasLicenses() bool`
+`func (o *InlineResponse200128) HasLevel() bool`
 
-HasLicenses returns a boolean if a field has been set.
+HasLevel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

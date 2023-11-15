@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
-**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
-**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
-**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20090WithDefaults instantiates a new InlineResponse20090 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIname
+### GetBroadcastThreshold
 
-`func (o *InlineResponse20090) GetIname() string`
+`func (o *InlineResponse20090) GetBroadcastThreshold() int32`
 
-GetIname returns the Iname field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetInameOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineResponse20090) GetInameOk() (*string, bool)`
+`func (o *InlineResponse20090) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIname
+### SetBroadcastThreshold
 
-`func (o *InlineResponse20090) SetIname(v string)`
+`func (o *InlineResponse20090) SetBroadcastThreshold(v int32)`
 
-SetIname sets Iname field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasIname
+### HasBroadcastThreshold
 
-`func (o *InlineResponse20090) HasIname() bool`
+`func (o *InlineResponse20090) HasBroadcastThreshold() bool`
 
-HasIname returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetName
+### GetMulticastThreshold
 
-`func (o *InlineResponse20090) GetName() string`
+`func (o *InlineResponse20090) GetMulticastThreshold() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMulticastThresholdOk
 
-`func (o *InlineResponse20090) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20090) GetMulticastThresholdOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMulticastThreshold
 
-`func (o *InlineResponse20090) SetName(v string)`
+`func (o *InlineResponse20090) SetMulticastThreshold(v int32)`
 
-SetName sets Name field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasName
+### HasMulticastThreshold
 
-`func (o *InlineResponse20090) HasName() bool`
+`func (o *InlineResponse20090) HasMulticastThreshold() bool`
 
-HasName returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetUnknownUnicastThreshold
 
-`func (o *InlineResponse20090) GetIsDefault() bool`
+`func (o *InlineResponse20090) GetUnknownUnicastThreshold() int32`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetUnknownUnicastThresholdOk
 
-`func (o *InlineResponse20090) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse20090) GetUnknownUnicastThresholdOk() (*int32, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetUnknownUnicastThreshold
 
-`func (o *InlineResponse20090) SetIsDefault(v bool)`
+`func (o *InlineResponse20090) SetUnknownUnicastThreshold(v int32)`
 
-SetIsDefault sets IsDefault field to given value.
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
 
-### HasIsDefault
+### HasUnknownUnicastThreshold
 
-`func (o *InlineResponse20090) HasIsDefault() bool`
+`func (o *InlineResponse20090) HasUnknownUnicastThreshold() bool`
 
-HasIsDefault returns a boolean if a field has been set.
-
-### GetVlanNames
-
-`func (o *InlineResponse20090) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
-
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
-
-### GetVlanNamesOk
-
-`func (o *InlineResponse20090) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
-
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanNames
-
-`func (o *InlineResponse20090) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
-
-SetVlanNames sets VlanNames field to given value.
-
-### HasVlanNames
-
-`func (o *InlineResponse20090) HasVlanNames() bool`
-
-HasVlanNames returns a boolean if a field has been set.
-
-### GetVlanGroups
-
-`func (o *InlineResponse20090) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
-
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
-
-### GetVlanGroupsOk
-
-`func (o *InlineResponse20090) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
-
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanGroups
-
-`func (o *InlineResponse20090) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
-
-SetVlanGroups sets VlanGroups field to given value.
-
-### HasVlanGroups
-
-`func (o *InlineResponse20090) HasVlanGroups() bool`
-
-HasVlanGroups returns a boolean if a field has been set.
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
+**RemainderLicenses** | Pointer to [**[]InlineResponse200156**](InlineResponse200156.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
+**MovedLicenses** | Pointer to [**[]InlineResponse200156**](InlineResponse200156.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200157WithDefaults instantiates a new InlineResponse200157 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetRemainderLicenses
 
-`func (o *InlineResponse200157) GetEnabled() bool`
+`func (o *InlineResponse200157) GetRemainderLicenses() []InlineResponse200156`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetRemainderLicensesOk
 
-`func (o *InlineResponse200157) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200157) GetRemainderLicensesOk() (*[]InlineResponse200156, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetRemainderLicenses
 
-`func (o *InlineResponse200157) SetEnabled(v bool)`
+`func (o *InlineResponse200157) SetRemainderLicenses(v []InlineResponse200156)`
 
-SetEnabled sets Enabled field to given value.
+SetRemainderLicenses sets RemainderLicenses field to given value.
 
-### HasEnabled
+### HasRemainderLicenses
 
-`func (o *InlineResponse200157) HasEnabled() bool`
+`func (o *InlineResponse200157) HasRemainderLicenses() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasRemainderLicenses returns a boolean if a field has been set.
+
+### GetMovedLicenses
+
+`func (o *InlineResponse200157) GetMovedLicenses() []InlineResponse200156`
+
+GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
+
+### GetMovedLicensesOk
+
+`func (o *InlineResponse200157) GetMovedLicensesOk() (*[]InlineResponse200156, bool)`
+
+GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMovedLicenses
+
+`func (o *InlineResponse200157) SetMovedLicenses(v []InlineResponse200156)`
+
+SetMovedLicenses sets MovedLicenses field to given value.
+
+### HasMovedLicenses
+
+`func (o *InlineResponse200157) HasMovedLicenses() bool`
+
+HasMovedLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

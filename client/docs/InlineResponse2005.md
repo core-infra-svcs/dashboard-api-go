@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Livestream** | Pointer to [**DevicesSerialSensorRelationshipsLivestream**](DevicesSerialSensorRelationshipsLivestream.md) |  | [optional] 
+**Livestream** | Pointer to [**InlineResponse2005Livestream**](InlineResponse2005Livestream.md) |  | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetLivestream
 
-`func (o *InlineResponse2005) GetLivestream() DevicesSerialSensorRelationshipsLivestream`
+`func (o *InlineResponse2005) GetLivestream() InlineResponse2005Livestream`
 
 GetLivestream returns the Livestream field if non-nil, zero value otherwise.
 
 ### GetLivestreamOk
 
-`func (o *InlineResponse2005) GetLivestreamOk() (*DevicesSerialSensorRelationshipsLivestream, bool)`
+`func (o *InlineResponse2005) GetLivestreamOk() (*InlineResponse2005Livestream, bool)`
 
 GetLivestreamOk returns a tuple with the Livestream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLivestream
 
-`func (o *InlineResponse2005) SetLivestream(v DevicesSerialSensorRelationshipsLivestream)`
+`func (o *InlineResponse2005) SetLivestream(v InlineResponse2005Livestream)`
 
 SetLivestream sets Livestream field to given value.
 

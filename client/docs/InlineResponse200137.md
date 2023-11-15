@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesNetwork.md) |  | [optional] 
 **ProductType** | Pointer to **string** | Device product type. | [optional] 
 **Serial** | Pointer to **string** | The device serial number. | [optional] 
-**Status** | Pointer to **string** | The device provisioning status. Possible statuses: unprovisioned, incomplete, complete. | [optional] 
+**Status** | Pointer to **string** | Status of the device. Possible values are: online, alerting, offline, dormant. | [optional] 
 **Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
 
 ## Methods
