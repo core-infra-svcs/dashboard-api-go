@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Servers** | Pointer to [**[]InlineResponse20091Servers**](InlineResponse20091Servers.md) | List of the syslog servers for this network | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse20091WithDefaults instantiates a new InlineResponse20091 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetServers
+### GetBroadcastThreshold
 
-`func (o *InlineResponse20091) GetServers() []InlineResponse20091Servers`
+`func (o *InlineResponse20091) GetBroadcastThreshold() int32`
 
-GetServers returns the Servers field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetServersOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineResponse20091) GetServersOk() (*[]InlineResponse20091Servers, bool)`
+`func (o *InlineResponse20091) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServers
+### SetBroadcastThreshold
 
-`func (o *InlineResponse20091) SetServers(v []InlineResponse20091Servers)`
+`func (o *InlineResponse20091) SetBroadcastThreshold(v int32)`
 
-SetServers sets Servers field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasServers
+### HasBroadcastThreshold
 
-`func (o *InlineResponse20091) HasServers() bool`
+`func (o *InlineResponse20091) HasBroadcastThreshold() bool`
 
-HasServers returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
+
+### GetMulticastThreshold
+
+`func (o *InlineResponse20091) GetMulticastThreshold() int32`
+
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+
+### GetMulticastThresholdOk
+
+`func (o *InlineResponse20091) GetMulticastThresholdOk() (*int32, bool)`
+
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMulticastThreshold
+
+`func (o *InlineResponse20091) SetMulticastThreshold(v int32)`
+
+SetMulticastThreshold sets MulticastThreshold field to given value.
+
+### HasMulticastThreshold
+
+`func (o *InlineResponse20091) HasMulticastThreshold() bool`
+
+HasMulticastThreshold returns a boolean if a field has been set.
+
+### GetUnknownUnicastThreshold
+
+`func (o *InlineResponse20091) GetUnknownUnicastThreshold() int32`
+
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+
+### GetUnknownUnicastThresholdOk
+
+`func (o *InlineResponse20091) GetUnknownUnicastThresholdOk() (*int32, bool)`
+
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnknownUnicastThreshold
+
+`func (o *InlineResponse20091) SetUnknownUnicastThreshold(v int32)`
+
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+
+### HasUnknownUnicastThreshold
+
+`func (o *InlineResponse20091) HasUnknownUnicastThreshold() bool`
+
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

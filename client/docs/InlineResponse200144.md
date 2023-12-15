@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Serial** | Pointer to **string** | Serial of MX device | [optional] 
-**Uplink** | Pointer to **string** | Uplink interface (wan1, wan2, or cellular) | [optional] 
-**Ip** | Pointer to **string** | IP address of uplink | [optional] 
-**TimeSeries** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries**](OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries.md) | Loss and latency timeseries data | [optional] 
+**Mac** | Pointer to **string** | The device MAC address. | [optional] 
+**Name** | Pointer to **string** | The device name. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesNetwork.md) |  | [optional] 
+**ProductType** | Pointer to **string** | Device product type. | [optional] 
+**Serial** | Pointer to **string** | The device serial number. | [optional] 
+**Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
+**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks**](OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks.md) | List of device uplink addresses information. | [optional] 
 
 ## Methods
 
@@ -29,30 +31,105 @@ NewInlineResponse200144WithDefaults instantiates a new InlineResponse200144 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetMac
 
-`func (o *InlineResponse200144) GetNetworkId() string`
+`func (o *InlineResponse200144) GetMac() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetMacOk
 
-`func (o *InlineResponse200144) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200144) GetMacOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetMac
 
-`func (o *InlineResponse200144) SetNetworkId(v string)`
+`func (o *InlineResponse200144) SetMac(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetMac sets Mac field to given value.
 
-### HasNetworkId
+### HasMac
 
-`func (o *InlineResponse200144) HasNetworkId() bool`
+`func (o *InlineResponse200144) HasMac() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200144) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200144) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200144) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200144) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200144) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200144) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200144) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200144) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetProductType
+
+`func (o *InlineResponse200144) GetProductType() string`
+
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
+
+### GetProductTypeOk
+
+`func (o *InlineResponse200144) GetProductTypeOk() (*string, bool)`
+
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductType
+
+`func (o *InlineResponse200144) SetProductType(v string)`
+
+SetProductType sets ProductType field to given value.
+
+### HasProductType
+
+`func (o *InlineResponse200144) HasProductType() bool`
+
+HasProductType returns a boolean if a field has been set.
 
 ### GetSerial
 
@@ -79,80 +156,55 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetUplink
+### GetTags
 
-`func (o *InlineResponse200144) GetUplink() string`
+`func (o *InlineResponse200144) GetTags() []string`
 
-GetUplink returns the Uplink field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetUplinkOk
+### GetTagsOk
 
-`func (o *InlineResponse200144) GetUplinkOk() (*string, bool)`
+`func (o *InlineResponse200144) GetTagsOk() (*[]string, bool)`
 
-GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplink
+### SetTags
 
-`func (o *InlineResponse200144) SetUplink(v string)`
+`func (o *InlineResponse200144) SetTags(v []string)`
 
-SetUplink sets Uplink field to given value.
+SetTags sets Tags field to given value.
 
-### HasUplink
+### HasTags
 
-`func (o *InlineResponse200144) HasUplink() bool`
+`func (o *InlineResponse200144) HasTags() bool`
 
-HasUplink returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetIp
+### GetUplinks
 
-`func (o *InlineResponse200144) GetIp() string`
+`func (o *InlineResponse200144) GetUplinks() []OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks`
 
-GetIp returns the Ip field if non-nil, zero value otherwise.
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
 
-### GetIpOk
+### GetUplinksOk
 
-`func (o *InlineResponse200144) GetIpOk() (*string, bool)`
+`func (o *InlineResponse200144) GetUplinksOk() (*[]OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks, bool)`
 
-GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIp
+### SetUplinks
 
-`func (o *InlineResponse200144) SetIp(v string)`
+`func (o *InlineResponse200144) SetUplinks(v []OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks)`
 
-SetIp sets Ip field to given value.
+SetUplinks sets Uplinks field to given value.
 
-### HasIp
+### HasUplinks
 
-`func (o *InlineResponse200144) HasIp() bool`
+`func (o *InlineResponse200144) HasUplinks() bool`
 
-HasIp returns a boolean if a field has been set.
-
-### GetTimeSeries
-
-`func (o *InlineResponse200144) GetTimeSeries() []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries`
-
-GetTimeSeries returns the TimeSeries field if non-nil, zero value otherwise.
-
-### GetTimeSeriesOk
-
-`func (o *InlineResponse200144) GetTimeSeriesOk() (*[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries, bool)`
-
-GetTimeSeriesOk returns a tuple with the TimeSeries field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeSeries
-
-`func (o *InlineResponse200144) SetTimeSeries(v []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries)`
-
-SetTimeSeries sets TimeSeries field to given value.
-
-### HasTimeSeries
-
-`func (o *InlineResponse200144) HasTimeSeries() bool`
-
-HasTimeSeries returns a boolean if a field has been set.
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

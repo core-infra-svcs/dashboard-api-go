@@ -4,17 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Admin&#39;s ID | [optional] 
-**Name** | Pointer to **string** | Admin&#39;s username | [optional] 
-**Email** | Pointer to **string** | Admin&#39;s email address | [optional] 
-**OrgAccess** | Pointer to **string** | Admin&#39;s level of access to the organization | [optional] 
-**AccountStatus** | Pointer to **string** | Status of the admin&#39;s account | [optional] 
-**TwoFactorAuthEnabled** | Pointer to **bool** | Indicates whether two-factor authentication is enabled | [optional] 
-**HasApiKey** | Pointer to **bool** | Indicates whether the admin has an API key | [optional] 
-**LastActive** | Pointer to **time.Time** | Time when the admin was last active | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags**](OrganizationsOrganizationIdAdminsTags.md) | Admin tag information | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks**](OrganizationsOrganizationIdAdminsNetworks.md) | Admin network access information | [optional] 
-**AuthenticationMethod** | Pointer to **string** | Admin&#39;s authentication method | [optional] 
+**Counts** | Pointer to [**InlineResponse200119Counts**](InlineResponse200119Counts.md) |  | [optional] 
+**Limits** | Pointer to [**InlineResponse200119Limits**](InlineResponse200119Limits.md) |  | [optional] 
 
 ## Methods
 
@@ -35,280 +26,55 @@ NewInlineResponse200119WithDefaults instantiates a new InlineResponse200119 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetCounts
 
-`func (o *InlineResponse200119) GetId() string`
+`func (o *InlineResponse200119) GetCounts() InlineResponse200119Counts`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetCountsOk
 
-`func (o *InlineResponse200119) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200119) GetCountsOk() (*InlineResponse200119Counts, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetCounts
 
-`func (o *InlineResponse200119) SetId(v string)`
+`func (o *InlineResponse200119) SetCounts(v InlineResponse200119Counts)`
 
-SetId sets Id field to given value.
+SetCounts sets Counts field to given value.
 
-### HasId
+### HasCounts
 
-`func (o *InlineResponse200119) HasId() bool`
+`func (o *InlineResponse200119) HasCounts() bool`
 
-HasId returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
-### GetName
+### GetLimits
 
-`func (o *InlineResponse200119) GetName() string`
+`func (o *InlineResponse200119) GetLimits() InlineResponse200119Limits`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLimits returns the Limits field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLimitsOk
 
-`func (o *InlineResponse200119) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200119) GetLimitsOk() (*InlineResponse200119Limits, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLimits
 
-`func (o *InlineResponse200119) SetName(v string)`
+`func (o *InlineResponse200119) SetLimits(v InlineResponse200119Limits)`
 
-SetName sets Name field to given value.
+SetLimits sets Limits field to given value.
 
-### HasName
+### HasLimits
 
-`func (o *InlineResponse200119) HasName() bool`
+`func (o *InlineResponse200119) HasLimits() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *InlineResponse200119) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineResponse200119) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineResponse200119) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *InlineResponse200119) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
-
-### GetOrgAccess
-
-`func (o *InlineResponse200119) GetOrgAccess() string`
-
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
-
-### GetOrgAccessOk
-
-`func (o *InlineResponse200119) GetOrgAccessOk() (*string, bool)`
-
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrgAccess
-
-`func (o *InlineResponse200119) SetOrgAccess(v string)`
-
-SetOrgAccess sets OrgAccess field to given value.
-
-### HasOrgAccess
-
-`func (o *InlineResponse200119) HasOrgAccess() bool`
-
-HasOrgAccess returns a boolean if a field has been set.
-
-### GetAccountStatus
-
-`func (o *InlineResponse200119) GetAccountStatus() string`
-
-GetAccountStatus returns the AccountStatus field if non-nil, zero value otherwise.
-
-### GetAccountStatusOk
-
-`func (o *InlineResponse200119) GetAccountStatusOk() (*string, bool)`
-
-GetAccountStatusOk returns a tuple with the AccountStatus field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccountStatus
-
-`func (o *InlineResponse200119) SetAccountStatus(v string)`
-
-SetAccountStatus sets AccountStatus field to given value.
-
-### HasAccountStatus
-
-`func (o *InlineResponse200119) HasAccountStatus() bool`
-
-HasAccountStatus returns a boolean if a field has been set.
-
-### GetTwoFactorAuthEnabled
-
-`func (o *InlineResponse200119) GetTwoFactorAuthEnabled() bool`
-
-GetTwoFactorAuthEnabled returns the TwoFactorAuthEnabled field if non-nil, zero value otherwise.
-
-### GetTwoFactorAuthEnabledOk
-
-`func (o *InlineResponse200119) GetTwoFactorAuthEnabledOk() (*bool, bool)`
-
-GetTwoFactorAuthEnabledOk returns a tuple with the TwoFactorAuthEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTwoFactorAuthEnabled
-
-`func (o *InlineResponse200119) SetTwoFactorAuthEnabled(v bool)`
-
-SetTwoFactorAuthEnabled sets TwoFactorAuthEnabled field to given value.
-
-### HasTwoFactorAuthEnabled
-
-`func (o *InlineResponse200119) HasTwoFactorAuthEnabled() bool`
-
-HasTwoFactorAuthEnabled returns a boolean if a field has been set.
-
-### GetHasApiKey
-
-`func (o *InlineResponse200119) GetHasApiKey() bool`
-
-GetHasApiKey returns the HasApiKey field if non-nil, zero value otherwise.
-
-### GetHasApiKeyOk
-
-`func (o *InlineResponse200119) GetHasApiKeyOk() (*bool, bool)`
-
-GetHasApiKeyOk returns a tuple with the HasApiKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHasApiKey
-
-`func (o *InlineResponse200119) SetHasApiKey(v bool)`
-
-SetHasApiKey sets HasApiKey field to given value.
-
-### HasHasApiKey
-
-`func (o *InlineResponse200119) HasHasApiKey() bool`
-
-HasHasApiKey returns a boolean if a field has been set.
-
-### GetLastActive
-
-`func (o *InlineResponse200119) GetLastActive() time.Time`
-
-GetLastActive returns the LastActive field if non-nil, zero value otherwise.
-
-### GetLastActiveOk
-
-`func (o *InlineResponse200119) GetLastActiveOk() (*time.Time, bool)`
-
-GetLastActiveOk returns a tuple with the LastActive field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastActive
-
-`func (o *InlineResponse200119) SetLastActive(v time.Time)`
-
-SetLastActive sets LastActive field to given value.
-
-### HasLastActive
-
-`func (o *InlineResponse200119) HasLastActive() bool`
-
-HasLastActive returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200119) GetTags() []OrganizationsOrganizationIdAdminsTags`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200119) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200119) SetTags(v []OrganizationsOrganizationIdAdminsTags)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200119) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineResponse200119) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineResponse200119) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineResponse200119) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineResponse200119) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
-
-### GetAuthenticationMethod
-
-`func (o *InlineResponse200119) GetAuthenticationMethod() string`
-
-GetAuthenticationMethod returns the AuthenticationMethod field if non-nil, zero value otherwise.
-
-### GetAuthenticationMethodOk
-
-`func (o *InlineResponse200119) GetAuthenticationMethodOk() (*string, bool)`
-
-GetAuthenticationMethodOk returns a tuple with the AuthenticationMethod field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthenticationMethod
-
-`func (o *InlineResponse200119) SetAuthenticationMethod(v string)`
-
-SetAuthenticationMethod sets AuthenticationMethod field to given value.
-
-### HasAuthenticationMethod
-
-`func (o *InlineResponse200119) HasAuthenticationMethod() bool`
-
-HasAuthenticationMethod returns a boolean if a field has been set.
+HasLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

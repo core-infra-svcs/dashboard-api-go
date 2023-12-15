@@ -4,14 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceId** | Pointer to **string** | The Meraki managed device Id. | [optional] 
-**Id** | Pointer to **string** | The numerical Meraki Id of the profile. | [optional] 
-**IsEncrypted** | Pointer to **bool** | A boolean indicating if the profile is encrypted. | [optional] 
-**IsManaged** | Pointer to **bool** | Whether or not the profile is managed by Meraki. | [optional] 
-**ProfileData** | Pointer to **string** | A string containing a JSON object with the profile data. | [optional] 
-**ProfileIdentifier** | Pointer to **string** | The identifier of the profile. | [optional] 
-**Name** | Pointer to **string** | The name of the profile. | [optional] 
-**Version** | Pointer to **string** | The verison of the profile. | [optional] 
+**Action** | Pointer to **string** | The type of command sent to the device. | [optional] 
+**Name** | Pointer to **string** | The name of the device to which the command is sent. | [optional] 
+**Details** | Pointer to **string** | A JSON string object containing command details. | [optional] 
+**DashboardUser** | Pointer to **string** | The Meraki dashboard user who initiated the command. | [optional] 
+**Ts** | Pointer to **string** | The time the command was sent to the device. | [optional] 
 
 ## Methods
 
@@ -32,155 +29,30 @@ NewInlineResponse20063WithDefaults instantiates a new InlineResponse20063 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeviceId
+### GetAction
 
-`func (o *InlineResponse20063) GetDeviceId() string`
+`func (o *InlineResponse20063) GetAction() string`
 
-GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
+GetAction returns the Action field if non-nil, zero value otherwise.
 
-### GetDeviceIdOk
+### GetActionOk
 
-`func (o *InlineResponse20063) GetDeviceIdOk() (*string, bool)`
+`func (o *InlineResponse20063) GetActionOk() (*string, bool)`
 
-GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
+GetActionOk returns a tuple with the Action field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceId
+### SetAction
 
-`func (o *InlineResponse20063) SetDeviceId(v string)`
+`func (o *InlineResponse20063) SetAction(v string)`
 
-SetDeviceId sets DeviceId field to given value.
+SetAction sets Action field to given value.
 
-### HasDeviceId
+### HasAction
 
-`func (o *InlineResponse20063) HasDeviceId() bool`
+`func (o *InlineResponse20063) HasAction() bool`
 
-HasDeviceId returns a boolean if a field has been set.
-
-### GetId
-
-`func (o *InlineResponse20063) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse20063) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse20063) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse20063) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetIsEncrypted
-
-`func (o *InlineResponse20063) GetIsEncrypted() bool`
-
-GetIsEncrypted returns the IsEncrypted field if non-nil, zero value otherwise.
-
-### GetIsEncryptedOk
-
-`func (o *InlineResponse20063) GetIsEncryptedOk() (*bool, bool)`
-
-GetIsEncryptedOk returns a tuple with the IsEncrypted field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsEncrypted
-
-`func (o *InlineResponse20063) SetIsEncrypted(v bool)`
-
-SetIsEncrypted sets IsEncrypted field to given value.
-
-### HasIsEncrypted
-
-`func (o *InlineResponse20063) HasIsEncrypted() bool`
-
-HasIsEncrypted returns a boolean if a field has been set.
-
-### GetIsManaged
-
-`func (o *InlineResponse20063) GetIsManaged() bool`
-
-GetIsManaged returns the IsManaged field if non-nil, zero value otherwise.
-
-### GetIsManagedOk
-
-`func (o *InlineResponse20063) GetIsManagedOk() (*bool, bool)`
-
-GetIsManagedOk returns a tuple with the IsManaged field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsManaged
-
-`func (o *InlineResponse20063) SetIsManaged(v bool)`
-
-SetIsManaged sets IsManaged field to given value.
-
-### HasIsManaged
-
-`func (o *InlineResponse20063) HasIsManaged() bool`
-
-HasIsManaged returns a boolean if a field has been set.
-
-### GetProfileData
-
-`func (o *InlineResponse20063) GetProfileData() string`
-
-GetProfileData returns the ProfileData field if non-nil, zero value otherwise.
-
-### GetProfileDataOk
-
-`func (o *InlineResponse20063) GetProfileDataOk() (*string, bool)`
-
-GetProfileDataOk returns a tuple with the ProfileData field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProfileData
-
-`func (o *InlineResponse20063) SetProfileData(v string)`
-
-SetProfileData sets ProfileData field to given value.
-
-### HasProfileData
-
-`func (o *InlineResponse20063) HasProfileData() bool`
-
-HasProfileData returns a boolean if a field has been set.
-
-### GetProfileIdentifier
-
-`func (o *InlineResponse20063) GetProfileIdentifier() string`
-
-GetProfileIdentifier returns the ProfileIdentifier field if non-nil, zero value otherwise.
-
-### GetProfileIdentifierOk
-
-`func (o *InlineResponse20063) GetProfileIdentifierOk() (*string, bool)`
-
-GetProfileIdentifierOk returns a tuple with the ProfileIdentifier field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProfileIdentifier
-
-`func (o *InlineResponse20063) SetProfileIdentifier(v string)`
-
-SetProfileIdentifier sets ProfileIdentifier field to given value.
-
-### HasProfileIdentifier
-
-`func (o *InlineResponse20063) HasProfileIdentifier() bool`
-
-HasProfileIdentifier returns a boolean if a field has been set.
+HasAction returns a boolean if a field has been set.
 
 ### GetName
 
@@ -207,30 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetVersion
+### GetDetails
 
-`func (o *InlineResponse20063) GetVersion() string`
+`func (o *InlineResponse20063) GetDetails() string`
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+GetDetails returns the Details field if non-nil, zero value otherwise.
 
-### GetVersionOk
+### GetDetailsOk
 
-`func (o *InlineResponse20063) GetVersionOk() (*string, bool)`
+`func (o *InlineResponse20063) GetDetailsOk() (*string, bool)`
 
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetDetails
 
-`func (o *InlineResponse20063) SetVersion(v string)`
+`func (o *InlineResponse20063) SetDetails(v string)`
 
-SetVersion sets Version field to given value.
+SetDetails sets Details field to given value.
 
-### HasVersion
+### HasDetails
 
-`func (o *InlineResponse20063) HasVersion() bool`
+`func (o *InlineResponse20063) HasDetails() bool`
 
-HasVersion returns a boolean if a field has been set.
+HasDetails returns a boolean if a field has been set.
+
+### GetDashboardUser
+
+`func (o *InlineResponse20063) GetDashboardUser() string`
+
+GetDashboardUser returns the DashboardUser field if non-nil, zero value otherwise.
+
+### GetDashboardUserOk
+
+`func (o *InlineResponse20063) GetDashboardUserOk() (*string, bool)`
+
+GetDashboardUserOk returns a tuple with the DashboardUser field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDashboardUser
+
+`func (o *InlineResponse20063) SetDashboardUser(v string)`
+
+SetDashboardUser sets DashboardUser field to given value.
+
+### HasDashboardUser
+
+`func (o *InlineResponse20063) HasDashboardUser() bool`
+
+HasDashboardUser returns a boolean if a field has been set.
+
+### GetTs
+
+`func (o *InlineResponse20063) GetTs() string`
+
+GetTs returns the Ts field if non-nil, zero value otherwise.
+
+### GetTsOk
+
+`func (o *InlineResponse20063) GetTsOk() (*string, bool)`
+
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTs
+
+`func (o *InlineResponse20063) SetTs(v string)`
+
+SetTs sets Ts field to given value.
+
+### HasTs
+
+`func (o *InlineResponse20063) HasTs() bool`
+
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

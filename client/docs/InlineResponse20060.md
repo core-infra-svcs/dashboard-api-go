@@ -4,8 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FirstSeenAt** | Pointer to **string** | When the device was first seen as connected to the internet in each connection. | [optional] 
-**LastSeenAt** | Pointer to **string** | When the device was last seen as connected to the internet in each connection. | [optional] 
+**Name** | Pointer to **string** | The name of the certificate. | [optional] 
+**NotValidAfter** | Pointer to **string** | The date after which the certificate is no longer valid. | [optional] 
+**NotValidBefore** | Pointer to **string** | The date before which the certificate is not valid. | [optional] 
+**CertPem** | Pointer to **string** | The PEM of the certificate. | [optional] 
+**DeviceId** | Pointer to **string** | The Meraki managed device Id. | [optional] 
+**Issuer** | Pointer to **string** | The certificate issuer. | [optional] 
+**Subject** | Pointer to **string** | The subject of the certificate. | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the certificate record. | [optional] 
 
 ## Methods
 
@@ -26,55 +32,205 @@ NewInlineResponse20060WithDefaults instantiates a new InlineResponse20060 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetFirstSeenAt
+### GetName
 
-`func (o *InlineResponse20060) GetFirstSeenAt() string`
+`func (o *InlineResponse20060) GetName() string`
 
-GetFirstSeenAt returns the FirstSeenAt field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetFirstSeenAtOk
+### GetNameOk
 
-`func (o *InlineResponse20060) GetFirstSeenAtOk() (*string, bool)`
+`func (o *InlineResponse20060) GetNameOk() (*string, bool)`
 
-GetFirstSeenAtOk returns a tuple with the FirstSeenAt field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFirstSeenAt
+### SetName
 
-`func (o *InlineResponse20060) SetFirstSeenAt(v string)`
+`func (o *InlineResponse20060) SetName(v string)`
 
-SetFirstSeenAt sets FirstSeenAt field to given value.
+SetName sets Name field to given value.
 
-### HasFirstSeenAt
+### HasName
 
-`func (o *InlineResponse20060) HasFirstSeenAt() bool`
+`func (o *InlineResponse20060) HasName() bool`
 
-HasFirstSeenAt returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetLastSeenAt
+### GetNotValidAfter
 
-`func (o *InlineResponse20060) GetLastSeenAt() string`
+`func (o *InlineResponse20060) GetNotValidAfter() string`
 
-GetLastSeenAt returns the LastSeenAt field if non-nil, zero value otherwise.
+GetNotValidAfter returns the NotValidAfter field if non-nil, zero value otherwise.
 
-### GetLastSeenAtOk
+### GetNotValidAfterOk
 
-`func (o *InlineResponse20060) GetLastSeenAtOk() (*string, bool)`
+`func (o *InlineResponse20060) GetNotValidAfterOk() (*string, bool)`
 
-GetLastSeenAtOk returns a tuple with the LastSeenAt field if it's non-nil, zero value otherwise
+GetNotValidAfterOk returns a tuple with the NotValidAfter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastSeenAt
+### SetNotValidAfter
 
-`func (o *InlineResponse20060) SetLastSeenAt(v string)`
+`func (o *InlineResponse20060) SetNotValidAfter(v string)`
 
-SetLastSeenAt sets LastSeenAt field to given value.
+SetNotValidAfter sets NotValidAfter field to given value.
 
-### HasLastSeenAt
+### HasNotValidAfter
 
-`func (o *InlineResponse20060) HasLastSeenAt() bool`
+`func (o *InlineResponse20060) HasNotValidAfter() bool`
 
-HasLastSeenAt returns a boolean if a field has been set.
+HasNotValidAfter returns a boolean if a field has been set.
+
+### GetNotValidBefore
+
+`func (o *InlineResponse20060) GetNotValidBefore() string`
+
+GetNotValidBefore returns the NotValidBefore field if non-nil, zero value otherwise.
+
+### GetNotValidBeforeOk
+
+`func (o *InlineResponse20060) GetNotValidBeforeOk() (*string, bool)`
+
+GetNotValidBeforeOk returns a tuple with the NotValidBefore field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotValidBefore
+
+`func (o *InlineResponse20060) SetNotValidBefore(v string)`
+
+SetNotValidBefore sets NotValidBefore field to given value.
+
+### HasNotValidBefore
+
+`func (o *InlineResponse20060) HasNotValidBefore() bool`
+
+HasNotValidBefore returns a boolean if a field has been set.
+
+### GetCertPem
+
+`func (o *InlineResponse20060) GetCertPem() string`
+
+GetCertPem returns the CertPem field if non-nil, zero value otherwise.
+
+### GetCertPemOk
+
+`func (o *InlineResponse20060) GetCertPemOk() (*string, bool)`
+
+GetCertPemOk returns a tuple with the CertPem field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCertPem
+
+`func (o *InlineResponse20060) SetCertPem(v string)`
+
+SetCertPem sets CertPem field to given value.
+
+### HasCertPem
+
+`func (o *InlineResponse20060) HasCertPem() bool`
+
+HasCertPem returns a boolean if a field has been set.
+
+### GetDeviceId
+
+`func (o *InlineResponse20060) GetDeviceId() string`
+
+GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
+
+### GetDeviceIdOk
+
+`func (o *InlineResponse20060) GetDeviceIdOk() (*string, bool)`
+
+GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceId
+
+`func (o *InlineResponse20060) SetDeviceId(v string)`
+
+SetDeviceId sets DeviceId field to given value.
+
+### HasDeviceId
+
+`func (o *InlineResponse20060) HasDeviceId() bool`
+
+HasDeviceId returns a boolean if a field has been set.
+
+### GetIssuer
+
+`func (o *InlineResponse20060) GetIssuer() string`
+
+GetIssuer returns the Issuer field if non-nil, zero value otherwise.
+
+### GetIssuerOk
+
+`func (o *InlineResponse20060) GetIssuerOk() (*string, bool)`
+
+GetIssuerOk returns a tuple with the Issuer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIssuer
+
+`func (o *InlineResponse20060) SetIssuer(v string)`
+
+SetIssuer sets Issuer field to given value.
+
+### HasIssuer
+
+`func (o *InlineResponse20060) HasIssuer() bool`
+
+HasIssuer returns a boolean if a field has been set.
+
+### GetSubject
+
+`func (o *InlineResponse20060) GetSubject() string`
+
+GetSubject returns the Subject field if non-nil, zero value otherwise.
+
+### GetSubjectOk
+
+`func (o *InlineResponse20060) GetSubjectOk() (*string, bool)`
+
+GetSubjectOk returns a tuple with the Subject field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubject
+
+`func (o *InlineResponse20060) SetSubject(v string)`
+
+SetSubject sets Subject field to given value.
+
+### HasSubject
+
+`func (o *InlineResponse20060) HasSubject() bool`
+
+HasSubject returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *InlineResponse20060) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse20060) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse20060) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse20060) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

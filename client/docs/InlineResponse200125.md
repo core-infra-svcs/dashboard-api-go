@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20017Rules**](InlineResponse20017Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**Peers** | Pointer to [**[]InlineResponse200125Peers**](InlineResponse200125Peers.md) | The list of VPN peers | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200125WithDefaults instantiates a new InlineResponse200125 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetPeers
 
-`func (o *InlineResponse200125) GetRules() []InlineResponse20017Rules`
+`func (o *InlineResponse200125) GetPeers() []InlineResponse200125Peers`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetPeersOk
 
-`func (o *InlineResponse200125) GetRulesOk() (*[]InlineResponse20017Rules, bool)`
+`func (o *InlineResponse200125) GetPeersOk() (*[]InlineResponse200125Peers, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetPeers
 
-`func (o *InlineResponse200125) SetRules(v []InlineResponse20017Rules)`
+`func (o *InlineResponse200125) SetPeers(v []InlineResponse200125Peers)`
 
-SetRules sets Rules field to given value.
+SetPeers sets Peers field to given value.
 
-### HasRules
+### HasPeers
 
-`func (o *InlineResponse200125) HasRules() bool`
+`func (o *InlineResponse200125) HasPeers() bool`
 
-HasRules returns a boolean if a field has been set.
+HasPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

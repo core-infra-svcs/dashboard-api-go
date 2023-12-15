@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
-**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
-**DynamicDns** | Pointer to [**InlineResponse20022DynamicDns**](InlineResponse20022DynamicDns.md) |  | [optional] 
+**Assigned** | Pointer to [**[]InlineResponse20022Assigned**](InlineResponse20022Assigned.md) | RF Profiles | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse20022WithDefaults instantiates a new InlineResponse20022 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientTrackingMethod
+### GetAssigned
 
-`func (o *InlineResponse20022) GetClientTrackingMethod() string`
+`func (o *InlineResponse20022) GetAssigned() []InlineResponse20022Assigned`
 
-GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
 
-### GetClientTrackingMethodOk
+### GetAssignedOk
 
-`func (o *InlineResponse20022) GetClientTrackingMethodOk() (*string, bool)`
+`func (o *InlineResponse20022) GetAssignedOk() (*[]InlineResponse20022Assigned, bool)`
 
-GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTrackingMethod
+### SetAssigned
 
-`func (o *InlineResponse20022) SetClientTrackingMethod(v string)`
+`func (o *InlineResponse20022) SetAssigned(v []InlineResponse20022Assigned)`
 
-SetClientTrackingMethod sets ClientTrackingMethod field to given value.
+SetAssigned sets Assigned field to given value.
 
-### HasClientTrackingMethod
+### HasAssigned
 
-`func (o *InlineResponse20022) HasClientTrackingMethod() bool`
+`func (o *InlineResponse20022) HasAssigned() bool`
 
-HasClientTrackingMethod returns a boolean if a field has been set.
-
-### GetDeploymentMode
-
-`func (o *InlineResponse20022) GetDeploymentMode() string`
-
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
-
-### GetDeploymentModeOk
-
-`func (o *InlineResponse20022) GetDeploymentModeOk() (*string, bool)`
-
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeploymentMode
-
-`func (o *InlineResponse20022) SetDeploymentMode(v string)`
-
-SetDeploymentMode sets DeploymentMode field to given value.
-
-### HasDeploymentMode
-
-`func (o *InlineResponse20022) HasDeploymentMode() bool`
-
-HasDeploymentMode returns a boolean if a field has been set.
-
-### GetDynamicDns
-
-`func (o *InlineResponse20022) GetDynamicDns() InlineResponse20022DynamicDns`
-
-GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
-
-### GetDynamicDnsOk
-
-`func (o *InlineResponse20022) GetDynamicDnsOk() (*InlineResponse20022DynamicDns, bool)`
-
-GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDynamicDns
-
-`func (o *InlineResponse20022) SetDynamicDns(v InlineResponse20022DynamicDns)`
-
-SetDynamicDns sets DynamicDns field to given value.
-
-### HasDynamicDns
-
-`func (o *InlineResponse20022) HasDynamicDns() bool`
-
-HasDynamicDns returns a boolean if a field has been set.
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

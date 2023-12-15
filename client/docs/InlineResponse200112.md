@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
-**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**Identity** | Pointer to [**InlineResponse200112Identity**](InlineResponse200112Identity.md) |  | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200112EapolKey**](InlineResponse200112EapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +28,105 @@ NewInlineResponse200112WithDefaults instantiates a new InlineResponse200112 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetTimeout
 
-`func (o *InlineResponse200112) GetName() string`
+`func (o *InlineResponse200112) GetTimeout() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTimeoutOk
 
-`func (o *InlineResponse200112) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200112) GetTimeoutOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTimeout
 
-`func (o *InlineResponse200112) SetName(v string)`
+`func (o *InlineResponse200112) SetTimeout(v int32)`
 
-SetName sets Name field to given value.
+SetTimeout sets Timeout field to given value.
 
-### HasName
+### HasTimeout
 
-`func (o *InlineResponse200112) HasName() bool`
+`func (o *InlineResponse200112) HasTimeout() bool`
 
-HasName returns a boolean if a field has been set.
+HasTimeout returns a boolean if a field has been set.
 
-### GetId
+### GetMaxRetries
 
-`func (o *InlineResponse200112) GetId() string`
+`func (o *InlineResponse200112) GetMaxRetries() int32`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetMaxRetriesOk
 
-`func (o *InlineResponse200112) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200112) GetMaxRetriesOk() (*int32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetMaxRetries
 
-`func (o *InlineResponse200112) SetId(v string)`
+`func (o *InlineResponse200112) SetMaxRetries(v int32)`
 
-SetId sets Id field to given value.
+SetMaxRetries sets MaxRetries field to given value.
 
-### HasId
+### HasMaxRetries
 
-`func (o *InlineResponse200112) HasId() bool`
+`func (o *InlineResponse200112) HasMaxRetries() bool`
 
-HasId returns a boolean if a field has been set.
+HasMaxRetries returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetIdentity
 
-`func (o *InlineResponse200112) GetGroupPolicyId() string`
+`func (o *InlineResponse200112) GetIdentity() InlineResponse200112Identity`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetIdentityOk
 
-`func (o *InlineResponse200112) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200112) GetIdentityOk() (*InlineResponse200112Identity, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetIdentity
 
-`func (o *InlineResponse200112) SetGroupPolicyId(v string)`
+`func (o *InlineResponse200112) SetIdentity(v InlineResponse200112Identity)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetIdentity sets Identity field to given value.
 
-### HasGroupPolicyId
+### HasIdentity
 
-`func (o *InlineResponse200112) HasGroupPolicyId() bool`
+`func (o *InlineResponse200112) HasIdentity() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasIdentity returns a boolean if a field has been set.
 
-### GetPassphrase
+### GetEapolKey
 
-`func (o *InlineResponse200112) GetPassphrase() string`
+`func (o *InlineResponse200112) GetEapolKey() InlineResponse200112EapolKey`
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
 
-### GetPassphraseOk
+### GetEapolKeyOk
 
-`func (o *InlineResponse200112) GetPassphraseOk() (*string, bool)`
+`func (o *InlineResponse200112) GetEapolKeyOk() (*InlineResponse200112EapolKey, bool)`
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetEapolKey
 
-`func (o *InlineResponse200112) SetPassphrase(v string)`
+`func (o *InlineResponse200112) SetEapolKey(v InlineResponse200112EapolKey)`
 
-SetPassphrase sets Passphrase field to given value.
+SetEapolKey sets EapolKey field to given value.
 
-### HasPassphrase
+### HasEapolKey
 
-`func (o *InlineResponse200112) HasPassphrase() bool`
+`func (o *InlineResponse200112) HasEapolKey() bool`
 
-HasPassphrase returns a boolean if a field has been set.
-
-### GetWifiPersonalNetworkId
-
-`func (o *InlineResponse200112) GetWifiPersonalNetworkId() string`
-
-GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
-
-### GetWifiPersonalNetworkIdOk
-
-`func (o *InlineResponse200112) GetWifiPersonalNetworkIdOk() (*string, bool)`
-
-GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifiPersonalNetworkId
-
-`func (o *InlineResponse200112) SetWifiPersonalNetworkId(v string)`
-
-SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
-
-### HasWifiPersonalNetworkId
-
-`func (o *InlineResponse200112) HasWifiPersonalNetworkId() bool`
-
-HasWifiPersonalNetworkId returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *InlineResponse200112) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineResponse200112) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineResponse200112) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *InlineResponse200112) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
-
-### GetExpiresAt
-
-`func (o *InlineResponse200112) GetExpiresAt() time.Time`
-
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
-
-### GetExpiresAtOk
-
-`func (o *InlineResponse200112) GetExpiresAtOk() (*time.Time, bool)`
-
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExpiresAt
-
-`func (o *InlineResponse200112) SetExpiresAt(v time.Time)`
-
-SetExpiresAt sets ExpiresAt field to given value.
-
-### HasExpiresAt
-
-`func (o *InlineResponse200112) HasExpiresAt() bool`
-
-HasExpiresAt returns a boolean if a field has been set.
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**Mac** | Pointer to **string** | MAC address of client | [optional] 
-**Id** | Pointer to **string** | ID of client | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork**](OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsByUsageUsage.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
+**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200168WithDefaults instantiates a new InlineResponse200168 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetTs
 
-`func (o *InlineResponse200168) GetName() string`
+`func (o *InlineResponse200168) GetTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTsOk
 
-`func (o *InlineResponse200168) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200168) GetTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTs
 
-`func (o *InlineResponse200168) SetName(v string)`
+`func (o *InlineResponse200168) SetTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetTs sets Ts field to given value.
 
-### HasName
+### HasTs
 
-`func (o *InlineResponse200168) HasName() bool`
+`func (o *InlineResponse200168) HasTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetMac
+### GetDraw
 
-`func (o *InlineResponse200168) GetMac() string`
+`func (o *InlineResponse200168) GetDraw() float32`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetDraw returns the Draw field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetDrawOk
 
-`func (o *InlineResponse200168) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200168) GetDrawOk() (*float32, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetDraw
 
-`func (o *InlineResponse200168) SetMac(v string)`
+`func (o *InlineResponse200168) SetDraw(v float32)`
 
-SetMac sets Mac field to given value.
+SetDraw sets Draw field to given value.
 
-### HasMac
+### HasDraw
 
-`func (o *InlineResponse200168) HasMac() bool`
+`func (o *InlineResponse200168) HasDraw() bool`
 
-HasMac returns a boolean if a field has been set.
-
-### GetId
-
-`func (o *InlineResponse200168) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200168) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200168) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200168) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200168) GetNetwork() OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200168) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200168) SetNetwork(v OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200168) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200168) GetUsage() OrganizationsOrganizationIdSummaryTopClientsByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200168) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200168) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200168) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasDraw returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

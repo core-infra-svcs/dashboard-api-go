@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Switch serial. | [optional] 
-**Name** | Pointer to **string** | Switch name. | [optional] 
-**Url** | Pointer to **string** | Url link to switch. | [optional] 
-**SupportsInspection** | Pointer to **bool** | Whether this switch supports Dynamic ARP Inspection. | [optional] 
-**HasTrustedPort** | Pointer to **bool** | Whether this switch has a trusted DAI port. Always false if supportsInspection is false. | [optional] 
+**TrustedServerId** | Pointer to **string** | ID of the trusted server. | [optional] 
+**Mac** | Pointer to **string** | Mac address of the trusted server. | [optional] 
+**Vlan** | Pointer to **int32** | Vlan ID of the trusted server. | [optional] 
+**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse20081WithDefaults instantiates a new InlineResponse20081 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetTrustedServerId
 
-`func (o *InlineResponse20081) GetSerial() string`
+`func (o *InlineResponse20081) GetTrustedServerId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetTrustedServerId returns the TrustedServerId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetTrustedServerIdOk
 
-`func (o *InlineResponse20081) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20081) GetTrustedServerIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetTrustedServerIdOk returns a tuple with the TrustedServerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetTrustedServerId
 
-`func (o *InlineResponse20081) SetSerial(v string)`
+`func (o *InlineResponse20081) SetTrustedServerId(v string)`
 
-SetSerial sets Serial field to given value.
+SetTrustedServerId sets TrustedServerId field to given value.
 
-### HasSerial
+### HasTrustedServerId
 
-`func (o *InlineResponse20081) HasSerial() bool`
+`func (o *InlineResponse20081) HasTrustedServerId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasTrustedServerId returns a boolean if a field has been set.
 
-### GetName
+### GetMac
 
-`func (o *InlineResponse20081) GetName() string`
+`func (o *InlineResponse20081) GetMac() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMacOk
 
-`func (o *InlineResponse20081) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20081) GetMacOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMac
 
-`func (o *InlineResponse20081) SetName(v string)`
+`func (o *InlineResponse20081) SetMac(v string)`
 
-SetName sets Name field to given value.
+SetMac sets Mac field to given value.
 
-### HasName
+### HasMac
 
-`func (o *InlineResponse20081) HasName() bool`
+`func (o *InlineResponse20081) HasMac() bool`
 
-HasName returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetUrl
+### GetVlan
 
-`func (o *InlineResponse20081) GetUrl() string`
+`func (o *InlineResponse20081) GetVlan() int32`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetVlanOk
 
-`func (o *InlineResponse20081) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20081) GetVlanOk() (*int32, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetVlan
 
-`func (o *InlineResponse20081) SetUrl(v string)`
+`func (o *InlineResponse20081) SetVlan(v int32)`
 
-SetUrl sets Url field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasUrl
+### HasVlan
 
-`func (o *InlineResponse20081) HasUrl() bool`
+`func (o *InlineResponse20081) HasVlan() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetSupportsInspection
+### GetIpv4
 
-`func (o *InlineResponse20081) GetSupportsInspection() bool`
+`func (o *InlineResponse20081) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4`
 
-GetSupportsInspection returns the SupportsInspection field if non-nil, zero value otherwise.
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
 
-### GetSupportsInspectionOk
+### GetIpv4Ok
 
-`func (o *InlineResponse20081) GetSupportsInspectionOk() (*bool, bool)`
+`func (o *InlineResponse20081) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4, bool)`
 
-GetSupportsInspectionOk returns a tuple with the SupportsInspection field if it's non-nil, zero value otherwise
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSupportsInspection
+### SetIpv4
 
-`func (o *InlineResponse20081) SetSupportsInspection(v bool)`
+`func (o *InlineResponse20081) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4)`
 
-SetSupportsInspection sets SupportsInspection field to given value.
+SetIpv4 sets Ipv4 field to given value.
 
-### HasSupportsInspection
+### HasIpv4
 
-`func (o *InlineResponse20081) HasSupportsInspection() bool`
+`func (o *InlineResponse20081) HasIpv4() bool`
 
-HasSupportsInspection returns a boolean if a field has been set.
-
-### GetHasTrustedPort
-
-`func (o *InlineResponse20081) GetHasTrustedPort() bool`
-
-GetHasTrustedPort returns the HasTrustedPort field if non-nil, zero value otherwise.
-
-### GetHasTrustedPortOk
-
-`func (o *InlineResponse20081) GetHasTrustedPortOk() (*bool, bool)`
-
-GetHasTrustedPortOk returns a tuple with the HasTrustedPort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHasTrustedPort
-
-`func (o *InlineResponse20081) SetHasTrustedPort(v bool)`
-
-SetHasTrustedPort sets HasTrustedPort field to given value.
-
-### HasHasTrustedPort
-
-`func (o *InlineResponse20081) HasHasTrustedPort() bool`
-
-HasHasTrustedPort returns a boolean if a field has been set.
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

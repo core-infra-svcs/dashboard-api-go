@@ -6,7 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
 **EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
+**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
+**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
+**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
 
 ## Methods
 
@@ -77,30 +79,80 @@ SetEndTs sets EndTs field to given value.
 
 HasEndTs returns a boolean if a field has been set.
 
-### GetClientCount
+### GetUtilizationTotal
 
-`func (o *InlineResponse200100) GetClientCount() int32`
+`func (o *InlineResponse200100) GetUtilizationTotal() float32`
 
-GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
+GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
 
-### GetClientCountOk
+### GetUtilizationTotalOk
 
-`func (o *InlineResponse200100) GetClientCountOk() (*int32, bool)`
+`func (o *InlineResponse200100) GetUtilizationTotalOk() (*float32, bool)`
 
-GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
+GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientCount
+### SetUtilizationTotal
 
-`func (o *InlineResponse200100) SetClientCount(v int32)`
+`func (o *InlineResponse200100) SetUtilizationTotal(v float32)`
 
-SetClientCount sets ClientCount field to given value.
+SetUtilizationTotal sets UtilizationTotal field to given value.
 
-### HasClientCount
+### HasUtilizationTotal
 
-`func (o *InlineResponse200100) HasClientCount() bool`
+`func (o *InlineResponse200100) HasUtilizationTotal() bool`
 
-HasClientCount returns a boolean if a field has been set.
+HasUtilizationTotal returns a boolean if a field has been set.
+
+### GetUtilization80211
+
+`func (o *InlineResponse200100) GetUtilization80211() float32`
+
+GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
+
+### GetUtilization80211Ok
+
+`func (o *InlineResponse200100) GetUtilization80211Ok() (*float32, bool)`
+
+GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUtilization80211
+
+`func (o *InlineResponse200100) SetUtilization80211(v float32)`
+
+SetUtilization80211 sets Utilization80211 field to given value.
+
+### HasUtilization80211
+
+`func (o *InlineResponse200100) HasUtilization80211() bool`
+
+HasUtilization80211 returns a boolean if a field has been set.
+
+### GetUtilizationNon80211
+
+`func (o *InlineResponse200100) GetUtilizationNon80211() float32`
+
+GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
+
+### GetUtilizationNon80211Ok
+
+`func (o *InlineResponse200100) GetUtilizationNon80211Ok() (*float32, bool)`
+
+GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUtilizationNon80211
+
+`func (o *InlineResponse200100) SetUtilizationNon80211(v float32)`
+
+SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
+
+### HasUtilizationNon80211
+
+`func (o *InlineResponse200100) HasUtilizationNon80211() bool`
+
+HasUtilizationNon80211 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

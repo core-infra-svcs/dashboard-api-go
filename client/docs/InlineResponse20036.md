@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**InlineResponse20036UpgradeWindow**](InlineResponse20036UpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**InlineResponse20036Products**](InlineResponse20036Products.md) |  | [optional] 
+**Category** | Pointer to **string** | Event category | [optional] 
+**Type** | Pointer to **string** | Event type | [optional] 
+**Description** | Pointer to **string** | Description of the event | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20036WithDefaults instantiates a new InlineResponse20036 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetCategory
 
-`func (o *InlineResponse20036) GetUpgradeWindow() InlineResponse20036UpgradeWindow`
+`func (o *InlineResponse20036) GetCategory() string`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetCategoryOk
 
-`func (o *InlineResponse20036) GetUpgradeWindowOk() (*InlineResponse20036UpgradeWindow, bool)`
+`func (o *InlineResponse20036) GetCategoryOk() (*string, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetCategory
 
-`func (o *InlineResponse20036) SetUpgradeWindow(v InlineResponse20036UpgradeWindow)`
+`func (o *InlineResponse20036) SetCategory(v string)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetCategory sets Category field to given value.
 
-### HasUpgradeWindow
+### HasCategory
 
-`func (o *InlineResponse20036) HasUpgradeWindow() bool`
+`func (o *InlineResponse20036) HasCategory() bool`
 
-HasUpgradeWindow returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetTimezone
+### GetType
 
-`func (o *InlineResponse20036) GetTimezone() string`
+`func (o *InlineResponse20036) GetType() string`
 
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetTimezoneOk
+### GetTypeOk
 
-`func (o *InlineResponse20036) GetTimezoneOk() (*string, bool)`
+`func (o *InlineResponse20036) GetTypeOk() (*string, bool)`
 
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimezone
+### SetType
 
-`func (o *InlineResponse20036) SetTimezone(v string)`
+`func (o *InlineResponse20036) SetType(v string)`
 
-SetTimezone sets Timezone field to given value.
+SetType sets Type field to given value.
 
-### HasTimezone
+### HasType
 
-`func (o *InlineResponse20036) HasTimezone() bool`
+`func (o *InlineResponse20036) HasType() bool`
 
-HasTimezone returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetProducts
+### GetDescription
 
-`func (o *InlineResponse20036) GetProducts() InlineResponse20036Products`
+`func (o *InlineResponse20036) GetDescription() string`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetDescriptionOk
 
-`func (o *InlineResponse20036) GetProductsOk() (*InlineResponse20036Products, bool)`
+`func (o *InlineResponse20036) GetDescriptionOk() (*string, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetDescription
 
-`func (o *InlineResponse20036) SetProducts(v InlineResponse20036Products)`
+`func (o *InlineResponse20036) SetDescription(v string)`
 
-SetProducts sets Products field to given value.
+SetDescription sets Description field to given value.
 
-### HasProducts
+### HasDescription
 
-`func (o *InlineResponse20036) HasProducts() bool`
+`func (o *InlineResponse20036) HasDescription() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

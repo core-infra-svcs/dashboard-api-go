@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BasicServiceSets** | Pointer to [**[]InlineResponse20014BasicServiceSets**](InlineResponse20014BasicServiceSets.md) | SSID status list | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device | [optional] 
+**ConnectionStats** | Pointer to [**InlineResponse20014ConnectionStats**](InlineResponse20014ConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse20014WithDefaults instantiates a new InlineResponse20014 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBasicServiceSets
+### GetSerial
 
-`func (o *InlineResponse20014) GetBasicServiceSets() []InlineResponse20014BasicServiceSets`
+`func (o *InlineResponse20014) GetSerial() string`
 
-GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetBasicServiceSetsOk
+### GetSerialOk
 
-`func (o *InlineResponse20014) GetBasicServiceSetsOk() (*[]InlineResponse20014BasicServiceSets, bool)`
+`func (o *InlineResponse20014) GetSerialOk() (*string, bool)`
 
-GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBasicServiceSets
+### SetSerial
 
-`func (o *InlineResponse20014) SetBasicServiceSets(v []InlineResponse20014BasicServiceSets)`
+`func (o *InlineResponse20014) SetSerial(v string)`
 
-SetBasicServiceSets sets BasicServiceSets field to given value.
+SetSerial sets Serial field to given value.
 
-### HasBasicServiceSets
+### HasSerial
 
-`func (o *InlineResponse20014) HasBasicServiceSets() bool`
+`func (o *InlineResponse20014) HasSerial() bool`
 
-HasBasicServiceSets returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
+
+### GetConnectionStats
+
+`func (o *InlineResponse20014) GetConnectionStats() InlineResponse20014ConnectionStats`
+
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
+
+### GetConnectionStatsOk
+
+`func (o *InlineResponse20014) GetConnectionStatsOk() (*InlineResponse20014ConnectionStats, bool)`
+
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConnectionStats
+
+`func (o *InlineResponse20014) SetConnectionStats(v InlineResponse20014ConnectionStats)`
+
+SetConnectionStats sets ConnectionStats field to given value.
+
+### HasConnectionStats
+
+`func (o *InlineResponse20014) HasConnectionStats() bool`
+
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

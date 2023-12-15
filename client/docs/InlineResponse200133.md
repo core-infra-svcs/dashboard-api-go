@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
-**Name** | Pointer to **string** | The name of the configuration template | [optional] 
-**ProductTypes** | Pointer to **[]string** | The product types of the configuration template | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
+**Usage** | Pointer to [**InlineResponse200133Usage**](InlineResponse200133Usage.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200133Counts**](InlineResponse200133Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse200133WithDefaults instantiates a new InlineResponse200133 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetUsage
 
-`func (o *InlineResponse200133) GetId() string`
+`func (o *InlineResponse200133) GetUsage() InlineResponse200133Usage`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetUsageOk
 
-`func (o *InlineResponse200133) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200133) GetUsageOk() (*InlineResponse200133Usage, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetUsage
 
-`func (o *InlineResponse200133) SetId(v string)`
+`func (o *InlineResponse200133) SetUsage(v InlineResponse200133Usage)`
 
-SetId sets Id field to given value.
+SetUsage sets Usage field to given value.
 
-### HasId
+### HasUsage
 
-`func (o *InlineResponse200133) HasId() bool`
+`func (o *InlineResponse200133) HasUsage() bool`
 
-HasId returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
-### GetName
+### GetCounts
 
-`func (o *InlineResponse200133) GetName() string`
+`func (o *InlineResponse200133) GetCounts() InlineResponse200133Counts`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCountsOk
 
-`func (o *InlineResponse200133) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200133) GetCountsOk() (*InlineResponse200133Counts, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCounts
 
-`func (o *InlineResponse200133) SetName(v string)`
+`func (o *InlineResponse200133) SetCounts(v InlineResponse200133Counts)`
 
-SetName sets Name field to given value.
+SetCounts sets Counts field to given value.
 
-### HasName
+### HasCounts
 
-`func (o *InlineResponse200133) HasName() bool`
+`func (o *InlineResponse200133) HasCounts() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetProductTypes
-
-`func (o *InlineResponse200133) GetProductTypes() []string`
-
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
-
-### GetProductTypesOk
-
-`func (o *InlineResponse200133) GetProductTypesOk() (*[]string, bool)`
-
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductTypes
-
-`func (o *InlineResponse200133) SetProductTypes(v []string)`
-
-SetProductTypes sets ProductTypes field to given value.
-
-### HasProductTypes
-
-`func (o *InlineResponse200133) HasProductTypes() bool`
-
-HasProductTypes returns a boolean if a field has been set.
-
-### GetTimeZone
-
-`func (o *InlineResponse200133) GetTimeZone() string`
-
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
-
-### GetTimeZoneOk
-
-`func (o *InlineResponse200133) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeZone
-
-`func (o *InlineResponse200133) SetTimeZone(v string)`
-
-SetTimeZone sets TimeZone field to given value.
-
-### HasTimeZone
-
-`func (o *InlineResponse200133) HasTimeZone() bool`
-
-HasTimeZone returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

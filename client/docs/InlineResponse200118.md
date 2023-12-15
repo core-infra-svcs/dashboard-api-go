@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200118Counts**](InlineResponse200118Counts.md) |  | [optional] 
-**Limits** | Pointer to [**InlineResponse200118Limits**](InlineResponse200118Limits.md) |  | [optional] 
+**AclId** | Pointer to **string** | ID of the adaptive policy ACL | [optional] 
+**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
+**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
+**IpVersion** | Pointer to **string** | IP version of adpative policy ACL | [optional] 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules | [optional] 
+**CreatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was created | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was last updated | [optional] 
 
 ## Methods
 
@@ -26,55 +31,180 @@ NewInlineResponse200118WithDefaults instantiates a new InlineResponse200118 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetAclId
 
-`func (o *InlineResponse200118) GetCounts() InlineResponse200118Counts`
+`func (o *InlineResponse200118) GetAclId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetAclId returns the AclId field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetAclIdOk
 
-`func (o *InlineResponse200118) GetCountsOk() (*InlineResponse200118Counts, bool)`
+`func (o *InlineResponse200118) GetAclIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetAclIdOk returns a tuple with the AclId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetAclId
 
-`func (o *InlineResponse200118) SetCounts(v InlineResponse200118Counts)`
+`func (o *InlineResponse200118) SetAclId(v string)`
 
-SetCounts sets Counts field to given value.
+SetAclId sets AclId field to given value.
 
-### HasCounts
+### HasAclId
 
-`func (o *InlineResponse200118) HasCounts() bool`
+`func (o *InlineResponse200118) HasAclId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasAclId returns a boolean if a field has been set.
 
-### GetLimits
+### GetName
 
-`func (o *InlineResponse200118) GetLimits() InlineResponse200118Limits`
+`func (o *InlineResponse200118) GetName() string`
 
-GetLimits returns the Limits field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLimitsOk
+### GetNameOk
 
-`func (o *InlineResponse200118) GetLimitsOk() (*InlineResponse200118Limits, bool)`
+`func (o *InlineResponse200118) GetNameOk() (*string, bool)`
 
-GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimits
+### SetName
 
-`func (o *InlineResponse200118) SetLimits(v InlineResponse200118Limits)`
+`func (o *InlineResponse200118) SetName(v string)`
 
-SetLimits sets Limits field to given value.
+SetName sets Name field to given value.
 
-### HasLimits
+### HasName
 
-`func (o *InlineResponse200118) HasLimits() bool`
+`func (o *InlineResponse200118) HasName() bool`
 
-HasLimits returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse200118) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse200118) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse200118) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse200118) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetIpVersion
+
+`func (o *InlineResponse200118) GetIpVersion() string`
+
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+
+### GetIpVersionOk
+
+`func (o *InlineResponse200118) GetIpVersionOk() (*string, bool)`
+
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpVersion
+
+`func (o *InlineResponse200118) SetIpVersion(v string)`
+
+SetIpVersion sets IpVersion field to given value.
+
+### HasIpVersion
+
+`func (o *InlineResponse200118) HasIpVersion() bool`
+
+HasIpVersion returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineResponse200118) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineResponse200118) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineResponse200118) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineResponse200118) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200118) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200118) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200118) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200118) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200118) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200118) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200118) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200118) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

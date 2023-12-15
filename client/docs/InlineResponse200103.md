@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | AP port profile ID | [optional] 
-**Name** | Pointer to **string** | AP port profile name | [optional] 
-**IsDefault** | Pointer to **bool** | Is default profile | [optional] 
-**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts.md) | Ports config | [optional] 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts.md) | Usb ports config | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
+**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
+**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200103WithDefaults instantiates a new InlineResponse200103 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetStartTs
 
-`func (o *InlineResponse200103) GetProfileId() string`
+`func (o *InlineResponse200103) GetStartTs() time.Time`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse200103) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200103) GetStartTsOk() (*time.Time, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetStartTs
 
-`func (o *InlineResponse200103) SetProfileId(v string)`
+`func (o *InlineResponse200103) SetStartTs(v time.Time)`
 
-SetProfileId sets ProfileId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasProfileId
+### HasStartTs
 
-`func (o *InlineResponse200103) HasProfileId() bool`
+`func (o *InlineResponse200103) HasStartTs() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetName
+### GetEndTs
 
-`func (o *InlineResponse200103) GetName() string`
+`func (o *InlineResponse200103) GetEndTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEndTsOk
 
-`func (o *InlineResponse200103) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200103) GetEndTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEndTs
 
-`func (o *InlineResponse200103) SetName(v string)`
+`func (o *InlineResponse200103) SetEndTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasName
+### HasEndTs
 
-`func (o *InlineResponse200103) HasName() bool`
+`func (o *InlineResponse200103) HasEndTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetAverageKbps
 
-`func (o *InlineResponse200103) GetIsDefault() bool`
+`func (o *InlineResponse200103) GetAverageKbps() int32`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetAverageKbpsOk
 
-`func (o *InlineResponse200103) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse200103) GetAverageKbpsOk() (*int32, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetAverageKbps
 
-`func (o *InlineResponse200103) SetIsDefault(v bool)`
+`func (o *InlineResponse200103) SetAverageKbps(v int32)`
 
-SetIsDefault sets IsDefault field to given value.
+SetAverageKbps sets AverageKbps field to given value.
 
-### HasIsDefault
+### HasAverageKbps
 
-`func (o *InlineResponse200103) HasIsDefault() bool`
+`func (o *InlineResponse200103) HasAverageKbps() bool`
 
-HasIsDefault returns a boolean if a field has been set.
+HasAverageKbps returns a boolean if a field has been set.
 
-### GetPorts
+### GetDownloadKbps
 
-`func (o *InlineResponse200103) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts`
+`func (o *InlineResponse200103) GetDownloadKbps() int32`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetDownloadKbpsOk
 
-`func (o *InlineResponse200103) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts, bool)`
+`func (o *InlineResponse200103) GetDownloadKbpsOk() (*int32, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetDownloadKbps
 
-`func (o *InlineResponse200103) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts)`
+`func (o *InlineResponse200103) SetDownloadKbps(v int32)`
 
-SetPorts sets Ports field to given value.
+SetDownloadKbps sets DownloadKbps field to given value.
 
-### HasPorts
+### HasDownloadKbps
 
-`func (o *InlineResponse200103) HasPorts() bool`
+`func (o *InlineResponse200103) HasDownloadKbps() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasDownloadKbps returns a boolean if a field has been set.
 
-### GetUsbPorts
+### GetUploadKbps
 
-`func (o *InlineResponse200103) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts`
+`func (o *InlineResponse200103) GetUploadKbps() int32`
 
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
 
-### GetUsbPortsOk
+### GetUploadKbpsOk
 
-`func (o *InlineResponse200103) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts, bool)`
+`func (o *InlineResponse200103) GetUploadKbpsOk() (*int32, bool)`
 
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsbPorts
+### SetUploadKbps
 
-`func (o *InlineResponse200103) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts)`
+`func (o *InlineResponse200103) SetUploadKbps(v int32)`
 
-SetUsbPorts sets UsbPorts field to given value.
+SetUploadKbps sets UploadKbps field to given value.
 
-### HasUsbPorts
+### HasUploadKbps
 
-`func (o *InlineResponse200103) HasUsbPorts() bool`
+`func (o *InlineResponse200103) HasUploadKbps() bool`
 
-HasUsbPorts returns a boolean if a field has been set.
+HasUploadKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

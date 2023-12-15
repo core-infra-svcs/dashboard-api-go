@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | The name of the organization | [optional] 
-**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
+**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
 **Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
 
 ## Methods
@@ -54,20 +54,20 @@ HasName returns a boolean if a field has been set.
 
 ### GetManagement
 
-`func (o *InlineObject182) GetManagement() OrganizationsManagement`
+`func (o *InlineObject182) GetManagement() OrganizationsManagement1`
 
 GetManagement returns the Management field if non-nil, zero value otherwise.
 
 ### GetManagementOk
 
-`func (o *InlineObject182) GetManagementOk() (*OrganizationsManagement, bool)`
+`func (o *InlineObject182) GetManagementOk() (*OrganizationsManagement1, bool)`
 
 GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetManagement
 
-`func (o *InlineObject182) SetManagement(v OrganizationsManagement)`
+`func (o *InlineObject182) SetManagement(v OrganizationsManagement1)`
 
 SetManagement sets Management field to given value.
 
