@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationAdmin
 
-> InlineResponse200120 CreateOrganizationAdmin(ctx, organizationId).CreateOrganizationAdmin(createOrganizationAdmin).Execute()
+> InlineResponse200122 CreateOrganizationAdmin(ctx, organizationId).CreateOrganizationAdmin(createOrganizationAdmin).Execute()
 
 Create a new dashboard administrator
 
@@ -33,7 +33,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationAdmin := *openapiclient.NewInlineObject192("Email_example", "Name_example", "OrgAccess_example") // InlineObject192 | 
+    createOrganizationAdmin := *openapiclient.NewInlineObject195("Email_example", "Name_example", "OrgAccess_example") // InlineObject195 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdminsApi.CreateOrganizationAdmin``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationAdmin`: InlineResponse200120
+    // response from `CreateOrganizationAdmin`: InlineResponse200122
     fmt.Fprintf(os.Stdout, "Response from `AdminsApi.CreateOrganizationAdmin`: %v\n", resp)
 }
 ```
@@ -63,11 +63,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdminReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdmin** | [**InlineObject192**](InlineObject192.md) |  | 
+ **createOrganizationAdmin** | [**InlineObject195**](InlineObject195.md) |  | 
 
 ### Return type
 
-[**InlineResponse200120**](InlineResponse200120.md)
+[**InlineResponse200122**](InlineResponse200122.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdmins
 
-> []InlineResponse200120 GetOrganizationAdmins(ctx, organizationId).Execute()
+> []InlineResponse200122 GetOrganizationAdmins(ctx, organizationId).Execute()
 
 List the dashboard administrators in this organization
 
@@ -184,7 +184,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdminsApi.GetOrganizationAdmins``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdmins`: []InlineResponse200120
+    // response from `GetOrganizationAdmins`: []InlineResponse200122
     fmt.Fprintf(os.Stdout, "Response from `AdminsApi.GetOrganizationAdmins`: %v\n", resp)
 }
 ```
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200120**](InlineResponse200120.md)
+[**[]InlineResponse200122**](InlineResponse200122.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdmin
 
-> InlineResponse200120 UpdateOrganizationAdmin(ctx, organizationId, adminId).UpdateOrganizationAdmin(updateOrganizationAdmin).Execute()
+> InlineResponse200122 UpdateOrganizationAdmin(ctx, organizationId, adminId).UpdateOrganizationAdmin(updateOrganizationAdmin).Execute()
 
 Update an administrator
 
@@ -247,7 +247,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     adminId := "adminId_example" // string | Admin ID
-    updateOrganizationAdmin := *openapiclient.NewInlineObject193() // InlineObject193 |  (optional)
+    updateOrganizationAdmin := *openapiclient.NewInlineObject196() // InlineObject196 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -256,7 +256,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdminsApi.UpdateOrganizationAdmin``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationAdmin`: InlineResponse200120
+    // response from `UpdateOrganizationAdmin`: InlineResponse200122
     fmt.Fprintf(os.Stdout, "Response from `AdminsApi.UpdateOrganizationAdmin`: %v\n", resp)
 }
 ```
@@ -279,11 +279,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdmin** | [**InlineObject193**](InlineObject193.md) |  | 
+ **updateOrganizationAdmin** | [**InlineObject196**](InlineObject196.md) |  | 
 
 ### Return type
 
-[**InlineResponse200120**](InlineResponse200120.md)
+[**InlineResponse200122**](InlineResponse200122.md)
 
 ### Authorization
 

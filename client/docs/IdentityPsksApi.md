@@ -35,7 +35,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    createNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject175("Name_example", "GroupPolicyId_example") // InlineObject175 | 
+    createNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject178("Name_example", "GroupPolicyId_example") // InlineObject178 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkWirelessSsidIdentityPsk** | [**InlineObject175**](InlineObject175.md) |  | 
+ **createNetworkWirelessSsidIdentityPsk** | [**InlineObject178**](InlineObject178.md) |  | 
 
 ### Return type
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidIdentityPsk
 
-> InlineResponse200113 GetNetworkWirelessSsidIdentityPsk(ctx, networkId, number, identityPskId).Execute()
+> InlineResponse200115 GetNetworkWirelessSsidIdentityPsk(ctx, networkId, number, identityPskId).Execute()
 
 Return an Identity PSK
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IdentityPsksApi.GetNetworkWirelessSsidIdentityPsk``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidIdentityPsk`: InlineResponse200113
+    // response from `GetNetworkWirelessSsidIdentityPsk`: InlineResponse200115
     fmt.Fprintf(os.Stdout, "Response from `IdentityPsksApi.GetNetworkWirelessSsidIdentityPsk`: %v\n", resp)
 }
 ```
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200113**](InlineResponse200113.md)
+[**InlineResponse200115**](InlineResponse200115.md)
 
 ### Authorization
 
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidIdentityPsks
 
-> []InlineResponse200113 GetNetworkWirelessSsidIdentityPsks(ctx, networkId, number).Execute()
+> []InlineResponse200115 GetNetworkWirelessSsidIdentityPsks(ctx, networkId, number).Execute()
 
 List all Identity PSKs in a wireless network
 
@@ -268,7 +268,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `IdentityPsksApi.GetNetworkWirelessSsidIdentityPsks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidIdentityPsks`: []InlineResponse200113
+    // response from `GetNetworkWirelessSsidIdentityPsks`: []InlineResponse200115
     fmt.Fprintf(os.Stdout, "Response from `IdentityPsksApi.GetNetworkWirelessSsidIdentityPsks`: %v\n", resp)
 }
 ```
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200113**](InlineResponse200113.md)
+[**[]InlineResponse200115**](InlineResponse200115.md)
 
 ### Authorization
 
@@ -334,7 +334,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
     identityPskId := "identityPskId_example" // string | Identity psk ID
-    updateNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject176() // InlineObject176 |  (optional)
+    updateNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject179() // InlineObject179 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkWirelessSsidIdentityPsk** | [**InlineObject176**](InlineObject176.md) |  | 
+ **updateNetworkWirelessSsidIdentityPsk** | [**InlineObject179**](InlineObject179.md) |  | 
 
 ### Return type
 

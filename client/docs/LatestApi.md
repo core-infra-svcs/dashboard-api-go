@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSensorReadingsLatest
 
-> []InlineResponse200165 GetOrganizationSensorReadingsLatest(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
+> []InlineResponse200167 GetOrganizationSensorReadingsLatest(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
 
 Return the latest available reading for each metric from each sensor, sorted by sensor serial
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LatestApi.GetOrganizationSensorReadingsLatest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorReadingsLatest`: []InlineResponse200165
+    // response from `GetOrganizationSensorReadingsLatest`: []InlineResponse200167
     fmt.Fprintf(os.Stdout, "Response from `LatestApi.GetOrganizationSensorReadingsLatest`: %v\n", resp)
 }
 ```
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200165**](InlineResponse200165.md)
+[**[]InlineResponse200167**](InlineResponse200167.md)
 
 ### Authorization
 

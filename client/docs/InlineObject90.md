@@ -4,19 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of your floor plan. | 
-**Center** | Pointer to [**NetworksNetworkIdFloorPlansCenter**](NetworksNetworkIdFloorPlansCenter.md) |  | [optional] 
-**BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner**](NetworksNetworkIdFloorPlansBottomLeftCorner.md) |  | [optional] 
-**BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
-**TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
-**TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
-**ImageContents** | **string** | The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. | 
+**Name** | **string** | Name of the Staged Upgrade Group. Length must be 1 to 255 characters | 
+**Description** | Pointer to **string** | Description of the Staged Upgrade Group. Length must be 1 to 255 characters | [optional] 
+**IsDefault** | **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | 
+**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject90
 
-`func NewInlineObject90(name string, imageContents string, ) *InlineObject90`
+`func NewInlineObject90(name string, isDefault bool, ) *InlineObject90`
 
 NewInlineObject90 instantiates a new InlineObject90 object
 This constructor will assign default values to properties that have it defined,
@@ -51,150 +48,75 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetCenter
+### GetDescription
 
-`func (o *InlineObject90) GetCenter() NetworksNetworkIdFloorPlansCenter`
+`func (o *InlineObject90) GetDescription() string`
 
-GetCenter returns the Center field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetCenterOk
+### GetDescriptionOk
 
-`func (o *InlineObject90) GetCenterOk() (*NetworksNetworkIdFloorPlansCenter, bool)`
+`func (o *InlineObject90) GetDescriptionOk() (*string, bool)`
 
-GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCenter
+### SetDescription
 
-`func (o *InlineObject90) SetCenter(v NetworksNetworkIdFloorPlansCenter)`
+`func (o *InlineObject90) SetDescription(v string)`
 
-SetCenter sets Center field to given value.
+SetDescription sets Description field to given value.
 
-### HasCenter
+### HasDescription
 
-`func (o *InlineObject90) HasCenter() bool`
+`func (o *InlineObject90) HasDescription() bool`
 
-HasCenter returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetBottomLeftCorner
+### GetIsDefault
 
-`func (o *InlineObject90) GetBottomLeftCorner() NetworksNetworkIdFloorPlansBottomLeftCorner`
+`func (o *InlineObject90) GetIsDefault() bool`
 
-GetBottomLeftCorner returns the BottomLeftCorner field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetBottomLeftCornerOk
+### GetIsDefaultOk
 
-`func (o *InlineObject90) GetBottomLeftCornerOk() (*NetworksNetworkIdFloorPlansBottomLeftCorner, bool)`
+`func (o *InlineObject90) GetIsDefaultOk() (*bool, bool)`
 
-GetBottomLeftCornerOk returns a tuple with the BottomLeftCorner field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBottomLeftCorner
+### SetIsDefault
 
-`func (o *InlineObject90) SetBottomLeftCorner(v NetworksNetworkIdFloorPlansBottomLeftCorner)`
+`func (o *InlineObject90) SetIsDefault(v bool)`
 
-SetBottomLeftCorner sets BottomLeftCorner field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasBottomLeftCorner
 
-`func (o *InlineObject90) HasBottomLeftCorner() bool`
+### GetAssignedDevices
 
-HasBottomLeftCorner returns a boolean if a field has been set.
+`func (o *InlineObject90) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1`
 
-### GetBottomRightCorner
+GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
 
-`func (o *InlineObject90) GetBottomRightCorner() NetworksNetworkIdFloorPlansBottomRightCorner`
+### GetAssignedDevicesOk
 
-GetBottomRightCorner returns the BottomRightCorner field if non-nil, zero value otherwise.
+`func (o *InlineObject90) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1, bool)`
 
-### GetBottomRightCornerOk
-
-`func (o *InlineObject90) GetBottomRightCornerOk() (*NetworksNetworkIdFloorPlansBottomRightCorner, bool)`
-
-GetBottomRightCornerOk returns a tuple with the BottomRightCorner field if it's non-nil, zero value otherwise
+GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBottomRightCorner
+### SetAssignedDevices
 
-`func (o *InlineObject90) SetBottomRightCorner(v NetworksNetworkIdFloorPlansBottomRightCorner)`
+`func (o *InlineObject90) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1)`
 
-SetBottomRightCorner sets BottomRightCorner field to given value.
+SetAssignedDevices sets AssignedDevices field to given value.
 
-### HasBottomRightCorner
+### HasAssignedDevices
 
-`func (o *InlineObject90) HasBottomRightCorner() bool`
+`func (o *InlineObject90) HasAssignedDevices() bool`
 
-HasBottomRightCorner returns a boolean if a field has been set.
-
-### GetTopLeftCorner
-
-`func (o *InlineObject90) GetTopLeftCorner() NetworksNetworkIdFloorPlansTopLeftCorner`
-
-GetTopLeftCorner returns the TopLeftCorner field if non-nil, zero value otherwise.
-
-### GetTopLeftCornerOk
-
-`func (o *InlineObject90) GetTopLeftCornerOk() (*NetworksNetworkIdFloorPlansTopLeftCorner, bool)`
-
-GetTopLeftCornerOk returns a tuple with the TopLeftCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTopLeftCorner
-
-`func (o *InlineObject90) SetTopLeftCorner(v NetworksNetworkIdFloorPlansTopLeftCorner)`
-
-SetTopLeftCorner sets TopLeftCorner field to given value.
-
-### HasTopLeftCorner
-
-`func (o *InlineObject90) HasTopLeftCorner() bool`
-
-HasTopLeftCorner returns a boolean if a field has been set.
-
-### GetTopRightCorner
-
-`func (o *InlineObject90) GetTopRightCorner() NetworksNetworkIdFloorPlansTopRightCorner`
-
-GetTopRightCorner returns the TopRightCorner field if non-nil, zero value otherwise.
-
-### GetTopRightCornerOk
-
-`func (o *InlineObject90) GetTopRightCornerOk() (*NetworksNetworkIdFloorPlansTopRightCorner, bool)`
-
-GetTopRightCornerOk returns a tuple with the TopRightCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTopRightCorner
-
-`func (o *InlineObject90) SetTopRightCorner(v NetworksNetworkIdFloorPlansTopRightCorner)`
-
-SetTopRightCorner sets TopRightCorner field to given value.
-
-### HasTopRightCorner
-
-`func (o *InlineObject90) HasTopRightCorner() bool`
-
-HasTopRightCorner returns a boolean if a field has been set.
-
-### GetImageContents
-
-`func (o *InlineObject90) GetImageContents() string`
-
-GetImageContents returns the ImageContents field if non-nil, zero value otherwise.
-
-### GetImageContentsOk
-
-`func (o *InlineObject90) GetImageContentsOk() (*string, bool)`
-
-GetImageContentsOk returns a tuple with the ImageContents field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetImageContents
-
-`func (o *InlineObject90) SetImageContents(v string)`
-
-SetImageContents sets ImageContents field to given value.
-
+HasAssignedDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

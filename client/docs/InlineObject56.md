@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
-**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
+**Name** | Pointer to **string** | The name of the static route | [optional] 
+**Subnet** | Pointer to **string** | The subnet of the static route | [optional] 
+**GatewayIp** | Pointer to **string** | The gateway IP (next hop) of the static route | [optional] 
+**GatewayVlanId** | Pointer to **string** | The gateway IP (next hop) VLAN ID of the static route | [optional] 
+**Enabled** | Pointer to **bool** | The enabled state of the static route | [optional] 
+**FixedIpAssignments** | Pointer to **map[string]interface{}** | The DHCP fixed IP assignments on the static route. This should be an object that contains mappings from MAC addresses to objects that themselves each contain \&quot;ip\&quot; and \&quot;name\&quot; string fields. See the sample request/response for more details. | [optional] 
+**ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges.md) | The DHCP reserved IP ranges on the static route | [optional] 
 
 ## Methods
 
@@ -53,80 +56,155 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetMaxLatency
+### GetSubnet
 
-`func (o *InlineObject56) GetMaxLatency() int32`
+`func (o *InlineObject56) GetSubnet() string`
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetMaxLatencyOk
+### GetSubnetOk
 
-`func (o *InlineObject56) GetMaxLatencyOk() (*int32, bool)`
+`func (o *InlineObject56) GetSubnetOk() (*string, bool)`
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetSubnet
 
-`func (o *InlineObject56) SetMaxLatency(v int32)`
+`func (o *InlineObject56) SetSubnet(v string)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasMaxLatency
+### HasSubnet
 
-`func (o *InlineObject56) HasMaxLatency() bool`
+`func (o *InlineObject56) HasSubnet() bool`
 
-HasMaxLatency returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetMaxJitter
+### GetGatewayIp
 
-`func (o *InlineObject56) GetMaxJitter() int32`
+`func (o *InlineObject56) GetGatewayIp() string`
 
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
 
-### GetMaxJitterOk
+### GetGatewayIpOk
 
-`func (o *InlineObject56) GetMaxJitterOk() (*int32, bool)`
+`func (o *InlineObject56) GetGatewayIpOk() (*string, bool)`
 
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxJitter
+### SetGatewayIp
 
-`func (o *InlineObject56) SetMaxJitter(v int32)`
+`func (o *InlineObject56) SetGatewayIp(v string)`
 
-SetMaxJitter sets MaxJitter field to given value.
+SetGatewayIp sets GatewayIp field to given value.
 
-### HasMaxJitter
+### HasGatewayIp
 
-`func (o *InlineObject56) HasMaxJitter() bool`
+`func (o *InlineObject56) HasGatewayIp() bool`
 
-HasMaxJitter returns a boolean if a field has been set.
+HasGatewayIp returns a boolean if a field has been set.
 
-### GetMaxLossPercentage
+### GetGatewayVlanId
 
-`func (o *InlineObject56) GetMaxLossPercentage() int32`
+`func (o *InlineObject56) GetGatewayVlanId() string`
 
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
 
-### GetMaxLossPercentageOk
+### GetGatewayVlanIdOk
 
-`func (o *InlineObject56) GetMaxLossPercentageOk() (*int32, bool)`
+`func (o *InlineObject56) GetGatewayVlanIdOk() (*string, bool)`
 
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLossPercentage
+### SetGatewayVlanId
 
-`func (o *InlineObject56) SetMaxLossPercentage(v int32)`
+`func (o *InlineObject56) SetGatewayVlanId(v string)`
 
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
+SetGatewayVlanId sets GatewayVlanId field to given value.
 
-### HasMaxLossPercentage
+### HasGatewayVlanId
 
-`func (o *InlineObject56) HasMaxLossPercentage() bool`
+`func (o *InlineObject56) HasGatewayVlanId() bool`
 
-HasMaxLossPercentage returns a boolean if a field has been set.
+HasGatewayVlanId returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineObject56) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject56) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject56) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject56) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetFixedIpAssignments
+
+`func (o *InlineObject56) GetFixedIpAssignments() map[string]interface{}`
+
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+
+### GetFixedIpAssignmentsOk
+
+`func (o *InlineObject56) GetFixedIpAssignmentsOk() (*map[string]interface{}, bool)`
+
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFixedIpAssignments
+
+`func (o *InlineObject56) SetFixedIpAssignments(v map[string]interface{})`
+
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
+
+### HasFixedIpAssignments
+
+`func (o *InlineObject56) HasFixedIpAssignments() bool`
+
+HasFixedIpAssignments returns a boolean if a field has been set.
+
+### GetReservedIpRanges
+
+`func (o *InlineObject56) GetReservedIpRanges() []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges`
+
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+
+### GetReservedIpRangesOk
+
+`func (o *InlineObject56) GetReservedIpRangesOk() (*[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges, bool)`
+
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReservedIpRanges
+
+`func (o *InlineObject56) SetReservedIpRanges(v []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges)`
+
+SetReservedIpRanges sets ReservedIpRanges field to given value.
+
+### HasReservedIpRanges
+
+`func (o *InlineObject56) HasReservedIpRanges() bool`
+
+HasReservedIpRanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

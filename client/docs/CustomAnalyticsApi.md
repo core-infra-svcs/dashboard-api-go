@@ -35,7 +35,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject202() // InlineObject202 |  (optional)
+    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject205() // InlineObject205 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -65,7 +65,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraCu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject202**](InlineObject202.md) |  | 
+ **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject205**](InlineObject205.md) |  | 
 
 ### Return type
 
@@ -391,7 +391,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraCustomAnalytics := *openapiclient.NewInlineObject4() // InlineObject4 |  (optional)
+    updateDeviceCameraCustomAnalytics := *openapiclient.NewInlineObject7() // InlineObject7 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -421,7 +421,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraCustomAn
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraCustomAnalytics** | [**InlineObject4**](InlineObject4.md) |  | 
+ **updateDeviceCameraCustomAnalytics** | [**InlineObject7**](InlineObject7.md) |  | 
 
 ### Return type
 

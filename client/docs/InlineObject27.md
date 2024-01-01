@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RfProfileId** | Pointer to **string** | The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power). | [optional] 
-**TwoFourGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsTwoFourGhzSettings**](DevicesSerialApplianceRadioSettingsTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**DevicesSerialWirelessRadioSettingsFiveGhzSettings**](DevicesSerialWirelessRadioSettingsFiveGhzSettings.md) |  | [optional] 
+**Enabled** | **bool** | Enable or disable warm spare for a switch | 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare switch | [optional] 
 
 ## Methods
 
 ### NewInlineObject27
 
-`func NewInlineObject27() *InlineObject27`
+`func NewInlineObject27(enabled bool, ) *InlineObject27`
 
 NewInlineObject27 instantiates a new InlineObject27 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineObject27WithDefaults instantiates a new InlineObject27 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRfProfileId
+### GetEnabled
 
-`func (o *InlineObject27) GetRfProfileId() string`
+`func (o *InlineObject27) GetEnabled() bool`
 
-GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRfProfileIdOk
+### GetEnabledOk
 
-`func (o *InlineObject27) GetRfProfileIdOk() (*string, bool)`
+`func (o *InlineObject27) GetEnabledOk() (*bool, bool)`
 
-GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRfProfileId
+### SetEnabled
 
-`func (o *InlineObject27) SetRfProfileId(v string)`
+`func (o *InlineObject27) SetEnabled(v bool)`
 
-SetRfProfileId sets RfProfileId field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRfProfileId
 
-`func (o *InlineObject27) HasRfProfileId() bool`
+### GetSpareSerial
 
-HasRfProfileId returns a boolean if a field has been set.
+`func (o *InlineObject27) GetSpareSerial() string`
 
-### GetTwoFourGhzSettings
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-`func (o *InlineObject27) GetTwoFourGhzSettings() DevicesSerialApplianceRadioSettingsTwoFourGhzSettings`
+### GetSpareSerialOk
 
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+`func (o *InlineObject27) GetSpareSerialOk() (*string, bool)`
 
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineObject27) GetTwoFourGhzSettingsOk() (*DevicesSerialApplianceRadioSettingsTwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetSpareSerial
 
-`func (o *InlineObject27) SetTwoFourGhzSettings(v DevicesSerialApplianceRadioSettingsTwoFourGhzSettings)`
+`func (o *InlineObject27) SetSpareSerial(v string)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
-### HasTwoFourGhzSettings
+### HasSpareSerial
 
-`func (o *InlineObject27) HasTwoFourGhzSettings() bool`
+`func (o *InlineObject27) HasSpareSerial() bool`
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
-
-### GetFiveGhzSettings
-
-`func (o *InlineObject27) GetFiveGhzSettings() DevicesSerialWirelessRadioSettingsFiveGhzSettings`
-
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
-
-### GetFiveGhzSettingsOk
-
-`func (o *InlineObject27) GetFiveGhzSettingsOk() (*DevicesSerialWirelessRadioSettingsFiveGhzSettings, bool)`
-
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFiveGhzSettings
-
-`func (o *InlineObject27) SetFiveGhzSettings(v DevicesSerialWirelessRadioSettingsFiveGhzSettings)`
-
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
-
-### HasFiveGhzSettings
-
-`func (o *InlineObject27) HasFiveGhzSettings() bool`
-
-HasFiveGhzSettings returns a boolean if a field has been set.
+HasSpareSerial returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

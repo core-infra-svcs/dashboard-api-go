@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## GetDeviceApplianceRadioSettings
 
-> InlineResponse2001 GetDeviceApplianceRadioSettings(ctx, serial).Execute()
+> InlineResponse2003 GetDeviceApplianceRadioSettings(ctx, serial).Execute()
 
 Return the radio settings of an appliance
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RadioApi.GetDeviceApplianceRadioSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceApplianceRadioSettings`: InlineResponse2001
+    // response from `GetDeviceApplianceRadioSettings`: InlineResponse2003
     fmt.Fprintf(os.Stdout, "Response from `RadioApi.GetDeviceApplianceRadioSettings`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceApplianceRadioSettings
 
-> InlineResponse2001 UpdateDeviceApplianceRadioSettings(ctx, serial).UpdateDeviceApplianceRadioSettings(updateDeviceApplianceRadioSettings).Execute()
+> InlineResponse2003 UpdateDeviceApplianceRadioSettings(ctx, serial).UpdateDeviceApplianceRadioSettings(updateDeviceApplianceRadioSettings).Execute()
 
 Update the radio settings of an appliance
 
@@ -173,7 +173,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceApplianceRadioSettings := *openapiclient.NewInlineObject1() // InlineObject1 |  (optional)
+    updateDeviceApplianceRadioSettings := *openapiclient.NewInlineObject4() // InlineObject4 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -182,7 +182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RadioApi.UpdateDeviceApplianceRadioSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceApplianceRadioSettings`: InlineResponse2001
+    // response from `UpdateDeviceApplianceRadioSettings`: InlineResponse2003
     fmt.Fprintf(os.Stdout, "Response from `RadioApi.UpdateDeviceApplianceRadioSettings`: %v\n", resp)
 }
 ```
@@ -203,11 +203,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceApplianceRadio
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceApplianceRadioSettings** | [**InlineObject1**](InlineObject1.md) |  | 
+ **updateDeviceApplianceRadioSettings** | [**InlineObject4**](InlineObject4.md) |  | 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -245,7 +245,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceWirelessRadioSettings := *openapiclient.NewInlineObject27() // InlineObject27 |  (optional)
+    updateDeviceWirelessRadioSettings := *openapiclient.NewInlineObject30() // InlineObject30 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -275,7 +275,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceWirelessRadioS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceWirelessRadioSettings** | [**InlineObject27**](InlineObject27.md) |  | 
+ **updateDeviceWirelessRadioSettings** | [**InlineObject30**](InlineObject30.md) |  | 
 
 ### Return type
 

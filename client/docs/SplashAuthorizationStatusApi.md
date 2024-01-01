@@ -105,7 +105,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clientId := "clientId_example" // string | Client ID
-    updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject78(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject78 | 
+    updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject81(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject81 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkClientSplashAuthorizationStatus** | [**InlineObject78**](InlineObject78.md) |  | 
+ **updateNetworkClientSplashAuthorizationStatus** | [**InlineObject81**](InlineObject81.md) |  | 
 
 ### Return type
 

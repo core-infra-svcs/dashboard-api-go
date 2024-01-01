@@ -4,21 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of a device | [optional] 
-**Tags** | Pointer to **[]string** | The list of tags of a device | [optional] 
-**Lat** | Pointer to **float32** | The latitude of a device | [optional] 
-**Lng** | Pointer to **float32** | The longitude of a device | [optional] 
-**Address** | Pointer to **string** | The address of a device | [optional] 
-**Notes** | Pointer to **string** | The notes for the device. String. Limited to 255 characters. | [optional] 
-**MoveMapMarker** | Pointer to **bool** | Whether or not to set the latitude and longitude of a device based on the new address. Only applies when lat and lng are not specified. | [optional] 
-**SwitchProfileId** | Pointer to **string** | The ID of a switch template to bind to the device (for available switch templates, see the &#39;Switch Templates&#39; endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template. | [optional] 
-**FloorPlanId** | Pointer to **string** | The floor plan to associate to this device. null disassociates the device from the floorplan. | [optional] 
+**ClaimKey** | **string** | The subscription&#39;s claim key | 
+**OrganizationId** | **string** | The id of the organization claiming the subscription | 
+**Name** | Pointer to **string** | Friendly name to identify the subscription | [optional] 
+**Description** | Pointer to **string** | Extra details or notes about the subscription | [optional] 
 
 ## Methods
 
 ### NewInlineObject
 
-`func NewInlineObject() *InlineObject`
+`func NewInlineObject(claimKey string, organizationId string, ) *InlineObject`
 
 NewInlineObject instantiates a new InlineObject object
 This constructor will assign default values to properties that have it defined,
@@ -32,6 +27,46 @@ will change when the set of required properties is changed
 NewInlineObjectWithDefaults instantiates a new InlineObject object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetClaimKey
+
+`func (o *InlineObject) GetClaimKey() string`
+
+GetClaimKey returns the ClaimKey field if non-nil, zero value otherwise.
+
+### GetClaimKeyOk
+
+`func (o *InlineObject) GetClaimKeyOk() (*string, bool)`
+
+GetClaimKeyOk returns a tuple with the ClaimKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClaimKey
+
+`func (o *InlineObject) SetClaimKey(v string)`
+
+SetClaimKey sets ClaimKey field to given value.
+
+
+### GetOrganizationId
+
+`func (o *InlineObject) GetOrganizationId() string`
+
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+
+### GetOrganizationIdOk
+
+`func (o *InlineObject) GetOrganizationIdOk() (*string, bool)`
+
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrganizationId
+
+`func (o *InlineObject) SetOrganizationId(v string)`
+
+SetOrganizationId sets OrganizationId field to given value.
+
 
 ### GetName
 
@@ -58,205 +93,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetTags
+### GetDescription
 
-`func (o *InlineObject) GetTags() []string`
+`func (o *InlineObject) GetDescription() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetDescriptionOk
 
-`func (o *InlineObject) GetTagsOk() (*[]string, bool)`
+`func (o *InlineObject) GetDescriptionOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetDescription
 
-`func (o *InlineObject) SetTags(v []string)`
+`func (o *InlineObject) SetDescription(v string)`
 
-SetTags sets Tags field to given value.
+SetDescription sets Description field to given value.
 
-### HasTags
+### HasDescription
 
-`func (o *InlineObject) HasTags() bool`
+`func (o *InlineObject) HasDescription() bool`
 
-HasTags returns a boolean if a field has been set.
-
-### GetLat
-
-`func (o *InlineObject) GetLat() float32`
-
-GetLat returns the Lat field if non-nil, zero value otherwise.
-
-### GetLatOk
-
-`func (o *InlineObject) GetLatOk() (*float32, bool)`
-
-GetLatOk returns a tuple with the Lat field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLat
-
-`func (o *InlineObject) SetLat(v float32)`
-
-SetLat sets Lat field to given value.
-
-### HasLat
-
-`func (o *InlineObject) HasLat() bool`
-
-HasLat returns a boolean if a field has been set.
-
-### GetLng
-
-`func (o *InlineObject) GetLng() float32`
-
-GetLng returns the Lng field if non-nil, zero value otherwise.
-
-### GetLngOk
-
-`func (o *InlineObject) GetLngOk() (*float32, bool)`
-
-GetLngOk returns a tuple with the Lng field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLng
-
-`func (o *InlineObject) SetLng(v float32)`
-
-SetLng sets Lng field to given value.
-
-### HasLng
-
-`func (o *InlineObject) HasLng() bool`
-
-HasLng returns a boolean if a field has been set.
-
-### GetAddress
-
-`func (o *InlineObject) GetAddress() string`
-
-GetAddress returns the Address field if non-nil, zero value otherwise.
-
-### GetAddressOk
-
-`func (o *InlineObject) GetAddressOk() (*string, bool)`
-
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAddress
-
-`func (o *InlineObject) SetAddress(v string)`
-
-SetAddress sets Address field to given value.
-
-### HasAddress
-
-`func (o *InlineObject) HasAddress() bool`
-
-HasAddress returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### GetMoveMapMarker
-
-`func (o *InlineObject) GetMoveMapMarker() bool`
-
-GetMoveMapMarker returns the MoveMapMarker field if non-nil, zero value otherwise.
-
-### GetMoveMapMarkerOk
-
-`func (o *InlineObject) GetMoveMapMarkerOk() (*bool, bool)`
-
-GetMoveMapMarkerOk returns a tuple with the MoveMapMarker field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMoveMapMarker
-
-`func (o *InlineObject) SetMoveMapMarker(v bool)`
-
-SetMoveMapMarker sets MoveMapMarker field to given value.
-
-### HasMoveMapMarker
-
-`func (o *InlineObject) HasMoveMapMarker() bool`
-
-HasMoveMapMarker returns a boolean if a field has been set.
-
-### GetSwitchProfileId
-
-`func (o *InlineObject) GetSwitchProfileId() string`
-
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
-
-### GetSwitchProfileIdOk
-
-`func (o *InlineObject) GetSwitchProfileIdOk() (*string, bool)`
-
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSwitchProfileId
-
-`func (o *InlineObject) SetSwitchProfileId(v string)`
-
-SetSwitchProfileId sets SwitchProfileId field to given value.
-
-### HasSwitchProfileId
-
-`func (o *InlineObject) HasSwitchProfileId() bool`
-
-HasSwitchProfileId returns a boolean if a field has been set.
-
-### GetFloorPlanId
-
-`func (o *InlineObject) GetFloorPlanId() string`
-
-GetFloorPlanId returns the FloorPlanId field if non-nil, zero value otherwise.
-
-### GetFloorPlanIdOk
-
-`func (o *InlineObject) GetFloorPlanIdOk() (*string, bool)`
-
-GetFloorPlanIdOk returns a tuple with the FloorPlanId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFloorPlanId
-
-`func (o *InlineObject) SetFloorPlanId(v string)`
-
-SetFloorPlanId sets FloorPlanId field to given value.
-
-### HasFloorPlanId
-
-`func (o *InlineObject) HasFloorPlanId() bool`
-
-HasFloorPlanId returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

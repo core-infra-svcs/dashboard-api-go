@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ports** | Pointer to **[]string** | List of switch ports | [optional] 
+**Livestream** | Pointer to [**InlineResponse2008Livestream**](InlineResponse2008Livestream.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse2008WithDefaults instantiates a new InlineResponse2008 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPorts
+### GetLivestream
 
-`func (o *InlineResponse2008) GetPorts() []string`
+`func (o *InlineResponse2008) GetLivestream() InlineResponse2008Livestream`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetLivestream returns the Livestream field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetLivestreamOk
 
-`func (o *InlineResponse2008) GetPortsOk() (*[]string, bool)`
+`func (o *InlineResponse2008) GetLivestreamOk() (*InlineResponse2008Livestream, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetLivestreamOk returns a tuple with the Livestream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetLivestream
 
-`func (o *InlineResponse2008) SetPorts(v []string)`
+`func (o *InlineResponse2008) SetLivestream(v InlineResponse2008Livestream)`
 
-SetPorts sets Ports field to given value.
+SetLivestream sets Livestream field to given value.
 
-### HasPorts
+### HasLivestream
 
-`func (o *InlineResponse2008) HasPorts() bool`
+`func (o *InlineResponse2008) HasLivestream() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasLivestream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

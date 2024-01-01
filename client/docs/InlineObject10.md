@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Sims** | Pointer to [**[]DevicesSerialCellularSimsSims**](DevicesSerialCellularSimsSims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
-**SimFailover** | Pointer to [**DevicesSerialCellularSimsSimFailover**](DevicesSerialCellularSimsSimFailover.md) |  | [optional] 
+**SenseEnabled** | Pointer to **bool** | Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera | [optional] 
+**MqttBrokerId** | Pointer to **string** | The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera | [optional] 
+**AudioDetection** | Pointer to [**DevicesSerialCameraSenseAudioDetection**](DevicesSerialCameraSenseAudioDetection.md) |  | [optional] 
+**DetectionModelId** | Pointer to **string** | The ID of the object detection model | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineObject10WithDefaults instantiates a new InlineObject10 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSims
+### GetSenseEnabled
 
-`func (o *InlineObject10) GetSims() []DevicesSerialCellularSimsSims`
+`func (o *InlineObject10) GetSenseEnabled() bool`
 
-GetSims returns the Sims field if non-nil, zero value otherwise.
+GetSenseEnabled returns the SenseEnabled field if non-nil, zero value otherwise.
 
-### GetSimsOk
+### GetSenseEnabledOk
 
-`func (o *InlineObject10) GetSimsOk() (*[]DevicesSerialCellularSimsSims, bool)`
+`func (o *InlineObject10) GetSenseEnabledOk() (*bool, bool)`
 
-GetSimsOk returns a tuple with the Sims field if it's non-nil, zero value otherwise
+GetSenseEnabledOk returns a tuple with the SenseEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSims
+### SetSenseEnabled
 
-`func (o *InlineObject10) SetSims(v []DevicesSerialCellularSimsSims)`
+`func (o *InlineObject10) SetSenseEnabled(v bool)`
 
-SetSims sets Sims field to given value.
+SetSenseEnabled sets SenseEnabled field to given value.
 
-### HasSims
+### HasSenseEnabled
 
-`func (o *InlineObject10) HasSims() bool`
+`func (o *InlineObject10) HasSenseEnabled() bool`
 
-HasSims returns a boolean if a field has been set.
+HasSenseEnabled returns a boolean if a field has been set.
 
-### GetSimFailover
+### GetMqttBrokerId
 
-`func (o *InlineObject10) GetSimFailover() DevicesSerialCellularSimsSimFailover`
+`func (o *InlineObject10) GetMqttBrokerId() string`
 
-GetSimFailover returns the SimFailover field if non-nil, zero value otherwise.
+GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
 
-### GetSimFailoverOk
+### GetMqttBrokerIdOk
 
-`func (o *InlineObject10) GetSimFailoverOk() (*DevicesSerialCellularSimsSimFailover, bool)`
+`func (o *InlineObject10) GetMqttBrokerIdOk() (*string, bool)`
 
-GetSimFailoverOk returns a tuple with the SimFailover field if it's non-nil, zero value otherwise
+GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSimFailover
+### SetMqttBrokerId
 
-`func (o *InlineObject10) SetSimFailover(v DevicesSerialCellularSimsSimFailover)`
+`func (o *InlineObject10) SetMqttBrokerId(v string)`
 
-SetSimFailover sets SimFailover field to given value.
+SetMqttBrokerId sets MqttBrokerId field to given value.
 
-### HasSimFailover
+### HasMqttBrokerId
 
-`func (o *InlineObject10) HasSimFailover() bool`
+`func (o *InlineObject10) HasMqttBrokerId() bool`
 
-HasSimFailover returns a boolean if a field has been set.
+HasMqttBrokerId returns a boolean if a field has been set.
+
+### GetAudioDetection
+
+`func (o *InlineObject10) GetAudioDetection() DevicesSerialCameraSenseAudioDetection`
+
+GetAudioDetection returns the AudioDetection field if non-nil, zero value otherwise.
+
+### GetAudioDetectionOk
+
+`func (o *InlineObject10) GetAudioDetectionOk() (*DevicesSerialCameraSenseAudioDetection, bool)`
+
+GetAudioDetectionOk returns a tuple with the AudioDetection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAudioDetection
+
+`func (o *InlineObject10) SetAudioDetection(v DevicesSerialCameraSenseAudioDetection)`
+
+SetAudioDetection sets AudioDetection field to given value.
+
+### HasAudioDetection
+
+`func (o *InlineObject10) HasAudioDetection() bool`
+
+HasAudioDetection returns a boolean if a field has been set.
+
+### GetDetectionModelId
+
+`func (o *InlineObject10) GetDetectionModelId() string`
+
+GetDetectionModelId returns the DetectionModelId field if non-nil, zero value otherwise.
+
+### GetDetectionModelIdOk
+
+`func (o *InlineObject10) GetDetectionModelIdOk() (*string, bool)`
+
+GetDetectionModelIdOk returns a tuple with the DetectionModelId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetectionModelId
+
+`func (o *InlineObject10) SetDetectionModelId(v string)`
+
+SetDetectionModelId sets DetectionModelId field to given value.
+
+### HasDetectionModelId
+
+`func (o *InlineObject10) HasDetectionModelId() bool`
+
+HasDetectionModelId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

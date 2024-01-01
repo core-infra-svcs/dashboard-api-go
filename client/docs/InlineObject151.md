@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile.md) |  | [optional] 
-**Serials** | **[]string** | Array of Device Serials | 
-**StackIds** | **[]string** | Array of Switch Stack IDs | 
+**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
+**CustomPieChartItems** | Pointer to [**[]NetworksNetworkIdTrafficAnalysisCustomPieChartItems**](NetworksNetworkIdTrafficAnalysisCustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
 
 ## Methods
 
 ### NewInlineObject151
 
-`func NewInlineObject151(serials []string, stackIds []string, ) *InlineObject151`
+`func NewInlineObject151() *InlineObject151`
 
 NewInlineObject151 instantiates a new InlineObject151 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,55 @@ NewInlineObject151WithDefaults instantiates a new InlineObject151 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlanProfile
+### GetMode
 
-`func (o *InlineObject151) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile`
+`func (o *InlineObject151) GetMode() string`
 
-GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetVlanProfileOk
+### GetModeOk
 
-`func (o *InlineObject151) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile, bool)`
+`func (o *InlineObject151) GetModeOk() (*string, bool)`
 
-GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanProfile
+### SetMode
 
-`func (o *InlineObject151) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile)`
+`func (o *InlineObject151) SetMode(v string)`
 
-SetVlanProfile sets VlanProfile field to given value.
+SetMode sets Mode field to given value.
 
-### HasVlanProfile
+### HasMode
 
-`func (o *InlineObject151) HasVlanProfile() bool`
+`func (o *InlineObject151) HasMode() bool`
 
-HasVlanProfile returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetSerials
+### GetCustomPieChartItems
 
-`func (o *InlineObject151) GetSerials() []string`
+`func (o *InlineObject151) GetCustomPieChartItems() []NetworksNetworkIdTrafficAnalysisCustomPieChartItems`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetCustomPieChartItemsOk
 
-`func (o *InlineObject151) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject151) GetCustomPieChartItemsOk() (*[]NetworksNetworkIdTrafficAnalysisCustomPieChartItems, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetCustomPieChartItems
 
-`func (o *InlineObject151) SetSerials(v []string)`
+`func (o *InlineObject151) SetCustomPieChartItems(v []NetworksNetworkIdTrafficAnalysisCustomPieChartItems)`
 
-SetSerials sets Serials field to given value.
+SetCustomPieChartItems sets CustomPieChartItems field to given value.
 
+### HasCustomPieChartItems
 
-### GetStackIds
+`func (o *InlineObject151) HasCustomPieChartItems() bool`
 
-`func (o *InlineObject151) GetStackIds() []string`
-
-GetStackIds returns the StackIds field if non-nil, zero value otherwise.
-
-### GetStackIdsOk
-
-`func (o *InlineObject151) GetStackIdsOk() (*[]string, bool)`
-
-GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStackIds
-
-`func (o *InlineObject151) SetStackIds(v []string)`
-
-SetStackIds sets StackIds field to given value.
-
+HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

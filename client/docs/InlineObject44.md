@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Prefix** | Pointer to **string** | A static IPv6 prefix | [optional] 
-**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | [optional] 
-**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
+**SpoofingProtection** | Pointer to [**NetworksNetworkIdApplianceFirewallSettingsSpoofingProtection**](NetworksNetworkIdApplianceFirewallSettingsSpoofingProtection.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineObject44WithDefaults instantiates a new InlineObject44 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPrefix
+### GetSpoofingProtection
 
-`func (o *InlineObject44) GetPrefix() string`
+`func (o *InlineObject44) GetSpoofingProtection() NetworksNetworkIdApplianceFirewallSettingsSpoofingProtection`
 
-GetPrefix returns the Prefix field if non-nil, zero value otherwise.
+GetSpoofingProtection returns the SpoofingProtection field if non-nil, zero value otherwise.
 
-### GetPrefixOk
+### GetSpoofingProtectionOk
 
-`func (o *InlineObject44) GetPrefixOk() (*string, bool)`
+`func (o *InlineObject44) GetSpoofingProtectionOk() (*NetworksNetworkIdApplianceFirewallSettingsSpoofingProtection, bool)`
 
-GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
+GetSpoofingProtectionOk returns a tuple with the SpoofingProtection field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrefix
+### SetSpoofingProtection
 
-`func (o *InlineObject44) SetPrefix(v string)`
+`func (o *InlineObject44) SetSpoofingProtection(v NetworksNetworkIdApplianceFirewallSettingsSpoofingProtection)`
 
-SetPrefix sets Prefix field to given value.
+SetSpoofingProtection sets SpoofingProtection field to given value.
 
-### HasPrefix
+### HasSpoofingProtection
 
-`func (o *InlineObject44) HasPrefix() bool`
+`func (o *InlineObject44) HasSpoofingProtection() bool`
 
-HasPrefix returns a boolean if a field has been set.
-
-### GetOrigin
-
-`func (o *InlineObject44) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
-
-GetOrigin returns the Origin field if non-nil, zero value otherwise.
-
-### GetOriginOk
-
-`func (o *InlineObject44) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
-
-GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrigin
-
-`func (o *InlineObject44) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
-
-SetOrigin sets Origin field to given value.
-
-### HasOrigin
-
-`func (o *InlineObject44) HasOrigin() bool`
-
-HasOrigin returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineObject44) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject44) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject44) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject44) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasSpoofingProtection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

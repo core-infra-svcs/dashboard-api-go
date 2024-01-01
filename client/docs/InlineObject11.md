@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ReservedIpRanges** | Pointer to [**[]DevicesSerialCellularGatewayLanReservedIpRanges**](DevicesSerialCellularGatewayLanReservedIpRanges.md) | list of all reserved IP ranges for a single MG | [optional] 
-**FixedIpAssignments** | Pointer to [**[]DevicesSerialCellularGatewayLanFixedIpAssignments**](DevicesSerialCellularGatewayLanFixedIpAssignments.md) | list of all fixed IP assignments for a single MG | [optional] 
+**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineObject11WithDefaults instantiates a new InlineObject11 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReservedIpRanges
+### GetExternalRtspEnabled
 
-`func (o *InlineObject11) GetReservedIpRanges() []DevicesSerialCellularGatewayLanReservedIpRanges`
+`func (o *InlineObject11) GetExternalRtspEnabled() bool`
 
-GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
 
-### GetReservedIpRangesOk
+### GetExternalRtspEnabledOk
 
-`func (o *InlineObject11) GetReservedIpRangesOk() (*[]DevicesSerialCellularGatewayLanReservedIpRanges, bool)`
+`func (o *InlineObject11) GetExternalRtspEnabledOk() (*bool, bool)`
 
-GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReservedIpRanges
+### SetExternalRtspEnabled
 
-`func (o *InlineObject11) SetReservedIpRanges(v []DevicesSerialCellularGatewayLanReservedIpRanges)`
+`func (o *InlineObject11) SetExternalRtspEnabled(v bool)`
 
-SetReservedIpRanges sets ReservedIpRanges field to given value.
+SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
 
-### HasReservedIpRanges
+### HasExternalRtspEnabled
 
-`func (o *InlineObject11) HasReservedIpRanges() bool`
+`func (o *InlineObject11) HasExternalRtspEnabled() bool`
 
-HasReservedIpRanges returns a boolean if a field has been set.
-
-### GetFixedIpAssignments
-
-`func (o *InlineObject11) GetFixedIpAssignments() []DevicesSerialCellularGatewayLanFixedIpAssignments`
-
-GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
-
-### GetFixedIpAssignmentsOk
-
-`func (o *InlineObject11) GetFixedIpAssignmentsOk() (*[]DevicesSerialCellularGatewayLanFixedIpAssignments, bool)`
-
-GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFixedIpAssignments
-
-`func (o *InlineObject11) SetFixedIpAssignments(v []DevicesSerialCellularGatewayLanFixedIpAssignments)`
-
-SetFixedIpAssignments sets FixedIpAssignments field to given value.
-
-### HasFixedIpAssignments
-
-`func (o *InlineObject11) HasFixedIpAssignments() bool`
-
-HasFixedIpAssignments returns a boolean if a field has been set.
+HasExternalRtspEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

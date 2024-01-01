@@ -196,7 +196,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClient
 
-> InlineResponse20034 GetNetworkClient(ctx, networkId, clientId).Execute()
+> InlineResponse20036 GetNetworkClient(ctx, networkId, clientId).Execute()
 
 Return the client associated with the given identifier
 
@@ -225,7 +225,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetNetworkClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClient`: InlineResponse20034
+    // response from `GetNetworkClient`: InlineResponse20036
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetNetworkClient`: %v\n", resp)
 }
 ```
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 
@@ -567,7 +567,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClients
 
-> InlineResponse20033 GetNetworkClients(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Statuses(statuses).Ip(ip).Ip6(ip6).Ip6Local(ip6Local).Mac(mac).Os(os).PskGroup(pskGroup).Description(description).Vlan(vlan).NamedVlan(namedVlan).RecentDeviceConnections(recentDeviceConnections).Execute()
+> InlineResponse20035 GetNetworkClients(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Statuses(statuses).Ip(ip).Ip6(ip6).Ip6Local(ip6Local).Mac(mac).Os(os).PskGroup(pskGroup).Description(description).Vlan(vlan).NamedVlan(namedVlan).RecentDeviceConnections(recentDeviceConnections).Execute()
 
 List the clients that have used this network in the timespan
 
@@ -611,7 +611,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetNetworkClients``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClients`: InlineResponse20033
+    // response from `GetNetworkClients`: InlineResponse20035
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetNetworkClients`: %v\n", resp)
 }
 ```
@@ -651,7 +651,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 
@@ -1523,7 +1523,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationClientsBandwidthUsageHistory
 
-> []InlineResponse200132 GetOrganizationClientsBandwidthUsageHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200134 GetOrganizationClientsBandwidthUsageHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return data usage (in megabits per second) over time for all clients in the given organization within a given time range.
 
@@ -1554,7 +1554,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetOrganizationClientsBandwidthUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationClientsBandwidthUsageHistory`: []InlineResponse200132
+    // response from `GetOrganizationClientsBandwidthUsageHistory`: []InlineResponse200134
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetOrganizationClientsBandwidthUsageHistory`: %v\n", resp)
 }
 ```
@@ -1581,7 +1581,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200132**](InlineResponse200132.md)
+[**[]InlineResponse200134**](InlineResponse200134.md)
 
 ### Authorization
 
@@ -1599,7 +1599,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationClientsOverview
 
-> InlineResponse200133 GetOrganizationClientsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200135 GetOrganizationClientsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return summary information around client data usage (in mb) across the given organization.
 
@@ -1630,7 +1630,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetOrganizationClientsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationClientsOverview`: InlineResponse200133
+    // response from `GetOrganizationClientsOverview`: InlineResponse200135
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetOrganizationClientsOverview`: %v\n", resp)
 }
 ```
@@ -1657,7 +1657,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200133**](InlineResponse200133.md)
+[**InlineResponse200135**](InlineResponse200135.md)
 
 ### Authorization
 
@@ -1753,7 +1753,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopClientsByUsage
 
-> []InlineResponse200170 GetOrganizationSummaryTopClientsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200172 GetOrganizationSummaryTopClientsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 clients by data usage (in mb) over given time range.
 
@@ -1784,7 +1784,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetOrganizationSummaryTopClientsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsByUsage`: []InlineResponse200170
+    // response from `GetOrganizationSummaryTopClientsByUsage`: []InlineResponse200172
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetOrganizationSummaryTopClientsByUsage`: %v\n", resp)
 }
 ```
@@ -1811,7 +1811,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200170**](InlineResponse200170.md)
+[**[]InlineResponse200172**](InlineResponse200172.md)
 
 ### Authorization
 
@@ -1829,7 +1829,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopClientsManufacturersByUsage
 
-> []InlineResponse200171 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200173 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top clients by data usage (in mb) over given time range, grouped by manufacturer.
 
@@ -1860,7 +1860,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClientsApi.GetOrganizationSummaryTopClientsManufacturersByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200171
+    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200173
     fmt.Fprintf(os.Stdout, "Response from `ClientsApi.GetOrganizationSummaryTopClientsManufacturersByUsage`: %v\n", resp)
 }
 ```
@@ -1887,7 +1887,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200171**](InlineResponse200171.md)
+[**[]InlineResponse200173**](InlineResponse200173.md)
 
 ### Authorization
 
@@ -1925,7 +1925,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    provisionNetworkClients := *openapiclient.NewInlineObject76([]openapiclient.NetworksNetworkIdClientsProvisionClients{*openapiclient.NewNetworksNetworkIdClientsProvisionClients("Mac_example")}, "DevicePolicy_example") // InlineObject76 | 
+    provisionNetworkClients := *openapiclient.NewInlineObject79([]openapiclient.NetworksNetworkIdClientsProvisionClients{*openapiclient.NewNetworksNetworkIdClientsProvisionClients("Mac_example")}, "DevicePolicy_example") // InlineObject79 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1955,7 +1955,7 @@ Other parameters are passed through a pointer to a apiProvisionNetworkClientsReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **provisionNetworkClients** | [**InlineObject76**](InlineObject76.md) |  | 
+ **provisionNetworkClients** | [**InlineObject79**](InlineObject79.md) |  | 
 
 ### Return type
 
@@ -1998,7 +1998,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clientId := "clientId_example" // string | Client ID
-    updateNetworkClientPolicy := *openapiclient.NewInlineObject77("DevicePolicy_example") // InlineObject77 | 
+    updateNetworkClientPolicy := *openapiclient.NewInlineObject80("DevicePolicy_example") // InlineObject80 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2030,7 +2030,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkClientPolicy** | [**InlineObject77**](InlineObject77.md) |  | 
+ **updateNetworkClientPolicy** | [**InlineObject80**](InlineObject80.md) |  | 
 
 ### Return type
 
@@ -2073,7 +2073,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clientId := "clientId_example" // string | Client ID
-    updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject78(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject78 | 
+    updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject81(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject81 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2105,7 +2105,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkClientSplashAuthorizationStatus** | [**InlineObject78**](InlineObject78.md) |  | 
+ **updateNetworkClientSplashAuthorizationStatus** | [**InlineObject81**](InlineObject81.md) |  | 
 
 ### Return type
 

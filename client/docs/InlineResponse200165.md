@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
-**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
+**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
+**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200165WithDefaults instantiates a new InlineResponse200165 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetId
 
-`func (o *InlineResponse200165) GetSerial() string`
+`func (o *InlineResponse200165) GetId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetIdOk
 
-`func (o *InlineResponse200165) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200165) GetIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetId
 
-`func (o *InlineResponse200165) SetSerial(v string)`
+`func (o *InlineResponse200165) SetId(v string)`
 
-SetSerial sets Serial field to given value.
+SetId sets Id field to given value.
 
-### HasSerial
+### HasId
 
-`func (o *InlineResponse200165) HasSerial() bool`
+`func (o *InlineResponse200165) HasId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetNetwork
+### GetRole
 
-`func (o *InlineResponse200165) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
+`func (o *InlineResponse200165) GetRole() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetRoleOk
 
-`func (o *InlineResponse200165) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
+`func (o *InlineResponse200165) GetRoleOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetRole
 
-`func (o *InlineResponse200165) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
+`func (o *InlineResponse200165) SetRole(v string)`
 
-SetNetwork sets Network field to given value.
+SetRole sets Role field to given value.
 
-### HasNetwork
+### HasRole
 
-`func (o *InlineResponse200165) HasNetwork() bool`
+`func (o *InlineResponse200165) HasRole() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasRole returns a boolean if a field has been set.
 
-### GetReadings
+### GetOrgAccess
 
-`func (o *InlineResponse200165) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
+`func (o *InlineResponse200165) GetOrgAccess() string`
 
-GetReadings returns the Readings field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetReadingsOk
+### GetOrgAccessOk
 
-`func (o *InlineResponse200165) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
+`func (o *InlineResponse200165) GetOrgAccessOk() (*string, bool)`
 
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReadings
+### SetOrgAccess
 
-`func (o *InlineResponse200165) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
+`func (o *InlineResponse200165) SetOrgAccess(v string)`
 
-SetReadings sets Readings field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasReadings
+### HasOrgAccess
 
-`func (o *InlineResponse200165) HasReadings() bool`
+`func (o *InlineResponse200165) HasOrgAccess() bool`
 
-HasReadings returns a boolean if a field has been set.
+HasOrgAccess returns a boolean if a field has been set.
+
+### GetNetworks
+
+`func (o *InlineResponse200165) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
+
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
+
+### GetNetworksOk
+
+`func (o *InlineResponse200165) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
+
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworks
+
+`func (o *InlineResponse200165) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
+
+SetNetworks sets Networks field to given value.
+
+### HasNetworks
+
+`func (o *InlineResponse200165) HasNetworks() bool`
+
+HasNetworks returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200165) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200165) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200165) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200165) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]DevicesSerialCellularGatewayPortForwardingRulesRules**](DevicesSerialCellularGatewayPortForwardingRulesRules.md) | An array of port forwarding params | [optional] 
+**Ids** | [**DevicesSerialCameraWirelessProfilesIds**](DevicesSerialCameraWirelessProfilesIds.md) |  | 
 
 ## Methods
 
 ### NewInlineObject12
 
-`func NewInlineObject12() *InlineObject12`
+`func NewInlineObject12(ids DevicesSerialCameraWirelessProfilesIds, ) *InlineObject12`
 
 NewInlineObject12 instantiates a new InlineObject12 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject12WithDefaults instantiates a new InlineObject12 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetIds
 
-`func (o *InlineObject12) GetRules() []DevicesSerialCellularGatewayPortForwardingRulesRules`
+`func (o *InlineObject12) GetIds() DevicesSerialCameraWirelessProfilesIds`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetIdsOk
 
-`func (o *InlineObject12) GetRulesOk() (*[]DevicesSerialCellularGatewayPortForwardingRulesRules, bool)`
+`func (o *InlineObject12) GetIdsOk() (*DevicesSerialCameraWirelessProfilesIds, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetIds
 
-`func (o *InlineObject12) SetRules(v []DevicesSerialCellularGatewayPortForwardingRulesRules)`
+`func (o *InlineObject12) SetIds(v DevicesSerialCameraWirelessProfilesIds)`
 
-SetRules sets Rules field to given value.
+SetIds sets Ids field to given value.
 
-### HasRules
-
-`func (o *InlineObject12) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

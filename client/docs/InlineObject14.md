@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Count** | Pointer to **int32** | Count parameter to pass to ping. [1..5], default 5 | [optional] 
-**Callback** | Pointer to [**DevicesSerialLiveToolsPingCallback**](DevicesSerialLiveToolsPingCallback.md) |  | [optional] 
+**ReservedIpRanges** | Pointer to [**[]DevicesSerialCellularGatewayLanReservedIpRanges**](DevicesSerialCellularGatewayLanReservedIpRanges.md) | list of all reserved IP ranges for a single MG | [optional] 
+**FixedIpAssignments** | Pointer to [**[]DevicesSerialCellularGatewayLanFixedIpAssignments**](DevicesSerialCellularGatewayLanFixedIpAssignments.md) | list of all fixed IP assignments for a single MG | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject14WithDefaults instantiates a new InlineObject14 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCount
+### GetReservedIpRanges
 
-`func (o *InlineObject14) GetCount() int32`
+`func (o *InlineObject14) GetReservedIpRanges() []DevicesSerialCellularGatewayLanReservedIpRanges`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetReservedIpRangesOk
 
-`func (o *InlineObject14) GetCountOk() (*int32, bool)`
+`func (o *InlineObject14) GetReservedIpRangesOk() (*[]DevicesSerialCellularGatewayLanReservedIpRanges, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetReservedIpRanges
 
-`func (o *InlineObject14) SetCount(v int32)`
+`func (o *InlineObject14) SetReservedIpRanges(v []DevicesSerialCellularGatewayLanReservedIpRanges)`
 
-SetCount sets Count field to given value.
+SetReservedIpRanges sets ReservedIpRanges field to given value.
 
-### HasCount
+### HasReservedIpRanges
 
-`func (o *InlineObject14) HasCount() bool`
+`func (o *InlineObject14) HasReservedIpRanges() bool`
 
-HasCount returns a boolean if a field has been set.
+HasReservedIpRanges returns a boolean if a field has been set.
 
-### GetCallback
+### GetFixedIpAssignments
 
-`func (o *InlineObject14) GetCallback() DevicesSerialLiveToolsPingCallback`
+`func (o *InlineObject14) GetFixedIpAssignments() []DevicesSerialCellularGatewayLanFixedIpAssignments`
 
-GetCallback returns the Callback field if non-nil, zero value otherwise.
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
 
-### GetCallbackOk
+### GetFixedIpAssignmentsOk
 
-`func (o *InlineObject14) GetCallbackOk() (*DevicesSerialLiveToolsPingCallback, bool)`
+`func (o *InlineObject14) GetFixedIpAssignmentsOk() (*[]DevicesSerialCellularGatewayLanFixedIpAssignments, bool)`
 
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallback
+### SetFixedIpAssignments
 
-`func (o *InlineObject14) SetCallback(v DevicesSerialLiveToolsPingCallback)`
+`func (o *InlineObject14) SetFixedIpAssignments(v []DevicesSerialCellularGatewayLanFixedIpAssignments)`
 
-SetCallback sets Callback field to given value.
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
 
-### HasCallback
+### HasFixedIpAssignments
 
-`func (o *InlineObject14) HasCallback() bool`
+`func (o *InlineObject14) HasFixedIpAssignments() bool`
 
-HasCallback returns a boolean if a field has been set.
+HasFixedIpAssignments returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

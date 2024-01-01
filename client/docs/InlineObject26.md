@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
+**Subnet** | Pointer to **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | [optional] 
+**NextHopIp** | Pointer to **string** | IP address of the next hop device to which the device sends its traffic for the subnet | [optional] 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineObject26WithDefaults instantiates a new InlineObject26 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUuid
+### GetName
 
-`func (o *InlineObject26) GetUuid() string`
+`func (o *InlineObject26) GetName() string`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetNameOk
 
-`func (o *InlineObject26) GetUuidOk() (*string, bool)`
+`func (o *InlineObject26) GetNameOk() (*string, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetName
 
-`func (o *InlineObject26) SetUuid(v string)`
+`func (o *InlineObject26) SetName(v string)`
 
-SetUuid sets Uuid field to given value.
+SetName sets Name field to given value.
 
-### HasUuid
+### HasName
 
-`func (o *InlineObject26) HasUuid() bool`
+`func (o *InlineObject26) HasName() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetMajor
+### GetSubnet
 
-`func (o *InlineObject26) GetMajor() int32`
+`func (o *InlineObject26) GetSubnet() string`
 
-GetMajor returns the Major field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetMajorOk
+### GetSubnetOk
 
-`func (o *InlineObject26) GetMajorOk() (*int32, bool)`
+`func (o *InlineObject26) GetSubnetOk() (*string, bool)`
 
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajor
+### SetSubnet
 
-`func (o *InlineObject26) SetMajor(v int32)`
+`func (o *InlineObject26) SetSubnet(v string)`
 
-SetMajor sets Major field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasMajor
+### HasSubnet
 
-`func (o *InlineObject26) HasMajor() bool`
+`func (o *InlineObject26) HasSubnet() bool`
 
-HasMajor returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetMinor
+### GetNextHopIp
 
-`func (o *InlineObject26) GetMinor() int32`
+`func (o *InlineObject26) GetNextHopIp() string`
 
-GetMinor returns the Minor field if non-nil, zero value otherwise.
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
 
-### GetMinorOk
+### GetNextHopIpOk
 
-`func (o *InlineObject26) GetMinorOk() (*int32, bool)`
+`func (o *InlineObject26) GetNextHopIpOk() (*string, bool)`
 
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMinor
+### SetNextHopIp
 
-`func (o *InlineObject26) SetMinor(v int32)`
+`func (o *InlineObject26) SetNextHopIp(v string)`
 
-SetMinor sets Minor field to given value.
+SetNextHopIp sets NextHopIp field to given value.
 
-### HasMinor
+### HasNextHopIp
 
-`func (o *InlineObject26) HasMinor() bool`
+`func (o *InlineObject26) HasNextHopIp() bool`
 
-HasMinor returns a boolean if a field has been set.
+HasNextHopIp returns a boolean if a field has been set.
+
+### GetAdvertiseViaOspfEnabled
+
+`func (o *InlineObject26) GetAdvertiseViaOspfEnabled() bool`
+
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
+
+### GetAdvertiseViaOspfEnabledOk
+
+`func (o *InlineObject26) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
+
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdvertiseViaOspfEnabled
+
+`func (o *InlineObject26) SetAdvertiseViaOspfEnabled(v bool)`
+
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
+
+### HasAdvertiseViaOspfEnabled
+
+`func (o *InlineObject26) HasAdvertiseViaOspfEnabled() bool`
+
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+
+### GetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject26) GetPreferOverOspfRoutesEnabled() bool`
+
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+
+### GetPreferOverOspfRoutesEnabledOk
+
+`func (o *InlineObject26) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject26) SetPreferOverOspfRoutesEnabled(v bool)`
+
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+
+### HasPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject26) HasPreferOverOspfRoutesEnabled() bool`
+
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

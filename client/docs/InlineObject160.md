@@ -4,18 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
-**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
-**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
-**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
-**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**Url** | **string** | The URL where the test webhook will be sent | 
+**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to an empty string. | [optional] [default to ""]
+**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
+**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
+**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
 
 ## Methods
 
 ### NewInlineObject160
 
-`func NewInlineObject160() *InlineObject160`
+`func NewInlineObject160(url string, ) *InlineObject160`
 
 NewInlineObject160 instantiates a new InlineObject160 object
 This constructor will assign default values to properties that have it defined,
@@ -30,155 +29,125 @@ NewInlineObject160WithDefaults instantiates a new InlineObject160 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScanningEnabled
+### GetUrl
 
-`func (o *InlineObject160) GetScanningEnabled() bool`
+`func (o *InlineObject160) GetUrl() string`
 
-GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetScanningEnabledOk
+### GetUrlOk
 
-`func (o *InlineObject160) GetScanningEnabledOk() (*bool, bool)`
+`func (o *InlineObject160) GetUrlOk() (*string, bool)`
 
-GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScanningEnabled
+### SetUrl
 
-`func (o *InlineObject160) SetScanningEnabled(v bool)`
+`func (o *InlineObject160) SetUrl(v string)`
 
-SetScanningEnabled sets ScanningEnabled field to given value.
+SetUrl sets Url field to given value.
 
-### HasScanningEnabled
 
-`func (o *InlineObject160) HasScanningEnabled() bool`
+### GetSharedSecret
 
-HasScanningEnabled returns a boolean if a field has been set.
+`func (o *InlineObject160) GetSharedSecret() string`
 
-### GetAdvertisingEnabled
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-`func (o *InlineObject160) GetAdvertisingEnabled() bool`
+### GetSharedSecretOk
 
-GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
+`func (o *InlineObject160) GetSharedSecretOk() (*string, bool)`
 
-### GetAdvertisingEnabledOk
-
-`func (o *InlineObject160) GetAdvertisingEnabledOk() (*bool, bool)`
-
-GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertisingEnabled
+### SetSharedSecret
 
-`func (o *InlineObject160) SetAdvertisingEnabled(v bool)`
+`func (o *InlineObject160) SetSharedSecret(v string)`
 
-SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasAdvertisingEnabled
+### HasSharedSecret
 
-`func (o *InlineObject160) HasAdvertisingEnabled() bool`
+`func (o *InlineObject160) HasSharedSecret() bool`
 
-HasAdvertisingEnabled returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
 
-### GetUuid
+### GetPayloadTemplateId
 
-`func (o *InlineObject160) GetUuid() string`
+`func (o *InlineObject160) GetPayloadTemplateId() string`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetPayloadTemplateIdOk
 
-`func (o *InlineObject160) GetUuidOk() (*string, bool)`
+`func (o *InlineObject160) GetPayloadTemplateIdOk() (*string, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetPayloadTemplateId
 
-`func (o *InlineObject160) SetUuid(v string)`
+`func (o *InlineObject160) SetPayloadTemplateId(v string)`
 
-SetUuid sets Uuid field to given value.
+SetPayloadTemplateId sets PayloadTemplateId field to given value.
 
-### HasUuid
+### HasPayloadTemplateId
 
-`func (o *InlineObject160) HasUuid() bool`
+`func (o *InlineObject160) HasPayloadTemplateId() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasPayloadTemplateId returns a boolean if a field has been set.
 
-### GetMajorMinorAssignmentMode
+### GetPayloadTemplateName
 
-`func (o *InlineObject160) GetMajorMinorAssignmentMode() string`
+`func (o *InlineObject160) GetPayloadTemplateName() string`
 
-GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
+GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
 
-### GetMajorMinorAssignmentModeOk
+### GetPayloadTemplateNameOk
 
-`func (o *InlineObject160) GetMajorMinorAssignmentModeOk() (*string, bool)`
+`func (o *InlineObject160) GetPayloadTemplateNameOk() (*string, bool)`
 
-GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
+GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorMinorAssignmentMode
+### SetPayloadTemplateName
 
-`func (o *InlineObject160) SetMajorMinorAssignmentMode(v string)`
+`func (o *InlineObject160) SetPayloadTemplateName(v string)`
 
-SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
+SetPayloadTemplateName sets PayloadTemplateName field to given value.
 
-### HasMajorMinorAssignmentMode
+### HasPayloadTemplateName
 
-`func (o *InlineObject160) HasMajorMinorAssignmentMode() bool`
+`func (o *InlineObject160) HasPayloadTemplateName() bool`
 
-HasMajorMinorAssignmentMode returns a boolean if a field has been set.
+HasPayloadTemplateName returns a boolean if a field has been set.
 
-### GetMajor
+### GetAlertTypeId
 
-`func (o *InlineObject160) GetMajor() int32`
+`func (o *InlineObject160) GetAlertTypeId() string`
 
-GetMajor returns the Major field if non-nil, zero value otherwise.
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
 
-### GetMajorOk
+### GetAlertTypeIdOk
 
-`func (o *InlineObject160) GetMajorOk() (*int32, bool)`
+`func (o *InlineObject160) GetAlertTypeIdOk() (*string, bool)`
 
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajor
+### SetAlertTypeId
 
-`func (o *InlineObject160) SetMajor(v int32)`
+`func (o *InlineObject160) SetAlertTypeId(v string)`
 
-SetMajor sets Major field to given value.
+SetAlertTypeId sets AlertTypeId field to given value.
 
-### HasMajor
+### HasAlertTypeId
 
-`func (o *InlineObject160) HasMajor() bool`
+`func (o *InlineObject160) HasAlertTypeId() bool`
 
-HasMajor returns a boolean if a field has been set.
-
-### GetMinor
-
-`func (o *InlineObject160) GetMinor() int32`
-
-GetMinor returns the Minor field if non-nil, zero value otherwise.
-
-### GetMinorOk
-
-`func (o *InlineObject160) GetMinorOk() (*int32, bool)`
-
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinor
-
-`func (o *InlineObject160) SetMinor(v int32)`
-
-SetMinor sets Minor field to given value.
-
-### HasMinor
-
-`func (o *InlineObject160) HasMinor() bool`
-
-HasMinor returns a boolean if a field has been set.
+HasAlertTypeId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

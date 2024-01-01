@@ -36,7 +36,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkCameraWirelessProfile := *openapiclient.NewInlineObject70("Name_example", *openapiclient.NewNetworksNetworkIdCameraWirelessProfilesSsid()) // InlineObject70 | 
+    createNetworkCameraWirelessProfile := *openapiclient.NewInlineObject73("Name_example", *openapiclient.NewNetworksNetworkIdCameraWirelessProfilesSsid()) // InlineObject73 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkCameraWireles
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkCameraWirelessProfile** | [**InlineObject70**](InlineObject70.md) |  | 
+ **createNetworkCameraWirelessProfile** | [**InlineObject73**](InlineObject73.md) |  | 
 
 ### Return type
 
@@ -392,7 +392,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraWirelessProfiles := *openapiclient.NewInlineObject9(*openapiclient.NewDevicesSerialCameraWirelessProfilesIds()) // InlineObject9 | 
+    updateDeviceCameraWirelessProfiles := *openapiclient.NewInlineObject12(*openapiclient.NewDevicesSerialCameraWirelessProfilesIds()) // InlineObject12 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -422,7 +422,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraWirelessProfiles** | [**InlineObject9**](InlineObject9.md) |  | 
+ **updateDeviceCameraWirelessProfiles** | [**InlineObject12**](InlineObject12.md) |  | 
 
 ### Return type
 
@@ -465,7 +465,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     wirelessProfileId := "wirelessProfileId_example" // string | Wireless profile ID
-    updateNetworkCameraWirelessProfile := *openapiclient.NewInlineObject71() // InlineObject71 |  (optional)
+    updateNetworkCameraWirelessProfile := *openapiclient.NewInlineObject74() // InlineObject74 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCameraWirelessProfile** | [**InlineObject71**](InlineObject71.md) |  | 
+ **updateNetworkCameraWirelessProfile** | [**InlineObject74**](InlineObject74.md) |  | 
 
 ### Return type
 

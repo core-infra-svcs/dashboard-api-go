@@ -36,7 +36,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkApplianceVlan := *openapiclient.NewInlineObject61("Id_example", "Name_example") // InlineObject61 | 
+    createNetworkApplianceVlan := *openapiclient.NewInlineObject64("Id_example", "Name_example") // InlineObject64 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkApplianceVlan
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkApplianceVlan** | [**InlineObject61**](InlineObject61.md) |  | 
+ **createNetworkApplianceVlan** | [**InlineObject64**](InlineObject64.md) |  | 
 
 ### Return type
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceVlan
 
-> InlineResponse20029 GetNetworkApplianceVlan(ctx, networkId, vlanId).Execute()
+> InlineResponse20031 GetNetworkApplianceVlan(ctx, networkId, vlanId).Execute()
 
 Return a VLAN
 
@@ -188,7 +188,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlansApi.GetNetworkApplianceVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVlan`: InlineResponse20029
+    // response from `GetNetworkApplianceVlan`: InlineResponse20031
     fmt.Fprintf(os.Stdout, "Response from `VlansApi.GetNetworkApplianceVlan`: %v\n", resp)
 }
 ```
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceVlans
 
-> []InlineResponse20029 GetNetworkApplianceVlans(ctx, networkId).Execute()
+> []InlineResponse20031 GetNetworkApplianceVlans(ctx, networkId).Execute()
 
 List the VLANs for an MX network
 
@@ -260,7 +260,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlansApi.GetNetworkApplianceVlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVlans`: []InlineResponse20029
+    // response from `GetNetworkApplianceVlans`: []InlineResponse20031
     fmt.Fprintf(os.Stdout, "Response from `VlansApi.GetNetworkApplianceVlans`: %v\n", resp)
 }
 ```
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20029**](InlineResponse20029.md)
+[**[]InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceVlan
 
-> InlineResponse20029 UpdateNetworkApplianceVlan(ctx, networkId, vlanId).UpdateNetworkApplianceVlan(updateNetworkApplianceVlan).Execute()
+> InlineResponse20031 UpdateNetworkApplianceVlan(ctx, networkId, vlanId).UpdateNetworkApplianceVlan(updateNetworkApplianceVlan).Execute()
 
 Update a VLAN
 
@@ -393,7 +393,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     vlanId := "vlanId_example" // string | Vlan ID
-    updateNetworkApplianceVlan := *openapiclient.NewInlineObject63() // InlineObject63 |  (optional)
+    updateNetworkApplianceVlan := *openapiclient.NewInlineObject66() // InlineObject66 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -402,7 +402,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlansApi.UpdateNetworkApplianceVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceVlan`: InlineResponse20029
+    // response from `UpdateNetworkApplianceVlan`: InlineResponse20031
     fmt.Fprintf(os.Stdout, "Response from `VlansApi.UpdateNetworkApplianceVlan`: %v\n", resp)
 }
 ```
@@ -425,11 +425,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceVlan** | [**InlineObject63**](InlineObject63.md) |  | 
+ **updateNetworkApplianceVlan** | [**InlineObject66**](InlineObject66.md) |  | 
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -467,7 +467,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceVlansSettings := *openapiclient.NewInlineObject62() // InlineObject62 |  (optional)
+    updateNetworkApplianceVlansSettings := *openapiclient.NewInlineObject65() // InlineObject65 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -497,7 +497,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceVlan
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceVlansSettings** | [**InlineObject62**](InlineObject62.md) |  | 
+ **updateNetworkApplianceVlansSettings** | [**InlineObject65**](InlineObject65.md) |  | 
 
 ### Return type
 

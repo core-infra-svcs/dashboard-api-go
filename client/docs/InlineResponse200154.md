@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingLicenses** | Pointer to [**[]InlineResponse200153**](InlineResponse200153.md) | Resulting licenses from the move | [optional] 
+**ImportId** | Pointer to **string** | Database ID for the new entity entry. | [optional] 
+**Device** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200154WithDefaults instantiates a new InlineResponse200154 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingLicenses
+### GetImportId
 
-`func (o *InlineResponse200154) GetResultingLicenses() []InlineResponse200153`
+`func (o *InlineResponse200154) GetImportId() string`
 
-GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
+GetImportId returns the ImportId field if non-nil, zero value otherwise.
 
-### GetResultingLicensesOk
+### GetImportIdOk
 
-`func (o *InlineResponse200154) GetResultingLicensesOk() (*[]InlineResponse200153, bool)`
+`func (o *InlineResponse200154) GetImportIdOk() (*string, bool)`
 
-GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
+GetImportIdOk returns a tuple with the ImportId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingLicenses
+### SetImportId
 
-`func (o *InlineResponse200154) SetResultingLicenses(v []InlineResponse200153)`
+`func (o *InlineResponse200154) SetImportId(v string)`
 
-SetResultingLicenses sets ResultingLicenses field to given value.
+SetImportId sets ImportId field to given value.
 
-### HasResultingLicenses
+### HasImportId
 
-`func (o *InlineResponse200154) HasResultingLicenses() bool`
+`func (o *InlineResponse200154) HasImportId() bool`
 
-HasResultingLicenses returns a boolean if a field has been set.
+HasImportId returns a boolean if a field has been set.
+
+### GetDevice
+
+`func (o *InlineResponse200154) GetDevice() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice`
+
+GetDevice returns the Device field if non-nil, zero value otherwise.
+
+### GetDeviceOk
+
+`func (o *InlineResponse200154) GetDeviceOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice, bool)`
+
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevice
+
+`func (o *InlineResponse200154) SetDevice(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice)`
+
+SetDevice sets Device field to given value.
+
+### HasDevice
+
+`func (o *InlineResponse200154) HasDevice() bool`
+
+HasDevice returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

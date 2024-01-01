@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSmDeviceSecurityCenters
 
-> []InlineResponse20067 GetNetworkSmDeviceSecurityCenters(ctx, networkId, deviceId).Execute()
+> []InlineResponse20069 GetNetworkSmDeviceSecurityCenters(ctx, networkId, deviceId).Execute()
 
 List the security centers on a device
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SecurityCentersApi.GetNetworkSmDeviceSecurityCenters``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceSecurityCenters`: []InlineResponse20067
+    // response from `GetNetworkSmDeviceSecurityCenters`: []InlineResponse20069
     fmt.Fprintf(os.Stdout, "Response from `SecurityCentersApi.GetNetworkSmDeviceSecurityCenters`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20067**](InlineResponse20067.md)
+[**[]InlineResponse20069**](InlineResponse20069.md)
 
 ### Authorization
 

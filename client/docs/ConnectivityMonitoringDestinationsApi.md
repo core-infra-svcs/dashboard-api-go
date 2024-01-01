@@ -173,7 +173,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceConnectivityMonitoringDestinations := *openapiclient.NewInlineObject30() // InlineObject30 |  (optional)
+    updateNetworkApplianceConnectivityMonitoringDestinations := *openapiclient.NewInlineObject33() // InlineObject33 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -203,7 +203,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceConn
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceConnectivityMonitoringDestinations** | [**InlineObject30**](InlineObject30.md) |  | 
+ **updateNetworkApplianceConnectivityMonitoringDestinations** | [**InlineObject33**](InlineObject33.md) |  | 
 
 ### Return type
 
@@ -245,7 +245,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkCellularGatewayConnectivityMonitoringDestinations := *openapiclient.NewInlineObject72() // InlineObject72 |  (optional)
+    updateNetworkCellularGatewayConnectivityMonitoringDestinations := *openapiclient.NewInlineObject75() // InlineObject75 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -275,7 +275,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayConnectivityMonitoringDestinations** | [**InlineObject72**](InlineObject72.md) |  | 
+ **updateNetworkCellularGatewayConnectivityMonitoringDestinations** | [**InlineObject75**](InlineObject75.md) |  | 
 
 ### Return type
 

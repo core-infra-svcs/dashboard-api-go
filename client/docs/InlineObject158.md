@@ -4,16 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
-**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
+**Name** | **string** | The name of the new template | 
+**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
+**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
 
 ## Methods
 
 ### NewInlineObject158
 
-`func NewInlineObject158() *InlineObject158`
+`func NewInlineObject158(name string, ) *InlineObject158`
 
 NewInlineObject158 instantiates a new InlineObject158 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +29,125 @@ NewInlineObject158WithDefaults instantiates a new InlineObject158 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject158) GetEnabled() bool`
+`func (o *InlineObject158) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject158) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject158) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject158) SetEnabled(v bool)`
+`func (o *InlineObject158) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject158) HasEnabled() bool`
+### GetBody
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject158) GetBody() string`
 
-### GetVlanId
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-`func (o *InlineObject158) GetVlanId() int32`
+### GetBodyOk
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+`func (o *InlineObject158) GetBodyOk() (*string, bool)`
 
-### GetVlanIdOk
-
-`func (o *InlineObject158) GetVlanIdOk() (*int32, bool)`
-
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetBody
 
-`func (o *InlineObject158) SetVlanId(v int32)`
+`func (o *InlineObject158) SetBody(v string)`
 
-SetVlanId sets VlanId field to given value.
+SetBody sets Body field to given value.
 
-### HasVlanId
+### HasBody
 
-`func (o *InlineObject158) HasVlanId() bool`
+`func (o *InlineObject158) HasBody() bool`
 
-HasVlanId returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
 
-### GetProtocols
+### GetHeaders
 
-`func (o *InlineObject158) GetProtocols() []string`
+`func (o *InlineObject158) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
 
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
 
-### GetProtocolsOk
+### GetHeadersOk
 
-`func (o *InlineObject158) GetProtocolsOk() (*[]string, bool)`
+`func (o *InlineObject158) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
 
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocols
+### SetHeaders
 
-`func (o *InlineObject158) SetProtocols(v []string)`
+`func (o *InlineObject158) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
 
-SetProtocols sets Protocols field to given value.
+SetHeaders sets Headers field to given value.
 
-### HasProtocols
+### HasHeaders
 
-`func (o *InlineObject158) HasProtocols() bool`
+`func (o *InlineObject158) HasHeaders() bool`
 
-HasProtocols returns a boolean if a field has been set.
+HasHeaders returns a boolean if a field has been set.
 
-### GetAccessPoints
+### GetBodyFile
 
-`func (o *InlineObject158) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
+`func (o *InlineObject158) GetBodyFile() string`
 
-GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
+GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
 
-### GetAccessPointsOk
+### GetBodyFileOk
 
-`func (o *InlineObject158) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
+`func (o *InlineObject158) GetBodyFileOk() (*string, bool)`
 
-GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
+GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccessPoints
+### SetBodyFile
 
-`func (o *InlineObject158) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
+`func (o *InlineObject158) SetBodyFile(v string)`
 
-SetAccessPoints sets AccessPoints field to given value.
+SetBodyFile sets BodyFile field to given value.
 
-### HasAccessPoints
+### HasBodyFile
 
-`func (o *InlineObject158) HasAccessPoints() bool`
+`func (o *InlineObject158) HasBodyFile() bool`
 
-HasAccessPoints returns a boolean if a field has been set.
+HasBodyFile returns a boolean if a field has been set.
+
+### GetHeadersFile
+
+`func (o *InlineObject158) GetHeadersFile() string`
+
+GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
+
+### GetHeadersFileOk
+
+`func (o *InlineObject158) GetHeadersFileOk() (*string, bool)`
+
+GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeadersFile
+
+`func (o *InlineObject158) SetHeadersFile(v string)`
+
+SetHeadersFile sets HeadersFile field to given value.
+
+### HasHeadersFile
+
+`func (o *InlineObject158) HasHeadersFile() bool`
+
+HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

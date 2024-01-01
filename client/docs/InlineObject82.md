@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**InlineResponse20037UpgradeWindow**](InlineResponse20037UpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
+**Serials** | **[]string** | A list of serials of devices to claim | 
 
 ## Methods
 
 ### NewInlineObject82
 
-`func NewInlineObject82() *InlineObject82`
+`func NewInlineObject82(serials []string, ) *InlineObject82`
 
 NewInlineObject82 instantiates a new InlineObject82 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +25,25 @@ NewInlineObject82WithDefaults instantiates a new InlineObject82 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetSerials
 
-`func (o *InlineObject82) GetUpgradeWindow() InlineResponse20037UpgradeWindow`
+`func (o *InlineObject82) GetSerials() []string`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetSerialsOk
 
-`func (o *InlineObject82) GetUpgradeWindowOk() (*InlineResponse20037UpgradeWindow, bool)`
+`func (o *InlineObject82) GetSerialsOk() (*[]string, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetSerials
 
-`func (o *InlineObject82) SetUpgradeWindow(v InlineResponse20037UpgradeWindow)`
+`func (o *InlineObject82) SetSerials(v []string)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetSerials sets Serials field to given value.
 
-### HasUpgradeWindow
-
-`func (o *InlineObject82) HasUpgradeWindow() bool`
-
-HasUpgradeWindow returns a boolean if a field has been set.
-
-### GetTimezone
-
-`func (o *InlineObject82) GetTimezone() string`
-
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
-
-### GetTimezoneOk
-
-`func (o *InlineObject82) GetTimezoneOk() (*string, bool)`
-
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimezone
-
-`func (o *InlineObject82) SetTimezone(v string)`
-
-SetTimezone sets Timezone field to given value.
-
-### HasTimezone
-
-`func (o *InlineObject82) HasTimezone() bool`
-
-HasTimezone returns a boolean if a field has been set.
-
-### GetProducts
-
-`func (o *InlineObject82) GetProducts() NetworksNetworkIdFirmwareUpgradesProducts`
-
-GetProducts returns the Products field if non-nil, zero value otherwise.
-
-### GetProductsOk
-
-`func (o *InlineObject82) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesProducts, bool)`
-
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProducts
-
-`func (o *InlineObject82) SetProducts(v NetworksNetworkIdFirmwareUpgradesProducts)`
-
-SetProducts sets Products field to given value.
-
-### HasProducts
-
-`func (o *InlineObject82) HasProducts() bool`
-
-HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

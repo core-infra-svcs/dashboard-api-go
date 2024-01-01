@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to claim | 
+**Clients** | [**[]NetworksNetworkIdClientsProvisionClients**](NetworksNetworkIdClientsProvisionClients.md) | The array of clients to provision | 
+**DevicePolicy** | **string** | The policy to apply to the specified client. Can be &#39;Group policy&#39;, &#39;Allowed&#39;, &#39;Blocked&#39;, &#39;Per connection&#39; or &#39;Normal&#39;. Required. | 
+**GroupPolicyId** | Pointer to **string** | The ID of the desired group policy to apply to the client. Required if &#39;devicePolicy&#39; is set to \&quot;Group policy\&quot;. Otherwise this is ignored. | [optional] 
+**PoliciesBySecurityAppliance** | Pointer to [**NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance**](NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance.md) |  | [optional] 
+**PoliciesBySsid** | Pointer to [**NetworksNetworkIdClientsProvisionPoliciesBySsid**](NetworksNetworkIdClientsProvisionPoliciesBySsid.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject79
 
-`func NewInlineObject79(serials []string, ) *InlineObject79`
+`func NewInlineObject79(clients []NetworksNetworkIdClientsProvisionClients, devicePolicy string, ) *InlineObject79`
 
 NewInlineObject79 instantiates a new InlineObject79 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +29,120 @@ NewInlineObject79WithDefaults instantiates a new InlineObject79 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetClients
 
-`func (o *InlineObject79) GetSerials() []string`
+`func (o *InlineObject79) GetClients() []NetworksNetworkIdClientsProvisionClients`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetClientsOk
 
-`func (o *InlineObject79) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject79) GetClientsOk() (*[]NetworksNetworkIdClientsProvisionClients, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetClients
 
-`func (o *InlineObject79) SetSerials(v []string)`
+`func (o *InlineObject79) SetClients(v []NetworksNetworkIdClientsProvisionClients)`
 
-SetSerials sets Serials field to given value.
+SetClients sets Clients field to given value.
 
+
+### GetDevicePolicy
+
+`func (o *InlineObject79) GetDevicePolicy() string`
+
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+
+### GetDevicePolicyOk
+
+`func (o *InlineObject79) GetDevicePolicyOk() (*string, bool)`
+
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDevicePolicy
+
+`func (o *InlineObject79) SetDevicePolicy(v string)`
+
+SetDevicePolicy sets DevicePolicy field to given value.
+
+
+### GetGroupPolicyId
+
+`func (o *InlineObject79) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineObject79) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineObject79) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+### HasGroupPolicyId
+
+`func (o *InlineObject79) HasGroupPolicyId() bool`
+
+HasGroupPolicyId returns a boolean if a field has been set.
+
+### GetPoliciesBySecurityAppliance
+
+`func (o *InlineObject79) GetPoliciesBySecurityAppliance() NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance`
+
+GetPoliciesBySecurityAppliance returns the PoliciesBySecurityAppliance field if non-nil, zero value otherwise.
+
+### GetPoliciesBySecurityApplianceOk
+
+`func (o *InlineObject79) GetPoliciesBySecurityApplianceOk() (*NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance, bool)`
+
+GetPoliciesBySecurityApplianceOk returns a tuple with the PoliciesBySecurityAppliance field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoliciesBySecurityAppliance
+
+`func (o *InlineObject79) SetPoliciesBySecurityAppliance(v NetworksNetworkIdClientsProvisionPoliciesBySecurityAppliance)`
+
+SetPoliciesBySecurityAppliance sets PoliciesBySecurityAppliance field to given value.
+
+### HasPoliciesBySecurityAppliance
+
+`func (o *InlineObject79) HasPoliciesBySecurityAppliance() bool`
+
+HasPoliciesBySecurityAppliance returns a boolean if a field has been set.
+
+### GetPoliciesBySsid
+
+`func (o *InlineObject79) GetPoliciesBySsid() NetworksNetworkIdClientsProvisionPoliciesBySsid`
+
+GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+
+### GetPoliciesBySsidOk
+
+`func (o *InlineObject79) GetPoliciesBySsidOk() (*NetworksNetworkIdClientsProvisionPoliciesBySsid, bool)`
+
+GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoliciesBySsid
+
+`func (o *InlineObject79) SetPoliciesBySsid(v NetworksNetworkIdClientsProvisionPoliciesBySsid)`
+
+SetPoliciesBySsid sets PoliciesBySsid field to given value.
+
+### HasPoliciesBySsid
+
+`func (o *InlineObject79) HasPoliciesBySsid() bool`
+
+HasPoliciesBySsid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

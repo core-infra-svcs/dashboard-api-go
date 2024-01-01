@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Interfaces** | [**DevicesSerialApplianceUplinksSettingsInterfaces**](DevicesSerialApplianceUplinksSettingsInterfaces.md) |  | 
+**NetworkIds** | **[]string** | List of network ids to bind to the subscription | 
 
 ## Methods
 
 ### NewInlineObject2
 
-`func NewInlineObject2(interfaces DevicesSerialApplianceUplinksSettingsInterfaces, ) *InlineObject2`
+`func NewInlineObject2(networkIds []string, ) *InlineObject2`
 
 NewInlineObject2 instantiates a new InlineObject2 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject2WithDefaults instantiates a new InlineObject2 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaces
+### GetNetworkIds
 
-`func (o *InlineObject2) GetInterfaces() DevicesSerialApplianceUplinksSettingsInterfaces`
+`func (o *InlineObject2) GetNetworkIds() []string`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject2) GetInterfacesOk() (*DevicesSerialApplianceUplinksSettingsInterfaces, bool)`
+`func (o *InlineObject2) GetNetworkIdsOk() (*[]string, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetNetworkIds
 
-`func (o *InlineObject2) SetInterfaces(v DevicesSerialApplianceUplinksSettingsInterfaces)`
+`func (o *InlineObject2) SetNetworkIds(v []string)`
 
-SetInterfaces sets Interfaces field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
 
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCameraVideoSettings
 
-> InlineResponse2003 GetDeviceCameraVideoSettings(ctx, serial).Execute()
+> InlineResponse2005 GetDeviceCameraVideoSettings(ctx, serial).Execute()
 
 Returns video settings for the given camera
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VideoApi.GetDeviceCameraVideoSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraVideoSettings`: InlineResponse2003
+    // response from `GetDeviceCameraVideoSettings`: InlineResponse2005
     fmt.Fprintf(os.Stdout, "Response from `VideoApi.GetDeviceCameraVideoSettings`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCameraVideoSettings
 
-> InlineResponse2003 UpdateDeviceCameraVideoSettings(ctx, serial).UpdateDeviceCameraVideoSettings(updateDeviceCameraVideoSettings).Execute()
+> InlineResponse2005 UpdateDeviceCameraVideoSettings(ctx, serial).UpdateDeviceCameraVideoSettings(updateDeviceCameraVideoSettings).Execute()
 
 Update video settings for the given camera
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraVideoSettings := *openapiclient.NewInlineObject8() // InlineObject8 |  (optional)
+    updateDeviceCameraVideoSettings := *openapiclient.NewInlineObject11() // InlineObject11 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VideoApi.UpdateDeviceCameraVideoSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCameraVideoSettings`: InlineResponse2003
+    // response from `UpdateDeviceCameraVideoSettings`: InlineResponse2005
     fmt.Fprintf(os.Stdout, "Response from `VideoApi.UpdateDeviceCameraVideoSettings`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraVideoSet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraVideoSettings** | [**InlineObject8**](InlineObject8.md) |  | 
+ **updateDeviceCameraVideoSettings** | [**InlineObject11**](InlineObject11.md) |  | 
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 

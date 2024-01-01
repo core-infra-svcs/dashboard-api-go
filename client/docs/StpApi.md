@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchStp := *openapiclient.NewInlineObject146() // InlineObject146 |  (optional)
+    updateNetworkSwitchStp := *openapiclient.NewInlineObject149() // InlineObject149 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchStpRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchStp** | [**InlineObject146**](InlineObject146.md) |  | 
+ **updateNetworkSwitchStp** | [**InlineObject149**](InlineObject149.md) |  | 
 
 ### Return type
 

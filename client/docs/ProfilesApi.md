@@ -50,7 +50,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    assignNetworkWirelessEthernetPortsProfiles := *openapiclient.NewInlineObject162([]string{"Serials_example"}, "ProfileId_example") // InlineObject162 | 
+    assignNetworkWirelessEthernetPortsProfiles := *openapiclient.NewInlineObject165([]string{"Serials_example"}, "ProfileId_example") // InlineObject165 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -80,7 +80,7 @@ Other parameters are passed through a pointer to a apiAssignNetworkWirelessEther
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **assignNetworkWirelessEthernetPortsProfiles** | [**InlineObject162**](InlineObject162.md) |  | 
+ **assignNetworkWirelessEthernetPortsProfiles** | [**InlineObject165**](InlineObject165.md) |  | 
 
 ### Return type
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSensorAlertsProfile
 
-> InlineResponse20049 CreateNetworkSensorAlertsProfile(ctx, networkId).CreateNetworkSensorAlertsProfile(createNetworkSensorAlertsProfile).Execute()
+> InlineResponse20051 CreateNetworkSensorAlertsProfile(ctx, networkId).CreateNetworkSensorAlertsProfile(createNetworkSensorAlertsProfile).Execute()
 
 Creates a sensor alert profile for a network.
 
@@ -122,7 +122,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSensorAlertsProfile := *openapiclient.NewInlineObject100("Name_example", []openapiclient.NetworksNetworkIdSensorAlertsProfilesConditions{*openapiclient.NewNetworksNetworkIdSensorAlertsProfilesConditions("Metric_example", *openapiclient.NewNetworksNetworkIdSensorAlertsProfilesThreshold())}) // InlineObject100 | 
+    createNetworkSensorAlertsProfile := *openapiclient.NewInlineObject103("Name_example", []openapiclient.NetworksNetworkIdSensorAlertsProfilesConditions{*openapiclient.NewNetworksNetworkIdSensorAlertsProfilesConditions("Metric_example", *openapiclient.NewNetworksNetworkIdSensorAlertsProfilesThreshold())}) // InlineObject103 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.CreateNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSensorAlertsProfile`: InlineResponse20049
+    // response from `CreateNetworkSensorAlertsProfile`: InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.CreateNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -152,11 +152,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSensorAlertsP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSensorAlertsProfile** | [**InlineObject100**](InlineObject100.md) |  | 
+ **createNetworkSensorAlertsProfile** | [**InlineObject103**](InlineObject103.md) |  | 
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkWirelessEthernetPortsProfile
 
-> InlineResponse200104 CreateNetworkWirelessEthernetPortsProfile(ctx, networkId).CreateNetworkWirelessEthernetPortsProfile(createNetworkWirelessEthernetPortsProfile).Execute()
+> InlineResponse200106 CreateNetworkWirelessEthernetPortsProfile(ctx, networkId).CreateNetworkWirelessEthernetPortsProfile(createNetworkWirelessEthernetPortsProfile).Execute()
 
 Create an AP port profile
 
@@ -194,7 +194,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWirelessEthernetPortsProfile := *openapiclient.NewInlineObject161("Name_example", []openapiclient.NetworksNetworkIdWirelessEthernetPortsProfilesPorts1{*openapiclient.NewNetworksNetworkIdWirelessEthernetPortsProfilesPorts1("Name_example")}) // InlineObject161 | 
+    createNetworkWirelessEthernetPortsProfile := *openapiclient.NewInlineObject164("Name_example", []openapiclient.NetworksNetworkIdWirelessEthernetPortsProfilesPorts1{*openapiclient.NewNetworksNetworkIdWirelessEthernetPortsProfilesPorts1("Name_example")}) // InlineObject164 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -203,7 +203,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.CreateNetworkWirelessEthernetPortsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWirelessEthernetPortsProfile`: InlineResponse200104
+    // response from `CreateNetworkWirelessEthernetPortsProfile`: InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.CreateNetworkWirelessEthernetPortsProfile`: %v\n", resp)
 }
 ```
@@ -224,11 +224,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWirelessEther
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWirelessEthernetPortsProfile** | [**InlineObject161**](InlineObject161.md) |  | 
+ **createNetworkWirelessEthernetPortsProfile** | [**InlineObject164**](InlineObject164.md) |  | 
 
 ### Return type
 
-[**InlineResponse200104**](InlineResponse200104.md)
+[**InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 
@@ -266,7 +266,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationAlertsProfile := *openapiclient.NewInlineObject194("Type_example", *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesAlertCondition(), *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesRecipients(), []string{"NetworkTags_example"}) // InlineObject194 | 
+    createOrganizationAlertsProfile := *openapiclient.NewInlineObject197("Type_example", *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesAlertCondition(), *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesRecipients(), []string{"NetworkTags_example"}) // InlineObject197 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -296,7 +296,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAlertsPr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAlertsProfile** | [**InlineObject194**](InlineObject194.md) |  | 
+ **createOrganizationAlertsProfile** | [**InlineObject197**](InlineObject197.md) |  | 
 
 ### Return type
 
@@ -531,7 +531,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsProfile
 
-> InlineResponse20049 GetNetworkSensorAlertsProfile(ctx, networkId, id).Execute()
+> InlineResponse20051 GetNetworkSensorAlertsProfile(ctx, networkId, id).Execute()
 
 Show details of a sensor alert profile for a network.
 
@@ -560,7 +560,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsProfile`: InlineResponse20049
+    // response from `GetNetworkSensorAlertsProfile`: InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -586,7 +586,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -604,7 +604,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsProfiles
 
-> []InlineResponse20049 GetNetworkSensorAlertsProfiles(ctx, networkId).Execute()
+> []InlineResponse20051 GetNetworkSensorAlertsProfiles(ctx, networkId).Execute()
 
 Lists all sensor alert profiles for a network.
 
@@ -632,7 +632,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetNetworkSensorAlertsProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsProfiles`: []InlineResponse20049
+    // response from `GetNetworkSensorAlertsProfiles`: []InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetNetworkSensorAlertsProfiles`: %v\n", resp)
 }
 ```
@@ -656,7 +656,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20049**](InlineResponse20049.md)
+[**[]InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -674,7 +674,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmProfiles
 
-> []InlineResponse20071 GetNetworkSmProfiles(ctx, networkId).Execute()
+> []InlineResponse20073 GetNetworkSmProfiles(ctx, networkId).Execute()
 
 List all profiles in a network
 
@@ -702,7 +702,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetNetworkSmProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmProfiles`: []InlineResponse20071
+    // response from `GetNetworkSmProfiles`: []InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetNetworkSmProfiles`: %v\n", resp)
 }
 ```
@@ -726,7 +726,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20071**](InlineResponse20071.md)
+[**[]InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -744,7 +744,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessEthernetPortsProfile
 
-> InlineResponse200104 GetNetworkWirelessEthernetPortsProfile(ctx, networkId, profileId).Execute()
+> InlineResponse200106 GetNetworkWirelessEthernetPortsProfile(ctx, networkId, profileId).Execute()
 
 Show the AP port profile by ID for this network
 
@@ -773,7 +773,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetNetworkWirelessEthernetPortsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessEthernetPortsProfile`: InlineResponse200104
+    // response from `GetNetworkWirelessEthernetPortsProfile`: InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetNetworkWirelessEthernetPortsProfile`: %v\n", resp)
 }
 ```
@@ -799,7 +799,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200104**](InlineResponse200104.md)
+[**InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 
@@ -817,7 +817,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessEthernetPortsProfiles
 
-> []InlineResponse200104 GetNetworkWirelessEthernetPortsProfiles(ctx, networkId).Execute()
+> []InlineResponse200106 GetNetworkWirelessEthernetPortsProfiles(ctx, networkId).Execute()
 
 List the AP port profiles for this network
 
@@ -845,7 +845,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetNetworkWirelessEthernetPortsProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessEthernetPortsProfiles`: []InlineResponse200104
+    // response from `GetNetworkWirelessEthernetPortsProfiles`: []InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetNetworkWirelessEthernetPortsProfiles`: %v\n", resp)
 }
 ```
@@ -869,7 +869,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200104**](InlineResponse200104.md)
+[**[]InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 
@@ -957,7 +957,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse200136 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
+> InlineResponse200138 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
 
 Return a switch template port
 
@@ -988,7 +988,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200136
+    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200138
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -1018,7 +1018,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200136**](InlineResponse200136.md)
+[**InlineResponse200138**](InlineResponse200138.md)
 
 ### Authorization
 
@@ -1036,7 +1036,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePorts
 
-> []InlineResponse200136 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
+> []InlineResponse200138 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
 
 Return all the ports of a switch template
 
@@ -1066,7 +1066,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetOrganizationConfigTemplateSwitchProfilePorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200136
+    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200138
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetOrganizationConfigTemplateSwitchProfilePorts`: %v\n", resp)
 }
 ```
@@ -1094,7 +1094,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200136**](InlineResponse200136.md)
+[**[]InlineResponse200138**](InlineResponse200138.md)
 
 ### Authorization
 
@@ -1112,7 +1112,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfiles
 
-> []InlineResponse200135 GetOrganizationConfigTemplateSwitchProfiles(ctx, organizationId, configTemplateId).Execute()
+> []InlineResponse200137 GetOrganizationConfigTemplateSwitchProfiles(ctx, organizationId, configTemplateId).Execute()
 
 List the switch templates for your switch template configuration
 
@@ -1141,7 +1141,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.GetOrganizationConfigTemplateSwitchProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfiles`: []InlineResponse200135
+    // response from `GetOrganizationConfigTemplateSwitchProfiles`: []InlineResponse200137
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.GetOrganizationConfigTemplateSwitchProfiles`: %v\n", resp)
 }
 ```
@@ -1167,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200135**](InlineResponse200135.md)
+[**[]InlineResponse200137**](InlineResponse200137.md)
 
 ### Authorization
 
@@ -1185,7 +1185,7 @@ Name | Type | Description  | Notes
 
 ## SetNetworkWirelessEthernetPortsProfilesDefault
 
-> InlineResponse200105 SetNetworkWirelessEthernetPortsProfilesDefault(ctx, networkId).SetNetworkWirelessEthernetPortsProfilesDefault(setNetworkWirelessEthernetPortsProfilesDefault).Execute()
+> InlineResponse200107 SetNetworkWirelessEthernetPortsProfilesDefault(ctx, networkId).SetNetworkWirelessEthernetPortsProfilesDefault(setNetworkWirelessEthernetPortsProfilesDefault).Execute()
 
 Set the AP port profile to be default for this network
 
@@ -1205,7 +1205,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    setNetworkWirelessEthernetPortsProfilesDefault := *openapiclient.NewInlineObject163("ProfileId_example") // InlineObject163 | 
+    setNetworkWirelessEthernetPortsProfilesDefault := *openapiclient.NewInlineObject166("ProfileId_example") // InlineObject166 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1214,7 +1214,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.SetNetworkWirelessEthernetPortsProfilesDefault``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SetNetworkWirelessEthernetPortsProfilesDefault`: InlineResponse200105
+    // response from `SetNetworkWirelessEthernetPortsProfilesDefault`: InlineResponse200107
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.SetNetworkWirelessEthernetPortsProfilesDefault`: %v\n", resp)
 }
 ```
@@ -1235,11 +1235,11 @@ Other parameters are passed through a pointer to a apiSetNetworkWirelessEthernet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **setNetworkWirelessEthernetPortsProfilesDefault** | [**InlineObject163**](InlineObject163.md) |  | 
+ **setNetworkWirelessEthernetPortsProfilesDefault** | [**InlineObject166**](InlineObject166.md) |  | 
 
 ### Return type
 
-[**InlineResponse200105**](InlineResponse200105.md)
+[**InlineResponse200107**](InlineResponse200107.md)
 
 ### Authorization
 
@@ -1257,7 +1257,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSensorAlertsProfile
 
-> InlineResponse20049 UpdateNetworkSensorAlertsProfile(ctx, networkId, id).UpdateNetworkSensorAlertsProfile(updateNetworkSensorAlertsProfile).Execute()
+> InlineResponse20051 UpdateNetworkSensorAlertsProfile(ctx, networkId, id).UpdateNetworkSensorAlertsProfile(updateNetworkSensorAlertsProfile).Execute()
 
 Updates a sensor alert profile for a network.
 
@@ -1278,7 +1278,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     id := "id_example" // string | ID
-    updateNetworkSensorAlertsProfile := *openapiclient.NewInlineObject101() // InlineObject101 |  (optional)
+    updateNetworkSensorAlertsProfile := *openapiclient.NewInlineObject104() // InlineObject104 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1287,7 +1287,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.UpdateNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSensorAlertsProfile`: InlineResponse20049
+    // response from `UpdateNetworkSensorAlertsProfile`: InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.UpdateNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -1310,11 +1310,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSensorAlertsProfile** | [**InlineObject101**](InlineObject101.md) |  | 
+ **updateNetworkSensorAlertsProfile** | [**InlineObject104**](InlineObject104.md) |  | 
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -1332,7 +1332,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessEthernetPortsProfile
 
-> InlineResponse200104 UpdateNetworkWirelessEthernetPortsProfile(ctx, networkId, profileId).UpdateNetworkWirelessEthernetPortsProfile(updateNetworkWirelessEthernetPortsProfile).Execute()
+> InlineResponse200106 UpdateNetworkWirelessEthernetPortsProfile(ctx, networkId, profileId).UpdateNetworkWirelessEthernetPortsProfile(updateNetworkWirelessEthernetPortsProfile).Execute()
 
 Update the AP port profile by ID for this network
 
@@ -1353,7 +1353,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     profileId := "profileId_example" // string | Profile ID
-    updateNetworkWirelessEthernetPortsProfile := *openapiclient.NewInlineObject164() // InlineObject164 |  (optional)
+    updateNetworkWirelessEthernetPortsProfile := *openapiclient.NewInlineObject167() // InlineObject167 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1362,7 +1362,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.UpdateNetworkWirelessEthernetPortsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessEthernetPortsProfile`: InlineResponse200104
+    // response from `UpdateNetworkWirelessEthernetPortsProfile`: InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.UpdateNetworkWirelessEthernetPortsProfile`: %v\n", resp)
 }
 ```
@@ -1385,11 +1385,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessEthernetPortsProfile** | [**InlineObject164**](InlineObject164.md) |  | 
+ **updateNetworkWirelessEthernetPortsProfile** | [**InlineObject167**](InlineObject167.md) |  | 
 
 ### Return type
 
-[**InlineResponse200104**](InlineResponse200104.md)
+[**InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 
@@ -1428,7 +1428,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     alertConfigId := "alertConfigId_example" // string | Alert config ID
-    updateOrganizationAlertsProfile := *openapiclient.NewInlineObject195() // InlineObject195 |  (optional)
+    updateOrganizationAlertsProfile := *openapiclient.NewInlineObject198() // InlineObject198 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1460,7 +1460,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAlertsProfile** | [**InlineObject195**](InlineObject195.md) |  | 
+ **updateOrganizationAlertsProfile** | [**InlineObject198**](InlineObject198.md) |  | 
 
 ### Return type
 
@@ -1482,7 +1482,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse200136 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
+> InlineResponse200138 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
 
 Update a switch template port
 
@@ -1505,7 +1505,7 @@ func main() {
     configTemplateId := "configTemplateId_example" // string | Config template ID
     profileId := "profileId_example" // string | Profile ID
     portId := "portId_example" // string | Port ID
-    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject210() // InlineObject210 |  (optional)
+    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject213() // InlineObject213 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1514,7 +1514,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ProfilesApi.UpdateOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200136
+    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200138
     fmt.Fprintf(os.Stdout, "Response from `ProfilesApi.UpdateOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -1541,11 +1541,11 @@ Name | Type | Description  | Notes
 
 
 
- **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject210**](InlineObject210.md) |  | 
+ **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject213**](InlineObject213.md) |  | 
 
 ### Return type
 
-[**InlineResponse200136**](InlineResponse200136.md)
+[**InlineResponse200138**](InlineResponse200138.md)
 
 ### Authorization
 

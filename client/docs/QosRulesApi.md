@@ -36,7 +36,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchQosRule := *openapiclient.NewInlineObject129(int32(123)) // InlineObject129 | 
+    createNetworkSwitchQosRule := *openapiclient.NewInlineObject132(int32(123)) // InlineObject132 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchQosRule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchQosRule** | [**InlineObject129**](InlineObject129.md) |  | 
+ **createNetworkSwitchQosRule** | [**InlineObject132**](InlineObject132.md) |  | 
 
 ### Return type
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchQosRule
 
-> InlineResponse20086 GetNetworkSwitchQosRule(ctx, networkId, qosRuleId).Execute()
+> InlineResponse20088 GetNetworkSwitchQosRule(ctx, networkId, qosRuleId).Execute()
 
 Return a quality of service rule
 
@@ -188,7 +188,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `QosRulesApi.GetNetworkSwitchQosRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchQosRule`: InlineResponse20086
+    // response from `GetNetworkSwitchQosRule`: InlineResponse20088
     fmt.Fprintf(os.Stdout, "Response from `QosRulesApi.GetNetworkSwitchQosRule`: %v\n", resp)
 }
 ```
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20086**](InlineResponse20086.md)
+[**InlineResponse20088**](InlineResponse20088.md)
 
 ### Authorization
 
@@ -393,7 +393,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     qosRuleId := "qosRuleId_example" // string | Qos rule ID
-    updateNetworkSwitchQosRule := *openapiclient.NewInlineObject131() // InlineObject131 |  (optional)
+    updateNetworkSwitchQosRule := *openapiclient.NewInlineObject134() // InlineObject134 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -425,7 +425,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchQosRule** | [**InlineObject131**](InlineObject131.md) |  | 
+ **updateNetworkSwitchQosRule** | [**InlineObject134**](InlineObject134.md) |  | 
 
 ### Return type
 
@@ -467,7 +467,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchQosRulesOrder := *openapiclient.NewInlineObject130([]string{"RuleIds_example"}) // InlineObject130 | 
+    updateNetworkSwitchQosRulesOrder := *openapiclient.NewInlineObject133([]string{"RuleIds_example"}) // InlineObject133 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -497,7 +497,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchQosRule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchQosRulesOrder** | [**InlineObject130**](InlineObject130.md) |  | 
+ **updateNetworkSwitchQosRulesOrder** | [**InlineObject133**](InlineObject133.md) |  | 
 
 ### Return type
 

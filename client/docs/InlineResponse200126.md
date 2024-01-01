@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20018Rules**](InlineResponse20018Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**NetworkId** | Pointer to **string** | Network identifier | [optional] 
+**Name** | Pointer to **string** | Network name | [optional] 
+**ByUplink** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink**](OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink.md) | Uplink usage | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200126WithDefaults instantiates a new InlineResponse200126 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetNetworkId
 
-`func (o *InlineResponse200126) GetRules() []InlineResponse20018Rules`
+`func (o *InlineResponse200126) GetNetworkId() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200126) GetRulesOk() (*[]InlineResponse20018Rules, bool)`
+`func (o *InlineResponse200126) GetNetworkIdOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetNetworkId
 
-`func (o *InlineResponse200126) SetRules(v []InlineResponse20018Rules)`
+`func (o *InlineResponse200126) SetNetworkId(v string)`
 
-SetRules sets Rules field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasRules
+### HasNetworkId
 
-`func (o *InlineResponse200126) HasRules() bool`
+`func (o *InlineResponse200126) HasNetworkId() bool`
 
-HasRules returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200126) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200126) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200126) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200126) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetByUplink
+
+`func (o *InlineResponse200126) GetByUplink() []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink`
+
+GetByUplink returns the ByUplink field if non-nil, zero value otherwise.
+
+### GetByUplinkOk
+
+`func (o *InlineResponse200126) GetByUplinkOk() (*[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink, bool)`
+
+GetByUplinkOk returns a tuple with the ByUplink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetByUplink
+
+`func (o *InlineResponse200126) SetByUplink(v []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink)`
+
+SetByUplink sets ByUplink field to given value.
+
+### HasByUplink
+
+`func (o *InlineResponse200126) HasByUplink() bool`
+
+HasByUplink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MqttBrokerId** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
-**Enabled** | Pointer to **bool** | Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data. | [optional] 
+**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
+**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
+**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20050WithDefaults instantiates a new InlineResponse20050 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMqttBrokerId
+### GetStartTs
 
-`func (o *InlineResponse20050) GetMqttBrokerId() string`
+`func (o *InlineResponse20050) GetStartTs() time.Time`
 
-GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetMqttBrokerIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse20050) GetMqttBrokerIdOk() (*string, bool)`
+`func (o *InlineResponse20050) GetStartTsOk() (*time.Time, bool)`
 
-GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqttBrokerId
+### SetStartTs
 
-`func (o *InlineResponse20050) SetMqttBrokerId(v string)`
+`func (o *InlineResponse20050) SetStartTs(v time.Time)`
 
-SetMqttBrokerId sets MqttBrokerId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasMqttBrokerId
+### HasStartTs
 
-`func (o *InlineResponse20050) HasMqttBrokerId() bool`
+`func (o *InlineResponse20050) HasStartTs() bool`
 
-HasMqttBrokerId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetEnabled
+### GetEndTs
 
-`func (o *InlineResponse20050) GetEnabled() bool`
+`func (o *InlineResponse20050) GetEndTs() time.Time`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetEndTsOk
 
-`func (o *InlineResponse20050) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20050) GetEndTsOk() (*time.Time, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetEndTs
 
-`func (o *InlineResponse20050) SetEnabled(v bool)`
+`func (o *InlineResponse20050) SetEndTs(v time.Time)`
 
-SetEnabled sets Enabled field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasEnabled
+### HasEndTs
 
-`func (o *InlineResponse20050) HasEnabled() bool`
+`func (o *InlineResponse20050) HasEndTs() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse20050) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse20050) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse20050) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse20050) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultSettings** | Pointer to [**InlineResponse20087DefaultSettings**](InlineResponse20087DefaultSettings.md) |  | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse20087Overrides**](InlineResponse20087Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
+**Id** | Pointer to **string** | Switch port schedule ID | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Switch port schedule name | [optional] 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule**](NetworksNetworkIdSwitchPortSchedulesPortSchedule.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20087WithDefaults instantiates a new InlineResponse20087 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultSettings
+### GetId
 
-`func (o *InlineResponse20087) GetDefaultSettings() InlineResponse20087DefaultSettings`
+`func (o *InlineResponse20087) GetId() string`
 
-GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDefaultSettingsOk
+### GetIdOk
 
-`func (o *InlineResponse20087) GetDefaultSettingsOk() (*InlineResponse20087DefaultSettings, bool)`
+`func (o *InlineResponse20087) GetIdOk() (*string, bool)`
 
-GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultSettings
+### SetId
 
-`func (o *InlineResponse20087) SetDefaultSettings(v InlineResponse20087DefaultSettings)`
+`func (o *InlineResponse20087) SetId(v string)`
 
-SetDefaultSettings sets DefaultSettings field to given value.
+SetId sets Id field to given value.
 
-### HasDefaultSettings
+### HasId
 
-`func (o *InlineResponse20087) HasDefaultSettings() bool`
+`func (o *InlineResponse20087) HasId() bool`
 
-HasDefaultSettings returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetOverrides
+### GetNetworkId
 
-`func (o *InlineResponse20087) GetOverrides() []InlineResponse20087Overrides`
+`func (o *InlineResponse20087) GetNetworkId() string`
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetOverridesOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20087) GetOverridesOk() (*[]InlineResponse20087Overrides, bool)`
+`func (o *InlineResponse20087) GetNetworkIdOk() (*string, bool)`
 
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetNetworkId
 
-`func (o *InlineResponse20087) SetOverrides(v []InlineResponse20087Overrides)`
+`func (o *InlineResponse20087) SetNetworkId(v string)`
 
-SetOverrides sets Overrides field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasOverrides
+### HasNetworkId
 
-`func (o *InlineResponse20087) HasOverrides() bool`
+`func (o *InlineResponse20087) HasNetworkId() bool`
 
-HasOverrides returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse20087) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse20087) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse20087) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse20087) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetPortSchedule
+
+`func (o *InlineResponse20087) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule`
+
+GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
+
+### GetPortScheduleOk
+
+`func (o *InlineResponse20087) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule, bool)`
+
+GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPortSchedule
+
+`func (o *InlineResponse20087) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule)`
+
+SetPortSchedule sets PortSchedule field to given value.
+
+### HasPortSchedule
+
+`func (o *InlineResponse20087) HasPortSchedule() bool`
+
+HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

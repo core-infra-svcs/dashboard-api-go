@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
-**Callback** | Pointer to [**DevicesSerialLiveToolsPingCallback**](DevicesSerialLiveToolsPingCallback.md) |  | [optional] 
+**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
+**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject183
 
-`func NewInlineObject183(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineObject183`
+`func NewInlineObject183() *InlineObject183`
 
 NewInlineObject183 instantiates a new InlineObject183 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +27,80 @@ NewInlineObject183WithDefaults instantiates a new InlineObject183 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetConcentrator
 
-`func (o *InlineObject183) GetConfirmed() bool`
+`func (o *InlineObject183) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetConcentratorOk
 
-`func (o *InlineObject183) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject183) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetConcentrator
 
-`func (o *InlineObject183) SetConfirmed(v bool)`
+`func (o *InlineObject183) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
 
-SetConfirmed sets Confirmed field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasConfirmed
+### HasConcentrator
 
-`func (o *InlineObject183) HasConfirmed() bool`
+`func (o *InlineObject183) HasConcentrator() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetSplitTunnel
 
-`func (o *InlineObject183) GetSynchronous() bool`
+`func (o *InlineObject183) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetSplitTunnelOk
 
-`func (o *InlineObject183) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject183) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetSplitTunnel
 
-`func (o *InlineObject183) SetSynchronous(v bool)`
+`func (o *InlineObject183) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
 
-SetSynchronous sets Synchronous field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasSynchronous
+### HasSplitTunnel
 
-`func (o *InlineObject183) HasSynchronous() bool`
+`func (o *InlineObject183) HasSplitTunnel() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
 
-### GetActions
+### GetFailover
 
-`func (o *InlineObject183) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
+`func (o *InlineObject183) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
 
-GetActions returns the Actions field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetActionsOk
+### GetFailoverOk
 
-`func (o *InlineObject183) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
+`func (o *InlineObject183) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
 
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActions
+### SetFailover
 
-`func (o *InlineObject183) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
+`func (o *InlineObject183) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
 
-SetActions sets Actions field to given value.
+SetFailover sets Failover field to given value.
 
+### HasFailover
 
-### GetCallback
+`func (o *InlineObject183) HasFailover() bool`
 
-`func (o *InlineObject183) GetCallback() DevicesSerialLiveToolsPingCallback`
-
-GetCallback returns the Callback field if non-nil, zero value otherwise.
-
-### GetCallbackOk
-
-`func (o *InlineObject183) GetCallbackOk() (*DevicesSerialLiveToolsPingCallback, bool)`
-
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCallback
-
-`func (o *InlineObject183) SetCallback(v DevicesSerialLiveToolsPingCallback)`
-
-SetCallback sets Callback field to given value.
-
-### HasCallback
-
-`func (o *InlineObject183) HasCallback() bool`
-
-HasCallback returns a boolean if a field has been set.
+HasFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are allowed | [optional] 
-**BlockedUrlPatterns** | Pointer to **[]string** | A list of URL patterns that are blocked | [optional] 
-**BlockedUrlCategories** | Pointer to **[]string** | A list of URL categories to block | [optional] 
-**UrlCategoryListSize** | Pointer to **string** | URL category list size which is either &#39;topSites&#39; or &#39;fullList&#39; | [optional] 
+**Name** | Pointer to **string** | The name of the network | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
+**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
+**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. | [optional] 
+**Notes** | Pointer to **string** | Add any notes or additional information about this network here. | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineObject31WithDefaults instantiates a new InlineObject31 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedUrlPatterns
+### GetName
 
-`func (o *InlineObject31) GetAllowedUrlPatterns() []string`
+`func (o *InlineObject31) GetName() string`
 
-GetAllowedUrlPatterns returns the AllowedUrlPatterns field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAllowedUrlPatternsOk
+### GetNameOk
 
-`func (o *InlineObject31) GetAllowedUrlPatternsOk() (*[]string, bool)`
+`func (o *InlineObject31) GetNameOk() (*string, bool)`
 
-GetAllowedUrlPatternsOk returns a tuple with the AllowedUrlPatterns field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedUrlPatterns
+### SetName
 
-`func (o *InlineObject31) SetAllowedUrlPatterns(v []string)`
+`func (o *InlineObject31) SetName(v string)`
 
-SetAllowedUrlPatterns sets AllowedUrlPatterns field to given value.
+SetName sets Name field to given value.
 
-### HasAllowedUrlPatterns
+### HasName
 
-`func (o *InlineObject31) HasAllowedUrlPatterns() bool`
+`func (o *InlineObject31) HasName() bool`
 
-HasAllowedUrlPatterns returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetBlockedUrlPatterns
+### GetTimeZone
 
-`func (o *InlineObject31) GetBlockedUrlPatterns() []string`
+`func (o *InlineObject31) GetTimeZone() string`
 
-GetBlockedUrlPatterns returns the BlockedUrlPatterns field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetBlockedUrlPatternsOk
+### GetTimeZoneOk
 
-`func (o *InlineObject31) GetBlockedUrlPatternsOk() (*[]string, bool)`
+`func (o *InlineObject31) GetTimeZoneOk() (*string, bool)`
 
-GetBlockedUrlPatternsOk returns a tuple with the BlockedUrlPatterns field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedUrlPatterns
+### SetTimeZone
 
-`func (o *InlineObject31) SetBlockedUrlPatterns(v []string)`
+`func (o *InlineObject31) SetTimeZone(v string)`
 
-SetBlockedUrlPatterns sets BlockedUrlPatterns field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasBlockedUrlPatterns
+### HasTimeZone
 
-`func (o *InlineObject31) HasBlockedUrlPatterns() bool`
+`func (o *InlineObject31) HasTimeZone() bool`
 
-HasBlockedUrlPatterns returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
-### GetBlockedUrlCategories
+### GetTags
 
-`func (o *InlineObject31) GetBlockedUrlCategories() []string`
+`func (o *InlineObject31) GetTags() []string`
 
-GetBlockedUrlCategories returns the BlockedUrlCategories field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetBlockedUrlCategoriesOk
+### GetTagsOk
 
-`func (o *InlineObject31) GetBlockedUrlCategoriesOk() (*[]string, bool)`
+`func (o *InlineObject31) GetTagsOk() (*[]string, bool)`
 
-GetBlockedUrlCategoriesOk returns a tuple with the BlockedUrlCategories field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedUrlCategories
+### SetTags
 
-`func (o *InlineObject31) SetBlockedUrlCategories(v []string)`
+`func (o *InlineObject31) SetTags(v []string)`
 
-SetBlockedUrlCategories sets BlockedUrlCategories field to given value.
+SetTags sets Tags field to given value.
 
-### HasBlockedUrlCategories
+### HasTags
 
-`func (o *InlineObject31) HasBlockedUrlCategories() bool`
+`func (o *InlineObject31) HasTags() bool`
 
-HasBlockedUrlCategories returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetUrlCategoryListSize
+### GetEnrollmentString
 
-`func (o *InlineObject31) GetUrlCategoryListSize() string`
+`func (o *InlineObject31) GetEnrollmentString() string`
 
-GetUrlCategoryListSize returns the UrlCategoryListSize field if non-nil, zero value otherwise.
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
 
-### GetUrlCategoryListSizeOk
+### GetEnrollmentStringOk
 
-`func (o *InlineObject31) GetUrlCategoryListSizeOk() (*string, bool)`
+`func (o *InlineObject31) GetEnrollmentStringOk() (*string, bool)`
 
-GetUrlCategoryListSizeOk returns a tuple with the UrlCategoryListSize field if it's non-nil, zero value otherwise
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrlCategoryListSize
+### SetEnrollmentString
 
-`func (o *InlineObject31) SetUrlCategoryListSize(v string)`
+`func (o *InlineObject31) SetEnrollmentString(v string)`
 
-SetUrlCategoryListSize sets UrlCategoryListSize field to given value.
+SetEnrollmentString sets EnrollmentString field to given value.
 
-### HasUrlCategoryListSize
+### HasEnrollmentString
 
-`func (o *InlineObject31) HasUrlCategoryListSize() bool`
+`func (o *InlineObject31) HasEnrollmentString() bool`
 
-HasUrlCategoryListSize returns a boolean if a field has been set.
+HasEnrollmentString returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject31) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject31) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject31) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject31) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

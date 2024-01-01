@@ -44,7 +44,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceSwitchRoutingStaticRoute := *openapiclient.NewInlineObject22("Subnet_example", "NextHopIp_example") // InlineObject22 | 
+    createDeviceSwitchRoutingStaticRoute := *openapiclient.NewInlineObject25("Subnet_example", "NextHopIp_example") // InlineObject25 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -74,7 +74,7 @@ Other parameters are passed through a pointer to a apiCreateDeviceSwitchRoutingS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceSwitchRoutingStaticRoute** | [**InlineObject22**](InlineObject22.md) |  | 
+ **createDeviceSwitchRoutingStaticRoute** | [**InlineObject25**](InlineObject25.md) |  | 
 
 ### Return type
 
@@ -116,7 +116,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkApplianceStaticRoute := *openapiclient.NewInlineObject52("Name_example", "Subnet_example", "GatewayIp_example") // InlineObject52 | 
+    createNetworkApplianceStaticRoute := *openapiclient.NewInlineObject55("Name_example", "Subnet_example", "GatewayIp_example") // InlineObject55 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -146,7 +146,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkApplianceStat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkApplianceStaticRoute** | [**InlineObject52**](InlineObject52.md) |  | 
+ **createNetworkApplianceStaticRoute** | [**InlineObject55**](InlineObject55.md) |  | 
 
 ### Return type
 
@@ -189,7 +189,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject143("Subnet_example", "NextHopIp_example") // InlineObject143 | 
+    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject146("Subnet_example", "NextHopIp_example") // InlineObject146 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject143**](InlineObject143.md) |  | 
+ **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject146**](InlineObject146.md) |  | 
 
 ### Return type
 
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingStaticRoute
 
-> InlineResponse20011 GetDeviceSwitchRoutingStaticRoute(ctx, serial, staticRouteId).Execute()
+> InlineResponse20013 GetDeviceSwitchRoutingStaticRoute(ctx, serial, staticRouteId).Execute()
 
 Return a layer 3 static route for a switch
 
@@ -488,7 +488,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.GetDeviceSwitchRoutingStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingStaticRoute`: InlineResponse20011
+    // response from `GetDeviceSwitchRoutingStaticRoute`: InlineResponse20013
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.GetDeviceSwitchRoutingStaticRoute`: %v\n", resp)
 }
 ```
@@ -514,7 +514,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**InlineResponse20013**](InlineResponse20013.md)
 
 ### Authorization
 
@@ -915,7 +915,7 @@ import (
 func main() {
     serial := "serial_example" // string | Serial
     staticRouteId := "staticRouteId_example" // string | Static route ID
-    updateDeviceSwitchRoutingStaticRoute := *openapiclient.NewInlineObject23() // InlineObject23 |  (optional)
+    updateDeviceSwitchRoutingStaticRoute := *openapiclient.NewInlineObject26() // InlineObject26 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -947,7 +947,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateDeviceSwitchRoutingStaticRoute** | [**InlineObject23**](InlineObject23.md) |  | 
+ **updateDeviceSwitchRoutingStaticRoute** | [**InlineObject26**](InlineObject26.md) |  | 
 
 ### Return type
 
@@ -990,7 +990,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     staticRouteId := "staticRouteId_example" // string | Static route ID
-    updateNetworkApplianceStaticRoute := *openapiclient.NewInlineObject53() // InlineObject53 |  (optional)
+    updateNetworkApplianceStaticRoute := *openapiclient.NewInlineObject56() // InlineObject56 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1022,7 +1022,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceStaticRoute** | [**InlineObject53**](InlineObject53.md) |  | 
+ **updateNetworkApplianceStaticRoute** | [**InlineObject56**](InlineObject56.md) |  | 
 
 ### Return type
 
@@ -1066,7 +1066,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     staticRouteId := "staticRouteId_example" // string | Static route ID
-    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject144() // InlineObject144 |  (optional)
+    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject147() // InlineObject147 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1100,7 +1100,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject144**](InlineObject144.md) |  | 
+ **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject147**](InlineObject147.md) |  | 
 
 ### Return type
 

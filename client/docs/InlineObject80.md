@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, 100 | 
+**DevicePolicy** | **string** | The policy to assign. Can be &#39;Whitelisted&#39;, &#39;Blocked&#39;, &#39;Normal&#39; or &#39;Group policy&#39;. Required. | 
+**GroupPolicyId** | Pointer to **string** | [optional] If &#39;devicePolicy&#39; is set to &#39;Group policy&#39; this param is used to specify the group policy ID. | [optional] 
 
 ## Methods
 
 ### NewInlineObject80
 
-`func NewInlineObject80(size string, ) *InlineObject80`
+`func NewInlineObject80(devicePolicy string, ) *InlineObject80`
 
 NewInlineObject80 instantiates a new InlineObject80 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,50 @@ NewInlineObject80WithDefaults instantiates a new InlineObject80 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSize
+### GetDevicePolicy
 
-`func (o *InlineObject80) GetSize() string`
+`func (o *InlineObject80) GetDevicePolicy() string`
 
-GetSize returns the Size field if non-nil, zero value otherwise.
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-### GetSizeOk
+### GetDevicePolicyOk
 
-`func (o *InlineObject80) GetSizeOk() (*string, bool)`
+`func (o *InlineObject80) GetDevicePolicyOk() (*string, bool)`
 
-GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSize
+### SetDevicePolicy
 
-`func (o *InlineObject80) SetSize(v string)`
+`func (o *InlineObject80) SetDevicePolicy(v string)`
 
-SetSize sets Size field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
+
+### GetGroupPolicyId
+
+`func (o *InlineObject80) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineObject80) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineObject80) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+### HasGroupPolicyId
+
+`func (o *InlineObject80) HasGroupPolicyId() bool`
+
+HasGroupPolicyId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

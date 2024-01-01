@@ -37,7 +37,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkMqttBroker := *openapiclient.NewInlineObject96("Name_example", "Host_example", int32(123)) // InlineObject96 | 
+    createNetworkMqttBroker := *openapiclient.NewInlineObject99("Name_example", "Host_example", int32(123)) // InlineObject99 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -67,7 +67,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkMqttBrokerReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkMqttBroker** | [**InlineObject96**](InlineObject96.md) |  | 
+ **createNetworkMqttBroker** | [**InlineObject99**](InlineObject99.md) |  | 
 
 ### Return type
 
@@ -303,7 +303,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorMqttBroker
 
-> InlineResponse20050 GetNetworkSensorMqttBroker(ctx, networkId, mqttBrokerId).Execute()
+> InlineResponse20052 GetNetworkSensorMqttBroker(ctx, networkId, mqttBrokerId).Execute()
 
 Return the sensor settings of an MQTT broker
 
@@ -332,7 +332,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MqttBrokersApi.GetNetworkSensorMqttBroker``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorMqttBroker`: InlineResponse20050
+    // response from `GetNetworkSensorMqttBroker`: InlineResponse20052
     fmt.Fprintf(os.Stdout, "Response from `MqttBrokersApi.GetNetworkSensorMqttBroker`: %v\n", resp)
 }
 ```
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorMqttBrokers
 
-> []InlineResponse20050 GetNetworkSensorMqttBrokers(ctx, networkId).Execute()
+> []InlineResponse20052 GetNetworkSensorMqttBrokers(ctx, networkId).Execute()
 
 List the sensor settings of all MQTT brokers for this network
 
@@ -404,7 +404,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MqttBrokersApi.GetNetworkSensorMqttBrokers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorMqttBrokers`: []InlineResponse20050
+    // response from `GetNetworkSensorMqttBrokers`: []InlineResponse20052
     fmt.Fprintf(os.Stdout, "Response from `MqttBrokersApi.GetNetworkSensorMqttBrokers`: %v\n", resp)
 }
 ```
@@ -428,7 +428,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20050**](InlineResponse20050.md)
+[**[]InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 
@@ -467,7 +467,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
-    updateNetworkMqttBroker := *openapiclient.NewInlineObject97() // InlineObject97 |  (optional)
+    updateNetworkMqttBroker := *openapiclient.NewInlineObject100() // InlineObject100 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkMqttBroker** | [**InlineObject97**](InlineObject97.md) |  | 
+ **updateNetworkMqttBroker** | [**InlineObject100**](InlineObject100.md) |  | 
 
 ### Return type
 
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSensorMqttBroker
 
-> InlineResponse20050 UpdateNetworkSensorMqttBroker(ctx, networkId, mqttBrokerId).UpdateNetworkSensorMqttBroker(updateNetworkSensorMqttBroker).Execute()
+> InlineResponse20052 UpdateNetworkSensorMqttBroker(ctx, networkId, mqttBrokerId).UpdateNetworkSensorMqttBroker(updateNetworkSensorMqttBroker).Execute()
 
 Update the sensor settings of an MQTT broker
 
@@ -542,7 +542,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
-    updateNetworkSensorMqttBroker := *openapiclient.NewInlineObject102(false) // InlineObject102 | 
+    updateNetworkSensorMqttBroker := *openapiclient.NewInlineObject105(false) // InlineObject105 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -551,7 +551,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MqttBrokersApi.UpdateNetworkSensorMqttBroker``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSensorMqttBroker`: InlineResponse20050
+    // response from `UpdateNetworkSensorMqttBroker`: InlineResponse20052
     fmt.Fprintf(os.Stdout, "Response from `MqttBrokersApi.UpdateNetworkSensorMqttBroker`: %v\n", resp)
 }
 ```
@@ -574,11 +574,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSensorMqttBroker** | [**InlineObject102**](InlineObject102.md) |  | 
+ **updateNetworkSensorMqttBroker** | [**InlineObject105**](InlineObject105.md) |  | 
 
 ### Return type
 
-[**InlineResponse20050**](InlineResponse20050.md)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 

@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InterfaceIp** | **string** | The IP address of the interface where the RP needs to be created. | 
-**MulticastGroup** | **string** | &#39;Any&#39;, or the IP address of a multicast group | 
+**RuleIds** | **[]string** | A list of quality of service rule IDs arranged in order in which they should be processed by the switch. | 
 
 ## Methods
 
 ### NewInlineObject133
 
-`func NewInlineObject133(interfaceIp string, multicastGroup string, ) *InlineObject133`
+`func NewInlineObject133(ruleIds []string, ) *InlineObject133`
 
 NewInlineObject133 instantiates a new InlineObject133 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject133WithDefaults instantiates a new InlineObject133 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaceIp
+### GetRuleIds
 
-`func (o *InlineObject133) GetInterfaceIp() string`
+`func (o *InlineObject133) GetRuleIds() []string`
 
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
 
-### GetInterfaceIpOk
+### GetRuleIdsOk
 
-`func (o *InlineObject133) GetInterfaceIpOk() (*string, bool)`
+`func (o *InlineObject133) GetRuleIdsOk() (*[]string, bool)`
 
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceIp
+### SetRuleIds
 
-`func (o *InlineObject133) SetInterfaceIp(v string)`
+`func (o *InlineObject133) SetRuleIds(v []string)`
 
-SetInterfaceIp sets InterfaceIp field to given value.
-
-
-### GetMulticastGroup
-
-`func (o *InlineObject133) GetMulticastGroup() string`
-
-GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
-
-### GetMulticastGroupOk
-
-`func (o *InlineObject133) GetMulticastGroupOk() (*string, bool)`
-
-GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMulticastGroup
-
-`func (o *InlineObject133) SetMulticastGroup(v string)`
-
-SetMulticastGroup sets MulticastGroup field to given value.
+SetRuleIds sets RuleIds field to given value.
 
 
 

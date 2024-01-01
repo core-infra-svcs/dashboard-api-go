@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceSerial** | Pointer to **string** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
+**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
+**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
 
 ## Methods
 
 ### NewInlineObject224
 
-`func NewInlineObject224() *InlineObject224`
+`func NewInlineObject224(destOrganizationId string, licenseIds []string, ) *InlineObject224`
 
 NewInlineObject224 instantiates a new InlineObject224 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,45 @@ NewInlineObject224WithDefaults instantiates a new InlineObject224 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeviceSerial
+### GetDestOrganizationId
 
-`func (o *InlineObject224) GetDeviceSerial() string`
+`func (o *InlineObject224) GetDestOrganizationId() string`
 
-GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetDeviceSerialOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineObject224) GetDeviceSerialOk() (*string, bool)`
+`func (o *InlineObject224) GetDestOrganizationIdOk() (*string, bool)`
 
-GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceSerial
+### SetDestOrganizationId
 
-`func (o *InlineObject224) SetDeviceSerial(v string)`
+`func (o *InlineObject224) SetDestOrganizationId(v string)`
 
-SetDeviceSerial sets DeviceSerial field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasDeviceSerial
 
-`func (o *InlineObject224) HasDeviceSerial() bool`
+### GetLicenseIds
 
-HasDeviceSerial returns a boolean if a field has been set.
+`func (o *InlineObject224) GetLicenseIds() []string`
+
+GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
+
+### GetLicenseIdsOk
+
+`func (o *InlineObject224) GetLicenseIdsOk() (*[]string, bool)`
+
+GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenseIds
+
+`func (o *InlineObject224) SetLicenseIds(v []string)`
+
+SetLicenseIds sets LicenseIds field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchDscpToCosMappings
 
-> InlineResponse20083 GetNetworkSwitchDscpToCosMappings(ctx, networkId).Execute()
+> InlineResponse20085 GetNetworkSwitchDscpToCosMappings(ctx, networkId).Execute()
 
 Return the DSCP to CoS mappings
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DscpToCosMappingsApi.GetNetworkSwitchDscpToCosMappings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDscpToCosMappings`: InlineResponse20083
+    // response from `GetNetworkSwitchDscpToCosMappings`: InlineResponse20085
     fmt.Fprintf(os.Stdout, "Response from `DscpToCosMappingsApi.GetNetworkSwitchDscpToCosMappings`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20083**](InlineResponse20083.md)
+[**InlineResponse20085**](InlineResponse20085.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchDscpToCosMappings := *openapiclient.NewInlineObject123([]openapiclient.NetworksNetworkIdSwitchDscpToCosMappingsMappings{*openapiclient.NewNetworksNetworkIdSwitchDscpToCosMappingsMappings(int32(123), int32(123))}) // InlineObject123 | 
+    updateNetworkSwitchDscpToCosMappings := *openapiclient.NewInlineObject126([]openapiclient.NetworksNetworkIdSwitchDscpToCosMappingsMappings{*openapiclient.NewNetworksNetworkIdSwitchDscpToCosMappingsMappings(int32(123), int32(123))}) // InlineObject126 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchDscpToC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchDscpToCosMappings** | [**InlineObject123**](InlineObject123.md) |  | 
+ **updateNetworkSwitchDscpToCosMappings** | [**InlineObject126**](InlineObject126.md) |  | 
 
 ### Return type
 

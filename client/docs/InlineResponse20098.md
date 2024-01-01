@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]InlineResponse20098Plans**](InlineResponse20098Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
+**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse20098WithDefaults instantiates a new InlineResponse20098 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetId
 
-`func (o *InlineResponse20098) GetCurrency() string`
+`func (o *InlineResponse20098) GetId() string`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetIdOk
 
-`func (o *InlineResponse20098) GetCurrencyOk() (*string, bool)`
+`func (o *InlineResponse20098) GetIdOk() (*string, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetId
 
-`func (o *InlineResponse20098) SetCurrency(v string)`
+`func (o *InlineResponse20098) SetId(v string)`
 
-SetCurrency sets Currency field to given value.
+SetId sets Id field to given value.
 
-### HasCurrency
+### HasId
 
-`func (o *InlineResponse20098) HasCurrency() bool`
+`func (o *InlineResponse20098) HasId() bool`
 
-HasCurrency returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetPlans
+### GetName
 
-`func (o *InlineResponse20098) GetPlans() []InlineResponse20098Plans`
+`func (o *InlineResponse20098) GetName() string`
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetPlansOk
+### GetNameOk
 
-`func (o *InlineResponse20098) GetPlansOk() (*[]InlineResponse20098Plans, bool)`
+`func (o *InlineResponse20098) GetNameOk() (*string, bool)`
 
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetName
 
-`func (o *InlineResponse20098) SetPlans(v []InlineResponse20098Plans)`
+`func (o *InlineResponse20098) SetName(v string)`
 
-SetPlans sets Plans field to given value.
+SetName sets Name field to given value.
 
-### HasPlans
+### HasName
 
-`func (o *InlineResponse20098) HasPlans() bool`
+`func (o *InlineResponse20098) HasName() bool`
 
-HasPlans returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse20098) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse20098) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse20098) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse20098) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
+
+### GetNetworkId
+
+`func (o *InlineResponse20098) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse20098) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse20098) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse20098) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
+### GetPayloadTemplate
+
+`func (o *InlineResponse20098) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
+
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateOk
+
+`func (o *InlineResponse20098) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
+
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplate
+
+`func (o *InlineResponse20098) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
+
+SetPayloadTemplate sets PayloadTemplate field to given value.
+
+### HasPayloadTemplate
+
+`func (o *InlineResponse20098) HasPayloadTemplate() bool`
+
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

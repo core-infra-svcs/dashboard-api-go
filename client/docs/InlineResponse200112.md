@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**Identity** | Pointer to [**InlineResponse200112Identity**](InlineResponse200112Identity.md) |  | [optional] 
-**EapolKey** | Pointer to [**InlineResponse200112EapolKey**](InlineResponse200112EapolKey.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
+**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200112WithDefaults instantiates a new InlineResponse200112 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetStartTs
 
-`func (o *InlineResponse200112) GetTimeout() int32`
+`func (o *InlineResponse200112) GetStartTs() time.Time`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetStartTsOk
 
-`func (o *InlineResponse200112) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineResponse200112) GetStartTsOk() (*time.Time, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetStartTs
 
-`func (o *InlineResponse200112) SetTimeout(v int32)`
+`func (o *InlineResponse200112) SetStartTs(v time.Time)`
 
-SetTimeout sets Timeout field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasTimeout
+### HasStartTs
 
-`func (o *InlineResponse200112) HasTimeout() bool`
+`func (o *InlineResponse200112) HasStartTs() bool`
 
-HasTimeout returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetMaxRetries
+### GetEndTs
 
-`func (o *InlineResponse200112) GetMaxRetries() int32`
+`func (o *InlineResponse200112) GetEndTs() time.Time`
 
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetMaxRetriesOk
+### GetEndTsOk
 
-`func (o *InlineResponse200112) GetMaxRetriesOk() (*int32, bool)`
+`func (o *InlineResponse200112) GetEndTsOk() (*time.Time, bool)`
 
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxRetries
+### SetEndTs
 
-`func (o *InlineResponse200112) SetMaxRetries(v int32)`
+`func (o *InlineResponse200112) SetEndTs(v time.Time)`
 
-SetMaxRetries sets MaxRetries field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasMaxRetries
+### HasEndTs
 
-`func (o *InlineResponse200112) HasMaxRetries() bool`
+`func (o *InlineResponse200112) HasEndTs() bool`
 
-HasMaxRetries returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetIdentity
+### GetSnr
 
-`func (o *InlineResponse200112) GetIdentity() InlineResponse200112Identity`
+`func (o *InlineResponse200112) GetSnr() int32`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetSnr returns the Snr field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetSnrOk
 
-`func (o *InlineResponse200112) GetIdentityOk() (*InlineResponse200112Identity, bool)`
+`func (o *InlineResponse200112) GetSnrOk() (*int32, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetSnr
 
-`func (o *InlineResponse200112) SetIdentity(v InlineResponse200112Identity)`
+`func (o *InlineResponse200112) SetSnr(v int32)`
 
-SetIdentity sets Identity field to given value.
+SetSnr sets Snr field to given value.
 
-### HasIdentity
+### HasSnr
 
-`func (o *InlineResponse200112) HasIdentity() bool`
+`func (o *InlineResponse200112) HasSnr() bool`
 
-HasIdentity returns a boolean if a field has been set.
+HasSnr returns a boolean if a field has been set.
 
-### GetEapolKey
+### GetRssi
 
-`func (o *InlineResponse200112) GetEapolKey() InlineResponse200112EapolKey`
+`func (o *InlineResponse200112) GetRssi() int32`
 
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
+GetRssi returns the Rssi field if non-nil, zero value otherwise.
 
-### GetEapolKeyOk
+### GetRssiOk
 
-`func (o *InlineResponse200112) GetEapolKeyOk() (*InlineResponse200112EapolKey, bool)`
+`func (o *InlineResponse200112) GetRssiOk() (*int32, bool)`
 
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
+GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEapolKey
+### SetRssi
 
-`func (o *InlineResponse200112) SetEapolKey(v InlineResponse200112EapolKey)`
+`func (o *InlineResponse200112) SetRssi(v int32)`
 
-SetEapolKey sets EapolKey field to given value.
+SetRssi sets Rssi field to given value.
 
-### HasEapolKey
+### HasRssi
 
-`func (o *InlineResponse200112) HasEapolKey() bool`
+`func (o *InlineResponse200112) HasRssi() bool`
 
-HasEapolKey returns a boolean if a field has been set.
+HasRssi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

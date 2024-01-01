@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkVlanProfilesAssignmentsByDevice
 
-> []InlineResponse20094 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
+> []InlineResponse20096 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
 
 Get the assigned VLAN Profiles for devices in a network
 
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetNetworkVlanProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse20094
+    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse20096
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetNetworkVlanProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20094**](InlineResponse20094.md)
+[**[]InlineResponse20096**](InlineResponse20096.md)
 
 ### Authorization
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ## ReassignNetworkVlanProfilesAssignments
 
-> InlineResponse20095 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
+> InlineResponse20097 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
 
 Update the assigned VLAN Profile for devices in a network
 
@@ -113,7 +113,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    reassignNetworkVlanProfilesAssignments := *openapiclient.NewInlineObject151([]string{"Serials_example"}, []string{"StackIds_example"}) // InlineObject151 | 
+    reassignNetworkVlanProfilesAssignments := *openapiclient.NewInlineObject154([]string{"Serials_example"}, []string{"StackIds_example"}) // InlineObject154 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -122,7 +122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.ReassignNetworkVlanProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse20095
+    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse20097
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.ReassignNetworkVlanProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -143,11 +143,11 @@ Other parameters are passed through a pointer to a apiReassignNetworkVlanProfile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **reassignNetworkVlanProfilesAssignments** | [**InlineObject151**](InlineObject151.md) |  | 
+ **reassignNetworkVlanProfilesAssignments** | [**InlineObject154**](InlineObject154.md) |  | 
 
 ### Return type
 
-[**InlineResponse20095**](InlineResponse20095.md)
+[**InlineResponse20097**](InlineResponse20097.md)
 
 ### Authorization
 

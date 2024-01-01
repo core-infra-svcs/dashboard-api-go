@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## GetDeviceApplianceUplinksSettings
 
-> InlineResponse2002 GetDeviceApplianceUplinksSettings(ctx, serial).Execute()
+> InlineResponse2004 GetDeviceApplianceUplinksSettings(ctx, serial).Execute()
 
 Return the uplink settings for an MX appliance
 
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetDeviceApplianceUplinksSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceApplianceUplinksSettings`: InlineResponse2002
+    // response from `GetDeviceApplianceUplinksSettings`: InlineResponse2004
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetDeviceApplianceUplinksSettings`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -330,7 +330,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksUsageByNetwork
 
-> []InlineResponse200124 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200126 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get the sent and received bytes for each uplink of all MX and Z networks within an organization
 
@@ -361,7 +361,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationApplianceUplinksUsageByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200124
+    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200126
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationApplianceUplinksUsageByNetwork`: %v\n", resp)
 }
 ```
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200124**](InlineResponse200124.md)
+[**[]InlineResponse200126**](InlineResponse200126.md)
 
 ### Authorization
 
@@ -406,7 +406,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksAddressesByDevice
 
-> []InlineResponse200144 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200146 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the current uplink addresses for devices in an organization.
 
@@ -442,7 +442,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationDevicesUplinksAddressesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200144
+    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200146
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationDevicesUplinksAddressesByDevice`: %v\n", resp)
 }
 ```
@@ -474,7 +474,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200144**](InlineResponse200144.md)
+[**[]InlineResponse200146**](InlineResponse200146.md)
 
 ### Authorization
 
@@ -492,7 +492,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksLossAndLatency
 
-> []InlineResponse200145 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
+> []InlineResponse200147 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
 
 Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
 
@@ -525,7 +525,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationDevicesUplinksLossAndLatency``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200145
+    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200147
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationDevicesUplinksLossAndLatency`: %v\n", resp)
 }
 ```
@@ -554,7 +554,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200145**](InlineResponse200145.md)
+[**[]InlineResponse200147**](InlineResponse200147.md)
 
 ### Authorization
 
@@ -572,7 +572,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationUplinksStatuses
 
-> []InlineResponse200177 GetOrganizationUplinksStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200179 GetOrganizationUplinksStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MX, MG and Z series devices in the organization
 
@@ -606,7 +606,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.GetOrganizationUplinksStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationUplinksStatuses`: []InlineResponse200177
+    // response from `GetOrganizationUplinksStatuses`: []InlineResponse200179
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.GetOrganizationUplinksStatuses`: %v\n", resp)
 }
 ```
@@ -636,7 +636,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200177**](InlineResponse200177.md)
+[**[]InlineResponse200179**](InlineResponse200179.md)
 
 ### Authorization
 
@@ -654,7 +654,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceApplianceUplinksSettings
 
-> InlineResponse2002 UpdateDeviceApplianceUplinksSettings(ctx, serial).UpdateDeviceApplianceUplinksSettings(updateDeviceApplianceUplinksSettings).Execute()
+> InlineResponse2004 UpdateDeviceApplianceUplinksSettings(ctx, serial).UpdateDeviceApplianceUplinksSettings(updateDeviceApplianceUplinksSettings).Execute()
 
 Update the uplink settings for an MX appliance
 
@@ -674,7 +674,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceApplianceUplinksSettings := *openapiclient.NewInlineObject2(*openapiclient.NewDevicesSerialApplianceUplinksSettingsInterfaces()) // InlineObject2 | 
+    updateDeviceApplianceUplinksSettings := *openapiclient.NewInlineObject5(*openapiclient.NewDevicesSerialApplianceUplinksSettingsInterfaces()) // InlineObject5 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -683,7 +683,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinksApi.UpdateDeviceApplianceUplinksSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceApplianceUplinksSettings`: InlineResponse2002
+    // response from `UpdateDeviceApplianceUplinksSettings`: InlineResponse2004
     fmt.Fprintf(os.Stdout, "Response from `UplinksApi.UpdateDeviceApplianceUplinksSettings`: %v\n", resp)
 }
 ```
@@ -704,11 +704,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceApplianceUplin
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceApplianceUplinksSettings** | [**InlineObject2**](InlineObject2.md) |  | 
+ **updateDeviceApplianceUplinksSettings** | [**InlineObject5**](InlineObject5.md) |  | 
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 

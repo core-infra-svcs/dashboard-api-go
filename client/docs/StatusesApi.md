@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 ## GetDeviceSwitchPortsStatuses
 
-> []InlineResponse2009 GetDeviceSwitchPortsStatuses(ctx, serial).T0(t0).Timespan(timespan).Execute()
+> []InlineResponse20011 GetDeviceSwitchPortsStatuses(ctx, serial).T0(t0).Timespan(timespan).Execute()
 
 Return the status for all the ports of a switch
 
@@ -53,7 +53,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusesApi.GetDeviceSwitchPortsStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchPortsStatuses`: []InlineResponse2009
+    // response from `GetDeviceSwitchPortsStatuses`: []InlineResponse20011
     fmt.Fprintf(os.Stdout, "Response from `StatusesApi.GetDeviceSwitchPortsStatuses`: %v\n", resp)
 }
 ```
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse2009**](InlineResponse2009.md)
+[**[]InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 
@@ -405,7 +405,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayUplinkStatuses
 
-> []InlineResponse200130 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200132 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MG cellular gateway in the organization
 
@@ -439,7 +439,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusesApi.GetOrganizationCellularGatewayUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200130
+    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200132
     fmt.Fprintf(os.Stdout, "Response from `StatusesApi.GetOrganizationCellularGatewayUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200130**](InlineResponse200130.md)
+[**[]InlineResponse200132**](InlineResponse200132.md)
 
 ### Authorization
 
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesPowerModulesStatusesByDevice
 
-> []InlineResponse200140 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200142 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the most recent status information for power modules in rackmount MX and MS devices that support them
 
@@ -523,7 +523,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusesApi.GetOrganizationDevicesPowerModulesStatusesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200140
+    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200142
     fmt.Fprintf(os.Stdout, "Response from `StatusesApi.GetOrganizationDevicesPowerModulesStatusesByDevice`: %v\n", resp)
 }
 ```
@@ -555,7 +555,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200140**](InlineResponse200140.md)
+[**[]InlineResponse200142**](InlineResponse200142.md)
 
 ### Authorization
 
@@ -573,7 +573,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesProvisioningStatuses
 
-> []InlineResponse200141 GetOrganizationDevicesProvisioningStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Status(status).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200143 GetOrganizationDevicesProvisioningStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Status(status).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the provisioning statuses information for devices in an organization.
 
@@ -610,7 +610,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusesApi.GetOrganizationDevicesProvisioningStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesProvisioningStatuses`: []InlineResponse200141
+    // response from `GetOrganizationDevicesProvisioningStatuses`: []InlineResponse200143
     fmt.Fprintf(os.Stdout, "Response from `StatusesApi.GetOrganizationDevicesProvisioningStatuses`: %v\n", resp)
 }
 ```
@@ -643,7 +643,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200141**](InlineResponse200141.md)
+[**[]InlineResponse200143**](InlineResponse200143.md)
 
 ### Authorization
 
@@ -661,7 +661,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatuses
 
-> []InlineResponse200142 GetOrganizationDevicesStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Statuses(statuses).ProductTypes(productTypes).Models(models).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200144 GetOrganizationDevicesStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Statuses(statuses).ProductTypes(productTypes).Models(models).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the status of every Meraki device in the organization
 
@@ -699,7 +699,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusesApi.GetOrganizationDevicesStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatuses`: []InlineResponse200142
+    // response from `GetOrganizationDevicesStatuses`: []InlineResponse200144
     fmt.Fprintf(os.Stdout, "Response from `StatusesApi.GetOrganizationDevicesStatuses`: %v\n", resp)
 }
 ```
@@ -733,7 +733,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200142**](InlineResponse200142.md)
+[**[]InlineResponse200144**](InlineResponse200144.md)
 
 ### Authorization
 
@@ -751,7 +751,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatusesOverview
 
-> InlineResponse200143 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
+> InlineResponse200145 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
 
 Return an overview of current device statuses
 
@@ -781,7 +781,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusesApi.GetOrganizationDevicesStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200143
+    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200145
     fmt.Fprintf(os.Stdout, "Response from `StatusesApi.GetOrganizationDevicesStatusesOverview`: %v\n", resp)
 }
 ```
@@ -807,7 +807,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200143**](InlineResponse200143.md)
+[**InlineResponse200145**](InlineResponse200145.md)
 
 ### Authorization
 
@@ -825,7 +825,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationUplinksStatuses
 
-> []InlineResponse200177 GetOrganizationUplinksStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200179 GetOrganizationUplinksStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MX, MG and Z series devices in the organization
 
@@ -859,7 +859,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusesApi.GetOrganizationUplinksStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationUplinksStatuses`: []InlineResponse200177
+    // response from `GetOrganizationUplinksStatuses`: []InlineResponse200179
     fmt.Fprintf(os.Stdout, "Response from `StatusesApi.GetOrganizationUplinksStatuses`: %v\n", resp)
 }
 ```
@@ -889,7 +889,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200177**](InlineResponse200177.md)
+[**[]InlineResponse200179**](InlineResponse200179.md)
 
 ### Authorization
 
@@ -907,7 +907,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWebhooksCallbacksStatus
 
-> InlineResponse200179 GetOrganizationWebhooksCallbacksStatus(ctx, organizationId, callbackId).Execute()
+> InlineResponse200181 GetOrganizationWebhooksCallbacksStatus(ctx, organizationId, callbackId).Execute()
 
 Return the status of an API callback
 
@@ -936,7 +936,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusesApi.GetOrganizationWebhooksCallbacksStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksCallbacksStatus`: InlineResponse200179
+    // response from `GetOrganizationWebhooksCallbacksStatus`: InlineResponse200181
     fmt.Fprintf(os.Stdout, "Response from `StatusesApi.GetOrganizationWebhooksCallbacksStatus`: %v\n", resp)
 }
 ```
@@ -962,7 +962,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200179**](InlineResponse200179.md)
+[**InlineResponse200181**](InlineResponse200181.md)
 
 ### Authorization
 
@@ -980,7 +980,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesEthernetStatuses
 
-> []InlineResponse200185 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200187 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the most recent Ethernet link speed, duplex, aggregation and power mode and status information for wireless devices.
 
@@ -1012,7 +1012,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusesApi.GetOrganizationWirelessDevicesEthernetStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200185
+    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200187
     fmt.Fprintf(os.Stdout, "Response from `StatusesApi.GetOrganizationWirelessDevicesEthernetStatuses`: %v\n", resp)
 }
 ```
@@ -1040,7 +1040,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200185**](InlineResponse200185.md)
+[**[]InlineResponse200187**](InlineResponse200187.md)
 
 ### Authorization
 
@@ -1078,7 +1078,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject203() // InlineObject203 |  (optional)
+    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject206() // InlineObject206 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1108,7 +1108,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationCameraOn
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationCameraOnboardingStatuses** | [**InlineObject203**](InlineObject203.md) |  | 
+ **updateOrganizationCameraOnboardingStatuses** | [**InlineObject206**](InlineObject206.md) |  | 
 
 ### Return type
 

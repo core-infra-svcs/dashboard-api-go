@@ -142,7 +142,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    bindNetwork := *openapiclient.NewInlineObject67("ConfigTemplateId_example") // InlineObject67 | 
+    bindNetwork := *openapiclient.NewInlineObject70("ConfigTemplateId_example") // InlineObject70 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -172,7 +172,7 @@ Other parameters are passed through a pointer to a apiBindNetworkRequest struct 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bindNetwork** | [**InlineObject67**](InlineObject67.md) |  | 
+ **bindNetwork** | [**InlineObject70**](InlineObject70.md) |  | 
 
 ### Return type
 
@@ -214,7 +214,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    claimNetworkDevices := *openapiclient.NewInlineObject79([]string{"Serials_example"}) // InlineObject79 | 
+    claimNetworkDevices := *openapiclient.NewInlineObject82([]string{"Serials_example"}) // InlineObject82 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -242,7 +242,7 @@ Other parameters are passed through a pointer to a apiClaimNetworkDevicesRequest
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **claimNetworkDevices** | [**InlineObject79**](InlineObject79.md) |  | 
+ **claimNetworkDevices** | [**InlineObject82**](InlineObject82.md) |  | 
 
 ### Return type
 
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ## CombineOrganizationNetworks
 
-> InlineResponse200160 CombineOrganizationNetworks(ctx, organizationId).CombineOrganizationNetworks(combineOrganizationNetworks).Execute()
+> InlineResponse200162 CombineOrganizationNetworks(ctx, organizationId).CombineOrganizationNetworks(combineOrganizationNetworks).Execute()
 
 Combine multiple networks into a single network
 
@@ -284,7 +284,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    combineOrganizationNetworks := *openapiclient.NewInlineObject228("Name_example", []string{"NetworkIds_example"}) // InlineObject228 | 
+    combineOrganizationNetworks := *openapiclient.NewInlineObject231("Name_example", []string{"NetworkIds_example"}) // InlineObject231 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -293,7 +293,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CombineOrganizationNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CombineOrganizationNetworks`: InlineResponse200160
+    // response from `CombineOrganizationNetworks`: InlineResponse200162
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CombineOrganizationNetworks`: %v\n", resp)
 }
 ```
@@ -314,11 +314,11 @@ Other parameters are passed through a pointer to a apiCombineOrganizationNetwork
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **combineOrganizationNetworks** | [**InlineObject228**](InlineObject228.md) |  | 
+ **combineOrganizationNetworks** | [**InlineObject231**](InlineObject231.md) |  | 
 
 ### Return type
 
-[**InlineResponse200160**](InlineResponse200160.md)
+[**InlineResponse200162**](InlineResponse200162.md)
 
 ### Authorization
 
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkFirmwareUpgradesRollback
 
-> InlineResponse20038 CreateNetworkFirmwareUpgradesRollback(ctx, networkId).CreateNetworkFirmwareUpgradesRollback(createNetworkFirmwareUpgradesRollback).Execute()
+> InlineResponse20040 CreateNetworkFirmwareUpgradesRollback(ctx, networkId).CreateNetworkFirmwareUpgradesRollback(createNetworkFirmwareUpgradesRollback).Execute()
 
 Rollback a Firmware Upgrade For A Network
 
@@ -356,7 +356,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkFirmwareUpgradesRollback := *openapiclient.NewInlineObject83([]openapiclient.NetworksNetworkIdFirmwareUpgradesRollbacksReasons{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesRollbacksReasons("Category_example", "Comment_example")}) // InlineObject83 | 
+    createNetworkFirmwareUpgradesRollback := *openapiclient.NewInlineObject86([]openapiclient.NetworksNetworkIdFirmwareUpgradesRollbacksReasons{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesRollbacksReasons("Category_example", "Comment_example")}) // InlineObject86 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -365,7 +365,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateNetworkFirmwareUpgradesRollback``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkFirmwareUpgradesRollback`: InlineResponse20038
+    // response from `CreateNetworkFirmwareUpgradesRollback`: InlineResponse20040
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateNetworkFirmwareUpgradesRollback`: %v\n", resp)
 }
 ```
@@ -386,11 +386,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFirmwareUpgradesRollback** | [**InlineObject83**](InlineObject83.md) |  | 
+ **createNetworkFirmwareUpgradesRollback** | [**InlineObject86**](InlineObject86.md) |  | 
 
 ### Return type
 
-[**InlineResponse20038**](InlineResponse20038.md)
+[**InlineResponse20040**](InlineResponse20040.md)
 
 ### Authorization
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkFirmwareUpgradesStagedEvent
 
-> InlineResponse20039 CreateNetworkFirmwareUpgradesStagedEvent(ctx, networkId).CreateNetworkFirmwareUpgradesStagedEvent(createNetworkFirmwareUpgradesStagedEvent).Execute()
+> InlineResponse20041 CreateNetworkFirmwareUpgradesStagedEvent(ctx, networkId).CreateNetworkFirmwareUpgradesStagedEvent(createNetworkFirmwareUpgradesStagedEvent).Execute()
 
 Create a Staged Upgrade Event for a network
 
@@ -428,7 +428,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkFirmwareUpgradesStagedEvent := *openapiclient.NewInlineObject85([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject85 | 
+    createNetworkFirmwareUpgradesStagedEvent := *openapiclient.NewInlineObject88([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject88 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -437,7 +437,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateNetworkFirmwareUpgradesStagedEvent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkFirmwareUpgradesStagedEvent`: InlineResponse20039
+    // response from `CreateNetworkFirmwareUpgradesStagedEvent`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateNetworkFirmwareUpgradesStagedEvent`: %v\n", resp)
 }
 ```
@@ -458,11 +458,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFirmwareUpgradesStagedEvent** | [**InlineObject85**](InlineObject85.md) |  | 
+ **createNetworkFirmwareUpgradesStagedEvent** | [**InlineObject88**](InlineObject88.md) |  | 
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -480,7 +480,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkFirmwareUpgradesStagedGroup
 
-> InlineResponse20040 CreateNetworkFirmwareUpgradesStagedGroup(ctx, networkId).CreateNetworkFirmwareUpgradesStagedGroup(createNetworkFirmwareUpgradesStagedGroup).Execute()
+> InlineResponse20042 CreateNetworkFirmwareUpgradesStagedGroup(ctx, networkId).CreateNetworkFirmwareUpgradesStagedGroup(createNetworkFirmwareUpgradesStagedGroup).Execute()
 
 Create a Staged Upgrade Group for a network
 
@@ -500,7 +500,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject87("Name_example", false) // InlineObject87 | 
+    createNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject90("Name_example", false) // InlineObject90 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -509,7 +509,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20040
+    // response from `CreateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20042
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
 }
 ```
@@ -530,11 +530,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFirmwareUpgradesStagedGroup** | [**InlineObject87**](InlineObject87.md) |  | 
+ **createNetworkFirmwareUpgradesStagedGroup** | [**InlineObject90**](InlineObject90.md) |  | 
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkFloorPlan
 
-> InlineResponse20042 CreateNetworkFloorPlan(ctx, networkId).CreateNetworkFloorPlan(createNetworkFloorPlan).Execute()
+> InlineResponse20044 CreateNetworkFloorPlan(ctx, networkId).CreateNetworkFloorPlan(createNetworkFloorPlan).Execute()
 
 Upload a floor plan
 
@@ -572,7 +572,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkFloorPlan := *openapiclient.NewInlineObject90("Name_example", "ImageContents_example") // InlineObject90 | 
+    createNetworkFloorPlan := *openapiclient.NewInlineObject93("Name_example", "ImageContents_example") // InlineObject93 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -581,7 +581,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateNetworkFloorPlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkFloorPlan`: InlineResponse20042
+    // response from `CreateNetworkFloorPlan`: InlineResponse20044
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateNetworkFloorPlan`: %v\n", resp)
 }
 ```
@@ -602,11 +602,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkFloorPlanRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFloorPlan** | [**InlineObject90**](InlineObject90.md) |  | 
+ **createNetworkFloorPlan** | [**InlineObject93**](InlineObject93.md) |  | 
 
 ### Return type
 
-[**InlineResponse20042**](InlineResponse20042.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -644,7 +644,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkGroupPolicy := *openapiclient.NewInlineObject92("Name_example") // InlineObject92 | 
+    createNetworkGroupPolicy := *openapiclient.NewInlineObject95("Name_example") // InlineObject95 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -674,7 +674,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkGroupPolicyRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkGroupPolicy** | [**InlineObject92**](InlineObject92.md) |  | 
+ **createNetworkGroupPolicy** | [**InlineObject95**](InlineObject95.md) |  | 
 
 ### Return type
 
@@ -696,7 +696,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkMerakiAuthUser
 
-> InlineResponse20045 CreateNetworkMerakiAuthUser(ctx, networkId).CreateNetworkMerakiAuthUser(createNetworkMerakiAuthUser).Execute()
+> InlineResponse20047 CreateNetworkMerakiAuthUser(ctx, networkId).CreateNetworkMerakiAuthUser(createNetworkMerakiAuthUser).Execute()
 
 Authorize a user configured with Meraki Authentication for a network (currently supports 802.1X, splash guest, and client VPN users, and currently, organizations have a 50,000 user cap)
 
@@ -716,7 +716,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkMerakiAuthUser := *openapiclient.NewInlineObject94("Email_example", []openapiclient.NetworksNetworkIdMerakiAuthUsersAuthorizations1{*openapiclient.NewNetworksNetworkIdMerakiAuthUsersAuthorizations1()}) // InlineObject94 | 
+    createNetworkMerakiAuthUser := *openapiclient.NewInlineObject97("Email_example", []openapiclient.NetworksNetworkIdMerakiAuthUsersAuthorizations1{*openapiclient.NewNetworksNetworkIdMerakiAuthUsersAuthorizations1()}) // InlineObject97 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -725,7 +725,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateNetworkMerakiAuthUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkMerakiAuthUser`: InlineResponse20045
+    // response from `CreateNetworkMerakiAuthUser`: InlineResponse20047
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateNetworkMerakiAuthUser`: %v\n", resp)
 }
 ```
@@ -746,11 +746,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkMerakiAuthUse
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkMerakiAuthUser** | [**InlineObject94**](InlineObject94.md) |  | 
+ **createNetworkMerakiAuthUser** | [**InlineObject97**](InlineObject97.md) |  | 
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -788,7 +788,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkMqttBroker := *openapiclient.NewInlineObject96("Name_example", "Host_example", int32(123)) // InlineObject96 | 
+    createNetworkMqttBroker := *openapiclient.NewInlineObject99("Name_example", "Host_example", int32(123)) // InlineObject99 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -818,7 +818,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkMqttBrokerReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkMqttBroker** | [**InlineObject96**](InlineObject96.md) |  | 
+ **createNetworkMqttBroker** | [**InlineObject99**](InlineObject99.md) |  | 
 
 ### Return type
 
@@ -860,7 +860,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkPiiRequest := *openapiclient.NewInlineObject99() // InlineObject99 |  (optional)
+    createNetworkPiiRequest := *openapiclient.NewInlineObject102() // InlineObject102 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -890,7 +890,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkPiiRequestReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkPiiRequest** | [**InlineObject99**](InlineObject99.md) |  | 
+ **createNetworkPiiRequest** | [**InlineObject102**](InlineObject102.md) |  | 
 
 ### Return type
 
@@ -912,7 +912,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkVlanProfile
 
-> InlineResponse20093 CreateNetworkVlanProfile(ctx, networkId).CreateNetworkVlanProfile(createNetworkVlanProfile).Execute()
+> InlineResponse20095 CreateNetworkVlanProfile(ctx, networkId).CreateNetworkVlanProfile(createNetworkVlanProfile).Execute()
 
 Create a VLAN profile for a network
 
@@ -932,7 +932,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkVlanProfile := *openapiclient.NewInlineObject150("Name_example", []openapiclient.NetworksNetworkIdVlanProfilesVlanNames1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanNames1("Name_example", "VlanId_example")}, []openapiclient.NetworksNetworkIdVlanProfilesVlanGroups1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanGroups1("Name_example", "VlanIds_example")}, "Iname_example") // InlineObject150 | 
+    createNetworkVlanProfile := *openapiclient.NewInlineObject153("Name_example", []openapiclient.NetworksNetworkIdVlanProfilesVlanNames1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanNames1("Name_example", "VlanId_example")}, []openapiclient.NetworksNetworkIdVlanProfilesVlanGroups1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanGroups1("Name_example", "VlanIds_example")}, "Iname_example") // InlineObject153 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -941,7 +941,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateNetworkVlanProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkVlanProfile`: InlineResponse20093
+    // response from `CreateNetworkVlanProfile`: InlineResponse20095
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateNetworkVlanProfile`: %v\n", resp)
 }
 ```
@@ -962,11 +962,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkVlanProfileRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkVlanProfile** | [**InlineObject150**](InlineObject150.md) |  | 
+ **createNetworkVlanProfile** | [**InlineObject153**](InlineObject153.md) |  | 
 
 ### Return type
 
-[**InlineResponse20093**](InlineResponse20093.md)
+[**InlineResponse20095**](InlineResponse20095.md)
 
 ### Authorization
 
@@ -984,7 +984,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkWebhooksHttpServer
 
-> InlineResponse20096 CreateNetworkWebhooksHttpServer(ctx, networkId).CreateNetworkWebhooksHttpServer(createNetworkWebhooksHttpServer).Execute()
+> InlineResponse20098 CreateNetworkWebhooksHttpServer(ctx, networkId).CreateNetworkWebhooksHttpServer(createNetworkWebhooksHttpServer).Execute()
 
 Add an HTTP server to a network
 
@@ -1004,7 +1004,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWebhooksHttpServer := *openapiclient.NewInlineObject153("Name_example", "Url_example") // InlineObject153 | 
+    createNetworkWebhooksHttpServer := *openapiclient.NewInlineObject156("Name_example", "Url_example") // InlineObject156 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1013,7 +1013,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWebhooksHttpServer`: InlineResponse20096
+    // response from `CreateNetworkWebhooksHttpServer`: InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -1034,11 +1034,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksHttpS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksHttpServer** | [**InlineObject153**](InlineObject153.md) |  | 
+ **createNetworkWebhooksHttpServer** | [**InlineObject156**](InlineObject156.md) |  | 
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -1056,7 +1056,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkWebhooksPayloadTemplate
 
-> InlineResponse20097 CreateNetworkWebhooksPayloadTemplate(ctx, networkId).CreateNetworkWebhooksPayloadTemplate(createNetworkWebhooksPayloadTemplate).Execute()
+> InlineResponse20099 CreateNetworkWebhooksPayloadTemplate(ctx, networkId).CreateNetworkWebhooksPayloadTemplate(createNetworkWebhooksPayloadTemplate).Execute()
 
 Create a webhook payload template for a network
 
@@ -1076,7 +1076,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject155("Name_example") // InlineObject155 | 
+    createNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject158("Name_example") // InlineObject158 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1085,7 +1085,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateNetworkWebhooksPayloadTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWebhooksPayloadTemplate`: InlineResponse20097
+    // response from `CreateNetworkWebhooksPayloadTemplate`: InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateNetworkWebhooksPayloadTemplate`: %v\n", resp)
 }
 ```
@@ -1106,11 +1106,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksPaylo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksPayloadTemplate** | [**InlineObject155**](InlineObject155.md) |  | 
+ **createNetworkWebhooksPayloadTemplate** | [**InlineObject158**](InlineObject158.md) |  | 
 
 ### Return type
 
-[**InlineResponse20097**](InlineResponse20097.md)
+[**InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 
@@ -1148,7 +1148,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWebhooksWebhookTest := *openapiclient.NewInlineObject157("Url_example") // InlineObject157 | 
+    createNetworkWebhooksWebhookTest := *openapiclient.NewInlineObject160("Url_example") // InlineObject160 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1178,7 +1178,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksWebho
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksWebhookTest** | [**InlineObject157**](InlineObject157.md) |  | 
+ **createNetworkWebhooksWebhookTest** | [**InlineObject160**](InlineObject160.md) |  | 
 
 ### Return type
 
@@ -1200,7 +1200,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationNetwork
 
-> InlineResponse20016 CreateOrganizationNetwork(ctx, organizationId).CreateOrganizationNetwork(createOrganizationNetwork).Execute()
+> InlineResponse20018 CreateOrganizationNetwork(ctx, organizationId).CreateOrganizationNetwork(createOrganizationNetwork).Execute()
 
 Create a network
 
@@ -1220,7 +1220,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationNetwork := *openapiclient.NewInlineObject227("Name_example", []string{"ProductTypes_example"}) // InlineObject227 | 
+    createOrganizationNetwork := *openapiclient.NewInlineObject230("Name_example", []string{"ProductTypes_example"}) // InlineObject230 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1229,7 +1229,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.CreateOrganizationNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationNetwork`: InlineResponse20016
+    // response from `CreateOrganizationNetwork`: InlineResponse20018
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.CreateOrganizationNetwork`: %v\n", resp)
 }
 ```
@@ -1250,11 +1250,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationNetworkR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationNetwork** | [**InlineObject227**](InlineObject227.md) |  | 
+ **createOrganizationNetwork** | [**InlineObject230**](InlineObject230.md) |  | 
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -1272,7 +1272,7 @@ Name | Type | Description  | Notes
 
 ## DeferNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20039 DeferNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
+> InlineResponse20041 DeferNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
 
 Postpone by 1 week all pending staged upgrade stages for a network
 
@@ -1300,7 +1300,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.DeferNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeferNetworkFirmwareUpgradesStagedEvents`: InlineResponse20039
+    // response from `DeferNetworkFirmwareUpgradesStagedEvents`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.DeferNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -1324,7 +1324,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -1481,7 +1481,7 @@ Name | Type | Description  | Notes
 
 ## DeleteNetworkFloorPlan
 
-> InlineResponse20042 DeleteNetworkFloorPlan(ctx, networkId, floorPlanId).Execute()
+> InlineResponse20044 DeleteNetworkFloorPlan(ctx, networkId, floorPlanId).Execute()
 
 Destroy a floor plan
 
@@ -1510,7 +1510,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.DeleteNetworkFloorPlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeleteNetworkFloorPlan`: InlineResponse20042
+    // response from `DeleteNetworkFloorPlan`: InlineResponse20044
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.DeleteNetworkFloorPlan`: %v\n", resp)
 }
 ```
@@ -1536,7 +1536,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20042**](InlineResponse20042.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -2053,7 +2053,7 @@ Name | Type | Description  | Notes
 
 ## GetNetwork
 
-> InlineResponse20016 GetNetwork(ctx, networkId).Execute()
+> InlineResponse20018 GetNetwork(ctx, networkId).Execute()
 
 Return a network
 
@@ -2081,7 +2081,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetwork`: InlineResponse20016
+    // response from `GetNetwork`: InlineResponse20018
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetwork`: %v\n", resp)
 }
 ```
@@ -2105,7 +2105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -2123,7 +2123,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAlertsHistory
 
-> []InlineResponse20017 GetNetworkAlertsHistory(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20019 GetNetworkAlertsHistory(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the alert history for this network
 
@@ -2154,7 +2154,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkAlertsHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAlertsHistory`: []InlineResponse20017
+    // response from `GetNetworkAlertsHistory`: []InlineResponse20019
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkAlertsHistory`: %v\n", resp)
 }
 ```
@@ -2181,7 +2181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20017**](InlineResponse20017.md)
+[**[]InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -2428,7 +2428,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClient
 
-> InlineResponse20034 GetNetworkClient(ctx, networkId, clientId).Execute()
+> InlineResponse20036 GetNetworkClient(ctx, networkId, clientId).Execute()
 
 Return the client associated with the given identifier
 
@@ -2457,7 +2457,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClient`: InlineResponse20034
+    // response from `GetNetworkClient`: InlineResponse20036
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkClient`: %v\n", resp)
 }
 ```
@@ -2483,7 +2483,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20034**](InlineResponse20034.md)
+[**InlineResponse20036**](InlineResponse20036.md)
 
 ### Authorization
 
@@ -2799,7 +2799,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClients
 
-> InlineResponse20033 GetNetworkClients(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Statuses(statuses).Ip(ip).Ip6(ip6).Ip6Local(ip6Local).Mac(mac).Os(os).PskGroup(pskGroup).Description(description).Vlan(vlan).NamedVlan(namedVlan).RecentDeviceConnections(recentDeviceConnections).Execute()
+> InlineResponse20035 GetNetworkClients(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Statuses(statuses).Ip(ip).Ip6(ip6).Ip6Local(ip6Local).Mac(mac).Os(os).PskGroup(pskGroup).Description(description).Vlan(vlan).NamedVlan(namedVlan).RecentDeviceConnections(recentDeviceConnections).Execute()
 
 List the clients that have used this network in the timespan
 
@@ -2843,7 +2843,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkClients``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClients`: InlineResponse20033
+    // response from `GetNetworkClients`: InlineResponse20035
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkClients`: %v\n", resp)
 }
 ```
@@ -2883,7 +2883,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20033**](InlineResponse20033.md)
+[**InlineResponse20035**](InlineResponse20035.md)
 
 ### Authorization
 
@@ -3303,7 +3303,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkEvents
 
-> InlineResponse20035 GetNetworkEvents(ctx, networkId).ProductType(productType).IncludedEventTypes(includedEventTypes).ExcludedEventTypes(excludedEventTypes).DeviceMac(deviceMac).DeviceSerial(deviceSerial).DeviceName(deviceName).ClientIp(clientIp).ClientMac(clientMac).ClientName(clientName).SmDeviceMac(smDeviceMac).SmDeviceName(smDeviceName).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse20037 GetNetworkEvents(ctx, networkId).ProductType(productType).IncludedEventTypes(includedEventTypes).ExcludedEventTypes(excludedEventTypes).DeviceMac(deviceMac).DeviceSerial(deviceSerial).DeviceName(deviceName).ClientIp(clientIp).ClientMac(clientMac).ClientName(clientName).SmDeviceMac(smDeviceMac).SmDeviceName(smDeviceName).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the events for the network
 
@@ -3345,7 +3345,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkEvents`: InlineResponse20035
+    // response from `GetNetworkEvents`: InlineResponse20037
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkEvents`: %v\n", resp)
 }
 ```
@@ -3383,7 +3383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20035**](InlineResponse20035.md)
+[**InlineResponse20037**](InlineResponse20037.md)
 
 ### Authorization
 
@@ -3401,7 +3401,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkEventsEventTypes
 
-> []InlineResponse20036 GetNetworkEventsEventTypes(ctx, networkId).Execute()
+> []InlineResponse20038 GetNetworkEventsEventTypes(ctx, networkId).Execute()
 
 List the event type to human-readable description
 
@@ -3429,7 +3429,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkEventsEventTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkEventsEventTypes`: []InlineResponse20036
+    // response from `GetNetworkEventsEventTypes`: []InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkEventsEventTypes`: %v\n", resp)
 }
 ```
@@ -3453,7 +3453,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20036**](InlineResponse20036.md)
+[**[]InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -3471,7 +3471,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgrades
 
-> InlineResponse20037 GetNetworkFirmwareUpgrades(ctx, networkId).Execute()
+> InlineResponse20039 GetNetworkFirmwareUpgrades(ctx, networkId).Execute()
 
 Get firmware upgrade information for a network
 
@@ -3499,7 +3499,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkFirmwareUpgrades``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgrades`: InlineResponse20037
+    // response from `GetNetworkFirmwareUpgrades`: InlineResponse20039
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkFirmwareUpgrades`: %v\n", resp)
 }
 ```
@@ -3523,7 +3523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20039**](InlineResponse20039.md)
 
 ### Authorization
 
@@ -3541,7 +3541,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20039 GetNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
+> InlineResponse20041 GetNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
 
 Get the Staged Upgrade Event from a network
 
@@ -3569,7 +3569,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedEvents`: InlineResponse20039
+    // response from `GetNetworkFirmwareUpgradesStagedEvents`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -3593,7 +3593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -3611,7 +3611,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedGroup
 
-> InlineResponse20040 GetNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).Execute()
+> InlineResponse20042 GetNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).Execute()
 
 Get a Staged Upgrade Group from a network
 
@@ -3640,7 +3640,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedGroup`: InlineResponse20040
+    // response from `GetNetworkFirmwareUpgradesStagedGroup`: InlineResponse20042
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
 }
 ```
@@ -3666,7 +3666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -3684,7 +3684,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedGroups
 
-> []InlineResponse20040 GetNetworkFirmwareUpgradesStagedGroups(ctx, networkId).Execute()
+> []InlineResponse20042 GetNetworkFirmwareUpgradesStagedGroups(ctx, networkId).Execute()
 
 List of Staged Upgrade Groups in a network
 
@@ -3712,7 +3712,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkFirmwareUpgradesStagedGroups``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedGroups`: []InlineResponse20040
+    // response from `GetNetworkFirmwareUpgradesStagedGroups`: []InlineResponse20042
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkFirmwareUpgradesStagedGroups`: %v\n", resp)
 }
 ```
@@ -3736,7 +3736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20040**](InlineResponse20040.md)
+[**[]InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -3754,7 +3754,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedStages
 
-> []InlineResponse20041 GetNetworkFirmwareUpgradesStagedStages(ctx, networkId).Execute()
+> []InlineResponse20043 GetNetworkFirmwareUpgradesStagedStages(ctx, networkId).Execute()
 
 Order of Staged Upgrade Groups in a network
 
@@ -3782,7 +3782,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkFirmwareUpgradesStagedStages``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedStages`: []InlineResponse20041
+    // response from `GetNetworkFirmwareUpgradesStagedStages`: []InlineResponse20043
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkFirmwareUpgradesStagedStages`: %v\n", resp)
 }
 ```
@@ -3806,7 +3806,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20041**](InlineResponse20041.md)
+[**[]InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 
@@ -3824,7 +3824,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFloorPlan
 
-> InlineResponse20042 GetNetworkFloorPlan(ctx, networkId, floorPlanId).Execute()
+> InlineResponse20044 GetNetworkFloorPlan(ctx, networkId, floorPlanId).Execute()
 
 Find a floor plan by ID
 
@@ -3853,7 +3853,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkFloorPlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFloorPlan`: InlineResponse20042
+    // response from `GetNetworkFloorPlan`: InlineResponse20044
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkFloorPlan`: %v\n", resp)
 }
 ```
@@ -3879,7 +3879,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20042**](InlineResponse20042.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -3897,7 +3897,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFloorPlans
 
-> []InlineResponse20042 GetNetworkFloorPlans(ctx, networkId).Execute()
+> []InlineResponse20044 GetNetworkFloorPlans(ctx, networkId).Execute()
 
 List the floor plans that belong to your network
 
@@ -3925,7 +3925,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkFloorPlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFloorPlans`: []InlineResponse20042
+    // response from `GetNetworkFloorPlans`: []InlineResponse20044
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkFloorPlans`: %v\n", resp)
 }
 ```
@@ -3949,7 +3949,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20042**](InlineResponse20042.md)
+[**[]InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -4110,7 +4110,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkHealthAlerts
 
-> []InlineResponse20043 GetNetworkHealthAlerts(ctx, networkId).Execute()
+> []InlineResponse20045 GetNetworkHealthAlerts(ctx, networkId).Execute()
 
 Return all global alerts on this network
 
@@ -4138,7 +4138,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkHealthAlerts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkHealthAlerts`: []InlineResponse20043
+    // response from `GetNetworkHealthAlerts`: []InlineResponse20045
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkHealthAlerts`: %v\n", resp)
 }
 ```
@@ -4162,7 +4162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20043**](InlineResponse20043.md)
+[**[]InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -4180,7 +4180,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkMerakiAuthUser
 
-> InlineResponse20045 GetNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).Execute()
+> InlineResponse20047 GetNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).Execute()
 
 Return the Meraki Auth splash guest, RADIUS, or client VPN user
 
@@ -4209,7 +4209,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkMerakiAuthUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkMerakiAuthUser`: InlineResponse20045
+    // response from `GetNetworkMerakiAuthUser`: InlineResponse20047
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkMerakiAuthUser`: %v\n", resp)
 }
 ```
@@ -4235,7 +4235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -4253,7 +4253,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkMerakiAuthUsers
 
-> []InlineResponse20045 GetNetworkMerakiAuthUsers(ctx, networkId).Execute()
+> []InlineResponse20047 GetNetworkMerakiAuthUsers(ctx, networkId).Execute()
 
 List the users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a MX network)
 
@@ -4281,7 +4281,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkMerakiAuthUsers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkMerakiAuthUsers`: []InlineResponse20045
+    // response from `GetNetworkMerakiAuthUsers`: []InlineResponse20047
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkMerakiAuthUsers`: %v\n", resp)
 }
 ```
@@ -4305,7 +4305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20045**](InlineResponse20045.md)
+[**[]InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -5009,7 +5009,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPoliciesByClient
 
-> []InlineResponse20046 GetNetworkPoliciesByClient(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).Execute()
+> []InlineResponse20048 GetNetworkPoliciesByClient(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).Execute()
 
 Get policies for all clients with policies
 
@@ -5042,7 +5042,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkPoliciesByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPoliciesByClient`: []InlineResponse20046
+    // response from `GetNetworkPoliciesByClient`: []InlineResponse20048
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkPoliciesByClient`: %v\n", resp)
 }
 ```
@@ -5071,7 +5071,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20046**](InlineResponse20046.md)
+[**[]InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 
@@ -5089,7 +5089,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSettings
 
-> InlineResponse20052 GetNetworkSettings(ctx, networkId).Execute()
+> InlineResponse20054 GetNetworkSettings(ctx, networkId).Execute()
 
 Return the settings for a network
 
@@ -5117,7 +5117,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSettings`: InlineResponse20052
+    // response from `GetNetworkSettings`: InlineResponse20054
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkSettings`: %v\n", resp)
 }
 ```
@@ -5141,7 +5141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20052**](InlineResponse20052.md)
+[**InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 
@@ -5305,7 +5305,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSyslogServers
 
-> InlineResponse20092 GetNetworkSyslogServers(ctx, networkId).Execute()
+> InlineResponse20094 GetNetworkSyslogServers(ctx, networkId).Execute()
 
 List the syslog servers for a network
 
@@ -5333,7 +5333,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkSyslogServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSyslogServers`: InlineResponse20092
+    // response from `GetNetworkSyslogServers`: InlineResponse20094
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkSyslogServers`: %v\n", resp)
 }
 ```
@@ -5357,7 +5357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20092**](InlineResponse20092.md)
+[**InlineResponse20094**](InlineResponse20094.md)
 
 ### Authorization
 
@@ -5731,7 +5731,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkVlanProfile
 
-> InlineResponse20093 GetNetworkVlanProfile(ctx, networkId, iname).Execute()
+> InlineResponse20095 GetNetworkVlanProfile(ctx, networkId, iname).Execute()
 
 Get an existing VLAN profile of a network
 
@@ -5760,7 +5760,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkVlanProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfile`: InlineResponse20093
+    // response from `GetNetworkVlanProfile`: InlineResponse20095
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkVlanProfile`: %v\n", resp)
 }
 ```
@@ -5786,7 +5786,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20093**](InlineResponse20093.md)
+[**InlineResponse20095**](InlineResponse20095.md)
 
 ### Authorization
 
@@ -5804,7 +5804,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkVlanProfiles
 
-> []InlineResponse20093 GetNetworkVlanProfiles(ctx, networkId).Execute()
+> []InlineResponse20095 GetNetworkVlanProfiles(ctx, networkId).Execute()
 
 List VLAN profiles for a network
 
@@ -5832,7 +5832,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkVlanProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfiles`: []InlineResponse20093
+    // response from `GetNetworkVlanProfiles`: []InlineResponse20095
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkVlanProfiles`: %v\n", resp)
 }
 ```
@@ -5856,7 +5856,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20093**](InlineResponse20093.md)
+[**[]InlineResponse20095**](InlineResponse20095.md)
 
 ### Authorization
 
@@ -5874,7 +5874,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkVlanProfilesAssignmentsByDevice
 
-> []InlineResponse20094 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
+> []InlineResponse20096 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
 
 Get the assigned VLAN Profiles for devices in a network
 
@@ -5908,7 +5908,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkVlanProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse20094
+    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse20096
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkVlanProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -5938,7 +5938,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20094**](InlineResponse20094.md)
+[**[]InlineResponse20096**](InlineResponse20096.md)
 
 ### Authorization
 
@@ -5956,7 +5956,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksHttpServer
 
-> InlineResponse20096 GetNetworkWebhooksHttpServer(ctx, networkId, httpServerId).Execute()
+> InlineResponse20098 GetNetworkWebhooksHttpServer(ctx, networkId, httpServerId).Execute()
 
 Return an HTTP server for a network
 
@@ -5985,7 +5985,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksHttpServer`: InlineResponse20096
+    // response from `GetNetworkWebhooksHttpServer`: InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -6011,7 +6011,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -6029,7 +6029,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksHttpServers
 
-> []InlineResponse20096 GetNetworkWebhooksHttpServers(ctx, networkId).Execute()
+> []InlineResponse20098 GetNetworkWebhooksHttpServers(ctx, networkId).Execute()
 
 List the HTTP servers for a network
 
@@ -6057,7 +6057,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkWebhooksHttpServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksHttpServers`: []InlineResponse20096
+    // response from `GetNetworkWebhooksHttpServers`: []InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkWebhooksHttpServers`: %v\n", resp)
 }
 ```
@@ -6081,7 +6081,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20096**](InlineResponse20096.md)
+[**[]InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -6099,7 +6099,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksPayloadTemplate
 
-> InlineResponse20097 GetNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).Execute()
+> InlineResponse20099 GetNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).Execute()
 
 Get the webhook payload template for a network
 
@@ -6128,7 +6128,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkWebhooksPayloadTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksPayloadTemplate`: InlineResponse20097
+    // response from `GetNetworkWebhooksPayloadTemplate`: InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkWebhooksPayloadTemplate`: %v\n", resp)
 }
 ```
@@ -6154,7 +6154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20097**](InlineResponse20097.md)
+[**InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 
@@ -6172,7 +6172,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksPayloadTemplates
 
-> []InlineResponse20097 GetNetworkWebhooksPayloadTemplates(ctx, networkId).Execute()
+> []InlineResponse20099 GetNetworkWebhooksPayloadTemplates(ctx, networkId).Execute()
 
 List the webhook payload templates for a network
 
@@ -6200,7 +6200,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetNetworkWebhooksPayloadTemplates``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksPayloadTemplates`: []InlineResponse20097
+    // response from `GetNetworkWebhooksPayloadTemplates`: []InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetNetworkWebhooksPayloadTemplates`: %v\n", resp)
 }
 ```
@@ -6224,7 +6224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20097**](InlineResponse20097.md)
+[**[]InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 
@@ -6315,7 +6315,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryOnboardingCloudMonitoringNetworks
 
-> []InlineResponse20016 GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ctx, organizationId).DeviceType(deviceType).Search(search).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20018 GetOrganizationInventoryOnboardingCloudMonitoringNetworks(ctx, organizationId).DeviceType(deviceType).Search(search).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns list of networks eligible for adding cloud monitored device
 
@@ -6348,7 +6348,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationInventoryOnboardingCloudMonitoringNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryOnboardingCloudMonitoringNetworks`: []InlineResponse20016
+    // response from `GetOrganizationInventoryOnboardingCloudMonitoringNetworks`: []InlineResponse20018
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationInventoryOnboardingCloudMonitoringNetworks`: %v\n", resp)
 }
 ```
@@ -6377,7 +6377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20016**](InlineResponse20016.md)
+[**[]InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -6395,7 +6395,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationNetworks
 
-> []InlineResponse20016 GetOrganizationNetworks(ctx, organizationId).ConfigTemplateId(configTemplateId).IsBoundToConfigTemplate(isBoundToConfigTemplate).Tags(tags).TagsFilterType(tagsFilterType).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20018 GetOrganizationNetworks(ctx, organizationId).ConfigTemplateId(configTemplateId).IsBoundToConfigTemplate(isBoundToConfigTemplate).Tags(tags).TagsFilterType(tagsFilterType).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the networks that the user has privileges on in an organization
 
@@ -6430,7 +6430,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.GetOrganizationNetworks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationNetworks`: []InlineResponse20016
+    // response from `GetOrganizationNetworks`: []InlineResponse20018
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.GetOrganizationNetworks`: %v\n", resp)
 }
 ```
@@ -6461,7 +6461,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20016**](InlineResponse20016.md)
+[**[]InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -6499,7 +6499,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    provisionNetworkClients := *openapiclient.NewInlineObject76([]openapiclient.NetworksNetworkIdClientsProvisionClients{*openapiclient.NewNetworksNetworkIdClientsProvisionClients("Mac_example")}, "DevicePolicy_example") // InlineObject76 | 
+    provisionNetworkClients := *openapiclient.NewInlineObject79([]openapiclient.NetworksNetworkIdClientsProvisionClients{*openapiclient.NewNetworksNetworkIdClientsProvisionClients("Mac_example")}, "DevicePolicy_example") // InlineObject79 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6529,7 +6529,7 @@ Other parameters are passed through a pointer to a apiProvisionNetworkClientsReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **provisionNetworkClients** | [**InlineObject76**](InlineObject76.md) |  | 
+ **provisionNetworkClients** | [**InlineObject79**](InlineObject79.md) |  | 
 
 ### Return type
 
@@ -6551,7 +6551,7 @@ Name | Type | Description  | Notes
 
 ## ReassignNetworkVlanProfilesAssignments
 
-> InlineResponse20095 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
+> InlineResponse20097 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
 
 Update the assigned VLAN Profile for devices in a network
 
@@ -6571,7 +6571,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    reassignNetworkVlanProfilesAssignments := *openapiclient.NewInlineObject151([]string{"Serials_example"}, []string{"StackIds_example"}) // InlineObject151 | 
+    reassignNetworkVlanProfilesAssignments := *openapiclient.NewInlineObject154([]string{"Serials_example"}, []string{"StackIds_example"}) // InlineObject154 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6580,7 +6580,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.ReassignNetworkVlanProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse20095
+    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse20097
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.ReassignNetworkVlanProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -6601,11 +6601,11 @@ Other parameters are passed through a pointer to a apiReassignNetworkVlanProfile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **reassignNetworkVlanProfilesAssignments** | [**InlineObject151**](InlineObject151.md) |  | 
+ **reassignNetworkVlanProfilesAssignments** | [**InlineObject154**](InlineObject154.md) |  | 
 
 ### Return type
 
-[**InlineResponse20095**](InlineResponse20095.md)
+[**InlineResponse20097**](InlineResponse20097.md)
 
 ### Authorization
 
@@ -6643,7 +6643,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    removeNetworkDevices := *openapiclient.NewInlineObject81("Serial_example") // InlineObject81 | 
+    removeNetworkDevices := *openapiclient.NewInlineObject84("Serial_example") // InlineObject84 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6671,7 +6671,7 @@ Other parameters are passed through a pointer to a apiRemoveNetworkDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **removeNetworkDevices** | [**InlineObject81**](InlineObject81.md) |  | 
+ **removeNetworkDevices** | [**InlineObject84**](InlineObject84.md) |  | 
 
 ### Return type
 
@@ -6693,7 +6693,7 @@ Name | Type | Description  | Notes
 
 ## RollbacksNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20039 RollbacksNetworkFirmwareUpgradesStagedEvents(ctx, networkId).RollbacksNetworkFirmwareUpgradesStagedEvents(rollbacksNetworkFirmwareUpgradesStagedEvents).Execute()
+> InlineResponse20041 RollbacksNetworkFirmwareUpgradesStagedEvents(ctx, networkId).RollbacksNetworkFirmwareUpgradesStagedEvents(rollbacksNetworkFirmwareUpgradesStagedEvents).Execute()
 
 Rollback a Staged Upgrade Event for a network
 
@@ -6713,7 +6713,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    rollbacksNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject86([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject86 | 
+    rollbacksNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject89([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject89 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6722,7 +6722,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.RollbacksNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RollbacksNetworkFirmwareUpgradesStagedEvents`: InlineResponse20039
+    // response from `RollbacksNetworkFirmwareUpgradesStagedEvents`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.RollbacksNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -6743,11 +6743,11 @@ Other parameters are passed through a pointer to a apiRollbacksNetworkFirmwareUp
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **rollbacksNetworkFirmwareUpgradesStagedEvents** | [**InlineObject86**](InlineObject86.md) |  | 
+ **rollbacksNetworkFirmwareUpgradesStagedEvents** | [**InlineObject89**](InlineObject89.md) |  | 
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -6765,7 +6765,7 @@ Name | Type | Description  | Notes
 
 ## SplitNetwork
 
-> InlineResponse20075 SplitNetwork(ctx, networkId).Execute()
+> InlineResponse20077 SplitNetwork(ctx, networkId).Execute()
 
 Split a combined network into individual networks for each type of device
 
@@ -6793,7 +6793,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.SplitNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SplitNetwork`: InlineResponse20075
+    // response from `SplitNetwork`: InlineResponse20077
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.SplitNetwork`: %v\n", resp)
 }
 ```
@@ -6817,7 +6817,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20075**](InlineResponse20075.md)
+[**InlineResponse20077**](InlineResponse20077.md)
 
 ### Authorization
 
@@ -6835,7 +6835,7 @@ Name | Type | Description  | Notes
 
 ## UnbindNetwork
 
-> InlineResponse20016 UnbindNetwork(ctx, networkId).UnbindNetwork(unbindNetwork).Execute()
+> InlineResponse20018 UnbindNetwork(ctx, networkId).UnbindNetwork(unbindNetwork).Execute()
 
 Unbind a network from a template.
 
@@ -6855,7 +6855,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    unbindNetwork := *openapiclient.NewInlineObject149() // InlineObject149 |  (optional)
+    unbindNetwork := *openapiclient.NewInlineObject152() // InlineObject152 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6864,7 +6864,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UnbindNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UnbindNetwork`: InlineResponse20016
+    // response from `UnbindNetwork`: InlineResponse20018
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UnbindNetwork`: %v\n", resp)
 }
 ```
@@ -6885,11 +6885,11 @@ Other parameters are passed through a pointer to a apiUnbindNetworkRequest struc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **unbindNetwork** | [**InlineObject149**](InlineObject149.md) |  | 
+ **unbindNetwork** | [**InlineObject152**](InlineObject152.md) |  | 
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -6907,7 +6907,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetwork
 
-> InlineResponse20016 UpdateNetwork(ctx, networkId).UpdateNetwork(updateNetwork).Execute()
+> InlineResponse20018 UpdateNetwork(ctx, networkId).UpdateNetwork(updateNetwork).Execute()
 
 Update a network
 
@@ -6927,7 +6927,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetwork := *openapiclient.NewInlineObject28() // InlineObject28 |  (optional)
+    updateNetwork := *openapiclient.NewInlineObject31() // InlineObject31 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6936,7 +6936,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetwork`: InlineResponse20016
+    // response from `UpdateNetwork`: InlineResponse20018
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetwork`: %v\n", resp)
 }
 ```
@@ -6957,11 +6957,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkRequest struc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetwork** | [**InlineObject28**](InlineObject28.md) |  | 
+ **updateNetwork** | [**InlineObject31**](InlineObject31.md) |  | 
 
 ### Return type
 
-[**InlineResponse20016**](InlineResponse20016.md)
+[**InlineResponse20018**](InlineResponse20018.md)
 
 ### Authorization
 
@@ -6999,7 +6999,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkAlertsSettings := *openapiclient.NewInlineObject29() // InlineObject29 |  (optional)
+    updateNetworkAlertsSettings := *openapiclient.NewInlineObject32() // InlineObject32 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7029,7 +7029,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkAlertsSetting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkAlertsSettings** | [**InlineObject29**](InlineObject29.md) |  | 
+ **updateNetworkAlertsSettings** | [**InlineObject32**](InlineObject32.md) |  | 
 
 ### Return type
 
@@ -7072,7 +7072,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clientId := "clientId_example" // string | Client ID
-    updateNetworkClientPolicy := *openapiclient.NewInlineObject77("DevicePolicy_example") // InlineObject77 | 
+    updateNetworkClientPolicy := *openapiclient.NewInlineObject80("DevicePolicy_example") // InlineObject80 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7104,7 +7104,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkClientPolicy** | [**InlineObject77**](InlineObject77.md) |  | 
+ **updateNetworkClientPolicy** | [**InlineObject80**](InlineObject80.md) |  | 
 
 ### Return type
 
@@ -7147,7 +7147,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clientId := "clientId_example" // string | Client ID
-    updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject78(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject78 | 
+    updateNetworkClientSplashAuthorizationStatus := *openapiclient.NewInlineObject81(*openapiclient.NewNetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids()) // InlineObject81 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7179,7 +7179,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkClientSplashAuthorizationStatus** | [**InlineObject78**](InlineObject78.md) |  | 
+ **updateNetworkClientSplashAuthorizationStatus** | [**InlineObject81**](InlineObject81.md) |  | 
 
 ### Return type
 
@@ -7201,7 +7201,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgrades
 
-> InlineResponse20037 UpdateNetworkFirmwareUpgrades(ctx, networkId).UpdateNetworkFirmwareUpgrades(updateNetworkFirmwareUpgrades).Execute()
+> InlineResponse20039 UpdateNetworkFirmwareUpgrades(ctx, networkId).UpdateNetworkFirmwareUpgrades(updateNetworkFirmwareUpgrades).Execute()
 
 Update firmware upgrade information for a network
 
@@ -7221,7 +7221,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkFirmwareUpgrades := *openapiclient.NewInlineObject82() // InlineObject82 |  (optional)
+    updateNetworkFirmwareUpgrades := *openapiclient.NewInlineObject85() // InlineObject85 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7230,7 +7230,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkFirmwareUpgrades``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgrades`: InlineResponse20037
+    // response from `UpdateNetworkFirmwareUpgrades`: InlineResponse20039
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkFirmwareUpgrades`: %v\n", resp)
 }
 ```
@@ -7251,11 +7251,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkFirmwareUpgrades** | [**InlineObject82**](InlineObject82.md) |  | 
+ **updateNetworkFirmwareUpgrades** | [**InlineObject85**](InlineObject85.md) |  | 
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20039**](InlineResponse20039.md)
 
 ### Authorization
 
@@ -7273,7 +7273,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20039 UpdateNetworkFirmwareUpgradesStagedEvents(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedEvents(updateNetworkFirmwareUpgradesStagedEvents).Execute()
+> InlineResponse20041 UpdateNetworkFirmwareUpgradesStagedEvents(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedEvents(updateNetworkFirmwareUpgradesStagedEvents).Execute()
 
 Update the Staged Upgrade Event for a network
 
@@ -7293,7 +7293,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject84([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject84 | 
+    updateNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject87([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject87 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7302,7 +7302,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedEvents`: InlineResponse20039
+    // response from `UpdateNetworkFirmwareUpgradesStagedEvents`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -7323,11 +7323,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkFirmwareUpgradesStagedEvents** | [**InlineObject84**](InlineObject84.md) |  | 
+ **updateNetworkFirmwareUpgradesStagedEvents** | [**InlineObject87**](InlineObject87.md) |  | 
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -7345,7 +7345,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedGroup
 
-> InlineResponse20040 UpdateNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).UpdateNetworkFirmwareUpgradesStagedGroup(updateNetworkFirmwareUpgradesStagedGroup).Execute()
+> InlineResponse20042 UpdateNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).UpdateNetworkFirmwareUpgradesStagedGroup(updateNetworkFirmwareUpgradesStagedGroup).Execute()
 
 Update a Staged Upgrade Group for a network
 
@@ -7366,7 +7366,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     groupId := "groupId_example" // string | Group ID
-    updateNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject88("Name_example", false) // InlineObject88 | 
+    updateNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject91("Name_example", false) // InlineObject91 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7375,7 +7375,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20040
+    // response from `UpdateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20042
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
 }
 ```
@@ -7398,11 +7398,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkFirmwareUpgradesStagedGroup** | [**InlineObject88**](InlineObject88.md) |  | 
+ **updateNetworkFirmwareUpgradesStagedGroup** | [**InlineObject91**](InlineObject91.md) |  | 
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -7420,7 +7420,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedStages
 
-> []InlineResponse20041 UpdateNetworkFirmwareUpgradesStagedStages(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedStages(updateNetworkFirmwareUpgradesStagedStages).Execute()
+> []InlineResponse20043 UpdateNetworkFirmwareUpgradesStagedStages(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedStages(updateNetworkFirmwareUpgradesStagedStages).Execute()
 
 Assign Staged Upgrade Group order in the sequence.
 
@@ -7440,7 +7440,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkFirmwareUpgradesStagedStages := *openapiclient.NewInlineObject89() // InlineObject89 |  (optional)
+    updateNetworkFirmwareUpgradesStagedStages := *openapiclient.NewInlineObject92() // InlineObject92 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7449,7 +7449,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkFirmwareUpgradesStagedStages``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedStages`: []InlineResponse20041
+    // response from `UpdateNetworkFirmwareUpgradesStagedStages`: []InlineResponse20043
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkFirmwareUpgradesStagedStages`: %v\n", resp)
 }
 ```
@@ -7470,11 +7470,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkFirmwareUpgradesStagedStages** | [**InlineObject89**](InlineObject89.md) |  | 
+ **updateNetworkFirmwareUpgradesStagedStages** | [**InlineObject92**](InlineObject92.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse20041**](InlineResponse20041.md)
+[**[]InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 
@@ -7492,7 +7492,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFloorPlan
 
-> InlineResponse20042 UpdateNetworkFloorPlan(ctx, networkId, floorPlanId).UpdateNetworkFloorPlan(updateNetworkFloorPlan).Execute()
+> InlineResponse20044 UpdateNetworkFloorPlan(ctx, networkId, floorPlanId).UpdateNetworkFloorPlan(updateNetworkFloorPlan).Execute()
 
 Update a floor plan's geolocation and other meta data
 
@@ -7513,7 +7513,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     floorPlanId := "floorPlanId_example" // string | Floor plan ID
-    updateNetworkFloorPlan := *openapiclient.NewInlineObject91() // InlineObject91 |  (optional)
+    updateNetworkFloorPlan := *openapiclient.NewInlineObject94() // InlineObject94 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7522,7 +7522,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkFloorPlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFloorPlan`: InlineResponse20042
+    // response from `UpdateNetworkFloorPlan`: InlineResponse20044
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkFloorPlan`: %v\n", resp)
 }
 ```
@@ -7545,11 +7545,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkFloorPlan** | [**InlineObject91**](InlineObject91.md) |  | 
+ **updateNetworkFloorPlan** | [**InlineObject94**](InlineObject94.md) |  | 
 
 ### Return type
 
-[**InlineResponse20042**](InlineResponse20042.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 
@@ -7588,7 +7588,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     groupPolicyId := "groupPolicyId_example" // string | Group policy ID
-    updateNetworkGroupPolicy := *openapiclient.NewInlineObject93() // InlineObject93 |  (optional)
+    updateNetworkGroupPolicy := *openapiclient.NewInlineObject96() // InlineObject96 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7620,7 +7620,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkGroupPolicy** | [**InlineObject93**](InlineObject93.md) |  | 
+ **updateNetworkGroupPolicy** | [**InlineObject96**](InlineObject96.md) |  | 
 
 ### Return type
 
@@ -7642,7 +7642,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkMerakiAuthUser
 
-> InlineResponse20045 UpdateNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).UpdateNetworkMerakiAuthUser(updateNetworkMerakiAuthUser).Execute()
+> InlineResponse20047 UpdateNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).UpdateNetworkMerakiAuthUser(updateNetworkMerakiAuthUser).Execute()
 
 Update a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be updated)
 
@@ -7663,7 +7663,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     merakiAuthUserId := "merakiAuthUserId_example" // string | Meraki auth user ID
-    updateNetworkMerakiAuthUser := *openapiclient.NewInlineObject95() // InlineObject95 |  (optional)
+    updateNetworkMerakiAuthUser := *openapiclient.NewInlineObject98() // InlineObject98 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7672,7 +7672,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkMerakiAuthUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkMerakiAuthUser`: InlineResponse20045
+    // response from `UpdateNetworkMerakiAuthUser`: InlineResponse20047
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkMerakiAuthUser`: %v\n", resp)
 }
 ```
@@ -7695,11 +7695,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkMerakiAuthUser** | [**InlineObject95**](InlineObject95.md) |  | 
+ **updateNetworkMerakiAuthUser** | [**InlineObject98**](InlineObject98.md) |  | 
 
 ### Return type
 
-[**InlineResponse20045**](InlineResponse20045.md)
+[**InlineResponse20047**](InlineResponse20047.md)
 
 ### Authorization
 
@@ -7738,7 +7738,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     mqttBrokerId := "mqttBrokerId_example" // string | Mqtt broker ID
-    updateNetworkMqttBroker := *openapiclient.NewInlineObject97() // InlineObject97 |  (optional)
+    updateNetworkMqttBroker := *openapiclient.NewInlineObject100() // InlineObject100 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7770,7 +7770,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkMqttBroker** | [**InlineObject97**](InlineObject97.md) |  | 
+ **updateNetworkMqttBroker** | [**InlineObject100**](InlineObject100.md) |  | 
 
 ### Return type
 
@@ -7812,7 +7812,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkNetflow := *openapiclient.NewInlineObject98() // InlineObject98 |  (optional)
+    updateNetworkNetflow := *openapiclient.NewInlineObject101() // InlineObject101 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7842,7 +7842,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkNetflowReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkNetflow** | [**InlineObject98**](InlineObject98.md) |  | 
+ **updateNetworkNetflow** | [**InlineObject101**](InlineObject101.md) |  | 
 
 ### Return type
 
@@ -7864,7 +7864,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSettings
 
-> InlineResponse20052 UpdateNetworkSettings(ctx, networkId).UpdateNetworkSettings(updateNetworkSettings).Execute()
+> InlineResponse20054 UpdateNetworkSettings(ctx, networkId).UpdateNetworkSettings(updateNetworkSettings).Execute()
 
 Update the settings for a network
 
@@ -7884,7 +7884,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSettings := *openapiclient.NewInlineObject103() // InlineObject103 |  (optional)
+    updateNetworkSettings := *openapiclient.NewInlineObject106() // InlineObject106 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7893,7 +7893,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSettings`: InlineResponse20052
+    // response from `UpdateNetworkSettings`: InlineResponse20054
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkSettings`: %v\n", resp)
 }
 ```
@@ -7914,11 +7914,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSettingsReque
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSettings** | [**InlineObject103**](InlineObject103.md) |  | 
+ **updateNetworkSettings** | [**InlineObject106**](InlineObject106.md) |  | 
 
 ### Return type
 
-[**InlineResponse20052**](InlineResponse20052.md)
+[**InlineResponse20054**](InlineResponse20054.md)
 
 ### Authorization
 
@@ -7956,7 +7956,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSnmp := *openapiclient.NewInlineObject115() // InlineObject115 |  (optional)
+    updateNetworkSnmp := *openapiclient.NewInlineObject118() // InlineObject118 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7986,7 +7986,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSnmpRequest s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSnmp** | [**InlineObject115**](InlineObject115.md) |  | 
+ **updateNetworkSnmp** | [**InlineObject118**](InlineObject118.md) |  | 
 
 ### Return type
 
@@ -8008,7 +8008,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSyslogServers
 
-> InlineResponse20092 UpdateNetworkSyslogServers(ctx, networkId).UpdateNetworkSyslogServers(updateNetworkSyslogServers).Execute()
+> InlineResponse20094 UpdateNetworkSyslogServers(ctx, networkId).UpdateNetworkSyslogServers(updateNetworkSyslogServers).Execute()
 
 Update the syslog servers for a network
 
@@ -8028,7 +8028,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSyslogServers := *openapiclient.NewInlineObject147([]openapiclient.NetworksNetworkIdSyslogServersServers{*openapiclient.NewNetworksNetworkIdSyslogServersServers("Host_example", int32(123), []string{"Roles_example"})}) // InlineObject147 | 
+    updateNetworkSyslogServers := *openapiclient.NewInlineObject150([]openapiclient.NetworksNetworkIdSyslogServersServers{*openapiclient.NewNetworksNetworkIdSyslogServersServers("Host_example", int32(123), []string{"Roles_example"})}) // InlineObject150 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8037,7 +8037,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkSyslogServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSyslogServers`: InlineResponse20092
+    // response from `UpdateNetworkSyslogServers`: InlineResponse20094
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkSyslogServers`: %v\n", resp)
 }
 ```
@@ -8058,11 +8058,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSyslogServers
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSyslogServers** | [**InlineObject147**](InlineObject147.md) |  | 
+ **updateNetworkSyslogServers** | [**InlineObject150**](InlineObject150.md) |  | 
 
 ### Return type
 
-[**InlineResponse20092**](InlineResponse20092.md)
+[**InlineResponse20094**](InlineResponse20094.md)
 
 ### Authorization
 
@@ -8100,7 +8100,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkTrafficAnalysis := *openapiclient.NewInlineObject148() // InlineObject148 |  (optional)
+    updateNetworkTrafficAnalysis := *openapiclient.NewInlineObject151() // InlineObject151 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8130,7 +8130,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkTrafficAnalys
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkTrafficAnalysis** | [**InlineObject148**](InlineObject148.md) |  | 
+ **updateNetworkTrafficAnalysis** | [**InlineObject151**](InlineObject151.md) |  | 
 
 ### Return type
 
@@ -8152,7 +8152,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkVlanProfile
 
-> InlineResponse20093 UpdateNetworkVlanProfile(ctx, networkId, iname).UpdateNetworkVlanProfile(updateNetworkVlanProfile).Execute()
+> InlineResponse20095 UpdateNetworkVlanProfile(ctx, networkId, iname).UpdateNetworkVlanProfile(updateNetworkVlanProfile).Execute()
 
 Update an existing VLAN profile of a network
 
@@ -8173,7 +8173,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     iname := "iname_example" // string | Iname
-    updateNetworkVlanProfile := *openapiclient.NewInlineObject152("Name_example", []openapiclient.NetworksNetworkIdVlanProfilesVlanNames1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanNames1("Name_example", "VlanId_example")}, []openapiclient.NetworksNetworkIdVlanProfilesVlanGroups1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanGroups1("Name_example", "VlanIds_example")}) // InlineObject152 | 
+    updateNetworkVlanProfile := *openapiclient.NewInlineObject155("Name_example", []openapiclient.NetworksNetworkIdVlanProfilesVlanNames1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanNames1("Name_example", "VlanId_example")}, []openapiclient.NetworksNetworkIdVlanProfilesVlanGroups1{*openapiclient.NewNetworksNetworkIdVlanProfilesVlanGroups1("Name_example", "VlanIds_example")}) // InlineObject155 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8182,7 +8182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkVlanProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkVlanProfile`: InlineResponse20093
+    // response from `UpdateNetworkVlanProfile`: InlineResponse20095
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkVlanProfile`: %v\n", resp)
 }
 ```
@@ -8205,11 +8205,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkVlanProfile** | [**InlineObject152**](InlineObject152.md) |  | 
+ **updateNetworkVlanProfile** | [**InlineObject155**](InlineObject155.md) |  | 
 
 ### Return type
 
-[**InlineResponse20093**](InlineResponse20093.md)
+[**InlineResponse20095**](InlineResponse20095.md)
 
 ### Authorization
 
@@ -8227,7 +8227,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWebhooksHttpServer
 
-> InlineResponse20096 UpdateNetworkWebhooksHttpServer(ctx, networkId, httpServerId).UpdateNetworkWebhooksHttpServer(updateNetworkWebhooksHttpServer).Execute()
+> InlineResponse20098 UpdateNetworkWebhooksHttpServer(ctx, networkId, httpServerId).UpdateNetworkWebhooksHttpServer(updateNetworkWebhooksHttpServer).Execute()
 
 Update an HTTP server
 
@@ -8248,7 +8248,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     httpServerId := "httpServerId_example" // string | Http server ID
-    updateNetworkWebhooksHttpServer := *openapiclient.NewInlineObject154() // InlineObject154 |  (optional)
+    updateNetworkWebhooksHttpServer := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8257,7 +8257,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWebhooksHttpServer`: InlineResponse20096
+    // response from `UpdateNetworkWebhooksHttpServer`: InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -8280,11 +8280,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWebhooksHttpServer** | [**InlineObject154**](InlineObject154.md) |  | 
+ **updateNetworkWebhooksHttpServer** | [**InlineObject157**](InlineObject157.md) |  | 
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -8302,7 +8302,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWebhooksPayloadTemplate
 
-> InlineResponse20097 UpdateNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).UpdateNetworkWebhooksPayloadTemplate(updateNetworkWebhooksPayloadTemplate).Execute()
+> InlineResponse20099 UpdateNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).UpdateNetworkWebhooksPayloadTemplate(updateNetworkWebhooksPayloadTemplate).Execute()
 
 Update a webhook payload template for a network
 
@@ -8323,7 +8323,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     payloadTemplateId := "payloadTemplateId_example" // string | Payload template ID
-    updateNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject156() // InlineObject156 |  (optional)
+    updateNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject159() // InlineObject159 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8332,7 +8332,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetworksApi.UpdateNetworkWebhooksPayloadTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWebhooksPayloadTemplate`: InlineResponse20097
+    // response from `UpdateNetworkWebhooksPayloadTemplate`: InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `NetworksApi.UpdateNetworkWebhooksPayloadTemplate`: %v\n", resp)
 }
 ```
@@ -8355,11 +8355,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWebhooksPayloadTemplate** | [**InlineObject156**](InlineObject156.md) |  | 
+ **updateNetworkWebhooksPayloadTemplate** | [**InlineObject159**](InlineObject159.md) |  | 
 
 ### Return type
 
-[**InlineResponse20097**](InlineResponse20097.md)
+[**InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 
@@ -8397,7 +8397,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    vmxNetworkDevicesClaim := *openapiclient.NewInlineObject80("Size_example") // InlineObject80 | 
+    vmxNetworkDevicesClaim := *openapiclient.NewInlineObject83("Size_example") // InlineObject83 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8427,7 +8427,7 @@ Other parameters are passed through a pointer to a apiVmxNetworkDevicesClaimRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **vmxNetworkDevicesClaim** | [**InlineObject80**](InlineObject80.md) |  | 
+ **vmxNetworkDevicesClaim** | [**InlineObject83**](InlineObject83.md) |  | 
 
 ### Return type
 

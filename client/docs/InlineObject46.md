@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
-**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
-**PerSsidSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesPerSsidSettings**](NetworksNetworkIdApplianceRfProfilesPerSsidSettings.md) |  | [optional] 
+**Prefix** | **string** | A static IPv6 prefix | 
+**Origin** | [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | 
+**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
 
 ## Methods
 
 ### NewInlineObject46
 
-`func NewInlineObject46() *InlineObject46`
+`func NewInlineObject46(prefix string, origin NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, ) *InlineObject46`
 
 NewInlineObject46 instantiates a new InlineObject46 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +27,70 @@ NewInlineObject46WithDefaults instantiates a new InlineObject46 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetPrefix
 
-`func (o *InlineObject46) GetName() string`
+`func (o *InlineObject46) GetPrefix() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPrefixOk
 
-`func (o *InlineObject46) GetNameOk() (*string, bool)`
+`func (o *InlineObject46) GetPrefixOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPrefix
 
-`func (o *InlineObject46) SetName(v string)`
+`func (o *InlineObject46) SetPrefix(v string)`
 
-SetName sets Name field to given value.
+SetPrefix sets Prefix field to given value.
 
-### HasName
 
-`func (o *InlineObject46) HasName() bool`
+### GetOrigin
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject46) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
 
-### GetTwoFourGhzSettings
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-`func (o *InlineObject46) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings`
+### GetOriginOk
 
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+`func (o *InlineObject46) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
 
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineObject46) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetOrigin
 
-`func (o *InlineObject46) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings)`
+`func (o *InlineObject46) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetOrigin sets Origin field to given value.
 
-### HasTwoFourGhzSettings
 
-`func (o *InlineObject46) HasTwoFourGhzSettings() bool`
+### GetDescription
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
+`func (o *InlineObject46) GetDescription() string`
 
-### GetFiveGhzSettings
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-`func (o *InlineObject46) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings`
+### GetDescriptionOk
 
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+`func (o *InlineObject46) GetDescriptionOk() (*string, bool)`
 
-### GetFiveGhzSettingsOk
-
-`func (o *InlineObject46) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings, bool)`
-
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFiveGhzSettings
+### SetDescription
 
-`func (o *InlineObject46) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings)`
+`func (o *InlineObject46) SetDescription(v string)`
 
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
+SetDescription sets Description field to given value.
 
-### HasFiveGhzSettings
+### HasDescription
 
-`func (o *InlineObject46) HasFiveGhzSettings() bool`
+`func (o *InlineObject46) HasDescription() bool`
 
-HasFiveGhzSettings returns a boolean if a field has been set.
-
-### GetPerSsidSettings
-
-`func (o *InlineObject46) GetPerSsidSettings() NetworksNetworkIdApplianceRfProfilesPerSsidSettings`
-
-GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
-
-### GetPerSsidSettingsOk
-
-`func (o *InlineObject46) GetPerSsidSettingsOk() (*NetworksNetworkIdApplianceRfProfilesPerSsidSettings, bool)`
-
-GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPerSsidSettings
-
-`func (o *InlineObject46) SetPerSsidSettings(v NetworksNetworkIdApplianceRfProfilesPerSsidSettings)`
-
-SetPerSsidSettings sets PerSsidSettings field to given value.
-
-### HasPerSsidSettings
-
-`func (o *InlineObject46) HasPerSsidSettings() bool`
-
-HasPerSsidSettings returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All firmware upgrade stages in the network with their start time. | 
+**Serial** | **string** | The serial of a device | 
 
 ## Methods
 
 ### NewInlineObject84
 
-`func NewInlineObject84(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject84`
+`func NewInlineObject84(serial string, ) *InlineObject84`
 
 NewInlineObject84 instantiates a new InlineObject84 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject84WithDefaults instantiates a new InlineObject84 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStages
+### GetSerial
 
-`func (o *InlineObject84) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
+`func (o *InlineObject84) GetSerial() string`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetSerialOk
 
-`func (o *InlineObject84) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
+`func (o *InlineObject84) GetSerialOk() (*string, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetSerial
 
-`func (o *InlineObject84) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
+`func (o *InlineObject84) SetSerial(v string)`
 
-SetStages sets Stages field to given value.
+SetSerial sets Serial field to given value.
 
 
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Custom** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom.md) | Custom VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
-**MajorApplications** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications**](NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications.md) | Major Application based VPN exclusion rules. Pass an empty array to clear existing rules. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingRulesRules**](NetworksNetworkIdApplianceTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject60WithDefaults instantiates a new InlineObject60 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCustom
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject60) GetCustom() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom`
+`func (o *InlineObject60) GetDefaultRulesEnabled() bool`
 
-GetCustom returns the Custom field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetCustomOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject60) GetCustomOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom, bool)`
+`func (o *InlineObject60) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustom
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject60) SetCustom(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsCustom)`
+`func (o *InlineObject60) SetDefaultRulesEnabled(v bool)`
 
-SetCustom sets Custom field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasCustom
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject60) HasCustom() bool`
+`func (o *InlineObject60) HasDefaultRulesEnabled() bool`
 
-HasCustom returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetMajorApplications
+### GetRules
 
-`func (o *InlineObject60) GetMajorApplications() []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications`
+`func (o *InlineObject60) GetRules() []NetworksNetworkIdApplianceTrafficShapingRulesRules`
 
-GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetMajorApplicationsOk
+### GetRulesOk
 
-`func (o *InlineObject60) GetMajorApplicationsOk() (*[]NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications, bool)`
+`func (o *InlineObject60) GetRulesOk() (*[]NetworksNetworkIdApplianceTrafficShapingRulesRules, bool)`
 
-GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorApplications
+### SetRules
 
-`func (o *InlineObject60) SetMajorApplications(v []NetworksNetworkIdApplianceTrafficShapingVpnExclusionsMajorApplications)`
+`func (o *InlineObject60) SetRules(v []NetworksNetworkIdApplianceTrafficShapingRulesRules)`
 
-SetMajorApplications sets MajorApplications field to given value.
+SetRules sets Rules field to given value.
 
-### HasMajorApplications
+### HasRules
 
-`func (o *InlineObject60) HasMajorApplications() bool`
+`func (o *InlineObject60) HasRules() bool`
 
-HasMajorApplications returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

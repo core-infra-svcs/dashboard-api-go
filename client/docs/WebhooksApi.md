@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkWebhooksHttpServer
 
-> InlineResponse20096 CreateNetworkWebhooksHttpServer(ctx, networkId).CreateNetworkWebhooksHttpServer(createNetworkWebhooksHttpServer).Execute()
+> InlineResponse20098 CreateNetworkWebhooksHttpServer(ctx, networkId).CreateNetworkWebhooksHttpServer(createNetworkWebhooksHttpServer).Execute()
 
 Add an HTTP server to a network
 
@@ -44,7 +44,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWebhooksHttpServer := *openapiclient.NewInlineObject153("Name_example", "Url_example") // InlineObject153 | 
+    createNetworkWebhooksHttpServer := *openapiclient.NewInlineObject156("Name_example", "Url_example") // InlineObject156 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -53,7 +53,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.CreateNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWebhooksHttpServer`: InlineResponse20096
+    // response from `CreateNetworkWebhooksHttpServer`: InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.CreateNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -74,11 +74,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksHttpS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksHttpServer** | [**InlineObject153**](InlineObject153.md) |  | 
+ **createNetworkWebhooksHttpServer** | [**InlineObject156**](InlineObject156.md) |  | 
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkWebhooksPayloadTemplate
 
-> InlineResponse20097 CreateNetworkWebhooksPayloadTemplate(ctx, networkId).CreateNetworkWebhooksPayloadTemplate(createNetworkWebhooksPayloadTemplate).Execute()
+> InlineResponse20099 CreateNetworkWebhooksPayloadTemplate(ctx, networkId).CreateNetworkWebhooksPayloadTemplate(createNetworkWebhooksPayloadTemplate).Execute()
 
 Create a webhook payload template for a network
 
@@ -116,7 +116,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject155("Name_example") // InlineObject155 | 
+    createNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject158("Name_example") // InlineObject158 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -125,7 +125,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.CreateNetworkWebhooksPayloadTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWebhooksPayloadTemplate`: InlineResponse20097
+    // response from `CreateNetworkWebhooksPayloadTemplate`: InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.CreateNetworkWebhooksPayloadTemplate`: %v\n", resp)
 }
 ```
@@ -146,11 +146,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksPaylo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksPayloadTemplate** | [**InlineObject155**](InlineObject155.md) |  | 
+ **createNetworkWebhooksPayloadTemplate** | [**InlineObject158**](InlineObject158.md) |  | 
 
 ### Return type
 
-[**InlineResponse20097**](InlineResponse20097.md)
+[**InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 
@@ -188,7 +188,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWebhooksWebhookTest := *openapiclient.NewInlineObject157("Url_example") // InlineObject157 | 
+    createNetworkWebhooksWebhookTest := *openapiclient.NewInlineObject160("Url_example") // InlineObject160 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -218,7 +218,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksWebho
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksWebhookTest** | [**InlineObject157**](InlineObject157.md) |  | 
+ **createNetworkWebhooksWebhookTest** | [**InlineObject160**](InlineObject160.md) |  | 
 
 ### Return type
 
@@ -382,7 +382,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksHttpServer
 
-> InlineResponse20096 GetNetworkWebhooksHttpServer(ctx, networkId, httpServerId).Execute()
+> InlineResponse20098 GetNetworkWebhooksHttpServer(ctx, networkId, httpServerId).Execute()
 
 Return an HTTP server for a network
 
@@ -411,7 +411,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.GetNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksHttpServer`: InlineResponse20096
+    // response from `GetNetworkWebhooksHttpServer`: InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.GetNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -437,7 +437,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -455,7 +455,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksHttpServers
 
-> []InlineResponse20096 GetNetworkWebhooksHttpServers(ctx, networkId).Execute()
+> []InlineResponse20098 GetNetworkWebhooksHttpServers(ctx, networkId).Execute()
 
 List the HTTP servers for a network
 
@@ -483,7 +483,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.GetNetworkWebhooksHttpServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksHttpServers`: []InlineResponse20096
+    // response from `GetNetworkWebhooksHttpServers`: []InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.GetNetworkWebhooksHttpServers`: %v\n", resp)
 }
 ```
@@ -507,7 +507,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20096**](InlineResponse20096.md)
+[**[]InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -525,7 +525,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksPayloadTemplate
 
-> InlineResponse20097 GetNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).Execute()
+> InlineResponse20099 GetNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).Execute()
 
 Get the webhook payload template for a network
 
@@ -554,7 +554,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.GetNetworkWebhooksPayloadTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksPayloadTemplate`: InlineResponse20097
+    // response from `GetNetworkWebhooksPayloadTemplate`: InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.GetNetworkWebhooksPayloadTemplate`: %v\n", resp)
 }
 ```
@@ -580,7 +580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20097**](InlineResponse20097.md)
+[**InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 
@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksPayloadTemplates
 
-> []InlineResponse20097 GetNetworkWebhooksPayloadTemplates(ctx, networkId).Execute()
+> []InlineResponse20099 GetNetworkWebhooksPayloadTemplates(ctx, networkId).Execute()
 
 List the webhook payload templates for a network
 
@@ -626,7 +626,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.GetNetworkWebhooksPayloadTemplates``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksPayloadTemplates`: []InlineResponse20097
+    // response from `GetNetworkWebhooksPayloadTemplates`: []InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.GetNetworkWebhooksPayloadTemplates`: %v\n", resp)
 }
 ```
@@ -650,7 +650,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20097**](InlineResponse20097.md)
+[**[]InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 
@@ -741,7 +741,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWebhooksAlertTypes
 
-> InlineResponse200178 GetOrganizationWebhooksAlertTypes(ctx, organizationId).ProductType(productType).Execute()
+> InlineResponse200180 GetOrganizationWebhooksAlertTypes(ctx, organizationId).ProductType(productType).Execute()
 
 Return a list of alert types to be used with managing webhook alerts
 
@@ -770,7 +770,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.GetOrganizationWebhooksAlertTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksAlertTypes`: InlineResponse200178
+    // response from `GetOrganizationWebhooksAlertTypes`: InlineResponse200180
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.GetOrganizationWebhooksAlertTypes`: %v\n", resp)
 }
 ```
@@ -795,7 +795,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200178**](InlineResponse200178.md)
+[**InlineResponse200180**](InlineResponse200180.md)
 
 ### Authorization
 
@@ -813,7 +813,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWebhooksCallbacksStatus
 
-> InlineResponse200179 GetOrganizationWebhooksCallbacksStatus(ctx, organizationId, callbackId).Execute()
+> InlineResponse200181 GetOrganizationWebhooksCallbacksStatus(ctx, organizationId, callbackId).Execute()
 
 Return the status of an API callback
 
@@ -842,7 +842,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.GetOrganizationWebhooksCallbacksStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksCallbacksStatus`: InlineResponse200179
+    // response from `GetOrganizationWebhooksCallbacksStatus`: InlineResponse200181
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.GetOrganizationWebhooksCallbacksStatus`: %v\n", resp)
 }
 ```
@@ -868,7 +868,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200179**](InlineResponse200179.md)
+[**InlineResponse200181**](InlineResponse200181.md)
 
 ### Authorization
 
@@ -886,7 +886,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWebhooksLogs
 
-> []InlineResponse200180 GetOrganizationWebhooksLogs(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Url(url).Execute()
+> []InlineResponse200182 GetOrganizationWebhooksLogs(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Url(url).Execute()
 
 Return the log of webhook POSTs sent
 
@@ -921,7 +921,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.GetOrganizationWebhooksLogs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksLogs`: []InlineResponse200180
+    // response from `GetOrganizationWebhooksLogs`: []InlineResponse200182
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.GetOrganizationWebhooksLogs`: %v\n", resp)
 }
 ```
@@ -952,7 +952,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200180**](InlineResponse200180.md)
+[**[]InlineResponse200182**](InlineResponse200182.md)
 
 ### Authorization
 
@@ -970,7 +970,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWebhooksHttpServer
 
-> InlineResponse20096 UpdateNetworkWebhooksHttpServer(ctx, networkId, httpServerId).UpdateNetworkWebhooksHttpServer(updateNetworkWebhooksHttpServer).Execute()
+> InlineResponse20098 UpdateNetworkWebhooksHttpServer(ctx, networkId, httpServerId).UpdateNetworkWebhooksHttpServer(updateNetworkWebhooksHttpServer).Execute()
 
 Update an HTTP server
 
@@ -991,7 +991,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     httpServerId := "httpServerId_example" // string | Http server ID
-    updateNetworkWebhooksHttpServer := *openapiclient.NewInlineObject154() // InlineObject154 |  (optional)
+    updateNetworkWebhooksHttpServer := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1000,7 +1000,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.UpdateNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWebhooksHttpServer`: InlineResponse20096
+    // response from `UpdateNetworkWebhooksHttpServer`: InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.UpdateNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -1023,11 +1023,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWebhooksHttpServer** | [**InlineObject154**](InlineObject154.md) |  | 
+ **updateNetworkWebhooksHttpServer** | [**InlineObject157**](InlineObject157.md) |  | 
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -1045,7 +1045,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWebhooksPayloadTemplate
 
-> InlineResponse20097 UpdateNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).UpdateNetworkWebhooksPayloadTemplate(updateNetworkWebhooksPayloadTemplate).Execute()
+> InlineResponse20099 UpdateNetworkWebhooksPayloadTemplate(ctx, networkId, payloadTemplateId).UpdateNetworkWebhooksPayloadTemplate(updateNetworkWebhooksPayloadTemplate).Execute()
 
 Update a webhook payload template for a network
 
@@ -1066,7 +1066,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     payloadTemplateId := "payloadTemplateId_example" // string | Payload template ID
-    updateNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject156() // InlineObject156 |  (optional)
+    updateNetworkWebhooksPayloadTemplate := *openapiclient.NewInlineObject159() // InlineObject159 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1075,7 +1075,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.UpdateNetworkWebhooksPayloadTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWebhooksPayloadTemplate`: InlineResponse20097
+    // response from `UpdateNetworkWebhooksPayloadTemplate`: InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.UpdateNetworkWebhooksPayloadTemplate`: %v\n", resp)
 }
 ```
@@ -1098,11 +1098,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWebhooksPayloadTemplate** | [**InlineObject156**](InlineObject156.md) |  | 
+ **updateNetworkWebhooksPayloadTemplate** | [**InlineObject159**](InlineObject159.md) |  | 
 
 ### Return type
 
-[**InlineResponse20097**](InlineResponse20097.md)
+[**InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 

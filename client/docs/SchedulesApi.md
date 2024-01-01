@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetNetworkCameraSchedules
 
-> []InlineResponse20031 GetNetworkCameraSchedules(ctx, networkId).Execute()
+> []InlineResponse20033 GetNetworkCameraSchedules(ctx, networkId).Execute()
 
 Returns a list of all camera recording schedules.
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SchedulesApi.GetNetworkCameraSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCameraSchedules`: []InlineResponse20031
+    // response from `GetNetworkCameraSchedules`: []InlineResponse20033
     fmt.Fprintf(os.Stdout, "Response from `SchedulesApi.GetNetworkCameraSchedules`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20031**](InlineResponse20031.md)
+[**[]InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidSchedules := *openapiclient.NewInlineObject177() // InlineObject177 |  (optional)
+    updateNetworkWirelessSsidSchedules := *openapiclient.NewInlineObject180() // InlineObject180 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidSchedules** | [**InlineObject177**](InlineObject177.md) |  | 
+ **updateNetworkWirelessSsidSchedules** | [**InlineObject180**](InlineObject180.md) |  | 
 
 ### Return type
 

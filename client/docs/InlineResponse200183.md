@@ -4,8 +4,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the channel utilization interval. | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the channel utilization interval. | [optional] 
 **Serial** | Pointer to **string** | The serial number for the device. | [optional] 
 **Mac** | Pointer to **string** | The MAC address of the device. | [optional] 
 **Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
@@ -29,56 +27,6 @@ will change when the set of required properties is changed
 NewInlineResponse200183WithDefaults instantiates a new InlineResponse200183 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetStartTs
-
-`func (o *InlineResponse200183) GetStartTs() time.Time`
-
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
-
-### GetStartTsOk
-
-`func (o *InlineResponse200183) GetStartTsOk() (*time.Time, bool)`
-
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStartTs
-
-`func (o *InlineResponse200183) SetStartTs(v time.Time)`
-
-SetStartTs sets StartTs field to given value.
-
-### HasStartTs
-
-`func (o *InlineResponse200183) HasStartTs() bool`
-
-HasStartTs returns a boolean if a field has been set.
-
-### GetEndTs
-
-`func (o *InlineResponse200183) GetEndTs() time.Time`
-
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
-
-### GetEndTsOk
-
-`func (o *InlineResponse200183) GetEndTsOk() (*time.Time, bool)`
-
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEndTs
-
-`func (o *InlineResponse200183) SetEndTs(v time.Time)`
-
-SetEndTs sets EndTs field to given value.
-
-### HasEndTs
-
-`func (o *InlineResponse200183) HasEndTs() bool`
-
-HasEndTs returns a boolean if a field has been set.
 
 ### GetSerial
 

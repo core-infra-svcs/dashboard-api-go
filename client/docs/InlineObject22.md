@@ -4,17 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
-**Subnet** | **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | 
-**NextHopIp** | **string** | IP address of the next hop device to which the device sends its traffic for the subnet | 
-**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
-**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
+**Name** | Pointer to **string** | A friendly name or description for the interface or VLAN. | [optional] 
+**Subnet** | Pointer to **string** | The network that this routed interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
+**InterfaceIp** | Pointer to **string** | The IP address this switch will use for layer 3 routing on this VLAN or subnet. This cannot be the same         as the switch&#39;s management IP. | [optional] 
+**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are:         &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
+**VlanId** | Pointer to **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | [optional] 
+**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route.         This IP address must exist in a subnet with a routed interface. Required if this is the first IPv4 interface. | [optional] 
+**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings1**](DevicesSerialSwitchRoutingInterfacesOspfSettings1.md) |  | [optional] 
+**OspfV3** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfV31**](DevicesSerialSwitchRoutingInterfacesOspfV31.md) |  | [optional] 
+**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv61**](DevicesSerialSwitchRoutingInterfacesIpv61.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject22
 
-`func NewInlineObject22(subnet string, nextHopIp string, ) *InlineObject22`
+`func NewInlineObject22() *InlineObject22`
 
 NewInlineObject22 instantiates a new InlineObject22 object
 This constructor will assign default values to properties that have it defined,
@@ -73,76 +77,186 @@ and a boolean to check if the value has been set.
 
 SetSubnet sets Subnet field to given value.
 
+### HasSubnet
 
-### GetNextHopIp
+`func (o *InlineObject22) HasSubnet() bool`
 
-`func (o *InlineObject22) GetNextHopIp() string`
+HasSubnet returns a boolean if a field has been set.
 
-GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
+### GetInterfaceIp
 
-### GetNextHopIpOk
+`func (o *InlineObject22) GetInterfaceIp() string`
 
-`func (o *InlineObject22) GetNextHopIpOk() (*string, bool)`
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
+### GetInterfaceIpOk
+
+`func (o *InlineObject22) GetInterfaceIpOk() (*string, bool)`
+
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNextHopIp
+### SetInterfaceIp
 
-`func (o *InlineObject22) SetNextHopIp(v string)`
+`func (o *InlineObject22) SetInterfaceIp(v string)`
 
-SetNextHopIp sets NextHopIp field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
+### HasInterfaceIp
 
-### GetAdvertiseViaOspfEnabled
+`func (o *InlineObject22) HasInterfaceIp() bool`
 
-`func (o *InlineObject22) GetAdvertiseViaOspfEnabled() bool`
+HasInterfaceIp returns a boolean if a field has been set.
 
-GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
+### GetMulticastRouting
 
-### GetAdvertiseViaOspfEnabledOk
+`func (o *InlineObject22) GetMulticastRouting() string`
 
-`func (o *InlineObject22) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
+GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
 
-GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
+### GetMulticastRoutingOk
+
+`func (o *InlineObject22) GetMulticastRoutingOk() (*string, bool)`
+
+GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertiseViaOspfEnabled
+### SetMulticastRouting
 
-`func (o *InlineObject22) SetAdvertiseViaOspfEnabled(v bool)`
+`func (o *InlineObject22) SetMulticastRouting(v string)`
 
-SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
+SetMulticastRouting sets MulticastRouting field to given value.
 
-### HasAdvertiseViaOspfEnabled
+### HasMulticastRouting
 
-`func (o *InlineObject22) HasAdvertiseViaOspfEnabled() bool`
+`func (o *InlineObject22) HasMulticastRouting() bool`
 
-HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+HasMulticastRouting returns a boolean if a field has been set.
 
-### GetPreferOverOspfRoutesEnabled
+### GetVlanId
 
-`func (o *InlineObject22) GetPreferOverOspfRoutesEnabled() bool`
+`func (o *InlineObject22) GetVlanId() int32`
 
-GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetPreferOverOspfRoutesEnabledOk
+### GetVlanIdOk
 
-`func (o *InlineObject22) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+`func (o *InlineObject22) GetVlanIdOk() (*int32, bool)`
 
-GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPreferOverOspfRoutesEnabled
+### SetVlanId
 
-`func (o *InlineObject22) SetPreferOverOspfRoutesEnabled(v bool)`
+`func (o *InlineObject22) SetVlanId(v int32)`
 
-SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasPreferOverOspfRoutesEnabled
+### HasVlanId
 
-`func (o *InlineObject22) HasPreferOverOspfRoutesEnabled() bool`
+`func (o *InlineObject22) HasVlanId() bool`
 
-HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
+
+### GetDefaultGateway
+
+`func (o *InlineObject22) GetDefaultGateway() string`
+
+GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
+
+### GetDefaultGatewayOk
+
+`func (o *InlineObject22) GetDefaultGatewayOk() (*string, bool)`
+
+GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaultGateway
+
+`func (o *InlineObject22) SetDefaultGateway(v string)`
+
+SetDefaultGateway sets DefaultGateway field to given value.
+
+### HasDefaultGateway
+
+`func (o *InlineObject22) HasDefaultGateway() bool`
+
+HasDefaultGateway returns a boolean if a field has been set.
+
+### GetOspfSettings
+
+`func (o *InlineObject22) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings1`
+
+GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
+
+### GetOspfSettingsOk
+
+`func (o *InlineObject22) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings1, bool)`
+
+GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfSettings
+
+`func (o *InlineObject22) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings1)`
+
+SetOspfSettings sets OspfSettings field to given value.
+
+### HasOspfSettings
+
+`func (o *InlineObject22) HasOspfSettings() bool`
+
+HasOspfSettings returns a boolean if a field has been set.
+
+### GetOspfV3
+
+`func (o *InlineObject22) GetOspfV3() DevicesSerialSwitchRoutingInterfacesOspfV31`
+
+GetOspfV3 returns the OspfV3 field if non-nil, zero value otherwise.
+
+### GetOspfV3Ok
+
+`func (o *InlineObject22) GetOspfV3Ok() (*DevicesSerialSwitchRoutingInterfacesOspfV31, bool)`
+
+GetOspfV3Ok returns a tuple with the OspfV3 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfV3
+
+`func (o *InlineObject22) SetOspfV3(v DevicesSerialSwitchRoutingInterfacesOspfV31)`
+
+SetOspfV3 sets OspfV3 field to given value.
+
+### HasOspfV3
+
+`func (o *InlineObject22) HasOspfV3() bool`
+
+HasOspfV3 returns a boolean if a field has been set.
+
+### GetIpv6
+
+`func (o *InlineObject22) GetIpv6() DevicesSerialSwitchRoutingInterfacesIpv61`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineObject22) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesIpv61, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineObject22) SetIpv6(v DevicesSerialSwitchRoutingInterfacesIpv61)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineObject22) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

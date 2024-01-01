@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkSwitchPortSchedule
 
-> InlineResponse20085 CreateNetworkSwitchPortSchedule(ctx, networkId).CreateNetworkSwitchPortSchedule(createNetworkSwitchPortSchedule).Execute()
+> InlineResponse20087 CreateNetworkSwitchPortSchedule(ctx, networkId).CreateNetworkSwitchPortSchedule(createNetworkSwitchPortSchedule).Execute()
 
 Add a switch port schedule
 
@@ -33,7 +33,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchPortSchedule := *openapiclient.NewInlineObject127("Name_example") // InlineObject127 | 
+    createNetworkSwitchPortSchedule := *openapiclient.NewInlineObject130("Name_example") // InlineObject130 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortSchedulesApi.CreateNetworkSwitchPortSchedule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchPortSchedule`: InlineResponse20085
+    // response from `CreateNetworkSwitchPortSchedule`: InlineResponse20087
     fmt.Fprintf(os.Stdout, "Response from `PortSchedulesApi.CreateNetworkSwitchPortSchedule`: %v\n", resp)
 }
 ```
@@ -63,11 +63,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchPortSch
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchPortSchedule** | [**InlineObject127**](InlineObject127.md) |  | 
+ **createNetworkSwitchPortSchedule** | [**InlineObject130**](InlineObject130.md) |  | 
 
 ### Return type
 
-[**InlineResponse20085**](InlineResponse20085.md)
+[**InlineResponse20087**](InlineResponse20087.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchPortSchedules
 
-> []InlineResponse20085 GetNetworkSwitchPortSchedules(ctx, networkId).Execute()
+> []InlineResponse20087 GetNetworkSwitchPortSchedules(ctx, networkId).Execute()
 
 List switch port schedules
 
@@ -184,7 +184,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortSchedulesApi.GetNetworkSwitchPortSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchPortSchedules`: []InlineResponse20085
+    // response from `GetNetworkSwitchPortSchedules`: []InlineResponse20087
     fmt.Fprintf(os.Stdout, "Response from `PortSchedulesApi.GetNetworkSwitchPortSchedules`: %v\n", resp)
 }
 ```
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20085**](InlineResponse20085.md)
+[**[]InlineResponse20087**](InlineResponse20087.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchPortSchedule
 
-> InlineResponse20085 UpdateNetworkSwitchPortSchedule(ctx, networkId, portScheduleId).UpdateNetworkSwitchPortSchedule(updateNetworkSwitchPortSchedule).Execute()
+> InlineResponse20087 UpdateNetworkSwitchPortSchedule(ctx, networkId, portScheduleId).UpdateNetworkSwitchPortSchedule(updateNetworkSwitchPortSchedule).Execute()
 
 Update a switch port schedule
 
@@ -247,7 +247,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     portScheduleId := "portScheduleId_example" // string | Port schedule ID
-    updateNetworkSwitchPortSchedule := *openapiclient.NewInlineObject128() // InlineObject128 |  (optional)
+    updateNetworkSwitchPortSchedule := *openapiclient.NewInlineObject131() // InlineObject131 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -256,7 +256,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortSchedulesApi.UpdateNetworkSwitchPortSchedule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchPortSchedule`: InlineResponse20085
+    // response from `UpdateNetworkSwitchPortSchedule`: InlineResponse20087
     fmt.Fprintf(os.Stdout, "Response from `PortSchedulesApi.UpdateNetworkSwitchPortSchedule`: %v\n", resp)
 }
 ```
@@ -279,11 +279,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchPortSchedule** | [**InlineObject128**](InlineObject128.md) |  | 
+ **updateNetworkSwitchPortSchedule** | [**InlineObject131**](InlineObject131.md) |  | 
 
 ### Return type
 
-[**InlineResponse20085**](InlineResponse20085.md)
+[**InlineResponse20087**](InlineResponse20087.md)
 
 ### Authorization
 

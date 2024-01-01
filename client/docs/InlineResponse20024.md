@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Subnet** | Pointer to **string** | The subnet of the single LAN | [optional] 
-**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the single LAN | [optional] 
-**MandatoryDhcp** | Pointer to [**InlineResponse20024MandatoryDhcp**](InlineResponse20024MandatoryDhcp.md) |  | [optional] 
-**Ipv6** | Pointer to [**InlineResponse20024Ipv6**](InlineResponse20024Ipv6.md) |  | [optional] 
+**Assigned** | Pointer to [**[]InlineResponse20024Assigned**](InlineResponse20024Assigned.md) | RF Profiles | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse20024WithDefaults instantiates a new InlineResponse20024 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubnet
+### GetAssigned
 
-`func (o *InlineResponse20024) GetSubnet() string`
+`func (o *InlineResponse20024) GetAssigned() []InlineResponse20024Assigned`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetAssignedOk
 
-`func (o *InlineResponse20024) GetSubnetOk() (*string, bool)`
+`func (o *InlineResponse20024) GetAssignedOk() (*[]InlineResponse20024Assigned, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetAssigned
 
-`func (o *InlineResponse20024) SetSubnet(v string)`
+`func (o *InlineResponse20024) SetAssigned(v []InlineResponse20024Assigned)`
 
-SetSubnet sets Subnet field to given value.
+SetAssigned sets Assigned field to given value.
 
-### HasSubnet
+### HasAssigned
 
-`func (o *InlineResponse20024) HasSubnet() bool`
+`func (o *InlineResponse20024) HasAssigned() bool`
 
-HasSubnet returns a boolean if a field has been set.
-
-### GetApplianceIp
-
-`func (o *InlineResponse20024) GetApplianceIp() string`
-
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
-
-### GetApplianceIpOk
-
-`func (o *InlineResponse20024) GetApplianceIpOk() (*string, bool)`
-
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApplianceIp
-
-`func (o *InlineResponse20024) SetApplianceIp(v string)`
-
-SetApplianceIp sets ApplianceIp field to given value.
-
-### HasApplianceIp
-
-`func (o *InlineResponse20024) HasApplianceIp() bool`
-
-HasApplianceIp returns a boolean if a field has been set.
-
-### GetMandatoryDhcp
-
-`func (o *InlineResponse20024) GetMandatoryDhcp() InlineResponse20024MandatoryDhcp`
-
-GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
-
-### GetMandatoryDhcpOk
-
-`func (o *InlineResponse20024) GetMandatoryDhcpOk() (*InlineResponse20024MandatoryDhcp, bool)`
-
-GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMandatoryDhcp
-
-`func (o *InlineResponse20024) SetMandatoryDhcp(v InlineResponse20024MandatoryDhcp)`
-
-SetMandatoryDhcp sets MandatoryDhcp field to given value.
-
-### HasMandatoryDhcp
-
-`func (o *InlineResponse20024) HasMandatoryDhcp() bool`
-
-HasMandatoryDhcp returns a boolean if a field has been set.
-
-### GetIpv6
-
-`func (o *InlineResponse20024) GetIpv6() InlineResponse20024Ipv6`
-
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
-
-### GetIpv6Ok
-
-`func (o *InlineResponse20024) GetIpv6Ok() (*InlineResponse20024Ipv6, bool)`
-
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv6
-
-`func (o *InlineResponse20024) SetIpv6(v InlineResponse20024Ipv6)`
-
-SetIpv6 sets Ipv6 field to given value.
-
-### HasIpv6
-
-`func (o *InlineResponse20024) HasIpv6() bool`
-
-HasIpv6 returns a boolean if a field has been set.
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
-**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
-**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
-**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
+**NetworkId** | Pointer to **string** | Network Id | [optional] 
+**Serial** | Pointer to **string** | Serial number of the device | [optional] 
+**Model** | Pointer to **string** | Device model | [optional] 
+**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
+**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks.md) | Uplinks info | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200132WithDefaults instantiates a new InlineResponse200132 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetNetworkId
 
-`func (o *InlineResponse200132) GetTs() time.Time`
+`func (o *InlineResponse200132) GetNetworkId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200132) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200132) GetNetworkIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetNetworkId
 
-`func (o *InlineResponse200132) SetTs(v time.Time)`
+`func (o *InlineResponse200132) SetNetworkId(v string)`
 
-SetTs sets Ts field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasTs
+### HasNetworkId
 
-`func (o *InlineResponse200132) HasTs() bool`
+`func (o *InlineResponse200132) HasNetworkId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetTotal
+### GetSerial
 
-`func (o *InlineResponse200132) GetTotal() int32`
+`func (o *InlineResponse200132) GetSerial() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetSerialOk
 
-`func (o *InlineResponse200132) GetTotalOk() (*int32, bool)`
+`func (o *InlineResponse200132) GetSerialOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetSerial
 
-`func (o *InlineResponse200132) SetTotal(v int32)`
+`func (o *InlineResponse200132) SetSerial(v string)`
 
-SetTotal sets Total field to given value.
+SetSerial sets Serial field to given value.
 
-### HasTotal
+### HasSerial
 
-`func (o *InlineResponse200132) HasTotal() bool`
+`func (o *InlineResponse200132) HasSerial() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetUpstream
+### GetModel
 
-`func (o *InlineResponse200132) GetUpstream() int32`
+`func (o *InlineResponse200132) GetModel() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetModelOk
 
-`func (o *InlineResponse200132) GetUpstreamOk() (*int32, bool)`
+`func (o *InlineResponse200132) GetModelOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetModel
 
-`func (o *InlineResponse200132) SetUpstream(v int32)`
+`func (o *InlineResponse200132) SetModel(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetModel sets Model field to given value.
 
-### HasUpstream
+### HasModel
 
-`func (o *InlineResponse200132) HasUpstream() bool`
+`func (o *InlineResponse200132) HasModel() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetDownstream
+### GetLastReportedAt
 
-`func (o *InlineResponse200132) GetDownstream() int32`
+`func (o *InlineResponse200132) GetLastReportedAt() time.Time`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetLastReportedAtOk
 
-`func (o *InlineResponse200132) GetDownstreamOk() (*int32, bool)`
+`func (o *InlineResponse200132) GetLastReportedAtOk() (*time.Time, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetLastReportedAt
 
-`func (o *InlineResponse200132) SetDownstream(v int32)`
+`func (o *InlineResponse200132) SetLastReportedAt(v time.Time)`
 
-SetDownstream sets Downstream field to given value.
+SetLastReportedAt sets LastReportedAt field to given value.
 
-### HasDownstream
+### HasLastReportedAt
 
-`func (o *InlineResponse200132) HasDownstream() bool`
+`func (o *InlineResponse200132) HasLastReportedAt() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasLastReportedAt returns a boolean if a field has been set.
+
+### GetUplinks
+
+`func (o *InlineResponse200132) GetUplinks() []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks`
+
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+
+### GetUplinksOk
+
+`func (o *InlineResponse200132) GetUplinksOk() (*[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks, bool)`
+
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinks
+
+`func (o *InlineResponse200132) SetUplinks(v []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks)`
+
+SetUplinks sets Uplinks field to given value.
+
+### HasUplinks
+
+`func (o *InlineResponse200132) HasUplinks() bool`
+
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

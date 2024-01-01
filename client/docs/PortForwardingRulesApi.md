@@ -173,7 +173,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject12() // InlineObject12 |  (optional)
+    updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject15() // InlineObject15 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -203,7 +203,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGatewa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGatewayPortForwardingRules** | [**InlineObject12**](InlineObject12.md) |  | 
+ **updateDeviceCellularGatewayPortForwardingRules** | [**InlineObject15**](InlineObject15.md) |  | 
 
 ### Return type
 
@@ -245,7 +245,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject40([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject40 | 
+    updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject43([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject43 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -275,7 +275,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallPortForwardingRules** | [**InlineObject40**](InlineObject40.md) |  | 
+ **updateNetworkApplianceFirewallPortForwardingRules** | [**InlineObject43**](InlineObject43.md) |  | 
 
 ### Return type
 

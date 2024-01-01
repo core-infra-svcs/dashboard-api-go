@@ -244,7 +244,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceSwitchWarmSpare := *openapiclient.NewInlineObject24(false) // InlineObject24 | 
+    updateDeviceSwitchWarmSpare := *openapiclient.NewInlineObject27(false) // InlineObject27 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -274,7 +274,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceSwitchWarmSpar
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceSwitchWarmSpare** | [**InlineObject24**](InlineObject24.md) |  | 
+ **updateDeviceSwitchWarmSpare** | [**InlineObject27**](InlineObject27.md) |  | 
 
 ### Return type
 
@@ -316,7 +316,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceWarmSpare := *openapiclient.NewInlineObject66(false) // InlineObject66 | 
+    updateNetworkApplianceWarmSpare := *openapiclient.NewInlineObject69(false) // InlineObject69 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -346,7 +346,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceWarm
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceWarmSpare** | [**InlineObject66**](InlineObject66.md) |  | 
+ **updateNetworkApplianceWarmSpare** | [**InlineObject69**](InlineObject69.md) |  | 
 
 ### Return type
 

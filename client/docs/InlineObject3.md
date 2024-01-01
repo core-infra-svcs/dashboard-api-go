@@ -4,9 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Duration** | Pointer to **int32** | The duration in seconds. Must be between 5 and 120. Default is 20 seconds | [optional] 
-**Period** | Pointer to **int32** | The period in milliseconds. Must be between 100 and 1000. Default is 160 milliseconds | [optional] 
-**Duty** | Pointer to **int32** | The duty cycle as the percent active. Must be between 10 and 90. Default is 50. | [optional] 
+**Name** | Pointer to **string** | The name of a device | [optional] 
+**Tags** | Pointer to **[]string** | The list of tags of a device | [optional] 
+**Lat** | Pointer to **float32** | The latitude of a device | [optional] 
+**Lng** | Pointer to **float32** | The longitude of a device | [optional] 
+**Address** | Pointer to **string** | The address of a device | [optional] 
+**Notes** | Pointer to **string** | The notes for the device. String. Limited to 255 characters. | [optional] 
+**MoveMapMarker** | Pointer to **bool** | Whether or not to set the latitude and longitude of a device based on the new address. Only applies when lat and lng are not specified. | [optional] 
+**SwitchProfileId** | Pointer to **string** | The ID of a switch template to bind to the device (for available switch templates, see the &#39;Switch Templates&#39; endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template. | [optional] 
+**FloorPlanId** | Pointer to **string** | The floor plan to associate to this device. null disassociates the device from the floorplan. | [optional] 
 
 ## Methods
 
@@ -27,80 +33,230 @@ NewInlineObject3WithDefaults instantiates a new InlineObject3 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDuration
+### GetName
 
-`func (o *InlineObject3) GetDuration() int32`
+`func (o *InlineObject3) GetName() string`
 
-GetDuration returns the Duration field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDurationOk
+### GetNameOk
 
-`func (o *InlineObject3) GetDurationOk() (*int32, bool)`
+`func (o *InlineObject3) GetNameOk() (*string, bool)`
 
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDuration
+### SetName
 
-`func (o *InlineObject3) SetDuration(v int32)`
+`func (o *InlineObject3) SetName(v string)`
 
-SetDuration sets Duration field to given value.
+SetName sets Name field to given value.
 
-### HasDuration
+### HasName
 
-`func (o *InlineObject3) HasDuration() bool`
+`func (o *InlineObject3) HasName() bool`
 
-HasDuration returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetPeriod
+### GetTags
 
-`func (o *InlineObject3) GetPeriod() int32`
+`func (o *InlineObject3) GetTags() []string`
 
-GetPeriod returns the Period field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetPeriodOk
+### GetTagsOk
 
-`func (o *InlineObject3) GetPeriodOk() (*int32, bool)`
+`func (o *InlineObject3) GetTagsOk() (*[]string, bool)`
 
-GetPeriodOk returns a tuple with the Period field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeriod
+### SetTags
 
-`func (o *InlineObject3) SetPeriod(v int32)`
+`func (o *InlineObject3) SetTags(v []string)`
 
-SetPeriod sets Period field to given value.
+SetTags sets Tags field to given value.
 
-### HasPeriod
+### HasTags
 
-`func (o *InlineObject3) HasPeriod() bool`
+`func (o *InlineObject3) HasTags() bool`
 
-HasPeriod returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetDuty
+### GetLat
 
-`func (o *InlineObject3) GetDuty() int32`
+`func (o *InlineObject3) GetLat() float32`
 
-GetDuty returns the Duty field if non-nil, zero value otherwise.
+GetLat returns the Lat field if non-nil, zero value otherwise.
 
-### GetDutyOk
+### GetLatOk
 
-`func (o *InlineObject3) GetDutyOk() (*int32, bool)`
+`func (o *InlineObject3) GetLatOk() (*float32, bool)`
 
-GetDutyOk returns a tuple with the Duty field if it's non-nil, zero value otherwise
+GetLatOk returns a tuple with the Lat field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDuty
+### SetLat
 
-`func (o *InlineObject3) SetDuty(v int32)`
+`func (o *InlineObject3) SetLat(v float32)`
 
-SetDuty sets Duty field to given value.
+SetLat sets Lat field to given value.
 
-### HasDuty
+### HasLat
 
-`func (o *InlineObject3) HasDuty() bool`
+`func (o *InlineObject3) HasLat() bool`
 
-HasDuty returns a boolean if a field has been set.
+HasLat returns a boolean if a field has been set.
+
+### GetLng
+
+`func (o *InlineObject3) GetLng() float32`
+
+GetLng returns the Lng field if non-nil, zero value otherwise.
+
+### GetLngOk
+
+`func (o *InlineObject3) GetLngOk() (*float32, bool)`
+
+GetLngOk returns a tuple with the Lng field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLng
+
+`func (o *InlineObject3) SetLng(v float32)`
+
+SetLng sets Lng field to given value.
+
+### HasLng
+
+`func (o *InlineObject3) HasLng() bool`
+
+HasLng returns a boolean if a field has been set.
+
+### GetAddress
+
+`func (o *InlineObject3) GetAddress() string`
+
+GetAddress returns the Address field if non-nil, zero value otherwise.
+
+### GetAddressOk
+
+`func (o *InlineObject3) GetAddressOk() (*string, bool)`
+
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAddress
+
+`func (o *InlineObject3) SetAddress(v string)`
+
+SetAddress sets Address field to given value.
+
+### HasAddress
+
+`func (o *InlineObject3) HasAddress() bool`
+
+HasAddress returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject3) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject3) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject3) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject3) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetMoveMapMarker
+
+`func (o *InlineObject3) GetMoveMapMarker() bool`
+
+GetMoveMapMarker returns the MoveMapMarker field if non-nil, zero value otherwise.
+
+### GetMoveMapMarkerOk
+
+`func (o *InlineObject3) GetMoveMapMarkerOk() (*bool, bool)`
+
+GetMoveMapMarkerOk returns a tuple with the MoveMapMarker field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMoveMapMarker
+
+`func (o *InlineObject3) SetMoveMapMarker(v bool)`
+
+SetMoveMapMarker sets MoveMapMarker field to given value.
+
+### HasMoveMapMarker
+
+`func (o *InlineObject3) HasMoveMapMarker() bool`
+
+HasMoveMapMarker returns a boolean if a field has been set.
+
+### GetSwitchProfileId
+
+`func (o *InlineObject3) GetSwitchProfileId() string`
+
+GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+
+### GetSwitchProfileIdOk
+
+`func (o *InlineObject3) GetSwitchProfileIdOk() (*string, bool)`
+
+GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitchProfileId
+
+`func (o *InlineObject3) SetSwitchProfileId(v string)`
+
+SetSwitchProfileId sets SwitchProfileId field to given value.
+
+### HasSwitchProfileId
+
+`func (o *InlineObject3) HasSwitchProfileId() bool`
+
+HasSwitchProfileId returns a boolean if a field has been set.
+
+### GetFloorPlanId
+
+`func (o *InlineObject3) GetFloorPlanId() string`
+
+GetFloorPlanId returns the FloorPlanId field if non-nil, zero value otherwise.
+
+### GetFloorPlanIdOk
+
+`func (o *InlineObject3) GetFloorPlanIdOk() (*string, bool)`
+
+GetFloorPlanIdOk returns a tuple with the FloorPlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFloorPlanId
+
+`func (o *InlineObject3) SetFloorPlanId(v string)`
+
+SetFloorPlanId sets FloorPlanId field to given value.
+
+### HasFloorPlanId
+
+`func (o *InlineObject3) HasFloorPlanId() bool`
+
+HasFloorPlanId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

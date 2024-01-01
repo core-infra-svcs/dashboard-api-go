@@ -503,7 +503,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceSecurityIntrusion := *openapiclient.NewInlineObject47() // InlineObject47 |  (optional)
+    updateNetworkApplianceSecurityIntrusion := *openapiclient.NewInlineObject50() // InlineObject50 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -533,7 +533,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSecu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceSecurityIntrusion** | [**InlineObject47**](InlineObject47.md) |  | 
+ **updateNetworkApplianceSecurityIntrusion** | [**InlineObject50**](InlineObject50.md) |  | 
 
 ### Return type
 
@@ -575,7 +575,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceSecurityMalware := *openapiclient.NewInlineObject48("Mode_example") // InlineObject48 | 
+    updateNetworkApplianceSecurityMalware := *openapiclient.NewInlineObject51("Mode_example") // InlineObject51 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -605,7 +605,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSecu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceSecurityMalware** | [**InlineObject48**](InlineObject48.md) |  | 
+ **updateNetworkApplianceSecurityMalware** | [**InlineObject51**](InlineObject51.md) |  | 
 
 ### Return type
 
@@ -647,7 +647,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject196([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject196 | 
+    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject199([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject199 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -677,7 +677,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject196**](InlineObject196.md) |  | 
+ **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject199**](InlineObject199.md) |  | 
 
 ### Return type
 

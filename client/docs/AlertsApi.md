@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkSensorAlertsProfile
 
-> InlineResponse20049 CreateNetworkSensorAlertsProfile(ctx, networkId).CreateNetworkSensorAlertsProfile(createNetworkSensorAlertsProfile).Execute()
+> InlineResponse20051 CreateNetworkSensorAlertsProfile(ctx, networkId).CreateNetworkSensorAlertsProfile(createNetworkSensorAlertsProfile).Execute()
 
 Creates a sensor alert profile for a network.
 
@@ -44,7 +44,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSensorAlertsProfile := *openapiclient.NewInlineObject100("Name_example", []openapiclient.NetworksNetworkIdSensorAlertsProfilesConditions{*openapiclient.NewNetworksNetworkIdSensorAlertsProfilesConditions("Metric_example", *openapiclient.NewNetworksNetworkIdSensorAlertsProfilesThreshold())}) // InlineObject100 | 
+    createNetworkSensorAlertsProfile := *openapiclient.NewInlineObject103("Name_example", []openapiclient.NetworksNetworkIdSensorAlertsProfilesConditions{*openapiclient.NewNetworksNetworkIdSensorAlertsProfilesConditions("Metric_example", *openapiclient.NewNetworksNetworkIdSensorAlertsProfilesThreshold())}) // InlineObject103 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -53,7 +53,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.CreateNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSensorAlertsProfile`: InlineResponse20049
+    // response from `CreateNetworkSensorAlertsProfile`: InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.CreateNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -74,11 +74,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSensorAlertsP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSensorAlertsProfile** | [**InlineObject100**](InlineObject100.md) |  | 
+ **createNetworkSensorAlertsProfile** | [**InlineObject103**](InlineObject103.md) |  | 
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationAlertsProfile := *openapiclient.NewInlineObject194("Type_example", *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesAlertCondition(), *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesRecipients(), []string{"NetworkTags_example"}) // InlineObject194 | 
+    createOrganizationAlertsProfile := *openapiclient.NewInlineObject197("Type_example", *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesAlertCondition(), *openapiclient.NewOrganizationsOrganizationIdAlertsProfilesRecipients(), []string{"NetworkTags_example"}) // InlineObject197 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -146,7 +146,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAlertsPr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAlertsProfile** | [**InlineObject194**](InlineObject194.md) |  | 
+ **createOrganizationAlertsProfile** | [**InlineObject197**](InlineObject197.md) |  | 
 
 ### Return type
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAlertsHistory
 
-> []InlineResponse20017 GetNetworkAlertsHistory(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20019 GetNetworkAlertsHistory(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the alert history for this network
 
@@ -341,7 +341,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetNetworkAlertsHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAlertsHistory`: []InlineResponse20017
+    // response from `GetNetworkAlertsHistory`: []InlineResponse20019
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetNetworkAlertsHistory`: %v\n", resp)
 }
 ```
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20017**](InlineResponse20017.md)
+[**[]InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkHealthAlerts
 
-> []InlineResponse20043 GetNetworkHealthAlerts(ctx, networkId).Execute()
+> []InlineResponse20045 GetNetworkHealthAlerts(ctx, networkId).Execute()
 
 Return all global alerts on this network
 
@@ -484,7 +484,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetNetworkHealthAlerts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkHealthAlerts`: []InlineResponse20043
+    // response from `GetNetworkHealthAlerts`: []InlineResponse20045
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetNetworkHealthAlerts`: %v\n", resp)
 }
 ```
@@ -508,7 +508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20043**](InlineResponse20043.md)
+[**[]InlineResponse20045**](InlineResponse20045.md)
 
 ### Authorization
 
@@ -526,7 +526,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsCurrentOverviewByMetric
 
-> InlineResponse20047 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
+> InlineResponse20049 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
 
 Return an overview of currently alerting sensors by metric
 
@@ -554,7 +554,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetNetworkSensorAlertsCurrentOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse20047
+    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse20049
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetNetworkSensorAlertsCurrentOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -578,7 +578,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20047**](InlineResponse20047.md)
+[**InlineResponse20049**](InlineResponse20049.md)
 
 ### Authorization
 
@@ -596,7 +596,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsOverviewByMetric
 
-> []InlineResponse20048 GetNetworkSensorAlertsOverviewByMetric(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse20050 GetNetworkSensorAlertsOverviewByMetric(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Return an overview of alert occurrences over a timespan, by metric
 
@@ -628,7 +628,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetNetworkSensorAlertsOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsOverviewByMetric`: []InlineResponse20048
+    // response from `GetNetworkSensorAlertsOverviewByMetric`: []InlineResponse20050
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetNetworkSensorAlertsOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -656,7 +656,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20048**](InlineResponse20048.md)
+[**[]InlineResponse20050**](InlineResponse20050.md)
 
 ### Authorization
 
@@ -674,7 +674,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsProfile
 
-> InlineResponse20049 GetNetworkSensorAlertsProfile(ctx, networkId, id).Execute()
+> InlineResponse20051 GetNetworkSensorAlertsProfile(ctx, networkId, id).Execute()
 
 Show details of a sensor alert profile for a network.
 
@@ -703,7 +703,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsProfile`: InlineResponse20049
+    // response from `GetNetworkSensorAlertsProfile`: InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -729,7 +729,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -747,7 +747,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsProfiles
 
-> []InlineResponse20049 GetNetworkSensorAlertsProfiles(ctx, networkId).Execute()
+> []InlineResponse20051 GetNetworkSensorAlertsProfiles(ctx, networkId).Execute()
 
 Lists all sensor alert profiles for a network.
 
@@ -775,7 +775,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.GetNetworkSensorAlertsProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsProfiles`: []InlineResponse20049
+    // response from `GetNetworkSensorAlertsProfiles`: []InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.GetNetworkSensorAlertsProfiles`: %v\n", resp)
 }
 ```
@@ -799,7 +799,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20049**](InlineResponse20049.md)
+[**[]InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -907,7 +907,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkAlertsSettings := *openapiclient.NewInlineObject29() // InlineObject29 |  (optional)
+    updateNetworkAlertsSettings := *openapiclient.NewInlineObject32() // InlineObject32 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -937,7 +937,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkAlertsSetting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkAlertsSettings** | [**InlineObject29**](InlineObject29.md) |  | 
+ **updateNetworkAlertsSettings** | [**InlineObject32**](InlineObject32.md) |  | 
 
 ### Return type
 
@@ -959,7 +959,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSensorAlertsProfile
 
-> InlineResponse20049 UpdateNetworkSensorAlertsProfile(ctx, networkId, id).UpdateNetworkSensorAlertsProfile(updateNetworkSensorAlertsProfile).Execute()
+> InlineResponse20051 UpdateNetworkSensorAlertsProfile(ctx, networkId, id).UpdateNetworkSensorAlertsProfile(updateNetworkSensorAlertsProfile).Execute()
 
 Updates a sensor alert profile for a network.
 
@@ -980,7 +980,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     id := "id_example" // string | ID
-    updateNetworkSensorAlertsProfile := *openapiclient.NewInlineObject101() // InlineObject101 |  (optional)
+    updateNetworkSensorAlertsProfile := *openapiclient.NewInlineObject104() // InlineObject104 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -989,7 +989,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlertsApi.UpdateNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSensorAlertsProfile`: InlineResponse20049
+    // response from `UpdateNetworkSensorAlertsProfile`: InlineResponse20051
     fmt.Fprintf(os.Stdout, "Response from `AlertsApi.UpdateNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -1012,11 +1012,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSensorAlertsProfile** | [**InlineObject101**](InlineObject101.md) |  | 
+ **updateNetworkSensorAlertsProfile** | [**InlineObject104**](InlineObject104.md) |  | 
 
 ### Return type
 
-[**InlineResponse20049**](InlineResponse20049.md)
+[**InlineResponse20051**](InlineResponse20051.md)
 
 ### Authorization
 
@@ -1055,7 +1055,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     alertConfigId := "alertConfigId_example" // string | Alert config ID
-    updateOrganizationAlertsProfile := *openapiclient.NewInlineObject195() // InlineObject195 |  (optional)
+    updateOrganizationAlertsProfile := *openapiclient.NewInlineObject198() // InlineObject198 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1087,7 +1087,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAlertsProfile** | [**InlineObject195**](InlineObject195.md) |  | 
+ **updateOrganizationAlertsProfile** | [**InlineObject198**](InlineObject198.md) |  | 
 
 ### Return type
 

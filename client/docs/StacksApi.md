@@ -27,7 +27,7 @@ Method | HTTP request | Description
 
 ## AddNetworkSwitchStack
 
-> InlineResponse20089 AddNetworkSwitchStack(ctx, networkId, switchStackId).AddNetworkSwitchStack(addNetworkSwitchStack).Execute()
+> InlineResponse20091 AddNetworkSwitchStack(ctx, networkId, switchStackId).AddNetworkSwitchStack(addNetworkSwitchStack).Execute()
 
 Add a switch to a stack
 
@@ -48,7 +48,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    addNetworkSwitchStack := *openapiclient.NewInlineObject138("Serial_example") // InlineObject138 | 
+    addNetworkSwitchStack := *openapiclient.NewInlineObject141("Serial_example") // InlineObject141 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -57,7 +57,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.AddNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `AddNetworkSwitchStack`: InlineResponse20089
+    // response from `AddNetworkSwitchStack`: InlineResponse20091
     fmt.Fprintf(os.Stdout, "Response from `StacksApi.AddNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -80,11 +80,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **addNetworkSwitchStack** | [**InlineObject138**](InlineObject138.md) |  | 
+ **addNetworkSwitchStack** | [**InlineObject141**](InlineObject141.md) |  | 
 
 ### Return type
 
-[**InlineResponse20089**](InlineResponse20089.md)
+[**InlineResponse20091**](InlineResponse20091.md)
 
 ### Authorization
 
@@ -122,7 +122,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchStack := *openapiclient.NewInlineObject137("Name_example", []string{"Serials_example"}) // InlineObject137 | 
+    createNetworkSwitchStack := *openapiclient.NewInlineObject140("Name_example", []string{"Serials_example"}) // InlineObject140 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -152,7 +152,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchStackRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchStack** | [**InlineObject137**](InlineObject137.md) |  | 
+ **createNetworkSwitchStack** | [**InlineObject140**](InlineObject140.md) |  | 
 
 ### Return type
 
@@ -195,7 +195,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    createNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject140("Name_example", int32(123)) // InlineObject140 | 
+    createNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject143("Name_example", int32(123)) // InlineObject143 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingInterface** | [**InlineObject140**](InlineObject140.md) |  | 
+ **createNetworkSwitchStackRoutingInterface** | [**InlineObject143**](InlineObject143.md) |  | 
 
 ### Return type
 
@@ -270,7 +270,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject143("Subnet_example", "NextHopIp_example") // InlineObject143 | 
+    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject146("Subnet_example", "NextHopIp_example") // InlineObject146 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject143**](InlineObject143.md) |  | 
+ **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject146**](InlineObject146.md) |  | 
 
 ### Return type
 
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStack
 
-> InlineResponse20089 GetNetworkSwitchStack(ctx, networkId, switchStackId).Execute()
+> InlineResponse20091 GetNetworkSwitchStack(ctx, networkId, switchStackId).Execute()
 
 Show a switch stack
 
@@ -572,7 +572,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.GetNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStack`: InlineResponse20089
+    // response from `GetNetworkSwitchStack`: InlineResponse20091
     fmt.Fprintf(os.Stdout, "Response from `StacksApi.GetNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20089**](InlineResponse20089.md)
+[**InlineResponse20091**](InlineResponse20091.md)
 
 ### Authorization
 
@@ -692,7 +692,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStackRoutingInterfaceDhcp
 
-> InlineResponse20090 GetNetworkSwitchStackRoutingInterfaceDhcp(ctx, networkId, switchStackId, interfaceId).Execute()
+> InlineResponse20092 GetNetworkSwitchStackRoutingInterfaceDhcp(ctx, networkId, switchStackId, interfaceId).Execute()
 
 Return a layer 3 interface DHCP configuration for a switch stack
 
@@ -722,7 +722,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.GetNetworkSwitchStackRoutingInterfaceDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStackRoutingInterfaceDhcp`: InlineResponse20090
+    // response from `GetNetworkSwitchStackRoutingInterfaceDhcp`: InlineResponse20092
     fmt.Fprintf(os.Stdout, "Response from `StacksApi.GetNetworkSwitchStackRoutingInterfaceDhcp`: %v\n", resp)
 }
 ```
@@ -750,7 +750,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20090**](InlineResponse20090.md)
+[**InlineResponse20092**](InlineResponse20092.md)
 
 ### Authorization
 
@@ -990,7 +990,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStacks
 
-> []InlineResponse20089 GetNetworkSwitchStacks(ctx, networkId).Execute()
+> []InlineResponse20091 GetNetworkSwitchStacks(ctx, networkId).Execute()
 
 List the switch stacks in a network
 
@@ -1018,7 +1018,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.GetNetworkSwitchStacks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStacks`: []InlineResponse20089
+    // response from `GetNetworkSwitchStacks`: []InlineResponse20091
     fmt.Fprintf(os.Stdout, "Response from `StacksApi.GetNetworkSwitchStacks`: %v\n", resp)
 }
 ```
@@ -1042,7 +1042,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20089**](InlineResponse20089.md)
+[**[]InlineResponse20091**](InlineResponse20091.md)
 
 ### Authorization
 
@@ -1081,7 +1081,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    removeNetworkSwitchStack := *openapiclient.NewInlineObject139("Serial_example") // InlineObject139 | 
+    removeNetworkSwitchStack := *openapiclient.NewInlineObject142("Serial_example") // InlineObject142 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1113,7 +1113,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **removeNetworkSwitchStack** | [**InlineObject139**](InlineObject139.md) |  | 
+ **removeNetworkSwitchStack** | [**InlineObject142**](InlineObject142.md) |  | 
 
 ### Return type
 
@@ -1157,7 +1157,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject141() // InlineObject141 |  (optional)
+    updateNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject144() // InlineObject144 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1191,7 +1191,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterface** | [**InlineObject141**](InlineObject141.md) |  | 
+ **updateNetworkSwitchStackRoutingInterface** | [**InlineObject144**](InlineObject144.md) |  | 
 
 ### Return type
 
@@ -1235,7 +1235,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject142() // InlineObject142 |  (optional)
+    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject145() // InlineObject145 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1269,7 +1269,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject142**](InlineObject142.md) |  | 
+ **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject145**](InlineObject145.md) |  | 
 
 ### Return type
 
@@ -1313,7 +1313,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     staticRouteId := "staticRouteId_example" // string | Static route ID
-    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject144() // InlineObject144 |  (optional)
+    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject147() // InlineObject147 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1347,7 +1347,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject144**](InlineObject144.md) |  | 
+ **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject147**](InlineObject147.md) |  | 
 
 ### Return type
 

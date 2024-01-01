@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Permission scope id | [optional] 
-**Name** | Pointer to **string** | Name of permission scope | [optional] 
-**Level** | Pointer to **string** | Permission scope level | [optional] 
+**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
 
 ## Methods
 
@@ -26,31 +28,6 @@ will change when the set of required properties is changed
 NewInlineResponse200129WithDefaults instantiates a new InlineResponse200129 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *InlineResponse200129) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200129) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200129) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200129) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -77,30 +54,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetLevel
+### GetEnabled
 
-`func (o *InlineResponse200129) GetLevel() string`
+`func (o *InlineResponse200129) GetEnabled() bool`
 
-GetLevel returns the Level field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetLevelOk
+### GetEnabledOk
 
-`func (o *InlineResponse200129) GetLevelOk() (*string, bool)`
+`func (o *InlineResponse200129) GetEnabledOk() (*bool, bool)`
 
-GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLevel
+### SetEnabled
 
-`func (o *InlineResponse200129) SetLevel(v string)`
+`func (o *InlineResponse200129) SetEnabled(v bool)`
 
-SetLevel sets Level field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasLevel
+### HasEnabled
 
-`func (o *InlineResponse200129) HasLevel() bool`
+`func (o *InlineResponse200129) HasEnabled() bool`
 
-HasLevel returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
+
+### GetAdminSettings
+
+`func (o *InlineResponse200129) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
+
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
+
+### GetAdminSettingsOk
+
+`func (o *InlineResponse200129) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
+
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdminSettings
+
+`func (o *InlineResponse200129) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
+
+SetAdminSettings sets AdminSettings field to given value.
+
+### HasAdminSettings
+
+`func (o *InlineResponse200129) HasAdminSettings() bool`
+
+HasAdminSettings returns a boolean if a field has been set.
+
+### GetHelpSettings
+
+`func (o *InlineResponse200129) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
+
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+
+### GetHelpSettingsOk
+
+`func (o *InlineResponse200129) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
+
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHelpSettings
+
+`func (o *InlineResponse200129) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
+
+SetHelpSettings sets HelpSettings field to given value.
+
+### HasHelpSettings
+
+`func (o *InlineResponse200129) HasHelpSettings() bool`
+
+HasHelpSettings returns a boolean if a field has been set.
+
+### GetCustomLogo
+
+`func (o *InlineResponse200129) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
+
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+
+### GetCustomLogoOk
+
+`func (o *InlineResponse200129) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
+
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomLogo
+
+`func (o *InlineResponse200129) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
+
+SetCustomLogo sets CustomLogo field to given value.
+
+### HasCustomLogo
+
+`func (o *InlineResponse200129) HasCustomLogo() bool`
+
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

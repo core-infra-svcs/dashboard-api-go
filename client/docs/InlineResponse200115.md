@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200115Rules**](InlineResponse200115Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
+**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
+**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
+**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineResponse200115WithDefaults instantiates a new InlineResponse200115 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetName
 
-`func (o *InlineResponse200115) GetTrafficShapingEnabled() bool`
+`func (o *InlineResponse200115) GetName() string`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetNameOk
 
-`func (o *InlineResponse200115) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200115) GetNameOk() (*string, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetName
 
-`func (o *InlineResponse200115) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineResponse200115) SetName(v string)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasTrafficShapingEnabled
+### HasName
 
-`func (o *InlineResponse200115) HasTrafficShapingEnabled() bool`
+`func (o *InlineResponse200115) HasName() bool`
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDefaultRulesEnabled
+### GetId
 
-`func (o *InlineResponse200115) GetDefaultRulesEnabled() bool`
+`func (o *InlineResponse200115) GetId() string`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse200115) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200115) GetIdOk() (*string, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetId
 
-`func (o *InlineResponse200115) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineResponse200115) SetId(v string)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetId sets Id field to given value.
 
-### HasDefaultRulesEnabled
+### HasId
 
-`func (o *InlineResponse200115) HasDefaultRulesEnabled() bool`
+`func (o *InlineResponse200115) HasId() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetRules
+### GetGroupPolicyId
 
-`func (o *InlineResponse200115) GetRules() []InlineResponse200115Rules`
+`func (o *InlineResponse200115) GetGroupPolicyId() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse200115) GetRulesOk() (*[]InlineResponse200115Rules, bool)`
+`func (o *InlineResponse200115) GetGroupPolicyIdOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetGroupPolicyId
 
-`func (o *InlineResponse200115) SetRules(v []InlineResponse200115Rules)`
+`func (o *InlineResponse200115) SetGroupPolicyId(v string)`
 
-SetRules sets Rules field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasRules
+### HasGroupPolicyId
 
-`func (o *InlineResponse200115) HasRules() bool`
+`func (o *InlineResponse200115) HasGroupPolicyId() bool`
 
-HasRules returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
+
+### GetPassphrase
+
+`func (o *InlineResponse200115) GetPassphrase() string`
+
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+
+### GetPassphraseOk
+
+`func (o *InlineResponse200115) GetPassphraseOk() (*string, bool)`
+
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPassphrase
+
+`func (o *InlineResponse200115) SetPassphrase(v string)`
+
+SetPassphrase sets Passphrase field to given value.
+
+### HasPassphrase
+
+`func (o *InlineResponse200115) HasPassphrase() bool`
+
+HasPassphrase returns a boolean if a field has been set.
+
+### GetWifiPersonalNetworkId
+
+`func (o *InlineResponse200115) GetWifiPersonalNetworkId() string`
+
+GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
+
+### GetWifiPersonalNetworkIdOk
+
+`func (o *InlineResponse200115) GetWifiPersonalNetworkIdOk() (*string, bool)`
+
+GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifiPersonalNetworkId
+
+`func (o *InlineResponse200115) SetWifiPersonalNetworkId(v string)`
+
+SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
+
+### HasWifiPersonalNetworkId
+
+`func (o *InlineResponse200115) HasWifiPersonalNetworkId() bool`
+
+HasWifiPersonalNetworkId returns a boolean if a field has been set.
+
+### GetEmail
+
+`func (o *InlineResponse200115) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *InlineResponse200115) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *InlineResponse200115) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *InlineResponse200115) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
+
+### GetExpiresAt
+
+`func (o *InlineResponse200115) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineResponse200115) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineResponse200115) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineResponse200115) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

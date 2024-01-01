@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Monitored media server id | [optional] 
-**Name** | Pointer to **string** | The name of the VoIP provider | [optional] 
-**Address** | Pointer to **string** | The IP address (IPv4 only) or hostname of the media server to monitor | [optional] 
-**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead | [optional] 
+**Serial** | Pointer to **string** | Serial of the device | [optional] 
+**Name** | Pointer to **string** | Name assigned to the device | [optional] 
+**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
+**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
 
 ## Methods
 
@@ -28,30 +28,30 @@ NewInlineResponse200150WithDefaults instantiates a new InlineResponse200150 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetSerial
 
-`func (o *InlineResponse200150) GetId() string`
+`func (o *InlineResponse200150) GetSerial() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200150) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200150) GetSerialOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetSerial
 
-`func (o *InlineResponse200150) SetId(v string)`
+`func (o *InlineResponse200150) SetSerial(v string)`
 
-SetId sets Id field to given value.
+SetSerial sets Serial field to given value.
 
-### HasId
+### HasSerial
 
-`func (o *InlineResponse200150) HasId() bool`
+`func (o *InlineResponse200150) HasSerial() bool`
 
-HasId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
 ### GetName
 
@@ -78,55 +78,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetAddress
+### GetDeviceStatus
 
-`func (o *InlineResponse200150) GetAddress() string`
+`func (o *InlineResponse200150) GetDeviceStatus() string`
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
 
-### GetAddressOk
+### GetDeviceStatusOk
 
-`func (o *InlineResponse200150) GetAddressOk() (*string, bool)`
+`func (o *InlineResponse200150) GetDeviceStatusOk() (*string, bool)`
 
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetDeviceStatus
 
-`func (o *InlineResponse200150) SetAddress(v string)`
+`func (o *InlineResponse200150) SetDeviceStatus(v string)`
 
-SetAddress sets Address field to given value.
+SetDeviceStatus sets DeviceStatus field to given value.
 
-### HasAddress
+### HasDeviceStatus
 
-`func (o *InlineResponse200150) HasAddress() bool`
+`func (o *InlineResponse200150) HasDeviceStatus() bool`
 
-HasAddress returns a boolean if a field has been set.
+HasDeviceStatus returns a boolean if a field has been set.
 
-### GetBestEffortMonitoringEnabled
+### GetUpgrade
 
-`func (o *InlineResponse200150) GetBestEffortMonitoringEnabled() bool`
+`func (o *InlineResponse200150) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
 
-GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
+GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
 
-### GetBestEffortMonitoringEnabledOk
+### GetUpgradeOk
 
-`func (o *InlineResponse200150) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200150) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
 
-GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
+GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBestEffortMonitoringEnabled
+### SetUpgrade
 
-`func (o *InlineResponse200150) SetBestEffortMonitoringEnabled(v bool)`
+`func (o *InlineResponse200150) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
 
-SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
+SetUpgrade sets Upgrade field to given value.
 
-### HasBestEffortMonitoringEnabled
+### HasUpgrade
 
-`func (o *InlineResponse200150) HasBestEffortMonitoringEnabled() bool`
+`func (o *InlineResponse200150) HasUpgrade() bool`
 
-HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
+HasUpgrade returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

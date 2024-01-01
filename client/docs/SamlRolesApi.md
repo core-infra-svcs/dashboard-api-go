@@ -34,7 +34,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationSamlRole := *openapiclient.NewInlineObject236("Role_example", "OrgAccess_example") // InlineObject236 | 
+    createOrganizationSamlRole := *openapiclient.NewInlineObject239("Role_example", "OrgAccess_example") // InlineObject239 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSamlRole
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSamlRole** | [**InlineObject236**](InlineObject236.md) |  | 
+ **createOrganizationSamlRole** | [**InlineObject239**](InlineObject239.md) |  | 
 
 ### Return type
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSamlRole
 
-> InlineResponse200163 GetOrganizationSamlRole(ctx, organizationId, samlRoleId).Execute()
+> InlineResponse200165 GetOrganizationSamlRole(ctx, organizationId, samlRoleId).Execute()
 
 Return a SAML role
 
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SamlRolesApi.GetOrganizationSamlRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSamlRole`: InlineResponse200163
+    // response from `GetOrganizationSamlRole`: InlineResponse200165
     fmt.Fprintf(os.Stdout, "Response from `SamlRolesApi.GetOrganizationSamlRole`: %v\n", resp)
 }
 ```
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200163**](InlineResponse200163.md)
+[**InlineResponse200165**](InlineResponse200165.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSamlRoles
 
-> []InlineResponse200163 GetOrganizationSamlRoles(ctx, organizationId).Execute()
+> []InlineResponse200165 GetOrganizationSamlRoles(ctx, organizationId).Execute()
 
 List the SAML roles for this organization
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SamlRolesApi.GetOrganizationSamlRoles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSamlRoles`: []InlineResponse200163
+    // response from `GetOrganizationSamlRoles`: []InlineResponse200165
     fmt.Fprintf(os.Stdout, "Response from `SamlRolesApi.GetOrganizationSamlRoles`: %v\n", resp)
 }
 ```
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200163**](InlineResponse200163.md)
+[**[]InlineResponse200165**](InlineResponse200165.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSamlRole
 
-> InlineResponse200163 UpdateOrganizationSamlRole(ctx, organizationId, samlRoleId).UpdateOrganizationSamlRole(updateOrganizationSamlRole).Execute()
+> InlineResponse200165 UpdateOrganizationSamlRole(ctx, organizationId, samlRoleId).UpdateOrganizationSamlRole(updateOrganizationSamlRole).Execute()
 
 Update a SAML role
 
@@ -321,7 +321,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     samlRoleId := "samlRoleId_example" // string | Saml role ID
-    updateOrganizationSamlRole := *openapiclient.NewInlineObject237() // InlineObject237 |  (optional)
+    updateOrganizationSamlRole := *openapiclient.NewInlineObject240() // InlineObject240 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -330,7 +330,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SamlRolesApi.UpdateOrganizationSamlRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSamlRole`: InlineResponse200163
+    // response from `UpdateOrganizationSamlRole`: InlineResponse200165
     fmt.Fprintf(os.Stdout, "Response from `SamlRolesApi.UpdateOrganizationSamlRole`: %v\n", resp)
 }
 ```
@@ -353,11 +353,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationSamlRole** | [**InlineObject237**](InlineObject237.md) |  | 
+ **updateOrganizationSamlRole** | [**InlineObject240**](InlineObject240.md) |  | 
 
 ### Return type
 
-[**InlineResponse200163**](InlineResponse200163.md)
+[**InlineResponse200165**](InlineResponse200165.md)
 
 ### Authorization
 

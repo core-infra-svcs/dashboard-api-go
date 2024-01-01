@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of this target group | [optional] 
-**Scope** | Pointer to **string** | The scope and tag options of the target group. Comma separated values beginning with one of withAny, withAll, withoutAny, withoutAll, all, none, followed by tags. Default to none if empty. | [optional] 
+**AppIds** | **[]string** | ids of applications to be installed | 
+**Force** | Pointer to **bool** | By default, installation of an app which is believed to already be present on the device will be skipped. If you&#39;d like to force the installation of the app, set this parameter to true. | [optional] 
 
 ## Methods
 
 ### NewInlineObject114
 
-`func NewInlineObject114() *InlineObject114`
+`func NewInlineObject114(appIds []string, ) *InlineObject114`
 
 NewInlineObject114 instantiates a new InlineObject114 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,50 @@ NewInlineObject114WithDefaults instantiates a new InlineObject114 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetAppIds
 
-`func (o *InlineObject114) GetName() string`
+`func (o *InlineObject114) GetAppIds() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetAppIds returns the AppIds field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetAppIdsOk
 
-`func (o *InlineObject114) GetNameOk() (*string, bool)`
+`func (o *InlineObject114) GetAppIdsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetAppIdsOk returns a tuple with the AppIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetAppIds
 
-`func (o *InlineObject114) SetName(v string)`
+`func (o *InlineObject114) SetAppIds(v []string)`
 
-SetName sets Name field to given value.
+SetAppIds sets AppIds field to given value.
 
-### HasName
 
-`func (o *InlineObject114) HasName() bool`
+### GetForce
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject114) GetForce() bool`
 
-### GetScope
+GetForce returns the Force field if non-nil, zero value otherwise.
 
-`func (o *InlineObject114) GetScope() string`
+### GetForceOk
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+`func (o *InlineObject114) GetForceOk() (*bool, bool)`
 
-### GetScopeOk
-
-`func (o *InlineObject114) GetScopeOk() (*string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetForceOk returns a tuple with the Force field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetForce
 
-`func (o *InlineObject114) SetScope(v string)`
+`func (o *InlineObject114) SetForce(v bool)`
 
-SetScope sets Scope field to given value.
+SetForce sets Force field to given value.
 
-### HasScope
+### HasForce
 
-`func (o *InlineObject114) HasScope() bool`
+`func (o *InlineObject114) HasForce() bool`
 
-HasScope returns a boolean if a field has been set.
+HasForce returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

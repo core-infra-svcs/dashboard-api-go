@@ -33,7 +33,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject124() // InlineObject124 |  (optional)
+    createNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject127() // InlineObject127 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -63,7 +63,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchLinkAgg
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchLinkAggregation** | [**InlineObject124**](InlineObject124.md) |  | 
+ **createNetworkSwitchLinkAggregation** | [**InlineObject127**](InlineObject127.md) |  | 
 
 ### Return type
 
@@ -247,7 +247,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     linkAggregationId := "linkAggregationId_example" // string | Link aggregation ID
-    updateNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject125() // InlineObject125 |  (optional)
+    updateNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject128() // InlineObject128 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchLinkAggregation** | [**InlineObject125**](InlineObject125.md) |  | 
+ **updateNetworkSwitchLinkAggregation** | [**InlineObject128**](InlineObject128.md) |  | 
 
 ### Return type
 

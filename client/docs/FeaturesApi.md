@@ -35,7 +35,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject211("ShortName_example") // InlineObject211 | 
+    createOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject214("ShortName_example") // InlineObject214 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -65,7 +65,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationEarlyAcc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject211**](InlineObject211.md) |  | 
+ **createOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject214**](InlineObject214.md) |  | 
 
 ### Return type
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationEarlyAccessFeatures
 
-> []InlineResponse200146 GetOrganizationEarlyAccessFeatures(ctx, organizationId).Execute()
+> []InlineResponse200148 GetOrganizationEarlyAccessFeatures(ctx, organizationId).Execute()
 
 List the available early access features for organization
 
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FeaturesApi.GetOrganizationEarlyAccessFeatures``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationEarlyAccessFeatures`: []InlineResponse200146
+    // response from `GetOrganizationEarlyAccessFeatures`: []InlineResponse200148
     fmt.Fprintf(os.Stdout, "Response from `FeaturesApi.GetOrganizationEarlyAccessFeatures`: %v\n", resp)
 }
 ```
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200146**](InlineResponse200146.md)
+[**[]InlineResponse200148**](InlineResponse200148.md)
 
 ### Authorization
 
@@ -392,7 +392,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     optInId := "optInId_example" // string | Opt in ID
-    updateOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject212() // InlineObject212 |  (optional)
+    updateOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject215() // InlineObject215 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject212**](InlineObject212.md) |  | 
+ **updateOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject215**](InlineObject215.md) |  | 
 
 ### Return type
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSensorAlertsCurrentOverviewByMetric
 
-> InlineResponse20047 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
+> InlineResponse20049 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
 
 Return an overview of currently alerting sensors by metric
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CurrentApi.GetNetworkSensorAlertsCurrentOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse20047
+    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse20049
     fmt.Fprintf(os.Stdout, "Response from `CurrentApi.GetNetworkSensorAlertsCurrentOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20047**](InlineResponse20047.md)
+[**InlineResponse20049**](InlineResponse20049.md)
 
 ### Authorization
 

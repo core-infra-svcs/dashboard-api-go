@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## GetDeviceWirelessBluetoothSettings
 
-> InlineResponse20013 GetDeviceWirelessBluetoothSettings(ctx, serial).Execute()
+> InlineResponse20015 GetDeviceWirelessBluetoothSettings(ctx, serial).Execute()
 
 Return the bluetooth settings for a wireless device
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BluetoothApi.GetDeviceWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceWirelessBluetoothSettings`: InlineResponse20013
+    // response from `GetDeviceWirelessBluetoothSettings`: InlineResponse20015
     fmt.Fprintf(os.Stdout, "Response from `BluetoothApi.GetDeviceWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessBluetoothSettings
 
-> InlineResponse20099 GetNetworkWirelessBluetoothSettings(ctx, networkId).Execute()
+> InlineResponse200101 GetNetworkWirelessBluetoothSettings(ctx, networkId).Execute()
 
 Return the Bluetooth settings for a network. <a href=\"https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)\">Bluetooth settings</a> must be enabled on the network.
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BluetoothApi.GetNetworkWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessBluetoothSettings`: InlineResponse20099
+    // response from `GetNetworkWirelessBluetoothSettings`: InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `BluetoothApi.GetNetworkWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20099**](InlineResponse20099.md)
+[**InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceWirelessBluetoothSettings
 
-> InlineResponse20013 UpdateDeviceWirelessBluetoothSettings(ctx, serial).UpdateDeviceWirelessBluetoothSettings(updateDeviceWirelessBluetoothSettings).Execute()
+> InlineResponse20015 UpdateDeviceWirelessBluetoothSettings(ctx, serial).UpdateDeviceWirelessBluetoothSettings(updateDeviceWirelessBluetoothSettings).Execute()
 
 Update the bluetooth settings for a wireless device
 
@@ -173,7 +173,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceWirelessBluetoothSettings := *openapiclient.NewInlineObject26() // InlineObject26 |  (optional)
+    updateDeviceWirelessBluetoothSettings := *openapiclient.NewInlineObject29() // InlineObject29 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -182,7 +182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BluetoothApi.UpdateDeviceWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceWirelessBluetoothSettings`: InlineResponse20013
+    // response from `UpdateDeviceWirelessBluetoothSettings`: InlineResponse20015
     fmt.Fprintf(os.Stdout, "Response from `BluetoothApi.UpdateDeviceWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -203,11 +203,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceWirelessBlueto
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceWirelessBluetoothSettings** | [**InlineObject26**](InlineObject26.md) |  | 
+ **updateDeviceWirelessBluetoothSettings** | [**InlineObject29**](InlineObject29.md) |  | 
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessBluetoothSettings
 
-> InlineResponse20099 UpdateNetworkWirelessBluetoothSettings(ctx, networkId).UpdateNetworkWirelessBluetoothSettings(updateNetworkWirelessBluetoothSettings).Execute()
+> InlineResponse200101 UpdateNetworkWirelessBluetoothSettings(ctx, networkId).UpdateNetworkWirelessBluetoothSettings(updateNetworkWirelessBluetoothSettings).Execute()
 
 Update the Bluetooth settings for a network
 
@@ -245,7 +245,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessBluetoothSettings := *openapiclient.NewInlineObject160() // InlineObject160 |  (optional)
+    updateNetworkWirelessBluetoothSettings := *openapiclient.NewInlineObject163() // InlineObject163 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -254,7 +254,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BluetoothApi.UpdateNetworkWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessBluetoothSettings`: InlineResponse20099
+    // response from `UpdateNetworkWirelessBluetoothSettings`: InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `BluetoothApi.UpdateNetworkWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -275,11 +275,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessBluet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessBluetoothSettings** | [**InlineObject160**](InlineObject160.md) |  | 
+ **updateNetworkWirelessBluetoothSettings** | [**InlineObject163**](InlineObject163.md) |  | 
 
 ### Return type
 
-[**InlineResponse20099**](InlineResponse20099.md)
+[**InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 

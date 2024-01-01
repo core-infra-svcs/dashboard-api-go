@@ -23,7 +23,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceSwitchRoutingInterface
 
-> InlineResponse20010 CreateDeviceSwitchRoutingInterface(ctx, serial).CreateDeviceSwitchRoutingInterface(createDeviceSwitchRoutingInterface).Execute()
+> InlineResponse20012 CreateDeviceSwitchRoutingInterface(ctx, serial).CreateDeviceSwitchRoutingInterface(createDeviceSwitchRoutingInterface).Execute()
 
 Create a layer 3 interface for a switch
 
@@ -43,7 +43,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceSwitchRoutingInterface := *openapiclient.NewInlineObject19() // InlineObject19 |  (optional)
+    createDeviceSwitchRoutingInterface := *openapiclient.NewInlineObject22() // InlineObject22 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -52,7 +52,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.CreateDeviceSwitchRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceSwitchRoutingInterface`: InlineResponse20010
+    // response from `CreateDeviceSwitchRoutingInterface`: InlineResponse20012
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.CreateDeviceSwitchRoutingInterface`: %v\n", resp)
 }
 ```
@@ -73,11 +73,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceSwitchRoutingI
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceSwitchRoutingInterface** | [**InlineObject19**](InlineObject19.md) |  | 
+ **createDeviceSwitchRoutingInterface** | [**InlineObject22**](InlineObject22.md) |  | 
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    createNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject140("Name_example", int32(123)) // InlineObject140 | 
+    createNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject143("Name_example", int32(123)) // InlineObject143 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingInterface** | [**InlineObject140**](InlineObject140.md) |  | 
+ **createNetworkSwitchStackRoutingInterface** | [**InlineObject143**](InlineObject143.md) |  | 
 
 ### Return type
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingInterface
 
-> InlineResponse20010 GetDeviceSwitchRoutingInterface(ctx, serial, interfaceId).Execute()
+> InlineResponse20012 GetDeviceSwitchRoutingInterface(ctx, serial, interfaceId).Execute()
 
 Return a layer 3 interface for a switch
 
@@ -344,7 +344,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetDeviceSwitchRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingInterface`: InlineResponse20010
+    // response from `GetDeviceSwitchRoutingInterface`: InlineResponse20012
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetDeviceSwitchRoutingInterface`: %v\n", resp)
 }
 ```
@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingInterfaces
 
-> []InlineResponse20010 GetDeviceSwitchRoutingInterfaces(ctx, serial).Execute()
+> []InlineResponse20012 GetDeviceSwitchRoutingInterfaces(ctx, serial).Execute()
 
 List layer 3 interfaces for a switch
 
@@ -489,7 +489,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetDeviceSwitchRoutingInterfaces``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingInterfaces`: []InlineResponse20010
+    // response from `GetDeviceSwitchRoutingInterfaces`: []InlineResponse20012
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetDeviceSwitchRoutingInterfaces`: %v\n", resp)
 }
 ```
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20010**](InlineResponse20010.md)
+[**[]InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStackRoutingInterfaceDhcp
 
-> InlineResponse20090 GetNetworkSwitchStackRoutingInterfaceDhcp(ctx, networkId, switchStackId, interfaceId).Execute()
+> InlineResponse20092 GetNetworkSwitchStackRoutingInterfaceDhcp(ctx, networkId, switchStackId, interfaceId).Execute()
 
 Return a layer 3 interface DHCP configuration for a switch stack
 
@@ -637,7 +637,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.GetNetworkSwitchStackRoutingInterfaceDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStackRoutingInterfaceDhcp`: InlineResponse20090
+    // response from `GetNetworkSwitchStackRoutingInterfaceDhcp`: InlineResponse20092
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.GetNetworkSwitchStackRoutingInterfaceDhcp`: %v\n", resp)
 }
 ```
@@ -665,7 +665,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20090**](InlineResponse20090.md)
+[**InlineResponse20092**](InlineResponse20092.md)
 
 ### Authorization
 
@@ -756,7 +756,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceSwitchRoutingInterface
 
-> InlineResponse20010 UpdateDeviceSwitchRoutingInterface(ctx, serial, interfaceId).UpdateDeviceSwitchRoutingInterface(updateDeviceSwitchRoutingInterface).Execute()
+> InlineResponse20012 UpdateDeviceSwitchRoutingInterface(ctx, serial, interfaceId).UpdateDeviceSwitchRoutingInterface(updateDeviceSwitchRoutingInterface).Execute()
 
 Update a layer 3 interface for a switch
 
@@ -777,7 +777,7 @@ import (
 func main() {
     serial := "serial_example" // string | Serial
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateDeviceSwitchRoutingInterface := *openapiclient.NewInlineObject20() // InlineObject20 |  (optional)
+    updateDeviceSwitchRoutingInterface := *openapiclient.NewInlineObject23() // InlineObject23 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -786,7 +786,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.UpdateDeviceSwitchRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceSwitchRoutingInterface`: InlineResponse20010
+    // response from `UpdateDeviceSwitchRoutingInterface`: InlineResponse20012
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.UpdateDeviceSwitchRoutingInterface`: %v\n", resp)
 }
 ```
@@ -809,11 +809,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateDeviceSwitchRoutingInterface** | [**InlineObject20**](InlineObject20.md) |  | 
+ **updateDeviceSwitchRoutingInterface** | [**InlineObject23**](InlineObject23.md) |  | 
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -852,7 +852,7 @@ import (
 func main() {
     serial := "serial_example" // string | Serial
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateDeviceSwitchRoutingInterfaceDhcp := *openapiclient.NewInlineObject21() // InlineObject21 |  (optional)
+    updateDeviceSwitchRoutingInterfaceDhcp := *openapiclient.NewInlineObject24() // InlineObject24 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -884,7 +884,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateDeviceSwitchRoutingInterfaceDhcp** | [**InlineObject21**](InlineObject21.md) |  | 
+ **updateDeviceSwitchRoutingInterfaceDhcp** | [**InlineObject24**](InlineObject24.md) |  | 
 
 ### Return type
 
@@ -928,7 +928,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject141() // InlineObject141 |  (optional)
+    updateNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject144() // InlineObject144 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -962,7 +962,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterface** | [**InlineObject141**](InlineObject141.md) |  | 
+ **updateNetworkSwitchStackRoutingInterface** | [**InlineObject144**](InlineObject144.md) |  | 
 
 ### Return type
 
@@ -1006,7 +1006,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject142() // InlineObject142 |  (optional)
+    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject145() // InlineObject145 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1040,7 +1040,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject142**](InlineObject142.md) |  | 
+ **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject145**](InlineObject145.md) |  | 
 
 ### Return type
 

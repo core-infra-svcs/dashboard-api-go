@@ -36,7 +36,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject213("Name_example", "Address_example") // InlineObject213 | 
+    createOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject216("Name_example", "Address_example") // InlineObject216 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInsightM
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInsightMonitoredMediaServer** | [**InlineObject213**](InlineObject213.md) |  | 
+ **createOrganizationInsightMonitoredMediaServer** | [**InlineObject216**](InlineObject216.md) |  | 
 
 ### Return type
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkInsightApplicationHealthByTime
 
-> []InlineResponse20044 GetNetworkInsightApplicationHealthByTime(ctx, networkId, applicationId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
+> []InlineResponse20046 GetNetworkInsightApplicationHealthByTime(ctx, networkId, applicationId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
 
 Get application health by time
 
@@ -192,7 +192,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InsightApi.GetNetworkInsightApplicationHealthByTime``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkInsightApplicationHealthByTime`: []InlineResponse20044
+    // response from `GetNetworkInsightApplicationHealthByTime`: []InlineResponse20046
     fmt.Fprintf(os.Stdout, "Response from `InsightApi.GetNetworkInsightApplicationHealthByTime`: %v\n", resp)
 }
 ```
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20044**](InlineResponse20044.md)
+[**[]InlineResponse20046**](InlineResponse20046.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInsightApplications
 
-> []InlineResponse200149 GetOrganizationInsightApplications(ctx, organizationId).Execute()
+> []InlineResponse200151 GetOrganizationInsightApplications(ctx, organizationId).Execute()
 
 List all Insight tracked applications
 
@@ -268,7 +268,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InsightApi.GetOrganizationInsightApplications``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInsightApplications`: []InlineResponse200149
+    // response from `GetOrganizationInsightApplications`: []InlineResponse200151
     fmt.Fprintf(os.Stdout, "Response from `InsightApi.GetOrganizationInsightApplications`: %v\n", resp)
 }
 ```
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200149**](InlineResponse200149.md)
+[**[]InlineResponse200151**](InlineResponse200151.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInsightMonitoredMediaServers
 
-> []InlineResponse200150 GetOrganizationInsightMonitoredMediaServers(ctx, organizationId).Execute()
+> []InlineResponse200152 GetOrganizationInsightMonitoredMediaServers(ctx, organizationId).Execute()
 
 List the monitored media servers for this organization
 
@@ -411,7 +411,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InsightApi.GetOrganizationInsightMonitoredMediaServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInsightMonitoredMediaServers`: []InlineResponse200150
+    // response from `GetOrganizationInsightMonitoredMediaServers`: []InlineResponse200152
     fmt.Fprintf(os.Stdout, "Response from `InsightApi.GetOrganizationInsightMonitoredMediaServers`: %v\n", resp)
 }
 ```
@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200150**](InlineResponse200150.md)
+[**[]InlineResponse200152**](InlineResponse200152.md)
 
 ### Authorization
 
@@ -474,7 +474,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     monitoredMediaServerId := "monitoredMediaServerId_example" // string | Monitored media server ID
-    updateOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject214() // InlineObject214 |  (optional)
+    updateOrganizationInsightMonitoredMediaServer := *openapiclient.NewInlineObject217() // InlineObject217 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationInsightMonitoredMediaServer** | [**InlineObject214**](InlineObject214.md) |  | 
+ **updateOrganizationInsightMonitoredMediaServer** | [**InlineObject217**](InlineObject217.md) |  | 
 
 ### Return type
 

@@ -4,13 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AclId** | Pointer to **string** | ID of the adaptive policy ACL | [optional] 
-**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
-**IpVersion** | Pointer to **string** | IP version of adpative policy ACL | [optional] 
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules | [optional] 
-**CreatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was created | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was last updated | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
+**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -31,180 +29,130 @@ NewInlineResponse200118WithDefaults instantiates a new InlineResponse200118 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAclId
+### GetStartTs
 
-`func (o *InlineResponse200118) GetAclId() string`
+`func (o *InlineResponse200118) GetStartTs() time.Time`
 
-GetAclId returns the AclId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetAclIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse200118) GetAclIdOk() (*string, bool)`
+`func (o *InlineResponse200118) GetStartTsOk() (*time.Time, bool)`
 
-GetAclIdOk returns a tuple with the AclId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAclId
+### SetStartTs
 
-`func (o *InlineResponse200118) SetAclId(v string)`
+`func (o *InlineResponse200118) SetStartTs(v time.Time)`
 
-SetAclId sets AclId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasAclId
+### HasStartTs
 
-`func (o *InlineResponse200118) HasAclId() bool`
+`func (o *InlineResponse200118) HasStartTs() bool`
 
-HasAclId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetName
+### GetEndTs
 
-`func (o *InlineResponse200118) GetName() string`
+`func (o *InlineResponse200118) GetEndTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEndTsOk
 
-`func (o *InlineResponse200118) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200118) GetEndTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEndTs
 
-`func (o *InlineResponse200118) SetName(v string)`
+`func (o *InlineResponse200118) SetEndTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasName
+### HasEndTs
 
-`func (o *InlineResponse200118) HasName() bool`
+`func (o *InlineResponse200118) HasEndTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetDescription
+### GetTotalKbps
 
-`func (o *InlineResponse200118) GetDescription() string`
+`func (o *InlineResponse200118) GetTotalKbps() int32`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetTotalKbpsOk
 
-`func (o *InlineResponse200118) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200118) GetTotalKbpsOk() (*int32, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetTotalKbps
 
-`func (o *InlineResponse200118) SetDescription(v string)`
+`func (o *InlineResponse200118) SetTotalKbps(v int32)`
 
-SetDescription sets Description field to given value.
+SetTotalKbps sets TotalKbps field to given value.
 
-### HasDescription
+### HasTotalKbps
 
-`func (o *InlineResponse200118) HasDescription() bool`
+`func (o *InlineResponse200118) HasTotalKbps() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasTotalKbps returns a boolean if a field has been set.
 
-### GetIpVersion
+### GetSentKbps
 
-`func (o *InlineResponse200118) GetIpVersion() string`
+`func (o *InlineResponse200118) GetSentKbps() int32`
 
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
 
-### GetIpVersionOk
+### GetSentKbpsOk
 
-`func (o *InlineResponse200118) GetIpVersionOk() (*string, bool)`
+`func (o *InlineResponse200118) GetSentKbpsOk() (*int32, bool)`
 
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpVersion
+### SetSentKbps
 
-`func (o *InlineResponse200118) SetIpVersion(v string)`
+`func (o *InlineResponse200118) SetSentKbps(v int32)`
 
-SetIpVersion sets IpVersion field to given value.
+SetSentKbps sets SentKbps field to given value.
 
-### HasIpVersion
+### HasSentKbps
 
-`func (o *InlineResponse200118) HasIpVersion() bool`
+`func (o *InlineResponse200118) HasSentKbps() bool`
 
-HasIpVersion returns a boolean if a field has been set.
+HasSentKbps returns a boolean if a field has been set.
 
-### GetRules
+### GetReceivedKbps
 
-`func (o *InlineResponse200118) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
+`func (o *InlineResponse200118) GetReceivedKbps() int32`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetReceivedKbpsOk
 
-`func (o *InlineResponse200118) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
+`func (o *InlineResponse200118) GetReceivedKbpsOk() (*int32, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetReceivedKbps
 
-`func (o *InlineResponse200118) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
+`func (o *InlineResponse200118) SetReceivedKbps(v int32)`
 
-SetRules sets Rules field to given value.
+SetReceivedKbps sets ReceivedKbps field to given value.
 
-### HasRules
+### HasReceivedKbps
 
-`func (o *InlineResponse200118) HasRules() bool`
+`func (o *InlineResponse200118) HasReceivedKbps() bool`
 
-HasRules returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200118) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200118) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200118) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200118) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200118) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200118) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200118) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200118) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasReceivedKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

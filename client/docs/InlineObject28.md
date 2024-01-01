@@ -4,11 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the network | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
-**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
-**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. | [optional] 
-**Notes** | Pointer to **string** | Add any notes or additional information about this network here. | [optional] 
+**Addresses** | Pointer to [**[]DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses**](DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses.md) | configured alternate management interface addresses | [optional] 
 
 ## Methods
 
@@ -29,130 +25,30 @@ NewInlineObject28WithDefaults instantiates a new InlineObject28 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetAddresses
 
-`func (o *InlineObject28) GetName() string`
+`func (o *InlineObject28) GetAddresses() []DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetAddresses returns the Addresses field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetAddressesOk
 
-`func (o *InlineObject28) GetNameOk() (*string, bool)`
+`func (o *InlineObject28) GetAddressesOk() (*[]DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetAddressesOk returns a tuple with the Addresses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetAddresses
 
-`func (o *InlineObject28) SetName(v string)`
+`func (o *InlineObject28) SetAddresses(v []DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses)`
 
-SetName sets Name field to given value.
+SetAddresses sets Addresses field to given value.
 
-### HasName
+### HasAddresses
 
-`func (o *InlineObject28) HasName() bool`
+`func (o *InlineObject28) HasAddresses() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetTimeZone
-
-`func (o *InlineObject28) GetTimeZone() string`
-
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
-
-### GetTimeZoneOk
-
-`func (o *InlineObject28) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeZone
-
-`func (o *InlineObject28) SetTimeZone(v string)`
-
-SetTimeZone sets TimeZone field to given value.
-
-### HasTimeZone
-
-`func (o *InlineObject28) HasTimeZone() bool`
-
-HasTimeZone returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineObject28) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject28) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject28) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject28) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetEnrollmentString
-
-`func (o *InlineObject28) GetEnrollmentString() string`
-
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
-
-### GetEnrollmentStringOk
-
-`func (o *InlineObject28) GetEnrollmentStringOk() (*string, bool)`
-
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrollmentString
-
-`func (o *InlineObject28) SetEnrollmentString(v string)`
-
-SetEnrollmentString sets EnrollmentString field to given value.
-
-### HasEnrollmentString
-
-`func (o *InlineObject28) HasEnrollmentString() bool`
-
-HasEnrollmentString returns a boolean if a field has been set.
-
-### GetNotes
-
-`func (o *InlineObject28) GetNotes() string`
-
-GetNotes returns the Notes field if non-nil, zero value otherwise.
-
-### GetNotesOk
-
-`func (o *InlineObject28) GetNotesOk() (*string, bool)`
-
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotes
-
-`func (o *InlineObject28) SetNotes(v string)`
-
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject28) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
+HasAddresses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

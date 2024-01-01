@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchRoutingOspf := *openapiclient.NewInlineObject135() // InlineObject135 |  (optional)
+    updateNetworkSwitchRoutingOspf := *openapiclient.NewInlineObject138() // InlineObject138 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchRoutingOspf** | [**InlineObject135**](InlineObject135.md) |  | 
+ **updateNetworkSwitchRoutingOspf** | [**InlineObject138**](InlineObject138.md) |  | 
 
 ### Return type
 

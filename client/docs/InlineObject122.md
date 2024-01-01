@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The updated mac address of the trusted server | [optional] 
-**Vlan** | Pointer to **int32** | The updated VLAN of the trusted server. It must be between 1 and 4094 | [optional] 
-**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
+**Switches** | Pointer to [**[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches**](NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineObject122WithDefaults instantiates a new InlineObject122 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetEnabled
 
-`func (o *InlineObject122) GetMac() string`
+`func (o *InlineObject122) GetEnabled() bool`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetEnabledOk
 
-`func (o *InlineObject122) GetMacOk() (*string, bool)`
+`func (o *InlineObject122) GetEnabledOk() (*bool, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetEnabled
 
-`func (o *InlineObject122) SetMac(v string)`
+`func (o *InlineObject122) SetEnabled(v bool)`
 
-SetMac sets Mac field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasMac
+### HasEnabled
 
-`func (o *InlineObject122) HasMac() bool`
+`func (o *InlineObject122) HasEnabled() bool`
 
-HasMac returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetVlan
+### GetVlanId
 
-`func (o *InlineObject122) GetVlan() int32`
+`func (o *InlineObject122) GetVlanId() int32`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetVlanIdOk
 
-`func (o *InlineObject122) GetVlanOk() (*int32, bool)`
+`func (o *InlineObject122) GetVlanIdOk() (*int32, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetVlanId
 
-`func (o *InlineObject122) SetVlan(v int32)`
+`func (o *InlineObject122) SetVlanId(v int32)`
 
-SetVlan sets Vlan field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasVlan
+### HasVlanId
 
-`func (o *InlineObject122) HasVlan() bool`
+`func (o *InlineObject122) HasVlanId() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetIpv4
+### GetProtocols
 
-`func (o *InlineObject122) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4`
+`func (o *InlineObject122) GetProtocols() []string`
 
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
 
-### GetIpv4Ok
+### GetProtocolsOk
 
-`func (o *InlineObject122) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4, bool)`
+`func (o *InlineObject122) GetProtocolsOk() (*[]string, bool)`
 
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv4
+### SetProtocols
 
-`func (o *InlineObject122) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4)`
+`func (o *InlineObject122) SetProtocols(v []string)`
 
-SetIpv4 sets Ipv4 field to given value.
+SetProtocols sets Protocols field to given value.
 
-### HasIpv4
+### HasProtocols
 
-`func (o *InlineObject122) HasIpv4() bool`
+`func (o *InlineObject122) HasProtocols() bool`
 
-HasIpv4 returns a boolean if a field has been set.
+HasProtocols returns a boolean if a field has been set.
+
+### GetSwitches
+
+`func (o *InlineObject122) GetSwitches() []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches`
+
+GetSwitches returns the Switches field if non-nil, zero value otherwise.
+
+### GetSwitchesOk
+
+`func (o *InlineObject122) GetSwitchesOk() (*[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches, bool)`
+
+GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitches
+
+`func (o *InlineObject122) SetSwitches(v []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches)`
+
+SetSwitches sets Switches field to given value.
+
+### HasSwitches
+
+`func (o *InlineObject122) HasSwitches() bool`
+
+HasSwitches returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

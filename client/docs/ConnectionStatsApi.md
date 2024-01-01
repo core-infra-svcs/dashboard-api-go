@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## GetDeviceWirelessConnectionStats
 
-> InlineResponse20014 GetDeviceWirelessConnectionStats(ctx, serial).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
+> InlineResponse20016 GetDeviceWirelessConnectionStats(ctx, serial).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
 
 Aggregated connectivity info for a given AP on this network
 
@@ -49,7 +49,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectionStatsApi.GetDeviceWirelessConnectionStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceWirelessConnectionStats`: InlineResponse20014
+    // response from `GetDeviceWirelessConnectionStats`: InlineResponse20016
     fmt.Fprintf(os.Stdout, "Response from `ConnectionStatsApi.GetDeviceWirelessConnectionStats`: %v\n", resp)
 }
 ```
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20014**](InlineResponse20014.md)
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessConnectionStats
 
-> InlineResponse200102 GetNetworkWirelessConnectionStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
+> InlineResponse200104 GetNetworkWirelessConnectionStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
 
 Aggregated connectivity info for this network
 
@@ -304,7 +304,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectionStatsApi.GetNetworkWirelessConnectionStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessConnectionStats`: InlineResponse200102
+    // response from `GetNetworkWirelessConnectionStats`: InlineResponse200104
     fmt.Fprintf(os.Stdout, "Response from `ConnectionStatsApi.GetNetworkWirelessConnectionStats`: %v\n", resp)
 }
 ```
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200102**](InlineResponse200102.md)
+[**InlineResponse200104**](InlineResponse200104.md)
 
 ### Authorization
 
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessDevicesConnectionStats
 
-> []InlineResponse20014 GetNetworkWirelessDevicesConnectionStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
+> []InlineResponse20016 GetNetworkWirelessDevicesConnectionStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
 
 Aggregated connectivity info for this network, grouped by node
 
@@ -388,7 +388,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectionStatsApi.GetNetworkWirelessDevicesConnectionStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessDevicesConnectionStats`: []InlineResponse20014
+    // response from `GetNetworkWirelessDevicesConnectionStats`: []InlineResponse20016
     fmt.Fprintf(os.Stdout, "Response from `ConnectionStatsApi.GetNetworkWirelessDevicesConnectionStats`: %v\n", resp)
 }
 ```
@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20014**](InlineResponse20014.md)
+[**[]InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 

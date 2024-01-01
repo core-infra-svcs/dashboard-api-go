@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultDestinations** | Pointer to [**NetworksNetworkIdAlertsSettingsDefaultDestinations**](NetworksNetworkIdAlertsSettingsDefaultDestinations.md) |  | [optional] 
-**Alerts** | Pointer to [**[]NetworksNetworkIdAlertsSettingsAlerts**](NetworksNetworkIdAlertsSettingsAlerts.md) | Alert-specific configuration for each type. Only alerts that pertain to the network can be updated. | [optional] 
-**Muting** | Pointer to [**NetworksNetworkIdAlertsSettingsMuting**](NetworksNetworkIdAlertsSettingsMuting.md) |  | [optional] 
+**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject29WithDefaults instantiates a new InlineObject29 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultDestinations
+### GetUuid
 
-`func (o *InlineObject29) GetDefaultDestinations() NetworksNetworkIdAlertsSettingsDefaultDestinations`
+`func (o *InlineObject29) GetUuid() string`
 
-GetDefaultDestinations returns the DefaultDestinations field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetDefaultDestinationsOk
+### GetUuidOk
 
-`func (o *InlineObject29) GetDefaultDestinationsOk() (*NetworksNetworkIdAlertsSettingsDefaultDestinations, bool)`
+`func (o *InlineObject29) GetUuidOk() (*string, bool)`
 
-GetDefaultDestinationsOk returns a tuple with the DefaultDestinations field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultDestinations
+### SetUuid
 
-`func (o *InlineObject29) SetDefaultDestinations(v NetworksNetworkIdAlertsSettingsDefaultDestinations)`
+`func (o *InlineObject29) SetUuid(v string)`
 
-SetDefaultDestinations sets DefaultDestinations field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasDefaultDestinations
+### HasUuid
 
-`func (o *InlineObject29) HasDefaultDestinations() bool`
+`func (o *InlineObject29) HasUuid() bool`
 
-HasDefaultDestinations returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
-### GetAlerts
+### GetMajor
 
-`func (o *InlineObject29) GetAlerts() []NetworksNetworkIdAlertsSettingsAlerts`
+`func (o *InlineObject29) GetMajor() int32`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetMajor returns the Major field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetMajorOk
 
-`func (o *InlineObject29) GetAlertsOk() (*[]NetworksNetworkIdAlertsSettingsAlerts, bool)`
+`func (o *InlineObject29) GetMajorOk() (*int32, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetMajor
 
-`func (o *InlineObject29) SetAlerts(v []NetworksNetworkIdAlertsSettingsAlerts)`
+`func (o *InlineObject29) SetMajor(v int32)`
 
-SetAlerts sets Alerts field to given value.
+SetMajor sets Major field to given value.
 
-### HasAlerts
+### HasMajor
 
-`func (o *InlineObject29) HasAlerts() bool`
+`func (o *InlineObject29) HasMajor() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasMajor returns a boolean if a field has been set.
 
-### GetMuting
+### GetMinor
 
-`func (o *InlineObject29) GetMuting() NetworksNetworkIdAlertsSettingsMuting`
+`func (o *InlineObject29) GetMinor() int32`
 
-GetMuting returns the Muting field if non-nil, zero value otherwise.
+GetMinor returns the Minor field if non-nil, zero value otherwise.
 
-### GetMutingOk
+### GetMinorOk
 
-`func (o *InlineObject29) GetMutingOk() (*NetworksNetworkIdAlertsSettingsMuting, bool)`
+`func (o *InlineObject29) GetMinorOk() (*int32, bool)`
 
-GetMutingOk returns a tuple with the Muting field if it's non-nil, zero value otherwise
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMuting
+### SetMinor
 
-`func (o *InlineObject29) SetMuting(v NetworksNetworkIdAlertsSettingsMuting)`
+`func (o *InlineObject29) SetMinor(v int32)`
 
-SetMuting sets Muting field to given value.
+SetMinor sets Minor field to given value.
 
-### HasMuting
+### HasMinor
 
-`func (o *InlineObject29) HasMuting() bool`
+`func (o *InlineObject29) HasMinor() bool`
 
-HasMuting returns a boolean if a field has been set.
+HasMinor returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

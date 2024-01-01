@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject55("Name_example") // InlineObject55 | 
+    createNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject58("Name_example") // InlineObject58 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject55**](InlineObject55.md) |  | 
+ **createNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject58**](InlineObject58.md) |  | 
 
 ### Return type
 
@@ -321,7 +321,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     customPerformanceClassId := "customPerformanceClassId_example" // string | Custom performance class ID
-    updateNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject56() // InlineObject56 |  (optional)
+    updateNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject59() // InlineObject59 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject56**](InlineObject56.md) |  | 
+ **updateNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject59**](InlineObject59.md) |  | 
 
 ### Return type
 

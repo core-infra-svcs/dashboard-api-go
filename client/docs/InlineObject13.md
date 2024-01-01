@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Target** | **string** | FQDN, IPv4 or IPv6 address | 
-**Count** | Pointer to **int32** | Count parameter to pass to ping. [1..5], default 5 | [optional] 
-**Callback** | Pointer to [**DevicesSerialLiveToolsPingCallback**](DevicesSerialLiveToolsPingCallback.md) |  | [optional] 
+**Sims** | Pointer to [**[]DevicesSerialCellularSimsSims**](DevicesSerialCellularSimsSims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
+**SimFailover** | Pointer to [**DevicesSerialCellularSimsSimFailover**](DevicesSerialCellularSimsSimFailover.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject13
 
-`func NewInlineObject13(target string, ) *InlineObject13`
+`func NewInlineObject13() *InlineObject13`
 
 NewInlineObject13 instantiates a new InlineObject13 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +26,55 @@ NewInlineObject13WithDefaults instantiates a new InlineObject13 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTarget
+### GetSims
 
-`func (o *InlineObject13) GetTarget() string`
+`func (o *InlineObject13) GetSims() []DevicesSerialCellularSimsSims`
 
-GetTarget returns the Target field if non-nil, zero value otherwise.
+GetSims returns the Sims field if non-nil, zero value otherwise.
 
-### GetTargetOk
+### GetSimsOk
 
-`func (o *InlineObject13) GetTargetOk() (*string, bool)`
+`func (o *InlineObject13) GetSimsOk() (*[]DevicesSerialCellularSimsSims, bool)`
 
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+GetSimsOk returns a tuple with the Sims field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTarget
+### SetSims
 
-`func (o *InlineObject13) SetTarget(v string)`
+`func (o *InlineObject13) SetSims(v []DevicesSerialCellularSimsSims)`
 
-SetTarget sets Target field to given value.
+SetSims sets Sims field to given value.
 
+### HasSims
 
-### GetCount
+`func (o *InlineObject13) HasSims() bool`
 
-`func (o *InlineObject13) GetCount() int32`
+HasSims returns a boolean if a field has been set.
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+### GetSimFailover
 
-### GetCountOk
+`func (o *InlineObject13) GetSimFailover() DevicesSerialCellularSimsSimFailover`
 
-`func (o *InlineObject13) GetCountOk() (*int32, bool)`
+GetSimFailover returns the SimFailover field if non-nil, zero value otherwise.
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+### GetSimFailoverOk
+
+`func (o *InlineObject13) GetSimFailoverOk() (*DevicesSerialCellularSimsSimFailover, bool)`
+
+GetSimFailoverOk returns a tuple with the SimFailover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetSimFailover
 
-`func (o *InlineObject13) SetCount(v int32)`
+`func (o *InlineObject13) SetSimFailover(v DevicesSerialCellularSimsSimFailover)`
 
-SetCount sets Count field to given value.
+SetSimFailover sets SimFailover field to given value.
 
-### HasCount
+### HasSimFailover
 
-`func (o *InlineObject13) HasCount() bool`
+`func (o *InlineObject13) HasSimFailover() bool`
 
-HasCount returns a boolean if a field has been set.
-
-### GetCallback
-
-`func (o *InlineObject13) GetCallback() DevicesSerialLiveToolsPingCallback`
-
-GetCallback returns the Callback field if non-nil, zero value otherwise.
-
-### GetCallbackOk
-
-`func (o *InlineObject13) GetCallbackOk() (*DevicesSerialLiveToolsPingCallback, bool)`
-
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCallback
-
-`func (o *InlineObject13) SetCallback(v DevicesSerialLiveToolsPingCallback)`
-
-SetCallback sets Callback field to given value.
-
-### HasCallback
-
-`func (o *InlineObject13) HasCallback() bool`
-
-HasCallback returns a boolean if a field has been set.
+HasSimFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

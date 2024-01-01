@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkFirmwareUpgradesStagedEvent
 
-> InlineResponse20039 CreateNetworkFirmwareUpgradesStagedEvent(ctx, networkId).CreateNetworkFirmwareUpgradesStagedEvent(createNetworkFirmwareUpgradesStagedEvent).Execute()
+> InlineResponse20041 CreateNetworkFirmwareUpgradesStagedEvent(ctx, networkId).CreateNetworkFirmwareUpgradesStagedEvent(createNetworkFirmwareUpgradesStagedEvent).Execute()
 
 Create a Staged Upgrade Event for a network
 
@@ -41,7 +41,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkFirmwareUpgradesStagedEvent := *openapiclient.NewInlineObject85([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject85 | 
+    createNetworkFirmwareUpgradesStagedEvent := *openapiclient.NewInlineObject88([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject88 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -50,7 +50,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.CreateNetworkFirmwareUpgradesStagedEvent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkFirmwareUpgradesStagedEvent`: InlineResponse20039
+    // response from `CreateNetworkFirmwareUpgradesStagedEvent`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.CreateNetworkFirmwareUpgradesStagedEvent`: %v\n", resp)
 }
 ```
@@ -71,11 +71,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFirmwareUpgradesStagedEvent** | [**InlineObject85**](InlineObject85.md) |  | 
+ **createNetworkFirmwareUpgradesStagedEvent** | [**InlineObject88**](InlineObject88.md) |  | 
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkFirmwareUpgradesStagedGroup
 
-> InlineResponse20040 CreateNetworkFirmwareUpgradesStagedGroup(ctx, networkId).CreateNetworkFirmwareUpgradesStagedGroup(createNetworkFirmwareUpgradesStagedGroup).Execute()
+> InlineResponse20042 CreateNetworkFirmwareUpgradesStagedGroup(ctx, networkId).CreateNetworkFirmwareUpgradesStagedGroup(createNetworkFirmwareUpgradesStagedGroup).Execute()
 
 Create a Staged Upgrade Group for a network
 
@@ -113,7 +113,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject87("Name_example", false) // InlineObject87 | 
+    createNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject90("Name_example", false) // InlineObject90 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -122,7 +122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.CreateNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20040
+    // response from `CreateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20042
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.CreateNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
 }
 ```
@@ -143,11 +143,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkFirmwareUpgradesStagedGroup** | [**InlineObject87**](InlineObject87.md) |  | 
+ **createNetworkFirmwareUpgradesStagedGroup** | [**InlineObject90**](InlineObject90.md) |  | 
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ## DeferNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20039 DeferNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
+> InlineResponse20041 DeferNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
 
 Postpone by 1 week all pending staged upgrade stages for a network
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.DeferNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeferNetworkFirmwareUpgradesStagedEvents`: InlineResponse20039
+    // response from `DeferNetworkFirmwareUpgradesStagedEvents`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.DeferNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20039 GetNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
+> InlineResponse20041 GetNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
 
 Get the Staged Upgrade Event from a network
 
@@ -334,7 +334,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.GetNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedEvents`: InlineResponse20039
+    // response from `GetNetworkFirmwareUpgradesStagedEvents`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.GetNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedGroup
 
-> InlineResponse20040 GetNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).Execute()
+> InlineResponse20042 GetNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).Execute()
 
 Get a Staged Upgrade Group from a network
 
@@ -405,7 +405,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.GetNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedGroup`: InlineResponse20040
+    // response from `GetNetworkFirmwareUpgradesStagedGroup`: InlineResponse20042
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.GetNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
 }
 ```
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedGroups
 
-> []InlineResponse20040 GetNetworkFirmwareUpgradesStagedGroups(ctx, networkId).Execute()
+> []InlineResponse20042 GetNetworkFirmwareUpgradesStagedGroups(ctx, networkId).Execute()
 
 List of Staged Upgrade Groups in a network
 
@@ -477,7 +477,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.GetNetworkFirmwareUpgradesStagedGroups``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedGroups`: []InlineResponse20040
+    // response from `GetNetworkFirmwareUpgradesStagedGroups`: []InlineResponse20042
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.GetNetworkFirmwareUpgradesStagedGroups`: %v\n", resp)
 }
 ```
@@ -501,7 +501,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20040**](InlineResponse20040.md)
+[**[]InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedStages
 
-> []InlineResponse20041 GetNetworkFirmwareUpgradesStagedStages(ctx, networkId).Execute()
+> []InlineResponse20043 GetNetworkFirmwareUpgradesStagedStages(ctx, networkId).Execute()
 
 Order of Staged Upgrade Groups in a network
 
@@ -547,7 +547,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.GetNetworkFirmwareUpgradesStagedStages``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedStages`: []InlineResponse20041
+    // response from `GetNetworkFirmwareUpgradesStagedStages`: []InlineResponse20043
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.GetNetworkFirmwareUpgradesStagedStages`: %v\n", resp)
 }
 ```
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20041**](InlineResponse20041.md)
+[**[]InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 
 ## RollbacksNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20039 RollbacksNetworkFirmwareUpgradesStagedEvents(ctx, networkId).RollbacksNetworkFirmwareUpgradesStagedEvents(rollbacksNetworkFirmwareUpgradesStagedEvents).Execute()
+> InlineResponse20041 RollbacksNetworkFirmwareUpgradesStagedEvents(ctx, networkId).RollbacksNetworkFirmwareUpgradesStagedEvents(rollbacksNetworkFirmwareUpgradesStagedEvents).Execute()
 
 Rollback a Staged Upgrade Event for a network
 
@@ -609,7 +609,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    rollbacksNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject86([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject86 | 
+    rollbacksNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject89([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject89 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -618,7 +618,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.RollbacksNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RollbacksNetworkFirmwareUpgradesStagedEvents`: InlineResponse20039
+    // response from `RollbacksNetworkFirmwareUpgradesStagedEvents`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.RollbacksNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -639,11 +639,11 @@ Other parameters are passed through a pointer to a apiRollbacksNetworkFirmwareUp
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **rollbacksNetworkFirmwareUpgradesStagedEvents** | [**InlineObject86**](InlineObject86.md) |  | 
+ **rollbacksNetworkFirmwareUpgradesStagedEvents** | [**InlineObject89**](InlineObject89.md) |  | 
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -661,7 +661,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20039 UpdateNetworkFirmwareUpgradesStagedEvents(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedEvents(updateNetworkFirmwareUpgradesStagedEvents).Execute()
+> InlineResponse20041 UpdateNetworkFirmwareUpgradesStagedEvents(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedEvents(updateNetworkFirmwareUpgradesStagedEvents).Execute()
 
 Update the Staged Upgrade Event for a network
 
@@ -681,7 +681,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject84([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject84 | 
+    updateNetworkFirmwareUpgradesStagedEvents := *openapiclient.NewInlineObject87([]openapiclient.NetworksNetworkIdFirmwareUpgradesStagedEventsStages{*openapiclient.NewNetworksNetworkIdFirmwareUpgradesStagedEventsStages()}) // InlineObject87 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -690,7 +690,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.UpdateNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedEvents`: InlineResponse20039
+    // response from `UpdateNetworkFirmwareUpgradesStagedEvents`: InlineResponse20041
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.UpdateNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -711,11 +711,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkFirmwareUpgradesStagedEvents** | [**InlineObject84**](InlineObject84.md) |  | 
+ **updateNetworkFirmwareUpgradesStagedEvents** | [**InlineObject87**](InlineObject87.md) |  | 
 
 ### Return type
 
-[**InlineResponse20039**](InlineResponse20039.md)
+[**InlineResponse20041**](InlineResponse20041.md)
 
 ### Authorization
 
@@ -733,7 +733,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedGroup
 
-> InlineResponse20040 UpdateNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).UpdateNetworkFirmwareUpgradesStagedGroup(updateNetworkFirmwareUpgradesStagedGroup).Execute()
+> InlineResponse20042 UpdateNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).UpdateNetworkFirmwareUpgradesStagedGroup(updateNetworkFirmwareUpgradesStagedGroup).Execute()
 
 Update a Staged Upgrade Group for a network
 
@@ -754,7 +754,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     groupId := "groupId_example" // string | Group ID
-    updateNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject88("Name_example", false) // InlineObject88 | 
+    updateNetworkFirmwareUpgradesStagedGroup := *openapiclient.NewInlineObject91("Name_example", false) // InlineObject91 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -763,7 +763,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.UpdateNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20040
+    // response from `UpdateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20042
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.UpdateNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
 }
 ```
@@ -786,11 +786,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkFirmwareUpgradesStagedGroup** | [**InlineObject88**](InlineObject88.md) |  | 
+ **updateNetworkFirmwareUpgradesStagedGroup** | [**InlineObject91**](InlineObject91.md) |  | 
 
 ### Return type
 
-[**InlineResponse20040**](InlineResponse20040.md)
+[**InlineResponse20042**](InlineResponse20042.md)
 
 ### Authorization
 
@@ -808,7 +808,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedStages
 
-> []InlineResponse20041 UpdateNetworkFirmwareUpgradesStagedStages(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedStages(updateNetworkFirmwareUpgradesStagedStages).Execute()
+> []InlineResponse20043 UpdateNetworkFirmwareUpgradesStagedStages(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedStages(updateNetworkFirmwareUpgradesStagedStages).Execute()
 
 Assign Staged Upgrade Group order in the sequence.
 
@@ -828,7 +828,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkFirmwareUpgradesStagedStages := *openapiclient.NewInlineObject89() // InlineObject89 |  (optional)
+    updateNetworkFirmwareUpgradesStagedStages := *openapiclient.NewInlineObject92() // InlineObject92 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -837,7 +837,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.UpdateNetworkFirmwareUpgradesStagedStages``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedStages`: []InlineResponse20041
+    // response from `UpdateNetworkFirmwareUpgradesStagedStages`: []InlineResponse20043
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.UpdateNetworkFirmwareUpgradesStagedStages`: %v\n", resp)
 }
 ```
@@ -858,11 +858,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkFirmwareUpgra
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkFirmwareUpgradesStagedStages** | [**InlineObject89**](InlineObject89.md) |  | 
+ **updateNetworkFirmwareUpgradesStagedStages** | [**InlineObject92**](InlineObject92.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse20041**](InlineResponse20041.md)
+[**[]InlineResponse20043**](InlineResponse20043.md)
 
 ### Authorization
 

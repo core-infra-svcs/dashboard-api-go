@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the combined network | 
-**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
-**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
+**Destination** | [**OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination**](OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination.md) |  | 
+**Licenses** | [**[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses**](OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses.md) | The list of licenses to move | 
 
 ## Methods
 
 ### NewInlineObject228
 
-`func NewInlineObject228(name string, networkIds []string, ) *InlineObject228`
+`func NewInlineObject228(destination OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, licenses []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, ) *InlineObject228`
 
 NewInlineObject228 instantiates a new InlineObject228 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,45 @@ NewInlineObject228WithDefaults instantiates a new InlineObject228 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDestination
 
-`func (o *InlineObject228) GetName() string`
+`func (o *InlineObject228) GetDestination() OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDestination returns the Destination field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDestinationOk
 
-`func (o *InlineObject228) GetNameOk() (*string, bool)`
+`func (o *InlineObject228) GetDestinationOk() (*OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDestination
 
-`func (o *InlineObject228) SetName(v string)`
+`func (o *InlineObject228) SetDestination(v OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination)`
 
-SetName sets Name field to given value.
+SetDestination sets Destination field to given value.
 
 
-### GetNetworkIds
+### GetLicenses
 
-`func (o *InlineObject228) GetNetworkIds() []string`
+`func (o *InlineObject228) GetLicenses() []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetLicensesOk
 
-`func (o *InlineObject228) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject228) GetLicensesOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetLicenses
 
-`func (o *InlineObject228) SetNetworkIds(v []string)`
+`func (o *InlineObject228) SetLicenses(v []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetLicenses sets Licenses field to given value.
 
-
-### GetEnrollmentString
-
-`func (o *InlineObject228) GetEnrollmentString() string`
-
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
-
-### GetEnrollmentStringOk
-
-`func (o *InlineObject228) GetEnrollmentStringOk() (*string, bool)`
-
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrollmentString
-
-`func (o *InlineObject228) SetEnrollmentString(v string)`
-
-SetEnrollmentString sets EnrollmentString field to given value.
-
-### HasEnrollmentString
-
-`func (o *InlineObject228) HasEnrollmentString() bool`
-
-HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

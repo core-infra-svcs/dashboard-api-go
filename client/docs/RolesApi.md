@@ -34,7 +34,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCameraRole := *openapiclient.NewInlineObject204("Name_example") // InlineObject204 | 
+    createOrganizationCameraRole := *openapiclient.NewInlineObject207("Name_example") // InlineObject207 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraRo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraRole** | [**InlineObject204**](InlineObject204.md) |  | 
+ **createOrganizationCameraRole** | [**InlineObject207**](InlineObject207.md) |  | 
 
 ### Return type
 
@@ -321,7 +321,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     roleId := "roleId_example" // string | Role ID
-    updateOrganizationCameraRole := *openapiclient.NewInlineObject205() // InlineObject205 |  (optional)
+    updateOrganizationCameraRole := *openapiclient.NewInlineObject208() // InlineObject208 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationCameraRole** | [**InlineObject205**](InlineObject205.md) |  | 
+ **updateOrganizationCameraRole** | [**InlineObject208**](InlineObject208.md) |  | 
 
 ### Return type
 

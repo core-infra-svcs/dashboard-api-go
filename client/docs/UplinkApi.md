@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayUplinkStatuses
 
-> []InlineResponse200130 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200132 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MG cellular gateway in the organization
 
@@ -116,7 +116,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinkApi.GetOrganizationCellularGatewayUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200130
+    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200132
     fmt.Fprintf(os.Stdout, "Response from `UplinkApi.GetOrganizationCellularGatewayUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200130**](InlineResponse200130.md)
+[**[]InlineResponse200132**](InlineResponse200132.md)
 
 ### Authorization
 
@@ -184,7 +184,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkCellularGatewayUplink := *openapiclient.NewInlineObject75() // InlineObject75 |  (optional)
+    updateNetworkCellularGatewayUplink := *openapiclient.NewInlineObject78() // InlineObject78 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -214,7 +214,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayUplink** | [**InlineObject75**](InlineObject75.md) |  | 
+ **updateNetworkCellularGatewayUplink** | [**InlineObject78**](InlineObject78.md) |  | 
 
 ### Return type
 

@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCellularGatewayDhcp
 
-> InlineResponse20032 GetNetworkCellularGatewayDhcp(ctx, networkId).Execute()
+> InlineResponse20034 GetNetworkCellularGatewayDhcp(ctx, networkId).Execute()
 
 List common DHCP settings of MGs
 
@@ -260,7 +260,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetNetworkCellularGatewayDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewayDhcp`: InlineResponse20032
+    // response from `GetNetworkCellularGatewayDhcp`: InlineResponse20034
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetNetworkCellularGatewayDhcp`: %v\n", resp)
 }
 ```
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20032**](InlineResponse20032.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayUplinkStatuses
 
-> []InlineResponse200130 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200132 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MG cellular gateway in the organization
 
@@ -476,7 +476,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.GetOrganizationCellularGatewayUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200130
+    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200132
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.GetOrganizationCellularGatewayUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200130**](InlineResponse200130.md)
+[**[]InlineResponse200132**](InlineResponse200132.md)
 
 ### Authorization
 
@@ -544,7 +544,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject11() // InlineObject11 |  (optional)
+    updateDeviceCellularGatewayLan := *openapiclient.NewInlineObject14() // InlineObject14 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -574,7 +574,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGatewa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGatewayLan** | [**InlineObject11**](InlineObject11.md) |  | 
+ **updateDeviceCellularGatewayLan** | [**InlineObject14**](InlineObject14.md) |  | 
 
 ### Return type
 
@@ -616,7 +616,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject12() // InlineObject12 |  (optional)
+    updateDeviceCellularGatewayPortForwardingRules := *openapiclient.NewInlineObject15() // InlineObject15 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -646,7 +646,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCellularGatewa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCellularGatewayPortForwardingRules** | [**InlineObject12**](InlineObject12.md) |  | 
+ **updateDeviceCellularGatewayPortForwardingRules** | [**InlineObject15**](InlineObject15.md) |  | 
 
 ### Return type
 
@@ -688,7 +688,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkCellularGatewayConnectivityMonitoringDestinations := *openapiclient.NewInlineObject72() // InlineObject72 |  (optional)
+    updateNetworkCellularGatewayConnectivityMonitoringDestinations := *openapiclient.NewInlineObject75() // InlineObject75 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -718,7 +718,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayConnectivityMonitoringDestinations** | [**InlineObject72**](InlineObject72.md) |  | 
+ **updateNetworkCellularGatewayConnectivityMonitoringDestinations** | [**InlineObject75**](InlineObject75.md) |  | 
 
 ### Return type
 
@@ -740,7 +740,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewayDhcp
 
-> InlineResponse20032 UpdateNetworkCellularGatewayDhcp(ctx, networkId).UpdateNetworkCellularGatewayDhcp(updateNetworkCellularGatewayDhcp).Execute()
+> InlineResponse20034 UpdateNetworkCellularGatewayDhcp(ctx, networkId).UpdateNetworkCellularGatewayDhcp(updateNetworkCellularGatewayDhcp).Execute()
 
 Update common DHCP settings of MGs
 
@@ -760,7 +760,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkCellularGatewayDhcp := *openapiclient.NewInlineObject73() // InlineObject73 |  (optional)
+    updateNetworkCellularGatewayDhcp := *openapiclient.NewInlineObject76() // InlineObject76 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -769,7 +769,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularGatewayApi.UpdateNetworkCellularGatewayDhcp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewayDhcp`: InlineResponse20032
+    // response from `UpdateNetworkCellularGatewayDhcp`: InlineResponse20034
     fmt.Fprintf(os.Stdout, "Response from `CellularGatewayApi.UpdateNetworkCellularGatewayDhcp`: %v\n", resp)
 }
 ```
@@ -790,11 +790,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayDhcp** | [**InlineObject73**](InlineObject73.md) |  | 
+ **updateNetworkCellularGatewayDhcp** | [**InlineObject76**](InlineObject76.md) |  | 
 
 ### Return type
 
-[**InlineResponse20032**](InlineResponse20032.md)
+[**InlineResponse20034**](InlineResponse20034.md)
 
 ### Authorization
 
@@ -832,7 +832,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkCellularGatewaySubnetPool := *openapiclient.NewInlineObject74() // InlineObject74 |  (optional)
+    updateNetworkCellularGatewaySubnetPool := *openapiclient.NewInlineObject77() // InlineObject77 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -862,7 +862,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewaySubnetPool** | [**InlineObject74**](InlineObject74.md) |  | 
+ **updateNetworkCellularGatewaySubnetPool** | [**InlineObject77**](InlineObject77.md) |  | 
 
 ### Return type
 
@@ -904,7 +904,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkCellularGatewayUplink := *openapiclient.NewInlineObject75() // InlineObject75 |  (optional)
+    updateNetworkCellularGatewayUplink := *openapiclient.NewInlineObject78() // InlineObject78 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -934,7 +934,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkCellularGatew
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkCellularGatewayUplink** | [**InlineObject75**](InlineObject75.md) |  | 
+ **updateNetworkCellularGatewayUplink** | [**InlineObject78**](InlineObject78.md) |  | 
 
 ### Return type
 

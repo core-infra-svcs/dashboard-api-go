@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkApplianceRfProfile
 
-> InlineResponse20022Assigned CreateNetworkApplianceRfProfile(ctx, networkId).CreateNetworkApplianceRfProfile(createNetworkApplianceRfProfile).Execute()
+> InlineResponse20024Assigned CreateNetworkApplianceRfProfile(ctx, networkId).CreateNetworkApplianceRfProfile(createNetworkApplianceRfProfile).Execute()
 
 Creates new RF profile for this network
 
@@ -39,7 +39,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkApplianceRfProfile := *openapiclient.NewInlineObject45("Name_example") // InlineObject45 | 
+    createNetworkApplianceRfProfile := *openapiclient.NewInlineObject48("Name_example") // InlineObject48 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -48,7 +48,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.CreateNetworkApplianceRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkApplianceRfProfile`: InlineResponse20022Assigned
+    // response from `CreateNetworkApplianceRfProfile`: InlineResponse20024Assigned
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.CreateNetworkApplianceRfProfile`: %v\n", resp)
 }
 ```
@@ -69,11 +69,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkApplianceRfPr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkApplianceRfProfile** | [**InlineObject45**](InlineObject45.md) |  | 
+ **createNetworkApplianceRfProfile** | [**InlineObject48**](InlineObject48.md) |  | 
 
 ### Return type
 
-[**InlineResponse20022Assigned**](InlineResponse20022Assigned.md)
+[**InlineResponse20024Assigned**](InlineResponse20024Assigned.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkWirelessRfProfile
 
-> InlineResponse200108 CreateNetworkWirelessRfProfile(ctx, networkId).CreateNetworkWirelessRfProfile(createNetworkWirelessRfProfile).Execute()
+> InlineResponse200110 CreateNetworkWirelessRfProfile(ctx, networkId).CreateNetworkWirelessRfProfile(createNetworkWirelessRfProfile).Execute()
 
 Creates new RF profile for this network
 
@@ -111,7 +111,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWirelessRfProfile := *openapiclient.NewInlineObject165("Name_example", "BandSelectionType_example") // InlineObject165 | 
+    createNetworkWirelessRfProfile := *openapiclient.NewInlineObject168("Name_example", "BandSelectionType_example") // InlineObject168 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -120,7 +120,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.CreateNetworkWirelessRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWirelessRfProfile`: InlineResponse200108
+    // response from `CreateNetworkWirelessRfProfile`: InlineResponse200110
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.CreateNetworkWirelessRfProfile`: %v\n", resp)
 }
 ```
@@ -141,11 +141,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWirelessRfPro
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWirelessRfProfile** | [**InlineObject165**](InlineObject165.md) |  | 
+ **createNetworkWirelessRfProfile** | [**InlineObject168**](InlineObject168.md) |  | 
 
 ### Return type
 
-[**InlineResponse200108**](InlineResponse200108.md)
+[**InlineResponse200110**](InlineResponse200110.md)
 
 ### Authorization
 
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceRfProfile
 
-> InlineResponse20022Assigned GetNetworkApplianceRfProfile(ctx, networkId, rfProfileId).Execute()
+> InlineResponse20024Assigned GetNetworkApplianceRfProfile(ctx, networkId, rfProfileId).Execute()
 
 Return a RF profile
 
@@ -334,7 +334,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.GetNetworkApplianceRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceRfProfile`: InlineResponse20022Assigned
+    // response from `GetNetworkApplianceRfProfile`: InlineResponse20024Assigned
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.GetNetworkApplianceRfProfile`: %v\n", resp)
 }
 ```
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022Assigned**](InlineResponse20022Assigned.md)
+[**InlineResponse20024Assigned**](InlineResponse20024Assigned.md)
 
 ### Authorization
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceRfProfiles
 
-> InlineResponse20022 GetNetworkApplianceRfProfiles(ctx, networkId).Execute()
+> InlineResponse20024 GetNetworkApplianceRfProfiles(ctx, networkId).Execute()
 
 List the RF profiles for this network
 
@@ -406,7 +406,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.GetNetworkApplianceRfProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceRfProfiles`: InlineResponse20022
+    // response from `GetNetworkApplianceRfProfiles`: InlineResponse20024
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.GetNetworkApplianceRfProfiles`: %v\n", resp)
 }
 ```
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022**](InlineResponse20022.md)
+[**InlineResponse20024**](InlineResponse20024.md)
 
 ### Authorization
 
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessRfProfile
 
-> InlineResponse200108 GetNetworkWirelessRfProfile(ctx, networkId, rfProfileId).Execute()
+> InlineResponse200110 GetNetworkWirelessRfProfile(ctx, networkId, rfProfileId).Execute()
 
 Return a RF profile
 
@@ -477,7 +477,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.GetNetworkWirelessRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessRfProfile`: InlineResponse200108
+    // response from `GetNetworkWirelessRfProfile`: InlineResponse200110
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.GetNetworkWirelessRfProfile`: %v\n", resp)
 }
 ```
@@ -503,7 +503,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200108**](InlineResponse200108.md)
+[**InlineResponse200110**](InlineResponse200110.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessRfProfiles
 
-> InlineResponse200108 GetNetworkWirelessRfProfiles(ctx, networkId).IncludeTemplateProfiles(includeTemplateProfiles).Execute()
+> InlineResponse200110 GetNetworkWirelessRfProfiles(ctx, networkId).IncludeTemplateProfiles(includeTemplateProfiles).Execute()
 
 List RF profiles for this network
 
@@ -550,7 +550,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.GetNetworkWirelessRfProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessRfProfiles`: InlineResponse200108
+    // response from `GetNetworkWirelessRfProfiles`: InlineResponse200110
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.GetNetworkWirelessRfProfiles`: %v\n", resp)
 }
 ```
@@ -575,7 +575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200108**](InlineResponse200108.md)
+[**InlineResponse200110**](InlineResponse200110.md)
 
 ### Authorization
 
@@ -593,7 +593,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceRfProfile
 
-> InlineResponse20022Assigned UpdateNetworkApplianceRfProfile(ctx, networkId, rfProfileId).UpdateNetworkApplianceRfProfile(updateNetworkApplianceRfProfile).Execute()
+> InlineResponse20024Assigned UpdateNetworkApplianceRfProfile(ctx, networkId, rfProfileId).UpdateNetworkApplianceRfProfile(updateNetworkApplianceRfProfile).Execute()
 
 Updates specified RF profile for this network
 
@@ -614,7 +614,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     rfProfileId := "rfProfileId_example" // string | Rf profile ID
-    updateNetworkApplianceRfProfile := *openapiclient.NewInlineObject46() // InlineObject46 |  (optional)
+    updateNetworkApplianceRfProfile := *openapiclient.NewInlineObject49() // InlineObject49 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -623,7 +623,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.UpdateNetworkApplianceRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceRfProfile`: InlineResponse20022Assigned
+    // response from `UpdateNetworkApplianceRfProfile`: InlineResponse20024Assigned
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.UpdateNetworkApplianceRfProfile`: %v\n", resp)
 }
 ```
@@ -646,11 +646,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceRfProfile** | [**InlineObject46**](InlineObject46.md) |  | 
+ **updateNetworkApplianceRfProfile** | [**InlineObject49**](InlineObject49.md) |  | 
 
 ### Return type
 
-[**InlineResponse20022Assigned**](InlineResponse20022Assigned.md)
+[**InlineResponse20024Assigned**](InlineResponse20024Assigned.md)
 
 ### Authorization
 
@@ -668,7 +668,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessRfProfile
 
-> InlineResponse200108 UpdateNetworkWirelessRfProfile(ctx, networkId, rfProfileId).UpdateNetworkWirelessRfProfile(updateNetworkWirelessRfProfile).Execute()
+> InlineResponse200110 UpdateNetworkWirelessRfProfile(ctx, networkId, rfProfileId).UpdateNetworkWirelessRfProfile(updateNetworkWirelessRfProfile).Execute()
 
 Updates specified RF profile for this network
 
@@ -689,7 +689,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     rfProfileId := "rfProfileId_example" // string | Rf profile ID
-    updateNetworkWirelessRfProfile := *openapiclient.NewInlineObject166() // InlineObject166 |  (optional)
+    updateNetworkWirelessRfProfile := *openapiclient.NewInlineObject169() // InlineObject169 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -698,7 +698,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.UpdateNetworkWirelessRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessRfProfile`: InlineResponse200108
+    // response from `UpdateNetworkWirelessRfProfile`: InlineResponse200110
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.UpdateNetworkWirelessRfProfile`: %v\n", resp)
 }
 ```
@@ -721,11 +721,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessRfProfile** | [**InlineObject166**](InlineObject166.md) |  | 
+ **updateNetworkWirelessRfProfile** | [**InlineObject169**](InlineObject169.md) |  | 
 
 ### Return type
 
-[**InlineResponse200108**](InlineResponse200108.md)
+[**InlineResponse200110**](InlineResponse200110.md)
 
 ### Authorization
 

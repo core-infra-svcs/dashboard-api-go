@@ -35,7 +35,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject189(*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup(), *openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup()) // InlineObject189 | 
+    createOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject192(*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup(), *openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup()) // InlineObject192 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -65,7 +65,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyPolicy** | [**InlineObject189**](InlineObject189.md) |  | 
+ **createOrganizationAdaptivePolicyPolicy** | [**InlineObject192**](InlineObject192.md) |  | 
 
 ### Return type
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPoliciesByClient
 
-> []InlineResponse20046 GetNetworkPoliciesByClient(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).Execute()
+> []InlineResponse20048 GetNetworkPoliciesByClient(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).Execute()
 
 Get policies for all clients with policies
 
@@ -191,7 +191,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PoliciesApi.GetNetworkPoliciesByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPoliciesByClient`: []InlineResponse20046
+    // response from `GetNetworkPoliciesByClient`: []InlineResponse20048
     fmt.Fprintf(os.Stdout, "Response from `PoliciesApi.GetNetworkPoliciesByClient`: %v\n", resp)
 }
 ```
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20046**](InlineResponse20046.md)
+[**[]InlineResponse20048**](InlineResponse20048.md)
 
 ### Authorization
 
@@ -402,7 +402,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     id := "id_example" // string | ID
-    updateOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject190() // InlineObject190 |  (optional)
+    updateOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject193() // InlineObject193 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -434,7 +434,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyPolicy** | [**InlineObject190**](InlineObject190.md) |  | 
+ **updateOrganizationAdaptivePolicyPolicy** | [**InlineObject193**](InlineObject193.md) |  | 
 
 ### Return type
 

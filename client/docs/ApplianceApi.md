@@ -207,7 +207,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkAppliancePrefixesDelegatedStatic := *openapiclient.NewInlineObject43("Prefix_example", *openapiclient.NewNetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1()) // InlineObject43 | 
+    createNetworkAppliancePrefixesDelegatedStatic := *openapiclient.NewInlineObject46("Prefix_example", *openapiclient.NewNetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1()) // InlineObject46 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -237,7 +237,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkAppliancePref
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkAppliancePrefixesDelegatedStatic** | [**InlineObject43**](InlineObject43.md) |  | 
+ **createNetworkAppliancePrefixesDelegatedStatic** | [**InlineObject46**](InlineObject46.md) |  | 
 
 ### Return type
 
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkApplianceRfProfile
 
-> InlineResponse20022Assigned CreateNetworkApplianceRfProfile(ctx, networkId).CreateNetworkApplianceRfProfile(createNetworkApplianceRfProfile).Execute()
+> InlineResponse20024Assigned CreateNetworkApplianceRfProfile(ctx, networkId).CreateNetworkApplianceRfProfile(createNetworkApplianceRfProfile).Execute()
 
 Creates new RF profile for this network
 
@@ -279,7 +279,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkApplianceRfProfile := *openapiclient.NewInlineObject45("Name_example") // InlineObject45 | 
+    createNetworkApplianceRfProfile := *openapiclient.NewInlineObject48("Name_example") // InlineObject48 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -288,7 +288,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.CreateNetworkApplianceRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkApplianceRfProfile`: InlineResponse20022Assigned
+    // response from `CreateNetworkApplianceRfProfile`: InlineResponse20024Assigned
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.CreateNetworkApplianceRfProfile`: %v\n", resp)
 }
 ```
@@ -309,11 +309,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkApplianceRfPr
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkApplianceRfProfile** | [**InlineObject45**](InlineObject45.md) |  | 
+ **createNetworkApplianceRfProfile** | [**InlineObject48**](InlineObject48.md) |  | 
 
 ### Return type
 
-[**InlineResponse20022Assigned**](InlineResponse20022Assigned.md)
+[**InlineResponse20024Assigned**](InlineResponse20024Assigned.md)
 
 ### Authorization
 
@@ -351,7 +351,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkApplianceStaticRoute := *openapiclient.NewInlineObject52("Name_example", "Subnet_example", "GatewayIp_example") // InlineObject52 | 
+    createNetworkApplianceStaticRoute := *openapiclient.NewInlineObject55("Name_example", "Subnet_example", "GatewayIp_example") // InlineObject55 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -381,7 +381,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkApplianceStat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkApplianceStaticRoute** | [**InlineObject52**](InlineObject52.md) |  | 
+ **createNetworkApplianceStaticRoute** | [**InlineObject55**](InlineObject55.md) |  | 
 
 ### Return type
 
@@ -423,7 +423,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject55("Name_example") // InlineObject55 | 
+    createNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject58("Name_example") // InlineObject58 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -453,7 +453,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject55**](InlineObject55.md) |  | 
+ **createNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject58**](InlineObject58.md) |  | 
 
 ### Return type
 
@@ -495,7 +495,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkApplianceVlan := *openapiclient.NewInlineObject61("Id_example", "Name_example") // InlineObject61 | 
+    createNetworkApplianceVlan := *openapiclient.NewInlineObject64("Id_example", "Name_example") // InlineObject64 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -525,7 +525,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkApplianceVlan
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkApplianceVlan** | [**InlineObject61**](InlineObject61.md) |  | 
+ **createNetworkApplianceVlan** | [**InlineObject64**](InlineObject64.md) |  | 
 
 ### Return type
 
@@ -1182,7 +1182,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceApplianceRadioSettings
 
-> InlineResponse2001 GetDeviceApplianceRadioSettings(ctx, serial).Execute()
+> InlineResponse2003 GetDeviceApplianceRadioSettings(ctx, serial).Execute()
 
 Return the radio settings of an appliance
 
@@ -1210,7 +1210,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetDeviceApplianceRadioSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceApplianceRadioSettings`: InlineResponse2001
+    // response from `GetDeviceApplianceRadioSettings`: InlineResponse2003
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetDeviceApplianceRadioSettings`: %v\n", resp)
 }
 ```
@@ -1234,7 +1234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -1252,7 +1252,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceApplianceUplinksSettings
 
-> InlineResponse2002 GetDeviceApplianceUplinksSettings(ctx, serial).Execute()
+> InlineResponse2004 GetDeviceApplianceUplinksSettings(ctx, serial).Execute()
 
 Return the uplink settings for an MX appliance
 
@@ -1280,7 +1280,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetDeviceApplianceUplinksSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceApplianceUplinksSettings`: InlineResponse2002
+    // response from `GetDeviceApplianceUplinksSettings`: InlineResponse2004
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetDeviceApplianceUplinksSettings`: %v\n", resp)
 }
 ```
@@ -1304,7 +1304,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -1902,7 +1902,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallInboundFirewallRules
 
-> InlineResponse20018 GetNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).Execute()
+> InlineResponse20020 GetNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).Execute()
 
 Return the inbound firewall rules for an MX network
 
@@ -1930,7 +1930,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceFirewallInboundFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20018
+    // response from `GetNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20020
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceFirewallInboundFirewallRules`: %v\n", resp)
 }
 ```
@@ -1954,7 +1954,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -2112,7 +2112,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories
 
-> InlineResponse20019 GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories(ctx, networkId).Execute()
+> InlineResponse20021 GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories(ctx, networkId).Execute()
 
 Return the L7 firewall application categories and their associated applications for an MX network
 
@@ -2140,7 +2140,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories`: InlineResponse20019
+    // response from `GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories`: InlineResponse20021
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories`: %v\n", resp)
 }
 ```
@@ -2164,7 +2164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 
@@ -2462,7 +2462,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAppliancePort
 
-> InlineResponse20020 GetNetworkAppliancePort(ctx, networkId, portId).Execute()
+> InlineResponse20022 GetNetworkAppliancePort(ctx, networkId, portId).Execute()
 
 Return per-port VLAN settings for a single MX port.
 
@@ -2491,7 +2491,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkAppliancePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAppliancePort`: InlineResponse20020
+    // response from `GetNetworkAppliancePort`: InlineResponse20022
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkAppliancePort`: %v\n", resp)
 }
 ```
@@ -2517,7 +2517,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -2535,7 +2535,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAppliancePorts
 
-> []InlineResponse20020 GetNetworkAppliancePorts(ctx, networkId).Execute()
+> []InlineResponse20022 GetNetworkAppliancePorts(ctx, networkId).Execute()
 
 List per-port VLAN settings for all ports of a MX.
 
@@ -2563,7 +2563,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkAppliancePorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAppliancePorts`: []InlineResponse20020
+    // response from `GetNetworkAppliancePorts`: []InlineResponse20022
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkAppliancePorts`: %v\n", resp)
 }
 ```
@@ -2587,7 +2587,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20020**](InlineResponse20020.md)
+[**[]InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -2605,7 +2605,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAppliancePrefixesDelegatedStatic
 
-> InlineResponse20021 GetNetworkAppliancePrefixesDelegatedStatic(ctx, networkId, staticDelegatedPrefixId).Execute()
+> InlineResponse20023 GetNetworkAppliancePrefixesDelegatedStatic(ctx, networkId, staticDelegatedPrefixId).Execute()
 
 Return a static delegated prefix from a network
 
@@ -2634,7 +2634,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkAppliancePrefixesDelegatedStatic``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAppliancePrefixesDelegatedStatic`: InlineResponse20021
+    // response from `GetNetworkAppliancePrefixesDelegatedStatic`: InlineResponse20023
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkAppliancePrefixesDelegatedStatic`: %v\n", resp)
 }
 ```
@@ -2660,7 +2660,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20021**](InlineResponse20021.md)
+[**InlineResponse20023**](InlineResponse20023.md)
 
 ### Authorization
 
@@ -2678,7 +2678,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAppliancePrefixesDelegatedStatics
 
-> []InlineResponse20021 GetNetworkAppliancePrefixesDelegatedStatics(ctx, networkId).Execute()
+> []InlineResponse20023 GetNetworkAppliancePrefixesDelegatedStatics(ctx, networkId).Execute()
 
 List static delegated prefixes for a network
 
@@ -2706,7 +2706,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkAppliancePrefixesDelegatedStatics``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAppliancePrefixesDelegatedStatics`: []InlineResponse20021
+    // response from `GetNetworkAppliancePrefixesDelegatedStatics`: []InlineResponse20023
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkAppliancePrefixesDelegatedStatics`: %v\n", resp)
 }
 ```
@@ -2730,7 +2730,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20021**](InlineResponse20021.md)
+[**[]InlineResponse20023**](InlineResponse20023.md)
 
 ### Authorization
 
@@ -2748,7 +2748,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceRfProfile
 
-> InlineResponse20022Assigned GetNetworkApplianceRfProfile(ctx, networkId, rfProfileId).Execute()
+> InlineResponse20024Assigned GetNetworkApplianceRfProfile(ctx, networkId, rfProfileId).Execute()
 
 Return a RF profile
 
@@ -2777,7 +2777,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceRfProfile`: InlineResponse20022Assigned
+    // response from `GetNetworkApplianceRfProfile`: InlineResponse20024Assigned
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceRfProfile`: %v\n", resp)
 }
 ```
@@ -2803,7 +2803,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022Assigned**](InlineResponse20022Assigned.md)
+[**InlineResponse20024Assigned**](InlineResponse20024Assigned.md)
 
 ### Authorization
 
@@ -2821,7 +2821,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceRfProfiles
 
-> InlineResponse20022 GetNetworkApplianceRfProfiles(ctx, networkId).Execute()
+> InlineResponse20024 GetNetworkApplianceRfProfiles(ctx, networkId).Execute()
 
 List the RF profiles for this network
 
@@ -2849,7 +2849,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceRfProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceRfProfiles`: InlineResponse20022
+    // response from `GetNetworkApplianceRfProfiles`: InlineResponse20024
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceRfProfiles`: %v\n", resp)
 }
 ```
@@ -2873,7 +2873,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022**](InlineResponse20022.md)
+[**InlineResponse20024**](InlineResponse20024.md)
 
 ### Authorization
 
@@ -3115,7 +3115,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceSettings
 
-> InlineResponse20023 GetNetworkApplianceSettings(ctx, networkId).Execute()
+> InlineResponse20025 GetNetworkApplianceSettings(ctx, networkId).Execute()
 
 Return the appliance settings for a network
 
@@ -3143,7 +3143,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceSettings`: InlineResponse20023
+    // response from `GetNetworkApplianceSettings`: InlineResponse20025
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceSettings`: %v\n", resp)
 }
 ```
@@ -3167,7 +3167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -3185,7 +3185,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceSingleLan
 
-> InlineResponse20024 GetNetworkApplianceSingleLan(ctx, networkId).Execute()
+> InlineResponse20026 GetNetworkApplianceSingleLan(ctx, networkId).Execute()
 
 Return single LAN configuration
 
@@ -3213,7 +3213,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceSingleLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceSingleLan`: InlineResponse20024
+    // response from `GetNetworkApplianceSingleLan`: InlineResponse20026
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceSingleLan`: %v\n", resp)
 }
 ```
@@ -3237,7 +3237,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 
@@ -3255,7 +3255,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceSsid
 
-> InlineResponse20025 GetNetworkApplianceSsid(ctx, networkId, number).Execute()
+> InlineResponse20027 GetNetworkApplianceSsid(ctx, networkId, number).Execute()
 
 Return a single MX SSID
 
@@ -3284,7 +3284,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceSsid``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceSsid`: InlineResponse20025
+    // response from `GetNetworkApplianceSsid`: InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceSsid`: %v\n", resp)
 }
 ```
@@ -3310,7 +3310,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -3328,7 +3328,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceSsids
 
-> []InlineResponse20025 GetNetworkApplianceSsids(ctx, networkId).Execute()
+> []InlineResponse20027 GetNetworkApplianceSsids(ctx, networkId).Execute()
 
 List the MX SSIDs in a network
 
@@ -3356,7 +3356,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceSsids``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceSsids`: []InlineResponse20025
+    // response from `GetNetworkApplianceSsids`: []InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceSsids`: %v\n", resp)
 }
 ```
@@ -3380,7 +3380,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20025**](InlineResponse20025.md)
+[**[]InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -3824,7 +3824,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingUplinkBandwidth
 
-> InlineResponse20026 GetNetworkApplianceTrafficShapingUplinkBandwidth(ctx, networkId).Execute()
+> InlineResponse20028 GetNetworkApplianceTrafficShapingUplinkBandwidth(ctx, networkId).Execute()
 
 Returns the uplink bandwidth limits for your MX network
 
@@ -3852,7 +3852,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceTrafficShapingUplinkBandwidth``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingUplinkBandwidth`: InlineResponse20026
+    // response from `GetNetworkApplianceTrafficShapingUplinkBandwidth`: InlineResponse20028
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceTrafficShapingUplinkBandwidth`: %v\n", resp)
 }
 ```
@@ -3876,7 +3876,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20026**](InlineResponse20026.md)
+[**InlineResponse20028**](InlineResponse20028.md)
 
 ### Authorization
 
@@ -3894,7 +3894,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingUplinkSelection
 
-> InlineResponse20027 GetNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).Execute()
+> InlineResponse20029 GetNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).Execute()
 
 Show uplink selection settings for an MX network
 
@@ -3922,7 +3922,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceTrafficShapingUplinkSelection``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20027
+    // response from `GetNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceTrafficShapingUplinkSelection`: %v\n", resp)
 }
 ```
@@ -3946,7 +3946,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -4042,7 +4042,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceVlan
 
-> InlineResponse20029 GetNetworkApplianceVlan(ctx, networkId, vlanId).Execute()
+> InlineResponse20031 GetNetworkApplianceVlan(ctx, networkId, vlanId).Execute()
 
 Return a VLAN
 
@@ -4071,7 +4071,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVlan`: InlineResponse20029
+    // response from `GetNetworkApplianceVlan`: InlineResponse20031
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceVlan`: %v\n", resp)
 }
 ```
@@ -4097,7 +4097,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -4115,7 +4115,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceVlans
 
-> []InlineResponse20029 GetNetworkApplianceVlans(ctx, networkId).Execute()
+> []InlineResponse20031 GetNetworkApplianceVlans(ctx, networkId).Execute()
 
 List the VLANs for an MX network
 
@@ -4143,7 +4143,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceVlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVlans`: []InlineResponse20029
+    // response from `GetNetworkApplianceVlans`: []InlineResponse20031
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceVlans`: %v\n", resp)
 }
 ```
@@ -4167,7 +4167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20029**](InlineResponse20029.md)
+[**[]InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -4325,7 +4325,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceVpnSiteToSiteVpn
 
-> InlineResponse20030 GetNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).Execute()
+> InlineResponse20032 GetNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).Execute()
 
 Return the site-to-site VPN settings of a network
 
@@ -4353,7 +4353,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetNetworkApplianceVpnSiteToSiteVpn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20030
+    // response from `GetNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20032
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetNetworkApplianceVpnSiteToSiteVpn`: %v\n", resp)
 }
 ```
@@ -4377,7 +4377,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20030**](InlineResponse20030.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -4619,7 +4619,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork
 
-> []InlineResponse20028 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse20030 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Display VPN exclusion rules for MX networks.
 
@@ -4651,7 +4651,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: []InlineResponse20028
+    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: []InlineResponse20030
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: %v\n", resp)
 }
 ```
@@ -4679,7 +4679,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20028**](InlineResponse20028.md)
+[**[]InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 
@@ -4779,7 +4779,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksUsageByNetwork
 
-> []InlineResponse200124 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200126 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get the sent and received bytes for each uplink of all MX and Z networks within an organization
 
@@ -4810,7 +4810,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceUplinksUsageByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200124
+    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200126
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceUplinksUsageByNetwork`: %v\n", resp)
 }
 ```
@@ -4837,7 +4837,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200124**](InlineResponse200124.md)
+[**[]InlineResponse200126**](InlineResponse200126.md)
 
 ### Authorization
 
@@ -5017,7 +5017,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse200125 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
+> InlineResponse200127 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
 
 Return the third party VPN peers for an organization
 
@@ -5045,7 +5045,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200125
+    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200127
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -5069,7 +5069,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200125**](InlineResponse200125.md)
+[**InlineResponse200127**](InlineResponse200127.md)
 
 ### Authorization
 
@@ -5087,7 +5087,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnVpnFirewallRules
 
-> InlineResponse200126 GetOrganizationApplianceVpnVpnFirewallRules(ctx, organizationId).Execute()
+> InlineResponse200128 GetOrganizationApplianceVpnVpnFirewallRules(ctx, organizationId).Execute()
 
 Return the firewall rules for an organization's site-to-site VPN
 
@@ -5115,7 +5115,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceVpnVpnFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnVpnFirewallRules`: InlineResponse200126
+    // response from `GetOrganizationApplianceVpnVpnFirewallRules`: InlineResponse200128
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceVpnVpnFirewallRules`: %v\n", resp)
 }
 ```
@@ -5139,7 +5139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200126**](InlineResponse200126.md)
+[**InlineResponse200128**](InlineResponse200128.md)
 
 ### Authorization
 
@@ -5227,7 +5227,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceApplianceRadioSettings
 
-> InlineResponse2001 UpdateDeviceApplianceRadioSettings(ctx, serial).UpdateDeviceApplianceRadioSettings(updateDeviceApplianceRadioSettings).Execute()
+> InlineResponse2003 UpdateDeviceApplianceRadioSettings(ctx, serial).UpdateDeviceApplianceRadioSettings(updateDeviceApplianceRadioSettings).Execute()
 
 Update the radio settings of an appliance
 
@@ -5247,7 +5247,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceApplianceRadioSettings := *openapiclient.NewInlineObject1() // InlineObject1 |  (optional)
+    updateDeviceApplianceRadioSettings := *openapiclient.NewInlineObject4() // InlineObject4 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5256,7 +5256,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateDeviceApplianceRadioSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceApplianceRadioSettings`: InlineResponse2001
+    // response from `UpdateDeviceApplianceRadioSettings`: InlineResponse2003
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateDeviceApplianceRadioSettings`: %v\n", resp)
 }
 ```
@@ -5277,11 +5277,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceApplianceRadio
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceApplianceRadioSettings** | [**InlineObject1**](InlineObject1.md) |  | 
+ **updateDeviceApplianceRadioSettings** | [**InlineObject4**](InlineObject4.md) |  | 
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -5299,7 +5299,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceApplianceUplinksSettings
 
-> InlineResponse2002 UpdateDeviceApplianceUplinksSettings(ctx, serial).UpdateDeviceApplianceUplinksSettings(updateDeviceApplianceUplinksSettings).Execute()
+> InlineResponse2004 UpdateDeviceApplianceUplinksSettings(ctx, serial).UpdateDeviceApplianceUplinksSettings(updateDeviceApplianceUplinksSettings).Execute()
 
 Update the uplink settings for an MX appliance
 
@@ -5319,7 +5319,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceApplianceUplinksSettings := *openapiclient.NewInlineObject2(*openapiclient.NewDevicesSerialApplianceUplinksSettingsInterfaces()) // InlineObject2 | 
+    updateDeviceApplianceUplinksSettings := *openapiclient.NewInlineObject5(*openapiclient.NewDevicesSerialApplianceUplinksSettingsInterfaces()) // InlineObject5 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5328,7 +5328,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateDeviceApplianceUplinksSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceApplianceUplinksSettings`: InlineResponse2002
+    // response from `UpdateDeviceApplianceUplinksSettings`: InlineResponse2004
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateDeviceApplianceUplinksSettings`: %v\n", resp)
 }
 ```
@@ -5349,11 +5349,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceApplianceUplin
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceApplianceUplinksSettings** | [**InlineObject2**](InlineObject2.md) |  | 
+ **updateDeviceApplianceUplinksSettings** | [**InlineObject5**](InlineObject5.md) |  | 
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -5391,7 +5391,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceConnectivityMonitoringDestinations := *openapiclient.NewInlineObject30() // InlineObject30 |  (optional)
+    updateNetworkApplianceConnectivityMonitoringDestinations := *openapiclient.NewInlineObject33() // InlineObject33 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5421,7 +5421,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceConn
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceConnectivityMonitoringDestinations** | [**InlineObject30**](InlineObject30.md) |  | 
+ **updateNetworkApplianceConnectivityMonitoringDestinations** | [**InlineObject33**](InlineObject33.md) |  | 
 
 ### Return type
 
@@ -5463,7 +5463,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceContentFiltering := *openapiclient.NewInlineObject31() // InlineObject31 |  (optional)
+    updateNetworkApplianceContentFiltering := *openapiclient.NewInlineObject34() // InlineObject34 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5493,7 +5493,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceCont
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceContentFiltering** | [**InlineObject31**](InlineObject31.md) |  | 
+ **updateNetworkApplianceContentFiltering** | [**InlineObject34**](InlineObject34.md) |  | 
 
 ### Return type
 
@@ -5535,7 +5535,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallCellularFirewallRules := *openapiclient.NewInlineObject32() // InlineObject32 |  (optional)
+    updateNetworkApplianceFirewallCellularFirewallRules := *openapiclient.NewInlineObject35() // InlineObject35 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5565,7 +5565,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallCellularFirewallRules** | [**InlineObject32**](InlineObject32.md) |  | 
+ **updateNetworkApplianceFirewallCellularFirewallRules** | [**InlineObject35**](InlineObject35.md) |  | 
 
 ### Return type
 
@@ -5608,7 +5608,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     service := "service_example" // string | Service
-    updateNetworkApplianceFirewallFirewalledService := *openapiclient.NewInlineObject33("Access_example") // InlineObject33 | 
+    updateNetworkApplianceFirewallFirewalledService := *openapiclient.NewInlineObject36("Access_example") // InlineObject36 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5640,7 +5640,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceFirewallFirewalledService** | [**InlineObject33**](InlineObject33.md) |  | 
+ **updateNetworkApplianceFirewallFirewalledService** | [**InlineObject36**](InlineObject36.md) |  | 
 
 ### Return type
 
@@ -5682,7 +5682,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallInboundCellularFirewallRules := *openapiclient.NewInlineObject34() // InlineObject34 |  (optional)
+    updateNetworkApplianceFirewallInboundCellularFirewallRules := *openapiclient.NewInlineObject37() // InlineObject37 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5712,7 +5712,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallInboundCellularFirewallRules** | [**InlineObject34**](InlineObject34.md) |  | 
+ **updateNetworkApplianceFirewallInboundCellularFirewallRules** | [**InlineObject37**](InlineObject37.md) |  | 
 
 ### Return type
 
@@ -5734,7 +5734,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallInboundFirewallRules
 
-> InlineResponse20018 UpdateNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallInboundFirewallRules(updateNetworkApplianceFirewallInboundFirewallRules).Execute()
+> InlineResponse20020 UpdateNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallInboundFirewallRules(updateNetworkApplianceFirewallInboundFirewallRules).Execute()
 
 Update the inbound firewall rules of an MX network
 
@@ -5754,7 +5754,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallInboundFirewallRules := *openapiclient.NewInlineObject35() // InlineObject35 |  (optional)
+    updateNetworkApplianceFirewallInboundFirewallRules := *openapiclient.NewInlineObject38() // InlineObject38 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5763,7 +5763,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceFirewallInboundFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20018
+    // response from `UpdateNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20020
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceFirewallInboundFirewallRules`: %v\n", resp)
 }
 ```
@@ -5784,11 +5784,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallInboundFirewallRules** | [**InlineObject35**](InlineObject35.md) |  | 
+ **updateNetworkApplianceFirewallInboundFirewallRules** | [**InlineObject38**](InlineObject38.md) |  | 
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -5826,7 +5826,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallL3FirewallRules := *openapiclient.NewInlineObject36() // InlineObject36 |  (optional)
+    updateNetworkApplianceFirewallL3FirewallRules := *openapiclient.NewInlineObject39() // InlineObject39 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5856,7 +5856,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallL3FirewallRules** | [**InlineObject36**](InlineObject36.md) |  | 
+ **updateNetworkApplianceFirewallL3FirewallRules** | [**InlineObject39**](InlineObject39.md) |  | 
 
 ### Return type
 
@@ -5898,7 +5898,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallL7FirewallRules := *openapiclient.NewInlineObject37() // InlineObject37 |  (optional)
+    updateNetworkApplianceFirewallL7FirewallRules := *openapiclient.NewInlineObject40() // InlineObject40 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5928,7 +5928,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallL7FirewallRules** | [**InlineObject37**](InlineObject37.md) |  | 
+ **updateNetworkApplianceFirewallL7FirewallRules** | [**InlineObject40**](InlineObject40.md) |  | 
 
 ### Return type
 
@@ -5970,7 +5970,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallOneToManyNatRules := *openapiclient.NewInlineObject38([]openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules("PublicIp_example", "Uplink_example", []openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules()})}) // InlineObject38 | 
+    updateNetworkApplianceFirewallOneToManyNatRules := *openapiclient.NewInlineObject41([]openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules("PublicIp_example", "Uplink_example", []openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules()})}) // InlineObject41 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6000,7 +6000,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallOneToManyNatRules** | [**InlineObject38**](InlineObject38.md) |  | 
+ **updateNetworkApplianceFirewallOneToManyNatRules** | [**InlineObject41**](InlineObject41.md) |  | 
 
 ### Return type
 
@@ -6042,7 +6042,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallOneToOneNatRules := *openapiclient.NewInlineObject39([]openapiclient.NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToOneNatRulesRules("LanIp_example")}) // InlineObject39 | 
+    updateNetworkApplianceFirewallOneToOneNatRules := *openapiclient.NewInlineObject42([]openapiclient.NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToOneNatRulesRules("LanIp_example")}) // InlineObject42 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6072,7 +6072,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallOneToOneNatRules** | [**InlineObject39**](InlineObject39.md) |  | 
+ **updateNetworkApplianceFirewallOneToOneNatRules** | [**InlineObject42**](InlineObject42.md) |  | 
 
 ### Return type
 
@@ -6114,7 +6114,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject40([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject40 | 
+    updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject43([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject43 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6144,7 +6144,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallPortForwardingRules** | [**InlineObject40**](InlineObject40.md) |  | 
+ **updateNetworkApplianceFirewallPortForwardingRules** | [**InlineObject43**](InlineObject43.md) |  | 
 
 ### Return type
 
@@ -6186,7 +6186,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallSettings := *openapiclient.NewInlineObject41() // InlineObject41 |  (optional)
+    updateNetworkApplianceFirewallSettings := *openapiclient.NewInlineObject44() // InlineObject44 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6216,7 +6216,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallSettings** | [**InlineObject41**](InlineObject41.md) |  | 
+ **updateNetworkApplianceFirewallSettings** | [**InlineObject44**](InlineObject44.md) |  | 
 
 ### Return type
 
@@ -6238,7 +6238,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkAppliancePort
 
-> InlineResponse20020 UpdateNetworkAppliancePort(ctx, networkId, portId).UpdateNetworkAppliancePort(updateNetworkAppliancePort).Execute()
+> InlineResponse20022 UpdateNetworkAppliancePort(ctx, networkId, portId).UpdateNetworkAppliancePort(updateNetworkAppliancePort).Execute()
 
 Update the per-port VLAN settings for a single MX port.
 
@@ -6259,7 +6259,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     portId := "portId_example" // string | Port ID
-    updateNetworkAppliancePort := *openapiclient.NewInlineObject42() // InlineObject42 |  (optional)
+    updateNetworkAppliancePort := *openapiclient.NewInlineObject45() // InlineObject45 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6268,7 +6268,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkAppliancePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkAppliancePort`: InlineResponse20020
+    // response from `UpdateNetworkAppliancePort`: InlineResponse20022
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkAppliancePort`: %v\n", resp)
 }
 ```
@@ -6291,11 +6291,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkAppliancePort** | [**InlineObject42**](InlineObject42.md) |  | 
+ **updateNetworkAppliancePort** | [**InlineObject45**](InlineObject45.md) |  | 
 
 ### Return type
 
-[**InlineResponse20020**](InlineResponse20020.md)
+[**InlineResponse20022**](InlineResponse20022.md)
 
 ### Authorization
 
@@ -6334,7 +6334,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     staticDelegatedPrefixId := "staticDelegatedPrefixId_example" // string | Static delegated prefix ID
-    updateNetworkAppliancePrefixesDelegatedStatic := *openapiclient.NewInlineObject44() // InlineObject44 |  (optional)
+    updateNetworkAppliancePrefixesDelegatedStatic := *openapiclient.NewInlineObject47() // InlineObject47 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6366,7 +6366,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkAppliancePrefixesDelegatedStatic** | [**InlineObject44**](InlineObject44.md) |  | 
+ **updateNetworkAppliancePrefixesDelegatedStatic** | [**InlineObject47**](InlineObject47.md) |  | 
 
 ### Return type
 
@@ -6388,7 +6388,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceRfProfile
 
-> InlineResponse20022Assigned UpdateNetworkApplianceRfProfile(ctx, networkId, rfProfileId).UpdateNetworkApplianceRfProfile(updateNetworkApplianceRfProfile).Execute()
+> InlineResponse20024Assigned UpdateNetworkApplianceRfProfile(ctx, networkId, rfProfileId).UpdateNetworkApplianceRfProfile(updateNetworkApplianceRfProfile).Execute()
 
 Updates specified RF profile for this network
 
@@ -6409,7 +6409,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     rfProfileId := "rfProfileId_example" // string | Rf profile ID
-    updateNetworkApplianceRfProfile := *openapiclient.NewInlineObject46() // InlineObject46 |  (optional)
+    updateNetworkApplianceRfProfile := *openapiclient.NewInlineObject49() // InlineObject49 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6418,7 +6418,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceRfProfile`: InlineResponse20022Assigned
+    // response from `UpdateNetworkApplianceRfProfile`: InlineResponse20024Assigned
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceRfProfile`: %v\n", resp)
 }
 ```
@@ -6441,11 +6441,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceRfProfile** | [**InlineObject46**](InlineObject46.md) |  | 
+ **updateNetworkApplianceRfProfile** | [**InlineObject49**](InlineObject49.md) |  | 
 
 ### Return type
 
-[**InlineResponse20022Assigned**](InlineResponse20022Assigned.md)
+[**InlineResponse20024Assigned**](InlineResponse20024Assigned.md)
 
 ### Authorization
 
@@ -6483,7 +6483,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceSecurityIntrusion := *openapiclient.NewInlineObject47() // InlineObject47 |  (optional)
+    updateNetworkApplianceSecurityIntrusion := *openapiclient.NewInlineObject50() // InlineObject50 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6513,7 +6513,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSecu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceSecurityIntrusion** | [**InlineObject47**](InlineObject47.md) |  | 
+ **updateNetworkApplianceSecurityIntrusion** | [**InlineObject50**](InlineObject50.md) |  | 
 
 ### Return type
 
@@ -6555,7 +6555,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceSecurityMalware := *openapiclient.NewInlineObject48("Mode_example") // InlineObject48 | 
+    updateNetworkApplianceSecurityMalware := *openapiclient.NewInlineObject51("Mode_example") // InlineObject51 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6585,7 +6585,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSecu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceSecurityMalware** | [**InlineObject48**](InlineObject48.md) |  | 
+ **updateNetworkApplianceSecurityMalware** | [**InlineObject51**](InlineObject51.md) |  | 
 
 ### Return type
 
@@ -6607,7 +6607,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceSettings
 
-> InlineResponse20023 UpdateNetworkApplianceSettings(ctx, networkId).UpdateNetworkApplianceSettings(updateNetworkApplianceSettings).Execute()
+> InlineResponse20025 UpdateNetworkApplianceSettings(ctx, networkId).UpdateNetworkApplianceSettings(updateNetworkApplianceSettings).Execute()
 
 Update the appliance settings for a network
 
@@ -6627,7 +6627,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceSettings := *openapiclient.NewInlineObject49() // InlineObject49 |  (optional)
+    updateNetworkApplianceSettings := *openapiclient.NewInlineObject52() // InlineObject52 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6636,7 +6636,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceSettings`: InlineResponse20023
+    // response from `UpdateNetworkApplianceSettings`: InlineResponse20025
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceSettings`: %v\n", resp)
 }
 ```
@@ -6657,11 +6657,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSett
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceSettings** | [**InlineObject49**](InlineObject49.md) |  | 
+ **updateNetworkApplianceSettings** | [**InlineObject52**](InlineObject52.md) |  | 
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -6679,7 +6679,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceSingleLan
 
-> InlineResponse20024 UpdateNetworkApplianceSingleLan(ctx, networkId).UpdateNetworkApplianceSingleLan(updateNetworkApplianceSingleLan).Execute()
+> InlineResponse20026 UpdateNetworkApplianceSingleLan(ctx, networkId).UpdateNetworkApplianceSingleLan(updateNetworkApplianceSingleLan).Execute()
 
 Update single LAN configuration
 
@@ -6699,7 +6699,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceSingleLan := *openapiclient.NewInlineObject50() // InlineObject50 |  (optional)
+    updateNetworkApplianceSingleLan := *openapiclient.NewInlineObject53() // InlineObject53 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6708,7 +6708,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceSingleLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceSingleLan`: InlineResponse20024
+    // response from `UpdateNetworkApplianceSingleLan`: InlineResponse20026
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceSingleLan`: %v\n", resp)
 }
 ```
@@ -6729,11 +6729,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSing
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceSingleLan** | [**InlineObject50**](InlineObject50.md) |  | 
+ **updateNetworkApplianceSingleLan** | [**InlineObject53**](InlineObject53.md) |  | 
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 
@@ -6751,7 +6751,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceSsid
 
-> InlineResponse20025 UpdateNetworkApplianceSsid(ctx, networkId, number).UpdateNetworkApplianceSsid(updateNetworkApplianceSsid).Execute()
+> InlineResponse20027 UpdateNetworkApplianceSsid(ctx, networkId, number).UpdateNetworkApplianceSsid(updateNetworkApplianceSsid).Execute()
 
 Update the attributes of an MX SSID
 
@@ -6772,7 +6772,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkApplianceSsid := *openapiclient.NewInlineObject51() // InlineObject51 |  (optional)
+    updateNetworkApplianceSsid := *openapiclient.NewInlineObject54() // InlineObject54 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6781,7 +6781,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceSsid``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceSsid`: InlineResponse20025
+    // response from `UpdateNetworkApplianceSsid`: InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceSsid`: %v\n", resp)
 }
 ```
@@ -6804,11 +6804,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceSsid** | [**InlineObject51**](InlineObject51.md) |  | 
+ **updateNetworkApplianceSsid** | [**InlineObject54**](InlineObject54.md) |  | 
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -6847,7 +6847,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     staticRouteId := "staticRouteId_example" // string | Static route ID
-    updateNetworkApplianceStaticRoute := *openapiclient.NewInlineObject53() // InlineObject53 |  (optional)
+    updateNetworkApplianceStaticRoute := *openapiclient.NewInlineObject56() // InlineObject56 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6879,7 +6879,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceStaticRoute** | [**InlineObject53**](InlineObject53.md) |  | 
+ **updateNetworkApplianceStaticRoute** | [**InlineObject56**](InlineObject56.md) |  | 
 
 ### Return type
 
@@ -6921,7 +6921,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShaping := *openapiclient.NewInlineObject54() // InlineObject54 |  (optional)
+    updateNetworkApplianceTrafficShaping := *openapiclient.NewInlineObject57() // InlineObject57 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6951,7 +6951,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShaping** | [**InlineObject54**](InlineObject54.md) |  | 
+ **updateNetworkApplianceTrafficShaping** | [**InlineObject57**](InlineObject57.md) |  | 
 
 ### Return type
 
@@ -6994,7 +6994,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     customPerformanceClassId := "customPerformanceClassId_example" // string | Custom performance class ID
-    updateNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject56() // InlineObject56 |  (optional)
+    updateNetworkApplianceTrafficShapingCustomPerformanceClass := *openapiclient.NewInlineObject59() // InlineObject59 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7026,7 +7026,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject56**](InlineObject56.md) |  | 
+ **updateNetworkApplianceTrafficShapingCustomPerformanceClass** | [**InlineObject59**](InlineObject59.md) |  | 
 
 ### Return type
 
@@ -7068,7 +7068,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShapingRules := *openapiclient.NewInlineObject57() // InlineObject57 |  (optional)
+    updateNetworkApplianceTrafficShapingRules := *openapiclient.NewInlineObject60() // InlineObject60 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7098,7 +7098,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShapingRules** | [**InlineObject57**](InlineObject57.md) |  | 
+ **updateNetworkApplianceTrafficShapingRules** | [**InlineObject60**](InlineObject60.md) |  | 
 
 ### Return type
 
@@ -7140,7 +7140,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShapingUplinkBandwidth := *openapiclient.NewInlineObject58() // InlineObject58 |  (optional)
+    updateNetworkApplianceTrafficShapingUplinkBandwidth := *openapiclient.NewInlineObject61() // InlineObject61 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7170,7 +7170,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShapingUplinkBandwidth** | [**InlineObject58**](InlineObject58.md) |  | 
+ **updateNetworkApplianceTrafficShapingUplinkBandwidth** | [**InlineObject61**](InlineObject61.md) |  | 
 
 ### Return type
 
@@ -7192,7 +7192,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingUplinkSelection
 
-> InlineResponse20027 UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).UpdateNetworkApplianceTrafficShapingUplinkSelection(updateNetworkApplianceTrafficShapingUplinkSelection).Execute()
+> InlineResponse20029 UpdateNetworkApplianceTrafficShapingUplinkSelection(ctx, networkId).UpdateNetworkApplianceTrafficShapingUplinkSelection(updateNetworkApplianceTrafficShapingUplinkSelection).Execute()
 
 Update uplink selection settings for an MX network
 
@@ -7212,7 +7212,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShapingUplinkSelection := *openapiclient.NewInlineObject59() // InlineObject59 |  (optional)
+    updateNetworkApplianceTrafficShapingUplinkSelection := *openapiclient.NewInlineObject62() // InlineObject62 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7221,7 +7221,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceTrafficShapingUplinkSelection``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20027
+    // response from `UpdateNetworkApplianceTrafficShapingUplinkSelection`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceTrafficShapingUplinkSelection`: %v\n", resp)
 }
 ```
@@ -7242,11 +7242,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShapingUplinkSelection** | [**InlineObject59**](InlineObject59.md) |  | 
+ **updateNetworkApplianceTrafficShapingUplinkSelection** | [**InlineObject62**](InlineObject62.md) |  | 
 
 ### Return type
 
-[**InlineResponse20027**](InlineResponse20027.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -7264,7 +7264,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingVpnExclusions
 
-> InlineResponse20028 UpdateNetworkApplianceTrafficShapingVpnExclusions(ctx, networkId).UpdateNetworkApplianceTrafficShapingVpnExclusions(updateNetworkApplianceTrafficShapingVpnExclusions).Execute()
+> InlineResponse20030 UpdateNetworkApplianceTrafficShapingVpnExclusions(ctx, networkId).UpdateNetworkApplianceTrafficShapingVpnExclusions(updateNetworkApplianceTrafficShapingVpnExclusions).Execute()
 
 Update VPN exclusion rules for an MX network.
 
@@ -7284,7 +7284,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShapingVpnExclusions := *openapiclient.NewInlineObject60() // InlineObject60 |  (optional)
+    updateNetworkApplianceTrafficShapingVpnExclusions := *openapiclient.NewInlineObject63() // InlineObject63 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7293,7 +7293,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceTrafficShapingVpnExclusions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingVpnExclusions`: InlineResponse20028
+    // response from `UpdateNetworkApplianceTrafficShapingVpnExclusions`: InlineResponse20030
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceTrafficShapingVpnExclusions`: %v\n", resp)
 }
 ```
@@ -7314,11 +7314,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShapingVpnExclusions** | [**InlineObject60**](InlineObject60.md) |  | 
+ **updateNetworkApplianceTrafficShapingVpnExclusions** | [**InlineObject63**](InlineObject63.md) |  | 
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 
@@ -7336,7 +7336,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceVlan
 
-> InlineResponse20029 UpdateNetworkApplianceVlan(ctx, networkId, vlanId).UpdateNetworkApplianceVlan(updateNetworkApplianceVlan).Execute()
+> InlineResponse20031 UpdateNetworkApplianceVlan(ctx, networkId, vlanId).UpdateNetworkApplianceVlan(updateNetworkApplianceVlan).Execute()
 
 Update a VLAN
 
@@ -7357,7 +7357,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     vlanId := "vlanId_example" // string | Vlan ID
-    updateNetworkApplianceVlan := *openapiclient.NewInlineObject63() // InlineObject63 |  (optional)
+    updateNetworkApplianceVlan := *openapiclient.NewInlineObject66() // InlineObject66 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7366,7 +7366,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceVlan`: InlineResponse20029
+    // response from `UpdateNetworkApplianceVlan`: InlineResponse20031
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceVlan`: %v\n", resp)
 }
 ```
@@ -7389,11 +7389,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceVlan** | [**InlineObject63**](InlineObject63.md) |  | 
+ **updateNetworkApplianceVlan** | [**InlineObject66**](InlineObject66.md) |  | 
 
 ### Return type
 
-[**InlineResponse20029**](InlineResponse20029.md)
+[**InlineResponse20031**](InlineResponse20031.md)
 
 ### Authorization
 
@@ -7431,7 +7431,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceVlansSettings := *openapiclient.NewInlineObject62() // InlineObject62 |  (optional)
+    updateNetworkApplianceVlansSettings := *openapiclient.NewInlineObject65() // InlineObject65 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7461,7 +7461,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceVlan
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceVlansSettings** | [**InlineObject62**](InlineObject62.md) |  | 
+ **updateNetworkApplianceVlansSettings** | [**InlineObject65**](InlineObject65.md) |  | 
 
 ### Return type
 
@@ -7503,7 +7503,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceVpnBgp := *openapiclient.NewInlineObject64(false) // InlineObject64 | 
+    updateNetworkApplianceVpnBgp := *openapiclient.NewInlineObject67(false) // InlineObject67 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7533,7 +7533,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceVpnB
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceVpnBgp** | [**InlineObject64**](InlineObject64.md) |  | 
+ **updateNetworkApplianceVpnBgp** | [**InlineObject67**](InlineObject67.md) |  | 
 
 ### Return type
 
@@ -7555,7 +7555,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceVpnSiteToSiteVpn
 
-> InlineResponse20030 UpdateNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).UpdateNetworkApplianceVpnSiteToSiteVpn(updateNetworkApplianceVpnSiteToSiteVpn).Execute()
+> InlineResponse20032 UpdateNetworkApplianceVpnSiteToSiteVpn(ctx, networkId).UpdateNetworkApplianceVpnSiteToSiteVpn(updateNetworkApplianceVpnSiteToSiteVpn).Execute()
 
 Update the site-to-site VPN settings of a network
 
@@ -7575,7 +7575,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceVpnSiteToSiteVpn := *openapiclient.NewInlineObject65("Mode_example") // InlineObject65 | 
+    updateNetworkApplianceVpnSiteToSiteVpn := *openapiclient.NewInlineObject68("Mode_example") // InlineObject68 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7584,7 +7584,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateNetworkApplianceVpnSiteToSiteVpn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20030
+    // response from `UpdateNetworkApplianceVpnSiteToSiteVpn`: InlineResponse20032
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateNetworkApplianceVpnSiteToSiteVpn`: %v\n", resp)
 }
 ```
@@ -7605,11 +7605,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceVpnS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceVpnSiteToSiteVpn** | [**InlineObject65**](InlineObject65.md) |  | 
+ **updateNetworkApplianceVpnSiteToSiteVpn** | [**InlineObject68**](InlineObject68.md) |  | 
 
 ### Return type
 
-[**InlineResponse20030**](InlineResponse20030.md)
+[**InlineResponse20032**](InlineResponse20032.md)
 
 ### Authorization
 
@@ -7647,7 +7647,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceWarmSpare := *openapiclient.NewInlineObject66(false) // InlineObject66 | 
+    updateNetworkApplianceWarmSpare := *openapiclient.NewInlineObject69(false) // InlineObject69 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7677,7 +7677,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceWarm
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceWarmSpare** | [**InlineObject66**](InlineObject66.md) |  | 
+ **updateNetworkApplianceWarmSpare** | [**InlineObject69**](InlineObject69.md) |  | 
 
 ### Return type
 
@@ -7719,7 +7719,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject196([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject196 | 
+    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject199([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject199 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7749,7 +7749,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject196**](InlineObject196.md) |  | 
+ **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject199**](InlineObject199.md) |  | 
 
 ### Return type
 
@@ -7771,7 +7771,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse200125 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
+> InlineResponse200127 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
 
 Update the third party VPN peers for an organization
 
@@ -7791,7 +7791,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceVpnThirdPartyVPNPeers := *openapiclient.NewInlineObject197([]openapiclient.OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers{*openapiclient.NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers("Name_example", []string{"PrivateSubnets_example"}, "Secret_example")}) // InlineObject197 | 
+    updateOrganizationApplianceVpnThirdPartyVPNPeers := *openapiclient.NewInlineObject200([]openapiclient.OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers{*openapiclient.NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers("Name_example", []string{"PrivateSubnets_example"}, "Secret_example")}) // InlineObject200 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7800,7 +7800,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200125
+    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200127
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -7821,11 +7821,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceVpnThirdPartyVPNPeers** | [**InlineObject197**](InlineObject197.md) |  | 
+ **updateOrganizationApplianceVpnThirdPartyVPNPeers** | [**InlineObject200**](InlineObject200.md) |  | 
 
 ### Return type
 
-[**InlineResponse200125**](InlineResponse200125.md)
+[**InlineResponse200127**](InlineResponse200127.md)
 
 ### Authorization
 
@@ -7843,7 +7843,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnVpnFirewallRules
 
-> InlineResponse200126 UpdateOrganizationApplianceVpnVpnFirewallRules(ctx, organizationId).UpdateOrganizationApplianceVpnVpnFirewallRules(updateOrganizationApplianceVpnVpnFirewallRules).Execute()
+> InlineResponse200128 UpdateOrganizationApplianceVpnVpnFirewallRules(ctx, organizationId).UpdateOrganizationApplianceVpnVpnFirewallRules(updateOrganizationApplianceVpnVpnFirewallRules).Execute()
 
 Update the firewall rules of an organization's site-to-site VPN
 
@@ -7863,7 +7863,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceVpnVpnFirewallRules := *openapiclient.NewInlineObject198() // InlineObject198 |  (optional)
+    updateOrganizationApplianceVpnVpnFirewallRules := *openapiclient.NewInlineObject201() // InlineObject201 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7872,7 +7872,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceVpnVpnFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnVpnFirewallRules`: InlineResponse200126
+    // response from `UpdateOrganizationApplianceVpnVpnFirewallRules`: InlineResponse200128
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceVpnVpnFirewallRules`: %v\n", resp)
 }
 ```
@@ -7893,11 +7893,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceVpnVpnFirewallRules** | [**InlineObject198**](InlineObject198.md) |  | 
+ **updateOrganizationApplianceVpnVpnFirewallRules** | [**InlineObject201**](InlineObject201.md) |  | 
 
 ### Return type
 
-[**InlineResponse200126**](InlineResponse200126.md)
+[**InlineResponse200128**](InlineResponse200128.md)
 
 ### Authorization
 

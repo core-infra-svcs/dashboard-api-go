@@ -31,7 +31,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWebhooksWebhookTest := *openapiclient.NewInlineObject157("Url_example") // InlineObject157 | 
+    createNetworkWebhooksWebhookTest := *openapiclient.NewInlineObject160("Url_example") // InlineObject160 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkWebhooksWebho
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWebhooksWebhookTest** | [**InlineObject157**](InlineObject157.md) |  | 
+ **createNetworkWebhooksWebhookTest** | [**InlineObject160**](InlineObject160.md) |  | 
 
 ### Return type
 

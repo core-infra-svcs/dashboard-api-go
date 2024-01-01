@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## UpdateNetworkSmDevicesFields
 
-> []InlineResponse20055 UpdateNetworkSmDevicesFields(ctx, networkId).UpdateNetworkSmDevicesFields(updateNetworkSmDevicesFields).Execute()
+> []InlineResponse20057 UpdateNetworkSmDevicesFields(ctx, networkId).UpdateNetworkSmDevicesFields(updateNetworkSmDevicesFields).Execute()
 
 Modify the fields of a device
 
@@ -30,7 +30,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSmDevicesFields := *openapiclient.NewInlineObject106(*openapiclient.NewNetworksNetworkIdSmDevicesFieldsDeviceFields()) // InlineObject106 | 
+    updateNetworkSmDevicesFields := *openapiclient.NewInlineObject109(*openapiclient.NewNetworksNetworkIdSmDevicesFieldsDeviceFields()) // InlineObject109 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FieldsApi.UpdateNetworkSmDevicesFields``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSmDevicesFields`: []InlineResponse20055
+    // response from `UpdateNetworkSmDevicesFields`: []InlineResponse20057
     fmt.Fprintf(os.Stdout, "Response from `FieldsApi.UpdateNetworkSmDevicesFields`: %v\n", resp)
 }
 ```
@@ -60,11 +60,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSmDevicesFiel
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSmDevicesFields** | [**InlineObject106**](InlineObject106.md) |  | 
+ **updateNetworkSmDevicesFields** | [**InlineObject109**](InlineObject109.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse20055**](InlineResponse20055.md)
+[**[]InlineResponse20057**](InlineResponse20057.md)
 
 ### Authorization
 

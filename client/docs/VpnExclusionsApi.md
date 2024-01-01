@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork
 
-> []InlineResponse20028 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse20030 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Display VPN exclusion rules for MX networks.
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnExclusionsApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: []InlineResponse20028
+    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: []InlineResponse20030
     fmt.Fprintf(os.Stdout, "Response from `VpnExclusionsApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20028**](InlineResponse20028.md)
+[**[]InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingVpnExclusions
 
-> InlineResponse20028 UpdateNetworkApplianceTrafficShapingVpnExclusions(ctx, networkId).UpdateNetworkApplianceTrafficShapingVpnExclusions(updateNetworkApplianceTrafficShapingVpnExclusions).Execute()
+> InlineResponse20030 UpdateNetworkApplianceTrafficShapingVpnExclusions(ctx, networkId).UpdateNetworkApplianceTrafficShapingVpnExclusions(updateNetworkApplianceTrafficShapingVpnExclusions).Execute()
 
 Update VPN exclusion rules for an MX network.
 
@@ -109,7 +109,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceTrafficShapingVpnExclusions := *openapiclient.NewInlineObject60() // InlineObject60 |  (optional)
+    updateNetworkApplianceTrafficShapingVpnExclusions := *openapiclient.NewInlineObject63() // InlineObject63 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -118,7 +118,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnExclusionsApi.UpdateNetworkApplianceTrafficShapingVpnExclusions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingVpnExclusions`: InlineResponse20028
+    // response from `UpdateNetworkApplianceTrafficShapingVpnExclusions`: InlineResponse20030
     fmt.Fprintf(os.Stdout, "Response from `VpnExclusionsApi.UpdateNetworkApplianceTrafficShapingVpnExclusions`: %v\n", resp)
 }
 ```
@@ -139,11 +139,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceTraf
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceTrafficShapingVpnExclusions** | [**InlineObject60**](InlineObject60.md) |  | 
+ **updateNetworkApplianceTrafficShapingVpnExclusions** | [**InlineObject63**](InlineObject63.md) |  | 
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20030**](InlineResponse20030.md)
 
 ### Authorization
 

@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**InlineResponse200178Example**](InlineResponse200178Example.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the switch. | [optional] 
+**Serial** | Pointer to **string** | The serial number of the switch. | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the switch. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSwitchPortsBySwitchNetwork**](OrganizationsOrganizationIdSwitchPortsBySwitchNetwork.md) |  | [optional] 
+**Model** | Pointer to **string** | The model of the switch. | [optional] 
+**Ports** | Pointer to [**[]OrganizationsOrganizationIdSwitchPortsBySwitchPorts**](OrganizationsOrganizationIdSwitchPortsBySwitchPorts.md) | Ports belonging to the switch | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse200178WithDefaults instantiates a new InlineResponse200178 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetName
 
-`func (o *InlineResponse200178) GetAlertTypeId() string`
+`func (o *InlineResponse200178) GetName() string`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetNameOk
 
-`func (o *InlineResponse200178) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200178) GetNameOk() (*string, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetName
 
-`func (o *InlineResponse200178) SetAlertTypeId(v string)`
+`func (o *InlineResponse200178) SetName(v string)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetName sets Name field to given value.
 
-### HasAlertTypeId
+### HasName
 
-`func (o *InlineResponse200178) HasAlertTypeId() bool`
+`func (o *InlineResponse200178) HasName() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetAlertType
+### GetSerial
 
-`func (o *InlineResponse200178) GetAlertType() string`
+`func (o *InlineResponse200178) GetSerial() string`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetSerialOk
 
-`func (o *InlineResponse200178) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200178) GetSerialOk() (*string, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetSerial
 
-`func (o *InlineResponse200178) SetAlertType(v string)`
+`func (o *InlineResponse200178) SetSerial(v string)`
 
-SetAlertType sets AlertType field to given value.
+SetSerial sets Serial field to given value.
 
-### HasAlertType
+### HasSerial
 
-`func (o *InlineResponse200178) HasAlertType() bool`
+`func (o *InlineResponse200178) HasSerial() bool`
 
-HasAlertType returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetExample
+### GetMac
 
-`func (o *InlineResponse200178) GetExample() InlineResponse200178Example`
+`func (o *InlineResponse200178) GetMac() string`
 
-GetExample returns the Example field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetExampleOk
+### GetMacOk
 
-`func (o *InlineResponse200178) GetExampleOk() (*InlineResponse200178Example, bool)`
+`func (o *InlineResponse200178) GetMacOk() (*string, bool)`
 
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExample
+### SetMac
 
-`func (o *InlineResponse200178) SetExample(v InlineResponse200178Example)`
+`func (o *InlineResponse200178) SetMac(v string)`
 
-SetExample sets Example field to given value.
+SetMac sets Mac field to given value.
 
-### HasExample
+### HasMac
 
-`func (o *InlineResponse200178) HasExample() bool`
+`func (o *InlineResponse200178) HasMac() bool`
 
-HasExample returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200178) GetNetwork() OrganizationsOrganizationIdSwitchPortsBySwitchNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200178) GetNetworkOk() (*OrganizationsOrganizationIdSwitchPortsBySwitchNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200178) SetNetwork(v OrganizationsOrganizationIdSwitchPortsBySwitchNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200178) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200178) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200178) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200178) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200178) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetPorts
+
+`func (o *InlineResponse200178) GetPorts() []OrganizationsOrganizationIdSwitchPortsBySwitchPorts`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineResponse200178) GetPortsOk() (*[]OrganizationsOrganizationIdSwitchPortsBySwitchPorts, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineResponse200178) SetPorts(v []OrganizationsOrganizationIdSwitchPortsBySwitchPorts)`
+
+SetPorts sets Ports field to given value.
+
+### HasPorts
+
+`func (o *InlineResponse200178) HasPorts() bool`
+
+HasPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallInboundFirewallRules
 
-> InlineResponse20018 GetNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).Execute()
+> InlineResponse20020 GetNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).Execute()
 
 Return the inbound firewall rules for an MX network
 
@@ -346,7 +346,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallInboundFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20018
+    // response from `GetNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20020
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallInboundFirewallRules`: %v\n", resp)
 }
 ```
@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -528,7 +528,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories
 
-> InlineResponse20019 GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories(ctx, networkId).Execute()
+> InlineResponse20021 GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories(ctx, networkId).Execute()
 
 Return the L7 firewall application categories and their associated applications for an MX network
 
@@ -556,7 +556,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories`: InlineResponse20019
+    // response from `GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories`: InlineResponse20021
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.GetNetworkApplianceFirewallL7FirewallRulesApplicationCategories`: %v\n", resp)
 }
 ```
@@ -580,7 +580,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20019**](InlineResponse20019.md)
+[**InlineResponse20021**](InlineResponse20021.md)
 
 ### Authorization
 
@@ -1044,7 +1044,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallCellularFirewallRules := *openapiclient.NewInlineObject32() // InlineObject32 |  (optional)
+    updateNetworkApplianceFirewallCellularFirewallRules := *openapiclient.NewInlineObject35() // InlineObject35 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1074,7 +1074,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallCellularFirewallRules** | [**InlineObject32**](InlineObject32.md) |  | 
+ **updateNetworkApplianceFirewallCellularFirewallRules** | [**InlineObject35**](InlineObject35.md) |  | 
 
 ### Return type
 
@@ -1117,7 +1117,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     service := "service_example" // string | Service
-    updateNetworkApplianceFirewallFirewalledService := *openapiclient.NewInlineObject33("Access_example") // InlineObject33 | 
+    updateNetworkApplianceFirewallFirewalledService := *openapiclient.NewInlineObject36("Access_example") // InlineObject36 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1149,7 +1149,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceFirewallFirewalledService** | [**InlineObject33**](InlineObject33.md) |  | 
+ **updateNetworkApplianceFirewallFirewalledService** | [**InlineObject36**](InlineObject36.md) |  | 
 
 ### Return type
 
@@ -1191,7 +1191,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallInboundCellularFirewallRules := *openapiclient.NewInlineObject34() // InlineObject34 |  (optional)
+    updateNetworkApplianceFirewallInboundCellularFirewallRules := *openapiclient.NewInlineObject37() // InlineObject37 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1221,7 +1221,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallInboundCellularFirewallRules** | [**InlineObject34**](InlineObject34.md) |  | 
+ **updateNetworkApplianceFirewallInboundCellularFirewallRules** | [**InlineObject37**](InlineObject37.md) |  | 
 
 ### Return type
 
@@ -1243,7 +1243,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallInboundFirewallRules
 
-> InlineResponse20018 UpdateNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallInboundFirewallRules(updateNetworkApplianceFirewallInboundFirewallRules).Execute()
+> InlineResponse20020 UpdateNetworkApplianceFirewallInboundFirewallRules(ctx, networkId).UpdateNetworkApplianceFirewallInboundFirewallRules(updateNetworkApplianceFirewallInboundFirewallRules).Execute()
 
 Update the inbound firewall rules of an MX network
 
@@ -1263,7 +1263,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallInboundFirewallRules := *openapiclient.NewInlineObject35() // InlineObject35 |  (optional)
+    updateNetworkApplianceFirewallInboundFirewallRules := *openapiclient.NewInlineObject38() // InlineObject38 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1272,7 +1272,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewallApi.UpdateNetworkApplianceFirewallInboundFirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20018
+    // response from `UpdateNetworkApplianceFirewallInboundFirewallRules`: InlineResponse20020
     fmt.Fprintf(os.Stdout, "Response from `FirewallApi.UpdateNetworkApplianceFirewallInboundFirewallRules`: %v\n", resp)
 }
 ```
@@ -1293,11 +1293,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallInboundFirewallRules** | [**InlineObject35**](InlineObject35.md) |  | 
+ **updateNetworkApplianceFirewallInboundFirewallRules** | [**InlineObject38**](InlineObject38.md) |  | 
 
 ### Return type
 
-[**InlineResponse20018**](InlineResponse20018.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 
@@ -1335,7 +1335,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallL3FirewallRules := *openapiclient.NewInlineObject36() // InlineObject36 |  (optional)
+    updateNetworkApplianceFirewallL3FirewallRules := *openapiclient.NewInlineObject39() // InlineObject39 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1365,7 +1365,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallL3FirewallRules** | [**InlineObject36**](InlineObject36.md) |  | 
+ **updateNetworkApplianceFirewallL3FirewallRules** | [**InlineObject39**](InlineObject39.md) |  | 
 
 ### Return type
 
@@ -1407,7 +1407,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallL7FirewallRules := *openapiclient.NewInlineObject37() // InlineObject37 |  (optional)
+    updateNetworkApplianceFirewallL7FirewallRules := *openapiclient.NewInlineObject40() // InlineObject40 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1437,7 +1437,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallL7FirewallRules** | [**InlineObject37**](InlineObject37.md) |  | 
+ **updateNetworkApplianceFirewallL7FirewallRules** | [**InlineObject40**](InlineObject40.md) |  | 
 
 ### Return type
 
@@ -1479,7 +1479,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallOneToManyNatRules := *openapiclient.NewInlineObject38([]openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules("PublicIp_example", "Uplink_example", []openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules()})}) // InlineObject38 | 
+    updateNetworkApplianceFirewallOneToManyNatRules := *openapiclient.NewInlineObject41([]openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesRules("PublicIp_example", "Uplink_example", []openapiclient.NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules()})}) // InlineObject41 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1509,7 +1509,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallOneToManyNatRules** | [**InlineObject38**](InlineObject38.md) |  | 
+ **updateNetworkApplianceFirewallOneToManyNatRules** | [**InlineObject41**](InlineObject41.md) |  | 
 
 ### Return type
 
@@ -1551,7 +1551,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallOneToOneNatRules := *openapiclient.NewInlineObject39([]openapiclient.NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToOneNatRulesRules("LanIp_example")}) // InlineObject39 | 
+    updateNetworkApplianceFirewallOneToOneNatRules := *openapiclient.NewInlineObject42([]openapiclient.NetworksNetworkIdApplianceFirewallOneToOneNatRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallOneToOneNatRulesRules("LanIp_example")}) // InlineObject42 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1581,7 +1581,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallOneToOneNatRules** | [**InlineObject39**](InlineObject39.md) |  | 
+ **updateNetworkApplianceFirewallOneToOneNatRules** | [**InlineObject42**](InlineObject42.md) |  | 
 
 ### Return type
 
@@ -1623,7 +1623,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject40([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject40 | 
+    updateNetworkApplianceFirewallPortForwardingRules := *openapiclient.NewInlineObject43([]openapiclient.NetworksNetworkIdApplianceFirewallPortForwardingRulesRules{*openapiclient.NewNetworksNetworkIdApplianceFirewallPortForwardingRulesRules("LanIp_example", "PublicPort_example", "LocalPort_example", []string{"AllowedIps_example"}, "Protocol_example")}) // InlineObject43 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1653,7 +1653,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallPortForwardingRules** | [**InlineObject40**](InlineObject40.md) |  | 
+ **updateNetworkApplianceFirewallPortForwardingRules** | [**InlineObject43**](InlineObject43.md) |  | 
 
 ### Return type
 
@@ -1695,7 +1695,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceFirewallSettings := *openapiclient.NewInlineObject41() // InlineObject41 |  (optional)
+    updateNetworkApplianceFirewallSettings := *openapiclient.NewInlineObject44() // InlineObject44 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1725,7 +1725,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceFire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceFirewallSettings** | [**InlineObject41**](InlineObject41.md) |  | 
+ **updateNetworkApplianceFirewallSettings** | [**InlineObject44**](InlineObject44.md) |  | 
 
 ### Return type
 
@@ -1768,7 +1768,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidFirewallL3FirewallRules := *openapiclient.NewInlineObject172() // InlineObject172 |  (optional)
+    updateNetworkWirelessSsidFirewallL3FirewallRules := *openapiclient.NewInlineObject175() // InlineObject175 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1800,7 +1800,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidFirewallL3FirewallRules** | [**InlineObject172**](InlineObject172.md) |  | 
+ **updateNetworkWirelessSsidFirewallL3FirewallRules** | [**InlineObject175**](InlineObject175.md) |  | 
 
 ### Return type
 
@@ -1843,7 +1843,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidFirewallL7FirewallRules := *openapiclient.NewInlineObject173() // InlineObject173 |  (optional)
+    updateNetworkWirelessSsidFirewallL7FirewallRules := *openapiclient.NewInlineObject176() // InlineObject176 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1875,7 +1875,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidFirewallL7FirewallRules** | [**InlineObject173**](InlineObject173.md) |  | 
+ **updateNetworkWirelessSsidFirewallL7FirewallRules** | [**InlineObject176**](InlineObject176.md) |  | 
 
 ### Return type
 

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
+**Timestamp** | Pointer to **time.Time** | [optional] The snapshot will be taken from this time on the camera. The timestamp is expected to be in ISO 8601 format. If no timestamp is specified, we will assume current time. | [optional] 
+**Fullframe** | Pointer to **bool** | [optional] If set to \&quot;true\&quot; the snapshot will be taken at full sensor resolution. This will error if used with timestamp. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject8WithDefaults instantiates a new InlineObject8 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetExternalRtspEnabled
+### GetTimestamp
 
-`func (o *InlineObject8) GetExternalRtspEnabled() bool`
+`func (o *InlineObject8) GetTimestamp() time.Time`
 
-GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
+GetTimestamp returns the Timestamp field if non-nil, zero value otherwise.
 
-### GetExternalRtspEnabledOk
+### GetTimestampOk
 
-`func (o *InlineObject8) GetExternalRtspEnabledOk() (*bool, bool)`
+`func (o *InlineObject8) GetTimestampOk() (*time.Time, bool)`
 
-GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
+GetTimestampOk returns a tuple with the Timestamp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExternalRtspEnabled
+### SetTimestamp
 
-`func (o *InlineObject8) SetExternalRtspEnabled(v bool)`
+`func (o *InlineObject8) SetTimestamp(v time.Time)`
 
-SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
+SetTimestamp sets Timestamp field to given value.
 
-### HasExternalRtspEnabled
+### HasTimestamp
 
-`func (o *InlineObject8) HasExternalRtspEnabled() bool`
+`func (o *InlineObject8) HasTimestamp() bool`
 
-HasExternalRtspEnabled returns a boolean if a field has been set.
+HasTimestamp returns a boolean if a field has been set.
+
+### GetFullframe
+
+`func (o *InlineObject8) GetFullframe() bool`
+
+GetFullframe returns the Fullframe field if non-nil, zero value otherwise.
+
+### GetFullframeOk
+
+`func (o *InlineObject8) GetFullframeOk() (*bool, bool)`
+
+GetFullframeOk returns a tuple with the Fullframe field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFullframe
+
+`func (o *InlineObject8) SetFullframe(v bool)`
+
+SetFullframe sets Fullframe field to given value.
+
+### HasFullframe
+
+`func (o *InlineObject8) HasFullframe() bool`
+
+HasFullframe returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

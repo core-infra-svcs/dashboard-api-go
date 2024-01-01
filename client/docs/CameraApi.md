@@ -71,7 +71,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject68("Name_example") // InlineObject68 | 
+    createNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject71("Name_example") // InlineObject71 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -101,7 +101,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkCameraQuality
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkCameraQualityRetentionProfile** | [**InlineObject68**](InlineObject68.md) |  | 
+ **createNetworkCameraQualityRetentionProfile** | [**InlineObject71**](InlineObject71.md) |  | 
 
 ### Return type
 
@@ -143,7 +143,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkCameraWirelessProfile := *openapiclient.NewInlineObject70("Name_example", *openapiclient.NewNetworksNetworkIdCameraWirelessProfilesSsid()) // InlineObject70 | 
+    createNetworkCameraWirelessProfile := *openapiclient.NewInlineObject73("Name_example", *openapiclient.NewNetworksNetworkIdCameraWirelessProfilesSsid()) // InlineObject73 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -173,7 +173,7 @@ Other parameters are passed through a pointer to a apiCreateNetworkCameraWireles
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkCameraWirelessProfile** | [**InlineObject70**](InlineObject70.md) |  | 
+ **createNetworkCameraWirelessProfile** | [**InlineObject73**](InlineObject73.md) |  | 
 
 ### Return type
 
@@ -215,7 +215,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject202() // InlineObject202 |  (optional)
+    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject205() // InlineObject205 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -245,7 +245,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraCu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject202**](InlineObject202.md) |  | 
+ **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject205**](InlineObject205.md) |  | 
 
 ### Return type
 
@@ -287,7 +287,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCameraRole := *openapiclient.NewInlineObject204("Name_example") // InlineObject204 | 
+    createOrganizationCameraRole := *openapiclient.NewInlineObject207("Name_example") // InlineObject207 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -317,7 +317,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraRo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraRole** | [**InlineObject204**](InlineObject204.md) |  | 
+ **createOrganizationCameraRole** | [**InlineObject207**](InlineObject207.md) |  | 
 
 ### Return type
 
@@ -643,7 +643,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    generateDeviceCameraSnapshot := *openapiclient.NewInlineObject5() // InlineObject5 |  (optional)
+    generateDeviceCameraSnapshot := *openapiclient.NewInlineObject8() // InlineObject8 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -673,7 +673,7 @@ Other parameters are passed through a pointer to a apiGenerateDeviceCameraSnapsh
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **generateDeviceCameraSnapshot** | [**InlineObject5**](InlineObject5.md) |  | 
+ **generateDeviceCameraSnapshot** | [**InlineObject8**](InlineObject8.md) |  | 
 
 ### Return type
 
@@ -1421,7 +1421,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCameraVideoSettings
 
-> InlineResponse2003 GetDeviceCameraVideoSettings(ctx, serial).Execute()
+> InlineResponse2005 GetDeviceCameraVideoSettings(ctx, serial).Execute()
 
 Returns video settings for the given camera
 
@@ -1449,7 +1449,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetDeviceCameraVideoSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraVideoSettings`: InlineResponse2003
+    // response from `GetDeviceCameraVideoSettings`: InlineResponse2005
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetDeviceCameraVideoSettings`: %v\n", resp)
 }
 ```
@@ -1473,7 +1473,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -1704,7 +1704,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCameraSchedules
 
-> []InlineResponse20031 GetNetworkCameraSchedules(ctx, networkId).Execute()
+> []InlineResponse20033 GetNetworkCameraSchedules(ctx, networkId).Execute()
 
 Returns a list of all camera recording schedules.
 
@@ -1732,7 +1732,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetNetworkCameraSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCameraSchedules`: []InlineResponse20031
+    // response from `GetNetworkCameraSchedules`: []InlineResponse20033
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetNetworkCameraSchedules`: %v\n", resp)
 }
 ```
@@ -1756,7 +1756,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20031**](InlineResponse20031.md)
+[**[]InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 
@@ -2134,7 +2134,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraPermission
 
-> InlineResponse200129 GetOrganizationCameraPermission(ctx, organizationId, permissionScopeId).Execute()
+> InlineResponse200131 GetOrganizationCameraPermission(ctx, organizationId, permissionScopeId).Execute()
 
 Retrieve a single permission scope
 
@@ -2163,7 +2163,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetOrganizationCameraPermission``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraPermission`: InlineResponse200129
+    // response from `GetOrganizationCameraPermission`: InlineResponse200131
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetOrganizationCameraPermission`: %v\n", resp)
 }
 ```
@@ -2189,7 +2189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200129**](InlineResponse200129.md)
+[**InlineResponse200131**](InlineResponse200131.md)
 
 ### Authorization
 
@@ -2207,7 +2207,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraPermissions
 
-> []InlineResponse200129 GetOrganizationCameraPermissions(ctx, organizationId).Execute()
+> []InlineResponse200131 GetOrganizationCameraPermissions(ctx, organizationId).Execute()
 
 List the permissions scopes for this organization
 
@@ -2235,7 +2235,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetOrganizationCameraPermissions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraPermissions`: []InlineResponse200129
+    // response from `GetOrganizationCameraPermissions`: []InlineResponse200131
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetOrganizationCameraPermissions`: %v\n", resp)
 }
 ```
@@ -2259,7 +2259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200129**](InlineResponse200129.md)
+[**[]InlineResponse200131**](InlineResponse200131.md)
 
 ### Authorization
 
@@ -2440,7 +2440,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraCustomAnalytics := *openapiclient.NewInlineObject4() // InlineObject4 |  (optional)
+    updateDeviceCameraCustomAnalytics := *openapiclient.NewInlineObject7() // InlineObject7 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2470,7 +2470,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraCustomAn
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraCustomAnalytics** | [**InlineObject4**](InlineObject4.md) |  | 
+ **updateDeviceCameraCustomAnalytics** | [**InlineObject7**](InlineObject7.md) |  | 
 
 ### Return type
 
@@ -2512,7 +2512,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraQualityAndRetention := *openapiclient.NewInlineObject6() // InlineObject6 |  (optional)
+    updateDeviceCameraQualityAndRetention := *openapiclient.NewInlineObject9() // InlineObject9 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2542,7 +2542,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraQualityA
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraQualityAndRetention** | [**InlineObject6**](InlineObject6.md) |  | 
+ **updateDeviceCameraQualityAndRetention** | [**InlineObject9**](InlineObject9.md) |  | 
 
 ### Return type
 
@@ -2584,7 +2584,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraSense := *openapiclient.NewInlineObject7() // InlineObject7 |  (optional)
+    updateDeviceCameraSense := *openapiclient.NewInlineObject10() // InlineObject10 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2614,7 +2614,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraSenseReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraSense** | [**InlineObject7**](InlineObject7.md) |  | 
+ **updateDeviceCameraSense** | [**InlineObject10**](InlineObject10.md) |  | 
 
 ### Return type
 
@@ -2636,7 +2636,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCameraVideoSettings
 
-> InlineResponse2003 UpdateDeviceCameraVideoSettings(ctx, serial).UpdateDeviceCameraVideoSettings(updateDeviceCameraVideoSettings).Execute()
+> InlineResponse2005 UpdateDeviceCameraVideoSettings(ctx, serial).UpdateDeviceCameraVideoSettings(updateDeviceCameraVideoSettings).Execute()
 
 Update video settings for the given camera
 
@@ -2656,7 +2656,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraVideoSettings := *openapiclient.NewInlineObject8() // InlineObject8 |  (optional)
+    updateDeviceCameraVideoSettings := *openapiclient.NewInlineObject11() // InlineObject11 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2665,7 +2665,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.UpdateDeviceCameraVideoSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCameraVideoSettings`: InlineResponse2003
+    // response from `UpdateDeviceCameraVideoSettings`: InlineResponse2005
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.UpdateDeviceCameraVideoSettings`: %v\n", resp)
 }
 ```
@@ -2686,11 +2686,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraVideoSet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraVideoSettings** | [**InlineObject8**](InlineObject8.md) |  | 
+ **updateDeviceCameraVideoSettings** | [**InlineObject11**](InlineObject11.md) |  | 
 
 ### Return type
 
-[**InlineResponse2003**](InlineResponse2003.md)
+[**InlineResponse2005**](InlineResponse2005.md)
 
 ### Authorization
 
@@ -2728,7 +2728,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceCameraWirelessProfiles := *openapiclient.NewInlineObject9(*openapiclient.NewDevicesSerialCameraWirelessProfilesIds()) // InlineObject9 | 
+    updateDeviceCameraWirelessProfiles := *openapiclient.NewInlineObject12(*openapiclient.NewDevicesSerialCameraWirelessProfilesIds()) // InlineObject12 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2758,7 +2758,7 @@ Other parameters are passed through a pointer to a apiUpdateDeviceCameraWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceCameraWirelessProfiles** | [**InlineObject9**](InlineObject9.md) |  | 
+ **updateDeviceCameraWirelessProfiles** | [**InlineObject12**](InlineObject12.md) |  | 
 
 ### Return type
 
@@ -2801,7 +2801,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     qualityRetentionProfileId := "qualityRetentionProfileId_example" // string | Quality retention profile ID
-    updateNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject69() // InlineObject69 |  (optional)
+    updateNetworkCameraQualityRetentionProfile := *openapiclient.NewInlineObject72() // InlineObject72 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2833,7 +2833,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCameraQualityRetentionProfile** | [**InlineObject69**](InlineObject69.md) |  | 
+ **updateNetworkCameraQualityRetentionProfile** | [**InlineObject72**](InlineObject72.md) |  | 
 
 ### Return type
 
@@ -2876,7 +2876,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     wirelessProfileId := "wirelessProfileId_example" // string | Wireless profile ID
-    updateNetworkCameraWirelessProfile := *openapiclient.NewInlineObject71() // InlineObject71 |  (optional)
+    updateNetworkCameraWirelessProfile := *openapiclient.NewInlineObject74() // InlineObject74 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2908,7 +2908,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkCameraWirelessProfile** | [**InlineObject71**](InlineObject71.md) |  | 
+ **updateNetworkCameraWirelessProfile** | [**InlineObject74**](InlineObject74.md) |  | 
 
 ### Return type
 
@@ -2950,7 +2950,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject203() // InlineObject203 |  (optional)
+    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject206() // InlineObject206 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2980,7 +2980,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationCameraOn
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationCameraOnboardingStatuses** | [**InlineObject203**](InlineObject203.md) |  | 
+ **updateOrganizationCameraOnboardingStatuses** | [**InlineObject206**](InlineObject206.md) |  | 
 
 ### Return type
 
@@ -3023,7 +3023,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     roleId := "roleId_example" // string | Role ID
-    updateOrganizationCameraRole := *openapiclient.NewInlineObject205() // InlineObject205 |  (optional)
+    updateOrganizationCameraRole := *openapiclient.NewInlineObject208() // InlineObject208 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3055,7 +3055,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationCameraRole** | [**InlineObject205**](InlineObject205.md) |  | 
+ **updateOrganizationCameraRole** | [**InlineObject208**](InlineObject208.md) |  | 
 
 ### Return type
 

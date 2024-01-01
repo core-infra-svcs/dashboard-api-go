@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice**](OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice.md) |  | [optional] 
+**Serial** | Pointer to **string** | The serial number of the AP | [optional] 
+**Name** | Pointer to **string** | The name of the AP | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork.md) |  | [optional] 
+**Power** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower.md) |  | [optional] 
+**Ports** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts.md) | List of port details | [optional] 
+**Aggregation** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation.md) |  | [optional] 
 
 ## Methods
 
@@ -28,72 +30,72 @@ NewInlineResponse200187WithDefaults instantiates a new InlineResponse200187 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetSerial
 
-`func (o *InlineResponse200187) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200187) GetSerial() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetSerialOk
 
-`func (o *InlineResponse200187) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200187) GetSerialOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetSerial
 
-`func (o *InlineResponse200187) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200187) SetSerial(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetSerial sets Serial field to given value.
 
-### HasDownstream
+### HasSerial
 
-`func (o *InlineResponse200187) HasDownstream() bool`
+`func (o *InlineResponse200187) HasSerial() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetUpstream
+### GetName
 
-`func (o *InlineResponse200187) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200187) GetName() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetNameOk
 
-`func (o *InlineResponse200187) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200187) GetNameOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetName
 
-`func (o *InlineResponse200187) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200187) SetName(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetName sets Name field to given value.
 
-### HasUpstream
+### HasName
 
-`func (o *InlineResponse200187) HasUpstream() bool`
+`func (o *InlineResponse200187) HasName() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 ### GetNetwork
 
-`func (o *InlineResponse200187) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
+`func (o *InlineResponse200187) GetNetwork() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200187) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
+`func (o *InlineResponse200187) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200187) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
+`func (o *InlineResponse200187) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork)`
 
 SetNetwork sets Network field to given value.
 
@@ -103,30 +105,80 @@ SetNetwork sets Network field to given value.
 
 HasNetwork returns a boolean if a field has been set.
 
-### GetDevice
+### GetPower
 
-`func (o *InlineResponse200187) GetDevice() OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice`
+`func (o *InlineResponse200187) GetPower() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetPower returns the Power field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetPowerOk
 
-`func (o *InlineResponse200187) GetDeviceOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice, bool)`
+`func (o *InlineResponse200187) GetPowerOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetPowerOk returns a tuple with the Power field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetPower
 
-`func (o *InlineResponse200187) SetDevice(v OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice)`
+`func (o *InlineResponse200187) SetPower(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower)`
 
-SetDevice sets Device field to given value.
+SetPower sets Power field to given value.
 
-### HasDevice
+### HasPower
 
-`func (o *InlineResponse200187) HasDevice() bool`
+`func (o *InlineResponse200187) HasPower() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasPower returns a boolean if a field has been set.
+
+### GetPorts
+
+`func (o *InlineResponse200187) GetPorts() []OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineResponse200187) GetPortsOk() (*[]OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineResponse200187) SetPorts(v []OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts)`
+
+SetPorts sets Ports field to given value.
+
+### HasPorts
+
+`func (o *InlineResponse200187) HasPorts() bool`
+
+HasPorts returns a boolean if a field has been set.
+
+### GetAggregation
+
+`func (o *InlineResponse200187) GetAggregation() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation`
+
+GetAggregation returns the Aggregation field if non-nil, zero value otherwise.
+
+### GetAggregationOk
+
+`func (o *InlineResponse200187) GetAggregationOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation, bool)`
+
+GetAggregationOk returns a tuple with the Aggregation field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAggregation
+
+`func (o *InlineResponse200187) SetAggregation(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation)`
+
+SetAggregation sets Aggregation field to given value.
+
+### HasAggregation
+
+`func (o *InlineResponse200187) HasAggregation() bool`
+
+HasAggregation returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
