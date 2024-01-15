@@ -8,15 +8,15 @@ Name | Type | Description | Notes
 **OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
 **Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
 **Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
-**Status** | Pointer to [**InlineResponse2015Status**](InlineResponse2015Status.md) |  | [optional] 
-**Actions** | [**[]InlineResponse2015Actions**](InlineResponse2015Actions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
 **Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse2015
 
-`func NewInlineResponse2015(actions []InlineResponse2015Actions, ) *InlineResponse2015`
+`func NewInlineResponse2015(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse2015`
 
 NewInlineResponse2015 instantiates a new InlineResponse2015 object
 This constructor will assign default values to properties that have it defined,
@@ -133,20 +133,20 @@ HasSynchronous returns a boolean if a field has been set.
 
 ### GetStatus
 
-`func (o *InlineResponse2015) GetStatus() InlineResponse2015Status`
+`func (o *InlineResponse2015) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *InlineResponse2015) GetStatusOk() (*InlineResponse2015Status, bool)`
+`func (o *InlineResponse2015) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *InlineResponse2015) SetStatus(v InlineResponse2015Status)`
+`func (o *InlineResponse2015) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
 
 SetStatus sets Status field to given value.
 
@@ -158,20 +158,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetActions
 
-`func (o *InlineResponse2015) GetActions() []InlineResponse2015Actions`
+`func (o *InlineResponse2015) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
 
 GetActions returns the Actions field if non-nil, zero value otherwise.
 
 ### GetActionsOk
 
-`func (o *InlineResponse2015) GetActionsOk() (*[]InlineResponse2015Actions, bool)`
+`func (o *InlineResponse2015) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
 
 GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetActions
 
-`func (o *InlineResponse2015) SetActions(v []InlineResponse2015Actions)`
+`func (o *InlineResponse2015) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
 
 SetActions sets Actions field to given value.
 

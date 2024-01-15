@@ -4,20 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial number of the sensor that took the reading. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
-**Ts** | Pointer to **string** | Time at which the reading occurred, in ISO8601 format. | [optional] 
-**Metric** | Pointer to **string** | Type of sensor reading. | [optional] 
-**Battery** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryBattery**](OrganizationsOrganizationIdSensorReadingsHistoryBattery.md) |  | [optional] 
-**Button** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryButton**](OrganizationsOrganizationIdSensorReadingsHistoryButton.md) |  | [optional] 
-**Door** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryDoor**](OrganizationsOrganizationIdSensorReadingsHistoryDoor.md) |  | [optional] 
-**Humidity** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryHumidity**](OrganizationsOrganizationIdSensorReadingsHistoryHumidity.md) |  | [optional] 
-**IndoorAirQuality** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality**](OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality.md) |  | [optional] 
-**Noise** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNoise**](OrganizationsOrganizationIdSensorReadingsHistoryNoise.md) |  | [optional] 
-**Pm25** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryPm25**](OrganizationsOrganizationIdSensorReadingsHistoryPm25.md) |  | [optional] 
-**Temperature** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryTemperature**](OrganizationsOrganizationIdSensorReadingsHistoryTemperature.md) |  | [optional] 
-**Tvoc** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryTvoc**](OrganizationsOrganizationIdSensorReadingsHistoryTvoc.md) |  | [optional] 
-**Water** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryWater**](OrganizationsOrganizationIdSensorReadingsHistoryWater.md) |  | [optional] 
+**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
+**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
 
 ## Methods
 
@@ -38,355 +29,130 @@ NewInlineResponse200166WithDefaults instantiates a new InlineResponse200166 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetId
 
-`func (o *InlineResponse200166) GetSerial() string`
+`func (o *InlineResponse200166) GetId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetIdOk
 
-`func (o *InlineResponse200166) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200166) GetIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetId
 
-`func (o *InlineResponse200166) SetSerial(v string)`
+`func (o *InlineResponse200166) SetId(v string)`
 
-SetSerial sets Serial field to given value.
+SetId sets Id field to given value.
 
-### HasSerial
+### HasId
 
-`func (o *InlineResponse200166) HasSerial() bool`
+`func (o *InlineResponse200166) HasId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetNetwork
+### GetRole
 
-`func (o *InlineResponse200166) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
+`func (o *InlineResponse200166) GetRole() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetRoleOk
 
-`func (o *InlineResponse200166) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
+`func (o *InlineResponse200166) GetRoleOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetRole
 
-`func (o *InlineResponse200166) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
+`func (o *InlineResponse200166) SetRole(v string)`
 
-SetNetwork sets Network field to given value.
+SetRole sets Role field to given value.
 
-### HasNetwork
+### HasRole
 
-`func (o *InlineResponse200166) HasNetwork() bool`
+`func (o *InlineResponse200166) HasRole() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasRole returns a boolean if a field has been set.
 
-### GetTs
+### GetOrgAccess
 
-`func (o *InlineResponse200166) GetTs() string`
+`func (o *InlineResponse200166) GetOrgAccess() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetOrgAccessOk
 
-`func (o *InlineResponse200166) GetTsOk() (*string, bool)`
+`func (o *InlineResponse200166) GetOrgAccessOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetOrgAccess
 
-`func (o *InlineResponse200166) SetTs(v string)`
+`func (o *InlineResponse200166) SetOrgAccess(v string)`
 
-SetTs sets Ts field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasTs
+### HasOrgAccess
 
-`func (o *InlineResponse200166) HasTs() bool`
+`func (o *InlineResponse200166) HasOrgAccess() bool`
 
-HasTs returns a boolean if a field has been set.
+HasOrgAccess returns a boolean if a field has been set.
 
-### GetMetric
+### GetNetworks
 
-`func (o *InlineResponse200166) GetMetric() string`
+`func (o *InlineResponse200166) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
 
-GetMetric returns the Metric field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetMetricOk
+### GetNetworksOk
 
-`func (o *InlineResponse200166) GetMetricOk() (*string, bool)`
+`func (o *InlineResponse200166) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
 
-GetMetricOk returns a tuple with the Metric field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMetric
+### SetNetworks
 
-`func (o *InlineResponse200166) SetMetric(v string)`
+`func (o *InlineResponse200166) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
 
-SetMetric sets Metric field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasMetric
+### HasNetworks
 
-`func (o *InlineResponse200166) HasMetric() bool`
+`func (o *InlineResponse200166) HasNetworks() bool`
 
-HasMetric returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
-### GetBattery
+### GetTags
 
-`func (o *InlineResponse200166) GetBattery() OrganizationsOrganizationIdSensorReadingsHistoryBattery`
+`func (o *InlineResponse200166) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
 
-GetBattery returns the Battery field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetBatteryOk
+### GetTagsOk
 
-`func (o *InlineResponse200166) GetBatteryOk() (*OrganizationsOrganizationIdSensorReadingsHistoryBattery, bool)`
+`func (o *InlineResponse200166) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
 
-GetBatteryOk returns a tuple with the Battery field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBattery
+### SetTags
 
-`func (o *InlineResponse200166) SetBattery(v OrganizationsOrganizationIdSensorReadingsHistoryBattery)`
+`func (o *InlineResponse200166) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
 
-SetBattery sets Battery field to given value.
+SetTags sets Tags field to given value.
 
-### HasBattery
+### HasTags
 
-`func (o *InlineResponse200166) HasBattery() bool`
+`func (o *InlineResponse200166) HasTags() bool`
 
-HasBattery returns a boolean if a field has been set.
-
-### GetButton
-
-`func (o *InlineResponse200166) GetButton() OrganizationsOrganizationIdSensorReadingsHistoryButton`
-
-GetButton returns the Button field if non-nil, zero value otherwise.
-
-### GetButtonOk
-
-`func (o *InlineResponse200166) GetButtonOk() (*OrganizationsOrganizationIdSensorReadingsHistoryButton, bool)`
-
-GetButtonOk returns a tuple with the Button field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetButton
-
-`func (o *InlineResponse200166) SetButton(v OrganizationsOrganizationIdSensorReadingsHistoryButton)`
-
-SetButton sets Button field to given value.
-
-### HasButton
-
-`func (o *InlineResponse200166) HasButton() bool`
-
-HasButton returns a boolean if a field has been set.
-
-### GetDoor
-
-`func (o *InlineResponse200166) GetDoor() OrganizationsOrganizationIdSensorReadingsHistoryDoor`
-
-GetDoor returns the Door field if non-nil, zero value otherwise.
-
-### GetDoorOk
-
-`func (o *InlineResponse200166) GetDoorOk() (*OrganizationsOrganizationIdSensorReadingsHistoryDoor, bool)`
-
-GetDoorOk returns a tuple with the Door field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDoor
-
-`func (o *InlineResponse200166) SetDoor(v OrganizationsOrganizationIdSensorReadingsHistoryDoor)`
-
-SetDoor sets Door field to given value.
-
-### HasDoor
-
-`func (o *InlineResponse200166) HasDoor() bool`
-
-HasDoor returns a boolean if a field has been set.
-
-### GetHumidity
-
-`func (o *InlineResponse200166) GetHumidity() OrganizationsOrganizationIdSensorReadingsHistoryHumidity`
-
-GetHumidity returns the Humidity field if non-nil, zero value otherwise.
-
-### GetHumidityOk
-
-`func (o *InlineResponse200166) GetHumidityOk() (*OrganizationsOrganizationIdSensorReadingsHistoryHumidity, bool)`
-
-GetHumidityOk returns a tuple with the Humidity field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHumidity
-
-`func (o *InlineResponse200166) SetHumidity(v OrganizationsOrganizationIdSensorReadingsHistoryHumidity)`
-
-SetHumidity sets Humidity field to given value.
-
-### HasHumidity
-
-`func (o *InlineResponse200166) HasHumidity() bool`
-
-HasHumidity returns a boolean if a field has been set.
-
-### GetIndoorAirQuality
-
-`func (o *InlineResponse200166) GetIndoorAirQuality() OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality`
-
-GetIndoorAirQuality returns the IndoorAirQuality field if non-nil, zero value otherwise.
-
-### GetIndoorAirQualityOk
-
-`func (o *InlineResponse200166) GetIndoorAirQualityOk() (*OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality, bool)`
-
-GetIndoorAirQualityOk returns a tuple with the IndoorAirQuality field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIndoorAirQuality
-
-`func (o *InlineResponse200166) SetIndoorAirQuality(v OrganizationsOrganizationIdSensorReadingsHistoryIndoorAirQuality)`
-
-SetIndoorAirQuality sets IndoorAirQuality field to given value.
-
-### HasIndoorAirQuality
-
-`func (o *InlineResponse200166) HasIndoorAirQuality() bool`
-
-HasIndoorAirQuality returns a boolean if a field has been set.
-
-### GetNoise
-
-`func (o *InlineResponse200166) GetNoise() OrganizationsOrganizationIdSensorReadingsHistoryNoise`
-
-GetNoise returns the Noise field if non-nil, zero value otherwise.
-
-### GetNoiseOk
-
-`func (o *InlineResponse200166) GetNoiseOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNoise, bool)`
-
-GetNoiseOk returns a tuple with the Noise field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNoise
-
-`func (o *InlineResponse200166) SetNoise(v OrganizationsOrganizationIdSensorReadingsHistoryNoise)`
-
-SetNoise sets Noise field to given value.
-
-### HasNoise
-
-`func (o *InlineResponse200166) HasNoise() bool`
-
-HasNoise returns a boolean if a field has been set.
-
-### GetPm25
-
-`func (o *InlineResponse200166) GetPm25() OrganizationsOrganizationIdSensorReadingsHistoryPm25`
-
-GetPm25 returns the Pm25 field if non-nil, zero value otherwise.
-
-### GetPm25Ok
-
-`func (o *InlineResponse200166) GetPm25Ok() (*OrganizationsOrganizationIdSensorReadingsHistoryPm25, bool)`
-
-GetPm25Ok returns a tuple with the Pm25 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPm25
-
-`func (o *InlineResponse200166) SetPm25(v OrganizationsOrganizationIdSensorReadingsHistoryPm25)`
-
-SetPm25 sets Pm25 field to given value.
-
-### HasPm25
-
-`func (o *InlineResponse200166) HasPm25() bool`
-
-HasPm25 returns a boolean if a field has been set.
-
-### GetTemperature
-
-`func (o *InlineResponse200166) GetTemperature() OrganizationsOrganizationIdSensorReadingsHistoryTemperature`
-
-GetTemperature returns the Temperature field if non-nil, zero value otherwise.
-
-### GetTemperatureOk
-
-`func (o *InlineResponse200166) GetTemperatureOk() (*OrganizationsOrganizationIdSensorReadingsHistoryTemperature, bool)`
-
-GetTemperatureOk returns a tuple with the Temperature field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTemperature
-
-`func (o *InlineResponse200166) SetTemperature(v OrganizationsOrganizationIdSensorReadingsHistoryTemperature)`
-
-SetTemperature sets Temperature field to given value.
-
-### HasTemperature
-
-`func (o *InlineResponse200166) HasTemperature() bool`
-
-HasTemperature returns a boolean if a field has been set.
-
-### GetTvoc
-
-`func (o *InlineResponse200166) GetTvoc() OrganizationsOrganizationIdSensorReadingsHistoryTvoc`
-
-GetTvoc returns the Tvoc field if non-nil, zero value otherwise.
-
-### GetTvocOk
-
-`func (o *InlineResponse200166) GetTvocOk() (*OrganizationsOrganizationIdSensorReadingsHistoryTvoc, bool)`
-
-GetTvocOk returns a tuple with the Tvoc field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTvoc
-
-`func (o *InlineResponse200166) SetTvoc(v OrganizationsOrganizationIdSensorReadingsHistoryTvoc)`
-
-SetTvoc sets Tvoc field to given value.
-
-### HasTvoc
-
-`func (o *InlineResponse200166) HasTvoc() bool`
-
-HasTvoc returns a boolean if a field has been set.
-
-### GetWater
-
-`func (o *InlineResponse200166) GetWater() OrganizationsOrganizationIdSensorReadingsHistoryWater`
-
-GetWater returns the Water field if non-nil, zero value otherwise.
-
-### GetWaterOk
-
-`func (o *InlineResponse200166) GetWaterOk() (*OrganizationsOrganizationIdSensorReadingsHistoryWater, bool)`
-
-GetWaterOk returns a tuple with the Water field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWater
-
-`func (o *InlineResponse200166) SetWater(v OrganizationsOrganizationIdSensorReadingsHistoryWater)`
-
-SetWater sets Water field to given value.
-
-### HasWater
-
-`func (o *InlineResponse200166) HasWater() bool`
-
-HasWater returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
+**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
+**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200168WithDefaults instantiates a new InlineResponse200168 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificate
+### GetSerial
 
-`func (o *InlineResponse200168) GetCertificate() string`
+`func (o *InlineResponse200168) GetSerial() string`
 
-GetCertificate returns the Certificate field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetCertificateOk
+### GetSerialOk
 
-`func (o *InlineResponse200168) GetCertificateOk() (*string, bool)`
+`func (o *InlineResponse200168) GetSerialOk() (*string, bool)`
 
-GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificate
+### SetSerial
 
-`func (o *InlineResponse200168) SetCertificate(v string)`
+`func (o *InlineResponse200168) SetSerial(v string)`
 
-SetCertificate sets Certificate field to given value.
+SetSerial sets Serial field to given value.
 
-### HasCertificate
+### HasSerial
 
-`func (o *InlineResponse200168) HasCertificate() bool`
+`func (o *InlineResponse200168) HasSerial() bool`
 
-HasCertificate returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200168) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200168) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200168) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200168) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetReadings
+
+`func (o *InlineResponse200168) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
+
+GetReadings returns the Readings field if non-nil, zero value otherwise.
+
+### GetReadingsOk
+
+`func (o *InlineResponse200168) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
+
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReadings
+
+`func (o *InlineResponse200168) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
+
+SetReadings sets Readings field to given value.
+
+### HasReadings
+
+`func (o *InlineResponse200168) HasReadings() bool`
+
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

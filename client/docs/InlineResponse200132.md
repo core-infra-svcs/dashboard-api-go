@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network Id | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Model** | Pointer to **string** | Device model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks.md) | Uplinks info | [optional] 
+**Id** | Pointer to **string** | Permission scope id | [optional] 
+**Name** | Pointer to **string** | Name of permission scope | [optional] 
+**Level** | Pointer to **string** | Permission scope level | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200132WithDefaults instantiates a new InlineResponse200132 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetId
 
-`func (o *InlineResponse200132) GetNetworkId() string`
+`func (o *InlineResponse200132) GetId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetIdOk
 
-`func (o *InlineResponse200132) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200132) GetIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetId
 
-`func (o *InlineResponse200132) SetNetworkId(v string)`
+`func (o *InlineResponse200132) SetId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetId sets Id field to given value.
 
-### HasNetworkId
+### HasId
 
-`func (o *InlineResponse200132) HasNetworkId() bool`
+`func (o *InlineResponse200132) HasId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetSerial
+### GetName
 
-`func (o *InlineResponse200132) GetSerial() string`
+`func (o *InlineResponse200132) GetName() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNameOk
 
-`func (o *InlineResponse200132) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200132) GetNameOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetName
 
-`func (o *InlineResponse200132) SetSerial(v string)`
+`func (o *InlineResponse200132) SetName(v string)`
 
-SetSerial sets Serial field to given value.
+SetName sets Name field to given value.
 
-### HasSerial
+### HasName
 
-`func (o *InlineResponse200132) HasSerial() bool`
+`func (o *InlineResponse200132) HasName() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetModel
+### GetLevel
 
-`func (o *InlineResponse200132) GetModel() string`
+`func (o *InlineResponse200132) GetLevel() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetLevel returns the Level field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetLevelOk
 
-`func (o *InlineResponse200132) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200132) GetLevelOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetLevel
 
-`func (o *InlineResponse200132) SetModel(v string)`
+`func (o *InlineResponse200132) SetLevel(v string)`
 
-SetModel sets Model field to given value.
+SetLevel sets Level field to given value.
 
-### HasModel
+### HasLevel
 
-`func (o *InlineResponse200132) HasModel() bool`
+`func (o *InlineResponse200132) HasLevel() bool`
 
-HasModel returns a boolean if a field has been set.
-
-### GetLastReportedAt
-
-`func (o *InlineResponse200132) GetLastReportedAt() time.Time`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse200132) GetLastReportedAtOk() (*time.Time, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse200132) SetLastReportedAt(v time.Time)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-### HasLastReportedAt
-
-`func (o *InlineResponse200132) HasLastReportedAt() bool`
-
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse200132) GetUplinks() []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse200132) GetUplinksOk() (*[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse200132) SetUplinks(v []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse200132) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasLevel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

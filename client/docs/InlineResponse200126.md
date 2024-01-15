@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network identifier | [optional] 
-**Name** | Pointer to **string** | Network name | [optional] 
-**ByUplink** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink**](OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink.md) | Uplink usage | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the access period | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the access period | [optional] 
+**Counts** | Pointer to [**[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts**](OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts.md) | list of response codes and a count of how many requests had that code in the given time period | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200126WithDefaults instantiates a new InlineResponse200126 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetStartTs
 
-`func (o *InlineResponse200126) GetNetworkId() string`
+`func (o *InlineResponse200126) GetStartTs() time.Time`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse200126) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200126) GetStartTsOk() (*time.Time, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetStartTs
 
-`func (o *InlineResponse200126) SetNetworkId(v string)`
+`func (o *InlineResponse200126) SetStartTs(v time.Time)`
 
-SetNetworkId sets NetworkId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasNetworkId
+### HasStartTs
 
-`func (o *InlineResponse200126) HasNetworkId() bool`
+`func (o *InlineResponse200126) HasStartTs() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetName
+### GetEndTs
 
-`func (o *InlineResponse200126) GetName() string`
+`func (o *InlineResponse200126) GetEndTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEndTsOk
 
-`func (o *InlineResponse200126) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200126) GetEndTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEndTs
 
-`func (o *InlineResponse200126) SetName(v string)`
+`func (o *InlineResponse200126) SetEndTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasName
+### HasEndTs
 
-`func (o *InlineResponse200126) HasName() bool`
+`func (o *InlineResponse200126) HasEndTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetByUplink
+### GetCounts
 
-`func (o *InlineResponse200126) GetByUplink() []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink`
+`func (o *InlineResponse200126) GetCounts() []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts`
 
-GetByUplink returns the ByUplink field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetByUplinkOk
+### GetCountsOk
 
-`func (o *InlineResponse200126) GetByUplinkOk() (*[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink, bool)`
+`func (o *InlineResponse200126) GetCountsOk() (*[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts, bool)`
 
-GetByUplinkOk returns a tuple with the ByUplink field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByUplink
+### SetCounts
 
-`func (o *InlineResponse200126) SetByUplink(v []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink)`
+`func (o *InlineResponse200126) SetCounts(v []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts)`
 
-SetByUplink sets ByUplink field to given value.
+SetCounts sets Counts field to given value.
 
-### HasByUplink
+### HasCounts
 
-`func (o *InlineResponse200126) HasByUplink() bool`
+`func (o *InlineResponse200126) HasCounts() bool`
 
-HasByUplink returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

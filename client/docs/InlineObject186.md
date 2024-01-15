@@ -6,14 +6,14 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
 **Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions1**](OrganizationsOrganizationIdActionBatchesActions1.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
 **Callback** | Pointer to [**DevicesSerialLiveToolsPingCallback**](DevicesSerialLiveToolsPingCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject186
 
-`func NewInlineObject186(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineObject186`
+`func NewInlineObject186(actions []OrganizationsOrganizationIdActionBatchesActions1, ) *InlineObject186`
 
 NewInlineObject186 instantiates a new InlineObject186 object
 This constructor will assign default values to properties that have it defined,
@@ -80,20 +80,20 @@ HasSynchronous returns a boolean if a field has been set.
 
 ### GetActions
 
-`func (o *InlineObject186) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
+`func (o *InlineObject186) GetActions() []OrganizationsOrganizationIdActionBatchesActions1`
 
 GetActions returns the Actions field if non-nil, zero value otherwise.
 
 ### GetActionsOk
 
-`func (o *InlineObject186) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
+`func (o *InlineObject186) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions1, bool)`
 
 GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetActions
 
-`func (o *InlineObject186) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
+`func (o *InlineObject186) SetActions(v []OrganizationsOrganizationIdActionBatchesActions1)`
 
 SetActions sets Actions field to given value.
 

@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Resource** | **string** | Unique identifier for the resource to be acted on | 
-**Operation** | **string** | The operation to be used | 
-**Body** | Pointer to **map[string]interface{}** | The body of the action | [optional] 
+**Operation** | **string** | The operation to be used by this action | 
+**Body** | Pointer to **map[string]interface{}** | Data provided in the body of the Action. Contents depend on the Action type | [optional] 
 
 ## Methods
 

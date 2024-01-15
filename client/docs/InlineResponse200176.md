@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the SSID | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
+**Model** | Pointer to **string** | The device model | [optional] 
+**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -27,47 +27,72 @@ NewInlineResponse200176WithDefaults instantiates a new InlineResponse200176 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetModel
 
-`func (o *InlineResponse200176) GetName() string`
+`func (o *InlineResponse200176) GetModel() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetModelOk
 
-`func (o *InlineResponse200176) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200176) GetModelOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetModel
 
-`func (o *InlineResponse200176) SetName(v string)`
+`func (o *InlineResponse200176) SetModel(v string)`
 
-SetName sets Name field to given value.
+SetModel sets Model field to given value.
 
-### HasName
+### HasModel
 
-`func (o *InlineResponse200176) HasName() bool`
+`func (o *InlineResponse200176) HasModel() bool`
 
-HasName returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
+
+### GetCount
+
+`func (o *InlineResponse200176) GetCount() int32`
+
+GetCount returns the Count field if non-nil, zero value otherwise.
+
+### GetCountOk
+
+`func (o *InlineResponse200176) GetCountOk() (*int32, bool)`
+
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCount
+
+`func (o *InlineResponse200176) SetCount(v int32)`
+
+SetCount sets Count field to given value.
+
+### HasCount
+
+`func (o *InlineResponse200176) HasCount() bool`
+
+HasCount returns a boolean if a field has been set.
 
 ### GetUsage
 
-`func (o *InlineResponse200176) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
+`func (o *InlineResponse200176) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
 
 GetUsage returns the Usage field if non-nil, zero value otherwise.
 
 ### GetUsageOk
 
-`func (o *InlineResponse200176) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
+`func (o *InlineResponse200176) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
 
 GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUsage
 
-`func (o *InlineResponse200176) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
+`func (o *InlineResponse200176) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
 
 SetUsage sets Usage field to given value.
 
@@ -76,31 +101,6 @@ SetUsage sets Usage field to given value.
 `func (o *InlineResponse200176) HasUsage() bool`
 
 HasUsage returns a boolean if a field has been set.
-
-### GetClients
-
-`func (o *InlineResponse200176) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
-
-GetClients returns the Clients field if non-nil, zero value otherwise.
-
-### GetClientsOk
-
-`func (o *InlineResponse200176) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
-
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClients
-
-`func (o *InlineResponse200176) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
-
-SetClients sets Clients field to given value.
-
-### HasClients
-
-`func (o *InlineResponse200176) HasClients() bool`
-
-HasClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
