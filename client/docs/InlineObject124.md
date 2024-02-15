@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | **string** | The mac address of the trusted server being added | 
-**Vlan** | **int32** | The VLAN of the trusted server being added. It must be between 1 and 4094 | 
-**Ipv4** | [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41.md) |  | 
+**Rules** | [**[]NetworksNetworkIdSwitchAccessControlListsRules**](NetworksNetworkIdSwitchAccessControlListsRules.md) | An ordered array of the access control list rules (not including the default rule). An empty array will clear the rules. | 
 
 ## Methods
 
 ### NewInlineObject124
 
-`func NewInlineObject124(mac string, vlan int32, ipv4 NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41, ) *InlineObject124`
+`func NewInlineObject124(rules []NetworksNetworkIdSwitchAccessControlListsRules, ) *InlineObject124`
 
 NewInlineObject124 instantiates a new InlineObject124 object
 This constructor will assign default values to properties that have it defined,
@@ -27,64 +25,24 @@ NewInlineObject124WithDefaults instantiates a new InlineObject124 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetRules
 
-`func (o *InlineObject124) GetMac() string`
+`func (o *InlineObject124) GetRules() []NetworksNetworkIdSwitchAccessControlListsRules`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetRulesOk
 
-`func (o *InlineObject124) GetMacOk() (*string, bool)`
+`func (o *InlineObject124) GetRulesOk() (*[]NetworksNetworkIdSwitchAccessControlListsRules, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetRules
 
-`func (o *InlineObject124) SetMac(v string)`
+`func (o *InlineObject124) SetRules(v []NetworksNetworkIdSwitchAccessControlListsRules)`
 
-SetMac sets Mac field to given value.
-
-
-### GetVlan
-
-`func (o *InlineObject124) GetVlan() int32`
-
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
-
-### GetVlanOk
-
-`func (o *InlineObject124) GetVlanOk() (*int32, bool)`
-
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlan
-
-`func (o *InlineObject124) SetVlan(v int32)`
-
-SetVlan sets Vlan field to given value.
-
-
-### GetIpv4
-
-`func (o *InlineObject124) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41`
-
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
-
-### GetIpv4Ok
-
-`func (o *InlineObject124) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41, bool)`
-
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv4
-
-`func (o *InlineObject124) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41)`
-
-SetIpv4 sets Ipv4 field to given value.
+SetRules sets Rules field to given value.
 
 
 

@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
-**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**ResultingLicenses** | Pointer to [**[]InlineResponse200164**](InlineResponse200164.md) | Resulting licenses from the move | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse200165WithDefaults instantiates a new InlineResponse200165 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIdpId
+### GetResultingLicenses
 
-`func (o *InlineResponse200165) GetIdpId() string`
+`func (o *InlineResponse200165) GetResultingLicenses() []InlineResponse200164`
 
-GetIdpId returns the IdpId field if non-nil, zero value otherwise.
+GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
 
-### GetIdpIdOk
+### GetResultingLicensesOk
 
-`func (o *InlineResponse200165) GetIdpIdOk() (*string, bool)`
+`func (o *InlineResponse200165) GetResultingLicensesOk() (*[]InlineResponse200164, bool)`
 
-GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
+GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdpId
+### SetResultingLicenses
 
-`func (o *InlineResponse200165) SetIdpId(v string)`
+`func (o *InlineResponse200165) SetResultingLicenses(v []InlineResponse200164)`
 
-SetIdpId sets IdpId field to given value.
+SetResultingLicenses sets ResultingLicenses field to given value.
 
-### HasIdpId
+### HasResultingLicenses
 
-`func (o *InlineResponse200165) HasIdpId() bool`
+`func (o *InlineResponse200165) HasResultingLicenses() bool`
 
-HasIdpId returns a boolean if a field has been set.
-
-### GetConsumerUrl
-
-`func (o *InlineResponse200165) GetConsumerUrl() string`
-
-GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
-
-### GetConsumerUrlOk
-
-`func (o *InlineResponse200165) GetConsumerUrlOk() (*string, bool)`
-
-GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetConsumerUrl
-
-`func (o *InlineResponse200165) SetConsumerUrl(v string)`
-
-SetConsumerUrl sets ConsumerUrl field to given value.
-
-### HasConsumerUrl
-
-`func (o *InlineResponse200165) HasConsumerUrl() bool`
-
-HasConsumerUrl returns a boolean if a field has been set.
-
-### GetX509certSha1Fingerprint
-
-`func (o *InlineResponse200165) GetX509certSha1Fingerprint() string`
-
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
-
-### GetX509certSha1FingerprintOk
-
-`func (o *InlineResponse200165) GetX509certSha1FingerprintOk() (*string, bool)`
-
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetX509certSha1Fingerprint
-
-`func (o *InlineResponse200165) SetX509certSha1Fingerprint(v string)`
-
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
-
-### HasX509certSha1Fingerprint
-
-`func (o *InlineResponse200165) HasX509certSha1Fingerprint() bool`
-
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
-
-### GetSloLogoutUrl
-
-`func (o *InlineResponse200165) GetSloLogoutUrl() string`
-
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
-
-### GetSloLogoutUrlOk
-
-`func (o *InlineResponse200165) GetSloLogoutUrlOk() (*string, bool)`
-
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSloLogoutUrl
-
-`func (o *InlineResponse200165) SetSloLogoutUrl(v string)`
-
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
-
-### HasSloLogoutUrl
-
-`func (o *InlineResponse200165) HasSloLogoutUrl() bool`
-
-HasSloLogoutUrl returns a boolean if a field has been set.
+HasResultingLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

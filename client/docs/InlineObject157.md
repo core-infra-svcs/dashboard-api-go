@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate.md) |  | [optional] 
+**RetainConfigs** | Pointer to **bool** | Optional boolean to retain all the current configs given by the template. | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineObject157WithDefaults instantiates a new InlineObject157 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRetainConfigs
 
-`func (o *InlineObject157) GetName() string`
+`func (o *InlineObject157) GetRetainConfigs() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRetainConfigs returns the RetainConfigs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRetainConfigsOk
 
-`func (o *InlineObject157) GetNameOk() (*string, bool)`
+`func (o *InlineObject157) GetRetainConfigsOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRetainConfigsOk returns a tuple with the RetainConfigs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRetainConfigs
 
-`func (o *InlineObject157) SetName(v string)`
+`func (o *InlineObject157) SetRetainConfigs(v bool)`
 
-SetName sets Name field to given value.
+SetRetainConfigs sets RetainConfigs field to given value.
 
-### HasName
+### HasRetainConfigs
 
-`func (o *InlineObject157) HasName() bool`
+`func (o *InlineObject157) HasRetainConfigs() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetSharedSecret
-
-`func (o *InlineObject157) GetSharedSecret() string`
-
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
-
-### GetSharedSecretOk
-
-`func (o *InlineObject157) GetSharedSecretOk() (*string, bool)`
-
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSharedSecret
-
-`func (o *InlineObject157) SetSharedSecret(v string)`
-
-SetSharedSecret sets SharedSecret field to given value.
-
-### HasSharedSecret
-
-`func (o *InlineObject157) HasSharedSecret() bool`
-
-HasSharedSecret returns a boolean if a field has been set.
-
-### GetPayloadTemplate
-
-`func (o *InlineObject157) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate`
-
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateOk
-
-`func (o *InlineObject157) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplate
-
-`func (o *InlineObject157) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate)`
-
-SetPayloadTemplate sets PayloadTemplate field to given value.
-
-### HasPayloadTemplate
-
-`func (o *InlineObject157) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
+HasRetainConfigs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
-**Cidr** | Pointer to **string** | CIDR Value of a policy object (e.g. 10.11.12.1/24\&quot;) | [optional] 
-**Fqdn** | Pointer to **string** | Fully qualified domain name of policy object (e.g. \&quot;example.com\&quot;) | [optional] 
-**Mask** | Pointer to **string** | Mask of a policy object (e.g. \&quot;255.255.0.0\&quot;) | [optional] 
-**Ip** | Pointer to **string** | IP Address of a policy object (e.g. \&quot;1.2.3.4\&quot;) | [optional] 
-**GroupIds** | Pointer to **[]int32** | The IDs of policy object groups the policy object belongs to | [optional] 
+**Name** | **string** | The name of the new network | 
+**ProductTypes** | **[]string** | The product type(s) of the new network. If more than one type is included, the network will be a combined network. | 
+**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
+**CopyFromNetworkId** | Pointer to **string** | The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network&#39;s type exactly. | [optional] 
+**Notes** | Pointer to **string** | Add any notes or additional information about this network here. | [optional] 
 
 ## Methods
 
 ### NewInlineObject235
 
-`func NewInlineObject235() *InlineObject235`
+`func NewInlineObject235(name string, productTypes []string, ) *InlineObject235`
 
 NewInlineObject235 instantiates a new InlineObject235 object
 This constructor will assign default values to properties that have it defined,
@@ -49,136 +49,126 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject235) HasName() bool`
+### GetProductTypes
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject235) GetProductTypes() []string`
 
-### GetCidr
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
 
-`func (o *InlineObject235) GetCidr() string`
+### GetProductTypesOk
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+`func (o *InlineObject235) GetProductTypesOk() (*[]string, bool)`
 
-### GetCidrOk
-
-`func (o *InlineObject235) GetCidrOk() (*string, bool)`
-
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetProductTypes
 
-`func (o *InlineObject235) SetCidr(v string)`
+`func (o *InlineObject235) SetProductTypes(v []string)`
 
-SetCidr sets Cidr field to given value.
+SetProductTypes sets ProductTypes field to given value.
 
-### HasCidr
 
-`func (o *InlineObject235) HasCidr() bool`
+### GetTags
 
-HasCidr returns a boolean if a field has been set.
+`func (o *InlineObject235) GetTags() []string`
 
-### GetFqdn
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-`func (o *InlineObject235) GetFqdn() string`
+### GetTagsOk
 
-GetFqdn returns the Fqdn field if non-nil, zero value otherwise.
+`func (o *InlineObject235) GetTagsOk() (*[]string, bool)`
 
-### GetFqdnOk
-
-`func (o *InlineObject235) GetFqdnOk() (*string, bool)`
-
-GetFqdnOk returns a tuple with the Fqdn field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFqdn
+### SetTags
 
-`func (o *InlineObject235) SetFqdn(v string)`
+`func (o *InlineObject235) SetTags(v []string)`
 
-SetFqdn sets Fqdn field to given value.
+SetTags sets Tags field to given value.
 
-### HasFqdn
+### HasTags
 
-`func (o *InlineObject235) HasFqdn() bool`
+`func (o *InlineObject235) HasTags() bool`
 
-HasFqdn returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetMask
+### GetTimeZone
 
-`func (o *InlineObject235) GetMask() string`
+`func (o *InlineObject235) GetTimeZone() string`
 
-GetMask returns the Mask field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetMaskOk
+### GetTimeZoneOk
 
-`func (o *InlineObject235) GetMaskOk() (*string, bool)`
+`func (o *InlineObject235) GetTimeZoneOk() (*string, bool)`
 
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMask
+### SetTimeZone
 
-`func (o *InlineObject235) SetMask(v string)`
+`func (o *InlineObject235) SetTimeZone(v string)`
 
-SetMask sets Mask field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasMask
+### HasTimeZone
 
-`func (o *InlineObject235) HasMask() bool`
+`func (o *InlineObject235) HasTimeZone() bool`
 
-HasMask returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
-### GetIp
+### GetCopyFromNetworkId
 
-`func (o *InlineObject235) GetIp() string`
+`func (o *InlineObject235) GetCopyFromNetworkId() string`
 
-GetIp returns the Ip field if non-nil, zero value otherwise.
+GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
 
-### GetIpOk
+### GetCopyFromNetworkIdOk
 
-`func (o *InlineObject235) GetIpOk() (*string, bool)`
+`func (o *InlineObject235) GetCopyFromNetworkIdOk() (*string, bool)`
 
-GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
+GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIp
+### SetCopyFromNetworkId
 
-`func (o *InlineObject235) SetIp(v string)`
+`func (o *InlineObject235) SetCopyFromNetworkId(v string)`
 
-SetIp sets Ip field to given value.
+SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
 
-### HasIp
+### HasCopyFromNetworkId
 
-`func (o *InlineObject235) HasIp() bool`
+`func (o *InlineObject235) HasCopyFromNetworkId() bool`
 
-HasIp returns a boolean if a field has been set.
+HasCopyFromNetworkId returns a boolean if a field has been set.
 
-### GetGroupIds
+### GetNotes
 
-`func (o *InlineObject235) GetGroupIds() []int32`
+`func (o *InlineObject235) GetNotes() string`
 
-GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
+GetNotes returns the Notes field if non-nil, zero value otherwise.
 
-### GetGroupIdsOk
+### GetNotesOk
 
-`func (o *InlineObject235) GetGroupIdsOk() (*[]int32, bool)`
+`func (o *InlineObject235) GetNotesOk() (*string, bool)`
 
-GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupIds
+### SetNotes
 
-`func (o *InlineObject235) SetGroupIds(v []int32)`
+`func (o *InlineObject235) SetNotes(v string)`
 
-SetGroupIds sets GroupIds field to given value.
+SetNotes sets Notes field to given value.
 
-### HasGroupIds
+### HasNotes
 
-`func (o *InlineObject235) HasGroupIds() bool`
+`func (o *InlineObject235) HasNotes() bool`
 
-HasGroupIds returns a boolean if a field has been set.
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

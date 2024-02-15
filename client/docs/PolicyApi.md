@@ -105,7 +105,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     clientId := "clientId_example" // string | Client ID
-    updateNetworkClientPolicy := *openapiclient.NewInlineObject80("DevicePolicy_example") // InlineObject80 | 
+    updateNetworkClientPolicy := *openapiclient.NewInlineObject83("DevicePolicy_example") // InlineObject83 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkClientPolicy** | [**InlineObject80**](InlineObject80.md) |  | 
+ **updateNetworkClientPolicy** | [**InlineObject83**](InlineObject83.md) |  | 
 
 ### Return type
 

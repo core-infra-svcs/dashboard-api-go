@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the group | [optional] 
-**Sgt** | Pointer to **int32** | SGT value of the group | [optional] 
-**Description** | Pointer to **string** | Description of the group | [optional] 
-**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) | [optional] 
+**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
+**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions1**](OrganizationsOrganizationIdActionBatchesActions1.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject191
 
-`func NewInlineObject191() *InlineObject191`
+`func NewInlineObject191(actions []OrganizationsOrganizationIdActionBatchesActions1, ) *InlineObject191`
 
 NewInlineObject191 instantiates a new InlineObject191 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +28,100 @@ NewInlineObject191WithDefaults instantiates a new InlineObject191 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConfirmed
 
-`func (o *InlineObject191) GetName() string`
+`func (o *InlineObject191) GetConfirmed() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConfirmedOk
 
-`func (o *InlineObject191) GetNameOk() (*string, bool)`
+`func (o *InlineObject191) GetConfirmedOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConfirmed
 
-`func (o *InlineObject191) SetName(v string)`
+`func (o *InlineObject191) SetConfirmed(v bool)`
 
-SetName sets Name field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasName
+### HasConfirmed
 
-`func (o *InlineObject191) HasName() bool`
+`func (o *InlineObject191) HasConfirmed() bool`
 
-HasName returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
 
-### GetSgt
+### GetSynchronous
 
-`func (o *InlineObject191) GetSgt() int32`
+`func (o *InlineObject191) GetSynchronous() bool`
 
-GetSgt returns the Sgt field if non-nil, zero value otherwise.
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-### GetSgtOk
+### GetSynchronousOk
 
-`func (o *InlineObject191) GetSgtOk() (*int32, bool)`
+`func (o *InlineObject191) GetSynchronousOk() (*bool, bool)`
 
-GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSgt
+### SetSynchronous
 
-`func (o *InlineObject191) SetSgt(v int32)`
+`func (o *InlineObject191) SetSynchronous(v bool)`
 
-SetSgt sets Sgt field to given value.
+SetSynchronous sets Synchronous field to given value.
 
-### HasSgt
+### HasSynchronous
 
-`func (o *InlineObject191) HasSgt() bool`
+`func (o *InlineObject191) HasSynchronous() bool`
 
-HasSgt returns a boolean if a field has been set.
+HasSynchronous returns a boolean if a field has been set.
 
-### GetDescription
+### GetActions
 
-`func (o *InlineObject191) GetDescription() string`
+`func (o *InlineObject191) GetActions() []OrganizationsOrganizationIdActionBatchesActions1`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetActions returns the Actions field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetActionsOk
 
-`func (o *InlineObject191) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject191) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions1, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetActions
 
-`func (o *InlineObject191) SetDescription(v string)`
+`func (o *InlineObject191) SetActions(v []OrganizationsOrganizationIdActionBatchesActions1)`
 
-SetDescription sets Description field to given value.
+SetActions sets Actions field to given value.
 
-### HasDescription
 
-`func (o *InlineObject191) HasDescription() bool`
+### GetCallback
 
-HasDescription returns a boolean if a field has been set.
+`func (o *InlineObject191) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
-### GetPolicyObjects
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-`func (o *InlineObject191) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
+### GetCallbackOk
 
-GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
+`func (o *InlineObject191) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
 
-### GetPolicyObjectsOk
-
-`func (o *InlineObject191) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
-
-GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyObjects
+### SetCallback
 
-`func (o *InlineObject191) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
+`func (o *InlineObject191) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
-SetPolicyObjects sets PolicyObjects field to given value.
+SetCallback sets Callback field to given value.
 
-### HasPolicyObjects
+### HasCallback
 
-`func (o *InlineObject191) HasPolicyObjects() bool`
+`func (o *InlineObject191) HasCallback() bool`
 
-HasPolicyObjects returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

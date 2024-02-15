@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**ArpTableId** | Pointer to **string** | Id of the ARP table request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ARP table request. | [optional] 
 **Request** | Pointer to [**InlineResponse2011Request**](InlineResponse2011Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the ping request. | [optional] 
+**Status** | Pointer to **string** | Status of the ARP table request. | [optional] 
 **Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
@@ -29,30 +29,30 @@ NewInlineResponse2011WithDefaults instantiates a new InlineResponse2011 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPingId
+### GetArpTableId
 
-`func (o *InlineResponse2011) GetPingId() string`
+`func (o *InlineResponse2011) GetArpTableId() string`
 
-GetPingId returns the PingId field if non-nil, zero value otherwise.
+GetArpTableId returns the ArpTableId field if non-nil, zero value otherwise.
 
-### GetPingIdOk
+### GetArpTableIdOk
 
-`func (o *InlineResponse2011) GetPingIdOk() (*string, bool)`
+`func (o *InlineResponse2011) GetArpTableIdOk() (*string, bool)`
 
-GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
+GetArpTableIdOk returns a tuple with the ArpTableId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPingId
+### SetArpTableId
 
-`func (o *InlineResponse2011) SetPingId(v string)`
+`func (o *InlineResponse2011) SetArpTableId(v string)`
 
-SetPingId sets PingId field to given value.
+SetArpTableId sets ArpTableId field to given value.
 
-### HasPingId
+### HasArpTableId
 
-`func (o *InlineResponse2011) HasPingId() bool`
+`func (o *InlineResponse2011) HasArpTableId() bool`
 
-HasPingId returns a boolean if a field has been set.
+HasArpTableId returns a boolean if a field has been set.
 
 ### GetUrl
 

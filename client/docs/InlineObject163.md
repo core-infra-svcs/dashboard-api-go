@@ -4,18 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
-**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
-**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
-**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
-**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**Name** | **string** | The name of the new template | 
+**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
+**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
 
 ## Methods
 
 ### NewInlineObject163
 
-`func NewInlineObject163() *InlineObject163`
+`func NewInlineObject163(name string, ) *InlineObject163`
 
 NewInlineObject163 instantiates a new InlineObject163 object
 This constructor will assign default values to properties that have it defined,
@@ -30,155 +29,125 @@ NewInlineObject163WithDefaults instantiates a new InlineObject163 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScanningEnabled
+### GetName
 
-`func (o *InlineObject163) GetScanningEnabled() bool`
+`func (o *InlineObject163) GetName() string`
 
-GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetScanningEnabledOk
+### GetNameOk
 
-`func (o *InlineObject163) GetScanningEnabledOk() (*bool, bool)`
+`func (o *InlineObject163) GetNameOk() (*string, bool)`
 
-GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScanningEnabled
+### SetName
 
-`func (o *InlineObject163) SetScanningEnabled(v bool)`
+`func (o *InlineObject163) SetName(v string)`
 
-SetScanningEnabled sets ScanningEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasScanningEnabled
 
-`func (o *InlineObject163) HasScanningEnabled() bool`
+### GetBody
 
-HasScanningEnabled returns a boolean if a field has been set.
+`func (o *InlineObject163) GetBody() string`
 
-### GetAdvertisingEnabled
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-`func (o *InlineObject163) GetAdvertisingEnabled() bool`
+### GetBodyOk
 
-GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
+`func (o *InlineObject163) GetBodyOk() (*string, bool)`
 
-### GetAdvertisingEnabledOk
-
-`func (o *InlineObject163) GetAdvertisingEnabledOk() (*bool, bool)`
-
-GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertisingEnabled
+### SetBody
 
-`func (o *InlineObject163) SetAdvertisingEnabled(v bool)`
+`func (o *InlineObject163) SetBody(v string)`
 
-SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
+SetBody sets Body field to given value.
 
-### HasAdvertisingEnabled
+### HasBody
 
-`func (o *InlineObject163) HasAdvertisingEnabled() bool`
+`func (o *InlineObject163) HasBody() bool`
 
-HasAdvertisingEnabled returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
 
-### GetUuid
+### GetHeaders
 
-`func (o *InlineObject163) GetUuid() string`
+`func (o *InlineObject163) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetHeadersOk
 
-`func (o *InlineObject163) GetUuidOk() (*string, bool)`
+`func (o *InlineObject163) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetHeaders
 
-`func (o *InlineObject163) SetUuid(v string)`
+`func (o *InlineObject163) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
 
-SetUuid sets Uuid field to given value.
+SetHeaders sets Headers field to given value.
 
-### HasUuid
+### HasHeaders
 
-`func (o *InlineObject163) HasUuid() bool`
+`func (o *InlineObject163) HasHeaders() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasHeaders returns a boolean if a field has been set.
 
-### GetMajorMinorAssignmentMode
+### GetBodyFile
 
-`func (o *InlineObject163) GetMajorMinorAssignmentMode() string`
+`func (o *InlineObject163) GetBodyFile() string`
 
-GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
+GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
 
-### GetMajorMinorAssignmentModeOk
+### GetBodyFileOk
 
-`func (o *InlineObject163) GetMajorMinorAssignmentModeOk() (*string, bool)`
+`func (o *InlineObject163) GetBodyFileOk() (*string, bool)`
 
-GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
+GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorMinorAssignmentMode
+### SetBodyFile
 
-`func (o *InlineObject163) SetMajorMinorAssignmentMode(v string)`
+`func (o *InlineObject163) SetBodyFile(v string)`
 
-SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
+SetBodyFile sets BodyFile field to given value.
 
-### HasMajorMinorAssignmentMode
+### HasBodyFile
 
-`func (o *InlineObject163) HasMajorMinorAssignmentMode() bool`
+`func (o *InlineObject163) HasBodyFile() bool`
 
-HasMajorMinorAssignmentMode returns a boolean if a field has been set.
+HasBodyFile returns a boolean if a field has been set.
 
-### GetMajor
+### GetHeadersFile
 
-`func (o *InlineObject163) GetMajor() int32`
+`func (o *InlineObject163) GetHeadersFile() string`
 
-GetMajor returns the Major field if non-nil, zero value otherwise.
+GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
 
-### GetMajorOk
+### GetHeadersFileOk
 
-`func (o *InlineObject163) GetMajorOk() (*int32, bool)`
+`func (o *InlineObject163) GetHeadersFileOk() (*string, bool)`
 
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajor
+### SetHeadersFile
 
-`func (o *InlineObject163) SetMajor(v int32)`
+`func (o *InlineObject163) SetHeadersFile(v string)`
 
-SetMajor sets Major field to given value.
+SetHeadersFile sets HeadersFile field to given value.
 
-### HasMajor
+### HasHeadersFile
 
-`func (o *InlineObject163) HasMajor() bool`
+`func (o *InlineObject163) HasHeadersFile() bool`
 
-HasMajor returns a boolean if a field has been set.
-
-### GetMinor
-
-`func (o *InlineObject163) GetMinor() int32`
-
-GetMinor returns the Minor field if non-nil, zero value otherwise.
-
-### GetMinorOk
-
-`func (o *InlineObject163) GetMinorOk() (*int32, bool)`
-
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinor
-
-`func (o *InlineObject163) SetMinor(v int32)`
-
-SetMinor sets Minor field to given value.
-
-### HasMinor
-
-`func (o *InlineObject163) HasMinor() bool`
-
-HasMinor returns a boolean if a field has been set.
+HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

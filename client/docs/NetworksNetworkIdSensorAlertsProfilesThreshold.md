@@ -12,6 +12,13 @@ Name | Type | Description | Notes
 **Pm25** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdPm25**](NetworksNetworkIdSensorAlertsProfilesThresholdPm25.md) |  | [optional] 
 **Noise** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdNoise**](NetworksNetworkIdSensorAlertsProfilesThresholdNoise.md) |  | [optional] 
 **IndoorAirQuality** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdIndoorAirQuality**](NetworksNetworkIdSensorAlertsProfilesThresholdIndoorAirQuality.md) |  | [optional] 
+**RealPower** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdRealPower**](NetworksNetworkIdSensorAlertsProfilesThresholdRealPower.md) |  | [optional] 
+**ApparentPower** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdApparentPower**](NetworksNetworkIdSensorAlertsProfilesThresholdApparentPower.md) |  | [optional] 
+**PowerFactor** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdPowerFactor**](NetworksNetworkIdSensorAlertsProfilesThresholdPowerFactor.md) |  | [optional] 
+**Current** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdCurrent**](NetworksNetworkIdSensorAlertsProfilesThresholdCurrent.md) |  | [optional] 
+**Voltage** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdVoltage**](NetworksNetworkIdSensorAlertsProfilesThresholdVoltage.md) |  | [optional] 
+**Frequency** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdFrequency**](NetworksNetworkIdSensorAlertsProfilesThresholdFrequency.md) |  | [optional] 
+**UpstreamPower** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdUpstreamPower**](NetworksNetworkIdSensorAlertsProfilesThresholdUpstreamPower.md) |  | [optional] 
 
 ## Methods
 
@@ -231,6 +238,181 @@ SetIndoorAirQuality sets IndoorAirQuality field to given value.
 `func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) HasIndoorAirQuality() bool`
 
 HasIndoorAirQuality returns a boolean if a field has been set.
+
+### GetRealPower
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetRealPower() NetworksNetworkIdSensorAlertsProfilesThresholdRealPower`
+
+GetRealPower returns the RealPower field if non-nil, zero value otherwise.
+
+### GetRealPowerOk
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetRealPowerOk() (*NetworksNetworkIdSensorAlertsProfilesThresholdRealPower, bool)`
+
+GetRealPowerOk returns a tuple with the RealPower field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRealPower
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) SetRealPower(v NetworksNetworkIdSensorAlertsProfilesThresholdRealPower)`
+
+SetRealPower sets RealPower field to given value.
+
+### HasRealPower
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) HasRealPower() bool`
+
+HasRealPower returns a boolean if a field has been set.
+
+### GetApparentPower
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetApparentPower() NetworksNetworkIdSensorAlertsProfilesThresholdApparentPower`
+
+GetApparentPower returns the ApparentPower field if non-nil, zero value otherwise.
+
+### GetApparentPowerOk
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetApparentPowerOk() (*NetworksNetworkIdSensorAlertsProfilesThresholdApparentPower, bool)`
+
+GetApparentPowerOk returns a tuple with the ApparentPower field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApparentPower
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) SetApparentPower(v NetworksNetworkIdSensorAlertsProfilesThresholdApparentPower)`
+
+SetApparentPower sets ApparentPower field to given value.
+
+### HasApparentPower
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) HasApparentPower() bool`
+
+HasApparentPower returns a boolean if a field has been set.
+
+### GetPowerFactor
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetPowerFactor() NetworksNetworkIdSensorAlertsProfilesThresholdPowerFactor`
+
+GetPowerFactor returns the PowerFactor field if non-nil, zero value otherwise.
+
+### GetPowerFactorOk
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetPowerFactorOk() (*NetworksNetworkIdSensorAlertsProfilesThresholdPowerFactor, bool)`
+
+GetPowerFactorOk returns a tuple with the PowerFactor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPowerFactor
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) SetPowerFactor(v NetworksNetworkIdSensorAlertsProfilesThresholdPowerFactor)`
+
+SetPowerFactor sets PowerFactor field to given value.
+
+### HasPowerFactor
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) HasPowerFactor() bool`
+
+HasPowerFactor returns a boolean if a field has been set.
+
+### GetCurrent
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetCurrent() NetworksNetworkIdSensorAlertsProfilesThresholdCurrent`
+
+GetCurrent returns the Current field if non-nil, zero value otherwise.
+
+### GetCurrentOk
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetCurrentOk() (*NetworksNetworkIdSensorAlertsProfilesThresholdCurrent, bool)`
+
+GetCurrentOk returns a tuple with the Current field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCurrent
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) SetCurrent(v NetworksNetworkIdSensorAlertsProfilesThresholdCurrent)`
+
+SetCurrent sets Current field to given value.
+
+### HasCurrent
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) HasCurrent() bool`
+
+HasCurrent returns a boolean if a field has been set.
+
+### GetVoltage
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetVoltage() NetworksNetworkIdSensorAlertsProfilesThresholdVoltage`
+
+GetVoltage returns the Voltage field if non-nil, zero value otherwise.
+
+### GetVoltageOk
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetVoltageOk() (*NetworksNetworkIdSensorAlertsProfilesThresholdVoltage, bool)`
+
+GetVoltageOk returns a tuple with the Voltage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVoltage
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) SetVoltage(v NetworksNetworkIdSensorAlertsProfilesThresholdVoltage)`
+
+SetVoltage sets Voltage field to given value.
+
+### HasVoltage
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) HasVoltage() bool`
+
+HasVoltage returns a boolean if a field has been set.
+
+### GetFrequency
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetFrequency() NetworksNetworkIdSensorAlertsProfilesThresholdFrequency`
+
+GetFrequency returns the Frequency field if non-nil, zero value otherwise.
+
+### GetFrequencyOk
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetFrequencyOk() (*NetworksNetworkIdSensorAlertsProfilesThresholdFrequency, bool)`
+
+GetFrequencyOk returns a tuple with the Frequency field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFrequency
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) SetFrequency(v NetworksNetworkIdSensorAlertsProfilesThresholdFrequency)`
+
+SetFrequency sets Frequency field to given value.
+
+### HasFrequency
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) HasFrequency() bool`
+
+HasFrequency returns a boolean if a field has been set.
+
+### GetUpstreamPower
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetUpstreamPower() NetworksNetworkIdSensorAlertsProfilesThresholdUpstreamPower`
+
+GetUpstreamPower returns the UpstreamPower field if non-nil, zero value otherwise.
+
+### GetUpstreamPowerOk
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetUpstreamPowerOk() (*NetworksNetworkIdSensorAlertsProfilesThresholdUpstreamPower, bool)`
+
+GetUpstreamPowerOk returns a tuple with the UpstreamPower field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpstreamPower
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) SetUpstreamPower(v NetworksNetworkIdSensorAlertsProfilesThresholdUpstreamPower)`
+
+SetUpstreamPower sets UpstreamPower field to given value.
+
+### HasUpstreamPower
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) HasUpstreamPower() bool`
+
+HasUpstreamPower returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

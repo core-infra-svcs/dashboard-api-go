@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | **string** | The URL where the test webhook will be sent | 
-**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to an empty string. | [optional] [default to ""]
-**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
-**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
-**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
+**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
+**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
+**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
 
 ## Methods
 
 ### NewInlineObject160
 
-`func NewInlineObject160(url string, ) *InlineObject160`
+`func NewInlineObject160(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, ) *InlineObject160`
 
 NewInlineObject160 instantiates a new InlineObject160 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +27,65 @@ NewInlineObject160WithDefaults instantiates a new InlineObject160 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetName
 
-`func (o *InlineObject160) GetUrl() string`
+`func (o *InlineObject160) GetName() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetNameOk
 
-`func (o *InlineObject160) GetUrlOk() (*string, bool)`
+`func (o *InlineObject160) GetNameOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetName
 
-`func (o *InlineObject160) SetUrl(v string)`
+`func (o *InlineObject160) SetName(v string)`
 
-SetUrl sets Url field to given value.
+SetName sets Name field to given value.
 
 
-### GetSharedSecret
+### GetVlanNames
 
-`func (o *InlineObject160) GetSharedSecret() string`
+`func (o *InlineObject160) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-### GetSharedSecretOk
+### GetVlanNamesOk
 
-`func (o *InlineObject160) GetSharedSecretOk() (*string, bool)`
+`func (o *InlineObject160) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetVlanNames
 
-`func (o *InlineObject160) SetSharedSecret(v string)`
+`func (o *InlineObject160) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetVlanNames sets VlanNames field to given value.
 
-### HasSharedSecret
 
-`func (o *InlineObject160) HasSharedSecret() bool`
+### GetVlanGroups
 
-HasSharedSecret returns a boolean if a field has been set.
+`func (o *InlineObject160) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
 
-### GetPayloadTemplateId
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
 
-`func (o *InlineObject160) GetPayloadTemplateId() string`
+### GetVlanGroupsOk
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+`func (o *InlineObject160) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
 
-### GetPayloadTemplateIdOk
-
-`func (o *InlineObject160) GetPayloadTemplateIdOk() (*string, bool)`
-
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetVlanGroups
 
-`func (o *InlineObject160) SetPayloadTemplateId(v string)`
+`func (o *InlineObject160) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetVlanGroups sets VlanGroups field to given value.
 
-### HasPayloadTemplateId
-
-`func (o *InlineObject160) HasPayloadTemplateId() bool`
-
-HasPayloadTemplateId returns a boolean if a field has been set.
-
-### GetPayloadTemplateName
-
-`func (o *InlineObject160) GetPayloadTemplateName() string`
-
-GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateNameOk
-
-`func (o *InlineObject160) GetPayloadTemplateNameOk() (*string, bool)`
-
-GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplateName
-
-`func (o *InlineObject160) SetPayloadTemplateName(v string)`
-
-SetPayloadTemplateName sets PayloadTemplateName field to given value.
-
-### HasPayloadTemplateName
-
-`func (o *InlineObject160) HasPayloadTemplateName() bool`
-
-HasPayloadTemplateName returns a boolean if a field has been set.
-
-### GetAlertTypeId
-
-`func (o *InlineObject160) GetAlertTypeId() string`
-
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
-
-### GetAlertTypeIdOk
-
-`func (o *InlineObject160) GetAlertTypeIdOk() (*string, bool)`
-
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAlertTypeId
-
-`func (o *InlineObject160) SetAlertTypeId(v string)`
-
-SetAlertTypeId sets AlertTypeId field to given value.
-
-### HasAlertTypeId
-
-`func (o *InlineObject160) HasAlertTypeId() bool`
-
-HasAlertTypeId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on this SSID. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules**](NetworksNetworkIdGroupPoliciesBonjourForwardingRules.md) | List of bonjour forwarding rules. | [optional] 
-**Exception** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException**](NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException.md) |  | [optional] 
+**Name** | Pointer to **string** | AP port profile name | [optional] 
+**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts.md) | AP ports configuration | [optional] 
+**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject172WithDefaults instantiates a new InlineObject172 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject172) GetEnabled() bool`
+`func (o *InlineObject172) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject172) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject172) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject172) SetEnabled(v bool)`
+`func (o *InlineObject172) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
+### HasName
 
-`func (o *InlineObject172) HasEnabled() bool`
+`func (o *InlineObject172) HasName() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRules
+### GetPorts
 
-`func (o *InlineObject172) GetRules() []NetworksNetworkIdGroupPoliciesBonjourForwardingRules`
+`func (o *InlineObject172) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetPortsOk
 
-`func (o *InlineObject172) GetRulesOk() (*[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules, bool)`
+`func (o *InlineObject172) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetPorts
 
-`func (o *InlineObject172) SetRules(v []NetworksNetworkIdGroupPoliciesBonjourForwardingRules)`
+`func (o *InlineObject172) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts)`
 
-SetRules sets Rules field to given value.
+SetPorts sets Ports field to given value.
 
-### HasRules
+### HasPorts
 
-`func (o *InlineObject172) HasRules() bool`
+`func (o *InlineObject172) HasPorts() bool`
 
-HasRules returns a boolean if a field has been set.
+HasPorts returns a boolean if a field has been set.
 
-### GetException
+### GetUsbPorts
 
-`func (o *InlineObject172) GetException() NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException`
+`func (o *InlineObject172) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
 
-GetException returns the Exception field if non-nil, zero value otherwise.
+GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
 
-### GetExceptionOk
+### GetUsbPortsOk
 
-`func (o *InlineObject172) GetExceptionOk() (*NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException, bool)`
+`func (o *InlineObject172) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
 
-GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
+GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetException
+### SetUsbPorts
 
-`func (o *InlineObject172) SetException(v NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException)`
+`func (o *InlineObject172) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
 
-SetException sets Exception field to given value.
+SetUsbPorts sets UsbPorts field to given value.
 
-### HasException
+### HasUsbPorts
 
-`func (o *InlineObject172) HasException() bool`
+`func (o *InlineObject172) HasUsbPorts() bool`
 
-HasException returns a boolean if a field has been set.
+HasUsbPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

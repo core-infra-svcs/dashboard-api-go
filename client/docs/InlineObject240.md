@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Name** | Pointer to **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**Cidr** | Pointer to **string** | CIDR Value of a policy object (e.g. 10.11.12.1/24\&quot;) | [optional] 
+**Fqdn** | Pointer to **string** | Fully qualified domain name of policy object (e.g. \&quot;example.com\&quot;) | [optional] 
+**Mask** | Pointer to **string** | Mask of a policy object (e.g. \&quot;255.255.0.0\&quot;) | [optional] 
+**Ip** | Pointer to **string** | IP Address of a policy object (e.g. \&quot;1.2.3.4\&quot;) | [optional] 
+**GroupIds** | Pointer to **[]int32** | The IDs of policy object groups the policy object belongs to | [optional] 
 
 ## Methods
 
@@ -28,105 +30,155 @@ NewInlineObject240WithDefaults instantiates a new InlineObject240 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRole
+### GetName
 
-`func (o *InlineObject240) GetRole() string`
+`func (o *InlineObject240) GetName() string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetNameOk
 
-`func (o *InlineObject240) GetRoleOk() (*string, bool)`
+`func (o *InlineObject240) GetNameOk() (*string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetName
 
-`func (o *InlineObject240) SetRole(v string)`
+`func (o *InlineObject240) SetName(v string)`
 
-SetRole sets Role field to given value.
+SetName sets Name field to given value.
 
-### HasRole
+### HasName
 
-`func (o *InlineObject240) HasRole() bool`
+`func (o *InlineObject240) HasName() bool`
 
-HasRole returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetOrgAccess
+### GetCidr
 
-`func (o *InlineObject240) GetOrgAccess() string`
+`func (o *InlineObject240) GetCidr() string`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetCidrOk
 
-`func (o *InlineObject240) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineObject240) GetCidrOk() (*string, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetCidr
 
-`func (o *InlineObject240) SetOrgAccess(v string)`
+`func (o *InlineObject240) SetCidr(v string)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasOrgAccess
+### HasCidr
 
-`func (o *InlineObject240) HasOrgAccess() bool`
+`func (o *InlineObject240) HasCidr() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
 
-### GetTags
+### GetFqdn
 
-`func (o *InlineObject240) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
+`func (o *InlineObject240) GetFqdn() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetFqdn returns the Fqdn field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetFqdnOk
 
-`func (o *InlineObject240) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
+`func (o *InlineObject240) GetFqdnOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetFqdnOk returns a tuple with the Fqdn field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetFqdn
 
-`func (o *InlineObject240) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
+`func (o *InlineObject240) SetFqdn(v string)`
 
-SetTags sets Tags field to given value.
+SetFqdn sets Fqdn field to given value.
 
-### HasTags
+### HasFqdn
 
-`func (o *InlineObject240) HasTags() bool`
+`func (o *InlineObject240) HasFqdn() bool`
 
-HasTags returns a boolean if a field has been set.
+HasFqdn returns a boolean if a field has been set.
 
-### GetNetworks
+### GetMask
 
-`func (o *InlineObject240) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
+`func (o *InlineObject240) GetMask() string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetMaskOk
 
-`func (o *InlineObject240) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
+`func (o *InlineObject240) GetMaskOk() (*string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetMask
 
-`func (o *InlineObject240) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
+`func (o *InlineObject240) SetMask(v string)`
 
-SetNetworks sets Networks field to given value.
+SetMask sets Mask field to given value.
 
-### HasNetworks
+### HasMask
 
-`func (o *InlineObject240) HasNetworks() bool`
+`func (o *InlineObject240) HasMask() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasMask returns a boolean if a field has been set.
+
+### GetIp
+
+`func (o *InlineObject240) GetIp() string`
+
+GetIp returns the Ip field if non-nil, zero value otherwise.
+
+### GetIpOk
+
+`func (o *InlineObject240) GetIpOk() (*string, bool)`
+
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIp
+
+`func (o *InlineObject240) SetIp(v string)`
+
+SetIp sets Ip field to given value.
+
+### HasIp
+
+`func (o *InlineObject240) HasIp() bool`
+
+HasIp returns a boolean if a field has been set.
+
+### GetGroupIds
+
+`func (o *InlineObject240) GetGroupIds() []int32`
+
+GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
+
+### GetGroupIdsOk
+
+`func (o *InlineObject240) GetGroupIdsOk() (*[]int32, bool)`
+
+GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupIds
+
+`func (o *InlineObject240) SetGroupIds(v []int32)`
+
+SetGroupIds sets GroupIds field to given value.
+
+### HasGroupIds
+
+`func (o *InlineObject240) HasGroupIds() bool`
+
+HasGroupIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
-**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
-**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
-**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
-**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
+**Name** | Pointer to **string** | Name of the user. Only allowed If the user is not Dashboard administrator. | [optional] 
+**Password** | Pointer to **string** | The password for this user account. Only allowed If the user is not Dashboard administrator. | [optional] 
+**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations**](NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md) | Authorization zones and expiration dates for the user. | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineObject101WithDefaults instantiates a new InlineObject101 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReportingEnabled
+### GetName
 
-`func (o *InlineObject101) GetReportingEnabled() bool`
+`func (o *InlineObject101) GetName() string`
 
-GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetReportingEnabledOk
+### GetNameOk
 
-`func (o *InlineObject101) GetReportingEnabledOk() (*bool, bool)`
+`func (o *InlineObject101) GetNameOk() (*string, bool)`
 
-GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReportingEnabled
+### SetName
 
-`func (o *InlineObject101) SetReportingEnabled(v bool)`
+`func (o *InlineObject101) SetName(v string)`
 
-SetReportingEnabled sets ReportingEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasReportingEnabled
+### HasName
 
-`func (o *InlineObject101) HasReportingEnabled() bool`
+`func (o *InlineObject101) HasName() bool`
 
-HasReportingEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetCollectorIp
+### GetPassword
 
-`func (o *InlineObject101) GetCollectorIp() string`
+`func (o *InlineObject101) GetPassword() string`
 
-GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
+GetPassword returns the Password field if non-nil, zero value otherwise.
 
-### GetCollectorIpOk
+### GetPasswordOk
 
-`func (o *InlineObject101) GetCollectorIpOk() (*string, bool)`
+`func (o *InlineObject101) GetPasswordOk() (*string, bool)`
 
-GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
+GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCollectorIp
+### SetPassword
 
-`func (o *InlineObject101) SetCollectorIp(v string)`
+`func (o *InlineObject101) SetPassword(v string)`
 
-SetCollectorIp sets CollectorIp field to given value.
+SetPassword sets Password field to given value.
 
-### HasCollectorIp
+### HasPassword
 
-`func (o *InlineObject101) HasCollectorIp() bool`
+`func (o *InlineObject101) HasPassword() bool`
 
-HasCollectorIp returns a boolean if a field has been set.
+HasPassword returns a boolean if a field has been set.
 
-### GetCollectorPort
+### GetEmailPasswordToUser
 
-`func (o *InlineObject101) GetCollectorPort() int32`
+`func (o *InlineObject101) GetEmailPasswordToUser() bool`
 
-GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
+GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
 
-### GetCollectorPortOk
+### GetEmailPasswordToUserOk
 
-`func (o *InlineObject101) GetCollectorPortOk() (*int32, bool)`
+`func (o *InlineObject101) GetEmailPasswordToUserOk() (*bool, bool)`
 
-GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
+GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCollectorPort
+### SetEmailPasswordToUser
 
-`func (o *InlineObject101) SetCollectorPort(v int32)`
+`func (o *InlineObject101) SetEmailPasswordToUser(v bool)`
 
-SetCollectorPort sets CollectorPort field to given value.
+SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
 
-### HasCollectorPort
+### HasEmailPasswordToUser
 
-`func (o *InlineObject101) HasCollectorPort() bool`
+`func (o *InlineObject101) HasEmailPasswordToUser() bool`
 
-HasCollectorPort returns a boolean if a field has been set.
+HasEmailPasswordToUser returns a boolean if a field has been set.
 
-### GetEtaEnabled
+### GetAuthorizations
 
-`func (o *InlineObject101) GetEtaEnabled() bool`
+`func (o *InlineObject101) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations`
 
-GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
 
-### GetEtaEnabledOk
+### GetAuthorizationsOk
 
-`func (o *InlineObject101) GetEtaEnabledOk() (*bool, bool)`
+`func (o *InlineObject101) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations, bool)`
 
-GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEtaEnabled
+### SetAuthorizations
 
-`func (o *InlineObject101) SetEtaEnabled(v bool)`
+`func (o *InlineObject101) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations)`
 
-SetEtaEnabled sets EtaEnabled field to given value.
+SetAuthorizations sets Authorizations field to given value.
 
-### HasEtaEnabled
+### HasAuthorizations
 
-`func (o *InlineObject101) HasEtaEnabled() bool`
+`func (o *InlineObject101) HasAuthorizations() bool`
 
-HasEtaEnabled returns a boolean if a field has been set.
-
-### GetEtaDstPort
-
-`func (o *InlineObject101) GetEtaDstPort() int32`
-
-GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
-
-### GetEtaDstPortOk
-
-`func (o *InlineObject101) GetEtaDstPortOk() (*int32, bool)`
-
-GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEtaDstPort
-
-`func (o *InlineObject101) SetEtaDstPort(v int32)`
-
-SetEtaDstPort sets EtaDstPort field to given value.
-
-### HasEtaDstPort
-
-`func (o *InlineObject101) HasEtaDstPort() bool`
-
-HasEtaDstPort returns a boolean if a field has been set.
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

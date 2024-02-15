@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse200136Usage**](InlineResponse200136Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200136Counts**](InlineResponse200136Counts.md) |  | [optional] 
+**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200136WithDefaults instantiates a new InlineResponse200136 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetBrandingPolicyIds
 
-`func (o *InlineResponse200136) GetUsage() InlineResponse200136Usage`
+`func (o *InlineResponse200136) GetBrandingPolicyIds() []string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetBrandingPolicyIdsOk
 
-`func (o *InlineResponse200136) GetUsageOk() (*InlineResponse200136Usage, bool)`
+`func (o *InlineResponse200136) GetBrandingPolicyIdsOk() (*[]string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetBrandingPolicyIds
 
-`func (o *InlineResponse200136) SetUsage(v InlineResponse200136Usage)`
+`func (o *InlineResponse200136) SetBrandingPolicyIds(v []string)`
 
-SetUsage sets Usage field to given value.
+SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
 
-### HasUsage
+### HasBrandingPolicyIds
 
-`func (o *InlineResponse200136) HasUsage() bool`
+`func (o *InlineResponse200136) HasBrandingPolicyIds() bool`
 
-HasUsage returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200136) GetCounts() InlineResponse200136Counts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200136) GetCountsOk() (*InlineResponse200136Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200136) SetCounts(v InlineResponse200136Counts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200136) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
+HasBrandingPolicyIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

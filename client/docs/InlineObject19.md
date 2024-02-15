@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Livestream** | Pointer to [**DevicesSerialSensorRelationshipsLivestream**](DevicesSerialSensorRelationshipsLivestream.md) |  | [optional] 
+**Count** | Pointer to **int32** | Count parameter to pass to ping. [1..5], default 5 | [optional] 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject19WithDefaults instantiates a new InlineObject19 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLivestream
+### GetCount
 
-`func (o *InlineObject19) GetLivestream() DevicesSerialSensorRelationshipsLivestream`
+`func (o *InlineObject19) GetCount() int32`
 
-GetLivestream returns the Livestream field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetLivestreamOk
+### GetCountOk
 
-`func (o *InlineObject19) GetLivestreamOk() (*DevicesSerialSensorRelationshipsLivestream, bool)`
+`func (o *InlineObject19) GetCountOk() (*int32, bool)`
 
-GetLivestreamOk returns a tuple with the Livestream field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLivestream
+### SetCount
 
-`func (o *InlineObject19) SetLivestream(v DevicesSerialSensorRelationshipsLivestream)`
+`func (o *InlineObject19) SetCount(v int32)`
 
-SetLivestream sets Livestream field to given value.
+SetCount sets Count field to given value.
 
-### HasLivestream
+### HasCount
 
-`func (o *InlineObject19) HasLivestream() bool`
+`func (o *InlineObject19) HasCount() bool`
 
-HasLivestream returns a boolean if a field has been set.
+HasCount returns a boolean if a field has been set.
+
+### GetCallback
+
+`func (o *InlineObject19) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineObject19) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineObject19) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineObject19) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

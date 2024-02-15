@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ssids** | [**NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids**](NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids.md) |  | 
+**BandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular**](NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject81
 
-`func NewInlineObject81(ssids NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, ) *InlineObject81`
+`func NewInlineObject81() *InlineObject81`
 
 NewInlineObject81 instantiates a new InlineObject81 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject81WithDefaults instantiates a new InlineObject81 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSsids
+### GetBandwidthLimits
 
-`func (o *InlineObject81) GetSsids() NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids`
+`func (o *InlineObject81) GetBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular`
 
-GetSsids returns the Ssids field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetSsidsOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineObject81) GetSsidsOk() (*NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, bool)`
+`func (o *InlineObject81) GetBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular, bool)`
 
-GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsids
+### SetBandwidthLimits
 
-`func (o *InlineObject81) SetSsids(v NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids)`
+`func (o *InlineObject81) SetBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular)`
 
-SetSsids sets Ssids field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
+### HasBandwidthLimits
+
+`func (o *InlineObject81) HasBandwidthLimits() bool`
+
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

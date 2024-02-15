@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20020Rules**](InlineResponse20020Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**BasicServiceSets** | Pointer to [**[]InlineResponse20020BasicServiceSets**](InlineResponse20020BasicServiceSets.md) | SSID status list | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse20020WithDefaults instantiates a new InlineResponse20020 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetBasicServiceSets
 
-`func (o *InlineResponse20020) GetRules() []InlineResponse20020Rules`
+`func (o *InlineResponse20020) GetBasicServiceSets() []InlineResponse20020BasicServiceSets`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetBasicServiceSetsOk
 
-`func (o *InlineResponse20020) GetRulesOk() (*[]InlineResponse20020Rules, bool)`
+`func (o *InlineResponse20020) GetBasicServiceSetsOk() (*[]InlineResponse20020BasicServiceSets, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetBasicServiceSets
 
-`func (o *InlineResponse20020) SetRules(v []InlineResponse20020Rules)`
+`func (o *InlineResponse20020) SetBasicServiceSets(v []InlineResponse20020BasicServiceSets)`
 
-SetRules sets Rules field to given value.
+SetBasicServiceSets sets BasicServiceSets field to given value.
 
-### HasRules
+### HasBasicServiceSets
 
-`func (o *InlineResponse20020) HasRules() bool`
+`func (o *InlineResponse20020) HasBasicServiceSets() bool`
 
-HasRules returns a boolean if a field has been set.
-
-### GetSyslogDefaultRule
-
-`func (o *InlineResponse20020) GetSyslogDefaultRule() bool`
-
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
-
-### GetSyslogDefaultRuleOk
-
-`func (o *InlineResponse20020) GetSyslogDefaultRuleOk() (*bool, bool)`
-
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSyslogDefaultRule
-
-`func (o *InlineResponse20020) SetSyslogDefaultRule(v bool)`
-
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
-
-### HasSyslogDefaultRule
-
-`func (o *InlineResponse20020) HasSyslogDefaultRule() bool`
-
-HasSyslogDefaultRule returns a boolean if a field has been set.
+HasBasicServiceSets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

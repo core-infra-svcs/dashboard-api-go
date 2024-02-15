@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200121Rules**](InlineResponse200121Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject187WithDefaults instantiates a new InlineObject187 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetTrafficShapingEnabled
 
-`func (o *InlineObject187) GetConfirmed() bool`
+`func (o *InlineObject187) GetTrafficShapingEnabled() bool`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineObject187) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject187) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetTrafficShapingEnabled
 
-`func (o *InlineObject187) SetConfirmed(v bool)`
+`func (o *InlineObject187) SetTrafficShapingEnabled(v bool)`
 
-SetConfirmed sets Confirmed field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasConfirmed
+### HasTrafficShapingEnabled
 
-`func (o *InlineObject187) HasConfirmed() bool`
+`func (o *InlineObject187) HasTrafficShapingEnabled() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject187) GetSynchronous() bool`
+`func (o *InlineObject187) GetDefaultRulesEnabled() bool`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject187) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject187) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject187) SetSynchronous(v bool)`
+`func (o *InlineObject187) SetDefaultRulesEnabled(v bool)`
 
-SetSynchronous sets Synchronous field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasSynchronous
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject187) HasSynchronous() bool`
+`func (o *InlineObject187) HasDefaultRulesEnabled() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject187) GetRules() []InlineResponse200121Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject187) GetRulesOk() (*[]InlineResponse200121Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject187) SetRules(v []InlineResponse200121Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineObject187) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

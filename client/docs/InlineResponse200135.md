@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
-**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
-**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
-**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
+**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200135WithDefaults instantiates a new InlineResponse200135 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetName
 
-`func (o *InlineResponse200135) GetTs() time.Time`
+`func (o *InlineResponse200135) GetName() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetNameOk
 
-`func (o *InlineResponse200135) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200135) GetNameOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetName
 
-`func (o *InlineResponse200135) SetTs(v time.Time)`
+`func (o *InlineResponse200135) SetName(v string)`
 
-SetTs sets Ts field to given value.
+SetName sets Name field to given value.
 
-### HasTs
+### HasName
 
-`func (o *InlineResponse200135) HasTs() bool`
+`func (o *InlineResponse200135) HasName() bool`
 
-HasTs returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetTotal
+### GetEnabled
 
-`func (o *InlineResponse200135) GetTotal() int32`
+`func (o *InlineResponse200135) GetEnabled() bool`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetEnabledOk
 
-`func (o *InlineResponse200135) GetTotalOk() (*int32, bool)`
+`func (o *InlineResponse200135) GetEnabledOk() (*bool, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetEnabled
 
-`func (o *InlineResponse200135) SetTotal(v int32)`
+`func (o *InlineResponse200135) SetEnabled(v bool)`
 
-SetTotal sets Total field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTotal
+### HasEnabled
 
-`func (o *InlineResponse200135) HasTotal() bool`
+`func (o *InlineResponse200135) HasEnabled() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetUpstream
+### GetAdminSettings
 
-`func (o *InlineResponse200135) GetUpstream() int32`
+`func (o *InlineResponse200135) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetAdminSettingsOk
 
-`func (o *InlineResponse200135) GetUpstreamOk() (*int32, bool)`
+`func (o *InlineResponse200135) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetAdminSettings
 
-`func (o *InlineResponse200135) SetUpstream(v int32)`
+`func (o *InlineResponse200135) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
 
-SetUpstream sets Upstream field to given value.
+SetAdminSettings sets AdminSettings field to given value.
 
-### HasUpstream
+### HasAdminSettings
 
-`func (o *InlineResponse200135) HasUpstream() bool`
+`func (o *InlineResponse200135) HasAdminSettings() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasAdminSettings returns a boolean if a field has been set.
 
-### GetDownstream
+### GetHelpSettings
 
-`func (o *InlineResponse200135) GetDownstream() int32`
+`func (o *InlineResponse200135) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetHelpSettingsOk
 
-`func (o *InlineResponse200135) GetDownstreamOk() (*int32, bool)`
+`func (o *InlineResponse200135) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetHelpSettings
 
-`func (o *InlineResponse200135) SetDownstream(v int32)`
+`func (o *InlineResponse200135) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
 
-SetDownstream sets Downstream field to given value.
+SetHelpSettings sets HelpSettings field to given value.
 
-### HasDownstream
+### HasHelpSettings
 
-`func (o *InlineResponse200135) HasDownstream() bool`
+`func (o *InlineResponse200135) HasHelpSettings() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasHelpSettings returns a boolean if a field has been set.
+
+### GetCustomLogo
+
+`func (o *InlineResponse200135) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
+
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+
+### GetCustomLogoOk
+
+`func (o *InlineResponse200135) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
+
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomLogo
+
+`func (o *InlineResponse200135) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
+
+SetCustomLogo sets CustomLogo field to given value.
+
+### HasCustomLogo
+
+`func (o *InlineResponse200135) HasCustomLogo() bool`
+
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

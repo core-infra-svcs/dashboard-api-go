@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
-**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
-**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
 
 ## Methods
 
 ### NewInlineObject183
 
-`func NewInlineObject183() *InlineObject183`
+`func NewInlineObject183(name string, groupPolicyId string, ) *InlineObject183`
 
 NewInlineObject183 instantiates a new InlineObject183 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +28,95 @@ NewInlineObject183WithDefaults instantiates a new InlineObject183 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConcentrator
+### GetName
 
-`func (o *InlineObject183) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
+`func (o *InlineObject183) GetName() string`
 
-GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetConcentratorOk
+### GetNameOk
 
-`func (o *InlineObject183) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
+`func (o *InlineObject183) GetNameOk() (*string, bool)`
 
-GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConcentrator
+### SetName
 
-`func (o *InlineObject183) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
+`func (o *InlineObject183) SetName(v string)`
 
-SetConcentrator sets Concentrator field to given value.
+SetName sets Name field to given value.
 
-### HasConcentrator
 
-`func (o *InlineObject183) HasConcentrator() bool`
+### GetPassphrase
 
-HasConcentrator returns a boolean if a field has been set.
+`func (o *InlineObject183) GetPassphrase() string`
 
-### GetSplitTunnel
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-`func (o *InlineObject183) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
+### GetPassphraseOk
 
-GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
+`func (o *InlineObject183) GetPassphraseOk() (*string, bool)`
 
-### GetSplitTunnelOk
-
-`func (o *InlineObject183) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
-
-GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplitTunnel
+### SetPassphrase
 
-`func (o *InlineObject183) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
+`func (o *InlineObject183) SetPassphrase(v string)`
 
-SetSplitTunnel sets SplitTunnel field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasSplitTunnel
+### HasPassphrase
 
-`func (o *InlineObject183) HasSplitTunnel() bool`
+`func (o *InlineObject183) HasPassphrase() bool`
 
-HasSplitTunnel returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetFailover
+### GetGroupPolicyId
 
-`func (o *InlineObject183) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
+`func (o *InlineObject183) GetGroupPolicyId() string`
 
-GetFailover returns the Failover field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetFailoverOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineObject183) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
+`func (o *InlineObject183) GetGroupPolicyIdOk() (*string, bool)`
 
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailover
+### SetGroupPolicyId
 
-`func (o *InlineObject183) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
+`func (o *InlineObject183) SetGroupPolicyId(v string)`
 
-SetFailover sets Failover field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasFailover
 
-`func (o *InlineObject183) HasFailover() bool`
+### GetExpiresAt
 
-HasFailover returns a boolean if a field has been set.
+`func (o *InlineObject183) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineObject183) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineObject183) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineObject183) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

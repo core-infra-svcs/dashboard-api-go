@@ -4,16 +4,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CpuPercentUsed** | Pointer to **float32** | The percentage of CPU used as a decimal format. | [optional] 
-**MemFree** | Pointer to **int32** | Memory that is not yet in use by the system. | [optional] 
-**MemWired** | Pointer to **int32** | Memory used for core OS functions on the device. | [optional] 
-**MemActive** | Pointer to **int32** | The active RAM on the device. | [optional] 
-**MemInactive** | Pointer to **int32** | The inactive RAM on the device. | [optional] 
-**NetworkSent** | Pointer to **int32** | Network bandwith transmitted. | [optional] 
-**NetworkReceived** | Pointer to **int32** | Network bandwith received. | [optional] 
-**SwapUsed** | Pointer to **int32** | The amount of space being used on the startup disk to swap unused files to and from RAM. | [optional] 
-**DiskUsage** | Pointer to [**NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage**](NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage.md) |  | [optional] 
-**Ts** | Pointer to **string** | The time at which the performance was measured. | [optional] 
+**MeasuredAt** | Pointer to **string** | The time the data was measured at. | [optional] 
+**User** | Pointer to **string** | The user during connection. | [optional] 
+**NetworkDevice** | Pointer to **string** | The network device for the device used for connection. | [optional] 
+**NetworkDriver** | Pointer to **string** | The network driver for the device. | [optional] 
+**WifiChannel** | Pointer to **string** | Channel through which the connection is routing. | [optional] 
+**WifiAuth** | Pointer to **string** | The type of authentication used by the SSID. | [optional] 
+**WifiBssid** | Pointer to **string** | The MAC of the access point the device is connected to. | [optional] 
+**WifiSsid** | Pointer to **string** | The name of the network the device is connected to. | [optional] 
+**WifiRssi** | Pointer to **string** | The Received Signal Strength Indicator for the device. | [optional] 
+**WifiNoise** | Pointer to **string** | The wireless signal power level received by the device. | [optional] 
+**DhcpServer** | Pointer to **string** | The IP address of the DCHP Server. | [optional] 
+**Ip** | Pointer to **string** | The IP of the device during connection. | [optional] 
+**NetworkMTU** | Pointer to **string** | The network max transmission unit. | [optional] 
+**Subnet** | Pointer to **string** | The subnet of the device connection. | [optional] 
+**Gateway** | Pointer to **string** | The gateway IP the device was connected to. | [optional] 
+**PublicIP** | Pointer to **string** | The public IP address of the device. | [optional] 
+**DnsServer** | Pointer to **string** | The DNS Server during the connection. | [optional] 
+**Ts** | Pointer to **string** | The time the connection was logged. | [optional] 
 
 ## Methods
 
@@ -34,230 +42,430 @@ NewInlineResponse20068WithDefaults instantiates a new InlineResponse20068 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCpuPercentUsed
+### GetMeasuredAt
 
-`func (o *InlineResponse20068) GetCpuPercentUsed() float32`
+`func (o *InlineResponse20068) GetMeasuredAt() string`
 
-GetCpuPercentUsed returns the CpuPercentUsed field if non-nil, zero value otherwise.
+GetMeasuredAt returns the MeasuredAt field if non-nil, zero value otherwise.
 
-### GetCpuPercentUsedOk
+### GetMeasuredAtOk
 
-`func (o *InlineResponse20068) GetCpuPercentUsedOk() (*float32, bool)`
+`func (o *InlineResponse20068) GetMeasuredAtOk() (*string, bool)`
 
-GetCpuPercentUsedOk returns a tuple with the CpuPercentUsed field if it's non-nil, zero value otherwise
+GetMeasuredAtOk returns a tuple with the MeasuredAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCpuPercentUsed
+### SetMeasuredAt
 
-`func (o *InlineResponse20068) SetCpuPercentUsed(v float32)`
+`func (o *InlineResponse20068) SetMeasuredAt(v string)`
 
-SetCpuPercentUsed sets CpuPercentUsed field to given value.
+SetMeasuredAt sets MeasuredAt field to given value.
 
-### HasCpuPercentUsed
+### HasMeasuredAt
 
-`func (o *InlineResponse20068) HasCpuPercentUsed() bool`
+`func (o *InlineResponse20068) HasMeasuredAt() bool`
 
-HasCpuPercentUsed returns a boolean if a field has been set.
+HasMeasuredAt returns a boolean if a field has been set.
 
-### GetMemFree
+### GetUser
 
-`func (o *InlineResponse20068) GetMemFree() int32`
+`func (o *InlineResponse20068) GetUser() string`
 
-GetMemFree returns the MemFree field if non-nil, zero value otherwise.
+GetUser returns the User field if non-nil, zero value otherwise.
 
-### GetMemFreeOk
+### GetUserOk
 
-`func (o *InlineResponse20068) GetMemFreeOk() (*int32, bool)`
+`func (o *InlineResponse20068) GetUserOk() (*string, bool)`
 
-GetMemFreeOk returns a tuple with the MemFree field if it's non-nil, zero value otherwise
+GetUserOk returns a tuple with the User field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemFree
+### SetUser
 
-`func (o *InlineResponse20068) SetMemFree(v int32)`
+`func (o *InlineResponse20068) SetUser(v string)`
 
-SetMemFree sets MemFree field to given value.
+SetUser sets User field to given value.
 
-### HasMemFree
+### HasUser
 
-`func (o *InlineResponse20068) HasMemFree() bool`
+`func (o *InlineResponse20068) HasUser() bool`
 
-HasMemFree returns a boolean if a field has been set.
+HasUser returns a boolean if a field has been set.
 
-### GetMemWired
+### GetNetworkDevice
 
-`func (o *InlineResponse20068) GetMemWired() int32`
+`func (o *InlineResponse20068) GetNetworkDevice() string`
 
-GetMemWired returns the MemWired field if non-nil, zero value otherwise.
+GetNetworkDevice returns the NetworkDevice field if non-nil, zero value otherwise.
 
-### GetMemWiredOk
+### GetNetworkDeviceOk
 
-`func (o *InlineResponse20068) GetMemWiredOk() (*int32, bool)`
+`func (o *InlineResponse20068) GetNetworkDeviceOk() (*string, bool)`
 
-GetMemWiredOk returns a tuple with the MemWired field if it's non-nil, zero value otherwise
+GetNetworkDeviceOk returns a tuple with the NetworkDevice field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemWired
+### SetNetworkDevice
 
-`func (o *InlineResponse20068) SetMemWired(v int32)`
+`func (o *InlineResponse20068) SetNetworkDevice(v string)`
 
-SetMemWired sets MemWired field to given value.
+SetNetworkDevice sets NetworkDevice field to given value.
 
-### HasMemWired
+### HasNetworkDevice
 
-`func (o *InlineResponse20068) HasMemWired() bool`
+`func (o *InlineResponse20068) HasNetworkDevice() bool`
 
-HasMemWired returns a boolean if a field has been set.
+HasNetworkDevice returns a boolean if a field has been set.
 
-### GetMemActive
+### GetNetworkDriver
 
-`func (o *InlineResponse20068) GetMemActive() int32`
+`func (o *InlineResponse20068) GetNetworkDriver() string`
 
-GetMemActive returns the MemActive field if non-nil, zero value otherwise.
+GetNetworkDriver returns the NetworkDriver field if non-nil, zero value otherwise.
 
-### GetMemActiveOk
+### GetNetworkDriverOk
 
-`func (o *InlineResponse20068) GetMemActiveOk() (*int32, bool)`
+`func (o *InlineResponse20068) GetNetworkDriverOk() (*string, bool)`
 
-GetMemActiveOk returns a tuple with the MemActive field if it's non-nil, zero value otherwise
+GetNetworkDriverOk returns a tuple with the NetworkDriver field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemActive
+### SetNetworkDriver
 
-`func (o *InlineResponse20068) SetMemActive(v int32)`
+`func (o *InlineResponse20068) SetNetworkDriver(v string)`
 
-SetMemActive sets MemActive field to given value.
+SetNetworkDriver sets NetworkDriver field to given value.
 
-### HasMemActive
+### HasNetworkDriver
 
-`func (o *InlineResponse20068) HasMemActive() bool`
+`func (o *InlineResponse20068) HasNetworkDriver() bool`
 
-HasMemActive returns a boolean if a field has been set.
+HasNetworkDriver returns a boolean if a field has been set.
 
-### GetMemInactive
+### GetWifiChannel
 
-`func (o *InlineResponse20068) GetMemInactive() int32`
+`func (o *InlineResponse20068) GetWifiChannel() string`
 
-GetMemInactive returns the MemInactive field if non-nil, zero value otherwise.
+GetWifiChannel returns the WifiChannel field if non-nil, zero value otherwise.
 
-### GetMemInactiveOk
+### GetWifiChannelOk
 
-`func (o *InlineResponse20068) GetMemInactiveOk() (*int32, bool)`
+`func (o *InlineResponse20068) GetWifiChannelOk() (*string, bool)`
 
-GetMemInactiveOk returns a tuple with the MemInactive field if it's non-nil, zero value otherwise
+GetWifiChannelOk returns a tuple with the WifiChannel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemInactive
+### SetWifiChannel
 
-`func (o *InlineResponse20068) SetMemInactive(v int32)`
+`func (o *InlineResponse20068) SetWifiChannel(v string)`
 
-SetMemInactive sets MemInactive field to given value.
+SetWifiChannel sets WifiChannel field to given value.
 
-### HasMemInactive
+### HasWifiChannel
 
-`func (o *InlineResponse20068) HasMemInactive() bool`
+`func (o *InlineResponse20068) HasWifiChannel() bool`
 
-HasMemInactive returns a boolean if a field has been set.
+HasWifiChannel returns a boolean if a field has been set.
 
-### GetNetworkSent
+### GetWifiAuth
 
-`func (o *InlineResponse20068) GetNetworkSent() int32`
+`func (o *InlineResponse20068) GetWifiAuth() string`
 
-GetNetworkSent returns the NetworkSent field if non-nil, zero value otherwise.
+GetWifiAuth returns the WifiAuth field if non-nil, zero value otherwise.
 
-### GetNetworkSentOk
+### GetWifiAuthOk
 
-`func (o *InlineResponse20068) GetNetworkSentOk() (*int32, bool)`
+`func (o *InlineResponse20068) GetWifiAuthOk() (*string, bool)`
 
-GetNetworkSentOk returns a tuple with the NetworkSent field if it's non-nil, zero value otherwise
+GetWifiAuthOk returns a tuple with the WifiAuth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkSent
+### SetWifiAuth
 
-`func (o *InlineResponse20068) SetNetworkSent(v int32)`
+`func (o *InlineResponse20068) SetWifiAuth(v string)`
 
-SetNetworkSent sets NetworkSent field to given value.
+SetWifiAuth sets WifiAuth field to given value.
 
-### HasNetworkSent
+### HasWifiAuth
 
-`func (o *InlineResponse20068) HasNetworkSent() bool`
+`func (o *InlineResponse20068) HasWifiAuth() bool`
 
-HasNetworkSent returns a boolean if a field has been set.
+HasWifiAuth returns a boolean if a field has been set.
 
-### GetNetworkReceived
+### GetWifiBssid
 
-`func (o *InlineResponse20068) GetNetworkReceived() int32`
+`func (o *InlineResponse20068) GetWifiBssid() string`
 
-GetNetworkReceived returns the NetworkReceived field if non-nil, zero value otherwise.
+GetWifiBssid returns the WifiBssid field if non-nil, zero value otherwise.
 
-### GetNetworkReceivedOk
+### GetWifiBssidOk
 
-`func (o *InlineResponse20068) GetNetworkReceivedOk() (*int32, bool)`
+`func (o *InlineResponse20068) GetWifiBssidOk() (*string, bool)`
 
-GetNetworkReceivedOk returns a tuple with the NetworkReceived field if it's non-nil, zero value otherwise
+GetWifiBssidOk returns a tuple with the WifiBssid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkReceived
+### SetWifiBssid
 
-`func (o *InlineResponse20068) SetNetworkReceived(v int32)`
+`func (o *InlineResponse20068) SetWifiBssid(v string)`
 
-SetNetworkReceived sets NetworkReceived field to given value.
+SetWifiBssid sets WifiBssid field to given value.
 
-### HasNetworkReceived
+### HasWifiBssid
 
-`func (o *InlineResponse20068) HasNetworkReceived() bool`
+`func (o *InlineResponse20068) HasWifiBssid() bool`
 
-HasNetworkReceived returns a boolean if a field has been set.
+HasWifiBssid returns a boolean if a field has been set.
 
-### GetSwapUsed
+### GetWifiSsid
 
-`func (o *InlineResponse20068) GetSwapUsed() int32`
+`func (o *InlineResponse20068) GetWifiSsid() string`
 
-GetSwapUsed returns the SwapUsed field if non-nil, zero value otherwise.
+GetWifiSsid returns the WifiSsid field if non-nil, zero value otherwise.
 
-### GetSwapUsedOk
+### GetWifiSsidOk
 
-`func (o *InlineResponse20068) GetSwapUsedOk() (*int32, bool)`
+`func (o *InlineResponse20068) GetWifiSsidOk() (*string, bool)`
 
-GetSwapUsedOk returns a tuple with the SwapUsed field if it's non-nil, zero value otherwise
+GetWifiSsidOk returns a tuple with the WifiSsid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwapUsed
+### SetWifiSsid
 
-`func (o *InlineResponse20068) SetSwapUsed(v int32)`
+`func (o *InlineResponse20068) SetWifiSsid(v string)`
 
-SetSwapUsed sets SwapUsed field to given value.
+SetWifiSsid sets WifiSsid field to given value.
 
-### HasSwapUsed
+### HasWifiSsid
 
-`func (o *InlineResponse20068) HasSwapUsed() bool`
+`func (o *InlineResponse20068) HasWifiSsid() bool`
 
-HasSwapUsed returns a boolean if a field has been set.
+HasWifiSsid returns a boolean if a field has been set.
 
-### GetDiskUsage
+### GetWifiRssi
 
-`func (o *InlineResponse20068) GetDiskUsage() NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage`
+`func (o *InlineResponse20068) GetWifiRssi() string`
 
-GetDiskUsage returns the DiskUsage field if non-nil, zero value otherwise.
+GetWifiRssi returns the WifiRssi field if non-nil, zero value otherwise.
 
-### GetDiskUsageOk
+### GetWifiRssiOk
 
-`func (o *InlineResponse20068) GetDiskUsageOk() (*NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage, bool)`
+`func (o *InlineResponse20068) GetWifiRssiOk() (*string, bool)`
 
-GetDiskUsageOk returns a tuple with the DiskUsage field if it's non-nil, zero value otherwise
+GetWifiRssiOk returns a tuple with the WifiRssi field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDiskUsage
+### SetWifiRssi
 
-`func (o *InlineResponse20068) SetDiskUsage(v NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage)`
+`func (o *InlineResponse20068) SetWifiRssi(v string)`
 
-SetDiskUsage sets DiskUsage field to given value.
+SetWifiRssi sets WifiRssi field to given value.
 
-### HasDiskUsage
+### HasWifiRssi
 
-`func (o *InlineResponse20068) HasDiskUsage() bool`
+`func (o *InlineResponse20068) HasWifiRssi() bool`
 
-HasDiskUsage returns a boolean if a field has been set.
+HasWifiRssi returns a boolean if a field has been set.
+
+### GetWifiNoise
+
+`func (o *InlineResponse20068) GetWifiNoise() string`
+
+GetWifiNoise returns the WifiNoise field if non-nil, zero value otherwise.
+
+### GetWifiNoiseOk
+
+`func (o *InlineResponse20068) GetWifiNoiseOk() (*string, bool)`
+
+GetWifiNoiseOk returns a tuple with the WifiNoise field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifiNoise
+
+`func (o *InlineResponse20068) SetWifiNoise(v string)`
+
+SetWifiNoise sets WifiNoise field to given value.
+
+### HasWifiNoise
+
+`func (o *InlineResponse20068) HasWifiNoise() bool`
+
+HasWifiNoise returns a boolean if a field has been set.
+
+### GetDhcpServer
+
+`func (o *InlineResponse20068) GetDhcpServer() string`
+
+GetDhcpServer returns the DhcpServer field if non-nil, zero value otherwise.
+
+### GetDhcpServerOk
+
+`func (o *InlineResponse20068) GetDhcpServerOk() (*string, bool)`
+
+GetDhcpServerOk returns a tuple with the DhcpServer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpServer
+
+`func (o *InlineResponse20068) SetDhcpServer(v string)`
+
+SetDhcpServer sets DhcpServer field to given value.
+
+### HasDhcpServer
+
+`func (o *InlineResponse20068) HasDhcpServer() bool`
+
+HasDhcpServer returns a boolean if a field has been set.
+
+### GetIp
+
+`func (o *InlineResponse20068) GetIp() string`
+
+GetIp returns the Ip field if non-nil, zero value otherwise.
+
+### GetIpOk
+
+`func (o *InlineResponse20068) GetIpOk() (*string, bool)`
+
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIp
+
+`func (o *InlineResponse20068) SetIp(v string)`
+
+SetIp sets Ip field to given value.
+
+### HasIp
+
+`func (o *InlineResponse20068) HasIp() bool`
+
+HasIp returns a boolean if a field has been set.
+
+### GetNetworkMTU
+
+`func (o *InlineResponse20068) GetNetworkMTU() string`
+
+GetNetworkMTU returns the NetworkMTU field if non-nil, zero value otherwise.
+
+### GetNetworkMTUOk
+
+`func (o *InlineResponse20068) GetNetworkMTUOk() (*string, bool)`
+
+GetNetworkMTUOk returns a tuple with the NetworkMTU field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkMTU
+
+`func (o *InlineResponse20068) SetNetworkMTU(v string)`
+
+SetNetworkMTU sets NetworkMTU field to given value.
+
+### HasNetworkMTU
+
+`func (o *InlineResponse20068) HasNetworkMTU() bool`
+
+HasNetworkMTU returns a boolean if a field has been set.
+
+### GetSubnet
+
+`func (o *InlineResponse20068) GetSubnet() string`
+
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+
+### GetSubnetOk
+
+`func (o *InlineResponse20068) GetSubnetOk() (*string, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnet
+
+`func (o *InlineResponse20068) SetSubnet(v string)`
+
+SetSubnet sets Subnet field to given value.
+
+### HasSubnet
+
+`func (o *InlineResponse20068) HasSubnet() bool`
+
+HasSubnet returns a boolean if a field has been set.
+
+### GetGateway
+
+`func (o *InlineResponse20068) GetGateway() string`
+
+GetGateway returns the Gateway field if non-nil, zero value otherwise.
+
+### GetGatewayOk
+
+`func (o *InlineResponse20068) GetGatewayOk() (*string, bool)`
+
+GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGateway
+
+`func (o *InlineResponse20068) SetGateway(v string)`
+
+SetGateway sets Gateway field to given value.
+
+### HasGateway
+
+`func (o *InlineResponse20068) HasGateway() bool`
+
+HasGateway returns a boolean if a field has been set.
+
+### GetPublicIP
+
+`func (o *InlineResponse20068) GetPublicIP() string`
+
+GetPublicIP returns the PublicIP field if non-nil, zero value otherwise.
+
+### GetPublicIPOk
+
+`func (o *InlineResponse20068) GetPublicIPOk() (*string, bool)`
+
+GetPublicIPOk returns a tuple with the PublicIP field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPublicIP
+
+`func (o *InlineResponse20068) SetPublicIP(v string)`
+
+SetPublicIP sets PublicIP field to given value.
+
+### HasPublicIP
+
+`func (o *InlineResponse20068) HasPublicIP() bool`
+
+HasPublicIP returns a boolean if a field has been set.
+
+### GetDnsServer
+
+`func (o *InlineResponse20068) GetDnsServer() string`
+
+GetDnsServer returns the DnsServer field if non-nil, zero value otherwise.
+
+### GetDnsServerOk
+
+`func (o *InlineResponse20068) GetDnsServerOk() (*string, bool)`
+
+GetDnsServerOk returns a tuple with the DnsServer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsServer
+
+`func (o *InlineResponse20068) SetDnsServer(v string)`
+
+SetDnsServer sets DnsServer field to given value.
+
+### HasDnsServer
+
+`func (o *InlineResponse20068) HasDnsServer() bool`
+
+HasDnsServer returns a boolean if a field has been set.
 
 ### GetTs
 

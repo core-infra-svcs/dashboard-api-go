@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ## ClaimAdministeredLicensingSubscriptionSubscriptions
 
-> InlineResponse2001 ClaimAdministeredLicensingSubscriptionSubscriptions(ctx).ClaimAdministeredLicensingSubscriptionSubscriptions(claimAdministeredLicensingSubscriptionSubscriptions).Execute()
+> InlineResponse2001 ClaimAdministeredLicensingSubscriptionSubscriptions(ctx).ClaimAdministeredLicensingSubscriptionSubscriptions(claimAdministeredLicensingSubscriptionSubscriptions).Validate(validate).Execute()
 
 Claim a subscription into an organization.
 
@@ -107,10 +107,11 @@ import (
 
 func main() {
     claimAdministeredLicensingSubscriptionSubscriptions := *openapiclient.NewInlineObject("ClaimKey_example", "OrganizationId_example") // InlineObject | 
+    validate := true // bool | Check if the provided claim key is valid and can be claimed into the organization. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SubscriptionsApi.ClaimAdministeredLicensingSubscriptionSubscriptions(context.Background()).ClaimAdministeredLicensingSubscriptionSubscriptions(claimAdministeredLicensingSubscriptionSubscriptions).Execute()
+    resp, r, err := apiClient.SubscriptionsApi.ClaimAdministeredLicensingSubscriptionSubscriptions(context.Background()).ClaimAdministeredLicensingSubscriptionSubscriptions(claimAdministeredLicensingSubscriptionSubscriptions).Validate(validate).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionsApi.ClaimAdministeredLicensingSubscriptionSubscriptions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -132,6 +133,7 @@ Other parameters are passed through a pointer to a apiClaimAdministeredLicensing
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **claimAdministeredLicensingSubscriptionSubscriptions** | [**InlineObject**](InlineObject.md) |  | 
+ **validate** | **bool** | Check if the provided claim key is valid and can be claimed into the organization. | 
 
 ### Return type
 

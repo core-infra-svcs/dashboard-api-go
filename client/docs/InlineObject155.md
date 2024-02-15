@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
-**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
-**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
+**Servers** | [**[]NetworksNetworkIdSyslogServersServers**](NetworksNetworkIdSyslogServersServers.md) | A list of the syslog servers for this network | 
 
 ## Methods
 
 ### NewInlineObject155
 
-`func NewInlineObject155(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, ) *InlineObject155`
+`func NewInlineObject155(servers []NetworksNetworkIdSyslogServersServers, ) *InlineObject155`
 
 NewInlineObject155 instantiates a new InlineObject155 object
 This constructor will assign default values to properties that have it defined,
@@ -27,64 +25,24 @@ NewInlineObject155WithDefaults instantiates a new InlineObject155 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetServers
 
-`func (o *InlineObject155) GetName() string`
+`func (o *InlineObject155) GetServers() []NetworksNetworkIdSyslogServersServers`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetServers returns the Servers field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetServersOk
 
-`func (o *InlineObject155) GetNameOk() (*string, bool)`
+`func (o *InlineObject155) GetServersOk() (*[]NetworksNetworkIdSyslogServersServers, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetServers
 
-`func (o *InlineObject155) SetName(v string)`
+`func (o *InlineObject155) SetServers(v []NetworksNetworkIdSyslogServersServers)`
 
-SetName sets Name field to given value.
-
-
-### GetVlanNames
-
-`func (o *InlineObject155) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
-
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
-
-### GetVlanNamesOk
-
-`func (o *InlineObject155) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
-
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanNames
-
-`func (o *InlineObject155) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
-
-SetVlanNames sets VlanNames field to given value.
-
-
-### GetVlanGroups
-
-`func (o *InlineObject155) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
-
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
-
-### GetVlanGroupsOk
-
-`func (o *InlineObject155) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
-
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanGroups
-
-`func (o *InlineObject155) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
-
-SetVlanGroups sets VlanGroups field to given value.
+SetServers sets Servers field to given value.
 
 
 

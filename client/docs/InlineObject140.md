@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new stack | 
-**Serials** | **[]string** | An array of switch serials to be added into the new stack | 
+**DefaultSettings** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastDefaultSettings**](NetworksNetworkIdSwitchRoutingMulticastDefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]NetworksNetworkIdSwitchRoutingMulticastOverrides**](NetworksNetworkIdSwitchRoutingMulticastOverrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings. An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
 ### NewInlineObject140
 
-`func NewInlineObject140(name string, serials []string, ) *InlineObject140`
+`func NewInlineObject140() *InlineObject140`
 
 NewInlineObject140 instantiates a new InlineObject140 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,55 @@ NewInlineObject140WithDefaults instantiates a new InlineObject140 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDefaultSettings
 
-`func (o *InlineObject140) GetName() string`
+`func (o *InlineObject140) GetDefaultSettings() NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDefaultSettingsOk
 
-`func (o *InlineObject140) GetNameOk() (*string, bool)`
+`func (o *InlineObject140) GetDefaultSettingsOk() (*NetworksNetworkIdSwitchRoutingMulticastDefaultSettings, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDefaultSettings
 
-`func (o *InlineObject140) SetName(v string)`
+`func (o *InlineObject140) SetDefaultSettings(v NetworksNetworkIdSwitchRoutingMulticastDefaultSettings)`
 
-SetName sets Name field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
+### HasDefaultSettings
 
-### GetSerials
+`func (o *InlineObject140) HasDefaultSettings() bool`
 
-`func (o *InlineObject140) GetSerials() []string`
+HasDefaultSettings returns a boolean if a field has been set.
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+### GetOverrides
 
-### GetSerialsOk
+`func (o *InlineObject140) GetOverrides() []NetworksNetworkIdSwitchRoutingMulticastOverrides`
 
-`func (o *InlineObject140) GetSerialsOk() (*[]string, bool)`
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+### GetOverridesOk
+
+`func (o *InlineObject140) GetOverridesOk() (*[]NetworksNetworkIdSwitchRoutingMulticastOverrides, bool)`
+
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetOverrides
 
-`func (o *InlineObject140) SetSerials(v []string)`
+`func (o *InlineObject140) SetOverrides(v []NetworksNetworkIdSwitchRoutingMulticastOverrides)`
 
-SetSerials sets Serials field to given value.
+SetOverrides sets Overrides field to given value.
 
+### HasOverrides
+
+`func (o *InlineObject140) HasOverrides() bool`
+
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

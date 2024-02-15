@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchQosRulesOrder := *openapiclient.NewInlineObject133([]string{"RuleIds_example"}) // InlineObject133 | 
+    updateNetworkSwitchQosRulesOrder := *openapiclient.NewInlineObject138([]string{"RuleIds_example"}) // InlineObject138 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -131,7 +131,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchQosRule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchQosRulesOrder** | [**InlineObject133**](InlineObject133.md) |  | 
+ **updateNetworkSwitchQosRulesOrder** | [**InlineObject138**](InlineObject138.md) |  | 
 
 ### Return type
 

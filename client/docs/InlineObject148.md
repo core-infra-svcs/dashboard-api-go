@@ -4,15 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for broadcast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for multicast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for unknown unicast (dlf-destination lookup failure) traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**Name** | **string** | A friendly name or description for the interface or VLAN. | 
+**Subnet** | Pointer to **string** | The network that this routed interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
+**InterfaceIp** | Pointer to **string** | The IP address this switch stack will use for layer 3 routing on this VLAN or subnet. This cannot be the same as the switch&#39;s management IP. | [optional] 
+**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are, &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
+**VlanId** | **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | 
+**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route. This IP address must exist in a subnet with a routed interface. | [optional] 
+**OspfSettings** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings.md) |  | [optional] 
+**Ipv6** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject148
 
-`func NewInlineObject148() *InlineObject148`
+`func NewInlineObject148(name string, vlanId int32, ) *InlineObject148`
 
 NewInlineObject148 instantiates a new InlineObject148 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +32,195 @@ NewInlineObject148WithDefaults instantiates a new InlineObject148 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetName
 
-`func (o *InlineObject148) GetBroadcastThreshold() int32`
+`func (o *InlineObject148) GetName() string`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetNameOk
 
-`func (o *InlineObject148) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineObject148) GetNameOk() (*string, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetName
 
-`func (o *InlineObject148) SetBroadcastThreshold(v int32)`
+`func (o *InlineObject148) SetName(v string)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetName sets Name field to given value.
 
-### HasBroadcastThreshold
 
-`func (o *InlineObject148) HasBroadcastThreshold() bool`
+### GetSubnet
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+`func (o *InlineObject148) GetSubnet() string`
 
-### GetMulticastThreshold
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-`func (o *InlineObject148) GetMulticastThreshold() int32`
+### GetSubnetOk
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+`func (o *InlineObject148) GetSubnetOk() (*string, bool)`
 
-### GetMulticastThresholdOk
-
-`func (o *InlineObject148) GetMulticastThresholdOk() (*int32, bool)`
-
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetSubnet
 
-`func (o *InlineObject148) SetMulticastThreshold(v int32)`
+`func (o *InlineObject148) SetSubnet(v string)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasMulticastThreshold
+### HasSubnet
 
-`func (o *InlineObject148) HasMulticastThreshold() bool`
+`func (o *InlineObject148) HasSubnet() bool`
 
-HasMulticastThreshold returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetUnknownUnicastThreshold
+### GetInterfaceIp
 
-`func (o *InlineObject148) GetUnknownUnicastThreshold() int32`
+`func (o *InlineObject148) GetInterfaceIp() string`
 
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetUnknownUnicastThresholdOk
+### GetInterfaceIpOk
 
-`func (o *InlineObject148) GetUnknownUnicastThresholdOk() (*int32, bool)`
+`func (o *InlineObject148) GetInterfaceIpOk() (*string, bool)`
 
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnknownUnicastThreshold
+### SetInterfaceIp
 
-`func (o *InlineObject148) SetUnknownUnicastThreshold(v int32)`
+`func (o *InlineObject148) SetInterfaceIp(v string)`
 
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasUnknownUnicastThreshold
+### HasInterfaceIp
 
-`func (o *InlineObject148) HasUnknownUnicastThreshold() bool`
+`func (o *InlineObject148) HasInterfaceIp() bool`
 
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
+HasInterfaceIp returns a boolean if a field has been set.
+
+### GetMulticastRouting
+
+`func (o *InlineObject148) GetMulticastRouting() string`
+
+GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
+
+### GetMulticastRoutingOk
+
+`func (o *InlineObject148) GetMulticastRoutingOk() (*string, bool)`
+
+GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMulticastRouting
+
+`func (o *InlineObject148) SetMulticastRouting(v string)`
+
+SetMulticastRouting sets MulticastRouting field to given value.
+
+### HasMulticastRouting
+
+`func (o *InlineObject148) HasMulticastRouting() bool`
+
+HasMulticastRouting returns a boolean if a field has been set.
+
+### GetVlanId
+
+`func (o *InlineObject148) GetVlanId() int32`
+
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+
+### GetVlanIdOk
+
+`func (o *InlineObject148) GetVlanIdOk() (*int32, bool)`
+
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanId
+
+`func (o *InlineObject148) SetVlanId(v int32)`
+
+SetVlanId sets VlanId field to given value.
+
+
+### GetDefaultGateway
+
+`func (o *InlineObject148) GetDefaultGateway() string`
+
+GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
+
+### GetDefaultGatewayOk
+
+`func (o *InlineObject148) GetDefaultGatewayOk() (*string, bool)`
+
+GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaultGateway
+
+`func (o *InlineObject148) SetDefaultGateway(v string)`
+
+SetDefaultGateway sets DefaultGateway field to given value.
+
+### HasDefaultGateway
+
+`func (o *InlineObject148) HasDefaultGateway() bool`
+
+HasDefaultGateway returns a boolean if a field has been set.
+
+### GetOspfSettings
+
+`func (o *InlineObject148) GetOspfSettings() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings`
+
+GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
+
+### GetOspfSettingsOk
+
+`func (o *InlineObject148) GetOspfSettingsOk() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings, bool)`
+
+GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfSettings
+
+`func (o *InlineObject148) SetOspfSettings(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings)`
+
+SetOspfSettings sets OspfSettings field to given value.
+
+### HasOspfSettings
+
+`func (o *InlineObject148) HasOspfSettings() bool`
+
+HasOspfSettings returns a boolean if a field has been set.
+
+### GetIpv6
+
+`func (o *InlineObject148) GetIpv6() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineObject148) GetIpv6Ok() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineObject148) SetIpv6(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineObject148) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

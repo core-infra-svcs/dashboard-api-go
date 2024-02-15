@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | AP port profile name | [optional] 
-**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts.md) | AP ports configuration | [optional] 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
+**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
+**Plans** | Pointer to [**[]NetworksNetworkIdWirelessBillingPlans**](NetworksNetworkIdWirelessBillingPlans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject167WithDefaults instantiates a new InlineObject167 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetCurrency
 
-`func (o *InlineObject167) GetName() string`
+`func (o *InlineObject167) GetCurrency() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCurrency returns the Currency field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCurrencyOk
 
-`func (o *InlineObject167) GetNameOk() (*string, bool)`
+`func (o *InlineObject167) GetCurrencyOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCurrency
 
-`func (o *InlineObject167) SetName(v string)`
+`func (o *InlineObject167) SetCurrency(v string)`
 
-SetName sets Name field to given value.
+SetCurrency sets Currency field to given value.
 
-### HasName
+### HasCurrency
 
-`func (o *InlineObject167) HasName() bool`
+`func (o *InlineObject167) HasCurrency() bool`
 
-HasName returns a boolean if a field has been set.
+HasCurrency returns a boolean if a field has been set.
 
-### GetPorts
+### GetPlans
 
-`func (o *InlineObject167) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts`
+`func (o *InlineObject167) GetPlans() []NetworksNetworkIdWirelessBillingPlans`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetPlans returns the Plans field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetPlansOk
 
-`func (o *InlineObject167) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts, bool)`
+`func (o *InlineObject167) GetPlansOk() (*[]NetworksNetworkIdWirelessBillingPlans, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetPlans
 
-`func (o *InlineObject167) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts)`
+`func (o *InlineObject167) SetPlans(v []NetworksNetworkIdWirelessBillingPlans)`
 
-SetPorts sets Ports field to given value.
+SetPlans sets Plans field to given value.
 
-### HasPorts
+### HasPlans
 
-`func (o *InlineObject167) HasPorts() bool`
+`func (o *InlineObject167) HasPlans() bool`
 
-HasPorts returns a boolean if a field has been set.
-
-### GetUsbPorts
-
-`func (o *InlineObject167) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
-
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
-
-### GetUsbPortsOk
-
-`func (o *InlineObject167) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
-
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsbPorts
-
-`func (o *InlineObject167) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
-
-SetUsbPorts sets UsbPorts field to given value.
-
-### HasUsbPorts
-
-`func (o *InlineObject167) HasUsbPorts() bool`
-
-HasUsbPorts returns a boolean if a field has been set.
+HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

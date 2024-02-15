@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20020Rules**](InlineResponse20020Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**ResponseCodeCounts** | Pointer to [**InlineResponse200129ResponseCodeCounts**](InlineResponse200129ResponseCodeCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200129WithDefaults instantiates a new InlineResponse200129 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetResponseCodeCounts
 
-`func (o *InlineResponse200129) GetRules() []InlineResponse20020Rules`
+`func (o *InlineResponse200129) GetResponseCodeCounts() InlineResponse200129ResponseCodeCounts`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetResponseCodeCounts returns the ResponseCodeCounts field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetResponseCodeCountsOk
 
-`func (o *InlineResponse200129) GetRulesOk() (*[]InlineResponse20020Rules, bool)`
+`func (o *InlineResponse200129) GetResponseCodeCountsOk() (*InlineResponse200129ResponseCodeCounts, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetResponseCodeCountsOk returns a tuple with the ResponseCodeCounts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetResponseCodeCounts
 
-`func (o *InlineResponse200129) SetRules(v []InlineResponse20020Rules)`
+`func (o *InlineResponse200129) SetResponseCodeCounts(v InlineResponse200129ResponseCodeCounts)`
 
-SetRules sets Rules field to given value.
+SetResponseCodeCounts sets ResponseCodeCounts field to given value.
 
-### HasRules
+### HasResponseCodeCounts
 
-`func (o *InlineResponse200129) HasRules() bool`
+`func (o *InlineResponse200129) HasResponseCodeCounts() bool`
 
-HasRules returns a boolean if a field has been set.
+HasResponseCodeCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

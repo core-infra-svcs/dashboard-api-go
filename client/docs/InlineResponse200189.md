@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the SSID | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
+**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200189WithDefaults instantiates a new InlineResponse200189 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetName
 
-`func (o *InlineResponse200189) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200189) GetName() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetNameOk
 
-`func (o *InlineResponse200189) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200189) GetNameOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetName
 
-`func (o *InlineResponse200189) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200189) SetName(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetName sets Name field to given value.
 
-### HasDownstream
+### HasName
 
-`func (o *InlineResponse200189) HasDownstream() bool`
+`func (o *InlineResponse200189) HasName() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUpstream
+### GetUsage
 
-`func (o *InlineResponse200189) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200189) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetUsageOk
 
-`func (o *InlineResponse200189) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200189) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetUsage
 
-`func (o *InlineResponse200189) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200189) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
 
-SetUpstream sets Upstream field to given value.
+SetUsage sets Usage field to given value.
 
-### HasUpstream
+### HasUsage
 
-`func (o *InlineResponse200189) HasUpstream() bool`
+`func (o *InlineResponse200189) HasUsage() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
-### GetClient
+### GetClients
 
-`func (o *InlineResponse200189) GetClient() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient`
+`func (o *InlineResponse200189) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetClientOk
+### GetClientsOk
 
-`func (o *InlineResponse200189) GetClientOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient, bool)`
+`func (o *InlineResponse200189) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
 
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetClients
 
-`func (o *InlineResponse200189) SetClient(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient)`
+`func (o *InlineResponse200189) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
 
-SetClient sets Client field to given value.
+SetClients sets Clients field to given value.
 
-### HasClient
+### HasClients
 
-`func (o *InlineResponse200189) HasClient() bool`
+`func (o *InlineResponse200189) HasClients() bool`
 
-HasClient returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200189) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200189) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200189) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200189) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
+HasClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

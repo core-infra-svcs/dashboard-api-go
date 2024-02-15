@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name for your port schedule. | [optional] 
-**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule1**](NetworksNetworkIdSwitchPortSchedulesPortSchedule1.md) |  | [optional] 
+**Mappings** | [**[]NetworksNetworkIdSwitchDscpToCosMappingsMappings**](NetworksNetworkIdSwitchDscpToCosMappingsMappings.md) | An array of DSCP to CoS mappings. An empty array will reset the mappings to default. | 
 
 ## Methods
 
 ### NewInlineObject131
 
-`func NewInlineObject131() *InlineObject131`
+`func NewInlineObject131(mappings []NetworksNetworkIdSwitchDscpToCosMappingsMappings, ) *InlineObject131`
 
 NewInlineObject131 instantiates a new InlineObject131 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject131WithDefaults instantiates a new InlineObject131 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetMappings
 
-`func (o *InlineObject131) GetName() string`
+`func (o *InlineObject131) GetMappings() []NetworksNetworkIdSwitchDscpToCosMappingsMappings`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMappings returns the Mappings field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMappingsOk
 
-`func (o *InlineObject131) GetNameOk() (*string, bool)`
+`func (o *InlineObject131) GetMappingsOk() (*[]NetworksNetworkIdSwitchDscpToCosMappingsMappings, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMappingsOk returns a tuple with the Mappings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMappings
 
-`func (o *InlineObject131) SetName(v string)`
+`func (o *InlineObject131) SetMappings(v []NetworksNetworkIdSwitchDscpToCosMappingsMappings)`
 
-SetName sets Name field to given value.
+SetMappings sets Mappings field to given value.
 
-### HasName
-
-`func (o *InlineObject131) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetPortSchedule
-
-`func (o *InlineObject131) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule1`
-
-GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
-
-### GetPortScheduleOk
-
-`func (o *InlineObject131) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule1, bool)`
-
-GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPortSchedule
-
-`func (o *InlineObject131) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule1)`
-
-SetPortSchedule sets PortSchedule field to given value.
-
-### HasPortSchedule
-
-`func (o *InlineObject131) HasPortSchedule() bool`
-
-HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

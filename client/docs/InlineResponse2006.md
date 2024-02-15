@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**ArpTableId** | Pointer to **string** | Id of the ARP table request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ARP table request. | [optional] 
 **Request** | Pointer to [**InlineResponse2011Request**](InlineResponse2011Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the ping request. | [optional] 
-**Results** | Pointer to [**InlineResponse2006Results**](InlineResponse2006Results.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ARP table request. | [optional] 
+**Entries** | Pointer to [**[]InlineResponse2006Entries**](InlineResponse2006Entries.md) | The ARP table entries | [optional] 
+**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -29,30 +30,30 @@ NewInlineResponse2006WithDefaults instantiates a new InlineResponse2006 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPingId
+### GetArpTableId
 
-`func (o *InlineResponse2006) GetPingId() string`
+`func (o *InlineResponse2006) GetArpTableId() string`
 
-GetPingId returns the PingId field if non-nil, zero value otherwise.
+GetArpTableId returns the ArpTableId field if non-nil, zero value otherwise.
 
-### GetPingIdOk
+### GetArpTableIdOk
 
-`func (o *InlineResponse2006) GetPingIdOk() (*string, bool)`
+`func (o *InlineResponse2006) GetArpTableIdOk() (*string, bool)`
 
-GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
+GetArpTableIdOk returns a tuple with the ArpTableId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPingId
+### SetArpTableId
 
-`func (o *InlineResponse2006) SetPingId(v string)`
+`func (o *InlineResponse2006) SetArpTableId(v string)`
 
-SetPingId sets PingId field to given value.
+SetArpTableId sets ArpTableId field to given value.
 
-### HasPingId
+### HasArpTableId
 
-`func (o *InlineResponse2006) HasPingId() bool`
+`func (o *InlineResponse2006) HasArpTableId() bool`
 
-HasPingId returns a boolean if a field has been set.
+HasArpTableId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -129,30 +130,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetResults
+### GetEntries
 
-`func (o *InlineResponse2006) GetResults() InlineResponse2006Results`
+`func (o *InlineResponse2006) GetEntries() []InlineResponse2006Entries`
 
-GetResults returns the Results field if non-nil, zero value otherwise.
+GetEntries returns the Entries field if non-nil, zero value otherwise.
 
-### GetResultsOk
+### GetEntriesOk
 
-`func (o *InlineResponse2006) GetResultsOk() (*InlineResponse2006Results, bool)`
+`func (o *InlineResponse2006) GetEntriesOk() (*[]InlineResponse2006Entries, bool)`
 
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResults
+### SetEntries
 
-`func (o *InlineResponse2006) SetResults(v InlineResponse2006Results)`
+`func (o *InlineResponse2006) SetEntries(v []InlineResponse2006Entries)`
 
-SetResults sets Results field to given value.
+SetEntries sets Entries field to given value.
 
-### HasResults
+### HasEntries
 
-`func (o *InlineResponse2006) HasResults() bool`
+`func (o *InlineResponse2006) HasEntries() bool`
 
-HasResults returns a boolean if a field has been set.
+HasEntries returns a boolean if a field has been set.
+
+### GetError
+
+`func (o *InlineResponse2006) GetError() string`
+
+GetError returns the Error field if non-nil, zero value otherwise.
+
+### GetErrorOk
+
+`func (o *InlineResponse2006) GetErrorOk() (*string, bool)`
+
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetError
+
+`func (o *InlineResponse2006) SetError(v string)`
+
+SetError sets Error field to given value.
+
+### HasError
+
+`func (o *InlineResponse2006) HasError() bool`
+
+HasError returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

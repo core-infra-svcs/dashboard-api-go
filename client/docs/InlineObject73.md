@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the camera wireless profile. This parameter is required. | 
-**Ssid** | [**NetworksNetworkIdCameraWirelessProfilesSsid**](NetworksNetworkIdCameraWirelessProfilesSsid.md) |  | 
-**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
+**ConfigTemplateId** | **string** | The ID of the template to which the network should be bound. | 
+**AutoBind** | Pointer to **bool** | Optional boolean indicating whether the network&#39;s switches should automatically bind to profiles of the same model. Defaults to false if left unspecified. This option only affects switch networks and switch templates. Auto-bind is not valid unless the switch template has at least one profile and has at most one profile per switch model. | [optional] 
 
 ## Methods
 
 ### NewInlineObject73
 
-`func NewInlineObject73(name string, ssid NetworksNetworkIdCameraWirelessProfilesSsid, ) *InlineObject73`
+`func NewInlineObject73(configTemplateId string, ) *InlineObject73`
 
 NewInlineObject73 instantiates a new InlineObject73 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,50 @@ NewInlineObject73WithDefaults instantiates a new InlineObject73 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConfigTemplateId
 
-`func (o *InlineObject73) GetName() string`
+`func (o *InlineObject73) GetConfigTemplateId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConfigTemplateId returns the ConfigTemplateId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConfigTemplateIdOk
 
-`func (o *InlineObject73) GetNameOk() (*string, bool)`
+`func (o *InlineObject73) GetConfigTemplateIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConfigTemplateIdOk returns a tuple with the ConfigTemplateId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConfigTemplateId
 
-`func (o *InlineObject73) SetName(v string)`
+`func (o *InlineObject73) SetConfigTemplateId(v string)`
 
-SetName sets Name field to given value.
+SetConfigTemplateId sets ConfigTemplateId field to given value.
 
 
-### GetSsid
+### GetAutoBind
 
-`func (o *InlineObject73) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid`
+`func (o *InlineObject73) GetAutoBind() bool`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetAutoBind returns the AutoBind field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetAutoBindOk
 
-`func (o *InlineObject73) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid, bool)`
+`func (o *InlineObject73) GetAutoBindOk() (*bool, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetAutoBindOk returns a tuple with the AutoBind field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetAutoBind
 
-`func (o *InlineObject73) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid)`
+`func (o *InlineObject73) SetAutoBind(v bool)`
 
-SetSsid sets Ssid field to given value.
+SetAutoBind sets AutoBind field to given value.
 
+### HasAutoBind
 
-### GetIdentity
+`func (o *InlineObject73) HasAutoBind() bool`
 
-`func (o *InlineObject73) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
-
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
-
-### GetIdentityOk
-
-`func (o *InlineObject73) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
-
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIdentity
-
-`func (o *InlineObject73) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
-
-SetIdentity sets Identity field to given value.
-
-### HasIdentity
-
-`func (o *InlineObject73) HasIdentity() bool`
-
-HasIdentity returns a boolean if a field has been set.
+HasAutoBind returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

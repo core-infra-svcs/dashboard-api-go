@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseId** | **string** | The ID of the SM license to assign seats from | 
-**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
-**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
+**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
+**Licenses** | Pointer to [**[]OrganizationsOrganizationIdInventoryClaimLicenses**](OrganizationsOrganizationIdInventoryClaimLicenses.md) | The licenses that should be claimed | [optional] 
 
 ## Methods
 
 ### NewInlineObject223
 
-`func NewInlineObject223(licenseId string, networkId string, seatCount int32, ) *InlineObject223`
+`func NewInlineObject223() *InlineObject223`
 
 NewInlineObject223 instantiates a new InlineObject223 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +27,80 @@ NewInlineObject223WithDefaults instantiates a new InlineObject223 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseId
+### GetOrders
 
-`func (o *InlineObject223) GetLicenseId() string`
+`func (o *InlineObject223) GetOrders() []string`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetOrdersOk
 
-`func (o *InlineObject223) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineObject223) GetOrdersOk() (*[]string, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetOrders
 
-`func (o *InlineObject223) SetLicenseId(v string)`
+`func (o *InlineObject223) SetOrders(v []string)`
 
-SetLicenseId sets LicenseId field to given value.
+SetOrders sets Orders field to given value.
 
+### HasOrders
 
-### GetNetworkId
+`func (o *InlineObject223) HasOrders() bool`
 
-`func (o *InlineObject223) GetNetworkId() string`
+HasOrders returns a boolean if a field has been set.
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+### GetSerials
 
-### GetNetworkIdOk
+`func (o *InlineObject223) GetSerials() []string`
 
-`func (o *InlineObject223) GetNetworkIdOk() (*string, bool)`
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+### GetSerialsOk
+
+`func (o *InlineObject223) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetSerials
 
-`func (o *InlineObject223) SetNetworkId(v string)`
+`func (o *InlineObject223) SetSerials(v []string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetSerials sets Serials field to given value.
 
+### HasSerials
 
-### GetSeatCount
+`func (o *InlineObject223) HasSerials() bool`
 
-`func (o *InlineObject223) GetSeatCount() int32`
+HasSerials returns a boolean if a field has been set.
 
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+### GetLicenses
 
-### GetSeatCountOk
+`func (o *InlineObject223) GetLicenses() []OrganizationsOrganizationIdInventoryClaimLicenses`
 
-`func (o *InlineObject223) GetSeatCountOk() (*int32, bool)`
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+### GetLicensesOk
+
+`func (o *InlineObject223) GetLicensesOk() (*[]OrganizationsOrganizationIdInventoryClaimLicenses, bool)`
+
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSeatCount
+### SetLicenses
 
-`func (o *InlineObject223) SetSeatCount(v int32)`
+`func (o *InlineObject223) SetLicenses(v []OrganizationsOrganizationIdInventoryClaimLicenses)`
 
-SetSeatCount sets SeatCount field to given value.
+SetLicenses sets Licenses field to given value.
 
+### HasLicenses
+
+`func (o *InlineObject223) HasLicenses() bool`
+
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

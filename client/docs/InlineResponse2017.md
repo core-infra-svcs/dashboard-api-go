@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | Cloud monitor import status | [optional] 
-**ImportId** | Pointer to **string** | Unique id associated with the import of the device | [optional] 
-**Message** | Pointer to **string** | Response method | [optional] 
+**Serials** | Pointer to **[]string** | List of updated AP serials | [optional] 
+**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse2017WithDefaults instantiates a new InlineResponse2017 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetSerials
 
-`func (o *InlineResponse2017) GetStatus() string`
+`func (o *InlineResponse2017) GetSerials() []string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetSerialsOk
 
-`func (o *InlineResponse2017) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse2017) GetSerialsOk() (*[]string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetSerials
 
-`func (o *InlineResponse2017) SetStatus(v string)`
+`func (o *InlineResponse2017) SetSerials(v []string)`
 
-SetStatus sets Status field to given value.
+SetSerials sets Serials field to given value.
 
-### HasStatus
+### HasSerials
 
-`func (o *InlineResponse2017) HasStatus() bool`
+`func (o *InlineResponse2017) HasSerials() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetImportId
+### GetProfileId
 
-`func (o *InlineResponse2017) GetImportId() string`
+`func (o *InlineResponse2017) GetProfileId() string`
 
-GetImportId returns the ImportId field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetImportIdOk
+### GetProfileIdOk
 
-`func (o *InlineResponse2017) GetImportIdOk() (*string, bool)`
+`func (o *InlineResponse2017) GetProfileIdOk() (*string, bool)`
 
-GetImportIdOk returns a tuple with the ImportId field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImportId
+### SetProfileId
 
-`func (o *InlineResponse2017) SetImportId(v string)`
+`func (o *InlineResponse2017) SetProfileId(v string)`
 
-SetImportId sets ImportId field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasImportId
+### HasProfileId
 
-`func (o *InlineResponse2017) HasImportId() bool`
+`func (o *InlineResponse2017) HasProfileId() bool`
 
-HasImportId returns a boolean if a field has been set.
-
-### GetMessage
-
-`func (o *InlineResponse2017) GetMessage() string`
-
-GetMessage returns the Message field if non-nil, zero value otherwise.
-
-### GetMessageOk
-
-`func (o *InlineResponse2017) GetMessageOk() (*string, bool)`
-
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMessage
-
-`func (o *InlineResponse2017) SetMessage(v string)`
-
-SetMessage sets Message field to given value.
-
-### HasMessage
-
-`func (o *InlineResponse2017) HasMessage() bool`
-
-HasMessage returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

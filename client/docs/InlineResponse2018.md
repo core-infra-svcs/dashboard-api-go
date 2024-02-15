@@ -4,17 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **string** | Message related to whether or not the device was found and can be imported. | [optional] 
-**Udi** | Pointer to **string** | Device UDI certificate | [optional] 
-**DeviceId** | Pointer to **string** | Import ID from the Import operation | [optional] 
-**Status** | Pointer to **string** | The import status of the device | [optional] 
-**ConfigParams** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
+**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
+**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
+**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse2018
 
-`func NewInlineResponse2018() *InlineResponse2018`
+`func NewInlineResponse2018(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse2018`
 
 NewInlineResponse2018 instantiates a new InlineResponse2018 object
 This constructor will assign default values to properties that have it defined,
@@ -29,97 +31,122 @@ NewInlineResponse2018WithDefaults instantiates a new InlineResponse2018 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMessage
+### GetId
 
-`func (o *InlineResponse2018) GetMessage() string`
+`func (o *InlineResponse2018) GetId() string`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetIdOk
 
-`func (o *InlineResponse2018) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse2018) GetIdOk() (*string, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetId
 
-`func (o *InlineResponse2018) SetMessage(v string)`
+`func (o *InlineResponse2018) SetId(v string)`
 
-SetMessage sets Message field to given value.
+SetId sets Id field to given value.
 
-### HasMessage
+### HasId
 
-`func (o *InlineResponse2018) HasMessage() bool`
+`func (o *InlineResponse2018) HasId() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUdi
+### GetOrganizationId
 
-`func (o *InlineResponse2018) GetUdi() string`
+`func (o *InlineResponse2018) GetOrganizationId() string`
 
-GetUdi returns the Udi field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetUdiOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse2018) GetUdiOk() (*string, bool)`
+`func (o *InlineResponse2018) GetOrganizationIdOk() (*string, bool)`
 
-GetUdiOk returns a tuple with the Udi field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUdi
+### SetOrganizationId
 
-`func (o *InlineResponse2018) SetUdi(v string)`
+`func (o *InlineResponse2018) SetOrganizationId(v string)`
 
-SetUdi sets Udi field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasUdi
+### HasOrganizationId
 
-`func (o *InlineResponse2018) HasUdi() bool`
+`func (o *InlineResponse2018) HasOrganizationId() bool`
 
-HasUdi returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
 
-### GetDeviceId
+### GetConfirmed
 
-`func (o *InlineResponse2018) GetDeviceId() string`
+`func (o *InlineResponse2018) GetConfirmed() bool`
 
-GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetDeviceIdOk
+### GetConfirmedOk
 
-`func (o *InlineResponse2018) GetDeviceIdOk() (*string, bool)`
+`func (o *InlineResponse2018) GetConfirmedOk() (*bool, bool)`
 
-GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceId
+### SetConfirmed
 
-`func (o *InlineResponse2018) SetDeviceId(v string)`
+`func (o *InlineResponse2018) SetConfirmed(v bool)`
 
-SetDeviceId sets DeviceId field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasDeviceId
+### HasConfirmed
 
-`func (o *InlineResponse2018) HasDeviceId() bool`
+`func (o *InlineResponse2018) HasConfirmed() bool`
 
-HasDeviceId returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
+
+### GetSynchronous
+
+`func (o *InlineResponse2018) GetSynchronous() bool`
+
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+
+### GetSynchronousOk
+
+`func (o *InlineResponse2018) GetSynchronousOk() (*bool, bool)`
+
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSynchronous
+
+`func (o *InlineResponse2018) SetSynchronous(v bool)`
+
+SetSynchronous sets Synchronous field to given value.
+
+### HasSynchronous
+
+`func (o *InlineResponse2018) HasSynchronous() bool`
+
+HasSynchronous returns a boolean if a field has been set.
 
 ### GetStatus
 
-`func (o *InlineResponse2018) GetStatus() string`
+`func (o *InlineResponse2018) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *InlineResponse2018) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse2018) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *InlineResponse2018) SetStatus(v string)`
+`func (o *InlineResponse2018) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
 
 SetStatus sets Status field to given value.
 
@@ -129,30 +156,50 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetConfigParams
+### GetActions
 
-`func (o *InlineResponse2018) GetConfigParams() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams`
+`func (o *InlineResponse2018) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
 
-GetConfigParams returns the ConfigParams field if non-nil, zero value otherwise.
+GetActions returns the Actions field if non-nil, zero value otherwise.
 
-### GetConfigParamsOk
+### GetActionsOk
 
-`func (o *InlineResponse2018) GetConfigParamsOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams, bool)`
+`func (o *InlineResponse2018) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
 
-GetConfigParamsOk returns a tuple with the ConfigParams field if it's non-nil, zero value otherwise
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfigParams
+### SetActions
 
-`func (o *InlineResponse2018) SetConfigParams(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams)`
+`func (o *InlineResponse2018) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
 
-SetConfigParams sets ConfigParams field to given value.
+SetActions sets Actions field to given value.
 
-### HasConfigParams
 
-`func (o *InlineResponse2018) HasConfigParams() bool`
+### GetCallback
 
-HasConfigParams returns a boolean if a field has been set.
+`func (o *InlineResponse2018) GetCallback() InlineResponse2011Callback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineResponse2018) GetCallbackOk() (*InlineResponse2011Callback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineResponse2018) SetCallback(v InlineResponse2011Callback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineResponse2018) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

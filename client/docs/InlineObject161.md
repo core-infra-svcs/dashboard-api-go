@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
-**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
+**Name** | **string** | A name for easy reference to the HTTP server | 
+**Url** | **string** | The URL of the HTTP server. Once set, cannot be updated. | 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate1**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject161
 
-`func NewInlineObject161() *InlineObject161`
+`func NewInlineObject161(name string, url string, ) *InlineObject161`
 
 NewInlineObject161 instantiates a new InlineObject161 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +28,95 @@ NewInlineObject161WithDefaults instantiates a new InlineObject161 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject161) GetEnabled() bool`
+`func (o *InlineObject161) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject161) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject161) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject161) SetEnabled(v bool)`
+`func (o *InlineObject161) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject161) HasEnabled() bool`
+### GetUrl
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject161) GetUrl() string`
 
-### GetVlanId
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-`func (o *InlineObject161) GetVlanId() int32`
+### GetUrlOk
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+`func (o *InlineObject161) GetUrlOk() (*string, bool)`
 
-### GetVlanIdOk
-
-`func (o *InlineObject161) GetVlanIdOk() (*int32, bool)`
-
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetUrl
 
-`func (o *InlineObject161) SetVlanId(v int32)`
+`func (o *InlineObject161) SetUrl(v string)`
 
-SetVlanId sets VlanId field to given value.
+SetUrl sets Url field to given value.
 
-### HasVlanId
 
-`func (o *InlineObject161) HasVlanId() bool`
+### GetSharedSecret
 
-HasVlanId returns a boolean if a field has been set.
+`func (o *InlineObject161) GetSharedSecret() string`
 
-### GetProtocols
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-`func (o *InlineObject161) GetProtocols() []string`
+### GetSharedSecretOk
 
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+`func (o *InlineObject161) GetSharedSecretOk() (*string, bool)`
 
-### GetProtocolsOk
-
-`func (o *InlineObject161) GetProtocolsOk() (*[]string, bool)`
-
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocols
+### SetSharedSecret
 
-`func (o *InlineObject161) SetProtocols(v []string)`
+`func (o *InlineObject161) SetSharedSecret(v string)`
 
-SetProtocols sets Protocols field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasProtocols
+### HasSharedSecret
 
-`func (o *InlineObject161) HasProtocols() bool`
+`func (o *InlineObject161) HasSharedSecret() bool`
 
-HasProtocols returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
 
-### GetAccessPoints
+### GetPayloadTemplate
 
-`func (o *InlineObject161) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
+`func (o *InlineObject161) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate1`
 
-GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
 
-### GetAccessPointsOk
+### GetPayloadTemplateOk
 
-`func (o *InlineObject161) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
+`func (o *InlineObject161) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate1, bool)`
 
-GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccessPoints
+### SetPayloadTemplate
 
-`func (o *InlineObject161) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
+`func (o *InlineObject161) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate1)`
 
-SetAccessPoints sets AccessPoints field to given value.
+SetPayloadTemplate sets PayloadTemplate field to given value.
 
-### HasAccessPoints
+### HasPayloadTemplate
 
-`func (o *InlineObject161) HasAccessPoints() bool`
+`func (o *InlineObject161) HasPayloadTemplate() bool`
 
-HasAccessPoints returns a boolean if a field has been set.
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

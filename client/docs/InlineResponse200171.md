@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
-**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
+**ResultingNetwork** | Pointer to [**InlineResponse200171ResultingNetwork**](InlineResponse200171ResultingNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200171WithDefaults instantiates a new InlineResponse200171 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetResultingNetwork
 
-`func (o *InlineResponse200171) GetTs() time.Time`
+`func (o *InlineResponse200171) GetResultingNetwork() InlineResponse200171ResultingNetwork`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetResultingNetworkOk
 
-`func (o *InlineResponse200171) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200171) GetResultingNetworkOk() (*InlineResponse200171ResultingNetwork, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetResultingNetwork
 
-`func (o *InlineResponse200171) SetTs(v time.Time)`
+`func (o *InlineResponse200171) SetResultingNetwork(v InlineResponse200171ResultingNetwork)`
 
-SetTs sets Ts field to given value.
+SetResultingNetwork sets ResultingNetwork field to given value.
 
-### HasTs
+### HasResultingNetwork
 
-`func (o *InlineResponse200171) HasTs() bool`
+`func (o *InlineResponse200171) HasResultingNetwork() bool`
 
-HasTs returns a boolean if a field has been set.
-
-### GetDraw
-
-`func (o *InlineResponse200171) GetDraw() float32`
-
-GetDraw returns the Draw field if non-nil, zero value otherwise.
-
-### GetDrawOk
-
-`func (o *InlineResponse200171) GetDrawOk() (*float32, bool)`
-
-GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDraw
-
-`func (o *InlineResponse200171) SetDraw(v float32)`
-
-SetDraw sets Draw field to given value.
-
-### HasDraw
-
-`func (o *InlineResponse200171) HasDraw() bool`
-
-HasDraw returns a boolean if a field has been set.
+HasResultingNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

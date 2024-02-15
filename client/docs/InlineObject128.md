@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | Array of switch or stack ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
-**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**Alerts** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyAlerts**](NetworksNetworkIdSwitchDhcpServerPolicyAlerts.md) |  | [optional] 
+**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
+**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set to block. An empty array will clear the entries. | [optional] 
+**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set to allow. An empty array will clear the entries. | [optional] 
+**ArpInspection** | Pointer to [**InlineResponse20086ArpInspection**](InlineResponse20086ArpInspection.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineObject128WithDefaults instantiates a new InlineObject128 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchPorts
+### GetAlerts
 
-`func (o *InlineObject128) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
+`func (o *InlineObject128) GetAlerts() NetworksNetworkIdSwitchDhcpServerPolicyAlerts`
 
-GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
 
-### GetSwitchPortsOk
+### GetAlertsOk
 
-`func (o *InlineObject128) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
+`func (o *InlineObject128) GetAlertsOk() (*NetworksNetworkIdSwitchDhcpServerPolicyAlerts, bool)`
 
-GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchPorts
+### SetAlerts
 
-`func (o *InlineObject128) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
+`func (o *InlineObject128) SetAlerts(v NetworksNetworkIdSwitchDhcpServerPolicyAlerts)`
 
-SetSwitchPorts sets SwitchPorts field to given value.
+SetAlerts sets Alerts field to given value.
 
-### HasSwitchPorts
+### HasAlerts
 
-`func (o *InlineObject128) HasSwitchPorts() bool`
+`func (o *InlineObject128) HasAlerts() bool`
 
-HasSwitchPorts returns a boolean if a field has been set.
+HasAlerts returns a boolean if a field has been set.
 
-### GetSwitchProfilePorts
+### GetDefaultPolicy
 
-`func (o *InlineObject128) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
+`func (o *InlineObject128) GetDefaultPolicy() string`
 
-GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetSwitchProfilePortsOk
+### GetDefaultPolicyOk
 
-`func (o *InlineObject128) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
+`func (o *InlineObject128) GetDefaultPolicyOk() (*string, bool)`
 
-GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfilePorts
+### SetDefaultPolicy
 
-`func (o *InlineObject128) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
+`func (o *InlineObject128) SetDefaultPolicy(v string)`
 
-SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasSwitchProfilePorts
+### HasDefaultPolicy
 
-`func (o *InlineObject128) HasSwitchProfilePorts() bool`
+`func (o *InlineObject128) HasDefaultPolicy() bool`
 
-HasSwitchProfilePorts returns a boolean if a field has been set.
+HasDefaultPolicy returns a boolean if a field has been set.
+
+### GetAllowedServers
+
+`func (o *InlineObject128) GetAllowedServers() []string`
+
+GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+
+### GetAllowedServersOk
+
+`func (o *InlineObject128) GetAllowedServersOk() (*[]string, bool)`
+
+GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedServers
+
+`func (o *InlineObject128) SetAllowedServers(v []string)`
+
+SetAllowedServers sets AllowedServers field to given value.
+
+### HasAllowedServers
+
+`func (o *InlineObject128) HasAllowedServers() bool`
+
+HasAllowedServers returns a boolean if a field has been set.
+
+### GetBlockedServers
+
+`func (o *InlineObject128) GetBlockedServers() []string`
+
+GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
+
+### GetBlockedServersOk
+
+`func (o *InlineObject128) GetBlockedServersOk() (*[]string, bool)`
+
+GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBlockedServers
+
+`func (o *InlineObject128) SetBlockedServers(v []string)`
+
+SetBlockedServers sets BlockedServers field to given value.
+
+### HasBlockedServers
+
+`func (o *InlineObject128) HasBlockedServers() bool`
+
+HasBlockedServers returns a boolean if a field has been set.
+
+### GetArpInspection
+
+`func (o *InlineObject128) GetArpInspection() InlineResponse20086ArpInspection`
+
+GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
+
+### GetArpInspectionOk
+
+`func (o *InlineObject128) GetArpInspectionOk() (*InlineResponse20086ArpInspection, bool)`
+
+GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetArpInspection
+
+`func (o *InlineObject128) SetArpInspection(v InlineResponse20086ArpInspection)`
+
+SetArpInspection sets ArpInspection field to given value.
+
+### HasArpInspection
+
+`func (o *InlineObject128) HasArpInspection() bool`
+
+HasArpInspection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

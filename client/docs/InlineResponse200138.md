@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
-**Name** | Pointer to **string** | Switch template name | [optional] 
-**Model** | Pointer to **string** | Switch model | [optional] 
+**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
+**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
+**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200138WithDefaults instantiates a new InlineResponse200138 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchProfileId
+### GetNetworkId
 
-`func (o *InlineResponse200138) GetSwitchProfileId() string`
+`func (o *InlineResponse200138) GetNetworkId() string`
 
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetSwitchProfileIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200138) GetSwitchProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200138) GetNetworkIdOk() (*string, bool)`
 
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfileId
+### SetNetworkId
 
-`func (o *InlineResponse200138) SetSwitchProfileId(v string)`
+`func (o *InlineResponse200138) SetNetworkId(v string)`
 
-SetSwitchProfileId sets SwitchProfileId field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasSwitchProfileId
+### HasNetworkId
 
-`func (o *InlineResponse200138) HasSwitchProfileId() bool`
+`func (o *InlineResponse200138) HasNetworkId() bool`
 
-HasSwitchProfileId returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetName
+### GetSerial
 
-`func (o *InlineResponse200138) GetName() string`
+`func (o *InlineResponse200138) GetSerial() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialOk
 
-`func (o *InlineResponse200138) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200138) GetSerialOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerial
 
-`func (o *InlineResponse200138) SetName(v string)`
+`func (o *InlineResponse200138) SetSerial(v string)`
 
-SetName sets Name field to given value.
+SetSerial sets Serial field to given value.
 
-### HasName
+### HasSerial
 
-`func (o *InlineResponse200138) HasName() bool`
+`func (o *InlineResponse200138) HasSerial() bool`
 
-HasName returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetModel
+### GetBoundaries
 
-`func (o *InlineResponse200138) GetModel() string`
+`func (o *InlineResponse200138) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetBoundariesOk
 
-`func (o *InlineResponse200138) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200138) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetBoundaries
 
-`func (o *InlineResponse200138) SetModel(v string)`
+`func (o *InlineResponse200138) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries)`
 
-SetModel sets Model field to given value.
+SetBoundaries sets Boundaries field to given value.
 
-### HasModel
+### HasBoundaries
 
-`func (o *InlineResponse200138) HasModel() bool`
+`func (o *InlineResponse200138) HasBoundaries() bool`
 
-HasModel returns a boolean if a field has been set.
+HasBoundaries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

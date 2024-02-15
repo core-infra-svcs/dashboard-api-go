@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InterfaceIp** | **string** | The IP address of the interface where the RP needs to be created. | 
-**MulticastGroup** | **string** | &#39;Any&#39;, or the IP address of a multicast group | 
+**Name** | Pointer to **string** | The name for your port schedule. | [optional] 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule1**](NetworksNetworkIdSwitchPortSchedulesPortSchedule1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject136
 
-`func NewInlineObject136(interfaceIp string, multicastGroup string, ) *InlineObject136`
+`func NewInlineObject136() *InlineObject136`
 
 NewInlineObject136 instantiates a new InlineObject136 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,55 @@ NewInlineObject136WithDefaults instantiates a new InlineObject136 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaceIp
+### GetName
 
-`func (o *InlineObject136) GetInterfaceIp() string`
+`func (o *InlineObject136) GetName() string`
 
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetInterfaceIpOk
+### GetNameOk
 
-`func (o *InlineObject136) GetInterfaceIpOk() (*string, bool)`
+`func (o *InlineObject136) GetNameOk() (*string, bool)`
 
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceIp
+### SetName
 
-`func (o *InlineObject136) SetInterfaceIp(v string)`
+`func (o *InlineObject136) SetName(v string)`
 
-SetInterfaceIp sets InterfaceIp field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetMulticastGroup
+`func (o *InlineObject136) HasName() bool`
 
-`func (o *InlineObject136) GetMulticastGroup() string`
+HasName returns a boolean if a field has been set.
 
-GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
+### GetPortSchedule
 
-### GetMulticastGroupOk
+`func (o *InlineObject136) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule1`
 
-`func (o *InlineObject136) GetMulticastGroupOk() (*string, bool)`
+GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
 
-GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
+### GetPortScheduleOk
+
+`func (o *InlineObject136) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule1, bool)`
+
+GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastGroup
+### SetPortSchedule
 
-`func (o *InlineObject136) SetMulticastGroup(v string)`
+`func (o *InlineObject136) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule1)`
 
-SetMulticastGroup sets MulticastGroup field to given value.
+SetPortSchedule sets PortSchedule field to given value.
 
+### HasPortSchedule
+
+`func (o *InlineObject136) HasPortSchedule() bool`
+
+HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

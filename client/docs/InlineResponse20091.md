@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Switch stacks id | [optional] 
-**Name** | Pointer to **string** | Switch stacks name | [optional] 
-**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
+**Id** | Pointer to **string** | Switch port schedule ID | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Switch port schedule name | [optional] 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule**](NetworksNetworkIdSwitchPortSchedulesPortSchedule.md) |  | [optional] 
 
 ## Methods
 
@@ -52,6 +53,31 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
+### GetNetworkId
+
+`func (o *InlineResponse20091) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse20091) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse20091) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse20091) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
 ### GetName
 
 `func (o *InlineResponse20091) GetName() string`
@@ -77,30 +103,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSerials
+### GetPortSchedule
 
-`func (o *InlineResponse20091) GetSerials() []string`
+`func (o *InlineResponse20091) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetPortScheduleOk
 
-`func (o *InlineResponse20091) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse20091) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetPortSchedule
 
-`func (o *InlineResponse20091) SetSerials(v []string)`
+`func (o *InlineResponse20091) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule)`
 
-SetSerials sets Serials field to given value.
+SetPortSchedule sets PortSchedule field to given value.
 
-### HasSerials
+### HasPortSchedule
 
-`func (o *InlineResponse20091) HasSerials() bool`
+`func (o *InlineResponse20091) HasPortSchedule() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

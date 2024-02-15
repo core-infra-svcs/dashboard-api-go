@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
-**Request** | Pointer to [**InlineResponse2011Request**](InlineResponse2011Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the ping request. | [optional] 
-**Results** | Pointer to [**InlineResponse2006Results**](InlineResponse2006Results.md) |  | [optional] 
-**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
+**CableTestId** | Pointer to **string** | Id of the cable test request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your cable test request. | [optional] 
+**Request** | Pointer to [**InlineResponse2012Request**](InlineResponse2012Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the cable test request. | [optional] 
+**Results** | Pointer to [**[]InlineResponse2007Results**](InlineResponse2007Results.md) | Results of the cable test request, one for each requested port. | [optional] 
+**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -30,30 +30,30 @@ NewInlineResponse2007WithDefaults instantiates a new InlineResponse2007 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPingId
+### GetCableTestId
 
-`func (o *InlineResponse2007) GetPingId() string`
+`func (o *InlineResponse2007) GetCableTestId() string`
 
-GetPingId returns the PingId field if non-nil, zero value otherwise.
+GetCableTestId returns the CableTestId field if non-nil, zero value otherwise.
 
-### GetPingIdOk
+### GetCableTestIdOk
 
-`func (o *InlineResponse2007) GetPingIdOk() (*string, bool)`
+`func (o *InlineResponse2007) GetCableTestIdOk() (*string, bool)`
 
-GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
+GetCableTestIdOk returns a tuple with the CableTestId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPingId
+### SetCableTestId
 
-`func (o *InlineResponse2007) SetPingId(v string)`
+`func (o *InlineResponse2007) SetCableTestId(v string)`
 
-SetPingId sets PingId field to given value.
+SetCableTestId sets CableTestId field to given value.
 
-### HasPingId
+### HasCableTestId
 
-`func (o *InlineResponse2007) HasPingId() bool`
+`func (o *InlineResponse2007) HasCableTestId() bool`
 
-HasPingId returns a boolean if a field has been set.
+HasCableTestId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -82,20 +82,20 @@ HasUrl returns a boolean if a field has been set.
 
 ### GetRequest
 
-`func (o *InlineResponse2007) GetRequest() InlineResponse2011Request`
+`func (o *InlineResponse2007) GetRequest() InlineResponse2012Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse2007) GetRequestOk() (*InlineResponse2011Request, bool)`
+`func (o *InlineResponse2007) GetRequestOk() (*InlineResponse2012Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse2007) SetRequest(v InlineResponse2011Request)`
+`func (o *InlineResponse2007) SetRequest(v InlineResponse2012Request)`
 
 SetRequest sets Request field to given value.
 
@@ -132,20 +132,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetResults
 
-`func (o *InlineResponse2007) GetResults() InlineResponse2006Results`
+`func (o *InlineResponse2007) GetResults() []InlineResponse2007Results`
 
 GetResults returns the Results field if non-nil, zero value otherwise.
 
 ### GetResultsOk
 
-`func (o *InlineResponse2007) GetResultsOk() (*InlineResponse2006Results, bool)`
+`func (o *InlineResponse2007) GetResultsOk() (*[]InlineResponse2007Results, bool)`
 
 GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetResults
 
-`func (o *InlineResponse2007) SetResults(v InlineResponse2006Results)`
+`func (o *InlineResponse2007) SetResults(v []InlineResponse2007Results)`
 
 SetResults sets Results field to given value.
 
@@ -155,30 +155,30 @@ SetResults sets Results field to given value.
 
 HasResults returns a boolean if a field has been set.
 
-### GetCallback
+### GetError
 
-`func (o *InlineResponse2007) GetCallback() InlineResponse2011Callback`
+`func (o *InlineResponse2007) GetError() string`
 
-GetCallback returns the Callback field if non-nil, zero value otherwise.
+GetError returns the Error field if non-nil, zero value otherwise.
 
-### GetCallbackOk
+### GetErrorOk
 
-`func (o *InlineResponse2007) GetCallbackOk() (*InlineResponse2011Callback, bool)`
+`func (o *InlineResponse2007) GetErrorOk() (*string, bool)`
 
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallback
+### SetError
 
-`func (o *InlineResponse2007) SetCallback(v InlineResponse2011Callback)`
+`func (o *InlineResponse2007) SetError(v string)`
 
-SetCallback sets Callback field to given value.
+SetError sets Error field to given value.
 
-### HasCallback
+### HasError
 
-`func (o *InlineResponse2007) HasCallback() bool`
+`func (o *InlineResponse2007) HasError() bool`
 
-HasCallback returns a boolean if a field has been set.
+HasError returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
-**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
-**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
-**Iname** | **string** | IName of the profile | 
+**BroadcastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for broadcast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for multicast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for unknown unicast (dlf-destination lookup failure) traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
 
 ## Methods
 
 ### NewInlineObject153
 
-`func NewInlineObject153(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, iname string, ) *InlineObject153`
+`func NewInlineObject153() *InlineObject153`
 
 NewInlineObject153 instantiates a new InlineObject153 object
 This constructor will assign default values to properties that have it defined,
@@ -28,85 +27,80 @@ NewInlineObject153WithDefaults instantiates a new InlineObject153 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetBroadcastThreshold
 
-`func (o *InlineObject153) GetName() string`
+`func (o *InlineObject153) GetBroadcastThreshold() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineObject153) GetNameOk() (*string, bool)`
+`func (o *InlineObject153) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBroadcastThreshold
 
-`func (o *InlineObject153) SetName(v string)`
+`func (o *InlineObject153) SetBroadcastThreshold(v int32)`
 
-SetName sets Name field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
+### HasBroadcastThreshold
 
-### GetVlanNames
+`func (o *InlineObject153) HasBroadcastThreshold() bool`
 
-`func (o *InlineObject153) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
+### GetMulticastThreshold
 
-### GetVlanNamesOk
+`func (o *InlineObject153) GetMulticastThreshold() int32`
 
-`func (o *InlineObject153) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
+### GetMulticastThresholdOk
+
+`func (o *InlineObject153) GetMulticastThresholdOk() (*int32, bool)`
+
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanNames
+### SetMulticastThreshold
 
-`func (o *InlineObject153) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
+`func (o *InlineObject153) SetMulticastThreshold(v int32)`
 
-SetVlanNames sets VlanNames field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
+### HasMulticastThreshold
 
-### GetVlanGroups
+`func (o *InlineObject153) HasMulticastThreshold() bool`
 
-`func (o *InlineObject153) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
+HasMulticastThreshold returns a boolean if a field has been set.
 
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
+### GetUnknownUnicastThreshold
 
-### GetVlanGroupsOk
+`func (o *InlineObject153) GetUnknownUnicastThreshold() int32`
 
-`func (o *InlineObject153) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
 
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
+### GetUnknownUnicastThresholdOk
+
+`func (o *InlineObject153) GetUnknownUnicastThresholdOk() (*int32, bool)`
+
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanGroups
+### SetUnknownUnicastThreshold
 
-`func (o *InlineObject153) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
+`func (o *InlineObject153) SetUnknownUnicastThreshold(v int32)`
 
-SetVlanGroups sets VlanGroups field to given value.
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
 
+### HasUnknownUnicastThreshold
 
-### GetIname
+`func (o *InlineObject153) HasUnknownUnicastThreshold() bool`
 
-`func (o *InlineObject153) GetIname() string`
-
-GetIname returns the Iname field if non-nil, zero value otherwise.
-
-### GetInameOk
-
-`func (o *InlineObject153) GetInameOk() (*string, bool)`
-
-GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIname
-
-`func (o *InlineObject153) SetIname(v string)`
-
-SetIname sets Iname field to given value.
-
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

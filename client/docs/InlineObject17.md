@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Count** | Pointer to **int32** | Count parameter to pass to ping. [1..5], default 5 | [optional] 
-**Callback** | Pointer to [**DevicesSerialLiveToolsPingCallback**](DevicesSerialLiveToolsPingCallback.md) |  | [optional] 
+**Ports** | **[]string** | A list of ports for which to perform the cable test. | 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject17
 
-`func NewInlineObject17() *InlineObject17`
+`func NewInlineObject17(ports []string, ) *InlineObject17`
 
 NewInlineObject17 instantiates a new InlineObject17 object
 This constructor will assign default values to properties that have it defined,
@@ -26,47 +26,42 @@ NewInlineObject17WithDefaults instantiates a new InlineObject17 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCount
+### GetPorts
 
-`func (o *InlineObject17) GetCount() int32`
+`func (o *InlineObject17) GetPorts() []string`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetPortsOk
 
-`func (o *InlineObject17) GetCountOk() (*int32, bool)`
+`func (o *InlineObject17) GetPortsOk() (*[]string, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetPorts
 
-`func (o *InlineObject17) SetCount(v int32)`
+`func (o *InlineObject17) SetPorts(v []string)`
 
-SetCount sets Count field to given value.
+SetPorts sets Ports field to given value.
 
-### HasCount
-
-`func (o *InlineObject17) HasCount() bool`
-
-HasCount returns a boolean if a field has been set.
 
 ### GetCallback
 
-`func (o *InlineObject17) GetCallback() DevicesSerialLiveToolsPingCallback`
+`func (o *InlineObject17) GetCallback() DevicesSerialLiveToolsArpTableCallback`
 
 GetCallback returns the Callback field if non-nil, zero value otherwise.
 
 ### GetCallbackOk
 
-`func (o *InlineObject17) GetCallbackOk() (*DevicesSerialLiveToolsPingCallback, bool)`
+`func (o *InlineObject17) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
 
 GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCallback
 
-`func (o *InlineObject17) SetCallback(v DevicesSerialLiveToolsPingCallback)`
+`func (o *InlineObject17) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
 
 SetCallback sets Callback field to given value.
 

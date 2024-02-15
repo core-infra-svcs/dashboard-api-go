@@ -4,16 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | **string** | ID of the network whose VPN exclusion rules are returned. | 
-**NetworkName** | **string** | Name of the network whose VPN exclusion rules are returned. | 
-**Custom** | [**[]InlineResponse20030Custom**](InlineResponse20030Custom.md) | Custom VPN exclusion rules. | 
-**MajorApplications** | [**[]InlineResponse20030MajorApplications**](InlineResponse20030MajorApplications.md) | Major Application based VPN exclusion rules. | 
+**Number** | Pointer to **int32** | The number of the SSID. | [optional] 
+**Name** | Pointer to **string** | The name of the SSID. | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not the SSID is enabled. | [optional] 
+**DefaultVlanId** | Pointer to **int32** | The VLAN ID of the VLAN associated to this SSID. | [optional] 
+**AuthMode** | Pointer to **string** | The association control method for the SSID. | [optional] 
+**RadiusServers** | Pointer to [**[]NetworksNetworkIdApplianceSsidsRadiusServers**](NetworksNetworkIdApplianceSsidsRadiusServers.md) | The RADIUS 802.1x servers to be used for authentication. | [optional] 
+**EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID. | [optional] 
+**WpaEncryptionMode** | Pointer to **string** | WPA encryption mode for the SSID. | [optional] 
+**Visible** | Pointer to **bool** | Boolean indicating whether the MX should advertise or hide this SSID. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20030
 
-`func NewInlineResponse20030(networkId string, networkName string, custom []InlineResponse20030Custom, majorApplications []InlineResponse20030MajorApplications, ) *InlineResponse20030`
+`func NewInlineResponse20030() *InlineResponse20030`
 
 NewInlineResponse20030 instantiates a new InlineResponse20030 object
 This constructor will assign default values to properties that have it defined,
@@ -28,85 +33,230 @@ NewInlineResponse20030WithDefaults instantiates a new InlineResponse20030 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetNumber
 
-`func (o *InlineResponse20030) GetNetworkId() string`
+`func (o *InlineResponse20030) GetNumber() int32`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetNumber returns the Number field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetNumberOk
 
-`func (o *InlineResponse20030) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20030) GetNumberOk() (*int32, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetNumber
 
-`func (o *InlineResponse20030) SetNetworkId(v string)`
+`func (o *InlineResponse20030) SetNumber(v int32)`
 
-SetNetworkId sets NetworkId field to given value.
+SetNumber sets Number field to given value.
 
+### HasNumber
 
-### GetNetworkName
+`func (o *InlineResponse20030) HasNumber() bool`
 
-`func (o *InlineResponse20030) GetNetworkName() string`
+HasNumber returns a boolean if a field has been set.
 
-GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
+### GetName
 
-### GetNetworkNameOk
+`func (o *InlineResponse20030) GetName() string`
 
-`func (o *InlineResponse20030) GetNetworkNameOk() (*string, bool)`
+GetName returns the Name field if non-nil, zero value otherwise.
 
-GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
+### GetNameOk
+
+`func (o *InlineResponse20030) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkName
+### SetName
 
-`func (o *InlineResponse20030) SetNetworkName(v string)`
+`func (o *InlineResponse20030) SetName(v string)`
 
-SetNetworkName sets NetworkName field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetCustom
+`func (o *InlineResponse20030) HasName() bool`
 
-`func (o *InlineResponse20030) GetCustom() []InlineResponse20030Custom`
+HasName returns a boolean if a field has been set.
 
-GetCustom returns the Custom field if non-nil, zero value otherwise.
+### GetEnabled
 
-### GetCustomOk
+`func (o *InlineResponse20030) GetEnabled() bool`
 
-`func (o *InlineResponse20030) GetCustomOk() (*[]InlineResponse20030Custom, bool)`
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
+### GetEnabledOk
+
+`func (o *InlineResponse20030) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustom
+### SetEnabled
 
-`func (o *InlineResponse20030) SetCustom(v []InlineResponse20030Custom)`
+`func (o *InlineResponse20030) SetEnabled(v bool)`
 
-SetCustom sets Custom field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetMajorApplications
+`func (o *InlineResponse20030) HasEnabled() bool`
 
-`func (o *InlineResponse20030) GetMajorApplications() []InlineResponse20030MajorApplications`
+HasEnabled returns a boolean if a field has been set.
 
-GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+### GetDefaultVlanId
 
-### GetMajorApplicationsOk
+`func (o *InlineResponse20030) GetDefaultVlanId() int32`
 
-`func (o *InlineResponse20030) GetMajorApplicationsOk() (*[]InlineResponse20030MajorApplications, bool)`
+GetDefaultVlanId returns the DefaultVlanId field if non-nil, zero value otherwise.
 
-GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+### GetDefaultVlanIdOk
+
+`func (o *InlineResponse20030) GetDefaultVlanIdOk() (*int32, bool)`
+
+GetDefaultVlanIdOk returns a tuple with the DefaultVlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorApplications
+### SetDefaultVlanId
 
-`func (o *InlineResponse20030) SetMajorApplications(v []InlineResponse20030MajorApplications)`
+`func (o *InlineResponse20030) SetDefaultVlanId(v int32)`
 
-SetMajorApplications sets MajorApplications field to given value.
+SetDefaultVlanId sets DefaultVlanId field to given value.
 
+### HasDefaultVlanId
+
+`func (o *InlineResponse20030) HasDefaultVlanId() bool`
+
+HasDefaultVlanId returns a boolean if a field has been set.
+
+### GetAuthMode
+
+`func (o *InlineResponse20030) GetAuthMode() string`
+
+GetAuthMode returns the AuthMode field if non-nil, zero value otherwise.
+
+### GetAuthModeOk
+
+`func (o *InlineResponse20030) GetAuthModeOk() (*string, bool)`
+
+GetAuthModeOk returns a tuple with the AuthMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthMode
+
+`func (o *InlineResponse20030) SetAuthMode(v string)`
+
+SetAuthMode sets AuthMode field to given value.
+
+### HasAuthMode
+
+`func (o *InlineResponse20030) HasAuthMode() bool`
+
+HasAuthMode returns a boolean if a field has been set.
+
+### GetRadiusServers
+
+`func (o *InlineResponse20030) GetRadiusServers() []NetworksNetworkIdApplianceSsidsRadiusServers`
+
+GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
+
+### GetRadiusServersOk
+
+`func (o *InlineResponse20030) GetRadiusServersOk() (*[]NetworksNetworkIdApplianceSsidsRadiusServers, bool)`
+
+GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusServers
+
+`func (o *InlineResponse20030) SetRadiusServers(v []NetworksNetworkIdApplianceSsidsRadiusServers)`
+
+SetRadiusServers sets RadiusServers field to given value.
+
+### HasRadiusServers
+
+`func (o *InlineResponse20030) HasRadiusServers() bool`
+
+HasRadiusServers returns a boolean if a field has been set.
+
+### GetEncryptionMode
+
+`func (o *InlineResponse20030) GetEncryptionMode() string`
+
+GetEncryptionMode returns the EncryptionMode field if non-nil, zero value otherwise.
+
+### GetEncryptionModeOk
+
+`func (o *InlineResponse20030) GetEncryptionModeOk() (*string, bool)`
+
+GetEncryptionModeOk returns a tuple with the EncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEncryptionMode
+
+`func (o *InlineResponse20030) SetEncryptionMode(v string)`
+
+SetEncryptionMode sets EncryptionMode field to given value.
+
+### HasEncryptionMode
+
+`func (o *InlineResponse20030) HasEncryptionMode() bool`
+
+HasEncryptionMode returns a boolean if a field has been set.
+
+### GetWpaEncryptionMode
+
+`func (o *InlineResponse20030) GetWpaEncryptionMode() string`
+
+GetWpaEncryptionMode returns the WpaEncryptionMode field if non-nil, zero value otherwise.
+
+### GetWpaEncryptionModeOk
+
+`func (o *InlineResponse20030) GetWpaEncryptionModeOk() (*string, bool)`
+
+GetWpaEncryptionModeOk returns a tuple with the WpaEncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWpaEncryptionMode
+
+`func (o *InlineResponse20030) SetWpaEncryptionMode(v string)`
+
+SetWpaEncryptionMode sets WpaEncryptionMode field to given value.
+
+### HasWpaEncryptionMode
+
+`func (o *InlineResponse20030) HasWpaEncryptionMode() bool`
+
+HasWpaEncryptionMode returns a boolean if a field has been set.
+
+### GetVisible
+
+`func (o *InlineResponse20030) GetVisible() bool`
+
+GetVisible returns the Visible field if non-nil, zero value otherwise.
+
+### GetVisibleOk
+
+`func (o *InlineResponse20030) GetVisibleOk() (*bool, bool)`
+
+GetVisibleOk returns a tuple with the Visible field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVisible
+
+`func (o *InlineResponse20030) SetVisible(v bool)`
+
+SetVisible sets Visible field to given value.
+
+### HasVisible
+
+`func (o *InlineResponse20030) HasVisible() bool`
+
+HasVisible returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

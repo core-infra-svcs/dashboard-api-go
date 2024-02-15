@@ -176,7 +176,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     service := "service_example" // string | Service
-    updateNetworkApplianceFirewallFirewalledService := *openapiclient.NewInlineObject36("Access_example") // InlineObject36 | 
+    updateNetworkApplianceFirewallFirewalledService := *openapiclient.NewInlineObject39("Access_example") // InlineObject39 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceFirewallFirewalledService** | [**InlineObject36**](InlineObject36.md) |  | 
+ **updateNetworkApplianceFirewallFirewalledService** | [**InlineObject39**](InlineObject39.md) |  | 
 
 ### Return type
 

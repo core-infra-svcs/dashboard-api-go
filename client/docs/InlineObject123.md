@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Alerts** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyAlerts**](NetworksNetworkIdSwitchDhcpServerPolicyAlerts.md) |  | [optional] 
-**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
-**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set to block. An empty array will clear the entries. | [optional] 
-**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set to allow. An empty array will clear the entries. | [optional] 
-**ArpInspection** | Pointer to [**InlineResponse20082ArpInspection**](InlineResponse20082ArpInspection.md) |  | [optional] 
+**Access** | Pointer to **string** | The type of SNMP access. Can be one of &#39;none&#39; (disabled), &#39;community&#39; (V1/V2c), or &#39;users&#39; (V3). | [optional] 
+**CommunityString** | Pointer to **string** | The SNMP community string. Only relevant if &#39;access&#39; is set to &#39;community&#39;. | [optional] 
+**Users** | Pointer to [**[]NetworksNetworkIdSnmpUsers**](NetworksNetworkIdSnmpUsers.md) | The list of SNMP users. Only relevant if &#39;access&#39; is set to &#39;users&#39;. | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineObject123WithDefaults instantiates a new InlineObject123 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlerts
+### GetAccess
 
-`func (o *InlineObject123) GetAlerts() NetworksNetworkIdSwitchDhcpServerPolicyAlerts`
+`func (o *InlineObject123) GetAccess() string`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetAccess returns the Access field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetAccessOk
 
-`func (o *InlineObject123) GetAlertsOk() (*NetworksNetworkIdSwitchDhcpServerPolicyAlerts, bool)`
+`func (o *InlineObject123) GetAccessOk() (*string, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetAccess
 
-`func (o *InlineObject123) SetAlerts(v NetworksNetworkIdSwitchDhcpServerPolicyAlerts)`
+`func (o *InlineObject123) SetAccess(v string)`
 
-SetAlerts sets Alerts field to given value.
+SetAccess sets Access field to given value.
 
-### HasAlerts
+### HasAccess
 
-`func (o *InlineObject123) HasAlerts() bool`
+`func (o *InlineObject123) HasAccess() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasAccess returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetCommunityString
 
-`func (o *InlineObject123) GetDefaultPolicy() string`
+`func (o *InlineObject123) GetCommunityString() string`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetCommunityString returns the CommunityString field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetCommunityStringOk
 
-`func (o *InlineObject123) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineObject123) GetCommunityStringOk() (*string, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetCommunityStringOk returns a tuple with the CommunityString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetCommunityString
 
-`func (o *InlineObject123) SetDefaultPolicy(v string)`
+`func (o *InlineObject123) SetCommunityString(v string)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetCommunityString sets CommunityString field to given value.
 
-### HasDefaultPolicy
+### HasCommunityString
 
-`func (o *InlineObject123) HasDefaultPolicy() bool`
+`func (o *InlineObject123) HasCommunityString() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasCommunityString returns a boolean if a field has been set.
 
-### GetAllowedServers
+### GetUsers
 
-`func (o *InlineObject123) GetAllowedServers() []string`
+`func (o *InlineObject123) GetUsers() []NetworksNetworkIdSnmpUsers`
 
-GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+GetUsers returns the Users field if non-nil, zero value otherwise.
 
-### GetAllowedServersOk
+### GetUsersOk
 
-`func (o *InlineObject123) GetAllowedServersOk() (*[]string, bool)`
+`func (o *InlineObject123) GetUsersOk() (*[]NetworksNetworkIdSnmpUsers, bool)`
 
-GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedServers
+### SetUsers
 
-`func (o *InlineObject123) SetAllowedServers(v []string)`
+`func (o *InlineObject123) SetUsers(v []NetworksNetworkIdSnmpUsers)`
 
-SetAllowedServers sets AllowedServers field to given value.
+SetUsers sets Users field to given value.
 
-### HasAllowedServers
+### HasUsers
 
-`func (o *InlineObject123) HasAllowedServers() bool`
+`func (o *InlineObject123) HasUsers() bool`
 
-HasAllowedServers returns a boolean if a field has been set.
-
-### GetBlockedServers
-
-`func (o *InlineObject123) GetBlockedServers() []string`
-
-GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
-
-### GetBlockedServersOk
-
-`func (o *InlineObject123) GetBlockedServersOk() (*[]string, bool)`
-
-GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBlockedServers
-
-`func (o *InlineObject123) SetBlockedServers(v []string)`
-
-SetBlockedServers sets BlockedServers field to given value.
-
-### HasBlockedServers
-
-`func (o *InlineObject123) HasBlockedServers() bool`
-
-HasBlockedServers returns a boolean if a field has been set.
-
-### GetArpInspection
-
-`func (o *InlineObject123) GetArpInspection() InlineResponse20082ArpInspection`
-
-GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
-
-### GetArpInspectionOk
-
-`func (o *InlineObject123) GetArpInspectionOk() (*InlineResponse20082ArpInspection, bool)`
-
-GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetArpInspection
-
-`func (o *InlineObject123) SetArpInspection(v InlineResponse20082ArpInspection)`
-
-SetArpInspection sets ArpInspection field to given value.
-
-### HasArpInspection
-
-`func (o *InlineObject123) HasArpInspection() bool`
-
-HasArpInspection returns a boolean if a field has been set.
+HasUsers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

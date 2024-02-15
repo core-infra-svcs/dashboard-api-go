@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the organization | [optional] 
-**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
-**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges**](NetworksNetworkIdWirelessSsidsNumberSchedulesRanges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds**](NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject185WithDefaults instantiates a new InlineObject185 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject185) GetName() string`
+`func (o *InlineObject185) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject185) GetNameOk() (*string, bool)`
+`func (o *InlineObject185) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject185) SetName(v string)`
+`func (o *InlineObject185) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
+### HasEnabled
 
-`func (o *InlineObject185) HasName() bool`
+`func (o *InlineObject185) HasEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetManagement
+### GetRanges
 
-`func (o *InlineObject185) GetManagement() OrganizationsManagement1`
+`func (o *InlineObject185) GetRanges() []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges`
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetManagementOk
+### GetRangesOk
 
-`func (o *InlineObject185) GetManagementOk() (*OrganizationsManagement1, bool)`
+`func (o *InlineObject185) GetRangesOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges, bool)`
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetRanges
 
-`func (o *InlineObject185) SetManagement(v OrganizationsManagement1)`
+`func (o *InlineObject185) SetRanges(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges)`
 
-SetManagement sets Management field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasManagement
+### HasRanges
 
-`func (o *InlineObject185) HasManagement() bool`
+`func (o *InlineObject185) HasRanges() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetApi
+### GetRangesInSeconds
 
-`func (o *InlineObject185) GetApi() OrganizationsOrganizationIdApi`
+`func (o *InlineObject185) GetRangesInSeconds() []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetRangesInSecondsOk
 
-`func (o *InlineObject185) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
+`func (o *InlineObject185) GetRangesInSecondsOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetRangesInSeconds
 
-`func (o *InlineObject185) SetApi(v OrganizationsOrganizationIdApi)`
+`func (o *InlineObject185) SetRangesInSeconds(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds)`
 
-SetApi sets Api field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasApi
+### HasRangesInSeconds
 
-`func (o *InlineObject185) HasApi() bool`
+`func (o *InlineObject185) HasRangesInSeconds() bool`
 
-HasApi returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

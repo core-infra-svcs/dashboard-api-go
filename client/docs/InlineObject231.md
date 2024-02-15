@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the combined network | 
-**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
-**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
+**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
+**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
 
 ## Methods
 
 ### NewInlineObject231
 
-`func NewInlineObject231(name string, networkIds []string, ) *InlineObject231`
+`func NewInlineObject231(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject231`
 
 NewInlineObject231 instantiates a new InlineObject231 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,45 @@ NewInlineObject231WithDefaults instantiates a new InlineObject231 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetLicenseIdToRenew
 
-`func (o *InlineObject231) GetName() string`
+`func (o *InlineObject231) GetLicenseIdToRenew() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLicenseIdToRenewOk
 
-`func (o *InlineObject231) GetNameOk() (*string, bool)`
+`func (o *InlineObject231) GetLicenseIdToRenewOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLicenseIdToRenew
 
-`func (o *InlineObject231) SetName(v string)`
+`func (o *InlineObject231) SetLicenseIdToRenew(v string)`
 
-SetName sets Name field to given value.
+SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
 
 
-### GetNetworkIds
+### GetUnusedLicenseId
 
-`func (o *InlineObject231) GetNetworkIds() []string`
+`func (o *InlineObject231) GetUnusedLicenseId() string`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetUnusedLicenseIdOk
 
-`func (o *InlineObject231) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject231) GetUnusedLicenseIdOk() (*string, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetUnusedLicenseId
 
-`func (o *InlineObject231) SetNetworkIds(v []string)`
+`func (o *InlineObject231) SetUnusedLicenseId(v string)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetUnusedLicenseId sets UnusedLicenseId field to given value.
 
-
-### GetEnrollmentString
-
-`func (o *InlineObject231) GetEnrollmentString() string`
-
-GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
-
-### GetEnrollmentStringOk
-
-`func (o *InlineObject231) GetEnrollmentStringOk() (*string, bool)`
-
-GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnrollmentString
-
-`func (o *InlineObject231) SetEnrollmentString(v string)`
-
-SetEnrollmentString sets EnrollmentString field to given value.
-
-### HasEnrollmentString
-
-`func (o *InlineObject231) HasEnrollmentString() bool`
-
-HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

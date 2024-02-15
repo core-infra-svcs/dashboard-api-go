@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
-**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
+**MeshingEnabled** | Pointer to **bool** | Toggle for enabling or disabling meshing in a network | [optional] 
+**Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
+**LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
+**UpgradeStrategy** | Pointer to **string** | The upgrade strategy to apply to the network. Must be one of &#39;minimizeUpgradeTime&#39; or &#39;minimizeClientDowntime&#39;. Requires firmware version MR 26.8 or higher&#39; | [optional] 
+**LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
+**NamedVlans** | Pointer to [**InlineResponse200115NamedVlans**](InlineResponse200115NamedVlans.md) |  | [optional] 
+**RegulatoryDomain** | Pointer to [**InlineResponse200115RegulatoryDomain**](InlineResponse200115RegulatoryDomain.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +31,180 @@ NewInlineResponse200115WithDefaults instantiates a new InlineResponse200115 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetMeshingEnabled
 
-`func (o *InlineResponse200115) GetName() string`
+`func (o *InlineResponse200115) GetMeshingEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMeshingEnabled returns the MeshingEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMeshingEnabledOk
 
-`func (o *InlineResponse200115) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200115) GetMeshingEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMeshingEnabledOk returns a tuple with the MeshingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMeshingEnabled
 
-`func (o *InlineResponse200115) SetName(v string)`
+`func (o *InlineResponse200115) SetMeshingEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetMeshingEnabled sets MeshingEnabled field to given value.
 
-### HasName
+### HasMeshingEnabled
 
-`func (o *InlineResponse200115) HasName() bool`
+`func (o *InlineResponse200115) HasMeshingEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasMeshingEnabled returns a boolean if a field has been set.
 
-### GetId
+### GetIpv6BridgeEnabled
 
-`func (o *InlineResponse200115) GetId() string`
+`func (o *InlineResponse200115) GetIpv6BridgeEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetIpv6BridgeEnabled returns the Ipv6BridgeEnabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetIpv6BridgeEnabledOk
 
-`func (o *InlineResponse200115) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200115) GetIpv6BridgeEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetIpv6BridgeEnabledOk returns a tuple with the Ipv6BridgeEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetIpv6BridgeEnabled
 
-`func (o *InlineResponse200115) SetId(v string)`
+`func (o *InlineResponse200115) SetIpv6BridgeEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetIpv6BridgeEnabled sets Ipv6BridgeEnabled field to given value.
 
-### HasId
+### HasIpv6BridgeEnabled
 
-`func (o *InlineResponse200115) HasId() bool`
+`func (o *InlineResponse200115) HasIpv6BridgeEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasIpv6BridgeEnabled returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetLocationAnalyticsEnabled
 
-`func (o *InlineResponse200115) GetGroupPolicyId() string`
+`func (o *InlineResponse200115) GetLocationAnalyticsEnabled() bool`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetLocationAnalyticsEnabled returns the LocationAnalyticsEnabled field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetLocationAnalyticsEnabledOk
 
-`func (o *InlineResponse200115) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200115) GetLocationAnalyticsEnabledOk() (*bool, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetLocationAnalyticsEnabledOk returns a tuple with the LocationAnalyticsEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetLocationAnalyticsEnabled
 
-`func (o *InlineResponse200115) SetGroupPolicyId(v string)`
+`func (o *InlineResponse200115) SetLocationAnalyticsEnabled(v bool)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetLocationAnalyticsEnabled sets LocationAnalyticsEnabled field to given value.
 
-### HasGroupPolicyId
+### HasLocationAnalyticsEnabled
 
-`func (o *InlineResponse200115) HasGroupPolicyId() bool`
+`func (o *InlineResponse200115) HasLocationAnalyticsEnabled() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasLocationAnalyticsEnabled returns a boolean if a field has been set.
 
-### GetPassphrase
+### GetUpgradeStrategy
 
-`func (o *InlineResponse200115) GetPassphrase() string`
+`func (o *InlineResponse200115) GetUpgradeStrategy() string`
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+GetUpgradeStrategy returns the UpgradeStrategy field if non-nil, zero value otherwise.
 
-### GetPassphraseOk
+### GetUpgradeStrategyOk
 
-`func (o *InlineResponse200115) GetPassphraseOk() (*string, bool)`
+`func (o *InlineResponse200115) GetUpgradeStrategyOk() (*string, bool)`
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+GetUpgradeStrategyOk returns a tuple with the UpgradeStrategy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetUpgradeStrategy
 
-`func (o *InlineResponse200115) SetPassphrase(v string)`
+`func (o *InlineResponse200115) SetUpgradeStrategy(v string)`
 
-SetPassphrase sets Passphrase field to given value.
+SetUpgradeStrategy sets UpgradeStrategy field to given value.
 
-### HasPassphrase
+### HasUpgradeStrategy
 
-`func (o *InlineResponse200115) HasPassphrase() bool`
+`func (o *InlineResponse200115) HasUpgradeStrategy() bool`
 
-HasPassphrase returns a boolean if a field has been set.
+HasUpgradeStrategy returns a boolean if a field has been set.
 
-### GetWifiPersonalNetworkId
+### GetLedLightsOn
 
-`func (o *InlineResponse200115) GetWifiPersonalNetworkId() string`
+`func (o *InlineResponse200115) GetLedLightsOn() bool`
 
-GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
+GetLedLightsOn returns the LedLightsOn field if non-nil, zero value otherwise.
 
-### GetWifiPersonalNetworkIdOk
+### GetLedLightsOnOk
 
-`func (o *InlineResponse200115) GetWifiPersonalNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200115) GetLedLightsOnOk() (*bool, bool)`
 
-GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
+GetLedLightsOnOk returns a tuple with the LedLightsOn field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiPersonalNetworkId
+### SetLedLightsOn
 
-`func (o *InlineResponse200115) SetWifiPersonalNetworkId(v string)`
+`func (o *InlineResponse200115) SetLedLightsOn(v bool)`
 
-SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
+SetLedLightsOn sets LedLightsOn field to given value.
 
-### HasWifiPersonalNetworkId
+### HasLedLightsOn
 
-`func (o *InlineResponse200115) HasWifiPersonalNetworkId() bool`
+`func (o *InlineResponse200115) HasLedLightsOn() bool`
 
-HasWifiPersonalNetworkId returns a boolean if a field has been set.
+HasLedLightsOn returns a boolean if a field has been set.
 
-### GetEmail
+### GetNamedVlans
 
-`func (o *InlineResponse200115) GetEmail() string`
+`func (o *InlineResponse200115) GetNamedVlans() InlineResponse200115NamedVlans`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetNamedVlansOk
 
-`func (o *InlineResponse200115) GetEmailOk() (*string, bool)`
+`func (o *InlineResponse200115) GetNamedVlansOk() (*InlineResponse200115NamedVlans, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetNamedVlans
 
-`func (o *InlineResponse200115) SetEmail(v string)`
+`func (o *InlineResponse200115) SetNamedVlans(v InlineResponse200115NamedVlans)`
 
-SetEmail sets Email field to given value.
+SetNamedVlans sets NamedVlans field to given value.
 
-### HasEmail
+### HasNamedVlans
 
-`func (o *InlineResponse200115) HasEmail() bool`
+`func (o *InlineResponse200115) HasNamedVlans() bool`
 
-HasEmail returns a boolean if a field has been set.
+HasNamedVlans returns a boolean if a field has been set.
 
-### GetExpiresAt
+### GetRegulatoryDomain
 
-`func (o *InlineResponse200115) GetExpiresAt() time.Time`
+`func (o *InlineResponse200115) GetRegulatoryDomain() InlineResponse200115RegulatoryDomain`
 
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+GetRegulatoryDomain returns the RegulatoryDomain field if non-nil, zero value otherwise.
 
-### GetExpiresAtOk
+### GetRegulatoryDomainOk
 
-`func (o *InlineResponse200115) GetExpiresAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200115) GetRegulatoryDomainOk() (*InlineResponse200115RegulatoryDomain, bool)`
 
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+GetRegulatoryDomainOk returns a tuple with the RegulatoryDomain field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExpiresAt
+### SetRegulatoryDomain
 
-`func (o *InlineResponse200115) SetExpiresAt(v time.Time)`
+`func (o *InlineResponse200115) SetRegulatoryDomain(v InlineResponse200115RegulatoryDomain)`
 
-SetExpiresAt sets ExpiresAt field to given value.
+SetRegulatoryDomain sets RegulatoryDomain field to given value.
 
-### HasExpiresAt
+### HasRegulatoryDomain
 
-`func (o *InlineResponse200115) HasExpiresAt() bool`
+`func (o *InlineResponse200115) HasRegulatoryDomain() bool`
 
-HasExpiresAt returns a boolean if a field has been set.
+HasRegulatoryDomain returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

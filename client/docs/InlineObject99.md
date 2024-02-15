@@ -4,17 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the MQTT broker. | 
-**Host** | **string** | Host name/IP address where the MQTT broker runs. | 
-**Port** | **int32** | Host port though which the MQTT broker can be reached. | 
-**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
-**Authentication** | Pointer to **map[string]interface{}** | Authentication settings of the MQTT broker | [optional] 
+**Name** | Pointer to **string** | The name for your group policy. | [optional] 
+**Scheduling** | Pointer to [**NetworksNetworkIdGroupPoliciesScheduling**](NetworksNetworkIdGroupPoliciesScheduling.md) |  | [optional] 
+**Bandwidth** | Pointer to [**NetworksNetworkIdGroupPoliciesBandwidth**](NetworksNetworkIdGroupPoliciesBandwidth.md) |  | [optional] 
+**FirewallAndTrafficShaping** | Pointer to [**NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping**](NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping.md) |  | [optional] 
+**ContentFiltering** | Pointer to [**NetworksNetworkIdGroupPoliciesContentFiltering**](NetworksNetworkIdGroupPoliciesContentFiltering.md) |  | [optional] 
+**SplashAuthSettings** | Pointer to **string** | Whether clients bound to your policy will bypass splash authorization or behave according to the network&#39;s rules. Can be one of &#39;network default&#39; or &#39;bypass&#39;. Only available if your network has a wireless configuration. | [optional] 
+**VlanTagging** | Pointer to [**NetworksNetworkIdGroupPoliciesVlanTagging**](NetworksNetworkIdGroupPoliciesVlanTagging.md) |  | [optional] 
+**BonjourForwarding** | Pointer to [**NetworksNetworkIdGroupPoliciesBonjourForwarding**](NetworksNetworkIdGroupPoliciesBonjourForwarding.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject99
 
-`func NewInlineObject99(name string, host string, port int32, ) *InlineObject99`
+`func NewInlineObject99() *InlineObject99`
 
 NewInlineObject99 instantiates a new InlineObject99 object
 This constructor will assign default values to properties that have it defined,
@@ -48,96 +51,186 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetHost
+`func (o *InlineObject99) HasName() bool`
 
-`func (o *InlineObject99) GetHost() string`
+HasName returns a boolean if a field has been set.
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+### GetScheduling
 
-### GetHostOk
+`func (o *InlineObject99) GetScheduling() NetworksNetworkIdGroupPoliciesScheduling`
 
-`func (o *InlineObject99) GetHostOk() (*string, bool)`
+GetScheduling returns the Scheduling field if non-nil, zero value otherwise.
 
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+### GetSchedulingOk
+
+`func (o *InlineObject99) GetSchedulingOk() (*NetworksNetworkIdGroupPoliciesScheduling, bool)`
+
+GetSchedulingOk returns a tuple with the Scheduling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetScheduling
 
-`func (o *InlineObject99) SetHost(v string)`
+`func (o *InlineObject99) SetScheduling(v NetworksNetworkIdGroupPoliciesScheduling)`
 
-SetHost sets Host field to given value.
+SetScheduling sets Scheduling field to given value.
 
+### HasScheduling
 
-### GetPort
+`func (o *InlineObject99) HasScheduling() bool`
 
-`func (o *InlineObject99) GetPort() int32`
+HasScheduling returns a boolean if a field has been set.
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+### GetBandwidth
 
-### GetPortOk
+`func (o *InlineObject99) GetBandwidth() NetworksNetworkIdGroupPoliciesBandwidth`
 
-`func (o *InlineObject99) GetPortOk() (*int32, bool)`
+GetBandwidth returns the Bandwidth field if non-nil, zero value otherwise.
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+### GetBandwidthOk
+
+`func (o *InlineObject99) GetBandwidthOk() (*NetworksNetworkIdGroupPoliciesBandwidth, bool)`
+
+GetBandwidthOk returns a tuple with the Bandwidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetBandwidth
 
-`func (o *InlineObject99) SetPort(v int32)`
+`func (o *InlineObject99) SetBandwidth(v NetworksNetworkIdGroupPoliciesBandwidth)`
 
-SetPort sets Port field to given value.
+SetBandwidth sets Bandwidth field to given value.
 
+### HasBandwidth
 
-### GetSecurity
+`func (o *InlineObject99) HasBandwidth() bool`
 
-`func (o *InlineObject99) GetSecurity() NetworksNetworkIdMqttBrokersSecurity`
+HasBandwidth returns a boolean if a field has been set.
 
-GetSecurity returns the Security field if non-nil, zero value otherwise.
+### GetFirewallAndTrafficShaping
 
-### GetSecurityOk
+`func (o *InlineObject99) GetFirewallAndTrafficShaping() NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping`
 
-`func (o *InlineObject99) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity, bool)`
+GetFirewallAndTrafficShaping returns the FirewallAndTrafficShaping field if non-nil, zero value otherwise.
 
-GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
+### GetFirewallAndTrafficShapingOk
+
+`func (o *InlineObject99) GetFirewallAndTrafficShapingOk() (*NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping, bool)`
+
+GetFirewallAndTrafficShapingOk returns a tuple with the FirewallAndTrafficShaping field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurity
+### SetFirewallAndTrafficShaping
 
-`func (o *InlineObject99) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity)`
+`func (o *InlineObject99) SetFirewallAndTrafficShaping(v NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping)`
 
-SetSecurity sets Security field to given value.
+SetFirewallAndTrafficShaping sets FirewallAndTrafficShaping field to given value.
 
-### HasSecurity
+### HasFirewallAndTrafficShaping
 
-`func (o *InlineObject99) HasSecurity() bool`
+`func (o *InlineObject99) HasFirewallAndTrafficShaping() bool`
 
-HasSecurity returns a boolean if a field has been set.
+HasFirewallAndTrafficShaping returns a boolean if a field has been set.
 
-### GetAuthentication
+### GetContentFiltering
 
-`func (o *InlineObject99) GetAuthentication() map[string]interface{}`
+`func (o *InlineObject99) GetContentFiltering() NetworksNetworkIdGroupPoliciesContentFiltering`
 
-GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
+GetContentFiltering returns the ContentFiltering field if non-nil, zero value otherwise.
 
-### GetAuthenticationOk
+### GetContentFilteringOk
 
-`func (o *InlineObject99) GetAuthenticationOk() (*map[string]interface{}, bool)`
+`func (o *InlineObject99) GetContentFilteringOk() (*NetworksNetworkIdGroupPoliciesContentFiltering, bool)`
 
-GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
+GetContentFilteringOk returns a tuple with the ContentFiltering field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthentication
+### SetContentFiltering
 
-`func (o *InlineObject99) SetAuthentication(v map[string]interface{})`
+`func (o *InlineObject99) SetContentFiltering(v NetworksNetworkIdGroupPoliciesContentFiltering)`
 
-SetAuthentication sets Authentication field to given value.
+SetContentFiltering sets ContentFiltering field to given value.
 
-### HasAuthentication
+### HasContentFiltering
 
-`func (o *InlineObject99) HasAuthentication() bool`
+`func (o *InlineObject99) HasContentFiltering() bool`
 
-HasAuthentication returns a boolean if a field has been set.
+HasContentFiltering returns a boolean if a field has been set.
+
+### GetSplashAuthSettings
+
+`func (o *InlineObject99) GetSplashAuthSettings() string`
+
+GetSplashAuthSettings returns the SplashAuthSettings field if non-nil, zero value otherwise.
+
+### GetSplashAuthSettingsOk
+
+`func (o *InlineObject99) GetSplashAuthSettingsOk() (*string, bool)`
+
+GetSplashAuthSettingsOk returns a tuple with the SplashAuthSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplashAuthSettings
+
+`func (o *InlineObject99) SetSplashAuthSettings(v string)`
+
+SetSplashAuthSettings sets SplashAuthSettings field to given value.
+
+### HasSplashAuthSettings
+
+`func (o *InlineObject99) HasSplashAuthSettings() bool`
+
+HasSplashAuthSettings returns a boolean if a field has been set.
+
+### GetVlanTagging
+
+`func (o *InlineObject99) GetVlanTagging() NetworksNetworkIdGroupPoliciesVlanTagging`
+
+GetVlanTagging returns the VlanTagging field if non-nil, zero value otherwise.
+
+### GetVlanTaggingOk
+
+`func (o *InlineObject99) GetVlanTaggingOk() (*NetworksNetworkIdGroupPoliciesVlanTagging, bool)`
+
+GetVlanTaggingOk returns a tuple with the VlanTagging field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanTagging
+
+`func (o *InlineObject99) SetVlanTagging(v NetworksNetworkIdGroupPoliciesVlanTagging)`
+
+SetVlanTagging sets VlanTagging field to given value.
+
+### HasVlanTagging
+
+`func (o *InlineObject99) HasVlanTagging() bool`
+
+HasVlanTagging returns a boolean if a field has been set.
+
+### GetBonjourForwarding
+
+`func (o *InlineObject99) GetBonjourForwarding() NetworksNetworkIdGroupPoliciesBonjourForwarding`
+
+GetBonjourForwarding returns the BonjourForwarding field if non-nil, zero value otherwise.
+
+### GetBonjourForwardingOk
+
+`func (o *InlineObject99) GetBonjourForwardingOk() (*NetworksNetworkIdGroupPoliciesBonjourForwarding, bool)`
+
+GetBonjourForwardingOk returns a tuple with the BonjourForwarding field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBonjourForwarding
+
+`func (o *InlineObject99) SetBonjourForwarding(v NetworksNetworkIdGroupPoliciesBonjourForwarding)`
+
+SetBonjourForwarding sets BonjourForwarding field to given value.
+
+### HasBonjourForwarding
+
+`func (o *InlineObject99) HasBonjourForwarding() bool`
+
+HasBonjourForwarding returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

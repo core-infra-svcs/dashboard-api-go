@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
-**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
+**Switches** | Pointer to [**[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches**](NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineObject127WithDefaults instantiates a new InlineObject127 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchPorts
+### GetEnabled
 
-`func (o *InlineObject127) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
+`func (o *InlineObject127) GetEnabled() bool`
 
-GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetSwitchPortsOk
+### GetEnabledOk
 
-`func (o *InlineObject127) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
+`func (o *InlineObject127) GetEnabledOk() (*bool, bool)`
 
-GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchPorts
+### SetEnabled
 
-`func (o *InlineObject127) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
+`func (o *InlineObject127) SetEnabled(v bool)`
 
-SetSwitchPorts sets SwitchPorts field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasSwitchPorts
+### HasEnabled
 
-`func (o *InlineObject127) HasSwitchPorts() bool`
+`func (o *InlineObject127) HasEnabled() bool`
 
-HasSwitchPorts returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSwitchProfilePorts
+### GetVlanId
 
-`func (o *InlineObject127) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
+`func (o *InlineObject127) GetVlanId() int32`
 
-GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetSwitchProfilePortsOk
+### GetVlanIdOk
 
-`func (o *InlineObject127) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
+`func (o *InlineObject127) GetVlanIdOk() (*int32, bool)`
 
-GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfilePorts
+### SetVlanId
 
-`func (o *InlineObject127) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
+`func (o *InlineObject127) SetVlanId(v int32)`
 
-SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasSwitchProfilePorts
+### HasVlanId
 
-`func (o *InlineObject127) HasSwitchProfilePorts() bool`
+`func (o *InlineObject127) HasVlanId() bool`
 
-HasSwitchProfilePorts returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
+
+### GetProtocols
+
+`func (o *InlineObject127) GetProtocols() []string`
+
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+
+### GetProtocolsOk
+
+`func (o *InlineObject127) GetProtocolsOk() (*[]string, bool)`
+
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtocols
+
+`func (o *InlineObject127) SetProtocols(v []string)`
+
+SetProtocols sets Protocols field to given value.
+
+### HasProtocols
+
+`func (o *InlineObject127) HasProtocols() bool`
+
+HasProtocols returns a boolean if a field has been set.
+
+### GetSwitches
+
+`func (o *InlineObject127) GetSwitches() []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches`
+
+GetSwitches returns the Switches field if non-nil, zero value otherwise.
+
+### GetSwitchesOk
+
+`func (o *InlineObject127) GetSwitchesOk() (*[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches, bool)`
+
+GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitches
+
+`func (o *InlineObject127) SetSwitches(v []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches)`
+
+SetSwitches sets Switches field to given value.
+
+### HasSwitches
+
+`func (o *InlineObject127) HasSwitches() bool`
+
+HasSwitches returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile.md) |  | [optional] 
-**Serials** | **[]string** | Array of Device Serials | 
-**StackIds** | **[]string** | Array of Switch Stack IDs | 
+**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
+**StpBridgePriority** | Pointer to [**[]NetworksNetworkIdSwitchStpStpBridgePriority**](NetworksNetworkIdSwitchStpStpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
 
 ## Methods
 
 ### NewInlineObject154
 
-`func NewInlineObject154(serials []string, stackIds []string, ) *InlineObject154`
+`func NewInlineObject154() *InlineObject154`
 
 NewInlineObject154 instantiates a new InlineObject154 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +26,55 @@ NewInlineObject154WithDefaults instantiates a new InlineObject154 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlanProfile
+### GetRstpEnabled
 
-`func (o *InlineObject154) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile`
+`func (o *InlineObject154) GetRstpEnabled() bool`
 
-GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
 
-### GetVlanProfileOk
+### GetRstpEnabledOk
 
-`func (o *InlineObject154) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile, bool)`
+`func (o *InlineObject154) GetRstpEnabledOk() (*bool, bool)`
 
-GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanProfile
+### SetRstpEnabled
 
-`func (o *InlineObject154) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile)`
+`func (o *InlineObject154) SetRstpEnabled(v bool)`
 
-SetVlanProfile sets VlanProfile field to given value.
+SetRstpEnabled sets RstpEnabled field to given value.
 
-### HasVlanProfile
+### HasRstpEnabled
 
-`func (o *InlineObject154) HasVlanProfile() bool`
+`func (o *InlineObject154) HasRstpEnabled() bool`
 
-HasVlanProfile returns a boolean if a field has been set.
+HasRstpEnabled returns a boolean if a field has been set.
 
-### GetSerials
+### GetStpBridgePriority
 
-`func (o *InlineObject154) GetSerials() []string`
+`func (o *InlineObject154) GetStpBridgePriority() []NetworksNetworkIdSwitchStpStpBridgePriority`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetStpBridgePriorityOk
 
-`func (o *InlineObject154) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject154) GetStpBridgePriorityOk() (*[]NetworksNetworkIdSwitchStpStpBridgePriority, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetStpBridgePriority
 
-`func (o *InlineObject154) SetSerials(v []string)`
+`func (o *InlineObject154) SetStpBridgePriority(v []NetworksNetworkIdSwitchStpStpBridgePriority)`
 
-SetSerials sets Serials field to given value.
+SetStpBridgePriority sets StpBridgePriority field to given value.
 
+### HasStpBridgePriority
 
-### GetStackIds
+`func (o *InlineObject154) HasStpBridgePriority() bool`
 
-`func (o *InlineObject154) GetStackIds() []string`
-
-GetStackIds returns the StackIds field if non-nil, zero value otherwise.
-
-### GetStackIdsOk
-
-`func (o *InlineObject154) GetStackIdsOk() (*[]string, bool)`
-
-GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStackIds
-
-`func (o *InlineObject154) SetStackIds(v []string)`
-
-SetStackIds sets StackIds field to given value.
-
+HasStpBridgePriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

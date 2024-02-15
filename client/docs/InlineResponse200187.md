@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the channel utilization interval. | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the channel utilization interval. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**Model** | Pointer to **string** | The device model | [optional] 
+**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200187WithDefaults instantiates a new InlineResponse200187 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetModel
 
-`func (o *InlineResponse200187) GetStartTs() time.Time`
+`func (o *InlineResponse200187) GetModel() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetModelOk
 
-`func (o *InlineResponse200187) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200187) GetModelOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetModel
 
-`func (o *InlineResponse200187) SetStartTs(v time.Time)`
+`func (o *InlineResponse200187) SetModel(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetModel sets Model field to given value.
 
-### HasStartTs
+### HasModel
 
-`func (o *InlineResponse200187) HasStartTs() bool`
+`func (o *InlineResponse200187) HasModel() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetEndTs
+### GetCount
 
-`func (o *InlineResponse200187) GetEndTs() time.Time`
+`func (o *InlineResponse200187) GetCount() int32`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetCountOk
 
-`func (o *InlineResponse200187) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200187) GetCountOk() (*int32, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetCount
 
-`func (o *InlineResponse200187) SetEndTs(v time.Time)`
+`func (o *InlineResponse200187) SetCount(v int32)`
 
-SetEndTs sets EndTs field to given value.
+SetCount sets Count field to given value.
 
-### HasEndTs
+### HasCount
 
-`func (o *InlineResponse200187) HasEndTs() bool`
+`func (o *InlineResponse200187) HasCount() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasCount returns a boolean if a field has been set.
 
-### GetNetwork
+### GetUsage
 
-`func (o *InlineResponse200187) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200187) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetUsageOk
 
-`func (o *InlineResponse200187) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200187) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetUsage
 
-`func (o *InlineResponse200187) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200187) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
 
-SetNetwork sets Network field to given value.
+SetUsage sets Usage field to given value.
 
-### HasNetwork
+### HasUsage
 
-`func (o *InlineResponse200187) HasNetwork() bool`
+`func (o *InlineResponse200187) HasUsage() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetByBand
-
-`func (o *InlineResponse200187) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
-
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
-
-### GetByBandOk
-
-`func (o *InlineResponse200187) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
-
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByBand
-
-`func (o *InlineResponse200187) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
-
-SetByBand sets ByBand field to given value.
-
-### HasByBand
-
-`func (o *InlineResponse200187) HasByBand() bool`
-
-HasByBand returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

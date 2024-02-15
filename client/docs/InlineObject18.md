@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Wan1** | Pointer to [**DevicesSerialManagementInterfaceWan1**](DevicesSerialManagementInterfaceWan1.md) |  | [optional] 
-**Wan2** | Pointer to [**DevicesSerialManagementInterfaceWan2**](DevicesSerialManagementInterfaceWan2.md) |  | [optional] 
+**Target** | **string** | FQDN, IPv4 or IPv6 address | 
+**Count** | Pointer to **int32** | Count parameter to pass to ping. [1..5], default 5 | [optional] 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject18
 
-`func NewInlineObject18() *InlineObject18`
+`func NewInlineObject18(target string, ) *InlineObject18`
 
 NewInlineObject18 instantiates a new InlineObject18 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,75 @@ NewInlineObject18WithDefaults instantiates a new InlineObject18 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWan1
+### GetTarget
 
-`func (o *InlineObject18) GetWan1() DevicesSerialManagementInterfaceWan1`
+`func (o *InlineObject18) GetTarget() string`
 
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+GetTarget returns the Target field if non-nil, zero value otherwise.
 
-### GetWan1Ok
+### GetTargetOk
 
-`func (o *InlineObject18) GetWan1Ok() (*DevicesSerialManagementInterfaceWan1, bool)`
+`func (o *InlineObject18) GetTargetOk() (*string, bool)`
 
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan1
+### SetTarget
 
-`func (o *InlineObject18) SetWan1(v DevicesSerialManagementInterfaceWan1)`
+`func (o *InlineObject18) SetTarget(v string)`
 
-SetWan1 sets Wan1 field to given value.
+SetTarget sets Target field to given value.
 
-### HasWan1
 
-`func (o *InlineObject18) HasWan1() bool`
+### GetCount
 
-HasWan1 returns a boolean if a field has been set.
+`func (o *InlineObject18) GetCount() int32`
 
-### GetWan2
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-`func (o *InlineObject18) GetWan2() DevicesSerialManagementInterfaceWan2`
+### GetCountOk
 
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+`func (o *InlineObject18) GetCountOk() (*int32, bool)`
 
-### GetWan2Ok
-
-`func (o *InlineObject18) GetWan2Ok() (*DevicesSerialManagementInterfaceWan2, bool)`
-
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan2
+### SetCount
 
-`func (o *InlineObject18) SetWan2(v DevicesSerialManagementInterfaceWan2)`
+`func (o *InlineObject18) SetCount(v int32)`
 
-SetWan2 sets Wan2 field to given value.
+SetCount sets Count field to given value.
 
-### HasWan2
+### HasCount
 
-`func (o *InlineObject18) HasWan2() bool`
+`func (o *InlineObject18) HasCount() bool`
 
-HasWan2 returns a boolean if a field has been set.
+HasCount returns a boolean if a field has been set.
+
+### GetCallback
+
+`func (o *InlineObject18) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineObject18) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineObject18) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineObject18) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

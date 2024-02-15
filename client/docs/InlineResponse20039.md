@@ -4,9 +4,26 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**InlineResponse20039UpgradeWindow**](InlineResponse20039UpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**InlineResponse20039Products**](InlineResponse20039Products.md) |  | [optional] 
+**Id** | Pointer to **string** | The ID of the client | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**Ip** | Pointer to **string** | The IP address of the client | [optional] 
+**Ip6** | Pointer to **string** | The IPv6 address of the client | [optional] 
+**Description** | Pointer to **string** | Short description of the client | [optional] 
+**FirstSeen** | Pointer to **int32** | Timestamp client was first seen in the network | [optional] 
+**LastSeen** | Pointer to **int32** | Timestamp client was last seen in the network | [optional] 
+**Manufacturer** | Pointer to **string** | Manufacturer of the client | [optional] 
+**Os** | Pointer to **string** | The operating system of the client | [optional] 
+**User** | Pointer to **string** | The username of the user of the client | [optional] 
+**Vlan** | Pointer to **string** | The name of the VLAN that the client is connected to | [optional] 
+**Ssid** | Pointer to **string** | The name of the SSID that the client is connected to | [optional] 
+**Switchport** | Pointer to **string** | The switch port that the client is connected to | [optional] 
+**WirelessCapabilities** | Pointer to **string** | Wireless capabilities of the client | [optional] 
+**SmInstalled** | Pointer to **bool** | Status of SM for the client | [optional] 
+**RecentDeviceMac** | Pointer to **string** | The MAC address of the node that the device was last connected to | [optional] 
+**ClientVpnConnections** | Pointer to [**[]InlineResponse20039ClientVpnConnections**](InlineResponse20039ClientVpnConnections.md) | VPN connections associated with the client | [optional] 
+**Lldp** | Pointer to **[][]string** | The link layer discover protocol settings for the client | [optional] 
+**Cdp** | Pointer to **[][]string** | The Cisco discover protocol settings for the client | [optional] 
+**Status** | Pointer to **string** | The connection status of the client | [optional] 
 
 ## Methods
 
@@ -27,80 +44,505 @@ NewInlineResponse20039WithDefaults instantiates a new InlineResponse20039 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetId
 
-`func (o *InlineResponse20039) GetUpgradeWindow() InlineResponse20039UpgradeWindow`
+`func (o *InlineResponse20039) GetId() string`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetIdOk
 
-`func (o *InlineResponse20039) GetUpgradeWindowOk() (*InlineResponse20039UpgradeWindow, bool)`
+`func (o *InlineResponse20039) GetIdOk() (*string, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetId
 
-`func (o *InlineResponse20039) SetUpgradeWindow(v InlineResponse20039UpgradeWindow)`
+`func (o *InlineResponse20039) SetId(v string)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetId sets Id field to given value.
 
-### HasUpgradeWindow
+### HasId
 
-`func (o *InlineResponse20039) HasUpgradeWindow() bool`
+`func (o *InlineResponse20039) HasId() bool`
 
-HasUpgradeWindow returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetTimezone
+### GetMac
 
-`func (o *InlineResponse20039) GetTimezone() string`
+`func (o *InlineResponse20039) GetMac() string`
 
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetTimezoneOk
+### GetMacOk
 
-`func (o *InlineResponse20039) GetTimezoneOk() (*string, bool)`
+`func (o *InlineResponse20039) GetMacOk() (*string, bool)`
 
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimezone
+### SetMac
 
-`func (o *InlineResponse20039) SetTimezone(v string)`
+`func (o *InlineResponse20039) SetMac(v string)`
 
-SetTimezone sets Timezone field to given value.
+SetMac sets Mac field to given value.
 
-### HasTimezone
+### HasMac
 
-`func (o *InlineResponse20039) HasTimezone() bool`
+`func (o *InlineResponse20039) HasMac() bool`
 
-HasTimezone returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetProducts
+### GetIp
 
-`func (o *InlineResponse20039) GetProducts() InlineResponse20039Products`
+`func (o *InlineResponse20039) GetIp() string`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetIp returns the Ip field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetIpOk
 
-`func (o *InlineResponse20039) GetProductsOk() (*InlineResponse20039Products, bool)`
+`func (o *InlineResponse20039) GetIpOk() (*string, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetIp
 
-`func (o *InlineResponse20039) SetProducts(v InlineResponse20039Products)`
+`func (o *InlineResponse20039) SetIp(v string)`
 
-SetProducts sets Products field to given value.
+SetIp sets Ip field to given value.
 
-### HasProducts
+### HasIp
 
-`func (o *InlineResponse20039) HasProducts() bool`
+`func (o *InlineResponse20039) HasIp() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasIp returns a boolean if a field has been set.
+
+### GetIp6
+
+`func (o *InlineResponse20039) GetIp6() string`
+
+GetIp6 returns the Ip6 field if non-nil, zero value otherwise.
+
+### GetIp6Ok
+
+`func (o *InlineResponse20039) GetIp6Ok() (*string, bool)`
+
+GetIp6Ok returns a tuple with the Ip6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIp6
+
+`func (o *InlineResponse20039) SetIp6(v string)`
+
+SetIp6 sets Ip6 field to given value.
+
+### HasIp6
+
+`func (o *InlineResponse20039) HasIp6() bool`
+
+HasIp6 returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse20039) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse20039) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse20039) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse20039) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetFirstSeen
+
+`func (o *InlineResponse20039) GetFirstSeen() int32`
+
+GetFirstSeen returns the FirstSeen field if non-nil, zero value otherwise.
+
+### GetFirstSeenOk
+
+`func (o *InlineResponse20039) GetFirstSeenOk() (*int32, bool)`
+
+GetFirstSeenOk returns a tuple with the FirstSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFirstSeen
+
+`func (o *InlineResponse20039) SetFirstSeen(v int32)`
+
+SetFirstSeen sets FirstSeen field to given value.
+
+### HasFirstSeen
+
+`func (o *InlineResponse20039) HasFirstSeen() bool`
+
+HasFirstSeen returns a boolean if a field has been set.
+
+### GetLastSeen
+
+`func (o *InlineResponse20039) GetLastSeen() int32`
+
+GetLastSeen returns the LastSeen field if non-nil, zero value otherwise.
+
+### GetLastSeenOk
+
+`func (o *InlineResponse20039) GetLastSeenOk() (*int32, bool)`
+
+GetLastSeenOk returns a tuple with the LastSeen field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastSeen
+
+`func (o *InlineResponse20039) SetLastSeen(v int32)`
+
+SetLastSeen sets LastSeen field to given value.
+
+### HasLastSeen
+
+`func (o *InlineResponse20039) HasLastSeen() bool`
+
+HasLastSeen returns a boolean if a field has been set.
+
+### GetManufacturer
+
+`func (o *InlineResponse20039) GetManufacturer() string`
+
+GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
+
+### GetManufacturerOk
+
+`func (o *InlineResponse20039) GetManufacturerOk() (*string, bool)`
+
+GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManufacturer
+
+`func (o *InlineResponse20039) SetManufacturer(v string)`
+
+SetManufacturer sets Manufacturer field to given value.
+
+### HasManufacturer
+
+`func (o *InlineResponse20039) HasManufacturer() bool`
+
+HasManufacturer returns a boolean if a field has been set.
+
+### GetOs
+
+`func (o *InlineResponse20039) GetOs() string`
+
+GetOs returns the Os field if non-nil, zero value otherwise.
+
+### GetOsOk
+
+`func (o *InlineResponse20039) GetOsOk() (*string, bool)`
+
+GetOsOk returns a tuple with the Os field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOs
+
+`func (o *InlineResponse20039) SetOs(v string)`
+
+SetOs sets Os field to given value.
+
+### HasOs
+
+`func (o *InlineResponse20039) HasOs() bool`
+
+HasOs returns a boolean if a field has been set.
+
+### GetUser
+
+`func (o *InlineResponse20039) GetUser() string`
+
+GetUser returns the User field if non-nil, zero value otherwise.
+
+### GetUserOk
+
+`func (o *InlineResponse20039) GetUserOk() (*string, bool)`
+
+GetUserOk returns a tuple with the User field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUser
+
+`func (o *InlineResponse20039) SetUser(v string)`
+
+SetUser sets User field to given value.
+
+### HasUser
+
+`func (o *InlineResponse20039) HasUser() bool`
+
+HasUser returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineResponse20039) GetVlan() string`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineResponse20039) GetVlanOk() (*string, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineResponse20039) SetVlan(v string)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineResponse20039) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetSsid
+
+`func (o *InlineResponse20039) GetSsid() string`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineResponse20039) GetSsidOk() (*string, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineResponse20039) SetSsid(v string)`
+
+SetSsid sets Ssid field to given value.
+
+### HasSsid
+
+`func (o *InlineResponse20039) HasSsid() bool`
+
+HasSsid returns a boolean if a field has been set.
+
+### GetSwitchport
+
+`func (o *InlineResponse20039) GetSwitchport() string`
+
+GetSwitchport returns the Switchport field if non-nil, zero value otherwise.
+
+### GetSwitchportOk
+
+`func (o *InlineResponse20039) GetSwitchportOk() (*string, bool)`
+
+GetSwitchportOk returns a tuple with the Switchport field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitchport
+
+`func (o *InlineResponse20039) SetSwitchport(v string)`
+
+SetSwitchport sets Switchport field to given value.
+
+### HasSwitchport
+
+`func (o *InlineResponse20039) HasSwitchport() bool`
+
+HasSwitchport returns a boolean if a field has been set.
+
+### GetWirelessCapabilities
+
+`func (o *InlineResponse20039) GetWirelessCapabilities() string`
+
+GetWirelessCapabilities returns the WirelessCapabilities field if non-nil, zero value otherwise.
+
+### GetWirelessCapabilitiesOk
+
+`func (o *InlineResponse20039) GetWirelessCapabilitiesOk() (*string, bool)`
+
+GetWirelessCapabilitiesOk returns a tuple with the WirelessCapabilities field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWirelessCapabilities
+
+`func (o *InlineResponse20039) SetWirelessCapabilities(v string)`
+
+SetWirelessCapabilities sets WirelessCapabilities field to given value.
+
+### HasWirelessCapabilities
+
+`func (o *InlineResponse20039) HasWirelessCapabilities() bool`
+
+HasWirelessCapabilities returns a boolean if a field has been set.
+
+### GetSmInstalled
+
+`func (o *InlineResponse20039) GetSmInstalled() bool`
+
+GetSmInstalled returns the SmInstalled field if non-nil, zero value otherwise.
+
+### GetSmInstalledOk
+
+`func (o *InlineResponse20039) GetSmInstalledOk() (*bool, bool)`
+
+GetSmInstalledOk returns a tuple with the SmInstalled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSmInstalled
+
+`func (o *InlineResponse20039) SetSmInstalled(v bool)`
+
+SetSmInstalled sets SmInstalled field to given value.
+
+### HasSmInstalled
+
+`func (o *InlineResponse20039) HasSmInstalled() bool`
+
+HasSmInstalled returns a boolean if a field has been set.
+
+### GetRecentDeviceMac
+
+`func (o *InlineResponse20039) GetRecentDeviceMac() string`
+
+GetRecentDeviceMac returns the RecentDeviceMac field if non-nil, zero value otherwise.
+
+### GetRecentDeviceMacOk
+
+`func (o *InlineResponse20039) GetRecentDeviceMacOk() (*string, bool)`
+
+GetRecentDeviceMacOk returns a tuple with the RecentDeviceMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecentDeviceMac
+
+`func (o *InlineResponse20039) SetRecentDeviceMac(v string)`
+
+SetRecentDeviceMac sets RecentDeviceMac field to given value.
+
+### HasRecentDeviceMac
+
+`func (o *InlineResponse20039) HasRecentDeviceMac() bool`
+
+HasRecentDeviceMac returns a boolean if a field has been set.
+
+### GetClientVpnConnections
+
+`func (o *InlineResponse20039) GetClientVpnConnections() []InlineResponse20039ClientVpnConnections`
+
+GetClientVpnConnections returns the ClientVpnConnections field if non-nil, zero value otherwise.
+
+### GetClientVpnConnectionsOk
+
+`func (o *InlineResponse20039) GetClientVpnConnectionsOk() (*[]InlineResponse20039ClientVpnConnections, bool)`
+
+GetClientVpnConnectionsOk returns a tuple with the ClientVpnConnections field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientVpnConnections
+
+`func (o *InlineResponse20039) SetClientVpnConnections(v []InlineResponse20039ClientVpnConnections)`
+
+SetClientVpnConnections sets ClientVpnConnections field to given value.
+
+### HasClientVpnConnections
+
+`func (o *InlineResponse20039) HasClientVpnConnections() bool`
+
+HasClientVpnConnections returns a boolean if a field has been set.
+
+### GetLldp
+
+`func (o *InlineResponse20039) GetLldp() [][]string`
+
+GetLldp returns the Lldp field if non-nil, zero value otherwise.
+
+### GetLldpOk
+
+`func (o *InlineResponse20039) GetLldpOk() (*[][]string, bool)`
+
+GetLldpOk returns a tuple with the Lldp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLldp
+
+`func (o *InlineResponse20039) SetLldp(v [][]string)`
+
+SetLldp sets Lldp field to given value.
+
+### HasLldp
+
+`func (o *InlineResponse20039) HasLldp() bool`
+
+HasLldp returns a boolean if a field has been set.
+
+### GetCdp
+
+`func (o *InlineResponse20039) GetCdp() [][]string`
+
+GetCdp returns the Cdp field if non-nil, zero value otherwise.
+
+### GetCdpOk
+
+`func (o *InlineResponse20039) GetCdpOk() (*[][]string, bool)`
+
+GetCdpOk returns a tuple with the Cdp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCdp
+
+`func (o *InlineResponse20039) SetCdp(v [][]string)`
+
+SetCdp sets Cdp field to given value.
+
+### HasCdp
+
+`func (o *InlineResponse20039) HasCdp() bool`
+
+HasCdp returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20039) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20039) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20039) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse20039) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
-**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
-**PowerExceptions** | Pointer to [**[]NetworksNetworkIdSwitchSettingsPowerExceptions**](NetworksNetworkIdSwitchSettingsPowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
-**UplinkClientSampling** | Pointer to [**NetworksNetworkIdSwitchSettingsUplinkClientSampling**](NetworksNetworkIdSwitchSettingsUplinkClientSampling.md) |  | [optional] 
-**MacBlocklist** | Pointer to [**NetworksNetworkIdSwitchSettingsMacBlocklist**](NetworksNetworkIdSwitchSettingsMacBlocklist.md) |  | [optional] 
+**Vlan** | Pointer to **int32** | The VLAN of the incoming packet. A null value will match any VLAN. | [optional] 
+**Protocol** | Pointer to **string** | The protocol of the incoming packet. Can be one of \&quot;ANY\&quot;, \&quot;TCP\&quot; or \&quot;UDP\&quot;. Default value is \&quot;ANY\&quot;. | [optional] 
+**SrcPort** | Pointer to **int32** | The source port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
+**SrcPortRange** | Pointer to **string** | The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80 | [optional] 
+**DstPort** | Pointer to **int32** | The destination port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
+**DstPortRange** | Pointer to **string** | The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80 | [optional] 
+**Dscp** | Pointer to **int32** | DSCP tag that should be assigned to incoming packet. Set this to -1 to trust incoming DSCP. Default value is 0. | [optional] 
 
 ## Methods
 
@@ -54,105 +56,155 @@ SetVlan sets Vlan field to given value.
 
 HasVlan returns a boolean if a field has been set.
 
-### GetUseCombinedPower
+### GetProtocol
 
-`func (o *InlineObject139) GetUseCombinedPower() bool`
+`func (o *InlineObject139) GetProtocol() string`
 
-GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
 
-### GetUseCombinedPowerOk
+### GetProtocolOk
 
-`func (o *InlineObject139) GetUseCombinedPowerOk() (*bool, bool)`
+`func (o *InlineObject139) GetProtocolOk() (*string, bool)`
 
-GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUseCombinedPower
+### SetProtocol
 
-`func (o *InlineObject139) SetUseCombinedPower(v bool)`
+`func (o *InlineObject139) SetProtocol(v string)`
 
-SetUseCombinedPower sets UseCombinedPower field to given value.
+SetProtocol sets Protocol field to given value.
 
-### HasUseCombinedPower
+### HasProtocol
 
-`func (o *InlineObject139) HasUseCombinedPower() bool`
+`func (o *InlineObject139) HasProtocol() bool`
 
-HasUseCombinedPower returns a boolean if a field has been set.
+HasProtocol returns a boolean if a field has been set.
 
-### GetPowerExceptions
+### GetSrcPort
 
-`func (o *InlineObject139) GetPowerExceptions() []NetworksNetworkIdSwitchSettingsPowerExceptions`
+`func (o *InlineObject139) GetSrcPort() int32`
 
-GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
+GetSrcPort returns the SrcPort field if non-nil, zero value otherwise.
 
-### GetPowerExceptionsOk
+### GetSrcPortOk
 
-`func (o *InlineObject139) GetPowerExceptionsOk() (*[]NetworksNetworkIdSwitchSettingsPowerExceptions, bool)`
+`func (o *InlineObject139) GetSrcPortOk() (*int32, bool)`
 
-GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
+GetSrcPortOk returns a tuple with the SrcPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPowerExceptions
+### SetSrcPort
 
-`func (o *InlineObject139) SetPowerExceptions(v []NetworksNetworkIdSwitchSettingsPowerExceptions)`
+`func (o *InlineObject139) SetSrcPort(v int32)`
 
-SetPowerExceptions sets PowerExceptions field to given value.
+SetSrcPort sets SrcPort field to given value.
 
-### HasPowerExceptions
+### HasSrcPort
 
-`func (o *InlineObject139) HasPowerExceptions() bool`
+`func (o *InlineObject139) HasSrcPort() bool`
 
-HasPowerExceptions returns a boolean if a field has been set.
+HasSrcPort returns a boolean if a field has been set.
 
-### GetUplinkClientSampling
+### GetSrcPortRange
 
-`func (o *InlineObject139) GetUplinkClientSampling() NetworksNetworkIdSwitchSettingsUplinkClientSampling`
+`func (o *InlineObject139) GetSrcPortRange() string`
 
-GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
+GetSrcPortRange returns the SrcPortRange field if non-nil, zero value otherwise.
 
-### GetUplinkClientSamplingOk
+### GetSrcPortRangeOk
 
-`func (o *InlineObject139) GetUplinkClientSamplingOk() (*NetworksNetworkIdSwitchSettingsUplinkClientSampling, bool)`
+`func (o *InlineObject139) GetSrcPortRangeOk() (*string, bool)`
 
-GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
+GetSrcPortRangeOk returns a tuple with the SrcPortRange field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkClientSampling
+### SetSrcPortRange
 
-`func (o *InlineObject139) SetUplinkClientSampling(v NetworksNetworkIdSwitchSettingsUplinkClientSampling)`
+`func (o *InlineObject139) SetSrcPortRange(v string)`
 
-SetUplinkClientSampling sets UplinkClientSampling field to given value.
+SetSrcPortRange sets SrcPortRange field to given value.
 
-### HasUplinkClientSampling
+### HasSrcPortRange
 
-`func (o *InlineObject139) HasUplinkClientSampling() bool`
+`func (o *InlineObject139) HasSrcPortRange() bool`
 
-HasUplinkClientSampling returns a boolean if a field has been set.
+HasSrcPortRange returns a boolean if a field has been set.
 
-### GetMacBlocklist
+### GetDstPort
 
-`func (o *InlineObject139) GetMacBlocklist() NetworksNetworkIdSwitchSettingsMacBlocklist`
+`func (o *InlineObject139) GetDstPort() int32`
 
-GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
+GetDstPort returns the DstPort field if non-nil, zero value otherwise.
 
-### GetMacBlocklistOk
+### GetDstPortOk
 
-`func (o *InlineObject139) GetMacBlocklistOk() (*NetworksNetworkIdSwitchSettingsMacBlocklist, bool)`
+`func (o *InlineObject139) GetDstPortOk() (*int32, bool)`
 
-GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
+GetDstPortOk returns a tuple with the DstPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMacBlocklist
+### SetDstPort
 
-`func (o *InlineObject139) SetMacBlocklist(v NetworksNetworkIdSwitchSettingsMacBlocklist)`
+`func (o *InlineObject139) SetDstPort(v int32)`
 
-SetMacBlocklist sets MacBlocklist field to given value.
+SetDstPort sets DstPort field to given value.
 
-### HasMacBlocklist
+### HasDstPort
 
-`func (o *InlineObject139) HasMacBlocklist() bool`
+`func (o *InlineObject139) HasDstPort() bool`
 
-HasMacBlocklist returns a boolean if a field has been set.
+HasDstPort returns a boolean if a field has been set.
+
+### GetDstPortRange
+
+`func (o *InlineObject139) GetDstPortRange() string`
+
+GetDstPortRange returns the DstPortRange field if non-nil, zero value otherwise.
+
+### GetDstPortRangeOk
+
+`func (o *InlineObject139) GetDstPortRangeOk() (*string, bool)`
+
+GetDstPortRangeOk returns a tuple with the DstPortRange field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDstPortRange
+
+`func (o *InlineObject139) SetDstPortRange(v string)`
+
+SetDstPortRange sets DstPortRange field to given value.
+
+### HasDstPortRange
+
+`func (o *InlineObject139) HasDstPortRange() bool`
+
+HasDstPortRange returns a boolean if a field has been set.
+
+### GetDscp
+
+`func (o *InlineObject139) GetDscp() int32`
+
+GetDscp returns the Dscp field if non-nil, zero value otherwise.
+
+### GetDscpOk
+
+`func (o *InlineObject139) GetDscpOk() (*int32, bool)`
+
+GetDscpOk returns a tuple with the Dscp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDscp
+
+`func (o *InlineObject139) SetDscp(v int32)`
+
+SetDscp sets Dscp field to given value.
+
+### HasDscp
+
+`func (o *InlineObject139) HasDscp() bool`
+
+HasDscp returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

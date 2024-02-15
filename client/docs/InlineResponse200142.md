@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, at which the event happened | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice.md) |  | [optional] 
-**Details** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork.md) |  | [optional] 
+**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
+**Licenses** | Pointer to [**[]InlineResponse200142Licenses**](InlineResponse200142Licenses.md) | The licenses claimed | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200142WithDefaults instantiates a new InlineResponse200142 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetOrders
 
-`func (o *InlineResponse200142) GetTs() time.Time`
+`func (o *InlineResponse200142) GetOrders() []string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetOrdersOk
 
-`func (o *InlineResponse200142) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200142) GetOrdersOk() (*[]string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetOrders
 
-`func (o *InlineResponse200142) SetTs(v time.Time)`
+`func (o *InlineResponse200142) SetOrders(v []string)`
 
-SetTs sets Ts field to given value.
+SetOrders sets Orders field to given value.
 
-### HasTs
+### HasOrders
 
-`func (o *InlineResponse200142) HasTs() bool`
+`func (o *InlineResponse200142) HasOrders() bool`
 
-HasTs returns a boolean if a field has been set.
+HasOrders returns a boolean if a field has been set.
 
-### GetDevice
+### GetSerials
 
-`func (o *InlineResponse200142) GetDevice() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice`
+`func (o *InlineResponse200142) GetSerials() []string`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetSerialsOk
 
-`func (o *InlineResponse200142) GetDeviceOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice, bool)`
+`func (o *InlineResponse200142) GetSerialsOk() (*[]string, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetSerials
 
-`func (o *InlineResponse200142) SetDevice(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice)`
+`func (o *InlineResponse200142) SetSerials(v []string)`
 
-SetDevice sets Device field to given value.
+SetSerials sets Serials field to given value.
 
-### HasDevice
+### HasSerials
 
-`func (o *InlineResponse200142) HasDevice() bool`
+`func (o *InlineResponse200142) HasSerials() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetDetails
+### GetLicenses
 
-`func (o *InlineResponse200142) GetDetails() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails`
+`func (o *InlineResponse200142) GetLicenses() []InlineResponse200142Licenses`
 
-GetDetails returns the Details field if non-nil, zero value otherwise.
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-### GetDetailsOk
+### GetLicensesOk
 
-`func (o *InlineResponse200142) GetDetailsOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails, bool)`
+`func (o *InlineResponse200142) GetLicensesOk() (*[]InlineResponse200142Licenses, bool)`
 
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetails
+### SetLicenses
 
-`func (o *InlineResponse200142) SetDetails(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails)`
+`func (o *InlineResponse200142) SetLicenses(v []InlineResponse200142Licenses)`
 
-SetDetails sets Details field to given value.
+SetLicenses sets Licenses field to given value.
 
-### HasDetails
+### HasLicenses
 
-`func (o *InlineResponse200142) HasDetails() bool`
+`func (o *InlineResponse200142) HasLicenses() bool`
 
-HasDetails returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200142) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200142) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200142) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200142) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**Name** | **string** | The name of the new organization | 
 
 ## Methods
 
 ### NewInlineObject215
 
-`func NewInlineObject215() *InlineObject215`
+`func NewInlineObject215(name string, ) *InlineObject215`
 
 NewInlineObject215 instantiates a new InlineObject215 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject215WithDefaults instantiates a new InlineObject215 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLimitScopeToNetworks
+### GetName
 
-`func (o *InlineObject215) GetLimitScopeToNetworks() []string`
+`func (o *InlineObject215) GetName() string`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetNameOk
 
-`func (o *InlineObject215) GetLimitScopeToNetworksOk() (*[]string, bool)`
+`func (o *InlineObject215) GetNameOk() (*string, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetName
 
-`func (o *InlineObject215) SetLimitScopeToNetworks(v []string)`
+`func (o *InlineObject215) SetName(v string)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetName sets Name field to given value.
 
-### HasLimitScopeToNetworks
-
-`func (o *InlineObject215) HasLimitScopeToNetworks() bool`
-
-HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

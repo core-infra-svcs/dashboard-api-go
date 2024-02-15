@@ -4,17 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Admin&#39;s ID | [optional] 
-**Name** | Pointer to **string** | Admin&#39;s username | [optional] 
-**Email** | Pointer to **string** | Admin&#39;s email address | [optional] 
-**OrgAccess** | Pointer to **string** | Admin&#39;s level of access to the organization | [optional] 
-**AccountStatus** | Pointer to **string** | Status of the admin&#39;s account | [optional] 
-**TwoFactorAuthEnabled** | Pointer to **bool** | Indicates whether two-factor authentication is enabled | [optional] 
-**HasApiKey** | Pointer to **bool** | Indicates whether the admin has an API key | [optional] 
-**LastActive** | Pointer to **time.Time** | Time when the admin was last active | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags**](OrganizationsOrganizationIdAdminsTags.md) | Admin tag information | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks**](OrganizationsOrganizationIdAdminsNetworks.md) | Admin network access information | [optional] 
-**AuthenticationMethod** | Pointer to **string** | Admin&#39;s authentication method | [optional] 
+**Id** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Organization name | [optional] 
+**Url** | Pointer to **string** | Organization URL | [optional] 
+**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
+**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
+**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
+**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
 
 ## Methods
 
@@ -85,230 +81,130 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetEmail
+### GetUrl
 
-`func (o *InlineResponse200123) GetEmail() string`
+`func (o *InlineResponse200123) GetUrl() string`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetUrlOk
 
-`func (o *InlineResponse200123) GetEmailOk() (*string, bool)`
+`func (o *InlineResponse200123) GetUrlOk() (*string, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetUrl
 
-`func (o *InlineResponse200123) SetEmail(v string)`
+`func (o *InlineResponse200123) SetUrl(v string)`
 
-SetEmail sets Email field to given value.
+SetUrl sets Url field to given value.
 
-### HasEmail
+### HasUrl
 
-`func (o *InlineResponse200123) HasEmail() bool`
+`func (o *InlineResponse200123) HasUrl() bool`
 
-HasEmail returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetOrgAccess
+### GetApi
 
-`func (o *InlineResponse200123) GetOrgAccess() string`
+`func (o *InlineResponse200123) GetApi() OrganizationsApi`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetApiOk
 
-`func (o *InlineResponse200123) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineResponse200123) GetApiOk() (*OrganizationsApi, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetApi
 
-`func (o *InlineResponse200123) SetOrgAccess(v string)`
+`func (o *InlineResponse200123) SetApi(v OrganizationsApi)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetApi sets Api field to given value.
 
-### HasOrgAccess
+### HasApi
 
-`func (o *InlineResponse200123) HasOrgAccess() bool`
+`func (o *InlineResponse200123) HasApi() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
-### GetAccountStatus
+### GetLicensing
 
-`func (o *InlineResponse200123) GetAccountStatus() string`
+`func (o *InlineResponse200123) GetLicensing() OrganizationsLicensing`
 
-GetAccountStatus returns the AccountStatus field if non-nil, zero value otherwise.
+GetLicensing returns the Licensing field if non-nil, zero value otherwise.
 
-### GetAccountStatusOk
+### GetLicensingOk
 
-`func (o *InlineResponse200123) GetAccountStatusOk() (*string, bool)`
+`func (o *InlineResponse200123) GetLicensingOk() (*OrganizationsLicensing, bool)`
 
-GetAccountStatusOk returns a tuple with the AccountStatus field if it's non-nil, zero value otherwise
+GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountStatus
+### SetLicensing
 
-`func (o *InlineResponse200123) SetAccountStatus(v string)`
+`func (o *InlineResponse200123) SetLicensing(v OrganizationsLicensing)`
 
-SetAccountStatus sets AccountStatus field to given value.
+SetLicensing sets Licensing field to given value.
 
-### HasAccountStatus
+### HasLicensing
 
-`func (o *InlineResponse200123) HasAccountStatus() bool`
+`func (o *InlineResponse200123) HasLicensing() bool`
 
-HasAccountStatus returns a boolean if a field has been set.
+HasLicensing returns a boolean if a field has been set.
 
-### GetTwoFactorAuthEnabled
+### GetCloud
 
-`func (o *InlineResponse200123) GetTwoFactorAuthEnabled() bool`
+`func (o *InlineResponse200123) GetCloud() OrganizationsCloud`
 
-GetTwoFactorAuthEnabled returns the TwoFactorAuthEnabled field if non-nil, zero value otherwise.
+GetCloud returns the Cloud field if non-nil, zero value otherwise.
 
-### GetTwoFactorAuthEnabledOk
+### GetCloudOk
 
-`func (o *InlineResponse200123) GetTwoFactorAuthEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200123) GetCloudOk() (*OrganizationsCloud, bool)`
 
-GetTwoFactorAuthEnabledOk returns a tuple with the TwoFactorAuthEnabled field if it's non-nil, zero value otherwise
+GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFactorAuthEnabled
+### SetCloud
 
-`func (o *InlineResponse200123) SetTwoFactorAuthEnabled(v bool)`
+`func (o *InlineResponse200123) SetCloud(v OrganizationsCloud)`
 
-SetTwoFactorAuthEnabled sets TwoFactorAuthEnabled field to given value.
+SetCloud sets Cloud field to given value.
 
-### HasTwoFactorAuthEnabled
+### HasCloud
 
-`func (o *InlineResponse200123) HasTwoFactorAuthEnabled() bool`
+`func (o *InlineResponse200123) HasCloud() bool`
 
-HasTwoFactorAuthEnabled returns a boolean if a field has been set.
+HasCloud returns a boolean if a field has been set.
 
-### GetHasApiKey
+### GetManagement
 
-`func (o *InlineResponse200123) GetHasApiKey() bool`
+`func (o *InlineResponse200123) GetManagement() OrganizationsManagement`
 
-GetHasApiKey returns the HasApiKey field if non-nil, zero value otherwise.
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-### GetHasApiKeyOk
+### GetManagementOk
 
-`func (o *InlineResponse200123) GetHasApiKeyOk() (*bool, bool)`
+`func (o *InlineResponse200123) GetManagementOk() (*OrganizationsManagement, bool)`
 
-GetHasApiKeyOk returns a tuple with the HasApiKey field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHasApiKey
+### SetManagement
 
-`func (o *InlineResponse200123) SetHasApiKey(v bool)`
+`func (o *InlineResponse200123) SetManagement(v OrganizationsManagement)`
 
-SetHasApiKey sets HasApiKey field to given value.
+SetManagement sets Management field to given value.
 
-### HasHasApiKey
+### HasManagement
 
-`func (o *InlineResponse200123) HasHasApiKey() bool`
+`func (o *InlineResponse200123) HasManagement() bool`
 
-HasHasApiKey returns a boolean if a field has been set.
-
-### GetLastActive
-
-`func (o *InlineResponse200123) GetLastActive() time.Time`
-
-GetLastActive returns the LastActive field if non-nil, zero value otherwise.
-
-### GetLastActiveOk
-
-`func (o *InlineResponse200123) GetLastActiveOk() (*time.Time, bool)`
-
-GetLastActiveOk returns a tuple with the LastActive field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastActive
-
-`func (o *InlineResponse200123) SetLastActive(v time.Time)`
-
-SetLastActive sets LastActive field to given value.
-
-### HasLastActive
-
-`func (o *InlineResponse200123) HasLastActive() bool`
-
-HasLastActive returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200123) GetTags() []OrganizationsOrganizationIdAdminsTags`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200123) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200123) SetTags(v []OrganizationsOrganizationIdAdminsTags)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200123) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineResponse200123) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineResponse200123) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineResponse200123) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineResponse200123) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
-
-### GetAuthenticationMethod
-
-`func (o *InlineResponse200123) GetAuthenticationMethod() string`
-
-GetAuthenticationMethod returns the AuthenticationMethod field if non-nil, zero value otherwise.
-
-### GetAuthenticationMethodOk
-
-`func (o *InlineResponse200123) GetAuthenticationMethodOk() (*string, bool)`
-
-GetAuthenticationMethodOk returns a tuple with the AuthenticationMethod field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthenticationMethod
-
-`func (o *InlineResponse200123) SetAuthenticationMethod(v string)`
-
-SetAuthenticationMethod sets AuthenticationMethod field to given value.
-
-### HasAuthenticationMethod
-
-`func (o *InlineResponse200123) HasAuthenticationMethod() bool`
-
-HasAuthenticationMethod returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
-**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
+**Devices** | [**[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices.md) | A set of devices to import (or update) | 
 
 ## Methods
 
 ### NewInlineObject226
 
-`func NewInlineObject226(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject226`
+`func NewInlineObject226(devices []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, ) *InlineObject226`
 
 NewInlineObject226 instantiates a new InlineObject226 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject226WithDefaults instantiates a new InlineObject226 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseIdToRenew
+### GetDevices
 
-`func (o *InlineObject226) GetLicenseIdToRenew() string`
+`func (o *InlineObject226) GetDevices() []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices`
 
-GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetLicenseIdToRenewOk
+### GetDevicesOk
 
-`func (o *InlineObject226) GetLicenseIdToRenewOk() (*string, bool)`
+`func (o *InlineObject226) GetDevicesOk() (*[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, bool)`
 
-GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIdToRenew
+### SetDevices
 
-`func (o *InlineObject226) SetLicenseIdToRenew(v string)`
+`func (o *InlineObject226) SetDevices(v []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices)`
 
-SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
-
-
-### GetUnusedLicenseId
-
-`func (o *InlineObject226) GetUnusedLicenseId() string`
-
-GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
-
-### GetUnusedLicenseIdOk
-
-`func (o *InlineObject226) GetUnusedLicenseIdOk() (*string, bool)`
-
-GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUnusedLicenseId
-
-`func (o *InlineObject226) SetUnusedLicenseId(v string)`
-
-SetUnusedLicenseId sets UnusedLicenseId field to given value.
+SetDevices sets Devices field to given value.
 
 
 

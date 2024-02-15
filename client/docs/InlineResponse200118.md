@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
-**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
-**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**Identity** | Pointer to [**InlineResponse200118Identity**](InlineResponse200118Identity.md) |  | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200118EapolKey**](InlineResponse200118EapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200118WithDefaults instantiates a new InlineResponse200118 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetTimeout
 
-`func (o *InlineResponse200118) GetStartTs() time.Time`
+`func (o *InlineResponse200118) GetTimeout() int32`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetTimeoutOk
 
-`func (o *InlineResponse200118) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200118) GetTimeoutOk() (*int32, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetTimeout
 
-`func (o *InlineResponse200118) SetStartTs(v time.Time)`
+`func (o *InlineResponse200118) SetTimeout(v int32)`
 
-SetStartTs sets StartTs field to given value.
+SetTimeout sets Timeout field to given value.
 
-### HasStartTs
+### HasTimeout
 
-`func (o *InlineResponse200118) HasStartTs() bool`
+`func (o *InlineResponse200118) HasTimeout() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasTimeout returns a boolean if a field has been set.
 
-### GetEndTs
+### GetMaxRetries
 
-`func (o *InlineResponse200118) GetEndTs() time.Time`
+`func (o *InlineResponse200118) GetMaxRetries() int32`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetMaxRetriesOk
 
-`func (o *InlineResponse200118) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200118) GetMaxRetriesOk() (*int32, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetMaxRetries
 
-`func (o *InlineResponse200118) SetEndTs(v time.Time)`
+`func (o *InlineResponse200118) SetMaxRetries(v int32)`
 
-SetEndTs sets EndTs field to given value.
+SetMaxRetries sets MaxRetries field to given value.
 
-### HasEndTs
+### HasMaxRetries
 
-`func (o *InlineResponse200118) HasEndTs() bool`
+`func (o *InlineResponse200118) HasMaxRetries() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasMaxRetries returns a boolean if a field has been set.
 
-### GetTotalKbps
+### GetIdentity
 
-`func (o *InlineResponse200118) GetTotalKbps() int32`
+`func (o *InlineResponse200118) GetIdentity() InlineResponse200118Identity`
 
-GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-### GetTotalKbpsOk
+### GetIdentityOk
 
-`func (o *InlineResponse200118) GetTotalKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200118) GetIdentityOk() (*InlineResponse200118Identity, bool)`
 
-GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotalKbps
+### SetIdentity
 
-`func (o *InlineResponse200118) SetTotalKbps(v int32)`
+`func (o *InlineResponse200118) SetIdentity(v InlineResponse200118Identity)`
 
-SetTotalKbps sets TotalKbps field to given value.
+SetIdentity sets Identity field to given value.
 
-### HasTotalKbps
+### HasIdentity
 
-`func (o *InlineResponse200118) HasTotalKbps() bool`
+`func (o *InlineResponse200118) HasIdentity() bool`
 
-HasTotalKbps returns a boolean if a field has been set.
+HasIdentity returns a boolean if a field has been set.
 
-### GetSentKbps
+### GetEapolKey
 
-`func (o *InlineResponse200118) GetSentKbps() int32`
+`func (o *InlineResponse200118) GetEapolKey() InlineResponse200118EapolKey`
 
-GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
 
-### GetSentKbpsOk
+### GetEapolKeyOk
 
-`func (o *InlineResponse200118) GetSentKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200118) GetEapolKeyOk() (*InlineResponse200118EapolKey, bool)`
 
-GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSentKbps
+### SetEapolKey
 
-`func (o *InlineResponse200118) SetSentKbps(v int32)`
+`func (o *InlineResponse200118) SetEapolKey(v InlineResponse200118EapolKey)`
 
-SetSentKbps sets SentKbps field to given value.
+SetEapolKey sets EapolKey field to given value.
 
-### HasSentKbps
+### HasEapolKey
 
-`func (o *InlineResponse200118) HasSentKbps() bool`
+`func (o *InlineResponse200118) HasEapolKey() bool`
 
-HasSentKbps returns a boolean if a field has been set.
-
-### GetReceivedKbps
-
-`func (o *InlineResponse200118) GetReceivedKbps() int32`
-
-GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
-
-### GetReceivedKbpsOk
-
-`func (o *InlineResponse200118) GetReceivedKbpsOk() (*int32, bool)`
-
-GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReceivedKbps
-
-`func (o *InlineResponse200118) SetReceivedKbps(v int32)`
-
-SetReceivedKbps sets ReceivedKbps field to given value.
-
-### HasReceivedKbps
-
-`func (o *InlineResponse200118) HasReceivedKbps() bool`
-
-HasReceivedKbps returns a boolean if a field has been set.
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

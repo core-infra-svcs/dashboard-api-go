@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultSettings** | Pointer to [**InlineResponse20089DefaultSettings**](InlineResponse20089DefaultSettings.md) |  | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse20089Overrides**](InlineResponse20089Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
+**Mappings** | Pointer to [**[]InlineResponse20089Mappings**](InlineResponse20089Mappings.md) | An array of DSCP to CoS mappings. An empty array will reset the mappings to default. | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse20089WithDefaults instantiates a new InlineResponse20089 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultSettings
+### GetMappings
 
-`func (o *InlineResponse20089) GetDefaultSettings() InlineResponse20089DefaultSettings`
+`func (o *InlineResponse20089) GetMappings() []InlineResponse20089Mappings`
 
-GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
+GetMappings returns the Mappings field if non-nil, zero value otherwise.
 
-### GetDefaultSettingsOk
+### GetMappingsOk
 
-`func (o *InlineResponse20089) GetDefaultSettingsOk() (*InlineResponse20089DefaultSettings, bool)`
+`func (o *InlineResponse20089) GetMappingsOk() (*[]InlineResponse20089Mappings, bool)`
 
-GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
+GetMappingsOk returns a tuple with the Mappings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultSettings
+### SetMappings
 
-`func (o *InlineResponse20089) SetDefaultSettings(v InlineResponse20089DefaultSettings)`
+`func (o *InlineResponse20089) SetMappings(v []InlineResponse20089Mappings)`
 
-SetDefaultSettings sets DefaultSettings field to given value.
+SetMappings sets Mappings field to given value.
 
-### HasDefaultSettings
+### HasMappings
 
-`func (o *InlineResponse20089) HasDefaultSettings() bool`
+`func (o *InlineResponse20089) HasMappings() bool`
 
-HasDefaultSettings returns a boolean if a field has been set.
-
-### GetOverrides
-
-`func (o *InlineResponse20089) GetOverrides() []InlineResponse20089Overrides`
-
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
-
-### GetOverridesOk
-
-`func (o *InlineResponse20089) GetOverridesOk() (*[]InlineResponse20089Overrides, bool)`
-
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOverrides
-
-`func (o *InlineResponse20089) SetOverrides(v []InlineResponse20089Overrides)`
-
-SetOverrides sets Overrides field to given value.
-
-### HasOverrides
-
-`func (o *InlineResponse20089) HasOverrides() bool`
-
-HasOverrides returns a boolean if a field has been set.
+HasMappings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

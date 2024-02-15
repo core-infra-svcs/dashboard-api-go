@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
+**DefaultSettings** | Pointer to [**InlineResponse20093DefaultSettings**](InlineResponse20093DefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse20093Overrides**](InlineResponse20093Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse20093WithDefaults instantiates a new InlineResponse20093 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetDefaultSettings
 
-`func (o *InlineResponse20093) GetBroadcastThreshold() int32`
+`func (o *InlineResponse20093) GetDefaultSettings() InlineResponse20093DefaultSettings`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetDefaultSettingsOk
 
-`func (o *InlineResponse20093) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse20093) GetDefaultSettingsOk() (*InlineResponse20093DefaultSettings, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetDefaultSettings
 
-`func (o *InlineResponse20093) SetBroadcastThreshold(v int32)`
+`func (o *InlineResponse20093) SetDefaultSettings(v InlineResponse20093DefaultSettings)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
-### HasBroadcastThreshold
+### HasDefaultSettings
 
-`func (o *InlineResponse20093) HasBroadcastThreshold() bool`
+`func (o *InlineResponse20093) HasDefaultSettings() bool`
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+HasDefaultSettings returns a boolean if a field has been set.
 
-### GetMulticastThreshold
+### GetOverrides
 
-`func (o *InlineResponse20093) GetMulticastThreshold() int32`
+`func (o *InlineResponse20093) GetOverrides() []InlineResponse20093Overrides`
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetMulticastThresholdOk
+### GetOverridesOk
 
-`func (o *InlineResponse20093) GetMulticastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse20093) GetOverridesOk() (*[]InlineResponse20093Overrides, bool)`
 
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetOverrides
 
-`func (o *InlineResponse20093) SetMulticastThreshold(v int32)`
+`func (o *InlineResponse20093) SetOverrides(v []InlineResponse20093Overrides)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasMulticastThreshold
+### HasOverrides
 
-`func (o *InlineResponse20093) HasMulticastThreshold() bool`
+`func (o *InlineResponse20093) HasOverrides() bool`
 
-HasMulticastThreshold returns a boolean if a field has been set.
-
-### GetUnknownUnicastThreshold
-
-`func (o *InlineResponse20093) GetUnknownUnicastThreshold() int32`
-
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
-
-### GetUnknownUnicastThresholdOk
-
-`func (o *InlineResponse20093) GetUnknownUnicastThresholdOk() (*int32, bool)`
-
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUnknownUnicastThreshold
-
-`func (o *InlineResponse20093) SetUnknownUnicastThreshold(v int32)`
-
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
-
-### HasUnknownUnicastThreshold
-
-`func (o *InlineResponse20093) HasUnknownUnicastThreshold() bool`
-
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

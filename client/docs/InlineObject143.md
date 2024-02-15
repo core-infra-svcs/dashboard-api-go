@@ -4,20 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | A friendly name or description for the interface or VLAN. | 
-**Subnet** | Pointer to **string** | The network that this routed interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
-**InterfaceIp** | Pointer to **string** | The IP address this switch stack will use for layer 3 routing on this VLAN or subnet. This cannot be the same as the switch&#39;s management IP. | [optional] 
-**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are, &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
-**VlanId** | **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | 
-**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route. This IP address must exist in a subnet with a routed interface. | [optional] 
-**OspfSettings** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings.md) |  | [optional] 
-**Ipv6** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default. | [optional] 
+**HelloTimerInSeconds** | Pointer to **int32** | Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds. | [optional] 
+**DeadTimerInSeconds** | Pointer to **int32** | Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535 | [optional] 
+**Areas** | Pointer to [**[]NetworksNetworkIdSwitchRoutingOspfAreas**](NetworksNetworkIdSwitchRoutingOspfAreas.md) | OSPF areas | [optional] 
+**V3** | Pointer to [**NetworksNetworkIdSwitchRoutingOspfV3**](NetworksNetworkIdSwitchRoutingOspfV3.md) |  | [optional] 
+**Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
+**Md5AuthenticationKey** | Pointer to [**NetworksNetworkIdSwitchRoutingOspfMd5AuthenticationKey**](NetworksNetworkIdSwitchRoutingOspfMd5AuthenticationKey.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject143
 
-`func NewInlineObject143(name string, vlanId int32, ) *InlineObject143`
+`func NewInlineObject143() *InlineObject143`
 
 NewInlineObject143 instantiates a new InlineObject143 object
 This constructor will assign default values to properties that have it defined,
@@ -32,195 +31,180 @@ NewInlineObject143WithDefaults instantiates a new InlineObject143 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject143) GetName() string`
+`func (o *InlineObject143) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject143) GetNameOk() (*string, bool)`
+`func (o *InlineObject143) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject143) SetName(v string)`
+`func (o *InlineObject143) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetSubnet
+`func (o *InlineObject143) HasEnabled() bool`
 
-`func (o *InlineObject143) GetSubnet() string`
+HasEnabled returns a boolean if a field has been set.
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+### GetHelloTimerInSeconds
 
-### GetSubnetOk
+`func (o *InlineObject143) GetHelloTimerInSeconds() int32`
 
-`func (o *InlineObject143) GetSubnetOk() (*string, bool)`
+GetHelloTimerInSeconds returns the HelloTimerInSeconds field if non-nil, zero value otherwise.
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+### GetHelloTimerInSecondsOk
+
+`func (o *InlineObject143) GetHelloTimerInSecondsOk() (*int32, bool)`
+
+GetHelloTimerInSecondsOk returns a tuple with the HelloTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetHelloTimerInSeconds
 
-`func (o *InlineObject143) SetSubnet(v string)`
+`func (o *InlineObject143) SetHelloTimerInSeconds(v int32)`
 
-SetSubnet sets Subnet field to given value.
+SetHelloTimerInSeconds sets HelloTimerInSeconds field to given value.
 
-### HasSubnet
+### HasHelloTimerInSeconds
 
-`func (o *InlineObject143) HasSubnet() bool`
+`func (o *InlineObject143) HasHelloTimerInSeconds() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasHelloTimerInSeconds returns a boolean if a field has been set.
 
-### GetInterfaceIp
+### GetDeadTimerInSeconds
 
-`func (o *InlineObject143) GetInterfaceIp() string`
+`func (o *InlineObject143) GetDeadTimerInSeconds() int32`
 
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+GetDeadTimerInSeconds returns the DeadTimerInSeconds field if non-nil, zero value otherwise.
 
-### GetInterfaceIpOk
+### GetDeadTimerInSecondsOk
 
-`func (o *InlineObject143) GetInterfaceIpOk() (*string, bool)`
+`func (o *InlineObject143) GetDeadTimerInSecondsOk() (*int32, bool)`
 
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+GetDeadTimerInSecondsOk returns a tuple with the DeadTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceIp
+### SetDeadTimerInSeconds
 
-`func (o *InlineObject143) SetInterfaceIp(v string)`
+`func (o *InlineObject143) SetDeadTimerInSeconds(v int32)`
 
-SetInterfaceIp sets InterfaceIp field to given value.
+SetDeadTimerInSeconds sets DeadTimerInSeconds field to given value.
 
-### HasInterfaceIp
+### HasDeadTimerInSeconds
 
-`func (o *InlineObject143) HasInterfaceIp() bool`
+`func (o *InlineObject143) HasDeadTimerInSeconds() bool`
 
-HasInterfaceIp returns a boolean if a field has been set.
+HasDeadTimerInSeconds returns a boolean if a field has been set.
 
-### GetMulticastRouting
+### GetAreas
 
-`func (o *InlineObject143) GetMulticastRouting() string`
+`func (o *InlineObject143) GetAreas() []NetworksNetworkIdSwitchRoutingOspfAreas`
 
-GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
+GetAreas returns the Areas field if non-nil, zero value otherwise.
 
-### GetMulticastRoutingOk
+### GetAreasOk
 
-`func (o *InlineObject143) GetMulticastRoutingOk() (*string, bool)`
+`func (o *InlineObject143) GetAreasOk() (*[]NetworksNetworkIdSwitchRoutingOspfAreas, bool)`
 
-GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
+GetAreasOk returns a tuple with the Areas field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastRouting
+### SetAreas
 
-`func (o *InlineObject143) SetMulticastRouting(v string)`
+`func (o *InlineObject143) SetAreas(v []NetworksNetworkIdSwitchRoutingOspfAreas)`
 
-SetMulticastRouting sets MulticastRouting field to given value.
+SetAreas sets Areas field to given value.
 
-### HasMulticastRouting
+### HasAreas
 
-`func (o *InlineObject143) HasMulticastRouting() bool`
+`func (o *InlineObject143) HasAreas() bool`
 
-HasMulticastRouting returns a boolean if a field has been set.
+HasAreas returns a boolean if a field has been set.
 
-### GetVlanId
+### GetV3
 
-`func (o *InlineObject143) GetVlanId() int32`
+`func (o *InlineObject143) GetV3() NetworksNetworkIdSwitchRoutingOspfV3`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetV3 returns the V3 field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetV3Ok
 
-`func (o *InlineObject143) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineObject143) GetV3Ok() (*NetworksNetworkIdSwitchRoutingOspfV3, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetV3
 
-`func (o *InlineObject143) SetVlanId(v int32)`
+`func (o *InlineObject143) SetV3(v NetworksNetworkIdSwitchRoutingOspfV3)`
 
-SetVlanId sets VlanId field to given value.
+SetV3 sets V3 field to given value.
 
+### HasV3
 
-### GetDefaultGateway
+`func (o *InlineObject143) HasV3() bool`
 
-`func (o *InlineObject143) GetDefaultGateway() string`
+HasV3 returns a boolean if a field has been set.
 
-GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
+### GetMd5AuthenticationEnabled
 
-### GetDefaultGatewayOk
+`func (o *InlineObject143) GetMd5AuthenticationEnabled() bool`
 
-`func (o *InlineObject143) GetDefaultGatewayOk() (*string, bool)`
+GetMd5AuthenticationEnabled returns the Md5AuthenticationEnabled field if non-nil, zero value otherwise.
 
-GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
+### GetMd5AuthenticationEnabledOk
+
+`func (o *InlineObject143) GetMd5AuthenticationEnabledOk() (*bool, bool)`
+
+GetMd5AuthenticationEnabledOk returns a tuple with the Md5AuthenticationEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultGateway
+### SetMd5AuthenticationEnabled
 
-`func (o *InlineObject143) SetDefaultGateway(v string)`
+`func (o *InlineObject143) SetMd5AuthenticationEnabled(v bool)`
 
-SetDefaultGateway sets DefaultGateway field to given value.
+SetMd5AuthenticationEnabled sets Md5AuthenticationEnabled field to given value.
 
-### HasDefaultGateway
+### HasMd5AuthenticationEnabled
 
-`func (o *InlineObject143) HasDefaultGateway() bool`
+`func (o *InlineObject143) HasMd5AuthenticationEnabled() bool`
 
-HasDefaultGateway returns a boolean if a field has been set.
+HasMd5AuthenticationEnabled returns a boolean if a field has been set.
 
-### GetOspfSettings
+### GetMd5AuthenticationKey
 
-`func (o *InlineObject143) GetOspfSettings() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings`
+`func (o *InlineObject143) GetMd5AuthenticationKey() NetworksNetworkIdSwitchRoutingOspfMd5AuthenticationKey`
 
-GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
+GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
 
-### GetOspfSettingsOk
+### GetMd5AuthenticationKeyOk
 
-`func (o *InlineObject143) GetOspfSettingsOk() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings, bool)`
+`func (o *InlineObject143) GetMd5AuthenticationKeyOk() (*NetworksNetworkIdSwitchRoutingOspfMd5AuthenticationKey, bool)`
 
-GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
+GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOspfSettings
+### SetMd5AuthenticationKey
 
-`func (o *InlineObject143) SetOspfSettings(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings)`
+`func (o *InlineObject143) SetMd5AuthenticationKey(v NetworksNetworkIdSwitchRoutingOspfMd5AuthenticationKey)`
 
-SetOspfSettings sets OspfSettings field to given value.
+SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
 
-### HasOspfSettings
+### HasMd5AuthenticationKey
 
-`func (o *InlineObject143) HasOspfSettings() bool`
+`func (o *InlineObject143) HasMd5AuthenticationKey() bool`
 
-HasOspfSettings returns a boolean if a field has been set.
-
-### GetIpv6
-
-`func (o *InlineObject143) GetIpv6() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6`
-
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
-
-### GetIpv6Ok
-
-`func (o *InlineObject143) GetIpv6Ok() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6, bool)`
-
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv6
-
-`func (o *InlineObject143) SetIpv6(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6)`
-
-SetIpv6 sets Ipv6 field to given value.
-
-### HasIpv6
-
-`func (o *InlineObject143) HasIpv6() bool`
-
-HasIpv6 returns a boolean if a field has been set.
+HasMd5AuthenticationKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

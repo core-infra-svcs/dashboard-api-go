@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
+**Counts** | Pointer to [**InlineResponse200131Counts**](InlineResponse200131Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200131WithDefaults instantiates a new InlineResponse200131 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBrandingPolicyIds
+### GetCounts
 
-`func (o *InlineResponse200131) GetBrandingPolicyIds() []string`
+`func (o *InlineResponse200131) GetCounts() InlineResponse200131Counts`
 
-GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetBrandingPolicyIdsOk
+### GetCountsOk
 
-`func (o *InlineResponse200131) GetBrandingPolicyIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200131) GetCountsOk() (*InlineResponse200131Counts, bool)`
 
-GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBrandingPolicyIds
+### SetCounts
 
-`func (o *InlineResponse200131) SetBrandingPolicyIds(v []string)`
+`func (o *InlineResponse200131) SetCounts(v InlineResponse200131Counts)`
 
-SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
+SetCounts sets Counts field to given value.
 
-### HasBrandingPolicyIds
+### HasCounts
 
-`func (o *InlineResponse200131) HasBrandingPolicyIds() bool`
+`func (o *InlineResponse200131) HasCounts() bool`
 
-HasBrandingPolicyIds returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

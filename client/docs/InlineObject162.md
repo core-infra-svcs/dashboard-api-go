@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]NetworksNetworkIdWirelessBillingPlans**](NetworksNetworkIdWirelessBillingPlans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject162WithDefaults instantiates a new InlineObject162 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetName
 
-`func (o *InlineObject162) GetCurrency() string`
+`func (o *InlineObject162) GetName() string`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetNameOk
 
-`func (o *InlineObject162) GetCurrencyOk() (*string, bool)`
+`func (o *InlineObject162) GetNameOk() (*string, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetName
 
-`func (o *InlineObject162) SetCurrency(v string)`
+`func (o *InlineObject162) SetName(v string)`
 
-SetCurrency sets Currency field to given value.
+SetName sets Name field to given value.
 
-### HasCurrency
+### HasName
 
-`func (o *InlineObject162) HasCurrency() bool`
+`func (o *InlineObject162) HasName() bool`
 
-HasCurrency returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetPlans
+### GetSharedSecret
 
-`func (o *InlineObject162) GetPlans() []NetworksNetworkIdWirelessBillingPlans`
+`func (o *InlineObject162) GetSharedSecret() string`
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-### GetPlansOk
+### GetSharedSecretOk
 
-`func (o *InlineObject162) GetPlansOk() (*[]NetworksNetworkIdWirelessBillingPlans, bool)`
+`func (o *InlineObject162) GetSharedSecretOk() (*string, bool)`
 
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetSharedSecret
 
-`func (o *InlineObject162) SetPlans(v []NetworksNetworkIdWirelessBillingPlans)`
+`func (o *InlineObject162) SetSharedSecret(v string)`
 
-SetPlans sets Plans field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasPlans
+### HasSharedSecret
 
-`func (o *InlineObject162) HasPlans() bool`
+`func (o *InlineObject162) HasSharedSecret() bool`
 
-HasPlans returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
+
+### GetPayloadTemplate
+
+`func (o *InlineObject162) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate`
+
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateOk
+
+`func (o *InlineObject162) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate, bool)`
+
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplate
+
+`func (o *InlineObject162) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate)`
+
+SetPayloadTemplate sets PayloadTemplate field to given value.
+
+### HasPayloadTemplate
+
+`func (o *InlineObject162) HasPayloadTemplate() bool`
+
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

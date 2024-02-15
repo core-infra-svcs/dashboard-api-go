@@ -4,12 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StaticDelegatedPrefixId** | Pointer to **string** | Static delegated prefix id. | [optional] 
-**Prefix** | Pointer to **string** | IPv6 prefix/prefix length. | [optional] 
-**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin.md) |  | [optional] 
-**Description** | Pointer to **string** | Identifying description for the prefix. | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Prefix creation time. | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | Prefix Updated time. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20023Rules**](InlineResponse20023Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
@@ -30,155 +26,55 @@ NewInlineResponse20023WithDefaults instantiates a new InlineResponse20023 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStaticDelegatedPrefixId
+### GetRules
 
-`func (o *InlineResponse20023) GetStaticDelegatedPrefixId() string`
+`func (o *InlineResponse20023) GetRules() []InlineResponse20023Rules`
 
-GetStaticDelegatedPrefixId returns the StaticDelegatedPrefixId field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetStaticDelegatedPrefixIdOk
+### GetRulesOk
 
-`func (o *InlineResponse20023) GetStaticDelegatedPrefixIdOk() (*string, bool)`
+`func (o *InlineResponse20023) GetRulesOk() (*[]InlineResponse20023Rules, bool)`
 
-GetStaticDelegatedPrefixIdOk returns a tuple with the StaticDelegatedPrefixId field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStaticDelegatedPrefixId
+### SetRules
 
-`func (o *InlineResponse20023) SetStaticDelegatedPrefixId(v string)`
+`func (o *InlineResponse20023) SetRules(v []InlineResponse20023Rules)`
 
-SetStaticDelegatedPrefixId sets StaticDelegatedPrefixId field to given value.
+SetRules sets Rules field to given value.
 
-### HasStaticDelegatedPrefixId
+### HasRules
 
-`func (o *InlineResponse20023) HasStaticDelegatedPrefixId() bool`
+`func (o *InlineResponse20023) HasRules() bool`
 
-HasStaticDelegatedPrefixId returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetPrefix
+### GetSyslogDefaultRule
 
-`func (o *InlineResponse20023) GetPrefix() string`
+`func (o *InlineResponse20023) GetSyslogDefaultRule() bool`
 
-GetPrefix returns the Prefix field if non-nil, zero value otherwise.
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
 
-### GetPrefixOk
+### GetSyslogDefaultRuleOk
 
-`func (o *InlineResponse20023) GetPrefixOk() (*string, bool)`
+`func (o *InlineResponse20023) GetSyslogDefaultRuleOk() (*bool, bool)`
 
-GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrefix
+### SetSyslogDefaultRule
 
-`func (o *InlineResponse20023) SetPrefix(v string)`
+`func (o *InlineResponse20023) SetSyslogDefaultRule(v bool)`
 
-SetPrefix sets Prefix field to given value.
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
 
-### HasPrefix
+### HasSyslogDefaultRule
 
-`func (o *InlineResponse20023) HasPrefix() bool`
+`func (o *InlineResponse20023) HasSyslogDefaultRule() bool`
 
-HasPrefix returns a boolean if a field has been set.
-
-### GetOrigin
-
-`func (o *InlineResponse20023) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin`
-
-GetOrigin returns the Origin field if non-nil, zero value otherwise.
-
-### GetOriginOk
-
-`func (o *InlineResponse20023) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin, bool)`
-
-GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrigin
-
-`func (o *InlineResponse20023) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin)`
-
-SetOrigin sets Origin field to given value.
-
-### HasOrigin
-
-`func (o *InlineResponse20023) HasOrigin() bool`
-
-HasOrigin returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse20023) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse20023) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse20023) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse20023) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse20023) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse20023) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse20023) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse20023) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse20023) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse20023) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse20023) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse20023) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

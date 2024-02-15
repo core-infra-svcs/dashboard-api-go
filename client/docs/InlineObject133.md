@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RuleIds** | **[]string** | A list of quality of service rule IDs arranged in order in which they should be processed by the switch. | 
+**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | Array of switch or stack ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
+**SwitchProfilePorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts.md) | Array of switch profile ports for updating aggregation group. Minimum 2 and maximum 8 ports are supported. | [optional] 
 
 ## Methods
 
 ### NewInlineObject133
 
-`func NewInlineObject133(ruleIds []string, ) *InlineObject133`
+`func NewInlineObject133() *InlineObject133`
 
 NewInlineObject133 instantiates a new InlineObject133 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject133WithDefaults instantiates a new InlineObject133 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRuleIds
+### GetSwitchPorts
 
-`func (o *InlineObject133) GetRuleIds() []string`
+`func (o *InlineObject133) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
 
-GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
+GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
 
-### GetRuleIdsOk
+### GetSwitchPortsOk
 
-`func (o *InlineObject133) GetRuleIdsOk() (*[]string, bool)`
+`func (o *InlineObject133) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
 
-GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
+GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRuleIds
+### SetSwitchPorts
 
-`func (o *InlineObject133) SetRuleIds(v []string)`
+`func (o *InlineObject133) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
 
-SetRuleIds sets RuleIds field to given value.
+SetSwitchPorts sets SwitchPorts field to given value.
 
+### HasSwitchPorts
+
+`func (o *InlineObject133) HasSwitchPorts() bool`
+
+HasSwitchPorts returns a boolean if a field has been set.
+
+### GetSwitchProfilePorts
+
+`func (o *InlineObject133) GetSwitchProfilePorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts`
+
+GetSwitchProfilePorts returns the SwitchProfilePorts field if non-nil, zero value otherwise.
+
+### GetSwitchProfilePortsOk
+
+`func (o *InlineObject133) GetSwitchProfilePortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts, bool)`
+
+GetSwitchProfilePortsOk returns a tuple with the SwitchProfilePorts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitchProfilePorts
+
+`func (o *InlineObject133) SetSwitchProfilePorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchProfilePorts)`
+
+SetSwitchProfilePorts sets SwitchProfilePorts field to given value.
+
+### HasSwitchProfilePorts
+
+`func (o *InlineObject133) HasSwitchProfilePorts() bool`
+
+HasSwitchProfilePorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

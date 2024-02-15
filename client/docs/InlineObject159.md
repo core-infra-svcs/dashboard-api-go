@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the template | [optional] 
-**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
-**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. | [optional] 
-**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
+**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile.md) |  | [optional] 
+**Serials** | **[]string** | Array of Device Serials | 
+**StackIds** | **[]string** | Array of Switch Stack IDs | 
 
 ## Methods
 
 ### NewInlineObject159
 
-`func NewInlineObject159() *InlineObject159`
+`func NewInlineObject159(serials []string, stackIds []string, ) *InlineObject159`
 
 NewInlineObject159 instantiates a new InlineObject159 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +27,70 @@ NewInlineObject159WithDefaults instantiates a new InlineObject159 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetVlanProfile
 
-`func (o *InlineObject159) GetName() string`
+`func (o *InlineObject159) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetVlanProfileOk
 
-`func (o *InlineObject159) GetNameOk() (*string, bool)`
+`func (o *InlineObject159) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetVlanProfile
 
-`func (o *InlineObject159) SetName(v string)`
+`func (o *InlineObject159) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile)`
 
-SetName sets Name field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
-### HasName
+### HasVlanProfile
 
-`func (o *InlineObject159) HasName() bool`
+`func (o *InlineObject159) HasVlanProfile() bool`
 
-HasName returns a boolean if a field has been set.
+HasVlanProfile returns a boolean if a field has been set.
 
-### GetBody
+### GetSerials
 
-`func (o *InlineObject159) GetBody() string`
+`func (o *InlineObject159) GetSerials() []string`
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetBodyOk
+### GetSerialsOk
 
-`func (o *InlineObject159) GetBodyOk() (*string, bool)`
+`func (o *InlineObject159) GetSerialsOk() (*[]string, bool)`
 
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetSerials
 
-`func (o *InlineObject159) SetBody(v string)`
+`func (o *InlineObject159) SetSerials(v []string)`
 
-SetBody sets Body field to given value.
+SetSerials sets Serials field to given value.
 
-### HasBody
 
-`func (o *InlineObject159) HasBody() bool`
+### GetStackIds
 
-HasBody returns a boolean if a field has been set.
+`func (o *InlineObject159) GetStackIds() []string`
 
-### GetHeaders
+GetStackIds returns the StackIds field if non-nil, zero value otherwise.
 
-`func (o *InlineObject159) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
+### GetStackIdsOk
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+`func (o *InlineObject159) GetStackIdsOk() (*[]string, bool)`
 
-### GetHeadersOk
-
-`func (o *InlineObject159) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
-
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetStackIds
 
-`func (o *InlineObject159) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
+`func (o *InlineObject159) SetStackIds(v []string)`
 
-SetHeaders sets Headers field to given value.
+SetStackIds sets StackIds field to given value.
 
-### HasHeaders
-
-`func (o *InlineObject159) HasHeaders() bool`
-
-HasHeaders returns a boolean if a field has been set.
-
-### GetBodyFile
-
-`func (o *InlineObject159) GetBodyFile() string`
-
-GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
-
-### GetBodyFileOk
-
-`func (o *InlineObject159) GetBodyFileOk() (*string, bool)`
-
-GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBodyFile
-
-`func (o *InlineObject159) SetBodyFile(v string)`
-
-SetBodyFile sets BodyFile field to given value.
-
-### HasBodyFile
-
-`func (o *InlineObject159) HasBodyFile() bool`
-
-HasBodyFile returns a boolean if a field has been set.
-
-### GetHeadersFile
-
-`func (o *InlineObject159) GetHeadersFile() string`
-
-GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
-
-### GetHeadersFileOk
-
-`func (o *InlineObject159) GetHeadersFileOk() (*string, bool)`
-
-GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeadersFile
-
-`func (o *InlineObject159) SetHeadersFile(v string)`
-
-SetHeadersFile sets HeadersFile field to given value.
-
-### HasHeadersFile
-
-`func (o *InlineObject159) HasHeadersFile() bool`
-
-HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

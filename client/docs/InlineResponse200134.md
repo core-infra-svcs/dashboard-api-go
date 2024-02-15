@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
-**Licenses** | Pointer to [**[]InlineResponse200134Licenses**](InlineResponse200134Licenses.md) | The licenses claimed | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20023Rules**](InlineResponse20023Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200134WithDefaults instantiates a new InlineResponse200134 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetRules
 
-`func (o *InlineResponse200134) GetOrders() []string`
+`func (o *InlineResponse200134) GetRules() []InlineResponse20023Rules`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetRulesOk
 
-`func (o *InlineResponse200134) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineResponse200134) GetRulesOk() (*[]InlineResponse20023Rules, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetRules
 
-`func (o *InlineResponse200134) SetOrders(v []string)`
+`func (o *InlineResponse200134) SetRules(v []InlineResponse20023Rules)`
 
-SetOrders sets Orders field to given value.
+SetRules sets Rules field to given value.
 
-### HasOrders
+### HasRules
 
-`func (o *InlineResponse200134) HasOrders() bool`
+`func (o *InlineResponse200134) HasRules() bool`
 
-HasOrders returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineResponse200134) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineResponse200134) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineResponse200134) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineResponse200134) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
-
-### GetLicenses
-
-`func (o *InlineResponse200134) GetLicenses() []InlineResponse200134Licenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineResponse200134) GetLicensesOk() (*[]InlineResponse200134Licenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineResponse200134) SetLicenses(v []InlineResponse200134Licenses)`
-
-SetLicenses sets Licenses field to given value.
-
-### HasLicenses
-
-`func (o *InlineResponse200134) HasLicenses() bool`
-
-HasLicenses returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

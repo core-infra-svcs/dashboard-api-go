@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Schedule id | [optional] 
-**Name** | Pointer to **string** | Schedule name | [optional] 
+**NetworkId** | **string** | ID of the network whose VPN exclusion rules are returned. | 
+**NetworkName** | **string** | Name of the network whose VPN exclusion rules are returned. | 
+**Custom** | [**[]InlineResponse20033Custom**](InlineResponse20033Custom.md) | Custom VPN exclusion rules. | 
+**MajorApplications** | [**[]InlineResponse20033MajorApplications**](InlineResponse20033MajorApplications.md) | Major Application based VPN exclusion rules. | 
 
 ## Methods
 
 ### NewInlineResponse20033
 
-`func NewInlineResponse20033() *InlineResponse20033`
+`func NewInlineResponse20033(networkId string, networkName string, custom []InlineResponse20033Custom, majorApplications []InlineResponse20033MajorApplications, ) *InlineResponse20033`
 
 NewInlineResponse20033 instantiates a new InlineResponse20033 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,85 @@ NewInlineResponse20033WithDefaults instantiates a new InlineResponse20033 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetNetworkId
 
-`func (o *InlineResponse20033) GetId() string`
+`func (o *InlineResponse20033) GetNetworkId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20033) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20033) GetNetworkIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetNetworkId
 
-`func (o *InlineResponse20033) SetId(v string)`
+`func (o *InlineResponse20033) SetNetworkId(v string)`
 
-SetId sets Id field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasId
 
-`func (o *InlineResponse20033) HasId() bool`
+### GetNetworkName
 
-HasId returns a boolean if a field has been set.
+`func (o *InlineResponse20033) GetNetworkName() string`
 
-### GetName
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20033) GetName() string`
+### GetNetworkNameOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse20033) GetNetworkNameOk() (*string, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse20033) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNetworkName
 
-`func (o *InlineResponse20033) SetName(v string)`
+`func (o *InlineResponse20033) SetNetworkName(v string)`
 
-SetName sets Name field to given value.
+SetNetworkName sets NetworkName field to given value.
 
-### HasName
 
-`func (o *InlineResponse20033) HasName() bool`
+### GetCustom
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineResponse20033) GetCustom() []InlineResponse20033Custom`
+
+GetCustom returns the Custom field if non-nil, zero value otherwise.
+
+### GetCustomOk
+
+`func (o *InlineResponse20033) GetCustomOk() (*[]InlineResponse20033Custom, bool)`
+
+GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustom
+
+`func (o *InlineResponse20033) SetCustom(v []InlineResponse20033Custom)`
+
+SetCustom sets Custom field to given value.
+
+
+### GetMajorApplications
+
+`func (o *InlineResponse20033) GetMajorApplications() []InlineResponse20033MajorApplications`
+
+GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+
+### GetMajorApplicationsOk
+
+`func (o *InlineResponse20033) GetMajorApplicationsOk() (*[]InlineResponse20033MajorApplications, bool)`
+
+GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajorApplications
+
+`func (o *InlineResponse20033) SetMajorApplications(v []InlineResponse20033MajorApplications)`
+
+SetMajorApplications sets MajorApplications field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

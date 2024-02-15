@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AclId** | Pointer to **string** | ID of the adaptive policy ACL | [optional] 
-**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
-**IpVersion** | Pointer to **string** | IP version of adpative policy ACL | [optional] 
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules | [optional] 
-**CreatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was created | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was last updated | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200121Rules**](InlineResponse200121Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -31,122 +27,72 @@ NewInlineResponse200121WithDefaults instantiates a new InlineResponse200121 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAclId
+### GetTrafficShapingEnabled
 
-`func (o *InlineResponse200121) GetAclId() string`
+`func (o *InlineResponse200121) GetTrafficShapingEnabled() bool`
 
-GetAclId returns the AclId field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetAclIdOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineResponse200121) GetAclIdOk() (*string, bool)`
+`func (o *InlineResponse200121) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetAclIdOk returns a tuple with the AclId field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAclId
+### SetTrafficShapingEnabled
 
-`func (o *InlineResponse200121) SetAclId(v string)`
+`func (o *InlineResponse200121) SetTrafficShapingEnabled(v bool)`
 
-SetAclId sets AclId field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasAclId
+### HasTrafficShapingEnabled
 
-`func (o *InlineResponse200121) HasAclId() bool`
+`func (o *InlineResponse200121) HasTrafficShapingEnabled() bool`
 
-HasAclId returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetDefaultRulesEnabled
 
-`func (o *InlineResponse200121) GetName() string`
+`func (o *InlineResponse200121) GetDefaultRulesEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineResponse200121) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200121) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDefaultRulesEnabled
 
-`func (o *InlineResponse200121) SetName(v string)`
+`func (o *InlineResponse200121) SetDefaultRulesEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasName
+### HasDefaultRulesEnabled
 
-`func (o *InlineResponse200121) HasName() bool`
+`func (o *InlineResponse200121) HasDefaultRulesEnabled() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200121) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200121) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200121) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200121) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetIpVersion
-
-`func (o *InlineResponse200121) GetIpVersion() string`
-
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
-
-### GetIpVersionOk
-
-`func (o *InlineResponse200121) GetIpVersionOk() (*string, bool)`
-
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpVersion
-
-`func (o *InlineResponse200121) SetIpVersion(v string)`
-
-SetIpVersion sets IpVersion field to given value.
-
-### HasIpVersion
-
-`func (o *InlineResponse200121) HasIpVersion() bool`
-
-HasIpVersion returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
 ### GetRules
 
-`func (o *InlineResponse200121) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
+`func (o *InlineResponse200121) GetRules() []InlineResponse200121Rules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineResponse200121) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
+`func (o *InlineResponse200121) GetRulesOk() (*[]InlineResponse200121Rules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineResponse200121) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
+`func (o *InlineResponse200121) SetRules(v []InlineResponse200121Rules)`
 
 SetRules sets Rules field to given value.
 
@@ -155,56 +101,6 @@ SetRules sets Rules field to given value.
 `func (o *InlineResponse200121) HasRules() bool`
 
 HasRules returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200121) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200121) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200121) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200121) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200121) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200121) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200121) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200121) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

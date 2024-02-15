@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits.md) |  | [optional] 
+**Name** | **string** | Name of the custom performance class | 
+**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
+**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
+**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
 
 ## Methods
 
 ### NewInlineObject61
 
-`func NewInlineObject61() *InlineObject61`
+`func NewInlineObject61(name string, ) *InlineObject61`
 
 NewInlineObject61 instantiates a new InlineObject61 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +28,100 @@ NewInlineObject61WithDefaults instantiates a new InlineObject61 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBandwidthLimits
+### GetName
 
-`func (o *InlineObject61) GetBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits`
+`func (o *InlineObject61) GetName() string`
 
-GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetBandwidthLimitsOk
+### GetNameOk
 
-`func (o *InlineObject61) GetBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits, bool)`
+`func (o *InlineObject61) GetNameOk() (*string, bool)`
 
-GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBandwidthLimits
+### SetName
 
-`func (o *InlineObject61) SetBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimits)`
+`func (o *InlineObject61) SetName(v string)`
 
-SetBandwidthLimits sets BandwidthLimits field to given value.
+SetName sets Name field to given value.
 
-### HasBandwidthLimits
 
-`func (o *InlineObject61) HasBandwidthLimits() bool`
+### GetMaxLatency
 
-HasBandwidthLimits returns a boolean if a field has been set.
+`func (o *InlineObject61) GetMaxLatency() int32`
+
+GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+
+### GetMaxLatencyOk
+
+`func (o *InlineObject61) GetMaxLatencyOk() (*int32, bool)`
+
+GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLatency
+
+`func (o *InlineObject61) SetMaxLatency(v int32)`
+
+SetMaxLatency sets MaxLatency field to given value.
+
+### HasMaxLatency
+
+`func (o *InlineObject61) HasMaxLatency() bool`
+
+HasMaxLatency returns a boolean if a field has been set.
+
+### GetMaxJitter
+
+`func (o *InlineObject61) GetMaxJitter() int32`
+
+GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+
+### GetMaxJitterOk
+
+`func (o *InlineObject61) GetMaxJitterOk() (*int32, bool)`
+
+GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxJitter
+
+`func (o *InlineObject61) SetMaxJitter(v int32)`
+
+SetMaxJitter sets MaxJitter field to given value.
+
+### HasMaxJitter
+
+`func (o *InlineObject61) HasMaxJitter() bool`
+
+HasMaxJitter returns a boolean if a field has been set.
+
+### GetMaxLossPercentage
+
+`func (o *InlineObject61) GetMaxLossPercentage() int32`
+
+GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+
+### GetMaxLossPercentageOk
+
+`func (o *InlineObject61) GetMaxLossPercentageOk() (*int32, bool)`
+
+GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLossPercentage
+
+`func (o *InlineObject61) SetMaxLossPercentage(v int32)`
+
+SetMaxLossPercentage sets MaxLossPercentage field to given value.
+
+### HasMaxLossPercentage
+
+`func (o *InlineObject61) HasMaxLossPercentage() bool`
+
+HasMaxLossPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
+**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the licenses to | [optional] 
+**LicenseIds** | Pointer to **[]string** | A list of IDs of licenses to move to the new organization | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200166WithDefaults instantiates a new InlineResponse200166 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetDestOrganizationId
 
-`func (o *InlineResponse200166) GetId() string`
+`func (o *InlineResponse200166) GetDestOrganizationId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineResponse200166) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200166) GetDestOrganizationIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetDestOrganizationId
 
-`func (o *InlineResponse200166) SetId(v string)`
+`func (o *InlineResponse200166) SetDestOrganizationId(v string)`
 
-SetId sets Id field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasId
+### HasDestOrganizationId
 
-`func (o *InlineResponse200166) HasId() bool`
+`func (o *InlineResponse200166) HasDestOrganizationId() bool`
 
-HasId returns a boolean if a field has been set.
+HasDestOrganizationId returns a boolean if a field has been set.
 
-### GetRole
+### GetLicenseIds
 
-`func (o *InlineResponse200166) GetRole() string`
+`func (o *InlineResponse200166) GetLicenseIds() []string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetLicenseIdsOk
 
-`func (o *InlineResponse200166) GetRoleOk() (*string, bool)`
+`func (o *InlineResponse200166) GetLicenseIdsOk() (*[]string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetLicenseIds
 
-`func (o *InlineResponse200166) SetRole(v string)`
+`func (o *InlineResponse200166) SetLicenseIds(v []string)`
 
-SetRole sets Role field to given value.
+SetLicenseIds sets LicenseIds field to given value.
 
-### HasRole
+### HasLicenseIds
 
-`func (o *InlineResponse200166) HasRole() bool`
+`func (o *InlineResponse200166) HasLicenseIds() bool`
 
-HasRole returns a boolean if a field has been set.
-
-### GetOrgAccess
-
-`func (o *InlineResponse200166) GetOrgAccess() string`
-
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
-
-### GetOrgAccessOk
-
-`func (o *InlineResponse200166) GetOrgAccessOk() (*string, bool)`
-
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrgAccess
-
-`func (o *InlineResponse200166) SetOrgAccess(v string)`
-
-SetOrgAccess sets OrgAccess field to given value.
-
-### HasOrgAccess
-
-`func (o *InlineResponse200166) HasOrgAccess() bool`
-
-HasOrgAccess returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineResponse200166) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineResponse200166) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineResponse200166) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineResponse200166) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200166) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200166) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200166) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200166) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasLicenseIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

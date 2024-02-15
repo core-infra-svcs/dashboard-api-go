@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
+**RemainderLicenses** | Pointer to [**[]InlineResponse200168**](InlineResponse200168.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
+**MovedLicenses** | Pointer to [**[]InlineResponse200168**](InlineResponse200168.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200169WithDefaults instantiates a new InlineResponse200169 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificate
+### GetRemainderLicenses
 
-`func (o *InlineResponse200169) GetCertificate() string`
+`func (o *InlineResponse200169) GetRemainderLicenses() []InlineResponse200168`
 
-GetCertificate returns the Certificate field if non-nil, zero value otherwise.
+GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
 
-### GetCertificateOk
+### GetRemainderLicensesOk
 
-`func (o *InlineResponse200169) GetCertificateOk() (*string, bool)`
+`func (o *InlineResponse200169) GetRemainderLicensesOk() (*[]InlineResponse200168, bool)`
 
-GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
+GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificate
+### SetRemainderLicenses
 
-`func (o *InlineResponse200169) SetCertificate(v string)`
+`func (o *InlineResponse200169) SetRemainderLicenses(v []InlineResponse200168)`
 
-SetCertificate sets Certificate field to given value.
+SetRemainderLicenses sets RemainderLicenses field to given value.
 
-### HasCertificate
+### HasRemainderLicenses
 
-`func (o *InlineResponse200169) HasCertificate() bool`
+`func (o *InlineResponse200169) HasRemainderLicenses() bool`
 
-HasCertificate returns a boolean if a field has been set.
+HasRemainderLicenses returns a boolean if a field has been set.
+
+### GetMovedLicenses
+
+`func (o *InlineResponse200169) GetMovedLicenses() []InlineResponse200168`
+
+GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
+
+### GetMovedLicensesOk
+
+`func (o *InlineResponse200169) GetMovedLicensesOk() (*[]InlineResponse200168, bool)`
+
+GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMovedLicenses
+
+`func (o *InlineResponse200169) SetMovedLicenses(v []InlineResponse200168)`
+
+SetMovedLicenses sets MovedLicenses field to given value.
+
+### HasMovedLicenses
+
+`func (o *InlineResponse200169) HasMovedLicenses() bool`
+
+HasMovedLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

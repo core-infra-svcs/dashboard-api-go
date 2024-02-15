@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlanProfile** | Pointer to [**InlineResponse20097VlanProfile**](InlineResponse20097VlanProfile.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | Array of Device Serials | [optional] 
-**StackIds** | Pointer to **[]string** | Array of Switch Stack IDs | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20097WithDefaults instantiates a new InlineResponse20097 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlanProfile
+### GetBroadcastThreshold
 
-`func (o *InlineResponse20097) GetVlanProfile() InlineResponse20097VlanProfile`
+`func (o *InlineResponse20097) GetBroadcastThreshold() int32`
 
-GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetVlanProfileOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineResponse20097) GetVlanProfileOk() (*InlineResponse20097VlanProfile, bool)`
+`func (o *InlineResponse20097) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanProfile
+### SetBroadcastThreshold
 
-`func (o *InlineResponse20097) SetVlanProfile(v InlineResponse20097VlanProfile)`
+`func (o *InlineResponse20097) SetBroadcastThreshold(v int32)`
 
-SetVlanProfile sets VlanProfile field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasVlanProfile
+### HasBroadcastThreshold
 
-`func (o *InlineResponse20097) HasVlanProfile() bool`
+`func (o *InlineResponse20097) HasBroadcastThreshold() bool`
 
-HasVlanProfile returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetSerials
+### GetMulticastThreshold
 
-`func (o *InlineResponse20097) GetSerials() []string`
+`func (o *InlineResponse20097) GetMulticastThreshold() int32`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetMulticastThresholdOk
 
-`func (o *InlineResponse20097) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse20097) GetMulticastThresholdOk() (*int32, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetMulticastThreshold
 
-`func (o *InlineResponse20097) SetSerials(v []string)`
+`func (o *InlineResponse20097) SetMulticastThreshold(v int32)`
 
-SetSerials sets Serials field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasSerials
+### HasMulticastThreshold
 
-`func (o *InlineResponse20097) HasSerials() bool`
+`func (o *InlineResponse20097) HasMulticastThreshold() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
 
-### GetStackIds
+### GetUnknownUnicastThreshold
 
-`func (o *InlineResponse20097) GetStackIds() []string`
+`func (o *InlineResponse20097) GetUnknownUnicastThreshold() int32`
 
-GetStackIds returns the StackIds field if non-nil, zero value otherwise.
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
 
-### GetStackIdsOk
+### GetUnknownUnicastThresholdOk
 
-`func (o *InlineResponse20097) GetStackIdsOk() (*[]string, bool)`
+`func (o *InlineResponse20097) GetUnknownUnicastThresholdOk() (*int32, bool)`
 
-GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStackIds
+### SetUnknownUnicastThreshold
 
-`func (o *InlineResponse20097) SetStackIds(v []string)`
+`func (o *InlineResponse20097) SetUnknownUnicastThreshold(v int32)`
 
-SetStackIds sets StackIds field to given value.
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
 
-### HasStackIds
+### HasUnknownUnicastThreshold
 
-`func (o *InlineResponse20097) HasStackIds() bool`
+`func (o *InlineResponse20097) HasUnknownUnicastThreshold() bool`
 
-HasStackIds returns a boolean if a field has been set.
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

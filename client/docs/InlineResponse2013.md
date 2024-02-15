@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Webhook delivery identifier | [optional] 
-**Url** | Pointer to **string** | URL where the webhook was delivered | [optional] 
-**Status** | Pointer to **string** | Current status of the webhook delivery | [optional] 
+**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ping request. | [optional] 
+**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
@@ -27,30 +29,30 @@ NewInlineResponse2013WithDefaults instantiates a new InlineResponse2013 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetPingId
 
-`func (o *InlineResponse2013) GetId() string`
+`func (o *InlineResponse2013) GetPingId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetPingId returns the PingId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetPingIdOk
 
-`func (o *InlineResponse2013) GetIdOk() (*string, bool)`
+`func (o *InlineResponse2013) GetPingIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetPingId
 
-`func (o *InlineResponse2013) SetId(v string)`
+`func (o *InlineResponse2013) SetPingId(v string)`
 
-SetId sets Id field to given value.
+SetPingId sets PingId field to given value.
 
-### HasId
+### HasPingId
 
-`func (o *InlineResponse2013) HasId() bool`
+`func (o *InlineResponse2013) HasPingId() bool`
 
-HasId returns a boolean if a field has been set.
+HasPingId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -77,6 +79,31 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### GetRequest
+
+`func (o *InlineResponse2013) GetRequest() InlineResponse2013Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse2013) GetRequestOk() (*InlineResponse2013Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse2013) SetRequest(v InlineResponse2013Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse2013) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
 ### GetStatus
 
 `func (o *InlineResponse2013) GetStatus() string`
@@ -101,6 +128,31 @@ SetStatus sets Status field to given value.
 `func (o *InlineResponse2013) HasStatus() bool`
 
 HasStatus returns a boolean if a field has been set.
+
+### GetCallback
+
+`func (o *InlineResponse2013) GetCallback() InlineResponse2011Callback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineResponse2013) GetCallbackOk() (*InlineResponse2011Callback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineResponse2013) SetCallback(v InlineResponse2011Callback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineResponse2013) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
