@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the SM seats to | [optional] 
-**LicenseId** | Pointer to **string** | The ID of the SM license to move the seats from | [optional] 
-**SeatCount** | Pointer to **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | [optional] 
+**ShortName** | Pointer to **string** | Short name of the early access feature | [optional] 
+**Name** | Pointer to **string** | Name of the early access feature | [optional] 
+**Descriptions** | Pointer to [**OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions**](OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions.md) |  | [optional] 
+**Topic** | Pointer to **string** | Topic of the early access feature | [optional] 
+**IsOrgScopedOnly** | Pointer to **bool** | If this early access feature can only be opted in for the entire organization | [optional] 
+**DocumentationLink** | Pointer to **string** | Link to the documentation of this early access feature | [optional] 
+**SupportLink** | Pointer to **string** | Link to get support for this early access feature | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineResponse200167WithDefaults instantiates a new InlineResponse200167 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetShortName
 
-`func (o *InlineResponse200167) GetDestOrganizationId() string`
+`func (o *InlineResponse200167) GetShortName() string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetShortNameOk
 
-`func (o *InlineResponse200167) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200167) GetShortNameOk() (*string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetShortName
 
-`func (o *InlineResponse200167) SetDestOrganizationId(v string)`
+`func (o *InlineResponse200167) SetShortName(v string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetShortName sets ShortName field to given value.
 
-### HasDestOrganizationId
+### HasShortName
 
-`func (o *InlineResponse200167) HasDestOrganizationId() bool`
+`func (o *InlineResponse200167) HasShortName() bool`
 
-HasDestOrganizationId returns a boolean if a field has been set.
+HasShortName returns a boolean if a field has been set.
 
-### GetLicenseId
+### GetName
 
-`func (o *InlineResponse200167) GetLicenseId() string`
+`func (o *InlineResponse200167) GetName() string`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetNameOk
 
-`func (o *InlineResponse200167) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineResponse200167) GetNameOk() (*string, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetName
 
-`func (o *InlineResponse200167) SetLicenseId(v string)`
+`func (o *InlineResponse200167) SetName(v string)`
 
-SetLicenseId sets LicenseId field to given value.
+SetName sets Name field to given value.
 
-### HasLicenseId
+### HasName
 
-`func (o *InlineResponse200167) HasLicenseId() bool`
+`func (o *InlineResponse200167) HasName() bool`
 
-HasLicenseId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSeatCount
+### GetDescriptions
 
-`func (o *InlineResponse200167) GetSeatCount() int32`
+`func (o *InlineResponse200167) GetDescriptions() OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions`
 
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+GetDescriptions returns the Descriptions field if non-nil, zero value otherwise.
 
-### GetSeatCountOk
+### GetDescriptionsOk
 
-`func (o *InlineResponse200167) GetSeatCountOk() (*int32, bool)`
+`func (o *InlineResponse200167) GetDescriptionsOk() (*OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions, bool)`
 
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+GetDescriptionsOk returns a tuple with the Descriptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSeatCount
+### SetDescriptions
 
-`func (o *InlineResponse200167) SetSeatCount(v int32)`
+`func (o *InlineResponse200167) SetDescriptions(v OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions)`
 
-SetSeatCount sets SeatCount field to given value.
+SetDescriptions sets Descriptions field to given value.
 
-### HasSeatCount
+### HasDescriptions
 
-`func (o *InlineResponse200167) HasSeatCount() bool`
+`func (o *InlineResponse200167) HasDescriptions() bool`
 
-HasSeatCount returns a boolean if a field has been set.
+HasDescriptions returns a boolean if a field has been set.
+
+### GetTopic
+
+`func (o *InlineResponse200167) GetTopic() string`
+
+GetTopic returns the Topic field if non-nil, zero value otherwise.
+
+### GetTopicOk
+
+`func (o *InlineResponse200167) GetTopicOk() (*string, bool)`
+
+GetTopicOk returns a tuple with the Topic field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTopic
+
+`func (o *InlineResponse200167) SetTopic(v string)`
+
+SetTopic sets Topic field to given value.
+
+### HasTopic
+
+`func (o *InlineResponse200167) HasTopic() bool`
+
+HasTopic returns a boolean if a field has been set.
+
+### GetIsOrgScopedOnly
+
+`func (o *InlineResponse200167) GetIsOrgScopedOnly() bool`
+
+GetIsOrgScopedOnly returns the IsOrgScopedOnly field if non-nil, zero value otherwise.
+
+### GetIsOrgScopedOnlyOk
+
+`func (o *InlineResponse200167) GetIsOrgScopedOnlyOk() (*bool, bool)`
+
+GetIsOrgScopedOnlyOk returns a tuple with the IsOrgScopedOnly field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsOrgScopedOnly
+
+`func (o *InlineResponse200167) SetIsOrgScopedOnly(v bool)`
+
+SetIsOrgScopedOnly sets IsOrgScopedOnly field to given value.
+
+### HasIsOrgScopedOnly
+
+`func (o *InlineResponse200167) HasIsOrgScopedOnly() bool`
+
+HasIsOrgScopedOnly returns a boolean if a field has been set.
+
+### GetDocumentationLink
+
+`func (o *InlineResponse200167) GetDocumentationLink() string`
+
+GetDocumentationLink returns the DocumentationLink field if non-nil, zero value otherwise.
+
+### GetDocumentationLinkOk
+
+`func (o *InlineResponse200167) GetDocumentationLinkOk() (*string, bool)`
+
+GetDocumentationLinkOk returns a tuple with the DocumentationLink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDocumentationLink
+
+`func (o *InlineResponse200167) SetDocumentationLink(v string)`
+
+SetDocumentationLink sets DocumentationLink field to given value.
+
+### HasDocumentationLink
+
+`func (o *InlineResponse200167) HasDocumentationLink() bool`
+
+HasDocumentationLink returns a boolean if a field has been set.
+
+### GetSupportLink
+
+`func (o *InlineResponse200167) GetSupportLink() string`
+
+GetSupportLink returns the SupportLink field if non-nil, zero value otherwise.
+
+### GetSupportLinkOk
+
+`func (o *InlineResponse200167) GetSupportLinkOk() (*string, bool)`
+
+GetSupportLinkOk returns a tuple with the SupportLink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSupportLink
+
+`func (o *InlineResponse200167) SetSupportLink(v string)`
+
+SetSupportLink sets SupportLink field to given value.
+
+### HasSupportLink
+
+`func (o *InlineResponse200167) HasSupportLink() bool`
+
+HasSupportLink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

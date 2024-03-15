@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Monitored media server id | [optional] 
-**Name** | Pointer to **string** | The name of the VoIP provider | [optional] 
-**Address** | Pointer to **string** | The IP address (IPv4 only) or hostname of the media server to monitor | [optional] 
-**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead | [optional] 
+**Mac** | Pointer to **string** | The device MAC address. | [optional] 
+**Name** | Pointer to **string** | The device name. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork**](OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork.md) |  | [optional] 
+**ProductType** | Pointer to **string** | Device product type. | [optional] 
+**Serial** | Pointer to **string** | The device serial number. | [optional] 
+**Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
+**Slots** | Pointer to [**[]OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots**](OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots.md) | Information for the device&#39;s AC power supplies. | [optional] 
 
 ## Methods
 
@@ -28,30 +31,30 @@ NewInlineResponse200161WithDefaults instantiates a new InlineResponse200161 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetMac
 
-`func (o *InlineResponse200161) GetId() string`
+`func (o *InlineResponse200161) GetMac() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetMacOk
 
-`func (o *InlineResponse200161) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200161) GetMacOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetMac
 
-`func (o *InlineResponse200161) SetId(v string)`
+`func (o *InlineResponse200161) SetMac(v string)`
 
-SetId sets Id field to given value.
+SetMac sets Mac field to given value.
 
-### HasId
+### HasMac
 
-`func (o *InlineResponse200161) HasId() bool`
+`func (o *InlineResponse200161) HasMac() bool`
 
-HasId returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
 ### GetName
 
@@ -78,55 +81,130 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetAddress
+### GetNetwork
 
-`func (o *InlineResponse200161) GetAddress() string`
+`func (o *InlineResponse200161) GetNetwork() OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork`
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetAddressOk
+### GetNetworkOk
 
-`func (o *InlineResponse200161) GetAddressOk() (*string, bool)`
+`func (o *InlineResponse200161) GetNetworkOk() (*OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork, bool)`
 
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetNetwork
 
-`func (o *InlineResponse200161) SetAddress(v string)`
+`func (o *InlineResponse200161) SetNetwork(v OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork)`
 
-SetAddress sets Address field to given value.
+SetNetwork sets Network field to given value.
 
-### HasAddress
+### HasNetwork
 
-`func (o *InlineResponse200161) HasAddress() bool`
+`func (o *InlineResponse200161) HasNetwork() bool`
 
-HasAddress returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetBestEffortMonitoringEnabled
+### GetProductType
 
-`func (o *InlineResponse200161) GetBestEffortMonitoringEnabled() bool`
+`func (o *InlineResponse200161) GetProductType() string`
 
-GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
 
-### GetBestEffortMonitoringEnabledOk
+### GetProductTypeOk
 
-`func (o *InlineResponse200161) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200161) GetProductTypeOk() (*string, bool)`
 
-GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBestEffortMonitoringEnabled
+### SetProductType
 
-`func (o *InlineResponse200161) SetBestEffortMonitoringEnabled(v bool)`
+`func (o *InlineResponse200161) SetProductType(v string)`
 
-SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
+SetProductType sets ProductType field to given value.
 
-### HasBestEffortMonitoringEnabled
+### HasProductType
 
-`func (o *InlineResponse200161) HasBestEffortMonitoringEnabled() bool`
+`func (o *InlineResponse200161) HasProductType() bool`
 
-HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
+HasProductType returns a boolean if a field has been set.
+
+### GetSerial
+
+`func (o *InlineResponse200161) GetSerial() string`
+
+GetSerial returns the Serial field if non-nil, zero value otherwise.
+
+### GetSerialOk
+
+`func (o *InlineResponse200161) GetSerialOk() (*string, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerial
+
+`func (o *InlineResponse200161) SetSerial(v string)`
+
+SetSerial sets Serial field to given value.
+
+### HasSerial
+
+`func (o *InlineResponse200161) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200161) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200161) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200161) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200161) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetSlots
+
+`func (o *InlineResponse200161) GetSlots() []OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots`
+
+GetSlots returns the Slots field if non-nil, zero value otherwise.
+
+### GetSlotsOk
+
+`func (o *InlineResponse200161) GetSlotsOk() (*[]OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots, bool)`
+
+GetSlotsOk returns a tuple with the Slots field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSlots
+
+`func (o *InlineResponse200161) SetSlots(v []OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots)`
+
+SetSlots sets Slots field to given value.
+
+### HasSlots
+
+`func (o *InlineResponse200161) HasSlots() bool`
+
+HasSlots returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

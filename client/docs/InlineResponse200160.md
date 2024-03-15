@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApplicationId** | Pointer to **string** | Application identifier | [optional] 
-**Name** | Pointer to **string** | Application name | [optional] 
-**Thresholds** | Pointer to [**OrganizationsOrganizationIdInsightApplicationsThresholds**](OrganizationsOrganizationIdInsightApplicationsThresholds.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, at which the event happened | [optional] 
+**Device** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice.md) |  | [optional] 
+**Details** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200160WithDefaults instantiates a new InlineResponse200160 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApplicationId
+### GetTs
 
-`func (o *InlineResponse200160) GetApplicationId() string`
+`func (o *InlineResponse200160) GetTs() time.Time`
 
-GetApplicationId returns the ApplicationId field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetApplicationIdOk
+### GetTsOk
 
-`func (o *InlineResponse200160) GetApplicationIdOk() (*string, bool)`
+`func (o *InlineResponse200160) GetTsOk() (*time.Time, bool)`
 
-GetApplicationIdOk returns a tuple with the ApplicationId field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplicationId
+### SetTs
 
-`func (o *InlineResponse200160) SetApplicationId(v string)`
+`func (o *InlineResponse200160) SetTs(v time.Time)`
 
-SetApplicationId sets ApplicationId field to given value.
+SetTs sets Ts field to given value.
 
-### HasApplicationId
+### HasTs
 
-`func (o *InlineResponse200160) HasApplicationId() bool`
+`func (o *InlineResponse200160) HasTs() bool`
 
-HasApplicationId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetName
+### GetDevice
 
-`func (o *InlineResponse200160) GetName() string`
+`func (o *InlineResponse200160) GetDevice() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDeviceOk
 
-`func (o *InlineResponse200160) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200160) GetDeviceOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDevice
 
-`func (o *InlineResponse200160) SetName(v string)`
+`func (o *InlineResponse200160) SetDevice(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice)`
 
-SetName sets Name field to given value.
+SetDevice sets Device field to given value.
 
-### HasName
+### HasDevice
 
-`func (o *InlineResponse200160) HasName() bool`
+`func (o *InlineResponse200160) HasDevice() bool`
 
-HasName returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetThresholds
+### GetDetails
 
-`func (o *InlineResponse200160) GetThresholds() OrganizationsOrganizationIdInsightApplicationsThresholds`
+`func (o *InlineResponse200160) GetDetails() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails`
 
-GetThresholds returns the Thresholds field if non-nil, zero value otherwise.
+GetDetails returns the Details field if non-nil, zero value otherwise.
 
-### GetThresholdsOk
+### GetDetailsOk
 
-`func (o *InlineResponse200160) GetThresholdsOk() (*OrganizationsOrganizationIdInsightApplicationsThresholds, bool)`
+`func (o *InlineResponse200160) GetDetailsOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails, bool)`
 
-GetThresholdsOk returns a tuple with the Thresholds field if it's non-nil, zero value otherwise
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetThresholds
+### SetDetails
 
-`func (o *InlineResponse200160) SetThresholds(v OrganizationsOrganizationIdInsightApplicationsThresholds)`
+`func (o *InlineResponse200160) SetDetails(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails)`
 
-SetThresholds sets Thresholds field to given value.
+SetDetails sets Details field to given value.
 
-### HasThresholds
+### HasDetails
 
-`func (o *InlineResponse200160) HasThresholds() bool`
+`func (o *InlineResponse200160) HasDetails() bool`
 
-HasThresholds returns a boolean if a field has been set.
+HasDetails returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200160) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200160) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200160) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200160) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

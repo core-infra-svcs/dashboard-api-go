@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
-**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
-**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
-**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
+**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse20099Overrides**](InlineResponse20099Overrides.md) | Override MTU size for individual switches or switch templates.       An empty array will clear overrides. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse20099WithDefaults instantiates a new InlineResponse20099 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIname
+### GetDefaultMtuSize
 
-`func (o *InlineResponse20099) GetIname() string`
+`func (o *InlineResponse20099) GetDefaultMtuSize() int32`
 
-GetIname returns the Iname field if non-nil, zero value otherwise.
+GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
 
-### GetInameOk
+### GetDefaultMtuSizeOk
 
-`func (o *InlineResponse20099) GetInameOk() (*string, bool)`
+`func (o *InlineResponse20099) GetDefaultMtuSizeOk() (*int32, bool)`
 
-GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
+GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIname
+### SetDefaultMtuSize
 
-`func (o *InlineResponse20099) SetIname(v string)`
+`func (o *InlineResponse20099) SetDefaultMtuSize(v int32)`
 
-SetIname sets Iname field to given value.
+SetDefaultMtuSize sets DefaultMtuSize field to given value.
 
-### HasIname
+### HasDefaultMtuSize
 
-`func (o *InlineResponse20099) HasIname() bool`
+`func (o *InlineResponse20099) HasDefaultMtuSize() bool`
 
-HasIname returns a boolean if a field has been set.
+HasDefaultMtuSize returns a boolean if a field has been set.
 
-### GetName
+### GetOverrides
 
-`func (o *InlineResponse20099) GetName() string`
+`func (o *InlineResponse20099) GetOverrides() []InlineResponse20099Overrides`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetOverridesOk
 
-`func (o *InlineResponse20099) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20099) GetOverridesOk() (*[]InlineResponse20099Overrides, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetOverrides
 
-`func (o *InlineResponse20099) SetName(v string)`
+`func (o *InlineResponse20099) SetOverrides(v []InlineResponse20099Overrides)`
 
-SetName sets Name field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasName
+### HasOverrides
 
-`func (o *InlineResponse20099) HasName() bool`
+`func (o *InlineResponse20099) HasOverrides() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetIsDefault
-
-`func (o *InlineResponse20099) GetIsDefault() bool`
-
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
-
-### GetIsDefaultOk
-
-`func (o *InlineResponse20099) GetIsDefaultOk() (*bool, bool)`
-
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsDefault
-
-`func (o *InlineResponse20099) SetIsDefault(v bool)`
-
-SetIsDefault sets IsDefault field to given value.
-
-### HasIsDefault
-
-`func (o *InlineResponse20099) HasIsDefault() bool`
-
-HasIsDefault returns a boolean if a field has been set.
-
-### GetVlanNames
-
-`func (o *InlineResponse20099) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
-
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
-
-### GetVlanNamesOk
-
-`func (o *InlineResponse20099) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
-
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanNames
-
-`func (o *InlineResponse20099) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
-
-SetVlanNames sets VlanNames field to given value.
-
-### HasVlanNames
-
-`func (o *InlineResponse20099) HasVlanNames() bool`
-
-HasVlanNames returns a boolean if a field has been set.
-
-### GetVlanGroups
-
-`func (o *InlineResponse20099) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
-
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
-
-### GetVlanGroupsOk
-
-`func (o *InlineResponse20099) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
-
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanGroups
-
-`func (o *InlineResponse20099) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
-
-SetVlanGroups sets VlanGroups field to given value.
-
-### HasVlanGroups
-
-`func (o *InlineResponse20099) HasVlanGroups() bool`
-
-HasVlanGroups returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

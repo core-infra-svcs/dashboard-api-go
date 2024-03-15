@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
-**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
-**LocalStatusPage** | Pointer to [**InlineResponse20057LocalStatusPage**](InlineResponse20057LocalStatusPage.md) |  | [optional] 
-**SecurePort** | Pointer to [**InlineResponse20057SecurePort**](InlineResponse20057SecurePort.md) |  | [optional] 
-**Fips** | Pointer to [**InlineResponse20057Fips**](InlineResponse20057Fips.md) |  | [optional] 
-**NamedVlans** | Pointer to [**InlineResponse20057NamedVlans**](InlineResponse20057NamedVlans.md) |  | [optional] 
+**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
+**Category** | Pointer to **string** | Category of the alert | [optional] 
+**Type** | Pointer to **string** | Alert type | [optional] 
+**Severity** | Pointer to **string** | Severity of the alert | [optional] 
+**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse20057WithDefaults instantiates a new InlineResponse20057 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLocalStatusPageEnabled
+### GetId
 
-`func (o *InlineResponse20057) GetLocalStatusPageEnabled() bool`
+`func (o *InlineResponse20057) GetId() string`
 
-GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse20057) GetLocalStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20057) GetIdOk() (*string, bool)`
 
-GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPageEnabled
+### SetId
 
-`func (o *InlineResponse20057) SetLocalStatusPageEnabled(v bool)`
+`func (o *InlineResponse20057) SetId(v string)`
 
-SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
+SetId sets Id field to given value.
 
-### HasLocalStatusPageEnabled
+### HasId
 
-`func (o *InlineResponse20057) HasLocalStatusPageEnabled() bool`
+`func (o *InlineResponse20057) HasId() bool`
 
-HasLocalStatusPageEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetRemoteStatusPageEnabled
+### GetCategory
 
-`func (o *InlineResponse20057) GetRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse20057) GetCategory() string`
 
-GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetRemoteStatusPageEnabledOk
+### GetCategoryOk
 
-`func (o *InlineResponse20057) GetRemoteStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20057) GetCategoryOk() (*string, bool)`
 
-GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemoteStatusPageEnabled
+### SetCategory
 
-`func (o *InlineResponse20057) SetRemoteStatusPageEnabled(v bool)`
+`func (o *InlineResponse20057) SetCategory(v string)`
 
-SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
+SetCategory sets Category field to given value.
 
-### HasRemoteStatusPageEnabled
+### HasCategory
 
-`func (o *InlineResponse20057) HasRemoteStatusPageEnabled() bool`
+`func (o *InlineResponse20057) HasCategory() bool`
 
-HasRemoteStatusPageEnabled returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetLocalStatusPage
+### GetType
 
-`func (o *InlineResponse20057) GetLocalStatusPage() InlineResponse20057LocalStatusPage`
+`func (o *InlineResponse20057) GetType() string`
 
-GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageOk
+### GetTypeOk
 
-`func (o *InlineResponse20057) GetLocalStatusPageOk() (*InlineResponse20057LocalStatusPage, bool)`
+`func (o *InlineResponse20057) GetTypeOk() (*string, bool)`
 
-GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPage
+### SetType
 
-`func (o *InlineResponse20057) SetLocalStatusPage(v InlineResponse20057LocalStatusPage)`
+`func (o *InlineResponse20057) SetType(v string)`
 
-SetLocalStatusPage sets LocalStatusPage field to given value.
+SetType sets Type field to given value.
 
-### HasLocalStatusPage
+### HasType
 
-`func (o *InlineResponse20057) HasLocalStatusPage() bool`
+`func (o *InlineResponse20057) HasType() bool`
 
-HasLocalStatusPage returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetSecurePort
+### GetSeverity
 
-`func (o *InlineResponse20057) GetSecurePort() InlineResponse20057SecurePort`
+`func (o *InlineResponse20057) GetSeverity() string`
 
-GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
+GetSeverity returns the Severity field if non-nil, zero value otherwise.
 
-### GetSecurePortOk
+### GetSeverityOk
 
-`func (o *InlineResponse20057) GetSecurePortOk() (*InlineResponse20057SecurePort, bool)`
+`func (o *InlineResponse20057) GetSeverityOk() (*string, bool)`
 
-GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
+GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurePort
+### SetSeverity
 
-`func (o *InlineResponse20057) SetSecurePort(v InlineResponse20057SecurePort)`
+`func (o *InlineResponse20057) SetSeverity(v string)`
 
-SetSecurePort sets SecurePort field to given value.
+SetSeverity sets Severity field to given value.
 
-### HasSecurePort
+### HasSeverity
 
-`func (o *InlineResponse20057) HasSecurePort() bool`
+`func (o *InlineResponse20057) HasSeverity() bool`
 
-HasSecurePort returns a boolean if a field has been set.
+HasSeverity returns a boolean if a field has been set.
 
-### GetFips
+### GetScope
 
-`func (o *InlineResponse20057) GetFips() InlineResponse20057Fips`
+`func (o *InlineResponse20057) GetScope() NetworksNetworkIdHealthAlertsScope`
 
-GetFips returns the Fips field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetFipsOk
+### GetScopeOk
 
-`func (o *InlineResponse20057) GetFipsOk() (*InlineResponse20057Fips, bool)`
+`func (o *InlineResponse20057) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
 
-GetFipsOk returns a tuple with the Fips field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFips
+### SetScope
 
-`func (o *InlineResponse20057) SetFips(v InlineResponse20057Fips)`
+`func (o *InlineResponse20057) SetScope(v NetworksNetworkIdHealthAlertsScope)`
 
-SetFips sets Fips field to given value.
+SetScope sets Scope field to given value.
 
-### HasFips
+### HasScope
 
-`func (o *InlineResponse20057) HasFips() bool`
+`func (o *InlineResponse20057) HasScope() bool`
 
-HasFips returns a boolean if a field has been set.
-
-### GetNamedVlans
-
-`func (o *InlineResponse20057) GetNamedVlans() InlineResponse20057NamedVlans`
-
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
-
-### GetNamedVlansOk
-
-`func (o *InlineResponse20057) GetNamedVlansOk() (*InlineResponse20057NamedVlans, bool)`
-
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNamedVlans
-
-`func (o *InlineResponse20057) SetNamedVlans(v InlineResponse20057NamedVlans)`
-
-SetNamedVlans sets NamedVlans field to given value.
-
-### HasNamedVlans
-
-`func (o *InlineResponse20057) HasNamedVlans() bool`
-
-HasNamedVlans returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

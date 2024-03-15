@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WithThisPolicy** | Pointer to **int32** | Number of ports in the network with this policy | [optional] 
+**WithThisPolicy** | Pointer to **int32** | Number of ports in the network with this policy. For template networks, this is the number of template ports (not child ports) with this policy. | [optional] 
 
 ## Methods
 

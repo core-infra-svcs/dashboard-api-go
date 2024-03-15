@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
-**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
-**DynamicDns** | Pointer to [**InlineResponse20028DynamicDns**](InlineResponse20028DynamicDns.md) |  | [optional] 
+**ApplicationCategories** | Pointer to [**[]InlineResponse20028ApplicationCategories**](InlineResponse20028ApplicationCategories.md) |  The L7 firewall application categories and their associated applications for an MX network | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse20028WithDefaults instantiates a new InlineResponse20028 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientTrackingMethod
+### GetApplicationCategories
 
-`func (o *InlineResponse20028) GetClientTrackingMethod() string`
+`func (o *InlineResponse20028) GetApplicationCategories() []InlineResponse20028ApplicationCategories`
 
-GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
+GetApplicationCategories returns the ApplicationCategories field if non-nil, zero value otherwise.
 
-### GetClientTrackingMethodOk
+### GetApplicationCategoriesOk
 
-`func (o *InlineResponse20028) GetClientTrackingMethodOk() (*string, bool)`
+`func (o *InlineResponse20028) GetApplicationCategoriesOk() (*[]InlineResponse20028ApplicationCategories, bool)`
 
-GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
+GetApplicationCategoriesOk returns a tuple with the ApplicationCategories field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTrackingMethod
+### SetApplicationCategories
 
-`func (o *InlineResponse20028) SetClientTrackingMethod(v string)`
+`func (o *InlineResponse20028) SetApplicationCategories(v []InlineResponse20028ApplicationCategories)`
 
-SetClientTrackingMethod sets ClientTrackingMethod field to given value.
+SetApplicationCategories sets ApplicationCategories field to given value.
 
-### HasClientTrackingMethod
+### HasApplicationCategories
 
-`func (o *InlineResponse20028) HasClientTrackingMethod() bool`
+`func (o *InlineResponse20028) HasApplicationCategories() bool`
 
-HasClientTrackingMethod returns a boolean if a field has been set.
-
-### GetDeploymentMode
-
-`func (o *InlineResponse20028) GetDeploymentMode() string`
-
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
-
-### GetDeploymentModeOk
-
-`func (o *InlineResponse20028) GetDeploymentModeOk() (*string, bool)`
-
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeploymentMode
-
-`func (o *InlineResponse20028) SetDeploymentMode(v string)`
-
-SetDeploymentMode sets DeploymentMode field to given value.
-
-### HasDeploymentMode
-
-`func (o *InlineResponse20028) HasDeploymentMode() bool`
-
-HasDeploymentMode returns a boolean if a field has been set.
-
-### GetDynamicDns
-
-`func (o *InlineResponse20028) GetDynamicDns() InlineResponse20028DynamicDns`
-
-GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
-
-### GetDynamicDnsOk
-
-`func (o *InlineResponse20028) GetDynamicDnsOk() (*InlineResponse20028DynamicDns, bool)`
-
-GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDynamicDns
-
-`func (o *InlineResponse20028) SetDynamicDns(v InlineResponse20028DynamicDns)`
-
-SetDynamicDns sets DynamicDns field to given value.
-
-### HasDynamicDns
-
-`func (o *InlineResponse20028) HasDynamicDns() bool`
-
-HasDynamicDns returns a boolean if a field has been set.
+HasApplicationCategories returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

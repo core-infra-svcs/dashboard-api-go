@@ -4,18 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
-**NetworkId** | Pointer to **string** | The network ID of the RF Profile | [optional] 
-**Name** | Pointer to **string** | The name of the new profile. Must be unique. This param is required on creation. | [optional] 
-**ClientBalancingEnabled** | Pointer to **bool** | Steers client to best available access point. Can be either true or false. Defaults to true. | [optional] 
-**MinBitrateType** | Pointer to **string** | Minimum bitrate can be set to either &#39;band&#39; or &#39;ssid&#39;. Defaults to band. | [optional] 
-**BandSelectionType** | Pointer to **string** | Band selection can be set to either &#39;ssid&#39; or &#39;ap&#39;. This param is required on creation. | [optional] 
-**ApBandSettings** | Pointer to [**InlineResponse200114ApBandSettings**](InlineResponse200114ApBandSettings.md) |  | [optional] 
-**TwoFourGhzSettings** | Pointer to [**InlineResponse200114TwoFourGhzSettings**](InlineResponse200114TwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**InlineResponse200114FiveGhzSettings**](InlineResponse200114FiveGhzSettings.md) |  | [optional] 
-**SixGhzSettings** | Pointer to [**InlineResponse200114SixGhzSettings**](InlineResponse200114SixGhzSettings.md) |  | [optional] 
-**Transmission** | Pointer to [**InlineResponse200114Transmission**](InlineResponse200114Transmission.md) |  | [optional] 
-**PerSsidSettings** | Pointer to [**InlineResponse200114PerSsidSettings**](InlineResponse200114PerSsidSettings.md) |  | [optional] 
+**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
+**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
+**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
+**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
+**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**EslEnabled** | Pointer to **bool** | Whether ESL is enabled on this network. | [optional] 
 
 ## Methods
 
@@ -36,305 +31,180 @@ NewInlineResponse200114WithDefaults instantiates a new InlineResponse200114 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetScanningEnabled
 
-`func (o *InlineResponse200114) GetId() string`
+`func (o *InlineResponse200114) GetScanningEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetScanningEnabledOk
 
-`func (o *InlineResponse200114) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200114) GetScanningEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetScanningEnabled
 
-`func (o *InlineResponse200114) SetId(v string)`
+`func (o *InlineResponse200114) SetScanningEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetScanningEnabled sets ScanningEnabled field to given value.
 
-### HasId
+### HasScanningEnabled
 
-`func (o *InlineResponse200114) HasId() bool`
+`func (o *InlineResponse200114) HasScanningEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasScanningEnabled returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetAdvertisingEnabled
 
-`func (o *InlineResponse200114) GetNetworkId() string`
+`func (o *InlineResponse200114) GetAdvertisingEnabled() bool`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetAdvertisingEnabledOk
 
-`func (o *InlineResponse200114) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200114) GetAdvertisingEnabledOk() (*bool, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetAdvertisingEnabled
 
-`func (o *InlineResponse200114) SetNetworkId(v string)`
+`func (o *InlineResponse200114) SetAdvertisingEnabled(v bool)`
 
-SetNetworkId sets NetworkId field to given value.
+SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
 
-### HasNetworkId
+### HasAdvertisingEnabled
 
-`func (o *InlineResponse200114) HasNetworkId() bool`
+`func (o *InlineResponse200114) HasAdvertisingEnabled() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasAdvertisingEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetUuid
 
-`func (o *InlineResponse200114) GetName() string`
+`func (o *InlineResponse200114) GetUuid() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUuidOk
 
-`func (o *InlineResponse200114) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200114) GetUuidOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUuid
 
-`func (o *InlineResponse200114) SetName(v string)`
+`func (o *InlineResponse200114) SetUuid(v string)`
 
-SetName sets Name field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasName
+### HasUuid
 
-`func (o *InlineResponse200114) HasName() bool`
+`func (o *InlineResponse200114) HasUuid() bool`
 
-HasName returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
-### GetClientBalancingEnabled
+### GetMajorMinorAssignmentMode
 
-`func (o *InlineResponse200114) GetClientBalancingEnabled() bool`
+`func (o *InlineResponse200114) GetMajorMinorAssignmentMode() string`
 
-GetClientBalancingEnabled returns the ClientBalancingEnabled field if non-nil, zero value otherwise.
+GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
 
-### GetClientBalancingEnabledOk
+### GetMajorMinorAssignmentModeOk
 
-`func (o *InlineResponse200114) GetClientBalancingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200114) GetMajorMinorAssignmentModeOk() (*string, bool)`
 
-GetClientBalancingEnabledOk returns a tuple with the ClientBalancingEnabled field if it's non-nil, zero value otherwise
+GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientBalancingEnabled
+### SetMajorMinorAssignmentMode
 
-`func (o *InlineResponse200114) SetClientBalancingEnabled(v bool)`
+`func (o *InlineResponse200114) SetMajorMinorAssignmentMode(v string)`
 
-SetClientBalancingEnabled sets ClientBalancingEnabled field to given value.
+SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
 
-### HasClientBalancingEnabled
+### HasMajorMinorAssignmentMode
 
-`func (o *InlineResponse200114) HasClientBalancingEnabled() bool`
+`func (o *InlineResponse200114) HasMajorMinorAssignmentMode() bool`
 
-HasClientBalancingEnabled returns a boolean if a field has been set.
+HasMajorMinorAssignmentMode returns a boolean if a field has been set.
 
-### GetMinBitrateType
+### GetMajor
 
-`func (o *InlineResponse200114) GetMinBitrateType() string`
+`func (o *InlineResponse200114) GetMajor() int32`
 
-GetMinBitrateType returns the MinBitrateType field if non-nil, zero value otherwise.
+GetMajor returns the Major field if non-nil, zero value otherwise.
 
-### GetMinBitrateTypeOk
+### GetMajorOk
 
-`func (o *InlineResponse200114) GetMinBitrateTypeOk() (*string, bool)`
+`func (o *InlineResponse200114) GetMajorOk() (*int32, bool)`
 
-GetMinBitrateTypeOk returns a tuple with the MinBitrateType field if it's non-nil, zero value otherwise
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMinBitrateType
+### SetMajor
 
-`func (o *InlineResponse200114) SetMinBitrateType(v string)`
+`func (o *InlineResponse200114) SetMajor(v int32)`
 
-SetMinBitrateType sets MinBitrateType field to given value.
+SetMajor sets Major field to given value.
 
-### HasMinBitrateType
+### HasMajor
 
-`func (o *InlineResponse200114) HasMinBitrateType() bool`
+`func (o *InlineResponse200114) HasMajor() bool`
 
-HasMinBitrateType returns a boolean if a field has been set.
+HasMajor returns a boolean if a field has been set.
 
-### GetBandSelectionType
+### GetMinor
 
-`func (o *InlineResponse200114) GetBandSelectionType() string`
+`func (o *InlineResponse200114) GetMinor() int32`
 
-GetBandSelectionType returns the BandSelectionType field if non-nil, zero value otherwise.
+GetMinor returns the Minor field if non-nil, zero value otherwise.
 
-### GetBandSelectionTypeOk
+### GetMinorOk
 
-`func (o *InlineResponse200114) GetBandSelectionTypeOk() (*string, bool)`
+`func (o *InlineResponse200114) GetMinorOk() (*int32, bool)`
 
-GetBandSelectionTypeOk returns a tuple with the BandSelectionType field if it's non-nil, zero value otherwise
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBandSelectionType
+### SetMinor
 
-`func (o *InlineResponse200114) SetBandSelectionType(v string)`
+`func (o *InlineResponse200114) SetMinor(v int32)`
 
-SetBandSelectionType sets BandSelectionType field to given value.
+SetMinor sets Minor field to given value.
 
-### HasBandSelectionType
+### HasMinor
 
-`func (o *InlineResponse200114) HasBandSelectionType() bool`
+`func (o *InlineResponse200114) HasMinor() bool`
 
-HasBandSelectionType returns a boolean if a field has been set.
+HasMinor returns a boolean if a field has been set.
 
-### GetApBandSettings
+### GetEslEnabled
 
-`func (o *InlineResponse200114) GetApBandSettings() InlineResponse200114ApBandSettings`
+`func (o *InlineResponse200114) GetEslEnabled() bool`
 
-GetApBandSettings returns the ApBandSettings field if non-nil, zero value otherwise.
+GetEslEnabled returns the EslEnabled field if non-nil, zero value otherwise.
 
-### GetApBandSettingsOk
+### GetEslEnabledOk
 
-`func (o *InlineResponse200114) GetApBandSettingsOk() (*InlineResponse200114ApBandSettings, bool)`
+`func (o *InlineResponse200114) GetEslEnabledOk() (*bool, bool)`
 
-GetApBandSettingsOk returns a tuple with the ApBandSettings field if it's non-nil, zero value otherwise
+GetEslEnabledOk returns a tuple with the EslEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApBandSettings
+### SetEslEnabled
 
-`func (o *InlineResponse200114) SetApBandSettings(v InlineResponse200114ApBandSettings)`
+`func (o *InlineResponse200114) SetEslEnabled(v bool)`
 
-SetApBandSettings sets ApBandSettings field to given value.
+SetEslEnabled sets EslEnabled field to given value.
 
-### HasApBandSettings
+### HasEslEnabled
 
-`func (o *InlineResponse200114) HasApBandSettings() bool`
+`func (o *InlineResponse200114) HasEslEnabled() bool`
 
-HasApBandSettings returns a boolean if a field has been set.
-
-### GetTwoFourGhzSettings
-
-`func (o *InlineResponse200114) GetTwoFourGhzSettings() InlineResponse200114TwoFourGhzSettings`
-
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
-
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineResponse200114) GetTwoFourGhzSettingsOk() (*InlineResponse200114TwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTwoFourGhzSettings
-
-`func (o *InlineResponse200114) SetTwoFourGhzSettings(v InlineResponse200114TwoFourGhzSettings)`
-
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
-
-### HasTwoFourGhzSettings
-
-`func (o *InlineResponse200114) HasTwoFourGhzSettings() bool`
-
-HasTwoFourGhzSettings returns a boolean if a field has been set.
-
-### GetFiveGhzSettings
-
-`func (o *InlineResponse200114) GetFiveGhzSettings() InlineResponse200114FiveGhzSettings`
-
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
-
-### GetFiveGhzSettingsOk
-
-`func (o *InlineResponse200114) GetFiveGhzSettingsOk() (*InlineResponse200114FiveGhzSettings, bool)`
-
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFiveGhzSettings
-
-`func (o *InlineResponse200114) SetFiveGhzSettings(v InlineResponse200114FiveGhzSettings)`
-
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
-
-### HasFiveGhzSettings
-
-`func (o *InlineResponse200114) HasFiveGhzSettings() bool`
-
-HasFiveGhzSettings returns a boolean if a field has been set.
-
-### GetSixGhzSettings
-
-`func (o *InlineResponse200114) GetSixGhzSettings() InlineResponse200114SixGhzSettings`
-
-GetSixGhzSettings returns the SixGhzSettings field if non-nil, zero value otherwise.
-
-### GetSixGhzSettingsOk
-
-`func (o *InlineResponse200114) GetSixGhzSettingsOk() (*InlineResponse200114SixGhzSettings, bool)`
-
-GetSixGhzSettingsOk returns a tuple with the SixGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSixGhzSettings
-
-`func (o *InlineResponse200114) SetSixGhzSettings(v InlineResponse200114SixGhzSettings)`
-
-SetSixGhzSettings sets SixGhzSettings field to given value.
-
-### HasSixGhzSettings
-
-`func (o *InlineResponse200114) HasSixGhzSettings() bool`
-
-HasSixGhzSettings returns a boolean if a field has been set.
-
-### GetTransmission
-
-`func (o *InlineResponse200114) GetTransmission() InlineResponse200114Transmission`
-
-GetTransmission returns the Transmission field if non-nil, zero value otherwise.
-
-### GetTransmissionOk
-
-`func (o *InlineResponse200114) GetTransmissionOk() (*InlineResponse200114Transmission, bool)`
-
-GetTransmissionOk returns a tuple with the Transmission field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTransmission
-
-`func (o *InlineResponse200114) SetTransmission(v InlineResponse200114Transmission)`
-
-SetTransmission sets Transmission field to given value.
-
-### HasTransmission
-
-`func (o *InlineResponse200114) HasTransmission() bool`
-
-HasTransmission returns a boolean if a field has been set.
-
-### GetPerSsidSettings
-
-`func (o *InlineResponse200114) GetPerSsidSettings() InlineResponse200114PerSsidSettings`
-
-GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
-
-### GetPerSsidSettingsOk
-
-`func (o *InlineResponse200114) GetPerSsidSettingsOk() (*InlineResponse200114PerSsidSettings, bool)`
-
-GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPerSsidSettings
-
-`func (o *InlineResponse200114) SetPerSsidSettings(v InlineResponse200114PerSsidSettings)`
-
-SetPerSsidSettings sets PerSsidSettings field to given value.
-
-### HasPerSsidSettings
-
-`func (o *InlineResponse200114) HasPerSsidSettings() bool`
-
-HasPerSsidSettings returns a boolean if a field has been set.
+HasEslEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Action** | Pointer to **string** | The type of command sent to the device. | [optional] 
-**Name** | Pointer to **string** | The name of the device to which the command is sent. | [optional] 
-**Details** | Pointer to **string** | A JSON string object containing command details. | [optional] 
-**DashboardUser** | Pointer to **string** | The Meraki dashboard user who initiated the command. | [optional] 
-**Ts** | Pointer to **string** | The time the command was sent to the device. | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
+**Name** | Pointer to **string** | The name of the device. | [optional] 
+**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
+**Serial** | Pointer to **string** | The device serial. | [optional] 
+**Notes** | Pointer to **string** | Notes associated with the device. | [optional] 
 
 ## Methods
 
@@ -29,30 +29,30 @@ NewInlineResponse20069WithDefaults instantiates a new InlineResponse20069 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAction
+### GetId
 
-`func (o *InlineResponse20069) GetAction() string`
+`func (o *InlineResponse20069) GetId() string`
 
-GetAction returns the Action field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetActionOk
+### GetIdOk
 
-`func (o *InlineResponse20069) GetActionOk() (*string, bool)`
+`func (o *InlineResponse20069) GetIdOk() (*string, bool)`
 
-GetActionOk returns a tuple with the Action field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAction
+### SetId
 
-`func (o *InlineResponse20069) SetAction(v string)`
+`func (o *InlineResponse20069) SetId(v string)`
 
-SetAction sets Action field to given value.
+SetId sets Id field to given value.
 
-### HasAction
+### HasId
 
-`func (o *InlineResponse20069) HasAction() bool`
+`func (o *InlineResponse20069) HasId() bool`
 
-HasAction returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -79,80 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDetails
+### GetWifiMac
 
-`func (o *InlineResponse20069) GetDetails() string`
+`func (o *InlineResponse20069) GetWifiMac() string`
 
-GetDetails returns the Details field if non-nil, zero value otherwise.
+GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
 
-### GetDetailsOk
+### GetWifiMacOk
 
-`func (o *InlineResponse20069) GetDetailsOk() (*string, bool)`
+`func (o *InlineResponse20069) GetWifiMacOk() (*string, bool)`
 
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetails
+### SetWifiMac
 
-`func (o *InlineResponse20069) SetDetails(v string)`
+`func (o *InlineResponse20069) SetWifiMac(v string)`
 
-SetDetails sets Details field to given value.
+SetWifiMac sets WifiMac field to given value.
 
-### HasDetails
+### HasWifiMac
 
-`func (o *InlineResponse20069) HasDetails() bool`
+`func (o *InlineResponse20069) HasWifiMac() bool`
 
-HasDetails returns a boolean if a field has been set.
+HasWifiMac returns a boolean if a field has been set.
 
-### GetDashboardUser
+### GetSerial
 
-`func (o *InlineResponse20069) GetDashboardUser() string`
+`func (o *InlineResponse20069) GetSerial() string`
 
-GetDashboardUser returns the DashboardUser field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetDashboardUserOk
+### GetSerialOk
 
-`func (o *InlineResponse20069) GetDashboardUserOk() (*string, bool)`
+`func (o *InlineResponse20069) GetSerialOk() (*string, bool)`
 
-GetDashboardUserOk returns a tuple with the DashboardUser field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDashboardUser
+### SetSerial
 
-`func (o *InlineResponse20069) SetDashboardUser(v string)`
+`func (o *InlineResponse20069) SetSerial(v string)`
 
-SetDashboardUser sets DashboardUser field to given value.
+SetSerial sets Serial field to given value.
 
-### HasDashboardUser
+### HasSerial
 
-`func (o *InlineResponse20069) HasDashboardUser() bool`
+`func (o *InlineResponse20069) HasSerial() bool`
 
-HasDashboardUser returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetTs
+### GetNotes
 
-`func (o *InlineResponse20069) GetTs() string`
+`func (o *InlineResponse20069) GetNotes() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetNotes returns the Notes field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetNotesOk
 
-`func (o *InlineResponse20069) GetTsOk() (*string, bool)`
+`func (o *InlineResponse20069) GetNotesOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetNotes
 
-`func (o *InlineResponse20069) SetTs(v string)`
+`func (o *InlineResponse20069) SetNotes(v string)`
 
-SetTs sets Ts field to given value.
+SetNotes sets Notes field to given value.
 
-### HasTs
+### HasNotes
 
-`func (o *InlineResponse20069) HasTs() bool`
+`func (o *InlineResponse20069) HasNotes() bool`
 
-HasTs returns a boolean if a field has been set.
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
-**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
+**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200182WithDefaults instantiates a new InlineResponse200182 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetEnabled
 
-`func (o *InlineResponse200182) GetTs() time.Time`
+`func (o *InlineResponse200182) GetEnabled() bool`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200182) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200182) GetEnabledOk() (*bool, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetEnabled
 
-`func (o *InlineResponse200182) SetTs(v time.Time)`
+`func (o *InlineResponse200182) SetEnabled(v bool)`
 
-SetTs sets Ts field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTs
+### HasEnabled
 
-`func (o *InlineResponse200182) HasTs() bool`
+`func (o *InlineResponse200182) HasEnabled() bool`
 
-HasTs returns a boolean if a field has been set.
-
-### GetDraw
-
-`func (o *InlineResponse200182) GetDraw() float32`
-
-GetDraw returns the Draw field if non-nil, zero value otherwise.
-
-### GetDrawOk
-
-`func (o *InlineResponse200182) GetDrawOk() (*float32, bool)`
-
-GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDraw
-
-`func (o *InlineResponse200182) SetDraw(v float32)`
-
-SetDraw sets Draw field to given value.
-
-### HasDraw
-
-`func (o *InlineResponse200182) HasDraw() bool`
-
-HasDraw returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

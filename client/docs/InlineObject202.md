@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | The alert type | 
-**AlertCondition** | [**OrganizationsOrganizationIdAlertsProfilesAlertCondition**](OrganizationsOrganizationIdAlertsProfilesAlertCondition.md) |  | 
-**Recipients** | [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | 
-**NetworkTags** | **[]string** | Networks with these tags will be monitored for the alert | 
-**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
+**Name** | Pointer to **string** | The name of the dashboard administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
 
 ## Methods
 
 ### NewInlineObject202
 
-`func NewInlineObject202(type_ string, alertCondition OrganizationsOrganizationIdAlertsProfilesAlertCondition, recipients OrganizationsOrganizationIdAlertsProfilesRecipients, networkTags []string, ) *InlineObject202`
+`func NewInlineObject202() *InlineObject202`
 
 NewInlineObject202 instantiates a new InlineObject202 object
 This constructor will assign default values to properties that have it defined,
@@ -29,110 +28,105 @@ NewInlineObject202WithDefaults instantiates a new InlineObject202 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetName
 
-`func (o *InlineObject202) GetType() string`
+`func (o *InlineObject202) GetName() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetNameOk
 
-`func (o *InlineObject202) GetTypeOk() (*string, bool)`
+`func (o *InlineObject202) GetNameOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetName
 
-`func (o *InlineObject202) SetType(v string)`
+`func (o *InlineObject202) SetName(v string)`
 
-SetType sets Type field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetAlertCondition
+`func (o *InlineObject202) HasName() bool`
 
-`func (o *InlineObject202) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition`
+HasName returns a boolean if a field has been set.
 
-GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+### GetOrgAccess
 
-### GetAlertConditionOk
+`func (o *InlineObject202) GetOrgAccess() string`
 
-`func (o *InlineObject202) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition, bool)`
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+### GetOrgAccessOk
+
+`func (o *InlineObject202) GetOrgAccessOk() (*string, bool)`
+
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertCondition
+### SetOrgAccess
 
-`func (o *InlineObject202) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition)`
+`func (o *InlineObject202) SetOrgAccess(v string)`
 
-SetAlertCondition sets AlertCondition field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
+### HasOrgAccess
 
-### GetRecipients
+`func (o *InlineObject202) HasOrgAccess() bool`
 
-`func (o *InlineObject202) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
+HasOrgAccess returns a boolean if a field has been set.
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+### GetTags
 
-### GetRecipientsOk
+`func (o *InlineObject202) GetTags() []OrganizationsOrganizationIdAdminsTags1`
 
-`func (o *InlineObject202) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+### GetTagsOk
+
+`func (o *InlineObject202) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetTags
 
-`func (o *InlineObject202) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
+`func (o *InlineObject202) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
 
-SetRecipients sets Recipients field to given value.
+SetTags sets Tags field to given value.
 
+### HasTags
 
-### GetNetworkTags
+`func (o *InlineObject202) HasTags() bool`
 
-`func (o *InlineObject202) GetNetworkTags() []string`
+HasTags returns a boolean if a field has been set.
 
-GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
+### GetNetworks
 
-### GetNetworkTagsOk
+`func (o *InlineObject202) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
 
-`func (o *InlineObject202) GetNetworkTagsOk() (*[]string, bool)`
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
+### GetNetworksOk
+
+`func (o *InlineObject202) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
+
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkTags
+### SetNetworks
 
-`func (o *InlineObject202) SetNetworkTags(v []string)`
+`func (o *InlineObject202) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
 
-SetNetworkTags sets NetworkTags field to given value.
+SetNetworks sets Networks field to given value.
 
+### HasNetworks
 
-### GetDescription
+`func (o *InlineObject202) HasNetworks() bool`
 
-`func (o *InlineObject202) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject202) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject202) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject202) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

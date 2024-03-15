@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
-**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**ImportId** | Pointer to **string** | Database ID for the new entity entry. | [optional] 
+**Device** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse200173WithDefaults instantiates a new InlineResponse200173 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIdpId
+### GetImportId
 
-`func (o *InlineResponse200173) GetIdpId() string`
+`func (o *InlineResponse200173) GetImportId() string`
 
-GetIdpId returns the IdpId field if non-nil, zero value otherwise.
+GetImportId returns the ImportId field if non-nil, zero value otherwise.
 
-### GetIdpIdOk
+### GetImportIdOk
 
-`func (o *InlineResponse200173) GetIdpIdOk() (*string, bool)`
+`func (o *InlineResponse200173) GetImportIdOk() (*string, bool)`
 
-GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
+GetImportIdOk returns a tuple with the ImportId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdpId
+### SetImportId
 
-`func (o *InlineResponse200173) SetIdpId(v string)`
+`func (o *InlineResponse200173) SetImportId(v string)`
 
-SetIdpId sets IdpId field to given value.
+SetImportId sets ImportId field to given value.
 
-### HasIdpId
+### HasImportId
 
-`func (o *InlineResponse200173) HasIdpId() bool`
+`func (o *InlineResponse200173) HasImportId() bool`
 
-HasIdpId returns a boolean if a field has been set.
+HasImportId returns a boolean if a field has been set.
 
-### GetConsumerUrl
+### GetDevice
 
-`func (o *InlineResponse200173) GetConsumerUrl() string`
+`func (o *InlineResponse200173) GetDevice() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice`
 
-GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetConsumerUrlOk
+### GetDeviceOk
 
-`func (o *InlineResponse200173) GetConsumerUrlOk() (*string, bool)`
+`func (o *InlineResponse200173) GetDeviceOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice, bool)`
 
-GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConsumerUrl
+### SetDevice
 
-`func (o *InlineResponse200173) SetConsumerUrl(v string)`
+`func (o *InlineResponse200173) SetDevice(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice)`
 
-SetConsumerUrl sets ConsumerUrl field to given value.
+SetDevice sets Device field to given value.
 
-### HasConsumerUrl
+### HasDevice
 
-`func (o *InlineResponse200173) HasConsumerUrl() bool`
+`func (o *InlineResponse200173) HasDevice() bool`
 
-HasConsumerUrl returns a boolean if a field has been set.
-
-### GetX509certSha1Fingerprint
-
-`func (o *InlineResponse200173) GetX509certSha1Fingerprint() string`
-
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
-
-### GetX509certSha1FingerprintOk
-
-`func (o *InlineResponse200173) GetX509certSha1FingerprintOk() (*string, bool)`
-
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetX509certSha1Fingerprint
-
-`func (o *InlineResponse200173) SetX509certSha1Fingerprint(v string)`
-
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
-
-### HasX509certSha1Fingerprint
-
-`func (o *InlineResponse200173) HasX509certSha1Fingerprint() bool`
-
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
-
-### GetSloLogoutUrl
-
-`func (o *InlineResponse200173) GetSloLogoutUrl() string`
-
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
-
-### GetSloLogoutUrlOk
-
-`func (o *InlineResponse200173) GetSloLogoutUrlOk() (*string, bool)`
-
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSloLogoutUrl
-
-`func (o *InlineResponse200173) SetSloLogoutUrl(v string)`
-
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
-
-### HasSloLogoutUrl
-
-`func (o *InlineResponse200173) HasSloLogoutUrl() bool`
-
-HasSloLogoutUrl returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

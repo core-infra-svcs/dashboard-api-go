@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
-**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
-**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
+**Device** | Pointer to [**NetworksNetworkIdSensorRelationshipsDevice**](NetworksNetworkIdSensorRelationshipsDevice.md) |  | [optional] 
+**Relationships** | Pointer to [**NetworksNetworkIdSensorRelationshipsRelationships**](NetworksNetworkIdSensorRelationshipsRelationships.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse20065WithDefaults instantiates a new InlineResponse20065 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReceived
+### GetDevice
 
-`func (o *InlineResponse20065) GetReceived() float32`
+`func (o *InlineResponse20065) GetDevice() NetworksNetworkIdSensorRelationshipsDevice`
 
-GetReceived returns the Received field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetReceivedOk
+### GetDeviceOk
 
-`func (o *InlineResponse20065) GetReceivedOk() (*float32, bool)`
+`func (o *InlineResponse20065) GetDeviceOk() (*NetworksNetworkIdSensorRelationshipsDevice, bool)`
 
-GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceived
+### SetDevice
 
-`func (o *InlineResponse20065) SetReceived(v float32)`
+`func (o *InlineResponse20065) SetDevice(v NetworksNetworkIdSensorRelationshipsDevice)`
 
-SetReceived sets Received field to given value.
+SetDevice sets Device field to given value.
 
-### HasReceived
+### HasDevice
 
-`func (o *InlineResponse20065) HasReceived() bool`
+`func (o *InlineResponse20065) HasDevice() bool`
 
-HasReceived returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetSent
+### GetRelationships
 
-`func (o *InlineResponse20065) GetSent() float32`
+`func (o *InlineResponse20065) GetRelationships() NetworksNetworkIdSensorRelationshipsRelationships`
 
-GetSent returns the Sent field if non-nil, zero value otherwise.
+GetRelationships returns the Relationships field if non-nil, zero value otherwise.
 
-### GetSentOk
+### GetRelationshipsOk
 
-`func (o *InlineResponse20065) GetSentOk() (*float32, bool)`
+`func (o *InlineResponse20065) GetRelationshipsOk() (*NetworksNetworkIdSensorRelationshipsRelationships, bool)`
 
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+GetRelationshipsOk returns a tuple with the Relationships field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSent
+### SetRelationships
 
-`func (o *InlineResponse20065) SetSent(v float32)`
+`func (o *InlineResponse20065) SetRelationships(v NetworksNetworkIdSensorRelationshipsRelationships)`
 
-SetSent sets Sent field to given value.
+SetRelationships sets Relationships field to given value.
 
-### HasSent
+### HasRelationships
 
-`func (o *InlineResponse20065) HasSent() bool`
+`func (o *InlineResponse20065) HasRelationships() bool`
 
-HasSent returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse20065) GetTs() string`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse20065) GetTsOk() (*string, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse20065) SetTs(v string)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse20065) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasRelationships returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

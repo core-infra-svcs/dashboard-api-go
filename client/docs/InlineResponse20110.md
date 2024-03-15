@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | Cloud monitor import status | [optional] 
-**ImportId** | Pointer to **string** | Unique id associated with the import of the device | [optional] 
-**Message** | Pointer to **string** | Response method | [optional] 
+**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings1**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings1.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse20110WithDefaults instantiates a new InlineResponse20110 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetName
 
-`func (o *InlineResponse20110) GetStatus() string`
+`func (o *InlineResponse20110) GetName() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetNameOk
 
-`func (o *InlineResponse20110) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20110) GetNameOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetName
 
-`func (o *InlineResponse20110) SetStatus(v string)`
+`func (o *InlineResponse20110) SetName(v string)`
 
-SetStatus sets Status field to given value.
+SetName sets Name field to given value.
 
-### HasStatus
+### HasName
 
-`func (o *InlineResponse20110) HasStatus() bool`
+`func (o *InlineResponse20110) HasName() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetImportId
+### GetEnabled
 
-`func (o *InlineResponse20110) GetImportId() string`
+`func (o *InlineResponse20110) GetEnabled() bool`
 
-GetImportId returns the ImportId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetImportIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse20110) GetImportIdOk() (*string, bool)`
+`func (o *InlineResponse20110) GetEnabledOk() (*bool, bool)`
 
-GetImportIdOk returns a tuple with the ImportId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImportId
+### SetEnabled
 
-`func (o *InlineResponse20110) SetImportId(v string)`
+`func (o *InlineResponse20110) SetEnabled(v bool)`
 
-SetImportId sets ImportId field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasImportId
+### HasEnabled
 
-`func (o *InlineResponse20110) HasImportId() bool`
+`func (o *InlineResponse20110) HasEnabled() bool`
 
-HasImportId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetMessage
+### GetAdminSettings
 
-`func (o *InlineResponse20110) GetMessage() string`
+`func (o *InlineResponse20110) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetAdminSettingsOk
 
-`func (o *InlineResponse20110) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse20110) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetAdminSettings
 
-`func (o *InlineResponse20110) SetMessage(v string)`
+`func (o *InlineResponse20110) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
 
-SetMessage sets Message field to given value.
+SetAdminSettings sets AdminSettings field to given value.
 
-### HasMessage
+### HasAdminSettings
 
-`func (o *InlineResponse20110) HasMessage() bool`
+`func (o *InlineResponse20110) HasAdminSettings() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasAdminSettings returns a boolean if a field has been set.
+
+### GetHelpSettings
+
+`func (o *InlineResponse20110) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings1`
+
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+
+### GetHelpSettingsOk
+
+`func (o *InlineResponse20110) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings1, bool)`
+
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHelpSettings
+
+`func (o *InlineResponse20110) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings1)`
+
+SetHelpSettings sets HelpSettings field to given value.
+
+### HasHelpSettings
+
+`func (o *InlineResponse20110) HasHelpSettings() bool`
+
+HasHelpSettings returns a boolean if a field has been set.
+
+### GetCustomLogo
+
+`func (o *InlineResponse20110) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
+
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+
+### GetCustomLogoOk
+
+`func (o *InlineResponse20110) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
+
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomLogo
+
+`func (o *InlineResponse20110) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
+
+SetCustomLogo sets CustomLogo field to given value.
+
+### HasCustomLogo
+
+`func (o *InlineResponse20110) HasCustomLogo() bool`
+
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

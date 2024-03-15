@@ -7,13 +7,14 @@ Method | HTTP request | Description
 [**BindAdministeredLicensingSubscriptionSubscription**](SubscriptionsApi.md#BindAdministeredLicensingSubscriptionSubscription) | **Post** /administered/licensing/subscription/subscriptions/{subscriptionId}/bind | Bind networks to a subscription
 [**ClaimAdministeredLicensingSubscriptionSubscriptions**](SubscriptionsApi.md#ClaimAdministeredLicensingSubscriptionSubscriptions) | **Post** /administered/licensing/subscription/subscriptions/claim | Claim a subscription into an organization.
 [**GetAdministeredLicensingSubscriptionSubscriptions**](SubscriptionsApi.md#GetAdministeredLicensingSubscriptionSubscriptions) | **Get** /administered/licensing/subscription/subscriptions | List available subscriptions
+[**GetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses**](SubscriptionsApi.md#GetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses) | **Get** /administered/licensing/subscription/subscriptions/compliance/statuses | Get compliance status for requested subscriptions
 [**ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey**](SubscriptionsApi.md#ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey) | **Post** /administered/licensing/subscription/subscriptions/claimKey/validate | Find a subscription by claim key
 
 
 
 ## BindAdministeredLicensingSubscriptionSubscription
 
-> InlineResponse2002 BindAdministeredLicensingSubscriptionSubscription(ctx, subscriptionId).BindAdministeredLicensingSubscriptionSubscription(bindAdministeredLicensingSubscriptionSubscription).Validate(validate).Execute()
+> InlineResponse2004 BindAdministeredLicensingSubscriptionSubscription(ctx, subscriptionId).BindAdministeredLicensingSubscriptionSubscription(bindAdministeredLicensingSubscriptionSubscription).Validate(validate).Execute()
 
 Bind networks to a subscription
 
@@ -43,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionsApi.BindAdministeredLicensingSubscriptionSubscription``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BindAdministeredLicensingSubscriptionSubscription`: InlineResponse2002
+    // response from `BindAdministeredLicensingSubscriptionSubscription`: InlineResponse2004
     fmt.Fprintf(os.Stdout, "Response from `SubscriptionsApi.BindAdministeredLicensingSubscriptionSubscription`: %v\n", resp)
 }
 ```
@@ -69,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse2004**](InlineResponse2004.md)
 
 ### Authorization
 
@@ -87,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## ClaimAdministeredLicensingSubscriptionSubscriptions
 
-> InlineResponse2001 ClaimAdministeredLicensingSubscriptionSubscriptions(ctx).ClaimAdministeredLicensingSubscriptionSubscriptions(claimAdministeredLicensingSubscriptionSubscriptions).Validate(validate).Execute()
+> InlineResponse2002 ClaimAdministeredLicensingSubscriptionSubscriptions(ctx).ClaimAdministeredLicensingSubscriptionSubscriptions(claimAdministeredLicensingSubscriptionSubscriptions).Validate(validate).Execute()
 
 Claim a subscription into an organization.
 
@@ -116,7 +117,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionsApi.ClaimAdministeredLicensingSubscriptionSubscriptions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ClaimAdministeredLicensingSubscriptionSubscriptions`: InlineResponse2001
+    // response from `ClaimAdministeredLicensingSubscriptionSubscriptions`: InlineResponse2002
     fmt.Fprintf(os.Stdout, "Response from `SubscriptionsApi.ClaimAdministeredLicensingSubscriptionSubscriptions`: %v\n", resp)
 }
 ```
@@ -137,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 
@@ -155,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## GetAdministeredLicensingSubscriptionSubscriptions
 
-> []InlineResponse2001 GetAdministeredLicensingSubscriptionSubscriptions(ctx).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SubscriptionIds(subscriptionIds).OrganizationIds(organizationIds).StartDate(startDate).EndDate(endDate).Statuses(statuses).ProductTypes(productTypes).Execute()
+> []InlineResponse2002 GetAdministeredLicensingSubscriptionSubscriptions(ctx).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SubscriptionIds(subscriptionIds).OrganizationIds(organizationIds).StartDate(startDate).EndDate(endDate).Statuses(statuses).ProductTypes(productTypes).Execute()
 
 List available subscriptions
 
@@ -192,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionsApi.GetAdministeredLicensingSubscriptionSubscriptions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetAdministeredLicensingSubscriptionSubscriptions`: []InlineResponse2001
+    // response from `GetAdministeredLicensingSubscriptionSubscriptions`: []InlineResponse2002
     fmt.Fprintf(os.Stdout, "Response from `SubscriptionsApi.GetAdministeredLicensingSubscriptionSubscriptions`: %v\n", resp)
 }
 ```
@@ -220,7 +221,75 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse2001**](InlineResponse2001.md)
+[**[]InlineResponse2002**](InlineResponse2002.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses
+
+> []InlineResponse2003 GetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses(ctx).OrganizationIds(organizationIds).SubscriptionIds(subscriptionIds).Execute()
+
+Get compliance status for requested subscriptions
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationIds := []string{"Inner_example"} // []string | Organizations to get subscription compliance information for (optional)
+    subscriptionIds := []string{"Inner_example"} // []string | Subscription ids (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.SubscriptionsApi.GetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses(context.Background()).OrganizationIds(organizationIds).SubscriptionIds(subscriptionIds).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionsApi.GetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses`: []InlineResponse2003
+    fmt.Fprintf(os.Stdout, "Response from `SubscriptionsApi.GetAdministeredLicensingSubscriptionSubscriptionsComplianceStatuses`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **organizationIds** | **[]string** | Organizations to get subscription compliance information for | 
+ **subscriptionIds** | **[]string** | Subscription ids | 
+
+### Return type
+
+[**[]InlineResponse2003**](InlineResponse2003.md)
 
 ### Authorization
 
@@ -238,7 +307,7 @@ Name | Type | Description  | Notes
 
 ## ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey
 
-> InlineResponse2001 ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey(ctx).ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey(validateAdministeredLicensingSubscriptionSubscriptionsClaimKey).Execute()
+> InlineResponse2002 ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey(ctx).ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey(validateAdministeredLicensingSubscriptionSubscriptionsClaimKey).Execute()
 
 Find a subscription by claim key
 
@@ -266,7 +335,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionsApi.ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey`: InlineResponse2001
+    // response from `ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey`: InlineResponse2002
     fmt.Fprintf(os.Stdout, "Response from `SubscriptionsApi.ValidateAdministeredLicensingSubscriptionSubscriptionsClaimKey`: %v\n", resp)
 }
 ```
@@ -286,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

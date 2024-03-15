@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
+**UpgradeWindow** | Pointer to [**InlineResponse20051UpgradeWindow**](InlineResponse20051UpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**InlineResponse20051Products**](InlineResponse20051Products.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20051WithDefaults instantiates a new InlineResponse20051 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetUpgradeWindow
 
-`func (o *InlineResponse20051) GetName() string`
+`func (o *InlineResponse20051) GetUpgradeWindow() InlineResponse20051UpgradeWindow`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUpgradeWindowOk
 
-`func (o *InlineResponse20051) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20051) GetUpgradeWindowOk() (*InlineResponse20051UpgradeWindow, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUpgradeWindow
 
-`func (o *InlineResponse20051) SetName(v string)`
+`func (o *InlineResponse20051) SetUpgradeWindow(v InlineResponse20051UpgradeWindow)`
 
-SetName sets Name field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
-### HasName
+### HasUpgradeWindow
 
-`func (o *InlineResponse20051) HasName() bool`
+`func (o *InlineResponse20051) HasUpgradeWindow() bool`
 
-HasName returns a boolean if a field has been set.
+HasUpgradeWindow returns a boolean if a field has been set.
 
-### GetClientId
+### GetTimezone
 
-`func (o *InlineResponse20051) GetClientId() string`
+`func (o *InlineResponse20051) GetTimezone() string`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetTimezoneOk
 
-`func (o *InlineResponse20051) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse20051) GetTimezoneOk() (*string, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetTimezone
 
-`func (o *InlineResponse20051) SetClientId(v string)`
+`func (o *InlineResponse20051) SetTimezone(v string)`
 
-SetClientId sets ClientId field to given value.
+SetTimezone sets Timezone field to given value.
 
-### HasClientId
+### HasTimezone
 
-`func (o *InlineResponse20051) HasClientId() bool`
+`func (o *InlineResponse20051) HasTimezone() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasTimezone returns a boolean if a field has been set.
 
-### GetAssigned
+### GetProducts
 
-`func (o *InlineResponse20051) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+`func (o *InlineResponse20051) GetProducts() InlineResponse20051Products`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetProductsOk
 
-`func (o *InlineResponse20051) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+`func (o *InlineResponse20051) GetProductsOk() (*InlineResponse20051Products, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetProducts
 
-`func (o *InlineResponse20051) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+`func (o *InlineResponse20051) SetProducts(v InlineResponse20051Products)`
 
-SetAssigned sets Assigned field to given value.
+SetProducts sets Products field to given value.
 
-### HasAssigned
+### HasProducts
 
-`func (o *InlineResponse20051) HasAssigned() bool`
+`func (o *InlineResponse20051) HasProducts() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**DefaultSettings** | Pointer to [**InlineResponse200102DefaultSettings**](InlineResponse200102DefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200102Overrides**](InlineResponse200102Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200102WithDefaults instantiates a new InlineResponse200102 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetDefaultSettings
 
-`func (o *InlineResponse200102) GetId() string`
+`func (o *InlineResponse200102) GetDefaultSettings() InlineResponse200102DefaultSettings`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetDefaultSettingsOk
 
-`func (o *InlineResponse200102) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200102) GetDefaultSettingsOk() (*InlineResponse200102DefaultSettings, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetDefaultSettings
 
-`func (o *InlineResponse200102) SetId(v string)`
+`func (o *InlineResponse200102) SetDefaultSettings(v InlineResponse200102DefaultSettings)`
 
-SetId sets Id field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
-### HasId
+### HasDefaultSettings
 
-`func (o *InlineResponse200102) HasId() bool`
+`func (o *InlineResponse200102) HasDefaultSettings() bool`
 
-HasId returns a boolean if a field has been set.
+HasDefaultSettings returns a boolean if a field has been set.
 
-### GetName
+### GetOverrides
 
-`func (o *InlineResponse200102) GetName() string`
+`func (o *InlineResponse200102) GetOverrides() []InlineResponse200102Overrides`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetOverridesOk
 
-`func (o *InlineResponse200102) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200102) GetOverridesOk() (*[]InlineResponse200102Overrides, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetOverrides
 
-`func (o *InlineResponse200102) SetName(v string)`
+`func (o *InlineResponse200102) SetOverrides(v []InlineResponse200102Overrides)`
 
-SetName sets Name field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasName
+### HasOverrides
 
-`func (o *InlineResponse200102) HasName() bool`
+`func (o *InlineResponse200102) HasOverrides() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse200102) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200102) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200102) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse200102) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse200102) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse200102) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse200102) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse200102) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetPayloadTemplate
-
-`func (o *InlineResponse200102) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
-
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateOk
-
-`func (o *InlineResponse200102) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplate
-
-`func (o *InlineResponse200102) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
-
-SetPayloadTemplate sets PayloadTemplate field to given value.
-
-### HasPayloadTemplate
-
-`func (o *InlineResponse200102) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

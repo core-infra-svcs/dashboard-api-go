@@ -4,14 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the certificate. | [optional] 
-**NotValidAfter** | Pointer to **string** | The date after which the certificate is no longer valid. | [optional] 
-**NotValidBefore** | Pointer to **string** | The date before which the certificate is not valid. | [optional] 
-**CertPem** | Pointer to **string** | The PEM of the certificate. | [optional] 
-**DeviceId** | Pointer to **string** | The Meraki managed device Id. | [optional] 
-**Issuer** | Pointer to **string** | The certificate issuer. | [optional] 
-**Subject** | Pointer to **string** | The subject of the certificate. | [optional] 
-**Id** | Pointer to **string** | The Meraki Id of the certificate record. | [optional] 
+**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
+**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
+**LocalStatusPage** | Pointer to [**InlineResponse20066LocalStatusPage**](InlineResponse20066LocalStatusPage.md) |  | [optional] 
+**SecurePort** | Pointer to [**InlineResponse20066SecurePort**](InlineResponse20066SecurePort.md) |  | [optional] 
+**Fips** | Pointer to [**InlineResponse20066Fips**](InlineResponse20066Fips.md) |  | [optional] 
+**NamedVlans** | Pointer to [**InlineResponse20066NamedVlans**](InlineResponse20066NamedVlans.md) |  | [optional] 
 
 ## Methods
 
@@ -32,205 +30,155 @@ NewInlineResponse20066WithDefaults instantiates a new InlineResponse20066 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetLocalStatusPageEnabled
 
-`func (o *InlineResponse20066) GetName() string`
+`func (o *InlineResponse20066) GetLocalStatusPageEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLocalStatusPageEnabledOk
 
-`func (o *InlineResponse20066) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20066) GetLocalStatusPageEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLocalStatusPageEnabled
 
-`func (o *InlineResponse20066) SetName(v string)`
+`func (o *InlineResponse20066) SetLocalStatusPageEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
 
-### HasName
+### HasLocalStatusPageEnabled
 
-`func (o *InlineResponse20066) HasName() bool`
+`func (o *InlineResponse20066) HasLocalStatusPageEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasLocalStatusPageEnabled returns a boolean if a field has been set.
 
-### GetNotValidAfter
+### GetRemoteStatusPageEnabled
 
-`func (o *InlineResponse20066) GetNotValidAfter() string`
+`func (o *InlineResponse20066) GetRemoteStatusPageEnabled() bool`
 
-GetNotValidAfter returns the NotValidAfter field if non-nil, zero value otherwise.
+GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
 
-### GetNotValidAfterOk
+### GetRemoteStatusPageEnabledOk
 
-`func (o *InlineResponse20066) GetNotValidAfterOk() (*string, bool)`
+`func (o *InlineResponse20066) GetRemoteStatusPageEnabledOk() (*bool, bool)`
 
-GetNotValidAfterOk returns a tuple with the NotValidAfter field if it's non-nil, zero value otherwise
+GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotValidAfter
+### SetRemoteStatusPageEnabled
 
-`func (o *InlineResponse20066) SetNotValidAfter(v string)`
+`func (o *InlineResponse20066) SetRemoteStatusPageEnabled(v bool)`
 
-SetNotValidAfter sets NotValidAfter field to given value.
+SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
 
-### HasNotValidAfter
+### HasRemoteStatusPageEnabled
 
-`func (o *InlineResponse20066) HasNotValidAfter() bool`
+`func (o *InlineResponse20066) HasRemoteStatusPageEnabled() bool`
 
-HasNotValidAfter returns a boolean if a field has been set.
+HasRemoteStatusPageEnabled returns a boolean if a field has been set.
 
-### GetNotValidBefore
+### GetLocalStatusPage
 
-`func (o *InlineResponse20066) GetNotValidBefore() string`
+`func (o *InlineResponse20066) GetLocalStatusPage() InlineResponse20066LocalStatusPage`
 
-GetNotValidBefore returns the NotValidBefore field if non-nil, zero value otherwise.
+GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
 
-### GetNotValidBeforeOk
+### GetLocalStatusPageOk
 
-`func (o *InlineResponse20066) GetNotValidBeforeOk() (*string, bool)`
+`func (o *InlineResponse20066) GetLocalStatusPageOk() (*InlineResponse20066LocalStatusPage, bool)`
 
-GetNotValidBeforeOk returns a tuple with the NotValidBefore field if it's non-nil, zero value otherwise
+GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotValidBefore
+### SetLocalStatusPage
 
-`func (o *InlineResponse20066) SetNotValidBefore(v string)`
+`func (o *InlineResponse20066) SetLocalStatusPage(v InlineResponse20066LocalStatusPage)`
 
-SetNotValidBefore sets NotValidBefore field to given value.
+SetLocalStatusPage sets LocalStatusPage field to given value.
 
-### HasNotValidBefore
+### HasLocalStatusPage
 
-`func (o *InlineResponse20066) HasNotValidBefore() bool`
+`func (o *InlineResponse20066) HasLocalStatusPage() bool`
 
-HasNotValidBefore returns a boolean if a field has been set.
+HasLocalStatusPage returns a boolean if a field has been set.
 
-### GetCertPem
+### GetSecurePort
 
-`func (o *InlineResponse20066) GetCertPem() string`
+`func (o *InlineResponse20066) GetSecurePort() InlineResponse20066SecurePort`
 
-GetCertPem returns the CertPem field if non-nil, zero value otherwise.
+GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
 
-### GetCertPemOk
+### GetSecurePortOk
 
-`func (o *InlineResponse20066) GetCertPemOk() (*string, bool)`
+`func (o *InlineResponse20066) GetSecurePortOk() (*InlineResponse20066SecurePort, bool)`
 
-GetCertPemOk returns a tuple with the CertPem field if it's non-nil, zero value otherwise
+GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertPem
+### SetSecurePort
 
-`func (o *InlineResponse20066) SetCertPem(v string)`
+`func (o *InlineResponse20066) SetSecurePort(v InlineResponse20066SecurePort)`
 
-SetCertPem sets CertPem field to given value.
+SetSecurePort sets SecurePort field to given value.
 
-### HasCertPem
+### HasSecurePort
 
-`func (o *InlineResponse20066) HasCertPem() bool`
+`func (o *InlineResponse20066) HasSecurePort() bool`
 
-HasCertPem returns a boolean if a field has been set.
+HasSecurePort returns a boolean if a field has been set.
 
-### GetDeviceId
+### GetFips
 
-`func (o *InlineResponse20066) GetDeviceId() string`
+`func (o *InlineResponse20066) GetFips() InlineResponse20066Fips`
 
-GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
+GetFips returns the Fips field if non-nil, zero value otherwise.
 
-### GetDeviceIdOk
+### GetFipsOk
 
-`func (o *InlineResponse20066) GetDeviceIdOk() (*string, bool)`
+`func (o *InlineResponse20066) GetFipsOk() (*InlineResponse20066Fips, bool)`
 
-GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
+GetFipsOk returns a tuple with the Fips field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceId
+### SetFips
 
-`func (o *InlineResponse20066) SetDeviceId(v string)`
+`func (o *InlineResponse20066) SetFips(v InlineResponse20066Fips)`
 
-SetDeviceId sets DeviceId field to given value.
+SetFips sets Fips field to given value.
 
-### HasDeviceId
+### HasFips
 
-`func (o *InlineResponse20066) HasDeviceId() bool`
+`func (o *InlineResponse20066) HasFips() bool`
 
-HasDeviceId returns a boolean if a field has been set.
+HasFips returns a boolean if a field has been set.
 
-### GetIssuer
+### GetNamedVlans
 
-`func (o *InlineResponse20066) GetIssuer() string`
+`func (o *InlineResponse20066) GetNamedVlans() InlineResponse20066NamedVlans`
 
-GetIssuer returns the Issuer field if non-nil, zero value otherwise.
+GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
 
-### GetIssuerOk
+### GetNamedVlansOk
 
-`func (o *InlineResponse20066) GetIssuerOk() (*string, bool)`
+`func (o *InlineResponse20066) GetNamedVlansOk() (*InlineResponse20066NamedVlans, bool)`
 
-GetIssuerOk returns a tuple with the Issuer field if it's non-nil, zero value otherwise
+GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIssuer
+### SetNamedVlans
 
-`func (o *InlineResponse20066) SetIssuer(v string)`
+`func (o *InlineResponse20066) SetNamedVlans(v InlineResponse20066NamedVlans)`
 
-SetIssuer sets Issuer field to given value.
+SetNamedVlans sets NamedVlans field to given value.
 
-### HasIssuer
+### HasNamedVlans
 
-`func (o *InlineResponse20066) HasIssuer() bool`
+`func (o *InlineResponse20066) HasNamedVlans() bool`
 
-HasIssuer returns a boolean if a field has been set.
-
-### GetSubject
-
-`func (o *InlineResponse20066) GetSubject() string`
-
-GetSubject returns the Subject field if non-nil, zero value otherwise.
-
-### GetSubjectOk
-
-`func (o *InlineResponse20066) GetSubjectOk() (*string, bool)`
-
-GetSubjectOk returns a tuple with the Subject field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubject
-
-`func (o *InlineResponse20066) SetSubject(v string)`
-
-SetSubject sets Subject field to given value.
-
-### HasSubject
-
-`func (o *InlineResponse20066) HasSubject() bool`
-
-HasSubject returns a boolean if a field has been set.
-
-### GetId
-
-`func (o *InlineResponse20066) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse20066) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse20066) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse20066) HasId() bool`
-
-HasId returns a boolean if a field has been set.
+HasNamedVlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
-**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
-**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
-**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200135Counts**](InlineResponse200135Counts.md) |  | [optional] 
+**Limits** | Pointer to [**InlineResponse200135Limits**](InlineResponse200135Limits.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200135WithDefaults instantiates a new InlineResponse200135 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetCounts
 
-`func (o *InlineResponse200135) GetName() string`
+`func (o *InlineResponse200135) GetCounts() InlineResponse200135Counts`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCountsOk
 
-`func (o *InlineResponse200135) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200135) GetCountsOk() (*InlineResponse200135Counts, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCounts
 
-`func (o *InlineResponse200135) SetName(v string)`
+`func (o *InlineResponse200135) SetCounts(v InlineResponse200135Counts)`
 
-SetName sets Name field to given value.
+SetCounts sets Counts field to given value.
 
-### HasName
+### HasCounts
 
-`func (o *InlineResponse200135) HasName() bool`
+`func (o *InlineResponse200135) HasCounts() bool`
 
-HasName returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
-### GetEnabled
+### GetLimits
 
-`func (o *InlineResponse200135) GetEnabled() bool`
+`func (o *InlineResponse200135) GetLimits() InlineResponse200135Limits`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetLimits returns the Limits field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetLimitsOk
 
-`func (o *InlineResponse200135) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200135) GetLimitsOk() (*InlineResponse200135Limits, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetLimits
 
-`func (o *InlineResponse200135) SetEnabled(v bool)`
+`func (o *InlineResponse200135) SetLimits(v InlineResponse200135Limits)`
 
-SetEnabled sets Enabled field to given value.
+SetLimits sets Limits field to given value.
 
-### HasEnabled
+### HasLimits
 
-`func (o *InlineResponse200135) HasEnabled() bool`
+`func (o *InlineResponse200135) HasLimits() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetAdminSettings
-
-`func (o *InlineResponse200135) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
-
-GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
-
-### GetAdminSettingsOk
-
-`func (o *InlineResponse200135) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
-
-GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdminSettings
-
-`func (o *InlineResponse200135) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
-
-SetAdminSettings sets AdminSettings field to given value.
-
-### HasAdminSettings
-
-`func (o *InlineResponse200135) HasAdminSettings() bool`
-
-HasAdminSettings returns a boolean if a field has been set.
-
-### GetHelpSettings
-
-`func (o *InlineResponse200135) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
-
-GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
-
-### GetHelpSettingsOk
-
-`func (o *InlineResponse200135) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
-
-GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHelpSettings
-
-`func (o *InlineResponse200135) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
-
-SetHelpSettings sets HelpSettings field to given value.
-
-### HasHelpSettings
-
-`func (o *InlineResponse200135) HasHelpSettings() bool`
-
-HasHelpSettings returns a boolean if a field has been set.
-
-### GetCustomLogo
-
-`func (o *InlineResponse200135) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
-
-GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
-
-### GetCustomLogoOk
-
-`func (o *InlineResponse200135) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
-
-GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCustomLogo
-
-`func (o *InlineResponse200135) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
-
-SetCustomLogo sets CustomLogo field to given value.
-
-### HasCustomLogo
-
-`func (o *InlineResponse200135) HasCustomLogo() bool`
-
-HasCustomLogo returns a boolean if a field has been set.
+HasLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

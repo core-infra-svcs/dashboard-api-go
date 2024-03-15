@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse20090Overrides**](InlineResponse20090Overrides.md) | Override MTU size for individual switches or switch templates.       An empty array will clear overrides. | [optional] 
+**ResultingNetworks** | Pointer to [**[]InlineResponse20025**](InlineResponse20025.md) | Networks after the split | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse20090WithDefaults instantiates a new InlineResponse20090 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultMtuSize
+### GetResultingNetworks
 
-`func (o *InlineResponse20090) GetDefaultMtuSize() int32`
+`func (o *InlineResponse20090) GetResultingNetworks() []InlineResponse20025`
 
-GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
+GetResultingNetworks returns the ResultingNetworks field if non-nil, zero value otherwise.
 
-### GetDefaultMtuSizeOk
+### GetResultingNetworksOk
 
-`func (o *InlineResponse20090) GetDefaultMtuSizeOk() (*int32, bool)`
+`func (o *InlineResponse20090) GetResultingNetworksOk() (*[]InlineResponse20025, bool)`
 
-GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
+GetResultingNetworksOk returns a tuple with the ResultingNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultMtuSize
+### SetResultingNetworks
 
-`func (o *InlineResponse20090) SetDefaultMtuSize(v int32)`
+`func (o *InlineResponse20090) SetResultingNetworks(v []InlineResponse20025)`
 
-SetDefaultMtuSize sets DefaultMtuSize field to given value.
+SetResultingNetworks sets ResultingNetworks field to given value.
 
-### HasDefaultMtuSize
+### HasResultingNetworks
 
-`func (o *InlineResponse20090) HasDefaultMtuSize() bool`
+`func (o *InlineResponse20090) HasResultingNetworks() bool`
 
-HasDefaultMtuSize returns a boolean if a field has been set.
-
-### GetOverrides
-
-`func (o *InlineResponse20090) GetOverrides() []InlineResponse20090Overrides`
-
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
-
-### GetOverridesOk
-
-`func (o *InlineResponse20090) GetOverridesOk() (*[]InlineResponse20090Overrides, bool)`
-
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOverrides
-
-`func (o *InlineResponse20090) SetOverrides(v []InlineResponse20090Overrides)`
-
-SetOverrides sets Overrides field to given value.
-
-### HasOverrides
-
-`func (o *InlineResponse20090) HasOverrides() bool`
-
-HasOverrides returns a boolean if a field has been set.
+HasResultingNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

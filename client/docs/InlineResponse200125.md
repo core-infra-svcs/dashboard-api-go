@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AclId** | Pointer to **string** | ID of the adaptive policy ACL | [optional] 
-**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
-**IpVersion** | Pointer to **string** | IP version of adpative policy ACL | [optional] 
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules | [optional] 
-**CreatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was created | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was last updated | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
+**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
 
 ## Methods
 
@@ -31,180 +28,105 @@ NewInlineResponse200125WithDefaults instantiates a new InlineResponse200125 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAclId
+### GetStartTs
 
-`func (o *InlineResponse200125) GetAclId() string`
+`func (o *InlineResponse200125) GetStartTs() time.Time`
 
-GetAclId returns the AclId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetAclIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse200125) GetAclIdOk() (*string, bool)`
+`func (o *InlineResponse200125) GetStartTsOk() (*time.Time, bool)`
 
-GetAclIdOk returns a tuple with the AclId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAclId
+### SetStartTs
 
-`func (o *InlineResponse200125) SetAclId(v string)`
+`func (o *InlineResponse200125) SetStartTs(v time.Time)`
 
-SetAclId sets AclId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasAclId
+### HasStartTs
 
-`func (o *InlineResponse200125) HasAclId() bool`
+`func (o *InlineResponse200125) HasStartTs() bool`
 
-HasAclId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetName
+### GetEndTs
 
-`func (o *InlineResponse200125) GetName() string`
+`func (o *InlineResponse200125) GetEndTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEndTsOk
 
-`func (o *InlineResponse200125) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200125) GetEndTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEndTs
 
-`func (o *InlineResponse200125) SetName(v string)`
+`func (o *InlineResponse200125) SetEndTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasName
+### HasEndTs
 
-`func (o *InlineResponse200125) HasName() bool`
+`func (o *InlineResponse200125) HasEndTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetDescription
+### GetSnr
 
-`func (o *InlineResponse200125) GetDescription() string`
+`func (o *InlineResponse200125) GetSnr() int32`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetSnr returns the Snr field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetSnrOk
 
-`func (o *InlineResponse200125) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200125) GetSnrOk() (*int32, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetSnr
 
-`func (o *InlineResponse200125) SetDescription(v string)`
+`func (o *InlineResponse200125) SetSnr(v int32)`
 
-SetDescription sets Description field to given value.
+SetSnr sets Snr field to given value.
 
-### HasDescription
+### HasSnr
 
-`func (o *InlineResponse200125) HasDescription() bool`
+`func (o *InlineResponse200125) HasSnr() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasSnr returns a boolean if a field has been set.
 
-### GetIpVersion
+### GetRssi
 
-`func (o *InlineResponse200125) GetIpVersion() string`
+`func (o *InlineResponse200125) GetRssi() int32`
 
-GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+GetRssi returns the Rssi field if non-nil, zero value otherwise.
 
-### GetIpVersionOk
+### GetRssiOk
 
-`func (o *InlineResponse200125) GetIpVersionOk() (*string, bool)`
+`func (o *InlineResponse200125) GetRssiOk() (*int32, bool)`
 
-GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpVersion
+### SetRssi
 
-`func (o *InlineResponse200125) SetIpVersion(v string)`
+`func (o *InlineResponse200125) SetRssi(v int32)`
 
-SetIpVersion sets IpVersion field to given value.
+SetRssi sets Rssi field to given value.
 
-### HasIpVersion
+### HasRssi
 
-`func (o *InlineResponse200125) HasIpVersion() bool`
+`func (o *InlineResponse200125) HasRssi() bool`
 
-HasIpVersion returns a boolean if a field has been set.
-
-### GetRules
-
-`func (o *InlineResponse200125) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *InlineResponse200125) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *InlineResponse200125) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *InlineResponse200125) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200125) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200125) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200125) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200125) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200125) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200125) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200125) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200125) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasRssi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

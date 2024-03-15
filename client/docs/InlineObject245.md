@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineObject245WithDefaults instantiates a new InlineObject245 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRole
+### GetX509certSha1Fingerprint
 
-`func (o *InlineObject245) GetRole() string`
+`func (o *InlineObject245) GetX509certSha1Fingerprint() string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineObject245) GetRoleOk() (*string, bool)`
+`func (o *InlineObject245) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetX509certSha1Fingerprint
 
-`func (o *InlineObject245) SetRole(v string)`
+`func (o *InlineObject245) SetX509certSha1Fingerprint(v string)`
 
-SetRole sets Role field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
-### HasRole
+### HasX509certSha1Fingerprint
 
-`func (o *InlineObject245) HasRole() bool`
+`func (o *InlineObject245) HasX509certSha1Fingerprint() bool`
 
-HasRole returns a boolean if a field has been set.
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
 
-### GetOrgAccess
+### GetSloLogoutUrl
 
-`func (o *InlineObject245) GetOrgAccess() string`
+`func (o *InlineObject245) GetSloLogoutUrl() string`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetSloLogoutUrlOk
 
-`func (o *InlineObject245) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineObject245) GetSloLogoutUrlOk() (*string, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetSloLogoutUrl
 
-`func (o *InlineObject245) SetOrgAccess(v string)`
+`func (o *InlineObject245) SetSloLogoutUrl(v string)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
 
-### HasOrgAccess
+### HasSloLogoutUrl
 
-`func (o *InlineObject245) HasOrgAccess() bool`
+`func (o *InlineObject245) HasSloLogoutUrl() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineObject245) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject245) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject245) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject245) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineObject245) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineObject245) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineObject245) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineObject245) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

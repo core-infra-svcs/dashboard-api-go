@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
-**Type** | Pointer to **string** | The boundary type | [optional] 
-**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the access period | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the access period | [optional] 
+**Counts** | Pointer to [**[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts**](OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts.md) | list of response codes and a count of how many requests had that code in the given time period | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200139WithDefaults instantiates a new InlineResponse200139 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBoundaryId
+### GetStartTs
 
-`func (o *InlineResponse200139) GetBoundaryId() string`
+`func (o *InlineResponse200139) GetStartTs() time.Time`
 
-GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetBoundaryIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse200139) GetBoundaryIdOk() (*string, bool)`
+`func (o *InlineResponse200139) GetStartTsOk() (*time.Time, bool)`
 
-GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBoundaryId
+### SetStartTs
 
-`func (o *InlineResponse200139) SetBoundaryId(v string)`
+`func (o *InlineResponse200139) SetStartTs(v time.Time)`
 
-SetBoundaryId sets BoundaryId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasBoundaryId
+### HasStartTs
 
-`func (o *InlineResponse200139) HasBoundaryId() bool`
+`func (o *InlineResponse200139) HasStartTs() bool`
 
-HasBoundaryId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetType
+### GetEndTs
 
-`func (o *InlineResponse200139) GetType() string`
+`func (o *InlineResponse200139) GetEndTs() time.Time`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetEndTsOk
 
-`func (o *InlineResponse200139) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200139) GetEndTsOk() (*time.Time, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetEndTs
 
-`func (o *InlineResponse200139) SetType(v string)`
+`func (o *InlineResponse200139) SetEndTs(v time.Time)`
 
-SetType sets Type field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasType
+### HasEndTs
 
-`func (o *InlineResponse200139) HasType() bool`
+`func (o *InlineResponse200139) HasEndTs() bool`
 
-HasType returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetResults
+### GetCounts
 
-`func (o *InlineResponse200139) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
+`func (o *InlineResponse200139) GetCounts() []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts`
 
-GetResults returns the Results field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetResultsOk
+### GetCountsOk
 
-`func (o *InlineResponse200139) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
+`func (o *InlineResponse200139) GetCountsOk() (*[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts, bool)`
 
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResults
+### SetCounts
 
-`func (o *InlineResponse200139) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
+`func (o *InlineResponse200139) SetCounts(v []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts)`
 
-SetResults sets Results field to given value.
+SetCounts sets Counts field to given value.
 
-### HasResults
+### HasCounts
 
-`func (o *InlineResponse200139) HasResults() bool`
+`func (o *InlineResponse200139) HasCounts() bool`
 
-HasResults returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Servers** | Pointer to [**[]InlineResponse20098Servers**](InlineResponse20098Servers.md) | List of the syslog servers for this network | [optional] 
+**Mappings** | Pointer to [**[]InlineResponse20098Mappings**](InlineResponse20098Mappings.md) | An array of DSCP to CoS mappings. An empty array will reset the mappings to default. | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20098WithDefaults instantiates a new InlineResponse20098 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetServers
+### GetMappings
 
-`func (o *InlineResponse20098) GetServers() []InlineResponse20098Servers`
+`func (o *InlineResponse20098) GetMappings() []InlineResponse20098Mappings`
 
-GetServers returns the Servers field if non-nil, zero value otherwise.
+GetMappings returns the Mappings field if non-nil, zero value otherwise.
 
-### GetServersOk
+### GetMappingsOk
 
-`func (o *InlineResponse20098) GetServersOk() (*[]InlineResponse20098Servers, bool)`
+`func (o *InlineResponse20098) GetMappingsOk() (*[]InlineResponse20098Mappings, bool)`
 
-GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
+GetMappingsOk returns a tuple with the Mappings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServers
+### SetMappings
 
-`func (o *InlineResponse20098) SetServers(v []InlineResponse20098Servers)`
+`func (o *InlineResponse20098) SetMappings(v []InlineResponse20098Mappings)`
 
-SetServers sets Servers field to given value.
+SetMappings sets Mappings field to given value.
 
-### HasServers
+### HasMappings
 
-`func (o *InlineResponse20098) HasServers() bool`
+`func (o *InlineResponse20098) HasMappings() bool`
 
-HasServers returns a boolean if a field has been set.
+HasMappings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

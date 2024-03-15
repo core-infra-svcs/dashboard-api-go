@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreatedAt** | Pointer to **string** | When the Meraki record for the wlanList was created. | [optional] 
-**Id** | Pointer to **string** | The Meraki managed Id of the wlanList record. | [optional] 
-**Xml** | Pointer to **string** | An XML string containing the WLAN List for the device. | [optional] 
+**FirstSeenAt** | Pointer to **string** | When the device was first seen as connected to the internet in each connection. | [optional] 
+**LastSeenAt** | Pointer to **string** | When the device was last seen as connected to the internet in each connection. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse20076WithDefaults instantiates a new InlineResponse20076 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCreatedAt
+### GetFirstSeenAt
 
-`func (o *InlineResponse20076) GetCreatedAt() string`
+`func (o *InlineResponse20076) GetFirstSeenAt() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetFirstSeenAt returns the FirstSeenAt field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetFirstSeenAtOk
 
-`func (o *InlineResponse20076) GetCreatedAtOk() (*string, bool)`
+`func (o *InlineResponse20076) GetFirstSeenAtOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetFirstSeenAtOk returns a tuple with the FirstSeenAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetFirstSeenAt
 
-`func (o *InlineResponse20076) SetCreatedAt(v string)`
+`func (o *InlineResponse20076) SetFirstSeenAt(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetFirstSeenAt sets FirstSeenAt field to given value.
 
-### HasCreatedAt
+### HasFirstSeenAt
 
-`func (o *InlineResponse20076) HasCreatedAt() bool`
+`func (o *InlineResponse20076) HasFirstSeenAt() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasFirstSeenAt returns a boolean if a field has been set.
 
-### GetId
+### GetLastSeenAt
 
-`func (o *InlineResponse20076) GetId() string`
+`func (o *InlineResponse20076) GetLastSeenAt() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetLastSeenAt returns the LastSeenAt field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetLastSeenAtOk
 
-`func (o *InlineResponse20076) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20076) GetLastSeenAtOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetLastSeenAtOk returns a tuple with the LastSeenAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetLastSeenAt
 
-`func (o *InlineResponse20076) SetId(v string)`
+`func (o *InlineResponse20076) SetLastSeenAt(v string)`
 
-SetId sets Id field to given value.
+SetLastSeenAt sets LastSeenAt field to given value.
 
-### HasId
+### HasLastSeenAt
 
-`func (o *InlineResponse20076) HasId() bool`
+`func (o *InlineResponse20076) HasLastSeenAt() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetXml
-
-`func (o *InlineResponse20076) GetXml() string`
-
-GetXml returns the Xml field if non-nil, zero value otherwise.
-
-### GetXmlOk
-
-`func (o *InlineResponse20076) GetXmlOk() (*string, bool)`
-
-GetXmlOk returns a tuple with the Xml field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetXml
-
-`func (o *InlineResponse20076) SetXml(v string)`
-
-SetXml sets Xml field to given value.
-
-### HasXml
-
-`func (o *InlineResponse20076) HasXml() bool`
-
-HasXml returns a boolean if a field has been set.
+HasLastSeenAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

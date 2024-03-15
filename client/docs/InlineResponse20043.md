@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Product** | Pointer to **string** | Product type to rollback (if the network is a combined network) | [optional] 
-**Status** | Pointer to **string** | Status of the rollback | [optional] 
-**UpgradeBatchId** | Pointer to **string** | Batch ID of the firmware rollback | [optional] 
-**Time** | Pointer to **time.Time** | Scheduled time for the rollback | [optional] 
-**ToVersion** | Pointer to [**InlineResponse20043ToVersion**](InlineResponse20043ToVersion.md) |  | [optional] 
-**Reasons** | Pointer to [**[]InlineResponse20043Reasons**](InlineResponse20043Reasons.md) | Reasons for the rollback | [optional] 
+**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
+**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
+**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
+**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineResponse20043WithDefaults instantiates a new InlineResponse20043 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProduct
+### GetTs
 
-`func (o *InlineResponse20043) GetProduct() string`
+`func (o *InlineResponse20043) GetTs() time.Time`
 
-GetProduct returns the Product field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetProductOk
+### GetTsOk
 
-`func (o *InlineResponse20043) GetProductOk() (*string, bool)`
+`func (o *InlineResponse20043) GetTsOk() (*time.Time, bool)`
 
-GetProductOk returns a tuple with the Product field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProduct
+### SetTs
 
-`func (o *InlineResponse20043) SetProduct(v string)`
+`func (o *InlineResponse20043) SetTs(v time.Time)`
 
-SetProduct sets Product field to given value.
+SetTs sets Ts field to given value.
 
-### HasProduct
+### HasTs
 
-`func (o *InlineResponse20043) HasProduct() bool`
+`func (o *InlineResponse20043) HasTs() bool`
 
-HasProduct returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetStatus
+### GetTotal
 
-`func (o *InlineResponse20043) GetStatus() string`
+`func (o *InlineResponse20043) GetTotal() float32`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetTotalOk
 
-`func (o *InlineResponse20043) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20043) GetTotalOk() (*float32, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetTotal
 
-`func (o *InlineResponse20043) SetStatus(v string)`
+`func (o *InlineResponse20043) SetTotal(v float32)`
 
-SetStatus sets Status field to given value.
+SetTotal sets Total field to given value.
 
-### HasStatus
+### HasTotal
 
-`func (o *InlineResponse20043) HasStatus() bool`
+`func (o *InlineResponse20043) HasTotal() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetUpgradeBatchId
+### GetUpstream
 
-`func (o *InlineResponse20043) GetUpgradeBatchId() string`
+`func (o *InlineResponse20043) GetUpstream() float32`
 
-GetUpgradeBatchId returns the UpgradeBatchId field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetUpgradeBatchIdOk
+### GetUpstreamOk
 
-`func (o *InlineResponse20043) GetUpgradeBatchIdOk() (*string, bool)`
+`func (o *InlineResponse20043) GetUpstreamOk() (*float32, bool)`
 
-GetUpgradeBatchIdOk returns a tuple with the UpgradeBatchId field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeBatchId
+### SetUpstream
 
-`func (o *InlineResponse20043) SetUpgradeBatchId(v string)`
+`func (o *InlineResponse20043) SetUpstream(v float32)`
 
-SetUpgradeBatchId sets UpgradeBatchId field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasUpgradeBatchId
+### HasUpstream
 
-`func (o *InlineResponse20043) HasUpgradeBatchId() bool`
+`func (o *InlineResponse20043) HasUpstream() bool`
 
-HasUpgradeBatchId returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetTime
+### GetDownstream
 
-`func (o *InlineResponse20043) GetTime() time.Time`
+`func (o *InlineResponse20043) GetDownstream() float32`
 
-GetTime returns the Time field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetTimeOk
+### GetDownstreamOk
 
-`func (o *InlineResponse20043) GetTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse20043) GetDownstreamOk() (*float32, bool)`
 
-GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTime
+### SetDownstream
 
-`func (o *InlineResponse20043) SetTime(v time.Time)`
+`func (o *InlineResponse20043) SetDownstream(v float32)`
 
-SetTime sets Time field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasTime
+### HasDownstream
 
-`func (o *InlineResponse20043) HasTime() bool`
+`func (o *InlineResponse20043) HasDownstream() bool`
 
-HasTime returns a boolean if a field has been set.
-
-### GetToVersion
-
-`func (o *InlineResponse20043) GetToVersion() InlineResponse20043ToVersion`
-
-GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
-
-### GetToVersionOk
-
-`func (o *InlineResponse20043) GetToVersionOk() (*InlineResponse20043ToVersion, bool)`
-
-GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetToVersion
-
-`func (o *InlineResponse20043) SetToVersion(v InlineResponse20043ToVersion)`
-
-SetToVersion sets ToVersion field to given value.
-
-### HasToVersion
-
-`func (o *InlineResponse20043) HasToVersion() bool`
-
-HasToVersion returns a boolean if a field has been set.
-
-### GetReasons
-
-`func (o *InlineResponse20043) GetReasons() []InlineResponse20043Reasons`
-
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
-
-### GetReasonsOk
-
-`func (o *InlineResponse20043) GetReasonsOk() (*[]InlineResponse20043Reasons, bool)`
-
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReasons
-
-`func (o *InlineResponse20043) SetReasons(v []InlineResponse20043Reasons)`
-
-SetReasons sets Reasons field to given value.
-
-### HasReasons
-
-`func (o *InlineResponse20043) HasReasons() bool`
-
-HasReasons returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

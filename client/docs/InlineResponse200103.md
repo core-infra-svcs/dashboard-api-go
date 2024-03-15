@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
-**Type** | Pointer to **string** | The type of the payload template | [optional] 
-**Name** | Pointer to **string** | The name of the payload template | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
-**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
-**Sharing** | Pointer to [**NetworksNetworkIdWebhooksPayloadTemplatesSharing**](NetworksNetworkIdWebhooksPayloadTemplatesSharing.md) |  | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]InlineResponse200103PowerExceptions**](InlineResponse200103PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
+**UplinkClientSampling** | Pointer to [**InlineResponse200103UplinkClientSampling**](InlineResponse200103UplinkClientSampling.md) |  | [optional] 
+**MacBlocklist** | Pointer to [**InlineResponse200103MacBlocklist**](InlineResponse200103MacBlocklist.md) |  | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse200103WithDefaults instantiates a new InlineResponse200103 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPayloadTemplateId
+### GetVlan
 
-`func (o *InlineResponse200103) GetPayloadTemplateId() string`
+`func (o *InlineResponse200103) GetVlan() int32`
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateIdOk
+### GetVlanOk
 
-`func (o *InlineResponse200103) GetPayloadTemplateIdOk() (*string, bool)`
+`func (o *InlineResponse200103) GetVlanOk() (*int32, bool)`
 
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetVlan
 
-`func (o *InlineResponse200103) SetPayloadTemplateId(v string)`
+`func (o *InlineResponse200103) SetVlan(v int32)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasPayloadTemplateId
+### HasVlan
 
-`func (o *InlineResponse200103) HasPayloadTemplateId() bool`
+`func (o *InlineResponse200103) HasVlan() bool`
 
-HasPayloadTemplateId returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetType
+### GetUseCombinedPower
 
-`func (o *InlineResponse200103) GetType() string`
+`func (o *InlineResponse200103) GetUseCombinedPower() bool`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetUseCombinedPowerOk
 
-`func (o *InlineResponse200103) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200103) GetUseCombinedPowerOk() (*bool, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetUseCombinedPower
 
-`func (o *InlineResponse200103) SetType(v string)`
+`func (o *InlineResponse200103) SetUseCombinedPower(v bool)`
 
-SetType sets Type field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasType
+### HasUseCombinedPower
 
-`func (o *InlineResponse200103) HasType() bool`
+`func (o *InlineResponse200103) HasUseCombinedPower() bool`
 
-HasType returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetName
+### GetPowerExceptions
 
-`func (o *InlineResponse200103) GetName() string`
+`func (o *InlineResponse200103) GetPowerExceptions() []InlineResponse200103PowerExceptions`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPowerExceptionsOk
 
-`func (o *InlineResponse200103) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200103) GetPowerExceptionsOk() (*[]InlineResponse200103PowerExceptions, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPowerExceptions
 
-`func (o *InlineResponse200103) SetName(v string)`
+`func (o *InlineResponse200103) SetPowerExceptions(v []InlineResponse200103PowerExceptions)`
 
-SetName sets Name field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasName
+### HasPowerExceptions
 
-`func (o *InlineResponse200103) HasName() bool`
+`func (o *InlineResponse200103) HasPowerExceptions() bool`
 
-HasName returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
-### GetHeaders
+### GetUplinkClientSampling
 
-`func (o *InlineResponse200103) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
+`func (o *InlineResponse200103) GetUplinkClientSampling() InlineResponse200103UplinkClientSampling`
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
 
-### GetHeadersOk
+### GetUplinkClientSamplingOk
 
-`func (o *InlineResponse200103) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
+`func (o *InlineResponse200103) GetUplinkClientSamplingOk() (*InlineResponse200103UplinkClientSampling, bool)`
 
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetUplinkClientSampling
 
-`func (o *InlineResponse200103) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
+`func (o *InlineResponse200103) SetUplinkClientSampling(v InlineResponse200103UplinkClientSampling)`
 
-SetHeaders sets Headers field to given value.
+SetUplinkClientSampling sets UplinkClientSampling field to given value.
 
-### HasHeaders
+### HasUplinkClientSampling
 
-`func (o *InlineResponse200103) HasHeaders() bool`
+`func (o *InlineResponse200103) HasUplinkClientSampling() bool`
 
-HasHeaders returns a boolean if a field has been set.
+HasUplinkClientSampling returns a boolean if a field has been set.
 
-### GetBody
+### GetMacBlocklist
 
-`func (o *InlineResponse200103) GetBody() string`
+`func (o *InlineResponse200103) GetMacBlocklist() InlineResponse200103MacBlocklist`
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
 
-### GetBodyOk
+### GetMacBlocklistOk
 
-`func (o *InlineResponse200103) GetBodyOk() (*string, bool)`
+`func (o *InlineResponse200103) GetMacBlocklistOk() (*InlineResponse200103MacBlocklist, bool)`
 
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetMacBlocklist
 
-`func (o *InlineResponse200103) SetBody(v string)`
+`func (o *InlineResponse200103) SetMacBlocklist(v InlineResponse200103MacBlocklist)`
 
-SetBody sets Body field to given value.
+SetMacBlocklist sets MacBlocklist field to given value.
 
-### HasBody
+### HasMacBlocklist
 
-`func (o *InlineResponse200103) HasBody() bool`
+`func (o *InlineResponse200103) HasMacBlocklist() bool`
 
-HasBody returns a boolean if a field has been set.
-
-### GetSharing
-
-`func (o *InlineResponse200103) GetSharing() NetworksNetworkIdWebhooksPayloadTemplatesSharing`
-
-GetSharing returns the Sharing field if non-nil, zero value otherwise.
-
-### GetSharingOk
-
-`func (o *InlineResponse200103) GetSharingOk() (*NetworksNetworkIdWebhooksPayloadTemplatesSharing, bool)`
-
-GetSharingOk returns a tuple with the Sharing field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSharing
-
-`func (o *InlineResponse200103) SetSharing(v NetworksNetworkIdWebhooksPayloadTemplatesSharing)`
-
-SetSharing sets Sharing field to given value.
-
-### HasSharing
-
-`func (o *InlineResponse200103) HasSharing() bool`
-
-HasSharing returns a boolean if a field has been set.
+HasMacBlocklist returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

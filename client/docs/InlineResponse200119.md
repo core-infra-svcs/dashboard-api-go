@@ -4,13 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
-**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
+**ProfileId** | Pointer to **string** | AP port profile ID | [optional] 
+**Name** | Pointer to **string** | AP port profile name | [optional] 
+**IsDefault** | Pointer to **bool** | Is default profile | [optional] 
+**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts.md) | Ports config | [optional] 
+**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts.md) | Usb ports config | [optional] 
 
 ## Methods
 
@@ -30,6 +28,31 @@ will change when the set of required properties is changed
 NewInlineResponse200119WithDefaults instantiates a new InlineResponse200119 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetProfileId
+
+`func (o *InlineResponse200119) GetProfileId() string`
+
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+
+### GetProfileIdOk
+
+`func (o *InlineResponse200119) GetProfileIdOk() (*string, bool)`
+
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfileId
+
+`func (o *InlineResponse200119) SetProfileId(v string)`
+
+SetProfileId sets ProfileId field to given value.
+
+### HasProfileId
+
+`func (o *InlineResponse200119) HasProfileId() bool`
+
+HasProfileId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -56,155 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetId
+### GetIsDefault
 
-`func (o *InlineResponse200119) GetId() string`
+`func (o *InlineResponse200119) GetIsDefault() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetIsDefaultOk
 
-`func (o *InlineResponse200119) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200119) GetIsDefaultOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetIsDefault
 
-`func (o *InlineResponse200119) SetId(v string)`
+`func (o *InlineResponse200119) SetIsDefault(v bool)`
 
-SetId sets Id field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasId
+### HasIsDefault
 
-`func (o *InlineResponse200119) HasId() bool`
+`func (o *InlineResponse200119) HasIsDefault() bool`
 
-HasId returns a boolean if a field has been set.
+HasIsDefault returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetPorts
 
-`func (o *InlineResponse200119) GetGroupPolicyId() string`
+`func (o *InlineResponse200119) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetPortsOk
 
-`func (o *InlineResponse200119) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200119) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetPorts
 
-`func (o *InlineResponse200119) SetGroupPolicyId(v string)`
+`func (o *InlineResponse200119) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetPorts sets Ports field to given value.
 
-### HasGroupPolicyId
+### HasPorts
 
-`func (o *InlineResponse200119) HasGroupPolicyId() bool`
+`func (o *InlineResponse200119) HasPorts() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasPorts returns a boolean if a field has been set.
 
-### GetPassphrase
+### GetUsbPorts
 
-`func (o *InlineResponse200119) GetPassphrase() string`
+`func (o *InlineResponse200119) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts`
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
 
-### GetPassphraseOk
+### GetUsbPortsOk
 
-`func (o *InlineResponse200119) GetPassphraseOk() (*string, bool)`
+`func (o *InlineResponse200119) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts, bool)`
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetUsbPorts
 
-`func (o *InlineResponse200119) SetPassphrase(v string)`
+`func (o *InlineResponse200119) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts)`
 
-SetPassphrase sets Passphrase field to given value.
+SetUsbPorts sets UsbPorts field to given value.
 
-### HasPassphrase
+### HasUsbPorts
 
-`func (o *InlineResponse200119) HasPassphrase() bool`
+`func (o *InlineResponse200119) HasUsbPorts() bool`
 
-HasPassphrase returns a boolean if a field has been set.
-
-### GetWifiPersonalNetworkId
-
-`func (o *InlineResponse200119) GetWifiPersonalNetworkId() string`
-
-GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
-
-### GetWifiPersonalNetworkIdOk
-
-`func (o *InlineResponse200119) GetWifiPersonalNetworkIdOk() (*string, bool)`
-
-GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifiPersonalNetworkId
-
-`func (o *InlineResponse200119) SetWifiPersonalNetworkId(v string)`
-
-SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
-
-### HasWifiPersonalNetworkId
-
-`func (o *InlineResponse200119) HasWifiPersonalNetworkId() bool`
-
-HasWifiPersonalNetworkId returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *InlineResponse200119) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineResponse200119) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineResponse200119) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *InlineResponse200119) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
-
-### GetExpiresAt
-
-`func (o *InlineResponse200119) GetExpiresAt() time.Time`
-
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
-
-### GetExpiresAtOk
-
-`func (o *InlineResponse200119) GetExpiresAtOk() (*time.Time, bool)`
-
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExpiresAt
-
-`func (o *InlineResponse200119) SetExpiresAt(v time.Time)`
-
-SetExpiresAt sets ExpiresAt field to given value.
-
-### HasExpiresAt
-
-`func (o *InlineResponse200119) HasExpiresAt() bool`
-
-HasExpiresAt returns a boolean if a field has been set.
+HasUsbPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

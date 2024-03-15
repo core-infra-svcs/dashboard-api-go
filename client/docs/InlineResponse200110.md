@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | AP port profile ID | [optional] 
-**Name** | Pointer to **string** | AP port profile name | [optional] 
-**IsDefault** | Pointer to **bool** | Is default profile | [optional] 
-**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts.md) | Ports config | [optional] 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts.md) | Usb ports config | [optional] 
+**VlanProfile** | Pointer to [**InlineResponse200110VlanProfile**](InlineResponse200110VlanProfile.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | Array of Device Serials | [optional] 
+**StackIds** | Pointer to **[]string** | Array of Switch Stack IDs | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200110WithDefaults instantiates a new InlineResponse200110 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetVlanProfile
 
-`func (o *InlineResponse200110) GetProfileId() string`
+`func (o *InlineResponse200110) GetVlanProfile() InlineResponse200110VlanProfile`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetVlanProfileOk
 
-`func (o *InlineResponse200110) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200110) GetVlanProfileOk() (*InlineResponse200110VlanProfile, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetVlanProfile
 
-`func (o *InlineResponse200110) SetProfileId(v string)`
+`func (o *InlineResponse200110) SetVlanProfile(v InlineResponse200110VlanProfile)`
 
-SetProfileId sets ProfileId field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
-### HasProfileId
+### HasVlanProfile
 
-`func (o *InlineResponse200110) HasProfileId() bool`
+`func (o *InlineResponse200110) HasVlanProfile() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasVlanProfile returns a boolean if a field has been set.
 
-### GetName
+### GetSerials
 
-`func (o *InlineResponse200110) GetName() string`
+`func (o *InlineResponse200110) GetSerials() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialsOk
 
-`func (o *InlineResponse200110) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200110) GetSerialsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerials
 
-`func (o *InlineResponse200110) SetName(v string)`
+`func (o *InlineResponse200110) SetSerials(v []string)`
 
-SetName sets Name field to given value.
+SetSerials sets Serials field to given value.
 
-### HasName
+### HasSerials
 
-`func (o *InlineResponse200110) HasName() bool`
+`func (o *InlineResponse200110) HasSerials() bool`
 
-HasName returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetStackIds
 
-`func (o *InlineResponse200110) GetIsDefault() bool`
+`func (o *InlineResponse200110) GetStackIds() []string`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetStackIds returns the StackIds field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetStackIdsOk
 
-`func (o *InlineResponse200110) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse200110) GetStackIdsOk() (*[]string, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetStackIds
 
-`func (o *InlineResponse200110) SetIsDefault(v bool)`
+`func (o *InlineResponse200110) SetStackIds(v []string)`
 
-SetIsDefault sets IsDefault field to given value.
+SetStackIds sets StackIds field to given value.
 
-### HasIsDefault
+### HasStackIds
 
-`func (o *InlineResponse200110) HasIsDefault() bool`
+`func (o *InlineResponse200110) HasStackIds() bool`
 
-HasIsDefault returns a boolean if a field has been set.
-
-### GetPorts
-
-`func (o *InlineResponse200110) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts`
-
-GetPorts returns the Ports field if non-nil, zero value otherwise.
-
-### GetPortsOk
-
-`func (o *InlineResponse200110) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts, bool)`
-
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPorts
-
-`func (o *InlineResponse200110) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts)`
-
-SetPorts sets Ports field to given value.
-
-### HasPorts
-
-`func (o *InlineResponse200110) HasPorts() bool`
-
-HasPorts returns a boolean if a field has been set.
-
-### GetUsbPorts
-
-`func (o *InlineResponse200110) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts`
-
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
-
-### GetUsbPortsOk
-
-`func (o *InlineResponse200110) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts, bool)`
-
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsbPorts
-
-`func (o *InlineResponse200110) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts)`
-
-SetUsbPorts sets UsbPorts field to given value.
-
-### HasUsbPorts
-
-`func (o *InlineResponse200110) HasUsbPorts() bool`
-
-HasUsbPorts returns a boolean if a field has been set.
+HasStackIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

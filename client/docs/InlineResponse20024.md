@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApplicationCategories** | Pointer to [**[]InlineResponse20024ApplicationCategories**](InlineResponse20024ApplicationCategories.md) |  The L7 firewall application categories and their associated applications for an MX network | [optional] 
+**BasicServiceSets** | Pointer to [**[]InlineResponse20024BasicServiceSets**](InlineResponse20024BasicServiceSets.md) | SSID status list | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20024WithDefaults instantiates a new InlineResponse20024 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApplicationCategories
+### GetBasicServiceSets
 
-`func (o *InlineResponse20024) GetApplicationCategories() []InlineResponse20024ApplicationCategories`
+`func (o *InlineResponse20024) GetBasicServiceSets() []InlineResponse20024BasicServiceSets`
 
-GetApplicationCategories returns the ApplicationCategories field if non-nil, zero value otherwise.
+GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
 
-### GetApplicationCategoriesOk
+### GetBasicServiceSetsOk
 
-`func (o *InlineResponse20024) GetApplicationCategoriesOk() (*[]InlineResponse20024ApplicationCategories, bool)`
+`func (o *InlineResponse20024) GetBasicServiceSetsOk() (*[]InlineResponse20024BasicServiceSets, bool)`
 
-GetApplicationCategoriesOk returns a tuple with the ApplicationCategories field if it's non-nil, zero value otherwise
+GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplicationCategories
+### SetBasicServiceSets
 
-`func (o *InlineResponse20024) SetApplicationCategories(v []InlineResponse20024ApplicationCategories)`
+`func (o *InlineResponse20024) SetBasicServiceSets(v []InlineResponse20024BasicServiceSets)`
 
-SetApplicationCategories sets ApplicationCategories field to given value.
+SetBasicServiceSets sets BasicServiceSets field to given value.
 
-### HasApplicationCategories
+### HasBasicServiceSets
 
-`func (o *InlineResponse20024) HasApplicationCategories() bool`
+`func (o *InlineResponse20024) HasBasicServiceSets() bool`
 
-HasApplicationCategories returns a boolean if a field has been set.
+HasBasicServiceSets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

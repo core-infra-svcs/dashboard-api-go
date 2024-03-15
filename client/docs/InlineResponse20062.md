@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
-**NewNetwork** | Pointer to **string** | The network to which the devices was moved. | [optional] 
+**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
+**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
+**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20062WithDefaults instantiates a new InlineResponse20062 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIds
+### GetStartTs
 
-`func (o *InlineResponse20062) GetIds() []string`
+`func (o *InlineResponse20062) GetStartTs() time.Time`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetStartTsOk
 
-`func (o *InlineResponse20062) GetIdsOk() (*[]string, bool)`
+`func (o *InlineResponse20062) GetStartTsOk() (*time.Time, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetStartTs
 
-`func (o *InlineResponse20062) SetIds(v []string)`
+`func (o *InlineResponse20062) SetStartTs(v time.Time)`
 
-SetIds sets Ids field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasIds
+### HasStartTs
 
-`func (o *InlineResponse20062) HasIds() bool`
+`func (o *InlineResponse20062) HasStartTs() bool`
 
-HasIds returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetNewNetwork
+### GetEndTs
 
-`func (o *InlineResponse20062) GetNewNetwork() string`
+`func (o *InlineResponse20062) GetEndTs() time.Time`
 
-GetNewNetwork returns the NewNetwork field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetNewNetworkOk
+### GetEndTsOk
 
-`func (o *InlineResponse20062) GetNewNetworkOk() (*string, bool)`
+`func (o *InlineResponse20062) GetEndTsOk() (*time.Time, bool)`
 
-GetNewNetworkOk returns a tuple with the NewNetwork field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNewNetwork
+### SetEndTs
 
-`func (o *InlineResponse20062) SetNewNetwork(v string)`
+`func (o *InlineResponse20062) SetEndTs(v time.Time)`
 
-SetNewNetwork sets NewNetwork field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasNewNetwork
+### HasEndTs
 
-`func (o *InlineResponse20062) HasNewNetwork() bool`
+`func (o *InlineResponse20062) HasEndTs() bool`
 
-HasNewNetwork returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse20062) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse20062) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse20062) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse20062) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
-**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the ping request. | [optional] 
-**Results** | Pointer to [**InlineResponse2008Results**](InlineResponse2008Results.md) |  | [optional] 
-**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
+**ArpTableId** | Pointer to **string** | Id of the ARP table request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ARP table request. | [optional] 
+**Request** | Pointer to [**InlineResponse2011Request**](InlineResponse2011Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ARP table request. | [optional] 
+**Entries** | Pointer to [**[]InlineResponse2009Entries**](InlineResponse2009Entries.md) | The ARP table entries | [optional] 
+**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -30,30 +30,30 @@ NewInlineResponse2009WithDefaults instantiates a new InlineResponse2009 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPingId
+### GetArpTableId
 
-`func (o *InlineResponse2009) GetPingId() string`
+`func (o *InlineResponse2009) GetArpTableId() string`
 
-GetPingId returns the PingId field if non-nil, zero value otherwise.
+GetArpTableId returns the ArpTableId field if non-nil, zero value otherwise.
 
-### GetPingIdOk
+### GetArpTableIdOk
 
-`func (o *InlineResponse2009) GetPingIdOk() (*string, bool)`
+`func (o *InlineResponse2009) GetArpTableIdOk() (*string, bool)`
 
-GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
+GetArpTableIdOk returns a tuple with the ArpTableId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPingId
+### SetArpTableId
 
-`func (o *InlineResponse2009) SetPingId(v string)`
+`func (o *InlineResponse2009) SetArpTableId(v string)`
 
-SetPingId sets PingId field to given value.
+SetArpTableId sets ArpTableId field to given value.
 
-### HasPingId
+### HasArpTableId
 
-`func (o *InlineResponse2009) HasPingId() bool`
+`func (o *InlineResponse2009) HasArpTableId() bool`
 
-HasPingId returns a boolean if a field has been set.
+HasArpTableId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -82,20 +82,20 @@ HasUrl returns a boolean if a field has been set.
 
 ### GetRequest
 
-`func (o *InlineResponse2009) GetRequest() InlineResponse2013Request`
+`func (o *InlineResponse2009) GetRequest() InlineResponse2011Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse2009) GetRequestOk() (*InlineResponse2013Request, bool)`
+`func (o *InlineResponse2009) GetRequestOk() (*InlineResponse2011Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse2009) SetRequest(v InlineResponse2013Request)`
+`func (o *InlineResponse2009) SetRequest(v InlineResponse2011Request)`
 
 SetRequest sets Request field to given value.
 
@@ -130,55 +130,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetResults
+### GetEntries
 
-`func (o *InlineResponse2009) GetResults() InlineResponse2008Results`
+`func (o *InlineResponse2009) GetEntries() []InlineResponse2009Entries`
 
-GetResults returns the Results field if non-nil, zero value otherwise.
+GetEntries returns the Entries field if non-nil, zero value otherwise.
 
-### GetResultsOk
+### GetEntriesOk
 
-`func (o *InlineResponse2009) GetResultsOk() (*InlineResponse2008Results, bool)`
+`func (o *InlineResponse2009) GetEntriesOk() (*[]InlineResponse2009Entries, bool)`
 
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResults
+### SetEntries
 
-`func (o *InlineResponse2009) SetResults(v InlineResponse2008Results)`
+`func (o *InlineResponse2009) SetEntries(v []InlineResponse2009Entries)`
 
-SetResults sets Results field to given value.
+SetEntries sets Entries field to given value.
 
-### HasResults
+### HasEntries
 
-`func (o *InlineResponse2009) HasResults() bool`
+`func (o *InlineResponse2009) HasEntries() bool`
 
-HasResults returns a boolean if a field has been set.
+HasEntries returns a boolean if a field has been set.
 
-### GetCallback
+### GetError
 
-`func (o *InlineResponse2009) GetCallback() InlineResponse2011Callback`
+`func (o *InlineResponse2009) GetError() string`
 
-GetCallback returns the Callback field if non-nil, zero value otherwise.
+GetError returns the Error field if non-nil, zero value otherwise.
 
-### GetCallbackOk
+### GetErrorOk
 
-`func (o *InlineResponse2009) GetCallbackOk() (*InlineResponse2011Callback, bool)`
+`func (o *InlineResponse2009) GetErrorOk() (*string, bool)`
 
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallback
+### SetError
 
-`func (o *InlineResponse2009) SetCallback(v InlineResponse2011Callback)`
+`func (o *InlineResponse2009) SetError(v string)`
 
-SetCallback sets Callback field to given value.
+SetError sets Error field to given value.
 
-### HasCallback
+### HasError
 
-`func (o *InlineResponse2009) HasCallback() bool`
+`func (o *InlineResponse2009) HasError() bool`
 
-HasCallback returns a boolean if a field has been set.
+HasError returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

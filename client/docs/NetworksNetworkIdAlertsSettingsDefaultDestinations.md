@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Emails** | Pointer to **[]string** | A list of emails that will recieve the alert(s). | [optional] 
+**Emails** | Pointer to **[]string** | A list of emails that will receive the alert(s). | [optional] 
 **AllAdmins** | Pointer to **bool** | If true, then all network admins will receive emails. | [optional] 
 **Snmp** | Pointer to **bool** | If true, then an SNMP trap will be sent if there is an SNMP trap server configured for this network. | [optional] 
 **HttpServerIds** | Pointer to **[]string** | A list of HTTP server IDs to send a Webhook to | [optional] 

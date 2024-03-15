@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]InlineResponse200104Plans**](InlineResponse200104Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**Id** | Pointer to **string** | Switch stacks id | [optional] 
+**Name** | Pointer to **string** | Switch stacks name | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200104WithDefaults instantiates a new InlineResponse200104 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetId
 
-`func (o *InlineResponse200104) GetCurrency() string`
+`func (o *InlineResponse200104) GetId() string`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetIdOk
 
-`func (o *InlineResponse200104) GetCurrencyOk() (*string, bool)`
+`func (o *InlineResponse200104) GetIdOk() (*string, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetId
 
-`func (o *InlineResponse200104) SetCurrency(v string)`
+`func (o *InlineResponse200104) SetId(v string)`
 
-SetCurrency sets Currency field to given value.
+SetId sets Id field to given value.
 
-### HasCurrency
+### HasId
 
-`func (o *InlineResponse200104) HasCurrency() bool`
+`func (o *InlineResponse200104) HasId() bool`
 
-HasCurrency returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetPlans
+### GetName
 
-`func (o *InlineResponse200104) GetPlans() []InlineResponse200104Plans`
+`func (o *InlineResponse200104) GetName() string`
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetPlansOk
+### GetNameOk
 
-`func (o *InlineResponse200104) GetPlansOk() (*[]InlineResponse200104Plans, bool)`
+`func (o *InlineResponse200104) GetNameOk() (*string, bool)`
 
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetName
 
-`func (o *InlineResponse200104) SetPlans(v []InlineResponse200104Plans)`
+`func (o *InlineResponse200104) SetName(v string)`
 
-SetPlans sets Plans field to given value.
+SetName sets Name field to given value.
 
-### HasPlans
+### HasName
 
-`func (o *InlineResponse200104) HasPlans() bool`
+`func (o *InlineResponse200104) HasName() bool`
 
-HasPlans returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse200104) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse200104) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse200104) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse200104) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

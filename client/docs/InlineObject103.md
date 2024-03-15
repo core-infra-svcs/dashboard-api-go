@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the MQTT broker. | [optional] 
-**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
-**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
+**Name** | **string** | Name of the MQTT broker. | 
+**Host** | **string** | Host name/IP address where the MQTT broker runs. | 
+**Port** | **int32** | Host port though which the MQTT broker can be reached. | 
 **Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
-**Authentication** | Pointer to **map[string]interface{}** | Authentication settings of the MQTT broker | [optional] 
+**Authentication** | Pointer to [**NetworksNetworkIdMqttBrokersAuthentication**](NetworksNetworkIdMqttBrokersAuthentication.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject103
 
-`func NewInlineObject103() *InlineObject103`
+`func NewInlineObject103(name string, host string, port int32, ) *InlineObject103`
 
 NewInlineObject103 instantiates a new InlineObject103 object
 This constructor will assign default values to properties that have it defined,
@@ -48,11 +48,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject103) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetHost
 
@@ -73,11 +68,6 @@ and a boolean to check if the value has been set.
 
 SetHost sets Host field to given value.
 
-### HasHost
-
-`func (o *InlineObject103) HasHost() bool`
-
-HasHost returns a boolean if a field has been set.
 
 ### GetPort
 
@@ -98,11 +88,6 @@ and a boolean to check if the value has been set.
 
 SetPort sets Port field to given value.
 
-### HasPort
-
-`func (o *InlineObject103) HasPort() bool`
-
-HasPort returns a boolean if a field has been set.
 
 ### GetSecurity
 
@@ -131,20 +116,20 @@ HasSecurity returns a boolean if a field has been set.
 
 ### GetAuthentication
 
-`func (o *InlineObject103) GetAuthentication() map[string]interface{}`
+`func (o *InlineObject103) GetAuthentication() NetworksNetworkIdMqttBrokersAuthentication`
 
 GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
 
 ### GetAuthenticationOk
 
-`func (o *InlineObject103) GetAuthenticationOk() (*map[string]interface{}, bool)`
+`func (o *InlineObject103) GetAuthenticationOk() (*NetworksNetworkIdMqttBrokersAuthentication, bool)`
 
 GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAuthentication
 
-`func (o *InlineObject103) SetAuthentication(v map[string]interface{})`
+`func (o *InlineObject103) SetAuthentication(v NetworksNetworkIdMqttBrokersAuthentication)`
 
 SetAuthentication sets Authentication field to given value.
 

@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Alerts** | Pointer to [**InlineResponse20086Alerts**](InlineResponse20086Alerts.md) |  | [optional] 
-**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
-**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set       to allow.An empty array will clear the entries. | [optional] 
-**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set       to block.An empty array will clear the entries. | [optional] 
-**ArpInspection** | Pointer to [**InlineResponse20086ArpInspection**](InlineResponse20086ArpInspection.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of a profile. | [optional] 
+**Name** | Pointer to **string** | Name of a profile. | [optional] 
+**Description** | Pointer to **string** | Description of a profile. | [optional] 
+**Scope** | Pointer to **string** | Scope of a profile. | [optional] 
+**Tags** | Pointer to **[]string** | Tags of a profile. | [optional] 
+**PayloadTypes** | Pointer to **[]string** | Payloads in the profile. | [optional] 
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewInlineResponse20086WithDefaults instantiates a new InlineResponse20086 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlerts
+### GetId
 
-`func (o *InlineResponse20086) GetAlerts() InlineResponse20086Alerts`
+`func (o *InlineResponse20086) GetId() string`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetIdOk
 
-`func (o *InlineResponse20086) GetAlertsOk() (*InlineResponse20086Alerts, bool)`
+`func (o *InlineResponse20086) GetIdOk() (*string, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetId
 
-`func (o *InlineResponse20086) SetAlerts(v InlineResponse20086Alerts)`
+`func (o *InlineResponse20086) SetId(v string)`
 
-SetAlerts sets Alerts field to given value.
+SetId sets Id field to given value.
 
-### HasAlerts
+### HasId
 
-`func (o *InlineResponse20086) HasAlerts() bool`
+`func (o *InlineResponse20086) HasId() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetName
 
-`func (o *InlineResponse20086) GetDefaultPolicy() string`
+`func (o *InlineResponse20086) GetName() string`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetNameOk
 
-`func (o *InlineResponse20086) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineResponse20086) GetNameOk() (*string, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetName
 
-`func (o *InlineResponse20086) SetDefaultPolicy(v string)`
+`func (o *InlineResponse20086) SetName(v string)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultPolicy
+### HasName
 
-`func (o *InlineResponse20086) HasDefaultPolicy() bool`
+`func (o *InlineResponse20086) HasName() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetBlockedServers
+### GetDescription
 
-`func (o *InlineResponse20086) GetBlockedServers() []string`
+`func (o *InlineResponse20086) GetDescription() string`
 
-GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetBlockedServersOk
+### GetDescriptionOk
 
-`func (o *InlineResponse20086) GetBlockedServersOk() (*[]string, bool)`
+`func (o *InlineResponse20086) GetDescriptionOk() (*string, bool)`
 
-GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedServers
+### SetDescription
 
-`func (o *InlineResponse20086) SetBlockedServers(v []string)`
+`func (o *InlineResponse20086) SetDescription(v string)`
 
-SetBlockedServers sets BlockedServers field to given value.
+SetDescription sets Description field to given value.
 
-### HasBlockedServers
+### HasDescription
 
-`func (o *InlineResponse20086) HasBlockedServers() bool`
+`func (o *InlineResponse20086) HasDescription() bool`
 
-HasBlockedServers returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetAllowedServers
+### GetScope
 
-`func (o *InlineResponse20086) GetAllowedServers() []string`
+`func (o *InlineResponse20086) GetScope() string`
 
-GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetAllowedServersOk
+### GetScopeOk
 
-`func (o *InlineResponse20086) GetAllowedServersOk() (*[]string, bool)`
+`func (o *InlineResponse20086) GetScopeOk() (*string, bool)`
 
-GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedServers
+### SetScope
 
-`func (o *InlineResponse20086) SetAllowedServers(v []string)`
+`func (o *InlineResponse20086) SetScope(v string)`
 
-SetAllowedServers sets AllowedServers field to given value.
+SetScope sets Scope field to given value.
 
-### HasAllowedServers
+### HasScope
 
-`func (o *InlineResponse20086) HasAllowedServers() bool`
+`func (o *InlineResponse20086) HasScope() bool`
 
-HasAllowedServers returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
-### GetArpInspection
+### GetTags
 
-`func (o *InlineResponse20086) GetArpInspection() InlineResponse20086ArpInspection`
+`func (o *InlineResponse20086) GetTags() []string`
 
-GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetArpInspectionOk
+### GetTagsOk
 
-`func (o *InlineResponse20086) GetArpInspectionOk() (*InlineResponse20086ArpInspection, bool)`
+`func (o *InlineResponse20086) GetTagsOk() (*[]string, bool)`
 
-GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArpInspection
+### SetTags
 
-`func (o *InlineResponse20086) SetArpInspection(v InlineResponse20086ArpInspection)`
+`func (o *InlineResponse20086) SetTags(v []string)`
 
-SetArpInspection sets ArpInspection field to given value.
+SetTags sets Tags field to given value.
 
-### HasArpInspection
+### HasTags
 
-`func (o *InlineResponse20086) HasArpInspection() bool`
+`func (o *InlineResponse20086) HasTags() bool`
 
-HasArpInspection returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetPayloadTypes
+
+`func (o *InlineResponse20086) GetPayloadTypes() []string`
+
+GetPayloadTypes returns the PayloadTypes field if non-nil, zero value otherwise.
+
+### GetPayloadTypesOk
+
+`func (o *InlineResponse20086) GetPayloadTypesOk() (*[]string, bool)`
+
+GetPayloadTypesOk returns a tuple with the PayloadTypes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTypes
+
+`func (o *InlineResponse20086) SetPayloadTypes(v []string)`
+
+SetPayloadTypes sets PayloadTypes field to given value.
+
+### HasPayloadTypes
+
+`func (o *InlineResponse20086) HasPayloadTypes() bool`
+
+HasPayloadTypes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | **string** | ID of the network whose VPN exclusion rules are returned. | 
-**NetworkName** | **string** | Name of the network whose VPN exclusion rules are returned. | 
-**Custom** | [**[]InlineResponse20033Custom**](InlineResponse20033Custom.md) | Custom VPN exclusion rules. | 
-**MajorApplications** | [**[]InlineResponse20033MajorApplications**](InlineResponse20033MajorApplications.md) | Major Application based VPN exclusion rules. | 
+**Subnet** | Pointer to **string** | The subnet of the single LAN | [optional] 
+**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the single LAN | [optional] 
+**MandatoryDhcp** | Pointer to [**InlineResponse20033MandatoryDhcp**](InlineResponse20033MandatoryDhcp.md) |  | [optional] 
+**Ipv6** | Pointer to [**InlineResponse20033Ipv6**](InlineResponse20033Ipv6.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20033
 
-`func NewInlineResponse20033(networkId string, networkName string, custom []InlineResponse20033Custom, majorApplications []InlineResponse20033MajorApplications, ) *InlineResponse20033`
+`func NewInlineResponse20033() *InlineResponse20033`
 
 NewInlineResponse20033 instantiates a new InlineResponse20033 object
 This constructor will assign default values to properties that have it defined,
@@ -28,85 +28,105 @@ NewInlineResponse20033WithDefaults instantiates a new InlineResponse20033 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetSubnet
 
-`func (o *InlineResponse20033) GetNetworkId() string`
+`func (o *InlineResponse20033) GetSubnet() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetSubnetOk
 
-`func (o *InlineResponse20033) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20033) GetSubnetOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetSubnet
 
-`func (o *InlineResponse20033) SetNetworkId(v string)`
+`func (o *InlineResponse20033) SetSubnet(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetSubnet sets Subnet field to given value.
 
+### HasSubnet
 
-### GetNetworkName
+`func (o *InlineResponse20033) HasSubnet() bool`
 
-`func (o *InlineResponse20033) GetNetworkName() string`
+HasSubnet returns a boolean if a field has been set.
 
-GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
+### GetApplianceIp
 
-### GetNetworkNameOk
+`func (o *InlineResponse20033) GetApplianceIp() string`
 
-`func (o *InlineResponse20033) GetNetworkNameOk() (*string, bool)`
+GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
 
-GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
+### GetApplianceIpOk
+
+`func (o *InlineResponse20033) GetApplianceIpOk() (*string, bool)`
+
+GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkName
+### SetApplianceIp
 
-`func (o *InlineResponse20033) SetNetworkName(v string)`
+`func (o *InlineResponse20033) SetApplianceIp(v string)`
 
-SetNetworkName sets NetworkName field to given value.
+SetApplianceIp sets ApplianceIp field to given value.
 
+### HasApplianceIp
 
-### GetCustom
+`func (o *InlineResponse20033) HasApplianceIp() bool`
 
-`func (o *InlineResponse20033) GetCustom() []InlineResponse20033Custom`
+HasApplianceIp returns a boolean if a field has been set.
 
-GetCustom returns the Custom field if non-nil, zero value otherwise.
+### GetMandatoryDhcp
 
-### GetCustomOk
+`func (o *InlineResponse20033) GetMandatoryDhcp() InlineResponse20033MandatoryDhcp`
 
-`func (o *InlineResponse20033) GetCustomOk() (*[]InlineResponse20033Custom, bool)`
+GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
 
-GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
+### GetMandatoryDhcpOk
+
+`func (o *InlineResponse20033) GetMandatoryDhcpOk() (*InlineResponse20033MandatoryDhcp, bool)`
+
+GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustom
+### SetMandatoryDhcp
 
-`func (o *InlineResponse20033) SetCustom(v []InlineResponse20033Custom)`
+`func (o *InlineResponse20033) SetMandatoryDhcp(v InlineResponse20033MandatoryDhcp)`
 
-SetCustom sets Custom field to given value.
+SetMandatoryDhcp sets MandatoryDhcp field to given value.
 
+### HasMandatoryDhcp
 
-### GetMajorApplications
+`func (o *InlineResponse20033) HasMandatoryDhcp() bool`
 
-`func (o *InlineResponse20033) GetMajorApplications() []InlineResponse20033MajorApplications`
+HasMandatoryDhcp returns a boolean if a field has been set.
 
-GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+### GetIpv6
 
-### GetMajorApplicationsOk
+`func (o *InlineResponse20033) GetIpv6() InlineResponse20033Ipv6`
 
-`func (o *InlineResponse20033) GetMajorApplicationsOk() (*[]InlineResponse20033MajorApplications, bool)`
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
 
-GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+### GetIpv6Ok
+
+`func (o *InlineResponse20033) GetIpv6Ok() (*InlineResponse20033Ipv6, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorApplications
+### SetIpv6
 
-`func (o *InlineResponse20033) SetMajorApplications(v []InlineResponse20033MajorApplications)`
+`func (o *InlineResponse20033) SetIpv6(v InlineResponse20033Ipv6)`
 
-SetMajorApplications sets MajorApplications field to given value.
+SetIpv6 sets Ipv6 field to given value.
 
+### HasIpv6
+
+`func (o *InlineResponse20033) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

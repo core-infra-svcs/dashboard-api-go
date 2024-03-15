@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Addresses** | Pointer to [**[]InlineResponse20017Addresses**](InlineResponse20017Addresses.md) | configured alternate management interface addresses | [optional] 
+**Ports** | Pointer to **[]string** | List of switch ports | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20017WithDefaults instantiates a new InlineResponse20017 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAddresses
+### GetPorts
 
-`func (o *InlineResponse20017) GetAddresses() []InlineResponse20017Addresses`
+`func (o *InlineResponse20017) GetPorts() []string`
 
-GetAddresses returns the Addresses field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetAddressesOk
+### GetPortsOk
 
-`func (o *InlineResponse20017) GetAddressesOk() (*[]InlineResponse20017Addresses, bool)`
+`func (o *InlineResponse20017) GetPortsOk() (*[]string, bool)`
 
-GetAddressesOk returns a tuple with the Addresses field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddresses
+### SetPorts
 
-`func (o *InlineResponse20017) SetAddresses(v []InlineResponse20017Addresses)`
+`func (o *InlineResponse20017) SetPorts(v []string)`
 
-SetAddresses sets Addresses field to given value.
+SetPorts sets Ports field to given value.
 
-### HasAddresses
+### HasPorts
 
-`func (o *InlineResponse20017) HasAddresses() bool`
+`func (o *InlineResponse20017) HasPorts() bool`
 
-HasAddresses returns a boolean if a field has been set.
+HasPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

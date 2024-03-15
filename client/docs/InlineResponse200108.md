@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
-**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
-**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
-**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
-**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
+**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
+**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
+**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
+**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
+**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200108WithDefaults instantiates a new InlineResponse200108 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssoc
+### GetIname
 
-`func (o *InlineResponse200108) GetAssoc() int32`
+`func (o *InlineResponse200108) GetIname() string`
 
-GetAssoc returns the Assoc field if non-nil, zero value otherwise.
+GetIname returns the Iname field if non-nil, zero value otherwise.
 
-### GetAssocOk
+### GetInameOk
 
-`func (o *InlineResponse200108) GetAssocOk() (*int32, bool)`
+`func (o *InlineResponse200108) GetInameOk() (*string, bool)`
 
-GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
+GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssoc
+### SetIname
 
-`func (o *InlineResponse200108) SetAssoc(v int32)`
+`func (o *InlineResponse200108) SetIname(v string)`
 
-SetAssoc sets Assoc field to given value.
+SetIname sets Iname field to given value.
 
-### HasAssoc
+### HasIname
 
-`func (o *InlineResponse200108) HasAssoc() bool`
+`func (o *InlineResponse200108) HasIname() bool`
 
-HasAssoc returns a boolean if a field has been set.
+HasIname returns a boolean if a field has been set.
 
-### GetAuth
+### GetName
 
-`func (o *InlineResponse200108) GetAuth() int32`
+`func (o *InlineResponse200108) GetName() string`
 
-GetAuth returns the Auth field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAuthOk
+### GetNameOk
 
-`func (o *InlineResponse200108) GetAuthOk() (*int32, bool)`
+`func (o *InlineResponse200108) GetNameOk() (*string, bool)`
 
-GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuth
+### SetName
 
-`func (o *InlineResponse200108) SetAuth(v int32)`
+`func (o *InlineResponse200108) SetName(v string)`
 
-SetAuth sets Auth field to given value.
+SetName sets Name field to given value.
 
-### HasAuth
+### HasName
 
-`func (o *InlineResponse200108) HasAuth() bool`
+`func (o *InlineResponse200108) HasName() bool`
 
-HasAuth returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDhcp
+### GetIsDefault
 
-`func (o *InlineResponse200108) GetDhcp() int32`
+`func (o *InlineResponse200108) GetIsDefault() bool`
 
-GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetDhcpOk
+### GetIsDefaultOk
 
-`func (o *InlineResponse200108) GetDhcpOk() (*int32, bool)`
+`func (o *InlineResponse200108) GetIsDefaultOk() (*bool, bool)`
 
-GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcp
+### SetIsDefault
 
-`func (o *InlineResponse200108) SetDhcp(v int32)`
+`func (o *InlineResponse200108) SetIsDefault(v bool)`
 
-SetDhcp sets Dhcp field to given value.
+SetIsDefault sets IsDefault field to given value.
 
-### HasDhcp
+### HasIsDefault
 
-`func (o *InlineResponse200108) HasDhcp() bool`
+`func (o *InlineResponse200108) HasIsDefault() bool`
 
-HasDhcp returns a boolean if a field has been set.
+HasIsDefault returns a boolean if a field has been set.
 
-### GetDns
+### GetVlanNames
 
-`func (o *InlineResponse200108) GetDns() int32`
+`func (o *InlineResponse200108) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
 
-GetDns returns the Dns field if non-nil, zero value otherwise.
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-### GetDnsOk
+### GetVlanNamesOk
 
-`func (o *InlineResponse200108) GetDnsOk() (*int32, bool)`
+`func (o *InlineResponse200108) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
 
-GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDns
+### SetVlanNames
 
-`func (o *InlineResponse200108) SetDns(v int32)`
+`func (o *InlineResponse200108) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
 
-SetDns sets Dns field to given value.
+SetVlanNames sets VlanNames field to given value.
 
-### HasDns
+### HasVlanNames
 
-`func (o *InlineResponse200108) HasDns() bool`
+`func (o *InlineResponse200108) HasVlanNames() bool`
 
-HasDns returns a boolean if a field has been set.
+HasVlanNames returns a boolean if a field has been set.
 
-### GetSuccess
+### GetVlanGroups
 
-`func (o *InlineResponse200108) GetSuccess() int32`
+`func (o *InlineResponse200108) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetVlanGroupsOk
 
-`func (o *InlineResponse200108) GetSuccessOk() (*int32, bool)`
+`func (o *InlineResponse200108) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetVlanGroups
 
-`func (o *InlineResponse200108) SetSuccess(v int32)`
+`func (o *InlineResponse200108) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
 
-SetSuccess sets Success field to given value.
+SetVlanGroups sets VlanGroups field to given value.
 
-### HasSuccess
+### HasVlanGroups
 
-`func (o *InlineResponse200108) HasSuccess() bool`
+`func (o *InlineResponse200108) HasVlanGroups() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasVlanGroups returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

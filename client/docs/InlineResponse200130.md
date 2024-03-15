@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the access period | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the access period | [optional] 
-**Counts** | Pointer to [**[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts**](OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts.md) | list of response codes and a count of how many requests had that code in the given time period | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200130Rules**](InlineResponse200130Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200130WithDefaults instantiates a new InlineResponse200130 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetTrafficShapingEnabled
 
-`func (o *InlineResponse200130) GetStartTs() time.Time`
+`func (o *InlineResponse200130) GetTrafficShapingEnabled() bool`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineResponse200130) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200130) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetTrafficShapingEnabled
 
-`func (o *InlineResponse200130) SetStartTs(v time.Time)`
+`func (o *InlineResponse200130) SetTrafficShapingEnabled(v bool)`
 
-SetStartTs sets StartTs field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasStartTs
+### HasTrafficShapingEnabled
 
-`func (o *InlineResponse200130) HasStartTs() bool`
+`func (o *InlineResponse200130) HasTrafficShapingEnabled() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetEndTs
+### GetDefaultRulesEnabled
 
-`func (o *InlineResponse200130) GetEndTs() time.Time`
+`func (o *InlineResponse200130) GetDefaultRulesEnabled() bool`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineResponse200130) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200130) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetDefaultRulesEnabled
 
-`func (o *InlineResponse200130) SetEndTs(v time.Time)`
+`func (o *InlineResponse200130) SetDefaultRulesEnabled(v bool)`
 
-SetEndTs sets EndTs field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasEndTs
+### HasDefaultRulesEnabled
 
-`func (o *InlineResponse200130) HasEndTs() bool`
+`func (o *InlineResponse200130) HasDefaultRulesEnabled() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetCounts
+### GetRules
 
-`func (o *InlineResponse200130) GetCounts() []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts`
+`func (o *InlineResponse200130) GetRules() []InlineResponse200130Rules`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetRulesOk
 
-`func (o *InlineResponse200130) GetCountsOk() (*[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts, bool)`
+`func (o *InlineResponse200130) GetRulesOk() (*[]InlineResponse200130Rules, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetRules
 
-`func (o *InlineResponse200130) SetCounts(v []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts)`
+`func (o *InlineResponse200130) SetRules(v []InlineResponse200130Rules)`
 
-SetCounts sets Counts field to given value.
+SetRules sets Rules field to given value.
 
-### HasCounts
+### HasRules
 
-`func (o *InlineResponse200130) HasCounts() bool`
+`func (o *InlineResponse200130) HasRules() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

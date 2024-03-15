@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
-**Category** | Pointer to **string** | Category of the alert | [optional] 
-**Type** | Pointer to **string** | Alert type | [optional] 
-**Severity** | Pointer to **string** | Severity of the alert | [optional] 
-**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
+**Received** | Pointer to **float32** | Usage received by the client on a given day | [optional] 
+**Sent** | Pointer to **float32** | Usage sent by the client on a given day | [optional] 
+**Ts** | Pointer to **time.Time** | The day&#39;s timestamp | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20048WithDefaults instantiates a new InlineResponse20048 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetReceived
 
-`func (o *InlineResponse20048) GetId() string`
+`func (o *InlineResponse20048) GetReceived() float32`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetReceived returns the Received field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetReceivedOk
 
-`func (o *InlineResponse20048) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20048) GetReceivedOk() (*float32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetReceived
 
-`func (o *InlineResponse20048) SetId(v string)`
+`func (o *InlineResponse20048) SetReceived(v float32)`
 
-SetId sets Id field to given value.
+SetReceived sets Received field to given value.
 
-### HasId
+### HasReceived
 
-`func (o *InlineResponse20048) HasId() bool`
+`func (o *InlineResponse20048) HasReceived() bool`
 
-HasId returns a boolean if a field has been set.
+HasReceived returns a boolean if a field has been set.
 
-### GetCategory
+### GetSent
 
-`func (o *InlineResponse20048) GetCategory() string`
+`func (o *InlineResponse20048) GetSent() float32`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetSent returns the Sent field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetSentOk
 
-`func (o *InlineResponse20048) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse20048) GetSentOk() (*float32, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetSent
 
-`func (o *InlineResponse20048) SetCategory(v string)`
+`func (o *InlineResponse20048) SetSent(v float32)`
 
-SetCategory sets Category field to given value.
+SetSent sets Sent field to given value.
 
-### HasCategory
+### HasSent
 
-`func (o *InlineResponse20048) HasCategory() bool`
+`func (o *InlineResponse20048) HasSent() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasSent returns a boolean if a field has been set.
 
-### GetType
+### GetTs
 
-`func (o *InlineResponse20048) GetType() string`
+`func (o *InlineResponse20048) GetTs() time.Time`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetTsOk
 
-`func (o *InlineResponse20048) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse20048) GetTsOk() (*time.Time, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetTs
 
-`func (o *InlineResponse20048) SetType(v string)`
+`func (o *InlineResponse20048) SetTs(v time.Time)`
 
-SetType sets Type field to given value.
+SetTs sets Ts field to given value.
 
-### HasType
+### HasTs
 
-`func (o *InlineResponse20048) HasType() bool`
+`func (o *InlineResponse20048) HasTs() bool`
 
-HasType returns a boolean if a field has been set.
-
-### GetSeverity
-
-`func (o *InlineResponse20048) GetSeverity() string`
-
-GetSeverity returns the Severity field if non-nil, zero value otherwise.
-
-### GetSeverityOk
-
-`func (o *InlineResponse20048) GetSeverityOk() (*string, bool)`
-
-GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeverity
-
-`func (o *InlineResponse20048) SetSeverity(v string)`
-
-SetSeverity sets Severity field to given value.
-
-### HasSeverity
-
-`func (o *InlineResponse20048) HasSeverity() bool`
-
-HasSeverity returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineResponse20048) GetScope() NetworksNetworkIdHealthAlertsScope`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineResponse20048) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineResponse20048) SetScope(v NetworksNetworkIdHealthAlertsScope)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineResponse20048) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

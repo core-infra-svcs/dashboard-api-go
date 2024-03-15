@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultSettings** | Pointer to [**InlineResponse20093DefaultSettings**](InlineResponse20093DefaultSettings.md) |  | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse20093Overrides**](InlineResponse20093Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
+**Switches** | Pointer to [**[]InlineResponse20093Switches**](InlineResponse20093Switches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20093WithDefaults instantiates a new InlineResponse20093 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultSettings
+### GetEnabled
 
-`func (o *InlineResponse20093) GetDefaultSettings() InlineResponse20093DefaultSettings`
+`func (o *InlineResponse20093) GetEnabled() bool`
 
-GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetDefaultSettingsOk
+### GetEnabledOk
 
-`func (o *InlineResponse20093) GetDefaultSettingsOk() (*InlineResponse20093DefaultSettings, bool)`
+`func (o *InlineResponse20093) GetEnabledOk() (*bool, bool)`
 
-GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultSettings
+### SetEnabled
 
-`func (o *InlineResponse20093) SetDefaultSettings(v InlineResponse20093DefaultSettings)`
+`func (o *InlineResponse20093) SetEnabled(v bool)`
 
-SetDefaultSettings sets DefaultSettings field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasDefaultSettings
+### HasEnabled
 
-`func (o *InlineResponse20093) HasDefaultSettings() bool`
+`func (o *InlineResponse20093) HasEnabled() bool`
 
-HasDefaultSettings returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetOverrides
+### GetVlanId
 
-`func (o *InlineResponse20093) GetOverrides() []InlineResponse20093Overrides`
+`func (o *InlineResponse20093) GetVlanId() int32`
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetOverridesOk
+### GetVlanIdOk
 
-`func (o *InlineResponse20093) GetOverridesOk() (*[]InlineResponse20093Overrides, bool)`
+`func (o *InlineResponse20093) GetVlanIdOk() (*int32, bool)`
 
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetVlanId
 
-`func (o *InlineResponse20093) SetOverrides(v []InlineResponse20093Overrides)`
+`func (o *InlineResponse20093) SetVlanId(v int32)`
 
-SetOverrides sets Overrides field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasOverrides
+### HasVlanId
 
-`func (o *InlineResponse20093) HasOverrides() bool`
+`func (o *InlineResponse20093) HasVlanId() bool`
 
-HasOverrides returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
+
+### GetProtocols
+
+`func (o *InlineResponse20093) GetProtocols() []string`
+
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+
+### GetProtocolsOk
+
+`func (o *InlineResponse20093) GetProtocolsOk() (*[]string, bool)`
+
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtocols
+
+`func (o *InlineResponse20093) SetProtocols(v []string)`
+
+SetProtocols sets Protocols field to given value.
+
+### HasProtocols
+
+`func (o *InlineResponse20093) HasProtocols() bool`
+
+HasProtocols returns a boolean if a field has been set.
+
+### GetSwitches
+
+`func (o *InlineResponse20093) GetSwitches() []InlineResponse20093Switches`
+
+GetSwitches returns the Switches field if non-nil, zero value otherwise.
+
+### GetSwitchesOk
+
+`func (o *InlineResponse20093) GetSwitchesOk() (*[]InlineResponse20093Switches, bool)`
+
+GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitches
+
+`func (o *InlineResponse20093) SetSwitches(v []InlineResponse20093Switches)`
+
+SetSwitches sets Switches field to given value.
+
+### HasSwitches
+
+`func (o *InlineResponse20093) HasSwitches() bool`
+
+HasSwitches returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

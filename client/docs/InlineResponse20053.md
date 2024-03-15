@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
-**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
-**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
+**Products** | Pointer to [**InlineResponse20053Products**](InlineResponse20053Products.md) |  | [optional] 
+**Stages** | Pointer to [**[]InlineResponse20053Stages**](InlineResponse20053Stages.md) | The ordered stages in the network | [optional] 
+**Reasons** | Pointer to [**[]InlineResponse20052Reasons**](InlineResponse20052Reasons.md) | Reasons for the rollback | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20053WithDefaults instantiates a new InlineResponse20053 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetProducts
 
-`func (o *InlineResponse20053) GetStartTs() time.Time`
+`func (o *InlineResponse20053) GetProducts() InlineResponse20053Products`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetProductsOk
 
-`func (o *InlineResponse20053) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20053) GetProductsOk() (*InlineResponse20053Products, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetProducts
 
-`func (o *InlineResponse20053) SetStartTs(v time.Time)`
+`func (o *InlineResponse20053) SetProducts(v InlineResponse20053Products)`
 
-SetStartTs sets StartTs field to given value.
+SetProducts sets Products field to given value.
 
-### HasStartTs
+### HasProducts
 
-`func (o *InlineResponse20053) HasStartTs() bool`
+`func (o *InlineResponse20053) HasProducts() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
 
-### GetEndTs
+### GetStages
 
-`func (o *InlineResponse20053) GetEndTs() time.Time`
+`func (o *InlineResponse20053) GetStages() []InlineResponse20053Stages`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetStages returns the Stages field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetStagesOk
 
-`func (o *InlineResponse20053) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20053) GetStagesOk() (*[]InlineResponse20053Stages, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetStages
 
-`func (o *InlineResponse20053) SetEndTs(v time.Time)`
+`func (o *InlineResponse20053) SetStages(v []InlineResponse20053Stages)`
 
-SetEndTs sets EndTs field to given value.
+SetStages sets Stages field to given value.
 
-### HasEndTs
+### HasStages
 
-`func (o *InlineResponse20053) HasEndTs() bool`
+`func (o *InlineResponse20053) HasStages() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasStages returns a boolean if a field has been set.
 
-### GetCounts
+### GetReasons
 
-`func (o *InlineResponse20053) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
+`func (o *InlineResponse20053) GetReasons() []InlineResponse20052Reasons`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetReasons returns the Reasons field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetReasonsOk
 
-`func (o *InlineResponse20053) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
+`func (o *InlineResponse20053) GetReasonsOk() (*[]InlineResponse20052Reasons, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetReasons
 
-`func (o *InlineResponse20053) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
+`func (o *InlineResponse20053) SetReasons(v []InlineResponse20052Reasons)`
 
-SetCounts sets Counts field to given value.
+SetReasons sets Reasons field to given value.
 
-### HasCounts
+### HasReasons
 
-`func (o *InlineResponse20053) HasCounts() bool`
+`func (o *InlineResponse20053) HasReasons() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasReasons returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

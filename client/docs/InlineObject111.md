@@ -4,16 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be checked-in. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be checked-in. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be checked-in. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be checked-in. | [optional] 
+**Ids** | **[]string** | The ids of the devices to attempt activation lock bypass. | 
 
 ## Methods
 
 ### NewInlineObject111
 
-`func NewInlineObject111() *InlineObject111`
+`func NewInlineObject111(ids []string, ) *InlineObject111`
 
 NewInlineObject111 instantiates a new InlineObject111 object
 This constructor will assign default values to properties that have it defined,
@@ -27,31 +24,6 @@ will change when the set of required properties is changed
 NewInlineObject111WithDefaults instantiates a new InlineObject111 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetWifiMacs
-
-`func (o *InlineObject111) GetWifiMacs() []string`
-
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
-
-### GetWifiMacsOk
-
-`func (o *InlineObject111) GetWifiMacsOk() (*[]string, bool)`
-
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifiMacs
-
-`func (o *InlineObject111) SetWifiMacs(v []string)`
-
-SetWifiMacs sets WifiMacs field to given value.
-
-### HasWifiMacs
-
-`func (o *InlineObject111) HasWifiMacs() bool`
-
-HasWifiMacs returns a boolean if a field has been set.
 
 ### GetIds
 
@@ -72,61 +44,6 @@ and a boolean to check if the value has been set.
 
 SetIds sets Ids field to given value.
 
-### HasIds
-
-`func (o *InlineObject111) HasIds() bool`
-
-HasIds returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineObject111) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineObject111) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineObject111) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineObject111) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineObject111) GetScope() []string`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineObject111) GetScopeOk() (*[]string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineObject111) SetScope(v []string)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineObject111) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

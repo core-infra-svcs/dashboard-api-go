@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
-**Name** | Pointer to **string** | Switch template name | [optional] 
-**Model** | Pointer to **string** | Switch model | [optional] 
+**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200146WithDefaults instantiates a new InlineResponse200146 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchProfileId
+### GetBrandingPolicyIds
 
-`func (o *InlineResponse200146) GetSwitchProfileId() string`
+`func (o *InlineResponse200146) GetBrandingPolicyIds() []string`
 
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
 
-### GetSwitchProfileIdOk
+### GetBrandingPolicyIdsOk
 
-`func (o *InlineResponse200146) GetSwitchProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200146) GetBrandingPolicyIdsOk() (*[]string, bool)`
 
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfileId
+### SetBrandingPolicyIds
 
-`func (o *InlineResponse200146) SetSwitchProfileId(v string)`
+`func (o *InlineResponse200146) SetBrandingPolicyIds(v []string)`
 
-SetSwitchProfileId sets SwitchProfileId field to given value.
+SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
 
-### HasSwitchProfileId
+### HasBrandingPolicyIds
 
-`func (o *InlineResponse200146) HasSwitchProfileId() bool`
+`func (o *InlineResponse200146) HasBrandingPolicyIds() bool`
 
-HasSwitchProfileId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200146) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200146) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200146) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200146) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200146) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200146) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200146) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200146) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
+HasBrandingPolicyIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

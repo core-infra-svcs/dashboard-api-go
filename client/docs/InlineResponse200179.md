@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200179Items**](InlineResponse200179Items.md) | Sentry Group Policies for the Organization keyed by Network Id | [optional] 
+**RemainderLicenses** | Pointer to [**[]InlineResponse200178**](InlineResponse200178.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
+**MovedLicenses** | Pointer to [**[]InlineResponse200178**](InlineResponse200178.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200179WithDefaults instantiates a new InlineResponse200179 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetRemainderLicenses
 
-`func (o *InlineResponse200179) GetItems() []InlineResponse200179Items`
+`func (o *InlineResponse200179) GetRemainderLicenses() []InlineResponse200178`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetRemainderLicensesOk
 
-`func (o *InlineResponse200179) GetItemsOk() (*[]InlineResponse200179Items, bool)`
+`func (o *InlineResponse200179) GetRemainderLicensesOk() (*[]InlineResponse200178, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetRemainderLicenses
 
-`func (o *InlineResponse200179) SetItems(v []InlineResponse200179Items)`
+`func (o *InlineResponse200179) SetRemainderLicenses(v []InlineResponse200178)`
 
-SetItems sets Items field to given value.
+SetRemainderLicenses sets RemainderLicenses field to given value.
 
-### HasItems
+### HasRemainderLicenses
 
-`func (o *InlineResponse200179) HasItems() bool`
+`func (o *InlineResponse200179) HasRemainderLicenses() bool`
 
-HasItems returns a boolean if a field has been set.
+HasRemainderLicenses returns a boolean if a field has been set.
+
+### GetMovedLicenses
+
+`func (o *InlineResponse200179) GetMovedLicenses() []InlineResponse200178`
+
+GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
+
+### GetMovedLicensesOk
+
+`func (o *InlineResponse200179) GetMovedLicensesOk() (*[]InlineResponse200178, bool)`
+
+GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMovedLicenses
+
+`func (o *InlineResponse200179) SetMovedLicenses(v []InlineResponse200178)`
+
+SetMovedLicenses sets MovedLicenses field to given value.
+
+### HasMovedLicenses
+
+`func (o *InlineResponse200179) HasMovedLicenses() bool`
+
+HasMovedLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

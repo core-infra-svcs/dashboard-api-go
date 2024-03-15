@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse200144Usage**](InlineResponse200144Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200144Counts**](InlineResponse200144Counts.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20027Rules**](InlineResponse20027Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200144WithDefaults instantiates a new InlineResponse200144 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetRules
 
-`func (o *InlineResponse200144) GetUsage() InlineResponse200144Usage`
+`func (o *InlineResponse200144) GetRules() []InlineResponse20027Rules`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetRulesOk
 
-`func (o *InlineResponse200144) GetUsageOk() (*InlineResponse200144Usage, bool)`
+`func (o *InlineResponse200144) GetRulesOk() (*[]InlineResponse20027Rules, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetRules
 
-`func (o *InlineResponse200144) SetUsage(v InlineResponse200144Usage)`
+`func (o *InlineResponse200144) SetRules(v []InlineResponse20027Rules)`
 
-SetUsage sets Usage field to given value.
+SetRules sets Rules field to given value.
 
-### HasUsage
+### HasRules
 
-`func (o *InlineResponse200144) HasUsage() bool`
+`func (o *InlineResponse200144) HasRules() bool`
 
-HasUsage returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200144) GetCounts() InlineResponse200144Counts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200144) GetCountsOk() (*InlineResponse200144Counts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200144) SetCounts(v InlineResponse200144Counts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200144) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

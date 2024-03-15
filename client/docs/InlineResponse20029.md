@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Subnet** | Pointer to **string** | The subnet of the single LAN | [optional] 
-**ApplianceIp** | Pointer to **string** | The local IP of the appliance on the single LAN | [optional] 
-**MandatoryDhcp** | Pointer to [**InlineResponse20029MandatoryDhcp**](InlineResponse20029MandatoryDhcp.md) |  | [optional] 
-**Ipv6** | Pointer to [**InlineResponse20029Ipv6**](InlineResponse20029Ipv6.md) |  | [optional] 
+**Number** | Pointer to **int32** | Number of the port | [optional] 
+**Enabled** | Pointer to **bool** | The status of the port | [optional] 
+**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
+**DropUntaggedTraffic** | Pointer to **bool** | Whether the trunk port can drop all untagged traffic. | [optional] 
+**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
+**AllowedVlans** | Pointer to **string** | Comma-delimited list of the VLAN ID&#39;s allowed on the port, or &#39;all&#39; to permit all VLAN&#39;s on the port. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. | [optional] 
 
 ## Methods
 
@@ -28,105 +31,180 @@ NewInlineResponse20029WithDefaults instantiates a new InlineResponse20029 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubnet
+### GetNumber
 
-`func (o *InlineResponse20029) GetSubnet() string`
+`func (o *InlineResponse20029) GetNumber() int32`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetNumber returns the Number field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetNumberOk
 
-`func (o *InlineResponse20029) GetSubnetOk() (*string, bool)`
+`func (o *InlineResponse20029) GetNumberOk() (*int32, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetNumber
 
-`func (o *InlineResponse20029) SetSubnet(v string)`
+`func (o *InlineResponse20029) SetNumber(v int32)`
 
-SetSubnet sets Subnet field to given value.
+SetNumber sets Number field to given value.
 
-### HasSubnet
+### HasNumber
 
-`func (o *InlineResponse20029) HasSubnet() bool`
+`func (o *InlineResponse20029) HasNumber() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasNumber returns a boolean if a field has been set.
 
-### GetApplianceIp
+### GetEnabled
 
-`func (o *InlineResponse20029) GetApplianceIp() string`
+`func (o *InlineResponse20029) GetEnabled() bool`
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetApplianceIpOk
+### GetEnabledOk
 
-`func (o *InlineResponse20029) GetApplianceIpOk() (*string, bool)`
+`func (o *InlineResponse20029) GetEnabledOk() (*bool, bool)`
 
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetEnabled
 
-`func (o *InlineResponse20029) SetApplianceIp(v string)`
+`func (o *InlineResponse20029) SetEnabled(v bool)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasApplianceIp
+### HasEnabled
 
-`func (o *InlineResponse20029) HasApplianceIp() bool`
+`func (o *InlineResponse20029) HasEnabled() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetMandatoryDhcp
+### GetType
 
-`func (o *InlineResponse20029) GetMandatoryDhcp() InlineResponse20029MandatoryDhcp`
+`func (o *InlineResponse20029) GetType() string`
 
-GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetMandatoryDhcpOk
+### GetTypeOk
 
-`func (o *InlineResponse20029) GetMandatoryDhcpOk() (*InlineResponse20029MandatoryDhcp, bool)`
+`func (o *InlineResponse20029) GetTypeOk() (*string, bool)`
 
-GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMandatoryDhcp
+### SetType
 
-`func (o *InlineResponse20029) SetMandatoryDhcp(v InlineResponse20029MandatoryDhcp)`
+`func (o *InlineResponse20029) SetType(v string)`
 
-SetMandatoryDhcp sets MandatoryDhcp field to given value.
+SetType sets Type field to given value.
 
-### HasMandatoryDhcp
+### HasType
 
-`func (o *InlineResponse20029) HasMandatoryDhcp() bool`
+`func (o *InlineResponse20029) HasType() bool`
 
-HasMandatoryDhcp returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetIpv6
+### GetDropUntaggedTraffic
 
-`func (o *InlineResponse20029) GetIpv6() InlineResponse20029Ipv6`
+`func (o *InlineResponse20029) GetDropUntaggedTraffic() bool`
 
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
 
-### GetIpv6Ok
+### GetDropUntaggedTrafficOk
 
-`func (o *InlineResponse20029) GetIpv6Ok() (*InlineResponse20029Ipv6, bool)`
+`func (o *InlineResponse20029) GetDropUntaggedTrafficOk() (*bool, bool)`
 
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6
+### SetDropUntaggedTraffic
 
-`func (o *InlineResponse20029) SetIpv6(v InlineResponse20029Ipv6)`
+`func (o *InlineResponse20029) SetDropUntaggedTraffic(v bool)`
 
-SetIpv6 sets Ipv6 field to given value.
+SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
 
-### HasIpv6
+### HasDropUntaggedTraffic
 
-`func (o *InlineResponse20029) HasIpv6() bool`
+`func (o *InlineResponse20029) HasDropUntaggedTraffic() bool`
 
-HasIpv6 returns a boolean if a field has been set.
+HasDropUntaggedTraffic returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineResponse20029) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineResponse20029) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineResponse20029) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineResponse20029) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetAllowedVlans
+
+`func (o *InlineResponse20029) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineResponse20029) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineResponse20029) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineResponse20029) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetAccessPolicy
+
+`func (o *InlineResponse20029) GetAccessPolicy() string`
+
+GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
+
+### GetAccessPolicyOk
+
+`func (o *InlineResponse20029) GetAccessPolicyOk() (*string, bool)`
+
+GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicy
+
+`func (o *InlineResponse20029) SetAccessPolicy(v string)`
+
+SetAccessPolicy sets AccessPolicy field to given value.
+
+### HasAccessPolicy
+
+`func (o *InlineResponse20029) HasAccessPolicy() bool`
+
+HasAccessPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

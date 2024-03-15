@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RemainderLicenses** | Pointer to [**[]InlineResponse200168**](InlineResponse200168.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
-**MovedLicenses** | Pointer to [**[]InlineResponse200168**](InlineResponse200168.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
+**Serial** | Pointer to **string** | Serial of the device | [optional] 
+**Name** | Pointer to **string** | Name assigned to the device | [optional] 
+**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
+**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200169WithDefaults instantiates a new InlineResponse200169 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRemainderLicenses
+### GetSerial
 
-`func (o *InlineResponse200169) GetRemainderLicenses() []InlineResponse200168`
+`func (o *InlineResponse200169) GetSerial() string`
 
-GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetRemainderLicensesOk
+### GetSerialOk
 
-`func (o *InlineResponse200169) GetRemainderLicensesOk() (*[]InlineResponse200168, bool)`
+`func (o *InlineResponse200169) GetSerialOk() (*string, bool)`
 
-GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemainderLicenses
+### SetSerial
 
-`func (o *InlineResponse200169) SetRemainderLicenses(v []InlineResponse200168)`
+`func (o *InlineResponse200169) SetSerial(v string)`
 
-SetRemainderLicenses sets RemainderLicenses field to given value.
+SetSerial sets Serial field to given value.
 
-### HasRemainderLicenses
+### HasSerial
 
-`func (o *InlineResponse200169) HasRemainderLicenses() bool`
+`func (o *InlineResponse200169) HasSerial() bool`
 
-HasRemainderLicenses returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetMovedLicenses
+### GetName
 
-`func (o *InlineResponse200169) GetMovedLicenses() []InlineResponse200168`
+`func (o *InlineResponse200169) GetName() string`
 
-GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMovedLicensesOk
+### GetNameOk
 
-`func (o *InlineResponse200169) GetMovedLicensesOk() (*[]InlineResponse200168, bool)`
+`func (o *InlineResponse200169) GetNameOk() (*string, bool)`
 
-GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMovedLicenses
+### SetName
 
-`func (o *InlineResponse200169) SetMovedLicenses(v []InlineResponse200168)`
+`func (o *InlineResponse200169) SetName(v string)`
 
-SetMovedLicenses sets MovedLicenses field to given value.
+SetName sets Name field to given value.
 
-### HasMovedLicenses
+### HasName
 
-`func (o *InlineResponse200169) HasMovedLicenses() bool`
+`func (o *InlineResponse200169) HasName() bool`
 
-HasMovedLicenses returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetDeviceStatus
+
+`func (o *InlineResponse200169) GetDeviceStatus() string`
+
+GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
+
+### GetDeviceStatusOk
+
+`func (o *InlineResponse200169) GetDeviceStatusOk() (*string, bool)`
+
+GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceStatus
+
+`func (o *InlineResponse200169) SetDeviceStatus(v string)`
+
+SetDeviceStatus sets DeviceStatus field to given value.
+
+### HasDeviceStatus
+
+`func (o *InlineResponse200169) HasDeviceStatus() bool`
+
+HasDeviceStatus returns a boolean if a field has been set.
+
+### GetUpgrade
+
+`func (o *InlineResponse200169) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
+
+GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
+
+### GetUpgradeOk
+
+`func (o *InlineResponse200169) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
+
+GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpgrade
+
+`func (o *InlineResponse200169) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
+
+SetUpgrade sets Upgrade field to given value.
+
+### HasUpgrade
+
+`func (o *InlineResponse200169) HasUpgrade() bool`
+
+HasUpgrade returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

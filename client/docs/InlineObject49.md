@@ -4,15 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Prefix** | **string** | A static IPv6 prefix | 
-**Origin** | [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1.md) |  | 
-**Description** | Pointer to **string** | A name or description for the prefix | [optional] 
+**Enabled** | Pointer to **bool** | The status of the port | [optional] 
+**DropUntaggedTraffic** | Pointer to **bool** | Trunk port can Drop all Untagged traffic. When true, no VLAN is required. Access ports cannot have dropUntaggedTraffic set to true. | [optional] 
+**Type** | Pointer to **string** | The type of the port: &#39;access&#39; or &#39;trunk&#39;. | [optional] 
+**Vlan** | Pointer to **int32** | Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode. | [optional] 
+**AllowedVlans** | Pointer to **string** | Comma-delimited list of the VLAN ID&#39;s allowed on the port, or &#39;all&#39; to permit all VLAN&#39;s on the port. | [optional] 
+**AccessPolicy** | Pointer to **string** | The name of the policy. Only applicable to Access ports. Valid values are: &#39;open&#39;, &#39;8021x-radius&#39;, &#39;mac-radius&#39;, &#39;hybris-radius&#39; for MX64 or Z3 or any MX supporting the per port authentication feature. Otherwise, &#39;open&#39; is the only valid value and &#39;open&#39; is the default value if the field is missing. | [optional] 
 
 ## Methods
 
 ### NewInlineObject49
 
-`func NewInlineObject49(prefix string, origin NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, ) *InlineObject49`
+`func NewInlineObject49() *InlineObject49`
 
 NewInlineObject49 instantiates a new InlineObject49 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +30,155 @@ NewInlineObject49WithDefaults instantiates a new InlineObject49 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPrefix
+### GetEnabled
 
-`func (o *InlineObject49) GetPrefix() string`
+`func (o *InlineObject49) GetEnabled() bool`
 
-GetPrefix returns the Prefix field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetPrefixOk
+### GetEnabledOk
 
-`func (o *InlineObject49) GetPrefixOk() (*string, bool)`
+`func (o *InlineObject49) GetEnabledOk() (*bool, bool)`
 
-GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPrefix
+### SetEnabled
 
-`func (o *InlineObject49) SetPrefix(v string)`
+`func (o *InlineObject49) SetEnabled(v bool)`
 
-SetPrefix sets Prefix field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetOrigin
+`func (o *InlineObject49) HasEnabled() bool`
 
-`func (o *InlineObject49) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1`
+HasEnabled returns a boolean if a field has been set.
 
-GetOrigin returns the Origin field if non-nil, zero value otherwise.
+### GetDropUntaggedTraffic
 
-### GetOriginOk
+`func (o *InlineObject49) GetDropUntaggedTraffic() bool`
 
-`func (o *InlineObject49) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1, bool)`
+GetDropUntaggedTraffic returns the DropUntaggedTraffic field if non-nil, zero value otherwise.
 
-GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
+### GetDropUntaggedTrafficOk
+
+`func (o *InlineObject49) GetDropUntaggedTrafficOk() (*bool, bool)`
+
+GetDropUntaggedTrafficOk returns a tuple with the DropUntaggedTraffic field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrigin
+### SetDropUntaggedTraffic
 
-`func (o *InlineObject49) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin1)`
+`func (o *InlineObject49) SetDropUntaggedTraffic(v bool)`
 
-SetOrigin sets Origin field to given value.
+SetDropUntaggedTraffic sets DropUntaggedTraffic field to given value.
 
+### HasDropUntaggedTraffic
 
-### GetDescription
+`func (o *InlineObject49) HasDropUntaggedTraffic() bool`
 
-`func (o *InlineObject49) GetDescription() string`
+HasDropUntaggedTraffic returns a boolean if a field has been set.
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+### GetType
 
-### GetDescriptionOk
+`func (o *InlineObject49) GetType() string`
 
-`func (o *InlineObject49) GetDescriptionOk() (*string, bool)`
+GetType returns the Type field if non-nil, zero value otherwise.
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+### GetTypeOk
+
+`func (o *InlineObject49) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetType
 
-`func (o *InlineObject49) SetDescription(v string)`
+`func (o *InlineObject49) SetType(v string)`
 
-SetDescription sets Description field to given value.
+SetType sets Type field to given value.
 
-### HasDescription
+### HasType
 
-`func (o *InlineObject49) HasDescription() bool`
+`func (o *InlineObject49) HasType() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetVlan
+
+`func (o *InlineObject49) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineObject49) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineObject49) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+### HasVlan
+
+`func (o *InlineObject49) HasVlan() bool`
+
+HasVlan returns a boolean if a field has been set.
+
+### GetAllowedVlans
+
+`func (o *InlineObject49) GetAllowedVlans() string`
+
+GetAllowedVlans returns the AllowedVlans field if non-nil, zero value otherwise.
+
+### GetAllowedVlansOk
+
+`func (o *InlineObject49) GetAllowedVlansOk() (*string, bool)`
+
+GetAllowedVlansOk returns a tuple with the AllowedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedVlans
+
+`func (o *InlineObject49) SetAllowedVlans(v string)`
+
+SetAllowedVlans sets AllowedVlans field to given value.
+
+### HasAllowedVlans
+
+`func (o *InlineObject49) HasAllowedVlans() bool`
+
+HasAllowedVlans returns a boolean if a field has been set.
+
+### GetAccessPolicy
+
+`func (o *InlineObject49) GetAccessPolicy() string`
+
+GetAccessPolicy returns the AccessPolicy field if non-nil, zero value otherwise.
+
+### GetAccessPolicyOk
+
+`func (o *InlineObject49) GetAccessPolicyOk() (*string, bool)`
+
+GetAccessPolicyOk returns a tuple with the AccessPolicy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPolicy
+
+`func (o *InlineObject49) SetAccessPolicy(v string)`
+
+SetAccessPolicy sets AccessPolicy field to given value.
+
+### HasAccessPolicy
+
+`func (o *InlineObject49) HasAccessPolicy() bool`
+
+HasAccessPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

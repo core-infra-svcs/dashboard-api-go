@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20023Rules**](InlineResponse20023Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device | [optional] 
+**ConnectionStats** | Pointer to [**InlineResponse20023ConnectionStats**](InlineResponse20023ConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse20023WithDefaults instantiates a new InlineResponse20023 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetSerial
 
-`func (o *InlineResponse20023) GetRules() []InlineResponse20023Rules`
+`func (o *InlineResponse20023) GetSerial() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetSerialOk
 
-`func (o *InlineResponse20023) GetRulesOk() (*[]InlineResponse20023Rules, bool)`
+`func (o *InlineResponse20023) GetSerialOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetSerial
 
-`func (o *InlineResponse20023) SetRules(v []InlineResponse20023Rules)`
+`func (o *InlineResponse20023) SetSerial(v string)`
 
-SetRules sets Rules field to given value.
+SetSerial sets Serial field to given value.
 
-### HasRules
+### HasSerial
 
-`func (o *InlineResponse20023) HasRules() bool`
+`func (o *InlineResponse20023) HasSerial() bool`
 
-HasRules returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetSyslogDefaultRule
+### GetConnectionStats
 
-`func (o *InlineResponse20023) GetSyslogDefaultRule() bool`
+`func (o *InlineResponse20023) GetConnectionStats() InlineResponse20023ConnectionStats`
 
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
-### GetSyslogDefaultRuleOk
+### GetConnectionStatsOk
 
-`func (o *InlineResponse20023) GetSyslogDefaultRuleOk() (*bool, bool)`
+`func (o *InlineResponse20023) GetConnectionStatsOk() (*InlineResponse20023ConnectionStats, bool)`
 
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSyslogDefaultRule
+### SetConnectionStats
 
-`func (o *InlineResponse20023) SetSyslogDefaultRule(v bool)`
+`func (o *InlineResponse20023) SetConnectionStats(v InlineResponse20023ConnectionStats)`
 
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+SetConnectionStats sets ConnectionStats field to given value.
 
-### HasSyslogDefaultRule
+### HasConnectionStats
 
-`func (o *InlineResponse20023) HasSyslogDefaultRule() bool`
+`func (o *InlineResponse20023) HasConnectionStats() bool`
 
-HasSyslogDefaultRule returns a boolean if a field has been set.
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

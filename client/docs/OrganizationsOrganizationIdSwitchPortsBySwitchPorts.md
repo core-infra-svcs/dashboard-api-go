@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Enabled** | Pointer to **bool** | The status of the switch port. | [optional] 
 **PoeEnabled** | Pointer to **bool** | The PoE status of the switch port. | [optional] 
 **Type** | Pointer to **string** | The type of the switch port (&#39;trunk&#39; or &#39;access&#39;). | [optional] 
-**Vlan** | Pointer to **int32** | The VLAN of the switch port. A null value will clear the value set for trunk ports. | [optional] 
+**Vlan** | Pointer to **int32** | The VLAN of the switch port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports. | [optional] 
 **VoiceVlan** | Pointer to **int32** | The voice VLAN of the switch port. Only applicable to access ports. | [optional] 
 **AllowedVlans** | Pointer to **string** | The VLANs allowed on the switch port. Only applicable to trunk ports. | [optional] 
 **RstpEnabled** | Pointer to **bool** | The rapid spanning tree protocol status. | [optional] 

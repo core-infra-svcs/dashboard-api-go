@@ -4,18 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | ID of the sensor alert profile. | [optional] 
-**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
-**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule**](NetworksNetworkIdSensorAlertsProfilesSchedule.md) |  | [optional] 
-**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
-**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
+**GroupId** | Pointer to **string** | Id of staged upgrade group | [optional] 
+**Name** | Pointer to **string** | Name of the Staged Upgrade Group | [optional] 
+**Description** | Pointer to **string** | Description of the Staged Upgrade Group | [optional] 
+**IsDefault** | Pointer to **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | [optional] 
+**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20054
 
-`func NewInlineResponse20054(conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineResponse20054`
+`func NewInlineResponse20054() *InlineResponse20054`
 
 NewInlineResponse20054 instantiates a new InlineResponse20054 object
 This constructor will assign default values to properties that have it defined,
@@ -30,30 +29,30 @@ NewInlineResponse20054WithDefaults instantiates a new InlineResponse20054 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetGroupId
 
-`func (o *InlineResponse20054) GetProfileId() string`
+`func (o *InlineResponse20054) GetGroupId() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetGroupId returns the GroupId field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetGroupIdOk
 
-`func (o *InlineResponse20054) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse20054) GetGroupIdOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetGroupId
 
-`func (o *InlineResponse20054) SetProfileId(v string)`
+`func (o *InlineResponse20054) SetGroupId(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetGroupId sets GroupId field to given value.
 
-### HasProfileId
+### HasGroupId
 
-`func (o *InlineResponse20054) HasProfileId() bool`
+`func (o *InlineResponse20054) HasGroupId() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasGroupId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -80,100 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSchedule
+### GetDescription
 
-`func (o *InlineResponse20054) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule`
+`func (o *InlineResponse20054) GetDescription() string`
 
-GetSchedule returns the Schedule field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetScheduleOk
+### GetDescriptionOk
 
-`func (o *InlineResponse20054) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule, bool)`
+`func (o *InlineResponse20054) GetDescriptionOk() (*string, bool)`
 
-GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSchedule
+### SetDescription
 
-`func (o *InlineResponse20054) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule)`
+`func (o *InlineResponse20054) SetDescription(v string)`
 
-SetSchedule sets Schedule field to given value.
+SetDescription sets Description field to given value.
 
-### HasSchedule
+### HasDescription
 
-`func (o *InlineResponse20054) HasSchedule() bool`
+`func (o *InlineResponse20054) HasDescription() bool`
 
-HasSchedule returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetConditions
+### GetIsDefault
 
-`func (o *InlineResponse20054) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
+`func (o *InlineResponse20054) GetIsDefault() bool`
 
-GetConditions returns the Conditions field if non-nil, zero value otherwise.
+GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
 
-### GetConditionsOk
+### GetIsDefaultOk
 
-`func (o *InlineResponse20054) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
+`func (o *InlineResponse20054) GetIsDefaultOk() (*bool, bool)`
 
-GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
+GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConditions
+### SetIsDefault
 
-`func (o *InlineResponse20054) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
+`func (o *InlineResponse20054) SetIsDefault(v bool)`
 
-SetConditions sets Conditions field to given value.
+SetIsDefault sets IsDefault field to given value.
 
+### HasIsDefault
 
-### GetRecipients
+`func (o *InlineResponse20054) HasIsDefault() bool`
 
-`func (o *InlineResponse20054) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+HasIsDefault returns a boolean if a field has been set.
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+### GetAssignedDevices
 
-### GetRecipientsOk
+`func (o *InlineResponse20054) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices`
 
-`func (o *InlineResponse20054) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+### GetAssignedDevicesOk
+
+`func (o *InlineResponse20054) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices, bool)`
+
+GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetAssignedDevices
 
-`func (o *InlineResponse20054) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+`func (o *InlineResponse20054) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices)`
 
-SetRecipients sets Recipients field to given value.
+SetAssignedDevices sets AssignedDevices field to given value.
 
-### HasRecipients
+### HasAssignedDevices
 
-`func (o *InlineResponse20054) HasRecipients() bool`
+`func (o *InlineResponse20054) HasAssignedDevices() bool`
 
-HasRecipients returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineResponse20054) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineResponse20054) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineResponse20054) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineResponse20054) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
+HasAssignedDevices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
-**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
-**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200130Rules**](InlineResponse200130Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject188WithDefaults instantiates a new InlineObject188 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConcentrator
+### GetTrafficShapingEnabled
 
-`func (o *InlineObject188) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
+`func (o *InlineObject188) GetTrafficShapingEnabled() bool`
 
-GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetConcentratorOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineObject188) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
+`func (o *InlineObject188) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConcentrator
+### SetTrafficShapingEnabled
 
-`func (o *InlineObject188) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
+`func (o *InlineObject188) SetTrafficShapingEnabled(v bool)`
 
-SetConcentrator sets Concentrator field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasConcentrator
+### HasTrafficShapingEnabled
 
-`func (o *InlineObject188) HasConcentrator() bool`
+`func (o *InlineObject188) HasTrafficShapingEnabled() bool`
 
-HasConcentrator returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetSplitTunnel
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject188) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
+`func (o *InlineObject188) GetDefaultRulesEnabled() bool`
 
-GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetSplitTunnelOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject188) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
+`func (o *InlineObject188) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplitTunnel
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject188) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
+`func (o *InlineObject188) SetDefaultRulesEnabled(v bool)`
 
-SetSplitTunnel sets SplitTunnel field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasSplitTunnel
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject188) HasSplitTunnel() bool`
+`func (o *InlineObject188) HasDefaultRulesEnabled() bool`
 
-HasSplitTunnel returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetFailover
+### GetRules
 
-`func (o *InlineObject188) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
+`func (o *InlineObject188) GetRules() []InlineResponse200130Rules`
 
-GetFailover returns the Failover field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetFailoverOk
+### GetRulesOk
 
-`func (o *InlineObject188) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
+`func (o *InlineObject188) GetRulesOk() (*[]InlineResponse200130Rules, bool)`
 
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailover
+### SetRules
 
-`func (o *InlineObject188) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
+`func (o *InlineObject188) SetRules(v []InlineResponse200130Rules)`
 
-SetFailover sets Failover field to given value.
+SetRules sets Rules field to given value.
 
-### HasFailover
+### HasRules
 
-`func (o *InlineObject188) HasFailover() bool`
+`func (o *InlineObject188) HasRules() bool`
 
-HasFailover returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assigned** | Pointer to [**[]InlineResponse20027Assigned**](InlineResponse20027Assigned.md) | RF Profiles | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20027Rules**](InlineResponse20027Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse20027WithDefaults instantiates a new InlineResponse20027 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssigned
+### GetRules
 
-`func (o *InlineResponse20027) GetAssigned() []InlineResponse20027Assigned`
+`func (o *InlineResponse20027) GetRules() []InlineResponse20027Rules`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetRulesOk
 
-`func (o *InlineResponse20027) GetAssignedOk() (*[]InlineResponse20027Assigned, bool)`
+`func (o *InlineResponse20027) GetRulesOk() (*[]InlineResponse20027Rules, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetRules
 
-`func (o *InlineResponse20027) SetAssigned(v []InlineResponse20027Assigned)`
+`func (o *InlineResponse20027) SetRules(v []InlineResponse20027Rules)`
 
-SetAssigned sets Assigned field to given value.
+SetRules sets Rules field to given value.
 
-### HasAssigned
+### HasRules
 
-`func (o *InlineResponse20027) HasAssigned() bool`
+`func (o *InlineResponse20027) HasRules() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
+
+### GetSyslogDefaultRule
+
+`func (o *InlineResponse20027) GetSyslogDefaultRule() bool`
+
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+
+### GetSyslogDefaultRuleOk
+
+`func (o *InlineResponse20027) GetSyslogDefaultRuleOk() (*bool, bool)`
+
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSyslogDefaultRule
+
+`func (o *InlineResponse20027) SetSyslogDefaultRule(v bool)`
+
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+
+### HasSyslogDefaultRule
+
+`func (o *InlineResponse20027) HasSyslogDefaultRule() bool`
+
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

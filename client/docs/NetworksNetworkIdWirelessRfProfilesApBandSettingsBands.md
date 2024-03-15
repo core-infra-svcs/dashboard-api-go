@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **[]string** | List of enabled bands. Can include [\&quot;2.4\&quot;, \&quot;5\&quot;, \&quot;6\&quot;] | [optional] 
+**Enabled** | Pointer to **[]string** | List of enabled bands. Can include [\&quot;2.4\&quot;, \&quot;5\&quot;, \&quot;6\&quot;, \&quot;disabled\&quot;] | [optional] 
 
 ## Methods
 

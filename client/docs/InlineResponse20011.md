@@ -4,7 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Livestream** | Pointer to [**InlineResponse20011Livestream**](InlineResponse20011Livestream.md) |  | [optional] 
+**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ping request. | [optional] 
+**Results** | Pointer to [**InlineResponse20011Results**](InlineResponse20011Results.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +29,130 @@ NewInlineResponse20011WithDefaults instantiates a new InlineResponse20011 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLivestream
+### GetPingId
 
-`func (o *InlineResponse20011) GetLivestream() InlineResponse20011Livestream`
+`func (o *InlineResponse20011) GetPingId() string`
 
-GetLivestream returns the Livestream field if non-nil, zero value otherwise.
+GetPingId returns the PingId field if non-nil, zero value otherwise.
 
-### GetLivestreamOk
+### GetPingIdOk
 
-`func (o *InlineResponse20011) GetLivestreamOk() (*InlineResponse20011Livestream, bool)`
+`func (o *InlineResponse20011) GetPingIdOk() (*string, bool)`
 
-GetLivestreamOk returns a tuple with the Livestream field if it's non-nil, zero value otherwise
+GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLivestream
+### SetPingId
 
-`func (o *InlineResponse20011) SetLivestream(v InlineResponse20011Livestream)`
+`func (o *InlineResponse20011) SetPingId(v string)`
 
-SetLivestream sets Livestream field to given value.
+SetPingId sets PingId field to given value.
 
-### HasLivestream
+### HasPingId
 
-`func (o *InlineResponse20011) HasLivestream() bool`
+`func (o *InlineResponse20011) HasPingId() bool`
 
-HasLivestream returns a boolean if a field has been set.
+HasPingId returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse20011) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse20011) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse20011) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse20011) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
+
+### GetRequest
+
+`func (o *InlineResponse20011) GetRequest() InlineResponse2013Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20011) GetRequestOk() (*InlineResponse2013Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20011) SetRequest(v InlineResponse2013Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20011) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20011) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20011) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20011) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse20011) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetResults
+
+`func (o *InlineResponse20011) GetResults() InlineResponse20011Results`
+
+GetResults returns the Results field if non-nil, zero value otherwise.
+
+### GetResultsOk
+
+`func (o *InlineResponse20011) GetResultsOk() (*InlineResponse20011Results, bool)`
+
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResults
+
+`func (o *InlineResponse20011) SetResults(v InlineResponse20011Results)`
+
+SetResults sets Results field to given value.
+
+### HasResults
+
+`func (o *InlineResponse20011) HasResults() bool`
+
+HasResults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

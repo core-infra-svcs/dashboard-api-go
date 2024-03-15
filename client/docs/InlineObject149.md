@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A friendly name or description for the interface or VLAN. | [optional] 
+**Name** | **string** | A friendly name or description for the interface or VLAN. | 
 **Subnet** | Pointer to **string** | The network that this routed interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
 **InterfaceIp** | Pointer to **string** | The IP address this switch stack will use for layer 3 routing on this VLAN or subnet. This cannot be the same as the switch&#39;s management IP. | [optional] 
-**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are, &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. | [optional] 
-**VlanId** | Pointer to **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | [optional] 
+**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are, &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
+**VlanId** | **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | 
 **DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route. This IP address must exist in a subnet with a routed interface. | [optional] 
-**OspfSettings** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdOspfSettings**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdOspfSettings.md) |  | [optional] 
-**Ipv6** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdIpv6**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdIpv6.md) |  | [optional] 
+**OspfSettings** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings.md) |  | [optional] 
+**Ipv6** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject149
 
-`func NewInlineObject149() *InlineObject149`
+`func NewInlineObject149(name string, vlanId int32, ) *InlineObject149`
 
 NewInlineObject149 instantiates a new InlineObject149 object
 This constructor will assign default values to properties that have it defined,
@@ -51,11 +51,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject149) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetSubnet
 
@@ -151,11 +146,6 @@ and a boolean to check if the value has been set.
 
 SetVlanId sets VlanId field to given value.
 
-### HasVlanId
-
-`func (o *InlineObject149) HasVlanId() bool`
-
-HasVlanId returns a boolean if a field has been set.
 
 ### GetDefaultGateway
 
@@ -184,20 +174,20 @@ HasDefaultGateway returns a boolean if a field has been set.
 
 ### GetOspfSettings
 
-`func (o *InlineObject149) GetOspfSettings() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdOspfSettings`
+`func (o *InlineObject149) GetOspfSettings() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings`
 
 GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
 
 ### GetOspfSettingsOk
 
-`func (o *InlineObject149) GetOspfSettingsOk() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdOspfSettings, bool)`
+`func (o *InlineObject149) GetOspfSettingsOk() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings, bool)`
 
 GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOspfSettings
 
-`func (o *InlineObject149) SetOspfSettings(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdOspfSettings)`
+`func (o *InlineObject149) SetOspfSettings(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings)`
 
 SetOspfSettings sets OspfSettings field to given value.
 
@@ -209,20 +199,20 @@ HasOspfSettings returns a boolean if a field has been set.
 
 ### GetIpv6
 
-`func (o *InlineObject149) GetIpv6() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdIpv6`
+`func (o *InlineObject149) GetIpv6() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6`
 
 GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
 
 ### GetIpv6Ok
 
-`func (o *InlineObject149) GetIpv6Ok() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdIpv6, bool)`
+`func (o *InlineObject149) GetIpv6Ok() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6, bool)`
 
 GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetIpv6
 
-`func (o *InlineObject149) SetIpv6(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesInterfaceIdIpv6)`
+`func (o *InlineObject149) SetIpv6(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6)`
 
 SetIpv6 sets Ipv6 field to given value.
 

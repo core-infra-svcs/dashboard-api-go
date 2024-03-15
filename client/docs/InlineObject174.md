@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
-**ClientBalancingEnabled** | Pointer to **bool** | Steers client to best available access point. Can be either true or false. | [optional] 
-**MinBitrateType** | Pointer to **string** | Minimum bitrate can be set to either &#39;band&#39; or &#39;ssid&#39;. | [optional] 
-**BandSelectionType** | Pointer to **string** | Band selection can be set to either &#39;ssid&#39; or &#39;ap&#39;. | [optional] 
-**ApBandSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings.md) |  | [optional] 
-**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
-**SixGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings.md) |  | [optional] 
-**Transmission** | Pointer to [**InlineResponse200114Transmission**](InlineResponse200114Transmission.md) |  | [optional] 
+**Name** | **string** | The name of the new profile. Must be unique. This param is required on creation. | 
+**ClientBalancingEnabled** | Pointer to **bool** | Steers client to best available access point. Can be either true or false. Defaults to true. | [optional] 
+**MinBitrateType** | Pointer to **string** | Minimum bitrate can be set to either &#39;band&#39; or &#39;ssid&#39;. Defaults to band. | [optional] 
+**BandSelectionType** | **string** | Band selection can be set to either &#39;ssid&#39; or &#39;ap&#39;. This param is required on creation. | 
+**ApBandSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesApBandSettings**](NetworksNetworkIdWirelessRfProfilesApBandSettings.md) |  | [optional] 
+**TwoFourGhzSettings** | Pointer to [**InlineResponse200123TwoFourGhzSettings**](InlineResponse200123TwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**InlineResponse200123FiveGhzSettings**](InlineResponse200123FiveGhzSettings.md) |  | [optional] 
+**SixGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesSixGhzSettings**](NetworksNetworkIdWirelessRfProfilesSixGhzSettings.md) |  | [optional] 
+**Transmission** | Pointer to [**InlineResponse200123Transmission**](InlineResponse200123Transmission.md) |  | [optional] 
 **PerSsidSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesPerSsidSettings**](NetworksNetworkIdWirelessRfProfilesPerSsidSettings.md) |  | [optional] 
 **FlexRadios** | Pointer to [**NetworksNetworkIdWirelessRfProfilesFlexRadios**](NetworksNetworkIdWirelessRfProfilesFlexRadios.md) |  | [optional] 
 
@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject174
 
-`func NewInlineObject174() *InlineObject174`
+`func NewInlineObject174(name string, bandSelectionType string, ) *InlineObject174`
 
 NewInlineObject174 instantiates a new InlineObject174 object
 This constructor will assign default values to properties that have it defined,
@@ -54,11 +54,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject174) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetClientBalancingEnabled
 
@@ -129,28 +124,23 @@ and a boolean to check if the value has been set.
 
 SetBandSelectionType sets BandSelectionType field to given value.
 
-### HasBandSelectionType
-
-`func (o *InlineObject174) HasBandSelectionType() bool`
-
-HasBandSelectionType returns a boolean if a field has been set.
 
 ### GetApBandSettings
 
-`func (o *InlineObject174) GetApBandSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings`
+`func (o *InlineObject174) GetApBandSettings() NetworksNetworkIdWirelessRfProfilesApBandSettings`
 
 GetApBandSettings returns the ApBandSettings field if non-nil, zero value otherwise.
 
 ### GetApBandSettingsOk
 
-`func (o *InlineObject174) GetApBandSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings, bool)`
+`func (o *InlineObject174) GetApBandSettingsOk() (*NetworksNetworkIdWirelessRfProfilesApBandSettings, bool)`
 
 GetApBandSettingsOk returns a tuple with the ApBandSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetApBandSettings
 
-`func (o *InlineObject174) SetApBandSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings)`
+`func (o *InlineObject174) SetApBandSettings(v NetworksNetworkIdWirelessRfProfilesApBandSettings)`
 
 SetApBandSettings sets ApBandSettings field to given value.
 
@@ -162,20 +152,20 @@ HasApBandSettings returns a boolean if a field has been set.
 
 ### GetTwoFourGhzSettings
 
-`func (o *InlineObject174) GetTwoFourGhzSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings`
+`func (o *InlineObject174) GetTwoFourGhzSettings() InlineResponse200123TwoFourGhzSettings`
 
 GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
 
 ### GetTwoFourGhzSettingsOk
 
-`func (o *InlineObject174) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings, bool)`
+`func (o *InlineObject174) GetTwoFourGhzSettingsOk() (*InlineResponse200123TwoFourGhzSettings, bool)`
 
 GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTwoFourGhzSettings
 
-`func (o *InlineObject174) SetTwoFourGhzSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings)`
+`func (o *InlineObject174) SetTwoFourGhzSettings(v InlineResponse200123TwoFourGhzSettings)`
 
 SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
 
@@ -187,20 +177,20 @@ HasTwoFourGhzSettings returns a boolean if a field has been set.
 
 ### GetFiveGhzSettings
 
-`func (o *InlineObject174) GetFiveGhzSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings`
+`func (o *InlineObject174) GetFiveGhzSettings() InlineResponse200123FiveGhzSettings`
 
 GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
 
 ### GetFiveGhzSettingsOk
 
-`func (o *InlineObject174) GetFiveGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings, bool)`
+`func (o *InlineObject174) GetFiveGhzSettingsOk() (*InlineResponse200123FiveGhzSettings, bool)`
 
 GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFiveGhzSettings
 
-`func (o *InlineObject174) SetFiveGhzSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings)`
+`func (o *InlineObject174) SetFiveGhzSettings(v InlineResponse200123FiveGhzSettings)`
 
 SetFiveGhzSettings sets FiveGhzSettings field to given value.
 
@@ -212,20 +202,20 @@ HasFiveGhzSettings returns a boolean if a field has been set.
 
 ### GetSixGhzSettings
 
-`func (o *InlineObject174) GetSixGhzSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings`
+`func (o *InlineObject174) GetSixGhzSettings() NetworksNetworkIdWirelessRfProfilesSixGhzSettings`
 
 GetSixGhzSettings returns the SixGhzSettings field if non-nil, zero value otherwise.
 
 ### GetSixGhzSettingsOk
 
-`func (o *InlineObject174) GetSixGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings, bool)`
+`func (o *InlineObject174) GetSixGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesSixGhzSettings, bool)`
 
 GetSixGhzSettingsOk returns a tuple with the SixGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSixGhzSettings
 
-`func (o *InlineObject174) SetSixGhzSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings)`
+`func (o *InlineObject174) SetSixGhzSettings(v NetworksNetworkIdWirelessRfProfilesSixGhzSettings)`
 
 SetSixGhzSettings sets SixGhzSettings field to given value.
 
@@ -237,20 +227,20 @@ HasSixGhzSettings returns a boolean if a field has been set.
 
 ### GetTransmission
 
-`func (o *InlineObject174) GetTransmission() InlineResponse200114Transmission`
+`func (o *InlineObject174) GetTransmission() InlineResponse200123Transmission`
 
 GetTransmission returns the Transmission field if non-nil, zero value otherwise.
 
 ### GetTransmissionOk
 
-`func (o *InlineObject174) GetTransmissionOk() (*InlineResponse200114Transmission, bool)`
+`func (o *InlineObject174) GetTransmissionOk() (*InlineResponse200123Transmission, bool)`
 
 GetTransmissionOk returns a tuple with the Transmission field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTransmission
 
-`func (o *InlineObject174) SetTransmission(v InlineResponse200114Transmission)`
+`func (o *InlineObject174) SetTransmission(v InlineResponse200123Transmission)`
 
 SetTransmission sets Transmission field to given value.
 

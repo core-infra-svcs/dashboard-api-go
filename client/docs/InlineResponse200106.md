@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
-**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
-**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200106WithDefaults instantiates a new InlineResponse200106 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetBroadcastThreshold
 
-`func (o *InlineResponse200106) GetStartTs() time.Time`
+`func (o *InlineResponse200106) GetBroadcastThreshold() int32`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineResponse200106) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200106) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetBroadcastThreshold
 
-`func (o *InlineResponse200106) SetStartTs(v time.Time)`
+`func (o *InlineResponse200106) SetBroadcastThreshold(v int32)`
 
-SetStartTs sets StartTs field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasStartTs
+### HasBroadcastThreshold
 
-`func (o *InlineResponse200106) HasStartTs() bool`
+`func (o *InlineResponse200106) HasBroadcastThreshold() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetEndTs
+### GetMulticastThreshold
 
-`func (o *InlineResponse200106) GetEndTs() time.Time`
+`func (o *InlineResponse200106) GetMulticastThreshold() int32`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetMulticastThresholdOk
 
-`func (o *InlineResponse200106) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200106) GetMulticastThresholdOk() (*int32, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetMulticastThreshold
 
-`func (o *InlineResponse200106) SetEndTs(v time.Time)`
+`func (o *InlineResponse200106) SetMulticastThreshold(v int32)`
 
-SetEndTs sets EndTs field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasEndTs
+### HasMulticastThreshold
 
-`func (o *InlineResponse200106) HasEndTs() bool`
+`func (o *InlineResponse200106) HasMulticastThreshold() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
 
-### GetUtilizationTotal
+### GetUnknownUnicastThreshold
 
-`func (o *InlineResponse200106) GetUtilizationTotal() float32`
+`func (o *InlineResponse200106) GetUnknownUnicastThreshold() int32`
 
-GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
 
-### GetUtilizationTotalOk
+### GetUnknownUnicastThresholdOk
 
-`func (o *InlineResponse200106) GetUtilizationTotalOk() (*float32, bool)`
+`func (o *InlineResponse200106) GetUnknownUnicastThresholdOk() (*int32, bool)`
 
-GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilizationTotal
+### SetUnknownUnicastThreshold
 
-`func (o *InlineResponse200106) SetUtilizationTotal(v float32)`
+`func (o *InlineResponse200106) SetUnknownUnicastThreshold(v int32)`
 
-SetUtilizationTotal sets UtilizationTotal field to given value.
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
 
-### HasUtilizationTotal
+### HasUnknownUnicastThreshold
 
-`func (o *InlineResponse200106) HasUtilizationTotal() bool`
+`func (o *InlineResponse200106) HasUnknownUnicastThreshold() bool`
 
-HasUtilizationTotal returns a boolean if a field has been set.
-
-### GetUtilization80211
-
-`func (o *InlineResponse200106) GetUtilization80211() float32`
-
-GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
-
-### GetUtilization80211Ok
-
-`func (o *InlineResponse200106) GetUtilization80211Ok() (*float32, bool)`
-
-GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUtilization80211
-
-`func (o *InlineResponse200106) SetUtilization80211(v float32)`
-
-SetUtilization80211 sets Utilization80211 field to given value.
-
-### HasUtilization80211
-
-`func (o *InlineResponse200106) HasUtilization80211() bool`
-
-HasUtilization80211 returns a boolean if a field has been set.
-
-### GetUtilizationNon80211
-
-`func (o *InlineResponse200106) GetUtilizationNon80211() float32`
-
-GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
-
-### GetUtilizationNon80211Ok
-
-`func (o *InlineResponse200106) GetUtilizationNon80211Ok() (*float32, bool)`
-
-GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUtilizationNon80211
-
-`func (o *InlineResponse200106) SetUtilizationNon80211(v float32)`
-
-SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
-
-### HasUtilizationNon80211
-
-`func (o *InlineResponse200106) HasUtilizationNon80211() bool`
-
-HasUtilizationNon80211 returns a boolean if a field has been set.
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

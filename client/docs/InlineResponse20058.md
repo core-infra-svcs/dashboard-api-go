@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
-**Name** | Pointer to **string** | The name of the device. | [optional] 
-**Tags** | Pointer to **[]string** | An array of tags associated with the device. | [optional] 
-**Ssid** | Pointer to **string** | The name of the SSID the device was last connected to. | [optional] 
-**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
-**OsName** | Pointer to **string** | The name of the device OS. | [optional] 
-**SystemModel** | Pointer to **string** | The device model. | [optional] 
-**Uuid** | Pointer to **string** | The UUID of the device. | [optional] 
-**SerialNumber** | Pointer to **string** | The device serial number. | [optional] 
-**Serial** | Pointer to **string** | The device serial. | [optional] 
-**Ip** | Pointer to **string** | The IP address of the device. | [optional] 
-**Notes** | Pointer to **string** | Notes associated with the device. | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**WanGoodput** | Pointer to **int32** | WAN goodput (Number of useful information bits delivered over a WAN per unit of time) | [optional] 
+**LanGoodput** | Pointer to **int32** | LAN goodput (Number of useful information bits delivered over a LAN per unit of time) | [optional] 
+**WanLatencyMs** | Pointer to **float32** | WAN latency in milliseconds | [optional] 
+**LanLatencyMs** | Pointer to **float32** | LAN latency in milliseconds | [optional] 
+**WanLossPercent** | Pointer to **float32** | WAN loss percentage | [optional] 
+**LanLossPercent** | Pointer to **float32** | LAN loss percentage | [optional] 
+**ResponseDuration** | Pointer to **int32** | Duration of the response, in milliseconds | [optional] 
+**Sent** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**Recv** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**NumClients** | Pointer to **int32** | Number of clients | [optional] 
 
 ## Methods
 
@@ -36,305 +36,305 @@ NewInlineResponse20058WithDefaults instantiates a new InlineResponse20058 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStartTs
 
-`func (o *InlineResponse20058) GetId() string`
+`func (o *InlineResponse20058) GetStartTs() time.Time`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse20058) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20058) GetStartTsOk() (*time.Time, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStartTs
 
-`func (o *InlineResponse20058) SetId(v string)`
+`func (o *InlineResponse20058) SetStartTs(v time.Time)`
 
-SetId sets Id field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasId
+### HasStartTs
 
-`func (o *InlineResponse20058) HasId() bool`
+`func (o *InlineResponse20058) HasStartTs() bool`
 
-HasId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetName
+### GetEndTs
 
-`func (o *InlineResponse20058) GetName() string`
+`func (o *InlineResponse20058) GetEndTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEndTsOk
 
-`func (o *InlineResponse20058) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20058) GetEndTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEndTs
 
-`func (o *InlineResponse20058) SetName(v string)`
+`func (o *InlineResponse20058) SetEndTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasName
+### HasEndTs
 
-`func (o *InlineResponse20058) HasName() bool`
+`func (o *InlineResponse20058) HasEndTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetTags
+### GetWanGoodput
 
-`func (o *InlineResponse20058) GetTags() []string`
+`func (o *InlineResponse20058) GetWanGoodput() int32`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetWanGoodput returns the WanGoodput field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetWanGoodputOk
 
-`func (o *InlineResponse20058) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse20058) GetWanGoodputOk() (*int32, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetWanGoodputOk returns a tuple with the WanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetWanGoodput
 
-`func (o *InlineResponse20058) SetTags(v []string)`
+`func (o *InlineResponse20058) SetWanGoodput(v int32)`
 
-SetTags sets Tags field to given value.
+SetWanGoodput sets WanGoodput field to given value.
 
-### HasTags
+### HasWanGoodput
 
-`func (o *InlineResponse20058) HasTags() bool`
+`func (o *InlineResponse20058) HasWanGoodput() bool`
 
-HasTags returns a boolean if a field has been set.
+HasWanGoodput returns a boolean if a field has been set.
 
-### GetSsid
+### GetLanGoodput
 
-`func (o *InlineResponse20058) GetSsid() string`
+`func (o *InlineResponse20058) GetLanGoodput() int32`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetLanGoodput returns the LanGoodput field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetLanGoodputOk
 
-`func (o *InlineResponse20058) GetSsidOk() (*string, bool)`
+`func (o *InlineResponse20058) GetLanGoodputOk() (*int32, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetLanGoodputOk returns a tuple with the LanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetLanGoodput
 
-`func (o *InlineResponse20058) SetSsid(v string)`
+`func (o *InlineResponse20058) SetLanGoodput(v int32)`
 
-SetSsid sets Ssid field to given value.
+SetLanGoodput sets LanGoodput field to given value.
 
-### HasSsid
+### HasLanGoodput
 
-`func (o *InlineResponse20058) HasSsid() bool`
+`func (o *InlineResponse20058) HasLanGoodput() bool`
 
-HasSsid returns a boolean if a field has been set.
+HasLanGoodput returns a boolean if a field has been set.
 
-### GetWifiMac
+### GetWanLatencyMs
 
-`func (o *InlineResponse20058) GetWifiMac() string`
+`func (o *InlineResponse20058) GetWanLatencyMs() float32`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetWanLatencyMs returns the WanLatencyMs field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetWanLatencyMsOk
 
-`func (o *InlineResponse20058) GetWifiMacOk() (*string, bool)`
+`func (o *InlineResponse20058) GetWanLatencyMsOk() (*float32, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetWanLatencyMsOk returns a tuple with the WanLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetWanLatencyMs
 
-`func (o *InlineResponse20058) SetWifiMac(v string)`
+`func (o *InlineResponse20058) SetWanLatencyMs(v float32)`
 
-SetWifiMac sets WifiMac field to given value.
+SetWanLatencyMs sets WanLatencyMs field to given value.
 
-### HasWifiMac
+### HasWanLatencyMs
 
-`func (o *InlineResponse20058) HasWifiMac() bool`
+`func (o *InlineResponse20058) HasWanLatencyMs() bool`
 
-HasWifiMac returns a boolean if a field has been set.
+HasWanLatencyMs returns a boolean if a field has been set.
 
-### GetOsName
+### GetLanLatencyMs
 
-`func (o *InlineResponse20058) GetOsName() string`
+`func (o *InlineResponse20058) GetLanLatencyMs() float32`
 
-GetOsName returns the OsName field if non-nil, zero value otherwise.
+GetLanLatencyMs returns the LanLatencyMs field if non-nil, zero value otherwise.
 
-### GetOsNameOk
+### GetLanLatencyMsOk
 
-`func (o *InlineResponse20058) GetOsNameOk() (*string, bool)`
+`func (o *InlineResponse20058) GetLanLatencyMsOk() (*float32, bool)`
 
-GetOsNameOk returns a tuple with the OsName field if it's non-nil, zero value otherwise
+GetLanLatencyMsOk returns a tuple with the LanLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOsName
+### SetLanLatencyMs
 
-`func (o *InlineResponse20058) SetOsName(v string)`
+`func (o *InlineResponse20058) SetLanLatencyMs(v float32)`
 
-SetOsName sets OsName field to given value.
+SetLanLatencyMs sets LanLatencyMs field to given value.
 
-### HasOsName
+### HasLanLatencyMs
 
-`func (o *InlineResponse20058) HasOsName() bool`
+`func (o *InlineResponse20058) HasLanLatencyMs() bool`
 
-HasOsName returns a boolean if a field has been set.
+HasLanLatencyMs returns a boolean if a field has been set.
 
-### GetSystemModel
+### GetWanLossPercent
 
-`func (o *InlineResponse20058) GetSystemModel() string`
+`func (o *InlineResponse20058) GetWanLossPercent() float32`
 
-GetSystemModel returns the SystemModel field if non-nil, zero value otherwise.
+GetWanLossPercent returns the WanLossPercent field if non-nil, zero value otherwise.
 
-### GetSystemModelOk
+### GetWanLossPercentOk
 
-`func (o *InlineResponse20058) GetSystemModelOk() (*string, bool)`
+`func (o *InlineResponse20058) GetWanLossPercentOk() (*float32, bool)`
 
-GetSystemModelOk returns a tuple with the SystemModel field if it's non-nil, zero value otherwise
+GetWanLossPercentOk returns a tuple with the WanLossPercent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSystemModel
+### SetWanLossPercent
 
-`func (o *InlineResponse20058) SetSystemModel(v string)`
+`func (o *InlineResponse20058) SetWanLossPercent(v float32)`
 
-SetSystemModel sets SystemModel field to given value.
+SetWanLossPercent sets WanLossPercent field to given value.
 
-### HasSystemModel
+### HasWanLossPercent
 
-`func (o *InlineResponse20058) HasSystemModel() bool`
+`func (o *InlineResponse20058) HasWanLossPercent() bool`
 
-HasSystemModel returns a boolean if a field has been set.
+HasWanLossPercent returns a boolean if a field has been set.
 
-### GetUuid
+### GetLanLossPercent
 
-`func (o *InlineResponse20058) GetUuid() string`
+`func (o *InlineResponse20058) GetLanLossPercent() float32`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetLanLossPercent returns the LanLossPercent field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetLanLossPercentOk
 
-`func (o *InlineResponse20058) GetUuidOk() (*string, bool)`
+`func (o *InlineResponse20058) GetLanLossPercentOk() (*float32, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetLanLossPercentOk returns a tuple with the LanLossPercent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetLanLossPercent
 
-`func (o *InlineResponse20058) SetUuid(v string)`
+`func (o *InlineResponse20058) SetLanLossPercent(v float32)`
 
-SetUuid sets Uuid field to given value.
+SetLanLossPercent sets LanLossPercent field to given value.
 
-### HasUuid
+### HasLanLossPercent
 
-`func (o *InlineResponse20058) HasUuid() bool`
+`func (o *InlineResponse20058) HasLanLossPercent() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasLanLossPercent returns a boolean if a field has been set.
 
-### GetSerialNumber
+### GetResponseDuration
 
-`func (o *InlineResponse20058) GetSerialNumber() string`
+`func (o *InlineResponse20058) GetResponseDuration() int32`
 
-GetSerialNumber returns the SerialNumber field if non-nil, zero value otherwise.
+GetResponseDuration returns the ResponseDuration field if non-nil, zero value otherwise.
 
-### GetSerialNumberOk
+### GetResponseDurationOk
 
-`func (o *InlineResponse20058) GetSerialNumberOk() (*string, bool)`
+`func (o *InlineResponse20058) GetResponseDurationOk() (*int32, bool)`
 
-GetSerialNumberOk returns a tuple with the SerialNumber field if it's non-nil, zero value otherwise
+GetResponseDurationOk returns a tuple with the ResponseDuration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerialNumber
+### SetResponseDuration
 
-`func (o *InlineResponse20058) SetSerialNumber(v string)`
+`func (o *InlineResponse20058) SetResponseDuration(v int32)`
 
-SetSerialNumber sets SerialNumber field to given value.
+SetResponseDuration sets ResponseDuration field to given value.
 
-### HasSerialNumber
+### HasResponseDuration
 
-`func (o *InlineResponse20058) HasSerialNumber() bool`
+`func (o *InlineResponse20058) HasResponseDuration() bool`
 
-HasSerialNumber returns a boolean if a field has been set.
+HasResponseDuration returns a boolean if a field has been set.
 
-### GetSerial
+### GetSent
 
-`func (o *InlineResponse20058) GetSerial() string`
+`func (o *InlineResponse20058) GetSent() int32`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSent returns the Sent field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSentOk
 
-`func (o *InlineResponse20058) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20058) GetSentOk() (*int32, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSent
 
-`func (o *InlineResponse20058) SetSerial(v string)`
+`func (o *InlineResponse20058) SetSent(v int32)`
 
-SetSerial sets Serial field to given value.
+SetSent sets Sent field to given value.
 
-### HasSerial
+### HasSent
 
-`func (o *InlineResponse20058) HasSerial() bool`
+`func (o *InlineResponse20058) HasSent() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasSent returns a boolean if a field has been set.
 
-### GetIp
+### GetRecv
 
-`func (o *InlineResponse20058) GetIp() string`
+`func (o *InlineResponse20058) GetRecv() int32`
 
-GetIp returns the Ip field if non-nil, zero value otherwise.
+GetRecv returns the Recv field if non-nil, zero value otherwise.
 
-### GetIpOk
+### GetRecvOk
 
-`func (o *InlineResponse20058) GetIpOk() (*string, bool)`
+`func (o *InlineResponse20058) GetRecvOk() (*int32, bool)`
 
-GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIp
+### SetRecv
 
-`func (o *InlineResponse20058) SetIp(v string)`
+`func (o *InlineResponse20058) SetRecv(v int32)`
 
-SetIp sets Ip field to given value.
+SetRecv sets Recv field to given value.
 
-### HasIp
+### HasRecv
 
-`func (o *InlineResponse20058) HasIp() bool`
+`func (o *InlineResponse20058) HasRecv() bool`
 
-HasIp returns a boolean if a field has been set.
+HasRecv returns a boolean if a field has been set.
 
-### GetNotes
+### GetNumClients
 
-`func (o *InlineResponse20058) GetNotes() string`
+`func (o *InlineResponse20058) GetNumClients() int32`
 
-GetNotes returns the Notes field if non-nil, zero value otherwise.
+GetNumClients returns the NumClients field if non-nil, zero value otherwise.
 
-### GetNotesOk
+### GetNumClientsOk
 
-`func (o *InlineResponse20058) GetNotesOk() (*string, bool)`
+`func (o *InlineResponse20058) GetNumClientsOk() (*int32, bool)`
 
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotes
+### SetNumClients
 
-`func (o *InlineResponse20058) SetNotes(v string)`
+`func (o *InlineResponse20058) SetNumClients(v int32)`
 
-SetNotes sets Notes field to given value.
+SetNumClients sets NumClients field to given value.
 
-### HasNotes
+### HasNumClients
 
-`func (o *InlineResponse20058) HasNotes() bool`
+`func (o *InlineResponse20058) HasNumClients() bool`
 
-HasNotes returns a boolean if a field has been set.
+HasNumClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

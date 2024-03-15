@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
-**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. An empty array will clear the rules. | [optional] 
-**IpVersion** | Pointer to **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | [optional] 
+**Name** | **string** | Name of the adaptive policy ACL | 
+**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] [default to ""]
+**Rules** | [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. | 
+**IpVersion** | **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | 
 
 ## Methods
 
 ### NewInlineObject194
 
-`func NewInlineObject194() *InlineObject194`
+`func NewInlineObject194(name string, rules []OrganizationsOrganizationIdAdaptivePolicyAclsRules1, ipVersion string, ) *InlineObject194`
 
 NewInlineObject194 instantiates a new InlineObject194 object
 This constructor will assign default values to properties that have it defined,
@@ -47,11 +47,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject194) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetDescription
 
@@ -97,11 +92,6 @@ and a boolean to check if the value has been set.
 
 SetRules sets Rules field to given value.
 
-### HasRules
-
-`func (o *InlineObject194) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
 
 ### GetIpVersion
 
@@ -122,11 +112,6 @@ and a boolean to check if the value has been set.
 
 SetIpVersion sets IpVersion field to given value.
 
-### HasIpVersion
-
-`func (o *InlineObject194) HasIpVersion() bool`
-
-HasIpVersion returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

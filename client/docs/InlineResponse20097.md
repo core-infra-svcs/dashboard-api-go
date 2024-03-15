@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
+**Serial** | Pointer to **string** | Switch serial. | [optional] 
+**Name** | Pointer to **string** | Switch name. | [optional] 
+**Url** | Pointer to **string** | Url link to switch. | [optional] 
+**SupportsInspection** | Pointer to **bool** | Whether this switch supports Dynamic ARP Inspection. | [optional] 
+**HasTrustedPort** | Pointer to **bool** | Whether this switch has a trusted DAI port. Always false if supportsInspection is false. | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse20097WithDefaults instantiates a new InlineResponse20097 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetSerial
 
-`func (o *InlineResponse20097) GetBroadcastThreshold() int32`
+`func (o *InlineResponse20097) GetSerial() string`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetSerialOk
 
-`func (o *InlineResponse20097) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse20097) GetSerialOk() (*string, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetSerial
 
-`func (o *InlineResponse20097) SetBroadcastThreshold(v int32)`
+`func (o *InlineResponse20097) SetSerial(v string)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetSerial sets Serial field to given value.
 
-### HasBroadcastThreshold
+### HasSerial
 
-`func (o *InlineResponse20097) HasBroadcastThreshold() bool`
+`func (o *InlineResponse20097) HasSerial() bool`
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetMulticastThreshold
+### GetName
 
-`func (o *InlineResponse20097) GetMulticastThreshold() int32`
+`func (o *InlineResponse20097) GetName() string`
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMulticastThresholdOk
+### GetNameOk
 
-`func (o *InlineResponse20097) GetMulticastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse20097) GetNameOk() (*string, bool)`
 
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetName
 
-`func (o *InlineResponse20097) SetMulticastThreshold(v int32)`
+`func (o *InlineResponse20097) SetName(v string)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetName sets Name field to given value.
 
-### HasMulticastThreshold
+### HasName
 
-`func (o *InlineResponse20097) HasMulticastThreshold() bool`
+`func (o *InlineResponse20097) HasName() bool`
 
-HasMulticastThreshold returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUnknownUnicastThreshold
+### GetUrl
 
-`func (o *InlineResponse20097) GetUnknownUnicastThreshold() int32`
+`func (o *InlineResponse20097) GetUrl() string`
 
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetUnknownUnicastThresholdOk
+### GetUrlOk
 
-`func (o *InlineResponse20097) GetUnknownUnicastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse20097) GetUrlOk() (*string, bool)`
 
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnknownUnicastThreshold
+### SetUrl
 
-`func (o *InlineResponse20097) SetUnknownUnicastThreshold(v int32)`
+`func (o *InlineResponse20097) SetUrl(v string)`
 
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+SetUrl sets Url field to given value.
 
-### HasUnknownUnicastThreshold
+### HasUrl
 
-`func (o *InlineResponse20097) HasUnknownUnicastThreshold() bool`
+`func (o *InlineResponse20097) HasUrl() bool`
 
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetSupportsInspection
+
+`func (o *InlineResponse20097) GetSupportsInspection() bool`
+
+GetSupportsInspection returns the SupportsInspection field if non-nil, zero value otherwise.
+
+### GetSupportsInspectionOk
+
+`func (o *InlineResponse20097) GetSupportsInspectionOk() (*bool, bool)`
+
+GetSupportsInspectionOk returns a tuple with the SupportsInspection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSupportsInspection
+
+`func (o *InlineResponse20097) SetSupportsInspection(v bool)`
+
+SetSupportsInspection sets SupportsInspection field to given value.
+
+### HasSupportsInspection
+
+`func (o *InlineResponse20097) HasSupportsInspection() bool`
+
+HasSupportsInspection returns a boolean if a field has been set.
+
+### GetHasTrustedPort
+
+`func (o *InlineResponse20097) GetHasTrustedPort() bool`
+
+GetHasTrustedPort returns the HasTrustedPort field if non-nil, zero value otherwise.
+
+### GetHasTrustedPortOk
+
+`func (o *InlineResponse20097) GetHasTrustedPortOk() (*bool, bool)`
+
+GetHasTrustedPortOk returns a tuple with the HasTrustedPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHasTrustedPort
+
+`func (o *InlineResponse20097) SetHasTrustedPort(v bool)`
+
+SetHasTrustedPort sets HasTrustedPort field to given value.
+
+### HasHasTrustedPort
+
+`func (o *InlineResponse20097) HasHasTrustedPort() bool`
+
+HasHasTrustedPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

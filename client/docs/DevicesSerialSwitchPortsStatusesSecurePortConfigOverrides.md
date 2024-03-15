@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Type** | Pointer to **string** | The type of the  (&#39;trunk&#39; or &#39;access&#39;). | [optional] 
-**Vlan** | Pointer to **int32** | The VLAN of the . A null value will clear the value set for trunk ports. | [optional] 
+**Vlan** | Pointer to **int32** | The VLAN of the . For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports. | [optional] 
 **VoiceVlan** | Pointer to **int32** | The voice VLAN of the . Only applicable to access ports. | [optional] 
 **AllowedVlans** | Pointer to **string** | The VLANs allowed on the . Only applicable to trunk ports. | [optional] 
 

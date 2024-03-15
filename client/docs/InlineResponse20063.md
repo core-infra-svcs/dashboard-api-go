@@ -4,13 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | Pointer to **[]string** | The Meraki Ids of the set of endpoints. | [optional] 
+**ProfileId** | Pointer to **string** | ID of the sensor alert profile. | [optional] 
+**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
+**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule**](NetworksNetworkIdSensorAlertsProfilesSchedule.md) |  | [optional] 
+**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
+**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20063
 
-`func NewInlineResponse20063() *InlineResponse20063`
+`func NewInlineResponse20063(conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineResponse20063`
 
 NewInlineResponse20063 instantiates a new InlineResponse20063 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +30,150 @@ NewInlineResponse20063WithDefaults instantiates a new InlineResponse20063 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIds
+### GetProfileId
 
-`func (o *InlineResponse20063) GetIds() []string`
+`func (o *InlineResponse20063) GetProfileId() string`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetProfileIdOk
 
-`func (o *InlineResponse20063) GetIdsOk() (*[]string, bool)`
+`func (o *InlineResponse20063) GetProfileIdOk() (*string, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetProfileId
 
-`func (o *InlineResponse20063) SetIds(v []string)`
+`func (o *InlineResponse20063) SetProfileId(v string)`
 
-SetIds sets Ids field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasIds
+### HasProfileId
 
-`func (o *InlineResponse20063) HasIds() bool`
+`func (o *InlineResponse20063) HasProfileId() bool`
 
-HasIds returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse20063) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse20063) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse20063) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse20063) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetSchedule
+
+`func (o *InlineResponse20063) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule`
+
+GetSchedule returns the Schedule field if non-nil, zero value otherwise.
+
+### GetScheduleOk
+
+`func (o *InlineResponse20063) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule, bool)`
+
+GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSchedule
+
+`func (o *InlineResponse20063) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule)`
+
+SetSchedule sets Schedule field to given value.
+
+### HasSchedule
+
+`func (o *InlineResponse20063) HasSchedule() bool`
+
+HasSchedule returns a boolean if a field has been set.
+
+### GetConditions
+
+`func (o *InlineResponse20063) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
+
+GetConditions returns the Conditions field if non-nil, zero value otherwise.
+
+### GetConditionsOk
+
+`func (o *InlineResponse20063) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
+
+GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConditions
+
+`func (o *InlineResponse20063) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
+
+SetConditions sets Conditions field to given value.
+
+
+### GetRecipients
+
+`func (o *InlineResponse20063) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+
+### GetRecipientsOk
+
+`func (o *InlineResponse20063) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecipients
+
+`func (o *InlineResponse20063) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+
+SetRecipients sets Recipients field to given value.
+
+### HasRecipients
+
+`func (o *InlineResponse20063) HasRecipients() bool`
+
+HasRecipients returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse20063) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse20063) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse20063) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse20063) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

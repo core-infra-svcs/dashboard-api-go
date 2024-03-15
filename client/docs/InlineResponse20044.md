@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Products** | Pointer to [**InlineResponse20044Products**](InlineResponse20044Products.md) |  | [optional] 
-**Stages** | Pointer to [**[]InlineResponse20044Stages**](InlineResponse20044Stages.md) | The ordered stages in the network | [optional] 
-**Reasons** | Pointer to [**[]InlineResponse20043Reasons**](InlineResponse20043Reasons.md) | Reasons for the rollback | [optional] 
+**Counts** | Pointer to [**InlineResponse20044Counts**](InlineResponse20044Counts.md) |  | [optional] 
+**Usages** | Pointer to [**InlineResponse20044Usages**](InlineResponse20044Usages.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse20044WithDefaults instantiates a new InlineResponse20044 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProducts
+### GetCounts
 
-`func (o *InlineResponse20044) GetProducts() InlineResponse20044Products`
+`func (o *InlineResponse20044) GetCounts() InlineResponse20044Counts`
 
-GetProducts returns the Products field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetProductsOk
+### GetCountsOk
 
-`func (o *InlineResponse20044) GetProductsOk() (*InlineResponse20044Products, bool)`
+`func (o *InlineResponse20044) GetCountsOk() (*InlineResponse20044Counts, bool)`
 
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProducts
+### SetCounts
 
-`func (o *InlineResponse20044) SetProducts(v InlineResponse20044Products)`
+`func (o *InlineResponse20044) SetCounts(v InlineResponse20044Counts)`
 
-SetProducts sets Products field to given value.
+SetCounts sets Counts field to given value.
 
-### HasProducts
+### HasCounts
 
-`func (o *InlineResponse20044) HasProducts() bool`
+`func (o *InlineResponse20044) HasCounts() bool`
 
-HasProducts returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
-### GetStages
+### GetUsages
 
-`func (o *InlineResponse20044) GetStages() []InlineResponse20044Stages`
+`func (o *InlineResponse20044) GetUsages() InlineResponse20044Usages`
 
-GetStages returns the Stages field if non-nil, zero value otherwise.
+GetUsages returns the Usages field if non-nil, zero value otherwise.
 
-### GetStagesOk
+### GetUsagesOk
 
-`func (o *InlineResponse20044) GetStagesOk() (*[]InlineResponse20044Stages, bool)`
+`func (o *InlineResponse20044) GetUsagesOk() (*InlineResponse20044Usages, bool)`
 
-GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
+GetUsagesOk returns a tuple with the Usages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStages
+### SetUsages
 
-`func (o *InlineResponse20044) SetStages(v []InlineResponse20044Stages)`
+`func (o *InlineResponse20044) SetUsages(v InlineResponse20044Usages)`
 
-SetStages sets Stages field to given value.
+SetUsages sets Usages field to given value.
 
-### HasStages
+### HasUsages
 
-`func (o *InlineResponse20044) HasStages() bool`
+`func (o *InlineResponse20044) HasUsages() bool`
 
-HasStages returns a boolean if a field has been set.
-
-### GetReasons
-
-`func (o *InlineResponse20044) GetReasons() []InlineResponse20043Reasons`
-
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
-
-### GetReasonsOk
-
-`func (o *InlineResponse20044) GetReasonsOk() (*[]InlineResponse20043Reasons, bool)`
-
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReasons
-
-`func (o *InlineResponse20044) SetReasons(v []InlineResponse20043Reasons)`
-
-SetReasons sets Reasons field to given value.
-
-### HasReasons
-
-`func (o *InlineResponse20044) HasReasons() bool`
-
-HasReasons returns a boolean if a field has been set.
+HasUsages returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

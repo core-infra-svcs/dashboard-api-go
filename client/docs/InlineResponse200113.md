@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**AvgLatencyMs** | Pointer to **int32** | Average latency in milliseconds | [optional] 
+**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
+**Plans** | Pointer to [**[]InlineResponse200113Plans**](InlineResponse200113Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200113WithDefaults instantiates a new InlineResponse200113 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetCurrency
 
-`func (o *InlineResponse200113) GetStartTs() time.Time`
+`func (o *InlineResponse200113) GetCurrency() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetCurrency returns the Currency field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetCurrencyOk
 
-`func (o *InlineResponse200113) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200113) GetCurrencyOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetCurrency
 
-`func (o *InlineResponse200113) SetStartTs(v time.Time)`
+`func (o *InlineResponse200113) SetCurrency(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetCurrency sets Currency field to given value.
 
-### HasStartTs
+### HasCurrency
 
-`func (o *InlineResponse200113) HasStartTs() bool`
+`func (o *InlineResponse200113) HasCurrency() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasCurrency returns a boolean if a field has been set.
 
-### GetEndTs
+### GetPlans
 
-`func (o *InlineResponse200113) GetEndTs() time.Time`
+`func (o *InlineResponse200113) GetPlans() []InlineResponse200113Plans`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetPlans returns the Plans field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetPlansOk
 
-`func (o *InlineResponse200113) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200113) GetPlansOk() (*[]InlineResponse200113Plans, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetPlans
 
-`func (o *InlineResponse200113) SetEndTs(v time.Time)`
+`func (o *InlineResponse200113) SetPlans(v []InlineResponse200113Plans)`
 
-SetEndTs sets EndTs field to given value.
+SetPlans sets Plans field to given value.
 
-### HasEndTs
+### HasPlans
 
-`func (o *InlineResponse200113) HasEndTs() bool`
+`func (o *InlineResponse200113) HasPlans() bool`
 
-HasEndTs returns a boolean if a field has been set.
-
-### GetAvgLatencyMs
-
-`func (o *InlineResponse200113) GetAvgLatencyMs() int32`
-
-GetAvgLatencyMs returns the AvgLatencyMs field if non-nil, zero value otherwise.
-
-### GetAvgLatencyMsOk
-
-`func (o *InlineResponse200113) GetAvgLatencyMsOk() (*int32, bool)`
-
-GetAvgLatencyMsOk returns a tuple with the AvgLatencyMs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAvgLatencyMs
-
-`func (o *InlineResponse200113) SetAvgLatencyMs(v int32)`
-
-SetAvgLatencyMs sets AvgLatencyMs field to given value.
-
-### HasAvgLatencyMs
-
-`func (o *InlineResponse200113) HasAvgLatencyMs() bool`
-
-HasAvgLatencyMs returns a boolean if a field has been set.
+HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

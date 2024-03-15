@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
-**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
-**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
-**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
-**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**EslEnabled** | Pointer to **bool** | Whether ESL is enabled on this network. | [optional] 
+**DhcpMode** | Pointer to **string** | The DHCP mode options for the switch stack interface (&#39;dhcpDisabled&#39;, &#39;dhcpRelay&#39; or &#39;dhcpServer&#39;) | [optional] 
+**DhcpLeaseTime** | Pointer to **string** | The DHCP lease time config for the dhcp server running on the switch stack interface (&#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39;) | [optional] 
+**DnsNameserversOption** | Pointer to **string** | The DHCP name server option for the dhcp server running on the switch stack interface (&#39;googlePublicDns&#39;, &#39;openDns&#39; or &#39;custom&#39;) | [optional] 
+**DnsCustomNameservers** | Pointer to **[]string** | The DHCP name server IPs when DHCP name server option is &#39;custom&#39; | [optional] 
+**BootOptionsEnabled** | Pointer to **bool** | Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface | [optional] 
+**BootNextServer** | Pointer to **string** | The PXE boot server IP for the DHCP server running on the switch stack interface | [optional] 
+**BootFileName** | Pointer to **string** | The PXE boot server file name for the DHCP server running on the switch stack interface | [optional] 
+**DhcpOptions** | Pointer to [**[]InlineResponse200105DhcpOptions**](InlineResponse200105DhcpOptions.md) | Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface | [optional] 
+**ReservedIpRanges** | Pointer to [**[]InlineResponse200105ReservedIpRanges**](InlineResponse200105ReservedIpRanges.md) | Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface | [optional] 
+**FixedIpAssignments** | Pointer to [**[]InlineResponse200105FixedIpAssignments**](InlineResponse200105FixedIpAssignments.md) | Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface | [optional] 
 
 ## Methods
 
@@ -31,180 +34,255 @@ NewInlineResponse200105WithDefaults instantiates a new InlineResponse200105 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScanningEnabled
+### GetDhcpMode
 
-`func (o *InlineResponse200105) GetScanningEnabled() bool`
+`func (o *InlineResponse200105) GetDhcpMode() string`
 
-GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
+GetDhcpMode returns the DhcpMode field if non-nil, zero value otherwise.
 
-### GetScanningEnabledOk
+### GetDhcpModeOk
 
-`func (o *InlineResponse200105) GetScanningEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200105) GetDhcpModeOk() (*string, bool)`
 
-GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
+GetDhcpModeOk returns a tuple with the DhcpMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScanningEnabled
+### SetDhcpMode
 
-`func (o *InlineResponse200105) SetScanningEnabled(v bool)`
+`func (o *InlineResponse200105) SetDhcpMode(v string)`
 
-SetScanningEnabled sets ScanningEnabled field to given value.
+SetDhcpMode sets DhcpMode field to given value.
 
-### HasScanningEnabled
+### HasDhcpMode
 
-`func (o *InlineResponse200105) HasScanningEnabled() bool`
+`func (o *InlineResponse200105) HasDhcpMode() bool`
 
-HasScanningEnabled returns a boolean if a field has been set.
+HasDhcpMode returns a boolean if a field has been set.
 
-### GetAdvertisingEnabled
+### GetDhcpLeaseTime
 
-`func (o *InlineResponse200105) GetAdvertisingEnabled() bool`
+`func (o *InlineResponse200105) GetDhcpLeaseTime() string`
 
-GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
+GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
 
-### GetAdvertisingEnabledOk
+### GetDhcpLeaseTimeOk
 
-`func (o *InlineResponse200105) GetAdvertisingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200105) GetDhcpLeaseTimeOk() (*string, bool)`
 
-GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
+GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertisingEnabled
+### SetDhcpLeaseTime
 
-`func (o *InlineResponse200105) SetAdvertisingEnabled(v bool)`
+`func (o *InlineResponse200105) SetDhcpLeaseTime(v string)`
 
-SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
+SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
 
-### HasAdvertisingEnabled
+### HasDhcpLeaseTime
 
-`func (o *InlineResponse200105) HasAdvertisingEnabled() bool`
+`func (o *InlineResponse200105) HasDhcpLeaseTime() bool`
 
-HasAdvertisingEnabled returns a boolean if a field has been set.
+HasDhcpLeaseTime returns a boolean if a field has been set.
 
-### GetUuid
+### GetDnsNameserversOption
 
-`func (o *InlineResponse200105) GetUuid() string`
+`func (o *InlineResponse200105) GetDnsNameserversOption() string`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetDnsNameserversOption returns the DnsNameserversOption field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetDnsNameserversOptionOk
 
-`func (o *InlineResponse200105) GetUuidOk() (*string, bool)`
+`func (o *InlineResponse200105) GetDnsNameserversOptionOk() (*string, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetDnsNameserversOptionOk returns a tuple with the DnsNameserversOption field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetDnsNameserversOption
 
-`func (o *InlineResponse200105) SetUuid(v string)`
+`func (o *InlineResponse200105) SetDnsNameserversOption(v string)`
 
-SetUuid sets Uuid field to given value.
+SetDnsNameserversOption sets DnsNameserversOption field to given value.
 
-### HasUuid
+### HasDnsNameserversOption
 
-`func (o *InlineResponse200105) HasUuid() bool`
+`func (o *InlineResponse200105) HasDnsNameserversOption() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasDnsNameserversOption returns a boolean if a field has been set.
 
-### GetMajorMinorAssignmentMode
+### GetDnsCustomNameservers
 
-`func (o *InlineResponse200105) GetMajorMinorAssignmentMode() string`
+`func (o *InlineResponse200105) GetDnsCustomNameservers() []string`
 
-GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
+GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
 
-### GetMajorMinorAssignmentModeOk
+### GetDnsCustomNameserversOk
 
-`func (o *InlineResponse200105) GetMajorMinorAssignmentModeOk() (*string, bool)`
+`func (o *InlineResponse200105) GetDnsCustomNameserversOk() (*[]string, bool)`
 
-GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
+GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajorMinorAssignmentMode
+### SetDnsCustomNameservers
 
-`func (o *InlineResponse200105) SetMajorMinorAssignmentMode(v string)`
+`func (o *InlineResponse200105) SetDnsCustomNameservers(v []string)`
 
-SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
+SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
 
-### HasMajorMinorAssignmentMode
+### HasDnsCustomNameservers
 
-`func (o *InlineResponse200105) HasMajorMinorAssignmentMode() bool`
+`func (o *InlineResponse200105) HasDnsCustomNameservers() bool`
 
-HasMajorMinorAssignmentMode returns a boolean if a field has been set.
+HasDnsCustomNameservers returns a boolean if a field has been set.
 
-### GetMajor
+### GetBootOptionsEnabled
 
-`func (o *InlineResponse200105) GetMajor() int32`
+`func (o *InlineResponse200105) GetBootOptionsEnabled() bool`
 
-GetMajor returns the Major field if non-nil, zero value otherwise.
+GetBootOptionsEnabled returns the BootOptionsEnabled field if non-nil, zero value otherwise.
 
-### GetMajorOk
+### GetBootOptionsEnabledOk
 
-`func (o *InlineResponse200105) GetMajorOk() (*int32, bool)`
+`func (o *InlineResponse200105) GetBootOptionsEnabledOk() (*bool, bool)`
 
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+GetBootOptionsEnabledOk returns a tuple with the BootOptionsEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajor
+### SetBootOptionsEnabled
 
-`func (o *InlineResponse200105) SetMajor(v int32)`
+`func (o *InlineResponse200105) SetBootOptionsEnabled(v bool)`
 
-SetMajor sets Major field to given value.
+SetBootOptionsEnabled sets BootOptionsEnabled field to given value.
 
-### HasMajor
+### HasBootOptionsEnabled
 
-`func (o *InlineResponse200105) HasMajor() bool`
+`func (o *InlineResponse200105) HasBootOptionsEnabled() bool`
 
-HasMajor returns a boolean if a field has been set.
+HasBootOptionsEnabled returns a boolean if a field has been set.
 
-### GetMinor
+### GetBootNextServer
 
-`func (o *InlineResponse200105) GetMinor() int32`
+`func (o *InlineResponse200105) GetBootNextServer() string`
 
-GetMinor returns the Minor field if non-nil, zero value otherwise.
+GetBootNextServer returns the BootNextServer field if non-nil, zero value otherwise.
 
-### GetMinorOk
+### GetBootNextServerOk
 
-`func (o *InlineResponse200105) GetMinorOk() (*int32, bool)`
+`func (o *InlineResponse200105) GetBootNextServerOk() (*string, bool)`
 
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+GetBootNextServerOk returns a tuple with the BootNextServer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMinor
+### SetBootNextServer
 
-`func (o *InlineResponse200105) SetMinor(v int32)`
+`func (o *InlineResponse200105) SetBootNextServer(v string)`
 
-SetMinor sets Minor field to given value.
+SetBootNextServer sets BootNextServer field to given value.
 
-### HasMinor
+### HasBootNextServer
 
-`func (o *InlineResponse200105) HasMinor() bool`
+`func (o *InlineResponse200105) HasBootNextServer() bool`
 
-HasMinor returns a boolean if a field has been set.
+HasBootNextServer returns a boolean if a field has been set.
 
-### GetEslEnabled
+### GetBootFileName
 
-`func (o *InlineResponse200105) GetEslEnabled() bool`
+`func (o *InlineResponse200105) GetBootFileName() string`
 
-GetEslEnabled returns the EslEnabled field if non-nil, zero value otherwise.
+GetBootFileName returns the BootFileName field if non-nil, zero value otherwise.
 
-### GetEslEnabledOk
+### GetBootFileNameOk
 
-`func (o *InlineResponse200105) GetEslEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200105) GetBootFileNameOk() (*string, bool)`
 
-GetEslEnabledOk returns a tuple with the EslEnabled field if it's non-nil, zero value otherwise
+GetBootFileNameOk returns a tuple with the BootFileName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEslEnabled
+### SetBootFileName
 
-`func (o *InlineResponse200105) SetEslEnabled(v bool)`
+`func (o *InlineResponse200105) SetBootFileName(v string)`
 
-SetEslEnabled sets EslEnabled field to given value.
+SetBootFileName sets BootFileName field to given value.
 
-### HasEslEnabled
+### HasBootFileName
 
-`func (o *InlineResponse200105) HasEslEnabled() bool`
+`func (o *InlineResponse200105) HasBootFileName() bool`
 
-HasEslEnabled returns a boolean if a field has been set.
+HasBootFileName returns a boolean if a field has been set.
+
+### GetDhcpOptions
+
+`func (o *InlineResponse200105) GetDhcpOptions() []InlineResponse200105DhcpOptions`
+
+GetDhcpOptions returns the DhcpOptions field if non-nil, zero value otherwise.
+
+### GetDhcpOptionsOk
+
+`func (o *InlineResponse200105) GetDhcpOptionsOk() (*[]InlineResponse200105DhcpOptions, bool)`
+
+GetDhcpOptionsOk returns a tuple with the DhcpOptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpOptions
+
+`func (o *InlineResponse200105) SetDhcpOptions(v []InlineResponse200105DhcpOptions)`
+
+SetDhcpOptions sets DhcpOptions field to given value.
+
+### HasDhcpOptions
+
+`func (o *InlineResponse200105) HasDhcpOptions() bool`
+
+HasDhcpOptions returns a boolean if a field has been set.
+
+### GetReservedIpRanges
+
+`func (o *InlineResponse200105) GetReservedIpRanges() []InlineResponse200105ReservedIpRanges`
+
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+
+### GetReservedIpRangesOk
+
+`func (o *InlineResponse200105) GetReservedIpRangesOk() (*[]InlineResponse200105ReservedIpRanges, bool)`
+
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReservedIpRanges
+
+`func (o *InlineResponse200105) SetReservedIpRanges(v []InlineResponse200105ReservedIpRanges)`
+
+SetReservedIpRanges sets ReservedIpRanges field to given value.
+
+### HasReservedIpRanges
+
+`func (o *InlineResponse200105) HasReservedIpRanges() bool`
+
+HasReservedIpRanges returns a boolean if a field has been set.
+
+### GetFixedIpAssignments
+
+`func (o *InlineResponse200105) GetFixedIpAssignments() []InlineResponse200105FixedIpAssignments`
+
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+
+### GetFixedIpAssignmentsOk
+
+`func (o *InlineResponse200105) GetFixedIpAssignmentsOk() (*[]InlineResponse200105FixedIpAssignments, bool)`
+
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFixedIpAssignments
+
+`func (o *InlineResponse200105) SetFixedIpAssignments(v []InlineResponse200105FixedIpAssignments)`
+
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
+
+### HasFixedIpAssignments
+
+`func (o *InlineResponse200105) HasFixedIpAssignments() bool`
+
+HasFixedIpAssignments returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

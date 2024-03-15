@@ -6,8 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
 **EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
-**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
+**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
 
 ## Methods
 
@@ -78,55 +77,30 @@ SetEndTs sets EndTs field to given value.
 
 HasEndTs returns a boolean if a field has been set.
 
-### GetSnr
+### GetClientCount
 
-`func (o *InlineResponse200116) GetSnr() int32`
+`func (o *InlineResponse200116) GetClientCount() int32`
 
-GetSnr returns the Snr field if non-nil, zero value otherwise.
+GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
 
-### GetSnrOk
+### GetClientCountOk
 
-`func (o *InlineResponse200116) GetSnrOk() (*int32, bool)`
+`func (o *InlineResponse200116) GetClientCountOk() (*int32, bool)`
 
-GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
+GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSnr
+### SetClientCount
 
-`func (o *InlineResponse200116) SetSnr(v int32)`
+`func (o *InlineResponse200116) SetClientCount(v int32)`
 
-SetSnr sets Snr field to given value.
+SetClientCount sets ClientCount field to given value.
 
-### HasSnr
+### HasClientCount
 
-`func (o *InlineResponse200116) HasSnr() bool`
+`func (o *InlineResponse200116) HasClientCount() bool`
 
-HasSnr returns a boolean if a field has been set.
-
-### GetRssi
-
-`func (o *InlineResponse200116) GetRssi() int32`
-
-GetRssi returns the Rssi field if non-nil, zero value otherwise.
-
-### GetRssiOk
-
-`func (o *InlineResponse200116) GetRssiOk() (*int32, bool)`
-
-GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRssi
-
-`func (o *InlineResponse200116) SetRssi(v int32)`
-
-SetRssi sets Rssi field to given value.
-
-### HasRssi
-
-`func (o *InlineResponse200116) HasRssi() bool`
-
-HasRssi returns a boolean if a field has been set.
+HasClientCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

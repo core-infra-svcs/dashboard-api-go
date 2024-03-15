@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BandwidthLimits** | Pointer to [**InlineResponse20031BandwidthLimits**](InlineResponse20031BandwidthLimits.md) |  | [optional] 
+**Assigned** | Pointer to [**[]InlineResponse20031Assigned**](InlineResponse20031Assigned.md) | RF Profiles | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20031WithDefaults instantiates a new InlineResponse20031 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBandwidthLimits
+### GetAssigned
 
-`func (o *InlineResponse20031) GetBandwidthLimits() InlineResponse20031BandwidthLimits`
+`func (o *InlineResponse20031) GetAssigned() []InlineResponse20031Assigned`
 
-GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
 
-### GetBandwidthLimitsOk
+### GetAssignedOk
 
-`func (o *InlineResponse20031) GetBandwidthLimitsOk() (*InlineResponse20031BandwidthLimits, bool)`
+`func (o *InlineResponse20031) GetAssignedOk() (*[]InlineResponse20031Assigned, bool)`
 
-GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBandwidthLimits
+### SetAssigned
 
-`func (o *InlineResponse20031) SetBandwidthLimits(v InlineResponse20031BandwidthLimits)`
+`func (o *InlineResponse20031) SetAssigned(v []InlineResponse20031Assigned)`
 
-SetBandwidthLimits sets BandwidthLimits field to given value.
+SetAssigned sets Assigned field to given value.
 
-### HasBandwidthLimits
+### HasAssigned
 
-`func (o *InlineResponse20031) HasBandwidthLimits() bool`
+`func (o *InlineResponse20031) HasAssigned() bool`
 
-HasBandwidthLimits returns a boolean if a field has been set.
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

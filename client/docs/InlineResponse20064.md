@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The Meraki Id of the devices. | [optional] 
+**MqttBrokerId** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
+**Enabled** | Pointer to **bool** | Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse20064WithDefaults instantiates a new InlineResponse20064 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetMqttBrokerId
 
-`func (o *InlineResponse20064) GetId() string`
+`func (o *InlineResponse20064) GetMqttBrokerId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetMqttBrokerIdOk
 
-`func (o *InlineResponse20064) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20064) GetMqttBrokerIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetMqttBrokerId
 
-`func (o *InlineResponse20064) SetId(v string)`
+`func (o *InlineResponse20064) SetMqttBrokerId(v string)`
 
-SetId sets Id field to given value.
+SetMqttBrokerId sets MqttBrokerId field to given value.
 
-### HasId
+### HasMqttBrokerId
 
-`func (o *InlineResponse20064) HasId() bool`
+`func (o *InlineResponse20064) HasMqttBrokerId() bool`
 
-HasId returns a boolean if a field has been set.
+HasMqttBrokerId returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse20064) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse20064) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse20064) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse20064) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

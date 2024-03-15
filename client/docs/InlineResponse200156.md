@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Serial** | Pointer to **string** | Serial of MX device | [optional] 
-**Uplink** | Pointer to **string** | Uplink interface (wan1, wan2, or cellular) | [optional] 
-**Ip** | Pointer to **string** | IP address of uplink | [optional] 
-**TimeSeries** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries**](OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries.md) | Loss and latency timeseries data | [optional] 
+**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
+**Name** | Pointer to **string** | Switch template name | [optional] 
+**Model** | Pointer to **string** | Switch model | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200156WithDefaults instantiates a new InlineResponse200156 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetSwitchProfileId
 
-`func (o *InlineResponse200156) GetNetworkId() string`
+`func (o *InlineResponse200156) GetSwitchProfileId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetSwitchProfileIdOk
 
-`func (o *InlineResponse200156) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200156) GetSwitchProfileIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetSwitchProfileId
 
-`func (o *InlineResponse200156) SetNetworkId(v string)`
+`func (o *InlineResponse200156) SetSwitchProfileId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetSwitchProfileId sets SwitchProfileId field to given value.
 
-### HasNetworkId
+### HasSwitchProfileId
 
-`func (o *InlineResponse200156) HasNetworkId() bool`
+`func (o *InlineResponse200156) HasSwitchProfileId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasSwitchProfileId returns a boolean if a field has been set.
 
-### GetSerial
+### GetName
 
-`func (o *InlineResponse200156) GetSerial() string`
+`func (o *InlineResponse200156) GetName() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNameOk
 
-`func (o *InlineResponse200156) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200156) GetNameOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetName
 
-`func (o *InlineResponse200156) SetSerial(v string)`
+`func (o *InlineResponse200156) SetName(v string)`
 
-SetSerial sets Serial field to given value.
+SetName sets Name field to given value.
 
-### HasSerial
+### HasName
 
-`func (o *InlineResponse200156) HasSerial() bool`
+`func (o *InlineResponse200156) HasName() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUplink
+### GetModel
 
-`func (o *InlineResponse200156) GetUplink() string`
+`func (o *InlineResponse200156) GetModel() string`
 
-GetUplink returns the Uplink field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetUplinkOk
+### GetModelOk
 
-`func (o *InlineResponse200156) GetUplinkOk() (*string, bool)`
+`func (o *InlineResponse200156) GetModelOk() (*string, bool)`
 
-GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplink
+### SetModel
 
-`func (o *InlineResponse200156) SetUplink(v string)`
+`func (o *InlineResponse200156) SetModel(v string)`
 
-SetUplink sets Uplink field to given value.
+SetModel sets Model field to given value.
 
-### HasUplink
+### HasModel
 
-`func (o *InlineResponse200156) HasUplink() bool`
+`func (o *InlineResponse200156) HasModel() bool`
 
-HasUplink returns a boolean if a field has been set.
-
-### GetIp
-
-`func (o *InlineResponse200156) GetIp() string`
-
-GetIp returns the Ip field if non-nil, zero value otherwise.
-
-### GetIpOk
-
-`func (o *InlineResponse200156) GetIpOk() (*string, bool)`
-
-GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIp
-
-`func (o *InlineResponse200156) SetIp(v string)`
-
-SetIp sets Ip field to given value.
-
-### HasIp
-
-`func (o *InlineResponse200156) HasIp() bool`
-
-HasIp returns a boolean if a field has been set.
-
-### GetTimeSeries
-
-`func (o *InlineResponse200156) GetTimeSeries() []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries`
-
-GetTimeSeries returns the TimeSeries field if non-nil, zero value otherwise.
-
-### GetTimeSeriesOk
-
-`func (o *InlineResponse200156) GetTimeSeriesOk() (*[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries, bool)`
-
-GetTimeSeriesOk returns a tuple with the TimeSeries field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeSeries
-
-`func (o *InlineResponse200156) SetTimeSeries(v []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries)`
-
-SetTimeSeries sets TimeSeries field to given value.
-
-### HasTimeSeries
-
-`func (o *InlineResponse200156) HasTimeSeries() bool`
-
-HasTimeSeries returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

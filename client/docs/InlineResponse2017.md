@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | List of updated AP serials | [optional] 
-**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
+**Id** | Pointer to **string** | Webhook delivery identifier | [optional] 
+**Url** | Pointer to **string** | URL where the webhook was delivered | [optional] 
+**Status** | Pointer to **string** | Current status of the webhook delivery | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse2017WithDefaults instantiates a new InlineResponse2017 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetId
 
-`func (o *InlineResponse2017) GetSerials() []string`
+`func (o *InlineResponse2017) GetId() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetIdOk
 
-`func (o *InlineResponse2017) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse2017) GetIdOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetId
 
-`func (o *InlineResponse2017) SetSerials(v []string)`
+`func (o *InlineResponse2017) SetId(v string)`
 
-SetSerials sets Serials field to given value.
+SetId sets Id field to given value.
 
-### HasSerials
+### HasId
 
-`func (o *InlineResponse2017) HasSerials() bool`
+`func (o *InlineResponse2017) HasId() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetProfileId
+### GetUrl
 
-`func (o *InlineResponse2017) GetProfileId() string`
+`func (o *InlineResponse2017) GetUrl() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetUrlOk
 
-`func (o *InlineResponse2017) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse2017) GetUrlOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetUrl
 
-`func (o *InlineResponse2017) SetProfileId(v string)`
+`func (o *InlineResponse2017) SetUrl(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetUrl sets Url field to given value.
 
-### HasProfileId
+### HasUrl
 
-`func (o *InlineResponse2017) HasProfileId() bool`
+`func (o *InlineResponse2017) HasUrl() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse2017) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse2017) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse2017) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse2017) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

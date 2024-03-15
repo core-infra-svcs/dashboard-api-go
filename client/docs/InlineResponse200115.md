@@ -4,13 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MeshingEnabled** | Pointer to **bool** | Toggle for enabling or disabling meshing in a network | [optional] 
-**Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
-**LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
-**UpgradeStrategy** | Pointer to **string** | The upgrade strategy to apply to the network. Must be one of &#39;minimizeUpgradeTime&#39; or &#39;minimizeClientDowntime&#39;. Requires firmware version MR 26.8 or higher&#39; | [optional] 
-**LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
-**NamedVlans** | Pointer to [**InlineResponse200115NamedVlans**](InlineResponse200115NamedVlans.md) |  | [optional] 
-**RegulatoryDomain** | Pointer to [**InlineResponse200115RegulatoryDomain**](InlineResponse200115RegulatoryDomain.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
+**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
+**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
 
 ## Methods
 
@@ -31,180 +29,130 @@ NewInlineResponse200115WithDefaults instantiates a new InlineResponse200115 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMeshingEnabled
+### GetStartTs
 
-`func (o *InlineResponse200115) GetMeshingEnabled() bool`
+`func (o *InlineResponse200115) GetStartTs() time.Time`
 
-GetMeshingEnabled returns the MeshingEnabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetMeshingEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse200115) GetMeshingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200115) GetStartTsOk() (*time.Time, bool)`
 
-GetMeshingEnabledOk returns a tuple with the MeshingEnabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshingEnabled
+### SetStartTs
 
-`func (o *InlineResponse200115) SetMeshingEnabled(v bool)`
+`func (o *InlineResponse200115) SetStartTs(v time.Time)`
 
-SetMeshingEnabled sets MeshingEnabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasMeshingEnabled
+### HasStartTs
 
-`func (o *InlineResponse200115) HasMeshingEnabled() bool`
+`func (o *InlineResponse200115) HasStartTs() bool`
 
-HasMeshingEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetIpv6BridgeEnabled
+### GetEndTs
 
-`func (o *InlineResponse200115) GetIpv6BridgeEnabled() bool`
+`func (o *InlineResponse200115) GetEndTs() time.Time`
 
-GetIpv6BridgeEnabled returns the Ipv6BridgeEnabled field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetIpv6BridgeEnabledOk
+### GetEndTsOk
 
-`func (o *InlineResponse200115) GetIpv6BridgeEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200115) GetEndTsOk() (*time.Time, bool)`
 
-GetIpv6BridgeEnabledOk returns a tuple with the Ipv6BridgeEnabled field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6BridgeEnabled
+### SetEndTs
 
-`func (o *InlineResponse200115) SetIpv6BridgeEnabled(v bool)`
+`func (o *InlineResponse200115) SetEndTs(v time.Time)`
 
-SetIpv6BridgeEnabled sets Ipv6BridgeEnabled field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasIpv6BridgeEnabled
+### HasEndTs
 
-`func (o *InlineResponse200115) HasIpv6BridgeEnabled() bool`
+`func (o *InlineResponse200115) HasEndTs() bool`
 
-HasIpv6BridgeEnabled returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetLocationAnalyticsEnabled
+### GetUtilizationTotal
 
-`func (o *InlineResponse200115) GetLocationAnalyticsEnabled() bool`
+`func (o *InlineResponse200115) GetUtilizationTotal() float32`
 
-GetLocationAnalyticsEnabled returns the LocationAnalyticsEnabled field if non-nil, zero value otherwise.
+GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
 
-### GetLocationAnalyticsEnabledOk
+### GetUtilizationTotalOk
 
-`func (o *InlineResponse200115) GetLocationAnalyticsEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200115) GetUtilizationTotalOk() (*float32, bool)`
 
-GetLocationAnalyticsEnabledOk returns a tuple with the LocationAnalyticsEnabled field if it's non-nil, zero value otherwise
+GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocationAnalyticsEnabled
+### SetUtilizationTotal
 
-`func (o *InlineResponse200115) SetLocationAnalyticsEnabled(v bool)`
+`func (o *InlineResponse200115) SetUtilizationTotal(v float32)`
 
-SetLocationAnalyticsEnabled sets LocationAnalyticsEnabled field to given value.
+SetUtilizationTotal sets UtilizationTotal field to given value.
 
-### HasLocationAnalyticsEnabled
+### HasUtilizationTotal
 
-`func (o *InlineResponse200115) HasLocationAnalyticsEnabled() bool`
+`func (o *InlineResponse200115) HasUtilizationTotal() bool`
 
-HasLocationAnalyticsEnabled returns a boolean if a field has been set.
+HasUtilizationTotal returns a boolean if a field has been set.
 
-### GetUpgradeStrategy
+### GetUtilization80211
 
-`func (o *InlineResponse200115) GetUpgradeStrategy() string`
+`func (o *InlineResponse200115) GetUtilization80211() float32`
 
-GetUpgradeStrategy returns the UpgradeStrategy field if non-nil, zero value otherwise.
+GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
 
-### GetUpgradeStrategyOk
+### GetUtilization80211Ok
 
-`func (o *InlineResponse200115) GetUpgradeStrategyOk() (*string, bool)`
+`func (o *InlineResponse200115) GetUtilization80211Ok() (*float32, bool)`
 
-GetUpgradeStrategyOk returns a tuple with the UpgradeStrategy field if it's non-nil, zero value otherwise
+GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeStrategy
+### SetUtilization80211
 
-`func (o *InlineResponse200115) SetUpgradeStrategy(v string)`
+`func (o *InlineResponse200115) SetUtilization80211(v float32)`
 
-SetUpgradeStrategy sets UpgradeStrategy field to given value.
+SetUtilization80211 sets Utilization80211 field to given value.
 
-### HasUpgradeStrategy
+### HasUtilization80211
 
-`func (o *InlineResponse200115) HasUpgradeStrategy() bool`
+`func (o *InlineResponse200115) HasUtilization80211() bool`
 
-HasUpgradeStrategy returns a boolean if a field has been set.
+HasUtilization80211 returns a boolean if a field has been set.
 
-### GetLedLightsOn
+### GetUtilizationNon80211
 
-`func (o *InlineResponse200115) GetLedLightsOn() bool`
+`func (o *InlineResponse200115) GetUtilizationNon80211() float32`
 
-GetLedLightsOn returns the LedLightsOn field if non-nil, zero value otherwise.
+GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
 
-### GetLedLightsOnOk
+### GetUtilizationNon80211Ok
 
-`func (o *InlineResponse200115) GetLedLightsOnOk() (*bool, bool)`
+`func (o *InlineResponse200115) GetUtilizationNon80211Ok() (*float32, bool)`
 
-GetLedLightsOnOk returns a tuple with the LedLightsOn field if it's non-nil, zero value otherwise
+GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLedLightsOn
+### SetUtilizationNon80211
 
-`func (o *InlineResponse200115) SetLedLightsOn(v bool)`
+`func (o *InlineResponse200115) SetUtilizationNon80211(v float32)`
 
-SetLedLightsOn sets LedLightsOn field to given value.
+SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
 
-### HasLedLightsOn
+### HasUtilizationNon80211
 
-`func (o *InlineResponse200115) HasLedLightsOn() bool`
+`func (o *InlineResponse200115) HasUtilizationNon80211() bool`
 
-HasLedLightsOn returns a boolean if a field has been set.
-
-### GetNamedVlans
-
-`func (o *InlineResponse200115) GetNamedVlans() InlineResponse200115NamedVlans`
-
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
-
-### GetNamedVlansOk
-
-`func (o *InlineResponse200115) GetNamedVlansOk() (*InlineResponse200115NamedVlans, bool)`
-
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNamedVlans
-
-`func (o *InlineResponse200115) SetNamedVlans(v InlineResponse200115NamedVlans)`
-
-SetNamedVlans sets NamedVlans field to given value.
-
-### HasNamedVlans
-
-`func (o *InlineResponse200115) HasNamedVlans() bool`
-
-HasNamedVlans returns a boolean if a field has been set.
-
-### GetRegulatoryDomain
-
-`func (o *InlineResponse200115) GetRegulatoryDomain() InlineResponse200115RegulatoryDomain`
-
-GetRegulatoryDomain returns the RegulatoryDomain field if non-nil, zero value otherwise.
-
-### GetRegulatoryDomainOk
-
-`func (o *InlineResponse200115) GetRegulatoryDomainOk() (*InlineResponse200115RegulatoryDomain, bool)`
-
-GetRegulatoryDomainOk returns a tuple with the RegulatoryDomain field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRegulatoryDomain
-
-`func (o *InlineResponse200115) SetRegulatoryDomain(v InlineResponse200115RegulatoryDomain)`
-
-SetRegulatoryDomain sets RegulatoryDomain field to given value.
-
-### HasRegulatoryDomain
-
-`func (o *InlineResponse200115) HasRegulatoryDomain() bool`
-
-HasRegulatoryDomain returns a boolean if a field has been set.
+HasUtilizationNon80211 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

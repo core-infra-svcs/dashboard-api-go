@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice**](OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | Network identifier | [optional] 
+**Serial** | Pointer to **string** | The uplink serial | [optional] 
+**Model** | Pointer to **string** | The uplink model | [optional] 
+**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
+**HighAvailability** | Pointer to [**OrganizationsOrganizationIdUplinksStatusesHighAvailability**](OrganizationsOrganizationIdUplinksStatusesHighAvailability.md) |  | [optional] 
+**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdUplinksStatusesUplinks**](OrganizationsOrganizationIdUplinksStatusesUplinks.md) | Uplinks | [optional] 
 
 ## Methods
 
@@ -28,105 +30,155 @@ NewInlineResponse200202WithDefaults instantiates a new InlineResponse200202 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetNetworkId
 
-`func (o *InlineResponse200202) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200202) GetNetworkId() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200202) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200202) GetNetworkIdOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetNetworkId
 
-`func (o *InlineResponse200202) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200202) SetNetworkId(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasDownstream
+### HasNetworkId
 
-`func (o *InlineResponse200202) HasDownstream() bool`
+`func (o *InlineResponse200202) HasNetworkId() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetUpstream
+### GetSerial
 
-`func (o *InlineResponse200202) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200202) GetSerial() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetSerialOk
 
-`func (o *InlineResponse200202) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200202) GetSerialOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetSerial
 
-`func (o *InlineResponse200202) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200202) SetSerial(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetSerial sets Serial field to given value.
 
-### HasUpstream
+### HasSerial
 
-`func (o *InlineResponse200202) HasUpstream() bool`
+`func (o *InlineResponse200202) HasSerial() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetNetwork
+### GetModel
 
-`func (o *InlineResponse200202) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
+`func (o *InlineResponse200202) GetModel() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetModelOk
 
-`func (o *InlineResponse200202) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
+`func (o *InlineResponse200202) GetModelOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetModel
 
-`func (o *InlineResponse200202) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
+`func (o *InlineResponse200202) SetModel(v string)`
 
-SetNetwork sets Network field to given value.
+SetModel sets Model field to given value.
 
-### HasNetwork
+### HasModel
 
-`func (o *InlineResponse200202) HasNetwork() bool`
+`func (o *InlineResponse200202) HasModel() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetDevice
+### GetLastReportedAt
 
-`func (o *InlineResponse200202) GetDevice() OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice`
+`func (o *InlineResponse200202) GetLastReportedAt() time.Time`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetLastReportedAtOk
 
-`func (o *InlineResponse200202) GetDeviceOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice, bool)`
+`func (o *InlineResponse200202) GetLastReportedAtOk() (*time.Time, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetLastReportedAt
 
-`func (o *InlineResponse200202) SetDevice(v OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice)`
+`func (o *InlineResponse200202) SetLastReportedAt(v time.Time)`
 
-SetDevice sets Device field to given value.
+SetLastReportedAt sets LastReportedAt field to given value.
 
-### HasDevice
+### HasLastReportedAt
 
-`func (o *InlineResponse200202) HasDevice() bool`
+`func (o *InlineResponse200202) HasLastReportedAt() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasLastReportedAt returns a boolean if a field has been set.
+
+### GetHighAvailability
+
+`func (o *InlineResponse200202) GetHighAvailability() OrganizationsOrganizationIdUplinksStatusesHighAvailability`
+
+GetHighAvailability returns the HighAvailability field if non-nil, zero value otherwise.
+
+### GetHighAvailabilityOk
+
+`func (o *InlineResponse200202) GetHighAvailabilityOk() (*OrganizationsOrganizationIdUplinksStatusesHighAvailability, bool)`
+
+GetHighAvailabilityOk returns a tuple with the HighAvailability field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHighAvailability
+
+`func (o *InlineResponse200202) SetHighAvailability(v OrganizationsOrganizationIdUplinksStatusesHighAvailability)`
+
+SetHighAvailability sets HighAvailability field to given value.
+
+### HasHighAvailability
+
+`func (o *InlineResponse200202) HasHighAvailability() bool`
+
+HasHighAvailability returns a boolean if a field has been set.
+
+### GetUplinks
+
+`func (o *InlineResponse200202) GetUplinks() []OrganizationsOrganizationIdUplinksStatusesUplinks`
+
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+
+### GetUplinksOk
+
+`func (o *InlineResponse200202) GetUplinksOk() (*[]OrganizationsOrganizationIdUplinksStatusesUplinks, bool)`
+
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinks
+
+`func (o *InlineResponse200202) SetUplinks(v []OrganizationsOrganizationIdUplinksStatusesUplinks)`
+
+SetUplinks sets Uplinks field to given value.
+
+### HasUplinks
+
+`func (o *InlineResponse200202) HasUplinks() bool`
+
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

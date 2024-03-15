@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Addresses** | Pointer to [**[]DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses**](DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses.md) | configured alternate management interface addresses | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineObject32WithDefaults instantiates a new InlineObject32 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUuid
+### GetAddresses
 
-`func (o *InlineObject32) GetUuid() string`
+`func (o *InlineObject32) GetAddresses() []DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetAddresses returns the Addresses field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetAddressesOk
 
-`func (o *InlineObject32) GetUuidOk() (*string, bool)`
+`func (o *InlineObject32) GetAddressesOk() (*[]DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetAddressesOk returns a tuple with the Addresses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetAddresses
 
-`func (o *InlineObject32) SetUuid(v string)`
+`func (o *InlineObject32) SetAddresses(v []DevicesSerialWirelessAlternateManagementInterfaceIpv6Addresses)`
 
-SetUuid sets Uuid field to given value.
+SetAddresses sets Addresses field to given value.
 
-### HasUuid
+### HasAddresses
 
-`func (o *InlineObject32) HasUuid() bool`
+`func (o *InlineObject32) HasAddresses() bool`
 
-HasUuid returns a boolean if a field has been set.
-
-### GetMajor
-
-`func (o *InlineObject32) GetMajor() int32`
-
-GetMajor returns the Major field if non-nil, zero value otherwise.
-
-### GetMajorOk
-
-`func (o *InlineObject32) GetMajorOk() (*int32, bool)`
-
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMajor
-
-`func (o *InlineObject32) SetMajor(v int32)`
-
-SetMajor sets Major field to given value.
-
-### HasMajor
-
-`func (o *InlineObject32) HasMajor() bool`
-
-HasMajor returns a boolean if a field has been set.
-
-### GetMinor
-
-`func (o *InlineObject32) GetMinor() int32`
-
-GetMinor returns the Minor field if non-nil, zero value otherwise.
-
-### GetMinorOk
-
-`func (o *InlineObject32) GetMinorOk() (*int32, bool)`
-
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinor
-
-`func (o *InlineObject32) SetMinor(v int32)`
-
-SetMinor sets Minor field to given value.
-
-### HasMinor
-
-`func (o *InlineObject32) HasMinor() bool`
-
-HasMinor returns a boolean if a field has been set.
+HasAddresses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
 
 ## Methods
 
 ### NewInlineObject184
 
-`func NewInlineObject184() *InlineObject184`
+`func NewInlineObject184(name string, groupPolicyId string, ) *InlineObject184`
 
 NewInlineObject184 instantiates a new InlineObject184 object
 This constructor will assign default values to properties that have it defined,
@@ -47,11 +47,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject184) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetPassphrase
 
@@ -97,11 +92,6 @@ and a boolean to check if the value has been set.
 
 SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasGroupPolicyId
-
-`func (o *InlineObject184) HasGroupPolicyId() bool`
-
-HasGroupPolicyId returns a boolean if a field has been set.
 
 ### GetExpiresAt
 
