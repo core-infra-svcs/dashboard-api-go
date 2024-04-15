@@ -4,18 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
-**Cidr** | Pointer to **string** | CIDR Value of a policy object (e.g. 10.11.12.1/24\&quot;) | [optional] 
-**Fqdn** | Pointer to **string** | Fully qualified domain name of policy object (e.g. \&quot;example.com\&quot;) | [optional] 
-**Mask** | Pointer to **string** | Mask of a policy object (e.g. \&quot;255.255.0.0\&quot;) | [optional] 
-**Ip** | Pointer to **string** | IP Address of a policy object (e.g. \&quot;1.2.3.4\&quot;) | [optional] 
-**GroupIds** | Pointer to **[]int32** | The IDs of policy object groups the policy object belongs to | [optional] 
+**Name** | **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
+**Category** | Pointer to **string** | Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
+**ObjectIds** | Pointer to **[]int32** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
 
 ## Methods
 
 ### NewInlineObject242
 
-`func NewInlineObject242() *InlineObject242`
+`func NewInlineObject242(name string, ) *InlineObject242`
 
 NewInlineObject242 instantiates a new InlineObject242 object
 This constructor will assign default values to properties that have it defined,
@@ -49,136 +46,56 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject242) HasName() bool`
+### GetCategory
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject242) GetCategory() string`
 
-### GetCidr
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-`func (o *InlineObject242) GetCidr() string`
+### GetCategoryOk
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+`func (o *InlineObject242) GetCategoryOk() (*string, bool)`
 
-### GetCidrOk
-
-`func (o *InlineObject242) GetCidrOk() (*string, bool)`
-
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetCategory
 
-`func (o *InlineObject242) SetCidr(v string)`
+`func (o *InlineObject242) SetCategory(v string)`
 
-SetCidr sets Cidr field to given value.
+SetCategory sets Category field to given value.
 
-### HasCidr
+### HasCategory
 
-`func (o *InlineObject242) HasCidr() bool`
+`func (o *InlineObject242) HasCategory() bool`
 
-HasCidr returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetFqdn
+### GetObjectIds
 
-`func (o *InlineObject242) GetFqdn() string`
+`func (o *InlineObject242) GetObjectIds() []int32`
 
-GetFqdn returns the Fqdn field if non-nil, zero value otherwise.
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
 
-### GetFqdnOk
+### GetObjectIdsOk
 
-`func (o *InlineObject242) GetFqdnOk() (*string, bool)`
+`func (o *InlineObject242) GetObjectIdsOk() (*[]int32, bool)`
 
-GetFqdnOk returns a tuple with the Fqdn field if it's non-nil, zero value otherwise
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFqdn
+### SetObjectIds
 
-`func (o *InlineObject242) SetFqdn(v string)`
+`func (o *InlineObject242) SetObjectIds(v []int32)`
 
-SetFqdn sets Fqdn field to given value.
+SetObjectIds sets ObjectIds field to given value.
 
-### HasFqdn
+### HasObjectIds
 
-`func (o *InlineObject242) HasFqdn() bool`
+`func (o *InlineObject242) HasObjectIds() bool`
 
-HasFqdn returns a boolean if a field has been set.
-
-### GetMask
-
-`func (o *InlineObject242) GetMask() string`
-
-GetMask returns the Mask field if non-nil, zero value otherwise.
-
-### GetMaskOk
-
-`func (o *InlineObject242) GetMaskOk() (*string, bool)`
-
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMask
-
-`func (o *InlineObject242) SetMask(v string)`
-
-SetMask sets Mask field to given value.
-
-### HasMask
-
-`func (o *InlineObject242) HasMask() bool`
-
-HasMask returns a boolean if a field has been set.
-
-### GetIp
-
-`func (o *InlineObject242) GetIp() string`
-
-GetIp returns the Ip field if non-nil, zero value otherwise.
-
-### GetIpOk
-
-`func (o *InlineObject242) GetIpOk() (*string, bool)`
-
-GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIp
-
-`func (o *InlineObject242) SetIp(v string)`
-
-SetIp sets Ip field to given value.
-
-### HasIp
-
-`func (o *InlineObject242) HasIp() bool`
-
-HasIp returns a boolean if a field has been set.
-
-### GetGroupIds
-
-`func (o *InlineObject242) GetGroupIds() []int32`
-
-GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
-
-### GetGroupIdsOk
-
-`func (o *InlineObject242) GetGroupIdsOk() (*[]int32, bool)`
-
-GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupIds
-
-`func (o *InlineObject242) SetGroupIds(v []int32)`
-
-SetGroupIds sets GroupIds field to given value.
-
-### HasGroupIds
-
-`func (o *InlineObject242) HasGroupIds() bool`
-
-HasGroupIds returns a boolean if a field has been set.
+HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

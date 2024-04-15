@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
 **Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
 **AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings1**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings1.md) |  | [optional] 
 **CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo1**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo1.md) |  | [optional] 
 
 ## Methods
@@ -106,20 +106,20 @@ HasAdminSettings returns a boolean if a field has been set.
 
 ### GetHelpSettings
 
-`func (o *InlineObject210) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
+`func (o *InlineObject210) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings1`
 
 GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
 
 ### GetHelpSettingsOk
 
-`func (o *InlineObject210) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
+`func (o *InlineObject210) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings1, bool)`
 
 GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetHelpSettings
 
-`func (o *InlineObject210) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
+`func (o *InlineObject210) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings1)`
 
 SetHelpSettings sets HelpSettings field to given value.
 

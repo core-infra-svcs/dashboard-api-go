@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Enable warm spare | 
-**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
-**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
-**VirtualIp1** | Pointer to **string** | The WAN 1 shared IP | [optional] 
-**VirtualIp2** | Pointer to **string** | The WAN 2 shared IP | [optional] 
+**Enabled** | **bool** | Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured. | 
+**AsNumber** | Pointer to **int32** | An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512. | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240. | [optional] 
+**Neighbors** | Pointer to [**[]NetworksNetworkIdApplianceVpnBgpNeighbors**](NetworksNetworkIdApplianceVpnBgpNeighbors.md) | List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated. | [optional] 
 
 ## Methods
 
@@ -49,105 +48,80 @@ and a boolean to check if the value has been set.
 SetEnabled sets Enabled field to given value.
 
 
-### GetSpareSerial
+### GetAsNumber
 
-`func (o *InlineObject73) GetSpareSerial() string`
+`func (o *InlineObject73) GetAsNumber() int32`
 
-GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-### GetSpareSerialOk
+### GetAsNumberOk
 
-`func (o *InlineObject73) GetSpareSerialOk() (*string, bool)`
+`func (o *InlineObject73) GetAsNumberOk() (*int32, bool)`
 
-GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpareSerial
+### SetAsNumber
 
-`func (o *InlineObject73) SetSpareSerial(v string)`
+`func (o *InlineObject73) SetAsNumber(v int32)`
 
-SetSpareSerial sets SpareSerial field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasSpareSerial
+### HasAsNumber
 
-`func (o *InlineObject73) HasSpareSerial() bool`
+`func (o *InlineObject73) HasAsNumber() bool`
 
-HasSpareSerial returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
 
-### GetUplinkMode
+### GetIbgpHoldTimer
 
-`func (o *InlineObject73) GetUplinkMode() string`
+`func (o *InlineObject73) GetIbgpHoldTimer() int32`
 
-GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
 
-### GetUplinkModeOk
+### GetIbgpHoldTimerOk
 
-`func (o *InlineObject73) GetUplinkModeOk() (*string, bool)`
+`func (o *InlineObject73) GetIbgpHoldTimerOk() (*int32, bool)`
 
-GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkMode
+### SetIbgpHoldTimer
 
-`func (o *InlineObject73) SetUplinkMode(v string)`
+`func (o *InlineObject73) SetIbgpHoldTimer(v int32)`
 
-SetUplinkMode sets UplinkMode field to given value.
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
-### HasUplinkMode
+### HasIbgpHoldTimer
 
-`func (o *InlineObject73) HasUplinkMode() bool`
+`func (o *InlineObject73) HasIbgpHoldTimer() bool`
 
-HasUplinkMode returns a boolean if a field has been set.
+HasIbgpHoldTimer returns a boolean if a field has been set.
 
-### GetVirtualIp1
+### GetNeighbors
 
-`func (o *InlineObject73) GetVirtualIp1() string`
+`func (o *InlineObject73) GetNeighbors() []NetworksNetworkIdApplianceVpnBgpNeighbors`
 
-GetVirtualIp1 returns the VirtualIp1 field if non-nil, zero value otherwise.
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
 
-### GetVirtualIp1Ok
+### GetNeighborsOk
 
-`func (o *InlineObject73) GetVirtualIp1Ok() (*string, bool)`
+`func (o *InlineObject73) GetNeighborsOk() (*[]NetworksNetworkIdApplianceVpnBgpNeighbors, bool)`
 
-GetVirtualIp1Ok returns a tuple with the VirtualIp1 field if it's non-nil, zero value otherwise
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVirtualIp1
+### SetNeighbors
 
-`func (o *InlineObject73) SetVirtualIp1(v string)`
+`func (o *InlineObject73) SetNeighbors(v []NetworksNetworkIdApplianceVpnBgpNeighbors)`
 
-SetVirtualIp1 sets VirtualIp1 field to given value.
+SetNeighbors sets Neighbors field to given value.
 
-### HasVirtualIp1
+### HasNeighbors
 
-`func (o *InlineObject73) HasVirtualIp1() bool`
+`func (o *InlineObject73) HasNeighbors() bool`
 
-HasVirtualIp1 returns a boolean if a field has been set.
-
-### GetVirtualIp2
-
-`func (o *InlineObject73) GetVirtualIp2() string`
-
-GetVirtualIp2 returns the VirtualIp2 field if non-nil, zero value otherwise.
-
-### GetVirtualIp2Ok
-
-`func (o *InlineObject73) GetVirtualIp2Ok() (*string, bool)`
-
-GetVirtualIp2Ok returns a tuple with the VirtualIp2 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVirtualIp2
-
-`func (o *InlineObject73) SetVirtualIp2(v string)`
-
-SetVirtualIp2 sets VirtualIp2 field to given value.
-
-### HasVirtualIp2
-
-`func (o *InlineObject73) HasVirtualIp2() bool`
-
-HasVirtualIp2 returns a boolean if a field has been set.
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

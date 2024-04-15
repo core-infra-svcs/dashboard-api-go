@@ -4,7 +4,7 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetDeviceCameraAnalyticsLive**](AnalyticsApi.md#GetDeviceCameraAnalyticsLive) | **Get** /devices/{serial}/camera/analytics/live | Returns live state from camera of analytics zones
+[**GetDeviceCameraAnalyticsLive**](AnalyticsApi.md#GetDeviceCameraAnalyticsLive) | **Get** /devices/{serial}/camera/analytics/live | Returns live state from camera analytics zones
 [**GetDeviceCameraAnalyticsOverview**](AnalyticsApi.md#GetDeviceCameraAnalyticsOverview) | **Get** /devices/{serial}/camera/analytics/overview | Returns an overview of aggregate analytics data for a timespan
 [**GetDeviceCameraAnalyticsRecent**](AnalyticsApi.md#GetDeviceCameraAnalyticsRecent) | **Get** /devices/{serial}/camera/analytics/recent | Returns most recent record for analytics zones
 [**GetDeviceCameraAnalyticsZoneHistory**](AnalyticsApi.md#GetDeviceCameraAnalyticsZoneHistory) | **Get** /devices/{serial}/camera/analytics/zones/{zoneId}/history | Return historical records for analytic zones
@@ -14,9 +14,9 @@ Method | HTTP request | Description
 
 ## GetDeviceCameraAnalyticsLive
 
-> map[string]interface{} GetDeviceCameraAnalyticsLive(ctx, serial).Execute()
+> InlineResponse2008 GetDeviceCameraAnalyticsLive(ctx, serial).Execute()
 
-Returns live state from camera of analytics zones
+Returns live state from camera analytics zones
 
 
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AnalyticsApi.GetDeviceCameraAnalyticsLive``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraAnalyticsLive`: map[string]interface{}
+    // response from `GetDeviceCameraAnalyticsLive`: InlineResponse2008
     fmt.Fprintf(os.Stdout, "Response from `AnalyticsApi.GetDeviceCameraAnalyticsLive`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCameraAnalyticsOverview
 
-> []map[string]interface{} GetDeviceCameraAnalyticsOverview(ctx, serial).T0(t0).T1(t1).Timespan(timespan).ObjectType(objectType).Execute()
+> []InlineResponse2009 GetDeviceCameraAnalyticsOverview(ctx, serial).T0(t0).T1(t1).Timespan(timespan).ObjectType(objectType).Execute()
 
 Returns an overview of aggregate analytics data for a timespan
 
@@ -116,7 +116,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AnalyticsApi.GetDeviceCameraAnalyticsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraAnalyticsOverview`: []map[string]interface{}
+    // response from `GetDeviceCameraAnalyticsOverview`: []InlineResponse2009
     fmt.Fprintf(os.Stdout, "Response from `AnalyticsApi.GetDeviceCameraAnalyticsOverview`: %v\n", resp)
 }
 ```
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse2009**](InlineResponse2009.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCameraAnalyticsRecent
 
-> []map[string]interface{} GetDeviceCameraAnalyticsRecent(ctx, serial).ObjectType(objectType).Execute()
+> []InlineResponse20010 GetDeviceCameraAnalyticsRecent(ctx, serial).ObjectType(objectType).Execute()
 
 Returns most recent record for analytics zones
 
@@ -191,7 +191,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AnalyticsApi.GetDeviceCameraAnalyticsRecent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraAnalyticsRecent`: []map[string]interface{}
+    // response from `GetDeviceCameraAnalyticsRecent`: []InlineResponse20010
     fmt.Fprintf(os.Stdout, "Response from `AnalyticsApi.GetDeviceCameraAnalyticsRecent`: %v\n", resp)
 }
 ```
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse20010**](InlineResponse20010.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCameraAnalyticsZoneHistory
 
-> []map[string]interface{} GetDeviceCameraAnalyticsZoneHistory(ctx, serial, zoneId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).ObjectType(objectType).Execute()
+> []InlineResponse20012 GetDeviceCameraAnalyticsZoneHistory(ctx, serial, zoneId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).ObjectType(objectType).Execute()
 
 Return historical records for analytic zones
 
@@ -268,7 +268,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AnalyticsApi.GetDeviceCameraAnalyticsZoneHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraAnalyticsZoneHistory`: []map[string]interface{}
+    // response from `GetDeviceCameraAnalyticsZoneHistory`: []InlineResponse20012
     fmt.Fprintf(os.Stdout, "Response from `AnalyticsApi.GetDeviceCameraAnalyticsZoneHistory`: %v\n", resp)
 }
 ```
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse20012**](InlineResponse20012.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceCameraAnalyticsZones
 
-> []map[string]interface{} GetDeviceCameraAnalyticsZones(ctx, serial).Execute()
+> []InlineResponse20011 GetDeviceCameraAnalyticsZones(ctx, serial).Execute()
 
 Returns all configured analytic zones for this camera
 
@@ -345,7 +345,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AnalyticsApi.GetDeviceCameraAnalyticsZones``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraAnalyticsZones`: []map[string]interface{}
+    // response from `GetDeviceCameraAnalyticsZones`: []InlineResponse20011
     fmt.Fprintf(os.Stdout, "Response from `AnalyticsApi.GetDeviceCameraAnalyticsZones`: %v\n", resp)
 }
 ```
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse20011**](InlineResponse20011.md)
 
 ### Authorization
 

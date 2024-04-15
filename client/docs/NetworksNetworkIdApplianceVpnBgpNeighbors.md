@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Ip** | Pointer to **string** | The IPv4 address of the neighbor | [optional] 
 **Ipv6** | Pointer to [**NetworksNetworkIdApplianceVpnBgpIpv6**](NetworksNetworkIdApplianceVpnBgpIpv6.md) |  | [optional] 
 **RemoteAsNumber** | **int32** | Remote ASN of the neighbor. The remote ASN must be an integer between 1 and 4294967295. | 
-**ReceiveLimit** | Pointer to **int32** | The receive limit is the maximum number of routes that can be received from any BGP peer. The receive limit must be an integer between 0 and 4294967295. When absent, it defaults to 0. | [optional] 
+**ReceiveLimit** | Pointer to **int32** | The receive limit is the maximum number of routes that can be received from any BGP peer. The receive limit must be an integer between 0 and 2147483647. When absent, it defaults to 0. | [optional] 
 **AllowTransit** | Pointer to **bool** | When this feature is on, the Meraki device will advertise routes learned from other Autonomous Systems, thereby allowing traffic between Autonomous Systems to transit this AS. When absent, it defaults to false. | [optional] 
 **EbgpHoldTimer** | **int32** | The eBGP hold timer in seconds for each neighbor. The eBGP hold timer must be an integer between 12 and 240. | 
 **EbgpMultihop** | **int32** | Configure this if the neighbor is not adjacent. The eBGP multi-hop must be an integer between 1 and 255. | 

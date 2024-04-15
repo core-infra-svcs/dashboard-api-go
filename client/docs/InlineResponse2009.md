@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArpTableId** | Pointer to **string** | Id of the ARP table request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ARP table request. | [optional] 
-**Request** | Pointer to [**InlineResponse2011Request**](InlineResponse2011Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the ARP table request. | [optional] 
-**Entries** | Pointer to [**[]InlineResponse2009Entries**](InlineResponse2009Entries.md) | The ARP table entries | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time | [optional] 
+**ZoneId** | Pointer to **int32** | The zone id | [optional] 
+**Entrances** | Pointer to **int32** | The number of sentrances | [optional] 
+**AverageCount** | Pointer to **float32** | The average count | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse2009WithDefaults instantiates a new InlineResponse2009 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetArpTableId
+### GetStartTs
 
-`func (o *InlineResponse2009) GetArpTableId() string`
+`func (o *InlineResponse2009) GetStartTs() time.Time`
 
-GetArpTableId returns the ArpTableId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetArpTableIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse2009) GetArpTableIdOk() (*string, bool)`
+`func (o *InlineResponse2009) GetStartTsOk() (*time.Time, bool)`
 
-GetArpTableIdOk returns a tuple with the ArpTableId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArpTableId
+### SetStartTs
 
-`func (o *InlineResponse2009) SetArpTableId(v string)`
+`func (o *InlineResponse2009) SetStartTs(v time.Time)`
 
-SetArpTableId sets ArpTableId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasArpTableId
+### HasStartTs
 
-`func (o *InlineResponse2009) HasArpTableId() bool`
+`func (o *InlineResponse2009) HasStartTs() bool`
 
-HasArpTableId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetUrl
+### GetEndTs
 
-`func (o *InlineResponse2009) GetUrl() string`
+`func (o *InlineResponse2009) GetEndTs() time.Time`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetEndTsOk
 
-`func (o *InlineResponse2009) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse2009) GetEndTsOk() (*time.Time, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetEndTs
 
-`func (o *InlineResponse2009) SetUrl(v string)`
+`func (o *InlineResponse2009) SetEndTs(v time.Time)`
 
-SetUrl sets Url field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasUrl
+### HasEndTs
 
-`func (o *InlineResponse2009) HasUrl() bool`
+`func (o *InlineResponse2009) HasEndTs() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetRequest
+### GetZoneId
 
-`func (o *InlineResponse2009) GetRequest() InlineResponse2011Request`
+`func (o *InlineResponse2009) GetZoneId() int32`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetZoneId returns the ZoneId field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetZoneIdOk
 
-`func (o *InlineResponse2009) GetRequestOk() (*InlineResponse2011Request, bool)`
+`func (o *InlineResponse2009) GetZoneIdOk() (*int32, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetZoneIdOk returns a tuple with the ZoneId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetZoneId
 
-`func (o *InlineResponse2009) SetRequest(v InlineResponse2011Request)`
+`func (o *InlineResponse2009) SetZoneId(v int32)`
 
-SetRequest sets Request field to given value.
+SetZoneId sets ZoneId field to given value.
 
-### HasRequest
+### HasZoneId
 
-`func (o *InlineResponse2009) HasRequest() bool`
+`func (o *InlineResponse2009) HasZoneId() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasZoneId returns a boolean if a field has been set.
 
-### GetStatus
+### GetEntrances
 
-`func (o *InlineResponse2009) GetStatus() string`
+`func (o *InlineResponse2009) GetEntrances() int32`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetEntrances returns the Entrances field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetEntrancesOk
 
-`func (o *InlineResponse2009) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse2009) GetEntrancesOk() (*int32, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetEntrancesOk returns a tuple with the Entrances field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetEntrances
 
-`func (o *InlineResponse2009) SetStatus(v string)`
+`func (o *InlineResponse2009) SetEntrances(v int32)`
 
-SetStatus sets Status field to given value.
+SetEntrances sets Entrances field to given value.
 
-### HasStatus
+### HasEntrances
 
-`func (o *InlineResponse2009) HasStatus() bool`
+`func (o *InlineResponse2009) HasEntrances() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasEntrances returns a boolean if a field has been set.
 
-### GetEntries
+### GetAverageCount
 
-`func (o *InlineResponse2009) GetEntries() []InlineResponse2009Entries`
+`func (o *InlineResponse2009) GetAverageCount() float32`
 
-GetEntries returns the Entries field if non-nil, zero value otherwise.
+GetAverageCount returns the AverageCount field if non-nil, zero value otherwise.
 
-### GetEntriesOk
+### GetAverageCountOk
 
-`func (o *InlineResponse2009) GetEntriesOk() (*[]InlineResponse2009Entries, bool)`
+`func (o *InlineResponse2009) GetAverageCountOk() (*float32, bool)`
 
-GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
+GetAverageCountOk returns a tuple with the AverageCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEntries
+### SetAverageCount
 
-`func (o *InlineResponse2009) SetEntries(v []InlineResponse2009Entries)`
+`func (o *InlineResponse2009) SetAverageCount(v float32)`
 
-SetEntries sets Entries field to given value.
+SetAverageCount sets AverageCount field to given value.
 
-### HasEntries
+### HasAverageCount
 
-`func (o *InlineResponse2009) HasEntries() bool`
+`func (o *InlineResponse2009) HasAverageCount() bool`
 
-HasEntries returns a boolean if a field has been set.
-
-### GetError
-
-`func (o *InlineResponse2009) GetError() string`
-
-GetError returns the Error field if non-nil, zero value otherwise.
-
-### GetErrorOk
-
-`func (o *InlineResponse2009) GetErrorOk() (*string, bool)`
-
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetError
-
-`func (o *InlineResponse2009) SetError(v string)`
-
-SetError sets Error field to given value.
-
-### HasError
-
-`func (o *InlineResponse2009) HasError() bool`
-
-HasError returns a boolean if a field has been set.
+HasAverageCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
-**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
-**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries.md) |  | [optional] 
+**Id** | Pointer to **string** | Switch port schedule ID | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Switch port schedule name | [optional] 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule**](NetworksNetworkIdSwitchPortSchedulesPortSchedule.md) |  | [optional] 
 
 ## Methods
 
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewInlineResponse200147WithDefaults instantiates a new InlineResponse200147 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineResponse200147) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200147) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200147) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse200147) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetNetworkId
 
@@ -52,55 +78,55 @@ SetNetworkId sets NetworkId field to given value.
 
 HasNetworkId returns a boolean if a field has been set.
 
-### GetSerial
+### GetName
 
-`func (o *InlineResponse200147) GetSerial() string`
+`func (o *InlineResponse200147) GetName() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNameOk
 
-`func (o *InlineResponse200147) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200147) GetNameOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetName
 
-`func (o *InlineResponse200147) SetSerial(v string)`
+`func (o *InlineResponse200147) SetName(v string)`
 
-SetSerial sets Serial field to given value.
+SetName sets Name field to given value.
 
-### HasSerial
+### HasName
 
-`func (o *InlineResponse200147) HasSerial() bool`
+`func (o *InlineResponse200147) HasName() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetBoundaries
+### GetPortSchedule
 
-`func (o *InlineResponse200147) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries`
+`func (o *InlineResponse200147) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule`
 
-GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
+GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
 
-### GetBoundariesOk
+### GetPortScheduleOk
 
-`func (o *InlineResponse200147) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries, bool)`
+`func (o *InlineResponse200147) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule, bool)`
 
-GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
+GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBoundaries
+### SetPortSchedule
 
-`func (o *InlineResponse200147) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries)`
+`func (o *InlineResponse200147) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule)`
 
-SetBoundaries sets Boundaries field to given value.
+SetPortSchedule sets PortSchedule field to given value.
 
-### HasBoundaries
+### HasPortSchedule
 
-`func (o *InlineResponse200147) HasBoundaries() bool`
+`func (o *InlineResponse200147) HasPortSchedule() bool`
 
-HasBoundaries returns a boolean if a field has been set.
+HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RetainConfigs** | Pointer to **bool** | Optional boolean to retain all the current configs given by the template. | [optional] 
+**Servers** | [**[]NetworksNetworkIdSyslogServersServers**](NetworksNetworkIdSyslogServersServers.md) | A list of the syslog servers for this network | 
 
 ## Methods
 
 ### NewInlineObject158
 
-`func NewInlineObject158() *InlineObject158`
+`func NewInlineObject158(servers []NetworksNetworkIdSyslogServersServers, ) *InlineObject158`
 
 NewInlineObject158 instantiates a new InlineObject158 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject158WithDefaults instantiates a new InlineObject158 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRetainConfigs
+### GetServers
 
-`func (o *InlineObject158) GetRetainConfigs() bool`
+`func (o *InlineObject158) GetServers() []NetworksNetworkIdSyslogServersServers`
 
-GetRetainConfigs returns the RetainConfigs field if non-nil, zero value otherwise.
+GetServers returns the Servers field if non-nil, zero value otherwise.
 
-### GetRetainConfigsOk
+### GetServersOk
 
-`func (o *InlineObject158) GetRetainConfigsOk() (*bool, bool)`
+`func (o *InlineObject158) GetServersOk() (*[]NetworksNetworkIdSyslogServersServers, bool)`
 
-GetRetainConfigsOk returns a tuple with the RetainConfigs field if it's non-nil, zero value otherwise
+GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRetainConfigs
+### SetServers
 
-`func (o *InlineObject158) SetRetainConfigs(v bool)`
+`func (o *InlineObject158) SetServers(v []NetworksNetworkIdSyslogServersServers)`
 
-SetRetainConfigs sets RetainConfigs field to given value.
+SetServers sets Servers field to given value.
 
-### HasRetainConfigs
-
-`func (o *InlineObject158) HasRetainConfigs() bool`
-
-HasRetainConfigs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

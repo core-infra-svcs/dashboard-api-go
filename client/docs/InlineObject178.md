@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on this SSID. | [optional] 
-**Rules** | Pointer to [**[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules**](NetworksNetworkIdGroupPoliciesBonjourForwardingRules.md) | List of bonjour forwarding rules. | [optional] 
-**Exception** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException**](NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException.md) |  | [optional] 
+**MeshingEnabled** | Pointer to **bool** | Toggle for enabling or disabling meshing in a network | [optional] 
+**Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
+**LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
+**UpgradeStrategy** | Pointer to **string** | The default strategy that network devices will use to perform an upgrade. Requires firmware version MR 26.8 or higher. | [optional] 
+**LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
+**NamedVlans** | Pointer to [**NetworksNetworkIdWirelessSettingsNamedVlans**](NetworksNetworkIdWirelessSettingsNamedVlans.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineObject178WithDefaults instantiates a new InlineObject178 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetMeshingEnabled
 
-`func (o *InlineObject178) GetEnabled() bool`
+`func (o *InlineObject178) GetMeshingEnabled() bool`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetMeshingEnabled returns the MeshingEnabled field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetMeshingEnabledOk
 
-`func (o *InlineObject178) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject178) GetMeshingEnabledOk() (*bool, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetMeshingEnabledOk returns a tuple with the MeshingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetMeshingEnabled
 
-`func (o *InlineObject178) SetEnabled(v bool)`
+`func (o *InlineObject178) SetMeshingEnabled(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetMeshingEnabled sets MeshingEnabled field to given value.
 
-### HasEnabled
+### HasMeshingEnabled
 
-`func (o *InlineObject178) HasEnabled() bool`
+`func (o *InlineObject178) HasMeshingEnabled() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasMeshingEnabled returns a boolean if a field has been set.
 
-### GetRules
+### GetIpv6BridgeEnabled
 
-`func (o *InlineObject178) GetRules() []NetworksNetworkIdGroupPoliciesBonjourForwardingRules`
+`func (o *InlineObject178) GetIpv6BridgeEnabled() bool`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetIpv6BridgeEnabled returns the Ipv6BridgeEnabled field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetIpv6BridgeEnabledOk
 
-`func (o *InlineObject178) GetRulesOk() (*[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules, bool)`
+`func (o *InlineObject178) GetIpv6BridgeEnabledOk() (*bool, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetIpv6BridgeEnabledOk returns a tuple with the Ipv6BridgeEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetIpv6BridgeEnabled
 
-`func (o *InlineObject178) SetRules(v []NetworksNetworkIdGroupPoliciesBonjourForwardingRules)`
+`func (o *InlineObject178) SetIpv6BridgeEnabled(v bool)`
 
-SetRules sets Rules field to given value.
+SetIpv6BridgeEnabled sets Ipv6BridgeEnabled field to given value.
 
-### HasRules
+### HasIpv6BridgeEnabled
 
-`func (o *InlineObject178) HasRules() bool`
+`func (o *InlineObject178) HasIpv6BridgeEnabled() bool`
 
-HasRules returns a boolean if a field has been set.
+HasIpv6BridgeEnabled returns a boolean if a field has been set.
 
-### GetException
+### GetLocationAnalyticsEnabled
 
-`func (o *InlineObject178) GetException() NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException`
+`func (o *InlineObject178) GetLocationAnalyticsEnabled() bool`
 
-GetException returns the Exception field if non-nil, zero value otherwise.
+GetLocationAnalyticsEnabled returns the LocationAnalyticsEnabled field if non-nil, zero value otherwise.
 
-### GetExceptionOk
+### GetLocationAnalyticsEnabledOk
 
-`func (o *InlineObject178) GetExceptionOk() (*NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException, bool)`
+`func (o *InlineObject178) GetLocationAnalyticsEnabledOk() (*bool, bool)`
 
-GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
+GetLocationAnalyticsEnabledOk returns a tuple with the LocationAnalyticsEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetException
+### SetLocationAnalyticsEnabled
 
-`func (o *InlineObject178) SetException(v NetworksNetworkIdWirelessSsidsNumberBonjourForwardingException)`
+`func (o *InlineObject178) SetLocationAnalyticsEnabled(v bool)`
 
-SetException sets Exception field to given value.
+SetLocationAnalyticsEnabled sets LocationAnalyticsEnabled field to given value.
 
-### HasException
+### HasLocationAnalyticsEnabled
 
-`func (o *InlineObject178) HasException() bool`
+`func (o *InlineObject178) HasLocationAnalyticsEnabled() bool`
 
-HasException returns a boolean if a field has been set.
+HasLocationAnalyticsEnabled returns a boolean if a field has been set.
+
+### GetUpgradeStrategy
+
+`func (o *InlineObject178) GetUpgradeStrategy() string`
+
+GetUpgradeStrategy returns the UpgradeStrategy field if non-nil, zero value otherwise.
+
+### GetUpgradeStrategyOk
+
+`func (o *InlineObject178) GetUpgradeStrategyOk() (*string, bool)`
+
+GetUpgradeStrategyOk returns a tuple with the UpgradeStrategy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpgradeStrategy
+
+`func (o *InlineObject178) SetUpgradeStrategy(v string)`
+
+SetUpgradeStrategy sets UpgradeStrategy field to given value.
+
+### HasUpgradeStrategy
+
+`func (o *InlineObject178) HasUpgradeStrategy() bool`
+
+HasUpgradeStrategy returns a boolean if a field has been set.
+
+### GetLedLightsOn
+
+`func (o *InlineObject178) GetLedLightsOn() bool`
+
+GetLedLightsOn returns the LedLightsOn field if non-nil, zero value otherwise.
+
+### GetLedLightsOnOk
+
+`func (o *InlineObject178) GetLedLightsOnOk() (*bool, bool)`
+
+GetLedLightsOnOk returns a tuple with the LedLightsOn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLedLightsOn
+
+`func (o *InlineObject178) SetLedLightsOn(v bool)`
+
+SetLedLightsOn sets LedLightsOn field to given value.
+
+### HasLedLightsOn
+
+`func (o *InlineObject178) HasLedLightsOn() bool`
+
+HasLedLightsOn returns a boolean if a field has been set.
+
+### GetNamedVlans
+
+`func (o *InlineObject178) GetNamedVlans() NetworksNetworkIdWirelessSettingsNamedVlans`
+
+GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
+
+### GetNamedVlansOk
+
+`func (o *InlineObject178) GetNamedVlansOk() (*NetworksNetworkIdWirelessSettingsNamedVlans, bool)`
+
+GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNamedVlans
+
+`func (o *InlineObject178) SetNamedVlans(v NetworksNetworkIdWirelessSettingsNamedVlans)`
+
+SetNamedVlans sets NamedVlans field to given value.
+
+### HasNamedVlans
+
+`func (o *InlineObject178) HasNamedVlans() bool`
+
+HasNamedVlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

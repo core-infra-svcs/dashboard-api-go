@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ActiveActiveAutoVpnEnabled** | Pointer to **bool** | Whether active-active AutoVPN is enabled | [optional] 
-**DefaultUplink** | Pointer to **string** | The default uplink. Must be one of: &#39;wan1&#39; or &#39;wan2&#39; | [optional] 
-**LoadBalancingEnabled** | Pointer to **bool** | Whether load balancing is enabled | [optional] 
-**FailoverAndFailback** | Pointer to [**InlineResponse20036FailoverAndFailback**](InlineResponse20036FailoverAndFailback.md) |  | [optional] 
-**WanTrafficUplinkPreferences** | Pointer to [**[]InlineResponse20036WanTrafficUplinkPreferences**](InlineResponse20036WanTrafficUplinkPreferences.md) | Uplink preference rules for WAN traffic | [optional] 
-**VpnTrafficUplinkPreferences** | Pointer to [**[]InlineResponse20036VpnTrafficUplinkPreferences**](InlineResponse20036VpnTrafficUplinkPreferences.md) | Uplink preference rules for VPN traffic | [optional] 
+**StaticRouteId** | Pointer to **string** | The identifier of a layer 3 static route | [optional] 
+**Name** | Pointer to **string** | The name or description of the layer 3 static route | [optional] 
+**Subnet** | **string** | The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24) | 
+**NextHopIp** | **string** |  The IP address of the router to which traffic for this destination network should be sent | 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static routes via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static routes over OSPF routes | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20036
 
-`func NewInlineResponse20036() *InlineResponse20036`
+`func NewInlineResponse20036(subnet string, nextHopIp string, ) *InlineResponse20036`
 
 NewInlineResponse20036 instantiates a new InlineResponse20036 object
 This constructor will assign default values to properties that have it defined,
@@ -30,155 +30,145 @@ NewInlineResponse20036WithDefaults instantiates a new InlineResponse20036 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetActiveActiveAutoVpnEnabled
+### GetStaticRouteId
 
-`func (o *InlineResponse20036) GetActiveActiveAutoVpnEnabled() bool`
+`func (o *InlineResponse20036) GetStaticRouteId() string`
 
-GetActiveActiveAutoVpnEnabled returns the ActiveActiveAutoVpnEnabled field if non-nil, zero value otherwise.
+GetStaticRouteId returns the StaticRouteId field if non-nil, zero value otherwise.
 
-### GetActiveActiveAutoVpnEnabledOk
+### GetStaticRouteIdOk
 
-`func (o *InlineResponse20036) GetActiveActiveAutoVpnEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20036) GetStaticRouteIdOk() (*string, bool)`
 
-GetActiveActiveAutoVpnEnabledOk returns a tuple with the ActiveActiveAutoVpnEnabled field if it's non-nil, zero value otherwise
+GetStaticRouteIdOk returns a tuple with the StaticRouteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActiveActiveAutoVpnEnabled
+### SetStaticRouteId
 
-`func (o *InlineResponse20036) SetActiveActiveAutoVpnEnabled(v bool)`
+`func (o *InlineResponse20036) SetStaticRouteId(v string)`
 
-SetActiveActiveAutoVpnEnabled sets ActiveActiveAutoVpnEnabled field to given value.
+SetStaticRouteId sets StaticRouteId field to given value.
 
-### HasActiveActiveAutoVpnEnabled
+### HasStaticRouteId
 
-`func (o *InlineResponse20036) HasActiveActiveAutoVpnEnabled() bool`
+`func (o *InlineResponse20036) HasStaticRouteId() bool`
 
-HasActiveActiveAutoVpnEnabled returns a boolean if a field has been set.
+HasStaticRouteId returns a boolean if a field has been set.
 
-### GetDefaultUplink
+### GetName
 
-`func (o *InlineResponse20036) GetDefaultUplink() string`
+`func (o *InlineResponse20036) GetName() string`
 
-GetDefaultUplink returns the DefaultUplink field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultUplinkOk
+### GetNameOk
 
-`func (o *InlineResponse20036) GetDefaultUplinkOk() (*string, bool)`
+`func (o *InlineResponse20036) GetNameOk() (*string, bool)`
 
-GetDefaultUplinkOk returns a tuple with the DefaultUplink field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultUplink
+### SetName
 
-`func (o *InlineResponse20036) SetDefaultUplink(v string)`
+`func (o *InlineResponse20036) SetName(v string)`
 
-SetDefaultUplink sets DefaultUplink field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultUplink
+### HasName
 
-`func (o *InlineResponse20036) HasDefaultUplink() bool`
+`func (o *InlineResponse20036) HasName() bool`
 
-HasDefaultUplink returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetLoadBalancingEnabled
+### GetSubnet
 
-`func (o *InlineResponse20036) GetLoadBalancingEnabled() bool`
+`func (o *InlineResponse20036) GetSubnet() string`
 
-GetLoadBalancingEnabled returns the LoadBalancingEnabled field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetLoadBalancingEnabledOk
+### GetSubnetOk
 
-`func (o *InlineResponse20036) GetLoadBalancingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20036) GetSubnetOk() (*string, bool)`
 
-GetLoadBalancingEnabledOk returns a tuple with the LoadBalancingEnabled field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLoadBalancingEnabled
+### SetSubnet
 
-`func (o *InlineResponse20036) SetLoadBalancingEnabled(v bool)`
+`func (o *InlineResponse20036) SetSubnet(v string)`
 
-SetLoadBalancingEnabled sets LoadBalancingEnabled field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasLoadBalancingEnabled
 
-`func (o *InlineResponse20036) HasLoadBalancingEnabled() bool`
+### GetNextHopIp
 
-HasLoadBalancingEnabled returns a boolean if a field has been set.
+`func (o *InlineResponse20036) GetNextHopIp() string`
 
-### GetFailoverAndFailback
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20036) GetFailoverAndFailback() InlineResponse20036FailoverAndFailback`
+### GetNextHopIpOk
 
-GetFailoverAndFailback returns the FailoverAndFailback field if non-nil, zero value otherwise.
+`func (o *InlineResponse20036) GetNextHopIpOk() (*string, bool)`
 
-### GetFailoverAndFailbackOk
-
-`func (o *InlineResponse20036) GetFailoverAndFailbackOk() (*InlineResponse20036FailoverAndFailback, bool)`
-
-GetFailoverAndFailbackOk returns a tuple with the FailoverAndFailback field if it's non-nil, zero value otherwise
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailoverAndFailback
+### SetNextHopIp
 
-`func (o *InlineResponse20036) SetFailoverAndFailback(v InlineResponse20036FailoverAndFailback)`
+`func (o *InlineResponse20036) SetNextHopIp(v string)`
 
-SetFailoverAndFailback sets FailoverAndFailback field to given value.
+SetNextHopIp sets NextHopIp field to given value.
 
-### HasFailoverAndFailback
 
-`func (o *InlineResponse20036) HasFailoverAndFailback() bool`
+### GetAdvertiseViaOspfEnabled
 
-HasFailoverAndFailback returns a boolean if a field has been set.
+`func (o *InlineResponse20036) GetAdvertiseViaOspfEnabled() bool`
 
-### GetWanTrafficUplinkPreferences
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20036) GetWanTrafficUplinkPreferences() []InlineResponse20036WanTrafficUplinkPreferences`
+### GetAdvertiseViaOspfEnabledOk
 
-GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
+`func (o *InlineResponse20036) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
 
-### GetWanTrafficUplinkPreferencesOk
-
-`func (o *InlineResponse20036) GetWanTrafficUplinkPreferencesOk() (*[]InlineResponse20036WanTrafficUplinkPreferences, bool)`
-
-GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWanTrafficUplinkPreferences
+### SetAdvertiseViaOspfEnabled
 
-`func (o *InlineResponse20036) SetWanTrafficUplinkPreferences(v []InlineResponse20036WanTrafficUplinkPreferences)`
+`func (o *InlineResponse20036) SetAdvertiseViaOspfEnabled(v bool)`
 
-SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
 
-### HasWanTrafficUplinkPreferences
+### HasAdvertiseViaOspfEnabled
 
-`func (o *InlineResponse20036) HasWanTrafficUplinkPreferences() bool`
+`func (o *InlineResponse20036) HasAdvertiseViaOspfEnabled() bool`
 
-HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
 
-### GetVpnTrafficUplinkPreferences
+### GetPreferOverOspfRoutesEnabled
 
-`func (o *InlineResponse20036) GetVpnTrafficUplinkPreferences() []InlineResponse20036VpnTrafficUplinkPreferences`
+`func (o *InlineResponse20036) GetPreferOverOspfRoutesEnabled() bool`
 
-GetVpnTrafficUplinkPreferences returns the VpnTrafficUplinkPreferences field if non-nil, zero value otherwise.
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
 
-### GetVpnTrafficUplinkPreferencesOk
+### GetPreferOverOspfRoutesEnabledOk
 
-`func (o *InlineResponse20036) GetVpnTrafficUplinkPreferencesOk() (*[]InlineResponse20036VpnTrafficUplinkPreferences, bool)`
+`func (o *InlineResponse20036) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
 
-GetVpnTrafficUplinkPreferencesOk returns a tuple with the VpnTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVpnTrafficUplinkPreferences
+### SetPreferOverOspfRoutesEnabled
 
-`func (o *InlineResponse20036) SetVpnTrafficUplinkPreferences(v []InlineResponse20036VpnTrafficUplinkPreferences)`
+`func (o *InlineResponse20036) SetPreferOverOspfRoutesEnabled(v bool)`
 
-SetVpnTrafficUplinkPreferences sets VpnTrafficUplinkPreferences field to given value.
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
 
-### HasVpnTrafficUplinkPreferences
+### HasPreferOverOspfRoutesEnabled
 
-`func (o *InlineResponse20036) HasVpnTrafficUplinkPreferences() bool`
+`func (o *InlineResponse20036) HasPreferOverOspfRoutesEnabled() bool`
 
-HasVpnTrafficUplinkPreferences returns a boolean if a field has been set.
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

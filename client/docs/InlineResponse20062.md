@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
-**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
-**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
+**BandwidthLimits** | Pointer to [**InlineResponse20062BandwidthLimits**](InlineResponse20062BandwidthLimits.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse20062WithDefaults instantiates a new InlineResponse20062 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetBandwidthLimits
 
-`func (o *InlineResponse20062) GetStartTs() time.Time`
+`func (o *InlineResponse20062) GetBandwidthLimits() InlineResponse20062BandwidthLimits`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineResponse20062) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20062) GetBandwidthLimitsOk() (*InlineResponse20062BandwidthLimits, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetBandwidthLimits
 
-`func (o *InlineResponse20062) SetStartTs(v time.Time)`
+`func (o *InlineResponse20062) SetBandwidthLimits(v InlineResponse20062BandwidthLimits)`
 
-SetStartTs sets StartTs field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
-### HasStartTs
+### HasBandwidthLimits
 
-`func (o *InlineResponse20062) HasStartTs() bool`
+`func (o *InlineResponse20062) HasBandwidthLimits() bool`
 
-HasStartTs returns a boolean if a field has been set.
-
-### GetEndTs
-
-`func (o *InlineResponse20062) GetEndTs() time.Time`
-
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
-
-### GetEndTsOk
-
-`func (o *InlineResponse20062) GetEndTsOk() (*time.Time, bool)`
-
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEndTs
-
-`func (o *InlineResponse20062) SetEndTs(v time.Time)`
-
-SetEndTs sets EndTs field to given value.
-
-### HasEndTs
-
-`func (o *InlineResponse20062) HasEndTs() bool`
-
-HasEndTs returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse20062) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse20062) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse20062) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse20062) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

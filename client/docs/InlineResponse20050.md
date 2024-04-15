@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Event category | [optional] 
-**Type** | Pointer to **string** | Event type | [optional] 
-**Description** | Pointer to **string** | Description of the event | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20050Rules**](InlineResponse20050Rules.md) | An array of port forwarding rules | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse20050WithDefaults instantiates a new InlineResponse20050 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetRules
 
-`func (o *InlineResponse20050) GetCategory() string`
+`func (o *InlineResponse20050) GetRules() []InlineResponse20050Rules`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetRulesOk
 
-`func (o *InlineResponse20050) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse20050) GetRulesOk() (*[]InlineResponse20050Rules, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetRules
 
-`func (o *InlineResponse20050) SetCategory(v string)`
+`func (o *InlineResponse20050) SetRules(v []InlineResponse20050Rules)`
 
-SetCategory sets Category field to given value.
+SetRules sets Rules field to given value.
 
-### HasCategory
+### HasRules
 
-`func (o *InlineResponse20050) HasCategory() bool`
+`func (o *InlineResponse20050) HasRules() bool`
 
-HasCategory returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse20050) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse20050) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse20050) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse20050) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse20050) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse20050) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse20050) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse20050) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

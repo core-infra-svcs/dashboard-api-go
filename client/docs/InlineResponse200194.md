@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**Mac** | Pointer to **string** | MAC address of client | [optional] 
-**Id** | Pointer to **string** | ID of client | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork**](OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsByUsageUsage.md) |  | [optional] 
+**AclId** | Pointer to **string** | ID of the adaptive policy ACL | [optional] 
+**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
+**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
+**IpVersion** | Pointer to **string** | IP version of adpative policy ACL | [optional] 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules**](OrganizationsOrganizationIdAdaptivePolicyAclsRules.md) | An ordered array of the adaptive policy ACL rules | [optional] 
+**CreatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was created | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | When the adaptive policy ACL was last updated | [optional] 
 
 ## Methods
 
@@ -28,6 +30,31 @@ will change when the set of required properties is changed
 NewInlineResponse200194WithDefaults instantiates a new InlineResponse200194 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetAclId
+
+`func (o *InlineResponse200194) GetAclId() string`
+
+GetAclId returns the AclId field if non-nil, zero value otherwise.
+
+### GetAclIdOk
+
+`func (o *InlineResponse200194) GetAclIdOk() (*string, bool)`
+
+GetAclIdOk returns a tuple with the AclId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAclId
+
+`func (o *InlineResponse200194) SetAclId(v string)`
+
+SetAclId sets AclId field to given value.
+
+### HasAclId
+
+`func (o *InlineResponse200194) HasAclId() bool`
+
+HasAclId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -54,105 +81,130 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetMac
+### GetDescription
 
-`func (o *InlineResponse200194) GetMac() string`
+`func (o *InlineResponse200194) GetDescription() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200194) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200194) GetDescriptionOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetDescription
 
-`func (o *InlineResponse200194) SetMac(v string)`
+`func (o *InlineResponse200194) SetDescription(v string)`
 
-SetMac sets Mac field to given value.
+SetDescription sets Description field to given value.
 
-### HasMac
+### HasDescription
 
-`func (o *InlineResponse200194) HasMac() bool`
+`func (o *InlineResponse200194) HasDescription() bool`
 
-HasMac returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetId
+### GetIpVersion
 
-`func (o *InlineResponse200194) GetId() string`
+`func (o *InlineResponse200194) GetIpVersion() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetIpVersionOk
 
-`func (o *InlineResponse200194) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200194) GetIpVersionOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetIpVersion
 
-`func (o *InlineResponse200194) SetId(v string)`
+`func (o *InlineResponse200194) SetIpVersion(v string)`
 
-SetId sets Id field to given value.
+SetIpVersion sets IpVersion field to given value.
 
-### HasId
+### HasIpVersion
 
-`func (o *InlineResponse200194) HasId() bool`
+`func (o *InlineResponse200194) HasIpVersion() bool`
 
-HasId returns a boolean if a field has been set.
+HasIpVersion returns a boolean if a field has been set.
 
-### GetNetwork
+### GetRules
 
-`func (o *InlineResponse200194) GetNetwork() OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork`
+`func (o *InlineResponse200194) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetRulesOk
 
-`func (o *InlineResponse200194) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork, bool)`
+`func (o *InlineResponse200194) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetRules
 
-`func (o *InlineResponse200194) SetNetwork(v OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork)`
+`func (o *InlineResponse200194) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules)`
 
-SetNetwork sets Network field to given value.
+SetRules sets Rules field to given value.
 
-### HasNetwork
+### HasRules
 
-`func (o *InlineResponse200194) HasNetwork() bool`
+`func (o *InlineResponse200194) HasRules() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetUsage
+### GetCreatedAt
 
-`func (o *InlineResponse200194) GetUsage() OrganizationsOrganizationIdSummaryTopClientsByUsageUsage`
+`func (o *InlineResponse200194) GetCreatedAt() time.Time`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200194) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageUsage, bool)`
+`func (o *InlineResponse200194) GetCreatedAtOk() (*time.Time, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetCreatedAt
 
-`func (o *InlineResponse200194) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsByUsageUsage)`
+`func (o *InlineResponse200194) SetCreatedAt(v time.Time)`
 
-SetUsage sets Usage field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasUsage
+### HasCreatedAt
 
-`func (o *InlineResponse200194) HasUsage() bool`
+`func (o *InlineResponse200194) HasCreatedAt() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200194) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200194) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200194) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200194) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

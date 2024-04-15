@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | [**[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices.md) | A set of device imports to commit | 
+**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
 
 ## Methods
 
 ### NewInlineObject227
 
-`func NewInlineObject227(devices []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices, ) *InlineObject227`
+`func NewInlineObject227(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject227`
 
 NewInlineObject227 instantiates a new InlineObject227 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject227WithDefaults instantiates a new InlineObject227 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevices
+### GetSwaps
 
-`func (o *InlineObject227) GetDevices() []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices`
+`func (o *InlineObject227) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetSwapsOk
 
-`func (o *InlineObject227) GetDevicesOk() (*[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices, bool)`
+`func (o *InlineObject227) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetSwaps
 
-`func (o *InlineObject227) SetDevices(v []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices)`
+`func (o *InlineObject227) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
 
-SetDevices sets Devices field to given value.
+SetSwaps sets Swaps field to given value.
 
 
 

@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Id** | Pointer to **string** | The unique identifier of the Identity PSK | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**WifiPersonalNetworkId** | Pointer to **string** | The WiFi Personal Network unique identifier | [optional] 
-**Email** | Pointer to **string** | The email associated with the System&#39;s Manager User | [optional] 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
+**CreatedAt** | Pointer to **string** | When the Meraki record for the wlanList was created. | [optional] 
+**Id** | Pointer to **string** | The Meraki managed Id of the wlanList record. | [optional] 
+**Xml** | Pointer to **string** | An XML string containing the WLAN List for the device. | [optional] 
 
 ## Methods
 
@@ -31,30 +27,30 @@ NewInlineResponse200128WithDefaults instantiates a new InlineResponse200128 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetCreatedAt
 
-`func (o *InlineResponse200128) GetName() string`
+`func (o *InlineResponse200128) GetCreatedAt() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200128) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200128) GetCreatedAtOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCreatedAt
 
-`func (o *InlineResponse200128) SetName(v string)`
+`func (o *InlineResponse200128) SetCreatedAt(v string)`
 
-SetName sets Name field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasName
+### HasCreatedAt
 
-`func (o *InlineResponse200128) HasName() bool`
+`func (o *InlineResponse200128) HasCreatedAt() bool`
 
-HasName returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
 ### GetId
 
@@ -81,130 +77,30 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetXml
 
-`func (o *InlineResponse200128) GetGroupPolicyId() string`
+`func (o *InlineResponse200128) GetXml() string`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetXml returns the Xml field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetXmlOk
 
-`func (o *InlineResponse200128) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200128) GetXmlOk() (*string, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetXmlOk returns a tuple with the Xml field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetXml
 
-`func (o *InlineResponse200128) SetGroupPolicyId(v string)`
+`func (o *InlineResponse200128) SetXml(v string)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetXml sets Xml field to given value.
 
-### HasGroupPolicyId
+### HasXml
 
-`func (o *InlineResponse200128) HasGroupPolicyId() bool`
+`func (o *InlineResponse200128) HasXml() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
-
-### GetPassphrase
-
-`func (o *InlineResponse200128) GetPassphrase() string`
-
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
-
-### GetPassphraseOk
-
-`func (o *InlineResponse200128) GetPassphraseOk() (*string, bool)`
-
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPassphrase
-
-`func (o *InlineResponse200128) SetPassphrase(v string)`
-
-SetPassphrase sets Passphrase field to given value.
-
-### HasPassphrase
-
-`func (o *InlineResponse200128) HasPassphrase() bool`
-
-HasPassphrase returns a boolean if a field has been set.
-
-### GetWifiPersonalNetworkId
-
-`func (o *InlineResponse200128) GetWifiPersonalNetworkId() string`
-
-GetWifiPersonalNetworkId returns the WifiPersonalNetworkId field if non-nil, zero value otherwise.
-
-### GetWifiPersonalNetworkIdOk
-
-`func (o *InlineResponse200128) GetWifiPersonalNetworkIdOk() (*string, bool)`
-
-GetWifiPersonalNetworkIdOk returns a tuple with the WifiPersonalNetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWifiPersonalNetworkId
-
-`func (o *InlineResponse200128) SetWifiPersonalNetworkId(v string)`
-
-SetWifiPersonalNetworkId sets WifiPersonalNetworkId field to given value.
-
-### HasWifiPersonalNetworkId
-
-`func (o *InlineResponse200128) HasWifiPersonalNetworkId() bool`
-
-HasWifiPersonalNetworkId returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *InlineResponse200128) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineResponse200128) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineResponse200128) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *InlineResponse200128) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
-
-### GetExpiresAt
-
-`func (o *InlineResponse200128) GetExpiresAt() time.Time`
-
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
-
-### GetExpiresAtOk
-
-`func (o *InlineResponse200128) GetExpiresAtOk() (*time.Time, bool)`
-
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExpiresAt
-
-`func (o *InlineResponse200128) SetExpiresAt(v time.Time)`
-
-SetExpiresAt sets ExpiresAt field to given value.
-
-### HasExpiresAt
-
-`func (o *InlineResponse200128) HasExpiresAt() bool`
-
-HasExpiresAt returns a boolean if a field has been set.
+HasXml returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

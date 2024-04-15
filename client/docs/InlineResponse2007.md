@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
-**RtspUrl** | Pointer to **string** | External rstp url. Will only be returned if external rtsp stream is exposed | [optional] 
+**Interfaces** | Pointer to [**InlineResponse2007Interfaces**](InlineResponse2007Interfaces.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse2007WithDefaults instantiates a new InlineResponse2007 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetExternalRtspEnabled
+### GetInterfaces
 
-`func (o *InlineResponse2007) GetExternalRtspEnabled() bool`
+`func (o *InlineResponse2007) GetInterfaces() InlineResponse2007Interfaces`
 
-GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
+GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
 
-### GetExternalRtspEnabledOk
+### GetInterfacesOk
 
-`func (o *InlineResponse2007) GetExternalRtspEnabledOk() (*bool, bool)`
+`func (o *InlineResponse2007) GetInterfacesOk() (*InlineResponse2007Interfaces, bool)`
 
-GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
+GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExternalRtspEnabled
+### SetInterfaces
 
-`func (o *InlineResponse2007) SetExternalRtspEnabled(v bool)`
+`func (o *InlineResponse2007) SetInterfaces(v InlineResponse2007Interfaces)`
 
-SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
+SetInterfaces sets Interfaces field to given value.
 
-### HasExternalRtspEnabled
+### HasInterfaces
 
-`func (o *InlineResponse2007) HasExternalRtspEnabled() bool`
+`func (o *InlineResponse2007) HasInterfaces() bool`
 
-HasExternalRtspEnabled returns a boolean if a field has been set.
-
-### GetRtspUrl
-
-`func (o *InlineResponse2007) GetRtspUrl() string`
-
-GetRtspUrl returns the RtspUrl field if non-nil, zero value otherwise.
-
-### GetRtspUrlOk
-
-`func (o *InlineResponse2007) GetRtspUrlOk() (*string, bool)`
-
-GetRtspUrlOk returns a tuple with the RtspUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRtspUrl
-
-`func (o *InlineResponse2007) SetRtspUrl(v string)`
-
-SetRtspUrl sets RtspUrl field to given value.
-
-### HasRtspUrl
-
-`func (o *InlineResponse2007) HasRtspUrl() bool`
-
-HasRtspUrl returns a boolean if a field has been set.
+HasInterfaces returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

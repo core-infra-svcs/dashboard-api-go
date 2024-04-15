@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCellularSims
 
-> map[string]interface{} GetDeviceCellularSims(ctx, serial).Execute()
+> InlineResponse20015 GetDeviceCellularSims(ctx, serial).Execute()
 
 Return the SIM and APN configurations for a cellular device.
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.GetDeviceCellularSims``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCellularSims`: map[string]interface{}
+    // response from `GetDeviceCellularSims`: InlineResponse20015
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.GetDeviceCellularSims`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCellularSims
 
-> map[string]interface{} UpdateDeviceCellularSims(ctx, serial).UpdateDeviceCellularSims(updateDeviceCellularSims).Execute()
+> InlineResponse20015 UpdateDeviceCellularSims(ctx, serial).UpdateDeviceCellularSims(updateDeviceCellularSims).Execute()
 
 Updates the SIM and APN configurations for a cellular device.
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularApi.UpdateDeviceCellularSims``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCellularSims`: map[string]interface{}
+    // response from `UpdateDeviceCellularSims`: InlineResponse20015
     fmt.Fprintf(os.Stdout, "Response from `CellularApi.UpdateDeviceCellularSims`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20015**](InlineResponse20015.md)
 
 ### Authorization
 

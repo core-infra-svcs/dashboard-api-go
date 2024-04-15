@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Iname** | Pointer to **string** | IName of the VLAN profile | [optional] 
-**Name** | Pointer to **string** | Name of the profile, string length must be from 1 to 255 characters | [optional] 
-**IsDefault** | Pointer to **bool** | Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned | [optional] 
-**VlanNames** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanNames**](NetworksNetworkIdVlanProfilesVlanNames.md) | An array of named VLANs | [optional] 
-**VlanGroups** | Pointer to [**[]NetworksNetworkIdVlanProfilesVlanGroups**](NetworksNetworkIdVlanProfilesVlanGroups.md) | An array of named VLANs | [optional] 
+**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
+**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
+**LocalStatusPage** | Pointer to [**InlineResponse200108LocalStatusPage**](InlineResponse200108LocalStatusPage.md) |  | [optional] 
+**SecurePort** | Pointer to [**InlineResponse200108SecurePort**](InlineResponse200108SecurePort.md) |  | [optional] 
+**Fips** | Pointer to [**InlineResponse200108Fips**](InlineResponse200108Fips.md) |  | [optional] 
+**NamedVlans** | Pointer to [**InlineResponse200108NamedVlans**](InlineResponse200108NamedVlans.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewInlineResponse200108WithDefaults instantiates a new InlineResponse200108 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIname
+### GetLocalStatusPageEnabled
 
-`func (o *InlineResponse200108) GetIname() string`
+`func (o *InlineResponse200108) GetLocalStatusPageEnabled() bool`
 
-GetIname returns the Iname field if non-nil, zero value otherwise.
+GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
 
-### GetInameOk
+### GetLocalStatusPageEnabledOk
 
-`func (o *InlineResponse200108) GetInameOk() (*string, bool)`
+`func (o *InlineResponse200108) GetLocalStatusPageEnabledOk() (*bool, bool)`
 
-GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
+GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIname
+### SetLocalStatusPageEnabled
 
-`func (o *InlineResponse200108) SetIname(v string)`
+`func (o *InlineResponse200108) SetLocalStatusPageEnabled(v bool)`
 
-SetIname sets Iname field to given value.
+SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
 
-### HasIname
+### HasLocalStatusPageEnabled
 
-`func (o *InlineResponse200108) HasIname() bool`
+`func (o *InlineResponse200108) HasLocalStatusPageEnabled() bool`
 
-HasIname returns a boolean if a field has been set.
+HasLocalStatusPageEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetRemoteStatusPageEnabled
 
-`func (o *InlineResponse200108) GetName() string`
+`func (o *InlineResponse200108) GetRemoteStatusPageEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRemoteStatusPageEnabledOk
 
-`func (o *InlineResponse200108) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200108) GetRemoteStatusPageEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRemoteStatusPageEnabled
 
-`func (o *InlineResponse200108) SetName(v string)`
+`func (o *InlineResponse200108) SetRemoteStatusPageEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
 
-### HasName
+### HasRemoteStatusPageEnabled
 
-`func (o *InlineResponse200108) HasName() bool`
+`func (o *InlineResponse200108) HasRemoteStatusPageEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasRemoteStatusPageEnabled returns a boolean if a field has been set.
 
-### GetIsDefault
+### GetLocalStatusPage
 
-`func (o *InlineResponse200108) GetIsDefault() bool`
+`func (o *InlineResponse200108) GetLocalStatusPage() InlineResponse200108LocalStatusPage`
 
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
+GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
 
-### GetIsDefaultOk
+### GetLocalStatusPageOk
 
-`func (o *InlineResponse200108) GetIsDefaultOk() (*bool, bool)`
+`func (o *InlineResponse200108) GetLocalStatusPageOk() (*InlineResponse200108LocalStatusPage, bool)`
 
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
+GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefault
+### SetLocalStatusPage
 
-`func (o *InlineResponse200108) SetIsDefault(v bool)`
+`func (o *InlineResponse200108) SetLocalStatusPage(v InlineResponse200108LocalStatusPage)`
 
-SetIsDefault sets IsDefault field to given value.
+SetLocalStatusPage sets LocalStatusPage field to given value.
 
-### HasIsDefault
+### HasLocalStatusPage
 
-`func (o *InlineResponse200108) HasIsDefault() bool`
+`func (o *InlineResponse200108) HasLocalStatusPage() bool`
 
-HasIsDefault returns a boolean if a field has been set.
+HasLocalStatusPage returns a boolean if a field has been set.
 
-### GetVlanNames
+### GetSecurePort
 
-`func (o *InlineResponse200108) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames`
+`func (o *InlineResponse200108) GetSecurePort() InlineResponse200108SecurePort`
 
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
+GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
 
-### GetVlanNamesOk
+### GetSecurePortOk
 
-`func (o *InlineResponse200108) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames, bool)`
+`func (o *InlineResponse200108) GetSecurePortOk() (*InlineResponse200108SecurePort, bool)`
 
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
+GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanNames
+### SetSecurePort
 
-`func (o *InlineResponse200108) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames)`
+`func (o *InlineResponse200108) SetSecurePort(v InlineResponse200108SecurePort)`
 
-SetVlanNames sets VlanNames field to given value.
+SetSecurePort sets SecurePort field to given value.
 
-### HasVlanNames
+### HasSecurePort
 
-`func (o *InlineResponse200108) HasVlanNames() bool`
+`func (o *InlineResponse200108) HasSecurePort() bool`
 
-HasVlanNames returns a boolean if a field has been set.
+HasSecurePort returns a boolean if a field has been set.
 
-### GetVlanGroups
+### GetFips
 
-`func (o *InlineResponse200108) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups`
+`func (o *InlineResponse200108) GetFips() InlineResponse200108Fips`
 
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
+GetFips returns the Fips field if non-nil, zero value otherwise.
 
-### GetVlanGroupsOk
+### GetFipsOk
 
-`func (o *InlineResponse200108) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups, bool)`
+`func (o *InlineResponse200108) GetFipsOk() (*InlineResponse200108Fips, bool)`
 
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
+GetFipsOk returns a tuple with the Fips field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanGroups
+### SetFips
 
-`func (o *InlineResponse200108) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups)`
+`func (o *InlineResponse200108) SetFips(v InlineResponse200108Fips)`
 
-SetVlanGroups sets VlanGroups field to given value.
+SetFips sets Fips field to given value.
 
-### HasVlanGroups
+### HasFips
 
-`func (o *InlineResponse200108) HasVlanGroups() bool`
+`func (o *InlineResponse200108) HasFips() bool`
 
-HasVlanGroups returns a boolean if a field has been set.
+HasFips returns a boolean if a field has been set.
+
+### GetNamedVlans
+
+`func (o *InlineResponse200108) GetNamedVlans() InlineResponse200108NamedVlans`
+
+GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
+
+### GetNamedVlansOk
+
+`func (o *InlineResponse200108) GetNamedVlansOk() (*InlineResponse200108NamedVlans, bool)`
+
+GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNamedVlans
+
+`func (o *InlineResponse200108) SetNamedVlans(v InlineResponse200108NamedVlans)`
+
+SetNamedVlans sets NamedVlans field to given value.
+
+### HasNamedVlans
+
+`func (o *InlineResponse200108) HasNamedVlans() bool`
+
+HasNamedVlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

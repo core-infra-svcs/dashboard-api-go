@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceSwitchPortsStatusesPackets
 
-> []map[string]interface{} GetDeviceSwitchPortsStatusesPackets(ctx, serial).T0(t0).Timespan(timespan).Execute()
+> []InlineResponse20033 GetDeviceSwitchPortsStatusesPackets(ctx, serial).T0(t0).Timespan(timespan).Execute()
 
 Return the packet counters for all the ports of a switch
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketsApi.GetDeviceSwitchPortsStatusesPackets``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchPortsStatusesPackets`: []map[string]interface{}
+    // response from `GetDeviceSwitchPortsStatusesPackets`: []InlineResponse20033
     fmt.Fprintf(os.Stdout, "Response from `PacketsApi.GetDeviceSwitchPortsStatusesPackets`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 

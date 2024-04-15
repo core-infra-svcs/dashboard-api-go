@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | **string** | Short name of the early access feature | 
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**Name** | Pointer to **string** | The name of the configuration template | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
 
 ## Methods
 
 ### NewInlineObject220
 
-`func NewInlineObject220(shortName string, ) *InlineObject220`
+`func NewInlineObject220() *InlineObject220`
 
 NewInlineObject220 instantiates a new InlineObject220 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,55 @@ NewInlineObject220WithDefaults instantiates a new InlineObject220 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetShortName
+### GetName
 
-`func (o *InlineObject220) GetShortName() string`
+`func (o *InlineObject220) GetName() string`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetNameOk
 
-`func (o *InlineObject220) GetShortNameOk() (*string, bool)`
+`func (o *InlineObject220) GetNameOk() (*string, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetName
 
-`func (o *InlineObject220) SetShortName(v string)`
+`func (o *InlineObject220) SetName(v string)`
 
-SetShortName sets ShortName field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetLimitScopeToNetworks
+`func (o *InlineObject220) HasName() bool`
 
-`func (o *InlineObject220) GetLimitScopeToNetworks() []string`
+HasName returns a boolean if a field has been set.
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+### GetTimeZone
 
-### GetLimitScopeToNetworksOk
+`func (o *InlineObject220) GetTimeZone() string`
 
-`func (o *InlineObject220) GetLimitScopeToNetworksOk() (*[]string, bool)`
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+### GetTimeZoneOk
+
+`func (o *InlineObject220) GetTimeZoneOk() (*string, bool)`
+
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetTimeZone
 
-`func (o *InlineObject220) SetLimitScopeToNetworks(v []string)`
+`func (o *InlineObject220) SetTimeZone(v string)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasLimitScopeToNetworks
+### HasTimeZone
 
-`func (o *InlineObject220) HasLimitScopeToNetworks() bool`
+`func (o *InlineObject220) HasTimeZone() bool`
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

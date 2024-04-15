@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CableTestId** | Pointer to **string** | Id of the cable test request. Used to check the status of the request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your cable test request. | [optional] 
-**Request** | Pointer to [**InlineResponse2012Request**](InlineResponse2012Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the cable test request. | [optional] 
-**Results** | Pointer to [**[]InlineResponse20010Results**](InlineResponse20010Results.md) | Results of the cable test request, one for each requested port. | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time | [optional] 
+**ZoneId** | Pointer to **int32** | The zone id | [optional] 
+**Entrances** | Pointer to **int32** | The number of entrances | [optional] 
+**AverageCount** | Pointer to **float32** | The average count | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse20010WithDefaults instantiates a new InlineResponse20010 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCableTestId
+### GetStartTs
 
-`func (o *InlineResponse20010) GetCableTestId() string`
+`func (o *InlineResponse20010) GetStartTs() time.Time`
 
-GetCableTestId returns the CableTestId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetCableTestIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse20010) GetCableTestIdOk() (*string, bool)`
+`func (o *InlineResponse20010) GetStartTsOk() (*time.Time, bool)`
 
-GetCableTestIdOk returns a tuple with the CableTestId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCableTestId
+### SetStartTs
 
-`func (o *InlineResponse20010) SetCableTestId(v string)`
+`func (o *InlineResponse20010) SetStartTs(v time.Time)`
 
-SetCableTestId sets CableTestId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasCableTestId
+### HasStartTs
 
-`func (o *InlineResponse20010) HasCableTestId() bool`
+`func (o *InlineResponse20010) HasStartTs() bool`
 
-HasCableTestId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetUrl
+### GetEndTs
 
-`func (o *InlineResponse20010) GetUrl() string`
+`func (o *InlineResponse20010) GetEndTs() time.Time`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetEndTsOk
 
-`func (o *InlineResponse20010) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20010) GetEndTsOk() (*time.Time, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetEndTs
 
-`func (o *InlineResponse20010) SetUrl(v string)`
+`func (o *InlineResponse20010) SetEndTs(v time.Time)`
 
-SetUrl sets Url field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasUrl
+### HasEndTs
 
-`func (o *InlineResponse20010) HasUrl() bool`
+`func (o *InlineResponse20010) HasEndTs() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetRequest
+### GetZoneId
 
-`func (o *InlineResponse20010) GetRequest() InlineResponse2012Request`
+`func (o *InlineResponse20010) GetZoneId() int32`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetZoneId returns the ZoneId field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetZoneIdOk
 
-`func (o *InlineResponse20010) GetRequestOk() (*InlineResponse2012Request, bool)`
+`func (o *InlineResponse20010) GetZoneIdOk() (*int32, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetZoneIdOk returns a tuple with the ZoneId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetZoneId
 
-`func (o *InlineResponse20010) SetRequest(v InlineResponse2012Request)`
+`func (o *InlineResponse20010) SetZoneId(v int32)`
 
-SetRequest sets Request field to given value.
+SetZoneId sets ZoneId field to given value.
 
-### HasRequest
+### HasZoneId
 
-`func (o *InlineResponse20010) HasRequest() bool`
+`func (o *InlineResponse20010) HasZoneId() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasZoneId returns a boolean if a field has been set.
 
-### GetStatus
+### GetEntrances
 
-`func (o *InlineResponse20010) GetStatus() string`
+`func (o *InlineResponse20010) GetEntrances() int32`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetEntrances returns the Entrances field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetEntrancesOk
 
-`func (o *InlineResponse20010) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20010) GetEntrancesOk() (*int32, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetEntrancesOk returns a tuple with the Entrances field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetEntrances
 
-`func (o *InlineResponse20010) SetStatus(v string)`
+`func (o *InlineResponse20010) SetEntrances(v int32)`
 
-SetStatus sets Status field to given value.
+SetEntrances sets Entrances field to given value.
 
-### HasStatus
+### HasEntrances
 
-`func (o *InlineResponse20010) HasStatus() bool`
+`func (o *InlineResponse20010) HasEntrances() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasEntrances returns a boolean if a field has been set.
 
-### GetResults
+### GetAverageCount
 
-`func (o *InlineResponse20010) GetResults() []InlineResponse20010Results`
+`func (o *InlineResponse20010) GetAverageCount() float32`
 
-GetResults returns the Results field if non-nil, zero value otherwise.
+GetAverageCount returns the AverageCount field if non-nil, zero value otherwise.
 
-### GetResultsOk
+### GetAverageCountOk
 
-`func (o *InlineResponse20010) GetResultsOk() (*[]InlineResponse20010Results, bool)`
+`func (o *InlineResponse20010) GetAverageCountOk() (*float32, bool)`
 
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+GetAverageCountOk returns a tuple with the AverageCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResults
+### SetAverageCount
 
-`func (o *InlineResponse20010) SetResults(v []InlineResponse20010Results)`
+`func (o *InlineResponse20010) SetAverageCount(v float32)`
 
-SetResults sets Results field to given value.
+SetAverageCount sets AverageCount field to given value.
 
-### HasResults
+### HasAverageCount
 
-`func (o *InlineResponse20010) HasResults() bool`
+`func (o *InlineResponse20010) HasAverageCount() bool`
 
-HasResults returns a boolean if a field has been set.
-
-### GetError
-
-`func (o *InlineResponse20010) GetError() string`
-
-GetError returns the Error field if non-nil, zero value otherwise.
-
-### GetErrorOk
-
-`func (o *InlineResponse20010) GetErrorOk() (*string, bool)`
-
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetError
-
-`func (o *InlineResponse20010) SetError(v string)`
-
-SetError sets Error field to given value.
-
-### HasError
-
-`func (o *InlineResponse20010) HasError() bool`
-
-HasError returns a boolean if a field has been set.
+HasAverageCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

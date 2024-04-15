@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Permission scope id | [optional] 
-**Name** | Pointer to **string** | Name of permission scope | [optional] 
-**Level** | Pointer to **string** | Permission scope level | [optional] 
+**DefaultSettings** | Pointer to [**InlineResponse200150DefaultSettings**](InlineResponse200150DefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200150Overrides**](InlineResponse200150Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200150WithDefaults instantiates a new InlineResponse200150 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetDefaultSettings
 
-`func (o *InlineResponse200150) GetId() string`
+`func (o *InlineResponse200150) GetDefaultSettings() InlineResponse200150DefaultSettings`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetDefaultSettingsOk
 
-`func (o *InlineResponse200150) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200150) GetDefaultSettingsOk() (*InlineResponse200150DefaultSettings, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetDefaultSettings
 
-`func (o *InlineResponse200150) SetId(v string)`
+`func (o *InlineResponse200150) SetDefaultSettings(v InlineResponse200150DefaultSettings)`
 
-SetId sets Id field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
-### HasId
+### HasDefaultSettings
 
-`func (o *InlineResponse200150) HasId() bool`
+`func (o *InlineResponse200150) HasDefaultSettings() bool`
 
-HasId returns a boolean if a field has been set.
+HasDefaultSettings returns a boolean if a field has been set.
 
-### GetName
+### GetOverrides
 
-`func (o *InlineResponse200150) GetName() string`
+`func (o *InlineResponse200150) GetOverrides() []InlineResponse200150Overrides`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetOverridesOk
 
-`func (o *InlineResponse200150) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200150) GetOverridesOk() (*[]InlineResponse200150Overrides, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetOverrides
 
-`func (o *InlineResponse200150) SetName(v string)`
+`func (o *InlineResponse200150) SetOverrides(v []InlineResponse200150Overrides)`
 
-SetName sets Name field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasName
+### HasOverrides
 
-`func (o *InlineResponse200150) HasName() bool`
+`func (o *InlineResponse200150) HasOverrides() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetLevel
-
-`func (o *InlineResponse200150) GetLevel() string`
-
-GetLevel returns the Level field if non-nil, zero value otherwise.
-
-### GetLevelOk
-
-`func (o *InlineResponse200150) GetLevelOk() (*string, bool)`
-
-GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLevel
-
-`func (o *InlineResponse200150) SetLevel(v string)`
-
-SetLevel sets Level field to given value.
-
-### HasLevel
-
-`func (o *InlineResponse200150) HasLevel() bool`
-
-HasLevel returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

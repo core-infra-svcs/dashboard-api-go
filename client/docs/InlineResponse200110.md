@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlanProfile** | Pointer to [**InlineResponse200110VlanProfile**](InlineResponse200110VlanProfile.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | Array of Device Serials | [optional] 
-**StackIds** | Pointer to **[]string** | Array of Switch Stack IDs | [optional] 
+**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200110WithDefaults instantiates a new InlineResponse200110 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlanProfile
+### GetIds
 
-`func (o *InlineResponse200110) GetVlanProfile() InlineResponse200110VlanProfile`
+`func (o *InlineResponse200110) GetIds() []string`
 
-GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetVlanProfileOk
+### GetIdsOk
 
-`func (o *InlineResponse200110) GetVlanProfileOk() (*InlineResponse200110VlanProfile, bool)`
+`func (o *InlineResponse200110) GetIdsOk() (*[]string, bool)`
 
-GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanProfile
+### SetIds
 
-`func (o *InlineResponse200110) SetVlanProfile(v InlineResponse200110VlanProfile)`
+`func (o *InlineResponse200110) SetIds(v []string)`
 
-SetVlanProfile sets VlanProfile field to given value.
+SetIds sets Ids field to given value.
 
-### HasVlanProfile
+### HasIds
 
-`func (o *InlineResponse200110) HasVlanProfile() bool`
+`func (o *InlineResponse200110) HasIds() bool`
 
-HasVlanProfile returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineResponse200110) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineResponse200110) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineResponse200110) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineResponse200110) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
-
-### GetStackIds
-
-`func (o *InlineResponse200110) GetStackIds() []string`
-
-GetStackIds returns the StackIds field if non-nil, zero value otherwise.
-
-### GetStackIdsOk
-
-`func (o *InlineResponse200110) GetStackIdsOk() (*[]string, bool)`
-
-GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStackIds
-
-`func (o *InlineResponse200110) SetStackIds(v []string)`
-
-SetStackIds sets StackIds field to given value.
-
-### HasStackIds
-
-`func (o *InlineResponse200110) HasStackIds() bool`
-
-HasStackIds returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

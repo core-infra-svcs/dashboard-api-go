@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Mode** | Pointer to **string** | Security protocol of the MQTT broker. | [optional] 
-**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecuritySecurity**](NetworksNetworkIdMqttBrokersSecuritySecurity.md) |  | [optional] 
+**Tls** | Pointer to [**NetworksNetworkIdMqttBrokersSecurityTls**](NetworksNetworkIdMqttBrokersSecurityTls.md) |  | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetMode sets Mode field to given value.
 
 HasMode returns a boolean if a field has been set.
 
-### GetSecurity
+### GetTls
 
-`func (o *NetworksNetworkIdMqttBrokersSecurity) GetSecurity() NetworksNetworkIdMqttBrokersSecuritySecurity`
+`func (o *NetworksNetworkIdMqttBrokersSecurity) GetTls() NetworksNetworkIdMqttBrokersSecurityTls`
 
-GetSecurity returns the Security field if non-nil, zero value otherwise.
+GetTls returns the Tls field if non-nil, zero value otherwise.
 
-### GetSecurityOk
+### GetTlsOk
 
-`func (o *NetworksNetworkIdMqttBrokersSecurity) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecuritySecurity, bool)`
+`func (o *NetworksNetworkIdMqttBrokersSecurity) GetTlsOk() (*NetworksNetworkIdMqttBrokersSecurityTls, bool)`
 
-GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
+GetTlsOk returns a tuple with the Tls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurity
+### SetTls
 
-`func (o *NetworksNetworkIdMqttBrokersSecurity) SetSecurity(v NetworksNetworkIdMqttBrokersSecuritySecurity)`
+`func (o *NetworksNetworkIdMqttBrokersSecurity) SetTls(v NetworksNetworkIdMqttBrokersSecurityTls)`
 
-SetSecurity sets Security field to given value.
+SetTls sets Tls field to given value.
 
-### HasSecurity
+### HasTls
 
-`func (o *NetworksNetworkIdMqttBrokersSecurity) HasSecurity() bool`
+`func (o *NetworksNetworkIdMqttBrokersSecurity) HasTls() bool`
 
-HasSecurity returns a boolean if a field has been set.
+HasTls returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

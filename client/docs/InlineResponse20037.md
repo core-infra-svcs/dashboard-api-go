@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | **string** | ID of the network whose VPN exclusion rules are returned. | 
-**NetworkName** | **string** | Name of the network whose VPN exclusion rules are returned. | 
-**Custom** | [**[]InlineResponse20037Custom**](InlineResponse20037Custom.md) | Custom VPN exclusion rules. | 
-**MajorApplications** | [**[]InlineResponse20037MajorApplications**](InlineResponse20037MajorApplications.md) | Major Application based VPN exclusion rules. | 
+**Enabled** | Pointer to **bool** | Enable or disable warm spare for a switch | [optional] 
+**PrimarySerial** | Pointer to **string** | Serial number of the primary switch | [optional] 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare switch | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20037
 
-`func NewInlineResponse20037(networkId string, networkName string, custom []InlineResponse20037Custom, majorApplications []InlineResponse20037MajorApplications, ) *InlineResponse20037`
+`func NewInlineResponse20037() *InlineResponse20037`
 
 NewInlineResponse20037 instantiates a new InlineResponse20037 object
 This constructor will assign default values to properties that have it defined,
@@ -28,85 +27,80 @@ NewInlineResponse20037WithDefaults instantiates a new InlineResponse20037 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetEnabled
 
-`func (o *InlineResponse20037) GetNetworkId() string`
+`func (o *InlineResponse20037) GetEnabled() bool`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse20037) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse20037) GetEnabledOk() (*bool, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetEnabled
 
-`func (o *InlineResponse20037) SetNetworkId(v string)`
+`func (o *InlineResponse20037) SetEnabled(v bool)`
 
-SetNetworkId sets NetworkId field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetNetworkName
+`func (o *InlineResponse20037) HasEnabled() bool`
 
-`func (o *InlineResponse20037) GetNetworkName() string`
+HasEnabled returns a boolean if a field has been set.
 
-GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
+### GetPrimarySerial
 
-### GetNetworkNameOk
+`func (o *InlineResponse20037) GetPrimarySerial() string`
 
-`func (o *InlineResponse20037) GetNetworkNameOk() (*string, bool)`
+GetPrimarySerial returns the PrimarySerial field if non-nil, zero value otherwise.
 
-GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
+### GetPrimarySerialOk
+
+`func (o *InlineResponse20037) GetPrimarySerialOk() (*string, bool)`
+
+GetPrimarySerialOk returns a tuple with the PrimarySerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkName
+### SetPrimarySerial
 
-`func (o *InlineResponse20037) SetNetworkName(v string)`
+`func (o *InlineResponse20037) SetPrimarySerial(v string)`
 
-SetNetworkName sets NetworkName field to given value.
+SetPrimarySerial sets PrimarySerial field to given value.
 
+### HasPrimarySerial
 
-### GetCustom
+`func (o *InlineResponse20037) HasPrimarySerial() bool`
 
-`func (o *InlineResponse20037) GetCustom() []InlineResponse20037Custom`
+HasPrimarySerial returns a boolean if a field has been set.
 
-GetCustom returns the Custom field if non-nil, zero value otherwise.
+### GetSpareSerial
 
-### GetCustomOk
+`func (o *InlineResponse20037) GetSpareSerial() string`
 
-`func (o *InlineResponse20037) GetCustomOk() (*[]InlineResponse20037Custom, bool)`
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
+### GetSpareSerialOk
+
+`func (o *InlineResponse20037) GetSpareSerialOk() (*string, bool)`
+
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustom
+### SetSpareSerial
 
-`func (o *InlineResponse20037) SetCustom(v []InlineResponse20037Custom)`
+`func (o *InlineResponse20037) SetSpareSerial(v string)`
 
-SetCustom sets Custom field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
+### HasSpareSerial
 
-### GetMajorApplications
+`func (o *InlineResponse20037) HasSpareSerial() bool`
 
-`func (o *InlineResponse20037) GetMajorApplications() []InlineResponse20037MajorApplications`
-
-GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
-
-### GetMajorApplicationsOk
-
-`func (o *InlineResponse20037) GetMajorApplicationsOk() (*[]InlineResponse20037MajorApplications, bool)`
-
-GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMajorApplications
-
-`func (o *InlineResponse20037) SetMajorApplications(v []InlineResponse20037MajorApplications)`
-
-SetMajorApplications sets MajorApplications field to given value.
-
+HasSpareSerial returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

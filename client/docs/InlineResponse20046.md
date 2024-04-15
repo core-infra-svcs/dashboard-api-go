@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
+**Service** | Pointer to **string** | Appliance service name | [optional] 
+**Access** | Pointer to **string** | A string indicating the rule for which IPs are allowed to use the specified service | [optional] 
+**AllowedIps** | Pointer to **[]string** | An array of allowed IPs that can access the service | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20046WithDefaults instantiates a new InlineResponse20046 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetService
 
-`func (o *InlineResponse20046) GetMac() string`
+`func (o *InlineResponse20046) GetService() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetService returns the Service field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetServiceOk
 
-`func (o *InlineResponse20046) GetMacOk() (*string, bool)`
+`func (o *InlineResponse20046) GetServiceOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetServiceOk returns a tuple with the Service field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetService
 
-`func (o *InlineResponse20046) SetMac(v string)`
+`func (o *InlineResponse20046) SetService(v string)`
 
-SetMac sets Mac field to given value.
+SetService sets Service field to given value.
 
-### HasMac
+### HasService
 
-`func (o *InlineResponse20046) HasMac() bool`
+`func (o *InlineResponse20046) HasService() bool`
 
-HasMac returns a boolean if a field has been set.
+HasService returns a boolean if a field has been set.
 
-### GetDevicePolicy
+### GetAccess
 
-`func (o *InlineResponse20046) GetDevicePolicy() string`
+`func (o *InlineResponse20046) GetAccess() string`
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+GetAccess returns the Access field if non-nil, zero value otherwise.
 
-### GetDevicePolicyOk
+### GetAccessOk
 
-`func (o *InlineResponse20046) GetDevicePolicyOk() (*string, bool)`
+`func (o *InlineResponse20046) GetAccessOk() (*string, bool)`
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetAccess
 
-`func (o *InlineResponse20046) SetDevicePolicy(v string)`
+`func (o *InlineResponse20046) SetAccess(v string)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetAccess sets Access field to given value.
 
-### HasDevicePolicy
+### HasAccess
 
-`func (o *InlineResponse20046) HasDevicePolicy() bool`
+`func (o *InlineResponse20046) HasAccess() bool`
 
-HasDevicePolicy returns a boolean if a field has been set.
+HasAccess returns a boolean if a field has been set.
 
-### GetGroupPolicyId
+### GetAllowedIps
 
-`func (o *InlineResponse20046) GetGroupPolicyId() string`
+`func (o *InlineResponse20046) GetAllowedIps() []string`
 
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+GetAllowedIps returns the AllowedIps field if non-nil, zero value otherwise.
 
-### GetGroupPolicyIdOk
+### GetAllowedIpsOk
 
-`func (o *InlineResponse20046) GetGroupPolicyIdOk() (*string, bool)`
+`func (o *InlineResponse20046) GetAllowedIpsOk() (*[]string, bool)`
 
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+GetAllowedIpsOk returns a tuple with the AllowedIps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupPolicyId
+### SetAllowedIps
 
-`func (o *InlineResponse20046) SetGroupPolicyId(v string)`
+`func (o *InlineResponse20046) SetAllowedIps(v []string)`
 
-SetGroupPolicyId sets GroupPolicyId field to given value.
+SetAllowedIps sets AllowedIps field to given value.
 
-### HasGroupPolicyId
+### HasAllowedIps
 
-`func (o *InlineResponse20046) HasGroupPolicyId() bool`
+`func (o *InlineResponse20046) HasAllowedIps() bool`
 
-HasGroupPolicyId returns a boolean if a field has been set.
+HasAllowedIps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

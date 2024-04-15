@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200130Rules**](InlineResponse200130Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200188Ranges**](InlineResponse200188Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200188RangesInSeconds**](InlineResponse200188RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject188WithDefaults instantiates a new InlineObject188 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetEnabled
 
-`func (o *InlineObject188) GetTrafficShapingEnabled() bool`
+`func (o *InlineObject188) GetEnabled() bool`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetEnabledOk
 
-`func (o *InlineObject188) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineObject188) GetEnabledOk() (*bool, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetEnabled
 
-`func (o *InlineObject188) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineObject188) SetEnabled(v bool)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTrafficShapingEnabled
+### HasEnabled
 
-`func (o *InlineObject188) HasTrafficShapingEnabled() bool`
+`func (o *InlineObject188) HasEnabled() bool`
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetDefaultRulesEnabled
+### GetRanges
 
-`func (o *InlineObject188) GetDefaultRulesEnabled() bool`
+`func (o *InlineObject188) GetRanges() []InlineResponse200188Ranges`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetRangesOk
 
-`func (o *InlineObject188) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineObject188) GetRangesOk() (*[]InlineResponse200188Ranges, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetRanges
 
-`func (o *InlineObject188) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineObject188) SetRanges(v []InlineResponse200188Ranges)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasDefaultRulesEnabled
+### HasRanges
 
-`func (o *InlineObject188) HasDefaultRulesEnabled() bool`
+`func (o *InlineObject188) HasRanges() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetRules
+### GetRangesInSeconds
 
-`func (o *InlineObject188) GetRules() []InlineResponse200130Rules`
+`func (o *InlineObject188) GetRangesInSeconds() []InlineResponse200188RangesInSeconds`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetRangesInSecondsOk
 
-`func (o *InlineObject188) GetRulesOk() (*[]InlineResponse200130Rules, bool)`
+`func (o *InlineObject188) GetRangesInSecondsOk() (*[]InlineResponse200188RangesInSeconds, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetRangesInSeconds
 
-`func (o *InlineObject188) SetRules(v []InlineResponse200130Rules)`
+`func (o *InlineObject188) SetRangesInSeconds(v []InlineResponse200188RangesInSeconds)`
 
-SetRules sets Rules field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasRules
+### HasRangesInSeconds
 
-`func (o *InlineObject188) HasRules() bool`
+`func (o *InlineObject188) HasRangesInSeconds() bool`
 
-HasRules returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

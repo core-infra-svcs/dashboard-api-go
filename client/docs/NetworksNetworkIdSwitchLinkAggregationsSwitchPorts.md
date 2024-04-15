@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | **string** | Serial number of the switch. | 
-**PortId** | **string** | Port identifier of switch port. For modules, the identifier is \&quot;SlotNumber_ModuleType_PortNumber\&quot; (Ex: \&quot;1_8X10G_1\&quot;), otherwise it is just the port number (Ex: \&quot;8\&quot;). | 
+**Serial** | Pointer to **string** | The serial number for the switch port. | [optional] 
+**PortId** | Pointer to **string** | The ID for the switch port. | [optional] 
 
 ## Methods
 
 ### NewNetworksNetworkIdSwitchLinkAggregationsSwitchPorts
 
-`func NewNetworksNetworkIdSwitchLinkAggregationsSwitchPorts(serial string, portId string, ) *NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
+`func NewNetworksNetworkIdSwitchLinkAggregationsSwitchPorts() *NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
 
 NewNetworksNetworkIdSwitchLinkAggregationsSwitchPorts instantiates a new NetworksNetworkIdSwitchLinkAggregationsSwitchPorts object
 This constructor will assign default values to properties that have it defined,
@@ -45,6 +45,11 @@ and a boolean to check if the value has been set.
 
 SetSerial sets Serial field to given value.
 
+### HasSerial
+
+`func (o *NetworksNetworkIdSwitchLinkAggregationsSwitchPorts) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
 
 ### GetPortId
 
@@ -65,6 +70,11 @@ and a boolean to check if the value has been set.
 
 SetPortId sets PortId field to given value.
 
+### HasPortId
+
+`func (o *NetworksNetworkIdSwitchLinkAggregationsSwitchPorts) HasPortId() bool`
+
+HasPortId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20091Rules**](InlineResponse20091Rules.md) | An ordered array of the access control list rules | [optional] 
+**Group** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedStagesGroup**](NetworksNetworkIdFirmwareUpgradesStagedStagesGroup.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20091WithDefaults instantiates a new InlineResponse20091 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetGroup
 
-`func (o *InlineResponse20091) GetRules() []InlineResponse20091Rules`
+`func (o *InlineResponse20091) GetGroup() NetworksNetworkIdFirmwareUpgradesStagedStagesGroup`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetGroup returns the Group field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetGroupOk
 
-`func (o *InlineResponse20091) GetRulesOk() (*[]InlineResponse20091Rules, bool)`
+`func (o *InlineResponse20091) GetGroupOk() (*NetworksNetworkIdFirmwareUpgradesStagedStagesGroup, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetGroup
 
-`func (o *InlineResponse20091) SetRules(v []InlineResponse20091Rules)`
+`func (o *InlineResponse20091) SetGroup(v NetworksNetworkIdFirmwareUpgradesStagedStagesGroup)`
 
-SetRules sets Rules field to given value.
+SetGroup sets Group field to given value.
 
-### HasRules
+### HasGroup
 
-`func (o *InlineResponse20091) HasRules() bool`
+`func (o *InlineResponse20091) HasGroup() bool`
 
-HasRules returns a boolean if a field has been set.
+HasGroup returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

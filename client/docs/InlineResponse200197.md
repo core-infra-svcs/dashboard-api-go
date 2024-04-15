@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**AdaptivePolicyId** | Pointer to **string** | The ID for the adaptive policy | [optional] 
+**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup.md) |  | [optional] 
+**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup.md) |  | [optional] 
+**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls.md) | The access control lists for the adaptive policy | [optional] 
+**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL | [optional] 
+**CreatedAt** | Pointer to **string** | The created at timestamp for the adaptive policy | [optional] 
+**UpdatedAt** | Pointer to **string** | The updated at timestamp for the adaptive policy | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineResponse200197WithDefaults instantiates a new InlineResponse200197 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetAdaptivePolicyId
 
-`func (o *InlineResponse200197) GetModel() string`
+`func (o *InlineResponse200197) GetAdaptivePolicyId() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetAdaptivePolicyId returns the AdaptivePolicyId field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetAdaptivePolicyIdOk
 
-`func (o *InlineResponse200197) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200197) GetAdaptivePolicyIdOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetAdaptivePolicyIdOk returns a tuple with the AdaptivePolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetAdaptivePolicyId
 
-`func (o *InlineResponse200197) SetModel(v string)`
+`func (o *InlineResponse200197) SetAdaptivePolicyId(v string)`
 
-SetModel sets Model field to given value.
+SetAdaptivePolicyId sets AdaptivePolicyId field to given value.
 
-### HasModel
+### HasAdaptivePolicyId
 
-`func (o *InlineResponse200197) HasModel() bool`
+`func (o *InlineResponse200197) HasAdaptivePolicyId() bool`
 
-HasModel returns a boolean if a field has been set.
+HasAdaptivePolicyId returns a boolean if a field has been set.
 
-### GetCount
+### GetSourceGroup
 
-`func (o *InlineResponse200197) GetCount() int32`
+`func (o *InlineResponse200197) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetSourceGroupOk
 
-`func (o *InlineResponse200197) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse200197) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetSourceGroup
 
-`func (o *InlineResponse200197) SetCount(v int32)`
+`func (o *InlineResponse200197) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup)`
 
-SetCount sets Count field to given value.
+SetSourceGroup sets SourceGroup field to given value.
 
-### HasCount
+### HasSourceGroup
 
-`func (o *InlineResponse200197) HasCount() bool`
+`func (o *InlineResponse200197) HasSourceGroup() bool`
 
-HasCount returns a boolean if a field has been set.
+HasSourceGroup returns a boolean if a field has been set.
 
-### GetUsage
+### GetDestinationGroup
 
-`func (o *InlineResponse200197) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
+`func (o *InlineResponse200197) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetDestinationGroupOk
 
-`func (o *InlineResponse200197) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
+`func (o *InlineResponse200197) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetDestinationGroup
 
-`func (o *InlineResponse200197) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
+`func (o *InlineResponse200197) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup)`
 
-SetUsage sets Usage field to given value.
+SetDestinationGroup sets DestinationGroup field to given value.
 
-### HasUsage
+### HasDestinationGroup
 
-`func (o *InlineResponse200197) HasUsage() bool`
+`func (o *InlineResponse200197) HasDestinationGroup() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasDestinationGroup returns a boolean if a field has been set.
+
+### GetAcls
+
+`func (o *InlineResponse200197) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls`
+
+GetAcls returns the Acls field if non-nil, zero value otherwise.
+
+### GetAclsOk
+
+`func (o *InlineResponse200197) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls, bool)`
+
+GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAcls
+
+`func (o *InlineResponse200197) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls)`
+
+SetAcls sets Acls field to given value.
+
+### HasAcls
+
+`func (o *InlineResponse200197) HasAcls() bool`
+
+HasAcls returns a boolean if a field has been set.
+
+### GetLastEntryRule
+
+`func (o *InlineResponse200197) GetLastEntryRule() string`
+
+GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
+
+### GetLastEntryRuleOk
+
+`func (o *InlineResponse200197) GetLastEntryRuleOk() (*string, bool)`
+
+GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastEntryRule
+
+`func (o *InlineResponse200197) SetLastEntryRule(v string)`
+
+SetLastEntryRule sets LastEntryRule field to given value.
+
+### HasLastEntryRule
+
+`func (o *InlineResponse200197) HasLastEntryRule() bool`
+
+HasLastEntryRule returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200197) GetCreatedAt() string`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200197) GetCreatedAtOk() (*string, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200197) SetCreatedAt(v string)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200197) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200197) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200197) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200197) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200197) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the adaptive policy ACL | [optional] 
-**Name** | Pointer to **string** | The name of the adaptive policy ACL | [optional] 
+**Id** | Pointer to **string** | The ID for the access control list | [optional] 
+**Name** | Pointer to **string** | The name for the access control list | [optional] 
 
 ## Methods
 

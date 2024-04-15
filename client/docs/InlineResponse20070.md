@@ -4,10 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
-**Tags** | Pointer to **[]string** | An array of tags associated with the device. | [optional] 
-**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
-**Serial** | Pointer to **string** | The device serial. | [optional] 
+**Id** | Pointer to **string** | Network ID | [optional] 
+**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Network name | [optional] 
+**ProductTypes** | Pointer to **[]string** | List of the product types that the network supports | [optional] 
+**TimeZone** | Pointer to **string** | Timezone of the network | [optional] 
+**Tags** | Pointer to **[]string** | Network tags | [optional] 
+**EnrollmentString** | Pointer to **string** | Enrollment string for the network | [optional] 
+**Url** | Pointer to **string** | URL to the network Dashboard UI | [optional] 
+**Notes** | Pointer to **string** | Notes for the network | [optional] 
+**IsBoundToConfigTemplate** | Pointer to **bool** | If the network is bound to a config template | [optional] 
+**ConfigTemplateId** | Pointer to **string** | ID of the config template the network is being bound to | [optional] 
 
 ## Methods
 
@@ -53,6 +60,106 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
+### GetOrganizationId
+
+`func (o *InlineResponse20070) GetOrganizationId() string`
+
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+
+### GetOrganizationIdOk
+
+`func (o *InlineResponse20070) GetOrganizationIdOk() (*string, bool)`
+
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrganizationId
+
+`func (o *InlineResponse20070) SetOrganizationId(v string)`
+
+SetOrganizationId sets OrganizationId field to given value.
+
+### HasOrganizationId
+
+`func (o *InlineResponse20070) HasOrganizationId() bool`
+
+HasOrganizationId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse20070) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse20070) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse20070) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse20070) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetProductTypes
+
+`func (o *InlineResponse20070) GetProductTypes() []string`
+
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+
+### GetProductTypesOk
+
+`func (o *InlineResponse20070) GetProductTypesOk() (*[]string, bool)`
+
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductTypes
+
+`func (o *InlineResponse20070) SetProductTypes(v []string)`
+
+SetProductTypes sets ProductTypes field to given value.
+
+### HasProductTypes
+
+`func (o *InlineResponse20070) HasProductTypes() bool`
+
+HasProductTypes returns a boolean if a field has been set.
+
+### GetTimeZone
+
+`func (o *InlineResponse20070) GetTimeZone() string`
+
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+
+### GetTimeZoneOk
+
+`func (o *InlineResponse20070) GetTimeZoneOk() (*string, bool)`
+
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTimeZone
+
+`func (o *InlineResponse20070) SetTimeZone(v string)`
+
+SetTimeZone sets TimeZone field to given value.
+
+### HasTimeZone
+
+`func (o *InlineResponse20070) HasTimeZone() bool`
+
+HasTimeZone returns a boolean if a field has been set.
+
 ### GetTags
 
 `func (o *InlineResponse20070) GetTags() []string`
@@ -78,55 +185,130 @@ SetTags sets Tags field to given value.
 
 HasTags returns a boolean if a field has been set.
 
-### GetWifiMac
+### GetEnrollmentString
 
-`func (o *InlineResponse20070) GetWifiMac() string`
+`func (o *InlineResponse20070) GetEnrollmentString() string`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetEnrollmentStringOk
 
-`func (o *InlineResponse20070) GetWifiMacOk() (*string, bool)`
+`func (o *InlineResponse20070) GetEnrollmentStringOk() (*string, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetEnrollmentString
 
-`func (o *InlineResponse20070) SetWifiMac(v string)`
+`func (o *InlineResponse20070) SetEnrollmentString(v string)`
 
-SetWifiMac sets WifiMac field to given value.
+SetEnrollmentString sets EnrollmentString field to given value.
 
-### HasWifiMac
+### HasEnrollmentString
 
-`func (o *InlineResponse20070) HasWifiMac() bool`
+`func (o *InlineResponse20070) HasEnrollmentString() bool`
 
-HasWifiMac returns a boolean if a field has been set.
+HasEnrollmentString returns a boolean if a field has been set.
 
-### GetSerial
+### GetUrl
 
-`func (o *InlineResponse20070) GetSerial() string`
+`func (o *InlineResponse20070) GetUrl() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetUrlOk
 
-`func (o *InlineResponse20070) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20070) GetUrlOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetUrl
 
-`func (o *InlineResponse20070) SetSerial(v string)`
+`func (o *InlineResponse20070) SetUrl(v string)`
 
-SetSerial sets Serial field to given value.
+SetUrl sets Url field to given value.
 
-### HasSerial
+### HasUrl
 
-`func (o *InlineResponse20070) HasSerial() bool`
+`func (o *InlineResponse20070) HasUrl() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse20070) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse20070) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse20070) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse20070) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetIsBoundToConfigTemplate
+
+`func (o *InlineResponse20070) GetIsBoundToConfigTemplate() bool`
+
+GetIsBoundToConfigTemplate returns the IsBoundToConfigTemplate field if non-nil, zero value otherwise.
+
+### GetIsBoundToConfigTemplateOk
+
+`func (o *InlineResponse20070) GetIsBoundToConfigTemplateOk() (*bool, bool)`
+
+GetIsBoundToConfigTemplateOk returns a tuple with the IsBoundToConfigTemplate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsBoundToConfigTemplate
+
+`func (o *InlineResponse20070) SetIsBoundToConfigTemplate(v bool)`
+
+SetIsBoundToConfigTemplate sets IsBoundToConfigTemplate field to given value.
+
+### HasIsBoundToConfigTemplate
+
+`func (o *InlineResponse20070) HasIsBoundToConfigTemplate() bool`
+
+HasIsBoundToConfigTemplate returns a boolean if a field has been set.
+
+### GetConfigTemplateId
+
+`func (o *InlineResponse20070) GetConfigTemplateId() string`
+
+GetConfigTemplateId returns the ConfigTemplateId field if non-nil, zero value otherwise.
+
+### GetConfigTemplateIdOk
+
+`func (o *InlineResponse20070) GetConfigTemplateIdOk() (*string, bool)`
+
+GetConfigTemplateIdOk returns a tuple with the ConfigTemplateId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConfigTemplateId
+
+`func (o *InlineResponse20070) SetConfigTemplateId(v string)`
+
+SetConfigTemplateId sets ConfigTemplateId field to given value.
+
+### HasConfigTemplateId
+
+`func (o *InlineResponse20070) HasConfigTemplateId() bool`
+
+HasConfigTemplateId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

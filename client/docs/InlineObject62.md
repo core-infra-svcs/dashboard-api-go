@@ -4,16 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the custom performance class | 
-**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
+**Name** | Pointer to **string** | Name of the route | [optional] 
+**Subnet** | Pointer to **string** | Subnet of the route | [optional] 
+**GatewayIp** | Pointer to **string** | Gateway IP address (next hop) | [optional] 
+**GatewayVlanId** | Pointer to **string** | Gateway VLAN ID | [optional] 
+**Enabled** | Pointer to **bool** | Whether the route should be enabled or not | [optional] 
+**FixedIpAssignments** | Pointer to [**map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments**](NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments.md) | Fixed DHCP IP assignments on the route | [optional] 
+**ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges.md) | DHCP reserved IP ranges | [optional] 
 
 ## Methods
 
 ### NewInlineObject62
 
-`func NewInlineObject62(name string, ) *InlineObject62`
+`func NewInlineObject62() *InlineObject62`
 
 NewInlineObject62 instantiates a new InlineObject62 object
 This constructor will assign default values to properties that have it defined,
@@ -47,81 +50,161 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetMaxLatency
+`func (o *InlineObject62) HasName() bool`
 
-`func (o *InlineObject62) GetMaxLatency() int32`
+HasName returns a boolean if a field has been set.
 
-GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+### GetSubnet
 
-### GetMaxLatencyOk
+`func (o *InlineObject62) GetSubnet() string`
 
-`func (o *InlineObject62) GetMaxLatencyOk() (*int32, bool)`
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+### GetSubnetOk
+
+`func (o *InlineObject62) GetSubnetOk() (*string, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLatency
+### SetSubnet
 
-`func (o *InlineObject62) SetMaxLatency(v int32)`
+`func (o *InlineObject62) SetSubnet(v string)`
 
-SetMaxLatency sets MaxLatency field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasMaxLatency
+### HasSubnet
 
-`func (o *InlineObject62) HasMaxLatency() bool`
+`func (o *InlineObject62) HasSubnet() bool`
 
-HasMaxLatency returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetMaxJitter
+### GetGatewayIp
 
-`func (o *InlineObject62) GetMaxJitter() int32`
+`func (o *InlineObject62) GetGatewayIp() string`
 
-GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
 
-### GetMaxJitterOk
+### GetGatewayIpOk
 
-`func (o *InlineObject62) GetMaxJitterOk() (*int32, bool)`
+`func (o *InlineObject62) GetGatewayIpOk() (*string, bool)`
 
-GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxJitter
+### SetGatewayIp
 
-`func (o *InlineObject62) SetMaxJitter(v int32)`
+`func (o *InlineObject62) SetGatewayIp(v string)`
 
-SetMaxJitter sets MaxJitter field to given value.
+SetGatewayIp sets GatewayIp field to given value.
 
-### HasMaxJitter
+### HasGatewayIp
 
-`func (o *InlineObject62) HasMaxJitter() bool`
+`func (o *InlineObject62) HasGatewayIp() bool`
 
-HasMaxJitter returns a boolean if a field has been set.
+HasGatewayIp returns a boolean if a field has been set.
 
-### GetMaxLossPercentage
+### GetGatewayVlanId
 
-`func (o *InlineObject62) GetMaxLossPercentage() int32`
+`func (o *InlineObject62) GetGatewayVlanId() string`
 
-GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
 
-### GetMaxLossPercentageOk
+### GetGatewayVlanIdOk
 
-`func (o *InlineObject62) GetMaxLossPercentageOk() (*int32, bool)`
+`func (o *InlineObject62) GetGatewayVlanIdOk() (*string, bool)`
 
-GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxLossPercentage
+### SetGatewayVlanId
 
-`func (o *InlineObject62) SetMaxLossPercentage(v int32)`
+`func (o *InlineObject62) SetGatewayVlanId(v string)`
 
-SetMaxLossPercentage sets MaxLossPercentage field to given value.
+SetGatewayVlanId sets GatewayVlanId field to given value.
 
-### HasMaxLossPercentage
+### HasGatewayVlanId
 
-`func (o *InlineObject62) HasMaxLossPercentage() bool`
+`func (o *InlineObject62) HasGatewayVlanId() bool`
 
-HasMaxLossPercentage returns a boolean if a field has been set.
+HasGatewayVlanId returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineObject62) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject62) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject62) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject62) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetFixedIpAssignments
+
+`func (o *InlineObject62) GetFixedIpAssignments() map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments`
+
+GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+
+### GetFixedIpAssignmentsOk
+
+`func (o *InlineObject62) GetFixedIpAssignmentsOk() (*map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments, bool)`
+
+GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFixedIpAssignments
+
+`func (o *InlineObject62) SetFixedIpAssignments(v map[string]NetworksNetworkIdApplianceStaticRoutesFixedIpAssignments)`
+
+SetFixedIpAssignments sets FixedIpAssignments field to given value.
+
+### HasFixedIpAssignments
+
+`func (o *InlineObject62) HasFixedIpAssignments() bool`
+
+HasFixedIpAssignments returns a boolean if a field has been set.
+
+### GetReservedIpRanges
+
+`func (o *InlineObject62) GetReservedIpRanges() []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges`
+
+GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+
+### GetReservedIpRangesOk
+
+`func (o *InlineObject62) GetReservedIpRangesOk() (*[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges, bool)`
+
+GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReservedIpRanges
+
+`func (o *InlineObject62) SetReservedIpRanges(v []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges)`
+
+SetReservedIpRanges sets ReservedIpRanges field to given value.
+
+### HasReservedIpRanges
+
+`func (o *InlineObject62) HasReservedIpRanges() bool`
+
+HasReservedIpRanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

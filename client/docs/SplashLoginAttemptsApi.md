@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSplashLoginAttempts
 
-> []map[string]interface{} GetNetworkSplashLoginAttempts(ctx, networkId).SsidNumber(ssidNumber).LoginIdentifier(loginIdentifier).Timespan(timespan).Execute()
+> []InlineResponse200135 GetNetworkSplashLoginAttempts(ctx, networkId).SsidNumber(ssidNumber).LoginIdentifier(loginIdentifier).Timespan(timespan).Execute()
 
 List the splash login attempts for a network
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SplashLoginAttemptsApi.GetNetworkSplashLoginAttempts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSplashLoginAttempts`: []map[string]interface{}
+    // response from `GetNetworkSplashLoginAttempts`: []InlineResponse200135
     fmt.Fprintf(os.Stdout, "Response from `SplashLoginAttemptsApi.GetNetworkSplashLoginAttempts`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse200135**](InlineResponse200135.md)
 
 ### Authorization
 

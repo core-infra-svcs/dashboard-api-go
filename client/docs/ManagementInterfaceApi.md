@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceManagementInterface
 
-> map[string]interface{} GetDeviceManagementInterface(ctx, serial).Execute()
+> InlineResponse20027 GetDeviceManagementInterface(ctx, serial).Execute()
 
 Return the management interface settings for a device
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ManagementInterfaceApi.GetDeviceManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceManagementInterface`: map[string]interface{}
+    // response from `GetDeviceManagementInterface`: InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `ManagementInterfaceApi.GetDeviceManagementInterface`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceManagementInterface
 
-> map[string]interface{} UpdateDeviceManagementInterface(ctx, serial).UpdateDeviceManagementInterface(updateDeviceManagementInterface).Execute()
+> InlineResponse20027 UpdateDeviceManagementInterface(ctx, serial).UpdateDeviceManagementInterface(updateDeviceManagementInterface).Execute()
 
 Update the management interface settings for a device
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ManagementInterfaceApi.UpdateDeviceManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceManagementInterface`: map[string]interface{}
+    // response from `UpdateDeviceManagementInterface`: InlineResponse20027
     fmt.Fprintf(os.Stdout, "Response from `ManagementInterfaceApi.UpdateDeviceManagementInterface`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20027**](InlineResponse20027.md)
 
 ### Authorization
 

@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsArpTable
 
-> InlineResponse2009 GetDeviceLiveToolsArpTable(ctx, serial, arpTableId).Execute()
+> InlineResponse20019 GetDeviceLiveToolsArpTable(ctx, serial, arpTableId).Execute()
 
 Return an ARP table live tool job.
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ArpTableApi.GetDeviceLiveToolsArpTable``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsArpTable`: InlineResponse2009
+    // response from `GetDeviceLiveToolsArpTable`: InlineResponse20019
     fmt.Fprintf(os.Stdout, "Response from `ArpTableApi.GetDeviceLiveToolsArpTable`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**InlineResponse20019**](InlineResponse20019.md)
 
 ### Authorization
 

@@ -4,18 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Email** | **string** | The email of the dashboard administrator. This attribute can not be updated. | 
-**Name** | **string** | The name of the dashboard administrator | 
-**OrgAccess** | **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
-**AuthenticationMethod** | Pointer to **string** | The method of authentication the user will use to sign in to the Meraki dashboard. Can be one of &#39;Email&#39; or &#39;Cisco SecureX Sign-On&#39;. The default is Email authentication | [optional] 
+**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1.md) |  | [optional] 
+**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1.md) |  | [optional] 
+**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy | [optional] 
+**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL | [optional] 
 
 ## Methods
 
 ### NewInlineObject201
 
-`func NewInlineObject201(email string, name string, orgAccess string, ) *InlineObject201`
+`func NewInlineObject201() *InlineObject201`
 
 NewInlineObject201 instantiates a new InlineObject201 object
 This constructor will assign default values to properties that have it defined,
@@ -30,140 +28,105 @@ NewInlineObject201WithDefaults instantiates a new InlineObject201 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEmail
+### GetSourceGroup
 
-`func (o *InlineObject201) GetEmail() string`
+`func (o *InlineObject201) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetSourceGroupOk
 
-`func (o *InlineObject201) GetEmailOk() (*string, bool)`
+`func (o *InlineObject201) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetSourceGroup
 
-`func (o *InlineObject201) SetEmail(v string)`
+`func (o *InlineObject201) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1)`
 
-SetEmail sets Email field to given value.
+SetSourceGroup sets SourceGroup field to given value.
 
+### HasSourceGroup
 
-### GetName
+`func (o *InlineObject201) HasSourceGroup() bool`
 
-`func (o *InlineObject201) GetName() string`
+HasSourceGroup returns a boolean if a field has been set.
 
-GetName returns the Name field if non-nil, zero value otherwise.
+### GetDestinationGroup
 
-### GetNameOk
+`func (o *InlineObject201) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1`
 
-`func (o *InlineObject201) GetNameOk() (*string, bool)`
+GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+### GetDestinationGroupOk
+
+`func (o *InlineObject201) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1, bool)`
+
+GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDestinationGroup
 
-`func (o *InlineObject201) SetName(v string)`
+`func (o *InlineObject201) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1)`
 
-SetName sets Name field to given value.
+SetDestinationGroup sets DestinationGroup field to given value.
 
+### HasDestinationGroup
 
-### GetOrgAccess
+`func (o *InlineObject201) HasDestinationGroup() bool`
 
-`func (o *InlineObject201) GetOrgAccess() string`
+HasDestinationGroup returns a boolean if a field has been set.
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+### GetAcls
 
-### GetOrgAccessOk
+`func (o *InlineObject201) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1`
 
-`func (o *InlineObject201) GetOrgAccessOk() (*string, bool)`
+GetAcls returns the Acls field if non-nil, zero value otherwise.
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+### GetAclsOk
+
+`func (o *InlineObject201) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1, bool)`
+
+GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetAcls
 
-`func (o *InlineObject201) SetOrgAccess(v string)`
+`func (o *InlineObject201) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetAcls sets Acls field to given value.
 
+### HasAcls
 
-### GetTags
+`func (o *InlineObject201) HasAcls() bool`
 
-`func (o *InlineObject201) GetTags() []OrganizationsOrganizationIdAdminsTags1`
+HasAcls returns a boolean if a field has been set.
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+### GetLastEntryRule
 
-### GetTagsOk
+`func (o *InlineObject201) GetLastEntryRule() string`
 
-`func (o *InlineObject201) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
+GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+### GetLastEntryRuleOk
+
+`func (o *InlineObject201) GetLastEntryRuleOk() (*string, bool)`
+
+GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetLastEntryRule
 
-`func (o *InlineObject201) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
+`func (o *InlineObject201) SetLastEntryRule(v string)`
 
-SetTags sets Tags field to given value.
+SetLastEntryRule sets LastEntryRule field to given value.
 
-### HasTags
+### HasLastEntryRule
 
-`func (o *InlineObject201) HasTags() bool`
+`func (o *InlineObject201) HasLastEntryRule() bool`
 
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineObject201) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineObject201) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineObject201) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineObject201) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
-
-### GetAuthenticationMethod
-
-`func (o *InlineObject201) GetAuthenticationMethod() string`
-
-GetAuthenticationMethod returns the AuthenticationMethod field if non-nil, zero value otherwise.
-
-### GetAuthenticationMethodOk
-
-`func (o *InlineObject201) GetAuthenticationMethodOk() (*string, bool)`
-
-GetAuthenticationMethodOk returns a tuple with the AuthenticationMethod field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthenticationMethod
-
-`func (o *InlineObject201) SetAuthenticationMethod(v string)`
-
-SetAuthenticationMethod sets AuthenticationMethod field to given value.
-
-### HasAuthenticationMethod
-
-`func (o *InlineObject201) HasAuthenticationMethod() bool`
-
-HasAuthenticationMethod returns a boolean if a field has been set.
+HasLastEntryRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

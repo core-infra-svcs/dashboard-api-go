@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100 | 
+**Ssids** | [**NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids**](NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids.md) |  | 
 
 ## Methods
 
 ### NewInlineObject87
 
-`func NewInlineObject87(size string, ) *InlineObject87`
+`func NewInlineObject87(ssids NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, ) *InlineObject87`
 
 NewInlineObject87 instantiates a new InlineObject87 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject87WithDefaults instantiates a new InlineObject87 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSize
+### GetSsids
 
-`func (o *InlineObject87) GetSize() string`
+`func (o *InlineObject87) GetSsids() NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids`
 
-GetSize returns the Size field if non-nil, zero value otherwise.
+GetSsids returns the Ssids field if non-nil, zero value otherwise.
 
-### GetSizeOk
+### GetSsidsOk
 
-`func (o *InlineObject87) GetSizeOk() (*string, bool)`
+`func (o *InlineObject87) GetSsidsOk() (*NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, bool)`
 
-GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
+GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSize
+### SetSsids
 
-`func (o *InlineObject87) SetSize(v string)`
+`func (o *InlineObject87) SetSsids(v NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids)`
 
-SetSize sets Size field to given value.
+SetSsids sets Ssids field to given value.
 
 
 

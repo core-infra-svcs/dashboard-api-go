@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**OccurredAt** | Pointer to **string** | time when the event occurred | [optional] 
-**AlertTypeId** | Pointer to **string** | type of alert | [optional] 
-**AlertType** | Pointer to **string** | user friendly alert type | [optional] 
-**Device** | Pointer to [**NetworksNetworkIdAlertsHistoryDevice**](NetworksNetworkIdAlertsHistoryDevice.md) |  | [optional] 
-**Destinations** | Pointer to [**NetworksNetworkIdAlertsHistoryDestinations**](NetworksNetworkIdAlertsHistoryDestinations.md) |  | [optional] 
-**AlertData** | Pointer to **map[string]interface{}** | relevant data about the event that caused the alert | [optional] 
+**StartTime** | Pointer to **time.Time** | Start time of the sample | [optional] 
+**EndTime** | Pointer to **time.Time** | End time of the sample | [optional] 
+**LossPercent** | Pointer to **float32** | Percentage of packets lost | [optional] 
+**LatencyMs** | Pointer to **float32** | Latency in milliseconds | [optional] 
+**Goodput** | Pointer to **int32** | Number of useful information bits delivered | [optional] 
+**Jitter** | Pointer to **float32** | Jitter, in milliseconds | [optional] 
 
 ## Methods
 
@@ -30,155 +30,155 @@ NewInlineResponse20026WithDefaults instantiates a new InlineResponse20026 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOccurredAt
+### GetStartTime
 
-`func (o *InlineResponse20026) GetOccurredAt() string`
+`func (o *InlineResponse20026) GetStartTime() time.Time`
 
-GetOccurredAt returns the OccurredAt field if non-nil, zero value otherwise.
+GetStartTime returns the StartTime field if non-nil, zero value otherwise.
 
-### GetOccurredAtOk
+### GetStartTimeOk
 
-`func (o *InlineResponse20026) GetOccurredAtOk() (*string, bool)`
+`func (o *InlineResponse20026) GetStartTimeOk() (*time.Time, bool)`
 
-GetOccurredAtOk returns a tuple with the OccurredAt field if it's non-nil, zero value otherwise
+GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOccurredAt
+### SetStartTime
 
-`func (o *InlineResponse20026) SetOccurredAt(v string)`
+`func (o *InlineResponse20026) SetStartTime(v time.Time)`
 
-SetOccurredAt sets OccurredAt field to given value.
+SetStartTime sets StartTime field to given value.
 
-### HasOccurredAt
+### HasStartTime
 
-`func (o *InlineResponse20026) HasOccurredAt() bool`
+`func (o *InlineResponse20026) HasStartTime() bool`
 
-HasOccurredAt returns a boolean if a field has been set.
+HasStartTime returns a boolean if a field has been set.
 
-### GetAlertTypeId
+### GetEndTime
 
-`func (o *InlineResponse20026) GetAlertTypeId() string`
+`func (o *InlineResponse20026) GetEndTime() time.Time`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetEndTime returns the EndTime field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetEndTimeOk
 
-`func (o *InlineResponse20026) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse20026) GetEndTimeOk() (*time.Time, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetEndTime
 
-`func (o *InlineResponse20026) SetAlertTypeId(v string)`
+`func (o *InlineResponse20026) SetEndTime(v time.Time)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetEndTime sets EndTime field to given value.
 
-### HasAlertTypeId
+### HasEndTime
 
-`func (o *InlineResponse20026) HasAlertTypeId() bool`
+`func (o *InlineResponse20026) HasEndTime() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasEndTime returns a boolean if a field has been set.
 
-### GetAlertType
+### GetLossPercent
 
-`func (o *InlineResponse20026) GetAlertType() string`
+`func (o *InlineResponse20026) GetLossPercent() float32`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetLossPercent returns the LossPercent field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetLossPercentOk
 
-`func (o *InlineResponse20026) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse20026) GetLossPercentOk() (*float32, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetLossPercentOk returns a tuple with the LossPercent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetLossPercent
 
-`func (o *InlineResponse20026) SetAlertType(v string)`
+`func (o *InlineResponse20026) SetLossPercent(v float32)`
 
-SetAlertType sets AlertType field to given value.
+SetLossPercent sets LossPercent field to given value.
 
-### HasAlertType
+### HasLossPercent
 
-`func (o *InlineResponse20026) HasAlertType() bool`
+`func (o *InlineResponse20026) HasLossPercent() bool`
 
-HasAlertType returns a boolean if a field has been set.
+HasLossPercent returns a boolean if a field has been set.
 
-### GetDevice
+### GetLatencyMs
 
-`func (o *InlineResponse20026) GetDevice() NetworksNetworkIdAlertsHistoryDevice`
+`func (o *InlineResponse20026) GetLatencyMs() float32`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetLatencyMs returns the LatencyMs field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetLatencyMsOk
 
-`func (o *InlineResponse20026) GetDeviceOk() (*NetworksNetworkIdAlertsHistoryDevice, bool)`
+`func (o *InlineResponse20026) GetLatencyMsOk() (*float32, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetLatencyMsOk returns a tuple with the LatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetLatencyMs
 
-`func (o *InlineResponse20026) SetDevice(v NetworksNetworkIdAlertsHistoryDevice)`
+`func (o *InlineResponse20026) SetLatencyMs(v float32)`
 
-SetDevice sets Device field to given value.
+SetLatencyMs sets LatencyMs field to given value.
 
-### HasDevice
+### HasLatencyMs
 
-`func (o *InlineResponse20026) HasDevice() bool`
+`func (o *InlineResponse20026) HasLatencyMs() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasLatencyMs returns a boolean if a field has been set.
 
-### GetDestinations
+### GetGoodput
 
-`func (o *InlineResponse20026) GetDestinations() NetworksNetworkIdAlertsHistoryDestinations`
+`func (o *InlineResponse20026) GetGoodput() int32`
 
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
+GetGoodput returns the Goodput field if non-nil, zero value otherwise.
 
-### GetDestinationsOk
+### GetGoodputOk
 
-`func (o *InlineResponse20026) GetDestinationsOk() (*NetworksNetworkIdAlertsHistoryDestinations, bool)`
+`func (o *InlineResponse20026) GetGoodputOk() (*int32, bool)`
 
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
+GetGoodputOk returns a tuple with the Goodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinations
+### SetGoodput
 
-`func (o *InlineResponse20026) SetDestinations(v NetworksNetworkIdAlertsHistoryDestinations)`
+`func (o *InlineResponse20026) SetGoodput(v int32)`
 
-SetDestinations sets Destinations field to given value.
+SetGoodput sets Goodput field to given value.
 
-### HasDestinations
+### HasGoodput
 
-`func (o *InlineResponse20026) HasDestinations() bool`
+`func (o *InlineResponse20026) HasGoodput() bool`
 
-HasDestinations returns a boolean if a field has been set.
+HasGoodput returns a boolean if a field has been set.
 
-### GetAlertData
+### GetJitter
 
-`func (o *InlineResponse20026) GetAlertData() map[string]interface{}`
+`func (o *InlineResponse20026) GetJitter() float32`
 
-GetAlertData returns the AlertData field if non-nil, zero value otherwise.
+GetJitter returns the Jitter field if non-nil, zero value otherwise.
 
-### GetAlertDataOk
+### GetJitterOk
 
-`func (o *InlineResponse20026) GetAlertDataOk() (*map[string]interface{}, bool)`
+`func (o *InlineResponse20026) GetJitterOk() (*float32, bool)`
 
-GetAlertDataOk returns a tuple with the AlertData field if it's non-nil, zero value otherwise
+GetJitterOk returns a tuple with the Jitter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertData
+### SetJitter
 
-`func (o *InlineResponse20026) SetAlertData(v map[string]interface{})`
+`func (o *InlineResponse20026) SetJitter(v float32)`
 
-SetAlertData sets AlertData field to given value.
+SetJitter sets Jitter field to given value.
 
-### HasAlertData
+### HasJitter
 
-`func (o *InlineResponse20026) HasAlertData() bool`
+`func (o *InlineResponse20026) HasJitter() bool`
 
-HasAlertData returns a boolean if a field has been set.
+HasJitter returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

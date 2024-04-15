@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assigned** | Pointer to [**[]InlineResponse20031Assigned**](InlineResponse20031Assigned.md) | RF Profiles | [optional] 
+**Ports** | Pointer to **[]string** | List of switch ports | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20031WithDefaults instantiates a new InlineResponse20031 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssigned
+### GetPorts
 
-`func (o *InlineResponse20031) GetAssigned() []InlineResponse20031Assigned`
+`func (o *InlineResponse20031) GetPorts() []string`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetPortsOk
 
-`func (o *InlineResponse20031) GetAssignedOk() (*[]InlineResponse20031Assigned, bool)`
+`func (o *InlineResponse20031) GetPortsOk() (*[]string, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetPorts
 
-`func (o *InlineResponse20031) SetAssigned(v []InlineResponse20031Assigned)`
+`func (o *InlineResponse20031) SetPorts(v []string)`
 
-SetAssigned sets Assigned field to given value.
+SetPorts sets Ports field to given value.
 
-### HasAssigned
+### HasPorts
 
-`func (o *InlineResponse20031) HasAssigned() bool`
+`func (o *InlineResponse20031) HasPorts() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

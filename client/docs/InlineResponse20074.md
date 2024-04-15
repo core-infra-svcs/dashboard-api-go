@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
-**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
-**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode for the cellular gateways in the network. (Passthrough/Routed) | [optional] 
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
+**Subnets** | Pointer to [**[]InlineResponse20074Subnets**](InlineResponse20074Subnets.md) | List of subnets of all MGs in this network. | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse20074WithDefaults instantiates a new InlineResponse20074 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReceived
+### GetDeploymentMode
 
-`func (o *InlineResponse20074) GetReceived() float32`
+`func (o *InlineResponse20074) GetDeploymentMode() string`
 
-GetReceived returns the Received field if non-nil, zero value otherwise.
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-### GetReceivedOk
+### GetDeploymentModeOk
 
-`func (o *InlineResponse20074) GetReceivedOk() (*float32, bool)`
+`func (o *InlineResponse20074) GetDeploymentModeOk() (*string, bool)`
 
-GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceived
+### SetDeploymentMode
 
-`func (o *InlineResponse20074) SetReceived(v float32)`
+`func (o *InlineResponse20074) SetDeploymentMode(v string)`
 
-SetReceived sets Received field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
-### HasReceived
+### HasDeploymentMode
 
-`func (o *InlineResponse20074) HasReceived() bool`
+`func (o *InlineResponse20074) HasDeploymentMode() bool`
 
-HasReceived returns a boolean if a field has been set.
+HasDeploymentMode returns a boolean if a field has been set.
 
-### GetSent
+### GetCidr
 
-`func (o *InlineResponse20074) GetSent() float32`
+`func (o *InlineResponse20074) GetCidr() string`
 
-GetSent returns the Sent field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetSentOk
+### GetCidrOk
 
-`func (o *InlineResponse20074) GetSentOk() (*float32, bool)`
+`func (o *InlineResponse20074) GetCidrOk() (*string, bool)`
 
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSent
+### SetCidr
 
-`func (o *InlineResponse20074) SetSent(v float32)`
+`func (o *InlineResponse20074) SetCidr(v string)`
 
-SetSent sets Sent field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasSent
+### HasCidr
 
-`func (o *InlineResponse20074) HasSent() bool`
+`func (o *InlineResponse20074) HasCidr() bool`
 
-HasSent returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
 
-### GetTs
+### GetMask
 
-`func (o *InlineResponse20074) GetTs() string`
+`func (o *InlineResponse20074) GetMask() int32`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetMaskOk
 
-`func (o *InlineResponse20074) GetTsOk() (*string, bool)`
+`func (o *InlineResponse20074) GetMaskOk() (*int32, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetMask
 
-`func (o *InlineResponse20074) SetTs(v string)`
+`func (o *InlineResponse20074) SetMask(v int32)`
 
-SetTs sets Ts field to given value.
+SetMask sets Mask field to given value.
 
-### HasTs
+### HasMask
 
-`func (o *InlineResponse20074) HasTs() bool`
+`func (o *InlineResponse20074) HasMask() bool`
 
-HasTs returns a boolean if a field has been set.
+HasMask returns a boolean if a field has been set.
+
+### GetSubnets
+
+`func (o *InlineResponse20074) GetSubnets() []InlineResponse20074Subnets`
+
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
+
+### GetSubnetsOk
+
+`func (o *InlineResponse20074) GetSubnetsOk() (*[]InlineResponse20074Subnets, bool)`
+
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnets
+
+`func (o *InlineResponse20074) SetSubnets(v []InlineResponse20074Subnets)`
+
+SetSubnets sets Subnets field to given value.
+
+### HasSubnets
+
+`func (o *InlineResponse20074) HasSubnets() bool`
+
+HasSubnets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

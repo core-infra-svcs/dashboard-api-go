@@ -4,13 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GlobalBandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits.md) |  | [optional] 
+**Name** | **string** | Name of the route | 
+**Subnet** | **string** | Subnet of the route | 
+**GatewayIp** | **string** | Gateway IP address (next hop) | 
+**GatewayVlanId** | Pointer to **string** | Gateway VLAN ID | [optional] 
 
 ## Methods
 
 ### NewInlineObject61
 
-`func NewInlineObject61() *InlineObject61`
+`func NewInlineObject61(name string, subnet string, gatewayIp string, ) *InlineObject61`
 
 NewInlineObject61 instantiates a new InlineObject61 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +28,90 @@ NewInlineObject61WithDefaults instantiates a new InlineObject61 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGlobalBandwidthLimits
+### GetName
 
-`func (o *InlineObject61) GetGlobalBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits`
+`func (o *InlineObject61) GetName() string`
 
-GetGlobalBandwidthLimits returns the GlobalBandwidthLimits field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetGlobalBandwidthLimitsOk
+### GetNameOk
 
-`func (o *InlineObject61) GetGlobalBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits, bool)`
+`func (o *InlineObject61) GetNameOk() (*string, bool)`
 
-GetGlobalBandwidthLimitsOk returns a tuple with the GlobalBandwidthLimits field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGlobalBandwidthLimits
+### SetName
 
-`func (o *InlineObject61) SetGlobalBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingGlobalBandwidthLimits)`
+`func (o *InlineObject61) SetName(v string)`
 
-SetGlobalBandwidthLimits sets GlobalBandwidthLimits field to given value.
+SetName sets Name field to given value.
 
-### HasGlobalBandwidthLimits
 
-`func (o *InlineObject61) HasGlobalBandwidthLimits() bool`
+### GetSubnet
 
-HasGlobalBandwidthLimits returns a boolean if a field has been set.
+`func (o *InlineObject61) GetSubnet() string`
+
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+
+### GetSubnetOk
+
+`func (o *InlineObject61) GetSubnetOk() (*string, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnet
+
+`func (o *InlineObject61) SetSubnet(v string)`
+
+SetSubnet sets Subnet field to given value.
+
+
+### GetGatewayIp
+
+`func (o *InlineObject61) GetGatewayIp() string`
+
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
+
+### GetGatewayIpOk
+
+`func (o *InlineObject61) GetGatewayIpOk() (*string, bool)`
+
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayIp
+
+`func (o *InlineObject61) SetGatewayIp(v string)`
+
+SetGatewayIp sets GatewayIp field to given value.
+
+
+### GetGatewayVlanId
+
+`func (o *InlineObject61) GetGatewayVlanId() string`
+
+GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
+
+### GetGatewayVlanIdOk
+
+`func (o *InlineObject61) GetGatewayVlanIdOk() (*string, bool)`
+
+GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayVlanId
+
+`func (o *InlineObject61) SetGatewayVlanId(v string)`
+
+SetGatewayVlanId sets GatewayVlanId field to given value.
+
+### HasGatewayVlanId
+
+`func (o *InlineObject61) HasGatewayVlanId() bool`
+
+HasGatewayVlanId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

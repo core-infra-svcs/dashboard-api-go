@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkPiiRequest
 
-> map[string]interface{} CreateNetworkPiiRequest(ctx, networkId).CreateNetworkPiiRequest(createNetworkPiiRequest).Execute()
+> InlineResponse200101 CreateNetworkPiiRequest(ctx, networkId).CreateNetworkPiiRequest(createNetworkPiiRequest).Execute()
 
 Submit a new delete or restrict processing PII request
 
@@ -36,7 +36,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkPiiRequest := *openapiclient.NewInlineObject106() // InlineObject106 |  (optional)
+    createNetworkPiiRequest := *openapiclient.NewInlineObject108() // InlineObject108 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiApi.CreateNetworkPiiRequest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkPiiRequest`: map[string]interface{}
+    // response from `CreateNetworkPiiRequest`: InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `PiiApi.CreateNetworkPiiRequest`: %v\n", resp)
 }
 ```
@@ -66,11 +66,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkPiiRequestReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkPiiRequest** | [**InlineObject106**](InlineObject106.md) |  | 
+ **createNetworkPiiRequest** | [**InlineObject108**](InlineObject108.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPiiPiiKeys
 
-> map[string]interface{} GetNetworkPiiPiiKeys(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
+> map[string]InlineResponse200100 GetNetworkPiiPiiKeys(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
 
 List the keys required to access Personally Identifiable Information (PII) for a given identifier
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiApi.GetNetworkPiiPiiKeys``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiPiiKeys`: map[string]interface{}
+    // response from `GetNetworkPiiPiiKeys`: map[string]InlineResponse200100
     fmt.Fprintf(os.Stdout, "Response from `PiiApi.GetNetworkPiiPiiKeys`: %v\n", resp)
 }
 ```
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**map[string]InlineResponse200100**](InlineResponse200100.md)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPiiRequest
 
-> map[string]interface{} GetNetworkPiiRequest(ctx, networkId, requestId).Execute()
+> InlineResponse200101 GetNetworkPiiRequest(ctx, networkId, requestId).Execute()
 
 Return a PII request
 
@@ -270,7 +270,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiApi.GetNetworkPiiRequest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiRequest`: map[string]interface{}
+    // response from `GetNetworkPiiRequest`: InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `PiiApi.GetNetworkPiiRequest`: %v\n", resp)
 }
 ```
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPiiRequests
 
-> []map[string]interface{} GetNetworkPiiRequests(ctx, networkId).Execute()
+> []InlineResponse200101 GetNetworkPiiRequests(ctx, networkId).Execute()
 
 List the PII requests for this network or organization
 
@@ -342,7 +342,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiApi.GetNetworkPiiRequests``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiRequests`: []map[string]interface{}
+    // response from `GetNetworkPiiRequests`: []InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `PiiApi.GetNetworkPiiRequests`: %v\n", resp)
 }
 ```
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPiiSmDevicesForKey
 
-> map[string]interface{} GetNetworkPiiSmDevicesForKey(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
+> map[string][]string GetNetworkPiiSmDevicesForKey(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
 
 Given a piece of Personally Identifiable Information (PII), return the Systems Manager device ID(s) associated with that identifier
 
@@ -418,7 +418,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiApi.GetNetworkPiiSmDevicesForKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiSmDevicesForKey`: map[string]interface{}
+    // response from `GetNetworkPiiSmDevicesForKey`: map[string][]string
     fmt.Fprintf(os.Stdout, "Response from `PiiApi.GetNetworkPiiSmDevicesForKey`: %v\n", resp)
 }
 ```
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**map[string][]string**](array.md)
 
 ### Authorization
 
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPiiSmOwnersForKey
 
-> map[string]interface{} GetNetworkPiiSmOwnersForKey(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
+> map[string][]string GetNetworkPiiSmOwnersForKey(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
 
 Given a piece of Personally Identifiable Information (PII), return the Systems Manager owner ID(s) associated with that identifier
 
@@ -500,7 +500,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiApi.GetNetworkPiiSmOwnersForKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiSmOwnersForKey`: map[string]interface{}
+    // response from `GetNetworkPiiSmOwnersForKey`: map[string][]string
     fmt.Fprintf(os.Stdout, "Response from `PiiApi.GetNetworkPiiSmOwnersForKey`: %v\n", resp)
 }
 ```
@@ -530,7 +530,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**map[string][]string**](array.md)
 
 ### Authorization
 

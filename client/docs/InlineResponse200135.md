@@ -4,8 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200135Counts**](InlineResponse200135Counts.md) |  | [optional] 
-**Limits** | Pointer to [**InlineResponse200135Limits**](InlineResponse200135Limits.md) |  | [optional] 
+**Name** | Pointer to **string** | User name | [optional] 
+**Login** | Pointer to **string** | User login identifier | [optional] 
+**Ssid** | Pointer to **string** | SSID name | [optional] 
+**LoginAt** | Pointer to **time.Time** | Login timestamp | [optional] 
+**GatewayDeviceMac** | Pointer to **string** | Gateway device mac address | [optional] 
+**ClientMac** | Pointer to **string** | Client mac address | [optional] 
+**ClientId** | Pointer to **string** | Client ID | [optional] 
+**Authorization** | Pointer to **string** | Authorization status | [optional] 
 
 ## Methods
 
@@ -26,55 +32,205 @@ NewInlineResponse200135WithDefaults instantiates a new InlineResponse200135 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetName
 
-`func (o *InlineResponse200135) GetCounts() InlineResponse200135Counts`
+`func (o *InlineResponse200135) GetName() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetNameOk
 
-`func (o *InlineResponse200135) GetCountsOk() (*InlineResponse200135Counts, bool)`
+`func (o *InlineResponse200135) GetNameOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetName
 
-`func (o *InlineResponse200135) SetCounts(v InlineResponse200135Counts)`
+`func (o *InlineResponse200135) SetName(v string)`
 
-SetCounts sets Counts field to given value.
+SetName sets Name field to given value.
 
-### HasCounts
+### HasName
 
-`func (o *InlineResponse200135) HasCounts() bool`
+`func (o *InlineResponse200135) HasName() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetLimits
+### GetLogin
 
-`func (o *InlineResponse200135) GetLimits() InlineResponse200135Limits`
+`func (o *InlineResponse200135) GetLogin() string`
 
-GetLimits returns the Limits field if non-nil, zero value otherwise.
+GetLogin returns the Login field if non-nil, zero value otherwise.
 
-### GetLimitsOk
+### GetLoginOk
 
-`func (o *InlineResponse200135) GetLimitsOk() (*InlineResponse200135Limits, bool)`
+`func (o *InlineResponse200135) GetLoginOk() (*string, bool)`
 
-GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+GetLoginOk returns a tuple with the Login field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimits
+### SetLogin
 
-`func (o *InlineResponse200135) SetLimits(v InlineResponse200135Limits)`
+`func (o *InlineResponse200135) SetLogin(v string)`
 
-SetLimits sets Limits field to given value.
+SetLogin sets Login field to given value.
 
-### HasLimits
+### HasLogin
 
-`func (o *InlineResponse200135) HasLimits() bool`
+`func (o *InlineResponse200135) HasLogin() bool`
 
-HasLimits returns a boolean if a field has been set.
+HasLogin returns a boolean if a field has been set.
+
+### GetSsid
+
+`func (o *InlineResponse200135) GetSsid() string`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineResponse200135) GetSsidOk() (*string, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineResponse200135) SetSsid(v string)`
+
+SetSsid sets Ssid field to given value.
+
+### HasSsid
+
+`func (o *InlineResponse200135) HasSsid() bool`
+
+HasSsid returns a boolean if a field has been set.
+
+### GetLoginAt
+
+`func (o *InlineResponse200135) GetLoginAt() time.Time`
+
+GetLoginAt returns the LoginAt field if non-nil, zero value otherwise.
+
+### GetLoginAtOk
+
+`func (o *InlineResponse200135) GetLoginAtOk() (*time.Time, bool)`
+
+GetLoginAtOk returns a tuple with the LoginAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLoginAt
+
+`func (o *InlineResponse200135) SetLoginAt(v time.Time)`
+
+SetLoginAt sets LoginAt field to given value.
+
+### HasLoginAt
+
+`func (o *InlineResponse200135) HasLoginAt() bool`
+
+HasLoginAt returns a boolean if a field has been set.
+
+### GetGatewayDeviceMac
+
+`func (o *InlineResponse200135) GetGatewayDeviceMac() string`
+
+GetGatewayDeviceMac returns the GatewayDeviceMac field if non-nil, zero value otherwise.
+
+### GetGatewayDeviceMacOk
+
+`func (o *InlineResponse200135) GetGatewayDeviceMacOk() (*string, bool)`
+
+GetGatewayDeviceMacOk returns a tuple with the GatewayDeviceMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayDeviceMac
+
+`func (o *InlineResponse200135) SetGatewayDeviceMac(v string)`
+
+SetGatewayDeviceMac sets GatewayDeviceMac field to given value.
+
+### HasGatewayDeviceMac
+
+`func (o *InlineResponse200135) HasGatewayDeviceMac() bool`
+
+HasGatewayDeviceMac returns a boolean if a field has been set.
+
+### GetClientMac
+
+`func (o *InlineResponse200135) GetClientMac() string`
+
+GetClientMac returns the ClientMac field if non-nil, zero value otherwise.
+
+### GetClientMacOk
+
+`func (o *InlineResponse200135) GetClientMacOk() (*string, bool)`
+
+GetClientMacOk returns a tuple with the ClientMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientMac
+
+`func (o *InlineResponse200135) SetClientMac(v string)`
+
+SetClientMac sets ClientMac field to given value.
+
+### HasClientMac
+
+`func (o *InlineResponse200135) HasClientMac() bool`
+
+HasClientMac returns a boolean if a field has been set.
+
+### GetClientId
+
+`func (o *InlineResponse200135) GetClientId() string`
+
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
+
+### GetClientIdOk
+
+`func (o *InlineResponse200135) GetClientIdOk() (*string, bool)`
+
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientId
+
+`func (o *InlineResponse200135) SetClientId(v string)`
+
+SetClientId sets ClientId field to given value.
+
+### HasClientId
+
+`func (o *InlineResponse200135) HasClientId() bool`
+
+HasClientId returns a boolean if a field has been set.
+
+### GetAuthorization
+
+`func (o *InlineResponse200135) GetAuthorization() string`
+
+GetAuthorization returns the Authorization field if non-nil, zero value otherwise.
+
+### GetAuthorizationOk
+
+`func (o *InlineResponse200135) GetAuthorizationOk() (*string, bool)`
+
+GetAuthorizationOk returns a tuple with the Authorization field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorization
+
+`func (o *InlineResponse200135) SetAuthorization(v string)`
+
+SetAuthorization sets Authorization field to given value.
+
+### HasAuthorization
+
+`func (o *InlineResponse200135) HasAuthorization() bool`
+
+HasAuthorization returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

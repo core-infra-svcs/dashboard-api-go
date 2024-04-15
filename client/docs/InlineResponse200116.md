@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
+**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
+**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
+**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200116WithDefaults instantiates a new InlineResponse200116 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetReceived
 
-`func (o *InlineResponse200116) GetStartTs() time.Time`
+`func (o *InlineResponse200116) GetReceived() float32`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetReceived returns the Received field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetReceivedOk
 
-`func (o *InlineResponse200116) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200116) GetReceivedOk() (*float32, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetReceived
 
-`func (o *InlineResponse200116) SetStartTs(v time.Time)`
+`func (o *InlineResponse200116) SetReceived(v float32)`
 
-SetStartTs sets StartTs field to given value.
+SetReceived sets Received field to given value.
 
-### HasStartTs
+### HasReceived
 
-`func (o *InlineResponse200116) HasStartTs() bool`
+`func (o *InlineResponse200116) HasReceived() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasReceived returns a boolean if a field has been set.
 
-### GetEndTs
+### GetSent
 
-`func (o *InlineResponse200116) GetEndTs() time.Time`
+`func (o *InlineResponse200116) GetSent() float32`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetSent returns the Sent field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetSentOk
 
-`func (o *InlineResponse200116) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200116) GetSentOk() (*float32, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetSent
 
-`func (o *InlineResponse200116) SetEndTs(v time.Time)`
+`func (o *InlineResponse200116) SetSent(v float32)`
 
-SetEndTs sets EndTs field to given value.
+SetSent sets Sent field to given value.
 
-### HasEndTs
+### HasSent
 
-`func (o *InlineResponse200116) HasEndTs() bool`
+`func (o *InlineResponse200116) HasSent() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasSent returns a boolean if a field has been set.
 
-### GetClientCount
+### GetTs
 
-`func (o *InlineResponse200116) GetClientCount() int32`
+`func (o *InlineResponse200116) GetTs() string`
 
-GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetClientCountOk
+### GetTsOk
 
-`func (o *InlineResponse200116) GetClientCountOk() (*int32, bool)`
+`func (o *InlineResponse200116) GetTsOk() (*string, bool)`
 
-GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientCount
+### SetTs
 
-`func (o *InlineResponse200116) SetClientCount(v int32)`
+`func (o *InlineResponse200116) SetTs(v string)`
 
-SetClientCount sets ClientCount field to given value.
+SetTs sets Ts field to given value.
 
-### HasClientCount
+### HasTs
 
-`func (o *InlineResponse200116) HasClientCount() bool`
+`func (o *InlineResponse200116) HasTs() bool`
 
-HasClientCount returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

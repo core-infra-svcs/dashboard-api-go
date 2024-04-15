@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
-**NewNetwork** | Pointer to **string** | The network to which the devices was moved. | [optional] 
+**Id** | Pointer to **string** | Schedule id | [optional] 
+**Name** | Pointer to **string** | Schedule name | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse20071WithDefaults instantiates a new InlineResponse20071 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetIds
+### GetId
 
-`func (o *InlineResponse20071) GetIds() []string`
+`func (o *InlineResponse20071) GetId() string`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetIdOk
 
-`func (o *InlineResponse20071) GetIdsOk() (*[]string, bool)`
+`func (o *InlineResponse20071) GetIdOk() (*string, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetId
 
-`func (o *InlineResponse20071) SetIds(v []string)`
+`func (o *InlineResponse20071) SetId(v string)`
 
-SetIds sets Ids field to given value.
+SetId sets Id field to given value.
 
-### HasIds
+### HasId
 
-`func (o *InlineResponse20071) HasIds() bool`
+`func (o *InlineResponse20071) HasId() bool`
 
-HasIds returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetNewNetwork
+### GetName
 
-`func (o *InlineResponse20071) GetNewNetwork() string`
+`func (o *InlineResponse20071) GetName() string`
 
-GetNewNetwork returns the NewNetwork field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNewNetworkOk
+### GetNameOk
 
-`func (o *InlineResponse20071) GetNewNetworkOk() (*string, bool)`
+`func (o *InlineResponse20071) GetNameOk() (*string, bool)`
 
-GetNewNetworkOk returns a tuple with the NewNetwork field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNewNetwork
+### SetName
 
-`func (o *InlineResponse20071) SetNewNetwork(v string)`
+`func (o *InlineResponse20071) SetName(v string)`
 
-SetNewNetwork sets NewNetwork field to given value.
+SetName sets Name field to given value.
 
-### HasNewNetwork
+### HasName
 
-`func (o *InlineResponse20071) HasNewNetwork() bool`
+`func (o *InlineResponse20071) HasName() bool`
 
-HasNewNetwork returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

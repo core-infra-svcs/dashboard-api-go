@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkTrafficAnalysis
 
-> map[string]interface{} GetNetworkTrafficAnalysis(ctx, networkId).Execute()
+> InlineResponse200159 GetNetworkTrafficAnalysis(ctx, networkId).Execute()
 
 Return the traffic analysis settings for a network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficAnalysisApi.GetNetworkTrafficAnalysis``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkTrafficAnalysis`: map[string]interface{}
+    // response from `GetNetworkTrafficAnalysis`: InlineResponse200159
     fmt.Fprintf(os.Stdout, "Response from `TrafficAnalysisApi.GetNetworkTrafficAnalysis`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse200159**](InlineResponse200159.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkTrafficAnalysis
 
-> map[string]interface{} UpdateNetworkTrafficAnalysis(ctx, networkId).UpdateNetworkTrafficAnalysis(updateNetworkTrafficAnalysis).Execute()
+> InlineResponse200159 UpdateNetworkTrafficAnalysis(ctx, networkId).UpdateNetworkTrafficAnalysis(updateNetworkTrafficAnalysis).Execute()
 
 Update the traffic analysis settings for a network
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkTrafficAnalysis := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
+    updateNetworkTrafficAnalysis := *openapiclient.NewInlineObject159() // InlineObject159 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficAnalysisApi.UpdateNetworkTrafficAnalysis``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkTrafficAnalysis`: map[string]interface{}
+    // response from `UpdateNetworkTrafficAnalysis`: InlineResponse200159
     fmt.Fprintf(os.Stdout, "Response from `TrafficAnalysisApi.UpdateNetworkTrafficAnalysis`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkTrafficAnalys
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkTrafficAnalysis** | [**InlineObject157**](InlineObject157.md) |  | 
+ **updateNetworkTrafficAnalysis** | [**InlineObject159**](InlineObject159.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse200159**](InlineResponse200159.md)
 
 ### Authorization
 

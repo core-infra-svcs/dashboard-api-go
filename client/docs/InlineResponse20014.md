@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WakeOnLanId** | Pointer to **string** | ID of the Wake-on-LAN job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request | [optional] 
-**Status** | Pointer to **string** | Status of the Wake-on-LAN request | [optional] 
-**Request** | Pointer to [**InlineResponse2015Request**](InlineResponse2015Request.md) |  | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
+**RtspUrl** | Pointer to **string** | External rstp url. Will only be returned if external rtsp stream is exposed | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse20014WithDefaults instantiates a new InlineResponse20014 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWakeOnLanId
+### GetExternalRtspEnabled
 
-`func (o *InlineResponse20014) GetWakeOnLanId() string`
+`func (o *InlineResponse20014) GetExternalRtspEnabled() bool`
 
-GetWakeOnLanId returns the WakeOnLanId field if non-nil, zero value otherwise.
+GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
 
-### GetWakeOnLanIdOk
+### GetExternalRtspEnabledOk
 
-`func (o *InlineResponse20014) GetWakeOnLanIdOk() (*string, bool)`
+`func (o *InlineResponse20014) GetExternalRtspEnabledOk() (*bool, bool)`
 
-GetWakeOnLanIdOk returns a tuple with the WakeOnLanId field if it's non-nil, zero value otherwise
+GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWakeOnLanId
+### SetExternalRtspEnabled
 
-`func (o *InlineResponse20014) SetWakeOnLanId(v string)`
+`func (o *InlineResponse20014) SetExternalRtspEnabled(v bool)`
 
-SetWakeOnLanId sets WakeOnLanId field to given value.
+SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
 
-### HasWakeOnLanId
+### HasExternalRtspEnabled
 
-`func (o *InlineResponse20014) HasWakeOnLanId() bool`
+`func (o *InlineResponse20014) HasExternalRtspEnabled() bool`
 
-HasWakeOnLanId returns a boolean if a field has been set.
+HasExternalRtspEnabled returns a boolean if a field has been set.
 
-### GetUrl
+### GetRtspUrl
 
-`func (o *InlineResponse20014) GetUrl() string`
+`func (o *InlineResponse20014) GetRtspUrl() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetRtspUrl returns the RtspUrl field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetRtspUrlOk
 
-`func (o *InlineResponse20014) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20014) GetRtspUrlOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetRtspUrlOk returns a tuple with the RtspUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetRtspUrl
 
-`func (o *InlineResponse20014) SetUrl(v string)`
+`func (o *InlineResponse20014) SetRtspUrl(v string)`
 
-SetUrl sets Url field to given value.
+SetRtspUrl sets RtspUrl field to given value.
 
-### HasUrl
+### HasRtspUrl
 
-`func (o *InlineResponse20014) HasUrl() bool`
+`func (o *InlineResponse20014) HasRtspUrl() bool`
 
-HasUrl returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse20014) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse20014) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse20014) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse20014) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetRequest
-
-`func (o *InlineResponse20014) GetRequest() InlineResponse2015Request`
-
-GetRequest returns the Request field if non-nil, zero value otherwise.
-
-### GetRequestOk
-
-`func (o *InlineResponse20014) GetRequestOk() (*InlineResponse2015Request, bool)`
-
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequest
-
-`func (o *InlineResponse20014) SetRequest(v InlineResponse2015Request)`
-
-SetRequest sets Request field to given value.
-
-### HasRequest
-
-`func (o *InlineResponse20014) HasRequest() bool`
-
-HasRequest returns a boolean if a field has been set.
-
-### GetError
-
-`func (o *InlineResponse20014) GetError() string`
-
-GetError returns the Error field if non-nil, zero value otherwise.
-
-### GetErrorOk
-
-`func (o *InlineResponse20014) GetErrorOk() (*string, bool)`
-
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetError
-
-`func (o *InlineResponse20014) SetError(v string)`
-
-SetError sets Error field to given value.
-
-### HasError
-
-`func (o *InlineResponse20014) HasError() bool`
-
-HasError returns a boolean if a field has been set.
+HasRtspUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

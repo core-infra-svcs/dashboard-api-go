@@ -4,16 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Identity PSK | 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
-**GroupPolicyId** | **string** | The group policy to be applied to clients | 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200186Rules**](InlineResponse200186Rules.md) | An array of L7 firewall rules for this SSID. Rules will get applied in the same order user has specified in request. Empty array will clear the L7 firewall rule configuration. | [optional] 
 
 ## Methods
 
 ### NewInlineObject184
 
-`func NewInlineObject184(name string, groupPolicyId string, ) *InlineObject184`
+`func NewInlineObject184() *InlineObject184`
 
 NewInlineObject184 instantiates a new InlineObject184 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +25,30 @@ NewInlineObject184WithDefaults instantiates a new InlineObject184 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRules
 
-`func (o *InlineObject184) GetName() string`
+`func (o *InlineObject184) GetRules() []InlineResponse200186Rules`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesOk
 
-`func (o *InlineObject184) GetNameOk() (*string, bool)`
+`func (o *InlineObject184) GetRulesOk() (*[]InlineResponse200186Rules, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRules
 
-`func (o *InlineObject184) SetName(v string)`
+`func (o *InlineObject184) SetRules(v []InlineResponse200186Rules)`
 
-SetName sets Name field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetPassphrase
+`func (o *InlineObject184) HasRules() bool`
 
-`func (o *InlineObject184) GetPassphrase() string`
-
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
-
-### GetPassphraseOk
-
-`func (o *InlineObject184) GetPassphraseOk() (*string, bool)`
-
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPassphrase
-
-`func (o *InlineObject184) SetPassphrase(v string)`
-
-SetPassphrase sets Passphrase field to given value.
-
-### HasPassphrase
-
-`func (o *InlineObject184) HasPassphrase() bool`
-
-HasPassphrase returns a boolean if a field has been set.
-
-### GetGroupPolicyId
-
-`func (o *InlineObject184) GetGroupPolicyId() string`
-
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
-
-### GetGroupPolicyIdOk
-
-`func (o *InlineObject184) GetGroupPolicyIdOk() (*string, bool)`
-
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupPolicyId
-
-`func (o *InlineObject184) SetGroupPolicyId(v string)`
-
-SetGroupPolicyId sets GroupPolicyId field to given value.
-
-
-### GetExpiresAt
-
-`func (o *InlineObject184) GetExpiresAt() time.Time`
-
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
-
-### GetExpiresAtOk
-
-`func (o *InlineObject184) GetExpiresAtOk() (*time.Time, bool)`
-
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExpiresAt
-
-`func (o *InlineObject184) SetExpiresAt(v time.Time)`
-
-SetExpiresAt sets ExpiresAt field to given value.
-
-### HasExpiresAt
-
-`func (o *InlineObject184) HasExpiresAt() bool`
-
-HasExpiresAt returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

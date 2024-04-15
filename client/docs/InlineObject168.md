@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]NetworksNetworkIdWirelessBillingPlans**](NetworksNetworkIdWirelessBillingPlans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**Url** | **string** | The URL where the test webhook will be sent | 
+**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to an empty string. | [optional] [default to ""]
+**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
+**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
+**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
 
 ## Methods
 
 ### NewInlineObject168
 
-`func NewInlineObject168() *InlineObject168`
+`func NewInlineObject168(url string, ) *InlineObject168`
 
 NewInlineObject168 instantiates a new InlineObject168 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +29,125 @@ NewInlineObject168WithDefaults instantiates a new InlineObject168 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetUrl
 
-`func (o *InlineObject168) GetCurrency() string`
+`func (o *InlineObject168) GetUrl() string`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetUrlOk
 
-`func (o *InlineObject168) GetCurrencyOk() (*string, bool)`
+`func (o *InlineObject168) GetUrlOk() (*string, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetUrl
 
-`func (o *InlineObject168) SetCurrency(v string)`
+`func (o *InlineObject168) SetUrl(v string)`
 
-SetCurrency sets Currency field to given value.
+SetUrl sets Url field to given value.
 
-### HasCurrency
 
-`func (o *InlineObject168) HasCurrency() bool`
+### GetSharedSecret
 
-HasCurrency returns a boolean if a field has been set.
+`func (o *InlineObject168) GetSharedSecret() string`
 
-### GetPlans
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-`func (o *InlineObject168) GetPlans() []NetworksNetworkIdWirelessBillingPlans`
+### GetSharedSecretOk
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+`func (o *InlineObject168) GetSharedSecretOk() (*string, bool)`
 
-### GetPlansOk
-
-`func (o *InlineObject168) GetPlansOk() (*[]NetworksNetworkIdWirelessBillingPlans, bool)`
-
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetSharedSecret
 
-`func (o *InlineObject168) SetPlans(v []NetworksNetworkIdWirelessBillingPlans)`
+`func (o *InlineObject168) SetSharedSecret(v string)`
 
-SetPlans sets Plans field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasPlans
+### HasSharedSecret
 
-`func (o *InlineObject168) HasPlans() bool`
+`func (o *InlineObject168) HasSharedSecret() bool`
 
-HasPlans returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
+
+### GetPayloadTemplateId
+
+`func (o *InlineObject168) GetPayloadTemplateId() string`
+
+GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateIdOk
+
+`func (o *InlineObject168) GetPayloadTemplateIdOk() (*string, bool)`
+
+GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplateId
+
+`func (o *InlineObject168) SetPayloadTemplateId(v string)`
+
+SetPayloadTemplateId sets PayloadTemplateId field to given value.
+
+### HasPayloadTemplateId
+
+`func (o *InlineObject168) HasPayloadTemplateId() bool`
+
+HasPayloadTemplateId returns a boolean if a field has been set.
+
+### GetPayloadTemplateName
+
+`func (o *InlineObject168) GetPayloadTemplateName() string`
+
+GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateNameOk
+
+`func (o *InlineObject168) GetPayloadTemplateNameOk() (*string, bool)`
+
+GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplateName
+
+`func (o *InlineObject168) SetPayloadTemplateName(v string)`
+
+SetPayloadTemplateName sets PayloadTemplateName field to given value.
+
+### HasPayloadTemplateName
+
+`func (o *InlineObject168) HasPayloadTemplateName() bool`
+
+HasPayloadTemplateName returns a boolean if a field has been set.
+
+### GetAlertTypeId
+
+`func (o *InlineObject168) GetAlertTypeId() string`
+
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+
+### GetAlertTypeIdOk
+
+`func (o *InlineObject168) GetAlertTypeIdOk() (*string, bool)`
+
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertTypeId
+
+`func (o *InlineObject168) SetAlertTypeId(v string)`
+
+SetAlertTypeId sets AlertTypeId field to given value.
+
+### HasAlertTypeId
+
+`func (o *InlineObject168) HasAlertTypeId() bool`
+
+HasAlertTypeId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

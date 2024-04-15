@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Product** | Pointer to **string** | Product type to rollback (if the network is a combined network) | [optional] 
-**Status** | Pointer to **string** | Status of the rollback | [optional] 
-**UpgradeBatchId** | Pointer to **string** | Batch ID of the firmware rollback | [optional] 
-**Time** | Pointer to **time.Time** | Scheduled time for the rollback | [optional] 
-**ToVersion** | Pointer to [**InlineResponse20052ToVersion**](InlineResponse20052ToVersion.md) |  | [optional] 
-**Reasons** | Pointer to [**[]InlineResponse20052Reasons**](InlineResponse20052Reasons.md) | Reasons for the rollback | [optional] 
+**StaticDelegatedPrefixId** | Pointer to **string** | Static delegated prefix id. | [optional] 
+**Prefix** | Pointer to **string** | IPv6 prefix/prefix length. | [optional] 
+**Origin** | Pointer to [**NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin**](NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin.md) |  | [optional] 
+**Description** | Pointer to **string** | Identifying description for the prefix. | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Prefix creation time. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Prefix Updated time. | [optional] 
 
 ## Methods
 
@@ -30,155 +30,155 @@ NewInlineResponse20052WithDefaults instantiates a new InlineResponse20052 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProduct
+### GetStaticDelegatedPrefixId
 
-`func (o *InlineResponse20052) GetProduct() string`
+`func (o *InlineResponse20052) GetStaticDelegatedPrefixId() string`
 
-GetProduct returns the Product field if non-nil, zero value otherwise.
+GetStaticDelegatedPrefixId returns the StaticDelegatedPrefixId field if non-nil, zero value otherwise.
 
-### GetProductOk
+### GetStaticDelegatedPrefixIdOk
 
-`func (o *InlineResponse20052) GetProductOk() (*string, bool)`
+`func (o *InlineResponse20052) GetStaticDelegatedPrefixIdOk() (*string, bool)`
 
-GetProductOk returns a tuple with the Product field if it's non-nil, zero value otherwise
+GetStaticDelegatedPrefixIdOk returns a tuple with the StaticDelegatedPrefixId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProduct
+### SetStaticDelegatedPrefixId
 
-`func (o *InlineResponse20052) SetProduct(v string)`
+`func (o *InlineResponse20052) SetStaticDelegatedPrefixId(v string)`
 
-SetProduct sets Product field to given value.
+SetStaticDelegatedPrefixId sets StaticDelegatedPrefixId field to given value.
 
-### HasProduct
+### HasStaticDelegatedPrefixId
 
-`func (o *InlineResponse20052) HasProduct() bool`
+`func (o *InlineResponse20052) HasStaticDelegatedPrefixId() bool`
 
-HasProduct returns a boolean if a field has been set.
+HasStaticDelegatedPrefixId returns a boolean if a field has been set.
 
-### GetStatus
+### GetPrefix
 
-`func (o *InlineResponse20052) GetStatus() string`
+`func (o *InlineResponse20052) GetPrefix() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetPrefix returns the Prefix field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetPrefixOk
 
-`func (o *InlineResponse20052) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20052) GetPrefixOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetPrefixOk returns a tuple with the Prefix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetPrefix
 
-`func (o *InlineResponse20052) SetStatus(v string)`
+`func (o *InlineResponse20052) SetPrefix(v string)`
 
-SetStatus sets Status field to given value.
+SetPrefix sets Prefix field to given value.
 
-### HasStatus
+### HasPrefix
 
-`func (o *InlineResponse20052) HasStatus() bool`
+`func (o *InlineResponse20052) HasPrefix() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasPrefix returns a boolean if a field has been set.
 
-### GetUpgradeBatchId
+### GetOrigin
 
-`func (o *InlineResponse20052) GetUpgradeBatchId() string`
+`func (o *InlineResponse20052) GetOrigin() NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin`
 
-GetUpgradeBatchId returns the UpgradeBatchId field if non-nil, zero value otherwise.
+GetOrigin returns the Origin field if non-nil, zero value otherwise.
 
-### GetUpgradeBatchIdOk
+### GetOriginOk
 
-`func (o *InlineResponse20052) GetUpgradeBatchIdOk() (*string, bool)`
+`func (o *InlineResponse20052) GetOriginOk() (*NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin, bool)`
 
-GetUpgradeBatchIdOk returns a tuple with the UpgradeBatchId field if it's non-nil, zero value otherwise
+GetOriginOk returns a tuple with the Origin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeBatchId
+### SetOrigin
 
-`func (o *InlineResponse20052) SetUpgradeBatchId(v string)`
+`func (o *InlineResponse20052) SetOrigin(v NetworksNetworkIdAppliancePrefixesDelegatedStaticsOrigin)`
 
-SetUpgradeBatchId sets UpgradeBatchId field to given value.
+SetOrigin sets Origin field to given value.
 
-### HasUpgradeBatchId
+### HasOrigin
 
-`func (o *InlineResponse20052) HasUpgradeBatchId() bool`
+`func (o *InlineResponse20052) HasOrigin() bool`
 
-HasUpgradeBatchId returns a boolean if a field has been set.
+HasOrigin returns a boolean if a field has been set.
 
-### GetTime
+### GetDescription
 
-`func (o *InlineResponse20052) GetTime() time.Time`
+`func (o *InlineResponse20052) GetDescription() string`
 
-GetTime returns the Time field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetTimeOk
+### GetDescriptionOk
 
-`func (o *InlineResponse20052) GetTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse20052) GetDescriptionOk() (*string, bool)`
 
-GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTime
+### SetDescription
 
-`func (o *InlineResponse20052) SetTime(v time.Time)`
+`func (o *InlineResponse20052) SetDescription(v string)`
 
-SetTime sets Time field to given value.
+SetDescription sets Description field to given value.
 
-### HasTime
+### HasDescription
 
-`func (o *InlineResponse20052) HasTime() bool`
+`func (o *InlineResponse20052) HasDescription() bool`
 
-HasTime returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetToVersion
+### GetCreatedAt
 
-`func (o *InlineResponse20052) GetToVersion() InlineResponse20052ToVersion`
+`func (o *InlineResponse20052) GetCreatedAt() time.Time`
 
-GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetToVersionOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse20052) GetToVersionOk() (*InlineResponse20052ToVersion, bool)`
+`func (o *InlineResponse20052) GetCreatedAtOk() (*time.Time, bool)`
 
-GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetToVersion
+### SetCreatedAt
 
-`func (o *InlineResponse20052) SetToVersion(v InlineResponse20052ToVersion)`
+`func (o *InlineResponse20052) SetCreatedAt(v time.Time)`
 
-SetToVersion sets ToVersion field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasToVersion
+### HasCreatedAt
 
-`func (o *InlineResponse20052) HasToVersion() bool`
+`func (o *InlineResponse20052) HasCreatedAt() bool`
 
-HasToVersion returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetReasons
+### GetUpdatedAt
 
-`func (o *InlineResponse20052) GetReasons() []InlineResponse20052Reasons`
+`func (o *InlineResponse20052) GetUpdatedAt() time.Time`
 
-GetReasons returns the Reasons field if non-nil, zero value otherwise.
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
-### GetReasonsOk
+### GetUpdatedAtOk
 
-`func (o *InlineResponse20052) GetReasonsOk() (*[]InlineResponse20052Reasons, bool)`
+`func (o *InlineResponse20052) GetUpdatedAtOk() (*time.Time, bool)`
 
-GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReasons
+### SetUpdatedAt
 
-`func (o *InlineResponse20052) SetReasons(v []InlineResponse20052Reasons)`
+`func (o *InlineResponse20052) SetUpdatedAt(v time.Time)`
 
-SetReasons sets Reasons field to given value.
+SetUpdatedAt sets UpdatedAt field to given value.
 
-### HasReasons
+### HasUpdatedAt
 
-`func (o *InlineResponse20052) HasReasons() bool`
+`func (o *InlineResponse20052) HasUpdatedAt() bool`
 
-HasReasons returns a boolean if a field has been set.
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

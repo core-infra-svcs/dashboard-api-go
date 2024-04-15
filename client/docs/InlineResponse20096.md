@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrustedServerId** | Pointer to **string** | ID of the trusted server. | [optional] 
-**Mac** | Pointer to **string** | Mac address of the trusted server. | [optional] 
-**Vlan** | Pointer to **int32** | Vlan ID of the trusted server. | [optional] 
-**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4.md) |  | [optional] 
+**Id** | Pointer to **string** | Meraki auth user id | [optional] 
+**Email** | Pointer to **string** | Email address of the user | [optional] 
+**Name** | Pointer to **string** | Name of the user | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
 
 ## Methods
 
@@ -28,105 +31,180 @@ NewInlineResponse20096WithDefaults instantiates a new InlineResponse20096 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrustedServerId
+### GetId
 
-`func (o *InlineResponse20096) GetTrustedServerId() string`
+`func (o *InlineResponse20096) GetId() string`
 
-GetTrustedServerId returns the TrustedServerId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetTrustedServerIdOk
+### GetIdOk
 
-`func (o *InlineResponse20096) GetTrustedServerIdOk() (*string, bool)`
+`func (o *InlineResponse20096) GetIdOk() (*string, bool)`
 
-GetTrustedServerIdOk returns a tuple with the TrustedServerId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrustedServerId
+### SetId
 
-`func (o *InlineResponse20096) SetTrustedServerId(v string)`
+`func (o *InlineResponse20096) SetId(v string)`
 
-SetTrustedServerId sets TrustedServerId field to given value.
+SetId sets Id field to given value.
 
-### HasTrustedServerId
+### HasId
 
-`func (o *InlineResponse20096) HasTrustedServerId() bool`
+`func (o *InlineResponse20096) HasId() bool`
 
-HasTrustedServerId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMac
+### GetEmail
 
-`func (o *InlineResponse20096) GetMac() string`
+`func (o *InlineResponse20096) GetEmail() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetEmailOk
 
-`func (o *InlineResponse20096) GetMacOk() (*string, bool)`
+`func (o *InlineResponse20096) GetEmailOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetEmail
 
-`func (o *InlineResponse20096) SetMac(v string)`
+`func (o *InlineResponse20096) SetEmail(v string)`
 
-SetMac sets Mac field to given value.
+SetEmail sets Email field to given value.
 
-### HasMac
+### HasEmail
 
-`func (o *InlineResponse20096) HasMac() bool`
+`func (o *InlineResponse20096) HasEmail() bool`
 
-HasMac returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetVlan
+### GetName
 
-`func (o *InlineResponse20096) GetVlan() int32`
+`func (o *InlineResponse20096) GetName() string`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetNameOk
 
-`func (o *InlineResponse20096) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse20096) GetNameOk() (*string, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetName
 
-`func (o *InlineResponse20096) SetVlan(v int32)`
+`func (o *InlineResponse20096) SetName(v string)`
 
-SetVlan sets Vlan field to given value.
+SetName sets Name field to given value.
 
-### HasVlan
+### HasName
 
-`func (o *InlineResponse20096) HasVlan() bool`
+`func (o *InlineResponse20096) HasName() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetIpv4
+### GetCreatedAt
 
-`func (o *InlineResponse20096) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4`
+`func (o *InlineResponse20096) GetCreatedAt() time.Time`
 
-GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetIpv4Ok
+### GetCreatedAtOk
 
-`func (o *InlineResponse20096) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4, bool)`
+`func (o *InlineResponse20096) GetCreatedAtOk() (*time.Time, bool)`
 
-GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv4
+### SetCreatedAt
 
-`func (o *InlineResponse20096) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv4)`
+`func (o *InlineResponse20096) SetCreatedAt(v time.Time)`
 
-SetIpv4 sets Ipv4 field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasIpv4
+### HasCreatedAt
 
-`func (o *InlineResponse20096) HasIpv4() bool`
+`func (o *InlineResponse20096) HasCreatedAt() bool`
 
-HasIpv4 returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetAccountType
+
+`func (o *InlineResponse20096) GetAccountType() string`
+
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+
+### GetAccountTypeOk
+
+`func (o *InlineResponse20096) GetAccountTypeOk() (*string, bool)`
+
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccountType
+
+`func (o *InlineResponse20096) SetAccountType(v string)`
+
+SetAccountType sets AccountType field to given value.
+
+### HasAccountType
+
+`func (o *InlineResponse20096) HasAccountType() bool`
+
+HasAccountType returns a boolean if a field has been set.
+
+### GetIsAdmin
+
+`func (o *InlineResponse20096) GetIsAdmin() bool`
+
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
+
+### GetIsAdminOk
+
+`func (o *InlineResponse20096) GetIsAdminOk() (*bool, bool)`
+
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsAdmin
+
+`func (o *InlineResponse20096) SetIsAdmin(v bool)`
+
+SetIsAdmin sets IsAdmin field to given value.
+
+### HasIsAdmin
+
+`func (o *InlineResponse20096) HasIsAdmin() bool`
+
+HasIsAdmin returns a boolean if a field has been set.
+
+### GetAuthorizations
+
+`func (o *InlineResponse20096) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
+
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+
+### GetAuthorizationsOk
+
+`func (o *InlineResponse20096) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
+
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizations
+
+`func (o *InlineResponse20096) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
+
+SetAuthorizations sets Authorizations field to given value.
+
+### HasAuthorizations
+
+`func (o *InlineResponse20096) HasAuthorizations() bool`
+
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

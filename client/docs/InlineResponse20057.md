@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
-**Category** | Pointer to **string** | Category of the alert | [optional] 
-**Type** | Pointer to **string** | Alert type | [optional] 
-**Severity** | Pointer to **string** | Severity of the alert | [optional] 
-**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
+**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
+**DynamicDns** | Pointer to [**InlineResponse20057DynamicDns**](InlineResponse20057DynamicDns.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20057WithDefaults instantiates a new InlineResponse20057 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetClientTrackingMethod
 
-`func (o *InlineResponse20057) GetId() string`
+`func (o *InlineResponse20057) GetClientTrackingMethod() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetClientTrackingMethodOk
 
-`func (o *InlineResponse20057) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20057) GetClientTrackingMethodOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetClientTrackingMethod
 
-`func (o *InlineResponse20057) SetId(v string)`
+`func (o *InlineResponse20057) SetClientTrackingMethod(v string)`
 
-SetId sets Id field to given value.
+SetClientTrackingMethod sets ClientTrackingMethod field to given value.
 
-### HasId
+### HasClientTrackingMethod
 
-`func (o *InlineResponse20057) HasId() bool`
+`func (o *InlineResponse20057) HasClientTrackingMethod() bool`
 
-HasId returns a boolean if a field has been set.
+HasClientTrackingMethod returns a boolean if a field has been set.
 
-### GetCategory
+### GetDeploymentMode
 
-`func (o *InlineResponse20057) GetCategory() string`
+`func (o *InlineResponse20057) GetDeploymentMode() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetDeploymentModeOk
 
-`func (o *InlineResponse20057) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse20057) GetDeploymentModeOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetDeploymentMode
 
-`func (o *InlineResponse20057) SetCategory(v string)`
+`func (o *InlineResponse20057) SetDeploymentMode(v string)`
 
-SetCategory sets Category field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
-### HasCategory
+### HasDeploymentMode
 
-`func (o *InlineResponse20057) HasCategory() bool`
+`func (o *InlineResponse20057) HasDeploymentMode() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasDeploymentMode returns a boolean if a field has been set.
 
-### GetType
+### GetDynamicDns
 
-`func (o *InlineResponse20057) GetType() string`
+`func (o *InlineResponse20057) GetDynamicDns() InlineResponse20057DynamicDns`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetDynamicDnsOk
 
-`func (o *InlineResponse20057) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse20057) GetDynamicDnsOk() (*InlineResponse20057DynamicDns, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetDynamicDns
 
-`func (o *InlineResponse20057) SetType(v string)`
+`func (o *InlineResponse20057) SetDynamicDns(v InlineResponse20057DynamicDns)`
 
-SetType sets Type field to given value.
+SetDynamicDns sets DynamicDns field to given value.
 
-### HasType
+### HasDynamicDns
 
-`func (o *InlineResponse20057) HasType() bool`
+`func (o *InlineResponse20057) HasDynamicDns() bool`
 
-HasType returns a boolean if a field has been set.
-
-### GetSeverity
-
-`func (o *InlineResponse20057) GetSeverity() string`
-
-GetSeverity returns the Severity field if non-nil, zero value otherwise.
-
-### GetSeverityOk
-
-`func (o *InlineResponse20057) GetSeverityOk() (*string, bool)`
-
-GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeverity
-
-`func (o *InlineResponse20057) SetSeverity(v string)`
-
-SetSeverity sets Severity field to given value.
-
-### HasSeverity
-
-`func (o *InlineResponse20057) HasSeverity() bool`
-
-HasSeverity returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineResponse20057) GetScope() NetworksNetworkIdHealthAlertsScope`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineResponse20057) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineResponse20057) SetScope(v NetworksNetworkIdHealthAlertsScope)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineResponse20057) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
+HasDynamicDns returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

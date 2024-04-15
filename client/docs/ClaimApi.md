@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## VmxNetworkDevicesClaim
 
-> map[string]interface{} VmxNetworkDevicesClaim(ctx, networkId).VmxNetworkDevicesClaim(vmxNetworkDevicesClaim).Execute()
+> InlineResponse20084 VmxNetworkDevicesClaim(ctx, networkId).VmxNetworkDevicesClaim(vmxNetworkDevicesClaim).Execute()
 
 Claim a vMX into a network
 
@@ -30,7 +30,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    vmxNetworkDevicesClaim := *openapiclient.NewInlineObject87("Size_example") // InlineObject87 | 
+    vmxNetworkDevicesClaim := *openapiclient.NewInlineObject89("Size_example") // InlineObject89 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClaimApi.VmxNetworkDevicesClaim``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `VmxNetworkDevicesClaim`: map[string]interface{}
+    // response from `VmxNetworkDevicesClaim`: InlineResponse20084
     fmt.Fprintf(os.Stdout, "Response from `ClaimApi.VmxNetworkDevicesClaim`: %v\n", resp)
 }
 ```
@@ -60,11 +60,11 @@ Other parameters are passed through a pointer to a apiVmxNetworkDevicesClaimRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **vmxNetworkDevicesClaim** | [**InlineObject87**](InlineObject87.md) |  | 
+ **vmxNetworkDevicesClaim** | [**InlineObject89**](InlineObject89.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20084**](InlineResponse20084.md)
 
 ### Authorization
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Start** | **string** | The first IP in the reserved range | 
-**End** | **string** | The last IP in the reserved range | 
-**Comment** | **string** | A text comment for the reserved range | 
+**Start** | **string** | First address in the reserved range | 
+**End** | **string** | Last address in the reserved range | 
+**Comment** | **string** | Description of the range | 
 
 ## Methods
 

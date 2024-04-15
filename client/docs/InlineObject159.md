@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
-**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
-**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
-**Iname** | **string** | IName of the profile | 
+**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
+**CustomPieChartItems** | Pointer to [**[]InlineResponse200159CustomPieChartItems**](InlineResponse200159CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
 
 ## Methods
 
 ### NewInlineObject159
 
-`func NewInlineObject159(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, iname string, ) *InlineObject159`
+`func NewInlineObject159() *InlineObject159`
 
 NewInlineObject159 instantiates a new InlineObject159 object
 This constructor will assign default values to properties that have it defined,
@@ -28,85 +26,55 @@ NewInlineObject159WithDefaults instantiates a new InlineObject159 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetMode
 
-`func (o *InlineObject159) GetName() string`
+`func (o *InlineObject159) GetMode() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetModeOk
 
-`func (o *InlineObject159) GetNameOk() (*string, bool)`
+`func (o *InlineObject159) GetModeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMode
 
-`func (o *InlineObject159) SetName(v string)`
+`func (o *InlineObject159) SetMode(v string)`
 
-SetName sets Name field to given value.
+SetMode sets Mode field to given value.
 
+### HasMode
 
-### GetVlanNames
+`func (o *InlineObject159) HasMode() bool`
 
-`func (o *InlineObject159) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
+HasMode returns a boolean if a field has been set.
 
-GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
+### GetCustomPieChartItems
 
-### GetVlanNamesOk
+`func (o *InlineObject159) GetCustomPieChartItems() []InlineResponse200159CustomPieChartItems`
 
-`func (o *InlineObject159) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
+GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
 
-GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
+### GetCustomPieChartItemsOk
+
+`func (o *InlineObject159) GetCustomPieChartItemsOk() (*[]InlineResponse200159CustomPieChartItems, bool)`
+
+GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanNames
+### SetCustomPieChartItems
 
-`func (o *InlineObject159) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
+`func (o *InlineObject159) SetCustomPieChartItems(v []InlineResponse200159CustomPieChartItems)`
 
-SetVlanNames sets VlanNames field to given value.
+SetCustomPieChartItems sets CustomPieChartItems field to given value.
 
+### HasCustomPieChartItems
 
-### GetVlanGroups
+`func (o *InlineObject159) HasCustomPieChartItems() bool`
 
-`func (o *InlineObject159) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
-
-GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
-
-### GetVlanGroupsOk
-
-`func (o *InlineObject159) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
-
-GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanGroups
-
-`func (o *InlineObject159) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
-
-SetVlanGroups sets VlanGroups field to given value.
-
-
-### GetIname
-
-`func (o *InlineObject159) GetIname() string`
-
-GetIname returns the Iname field if non-nil, zero value otherwise.
-
-### GetInameOk
-
-`func (o *InlineObject159) GetInameOk() (*string, bool)`
-
-GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIname
-
-`func (o *InlineObject159) SetIname(v string)`
-
-SetIname sets Iname field to given value.
-
+HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

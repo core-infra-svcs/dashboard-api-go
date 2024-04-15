@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse200154Usage**](InlineResponse200154Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200154Counts**](InlineResponse200154Counts.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
+**Name** | Pointer to **string** | Name of the Switch stack | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200154WithDefaults instantiates a new InlineResponse200154 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetId
 
-`func (o *InlineResponse200154) GetUsage() InlineResponse200154Usage`
+`func (o *InlineResponse200154) GetId() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetIdOk
 
-`func (o *InlineResponse200154) GetUsageOk() (*InlineResponse200154Usage, bool)`
+`func (o *InlineResponse200154) GetIdOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetId
 
-`func (o *InlineResponse200154) SetUsage(v InlineResponse200154Usage)`
+`func (o *InlineResponse200154) SetId(v string)`
 
-SetUsage sets Usage field to given value.
+SetId sets Id field to given value.
 
-### HasUsage
+### HasId
 
-`func (o *InlineResponse200154) HasUsage() bool`
+`func (o *InlineResponse200154) HasId() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetCounts
+### GetName
 
-`func (o *InlineResponse200154) GetCounts() InlineResponse200154Counts`
+`func (o *InlineResponse200154) GetName() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetNameOk
 
-`func (o *InlineResponse200154) GetCountsOk() (*InlineResponse200154Counts, bool)`
+`func (o *InlineResponse200154) GetNameOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetName
 
-`func (o *InlineResponse200154) SetCounts(v InlineResponse200154Counts)`
+`func (o *InlineResponse200154) SetName(v string)`
 
-SetCounts sets Counts field to given value.
+SetName sets Name field to given value.
 
-### HasCounts
+### HasName
 
-`func (o *InlineResponse200154) HasCounts() bool`
+`func (o *InlineResponse200154) HasName() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse200154) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse200154) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse200154) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse200154) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

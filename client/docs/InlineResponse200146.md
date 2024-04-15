@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
+**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200146Overrides**](InlineResponse200146Overrides.md) | Override MTU size for individual switches or switch templates.       An empty array will clear overrides. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200146WithDefaults instantiates a new InlineResponse200146 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBrandingPolicyIds
+### GetDefaultMtuSize
 
-`func (o *InlineResponse200146) GetBrandingPolicyIds() []string`
+`func (o *InlineResponse200146) GetDefaultMtuSize() int32`
 
-GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
+GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
 
-### GetBrandingPolicyIdsOk
+### GetDefaultMtuSizeOk
 
-`func (o *InlineResponse200146) GetBrandingPolicyIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200146) GetDefaultMtuSizeOk() (*int32, bool)`
 
-GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
+GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBrandingPolicyIds
+### SetDefaultMtuSize
 
-`func (o *InlineResponse200146) SetBrandingPolicyIds(v []string)`
+`func (o *InlineResponse200146) SetDefaultMtuSize(v int32)`
 
-SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
+SetDefaultMtuSize sets DefaultMtuSize field to given value.
 
-### HasBrandingPolicyIds
+### HasDefaultMtuSize
 
-`func (o *InlineResponse200146) HasBrandingPolicyIds() bool`
+`func (o *InlineResponse200146) HasDefaultMtuSize() bool`
 
-HasBrandingPolicyIds returns a boolean if a field has been set.
+HasDefaultMtuSize returns a boolean if a field has been set.
+
+### GetOverrides
+
+`func (o *InlineResponse200146) GetOverrides() []InlineResponse200146Overrides`
+
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+
+### GetOverridesOk
+
+`func (o *InlineResponse200146) GetOverridesOk() (*[]InlineResponse200146Overrides, bool)`
+
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOverrides
+
+`func (o *InlineResponse200146) SetOverrides(v []InlineResponse200146Overrides)`
+
+SetOverrides sets Overrides field to given value.
+
+### HasOverrides
+
+`func (o *InlineResponse200146) HasOverrides() bool`
+
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

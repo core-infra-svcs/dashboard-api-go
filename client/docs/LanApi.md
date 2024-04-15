@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceCellularGatewayLan
 
-> map[string]interface{} GetDeviceCellularGatewayLan(ctx, serial).Execute()
+> InlineResponse20016 GetDeviceCellularGatewayLan(ctx, serial).Execute()
 
 Show the LAN Settings of a MG
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LanApi.GetDeviceCellularGatewayLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCellularGatewayLan`: map[string]interface{}
+    // response from `GetDeviceCellularGatewayLan`: InlineResponse20016
     fmt.Fprintf(os.Stdout, "Response from `LanApi.GetDeviceCellularGatewayLan`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceCellularGatewayLan
 
-> map[string]interface{} UpdateDeviceCellularGatewayLan(ctx, serial).UpdateDeviceCellularGatewayLan(updateDeviceCellularGatewayLan).Execute()
+> InlineResponse20016 UpdateDeviceCellularGatewayLan(ctx, serial).UpdateDeviceCellularGatewayLan(updateDeviceCellularGatewayLan).Execute()
 
 Update the LAN Settings for a single MG.
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LanApi.UpdateDeviceCellularGatewayLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceCellularGatewayLan`: map[string]interface{}
+    // response from `UpdateDeviceCellularGatewayLan`: InlineResponse20016
     fmt.Fprintf(os.Stdout, "Response from `LanApi.UpdateDeviceCellularGatewayLan`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20016**](InlineResponse20016.md)
 
 ### Authorization
 

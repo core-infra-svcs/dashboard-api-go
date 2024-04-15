@@ -4,13 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The device MAC address. | [optional] 
-**Name** | Pointer to **string** | The device name. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork**](OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork.md) |  | [optional] 
-**ProductType** | Pointer to **string** | Device product type. | [optional] 
-**Serial** | Pointer to **string** | The device serial number. | [optional] 
-**Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
-**Slots** | Pointer to [**[]OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots**](OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots.md) | Information for the device&#39;s AC power supplies. | [optional] 
+**Name** | Pointer to **string** | Name of the Device | [optional] 
+**Serial** | Pointer to **string** | Serial of the Device | [optional] 
+**Mac** | Pointer to **string** | MAC address of the device | [optional] 
+**ProductType** | Pointer to **string** | The product type | [optional] 
+**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile.md) |  | [optional] 
+**Stack** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack**](NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack.md) |  | [optional] 
 
 ## Methods
 
@@ -30,31 +29,6 @@ will change when the set of required properties is changed
 NewInlineResponse200161WithDefaults instantiates a new InlineResponse200161 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetMac
-
-`func (o *InlineResponse200161) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200161) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200161) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse200161) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
 
 ### GetName
 
@@ -81,30 +55,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetNetwork
+### GetSerial
 
-`func (o *InlineResponse200161) GetNetwork() OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork`
+`func (o *InlineResponse200161) GetSerial() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetSerialOk
 
-`func (o *InlineResponse200161) GetNetworkOk() (*OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork, bool)`
+`func (o *InlineResponse200161) GetSerialOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetSerial
 
-`func (o *InlineResponse200161) SetNetwork(v OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork)`
+`func (o *InlineResponse200161) SetSerial(v string)`
 
-SetNetwork sets Network field to given value.
+SetSerial sets Serial field to given value.
 
-### HasNetwork
+### HasSerial
 
-`func (o *InlineResponse200161) HasNetwork() bool`
+`func (o *InlineResponse200161) HasSerial() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200161) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200161) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200161) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200161) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
 
 ### GetProductType
 
@@ -131,80 +130,55 @@ SetProductType sets ProductType field to given value.
 
 HasProductType returns a boolean if a field has been set.
 
-### GetSerial
+### GetVlanProfile
 
-`func (o *InlineResponse200161) GetSerial() string`
+`func (o *InlineResponse200161) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetVlanProfileOk
 
-`func (o *InlineResponse200161) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200161) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetVlanProfile
 
-`func (o *InlineResponse200161) SetSerial(v string)`
+`func (o *InlineResponse200161) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsByDeviceVlanProfile)`
 
-SetSerial sets Serial field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
-### HasSerial
+### HasVlanProfile
 
-`func (o *InlineResponse200161) HasSerial() bool`
+`func (o *InlineResponse200161) HasVlanProfile() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasVlanProfile returns a boolean if a field has been set.
 
-### GetTags
+### GetStack
 
-`func (o *InlineResponse200161) GetTags() []string`
+`func (o *InlineResponse200161) GetStack() NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetStack returns the Stack field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetStackOk
 
-`func (o *InlineResponse200161) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse200161) GetStackOk() (*NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetStackOk returns a tuple with the Stack field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetStack
 
-`func (o *InlineResponse200161) SetTags(v []string)`
+`func (o *InlineResponse200161) SetStack(v NetworksNetworkIdVlanProfilesAssignmentsByDeviceStack)`
 
-SetTags sets Tags field to given value.
+SetStack sets Stack field to given value.
 
-### HasTags
+### HasStack
 
-`func (o *InlineResponse200161) HasTags() bool`
+`func (o *InlineResponse200161) HasStack() bool`
 
-HasTags returns a boolean if a field has been set.
-
-### GetSlots
-
-`func (o *InlineResponse200161) GetSlots() []OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots`
-
-GetSlots returns the Slots field if non-nil, zero value otherwise.
-
-### GetSlotsOk
-
-`func (o *InlineResponse200161) GetSlotsOk() (*[]OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots, bool)`
-
-GetSlotsOk returns a tuple with the Slots field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSlots
-
-`func (o *InlineResponse200161) SetSlots(v []OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots)`
-
-SetSlots sets Slots field to given value.
-
-### HasSlots
-
-`func (o *InlineResponse200161) HasSlots() bool`
-
-HasSlots returns a boolean if a field has been set.
+HasStack returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

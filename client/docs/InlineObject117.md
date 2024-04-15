@@ -4,20 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the endpoints to be rebooted. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the endpoints to be rebooted. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the endpoints to be rebooted. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be rebooted. | [optional] 
-**KextPaths** | Pointer to **[]string** | The KextPaths of the endpoints to be rebooted. Available for macOS 11+ | [optional] 
-**NotifyUser** | Pointer to **bool** | Whether or not to notify the user before rebooting the endpoint. Available for macOS 11.3+ | [optional] 
-**RebuildKernelCache** | Pointer to **bool** | Whether or not to rebuild the kernel cache when rebooting the endpoint. Available for macOS 11+ | [optional] 
-**RequestRequiresNetworkTether** | Pointer to **bool** | Whether or not the request requires network tethering. Available for macOS and supervised iOS or tvOS | [optional] 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be modified. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the devices to be modified. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices to be modified. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be modified. | [optional] 
+**Tags** | **[]string** | The tags to be added, deleted, or updated. | 
+**UpdateAction** | **string** | One of add, delete, or update. Only devices that have been modified will be returned. | 
 
 ## Methods
 
 ### NewInlineObject117
 
-`func NewInlineObject117() *InlineObject117`
+`func NewInlineObject117(tags []string, updateAction string, ) *InlineObject117`
 
 NewInlineObject117 instantiates a new InlineObject117 object
 This constructor will assign default values to properties that have it defined,
@@ -132,105 +130,45 @@ SetScope sets Scope field to given value.
 
 HasScope returns a boolean if a field has been set.
 
-### GetKextPaths
+### GetTags
 
-`func (o *InlineObject117) GetKextPaths() []string`
+`func (o *InlineObject117) GetTags() []string`
 
-GetKextPaths returns the KextPaths field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetKextPathsOk
+### GetTagsOk
 
-`func (o *InlineObject117) GetKextPathsOk() (*[]string, bool)`
+`func (o *InlineObject117) GetTagsOk() (*[]string, bool)`
 
-GetKextPathsOk returns a tuple with the KextPaths field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetKextPaths
+### SetTags
 
-`func (o *InlineObject117) SetKextPaths(v []string)`
+`func (o *InlineObject117) SetTags(v []string)`
 
-SetKextPaths sets KextPaths field to given value.
+SetTags sets Tags field to given value.
 
-### HasKextPaths
 
-`func (o *InlineObject117) HasKextPaths() bool`
+### GetUpdateAction
 
-HasKextPaths returns a boolean if a field has been set.
+`func (o *InlineObject117) GetUpdateAction() string`
 
-### GetNotifyUser
+GetUpdateAction returns the UpdateAction field if non-nil, zero value otherwise.
 
-`func (o *InlineObject117) GetNotifyUser() bool`
+### GetUpdateActionOk
 
-GetNotifyUser returns the NotifyUser field if non-nil, zero value otherwise.
+`func (o *InlineObject117) GetUpdateActionOk() (*string, bool)`
 
-### GetNotifyUserOk
-
-`func (o *InlineObject117) GetNotifyUserOk() (*bool, bool)`
-
-GetNotifyUserOk returns a tuple with the NotifyUser field if it's non-nil, zero value otherwise
+GetUpdateActionOk returns a tuple with the UpdateAction field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotifyUser
+### SetUpdateAction
 
-`func (o *InlineObject117) SetNotifyUser(v bool)`
+`func (o *InlineObject117) SetUpdateAction(v string)`
 
-SetNotifyUser sets NotifyUser field to given value.
+SetUpdateAction sets UpdateAction field to given value.
 
-### HasNotifyUser
-
-`func (o *InlineObject117) HasNotifyUser() bool`
-
-HasNotifyUser returns a boolean if a field has been set.
-
-### GetRebuildKernelCache
-
-`func (o *InlineObject117) GetRebuildKernelCache() bool`
-
-GetRebuildKernelCache returns the RebuildKernelCache field if non-nil, zero value otherwise.
-
-### GetRebuildKernelCacheOk
-
-`func (o *InlineObject117) GetRebuildKernelCacheOk() (*bool, bool)`
-
-GetRebuildKernelCacheOk returns a tuple with the RebuildKernelCache field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRebuildKernelCache
-
-`func (o *InlineObject117) SetRebuildKernelCache(v bool)`
-
-SetRebuildKernelCache sets RebuildKernelCache field to given value.
-
-### HasRebuildKernelCache
-
-`func (o *InlineObject117) HasRebuildKernelCache() bool`
-
-HasRebuildKernelCache returns a boolean if a field has been set.
-
-### GetRequestRequiresNetworkTether
-
-`func (o *InlineObject117) GetRequestRequiresNetworkTether() bool`
-
-GetRequestRequiresNetworkTether returns the RequestRequiresNetworkTether field if non-nil, zero value otherwise.
-
-### GetRequestRequiresNetworkTetherOk
-
-`func (o *InlineObject117) GetRequestRequiresNetworkTetherOk() (*bool, bool)`
-
-GetRequestRequiresNetworkTetherOk returns a tuple with the RequestRequiresNetworkTether field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequestRequiresNetworkTether
-
-`func (o *InlineObject117) SetRequestRequiresNetworkTether(v bool)`
-
-SetRequestRequiresNetworkTether sets RequestRequiresNetworkTether field to given value.
-
-### HasRequestRequiresNetworkTether
-
-`func (o *InlineObject117) HasRequestRequiresNetworkTether() bool`
-
-HasRequestRequiresNetworkTether returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

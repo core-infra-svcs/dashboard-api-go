@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
-**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the ping request. | [optional] 
-**Results** | Pointer to [**InlineResponse20011Results**](InlineResponse20011Results.md) |  | [optional] 
+**Id** | Pointer to **string** | The zone ID | [optional] 
+**Type** | Pointer to **string** | The zone type | [optional] 
+**Label** | Pointer to **string** | The zone label | [optional] 
+**RegionOfInterest** | Pointer to [**DevicesSerialCameraAnalyticsZonesRegionOfInterest**](DevicesSerialCameraAnalyticsZonesRegionOfInterest.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse20011WithDefaults instantiates a new InlineResponse20011 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPingId
+### GetId
 
-`func (o *InlineResponse20011) GetPingId() string`
+`func (o *InlineResponse20011) GetId() string`
 
-GetPingId returns the PingId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetPingIdOk
+### GetIdOk
 
-`func (o *InlineResponse20011) GetPingIdOk() (*string, bool)`
+`func (o *InlineResponse20011) GetIdOk() (*string, bool)`
 
-GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPingId
+### SetId
 
-`func (o *InlineResponse20011) SetPingId(v string)`
+`func (o *InlineResponse20011) SetId(v string)`
 
-SetPingId sets PingId field to given value.
+SetId sets Id field to given value.
 
-### HasPingId
+### HasId
 
-`func (o *InlineResponse20011) HasPingId() bool`
+`func (o *InlineResponse20011) HasId() bool`
 
-HasPingId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUrl
+### GetType
 
-`func (o *InlineResponse20011) GetUrl() string`
+`func (o *InlineResponse20011) GetType() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetTypeOk
 
-`func (o *InlineResponse20011) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20011) GetTypeOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetType
 
-`func (o *InlineResponse20011) SetUrl(v string)`
+`func (o *InlineResponse20011) SetType(v string)`
 
-SetUrl sets Url field to given value.
+SetType sets Type field to given value.
 
-### HasUrl
+### HasType
 
-`func (o *InlineResponse20011) HasUrl() bool`
+`func (o *InlineResponse20011) HasType() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetRequest
+### GetLabel
 
-`func (o *InlineResponse20011) GetRequest() InlineResponse2013Request`
+`func (o *InlineResponse20011) GetLabel() string`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetLabel returns the Label field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetLabelOk
 
-`func (o *InlineResponse20011) GetRequestOk() (*InlineResponse2013Request, bool)`
+`func (o *InlineResponse20011) GetLabelOk() (*string, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetLabelOk returns a tuple with the Label field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetLabel
 
-`func (o *InlineResponse20011) SetRequest(v InlineResponse2013Request)`
+`func (o *InlineResponse20011) SetLabel(v string)`
 
-SetRequest sets Request field to given value.
+SetLabel sets Label field to given value.
 
-### HasRequest
+### HasLabel
 
-`func (o *InlineResponse20011) HasRequest() bool`
+`func (o *InlineResponse20011) HasLabel() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasLabel returns a boolean if a field has been set.
 
-### GetStatus
+### GetRegionOfInterest
 
-`func (o *InlineResponse20011) GetStatus() string`
+`func (o *InlineResponse20011) GetRegionOfInterest() DevicesSerialCameraAnalyticsZonesRegionOfInterest`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetRegionOfInterest returns the RegionOfInterest field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetRegionOfInterestOk
 
-`func (o *InlineResponse20011) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20011) GetRegionOfInterestOk() (*DevicesSerialCameraAnalyticsZonesRegionOfInterest, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetRegionOfInterestOk returns a tuple with the RegionOfInterest field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetRegionOfInterest
 
-`func (o *InlineResponse20011) SetStatus(v string)`
+`func (o *InlineResponse20011) SetRegionOfInterest(v DevicesSerialCameraAnalyticsZonesRegionOfInterest)`
 
-SetStatus sets Status field to given value.
+SetRegionOfInterest sets RegionOfInterest field to given value.
 
-### HasStatus
+### HasRegionOfInterest
 
-`func (o *InlineResponse20011) HasStatus() bool`
+`func (o *InlineResponse20011) HasRegionOfInterest() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetResults
-
-`func (o *InlineResponse20011) GetResults() InlineResponse20011Results`
-
-GetResults returns the Results field if non-nil, zero value otherwise.
-
-### GetResultsOk
-
-`func (o *InlineResponse20011) GetResultsOk() (*InlineResponse20011Results, bool)`
-
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResults
-
-`func (o *InlineResponse20011) SetResults(v InlineResponse20011Results)`
-
-SetResults sets Results field to given value.
-
-### HasResults
-
-`func (o *InlineResponse20011) HasResults() bool`
-
-HasResults returns a boolean if a field has been set.
+HasRegionOfInterest returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

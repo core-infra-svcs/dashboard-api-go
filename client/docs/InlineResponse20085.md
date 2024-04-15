@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreatedAt** | Pointer to **string** | When the Meraki record for the wlanList was created. | [optional] 
-**Id** | Pointer to **string** | The Meraki managed Id of the wlanList record. | [optional] 
-**Xml** | Pointer to **string** | An XML string containing the WLAN List for the device. | [optional] 
+**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
+**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
+**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
+**Events** | Pointer to [**[]InlineResponse20085Events**](InlineResponse20085Events.md) | An array of events that took place in the network. | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse20085WithDefaults instantiates a new InlineResponse20085 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCreatedAt
+### GetMessage
 
-`func (o *InlineResponse20085) GetCreatedAt() string`
+`func (o *InlineResponse20085) GetMessage() string`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetMessage returns the Message field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetMessageOk
 
-`func (o *InlineResponse20085) GetCreatedAtOk() (*string, bool)`
+`func (o *InlineResponse20085) GetMessageOk() (*string, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetMessage
 
-`func (o *InlineResponse20085) SetCreatedAt(v string)`
+`func (o *InlineResponse20085) SetMessage(v string)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetMessage sets Message field to given value.
 
-### HasCreatedAt
+### HasMessage
 
-`func (o *InlineResponse20085) HasCreatedAt() bool`
+`func (o *InlineResponse20085) HasMessage() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasMessage returns a boolean if a field has been set.
 
-### GetId
+### GetPageStartAt
 
-`func (o *InlineResponse20085) GetId() string`
+`func (o *InlineResponse20085) GetPageStartAt() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetPageStartAtOk
 
-`func (o *InlineResponse20085) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20085) GetPageStartAtOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetPageStartAt
 
-`func (o *InlineResponse20085) SetId(v string)`
+`func (o *InlineResponse20085) SetPageStartAt(v string)`
 
-SetId sets Id field to given value.
+SetPageStartAt sets PageStartAt field to given value.
 
-### HasId
+### HasPageStartAt
 
-`func (o *InlineResponse20085) HasId() bool`
+`func (o *InlineResponse20085) HasPageStartAt() bool`
 
-HasId returns a boolean if a field has been set.
+HasPageStartAt returns a boolean if a field has been set.
 
-### GetXml
+### GetPageEndAt
 
-`func (o *InlineResponse20085) GetXml() string`
+`func (o *InlineResponse20085) GetPageEndAt() string`
 
-GetXml returns the Xml field if non-nil, zero value otherwise.
+GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
 
-### GetXmlOk
+### GetPageEndAtOk
 
-`func (o *InlineResponse20085) GetXmlOk() (*string, bool)`
+`func (o *InlineResponse20085) GetPageEndAtOk() (*string, bool)`
 
-GetXmlOk returns a tuple with the Xml field if it's non-nil, zero value otherwise
+GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetXml
+### SetPageEndAt
 
-`func (o *InlineResponse20085) SetXml(v string)`
+`func (o *InlineResponse20085) SetPageEndAt(v string)`
 
-SetXml sets Xml field to given value.
+SetPageEndAt sets PageEndAt field to given value.
 
-### HasXml
+### HasPageEndAt
 
-`func (o *InlineResponse20085) HasXml() bool`
+`func (o *InlineResponse20085) HasPageEndAt() bool`
 
-HasXml returns a boolean if a field has been set.
+HasPageEndAt returns a boolean if a field has been set.
+
+### GetEvents
+
+`func (o *InlineResponse20085) GetEvents() []InlineResponse20085Events`
+
+GetEvents returns the Events field if non-nil, zero value otherwise.
+
+### GetEventsOk
+
+`func (o *InlineResponse20085) GetEventsOk() (*[]InlineResponse20085Events, bool)`
+
+GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEvents
+
+`func (o *InlineResponse20085) SetEvents(v []InlineResponse20085Events)`
+
+SetEvents sets Events field to given value.
+
+### HasEvents
+
+`func (o *InlineResponse20085) HasEvents() bool`
+
+HasEvents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

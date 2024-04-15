@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SupportedMetrics** | Pointer to **[]string** | List of metrics that are supported for alerts, based on available sensor devices in the network | [optional] 
-**Counts** | Pointer to [**InlineResponse20061Counts**](InlineResponse20061Counts.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the custom performance class | [optional] 
+**CustomPerformanceClassId** | Pointer to **string** | ID of the custom performance class | [optional] 
+**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
+**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
+**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse20061WithDefaults instantiates a new InlineResponse20061 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSupportedMetrics
+### GetName
 
-`func (o *InlineResponse20061) GetSupportedMetrics() []string`
+`func (o *InlineResponse20061) GetName() string`
 
-GetSupportedMetrics returns the SupportedMetrics field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSupportedMetricsOk
+### GetNameOk
 
-`func (o *InlineResponse20061) GetSupportedMetricsOk() (*[]string, bool)`
+`func (o *InlineResponse20061) GetNameOk() (*string, bool)`
 
-GetSupportedMetricsOk returns a tuple with the SupportedMetrics field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSupportedMetrics
+### SetName
 
-`func (o *InlineResponse20061) SetSupportedMetrics(v []string)`
+`func (o *InlineResponse20061) SetName(v string)`
 
-SetSupportedMetrics sets SupportedMetrics field to given value.
+SetName sets Name field to given value.
 
-### HasSupportedMetrics
+### HasName
 
-`func (o *InlineResponse20061) HasSupportedMetrics() bool`
+`func (o *InlineResponse20061) HasName() bool`
 
-HasSupportedMetrics returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetCounts
+### GetCustomPerformanceClassId
 
-`func (o *InlineResponse20061) GetCounts() InlineResponse20061Counts`
+`func (o *InlineResponse20061) GetCustomPerformanceClassId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetCustomPerformanceClassId returns the CustomPerformanceClassId field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetCustomPerformanceClassIdOk
 
-`func (o *InlineResponse20061) GetCountsOk() (*InlineResponse20061Counts, bool)`
+`func (o *InlineResponse20061) GetCustomPerformanceClassIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetCustomPerformanceClassIdOk returns a tuple with the CustomPerformanceClassId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetCustomPerformanceClassId
 
-`func (o *InlineResponse20061) SetCounts(v InlineResponse20061Counts)`
+`func (o *InlineResponse20061) SetCustomPerformanceClassId(v string)`
 
-SetCounts sets Counts field to given value.
+SetCustomPerformanceClassId sets CustomPerformanceClassId field to given value.
 
-### HasCounts
+### HasCustomPerformanceClassId
 
-`func (o *InlineResponse20061) HasCounts() bool`
+`func (o *InlineResponse20061) HasCustomPerformanceClassId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasCustomPerformanceClassId returns a boolean if a field has been set.
+
+### GetMaxLatency
+
+`func (o *InlineResponse20061) GetMaxLatency() int32`
+
+GetMaxLatency returns the MaxLatency field if non-nil, zero value otherwise.
+
+### GetMaxLatencyOk
+
+`func (o *InlineResponse20061) GetMaxLatencyOk() (*int32, bool)`
+
+GetMaxLatencyOk returns a tuple with the MaxLatency field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLatency
+
+`func (o *InlineResponse20061) SetMaxLatency(v int32)`
+
+SetMaxLatency sets MaxLatency field to given value.
+
+### HasMaxLatency
+
+`func (o *InlineResponse20061) HasMaxLatency() bool`
+
+HasMaxLatency returns a boolean if a field has been set.
+
+### GetMaxJitter
+
+`func (o *InlineResponse20061) GetMaxJitter() int32`
+
+GetMaxJitter returns the MaxJitter field if non-nil, zero value otherwise.
+
+### GetMaxJitterOk
+
+`func (o *InlineResponse20061) GetMaxJitterOk() (*int32, bool)`
+
+GetMaxJitterOk returns a tuple with the MaxJitter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxJitter
+
+`func (o *InlineResponse20061) SetMaxJitter(v int32)`
+
+SetMaxJitter sets MaxJitter field to given value.
+
+### HasMaxJitter
+
+`func (o *InlineResponse20061) HasMaxJitter() bool`
+
+HasMaxJitter returns a boolean if a field has been set.
+
+### GetMaxLossPercentage
+
+`func (o *InlineResponse20061) GetMaxLossPercentage() int32`
+
+GetMaxLossPercentage returns the MaxLossPercentage field if non-nil, zero value otherwise.
+
+### GetMaxLossPercentageOk
+
+`func (o *InlineResponse20061) GetMaxLossPercentageOk() (*int32, bool)`
+
+GetMaxLossPercentageOk returns a tuple with the MaxLossPercentage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMaxLossPercentage
+
+`func (o *InlineResponse20061) SetMaxLossPercentage(v int32)`
+
+SetMaxLossPercentage sets MaxLossPercentage field to given value.
+
+### HasMaxLossPercentage
+
+`func (o *InlineResponse20061) HasMaxLossPercentage() bool`
+
+HasMaxLossPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

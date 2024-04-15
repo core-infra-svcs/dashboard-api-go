@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Subnet** | Pointer to **string** | The subnet of the single LAN configuration | [optional] 
-**ApplianceIp** | Pointer to **string** | The appliance IP address of the single LAN | [optional] 
-**Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
-**MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceSingleLanMandatoryDhcp**](NetworksNetworkIdApplianceSingleLanMandatoryDhcp.md) |  | [optional] 
+**Mode** | **string** | Set mode to &#39;enabled&#39; to enable malware prevention, otherwise &#39;disabled&#39; | 
+**AllowedUrls** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls**](NetworksNetworkIdApplianceSecurityMalwareAllowedUrls.md) | The urls that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
+**AllowedFiles** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles**](NetworksNetworkIdApplianceSecurityMalwareAllowedFiles.md) | The sha256 digests of files that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
 
 ## Methods
 
 ### NewInlineObject57
 
-`func NewInlineObject57() *InlineObject57`
+`func NewInlineObject57(mode string, ) *InlineObject57`
 
 NewInlineObject57 instantiates a new InlineObject57 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +27,75 @@ NewInlineObject57WithDefaults instantiates a new InlineObject57 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubnet
+### GetMode
 
-`func (o *InlineObject57) GetSubnet() string`
+`func (o *InlineObject57) GetMode() string`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetModeOk
 
-`func (o *InlineObject57) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject57) GetModeOk() (*string, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetMode
 
-`func (o *InlineObject57) SetSubnet(v string)`
+`func (o *InlineObject57) SetMode(v string)`
 
-SetSubnet sets Subnet field to given value.
+SetMode sets Mode field to given value.
 
-### HasSubnet
 
-`func (o *InlineObject57) HasSubnet() bool`
+### GetAllowedUrls
 
-HasSubnet returns a boolean if a field has been set.
+`func (o *InlineObject57) GetAllowedUrls() []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls`
 
-### GetApplianceIp
+GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
 
-`func (o *InlineObject57) GetApplianceIp() string`
+### GetAllowedUrlsOk
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+`func (o *InlineObject57) GetAllowedUrlsOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls, bool)`
 
-### GetApplianceIpOk
-
-`func (o *InlineObject57) GetApplianceIpOk() (*string, bool)`
-
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetAllowedUrls
 
-`func (o *InlineObject57) SetApplianceIp(v string)`
+`func (o *InlineObject57) SetAllowedUrls(v []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetAllowedUrls sets AllowedUrls field to given value.
 
-### HasApplianceIp
+### HasAllowedUrls
 
-`func (o *InlineObject57) HasApplianceIp() bool`
+`func (o *InlineObject57) HasAllowedUrls() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
+HasAllowedUrls returns a boolean if a field has been set.
 
-### GetIpv6
+### GetAllowedFiles
 
-`func (o *InlineObject57) GetIpv6() NetworksNetworkIdApplianceSingleLanIpv6`
+`func (o *InlineObject57) GetAllowedFiles() []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles`
 
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
 
-### GetIpv6Ok
+### GetAllowedFilesOk
 
-`func (o *InlineObject57) GetIpv6Ok() (*NetworksNetworkIdApplianceSingleLanIpv6, bool)`
+`func (o *InlineObject57) GetAllowedFilesOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles, bool)`
 
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6
+### SetAllowedFiles
 
-`func (o *InlineObject57) SetIpv6(v NetworksNetworkIdApplianceSingleLanIpv6)`
+`func (o *InlineObject57) SetAllowedFiles(v []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles)`
 
-SetIpv6 sets Ipv6 field to given value.
+SetAllowedFiles sets AllowedFiles field to given value.
 
-### HasIpv6
+### HasAllowedFiles
 
-`func (o *InlineObject57) HasIpv6() bool`
+`func (o *InlineObject57) HasAllowedFiles() bool`
 
-HasIpv6 returns a boolean if a field has been set.
-
-### GetMandatoryDhcp
-
-`func (o *InlineObject57) GetMandatoryDhcp() NetworksNetworkIdApplianceSingleLanMandatoryDhcp`
-
-GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
-
-### GetMandatoryDhcpOk
-
-`func (o *InlineObject57) GetMandatoryDhcpOk() (*NetworksNetworkIdApplianceSingleLanMandatoryDhcp, bool)`
-
-GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMandatoryDhcp
-
-`func (o *InlineObject57) SetMandatoryDhcp(v NetworksNetworkIdApplianceSingleLanMandatoryDhcp)`
-
-SetMandatoryDhcp sets MandatoryDhcp field to given value.
-
-### HasMandatoryDhcp
-
-`func (o *InlineObject57) HasMandatoryDhcp() bool`
-
-HasMandatoryDhcp returns a boolean if a field has been set.
+HasAllowedFiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

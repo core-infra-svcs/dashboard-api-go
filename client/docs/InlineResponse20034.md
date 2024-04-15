@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Number** | Pointer to **int32** | The number of the SSID. | [optional] 
-**Name** | Pointer to **string** | The name of the SSID. | [optional] 
-**Enabled** | Pointer to **bool** | Whether or not the SSID is enabled. | [optional] 
-**DefaultVlanId** | Pointer to **int32** | The VLAN ID of the VLAN associated to this SSID. | [optional] 
-**AuthMode** | Pointer to **string** | The association control method for the SSID. | [optional] 
-**RadiusServers** | Pointer to [**[]NetworksNetworkIdApplianceSsidsRadiusServers**](NetworksNetworkIdApplianceSsidsRadiusServers.md) | The RADIUS 802.1x servers to be used for authentication. | [optional] 
-**EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID. | [optional] 
-**WpaEncryptionMode** | Pointer to **string** | WPA encryption mode for the SSID. | [optional] 
-**Visible** | Pointer to **bool** | Boolean indicating whether the MX should advertise or hide this SSID. | [optional] 
+**InterfaceId** | Pointer to **string** | The id | [optional] 
+**Name** | Pointer to **string** | The name | [optional] 
+**Subnet** | Pointer to **string** | IPv4 subnet | [optional] 
+**InterfaceIp** | Pointer to **string** | IPv4 address | [optional] 
+**MulticastRouting** | Pointer to **string** | Multicast routing status | [optional] 
+**VlanId** | Pointer to **int32** | VLAN id | [optional] 
+**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings**](DevicesSerialSwitchRoutingInterfacesOspfSettings.md) |  | [optional] 
+**OspfV3** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfV3**](DevicesSerialSwitchRoutingInterfacesOspfV3.md) |  | [optional] 
+**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv6**](DevicesSerialSwitchRoutingInterfacesIpv6.md) |  | [optional] 
+**DefaultGateway** | Pointer to **string** | IPv4 default gateway | [optional] 
 
 ## Methods
 
@@ -33,30 +34,30 @@ NewInlineResponse20034WithDefaults instantiates a new InlineResponse20034 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNumber
+### GetInterfaceId
 
-`func (o *InlineResponse20034) GetNumber() int32`
+`func (o *InlineResponse20034) GetInterfaceId() string`
 
-GetNumber returns the Number field if non-nil, zero value otherwise.
+GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
 
-### GetNumberOk
+### GetInterfaceIdOk
 
-`func (o *InlineResponse20034) GetNumberOk() (*int32, bool)`
+`func (o *InlineResponse20034) GetInterfaceIdOk() (*string, bool)`
 
-GetNumberOk returns a tuple with the Number field if it's non-nil, zero value otherwise
+GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNumber
+### SetInterfaceId
 
-`func (o *InlineResponse20034) SetNumber(v int32)`
+`func (o *InlineResponse20034) SetInterfaceId(v string)`
 
-SetNumber sets Number field to given value.
+SetInterfaceId sets InterfaceId field to given value.
 
-### HasNumber
+### HasInterfaceId
 
-`func (o *InlineResponse20034) HasNumber() bool`
+`func (o *InlineResponse20034) HasInterfaceId() bool`
 
-HasNumber returns a boolean if a field has been set.
+HasInterfaceId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -83,180 +84,205 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetEnabled
+### GetSubnet
 
-`func (o *InlineResponse20034) GetEnabled() bool`
+`func (o *InlineResponse20034) GetSubnet() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetSubnetOk
 
-`func (o *InlineResponse20034) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20034) GetSubnetOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetSubnet
 
-`func (o *InlineResponse20034) SetEnabled(v bool)`
+`func (o *InlineResponse20034) SetSubnet(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasEnabled
+### HasSubnet
 
-`func (o *InlineResponse20034) HasEnabled() bool`
+`func (o *InlineResponse20034) HasSubnet() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetDefaultVlanId
+### GetInterfaceIp
 
-`func (o *InlineResponse20034) GetDefaultVlanId() int32`
+`func (o *InlineResponse20034) GetInterfaceIp() string`
 
-GetDefaultVlanId returns the DefaultVlanId field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetDefaultVlanIdOk
+### GetInterfaceIpOk
 
-`func (o *InlineResponse20034) GetDefaultVlanIdOk() (*int32, bool)`
+`func (o *InlineResponse20034) GetInterfaceIpOk() (*string, bool)`
 
-GetDefaultVlanIdOk returns a tuple with the DefaultVlanId field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultVlanId
+### SetInterfaceIp
 
-`func (o *InlineResponse20034) SetDefaultVlanId(v int32)`
+`func (o *InlineResponse20034) SetInterfaceIp(v string)`
 
-SetDefaultVlanId sets DefaultVlanId field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
 
-### HasDefaultVlanId
+### HasInterfaceIp
 
-`func (o *InlineResponse20034) HasDefaultVlanId() bool`
+`func (o *InlineResponse20034) HasInterfaceIp() bool`
 
-HasDefaultVlanId returns a boolean if a field has been set.
+HasInterfaceIp returns a boolean if a field has been set.
 
-### GetAuthMode
+### GetMulticastRouting
 
-`func (o *InlineResponse20034) GetAuthMode() string`
+`func (o *InlineResponse20034) GetMulticastRouting() string`
 
-GetAuthMode returns the AuthMode field if non-nil, zero value otherwise.
+GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
 
-### GetAuthModeOk
+### GetMulticastRoutingOk
 
-`func (o *InlineResponse20034) GetAuthModeOk() (*string, bool)`
+`func (o *InlineResponse20034) GetMulticastRoutingOk() (*string, bool)`
 
-GetAuthModeOk returns a tuple with the AuthMode field if it's non-nil, zero value otherwise
+GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthMode
+### SetMulticastRouting
 
-`func (o *InlineResponse20034) SetAuthMode(v string)`
+`func (o *InlineResponse20034) SetMulticastRouting(v string)`
 
-SetAuthMode sets AuthMode field to given value.
+SetMulticastRouting sets MulticastRouting field to given value.
 
-### HasAuthMode
+### HasMulticastRouting
 
-`func (o *InlineResponse20034) HasAuthMode() bool`
+`func (o *InlineResponse20034) HasMulticastRouting() bool`
 
-HasAuthMode returns a boolean if a field has been set.
+HasMulticastRouting returns a boolean if a field has been set.
 
-### GetRadiusServers
+### GetVlanId
 
-`func (o *InlineResponse20034) GetRadiusServers() []NetworksNetworkIdApplianceSsidsRadiusServers`
+`func (o *InlineResponse20034) GetVlanId() int32`
 
-GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetRadiusServersOk
+### GetVlanIdOk
 
-`func (o *InlineResponse20034) GetRadiusServersOk() (*[]NetworksNetworkIdApplianceSsidsRadiusServers, bool)`
+`func (o *InlineResponse20034) GetVlanIdOk() (*int32, bool)`
 
-GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRadiusServers
+### SetVlanId
 
-`func (o *InlineResponse20034) SetRadiusServers(v []NetworksNetworkIdApplianceSsidsRadiusServers)`
+`func (o *InlineResponse20034) SetVlanId(v int32)`
 
-SetRadiusServers sets RadiusServers field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasRadiusServers
+### HasVlanId
 
-`func (o *InlineResponse20034) HasRadiusServers() bool`
+`func (o *InlineResponse20034) HasVlanId() bool`
 
-HasRadiusServers returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetEncryptionMode
+### GetOspfSettings
 
-`func (o *InlineResponse20034) GetEncryptionMode() string`
+`func (o *InlineResponse20034) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings`
 
-GetEncryptionMode returns the EncryptionMode field if non-nil, zero value otherwise.
+GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
 
-### GetEncryptionModeOk
+### GetOspfSettingsOk
 
-`func (o *InlineResponse20034) GetEncryptionModeOk() (*string, bool)`
+`func (o *InlineResponse20034) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings, bool)`
 
-GetEncryptionModeOk returns a tuple with the EncryptionMode field if it's non-nil, zero value otherwise
+GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEncryptionMode
+### SetOspfSettings
 
-`func (o *InlineResponse20034) SetEncryptionMode(v string)`
+`func (o *InlineResponse20034) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings)`
 
-SetEncryptionMode sets EncryptionMode field to given value.
+SetOspfSettings sets OspfSettings field to given value.
 
-### HasEncryptionMode
+### HasOspfSettings
 
-`func (o *InlineResponse20034) HasEncryptionMode() bool`
+`func (o *InlineResponse20034) HasOspfSettings() bool`
 
-HasEncryptionMode returns a boolean if a field has been set.
+HasOspfSettings returns a boolean if a field has been set.
 
-### GetWpaEncryptionMode
+### GetOspfV3
 
-`func (o *InlineResponse20034) GetWpaEncryptionMode() string`
+`func (o *InlineResponse20034) GetOspfV3() DevicesSerialSwitchRoutingInterfacesOspfV3`
 
-GetWpaEncryptionMode returns the WpaEncryptionMode field if non-nil, zero value otherwise.
+GetOspfV3 returns the OspfV3 field if non-nil, zero value otherwise.
 
-### GetWpaEncryptionModeOk
+### GetOspfV3Ok
 
-`func (o *InlineResponse20034) GetWpaEncryptionModeOk() (*string, bool)`
+`func (o *InlineResponse20034) GetOspfV3Ok() (*DevicesSerialSwitchRoutingInterfacesOspfV3, bool)`
 
-GetWpaEncryptionModeOk returns a tuple with the WpaEncryptionMode field if it's non-nil, zero value otherwise
+GetOspfV3Ok returns a tuple with the OspfV3 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWpaEncryptionMode
+### SetOspfV3
 
-`func (o *InlineResponse20034) SetWpaEncryptionMode(v string)`
+`func (o *InlineResponse20034) SetOspfV3(v DevicesSerialSwitchRoutingInterfacesOspfV3)`
 
-SetWpaEncryptionMode sets WpaEncryptionMode field to given value.
+SetOspfV3 sets OspfV3 field to given value.
 
-### HasWpaEncryptionMode
+### HasOspfV3
 
-`func (o *InlineResponse20034) HasWpaEncryptionMode() bool`
+`func (o *InlineResponse20034) HasOspfV3() bool`
 
-HasWpaEncryptionMode returns a boolean if a field has been set.
+HasOspfV3 returns a boolean if a field has been set.
 
-### GetVisible
+### GetIpv6
 
-`func (o *InlineResponse20034) GetVisible() bool`
+`func (o *InlineResponse20034) GetIpv6() DevicesSerialSwitchRoutingInterfacesIpv6`
 
-GetVisible returns the Visible field if non-nil, zero value otherwise.
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
 
-### GetVisibleOk
+### GetIpv6Ok
 
-`func (o *InlineResponse20034) GetVisibleOk() (*bool, bool)`
+`func (o *InlineResponse20034) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesIpv6, bool)`
 
-GetVisibleOk returns a tuple with the Visible field if it's non-nil, zero value otherwise
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVisible
+### SetIpv6
 
-`func (o *InlineResponse20034) SetVisible(v bool)`
+`func (o *InlineResponse20034) SetIpv6(v DevicesSerialSwitchRoutingInterfacesIpv6)`
 
-SetVisible sets Visible field to given value.
+SetIpv6 sets Ipv6 field to given value.
 
-### HasVisible
+### HasIpv6
 
-`func (o *InlineResponse20034) HasVisible() bool`
+`func (o *InlineResponse20034) HasIpv6() bool`
 
-HasVisible returns a boolean if a field has been set.
+HasIpv6 returns a boolean if a field has been set.
+
+### GetDefaultGateway
+
+`func (o *InlineResponse20034) GetDefaultGateway() string`
+
+GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
+
+### GetDefaultGatewayOk
+
+`func (o *InlineResponse20034) GetDefaultGatewayOk() (*string, bool)`
+
+GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaultGateway
+
+`func (o *InlineResponse20034) SetDefaultGateway(v string)`
+
+SetDefaultGateway sets DefaultGateway field to given value.
+
+### HasDefaultGateway
+
+`func (o *InlineResponse20034) HasDefaultGateway() bool`
+
+HasDefaultGateway returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

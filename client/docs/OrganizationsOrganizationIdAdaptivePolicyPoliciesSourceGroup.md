@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the source adaptive policy group | [optional] 
-**Name** | Pointer to **string** | The name of the source adaptive policy group | [optional] 
-**Sgt** | Pointer to **int32** | The SGT of the source adaptive policy group | [optional] 
+**Id** | Pointer to **string** | The ID for the source group | [optional] 
+**Name** | Pointer to **string** | The name for the source group | [optional] 
+**Sgt** | Pointer to **int32** | The security group tag for the source group | [optional] 
 
 ## Methods
 

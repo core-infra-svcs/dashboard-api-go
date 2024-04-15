@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
-**Name** | Pointer to **string** | The name of the device. | [optional] 
-**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
-**Serial** | Pointer to **string** | The device serial. | [optional] 
-**Notes** | Pointer to **string** | Notes associated with the device. | [optional] 
+**Enabled** | Pointer to **bool** | Is the warm spare enabled | [optional] 
+**PrimarySerial** | Pointer to **string** | Serial number of the primary appliance | [optional] 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
+**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
+**Wan1** | Pointer to [**InlineResponse20069Wan1**](InlineResponse20069Wan1.md) |  | [optional] 
+**Wan2** | Pointer to [**InlineResponse20069Wan2**](InlineResponse20069Wan2.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewInlineResponse20069WithDefaults instantiates a new InlineResponse20069 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEnabled
 
-`func (o *InlineResponse20069) GetId() string`
+`func (o *InlineResponse20069) GetEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEnabledOk
 
-`func (o *InlineResponse20069) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20069) GetEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEnabled
 
-`func (o *InlineResponse20069) SetId(v string)`
+`func (o *InlineResponse20069) SetEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasId
+### HasEnabled
 
-`func (o *InlineResponse20069) HasId() bool`
+`func (o *InlineResponse20069) HasEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetPrimarySerial
 
-`func (o *InlineResponse20069) GetName() string`
+`func (o *InlineResponse20069) GetPrimarySerial() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPrimarySerial returns the PrimarySerial field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPrimarySerialOk
 
-`func (o *InlineResponse20069) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20069) GetPrimarySerialOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPrimarySerialOk returns a tuple with the PrimarySerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPrimarySerial
 
-`func (o *InlineResponse20069) SetName(v string)`
+`func (o *InlineResponse20069) SetPrimarySerial(v string)`
 
-SetName sets Name field to given value.
+SetPrimarySerial sets PrimarySerial field to given value.
 
-### HasName
+### HasPrimarySerial
 
-`func (o *InlineResponse20069) HasName() bool`
+`func (o *InlineResponse20069) HasPrimarySerial() bool`
 
-HasName returns a boolean if a field has been set.
+HasPrimarySerial returns a boolean if a field has been set.
 
-### GetWifiMac
+### GetSpareSerial
 
-`func (o *InlineResponse20069) GetWifiMac() string`
+`func (o *InlineResponse20069) GetSpareSerial() string`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetSpareSerialOk
 
-`func (o *InlineResponse20069) GetWifiMacOk() (*string, bool)`
+`func (o *InlineResponse20069) GetSpareSerialOk() (*string, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetSpareSerial
 
-`func (o *InlineResponse20069) SetWifiMac(v string)`
+`func (o *InlineResponse20069) SetSpareSerial(v string)`
 
-SetWifiMac sets WifiMac field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
-### HasWifiMac
+### HasSpareSerial
 
-`func (o *InlineResponse20069) HasWifiMac() bool`
+`func (o *InlineResponse20069) HasSpareSerial() bool`
 
-HasWifiMac returns a boolean if a field has been set.
+HasSpareSerial returns a boolean if a field has been set.
 
-### GetSerial
+### GetUplinkMode
 
-`func (o *InlineResponse20069) GetSerial() string`
+`func (o *InlineResponse20069) GetUplinkMode() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetUplinkModeOk
 
-`func (o *InlineResponse20069) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20069) GetUplinkModeOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetUplinkMode
 
-`func (o *InlineResponse20069) SetSerial(v string)`
+`func (o *InlineResponse20069) SetUplinkMode(v string)`
 
-SetSerial sets Serial field to given value.
+SetUplinkMode sets UplinkMode field to given value.
 
-### HasSerial
+### HasUplinkMode
 
-`func (o *InlineResponse20069) HasSerial() bool`
+`func (o *InlineResponse20069) HasUplinkMode() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasUplinkMode returns a boolean if a field has been set.
 
-### GetNotes
+### GetWan1
 
-`func (o *InlineResponse20069) GetNotes() string`
+`func (o *InlineResponse20069) GetWan1() InlineResponse20069Wan1`
 
-GetNotes returns the Notes field if non-nil, zero value otherwise.
+GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
 
-### GetNotesOk
+### GetWan1Ok
 
-`func (o *InlineResponse20069) GetNotesOk() (*string, bool)`
+`func (o *InlineResponse20069) GetWan1Ok() (*InlineResponse20069Wan1, bool)`
 
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotes
+### SetWan1
 
-`func (o *InlineResponse20069) SetNotes(v string)`
+`func (o *InlineResponse20069) SetWan1(v InlineResponse20069Wan1)`
 
-SetNotes sets Notes field to given value.
+SetWan1 sets Wan1 field to given value.
 
-### HasNotes
+### HasWan1
 
-`func (o *InlineResponse20069) HasNotes() bool`
+`func (o *InlineResponse20069) HasWan1() bool`
 
-HasNotes returns a boolean if a field has been set.
+HasWan1 returns a boolean if a field has been set.
+
+### GetWan2
+
+`func (o *InlineResponse20069) GetWan2() InlineResponse20069Wan2`
+
+GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+
+### GetWan2Ok
+
+`func (o *InlineResponse20069) GetWan2Ok() (*InlineResponse20069Wan2, bool)`
+
+GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWan2
+
+`func (o *InlineResponse20069) SetWan2(v InlineResponse20069Wan2)`
+
+SetWan2 sets Wan2 field to given value.
+
+### HasWan2
+
+`func (o *InlineResponse20069) HasWan2() bool`
+
+HasWan2 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

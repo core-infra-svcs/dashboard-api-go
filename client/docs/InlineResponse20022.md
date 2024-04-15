@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ping request. | [optional] 
+**Results** | Pointer to [**InlineResponse20021Results**](InlineResponse20021Results.md) |  | [optional] 
+**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse20022WithDefaults instantiates a new InlineResponse20022 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUuid
+### GetPingId
 
-`func (o *InlineResponse20022) GetUuid() string`
+`func (o *InlineResponse20022) GetPingId() string`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetPingId returns the PingId field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetPingIdOk
 
-`func (o *InlineResponse20022) GetUuidOk() (*string, bool)`
+`func (o *InlineResponse20022) GetPingIdOk() (*string, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetPingId
 
-`func (o *InlineResponse20022) SetUuid(v string)`
+`func (o *InlineResponse20022) SetPingId(v string)`
 
-SetUuid sets Uuid field to given value.
+SetPingId sets PingId field to given value.
 
-### HasUuid
+### HasPingId
 
-`func (o *InlineResponse20022) HasUuid() bool`
+`func (o *InlineResponse20022) HasPingId() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasPingId returns a boolean if a field has been set.
 
-### GetMajor
+### GetUrl
 
-`func (o *InlineResponse20022) GetMajor() int32`
+`func (o *InlineResponse20022) GetUrl() string`
 
-GetMajor returns the Major field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetMajorOk
+### GetUrlOk
 
-`func (o *InlineResponse20022) GetMajorOk() (*int32, bool)`
+`func (o *InlineResponse20022) GetUrlOk() (*string, bool)`
 
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajor
+### SetUrl
 
-`func (o *InlineResponse20022) SetMajor(v int32)`
+`func (o *InlineResponse20022) SetUrl(v string)`
 
-SetMajor sets Major field to given value.
+SetUrl sets Url field to given value.
 
-### HasMajor
+### HasUrl
 
-`func (o *InlineResponse20022) HasMajor() bool`
+`func (o *InlineResponse20022) HasUrl() bool`
 
-HasMajor returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetMinor
+### GetRequest
 
-`func (o *InlineResponse20022) GetMinor() int32`
+`func (o *InlineResponse20022) GetRequest() InlineResponse2013Request`
 
-GetMinor returns the Minor field if non-nil, zero value otherwise.
+GetRequest returns the Request field if non-nil, zero value otherwise.
 
-### GetMinorOk
+### GetRequestOk
 
-`func (o *InlineResponse20022) GetMinorOk() (*int32, bool)`
+`func (o *InlineResponse20022) GetRequestOk() (*InlineResponse2013Request, bool)`
 
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMinor
+### SetRequest
 
-`func (o *InlineResponse20022) SetMinor(v int32)`
+`func (o *InlineResponse20022) SetRequest(v InlineResponse2013Request)`
 
-SetMinor sets Minor field to given value.
+SetRequest sets Request field to given value.
 
-### HasMinor
+### HasRequest
 
-`func (o *InlineResponse20022) HasMinor() bool`
+`func (o *InlineResponse20022) HasRequest() bool`
 
-HasMinor returns a boolean if a field has been set.
+HasRequest returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse20022) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse20022) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse20022) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse20022) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetResults
+
+`func (o *InlineResponse20022) GetResults() InlineResponse20021Results`
+
+GetResults returns the Results field if non-nil, zero value otherwise.
+
+### GetResultsOk
+
+`func (o *InlineResponse20022) GetResultsOk() (*InlineResponse20021Results, bool)`
+
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResults
+
+`func (o *InlineResponse20022) SetResults(v InlineResponse20021Results)`
+
+SetResults sets Results field to given value.
+
+### HasResults
+
+`func (o *InlineResponse20022) HasResults() bool`
+
+HasResults returns a boolean if a field has been set.
+
+### GetCallback
+
+`func (o *InlineResponse20022) GetCallback() InlineResponse2011Callback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineResponse20022) GetCallbackOk() (*InlineResponse2011Callback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineResponse20022) SetCallback(v InlineResponse2011Callback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineResponse20022) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

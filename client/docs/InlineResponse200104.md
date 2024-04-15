@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Switch stacks id | [optional] 
-**Name** | Pointer to **string** | Switch stacks name | [optional] 
-**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
+**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
+**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
+**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200104WithDefaults instantiates a new InlineResponse200104 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStartTs
 
-`func (o *InlineResponse200104) GetId() string`
+`func (o *InlineResponse200104) GetStartTs() time.Time`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse200104) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200104) GetStartTsOk() (*time.Time, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStartTs
 
-`func (o *InlineResponse200104) SetId(v string)`
+`func (o *InlineResponse200104) SetStartTs(v time.Time)`
 
-SetId sets Id field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasId
+### HasStartTs
 
-`func (o *InlineResponse200104) HasId() bool`
+`func (o *InlineResponse200104) HasStartTs() bool`
 
-HasId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetName
+### GetEndTs
 
-`func (o *InlineResponse200104) GetName() string`
+`func (o *InlineResponse200104) GetEndTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEndTsOk
 
-`func (o *InlineResponse200104) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200104) GetEndTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEndTs
 
-`func (o *InlineResponse200104) SetName(v string)`
+`func (o *InlineResponse200104) SetEndTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasName
+### HasEndTs
 
-`func (o *InlineResponse200104) HasName() bool`
+`func (o *InlineResponse200104) HasEndTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetSerials
+### GetCounts
 
-`func (o *InlineResponse200104) GetSerials() []string`
+`func (o *InlineResponse200104) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetCountsOk
 
-`func (o *InlineResponse200104) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200104) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetCounts
 
-`func (o *InlineResponse200104) SetSerials(v []string)`
+`func (o *InlineResponse200104) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
 
-SetSerials sets Serials field to given value.
+SetCounts sets Counts field to given value.
 
-### HasSerials
+### HasCounts
 
-`func (o *InlineResponse200104) HasSerials() bool`
+`func (o *InlineResponse200104) HasCounts() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

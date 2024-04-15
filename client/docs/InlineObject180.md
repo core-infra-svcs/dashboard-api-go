@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**Identity** | Pointer to [**InlineResponse200127Identity**](InlineResponse200127Identity.md) |  | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**EapolKey** | Pointer to [**InlineResponse200127EapolKey**](InlineResponse200127EapolKey.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on this SSID. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules**](NetworksNetworkIdGroupPoliciesBonjourForwardingRules.md) | List of bonjour forwarding rules. | [optional] 
+**Exception** | Pointer to [**InlineResponse200183Exception**](InlineResponse200183Exception.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject180WithDefaults instantiates a new InlineObject180 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetEnabled
 
-`func (o *InlineObject180) GetTimeout() int32`
+`func (o *InlineObject180) GetEnabled() bool`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetEnabledOk
 
-`func (o *InlineObject180) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineObject180) GetEnabledOk() (*bool, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetEnabled
 
-`func (o *InlineObject180) SetTimeout(v int32)`
+`func (o *InlineObject180) SetEnabled(v bool)`
 
-SetTimeout sets Timeout field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasTimeout
+### HasEnabled
 
-`func (o *InlineObject180) HasTimeout() bool`
+`func (o *InlineObject180) HasEnabled() bool`
 
-HasTimeout returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetIdentity
+### GetRules
 
-`func (o *InlineObject180) GetIdentity() InlineResponse200127Identity`
+`func (o *InlineObject180) GetRules() []NetworksNetworkIdGroupPoliciesBonjourForwardingRules`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetRulesOk
 
-`func (o *InlineObject180) GetIdentityOk() (*InlineResponse200127Identity, bool)`
+`func (o *InlineObject180) GetRulesOk() (*[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetRules
 
-`func (o *InlineObject180) SetIdentity(v InlineResponse200127Identity)`
+`func (o *InlineObject180) SetRules(v []NetworksNetworkIdGroupPoliciesBonjourForwardingRules)`
 
-SetIdentity sets Identity field to given value.
+SetRules sets Rules field to given value.
 
-### HasIdentity
+### HasRules
 
-`func (o *InlineObject180) HasIdentity() bool`
+`func (o *InlineObject180) HasRules() bool`
 
-HasIdentity returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetMaxRetries
+### GetException
 
-`func (o *InlineObject180) GetMaxRetries() int32`
+`func (o *InlineObject180) GetException() InlineResponse200183Exception`
 
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
+GetException returns the Exception field if non-nil, zero value otherwise.
 
-### GetMaxRetriesOk
+### GetExceptionOk
 
-`func (o *InlineObject180) GetMaxRetriesOk() (*int32, bool)`
+`func (o *InlineObject180) GetExceptionOk() (*InlineResponse200183Exception, bool)`
 
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxRetries
+### SetException
 
-`func (o *InlineObject180) SetMaxRetries(v int32)`
+`func (o *InlineObject180) SetException(v InlineResponse200183Exception)`
 
-SetMaxRetries sets MaxRetries field to given value.
+SetException sets Exception field to given value.
 
-### HasMaxRetries
+### HasException
 
-`func (o *InlineObject180) HasMaxRetries() bool`
+`func (o *InlineObject180) HasException() bool`
 
-HasMaxRetries returns a boolean if a field has been set.
-
-### GetEapolKey
-
-`func (o *InlineObject180) GetEapolKey() InlineResponse200127EapolKey`
-
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
-
-### GetEapolKeyOk
-
-`func (o *InlineObject180) GetEapolKeyOk() (*InlineResponse200127EapolKey, bool)`
-
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEapolKey
-
-`func (o *InlineObject180) SetEapolKey(v InlineResponse200127EapolKey)`
-
-SetEapolKey sets EapolKey field to given value.
-
-### HasEapolKey
-
-`func (o *InlineObject180) HasEapolKey() bool`
-
-HasEapolKey returns a boolean if a field has been set.
+HasException returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

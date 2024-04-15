@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
-**Type** | Pointer to **string** | The type of the payload template | [optional] 
-**Name** | Pointer to **string** | The name of the payload template | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
-**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
-**Sharing** | Pointer to [**NetworksNetworkIdWebhooksPayloadTemplatesSharing**](NetworksNetworkIdWebhooksPayloadTemplatesSharing.md) |  | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the device record. | [optional] 
+**Tags** | Pointer to **[]string** | An array of tags associated with the device. | [optional] 
+**WifiMac** | Pointer to **string** | The MAC of the device. | [optional] 
+**Serial** | Pointer to **string** | The device serial. | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineResponse200112WithDefaults instantiates a new InlineResponse200112 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPayloadTemplateId
+### GetId
 
-`func (o *InlineResponse200112) GetPayloadTemplateId() string`
+`func (o *InlineResponse200112) GetId() string`
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateIdOk
+### GetIdOk
 
-`func (o *InlineResponse200112) GetPayloadTemplateIdOk() (*string, bool)`
+`func (o *InlineResponse200112) GetIdOk() (*string, bool)`
 
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetId
 
-`func (o *InlineResponse200112) SetPayloadTemplateId(v string)`
+`func (o *InlineResponse200112) SetId(v string)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetId sets Id field to given value.
 
-### HasPayloadTemplateId
+### HasId
 
-`func (o *InlineResponse200112) HasPayloadTemplateId() bool`
+`func (o *InlineResponse200112) HasId() bool`
 
-HasPayloadTemplateId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetType
+### GetTags
 
-`func (o *InlineResponse200112) GetType() string`
+`func (o *InlineResponse200112) GetTags() []string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetTagsOk
 
-`func (o *InlineResponse200112) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200112) GetTagsOk() (*[]string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetTags
 
-`func (o *InlineResponse200112) SetType(v string)`
+`func (o *InlineResponse200112) SetTags(v []string)`
 
-SetType sets Type field to given value.
+SetTags sets Tags field to given value.
 
-### HasType
+### HasTags
 
-`func (o *InlineResponse200112) HasType() bool`
+`func (o *InlineResponse200112) HasTags() bool`
 
-HasType returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetName
+### GetWifiMac
 
-`func (o *InlineResponse200112) GetName() string`
+`func (o *InlineResponse200112) GetWifiMac() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetWifiMacOk
 
-`func (o *InlineResponse200112) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200112) GetWifiMacOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetWifiMac
 
-`func (o *InlineResponse200112) SetName(v string)`
+`func (o *InlineResponse200112) SetWifiMac(v string)`
 
-SetName sets Name field to given value.
+SetWifiMac sets WifiMac field to given value.
 
-### HasName
+### HasWifiMac
 
-`func (o *InlineResponse200112) HasName() bool`
+`func (o *InlineResponse200112) HasWifiMac() bool`
 
-HasName returns a boolean if a field has been set.
+HasWifiMac returns a boolean if a field has been set.
 
-### GetHeaders
+### GetSerial
 
-`func (o *InlineResponse200112) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
+`func (o *InlineResponse200112) GetSerial() string`
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetHeadersOk
+### GetSerialOk
 
-`func (o *InlineResponse200112) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
+`func (o *InlineResponse200112) GetSerialOk() (*string, bool)`
 
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetSerial
 
-`func (o *InlineResponse200112) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
+`func (o *InlineResponse200112) SetSerial(v string)`
 
-SetHeaders sets Headers field to given value.
+SetSerial sets Serial field to given value.
 
-### HasHeaders
+### HasSerial
 
-`func (o *InlineResponse200112) HasHeaders() bool`
+`func (o *InlineResponse200112) HasSerial() bool`
 
-HasHeaders returns a boolean if a field has been set.
-
-### GetBody
-
-`func (o *InlineResponse200112) GetBody() string`
-
-GetBody returns the Body field if non-nil, zero value otherwise.
-
-### GetBodyOk
-
-`func (o *InlineResponse200112) GetBodyOk() (*string, bool)`
-
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBody
-
-`func (o *InlineResponse200112) SetBody(v string)`
-
-SetBody sets Body field to given value.
-
-### HasBody
-
-`func (o *InlineResponse200112) HasBody() bool`
-
-HasBody returns a boolean if a field has been set.
-
-### GetSharing
-
-`func (o *InlineResponse200112) GetSharing() NetworksNetworkIdWebhooksPayloadTemplatesSharing`
-
-GetSharing returns the Sharing field if non-nil, zero value otherwise.
-
-### GetSharingOk
-
-`func (o *InlineResponse200112) GetSharingOk() (*NetworksNetworkIdWebhooksPayloadTemplatesSharing, bool)`
-
-GetSharingOk returns a tuple with the Sharing field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSharing
-
-`func (o *InlineResponse200112) SetSharing(v NetworksNetworkIdWebhooksPayloadTemplatesSharing)`
-
-SetSharing sets Sharing field to given value.
-
-### HasSharing
-
-`func (o *InlineResponse200112) HasSharing() bool`
-
-HasSharing returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

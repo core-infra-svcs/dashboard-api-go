@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ImportId** | Pointer to **string** | Database ID for the new entity entry. | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
+**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
+**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200173WithDefaults instantiates a new InlineResponse200173 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetImportId
+### GetStartTs
 
-`func (o *InlineResponse200173) GetImportId() string`
+`func (o *InlineResponse200173) GetStartTs() time.Time`
 
-GetImportId returns the ImportId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetImportIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse200173) GetImportIdOk() (*string, bool)`
+`func (o *InlineResponse200173) GetStartTsOk() (*time.Time, bool)`
 
-GetImportIdOk returns a tuple with the ImportId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImportId
+### SetStartTs
 
-`func (o *InlineResponse200173) SetImportId(v string)`
+`func (o *InlineResponse200173) SetStartTs(v time.Time)`
 
-SetImportId sets ImportId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasImportId
+### HasStartTs
 
-`func (o *InlineResponse200173) HasImportId() bool`
+`func (o *InlineResponse200173) HasStartTs() bool`
 
-HasImportId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetDevice
+### GetEndTs
 
-`func (o *InlineResponse200173) GetDevice() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice`
+`func (o *InlineResponse200173) GetEndTs() time.Time`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetEndTsOk
 
-`func (o *InlineResponse200173) GetDeviceOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice, bool)`
+`func (o *InlineResponse200173) GetEndTsOk() (*time.Time, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetEndTs
 
-`func (o *InlineResponse200173) SetDevice(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevice)`
+`func (o *InlineResponse200173) SetEndTs(v time.Time)`
 
-SetDevice sets Device field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasDevice
+### HasEndTs
 
-`func (o *InlineResponse200173) HasDevice() bool`
+`func (o *InlineResponse200173) HasEndTs() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetAverageKbps
+
+`func (o *InlineResponse200173) GetAverageKbps() int32`
+
+GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
+
+### GetAverageKbpsOk
+
+`func (o *InlineResponse200173) GetAverageKbpsOk() (*int32, bool)`
+
+GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAverageKbps
+
+`func (o *InlineResponse200173) SetAverageKbps(v int32)`
+
+SetAverageKbps sets AverageKbps field to given value.
+
+### HasAverageKbps
+
+`func (o *InlineResponse200173) HasAverageKbps() bool`
+
+HasAverageKbps returns a boolean if a field has been set.
+
+### GetDownloadKbps
+
+`func (o *InlineResponse200173) GetDownloadKbps() int32`
+
+GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
+
+### GetDownloadKbpsOk
+
+`func (o *InlineResponse200173) GetDownloadKbpsOk() (*int32, bool)`
+
+GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownloadKbps
+
+`func (o *InlineResponse200173) SetDownloadKbps(v int32)`
+
+SetDownloadKbps sets DownloadKbps field to given value.
+
+### HasDownloadKbps
+
+`func (o *InlineResponse200173) HasDownloadKbps() bool`
+
+HasDownloadKbps returns a boolean if a field has been set.
+
+### GetUploadKbps
+
+`func (o *InlineResponse200173) GetUploadKbps() int32`
+
+GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
+
+### GetUploadKbpsOk
+
+`func (o *InlineResponse200173) GetUploadKbpsOk() (*int32, bool)`
+
+GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUploadKbps
+
+`func (o *InlineResponse200173) SetUploadKbps(v int32)`
+
+SetUploadKbps sets UploadKbps field to given value.
+
+### HasUploadKbps
+
+`func (o *InlineResponse200173) HasUploadKbps() bool`
+
+HasUploadKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

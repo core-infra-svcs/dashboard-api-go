@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MqttBrokerId** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
-**Enabled** | Pointer to **bool** | Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data. | [optional] 
+**NetworkId** | **string** | ID of the network whose VPN exclusion rules are returned. | 
+**NetworkName** | **string** | Name of the network whose VPN exclusion rules are returned. | 
+**Custom** | [**[]InlineResponse20064Custom**](InlineResponse20064Custom.md) | Custom VPN exclusion rules. | 
+**MajorApplications** | [**[]InlineResponse20064MajorApplications**](InlineResponse20064MajorApplications.md) | Major Application based VPN exclusion rules. | 
 
 ## Methods
 
 ### NewInlineResponse20064
 
-`func NewInlineResponse20064() *InlineResponse20064`
+`func NewInlineResponse20064(networkId string, networkName string, custom []InlineResponse20064Custom, majorApplications []InlineResponse20064MajorApplications, ) *InlineResponse20064`
 
 NewInlineResponse20064 instantiates a new InlineResponse20064 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +28,85 @@ NewInlineResponse20064WithDefaults instantiates a new InlineResponse20064 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMqttBrokerId
+### GetNetworkId
 
-`func (o *InlineResponse20064) GetMqttBrokerId() string`
+`func (o *InlineResponse20064) GetNetworkId() string`
 
-GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetMqttBrokerIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20064) GetMqttBrokerIdOk() (*string, bool)`
+`func (o *InlineResponse20064) GetNetworkIdOk() (*string, bool)`
 
-GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqttBrokerId
+### SetNetworkId
 
-`func (o *InlineResponse20064) SetMqttBrokerId(v string)`
+`func (o *InlineResponse20064) SetNetworkId(v string)`
 
-SetMqttBrokerId sets MqttBrokerId field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasMqttBrokerId
 
-`func (o *InlineResponse20064) HasMqttBrokerId() bool`
+### GetNetworkName
 
-HasMqttBrokerId returns a boolean if a field has been set.
+`func (o *InlineResponse20064) GetNetworkName() string`
 
-### GetEnabled
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20064) GetEnabled() bool`
+### GetNetworkNameOk
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+`func (o *InlineResponse20064) GetNetworkNameOk() (*string, bool)`
 
-### GetEnabledOk
-
-`func (o *InlineResponse20064) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetNetworkName
 
-`func (o *InlineResponse20064) SetEnabled(v bool)`
+`func (o *InlineResponse20064) SetNetworkName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetNetworkName sets NetworkName field to given value.
 
-### HasEnabled
 
-`func (o *InlineResponse20064) HasEnabled() bool`
+### GetCustom
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineResponse20064) GetCustom() []InlineResponse20064Custom`
+
+GetCustom returns the Custom field if non-nil, zero value otherwise.
+
+### GetCustomOk
+
+`func (o *InlineResponse20064) GetCustomOk() (*[]InlineResponse20064Custom, bool)`
+
+GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustom
+
+`func (o *InlineResponse20064) SetCustom(v []InlineResponse20064Custom)`
+
+SetCustom sets Custom field to given value.
+
+
+### GetMajorApplications
+
+`func (o *InlineResponse20064) GetMajorApplications() []InlineResponse20064MajorApplications`
+
+GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+
+### GetMajorApplicationsOk
+
+`func (o *InlineResponse20064) GetMajorApplicationsOk() (*[]InlineResponse20064MajorApplications, bool)`
+
+GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajorApplications
+
+`func (o *InlineResponse20064) SetMajorApplications(v []InlineResponse20064MajorApplications)`
+
+SetMajorApplications sets MajorApplications field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

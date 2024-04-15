@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | The site-to-site VPN mode. | [optional] 
-**Hubs** | Pointer to [**[]InlineResponse20039Hubs**](InlineResponse20039Hubs.md) | The list of VPN hubs, in order of preference. | [optional] 
-**Subnets** | Pointer to [**[]InlineResponse20039Subnets**](InlineResponse20039Subnets.md) | The list of subnets and their VPN presence. | [optional] 
+**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20039WithDefaults instantiates a new InlineResponse20039 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetUuid
 
-`func (o *InlineResponse20039) GetMode() string`
+`func (o *InlineResponse20039) GetUuid() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetUuidOk
 
-`func (o *InlineResponse20039) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20039) GetUuidOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetUuid
 
-`func (o *InlineResponse20039) SetMode(v string)`
+`func (o *InlineResponse20039) SetUuid(v string)`
 
-SetMode sets Mode field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasMode
+### HasUuid
 
-`func (o *InlineResponse20039) HasMode() bool`
+`func (o *InlineResponse20039) HasUuid() bool`
 
-HasMode returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
 
-### GetHubs
+### GetMajor
 
-`func (o *InlineResponse20039) GetHubs() []InlineResponse20039Hubs`
+`func (o *InlineResponse20039) GetMajor() int32`
 
-GetHubs returns the Hubs field if non-nil, zero value otherwise.
+GetMajor returns the Major field if non-nil, zero value otherwise.
 
-### GetHubsOk
+### GetMajorOk
 
-`func (o *InlineResponse20039) GetHubsOk() (*[]InlineResponse20039Hubs, bool)`
+`func (o *InlineResponse20039) GetMajorOk() (*int32, bool)`
 
-GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHubs
+### SetMajor
 
-`func (o *InlineResponse20039) SetHubs(v []InlineResponse20039Hubs)`
+`func (o *InlineResponse20039) SetMajor(v int32)`
 
-SetHubs sets Hubs field to given value.
+SetMajor sets Major field to given value.
 
-### HasHubs
+### HasMajor
 
-`func (o *InlineResponse20039) HasHubs() bool`
+`func (o *InlineResponse20039) HasMajor() bool`
 
-HasHubs returns a boolean if a field has been set.
+HasMajor returns a boolean if a field has been set.
 
-### GetSubnets
+### GetMinor
 
-`func (o *InlineResponse20039) GetSubnets() []InlineResponse20039Subnets`
+`func (o *InlineResponse20039) GetMinor() int32`
 
-GetSubnets returns the Subnets field if non-nil, zero value otherwise.
+GetMinor returns the Minor field if non-nil, zero value otherwise.
 
-### GetSubnetsOk
+### GetMinorOk
 
-`func (o *InlineResponse20039) GetSubnetsOk() (*[]InlineResponse20039Subnets, bool)`
+`func (o *InlineResponse20039) GetMinorOk() (*int32, bool)`
 
-GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnets
+### SetMinor
 
-`func (o *InlineResponse20039) SetSubnets(v []InlineResponse20039Subnets)`
+`func (o *InlineResponse20039) SetMinor(v int32)`
 
-SetSubnets sets Subnets field to given value.
+SetMinor sets Minor field to given value.
 
-### HasSubnets
+### HasMinor
 
-`func (o *InlineResponse20039) HasSubnets() bool`
+`func (o *InlineResponse20039) HasMinor() bool`
 
-HasSubnets returns a boolean if a field has been set.
+HasMinor returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

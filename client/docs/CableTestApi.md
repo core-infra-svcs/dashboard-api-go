@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsCableTest
 
-> InlineResponse20010 GetDeviceLiveToolsCableTest(ctx, serial, id).Execute()
+> InlineResponse20020 GetDeviceLiveToolsCableTest(ctx, serial, id).Execute()
 
 Return a cable test live tool job.
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CableTestApi.GetDeviceLiveToolsCableTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsCableTest`: InlineResponse20010
+    // response from `GetDeviceLiveToolsCableTest`: InlineResponse20020
     fmt.Fprintf(os.Stdout, "Response from `CableTestApi.GetDeviceLiveToolsCableTest`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**InlineResponse20020**](InlineResponse20020.md)
 
 ### Authorization
 

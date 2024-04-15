@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the destination adaptive policy group | [optional] 
-**Name** | Pointer to **string** | The name of the destination adaptive policy group | [optional] 
-**Sgt** | Pointer to **int32** | The SGT of the destination adaptive policy group | [optional] 
+**Id** | Pointer to **string** | The ID for the destination group | [optional] 
+**Name** | Pointer to **string** | The name for the destination group | [optional] 
+**Sgt** | Pointer to **int32** | The security group tag for the destination group | [optional] 
 
 ## Methods
 

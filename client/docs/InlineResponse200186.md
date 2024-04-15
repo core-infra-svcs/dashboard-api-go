@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
-**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200186Rules**](InlineResponse200186Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200186WithDefaults instantiates a new InlineResponse200186 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetRules
 
-`func (o *InlineResponse200186) GetSerial() string`
+`func (o *InlineResponse200186) GetRules() []InlineResponse200186Rules`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetRulesOk
 
-`func (o *InlineResponse200186) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200186) GetRulesOk() (*[]InlineResponse200186Rules, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetRules
 
-`func (o *InlineResponse200186) SetSerial(v string)`
+`func (o *InlineResponse200186) SetRules(v []InlineResponse200186Rules)`
 
-SetSerial sets Serial field to given value.
+SetRules sets Rules field to given value.
 
-### HasSerial
+### HasRules
 
-`func (o *InlineResponse200186) HasSerial() bool`
+`func (o *InlineResponse200186) HasRules() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200186) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200186) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200186) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200186) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetReadings
-
-`func (o *InlineResponse200186) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
-
-GetReadings returns the Readings field if non-nil, zero value otherwise.
-
-### GetReadingsOk
-
-`func (o *InlineResponse200186) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
-
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReadings
-
-`func (o *InlineResponse200186) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
-
-SetReadings sets Readings field to given value.
-
-### HasReadings
-
-`func (o *InlineResponse200186) HasReadings() bool`
-
-HasReadings returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

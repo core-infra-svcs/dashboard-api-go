@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the access period | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the access period | [optional] 
-**Counts** | Pointer to [**[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts**](OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts.md) | list of response codes and a count of how many requests had that code in the given time period | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
+**Switches** | Pointer to [**[]InlineResponse200139Switches**](InlineResponse200139Switches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200139WithDefaults instantiates a new InlineResponse200139 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetEnabled
 
-`func (o *InlineResponse200139) GetStartTs() time.Time`
+`func (o *InlineResponse200139) GetEnabled() bool`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200139) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200139) GetEnabledOk() (*bool, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetEnabled
 
-`func (o *InlineResponse200139) SetStartTs(v time.Time)`
+`func (o *InlineResponse200139) SetEnabled(v bool)`
 
-SetStartTs sets StartTs field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasStartTs
+### HasEnabled
 
-`func (o *InlineResponse200139) HasStartTs() bool`
+`func (o *InlineResponse200139) HasEnabled() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetEndTs
+### GetVlanId
 
-`func (o *InlineResponse200139) GetEndTs() time.Time`
+`func (o *InlineResponse200139) GetVlanId() int32`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetVlanIdOk
 
-`func (o *InlineResponse200139) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200139) GetVlanIdOk() (*int32, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetVlanId
 
-`func (o *InlineResponse200139) SetEndTs(v time.Time)`
+`func (o *InlineResponse200139) SetVlanId(v int32)`
 
-SetEndTs sets EndTs field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasEndTs
+### HasVlanId
 
-`func (o *InlineResponse200139) HasEndTs() bool`
+`func (o *InlineResponse200139) HasVlanId() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetCounts
+### GetProtocols
 
-`func (o *InlineResponse200139) GetCounts() []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts`
+`func (o *InlineResponse200139) GetProtocols() []string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetProtocolsOk
 
-`func (o *InlineResponse200139) GetCountsOk() (*[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts, bool)`
+`func (o *InlineResponse200139) GetProtocolsOk() (*[]string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetProtocols
 
-`func (o *InlineResponse200139) SetCounts(v []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts)`
+`func (o *InlineResponse200139) SetProtocols(v []string)`
 
-SetCounts sets Counts field to given value.
+SetProtocols sets Protocols field to given value.
 
-### HasCounts
+### HasProtocols
 
-`func (o *InlineResponse200139) HasCounts() bool`
+`func (o *InlineResponse200139) HasProtocols() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasProtocols returns a boolean if a field has been set.
+
+### GetSwitches
+
+`func (o *InlineResponse200139) GetSwitches() []InlineResponse200139Switches`
+
+GetSwitches returns the Switches field if non-nil, zero value otherwise.
+
+### GetSwitchesOk
+
+`func (o *InlineResponse200139) GetSwitchesOk() (*[]InlineResponse200139Switches, bool)`
+
+GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitches
+
+`func (o *InlineResponse200139) SetSwitches(v []InlineResponse200139Switches)`
+
+SetSwitches sets Switches field to given value.
+
+### HasSwitches
+
+`func (o *InlineResponse200139) HasSwitches() bool`
+
+HasSwitches returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

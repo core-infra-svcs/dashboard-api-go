@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice**](OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
+**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
+**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200212WithDefaults instantiates a new InlineResponse200212 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetNetworkId
 
-`func (o *InlineResponse200212) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200212) GetNetworkId() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200212) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200212) GetNetworkIdOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetNetworkId
 
-`func (o *InlineResponse200212) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200212) SetNetworkId(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasDownstream
+### HasNetworkId
 
-`func (o *InlineResponse200212) HasDownstream() bool`
+`func (o *InlineResponse200212) HasNetworkId() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetUpstream
+### GetSerial
 
-`func (o *InlineResponse200212) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200212) GetSerial() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetSerialOk
 
-`func (o *InlineResponse200212) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200212) GetSerialOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetSerial
 
-`func (o *InlineResponse200212) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200212) SetSerial(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetSerial sets Serial field to given value.
 
-### HasUpstream
+### HasSerial
 
-`func (o *InlineResponse200212) HasUpstream() bool`
+`func (o *InlineResponse200212) HasSerial() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetNetwork
+### GetBoundaries
 
-`func (o *InlineResponse200212) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
+`func (o *InlineResponse200212) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetBoundariesOk
 
-`func (o *InlineResponse200212) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
+`func (o *InlineResponse200212) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetBoundaries
 
-`func (o *InlineResponse200212) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
+`func (o *InlineResponse200212) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries)`
 
-SetNetwork sets Network field to given value.
+SetBoundaries sets Boundaries field to given value.
 
-### HasNetwork
+### HasBoundaries
 
-`func (o *InlineResponse200212) HasNetwork() bool`
+`func (o *InlineResponse200212) HasBoundaries() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetDevice
-
-`func (o *InlineResponse200212) GetDevice() OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice`
-
-GetDevice returns the Device field if non-nil, zero value otherwise.
-
-### GetDeviceOk
-
-`func (o *InlineResponse200212) GetDeviceOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice, bool)`
-
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevice
-
-`func (o *InlineResponse200212) SetDevice(v OrganizationsOrganizationIdWirelessDevicesPacketLossByDeviceDevice)`
-
-SetDevice sets Device field to given value.
-
-### HasDevice
-
-`func (o *InlineResponse200212) HasDevice() bool`
-
-HasDevice returns a boolean if a field has been set.
+HasBoundaries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

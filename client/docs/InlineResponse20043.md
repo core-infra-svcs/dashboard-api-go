@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
-**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
-**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
-**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
+**OccurredAt** | Pointer to **string** | time when the event occurred | [optional] 
+**AlertTypeId** | Pointer to **string** | type of alert | [optional] 
+**AlertType** | Pointer to **string** | user friendly alert type | [optional] 
+**Device** | Pointer to [**NetworksNetworkIdAlertsHistoryDevice**](NetworksNetworkIdAlertsHistoryDevice.md) |  | [optional] 
+**Destinations** | Pointer to [**NetworksNetworkIdAlertsHistoryDestinations**](NetworksNetworkIdAlertsHistoryDestinations.md) |  | [optional] 
+**AlertData** | Pointer to **map[string]interface{}** | relevant data about the event that caused the alert | [optional] 
 
 ## Methods
 
@@ -28,105 +30,155 @@ NewInlineResponse20043WithDefaults instantiates a new InlineResponse20043 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetOccurredAt
 
-`func (o *InlineResponse20043) GetTs() time.Time`
+`func (o *InlineResponse20043) GetOccurredAt() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetOccurredAt returns the OccurredAt field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetOccurredAtOk
 
-`func (o *InlineResponse20043) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20043) GetOccurredAtOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetOccurredAtOk returns a tuple with the OccurredAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetOccurredAt
 
-`func (o *InlineResponse20043) SetTs(v time.Time)`
+`func (o *InlineResponse20043) SetOccurredAt(v string)`
 
-SetTs sets Ts field to given value.
+SetOccurredAt sets OccurredAt field to given value.
 
-### HasTs
+### HasOccurredAt
 
-`func (o *InlineResponse20043) HasTs() bool`
+`func (o *InlineResponse20043) HasOccurredAt() bool`
 
-HasTs returns a boolean if a field has been set.
+HasOccurredAt returns a boolean if a field has been set.
 
-### GetTotal
+### GetAlertTypeId
 
-`func (o *InlineResponse20043) GetTotal() float32`
+`func (o *InlineResponse20043) GetAlertTypeId() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetAlertTypeIdOk
 
-`func (o *InlineResponse20043) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse20043) GetAlertTypeIdOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetAlertTypeId
 
-`func (o *InlineResponse20043) SetTotal(v float32)`
+`func (o *InlineResponse20043) SetAlertTypeId(v string)`
 
-SetTotal sets Total field to given value.
+SetAlertTypeId sets AlertTypeId field to given value.
 
-### HasTotal
+### HasAlertTypeId
 
-`func (o *InlineResponse20043) HasTotal() bool`
+`func (o *InlineResponse20043) HasAlertTypeId() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasAlertTypeId returns a boolean if a field has been set.
 
-### GetUpstream
+### GetAlertType
 
-`func (o *InlineResponse20043) GetUpstream() float32`
+`func (o *InlineResponse20043) GetAlertType() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetAlertType returns the AlertType field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetAlertTypeOk
 
-`func (o *InlineResponse20043) GetUpstreamOk() (*float32, bool)`
+`func (o *InlineResponse20043) GetAlertTypeOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetAlertType
 
-`func (o *InlineResponse20043) SetUpstream(v float32)`
+`func (o *InlineResponse20043) SetAlertType(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetAlertType sets AlertType field to given value.
 
-### HasUpstream
+### HasAlertType
 
-`func (o *InlineResponse20043) HasUpstream() bool`
+`func (o *InlineResponse20043) HasAlertType() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasAlertType returns a boolean if a field has been set.
 
-### GetDownstream
+### GetDevice
 
-`func (o *InlineResponse20043) GetDownstream() float32`
+`func (o *InlineResponse20043) GetDevice() NetworksNetworkIdAlertsHistoryDevice`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetDeviceOk
 
-`func (o *InlineResponse20043) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse20043) GetDeviceOk() (*NetworksNetworkIdAlertsHistoryDevice, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetDevice
 
-`func (o *InlineResponse20043) SetDownstream(v float32)`
+`func (o *InlineResponse20043) SetDevice(v NetworksNetworkIdAlertsHistoryDevice)`
 
-SetDownstream sets Downstream field to given value.
+SetDevice sets Device field to given value.
 
-### HasDownstream
+### HasDevice
 
-`func (o *InlineResponse20043) HasDownstream() bool`
+`func (o *InlineResponse20043) HasDevice() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
+
+### GetDestinations
+
+`func (o *InlineResponse20043) GetDestinations() NetworksNetworkIdAlertsHistoryDestinations`
+
+GetDestinations returns the Destinations field if non-nil, zero value otherwise.
+
+### GetDestinationsOk
+
+`func (o *InlineResponse20043) GetDestinationsOk() (*NetworksNetworkIdAlertsHistoryDestinations, bool)`
+
+GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDestinations
+
+`func (o *InlineResponse20043) SetDestinations(v NetworksNetworkIdAlertsHistoryDestinations)`
+
+SetDestinations sets Destinations field to given value.
+
+### HasDestinations
+
+`func (o *InlineResponse20043) HasDestinations() bool`
+
+HasDestinations returns a boolean if a field has been set.
+
+### GetAlertData
+
+`func (o *InlineResponse20043) GetAlertData() map[string]interface{}`
+
+GetAlertData returns the AlertData field if non-nil, zero value otherwise.
+
+### GetAlertDataOk
+
+`func (o *InlineResponse20043) GetAlertDataOk() (*map[string]interface{}, bool)`
+
+GetAlertDataOk returns a tuple with the AlertData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertData
+
+`func (o *InlineResponse20043) SetAlertData(v map[string]interface{})`
+
+SetAlertData sets AlertData field to given value.
+
+### HasAlertData
+
+`func (o *InlineResponse20043) HasAlertData() bool`
+
+HasAlertData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

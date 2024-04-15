@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
-**Name** | Pointer to **string** | Switch template name | [optional] 
-**Model** | Pointer to **string** | Switch model | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200156WithDefaults instantiates a new InlineResponse200156 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchProfileId
+### GetBroadcastThreshold
 
-`func (o *InlineResponse200156) GetSwitchProfileId() string`
+`func (o *InlineResponse200156) GetBroadcastThreshold() int32`
 
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetSwitchProfileIdOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineResponse200156) GetSwitchProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200156) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfileId
+### SetBroadcastThreshold
 
-`func (o *InlineResponse200156) SetSwitchProfileId(v string)`
+`func (o *InlineResponse200156) SetBroadcastThreshold(v int32)`
 
-SetSwitchProfileId sets SwitchProfileId field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasSwitchProfileId
+### HasBroadcastThreshold
 
-`func (o *InlineResponse200156) HasSwitchProfileId() bool`
+`func (o *InlineResponse200156) HasBroadcastThreshold() bool`
 
-HasSwitchProfileId returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetName
+### GetMulticastThreshold
 
-`func (o *InlineResponse200156) GetName() string`
+`func (o *InlineResponse200156) GetMulticastThreshold() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMulticastThresholdOk
 
-`func (o *InlineResponse200156) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200156) GetMulticastThresholdOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMulticastThreshold
 
-`func (o *InlineResponse200156) SetName(v string)`
+`func (o *InlineResponse200156) SetMulticastThreshold(v int32)`
 
-SetName sets Name field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasName
+### HasMulticastThreshold
 
-`func (o *InlineResponse200156) HasName() bool`
+`func (o *InlineResponse200156) HasMulticastThreshold() bool`
 
-HasName returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
 
-### GetModel
+### GetUnknownUnicastThreshold
 
-`func (o *InlineResponse200156) GetModel() string`
+`func (o *InlineResponse200156) GetUnknownUnicastThreshold() int32`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetUnknownUnicastThresholdOk
 
-`func (o *InlineResponse200156) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200156) GetUnknownUnicastThresholdOk() (*int32, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetUnknownUnicastThreshold
 
-`func (o *InlineResponse200156) SetModel(v string)`
+`func (o *InlineResponse200156) SetUnknownUnicastThreshold(v int32)`
 
-SetModel sets Model field to given value.
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
 
-### HasModel
+### HasUnknownUnicastThreshold
 
-`func (o *InlineResponse200156) HasModel() bool`
+`func (o *InlineResponse200156) HasUnknownUnicastThreshold() bool`
 
-HasModel returns a boolean if a field has been set.
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

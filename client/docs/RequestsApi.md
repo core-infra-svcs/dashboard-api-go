@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkPiiRequest
 
-> map[string]interface{} CreateNetworkPiiRequest(ctx, networkId).CreateNetworkPiiRequest(createNetworkPiiRequest).Execute()
+> InlineResponse200101 CreateNetworkPiiRequest(ctx, networkId).CreateNetworkPiiRequest(createNetworkPiiRequest).Execute()
 
 Submit a new delete or restrict processing PII request
 
@@ -33,7 +33,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkPiiRequest := *openapiclient.NewInlineObject106() // InlineObject106 |  (optional)
+    createNetworkPiiRequest := *openapiclient.NewInlineObject108() // InlineObject108 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RequestsApi.CreateNetworkPiiRequest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkPiiRequest`: map[string]interface{}
+    // response from `CreateNetworkPiiRequest`: InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `RequestsApi.CreateNetworkPiiRequest`: %v\n", resp)
 }
 ```
@@ -63,11 +63,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkPiiRequestReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkPiiRequest** | [**InlineObject106**](InlineObject106.md) |  | 
+ **createNetworkPiiRequest** | [**InlineObject108**](InlineObject108.md) |  | 
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPiiRequest
 
-> map[string]interface{} GetNetworkPiiRequest(ctx, networkId, requestId).Execute()
+> InlineResponse200101 GetNetworkPiiRequest(ctx, networkId, requestId).Execute()
 
 Return a PII request
 
@@ -185,7 +185,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RequestsApi.GetNetworkPiiRequest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiRequest`: map[string]interface{}
+    // response from `GetNetworkPiiRequest`: InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `RequestsApi.GetNetworkPiiRequest`: %v\n", resp)
 }
 ```
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPiiRequests
 
-> []map[string]interface{} GetNetworkPiiRequests(ctx, networkId).Execute()
+> []InlineResponse200101 GetNetworkPiiRequests(ctx, networkId).Execute()
 
 List the PII requests for this network or organization
 
@@ -257,7 +257,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RequestsApi.GetNetworkPiiRequests``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiRequests`: []map[string]interface{}
+    // response from `GetNetworkPiiRequests`: []InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `RequestsApi.GetNetworkPiiRequests`: %v\n", resp)
 }
 ```
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 

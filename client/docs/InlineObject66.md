@@ -4,12 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ActiveActiveAutoVpnEnabled** | Pointer to **bool** | Toggle for enabling or disabling active-active AutoVPN | [optional] 
-**DefaultUplink** | Pointer to **string** | The default uplink. Must be one of: &#39;wan1&#39; or &#39;wan2&#39; | [optional] 
-**LoadBalancingEnabled** | Pointer to **bool** | Toggle for enabling or disabling load balancing | [optional] 
-**FailoverAndFailback** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback.md) |  | [optional] 
-**WanTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences.md) | Array of uplink preference rules for WAN traffic | [optional] 
-**VpnTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences**](NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences.md) | Array of uplink preference rules for VPN traffic | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdApplianceTrafficShapingRulesRules**](NetworksNetworkIdApplianceTrafficShapingRulesRules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -30,155 +26,55 @@ NewInlineObject66WithDefaults instantiates a new InlineObject66 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetActiveActiveAutoVpnEnabled
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject66) GetActiveActiveAutoVpnEnabled() bool`
+`func (o *InlineObject66) GetDefaultRulesEnabled() bool`
 
-GetActiveActiveAutoVpnEnabled returns the ActiveActiveAutoVpnEnabled field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetActiveActiveAutoVpnEnabledOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject66) GetActiveActiveAutoVpnEnabledOk() (*bool, bool)`
+`func (o *InlineObject66) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetActiveActiveAutoVpnEnabledOk returns a tuple with the ActiveActiveAutoVpnEnabled field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActiveActiveAutoVpnEnabled
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject66) SetActiveActiveAutoVpnEnabled(v bool)`
+`func (o *InlineObject66) SetDefaultRulesEnabled(v bool)`
 
-SetActiveActiveAutoVpnEnabled sets ActiveActiveAutoVpnEnabled field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasActiveActiveAutoVpnEnabled
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject66) HasActiveActiveAutoVpnEnabled() bool`
+`func (o *InlineObject66) HasDefaultRulesEnabled() bool`
 
-HasActiveActiveAutoVpnEnabled returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetDefaultUplink
+### GetRules
 
-`func (o *InlineObject66) GetDefaultUplink() string`
+`func (o *InlineObject66) GetRules() []NetworksNetworkIdApplianceTrafficShapingRulesRules`
 
-GetDefaultUplink returns the DefaultUplink field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetDefaultUplinkOk
+### GetRulesOk
 
-`func (o *InlineObject66) GetDefaultUplinkOk() (*string, bool)`
+`func (o *InlineObject66) GetRulesOk() (*[]NetworksNetworkIdApplianceTrafficShapingRulesRules, bool)`
 
-GetDefaultUplinkOk returns a tuple with the DefaultUplink field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultUplink
+### SetRules
 
-`func (o *InlineObject66) SetDefaultUplink(v string)`
+`func (o *InlineObject66) SetRules(v []NetworksNetworkIdApplianceTrafficShapingRulesRules)`
 
-SetDefaultUplink sets DefaultUplink field to given value.
+SetRules sets Rules field to given value.
 
-### HasDefaultUplink
+### HasRules
 
-`func (o *InlineObject66) HasDefaultUplink() bool`
+`func (o *InlineObject66) HasRules() bool`
 
-HasDefaultUplink returns a boolean if a field has been set.
-
-### GetLoadBalancingEnabled
-
-`func (o *InlineObject66) GetLoadBalancingEnabled() bool`
-
-GetLoadBalancingEnabled returns the LoadBalancingEnabled field if non-nil, zero value otherwise.
-
-### GetLoadBalancingEnabledOk
-
-`func (o *InlineObject66) GetLoadBalancingEnabledOk() (*bool, bool)`
-
-GetLoadBalancingEnabledOk returns a tuple with the LoadBalancingEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLoadBalancingEnabled
-
-`func (o *InlineObject66) SetLoadBalancingEnabled(v bool)`
-
-SetLoadBalancingEnabled sets LoadBalancingEnabled field to given value.
-
-### HasLoadBalancingEnabled
-
-`func (o *InlineObject66) HasLoadBalancingEnabled() bool`
-
-HasLoadBalancingEnabled returns a boolean if a field has been set.
-
-### GetFailoverAndFailback
-
-`func (o *InlineObject66) GetFailoverAndFailback() NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback`
-
-GetFailoverAndFailback returns the FailoverAndFailback field if non-nil, zero value otherwise.
-
-### GetFailoverAndFailbackOk
-
-`func (o *InlineObject66) GetFailoverAndFailbackOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback, bool)`
-
-GetFailoverAndFailbackOk returns a tuple with the FailoverAndFailback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFailoverAndFailback
-
-`func (o *InlineObject66) SetFailoverAndFailback(v NetworksNetworkIdApplianceTrafficShapingUplinkSelectionFailoverAndFailback)`
-
-SetFailoverAndFailback sets FailoverAndFailback field to given value.
-
-### HasFailoverAndFailback
-
-`func (o *InlineObject66) HasFailoverAndFailback() bool`
-
-HasFailoverAndFailback returns a boolean if a field has been set.
-
-### GetWanTrafficUplinkPreferences
-
-`func (o *InlineObject66) GetWanTrafficUplinkPreferences() []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences`
-
-GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
-
-### GetWanTrafficUplinkPreferencesOk
-
-`func (o *InlineObject66) GetWanTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences, bool)`
-
-GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWanTrafficUplinkPreferences
-
-`func (o *InlineObject66) SetWanTrafficUplinkPreferences(v []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferences)`
-
-SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
-
-### HasWanTrafficUplinkPreferences
-
-`func (o *InlineObject66) HasWanTrafficUplinkPreferences() bool`
-
-HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
-
-### GetVpnTrafficUplinkPreferences
-
-`func (o *InlineObject66) GetVpnTrafficUplinkPreferences() []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences`
-
-GetVpnTrafficUplinkPreferences returns the VpnTrafficUplinkPreferences field if non-nil, zero value otherwise.
-
-### GetVpnTrafficUplinkPreferencesOk
-
-`func (o *InlineObject66) GetVpnTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences, bool)`
-
-GetVpnTrafficUplinkPreferencesOk returns a tuple with the VpnTrafficUplinkPreferences field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVpnTrafficUplinkPreferences
-
-`func (o *InlineObject66) SetVpnTrafficUplinkPreferences(v []NetworksNetworkIdApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferences)`
-
-SetVpnTrafficUplinkPreferences sets VpnTrafficUplinkPreferences field to given value.
-
-### HasVpnTrafficUplinkPreferences
-
-`func (o *InlineObject66) HasVpnTrafficUplinkPreferences() bool`
-
-HasVpnTrafficUplinkPreferences returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

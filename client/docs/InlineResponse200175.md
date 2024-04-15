@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingLicenses** | Pointer to [**[]InlineResponse200174**](InlineResponse200174.md) | Resulting licenses from the move | [optional] 
+**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200175WithDefaults instantiates a new InlineResponse200175 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingLicenses
+### GetProfileId
 
-`func (o *InlineResponse200175) GetResultingLicenses() []InlineResponse200174`
+`func (o *InlineResponse200175) GetProfileId() string`
 
-GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetResultingLicensesOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200175) GetResultingLicensesOk() (*[]InlineResponse200174, bool)`
+`func (o *InlineResponse200175) GetProfileIdOk() (*string, bool)`
 
-GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingLicenses
+### SetProfileId
 
-`func (o *InlineResponse200175) SetResultingLicenses(v []InlineResponse200174)`
+`func (o *InlineResponse200175) SetProfileId(v string)`
 
-SetResultingLicenses sets ResultingLicenses field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasResultingLicenses
+### HasProfileId
 
-`func (o *InlineResponse200175) HasResultingLicenses() bool`
+`func (o *InlineResponse200175) HasProfileId() bool`
 
-HasResultingLicenses returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

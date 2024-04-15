@@ -4,18 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Name** | Pointer to **string** | Name of the appliance | [optional] 
-**Mac** | Pointer to **string** | Mac address of the appliance | [optional] 
-**Serial** | Pointer to **string** | Serial number of the appliance | [optional] 
-**Model** | Pointer to **string** | Model of the appliance | [optional] 
-**Utilization** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
+**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
+**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
+**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
 
 ## Methods
 
 ### NewInlineResponse200193
 
-`func NewInlineResponse200193() *InlineResponse200193`
+`func NewInlineResponse200193(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse200193`
 
 NewInlineResponse200193 instantiates a new InlineResponse200193 object
 This constructor will assign default values to properties that have it defined,
@@ -30,155 +30,150 @@ NewInlineResponse200193WithDefaults instantiates a new InlineResponse200193 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetId
 
-`func (o *InlineResponse200193) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+`func (o *InlineResponse200193) GetId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetIdOk
 
-`func (o *InlineResponse200193) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+`func (o *InlineResponse200193) GetIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetId
 
-`func (o *InlineResponse200193) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+`func (o *InlineResponse200193) SetId(v string)`
 
-SetNetwork sets Network field to given value.
+SetId sets Id field to given value.
 
-### HasNetwork
+### HasId
 
-`func (o *InlineResponse200193) HasNetwork() bool`
+`func (o *InlineResponse200193) HasId() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetName
+### GetOrganizationId
 
-`func (o *InlineResponse200193) GetName() string`
+`func (o *InlineResponse200193) GetOrganizationId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse200193) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200193) GetOrganizationIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetOrganizationId
 
-`func (o *InlineResponse200193) SetName(v string)`
+`func (o *InlineResponse200193) SetOrganizationId(v string)`
 
-SetName sets Name field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasName
+### HasOrganizationId
 
-`func (o *InlineResponse200193) HasName() bool`
+`func (o *InlineResponse200193) HasOrganizationId() bool`
 
-HasName returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
 
-### GetMac
+### GetConfirmed
 
-`func (o *InlineResponse200193) GetMac() string`
+`func (o *InlineResponse200193) GetConfirmed() bool`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetConfirmedOk
 
-`func (o *InlineResponse200193) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200193) GetConfirmedOk() (*bool, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetConfirmed
 
-`func (o *InlineResponse200193) SetMac(v string)`
+`func (o *InlineResponse200193) SetConfirmed(v bool)`
 
-SetMac sets Mac field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasMac
+### HasConfirmed
 
-`func (o *InlineResponse200193) HasMac() bool`
+`func (o *InlineResponse200193) HasConfirmed() bool`
 
-HasMac returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
 
-### GetSerial
+### GetSynchronous
 
-`func (o *InlineResponse200193) GetSerial() string`
+`func (o *InlineResponse200193) GetSynchronous() bool`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSynchronousOk
 
-`func (o *InlineResponse200193) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200193) GetSynchronousOk() (*bool, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSynchronous
 
-`func (o *InlineResponse200193) SetSerial(v string)`
+`func (o *InlineResponse200193) SetSynchronous(v bool)`
 
-SetSerial sets Serial field to given value.
+SetSynchronous sets Synchronous field to given value.
 
-### HasSerial
+### HasSynchronous
 
-`func (o *InlineResponse200193) HasSerial() bool`
+`func (o *InlineResponse200193) HasSynchronous() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasSynchronous returns a boolean if a field has been set.
 
-### GetModel
+### GetStatus
 
-`func (o *InlineResponse200193) GetModel() string`
+`func (o *InlineResponse200193) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetStatusOk
 
-`func (o *InlineResponse200193) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200193) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetStatus
 
-`func (o *InlineResponse200193) SetModel(v string)`
+`func (o *InlineResponse200193) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
 
-SetModel sets Model field to given value.
+SetStatus sets Status field to given value.
 
-### HasModel
+### HasStatus
 
-`func (o *InlineResponse200193) HasModel() bool`
+`func (o *InlineResponse200193) HasStatus() bool`
 
-HasModel returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetUtilization
+### GetActions
 
-`func (o *InlineResponse200193) GetUtilization() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization`
+`func (o *InlineResponse200193) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
 
-GetUtilization returns the Utilization field if non-nil, zero value otherwise.
+GetActions returns the Actions field if non-nil, zero value otherwise.
 
-### GetUtilizationOk
+### GetActionsOk
 
-`func (o *InlineResponse200193) GetUtilizationOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization, bool)`
+`func (o *InlineResponse200193) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
 
-GetUtilizationOk returns a tuple with the Utilization field if it's non-nil, zero value otherwise
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUtilization
+### SetActions
 
-`func (o *InlineResponse200193) SetUtilization(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationUtilization)`
+`func (o *InlineResponse200193) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
 
-SetUtilization sets Utilization field to given value.
+SetActions sets Actions field to given value.
 
-### HasUtilization
-
-`func (o *InlineResponse200193) HasUtilization() bool`
-
-HasUtilization returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

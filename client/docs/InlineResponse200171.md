@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Monitored media server id | [optional] 
-**Name** | Pointer to **string** | The name of the VoIP provider | [optional] 
-**Address** | Pointer to **string** | The IP address (IPv4 only) or hostname of the media server to monitor | [optional] 
-**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead | [optional] 
+**T0** | Pointer to **int32** | The latency history bucket start time in seconds | [optional] 
+**T1** | Pointer to **int32** | The latency history bucket end time in seconds | [optional] 
+**LatencyBinsByCategory** | Pointer to [**NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory**](NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200171WithDefaults instantiates a new InlineResponse200171 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetT0
 
-`func (o *InlineResponse200171) GetId() string`
+`func (o *InlineResponse200171) GetT0() int32`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetT0 returns the T0 field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetT0Ok
 
-`func (o *InlineResponse200171) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200171) GetT0Ok() (*int32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetT0Ok returns a tuple with the T0 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetT0
 
-`func (o *InlineResponse200171) SetId(v string)`
+`func (o *InlineResponse200171) SetT0(v int32)`
 
-SetId sets Id field to given value.
+SetT0 sets T0 field to given value.
 
-### HasId
+### HasT0
 
-`func (o *InlineResponse200171) HasId() bool`
+`func (o *InlineResponse200171) HasT0() bool`
 
-HasId returns a boolean if a field has been set.
+HasT0 returns a boolean if a field has been set.
 
-### GetName
+### GetT1
 
-`func (o *InlineResponse200171) GetName() string`
+`func (o *InlineResponse200171) GetT1() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetT1 returns the T1 field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetT1Ok
 
-`func (o *InlineResponse200171) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200171) GetT1Ok() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetT1Ok returns a tuple with the T1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetT1
 
-`func (o *InlineResponse200171) SetName(v string)`
+`func (o *InlineResponse200171) SetT1(v int32)`
 
-SetName sets Name field to given value.
+SetT1 sets T1 field to given value.
 
-### HasName
+### HasT1
 
-`func (o *InlineResponse200171) HasName() bool`
+`func (o *InlineResponse200171) HasT1() bool`
 
-HasName returns a boolean if a field has been set.
+HasT1 returns a boolean if a field has been set.
 
-### GetAddress
+### GetLatencyBinsByCategory
 
-`func (o *InlineResponse200171) GetAddress() string`
+`func (o *InlineResponse200171) GetLatencyBinsByCategory() NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory`
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+GetLatencyBinsByCategory returns the LatencyBinsByCategory field if non-nil, zero value otherwise.
 
-### GetAddressOk
+### GetLatencyBinsByCategoryOk
 
-`func (o *InlineResponse200171) GetAddressOk() (*string, bool)`
+`func (o *InlineResponse200171) GetLatencyBinsByCategoryOk() (*NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory, bool)`
 
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+GetLatencyBinsByCategoryOk returns a tuple with the LatencyBinsByCategory field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetLatencyBinsByCategory
 
-`func (o *InlineResponse200171) SetAddress(v string)`
+`func (o *InlineResponse200171) SetLatencyBinsByCategory(v NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory)`
 
-SetAddress sets Address field to given value.
+SetLatencyBinsByCategory sets LatencyBinsByCategory field to given value.
 
-### HasAddress
+### HasLatencyBinsByCategory
 
-`func (o *InlineResponse200171) HasAddress() bool`
+`func (o *InlineResponse200171) HasLatencyBinsByCategory() bool`
 
-HasAddress returns a boolean if a field has been set.
-
-### GetBestEffortMonitoringEnabled
-
-`func (o *InlineResponse200171) GetBestEffortMonitoringEnabled() bool`
-
-GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
-
-### GetBestEffortMonitoringEnabledOk
-
-`func (o *InlineResponse200171) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
-
-GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBestEffortMonitoringEnabled
-
-`func (o *InlineResponse200171) SetBestEffortMonitoringEnabled(v bool)`
-
-SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
-
-### HasBestEffortMonitoringEnabled
-
-`func (o *InlineResponse200171) HasBestEffortMonitoringEnabled() bool`
-
-HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
+HasLatencyBinsByCategory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

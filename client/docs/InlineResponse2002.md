@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **StartDate** | Pointer to **time.Time** | Subscription start date | [optional] 
 **EndDate** | Pointer to **time.Time** | Subscription expiration date | [optional] 
 **WebOrderId** | Pointer to **string** | Web order id | [optional] 
+**Type** | Pointer to **string** | Subscription type | [optional] 
 **ProductTypes** | Pointer to **[]string** | Products the subscription has entitlements for | [optional] 
 **Entitlements** | Pointer to [**[]AdministeredLicensingSubscriptionSubscriptionsEntitlements**](AdministeredLicensingSubscriptionSubscriptionsEntitlements.md) | Entitlement info | [optional] 
 **Counts** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsCounts**](AdministeredLicensingSubscriptionSubscriptionsCounts.md) |  | [optional] 
@@ -208,6 +209,31 @@ SetWebOrderId sets WebOrderId field to given value.
 `func (o *InlineResponse2002) HasWebOrderId() bool`
 
 HasWebOrderId returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse2002) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse2002) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse2002) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse2002) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 ### GetProductTypes
 

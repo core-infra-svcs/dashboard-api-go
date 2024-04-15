@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | The name of the SSID. | [optional] 
 **AuthMode** | Pointer to **string** | The auth mode of the SSID. It can be set to (&#39;psk&#39;, &#39;8021x-radius&#39;). | [optional] 
-**EncryptionMode** | Pointer to **string** | The encryption mode of the SSID. It can be set to (&#39;wpa&#39;, &#39;wpa-eap&#39;). With &#39;wpa&#39; mode, the authMode should be &#39;psk&#39; and with &#39;wpa-eap&#39; the authMode should be &#39;8021x-radius&#39; | [optional] 
-**Psk** | Pointer to **string** | The pre-shared key of the SSID. | [optional] 
+**EncryptionMode** | Pointer to **string** | The encryption mode of the SSID. | [optional] 
+**Psk** | Pointer to **string** | The pre-shared key of the SSID, if mode is PSK | [optional] 
 
 ## Methods
 

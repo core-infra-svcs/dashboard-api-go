@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200130Rules**](InlineResponse200130Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Id** | Pointer to **string** | The ID of this target group. | [optional] 
+**Name** | Pointer to **string** | The name of this target group. | [optional] 
+**Scope** | Pointer to **string** | The scope of the target group. | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the target group. | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200130WithDefaults instantiates a new InlineResponse200130 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetId
 
-`func (o *InlineResponse200130) GetTrafficShapingEnabled() bool`
+`func (o *InlineResponse200130) GetId() string`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse200130) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200130) GetIdOk() (*string, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetId
 
-`func (o *InlineResponse200130) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineResponse200130) SetId(v string)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetId sets Id field to given value.
 
-### HasTrafficShapingEnabled
+### HasId
 
-`func (o *InlineResponse200130) HasTrafficShapingEnabled() bool`
+`func (o *InlineResponse200130) HasId() bool`
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetDefaultRulesEnabled
+### GetName
 
-`func (o *InlineResponse200130) GetDefaultRulesEnabled() bool`
+`func (o *InlineResponse200130) GetName() string`
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultRulesEnabledOk
+### GetNameOk
 
-`func (o *InlineResponse200130) GetDefaultRulesEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200130) GetNameOk() (*string, bool)`
 
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetName
 
-`func (o *InlineResponse200130) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineResponse200130) SetName(v string)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultRulesEnabled
+### HasName
 
-`func (o *InlineResponse200130) HasDefaultRulesEnabled() bool`
+`func (o *InlineResponse200130) HasName() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRules
+### GetScope
 
-`func (o *InlineResponse200130) GetRules() []InlineResponse200130Rules`
+`func (o *InlineResponse200130) GetScope() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetScopeOk
 
-`func (o *InlineResponse200130) GetRulesOk() (*[]InlineResponse200130Rules, bool)`
+`func (o *InlineResponse200130) GetScopeOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetScope
 
-`func (o *InlineResponse200130) SetRules(v []InlineResponse200130Rules)`
+`func (o *InlineResponse200130) SetScope(v string)`
 
-SetRules sets Rules field to given value.
+SetScope sets Scope field to given value.
 
-### HasRules
+### HasScope
 
-`func (o *InlineResponse200130) HasRules() bool`
+`func (o *InlineResponse200130) HasScope() bool`
 
-HasRules returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200130) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200130) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200130) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200130) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

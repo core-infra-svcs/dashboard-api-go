@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number of the AP | [optional] 
-**Name** | Pointer to **string** | The name of the AP | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork.md) |  | [optional] 
-**Power** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower.md) |  | [optional] 
-**Ports** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts.md) | List of port details | [optional] 
-**Aggregation** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation**](OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
 
 ## Methods
 
@@ -29,31 +28,6 @@ will change when the set of required properties is changed
 NewInlineResponse200210WithDefaults instantiates a new InlineResponse200210 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetSerial
-
-`func (o *InlineResponse200210) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200210) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200210) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200210) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
 
 ### GetName
 
@@ -80,105 +54,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetNetwork
+### GetEnabled
 
-`func (o *InlineResponse200210) GetNetwork() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork`
+`func (o *InlineResponse200210) GetEnabled() bool`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetEnabledOk
 
-`func (o *InlineResponse200210) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork, bool)`
+`func (o *InlineResponse200210) GetEnabledOk() (*bool, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetEnabled
 
-`func (o *InlineResponse200210) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesNetwork)`
+`func (o *InlineResponse200210) SetEnabled(v bool)`
 
-SetNetwork sets Network field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasNetwork
+### HasEnabled
 
-`func (o *InlineResponse200210) HasNetwork() bool`
+`func (o *InlineResponse200210) HasEnabled() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetPower
+### GetAdminSettings
 
-`func (o *InlineResponse200210) GetPower() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower`
+`func (o *InlineResponse200210) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
 
-GetPower returns the Power field if non-nil, zero value otherwise.
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
 
-### GetPowerOk
+### GetAdminSettingsOk
 
-`func (o *InlineResponse200210) GetPowerOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower, bool)`
+`func (o *InlineResponse200210) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
 
-GetPowerOk returns a tuple with the Power field if it's non-nil, zero value otherwise
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPower
+### SetAdminSettings
 
-`func (o *InlineResponse200210) SetPower(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPower)`
+`func (o *InlineResponse200210) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
 
-SetPower sets Power field to given value.
+SetAdminSettings sets AdminSettings field to given value.
 
-### HasPower
+### HasAdminSettings
 
-`func (o *InlineResponse200210) HasPower() bool`
+`func (o *InlineResponse200210) HasAdminSettings() bool`
 
-HasPower returns a boolean if a field has been set.
+HasAdminSettings returns a boolean if a field has been set.
 
-### GetPorts
+### GetHelpSettings
 
-`func (o *InlineResponse200210) GetPorts() []OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts`
+`func (o *InlineResponse200210) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetHelpSettingsOk
 
-`func (o *InlineResponse200210) GetPortsOk() (*[]OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts, bool)`
+`func (o *InlineResponse200210) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetHelpSettings
 
-`func (o *InlineResponse200210) SetPorts(v []OrganizationsOrganizationIdWirelessDevicesEthernetStatusesPorts)`
+`func (o *InlineResponse200210) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
 
-SetPorts sets Ports field to given value.
+SetHelpSettings sets HelpSettings field to given value.
 
-### HasPorts
+### HasHelpSettings
 
-`func (o *InlineResponse200210) HasPorts() bool`
+`func (o *InlineResponse200210) HasHelpSettings() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasHelpSettings returns a boolean if a field has been set.
 
-### GetAggregation
+### GetCustomLogo
 
-`func (o *InlineResponse200210) GetAggregation() OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation`
+`func (o *InlineResponse200210) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
 
-GetAggregation returns the Aggregation field if non-nil, zero value otherwise.
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
 
-### GetAggregationOk
+### GetCustomLogoOk
 
-`func (o *InlineResponse200210) GetAggregationOk() (*OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation, bool)`
+`func (o *InlineResponse200210) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
 
-GetAggregationOk returns a tuple with the Aggregation field if it's non-nil, zero value otherwise
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAggregation
+### SetCustomLogo
 
-`func (o *InlineResponse200210) SetAggregation(v OrganizationsOrganizationIdWirelessDevicesEthernetStatusesAggregation)`
+`func (o *InlineResponse200210) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
 
-SetAggregation sets Aggregation field to given value.
+SetCustomLogo sets CustomLogo field to given value.
 
-### HasAggregation
+### HasCustomLogo
 
-`func (o *InlineResponse200210) HasAggregation() bool`
+`func (o *InlineResponse200210) HasCustomLogo() bool`
 
-HasAggregation returns a boolean if a field has been set.
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

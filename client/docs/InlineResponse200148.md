@@ -4,9 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
-**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
-**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries.md) |  | [optional] 
+**Id** | Pointer to **string** | Qos Rule id | [optional] 
+**Vlan** | Pointer to **int32** | The VLAN of the incoming packet. A null value will match any VLAN. | [optional] 
+**Protocol** | Pointer to **string** | The protocol of the incoming packet. Can be one of \&quot;ANY\&quot;, \&quot;TCP\&quot; or \&quot;UDP\&quot;. Default value is \&quot;ANY\&quot; | [optional] 
+**SrcPort** | Pointer to **int32** | The source port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
+**SrcPortRange** | Pointer to **string** | The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80 | [optional] 
+**DstPort** | Pointer to **int32** | The destination port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
+**DstPortRange** | Pointer to **string** | The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80 | [optional] 
+**Dscp** | Pointer to **int32** | DSCP tag for the incoming packet. Set this to -1 to trust incoming DSCP. Default value is 0 | [optional] 
 
 ## Methods
 
@@ -27,80 +32,205 @@ NewInlineResponse200148WithDefaults instantiates a new InlineResponse200148 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetId
 
-`func (o *InlineResponse200148) GetNetworkId() string`
+`func (o *InlineResponse200148) GetId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetIdOk
 
-`func (o *InlineResponse200148) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200148) GetIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetId
 
-`func (o *InlineResponse200148) SetNetworkId(v string)`
+`func (o *InlineResponse200148) SetId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetId sets Id field to given value.
 
-### HasNetworkId
+### HasId
 
-`func (o *InlineResponse200148) HasNetworkId() bool`
+`func (o *InlineResponse200148) HasId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetSerial
+### GetVlan
 
-`func (o *InlineResponse200148) GetSerial() string`
+`func (o *InlineResponse200148) GetVlan() int32`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetVlanOk
 
-`func (o *InlineResponse200148) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200148) GetVlanOk() (*int32, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetVlan
 
-`func (o *InlineResponse200148) SetSerial(v string)`
+`func (o *InlineResponse200148) SetVlan(v int32)`
 
-SetSerial sets Serial field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasSerial
+### HasVlan
 
-`func (o *InlineResponse200148) HasSerial() bool`
+`func (o *InlineResponse200148) HasVlan() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetBoundaries
+### GetProtocol
 
-`func (o *InlineResponse200148) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries`
+`func (o *InlineResponse200148) GetProtocol() string`
 
-GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
 
-### GetBoundariesOk
+### GetProtocolOk
 
-`func (o *InlineResponse200148) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries, bool)`
+`func (o *InlineResponse200148) GetProtocolOk() (*string, bool)`
 
-GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBoundaries
+### SetProtocol
 
-`func (o *InlineResponse200148) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries)`
+`func (o *InlineResponse200148) SetProtocol(v string)`
 
-SetBoundaries sets Boundaries field to given value.
+SetProtocol sets Protocol field to given value.
 
-### HasBoundaries
+### HasProtocol
 
-`func (o *InlineResponse200148) HasBoundaries() bool`
+`func (o *InlineResponse200148) HasProtocol() bool`
 
-HasBoundaries returns a boolean if a field has been set.
+HasProtocol returns a boolean if a field has been set.
+
+### GetSrcPort
+
+`func (o *InlineResponse200148) GetSrcPort() int32`
+
+GetSrcPort returns the SrcPort field if non-nil, zero value otherwise.
+
+### GetSrcPortOk
+
+`func (o *InlineResponse200148) GetSrcPortOk() (*int32, bool)`
+
+GetSrcPortOk returns a tuple with the SrcPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSrcPort
+
+`func (o *InlineResponse200148) SetSrcPort(v int32)`
+
+SetSrcPort sets SrcPort field to given value.
+
+### HasSrcPort
+
+`func (o *InlineResponse200148) HasSrcPort() bool`
+
+HasSrcPort returns a boolean if a field has been set.
+
+### GetSrcPortRange
+
+`func (o *InlineResponse200148) GetSrcPortRange() string`
+
+GetSrcPortRange returns the SrcPortRange field if non-nil, zero value otherwise.
+
+### GetSrcPortRangeOk
+
+`func (o *InlineResponse200148) GetSrcPortRangeOk() (*string, bool)`
+
+GetSrcPortRangeOk returns a tuple with the SrcPortRange field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSrcPortRange
+
+`func (o *InlineResponse200148) SetSrcPortRange(v string)`
+
+SetSrcPortRange sets SrcPortRange field to given value.
+
+### HasSrcPortRange
+
+`func (o *InlineResponse200148) HasSrcPortRange() bool`
+
+HasSrcPortRange returns a boolean if a field has been set.
+
+### GetDstPort
+
+`func (o *InlineResponse200148) GetDstPort() int32`
+
+GetDstPort returns the DstPort field if non-nil, zero value otherwise.
+
+### GetDstPortOk
+
+`func (o *InlineResponse200148) GetDstPortOk() (*int32, bool)`
+
+GetDstPortOk returns a tuple with the DstPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDstPort
+
+`func (o *InlineResponse200148) SetDstPort(v int32)`
+
+SetDstPort sets DstPort field to given value.
+
+### HasDstPort
+
+`func (o *InlineResponse200148) HasDstPort() bool`
+
+HasDstPort returns a boolean if a field has been set.
+
+### GetDstPortRange
+
+`func (o *InlineResponse200148) GetDstPortRange() string`
+
+GetDstPortRange returns the DstPortRange field if non-nil, zero value otherwise.
+
+### GetDstPortRangeOk
+
+`func (o *InlineResponse200148) GetDstPortRangeOk() (*string, bool)`
+
+GetDstPortRangeOk returns a tuple with the DstPortRange field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDstPortRange
+
+`func (o *InlineResponse200148) SetDstPortRange(v string)`
+
+SetDstPortRange sets DstPortRange field to given value.
+
+### HasDstPortRange
+
+`func (o *InlineResponse200148) HasDstPortRange() bool`
+
+HasDstPortRange returns a boolean if a field has been set.
+
+### GetDscp
+
+`func (o *InlineResponse200148) GetDscp() int32`
+
+GetDscp returns the Dscp field if non-nil, zero value otherwise.
+
+### GetDscpOk
+
+`func (o *InlineResponse200148) GetDscpOk() (*int32, bool)`
+
+GetDscpOk returns a tuple with the Dscp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDscp
+
+`func (o *InlineResponse200148) SetDscp(v int32)`
+
+SetDscp sets Dscp field to given value.
+
+### HasDscp
+
+`func (o *InlineResponse200148) HasDscp() bool`
+
+HasDscp returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

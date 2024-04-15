@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the static route | [optional] 
-**Subnet** | Pointer to **string** | The subnet of the static route | [optional] 
-**GatewayIp** | Pointer to **string** | The gateway IP (next hop) of the static route | [optional] 
-**GatewayVlanId** | Pointer to **string** | The gateway IP (next hop) VLAN ID of the static route | [optional] 
-**Enabled** | Pointer to **bool** | The enabled state of the static route | [optional] 
-**FixedIpAssignments** | Pointer to **map[string]interface{}** | The DHCP fixed IP assignments on the static route. This should be an object that contains mappings from MAC addresses to objects that themselves each contain \&quot;ip\&quot; and \&quot;name\&quot; string fields. See the sample request/response for more details. | [optional] 
-**ReservedIpRanges** | Pointer to [**[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges**](NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges.md) | The DHCP reserved IP ranges on the static route | [optional] 
+**Name** | Pointer to **string** | The name of the SSID. | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not the SSID is enabled. | [optional] 
+**DefaultVlanId** | Pointer to **int32** | The VLAN ID of the VLAN associated to this SSID. This parameter is only valid if the network is in routed mode. | [optional] 
+**AuthMode** | Pointer to **string** | The association control method for the SSID (&#39;open&#39;, &#39;psk&#39;, &#39;8021x-meraki&#39; or &#39;8021x-radius&#39;). | [optional] 
+**Psk** | Pointer to **string** | The passkey for the SSID. This param is only valid if the authMode is &#39;psk&#39;. | [optional] 
+**RadiusServers** | Pointer to [**[]NetworksNetworkIdApplianceSsidsNumberRadiusServers**](NetworksNetworkIdApplianceSsidsNumberRadiusServers.md) | The RADIUS 802.1x servers to be used for authentication. This param is only valid if the authMode is &#39;8021x-radius&#39;. | [optional] 
+**EncryptionMode** | Pointer to **string** | The psk encryption mode for the SSID (&#39;wep&#39; or &#39;wpa&#39;). This param is only valid if the authMode is &#39;psk&#39;. | [optional] 
+**WpaEncryptionMode** | Pointer to **string** | The types of WPA encryption. (&#39;WPA1 and WPA2&#39;, &#39;WPA2 only&#39;, &#39;WPA3 Transition Mode&#39; or &#39;WPA3 only&#39;). This param is only valid if (1) the authMode is &#39;psk&#39; &amp; the encryptionMode is &#39;wpa&#39; OR (2) the authMode is &#39;8021x-meraki&#39; OR (3) the authMode is &#39;8021x-radius&#39; | [optional] 
+**Visible** | Pointer to **bool** | Boolean indicating whether the MX should advertise or hide this SSID. | [optional] 
+**DhcpEnforcedDeauthentication** | Pointer to [**NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication**](NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication.md) |  | [optional] 
+**Dot11w** | Pointer to [**NetworksNetworkIdApplianceSsidsNumberDot11w**](NetworksNetworkIdApplianceSsidsNumberDot11w.md) |  | [optional] 
 
 ## Methods
 
@@ -56,81 +60,6 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSubnet
-
-`func (o *InlineObject60) GetSubnet() string`
-
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
-
-### GetSubnetOk
-
-`func (o *InlineObject60) GetSubnetOk() (*string, bool)`
-
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubnet
-
-`func (o *InlineObject60) SetSubnet(v string)`
-
-SetSubnet sets Subnet field to given value.
-
-### HasSubnet
-
-`func (o *InlineObject60) HasSubnet() bool`
-
-HasSubnet returns a boolean if a field has been set.
-
-### GetGatewayIp
-
-`func (o *InlineObject60) GetGatewayIp() string`
-
-GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
-
-### GetGatewayIpOk
-
-`func (o *InlineObject60) GetGatewayIpOk() (*string, bool)`
-
-GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGatewayIp
-
-`func (o *InlineObject60) SetGatewayIp(v string)`
-
-SetGatewayIp sets GatewayIp field to given value.
-
-### HasGatewayIp
-
-`func (o *InlineObject60) HasGatewayIp() bool`
-
-HasGatewayIp returns a boolean if a field has been set.
-
-### GetGatewayVlanId
-
-`func (o *InlineObject60) GetGatewayVlanId() string`
-
-GetGatewayVlanId returns the GatewayVlanId field if non-nil, zero value otherwise.
-
-### GetGatewayVlanIdOk
-
-`func (o *InlineObject60) GetGatewayVlanIdOk() (*string, bool)`
-
-GetGatewayVlanIdOk returns a tuple with the GatewayVlanId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGatewayVlanId
-
-`func (o *InlineObject60) SetGatewayVlanId(v string)`
-
-SetGatewayVlanId sets GatewayVlanId field to given value.
-
-### HasGatewayVlanId
-
-`func (o *InlineObject60) HasGatewayVlanId() bool`
-
-HasGatewayVlanId returns a boolean if a field has been set.
-
 ### GetEnabled
 
 `func (o *InlineObject60) GetEnabled() bool`
@@ -156,55 +85,230 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetFixedIpAssignments
+### GetDefaultVlanId
 
-`func (o *InlineObject60) GetFixedIpAssignments() map[string]interface{}`
+`func (o *InlineObject60) GetDefaultVlanId() int32`
 
-GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
+GetDefaultVlanId returns the DefaultVlanId field if non-nil, zero value otherwise.
 
-### GetFixedIpAssignmentsOk
+### GetDefaultVlanIdOk
 
-`func (o *InlineObject60) GetFixedIpAssignmentsOk() (*map[string]interface{}, bool)`
+`func (o *InlineObject60) GetDefaultVlanIdOk() (*int32, bool)`
 
-GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
+GetDefaultVlanIdOk returns a tuple with the DefaultVlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFixedIpAssignments
+### SetDefaultVlanId
 
-`func (o *InlineObject60) SetFixedIpAssignments(v map[string]interface{})`
+`func (o *InlineObject60) SetDefaultVlanId(v int32)`
 
-SetFixedIpAssignments sets FixedIpAssignments field to given value.
+SetDefaultVlanId sets DefaultVlanId field to given value.
 
-### HasFixedIpAssignments
+### HasDefaultVlanId
 
-`func (o *InlineObject60) HasFixedIpAssignments() bool`
+`func (o *InlineObject60) HasDefaultVlanId() bool`
 
-HasFixedIpAssignments returns a boolean if a field has been set.
+HasDefaultVlanId returns a boolean if a field has been set.
 
-### GetReservedIpRanges
+### GetAuthMode
 
-`func (o *InlineObject60) GetReservedIpRanges() []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges`
+`func (o *InlineObject60) GetAuthMode() string`
 
-GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
+GetAuthMode returns the AuthMode field if non-nil, zero value otherwise.
 
-### GetReservedIpRangesOk
+### GetAuthModeOk
 
-`func (o *InlineObject60) GetReservedIpRangesOk() (*[]NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges, bool)`
+`func (o *InlineObject60) GetAuthModeOk() (*string, bool)`
 
-GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
+GetAuthModeOk returns a tuple with the AuthMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReservedIpRanges
+### SetAuthMode
 
-`func (o *InlineObject60) SetReservedIpRanges(v []NetworksNetworkIdApplianceStaticRoutesStaticRouteIdReservedIpRanges)`
+`func (o *InlineObject60) SetAuthMode(v string)`
 
-SetReservedIpRanges sets ReservedIpRanges field to given value.
+SetAuthMode sets AuthMode field to given value.
 
-### HasReservedIpRanges
+### HasAuthMode
 
-`func (o *InlineObject60) HasReservedIpRanges() bool`
+`func (o *InlineObject60) HasAuthMode() bool`
 
-HasReservedIpRanges returns a boolean if a field has been set.
+HasAuthMode returns a boolean if a field has been set.
+
+### GetPsk
+
+`func (o *InlineObject60) GetPsk() string`
+
+GetPsk returns the Psk field if non-nil, zero value otherwise.
+
+### GetPskOk
+
+`func (o *InlineObject60) GetPskOk() (*string, bool)`
+
+GetPskOk returns a tuple with the Psk field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPsk
+
+`func (o *InlineObject60) SetPsk(v string)`
+
+SetPsk sets Psk field to given value.
+
+### HasPsk
+
+`func (o *InlineObject60) HasPsk() bool`
+
+HasPsk returns a boolean if a field has been set.
+
+### GetRadiusServers
+
+`func (o *InlineObject60) GetRadiusServers() []NetworksNetworkIdApplianceSsidsNumberRadiusServers`
+
+GetRadiusServers returns the RadiusServers field if non-nil, zero value otherwise.
+
+### GetRadiusServersOk
+
+`func (o *InlineObject60) GetRadiusServersOk() (*[]NetworksNetworkIdApplianceSsidsNumberRadiusServers, bool)`
+
+GetRadiusServersOk returns a tuple with the RadiusServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusServers
+
+`func (o *InlineObject60) SetRadiusServers(v []NetworksNetworkIdApplianceSsidsNumberRadiusServers)`
+
+SetRadiusServers sets RadiusServers field to given value.
+
+### HasRadiusServers
+
+`func (o *InlineObject60) HasRadiusServers() bool`
+
+HasRadiusServers returns a boolean if a field has been set.
+
+### GetEncryptionMode
+
+`func (o *InlineObject60) GetEncryptionMode() string`
+
+GetEncryptionMode returns the EncryptionMode field if non-nil, zero value otherwise.
+
+### GetEncryptionModeOk
+
+`func (o *InlineObject60) GetEncryptionModeOk() (*string, bool)`
+
+GetEncryptionModeOk returns a tuple with the EncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEncryptionMode
+
+`func (o *InlineObject60) SetEncryptionMode(v string)`
+
+SetEncryptionMode sets EncryptionMode field to given value.
+
+### HasEncryptionMode
+
+`func (o *InlineObject60) HasEncryptionMode() bool`
+
+HasEncryptionMode returns a boolean if a field has been set.
+
+### GetWpaEncryptionMode
+
+`func (o *InlineObject60) GetWpaEncryptionMode() string`
+
+GetWpaEncryptionMode returns the WpaEncryptionMode field if non-nil, zero value otherwise.
+
+### GetWpaEncryptionModeOk
+
+`func (o *InlineObject60) GetWpaEncryptionModeOk() (*string, bool)`
+
+GetWpaEncryptionModeOk returns a tuple with the WpaEncryptionMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWpaEncryptionMode
+
+`func (o *InlineObject60) SetWpaEncryptionMode(v string)`
+
+SetWpaEncryptionMode sets WpaEncryptionMode field to given value.
+
+### HasWpaEncryptionMode
+
+`func (o *InlineObject60) HasWpaEncryptionMode() bool`
+
+HasWpaEncryptionMode returns a boolean if a field has been set.
+
+### GetVisible
+
+`func (o *InlineObject60) GetVisible() bool`
+
+GetVisible returns the Visible field if non-nil, zero value otherwise.
+
+### GetVisibleOk
+
+`func (o *InlineObject60) GetVisibleOk() (*bool, bool)`
+
+GetVisibleOk returns a tuple with the Visible field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVisible
+
+`func (o *InlineObject60) SetVisible(v bool)`
+
+SetVisible sets Visible field to given value.
+
+### HasVisible
+
+`func (o *InlineObject60) HasVisible() bool`
+
+HasVisible returns a boolean if a field has been set.
+
+### GetDhcpEnforcedDeauthentication
+
+`func (o *InlineObject60) GetDhcpEnforcedDeauthentication() NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication`
+
+GetDhcpEnforcedDeauthentication returns the DhcpEnforcedDeauthentication field if non-nil, zero value otherwise.
+
+### GetDhcpEnforcedDeauthenticationOk
+
+`func (o *InlineObject60) GetDhcpEnforcedDeauthenticationOk() (*NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication, bool)`
+
+GetDhcpEnforcedDeauthenticationOk returns a tuple with the DhcpEnforcedDeauthentication field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpEnforcedDeauthentication
+
+`func (o *InlineObject60) SetDhcpEnforcedDeauthentication(v NetworksNetworkIdApplianceSsidsNumberDhcpEnforcedDeauthentication)`
+
+SetDhcpEnforcedDeauthentication sets DhcpEnforcedDeauthentication field to given value.
+
+### HasDhcpEnforcedDeauthentication
+
+`func (o *InlineObject60) HasDhcpEnforcedDeauthentication() bool`
+
+HasDhcpEnforcedDeauthentication returns a boolean if a field has been set.
+
+### GetDot11w
+
+`func (o *InlineObject60) GetDot11w() NetworksNetworkIdApplianceSsidsNumberDot11w`
+
+GetDot11w returns the Dot11w field if non-nil, zero value otherwise.
+
+### GetDot11wOk
+
+`func (o *InlineObject60) GetDot11wOk() (*NetworksNetworkIdApplianceSsidsNumberDot11w, bool)`
+
+GetDot11wOk returns a tuple with the Dot11w field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDot11w
+
+`func (o *InlineObject60) SetDot11w(v NetworksNetworkIdApplianceSsidsNumberDot11w)`
+
+SetDot11w sets Dot11w field to given value.
+
+### HasDot11w
+
+`func (o *InlineObject60) HasDot11w() bool`
+
+HasDot11w returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Received** | Pointer to **float32** | Usage received by the client on a given day | [optional] 
-**Sent** | Pointer to **float32** | Usage sent by the client on a given day | [optional] 
-**Ts** | Pointer to **time.Time** | The day&#39;s timestamp | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20047Rules**](InlineResponse20047Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse20048WithDefaults instantiates a new InlineResponse20048 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReceived
+### GetRules
 
-`func (o *InlineResponse20048) GetReceived() float32`
+`func (o *InlineResponse20048) GetRules() []InlineResponse20047Rules`
 
-GetReceived returns the Received field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetReceivedOk
+### GetRulesOk
 
-`func (o *InlineResponse20048) GetReceivedOk() (*float32, bool)`
+`func (o *InlineResponse20048) GetRulesOk() (*[]InlineResponse20047Rules, bool)`
 
-GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceived
+### SetRules
 
-`func (o *InlineResponse20048) SetReceived(v float32)`
+`func (o *InlineResponse20048) SetRules(v []InlineResponse20047Rules)`
 
-SetReceived sets Received field to given value.
+SetRules sets Rules field to given value.
 
-### HasReceived
+### HasRules
 
-`func (o *InlineResponse20048) HasReceived() bool`
+`func (o *InlineResponse20048) HasRules() bool`
 
-HasReceived returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetSent
+### GetSyslogDefaultRule
 
-`func (o *InlineResponse20048) GetSent() float32`
+`func (o *InlineResponse20048) GetSyslogDefaultRule() bool`
 
-GetSent returns the Sent field if non-nil, zero value otherwise.
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
 
-### GetSentOk
+### GetSyslogDefaultRuleOk
 
-`func (o *InlineResponse20048) GetSentOk() (*float32, bool)`
+`func (o *InlineResponse20048) GetSyslogDefaultRuleOk() (*bool, bool)`
 
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSent
+### SetSyslogDefaultRule
 
-`func (o *InlineResponse20048) SetSent(v float32)`
+`func (o *InlineResponse20048) SetSyslogDefaultRule(v bool)`
 
-SetSent sets Sent field to given value.
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
 
-### HasSent
+### HasSyslogDefaultRule
 
-`func (o *InlineResponse20048) HasSent() bool`
+`func (o *InlineResponse20048) HasSyslogDefaultRule() bool`
 
-HasSent returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse20048) GetTs() time.Time`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse20048) GetTsOk() (*time.Time, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse20048) SetTs(v time.Time)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse20048) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

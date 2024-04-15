@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
+**MqttBrokerId** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
+**Enabled** | Pointer to **bool** | Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200106WithDefaults instantiates a new InlineResponse200106 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetMqttBrokerId
 
-`func (o *InlineResponse200106) GetBroadcastThreshold() int32`
+`func (o *InlineResponse200106) GetMqttBrokerId() string`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetMqttBrokerIdOk
 
-`func (o *InlineResponse200106) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200106) GetMqttBrokerIdOk() (*string, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetMqttBrokerId
 
-`func (o *InlineResponse200106) SetBroadcastThreshold(v int32)`
+`func (o *InlineResponse200106) SetMqttBrokerId(v string)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetMqttBrokerId sets MqttBrokerId field to given value.
 
-### HasBroadcastThreshold
+### HasMqttBrokerId
 
-`func (o *InlineResponse200106) HasBroadcastThreshold() bool`
+`func (o *InlineResponse200106) HasMqttBrokerId() bool`
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+HasMqttBrokerId returns a boolean if a field has been set.
 
-### GetMulticastThreshold
+### GetEnabled
 
-`func (o *InlineResponse200106) GetMulticastThreshold() int32`
+`func (o *InlineResponse200106) GetEnabled() bool`
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetMulticastThresholdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200106) GetMulticastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200106) GetEnabledOk() (*bool, bool)`
 
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetEnabled
 
-`func (o *InlineResponse200106) SetMulticastThreshold(v int32)`
+`func (o *InlineResponse200106) SetEnabled(v bool)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasMulticastThreshold
+### HasEnabled
 
-`func (o *InlineResponse200106) HasMulticastThreshold() bool`
+`func (o *InlineResponse200106) HasEnabled() bool`
 
-HasMulticastThreshold returns a boolean if a field has been set.
-
-### GetUnknownUnicastThreshold
-
-`func (o *InlineResponse200106) GetUnknownUnicastThreshold() int32`
-
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
-
-### GetUnknownUnicastThresholdOk
-
-`func (o *InlineResponse200106) GetUnknownUnicastThresholdOk() (*int32, bool)`
-
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUnknownUnicastThreshold
-
-`func (o *InlineResponse200106) SetUnknownUnicastThreshold(v int32)`
-
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
-
-### HasUnknownUnicastThreshold
-
-`func (o *InlineResponse200106) HasUnknownUnicastThreshold() bool`
-
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
+**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
+**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
+**Identity** | Pointer to [**InlineResponse200184Identity**](InlineResponse200184Identity.md) |  | [optional] 
+**EapolKey** | Pointer to [**InlineResponse200184EapolKey**](InlineResponse200184EapolKey.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200184WithDefaults instantiates a new InlineResponse200184 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetTimeout
 
-`func (o *InlineResponse200184) GetId() string`
+`func (o *InlineResponse200184) GetTimeout() int32`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetTimeout returns the Timeout field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetTimeoutOk
 
-`func (o *InlineResponse200184) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200184) GetTimeoutOk() (*int32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetTimeout
 
-`func (o *InlineResponse200184) SetId(v string)`
+`func (o *InlineResponse200184) SetTimeout(v int32)`
 
-SetId sets Id field to given value.
+SetTimeout sets Timeout field to given value.
 
-### HasId
+### HasTimeout
 
-`func (o *InlineResponse200184) HasId() bool`
+`func (o *InlineResponse200184) HasTimeout() bool`
 
-HasId returns a boolean if a field has been set.
+HasTimeout returns a boolean if a field has been set.
 
-### GetRole
+### GetMaxRetries
 
-`func (o *InlineResponse200184) GetRole() string`
+`func (o *InlineResponse200184) GetMaxRetries() int32`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetMaxRetriesOk
 
-`func (o *InlineResponse200184) GetRoleOk() (*string, bool)`
+`func (o *InlineResponse200184) GetMaxRetriesOk() (*int32, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetMaxRetries
 
-`func (o *InlineResponse200184) SetRole(v string)`
+`func (o *InlineResponse200184) SetMaxRetries(v int32)`
 
-SetRole sets Role field to given value.
+SetMaxRetries sets MaxRetries field to given value.
 
-### HasRole
+### HasMaxRetries
 
-`func (o *InlineResponse200184) HasRole() bool`
+`func (o *InlineResponse200184) HasMaxRetries() bool`
 
-HasRole returns a boolean if a field has been set.
+HasMaxRetries returns a boolean if a field has been set.
 
-### GetOrgAccess
+### GetIdentity
 
-`func (o *InlineResponse200184) GetOrgAccess() string`
+`func (o *InlineResponse200184) GetIdentity() InlineResponse200184Identity`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetIdentityOk
 
-`func (o *InlineResponse200184) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineResponse200184) GetIdentityOk() (*InlineResponse200184Identity, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetIdentity
 
-`func (o *InlineResponse200184) SetOrgAccess(v string)`
+`func (o *InlineResponse200184) SetIdentity(v InlineResponse200184Identity)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetIdentity sets Identity field to given value.
 
-### HasOrgAccess
+### HasIdentity
 
-`func (o *InlineResponse200184) HasOrgAccess() bool`
+`func (o *InlineResponse200184) HasIdentity() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasIdentity returns a boolean if a field has been set.
 
-### GetNetworks
+### GetEapolKey
 
-`func (o *InlineResponse200184) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
+`func (o *InlineResponse200184) GetEapolKey() InlineResponse200184EapolKey`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetEapolKeyOk
 
-`func (o *InlineResponse200184) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
+`func (o *InlineResponse200184) GetEapolKeyOk() (*InlineResponse200184EapolKey, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetEapolKey
 
-`func (o *InlineResponse200184) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
+`func (o *InlineResponse200184) SetEapolKey(v InlineResponse200184EapolKey)`
 
-SetNetworks sets Networks field to given value.
+SetEapolKey sets EapolKey field to given value.
 
-### HasNetworks
+### HasEapolKey
 
-`func (o *InlineResponse200184) HasNetworks() bool`
+`func (o *InlineResponse200184) HasEapolKey() bool`
 
-HasNetworks returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200184) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200184) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200184) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200184) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasEapolKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

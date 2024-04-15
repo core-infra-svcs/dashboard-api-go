@@ -7,11 +7,7 @@ Name | Type | Description | Notes
 **Duration** | Pointer to **int32** | The total duration in seconds that the threshold should be crossed before alerting | [optional] 
 **Window** | Pointer to **int32** | The look back period in seconds for sensing the alert | [optional] 
 **BitRateBps** | Pointer to **int32** | The threshold the metric must cross to be valid for alerting. Used only for WAN Utilization alerts. | [optional] 
-**LossRatio** | Pointer to **float32** | The threshold the metric must cross to be valid for alerting. Used only for Packet Loss alerts. | [optional] 
-**LatencyMs** | Pointer to **int32** | The threshold the metric must cross to be valid for alerting. Used only for WAN Latency alerts. | [optional] 
-**JitterMs** | Pointer to **int32** | The threshold the metric must cross to be valid for alerting. Used only for VoIP Jitter alerts. | [optional] 
-**Mos** | Pointer to **float32** | The threshold the metric must drop below to be valid for alerting. Used only for VoIP MOS alerts. | [optional] 
-**Interface** | Pointer to **string** | The uplink observed for the alert.  interface must be one of the following: wan1, wan2, wan3, cellular | [optional] 
+**Interface** | Pointer to **string** | The uplink observed for the alert | [optional] 
 
 ## Methods
 
@@ -106,106 +102,6 @@ SetBitRateBps sets BitRateBps field to given value.
 `func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) HasBitRateBps() bool`
 
 HasBitRateBps returns a boolean if a field has been set.
-
-### GetLossRatio
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) GetLossRatio() float32`
-
-GetLossRatio returns the LossRatio field if non-nil, zero value otherwise.
-
-### GetLossRatioOk
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) GetLossRatioOk() (*float32, bool)`
-
-GetLossRatioOk returns a tuple with the LossRatio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLossRatio
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) SetLossRatio(v float32)`
-
-SetLossRatio sets LossRatio field to given value.
-
-### HasLossRatio
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) HasLossRatio() bool`
-
-HasLossRatio returns a boolean if a field has been set.
-
-### GetLatencyMs
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) GetLatencyMs() int32`
-
-GetLatencyMs returns the LatencyMs field if non-nil, zero value otherwise.
-
-### GetLatencyMsOk
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) GetLatencyMsOk() (*int32, bool)`
-
-GetLatencyMsOk returns a tuple with the LatencyMs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLatencyMs
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) SetLatencyMs(v int32)`
-
-SetLatencyMs sets LatencyMs field to given value.
-
-### HasLatencyMs
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) HasLatencyMs() bool`
-
-HasLatencyMs returns a boolean if a field has been set.
-
-### GetJitterMs
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) GetJitterMs() int32`
-
-GetJitterMs returns the JitterMs field if non-nil, zero value otherwise.
-
-### GetJitterMsOk
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) GetJitterMsOk() (*int32, bool)`
-
-GetJitterMsOk returns a tuple with the JitterMs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetJitterMs
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) SetJitterMs(v int32)`
-
-SetJitterMs sets JitterMs field to given value.
-
-### HasJitterMs
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) HasJitterMs() bool`
-
-HasJitterMs returns a boolean if a field has been set.
-
-### GetMos
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) GetMos() float32`
-
-GetMos returns the Mos field if non-nil, zero value otherwise.
-
-### GetMosOk
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) GetMosOk() (*float32, bool)`
-
-GetMosOk returns a tuple with the Mos field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMos
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) SetMos(v float32)`
-
-SetMos sets Mos field to given value.
-
-### HasMos
-
-`func (o *OrganizationsOrganizationIdAlertsProfilesAlertCondition) HasMos() bool`
-
-HasMos returns a boolean if a field has been set.
 
 ### GetInterface
 

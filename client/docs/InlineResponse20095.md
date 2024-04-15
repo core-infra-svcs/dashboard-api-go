@@ -4,11 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Alerts** | Pointer to [**InlineResponse20095Alerts**](InlineResponse20095Alerts.md) |  | [optional] 
-**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
-**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set       to allow.An empty array will clear the entries. | [optional] 
-**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set       to block.An empty array will clear the entries. | [optional] 
-**ArpInspection** | Pointer to [**InlineResponse20095ArpInspection**](InlineResponse20095ArpInspection.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**WanGoodput** | Pointer to **int32** | WAN goodput (Number of useful information bits delivered over a WAN per unit of time) | [optional] 
+**LanGoodput** | Pointer to **int32** | LAN goodput (Number of useful information bits delivered over a LAN per unit of time) | [optional] 
+**WanLatencyMs** | Pointer to **float32** | WAN latency in milliseconds | [optional] 
+**LanLatencyMs** | Pointer to **float32** | LAN latency in milliseconds | [optional] 
+**WanLossPercent** | Pointer to **float32** | WAN loss percentage | [optional] 
+**LanLossPercent** | Pointer to **float32** | LAN loss percentage | [optional] 
+**ResponseDuration** | Pointer to **int32** | Duration of the response, in milliseconds | [optional] 
+**Sent** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**Recv** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**NumClients** | Pointer to **int32** | Number of clients | [optional] 
 
 ## Methods
 
@@ -29,130 +36,305 @@ NewInlineResponse20095WithDefaults instantiates a new InlineResponse20095 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlerts
+### GetStartTs
 
-`func (o *InlineResponse20095) GetAlerts() InlineResponse20095Alerts`
+`func (o *InlineResponse20095) GetStartTs() time.Time`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetStartTsOk
 
-`func (o *InlineResponse20095) GetAlertsOk() (*InlineResponse20095Alerts, bool)`
+`func (o *InlineResponse20095) GetStartTsOk() (*time.Time, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetStartTs
 
-`func (o *InlineResponse20095) SetAlerts(v InlineResponse20095Alerts)`
+`func (o *InlineResponse20095) SetStartTs(v time.Time)`
 
-SetAlerts sets Alerts field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasAlerts
+### HasStartTs
 
-`func (o *InlineResponse20095) HasAlerts() bool`
+`func (o *InlineResponse20095) HasStartTs() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetEndTs
 
-`func (o *InlineResponse20095) GetDefaultPolicy() string`
+`func (o *InlineResponse20095) GetEndTs() time.Time`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetEndTsOk
 
-`func (o *InlineResponse20095) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineResponse20095) GetEndTsOk() (*time.Time, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetEndTs
 
-`func (o *InlineResponse20095) SetDefaultPolicy(v string)`
+`func (o *InlineResponse20095) SetEndTs(v time.Time)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasDefaultPolicy
+### HasEndTs
 
-`func (o *InlineResponse20095) HasDefaultPolicy() bool`
+`func (o *InlineResponse20095) HasEndTs() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetBlockedServers
+### GetWanGoodput
 
-`func (o *InlineResponse20095) GetBlockedServers() []string`
+`func (o *InlineResponse20095) GetWanGoodput() int32`
 
-GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
+GetWanGoodput returns the WanGoodput field if non-nil, zero value otherwise.
 
-### GetBlockedServersOk
+### GetWanGoodputOk
 
-`func (o *InlineResponse20095) GetBlockedServersOk() (*[]string, bool)`
+`func (o *InlineResponse20095) GetWanGoodputOk() (*int32, bool)`
 
-GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
+GetWanGoodputOk returns a tuple with the WanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBlockedServers
+### SetWanGoodput
 
-`func (o *InlineResponse20095) SetBlockedServers(v []string)`
+`func (o *InlineResponse20095) SetWanGoodput(v int32)`
 
-SetBlockedServers sets BlockedServers field to given value.
+SetWanGoodput sets WanGoodput field to given value.
 
-### HasBlockedServers
+### HasWanGoodput
 
-`func (o *InlineResponse20095) HasBlockedServers() bool`
+`func (o *InlineResponse20095) HasWanGoodput() bool`
 
-HasBlockedServers returns a boolean if a field has been set.
+HasWanGoodput returns a boolean if a field has been set.
 
-### GetAllowedServers
+### GetLanGoodput
 
-`func (o *InlineResponse20095) GetAllowedServers() []string`
+`func (o *InlineResponse20095) GetLanGoodput() int32`
 
-GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+GetLanGoodput returns the LanGoodput field if non-nil, zero value otherwise.
 
-### GetAllowedServersOk
+### GetLanGoodputOk
 
-`func (o *InlineResponse20095) GetAllowedServersOk() (*[]string, bool)`
+`func (o *InlineResponse20095) GetLanGoodputOk() (*int32, bool)`
 
-GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+GetLanGoodputOk returns a tuple with the LanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedServers
+### SetLanGoodput
 
-`func (o *InlineResponse20095) SetAllowedServers(v []string)`
+`func (o *InlineResponse20095) SetLanGoodput(v int32)`
 
-SetAllowedServers sets AllowedServers field to given value.
+SetLanGoodput sets LanGoodput field to given value.
 
-### HasAllowedServers
+### HasLanGoodput
 
-`func (o *InlineResponse20095) HasAllowedServers() bool`
+`func (o *InlineResponse20095) HasLanGoodput() bool`
 
-HasAllowedServers returns a boolean if a field has been set.
+HasLanGoodput returns a boolean if a field has been set.
 
-### GetArpInspection
+### GetWanLatencyMs
 
-`func (o *InlineResponse20095) GetArpInspection() InlineResponse20095ArpInspection`
+`func (o *InlineResponse20095) GetWanLatencyMs() float32`
 
-GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
+GetWanLatencyMs returns the WanLatencyMs field if non-nil, zero value otherwise.
 
-### GetArpInspectionOk
+### GetWanLatencyMsOk
 
-`func (o *InlineResponse20095) GetArpInspectionOk() (*InlineResponse20095ArpInspection, bool)`
+`func (o *InlineResponse20095) GetWanLatencyMsOk() (*float32, bool)`
 
-GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
+GetWanLatencyMsOk returns a tuple with the WanLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArpInspection
+### SetWanLatencyMs
 
-`func (o *InlineResponse20095) SetArpInspection(v InlineResponse20095ArpInspection)`
+`func (o *InlineResponse20095) SetWanLatencyMs(v float32)`
 
-SetArpInspection sets ArpInspection field to given value.
+SetWanLatencyMs sets WanLatencyMs field to given value.
 
-### HasArpInspection
+### HasWanLatencyMs
 
-`func (o *InlineResponse20095) HasArpInspection() bool`
+`func (o *InlineResponse20095) HasWanLatencyMs() bool`
 
-HasArpInspection returns a boolean if a field has been set.
+HasWanLatencyMs returns a boolean if a field has been set.
+
+### GetLanLatencyMs
+
+`func (o *InlineResponse20095) GetLanLatencyMs() float32`
+
+GetLanLatencyMs returns the LanLatencyMs field if non-nil, zero value otherwise.
+
+### GetLanLatencyMsOk
+
+`func (o *InlineResponse20095) GetLanLatencyMsOk() (*float32, bool)`
+
+GetLanLatencyMsOk returns a tuple with the LanLatencyMs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanLatencyMs
+
+`func (o *InlineResponse20095) SetLanLatencyMs(v float32)`
+
+SetLanLatencyMs sets LanLatencyMs field to given value.
+
+### HasLanLatencyMs
+
+`func (o *InlineResponse20095) HasLanLatencyMs() bool`
+
+HasLanLatencyMs returns a boolean if a field has been set.
+
+### GetWanLossPercent
+
+`func (o *InlineResponse20095) GetWanLossPercent() float32`
+
+GetWanLossPercent returns the WanLossPercent field if non-nil, zero value otherwise.
+
+### GetWanLossPercentOk
+
+`func (o *InlineResponse20095) GetWanLossPercentOk() (*float32, bool)`
+
+GetWanLossPercentOk returns a tuple with the WanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWanLossPercent
+
+`func (o *InlineResponse20095) SetWanLossPercent(v float32)`
+
+SetWanLossPercent sets WanLossPercent field to given value.
+
+### HasWanLossPercent
+
+`func (o *InlineResponse20095) HasWanLossPercent() bool`
+
+HasWanLossPercent returns a boolean if a field has been set.
+
+### GetLanLossPercent
+
+`func (o *InlineResponse20095) GetLanLossPercent() float32`
+
+GetLanLossPercent returns the LanLossPercent field if non-nil, zero value otherwise.
+
+### GetLanLossPercentOk
+
+`func (o *InlineResponse20095) GetLanLossPercentOk() (*float32, bool)`
+
+GetLanLossPercentOk returns a tuple with the LanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanLossPercent
+
+`func (o *InlineResponse20095) SetLanLossPercent(v float32)`
+
+SetLanLossPercent sets LanLossPercent field to given value.
+
+### HasLanLossPercent
+
+`func (o *InlineResponse20095) HasLanLossPercent() bool`
+
+HasLanLossPercent returns a boolean if a field has been set.
+
+### GetResponseDuration
+
+`func (o *InlineResponse20095) GetResponseDuration() int32`
+
+GetResponseDuration returns the ResponseDuration field if non-nil, zero value otherwise.
+
+### GetResponseDurationOk
+
+`func (o *InlineResponse20095) GetResponseDurationOk() (*int32, bool)`
+
+GetResponseDurationOk returns a tuple with the ResponseDuration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResponseDuration
+
+`func (o *InlineResponse20095) SetResponseDuration(v int32)`
+
+SetResponseDuration sets ResponseDuration field to given value.
+
+### HasResponseDuration
+
+`func (o *InlineResponse20095) HasResponseDuration() bool`
+
+HasResponseDuration returns a boolean if a field has been set.
+
+### GetSent
+
+`func (o *InlineResponse20095) GetSent() int32`
+
+GetSent returns the Sent field if non-nil, zero value otherwise.
+
+### GetSentOk
+
+`func (o *InlineResponse20095) GetSentOk() (*int32, bool)`
+
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSent
+
+`func (o *InlineResponse20095) SetSent(v int32)`
+
+SetSent sets Sent field to given value.
+
+### HasSent
+
+`func (o *InlineResponse20095) HasSent() bool`
+
+HasSent returns a boolean if a field has been set.
+
+### GetRecv
+
+`func (o *InlineResponse20095) GetRecv() int32`
+
+GetRecv returns the Recv field if non-nil, zero value otherwise.
+
+### GetRecvOk
+
+`func (o *InlineResponse20095) GetRecvOk() (*int32, bool)`
+
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecv
+
+`func (o *InlineResponse20095) SetRecv(v int32)`
+
+SetRecv sets Recv field to given value.
+
+### HasRecv
+
+`func (o *InlineResponse20095) HasRecv() bool`
+
+HasRecv returns a boolean if a field has been set.
+
+### GetNumClients
+
+`func (o *InlineResponse20095) GetNumClients() int32`
+
+GetNumClients returns the NumClients field if non-nil, zero value otherwise.
+
+### GetNumClientsOk
+
+`func (o *InlineResponse20095) GetNumClientsOk() (*int32, bool)`
+
+GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumClients
+
+`func (o *InlineResponse20095) SetNumClients(v int32)`
+
+SetNumClients sets NumClients field to given value.
+
+### HasNumClients
+
+`func (o *InlineResponse20095) HasNumClients() bool`
+
+HasNumClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

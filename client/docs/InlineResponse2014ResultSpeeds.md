@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to **int32** | Shows the download speed from shard in (Mbps) | [optional] 
+**Downstream** | Pointer to **int32** | Shows the download speed from shard (Mbps) | [optional] 
 
 ## Methods
 

@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of a profile. | [optional] 
-**Name** | Pointer to **string** | Name of a profile. | [optional] 
-**Description** | Pointer to **string** | Description of a profile. | [optional] 
-**Scope** | Pointer to **string** | Scope of a profile. | [optional] 
-**Tags** | Pointer to **[]string** | Tags of a profile. | [optional] 
-**PayloadTypes** | Pointer to **[]string** | Payloads in the profile. | [optional] 
+**Category** | Pointer to **string** | Event category | [optional] 
+**Type** | Pointer to **string** | Event type | [optional] 
+**Description** | Pointer to **string** | Description of the event | [optional] 
 
 ## Methods
 
@@ -30,55 +27,55 @@ NewInlineResponse20086WithDefaults instantiates a new InlineResponse20086 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetCategory
 
-`func (o *InlineResponse20086) GetId() string`
+`func (o *InlineResponse20086) GetCategory() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetCategoryOk
 
-`func (o *InlineResponse20086) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20086) GetCategoryOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetCategory
 
-`func (o *InlineResponse20086) SetId(v string)`
+`func (o *InlineResponse20086) SetCategory(v string)`
 
-SetId sets Id field to given value.
+SetCategory sets Category field to given value.
 
-### HasId
+### HasCategory
 
-`func (o *InlineResponse20086) HasId() bool`
+`func (o *InlineResponse20086) HasCategory() bool`
 
-HasId returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetName
+### GetType
 
-`func (o *InlineResponse20086) GetName() string`
+`func (o *InlineResponse20086) GetType() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTypeOk
 
-`func (o *InlineResponse20086) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20086) GetTypeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetType
 
-`func (o *InlineResponse20086) SetName(v string)`
+`func (o *InlineResponse20086) SetType(v string)`
 
-SetName sets Name field to given value.
+SetType sets Type field to given value.
 
-### HasName
+### HasType
 
-`func (o *InlineResponse20086) HasName() bool`
+`func (o *InlineResponse20086) HasType() bool`
 
-HasName returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
 ### GetDescription
 
@@ -104,81 +101,6 @@ SetDescription sets Description field to given value.
 `func (o *InlineResponse20086) HasDescription() bool`
 
 HasDescription returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineResponse20086) GetScope() string`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineResponse20086) GetScopeOk() (*string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineResponse20086) SetScope(v string)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineResponse20086) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse20086) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse20086) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse20086) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse20086) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetPayloadTypes
-
-`func (o *InlineResponse20086) GetPayloadTypes() []string`
-
-GetPayloadTypes returns the PayloadTypes field if non-nil, zero value otherwise.
-
-### GetPayloadTypesOk
-
-`func (o *InlineResponse20086) GetPayloadTypesOk() (*[]string, bool)`
-
-GetPayloadTypesOk returns a tuple with the PayloadTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTypes
-
-`func (o *InlineResponse20086) SetPayloadTypes(v []string)`
-
-SetPayloadTypes sets PayloadTypes field to given value.
-
-### HasPayloadTypes
-
-`func (o *InlineResponse20086) HasPayloadTypes() bool`
-
-HasPayloadTypes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

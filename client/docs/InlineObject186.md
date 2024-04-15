@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges**](NetworksNetworkIdWirelessSsidsNumberSchedulesRanges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds**](NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
 
 ## Methods
 
 ### NewInlineObject186
 
-`func NewInlineObject186() *InlineObject186`
+`func NewInlineObject186(name string, groupPolicyId string, ) *InlineObject186`
 
 NewInlineObject186 instantiates a new InlineObject186 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +28,95 @@ NewInlineObject186WithDefaults instantiates a new InlineObject186 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject186) GetEnabled() bool`
+`func (o *InlineObject186) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject186) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject186) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject186) SetEnabled(v bool)`
+`func (o *InlineObject186) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject186) HasEnabled() bool`
+### GetPassphrase
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject186) GetPassphrase() string`
 
-### GetRanges
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-`func (o *InlineObject186) GetRanges() []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges`
+### GetPassphraseOk
 
-GetRanges returns the Ranges field if non-nil, zero value otherwise.
+`func (o *InlineObject186) GetPassphraseOk() (*string, bool)`
 
-### GetRangesOk
-
-`func (o *InlineObject186) GetRangesOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRanges, bool)`
-
-GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRanges
+### SetPassphrase
 
-`func (o *InlineObject186) SetRanges(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRanges)`
+`func (o *InlineObject186) SetPassphrase(v string)`
 
-SetRanges sets Ranges field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasRanges
+### HasPassphrase
 
-`func (o *InlineObject186) HasRanges() bool`
+`func (o *InlineObject186) HasPassphrase() bool`
 
-HasRanges returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetRangesInSeconds
+### GetGroupPolicyId
 
-`func (o *InlineObject186) GetRangesInSeconds() []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds`
+`func (o *InlineObject186) GetGroupPolicyId() string`
 
-GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetRangesInSecondsOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineObject186) GetRangesInSecondsOk() (*[]NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds, bool)`
+`func (o *InlineObject186) GetGroupPolicyIdOk() (*string, bool)`
 
-GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRangesInSeconds
+### SetGroupPolicyId
 
-`func (o *InlineObject186) SetRangesInSeconds(v []NetworksNetworkIdWirelessSsidsNumberSchedulesRangesInSeconds)`
+`func (o *InlineObject186) SetGroupPolicyId(v string)`
 
-SetRangesInSeconds sets RangesInSeconds field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasRangesInSeconds
 
-`func (o *InlineObject186) HasRangesInSeconds() bool`
+### GetExpiresAt
 
-HasRangesInSeconds returns a boolean if a field has been set.
+`func (o *InlineObject186) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineObject186) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineObject186) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineObject186) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

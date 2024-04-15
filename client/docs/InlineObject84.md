@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DevicePolicy** | **string** | The policy to assign. Can be &#39;Whitelisted&#39;, &#39;Blocked&#39;, &#39;Normal&#39; or &#39;Group policy&#39;. Required. | 
-**GroupPolicyId** | Pointer to **string** | [optional] If &#39;devicePolicy&#39; is set to &#39;Group policy&#39; this param is used to specify the group policy ID. | [optional] 
+**BandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular**](NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject84
 
-`func NewInlineObject84(devicePolicy string, ) *InlineObject84`
+`func NewInlineObject84() *InlineObject84`
 
 NewInlineObject84 instantiates a new InlineObject84 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,30 @@ NewInlineObject84WithDefaults instantiates a new InlineObject84 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevicePolicy
+### GetBandwidthLimits
 
-`func (o *InlineObject84) GetDevicePolicy() string`
+`func (o *InlineObject84) GetBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular`
 
-GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
+GetBandwidthLimits returns the BandwidthLimits field if non-nil, zero value otherwise.
 
-### GetDevicePolicyOk
+### GetBandwidthLimitsOk
 
-`func (o *InlineObject84) GetDevicePolicyOk() (*string, bool)`
+`func (o *InlineObject84) GetBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular, bool)`
 
-GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
+GetBandwidthLimitsOk returns a tuple with the BandwidthLimits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevicePolicy
+### SetBandwidthLimits
 
-`func (o *InlineObject84) SetDevicePolicy(v string)`
+`func (o *InlineObject84) SetBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellular)`
 
-SetDevicePolicy sets DevicePolicy field to given value.
+SetBandwidthLimits sets BandwidthLimits field to given value.
 
+### HasBandwidthLimits
 
-### GetGroupPolicyId
+`func (o *InlineObject84) HasBandwidthLimits() bool`
 
-`func (o *InlineObject84) GetGroupPolicyId() string`
-
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
-
-### GetGroupPolicyIdOk
-
-`func (o *InlineObject84) GetGroupPolicyIdOk() (*string, bool)`
-
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupPolicyId
-
-`func (o *InlineObject84) SetGroupPolicyId(v string)`
-
-SetGroupPolicyId sets GroupPolicyId field to given value.
-
-### HasGroupPolicyId
-
-`func (o *InlineObject84) HasGroupPolicyId() bool`
-
-HasGroupPolicyId returns a boolean if a field has been set.
+HasBandwidthLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

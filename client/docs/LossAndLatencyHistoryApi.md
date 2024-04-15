@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceLossAndLatencyHistory
 
-> []map[string]interface{} GetDeviceLossAndLatencyHistory(ctx, serial).Ip(ip).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Uplink(uplink).Execute()
+> []InlineResponse20026 GetDeviceLossAndLatencyHistory(ctx, serial).Ip(ip).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Uplink(uplink).Execute()
 
 Get the uplink loss percentage and latency in milliseconds, and goodput in kilobits per second for MX, MG and Z devices.
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LossAndLatencyHistoryApi.GetDeviceLossAndLatencyHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLossAndLatencyHistory`: []map[string]interface{}
+    // response from `GetDeviceLossAndLatencyHistory`: []InlineResponse20026
     fmt.Fprintf(os.Stdout, "Response from `LossAndLatencyHistoryApi.GetDeviceLossAndLatencyHistory`: %v\n", resp)
 }
 ```
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 

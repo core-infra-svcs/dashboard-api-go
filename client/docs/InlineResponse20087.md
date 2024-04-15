@@ -4,17 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | device ID | [optional] 
-**SsidName** | Pointer to **string** | SSID name | [optional] 
-**Name** | Pointer to **string** | device name | [optional] 
-**Scope** | Pointer to **string** | scope | [optional] 
-**Tags** | Pointer to **[]string** | device tags | [optional] 
-**TimeboundType** | Pointer to **string** | type of access period, either a static range or a dynamic period | [optional] 
-**SendExpirationEmails** | Pointer to **bool** | Send Email Notifications | [optional] 
-**NotifyTimeBeforeAccessEnds** | Pointer to **int32** | Time before access expiration reminder email sends | [optional] 
-**AdditionalEmailText** | Pointer to **string** | Optional email text | [optional] 
-**AccessStartAt** | Pointer to **time.Time** | time that access starts | [optional] 
-**AccessEndAt** | Pointer to **time.Time** | time that access ends | [optional] 
+**UpgradeWindow** | Pointer to [**InlineResponse20087UpgradeWindow**](InlineResponse20087UpgradeWindow.md) |  | [optional] 
+**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
+**Products** | Pointer to [**InlineResponse20087Products**](InlineResponse20087Products.md) |  | [optional] 
 
 ## Methods
 
@@ -35,280 +27,80 @@ NewInlineResponse20087WithDefaults instantiates a new InlineResponse20087 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetUpgradeWindow
 
-`func (o *InlineResponse20087) GetId() string`
+`func (o *InlineResponse20087) GetUpgradeWindow() InlineResponse20087UpgradeWindow`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetUpgradeWindowOk
 
-`func (o *InlineResponse20087) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20087) GetUpgradeWindowOk() (*InlineResponse20087UpgradeWindow, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetUpgradeWindow
 
-`func (o *InlineResponse20087) SetId(v string)`
+`func (o *InlineResponse20087) SetUpgradeWindow(v InlineResponse20087UpgradeWindow)`
 
-SetId sets Id field to given value.
+SetUpgradeWindow sets UpgradeWindow field to given value.
 
-### HasId
+### HasUpgradeWindow
 
-`func (o *InlineResponse20087) HasId() bool`
+`func (o *InlineResponse20087) HasUpgradeWindow() bool`
 
-HasId returns a boolean if a field has been set.
+HasUpgradeWindow returns a boolean if a field has been set.
 
-### GetSsidName
+### GetTimezone
 
-`func (o *InlineResponse20087) GetSsidName() string`
+`func (o *InlineResponse20087) GetTimezone() string`
 
-GetSsidName returns the SsidName field if non-nil, zero value otherwise.
+GetTimezone returns the Timezone field if non-nil, zero value otherwise.
 
-### GetSsidNameOk
+### GetTimezoneOk
 
-`func (o *InlineResponse20087) GetSsidNameOk() (*string, bool)`
+`func (o *InlineResponse20087) GetTimezoneOk() (*string, bool)`
 
-GetSsidNameOk returns a tuple with the SsidName field if it's non-nil, zero value otherwise
+GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsidName
+### SetTimezone
 
-`func (o *InlineResponse20087) SetSsidName(v string)`
+`func (o *InlineResponse20087) SetTimezone(v string)`
 
-SetSsidName sets SsidName field to given value.
+SetTimezone sets Timezone field to given value.
 
-### HasSsidName
+### HasTimezone
 
-`func (o *InlineResponse20087) HasSsidName() bool`
+`func (o *InlineResponse20087) HasTimezone() bool`
 
-HasSsidName returns a boolean if a field has been set.
+HasTimezone returns a boolean if a field has been set.
 
-### GetName
+### GetProducts
 
-`func (o *InlineResponse20087) GetName() string`
+`func (o *InlineResponse20087) GetProducts() InlineResponse20087Products`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetProducts returns the Products field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetProductsOk
 
-`func (o *InlineResponse20087) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20087) GetProductsOk() (*InlineResponse20087Products, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetProducts
 
-`func (o *InlineResponse20087) SetName(v string)`
+`func (o *InlineResponse20087) SetProducts(v InlineResponse20087Products)`
 
-SetName sets Name field to given value.
+SetProducts sets Products field to given value.
 
-### HasName
+### HasProducts
 
-`func (o *InlineResponse20087) HasName() bool`
+`func (o *InlineResponse20087) HasProducts() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineResponse20087) GetScope() string`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineResponse20087) GetScopeOk() (*string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineResponse20087) SetScope(v string)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineResponse20087) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse20087) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse20087) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse20087) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse20087) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetTimeboundType
-
-`func (o *InlineResponse20087) GetTimeboundType() string`
-
-GetTimeboundType returns the TimeboundType field if non-nil, zero value otherwise.
-
-### GetTimeboundTypeOk
-
-`func (o *InlineResponse20087) GetTimeboundTypeOk() (*string, bool)`
-
-GetTimeboundTypeOk returns a tuple with the TimeboundType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeboundType
-
-`func (o *InlineResponse20087) SetTimeboundType(v string)`
-
-SetTimeboundType sets TimeboundType field to given value.
-
-### HasTimeboundType
-
-`func (o *InlineResponse20087) HasTimeboundType() bool`
-
-HasTimeboundType returns a boolean if a field has been set.
-
-### GetSendExpirationEmails
-
-`func (o *InlineResponse20087) GetSendExpirationEmails() bool`
-
-GetSendExpirationEmails returns the SendExpirationEmails field if non-nil, zero value otherwise.
-
-### GetSendExpirationEmailsOk
-
-`func (o *InlineResponse20087) GetSendExpirationEmailsOk() (*bool, bool)`
-
-GetSendExpirationEmailsOk returns a tuple with the SendExpirationEmails field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSendExpirationEmails
-
-`func (o *InlineResponse20087) SetSendExpirationEmails(v bool)`
-
-SetSendExpirationEmails sets SendExpirationEmails field to given value.
-
-### HasSendExpirationEmails
-
-`func (o *InlineResponse20087) HasSendExpirationEmails() bool`
-
-HasSendExpirationEmails returns a boolean if a field has been set.
-
-### GetNotifyTimeBeforeAccessEnds
-
-`func (o *InlineResponse20087) GetNotifyTimeBeforeAccessEnds() int32`
-
-GetNotifyTimeBeforeAccessEnds returns the NotifyTimeBeforeAccessEnds field if non-nil, zero value otherwise.
-
-### GetNotifyTimeBeforeAccessEndsOk
-
-`func (o *InlineResponse20087) GetNotifyTimeBeforeAccessEndsOk() (*int32, bool)`
-
-GetNotifyTimeBeforeAccessEndsOk returns a tuple with the NotifyTimeBeforeAccessEnds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotifyTimeBeforeAccessEnds
-
-`func (o *InlineResponse20087) SetNotifyTimeBeforeAccessEnds(v int32)`
-
-SetNotifyTimeBeforeAccessEnds sets NotifyTimeBeforeAccessEnds field to given value.
-
-### HasNotifyTimeBeforeAccessEnds
-
-`func (o *InlineResponse20087) HasNotifyTimeBeforeAccessEnds() bool`
-
-HasNotifyTimeBeforeAccessEnds returns a boolean if a field has been set.
-
-### GetAdditionalEmailText
-
-`func (o *InlineResponse20087) GetAdditionalEmailText() string`
-
-GetAdditionalEmailText returns the AdditionalEmailText field if non-nil, zero value otherwise.
-
-### GetAdditionalEmailTextOk
-
-`func (o *InlineResponse20087) GetAdditionalEmailTextOk() (*string, bool)`
-
-GetAdditionalEmailTextOk returns a tuple with the AdditionalEmailText field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdditionalEmailText
-
-`func (o *InlineResponse20087) SetAdditionalEmailText(v string)`
-
-SetAdditionalEmailText sets AdditionalEmailText field to given value.
-
-### HasAdditionalEmailText
-
-`func (o *InlineResponse20087) HasAdditionalEmailText() bool`
-
-HasAdditionalEmailText returns a boolean if a field has been set.
-
-### GetAccessStartAt
-
-`func (o *InlineResponse20087) GetAccessStartAt() time.Time`
-
-GetAccessStartAt returns the AccessStartAt field if non-nil, zero value otherwise.
-
-### GetAccessStartAtOk
-
-`func (o *InlineResponse20087) GetAccessStartAtOk() (*time.Time, bool)`
-
-GetAccessStartAtOk returns a tuple with the AccessStartAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessStartAt
-
-`func (o *InlineResponse20087) SetAccessStartAt(v time.Time)`
-
-SetAccessStartAt sets AccessStartAt field to given value.
-
-### HasAccessStartAt
-
-`func (o *InlineResponse20087) HasAccessStartAt() bool`
-
-HasAccessStartAt returns a boolean if a field has been set.
-
-### GetAccessEndAt
-
-`func (o *InlineResponse20087) GetAccessEndAt() time.Time`
-
-GetAccessEndAt returns the AccessEndAt field if non-nil, zero value otherwise.
-
-### GetAccessEndAtOk
-
-`func (o *InlineResponse20087) GetAccessEndAtOk() (*time.Time, bool)`
-
-GetAccessEndAtOk returns a tuple with the AccessEndAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessEndAt
-
-`func (o *InlineResponse20087) SetAccessEndAt(v time.Time)`
-
-SetAccessEndAt sets AccessEndAt field to given value.
-
-### HasAccessEndAt
-
-`func (o *InlineResponse20087) HasAccessEndAt() bool`
-
-HasAccessEndAt returns a boolean if a field has been set.
+HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The device MAC address. | [optional] 
-**Name** | Pointer to **string** | The device name. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesNetwork.md) |  | [optional] 
-**ProductType** | Pointer to **string** | Device product type. | [optional] 
-**Serial** | Pointer to **string** | The device serial number. | [optional] 
-**Status** | Pointer to **string** | Status of the device. Possible values are: online, alerting, offline, dormant. | [optional] 
-**Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
+**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
+**CustomPieChartItems** | Pointer to [**[]InlineResponse200159CustomPieChartItems**](InlineResponse200159CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
 
 ## Methods
 
@@ -31,180 +26,55 @@ NewInlineResponse200159WithDefaults instantiates a new InlineResponse200159 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetMode
 
-`func (o *InlineResponse200159) GetMac() string`
+`func (o *InlineResponse200159) GetMode() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetModeOk
 
-`func (o *InlineResponse200159) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200159) GetModeOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetMode
 
-`func (o *InlineResponse200159) SetMac(v string)`
+`func (o *InlineResponse200159) SetMode(v string)`
 
-SetMac sets Mac field to given value.
+SetMode sets Mode field to given value.
 
-### HasMac
+### HasMode
 
-`func (o *InlineResponse200159) HasMac() bool`
+`func (o *InlineResponse200159) HasMode() bool`
 
-HasMac returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetName
+### GetCustomPieChartItems
 
-`func (o *InlineResponse200159) GetName() string`
+`func (o *InlineResponse200159) GetCustomPieChartItems() []InlineResponse200159CustomPieChartItems`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCustomPieChartItemsOk
 
-`func (o *InlineResponse200159) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200159) GetCustomPieChartItemsOk() (*[]InlineResponse200159CustomPieChartItems, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCustomPieChartItems
 
-`func (o *InlineResponse200159) SetName(v string)`
+`func (o *InlineResponse200159) SetCustomPieChartItems(v []InlineResponse200159CustomPieChartItems)`
 
-SetName sets Name field to given value.
+SetCustomPieChartItems sets CustomPieChartItems field to given value.
 
-### HasName
+### HasCustomPieChartItems
 
-`func (o *InlineResponse200159) HasName() bool`
+`func (o *InlineResponse200159) HasCustomPieChartItems() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200159) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200159) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200159) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200159) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetProductType
-
-`func (o *InlineResponse200159) GetProductType() string`
-
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
-
-### GetProductTypeOk
-
-`func (o *InlineResponse200159) GetProductTypeOk() (*string, bool)`
-
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductType
-
-`func (o *InlineResponse200159) SetProductType(v string)`
-
-SetProductType sets ProductType field to given value.
-
-### HasProductType
-
-`func (o *InlineResponse200159) HasProductType() bool`
-
-HasProductType returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200159) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200159) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200159) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200159) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200159) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200159) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200159) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200159) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200159) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200159) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200159) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200159) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
-**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
-**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
-**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
+**Id** | Pointer to **string** | The ID for the link aggregation. | [optional] 
+**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | The ID for the link aggregation. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200145WithDefaults instantiates a new InlineResponse200145 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetId
 
-`func (o *InlineResponse200145) GetName() string`
+`func (o *InlineResponse200145) GetId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetIdOk
 
-`func (o *InlineResponse200145) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200145) GetIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetId
 
-`func (o *InlineResponse200145) SetName(v string)`
+`func (o *InlineResponse200145) SetId(v string)`
 
-SetName sets Name field to given value.
+SetId sets Id field to given value.
 
-### HasName
+### HasId
 
-`func (o *InlineResponse200145) HasName() bool`
+`func (o *InlineResponse200145) HasId() bool`
 
-HasName returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetEnabled
+### GetSwitchPorts
 
-`func (o *InlineResponse200145) GetEnabled() bool`
+`func (o *InlineResponse200145) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetSwitchPortsOk
 
-`func (o *InlineResponse200145) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200145) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetSwitchPorts
 
-`func (o *InlineResponse200145) SetEnabled(v bool)`
+`func (o *InlineResponse200145) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
 
-SetEnabled sets Enabled field to given value.
+SetSwitchPorts sets SwitchPorts field to given value.
 
-### HasEnabled
+### HasSwitchPorts
 
-`func (o *InlineResponse200145) HasEnabled() bool`
+`func (o *InlineResponse200145) HasSwitchPorts() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetAdminSettings
-
-`func (o *InlineResponse200145) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
-
-GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
-
-### GetAdminSettingsOk
-
-`func (o *InlineResponse200145) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
-
-GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdminSettings
-
-`func (o *InlineResponse200145) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
-
-SetAdminSettings sets AdminSettings field to given value.
-
-### HasAdminSettings
-
-`func (o *InlineResponse200145) HasAdminSettings() bool`
-
-HasAdminSettings returns a boolean if a field has been set.
-
-### GetHelpSettings
-
-`func (o *InlineResponse200145) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
-
-GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
-
-### GetHelpSettingsOk
-
-`func (o *InlineResponse200145) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
-
-GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHelpSettings
-
-`func (o *InlineResponse200145) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
-
-SetHelpSettings sets HelpSettings field to given value.
-
-### HasHelpSettings
-
-`func (o *InlineResponse200145) HasHelpSettings() bool`
-
-HasHelpSettings returns a boolean if a field has been set.
-
-### GetCustomLogo
-
-`func (o *InlineResponse200145) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
-
-GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
-
-### GetCustomLogoOk
-
-`func (o *InlineResponse200145) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
-
-GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCustomLogo
-
-`func (o *InlineResponse200145) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
-
-SetCustomLogo sets CustomLogo field to given value.
-
-### HasCustomLogo
-
-`func (o *InlineResponse200145) HasCustomLogo() bool`
-
-HasCustomLogo returns a boolean if a field has been set.
+HasSwitchPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

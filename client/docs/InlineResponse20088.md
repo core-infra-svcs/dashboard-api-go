@@ -4,14 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | device ID | [optional] 
-**Name** | Pointer to **string** | device name | [optional] 
-**SystemType** | Pointer to **string** | system type | [optional] 
-**Mac** | Pointer to **string** | mac address | [optional] 
-**Username** | Pointer to **string** | username | [optional] 
-**Email** | Pointer to **string** | user email | [optional] 
-**Tags** | Pointer to **[]string** | device tags | [optional] 
-**TrustedAccessConnections** | Pointer to [**[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections**](NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections.md) | Array of trusted access configs | [optional] 
+**Product** | Pointer to **string** | Product type to rollback (if the network is a combined network) | [optional] 
+**Status** | Pointer to **string** | Status of the rollback | [optional] 
+**UpgradeBatchId** | Pointer to **string** | Batch ID of the firmware rollback | [optional] 
+**Time** | Pointer to **time.Time** | Scheduled time for the rollback | [optional] 
+**ToVersion** | Pointer to [**InlineResponse20088ToVersion**](InlineResponse20088ToVersion.md) |  | [optional] 
+**Reasons** | Pointer to [**[]InlineResponse20088Reasons**](InlineResponse20088Reasons.md) | Reasons for the rollback | [optional] 
 
 ## Methods
 
@@ -32,205 +30,155 @@ NewInlineResponse20088WithDefaults instantiates a new InlineResponse20088 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetProduct
 
-`func (o *InlineResponse20088) GetId() string`
+`func (o *InlineResponse20088) GetProduct() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetProduct returns the Product field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetProductOk
 
-`func (o *InlineResponse20088) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20088) GetProductOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetProductOk returns a tuple with the Product field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetProduct
 
-`func (o *InlineResponse20088) SetId(v string)`
+`func (o *InlineResponse20088) SetProduct(v string)`
 
-SetId sets Id field to given value.
+SetProduct sets Product field to given value.
 
-### HasId
+### HasProduct
 
-`func (o *InlineResponse20088) HasId() bool`
+`func (o *InlineResponse20088) HasProduct() bool`
 
-HasId returns a boolean if a field has been set.
+HasProduct returns a boolean if a field has been set.
 
-### GetName
+### GetStatus
 
-`func (o *InlineResponse20088) GetName() string`
+`func (o *InlineResponse20088) GetStatus() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStatusOk
 
-`func (o *InlineResponse20088) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20088) GetStatusOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStatus
 
-`func (o *InlineResponse20088) SetName(v string)`
+`func (o *InlineResponse20088) SetStatus(v string)`
 
-SetName sets Name field to given value.
+SetStatus sets Status field to given value.
 
-### HasName
+### HasStatus
 
-`func (o *InlineResponse20088) HasName() bool`
+`func (o *InlineResponse20088) HasStatus() bool`
 
-HasName returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetSystemType
+### GetUpgradeBatchId
 
-`func (o *InlineResponse20088) GetSystemType() string`
+`func (o *InlineResponse20088) GetUpgradeBatchId() string`
 
-GetSystemType returns the SystemType field if non-nil, zero value otherwise.
+GetUpgradeBatchId returns the UpgradeBatchId field if non-nil, zero value otherwise.
 
-### GetSystemTypeOk
+### GetUpgradeBatchIdOk
 
-`func (o *InlineResponse20088) GetSystemTypeOk() (*string, bool)`
+`func (o *InlineResponse20088) GetUpgradeBatchIdOk() (*string, bool)`
 
-GetSystemTypeOk returns a tuple with the SystemType field if it's non-nil, zero value otherwise
+GetUpgradeBatchIdOk returns a tuple with the UpgradeBatchId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSystemType
+### SetUpgradeBatchId
 
-`func (o *InlineResponse20088) SetSystemType(v string)`
+`func (o *InlineResponse20088) SetUpgradeBatchId(v string)`
 
-SetSystemType sets SystemType field to given value.
+SetUpgradeBatchId sets UpgradeBatchId field to given value.
 
-### HasSystemType
+### HasUpgradeBatchId
 
-`func (o *InlineResponse20088) HasSystemType() bool`
+`func (o *InlineResponse20088) HasUpgradeBatchId() bool`
 
-HasSystemType returns a boolean if a field has been set.
+HasUpgradeBatchId returns a boolean if a field has been set.
 
-### GetMac
+### GetTime
 
-`func (o *InlineResponse20088) GetMac() string`
+`func (o *InlineResponse20088) GetTime() time.Time`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetTime returns the Time field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetTimeOk
 
-`func (o *InlineResponse20088) GetMacOk() (*string, bool)`
+`func (o *InlineResponse20088) GetTimeOk() (*time.Time, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetTime
 
-`func (o *InlineResponse20088) SetMac(v string)`
+`func (o *InlineResponse20088) SetTime(v time.Time)`
 
-SetMac sets Mac field to given value.
+SetTime sets Time field to given value.
 
-### HasMac
+### HasTime
 
-`func (o *InlineResponse20088) HasMac() bool`
+`func (o *InlineResponse20088) HasTime() bool`
 
-HasMac returns a boolean if a field has been set.
+HasTime returns a boolean if a field has been set.
 
-### GetUsername
+### GetToVersion
 
-`func (o *InlineResponse20088) GetUsername() string`
+`func (o *InlineResponse20088) GetToVersion() InlineResponse20088ToVersion`
 
-GetUsername returns the Username field if non-nil, zero value otherwise.
+GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
 
-### GetUsernameOk
+### GetToVersionOk
 
-`func (o *InlineResponse20088) GetUsernameOk() (*string, bool)`
+`func (o *InlineResponse20088) GetToVersionOk() (*InlineResponse20088ToVersion, bool)`
 
-GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsername
+### SetToVersion
 
-`func (o *InlineResponse20088) SetUsername(v string)`
+`func (o *InlineResponse20088) SetToVersion(v InlineResponse20088ToVersion)`
 
-SetUsername sets Username field to given value.
+SetToVersion sets ToVersion field to given value.
 
-### HasUsername
+### HasToVersion
 
-`func (o *InlineResponse20088) HasUsername() bool`
+`func (o *InlineResponse20088) HasToVersion() bool`
 
-HasUsername returns a boolean if a field has been set.
+HasToVersion returns a boolean if a field has been set.
 
-### GetEmail
+### GetReasons
 
-`func (o *InlineResponse20088) GetEmail() string`
+`func (o *InlineResponse20088) GetReasons() []InlineResponse20088Reasons`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetReasons returns the Reasons field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetReasonsOk
 
-`func (o *InlineResponse20088) GetEmailOk() (*string, bool)`
+`func (o *InlineResponse20088) GetReasonsOk() (*[]InlineResponse20088Reasons, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetReasons
 
-`func (o *InlineResponse20088) SetEmail(v string)`
+`func (o *InlineResponse20088) SetReasons(v []InlineResponse20088Reasons)`
 
-SetEmail sets Email field to given value.
+SetReasons sets Reasons field to given value.
 
-### HasEmail
+### HasReasons
 
-`func (o *InlineResponse20088) HasEmail() bool`
+`func (o *InlineResponse20088) HasReasons() bool`
 
-HasEmail returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse20088) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse20088) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse20088) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse20088) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetTrustedAccessConnections
-
-`func (o *InlineResponse20088) GetTrustedAccessConnections() []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections`
-
-GetTrustedAccessConnections returns the TrustedAccessConnections field if non-nil, zero value otherwise.
-
-### GetTrustedAccessConnectionsOk
-
-`func (o *InlineResponse20088) GetTrustedAccessConnectionsOk() (*[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections, bool)`
-
-GetTrustedAccessConnectionsOk returns a tuple with the TrustedAccessConnections field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTrustedAccessConnections
-
-`func (o *InlineResponse20088) SetTrustedAccessConnections(v []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections)`
-
-SetTrustedAccessConnections sets TrustedAccessConnections field to given value.
-
-### HasTrustedAccessConnections
-
-`func (o *InlineResponse20088) HasTrustedAccessConnections() bool`
-
-HasTrustedAccessConnections returns a boolean if a field has been set.
+HasReasons returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

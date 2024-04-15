@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse20044Counts**](InlineResponse20044Counts.md) |  | [optional] 
-**Usages** | Pointer to [**InlineResponse20044Usages**](InlineResponse20044Usages.md) |  | [optional] 
+**DefaultDestinations** | Pointer to [**InlineResponse20044DefaultDestinations**](InlineResponse20044DefaultDestinations.md) |  | [optional] 
+**Alerts** | Pointer to [**[]InlineResponse20044Alerts**](InlineResponse20044Alerts.md) | Alert-specific configuration for each type. Only alerts that pertain to the network can be updated. | [optional] 
+**Muting** | Pointer to [**InlineResponse20044Muting**](InlineResponse20044Muting.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20044WithDefaults instantiates a new InlineResponse20044 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetDefaultDestinations
 
-`func (o *InlineResponse20044) GetCounts() InlineResponse20044Counts`
+`func (o *InlineResponse20044) GetDefaultDestinations() InlineResponse20044DefaultDestinations`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetDefaultDestinations returns the DefaultDestinations field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetDefaultDestinationsOk
 
-`func (o *InlineResponse20044) GetCountsOk() (*InlineResponse20044Counts, bool)`
+`func (o *InlineResponse20044) GetDefaultDestinationsOk() (*InlineResponse20044DefaultDestinations, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetDefaultDestinationsOk returns a tuple with the DefaultDestinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetDefaultDestinations
 
-`func (o *InlineResponse20044) SetCounts(v InlineResponse20044Counts)`
+`func (o *InlineResponse20044) SetDefaultDestinations(v InlineResponse20044DefaultDestinations)`
 
-SetCounts sets Counts field to given value.
+SetDefaultDestinations sets DefaultDestinations field to given value.
 
-### HasCounts
+### HasDefaultDestinations
 
-`func (o *InlineResponse20044) HasCounts() bool`
+`func (o *InlineResponse20044) HasDefaultDestinations() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasDefaultDestinations returns a boolean if a field has been set.
 
-### GetUsages
+### GetAlerts
 
-`func (o *InlineResponse20044) GetUsages() InlineResponse20044Usages`
+`func (o *InlineResponse20044) GetAlerts() []InlineResponse20044Alerts`
 
-GetUsages returns the Usages field if non-nil, zero value otherwise.
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
 
-### GetUsagesOk
+### GetAlertsOk
 
-`func (o *InlineResponse20044) GetUsagesOk() (*InlineResponse20044Usages, bool)`
+`func (o *InlineResponse20044) GetAlertsOk() (*[]InlineResponse20044Alerts, bool)`
 
-GetUsagesOk returns a tuple with the Usages field if it's non-nil, zero value otherwise
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsages
+### SetAlerts
 
-`func (o *InlineResponse20044) SetUsages(v InlineResponse20044Usages)`
+`func (o *InlineResponse20044) SetAlerts(v []InlineResponse20044Alerts)`
 
-SetUsages sets Usages field to given value.
+SetAlerts sets Alerts field to given value.
 
-### HasUsages
+### HasAlerts
 
-`func (o *InlineResponse20044) HasUsages() bool`
+`func (o *InlineResponse20044) HasAlerts() bool`
 
-HasUsages returns a boolean if a field has been set.
+HasAlerts returns a boolean if a field has been set.
+
+### GetMuting
+
+`func (o *InlineResponse20044) GetMuting() InlineResponse20044Muting`
+
+GetMuting returns the Muting field if non-nil, zero value otherwise.
+
+### GetMutingOk
+
+`func (o *InlineResponse20044) GetMutingOk() (*InlineResponse20044Muting, bool)`
+
+GetMutingOk returns a tuple with the Muting field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMuting
+
+`func (o *InlineResponse20044) SetMuting(v InlineResponse20044Muting)`
+
+SetMuting sets Muting field to given value.
+
+### HasMuting
+
+`func (o *InlineResponse20044) HasMuting() bool`
+
+HasMuting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

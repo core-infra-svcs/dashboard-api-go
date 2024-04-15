@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**InlineResponse200203Example**](InlineResponse200203Example.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the access period | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the access period | [optional] 
+**Counts** | Pointer to [**[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts**](OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts.md) | list of response codes and a count of how many requests had that code in the given time period | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200203WithDefaults instantiates a new InlineResponse200203 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetStartTs
 
-`func (o *InlineResponse200203) GetAlertTypeId() string`
+`func (o *InlineResponse200203) GetStartTs() time.Time`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse200203) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200203) GetStartTsOk() (*time.Time, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetStartTs
 
-`func (o *InlineResponse200203) SetAlertTypeId(v string)`
+`func (o *InlineResponse200203) SetStartTs(v time.Time)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasAlertTypeId
+### HasStartTs
 
-`func (o *InlineResponse200203) HasAlertTypeId() bool`
+`func (o *InlineResponse200203) HasStartTs() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetAlertType
+### GetEndTs
 
-`func (o *InlineResponse200203) GetAlertType() string`
+`func (o *InlineResponse200203) GetEndTs() time.Time`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetEndTsOk
 
-`func (o *InlineResponse200203) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200203) GetEndTsOk() (*time.Time, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetEndTs
 
-`func (o *InlineResponse200203) SetAlertType(v string)`
+`func (o *InlineResponse200203) SetEndTs(v time.Time)`
 
-SetAlertType sets AlertType field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasAlertType
+### HasEndTs
 
-`func (o *InlineResponse200203) HasAlertType() bool`
+`func (o *InlineResponse200203) HasEndTs() bool`
 
-HasAlertType returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetExample
+### GetCounts
 
-`func (o *InlineResponse200203) GetExample() InlineResponse200203Example`
+`func (o *InlineResponse200203) GetCounts() []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts`
 
-GetExample returns the Example field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetExampleOk
+### GetCountsOk
 
-`func (o *InlineResponse200203) GetExampleOk() (*InlineResponse200203Example, bool)`
+`func (o *InlineResponse200203) GetCountsOk() (*[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts, bool)`
 
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExample
+### SetCounts
 
-`func (o *InlineResponse200203) SetExample(v InlineResponse200203Example)`
+`func (o *InlineResponse200203) SetCounts(v []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts)`
 
-SetExample sets Example field to given value.
+SetCounts sets Counts field to given value.
 
-### HasExample
+### HasCounts
 
-`func (o *InlineResponse200203) HasExample() bool`
+`func (o *InlineResponse200203) HasCounts() bool`
 
-HasExample returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

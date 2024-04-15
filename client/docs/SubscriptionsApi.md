@@ -258,7 +258,7 @@ import (
 )
 
 func main() {
-    organizationIds := []string{"Inner_example"} // []string | Organizations to get subscription compliance information for (optional)
+    organizationIds := []string{"Inner_example"} // []string | Organizations to get subscription compliance information for
     subscriptionIds := []string{"Inner_example"} // []string | Subscription ids (optional)
 
     configuration := openapiclient.NewConfiguration()

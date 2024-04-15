@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
-**RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
-**LocalStatusPage** | Pointer to [**NetworksNetworkIdSettingsLocalStatusPage**](NetworksNetworkIdSettingsLocalStatusPage.md) |  | [optional] 
-**SecurePort** | Pointer to [**InlineResponse20066SecurePort**](InlineResponse20066SecurePort.md) |  | [optional] 
-**NamedVlans** | Pointer to [**NetworksNetworkIdSettingsNamedVlans**](NetworksNetworkIdSettingsNamedVlans.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
+**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
+**Conditions** | Pointer to [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | [optional] 
+**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineObject110WithDefaults instantiates a new InlineObject110 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLocalStatusPageEnabled
+### GetName
 
-`func (o *InlineObject110) GetLocalStatusPageEnabled() bool`
+`func (o *InlineObject110) GetName() string`
 
-GetLocalStatusPageEnabled returns the LocalStatusPageEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageEnabledOk
+### GetNameOk
 
-`func (o *InlineObject110) GetLocalStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineObject110) GetNameOk() (*string, bool)`
 
-GetLocalStatusPageEnabledOk returns a tuple with the LocalStatusPageEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPageEnabled
+### SetName
 
-`func (o *InlineObject110) SetLocalStatusPageEnabled(v bool)`
+`func (o *InlineObject110) SetName(v string)`
 
-SetLocalStatusPageEnabled sets LocalStatusPageEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasLocalStatusPageEnabled
+### HasName
 
-`func (o *InlineObject110) HasLocalStatusPageEnabled() bool`
+`func (o *InlineObject110) HasName() bool`
 
-HasLocalStatusPageEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRemoteStatusPageEnabled
+### GetSchedule
 
-`func (o *InlineObject110) GetRemoteStatusPageEnabled() bool`
+`func (o *InlineObject110) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule1`
 
-GetRemoteStatusPageEnabled returns the RemoteStatusPageEnabled field if non-nil, zero value otherwise.
+GetSchedule returns the Schedule field if non-nil, zero value otherwise.
 
-### GetRemoteStatusPageEnabledOk
+### GetScheduleOk
 
-`func (o *InlineObject110) GetRemoteStatusPageEnabledOk() (*bool, bool)`
+`func (o *InlineObject110) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule1, bool)`
 
-GetRemoteStatusPageEnabledOk returns a tuple with the RemoteStatusPageEnabled field if it's non-nil, zero value otherwise
+GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemoteStatusPageEnabled
+### SetSchedule
 
-`func (o *InlineObject110) SetRemoteStatusPageEnabled(v bool)`
+`func (o *InlineObject110) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule1)`
 
-SetRemoteStatusPageEnabled sets RemoteStatusPageEnabled field to given value.
+SetSchedule sets Schedule field to given value.
 
-### HasRemoteStatusPageEnabled
+### HasSchedule
 
-`func (o *InlineObject110) HasRemoteStatusPageEnabled() bool`
+`func (o *InlineObject110) HasSchedule() bool`
 
-HasRemoteStatusPageEnabled returns a boolean if a field has been set.
+HasSchedule returns a boolean if a field has been set.
 
-### GetLocalStatusPage
+### GetConditions
 
-`func (o *InlineObject110) GetLocalStatusPage() NetworksNetworkIdSettingsLocalStatusPage`
+`func (o *InlineObject110) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
 
-GetLocalStatusPage returns the LocalStatusPage field if non-nil, zero value otherwise.
+GetConditions returns the Conditions field if non-nil, zero value otherwise.
 
-### GetLocalStatusPageOk
+### GetConditionsOk
 
-`func (o *InlineObject110) GetLocalStatusPageOk() (*NetworksNetworkIdSettingsLocalStatusPage, bool)`
+`func (o *InlineObject110) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
 
-GetLocalStatusPageOk returns a tuple with the LocalStatusPage field if it's non-nil, zero value otherwise
+GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLocalStatusPage
+### SetConditions
 
-`func (o *InlineObject110) SetLocalStatusPage(v NetworksNetworkIdSettingsLocalStatusPage)`
+`func (o *InlineObject110) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
 
-SetLocalStatusPage sets LocalStatusPage field to given value.
+SetConditions sets Conditions field to given value.
 
-### HasLocalStatusPage
+### HasConditions
 
-`func (o *InlineObject110) HasLocalStatusPage() bool`
+`func (o *InlineObject110) HasConditions() bool`
 
-HasLocalStatusPage returns a boolean if a field has been set.
+HasConditions returns a boolean if a field has been set.
 
-### GetSecurePort
+### GetRecipients
 
-`func (o *InlineObject110) GetSecurePort() InlineResponse20066SecurePort`
+`func (o *InlineObject110) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
 
-GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
 
-### GetSecurePortOk
+### GetRecipientsOk
 
-`func (o *InlineObject110) GetSecurePortOk() (*InlineResponse20066SecurePort, bool)`
+`func (o *InlineObject110) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
 
-GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurePort
+### SetRecipients
 
-`func (o *InlineObject110) SetSecurePort(v InlineResponse20066SecurePort)`
+`func (o *InlineObject110) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
 
-SetSecurePort sets SecurePort field to given value.
+SetRecipients sets Recipients field to given value.
 
-### HasSecurePort
+### HasRecipients
 
-`func (o *InlineObject110) HasSecurePort() bool`
+`func (o *InlineObject110) HasRecipients() bool`
 
-HasSecurePort returns a boolean if a field has been set.
+HasRecipients returns a boolean if a field has been set.
 
-### GetNamedVlans
+### GetSerials
 
-`func (o *InlineObject110) GetNamedVlans() NetworksNetworkIdSettingsNamedVlans`
+`func (o *InlineObject110) GetSerials() []string`
 
-GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetNamedVlansOk
+### GetSerialsOk
 
-`func (o *InlineObject110) GetNamedVlansOk() (*NetworksNetworkIdSettingsNamedVlans, bool)`
+`func (o *InlineObject110) GetSerialsOk() (*[]string, bool)`
 
-GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNamedVlans
+### SetSerials
 
-`func (o *InlineObject110) SetNamedVlans(v NetworksNetworkIdSettingsNamedVlans)`
+`func (o *InlineObject110) SetSerials(v []string)`
 
-SetNamedVlans sets NamedVlans field to given value.
+SetSerials sets Serials field to given value.
 
-### HasNamedVlans
+### HasSerials
 
-`func (o *InlineObject110) HasNamedVlans() bool`
+`func (o *InlineObject110) HasSerials() bool`
 
-HasNamedVlans returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

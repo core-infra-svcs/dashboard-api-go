@@ -4,15 +4,15 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetDeviceCameraAnalyticsLive**](LiveApi.md#GetDeviceCameraAnalyticsLive) | **Get** /devices/{serial}/camera/analytics/live | Returns live state from camera of analytics zones
+[**GetDeviceCameraAnalyticsLive**](LiveApi.md#GetDeviceCameraAnalyticsLive) | **Get** /devices/{serial}/camera/analytics/live | Returns live state from camera analytics zones
 
 
 
 ## GetDeviceCameraAnalyticsLive
 
-> map[string]interface{} GetDeviceCameraAnalyticsLive(ctx, serial).Execute()
+> InlineResponse2008 GetDeviceCameraAnalyticsLive(ctx, serial).Execute()
 
-Returns live state from camera of analytics zones
+Returns live state from camera analytics zones
 
 
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveApi.GetDeviceCameraAnalyticsLive``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceCameraAnalyticsLive`: map[string]interface{}
+    // response from `GetDeviceCameraAnalyticsLive`: InlineResponse2008
     fmt.Fprintf(os.Stdout, "Response from `LiveApi.GetDeviceCameraAnalyticsLive`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse2008**](InlineResponse2008.md)
 
 ### Authorization
 

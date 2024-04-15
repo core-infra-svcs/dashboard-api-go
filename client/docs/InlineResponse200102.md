@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultSettings** | Pointer to [**InlineResponse200102DefaultSettings**](InlineResponse200102DefaultSettings.md) |  | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse200102Overrides**](InlineResponse200102Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**ClientId** | Pointer to **string** | ID of client | [optional] 
+**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200102WithDefaults instantiates a new InlineResponse200102 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultSettings
+### GetName
 
-`func (o *InlineResponse200102) GetDefaultSettings() InlineResponse200102DefaultSettings`
+`func (o *InlineResponse200102) GetName() string`
 
-GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultSettingsOk
+### GetNameOk
 
-`func (o *InlineResponse200102) GetDefaultSettingsOk() (*InlineResponse200102DefaultSettings, bool)`
+`func (o *InlineResponse200102) GetNameOk() (*string, bool)`
 
-GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultSettings
+### SetName
 
-`func (o *InlineResponse200102) SetDefaultSettings(v InlineResponse200102DefaultSettings)`
+`func (o *InlineResponse200102) SetName(v string)`
 
-SetDefaultSettings sets DefaultSettings field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultSettings
+### HasName
 
-`func (o *InlineResponse200102) HasDefaultSettings() bool`
+`func (o *InlineResponse200102) HasName() bool`
 
-HasDefaultSettings returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetOverrides
+### GetClientId
 
-`func (o *InlineResponse200102) GetOverrides() []InlineResponse200102Overrides`
+`func (o *InlineResponse200102) GetClientId() string`
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetOverridesOk
+### GetClientIdOk
 
-`func (o *InlineResponse200102) GetOverridesOk() (*[]InlineResponse200102Overrides, bool)`
+`func (o *InlineResponse200102) GetClientIdOk() (*string, bool)`
 
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetClientId
 
-`func (o *InlineResponse200102) SetOverrides(v []InlineResponse200102Overrides)`
+`func (o *InlineResponse200102) SetClientId(v string)`
 
-SetOverrides sets Overrides field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasOverrides
+### HasClientId
 
-`func (o *InlineResponse200102) HasOverrides() bool`
+`func (o *InlineResponse200102) HasClientId() bool`
 
-HasOverrides returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
+
+### GetAssigned
+
+`func (o *InlineResponse200102) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+
+### GetAssignedOk
+
+`func (o *InlineResponse200102) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssigned
+
+`func (o *InlineResponse200102) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+
+SetAssigned sets Assigned field to given value.
+
+### HasAssigned
+
+`func (o *InlineResponse200102) HasAssigned() bool`
+
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

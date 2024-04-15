@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ports** | Pointer to **[]string** | List of switch ports | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20017Rules**](InlineResponse20017Rules.md) | An array of port forwarding params | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20017WithDefaults instantiates a new InlineResponse20017 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPorts
+### GetRules
 
-`func (o *InlineResponse20017) GetPorts() []string`
+`func (o *InlineResponse20017) GetRules() []InlineResponse20017Rules`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetRulesOk
 
-`func (o *InlineResponse20017) GetPortsOk() (*[]string, bool)`
+`func (o *InlineResponse20017) GetRulesOk() (*[]InlineResponse20017Rules, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetRules
 
-`func (o *InlineResponse20017) SetPorts(v []string)`
+`func (o *InlineResponse20017) SetRules(v []InlineResponse20017Rules)`
 
-SetPorts sets Ports field to given value.
+SetRules sets Rules field to given value.
 
-### HasPorts
+### HasRules
 
-`func (o *InlineResponse20017) HasPorts() bool`
+`func (o *InlineResponse20017) HasRules() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

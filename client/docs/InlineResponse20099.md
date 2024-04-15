@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse20099Overrides**](InlineResponse20099Overrides.md) | Override MTU size for individual switches or switch templates.       An empty array will clear overrides. | [optional] 
+**Serial** | Pointer to **string** | Device serial | [optional] 
+**Model** | Pointer to **string** | Device model. | [optional] 
+**Tags** | Pointer to **string** | Device tags. | [optional] 
+**Wifi0** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for first wifi radio of device. | [optional] 
+**Wifi1** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for second wifi radio of device. | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse20099WithDefaults instantiates a new InlineResponse20099 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultMtuSize
+### GetSerial
 
-`func (o *InlineResponse20099) GetDefaultMtuSize() int32`
+`func (o *InlineResponse20099) GetSerial() string`
 
-GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetDefaultMtuSizeOk
+### GetSerialOk
 
-`func (o *InlineResponse20099) GetDefaultMtuSizeOk() (*int32, bool)`
+`func (o *InlineResponse20099) GetSerialOk() (*string, bool)`
 
-GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultMtuSize
+### SetSerial
 
-`func (o *InlineResponse20099) SetDefaultMtuSize(v int32)`
+`func (o *InlineResponse20099) SetSerial(v string)`
 
-SetDefaultMtuSize sets DefaultMtuSize field to given value.
+SetSerial sets Serial field to given value.
 
-### HasDefaultMtuSize
+### HasSerial
 
-`func (o *InlineResponse20099) HasDefaultMtuSize() bool`
+`func (o *InlineResponse20099) HasSerial() bool`
 
-HasDefaultMtuSize returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetOverrides
+### GetModel
 
-`func (o *InlineResponse20099) GetOverrides() []InlineResponse20099Overrides`
+`func (o *InlineResponse20099) GetModel() string`
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetOverridesOk
+### GetModelOk
 
-`func (o *InlineResponse20099) GetOverridesOk() (*[]InlineResponse20099Overrides, bool)`
+`func (o *InlineResponse20099) GetModelOk() (*string, bool)`
 
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetModel
 
-`func (o *InlineResponse20099) SetOverrides(v []InlineResponse20099Overrides)`
+`func (o *InlineResponse20099) SetModel(v string)`
 
-SetOverrides sets Overrides field to given value.
+SetModel sets Model field to given value.
 
-### HasOverrides
+### HasModel
 
-`func (o *InlineResponse20099) HasOverrides() bool`
+`func (o *InlineResponse20099) HasModel() bool`
 
-HasOverrides returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse20099) GetTags() string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse20099) GetTagsOk() (*string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse20099) SetTags(v string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse20099) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetWifi0
+
+`func (o *InlineResponse20099) GetWifi0() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+
+GetWifi0 returns the Wifi0 field if non-nil, zero value otherwise.
+
+### GetWifi0Ok
+
+`func (o *InlineResponse20099) GetWifi0Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+
+GetWifi0Ok returns a tuple with the Wifi0 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifi0
+
+`func (o *InlineResponse20099) SetWifi0(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+
+SetWifi0 sets Wifi0 field to given value.
+
+### HasWifi0
+
+`func (o *InlineResponse20099) HasWifi0() bool`
+
+HasWifi0 returns a boolean if a field has been set.
+
+### GetWifi1
+
+`func (o *InlineResponse20099) GetWifi1() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+
+GetWifi1 returns the Wifi1 field if non-nil, zero value otherwise.
+
+### GetWifi1Ok
+
+`func (o *InlineResponse20099) GetWifi1Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+
+GetWifi1Ok returns a tuple with the Wifi1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifi1
+
+`func (o *InlineResponse20099) SetWifi1(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+
+SetWifi1 sets Wifi1 field to given value.
+
+### HasWifi1
+
+`func (o *InlineResponse20099) HasWifi1() bool`
+
+HasWifi1 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

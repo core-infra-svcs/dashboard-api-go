@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Host** | **string** | Public IP address of the RADIUS accounting server | 
-**Port** | **int32** | UDP port that the RADIUS Accounting server listens on for access requests | 
-**Secret** | **string** | RADIUS client shared secret | 
+**OrganizationRadiusServerId** | Pointer to **string** | Organization wide RADIUS server ID. If this field is provided, the host, port and secret field will be ignored | [optional] 
+**Host** | Pointer to **string** | Public IP address of the RADIUS accounting server | [optional] 
+**Port** | Pointer to **int32** | UDP port that the RADIUS Accounting server listens on for access requests | [optional] 
+**Secret** | Pointer to **string** | RADIUS client shared secret | [optional] 
 
 ## Methods
 
 ### NewNetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1
 
-`func NewNetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1(host string, port int32, secret string, ) *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1`
+`func NewNetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1() *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1`
 
 NewNetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1 instantiates a new NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1 object
 This constructor will assign default values to properties that have it defined,
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewNetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1WithDefaults instantiates a new NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetOrganizationRadiusServerId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1) GetOrganizationRadiusServerId() string`
+
+GetOrganizationRadiusServerId returns the OrganizationRadiusServerId field if non-nil, zero value otherwise.
+
+### GetOrganizationRadiusServerIdOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1) GetOrganizationRadiusServerIdOk() (*string, bool)`
+
+GetOrganizationRadiusServerIdOk returns a tuple with the OrganizationRadiusServerId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrganizationRadiusServerId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1) SetOrganizationRadiusServerId(v string)`
+
+SetOrganizationRadiusServerId sets OrganizationRadiusServerId field to given value.
+
+### HasOrganizationRadiusServerId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1) HasOrganizationRadiusServerId() bool`
+
+HasOrganizationRadiusServerId returns a boolean if a field has been set.
 
 ### GetHost
 
@@ -46,6 +72,11 @@ and a boolean to check if the value has been set.
 
 SetHost sets Host field to given value.
 
+### HasHost
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1) HasHost() bool`
+
+HasHost returns a boolean if a field has been set.
 
 ### GetPort
 
@@ -66,6 +97,11 @@ and a boolean to check if the value has been set.
 
 SetPort sets Port field to given value.
 
+### HasPort
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1) HasPort() bool`
+
+HasPort returns a boolean if a field has been set.
 
 ### GetSecret
 
@@ -86,6 +122,11 @@ and a boolean to check if the value has been set.
 
 SetSecret sets Secret field to given value.
 
+### HasSecret
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers1) HasSecret() bool`
+
+HasSecret returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

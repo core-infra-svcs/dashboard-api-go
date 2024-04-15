@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Schedule id | [optional] 
-**Name** | Pointer to **string** | Schedule name | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device | [optional] 
+**ConnectionStats** | Pointer to [**InlineResponse20040ConnectionStats**](InlineResponse20040ConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse20040WithDefaults instantiates a new InlineResponse20040 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetSerial
 
-`func (o *InlineResponse20040) GetId() string`
+`func (o *InlineResponse20040) GetSerial() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetSerialOk
 
-`func (o *InlineResponse20040) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20040) GetSerialOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetSerial
 
-`func (o *InlineResponse20040) SetId(v string)`
+`func (o *InlineResponse20040) SetSerial(v string)`
 
-SetId sets Id field to given value.
+SetSerial sets Serial field to given value.
 
-### HasId
+### HasSerial
 
-`func (o *InlineResponse20040) HasId() bool`
+`func (o *InlineResponse20040) HasSerial() bool`
 
-HasId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetName
+### GetConnectionStats
 
-`func (o *InlineResponse20040) GetName() string`
+`func (o *InlineResponse20040) GetConnectionStats() InlineResponse20040ConnectionStats`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConnectionStatsOk
 
-`func (o *InlineResponse20040) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20040) GetConnectionStatsOk() (*InlineResponse20040ConnectionStats, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConnectionStats
 
-`func (o *InlineResponse20040) SetName(v string)`
+`func (o *InlineResponse20040) SetConnectionStats(v InlineResponse20040ConnectionStats)`
 
-SetName sets Name field to given value.
+SetConnectionStats sets ConnectionStats field to given value.
 
-### HasName
+### HasConnectionStats
 
-`func (o *InlineResponse20040) HasName() bool`
+`func (o *InlineResponse20040) HasConnectionStats() bool`
 
-HasName returns a boolean if a field has been set.
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SpoofingProtection** | Pointer to [**NetworksNetworkIdApplianceFirewallSettingsSpoofingProtection**](NetworksNetworkIdApplianceFirewallSettingsSpoofingProtection.md) |  | [optional] 
+**Rules** | [**[]NetworksNetworkIdApplianceFirewallPortForwardingRulesRules**](NetworksNetworkIdApplianceFirewallPortForwardingRulesRules.md) | An array of port forwarding params | 
 
 ## Methods
 
 ### NewInlineObject48
 
-`func NewInlineObject48() *InlineObject48`
+`func NewInlineObject48(rules []NetworksNetworkIdApplianceFirewallPortForwardingRulesRules, ) *InlineObject48`
 
 NewInlineObject48 instantiates a new InlineObject48 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject48WithDefaults instantiates a new InlineObject48 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSpoofingProtection
+### GetRules
 
-`func (o *InlineObject48) GetSpoofingProtection() NetworksNetworkIdApplianceFirewallSettingsSpoofingProtection`
+`func (o *InlineObject48) GetRules() []NetworksNetworkIdApplianceFirewallPortForwardingRulesRules`
 
-GetSpoofingProtection returns the SpoofingProtection field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetSpoofingProtectionOk
+### GetRulesOk
 
-`func (o *InlineObject48) GetSpoofingProtectionOk() (*NetworksNetworkIdApplianceFirewallSettingsSpoofingProtection, bool)`
+`func (o *InlineObject48) GetRulesOk() (*[]NetworksNetworkIdApplianceFirewallPortForwardingRulesRules, bool)`
 
-GetSpoofingProtectionOk returns a tuple with the SpoofingProtection field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpoofingProtection
+### SetRules
 
-`func (o *InlineObject48) SetSpoofingProtection(v NetworksNetworkIdApplianceFirewallSettingsSpoofingProtection)`
+`func (o *InlineObject48) SetRules(v []NetworksNetworkIdApplianceFirewallPortForwardingRulesRules)`
 
-SetSpoofingProtection sets SpoofingProtection field to given value.
+SetRules sets Rules field to given value.
 
-### HasSpoofingProtection
-
-`func (o *InlineObject48) HasSpoofingProtection() bool`
-
-HasSpoofingProtection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

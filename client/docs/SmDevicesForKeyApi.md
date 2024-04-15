@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkPiiSmDevicesForKey
 
-> map[string]interface{} GetNetworkPiiSmDevicesForKey(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
+> map[string][]string GetNetworkPiiSmDevicesForKey(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
 
 Given a piece of Personally Identifiable Information (PII), return the Systems Manager device ID(s) associated with that identifier
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmDevicesForKeyApi.GetNetworkPiiSmDevicesForKey``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiSmDevicesForKey`: map[string]interface{}
+    // response from `GetNetworkPiiSmDevicesForKey`: map[string][]string
     fmt.Fprintf(os.Stdout, "Response from `SmDevicesForKeyApi.GetNetworkPiiSmDevicesForKey`: %v\n", resp)
 }
 ```
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**map[string][]string**](array.md)
 
 ### Authorization
 

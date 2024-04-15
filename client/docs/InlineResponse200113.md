@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]InlineResponse200113Plans**](InlineResponse200113Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
+**NewNetwork** | Pointer to **string** | The network to which the devices was moved. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200113WithDefaults instantiates a new InlineResponse200113 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetIds
 
-`func (o *InlineResponse200113) GetCurrency() string`
+`func (o *InlineResponse200113) GetIds() []string`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetIdsOk
 
-`func (o *InlineResponse200113) GetCurrencyOk() (*string, bool)`
+`func (o *InlineResponse200113) GetIdsOk() (*[]string, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetIds
 
-`func (o *InlineResponse200113) SetCurrency(v string)`
+`func (o *InlineResponse200113) SetIds(v []string)`
 
-SetCurrency sets Currency field to given value.
+SetIds sets Ids field to given value.
 
-### HasCurrency
+### HasIds
 
-`func (o *InlineResponse200113) HasCurrency() bool`
+`func (o *InlineResponse200113) HasIds() bool`
 
-HasCurrency returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
 
-### GetPlans
+### GetNewNetwork
 
-`func (o *InlineResponse200113) GetPlans() []InlineResponse200113Plans`
+`func (o *InlineResponse200113) GetNewNetwork() string`
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+GetNewNetwork returns the NewNetwork field if non-nil, zero value otherwise.
 
-### GetPlansOk
+### GetNewNetworkOk
 
-`func (o *InlineResponse200113) GetPlansOk() (*[]InlineResponse200113Plans, bool)`
+`func (o *InlineResponse200113) GetNewNetworkOk() (*string, bool)`
 
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetNewNetworkOk returns a tuple with the NewNetwork field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetNewNetwork
 
-`func (o *InlineResponse200113) SetPlans(v []InlineResponse200113Plans)`
+`func (o *InlineResponse200113) SetNewNetwork(v string)`
 
-SetPlans sets Plans field to given value.
+SetNewNetwork sets NewNetwork field to given value.
 
-### HasPlans
+### HasNewNetwork
 
-`func (o *InlineResponse200113) HasPlans() bool`
+`func (o *InlineResponse200113) HasNewNetwork() bool`
 
-HasPlans returns a boolean if a field has been set.
+HasNewNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

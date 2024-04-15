@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20027Rules**](InlineResponse20027Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**DdnsHostnames** | Pointer to [**InlineResponse20027DdnsHostnames**](InlineResponse20027DdnsHostnames.md) |  | [optional] 
+**Wan1** | Pointer to [**InlineResponse20027Wan1**](InlineResponse20027Wan1.md) |  | [optional] 
+**Wan2** | Pointer to [**InlineResponse20027Wan2**](InlineResponse20027Wan2.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20027WithDefaults instantiates a new InlineResponse20027 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetDdnsHostnames
 
-`func (o *InlineResponse20027) GetRules() []InlineResponse20027Rules`
+`func (o *InlineResponse20027) GetDdnsHostnames() InlineResponse20027DdnsHostnames`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetDdnsHostnames returns the DdnsHostnames field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetDdnsHostnamesOk
 
-`func (o *InlineResponse20027) GetRulesOk() (*[]InlineResponse20027Rules, bool)`
+`func (o *InlineResponse20027) GetDdnsHostnamesOk() (*InlineResponse20027DdnsHostnames, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetDdnsHostnamesOk returns a tuple with the DdnsHostnames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetDdnsHostnames
 
-`func (o *InlineResponse20027) SetRules(v []InlineResponse20027Rules)`
+`func (o *InlineResponse20027) SetDdnsHostnames(v InlineResponse20027DdnsHostnames)`
 
-SetRules sets Rules field to given value.
+SetDdnsHostnames sets DdnsHostnames field to given value.
 
-### HasRules
+### HasDdnsHostnames
 
-`func (o *InlineResponse20027) HasRules() bool`
+`func (o *InlineResponse20027) HasDdnsHostnames() bool`
 
-HasRules returns a boolean if a field has been set.
+HasDdnsHostnames returns a boolean if a field has been set.
 
-### GetSyslogDefaultRule
+### GetWan1
 
-`func (o *InlineResponse20027) GetSyslogDefaultRule() bool`
+`func (o *InlineResponse20027) GetWan1() InlineResponse20027Wan1`
 
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
 
-### GetSyslogDefaultRuleOk
+### GetWan1Ok
 
-`func (o *InlineResponse20027) GetSyslogDefaultRuleOk() (*bool, bool)`
+`func (o *InlineResponse20027) GetWan1Ok() (*InlineResponse20027Wan1, bool)`
 
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSyslogDefaultRule
+### SetWan1
 
-`func (o *InlineResponse20027) SetSyslogDefaultRule(v bool)`
+`func (o *InlineResponse20027) SetWan1(v InlineResponse20027Wan1)`
 
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+SetWan1 sets Wan1 field to given value.
 
-### HasSyslogDefaultRule
+### HasWan1
 
-`func (o *InlineResponse20027) HasSyslogDefaultRule() bool`
+`func (o *InlineResponse20027) HasWan1() bool`
 
-HasSyslogDefaultRule returns a boolean if a field has been set.
+HasWan1 returns a boolean if a field has been set.
+
+### GetWan2
+
+`func (o *InlineResponse20027) GetWan2() InlineResponse20027Wan2`
+
+GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+
+### GetWan2Ok
+
+`func (o *InlineResponse20027) GetWan2Ok() (*InlineResponse20027Wan2, bool)`
+
+GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWan2
+
+`func (o *InlineResponse20027) SetWan2(v InlineResponse20027Wan2)`
+
+SetWan2 sets Wan2 field to given value.
+
+### HasWan2
+
+`func (o *InlineResponse20027) HasWan2() bool`
+
+HasWan2 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

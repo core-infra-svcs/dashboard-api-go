@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **string** | Message related to whether or not the device was found and can be imported. | [optional] 
-**Udi** | Pointer to **string** | Device UDI certificate | [optional] 
-**DeviceId** | Pointer to **string** | Import ID from the Import operation | [optional] 
-**Status** | Pointer to **string** | The import status of the device | [optional] 
-**ConfigParams** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams.md) |  | [optional] 
+**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
+**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
+**UploadId** | Pointer to **string** | Upload ID | [optional] 
+**UploadUrl** | Pointer to **string** | Upload URL | [optional] 
+**UploadUrlExpiry** | Pointer to **time.Time** | Upload URL expiry time | [optional] 
 
 ## Methods
 
@@ -29,97 +31,97 @@ NewInlineResponse20112WithDefaults instantiates a new InlineResponse20112 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMessage
+### GetArtifactId
 
-`func (o *InlineResponse20112) GetMessage() string`
+`func (o *InlineResponse20112) GetArtifactId() string`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetArtifactIdOk
 
-`func (o *InlineResponse20112) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse20112) GetArtifactIdOk() (*string, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetArtifactId
 
-`func (o *InlineResponse20112) SetMessage(v string)`
+`func (o *InlineResponse20112) SetArtifactId(v string)`
 
-SetMessage sets Message field to given value.
+SetArtifactId sets ArtifactId field to given value.
 
-### HasMessage
+### HasArtifactId
 
-`func (o *InlineResponse20112) HasMessage() bool`
+`func (o *InlineResponse20112) HasArtifactId() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasArtifactId returns a boolean if a field has been set.
 
-### GetUdi
+### GetOrganizationId
 
-`func (o *InlineResponse20112) GetUdi() string`
+`func (o *InlineResponse20112) GetOrganizationId() string`
 
-GetUdi returns the Udi field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetUdiOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse20112) GetUdiOk() (*string, bool)`
+`func (o *InlineResponse20112) GetOrganizationIdOk() (*string, bool)`
 
-GetUdiOk returns a tuple with the Udi field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUdi
+### SetOrganizationId
 
-`func (o *InlineResponse20112) SetUdi(v string)`
+`func (o *InlineResponse20112) SetOrganizationId(v string)`
 
-SetUdi sets Udi field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasUdi
+### HasOrganizationId
 
-`func (o *InlineResponse20112) HasUdi() bool`
+`func (o *InlineResponse20112) HasOrganizationId() bool`
 
-HasUdi returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
 
-### GetDeviceId
+### GetName
 
-`func (o *InlineResponse20112) GetDeviceId() string`
+`func (o *InlineResponse20112) GetName() string`
 
-GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDeviceIdOk
+### GetNameOk
 
-`func (o *InlineResponse20112) GetDeviceIdOk() (*string, bool)`
+`func (o *InlineResponse20112) GetNameOk() (*string, bool)`
 
-GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceId
+### SetName
 
-`func (o *InlineResponse20112) SetDeviceId(v string)`
+`func (o *InlineResponse20112) SetName(v string)`
 
-SetDeviceId sets DeviceId field to given value.
+SetName sets Name field to given value.
 
-### HasDeviceId
+### HasName
 
-`func (o *InlineResponse20112) HasDeviceId() bool`
+`func (o *InlineResponse20112) HasName() bool`
 
-HasDeviceId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 ### GetStatus
 
-`func (o *InlineResponse20112) GetStatus() string`
+`func (o *InlineResponse20112) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *InlineResponse20112) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20112) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *InlineResponse20112) SetStatus(v string)`
+`func (o *InlineResponse20112) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
 
 SetStatus sets Status field to given value.
 
@@ -129,30 +131,80 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetConfigParams
+### GetUploadId
 
-`func (o *InlineResponse20112) GetConfigParams() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams`
+`func (o *InlineResponse20112) GetUploadId() string`
 
-GetConfigParams returns the ConfigParams field if non-nil, zero value otherwise.
+GetUploadId returns the UploadId field if non-nil, zero value otherwise.
 
-### GetConfigParamsOk
+### GetUploadIdOk
 
-`func (o *InlineResponse20112) GetConfigParamsOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams, bool)`
+`func (o *InlineResponse20112) GetUploadIdOk() (*string, bool)`
 
-GetConfigParamsOk returns a tuple with the ConfigParams field if it's non-nil, zero value otherwise
+GetUploadIdOk returns a tuple with the UploadId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfigParams
+### SetUploadId
 
-`func (o *InlineResponse20112) SetConfigParams(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareConfigParams)`
+`func (o *InlineResponse20112) SetUploadId(v string)`
 
-SetConfigParams sets ConfigParams field to given value.
+SetUploadId sets UploadId field to given value.
 
-### HasConfigParams
+### HasUploadId
 
-`func (o *InlineResponse20112) HasConfigParams() bool`
+`func (o *InlineResponse20112) HasUploadId() bool`
 
-HasConfigParams returns a boolean if a field has been set.
+HasUploadId returns a boolean if a field has been set.
+
+### GetUploadUrl
+
+`func (o *InlineResponse20112) GetUploadUrl() string`
+
+GetUploadUrl returns the UploadUrl field if non-nil, zero value otherwise.
+
+### GetUploadUrlOk
+
+`func (o *InlineResponse20112) GetUploadUrlOk() (*string, bool)`
+
+GetUploadUrlOk returns a tuple with the UploadUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUploadUrl
+
+`func (o *InlineResponse20112) SetUploadUrl(v string)`
+
+SetUploadUrl sets UploadUrl field to given value.
+
+### HasUploadUrl
+
+`func (o *InlineResponse20112) HasUploadUrl() bool`
+
+HasUploadUrl returns a boolean if a field has been set.
+
+### GetUploadUrlExpiry
+
+`func (o *InlineResponse20112) GetUploadUrlExpiry() time.Time`
+
+GetUploadUrlExpiry returns the UploadUrlExpiry field if non-nil, zero value otherwise.
+
+### GetUploadUrlExpiryOk
+
+`func (o *InlineResponse20112) GetUploadUrlExpiryOk() (*time.Time, bool)`
+
+GetUploadUrlExpiryOk returns a tuple with the UploadUrlExpiry field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUploadUrlExpiry
+
+`func (o *InlineResponse20112) SetUploadUrlExpiry(v time.Time)`
+
+SetUploadUrlExpiry sets UploadUrlExpiry field to given value.
+
+### HasUploadUrlExpiry
+
+`func (o *InlineResponse20112) HasUploadUrlExpiry() bool`
+
+HasUploadUrlExpiry returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

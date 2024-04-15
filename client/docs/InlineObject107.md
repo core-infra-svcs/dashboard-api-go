@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the sensor alert profile. | 
-**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
-**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
-**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
+**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
+**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
+**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
+**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
+**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
 
 ## Methods
 
 ### NewInlineObject107
 
-`func NewInlineObject107(name string, conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineObject107`
+`func NewInlineObject107() *InlineObject107`
 
 NewInlineObject107 instantiates a new InlineObject107 object
 This constructor will assign default values to properties that have it defined,
@@ -29,120 +29,130 @@ NewInlineObject107WithDefaults instantiates a new InlineObject107 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetReportingEnabled
 
-`func (o *InlineObject107) GetName() string`
+`func (o *InlineObject107) GetReportingEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetReportingEnabledOk
 
-`func (o *InlineObject107) GetNameOk() (*string, bool)`
+`func (o *InlineObject107) GetReportingEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetReportingEnabled
 
-`func (o *InlineObject107) SetName(v string)`
+`func (o *InlineObject107) SetReportingEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetReportingEnabled sets ReportingEnabled field to given value.
 
+### HasReportingEnabled
 
-### GetSchedule
+`func (o *InlineObject107) HasReportingEnabled() bool`
 
-`func (o *InlineObject107) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule1`
+HasReportingEnabled returns a boolean if a field has been set.
 
-GetSchedule returns the Schedule field if non-nil, zero value otherwise.
+### GetCollectorIp
 
-### GetScheduleOk
+`func (o *InlineObject107) GetCollectorIp() string`
 
-`func (o *InlineObject107) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule1, bool)`
+GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
 
-GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
+### GetCollectorIpOk
+
+`func (o *InlineObject107) GetCollectorIpOk() (*string, bool)`
+
+GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSchedule
+### SetCollectorIp
 
-`func (o *InlineObject107) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule1)`
+`func (o *InlineObject107) SetCollectorIp(v string)`
 
-SetSchedule sets Schedule field to given value.
+SetCollectorIp sets CollectorIp field to given value.
 
-### HasSchedule
+### HasCollectorIp
 
-`func (o *InlineObject107) HasSchedule() bool`
+`func (o *InlineObject107) HasCollectorIp() bool`
 
-HasSchedule returns a boolean if a field has been set.
+HasCollectorIp returns a boolean if a field has been set.
 
-### GetConditions
+### GetCollectorPort
 
-`func (o *InlineObject107) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
+`func (o *InlineObject107) GetCollectorPort() int32`
 
-GetConditions returns the Conditions field if non-nil, zero value otherwise.
+GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
 
-### GetConditionsOk
+### GetCollectorPortOk
 
-`func (o *InlineObject107) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
+`func (o *InlineObject107) GetCollectorPortOk() (*int32, bool)`
 
-GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
+GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConditions
+### SetCollectorPort
 
-`func (o *InlineObject107) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
+`func (o *InlineObject107) SetCollectorPort(v int32)`
 
-SetConditions sets Conditions field to given value.
+SetCollectorPort sets CollectorPort field to given value.
 
+### HasCollectorPort
 
-### GetRecipients
+`func (o *InlineObject107) HasCollectorPort() bool`
 
-`func (o *InlineObject107) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+HasCollectorPort returns a boolean if a field has been set.
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+### GetEtaEnabled
 
-### GetRecipientsOk
+`func (o *InlineObject107) GetEtaEnabled() bool`
 
-`func (o *InlineObject107) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+### GetEtaEnabledOk
+
+`func (o *InlineObject107) GetEtaEnabledOk() (*bool, bool)`
+
+GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetEtaEnabled
 
-`func (o *InlineObject107) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+`func (o *InlineObject107) SetEtaEnabled(v bool)`
 
-SetRecipients sets Recipients field to given value.
+SetEtaEnabled sets EtaEnabled field to given value.
 
-### HasRecipients
+### HasEtaEnabled
 
-`func (o *InlineObject107) HasRecipients() bool`
+`func (o *InlineObject107) HasEtaEnabled() bool`
 
-HasRecipients returns a boolean if a field has been set.
+HasEtaEnabled returns a boolean if a field has been set.
 
-### GetSerials
+### GetEtaDstPort
 
-`func (o *InlineObject107) GetSerials() []string`
+`func (o *InlineObject107) GetEtaDstPort() int32`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetEtaDstPortOk
 
-`func (o *InlineObject107) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject107) GetEtaDstPortOk() (*int32, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetEtaDstPort
 
-`func (o *InlineObject107) SetSerials(v []string)`
+`func (o *InlineObject107) SetEtaDstPort(v int32)`
 
-SetSerials sets Serials field to given value.
+SetEtaDstPort sets EtaDstPort field to given value.
 
-### HasSerials
+### HasEtaDstPort
 
-`func (o *InlineObject107) HasSerials() bool`
+`func (o *InlineObject107) HasEtaDstPort() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasEtaDstPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
-**Type** | Pointer to **string** | The boundary type | [optional] 
-**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
+**RuleIds** | Pointer to **[]string** | Qos Rule ids | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200149WithDefaults instantiates a new InlineResponse200149 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBoundaryId
+### GetRuleIds
 
-`func (o *InlineResponse200149) GetBoundaryId() string`
+`func (o *InlineResponse200149) GetRuleIds() []string`
 
-GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
+GetRuleIds returns the RuleIds field if non-nil, zero value otherwise.
 
-### GetBoundaryIdOk
+### GetRuleIdsOk
 
-`func (o *InlineResponse200149) GetBoundaryIdOk() (*string, bool)`
+`func (o *InlineResponse200149) GetRuleIdsOk() (*[]string, bool)`
 
-GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
+GetRuleIdsOk returns a tuple with the RuleIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBoundaryId
+### SetRuleIds
 
-`func (o *InlineResponse200149) SetBoundaryId(v string)`
+`func (o *InlineResponse200149) SetRuleIds(v []string)`
 
-SetBoundaryId sets BoundaryId field to given value.
+SetRuleIds sets RuleIds field to given value.
 
-### HasBoundaryId
+### HasRuleIds
 
-`func (o *InlineResponse200149) HasBoundaryId() bool`
+`func (o *InlineResponse200149) HasRuleIds() bool`
 
-HasBoundaryId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200149) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200149) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200149) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse200149) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetResults
-
-`func (o *InlineResponse200149) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
-
-GetResults returns the Results field if non-nil, zero value otherwise.
-
-### GetResultsOk
-
-`func (o *InlineResponse200149) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
-
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResults
-
-`func (o *InlineResponse200149) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
-
-SetResults sets Results field to given value.
-
-### HasResults
-
-`func (o *InlineResponse200149) HasResults() bool`
-
-HasResults returns a boolean if a field has been set.
+HasRuleIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

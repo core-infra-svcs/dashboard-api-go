@@ -4,20 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FloorPlanId** | Pointer to **string** | Floor plan ID | [optional] 
-**ImageUrl** | Pointer to **string** | The url link for the floor plan image. | [optional] 
-**ImageUrlExpiresAt** | Pointer to **string** | The time the image url link will expire. | [optional] 
-**ImageExtension** | Pointer to **string** | The format type of the image. | [optional] 
-**ImageMd5** | Pointer to **string** | The file contents (a base 64 encoded string) of your new image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. If you upload a new image, and you do NOT specify any new geolocation fields (&#39;center, &#39;topLeftCorner&#39;, etc), the floor plan will be recentered with no rotation in order to maintain the aspect ratio of your new image. | [optional] 
-**Name** | Pointer to **string** | The name of your floor plan. | [optional] 
-**Devices** | Pointer to [**[]NetworksNetworkIdFloorPlansDevices**](NetworksNetworkIdFloorPlansDevices.md) | List of devices for the floorplan | [optional] 
-**Width** | Pointer to **float32** | The width of your floor plan. | [optional] 
-**Height** | Pointer to **float32** | The height of your floor plan. | [optional] 
-**Center** | Pointer to [**NetworksNetworkIdFloorPlansCenter**](NetworksNetworkIdFloorPlansCenter.md) |  | [optional] 
-**BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner**](NetworksNetworkIdFloorPlansBottomLeftCorner.md) |  | [optional] 
-**BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
-**TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
-**TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
+**Mode** | Pointer to **string** | Current status of malware prevention | [optional] 
+**AllowedUrls** | Pointer to [**[]InlineResponse20056AllowedUrls**](InlineResponse20056AllowedUrls.md) | URLs permitted by the malware detection engine | [optional] 
+**AllowedFiles** | Pointer to [**[]InlineResponse20056AllowedFiles**](InlineResponse20056AllowedFiles.md) | Sha256 digests of files permitted by the malware detection engine | [optional] 
 
 ## Methods
 
@@ -38,355 +27,80 @@ NewInlineResponse20056WithDefaults instantiates a new InlineResponse20056 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetFloorPlanId
+### GetMode
 
-`func (o *InlineResponse20056) GetFloorPlanId() string`
+`func (o *InlineResponse20056) GetMode() string`
 
-GetFloorPlanId returns the FloorPlanId field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetFloorPlanIdOk
+### GetModeOk
 
-`func (o *InlineResponse20056) GetFloorPlanIdOk() (*string, bool)`
+`func (o *InlineResponse20056) GetModeOk() (*string, bool)`
 
-GetFloorPlanIdOk returns a tuple with the FloorPlanId field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFloorPlanId
+### SetMode
 
-`func (o *InlineResponse20056) SetFloorPlanId(v string)`
+`func (o *InlineResponse20056) SetMode(v string)`
 
-SetFloorPlanId sets FloorPlanId field to given value.
+SetMode sets Mode field to given value.
 
-### HasFloorPlanId
+### HasMode
 
-`func (o *InlineResponse20056) HasFloorPlanId() bool`
+`func (o *InlineResponse20056) HasMode() bool`
 
-HasFloorPlanId returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetImageUrl
+### GetAllowedUrls
 
-`func (o *InlineResponse20056) GetImageUrl() string`
+`func (o *InlineResponse20056) GetAllowedUrls() []InlineResponse20056AllowedUrls`
 
-GetImageUrl returns the ImageUrl field if non-nil, zero value otherwise.
+GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
 
-### GetImageUrlOk
+### GetAllowedUrlsOk
 
-`func (o *InlineResponse20056) GetImageUrlOk() (*string, bool)`
+`func (o *InlineResponse20056) GetAllowedUrlsOk() (*[]InlineResponse20056AllowedUrls, bool)`
 
-GetImageUrlOk returns a tuple with the ImageUrl field if it's non-nil, zero value otherwise
+GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImageUrl
+### SetAllowedUrls
 
-`func (o *InlineResponse20056) SetImageUrl(v string)`
+`func (o *InlineResponse20056) SetAllowedUrls(v []InlineResponse20056AllowedUrls)`
 
-SetImageUrl sets ImageUrl field to given value.
+SetAllowedUrls sets AllowedUrls field to given value.
 
-### HasImageUrl
+### HasAllowedUrls
 
-`func (o *InlineResponse20056) HasImageUrl() bool`
+`func (o *InlineResponse20056) HasAllowedUrls() bool`
 
-HasImageUrl returns a boolean if a field has been set.
+HasAllowedUrls returns a boolean if a field has been set.
 
-### GetImageUrlExpiresAt
+### GetAllowedFiles
 
-`func (o *InlineResponse20056) GetImageUrlExpiresAt() string`
+`func (o *InlineResponse20056) GetAllowedFiles() []InlineResponse20056AllowedFiles`
 
-GetImageUrlExpiresAt returns the ImageUrlExpiresAt field if non-nil, zero value otherwise.
+GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
 
-### GetImageUrlExpiresAtOk
+### GetAllowedFilesOk
 
-`func (o *InlineResponse20056) GetImageUrlExpiresAtOk() (*string, bool)`
+`func (o *InlineResponse20056) GetAllowedFilesOk() (*[]InlineResponse20056AllowedFiles, bool)`
 
-GetImageUrlExpiresAtOk returns a tuple with the ImageUrlExpiresAt field if it's non-nil, zero value otherwise
+GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImageUrlExpiresAt
+### SetAllowedFiles
 
-`func (o *InlineResponse20056) SetImageUrlExpiresAt(v string)`
+`func (o *InlineResponse20056) SetAllowedFiles(v []InlineResponse20056AllowedFiles)`
 
-SetImageUrlExpiresAt sets ImageUrlExpiresAt field to given value.
+SetAllowedFiles sets AllowedFiles field to given value.
 
-### HasImageUrlExpiresAt
+### HasAllowedFiles
 
-`func (o *InlineResponse20056) HasImageUrlExpiresAt() bool`
+`func (o *InlineResponse20056) HasAllowedFiles() bool`
 
-HasImageUrlExpiresAt returns a boolean if a field has been set.
-
-### GetImageExtension
-
-`func (o *InlineResponse20056) GetImageExtension() string`
-
-GetImageExtension returns the ImageExtension field if non-nil, zero value otherwise.
-
-### GetImageExtensionOk
-
-`func (o *InlineResponse20056) GetImageExtensionOk() (*string, bool)`
-
-GetImageExtensionOk returns a tuple with the ImageExtension field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetImageExtension
-
-`func (o *InlineResponse20056) SetImageExtension(v string)`
-
-SetImageExtension sets ImageExtension field to given value.
-
-### HasImageExtension
-
-`func (o *InlineResponse20056) HasImageExtension() bool`
-
-HasImageExtension returns a boolean if a field has been set.
-
-### GetImageMd5
-
-`func (o *InlineResponse20056) GetImageMd5() string`
-
-GetImageMd5 returns the ImageMd5 field if non-nil, zero value otherwise.
-
-### GetImageMd5Ok
-
-`func (o *InlineResponse20056) GetImageMd5Ok() (*string, bool)`
-
-GetImageMd5Ok returns a tuple with the ImageMd5 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetImageMd5
-
-`func (o *InlineResponse20056) SetImageMd5(v string)`
-
-SetImageMd5 sets ImageMd5 field to given value.
-
-### HasImageMd5
-
-`func (o *InlineResponse20056) HasImageMd5() bool`
-
-HasImageMd5 returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse20056) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse20056) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse20056) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse20056) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetDevices
-
-`func (o *InlineResponse20056) GetDevices() []NetworksNetworkIdFloorPlansDevices`
-
-GetDevices returns the Devices field if non-nil, zero value otherwise.
-
-### GetDevicesOk
-
-`func (o *InlineResponse20056) GetDevicesOk() (*[]NetworksNetworkIdFloorPlansDevices, bool)`
-
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDevices
-
-`func (o *InlineResponse20056) SetDevices(v []NetworksNetworkIdFloorPlansDevices)`
-
-SetDevices sets Devices field to given value.
-
-### HasDevices
-
-`func (o *InlineResponse20056) HasDevices() bool`
-
-HasDevices returns a boolean if a field has been set.
-
-### GetWidth
-
-`func (o *InlineResponse20056) GetWidth() float32`
-
-GetWidth returns the Width field if non-nil, zero value otherwise.
-
-### GetWidthOk
-
-`func (o *InlineResponse20056) GetWidthOk() (*float32, bool)`
-
-GetWidthOk returns a tuple with the Width field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWidth
-
-`func (o *InlineResponse20056) SetWidth(v float32)`
-
-SetWidth sets Width field to given value.
-
-### HasWidth
-
-`func (o *InlineResponse20056) HasWidth() bool`
-
-HasWidth returns a boolean if a field has been set.
-
-### GetHeight
-
-`func (o *InlineResponse20056) GetHeight() float32`
-
-GetHeight returns the Height field if non-nil, zero value otherwise.
-
-### GetHeightOk
-
-`func (o *InlineResponse20056) GetHeightOk() (*float32, bool)`
-
-GetHeightOk returns a tuple with the Height field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeight
-
-`func (o *InlineResponse20056) SetHeight(v float32)`
-
-SetHeight sets Height field to given value.
-
-### HasHeight
-
-`func (o *InlineResponse20056) HasHeight() bool`
-
-HasHeight returns a boolean if a field has been set.
-
-### GetCenter
-
-`func (o *InlineResponse20056) GetCenter() NetworksNetworkIdFloorPlansCenter`
-
-GetCenter returns the Center field if non-nil, zero value otherwise.
-
-### GetCenterOk
-
-`func (o *InlineResponse20056) GetCenterOk() (*NetworksNetworkIdFloorPlansCenter, bool)`
-
-GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCenter
-
-`func (o *InlineResponse20056) SetCenter(v NetworksNetworkIdFloorPlansCenter)`
-
-SetCenter sets Center field to given value.
-
-### HasCenter
-
-`func (o *InlineResponse20056) HasCenter() bool`
-
-HasCenter returns a boolean if a field has been set.
-
-### GetBottomLeftCorner
-
-`func (o *InlineResponse20056) GetBottomLeftCorner() NetworksNetworkIdFloorPlansBottomLeftCorner`
-
-GetBottomLeftCorner returns the BottomLeftCorner field if non-nil, zero value otherwise.
-
-### GetBottomLeftCornerOk
-
-`func (o *InlineResponse20056) GetBottomLeftCornerOk() (*NetworksNetworkIdFloorPlansBottomLeftCorner, bool)`
-
-GetBottomLeftCornerOk returns a tuple with the BottomLeftCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBottomLeftCorner
-
-`func (o *InlineResponse20056) SetBottomLeftCorner(v NetworksNetworkIdFloorPlansBottomLeftCorner)`
-
-SetBottomLeftCorner sets BottomLeftCorner field to given value.
-
-### HasBottomLeftCorner
-
-`func (o *InlineResponse20056) HasBottomLeftCorner() bool`
-
-HasBottomLeftCorner returns a boolean if a field has been set.
-
-### GetBottomRightCorner
-
-`func (o *InlineResponse20056) GetBottomRightCorner() NetworksNetworkIdFloorPlansBottomRightCorner`
-
-GetBottomRightCorner returns the BottomRightCorner field if non-nil, zero value otherwise.
-
-### GetBottomRightCornerOk
-
-`func (o *InlineResponse20056) GetBottomRightCornerOk() (*NetworksNetworkIdFloorPlansBottomRightCorner, bool)`
-
-GetBottomRightCornerOk returns a tuple with the BottomRightCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBottomRightCorner
-
-`func (o *InlineResponse20056) SetBottomRightCorner(v NetworksNetworkIdFloorPlansBottomRightCorner)`
-
-SetBottomRightCorner sets BottomRightCorner field to given value.
-
-### HasBottomRightCorner
-
-`func (o *InlineResponse20056) HasBottomRightCorner() bool`
-
-HasBottomRightCorner returns a boolean if a field has been set.
-
-### GetTopLeftCorner
-
-`func (o *InlineResponse20056) GetTopLeftCorner() NetworksNetworkIdFloorPlansTopLeftCorner`
-
-GetTopLeftCorner returns the TopLeftCorner field if non-nil, zero value otherwise.
-
-### GetTopLeftCornerOk
-
-`func (o *InlineResponse20056) GetTopLeftCornerOk() (*NetworksNetworkIdFloorPlansTopLeftCorner, bool)`
-
-GetTopLeftCornerOk returns a tuple with the TopLeftCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTopLeftCorner
-
-`func (o *InlineResponse20056) SetTopLeftCorner(v NetworksNetworkIdFloorPlansTopLeftCorner)`
-
-SetTopLeftCorner sets TopLeftCorner field to given value.
-
-### HasTopLeftCorner
-
-`func (o *InlineResponse20056) HasTopLeftCorner() bool`
-
-HasTopLeftCorner returns a boolean if a field has been set.
-
-### GetTopRightCorner
-
-`func (o *InlineResponse20056) GetTopRightCorner() NetworksNetworkIdFloorPlansTopRightCorner`
-
-GetTopRightCorner returns the TopRightCorner field if non-nil, zero value otherwise.
-
-### GetTopRightCornerOk
-
-`func (o *InlineResponse20056) GetTopRightCornerOk() (*NetworksNetworkIdFloorPlansTopRightCorner, bool)`
-
-GetTopRightCornerOk returns a tuple with the TopRightCorner field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTopRightCorner
-
-`func (o *InlineResponse20056) SetTopRightCorner(v NetworksNetworkIdFloorPlansTopRightCorner)`
-
-SetTopRightCorner sets TopRightCorner field to given value.
-
-### HasTopRightCorner
-
-`func (o *InlineResponse20056) HasTopRightCorner() bool`
-
-HasTopRightCorner returns a boolean if a field has been set.
+HasAllowedFiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

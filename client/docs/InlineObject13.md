@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Sims** | Pointer to [**[]DevicesSerialCellularSimsSims**](DevicesSerialCellularSimsSims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
+**Sims** | Pointer to [**[]InlineResponse20015Sims**](InlineResponse20015Sims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
 **SimFailover** | Pointer to [**DevicesSerialCellularSimsSimFailover**](DevicesSerialCellularSimsSimFailover.md) |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetSims
 
-`func (o *InlineObject13) GetSims() []DevicesSerialCellularSimsSims`
+`func (o *InlineObject13) GetSims() []InlineResponse20015Sims`
 
 GetSims returns the Sims field if non-nil, zero value otherwise.
 
 ### GetSimsOk
 
-`func (o *InlineObject13) GetSimsOk() (*[]DevicesSerialCellularSimsSims, bool)`
+`func (o *InlineObject13) GetSimsOk() (*[]InlineResponse20015Sims, bool)`
 
 GetSimsOk returns a tuple with the Sims field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSims
 
-`func (o *InlineObject13) SetSims(v []DevicesSerialCellularSimsSims)`
+`func (o *InlineObject13) SetSims(v []InlineResponse20015Sims)`
 
 SetSims sets Sims field to given value.
 
