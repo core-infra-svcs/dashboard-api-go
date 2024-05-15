@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | The device MAC address. | [optional] 
-**Name** | Pointer to **string** | The device name. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesNetwork.md) |  | [optional] 
-**ProductType** | Pointer to **string** | Device product type. | [optional] 
-**Serial** | Pointer to **string** | The device serial number. | [optional] 
-**Status** | Pointer to **string** | The device provisioning status. Possible statuses: unprovisioned, incomplete, complete. | [optional] 
-**Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
+**Id** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
+**Name** | Pointer to **string** | The name of the configuration template | [optional] 
+**ProductTypes** | Pointer to **[]string** | The product types of the configuration template | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
 
 ## Methods
 
@@ -31,30 +28,30 @@ NewInlineResponse200229WithDefaults instantiates a new InlineResponse200229 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetId
 
-`func (o *InlineResponse200229) GetMac() string`
+`func (o *InlineResponse200229) GetId() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetIdOk
 
-`func (o *InlineResponse200229) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200229) GetIdOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetId
 
-`func (o *InlineResponse200229) SetMac(v string)`
+`func (o *InlineResponse200229) SetId(v string)`
 
-SetMac sets Mac field to given value.
+SetId sets Id field to given value.
 
-### HasMac
+### HasId
 
-`func (o *InlineResponse200229) HasMac() bool`
+`func (o *InlineResponse200229) HasId() bool`
 
-HasMac returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -81,130 +78,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetNetwork
+### GetProductTypes
 
-`func (o *InlineResponse200229) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesNetwork`
+`func (o *InlineResponse200229) GetProductTypes() []string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetProductTypesOk
 
-`func (o *InlineResponse200229) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesNetwork, bool)`
+`func (o *InlineResponse200229) GetProductTypesOk() (*[]string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetProductTypes
 
-`func (o *InlineResponse200229) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesNetwork)`
+`func (o *InlineResponse200229) SetProductTypes(v []string)`
 
-SetNetwork sets Network field to given value.
+SetProductTypes sets ProductTypes field to given value.
 
-### HasNetwork
+### HasProductTypes
 
-`func (o *InlineResponse200229) HasNetwork() bool`
+`func (o *InlineResponse200229) HasProductTypes() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasProductTypes returns a boolean if a field has been set.
 
-### GetProductType
+### GetTimeZone
 
-`func (o *InlineResponse200229) GetProductType() string`
+`func (o *InlineResponse200229) GetTimeZone() string`
 
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetProductTypeOk
+### GetTimeZoneOk
 
-`func (o *InlineResponse200229) GetProductTypeOk() (*string, bool)`
+`func (o *InlineResponse200229) GetTimeZoneOk() (*string, bool)`
 
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductType
+### SetTimeZone
 
-`func (o *InlineResponse200229) SetProductType(v string)`
+`func (o *InlineResponse200229) SetTimeZone(v string)`
 
-SetProductType sets ProductType field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasProductType
+### HasTimeZone
 
-`func (o *InlineResponse200229) HasProductType() bool`
+`func (o *InlineResponse200229) HasTimeZone() bool`
 
-HasProductType returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200229) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200229) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200229) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200229) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200229) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200229) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200229) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200229) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200229) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200229) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200229) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200229) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

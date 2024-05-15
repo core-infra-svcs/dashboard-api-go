@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationInventoryOnboardingCloudMonitoringPrepare
 
-> []InlineResponse20114 CreateOrganizationInventoryOnboardingCloudMonitoringPrepare(ctx, organizationId).CreateOrganizationInventoryOnboardingCloudMonitoringPrepare(createOrganizationInventoryOnboardingCloudMonitoringPrepare).Execute()
+> []InlineResponse20115 CreateOrganizationInventoryOnboardingCloudMonitoringPrepare(ctx, organizationId).CreateOrganizationInventoryOnboardingCloudMonitoringPrepare(createOrganizationInventoryOnboardingCloudMonitoringPrepare).Execute()
 
 Initiates or updates an import session
 
@@ -30,7 +30,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationInventoryOnboardingCloudMonitoringPrepare := *openapiclient.NewInlineObject230([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices("Sudi_example")}) // InlineObject230 | 
+    createOrganizationInventoryOnboardingCloudMonitoringPrepare := *openapiclient.NewInlineObject235([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices("Sudi_example")}) // InlineObject235 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PrepareApi.CreateOrganizationInventoryOnboardingCloudMonitoringPrepare``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationInventoryOnboardingCloudMonitoringPrepare`: []InlineResponse20114
+    // response from `CreateOrganizationInventoryOnboardingCloudMonitoringPrepare`: []InlineResponse20115
     fmt.Fprintf(os.Stdout, "Response from `PrepareApi.CreateOrganizationInventoryOnboardingCloudMonitoringPrepare`: %v\n", resp)
 }
 ```
@@ -60,11 +60,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringPrepare** | [**InlineObject230**](InlineObject230.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringPrepare** | [**InlineObject235**](InlineObject235.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse20114**](InlineResponse20114.md)
+[**[]InlineResponse20115**](InlineResponse20115.md)
 
 ### Authorization
 

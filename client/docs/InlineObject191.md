@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
-**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
-**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200190Ranges**](InlineResponse200190Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200190RangesInSeconds**](InlineResponse200190RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject191WithDefaults instantiates a new InlineObject191 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConcentrator
+### GetEnabled
 
-`func (o *InlineObject191) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
+`func (o *InlineObject191) GetEnabled() bool`
 
-GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetConcentratorOk
+### GetEnabledOk
 
-`func (o *InlineObject191) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
+`func (o *InlineObject191) GetEnabledOk() (*bool, bool)`
 
-GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConcentrator
+### SetEnabled
 
-`func (o *InlineObject191) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
+`func (o *InlineObject191) SetEnabled(v bool)`
 
-SetConcentrator sets Concentrator field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasConcentrator
+### HasEnabled
 
-`func (o *InlineObject191) HasConcentrator() bool`
+`func (o *InlineObject191) HasEnabled() bool`
 
-HasConcentrator returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSplitTunnel
+### GetRanges
 
-`func (o *InlineObject191) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
+`func (o *InlineObject191) GetRanges() []InlineResponse200190Ranges`
 
-GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetSplitTunnelOk
+### GetRangesOk
 
-`func (o *InlineObject191) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
+`func (o *InlineObject191) GetRangesOk() (*[]InlineResponse200190Ranges, bool)`
 
-GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplitTunnel
+### SetRanges
 
-`func (o *InlineObject191) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
+`func (o *InlineObject191) SetRanges(v []InlineResponse200190Ranges)`
 
-SetSplitTunnel sets SplitTunnel field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasSplitTunnel
+### HasRanges
 
-`func (o *InlineObject191) HasSplitTunnel() bool`
+`func (o *InlineObject191) HasRanges() bool`
 
-HasSplitTunnel returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetFailover
+### GetRangesInSeconds
 
-`func (o *InlineObject191) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
+`func (o *InlineObject191) GetRangesInSeconds() []InlineResponse200190RangesInSeconds`
 
-GetFailover returns the Failover field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetFailoverOk
+### GetRangesInSecondsOk
 
-`func (o *InlineObject191) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
+`func (o *InlineObject191) GetRangesInSecondsOk() (*[]InlineResponse200190RangesInSeconds, bool)`
 
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFailover
+### SetRangesInSeconds
 
-`func (o *InlineObject191) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
+`func (o *InlineObject191) SetRangesInSeconds(v []InlineResponse200190RangesInSeconds)`
 
-SetFailover sets Failover field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasFailover
+### HasRangesInSeconds
 
-`func (o *InlineObject191) HasFailover() bool`
+`func (o *InlineObject191) HasRangesInSeconds() bool`
 
-HasFailover returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

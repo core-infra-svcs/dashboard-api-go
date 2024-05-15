@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientId** | Pointer to **string** | The ID of the client | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**Manufacturer** | Pointer to **string** | Manufacturer of the client | [optional] 
-**Records** | Pointer to [**[]InlineResponse200221Records**](InlineResponse200221Records.md) | The clients that appear on any networks within an organization | [optional] 
+**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
+**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200221WithDefaults instantiates a new InlineResponse200221 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientId
+### GetArtifactId
 
-`func (o *InlineResponse200221) GetClientId() string`
+`func (o *InlineResponse200221) GetArtifactId() string`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetArtifactIdOk
 
-`func (o *InlineResponse200221) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200221) GetArtifactIdOk() (*string, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetArtifactId
 
-`func (o *InlineResponse200221) SetClientId(v string)`
+`func (o *InlineResponse200221) SetArtifactId(v string)`
 
-SetClientId sets ClientId field to given value.
+SetArtifactId sets ArtifactId field to given value.
 
-### HasClientId
+### HasArtifactId
 
-`func (o *InlineResponse200221) HasClientId() bool`
+`func (o *InlineResponse200221) HasArtifactId() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasArtifactId returns a boolean if a field has been set.
 
-### GetMac
+### GetOrganizationId
 
-`func (o *InlineResponse200221) GetMac() string`
+`func (o *InlineResponse200221) GetOrganizationId() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse200221) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200221) GetOrganizationIdOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetOrganizationId
 
-`func (o *InlineResponse200221) SetMac(v string)`
+`func (o *InlineResponse200221) SetOrganizationId(v string)`
 
-SetMac sets Mac field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasMac
+### HasOrganizationId
 
-`func (o *InlineResponse200221) HasMac() bool`
+`func (o *InlineResponse200221) HasOrganizationId() bool`
 
-HasMac returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
 
-### GetManufacturer
+### GetName
 
-`func (o *InlineResponse200221) GetManufacturer() string`
+`func (o *InlineResponse200221) GetName() string`
 
-GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetManufacturerOk
+### GetNameOk
 
-`func (o *InlineResponse200221) GetManufacturerOk() (*string, bool)`
+`func (o *InlineResponse200221) GetNameOk() (*string, bool)`
 
-GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManufacturer
+### SetName
 
-`func (o *InlineResponse200221) SetManufacturer(v string)`
+`func (o *InlineResponse200221) SetName(v string)`
 
-SetManufacturer sets Manufacturer field to given value.
+SetName sets Name field to given value.
 
-### HasManufacturer
+### HasName
 
-`func (o *InlineResponse200221) HasManufacturer() bool`
+`func (o *InlineResponse200221) HasName() bool`
 
-HasManufacturer returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetRecords
+### GetStatus
 
-`func (o *InlineResponse200221) GetRecords() []InlineResponse200221Records`
+`func (o *InlineResponse200221) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
 
-GetRecords returns the Records field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetRecordsOk
+### GetStatusOk
 
-`func (o *InlineResponse200221) GetRecordsOk() (*[]InlineResponse200221Records, bool)`
+`func (o *InlineResponse200221) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
 
-GetRecordsOk returns a tuple with the Records field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecords
+### SetStatus
 
-`func (o *InlineResponse200221) SetRecords(v []InlineResponse200221Records)`
+`func (o *InlineResponse200221) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
 
-SetRecords sets Records field to given value.
+SetStatus sets Status field to given value.
 
-### HasRecords
+### HasStatus
 
-`func (o *InlineResponse200221) HasRecords() bool`
+`func (o *InlineResponse200221) HasStatus() bool`
 
-HasRecords returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

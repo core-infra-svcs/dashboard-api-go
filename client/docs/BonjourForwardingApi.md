@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessSsidBonjourForwarding
 
-> InlineResponse200183 GetNetworkWirelessSsidBonjourForwarding(ctx, networkId, number).Execute()
+> InlineResponse200185 GetNetworkWirelessSsidBonjourForwarding(ctx, networkId, number).Execute()
 
 List the Bonjour forwarding setting and rules for the SSID
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BonjourForwardingApi.GetNetworkWirelessSsidBonjourForwarding``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidBonjourForwarding`: InlineResponse200183
+    // response from `GetNetworkWirelessSsidBonjourForwarding`: InlineResponse200185
     fmt.Fprintf(os.Stdout, "Response from `BonjourForwardingApi.GetNetworkWirelessSsidBonjourForwarding`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200183**](InlineResponse200183.md)
+[**InlineResponse200185**](InlineResponse200185.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidBonjourForwarding
 
-> InlineResponse200183 UpdateNetworkWirelessSsidBonjourForwarding(ctx, networkId, number).UpdateNetworkWirelessSsidBonjourForwarding(updateNetworkWirelessSsidBonjourForwarding).Execute()
+> InlineResponse200185 UpdateNetworkWirelessSsidBonjourForwarding(ctx, networkId, number).UpdateNetworkWirelessSsidBonjourForwarding(updateNetworkWirelessSsidBonjourForwarding).Execute()
 
 Update the bonjour forwarding setting and rules for the SSID
 
@@ -105,7 +105,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidBonjourForwarding := *openapiclient.NewInlineObject180() // InlineObject180 |  (optional)
+    updateNetworkWirelessSsidBonjourForwarding := *openapiclient.NewInlineObject183() // InlineObject183 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -114,7 +114,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BonjourForwardingApi.UpdateNetworkWirelessSsidBonjourForwarding``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidBonjourForwarding`: InlineResponse200183
+    // response from `UpdateNetworkWirelessSsidBonjourForwarding`: InlineResponse200185
     fmt.Fprintf(os.Stdout, "Response from `BonjourForwardingApi.UpdateNetworkWirelessSsidBonjourForwarding`: %v\n", resp)
 }
 ```
@@ -137,11 +137,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidBonjourForwarding** | [**InlineObject180**](InlineObject180.md) |  | 
+ **updateNetworkWirelessSsidBonjourForwarding** | [**InlineObject183**](InlineObject183.md) |  | 
 
 ### Return type
 
-[**InlineResponse200183**](InlineResponse200183.md)
+[**InlineResponse200185**](InlineResponse200185.md)
 
 ### Authorization
 

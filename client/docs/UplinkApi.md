@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetNetworkCellularGatewayUplink
 
-> InlineResponse20075 GetNetworkCellularGatewayUplink(ctx, networkId).Execute()
+> InlineResponse20076 GetNetworkCellularGatewayUplink(ctx, networkId).Execute()
 
 Returns the uplink settings for your MG network.
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinkApi.GetNetworkCellularGatewayUplink``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewayUplink`: InlineResponse20075
+    // response from `GetNetworkCellularGatewayUplink`: InlineResponse20076
     fmt.Fprintf(os.Stdout, "Response from `UplinkApi.GetNetworkCellularGatewayUplink`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20075**](InlineResponse20075.md)
+[**InlineResponse20076**](InlineResponse20076.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayUplinkStatuses
 
-> []InlineResponse200217 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200224 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MG cellular gateway in the organization
 
@@ -116,7 +116,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinkApi.GetOrganizationCellularGatewayUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200217
+    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200224
     fmt.Fprintf(os.Stdout, "Response from `UplinkApi.GetOrganizationCellularGatewayUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200217**](InlineResponse200217.md)
+[**[]InlineResponse200224**](InlineResponse200224.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewayUplink
 
-> InlineResponse20075 UpdateNetworkCellularGatewayUplink(ctx, networkId).UpdateNetworkCellularGatewayUplink(updateNetworkCellularGatewayUplink).Execute()
+> InlineResponse20076 UpdateNetworkCellularGatewayUplink(ctx, networkId).UpdateNetworkCellularGatewayUplink(updateNetworkCellularGatewayUplink).Execute()
 
 Updates the uplink settings for your MG network.
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UplinkApi.UpdateNetworkCellularGatewayUplink``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewayUplink`: InlineResponse20075
+    // response from `UpdateNetworkCellularGatewayUplink`: InlineResponse20076
     fmt.Fprintf(os.Stdout, "Response from `UplinkApi.UpdateNetworkCellularGatewayUplink`: %v\n", resp)
 }
 ```
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20075**](InlineResponse20075.md)
+[**InlineResponse20076**](InlineResponse20076.md)
 
 ### Authorization
 

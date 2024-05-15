@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSummarySwitchPowerHistory
 
-> []InlineResponse200265 GetOrganizationSummarySwitchPowerHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200275 GetOrganizationSummarySwitchPowerHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the total PoE power draw for all switch ports in the organization over the requested timespan (by default the last 24 hours)
 
@@ -49,7 +49,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummaryApi.GetOrganizationSummarySwitchPowerHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummarySwitchPowerHistory`: []InlineResponse200265
+    // response from `GetOrganizationSummarySwitchPowerHistory`: []InlineResponse200275
     fmt.Fprintf(os.Stdout, "Response from `SummaryApi.GetOrganizationSummarySwitchPowerHistory`: %v\n", resp)
 }
 ```
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200265**](InlineResponse200265.md)
+[**[]InlineResponse200275**](InlineResponse200275.md)
 
 ### Authorization
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopAppliancesByUtilization
 
-> []InlineResponse200266 GetOrganizationSummaryTopAppliancesByUtilization(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200276 GetOrganizationSummaryTopAppliancesByUtilization(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the top 10 appliances sorted by utilization over given time range.
 
@@ -125,7 +125,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummaryApi.GetOrganizationSummaryTopAppliancesByUtilization``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopAppliancesByUtilization`: []InlineResponse200266
+    // response from `GetOrganizationSummaryTopAppliancesByUtilization`: []InlineResponse200276
     fmt.Fprintf(os.Stdout, "Response from `SummaryApi.GetOrganizationSummaryTopAppliancesByUtilization`: %v\n", resp)
 }
 ```
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200266**](InlineResponse200266.md)
+[**[]InlineResponse200276**](InlineResponse200276.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopClientsByUsage
 
-> []InlineResponse200267 GetOrganizationSummaryTopClientsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200277 GetOrganizationSummaryTopClientsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 clients by data usage (in mb) over given time range.
 
@@ -201,7 +201,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummaryApi.GetOrganizationSummaryTopClientsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsByUsage`: []InlineResponse200267
+    // response from `GetOrganizationSummaryTopClientsByUsage`: []InlineResponse200277
     fmt.Fprintf(os.Stdout, "Response from `SummaryApi.GetOrganizationSummaryTopClientsByUsage`: %v\n", resp)
 }
 ```
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200267**](InlineResponse200267.md)
+[**[]InlineResponse200277**](InlineResponse200277.md)
 
 ### Authorization
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopClientsManufacturersByUsage
 
-> []InlineResponse200268 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200278 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top clients by data usage (in mb) over given time range, grouped by manufacturer.
 
@@ -277,7 +277,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummaryApi.GetOrganizationSummaryTopClientsManufacturersByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200268
+    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200278
     fmt.Fprintf(os.Stdout, "Response from `SummaryApi.GetOrganizationSummaryTopClientsManufacturersByUsage`: %v\n", resp)
 }
 ```
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200268**](InlineResponse200268.md)
+[**[]InlineResponse200278**](InlineResponse200278.md)
 
 ### Authorization
 
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopDevicesByUsage
 
-> []InlineResponse200269 GetOrganizationSummaryTopDevicesByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200279 GetOrganizationSummaryTopDevicesByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 devices sorted by data usage over given time range
 
@@ -353,7 +353,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummaryApi.GetOrganizationSummaryTopDevicesByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopDevicesByUsage`: []InlineResponse200269
+    // response from `GetOrganizationSummaryTopDevicesByUsage`: []InlineResponse200279
     fmt.Fprintf(os.Stdout, "Response from `SummaryApi.GetOrganizationSummaryTopDevicesByUsage`: %v\n", resp)
 }
 ```
@@ -380,7 +380,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200269**](InlineResponse200269.md)
+[**[]InlineResponse200279**](InlineResponse200279.md)
 
 ### Authorization
 
@@ -398,7 +398,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopDevicesModelsByUsage
 
-> []InlineResponse200270 GetOrganizationSummaryTopDevicesModelsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200280 GetOrganizationSummaryTopDevicesModelsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 device models sorted by data usage over given time range
 
@@ -429,7 +429,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummaryApi.GetOrganizationSummaryTopDevicesModelsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopDevicesModelsByUsage`: []InlineResponse200270
+    // response from `GetOrganizationSummaryTopDevicesModelsByUsage`: []InlineResponse200280
     fmt.Fprintf(os.Stdout, "Response from `SummaryApi.GetOrganizationSummaryTopDevicesModelsByUsage`: %v\n", resp)
 }
 ```
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200270**](InlineResponse200270.md)
+[**[]InlineResponse200280**](InlineResponse200280.md)
 
 ### Authorization
 
@@ -474,7 +474,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopNetworksByStatus
 
-> []InlineResponse200271 GetOrganizationSummaryTopNetworksByStatus(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200281 GetOrganizationSummaryTopNetworksByStatus(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the client and status overview information for the networks in an organization
 
@@ -505,7 +505,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummaryApi.GetOrganizationSummaryTopNetworksByStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopNetworksByStatus`: []InlineResponse200271
+    // response from `GetOrganizationSummaryTopNetworksByStatus`: []InlineResponse200281
     fmt.Fprintf(os.Stdout, "Response from `SummaryApi.GetOrganizationSummaryTopNetworksByStatus`: %v\n", resp)
 }
 ```
@@ -532,7 +532,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200271**](InlineResponse200271.md)
+[**[]InlineResponse200281**](InlineResponse200281.md)
 
 ### Authorization
 
@@ -550,7 +550,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopSsidsByUsage
 
-> []InlineResponse200272 GetOrganizationSummaryTopSsidsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200282 GetOrganizationSummaryTopSsidsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 ssids by data usage over given time range
 
@@ -581,7 +581,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummaryApi.GetOrganizationSummaryTopSsidsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopSsidsByUsage`: []InlineResponse200272
+    // response from `GetOrganizationSummaryTopSsidsByUsage`: []InlineResponse200282
     fmt.Fprintf(os.Stdout, "Response from `SummaryApi.GetOrganizationSummaryTopSsidsByUsage`: %v\n", resp)
 }
 ```
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200272**](InlineResponse200272.md)
+[**[]InlineResponse200282**](InlineResponse200282.md)
 
 ### Authorization
 
@@ -626,7 +626,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopSwitchesByEnergyUsage
 
-> []InlineResponse200273 GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200283 GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 switches by energy usage over given time range
 
@@ -657,7 +657,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SummaryApi.GetOrganizationSummaryTopSwitchesByEnergyUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopSwitchesByEnergyUsage`: []InlineResponse200273
+    // response from `GetOrganizationSummaryTopSwitchesByEnergyUsage`: []InlineResponse200283
     fmt.Fprintf(os.Stdout, "Response from `SummaryApi.GetOrganizationSummaryTopSwitchesByEnergyUsage`: %v\n", resp)
 }
 ```
@@ -684,7 +684,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200273**](InlineResponse200273.md)
+[**[]InlineResponse200283**](InlineResponse200283.md)
 
 ### Authorization
 

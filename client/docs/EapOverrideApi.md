@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessSsidEapOverride
 
-> InlineResponse200184 GetNetworkWirelessSsidEapOverride(ctx, networkId, number).Execute()
+> InlineResponse200186 GetNetworkWirelessSsidEapOverride(ctx, networkId, number).Execute()
 
 Return the EAP overridden parameters for an SSID
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EapOverrideApi.GetNetworkWirelessSsidEapOverride``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidEapOverride`: InlineResponse200184
+    // response from `GetNetworkWirelessSsidEapOverride`: InlineResponse200186
     fmt.Fprintf(os.Stdout, "Response from `EapOverrideApi.GetNetworkWirelessSsidEapOverride`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200184**](InlineResponse200184.md)
+[**InlineResponse200186**](InlineResponse200186.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidEapOverride
 
-> InlineResponse200184 UpdateNetworkWirelessSsidEapOverride(ctx, networkId, number).UpdateNetworkWirelessSsidEapOverride(updateNetworkWirelessSsidEapOverride).Execute()
+> InlineResponse200186 UpdateNetworkWirelessSsidEapOverride(ctx, networkId, number).UpdateNetworkWirelessSsidEapOverride(updateNetworkWirelessSsidEapOverride).Execute()
 
 Update the EAP overridden parameters for an SSID.
 
@@ -105,7 +105,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidEapOverride := *openapiclient.NewInlineObject182() // InlineObject182 |  (optional)
+    updateNetworkWirelessSsidEapOverride := *openapiclient.NewInlineObject185() // InlineObject185 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -114,7 +114,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EapOverrideApi.UpdateNetworkWirelessSsidEapOverride``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidEapOverride`: InlineResponse200184
+    // response from `UpdateNetworkWirelessSsidEapOverride`: InlineResponse200186
     fmt.Fprintf(os.Stdout, "Response from `EapOverrideApi.UpdateNetworkWirelessSsidEapOverride`: %v\n", resp)
 }
 ```
@@ -137,11 +137,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidEapOverride** | [**InlineObject182**](InlineObject182.md) |  | 
+ **updateNetworkWirelessSsidEapOverride** | [**InlineObject185**](InlineObject185.md) |  | 
 
 ### Return type
 
-[**InlineResponse200184**](InlineResponse200184.md)
+[**InlineResponse200186**](InlineResponse200186.md)
 
 ### Authorization
 

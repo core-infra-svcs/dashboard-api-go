@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the manufacturer | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage.md) |  | [optional] 
+**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200268WithDefaults instantiates a new InlineResponse200268 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetCertificate
 
-`func (o *InlineResponse200268) GetName() string`
+`func (o *InlineResponse200268) GetCertificate() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCertificate returns the Certificate field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCertificateOk
 
-`func (o *InlineResponse200268) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200268) GetCertificateOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCertificate
 
-`func (o *InlineResponse200268) SetName(v string)`
+`func (o *InlineResponse200268) SetCertificate(v string)`
 
-SetName sets Name field to given value.
+SetCertificate sets Certificate field to given value.
 
-### HasName
+### HasCertificate
 
-`func (o *InlineResponse200268) HasName() bool`
+`func (o *InlineResponse200268) HasCertificate() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetClients
-
-`func (o *InlineResponse200268) GetClients() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients`
-
-GetClients returns the Clients field if non-nil, zero value otherwise.
-
-### GetClientsOk
-
-`func (o *InlineResponse200268) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients, bool)`
-
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClients
-
-`func (o *InlineResponse200268) SetClients(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients)`
-
-SetClients sets Clients field to given value.
-
-### HasClients
-
-`func (o *InlineResponse200268) HasClients() bool`
-
-HasClients returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200268) GetUsage() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200268) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200268) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200268) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasCertificate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

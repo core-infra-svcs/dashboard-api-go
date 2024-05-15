@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID device type group policies are enabled. | [optional] 
-**DeviceTypePolicies** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies**](NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies.md) | List of device type policies. | [optional] 
+**MeshingEnabled** | Pointer to **bool** | Toggle for enabling or disabling meshing in a network | [optional] 
+**Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
+**LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
+**UpgradeStrategy** | Pointer to **string** | The default strategy that network devices will use to perform an upgrade. Requires firmware version MR 26.8 or higher. | [optional] 
+**LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
+**NamedVlans** | Pointer to [**NetworksNetworkIdWirelessSettingsNamedVlans**](NetworksNetworkIdWirelessSettingsNamedVlans.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +30,155 @@ NewInlineObject181WithDefaults instantiates a new InlineObject181 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetMeshingEnabled
 
-`func (o *InlineObject181) GetEnabled() bool`
+`func (o *InlineObject181) GetMeshingEnabled() bool`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetMeshingEnabled returns the MeshingEnabled field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetMeshingEnabledOk
 
-`func (o *InlineObject181) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject181) GetMeshingEnabledOk() (*bool, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetMeshingEnabledOk returns a tuple with the MeshingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetMeshingEnabled
 
-`func (o *InlineObject181) SetEnabled(v bool)`
+`func (o *InlineObject181) SetMeshingEnabled(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetMeshingEnabled sets MeshingEnabled field to given value.
 
-### HasEnabled
+### HasMeshingEnabled
 
-`func (o *InlineObject181) HasEnabled() bool`
+`func (o *InlineObject181) HasMeshingEnabled() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasMeshingEnabled returns a boolean if a field has been set.
 
-### GetDeviceTypePolicies
+### GetIpv6BridgeEnabled
 
-`func (o *InlineObject181) GetDeviceTypePolicies() []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies`
+`func (o *InlineObject181) GetIpv6BridgeEnabled() bool`
 
-GetDeviceTypePolicies returns the DeviceTypePolicies field if non-nil, zero value otherwise.
+GetIpv6BridgeEnabled returns the Ipv6BridgeEnabled field if non-nil, zero value otherwise.
 
-### GetDeviceTypePoliciesOk
+### GetIpv6BridgeEnabledOk
 
-`func (o *InlineObject181) GetDeviceTypePoliciesOk() (*[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies, bool)`
+`func (o *InlineObject181) GetIpv6BridgeEnabledOk() (*bool, bool)`
 
-GetDeviceTypePoliciesOk returns a tuple with the DeviceTypePolicies field if it's non-nil, zero value otherwise
+GetIpv6BridgeEnabledOk returns a tuple with the Ipv6BridgeEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceTypePolicies
+### SetIpv6BridgeEnabled
 
-`func (o *InlineObject181) SetDeviceTypePolicies(v []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies)`
+`func (o *InlineObject181) SetIpv6BridgeEnabled(v bool)`
 
-SetDeviceTypePolicies sets DeviceTypePolicies field to given value.
+SetIpv6BridgeEnabled sets Ipv6BridgeEnabled field to given value.
 
-### HasDeviceTypePolicies
+### HasIpv6BridgeEnabled
 
-`func (o *InlineObject181) HasDeviceTypePolicies() bool`
+`func (o *InlineObject181) HasIpv6BridgeEnabled() bool`
 
-HasDeviceTypePolicies returns a boolean if a field has been set.
+HasIpv6BridgeEnabled returns a boolean if a field has been set.
+
+### GetLocationAnalyticsEnabled
+
+`func (o *InlineObject181) GetLocationAnalyticsEnabled() bool`
+
+GetLocationAnalyticsEnabled returns the LocationAnalyticsEnabled field if non-nil, zero value otherwise.
+
+### GetLocationAnalyticsEnabledOk
+
+`func (o *InlineObject181) GetLocationAnalyticsEnabledOk() (*bool, bool)`
+
+GetLocationAnalyticsEnabledOk returns a tuple with the LocationAnalyticsEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocationAnalyticsEnabled
+
+`func (o *InlineObject181) SetLocationAnalyticsEnabled(v bool)`
+
+SetLocationAnalyticsEnabled sets LocationAnalyticsEnabled field to given value.
+
+### HasLocationAnalyticsEnabled
+
+`func (o *InlineObject181) HasLocationAnalyticsEnabled() bool`
+
+HasLocationAnalyticsEnabled returns a boolean if a field has been set.
+
+### GetUpgradeStrategy
+
+`func (o *InlineObject181) GetUpgradeStrategy() string`
+
+GetUpgradeStrategy returns the UpgradeStrategy field if non-nil, zero value otherwise.
+
+### GetUpgradeStrategyOk
+
+`func (o *InlineObject181) GetUpgradeStrategyOk() (*string, bool)`
+
+GetUpgradeStrategyOk returns a tuple with the UpgradeStrategy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpgradeStrategy
+
+`func (o *InlineObject181) SetUpgradeStrategy(v string)`
+
+SetUpgradeStrategy sets UpgradeStrategy field to given value.
+
+### HasUpgradeStrategy
+
+`func (o *InlineObject181) HasUpgradeStrategy() bool`
+
+HasUpgradeStrategy returns a boolean if a field has been set.
+
+### GetLedLightsOn
+
+`func (o *InlineObject181) GetLedLightsOn() bool`
+
+GetLedLightsOn returns the LedLightsOn field if non-nil, zero value otherwise.
+
+### GetLedLightsOnOk
+
+`func (o *InlineObject181) GetLedLightsOnOk() (*bool, bool)`
+
+GetLedLightsOnOk returns a tuple with the LedLightsOn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLedLightsOn
+
+`func (o *InlineObject181) SetLedLightsOn(v bool)`
+
+SetLedLightsOn sets LedLightsOn field to given value.
+
+### HasLedLightsOn
+
+`func (o *InlineObject181) HasLedLightsOn() bool`
+
+HasLedLightsOn returns a boolean if a field has been set.
+
+### GetNamedVlans
+
+`func (o *InlineObject181) GetNamedVlans() NetworksNetworkIdWirelessSettingsNamedVlans`
+
+GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
+
+### GetNamedVlansOk
+
+`func (o *InlineObject181) GetNamedVlansOk() (*NetworksNetworkIdWirelessSettingsNamedVlans, bool)`
+
+GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNamedVlans
+
+`func (o *InlineObject181) SetNamedVlans(v NetworksNetworkIdWirelessSettingsNamedVlans)`
+
+SetNamedVlans sets NamedVlans field to given value.
+
+### HasNamedVlans
+
+`func (o *InlineObject181) HasNamedVlans() bool`
+
+HasNamedVlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

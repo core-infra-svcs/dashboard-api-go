@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkSwitchLinkAggregation
 
-> InlineResponse200145 CreateNetworkSwitchLinkAggregation(ctx, networkId).CreateNetworkSwitchLinkAggregation(createNetworkSwitchLinkAggregation).Execute()
+> InlineResponse200146 CreateNetworkSwitchLinkAggregation(ctx, networkId).CreateNetworkSwitchLinkAggregation(createNetworkSwitchLinkAggregation).Execute()
 
 Create a link aggregation group
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LinkAggregationsApi.CreateNetworkSwitchLinkAggregation``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchLinkAggregation`: InlineResponse200145
+    // response from `CreateNetworkSwitchLinkAggregation`: InlineResponse200146
     fmt.Fprintf(os.Stdout, "Response from `LinkAggregationsApi.CreateNetworkSwitchLinkAggregation`: %v\n", resp)
 }
 ```
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200145**](InlineResponse200145.md)
+[**InlineResponse200146**](InlineResponse200146.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchLinkAggregations
 
-> []InlineResponse200145 GetNetworkSwitchLinkAggregations(ctx, networkId).Execute()
+> []InlineResponse200146 GetNetworkSwitchLinkAggregations(ctx, networkId).Execute()
 
 List link aggregation groups
 
@@ -184,7 +184,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LinkAggregationsApi.GetNetworkSwitchLinkAggregations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchLinkAggregations`: []InlineResponse200145
+    // response from `GetNetworkSwitchLinkAggregations`: []InlineResponse200146
     fmt.Fprintf(os.Stdout, "Response from `LinkAggregationsApi.GetNetworkSwitchLinkAggregations`: %v\n", resp)
 }
 ```
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200145**](InlineResponse200145.md)
+[**[]InlineResponse200146**](InlineResponse200146.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchLinkAggregation
 
-> InlineResponse200145 UpdateNetworkSwitchLinkAggregation(ctx, networkId, linkAggregationId).UpdateNetworkSwitchLinkAggregation(updateNetworkSwitchLinkAggregation).Execute()
+> InlineResponse200146 UpdateNetworkSwitchLinkAggregation(ctx, networkId, linkAggregationId).UpdateNetworkSwitchLinkAggregation(updateNetworkSwitchLinkAggregation).Execute()
 
 Update a link aggregation group
 
@@ -256,7 +256,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LinkAggregationsApi.UpdateNetworkSwitchLinkAggregation``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchLinkAggregation`: InlineResponse200145
+    // response from `UpdateNetworkSwitchLinkAggregation`: InlineResponse200146
     fmt.Fprintf(os.Stdout, "Response from `LinkAggregationsApi.UpdateNetworkSwitchLinkAggregation`: %v\n", resp)
 }
 ```
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200145**](InlineResponse200145.md)
+[**InlineResponse200146**](InlineResponse200146.md)
 
 ### Authorization
 

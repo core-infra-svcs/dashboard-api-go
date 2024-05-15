@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessBilling
 
-> InlineResponse200165 GetNetworkWirelessBilling(ctx, networkId).Execute()
+> InlineResponse200167 GetNetworkWirelessBilling(ctx, networkId).Execute()
 
 Return the billing settings of this network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BillingApi.GetNetworkWirelessBilling``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessBilling`: InlineResponse200165
+    // response from `GetNetworkWirelessBilling`: InlineResponse200167
     fmt.Fprintf(os.Stdout, "Response from `BillingApi.GetNetworkWirelessBilling`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200165**](InlineResponse200165.md)
+[**InlineResponse200167**](InlineResponse200167.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessBilling
 
-> InlineResponse200165 UpdateNetworkWirelessBilling(ctx, networkId).UpdateNetworkWirelessBilling(updateNetworkWirelessBilling).Execute()
+> InlineResponse200167 UpdateNetworkWirelessBilling(ctx, networkId).UpdateNetworkWirelessBilling(updateNetworkWirelessBilling).Execute()
 
 Update the billing settings
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessBilling := *openapiclient.NewInlineObject170() // InlineObject170 |  (optional)
+    updateNetworkWirelessBilling := *openapiclient.NewInlineObject173() // InlineObject173 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BillingApi.UpdateNetworkWirelessBilling``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessBilling`: InlineResponse200165
+    // response from `UpdateNetworkWirelessBilling`: InlineResponse200167
     fmt.Fprintf(os.Stdout, "Response from `BillingApi.UpdateNetworkWirelessBilling`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessBilli
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessBilling** | [**InlineObject170**](InlineObject170.md) |  | 
+ **updateNetworkWirelessBilling** | [**InlineObject173**](InlineObject173.md) |  | 
 
 ### Return type
 
-[**InlineResponse200165**](InlineResponse200165.md)
+[**InlineResponse200167**](InlineResponse200167.md)
 
 ### Authorization
 

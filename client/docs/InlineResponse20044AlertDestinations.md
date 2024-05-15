@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Emails** | Pointer to **[]string** | A list of emails that will receive information about the alert | [optional] 
+**SmsNumbers** | Pointer to **[]string** | A list of phone numbers that will receive text messages about the alert. Only available for sensors status alerts. | [optional] 
 **AllAdmins** | Pointer to **bool** | If true, then all network admins will receive emails for this alert | [optional] 
 **Snmp** | Pointer to **bool** | If true, then an SNMP trap will be sent for this alert if there is an SNMP trap server configured for this network | [optional] 
 **HttpServerIds** | Pointer to **[]string** | A list of HTTP server IDs to send a Webhook to for this alert | [optional] 
@@ -52,6 +53,31 @@ SetEmails sets Emails field to given value.
 `func (o *InlineResponse20044AlertDestinations) HasEmails() bool`
 
 HasEmails returns a boolean if a field has been set.
+
+### GetSmsNumbers
+
+`func (o *InlineResponse20044AlertDestinations) GetSmsNumbers() []string`
+
+GetSmsNumbers returns the SmsNumbers field if non-nil, zero value otherwise.
+
+### GetSmsNumbersOk
+
+`func (o *InlineResponse20044AlertDestinations) GetSmsNumbersOk() (*[]string, bool)`
+
+GetSmsNumbersOk returns a tuple with the SmsNumbers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSmsNumbers
+
+`func (o *InlineResponse20044AlertDestinations) SetSmsNumbers(v []string)`
+
+SetSmsNumbers sets SmsNumbers field to given value.
+
+### HasSmsNumbers
+
+`func (o *InlineResponse20044AlertDestinations) HasSmsNumbers() bool`
+
+HasSmsNumbers returns a boolean if a field has been set.
 
 ### GetAllAdmins
 

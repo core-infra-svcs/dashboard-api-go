@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1.md) |  | 
-**DestinationGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1.md) |  | 
-**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: []) | [optional] 
-**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL (default: \&quot;default\&quot;) | [optional] 
+**Name** | Pointer to **string** | Name of the adaptive policy ACL | [optional] 
+**Description** | Pointer to **string** | Description of the adaptive policy ACL | [optional] 
+**Rules** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1**](OrganizationsOrganizationIdAdaptivePolicyAclsRules1.md) | An ordered array of the adaptive policy ACL rules. An empty array will clear the rules. | [optional] 
+**IpVersion** | Pointer to **string** | IP version of adpative policy ACL. One of: &#39;any&#39;, &#39;ipv4&#39; or &#39;ipv6&#39; | [optional] 
 
 ## Methods
 
 ### NewInlineObject200
 
-`func NewInlineObject200(sourceGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1, destinationGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1, ) *InlineObject200`
+`func NewInlineObject200() *InlineObject200`
 
 NewInlineObject200 instantiates a new InlineObject200 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +28,105 @@ NewInlineObject200WithDefaults instantiates a new InlineObject200 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceGroup
+### GetName
 
-`func (o *InlineObject200) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1`
+`func (o *InlineObject200) GetName() string`
 
-GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSourceGroupOk
+### GetNameOk
 
-`func (o *InlineObject200) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1, bool)`
+`func (o *InlineObject200) GetNameOk() (*string, bool)`
 
-GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceGroup
+### SetName
 
-`func (o *InlineObject200) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1)`
+`func (o *InlineObject200) SetName(v string)`
 
-SetSourceGroup sets SourceGroup field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetDestinationGroup
+`func (o *InlineObject200) HasName() bool`
 
-`func (o *InlineObject200) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1`
+HasName returns a boolean if a field has been set.
 
-GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
+### GetDescription
 
-### GetDestinationGroupOk
+`func (o *InlineObject200) GetDescription() string`
 
-`func (o *InlineObject200) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1, bool)`
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
+### GetDescriptionOk
+
+`func (o *InlineObject200) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinationGroup
+### SetDescription
 
-`func (o *InlineObject200) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1)`
+`func (o *InlineObject200) SetDescription(v string)`
 
-SetDestinationGroup sets DestinationGroup field to given value.
+SetDescription sets Description field to given value.
 
+### HasDescription
 
-### GetAcls
+`func (o *InlineObject200) HasDescription() bool`
 
-`func (o *InlineObject200) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1`
+HasDescription returns a boolean if a field has been set.
 
-GetAcls returns the Acls field if non-nil, zero value otherwise.
+### GetRules
 
-### GetAclsOk
+`func (o *InlineObject200) GetRules() []OrganizationsOrganizationIdAdaptivePolicyAclsRules1`
 
-`func (o *InlineObject200) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1, bool)`
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
+### GetRulesOk
+
+`func (o *InlineObject200) GetRulesOk() (*[]OrganizationsOrganizationIdAdaptivePolicyAclsRules1, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAcls
+### SetRules
 
-`func (o *InlineObject200) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1)`
+`func (o *InlineObject200) SetRules(v []OrganizationsOrganizationIdAdaptivePolicyAclsRules1)`
 
-SetAcls sets Acls field to given value.
+SetRules sets Rules field to given value.
 
-### HasAcls
+### HasRules
 
-`func (o *InlineObject200) HasAcls() bool`
+`func (o *InlineObject200) HasRules() bool`
 
-HasAcls returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetLastEntryRule
+### GetIpVersion
 
-`func (o *InlineObject200) GetLastEntryRule() string`
+`func (o *InlineObject200) GetIpVersion() string`
 
-GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
 
-### GetLastEntryRuleOk
+### GetIpVersionOk
 
-`func (o *InlineObject200) GetLastEntryRuleOk() (*string, bool)`
+`func (o *InlineObject200) GetIpVersionOk() (*string, bool)`
 
-GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastEntryRule
+### SetIpVersion
 
-`func (o *InlineObject200) SetLastEntryRule(v string)`
+`func (o *InlineObject200) SetIpVersion(v string)`
 
-SetLastEntryRule sets LastEntryRule field to given value.
+SetIpVersion sets IpVersion field to given value.
 
-### HasLastEntryRule
+### HasIpVersion
 
-`func (o *InlineObject200) HasLastEntryRule() bool`
+`func (o *InlineObject200) HasIpVersion() bool`
 
-HasLastEntryRule returns a boolean if a field has been set.
+HasIpVersion returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

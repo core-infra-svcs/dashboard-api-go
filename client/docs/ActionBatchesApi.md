@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationActionBatch
 
-> InlineResponse20110 CreateOrganizationActionBatch(ctx, organizationId).CreateOrganizationActionBatch(createOrganizationActionBatch).Execute()
+> InlineResponse20111 CreateOrganizationActionBatch(ctx, organizationId).CreateOrganizationActionBatch(createOrganizationActionBatch).Execute()
 
 Create an action batch
 
@@ -34,7 +34,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationActionBatch := *openapiclient.NewInlineObject194([]openapiclient.OrganizationsOrganizationIdActionBatchesActions1{*openapiclient.NewOrganizationsOrganizationIdActionBatchesActions1("Resource_example", "Operation_example")}) // InlineObject194 | 
+    createOrganizationActionBatch := *openapiclient.NewInlineObject197([]openapiclient.OrganizationsOrganizationIdActionBatchesActions1{*openapiclient.NewOrganizationsOrganizationIdActionBatchesActions1("Resource_example", "Operation_example")}) // InlineObject197 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ActionBatchesApi.CreateOrganizationActionBatch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationActionBatch`: InlineResponse20110
+    // response from `CreateOrganizationActionBatch`: InlineResponse20111
     fmt.Fprintf(os.Stdout, "Response from `ActionBatchesApi.CreateOrganizationActionBatch`: %v\n", resp)
 }
 ```
@@ -64,11 +64,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationActionBa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationActionBatch** | [**InlineObject194**](InlineObject194.md) |  | 
+ **createOrganizationActionBatch** | [**InlineObject197**](InlineObject197.md) |  | 
 
 ### Return type
 
-[**InlineResponse20110**](InlineResponse20110.md)
+[**InlineResponse20111**](InlineResponse20111.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationActionBatch
 
-> InlineResponse20110 GetOrganizationActionBatch(ctx, organizationId, actionBatchId).Execute()
+> InlineResponse20111 GetOrganizationActionBatch(ctx, organizationId, actionBatchId).Execute()
 
 Return an action batch
 
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ActionBatchesApi.GetOrganizationActionBatch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationActionBatch`: InlineResponse20110
+    // response from `GetOrganizationActionBatch`: InlineResponse20111
     fmt.Fprintf(os.Stdout, "Response from `ActionBatchesApi.GetOrganizationActionBatch`: %v\n", resp)
 }
 ```
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20110**](InlineResponse20110.md)
+[**InlineResponse20111**](InlineResponse20111.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationActionBatches
 
-> []InlineResponse200193 GetOrganizationActionBatches(ctx, organizationId).Status(status).Execute()
+> []InlineResponse200195 GetOrganizationActionBatches(ctx, organizationId).Status(status).Execute()
 
 Return the list of action batches in the organization
 
@@ -259,7 +259,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ActionBatchesApi.GetOrganizationActionBatches``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationActionBatches`: []InlineResponse200193
+    // response from `GetOrganizationActionBatches`: []InlineResponse200195
     fmt.Fprintf(os.Stdout, "Response from `ActionBatchesApi.GetOrganizationActionBatches`: %v\n", resp)
 }
 ```
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200193**](InlineResponse200193.md)
+[**[]InlineResponse200195**](InlineResponse200195.md)
 
 ### Authorization
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationActionBatch
 
-> InlineResponse200193 UpdateOrganizationActionBatch(ctx, organizationId, actionBatchId).UpdateOrganizationActionBatch(updateOrganizationActionBatch).Execute()
+> InlineResponse200195 UpdateOrganizationActionBatch(ctx, organizationId, actionBatchId).UpdateOrganizationActionBatch(updateOrganizationActionBatch).Execute()
 
 Update an action batch
 
@@ -323,7 +323,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     actionBatchId := "actionBatchId_example" // string | Action batch ID
-    updateOrganizationActionBatch := *openapiclient.NewInlineObject195() // InlineObject195 |  (optional)
+    updateOrganizationActionBatch := *openapiclient.NewInlineObject198() // InlineObject198 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -332,7 +332,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ActionBatchesApi.UpdateOrganizationActionBatch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationActionBatch`: InlineResponse200193
+    // response from `UpdateOrganizationActionBatch`: InlineResponse200195
     fmt.Fprintf(os.Stdout, "Response from `ActionBatchesApi.UpdateOrganizationActionBatch`: %v\n", resp)
 }
 ```
@@ -355,11 +355,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationActionBatch** | [**InlineObject195**](InlineObject195.md) |  | 
+ **updateOrganizationActionBatch** | [**InlineObject198**](InlineObject198.md) |  | 
 
 ### Return type
 
-[**InlineResponse200193**](InlineResponse200193.md)
+[**InlineResponse200195**](InlineResponse200195.md)
 
 ### Authorization
 

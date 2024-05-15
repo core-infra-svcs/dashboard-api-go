@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vpnstatusentities** | Pointer to [**[]InlineResponse200208Vpnstatusentities**](InlineResponse200208Vpnstatusentities.md) | The list of VPN Status for networks | [optional] 
+**Counts** | Pointer to [**InlineResponse200208Counts**](InlineResponse200208Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200208WithDefaults instantiates a new InlineResponse200208 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVpnstatusentities
+### GetCounts
 
-`func (o *InlineResponse200208) GetVpnstatusentities() []InlineResponse200208Vpnstatusentities`
+`func (o *InlineResponse200208) GetCounts() InlineResponse200208Counts`
 
-GetVpnstatusentities returns the Vpnstatusentities field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetVpnstatusentitiesOk
+### GetCountsOk
 
-`func (o *InlineResponse200208) GetVpnstatusentitiesOk() (*[]InlineResponse200208Vpnstatusentities, bool)`
+`func (o *InlineResponse200208) GetCountsOk() (*InlineResponse200208Counts, bool)`
 
-GetVpnstatusentitiesOk returns a tuple with the Vpnstatusentities field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVpnstatusentities
+### SetCounts
 
-`func (o *InlineResponse200208) SetVpnstatusentities(v []InlineResponse200208Vpnstatusentities)`
+`func (o *InlineResponse200208) SetCounts(v InlineResponse200208Counts)`
 
-SetVpnstatusentities sets Vpnstatusentities field to given value.
+SetCounts sets Counts field to given value.
 
-### HasVpnstatusentities
+### HasCounts
 
-`func (o *InlineResponse200208) HasVpnstatusentities() bool`
+`func (o *InlineResponse200208) HasCounts() bool`
 
-HasVpnstatusentities returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

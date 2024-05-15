@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkBluetoothClient
 
-> map[string]interface{} GetNetworkBluetoothClient(ctx, networkId, bluetoothClientId).IncludeConnectivityHistory(includeConnectivityHistory).ConnectivityHistoryTimespan(connectivityHistoryTimespan).Execute()
+> InlineResponse20071 GetNetworkBluetoothClient(ctx, networkId, bluetoothClientId).IncludeConnectivityHistory(includeConnectivityHistory).ConnectivityHistoryTimespan(connectivityHistoryTimespan).Execute()
 
 Return a Bluetooth client
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BluetoothClientsApi.GetNetworkBluetoothClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkBluetoothClient`: map[string]interface{}
+    // response from `GetNetworkBluetoothClient`: InlineResponse20071
     fmt.Fprintf(os.Stdout, "Response from `BluetoothClientsApi.GetNetworkBluetoothClient`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20071**](InlineResponse20071.md)
 
 ### Authorization
 
@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkBluetoothClients
 
-> []map[string]interface{} GetNetworkBluetoothClients(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).IncludeConnectivityHistory(includeConnectivityHistory).Execute()
+> []InlineResponse20071 GetNetworkBluetoothClients(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).IncludeConnectivityHistory(includeConnectivityHistory).Execute()
 
 List the Bluetooth clients seen by APs in this network
 
@@ -122,7 +122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BluetoothClientsApi.GetNetworkBluetoothClients``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkBluetoothClients`: []map[string]interface{}
+    // response from `GetNetworkBluetoothClients`: []InlineResponse20071
     fmt.Fprintf(os.Stdout, "Response from `BluetoothClientsApi.GetNetworkBluetoothClients`: %v\n", resp)
 }
 ```
@@ -152,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse20071**](InlineResponse20071.md)
 
 ### Authorization
 

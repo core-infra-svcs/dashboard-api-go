@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## GetNetworkVlanProfilesAssignmentsByDevice
 
-> []InlineResponse200161 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
+> []InlineResponse200162 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
 
 Get the assigned VLAN Profiles for devices in a network
 
@@ -48,7 +48,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetNetworkVlanProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse200161
+    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse200162
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetNetworkVlanProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200161**](InlineResponse200161.md)
+[**[]InlineResponse200162**](InlineResponse200162.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmSentryPoliciesAssignmentsByNetwork
 
-> []InlineResponse200262 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200270 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the Sentry Policies for an organization ordered in ascending order of priority
 
@@ -128,7 +128,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200262
+    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200270
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: %v\n", resp)
 }
 ```
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200262**](InlineResponse200262.md)
+[**[]InlineResponse200270**](InlineResponse200270.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessRfProfilesAssignmentsByDevice
 
-> []InlineResponse200289 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
+> []InlineResponse200301 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
 
 List the RF profiles of an organization by device
 
@@ -198,7 +198,7 @@ func main() {
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     networkIds := []string{"Inner_example"} // []string | Optional parameter to filter devices by network. (optional)
-    productTypes := []string{"ProductTypes_example"} // []string | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. (optional)
+    productTypes := []string{"ProductTypes_example"} // []string | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. (optional)
     name := "name_example" // string | Optional parameter to filter RF profiles by device name. All returned devices will have a name that contains the search term or is an exact match. (optional)
     mac := "mac_example" // string | Optional parameter to filter RF profiles by device MAC address. All returned devices will have a MAC address that contains the search term or is an exact match. (optional)
     serial := "serial_example" // string | Optional parameter to filter RF profiles by device serial number. All returned devices will have a serial number that contains the search term or is an exact match. (optional)
@@ -214,7 +214,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200289
+    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200301
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -239,7 +239,7 @@ Name | Type | Description  | Notes
  **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **networkIds** | **[]string** | Optional parameter to filter devices by network. | 
- **productTypes** | **[]string** | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. | 
+ **productTypes** | **[]string** | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. | 
  **name** | **string** | Optional parameter to filter RF profiles by device name. All returned devices will have a name that contains the search term or is an exact match. | 
  **mac** | **string** | Optional parameter to filter RF profiles by device MAC address. All returned devices will have a MAC address that contains the search term or is an exact match. | 
  **serial** | **string** | Optional parameter to filter RF profiles by device serial number. All returned devices will have a serial number that contains the search term or is an exact match. | 
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200289**](InlineResponse200289.md)
+[**[]InlineResponse200301**](InlineResponse200301.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ## ReassignNetworkVlanProfilesAssignments
 
-> InlineResponse200162 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
+> InlineResponse200163 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
 
 Update the assigned VLAN Profile for devices in a network
 
@@ -297,7 +297,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.ReassignNetworkVlanProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse200162
+    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse200163
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.ReassignNetworkVlanProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -322,7 +322,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200162**](InlineResponse200162.md)
+[**InlineResponse200163**](InlineResponse200163.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSmSentryPoliciesAssignments
 
-> InlineResponse200261 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
+> InlineResponse200269 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
 
 Update an Organizations Sentry Policies using the provided list
 
@@ -360,7 +360,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject252([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject252 | 
+    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject257([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject257 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -369,7 +369,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.UpdateOrganizationSmSentryPoliciesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200261
+    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200269
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.UpdateOrganizationSmSentryPoliciesAssignments`: %v\n", resp)
 }
 ```
@@ -390,11 +390,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSmSentry
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject252**](InlineObject252.md) |  | 
+ **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject257**](InlineObject257.md) |  | 
 
 ### Return type
 
-[**InlineResponse200261**](InlineResponse200261.md)
+[**InlineResponse200269**](InlineResponse200269.md)
 
 ### Authorization
 

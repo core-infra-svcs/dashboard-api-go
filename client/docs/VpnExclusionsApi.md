@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork
 
-> InlineResponse200204 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200206 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Display VPN exclusion rules for MX networks.
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnExclusionsApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200204
+    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200206
     fmt.Fprintf(os.Stdout, "Response from `VpnExclusionsApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200204**](InlineResponse200204.md)
+[**InlineResponse200206**](InlineResponse200206.md)
 
 ### Authorization
 

@@ -4,11 +4,158 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**CreateNetworkWirelessAirMarshalRule**](RulesApi.md#CreateNetworkWirelessAirMarshalRule) | **Post** /networks/{networkId}/wireless/airMarshal/rules | Creates a new rule
+[**DeleteNetworkWirelessAirMarshalRule**](RulesApi.md#DeleteNetworkWirelessAirMarshalRule) | **Delete** /networks/{networkId}/wireless/airMarshal/rules/{ruleId} | Delete an Air Marshal rule.
 [**GetNetworkApplianceTrafficShapingRules**](RulesApi.md#GetNetworkApplianceTrafficShapingRules) | **Get** /networks/{networkId}/appliance/trafficShaping/rules | Display the traffic shaping settings rules for an MX network
 [**GetNetworkWirelessSsidTrafficShapingRules**](RulesApi.md#GetNetworkWirelessSsidTrafficShapingRules) | **Get** /networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules | Display the traffic shaping settings for a SSID on an MR network
+[**GetOrganizationWirelessAirMarshalRules**](RulesApi.md#GetOrganizationWirelessAirMarshalRules) | **Get** /organizations/{organizationId}/wireless/airMarshal/rules | Returns the current Air Marshal rules for this organization
 [**UpdateNetworkApplianceTrafficShapingRules**](RulesApi.md#UpdateNetworkApplianceTrafficShapingRules) | **Put** /networks/{networkId}/appliance/trafficShaping/rules | Update the traffic shaping settings rules for an MX network
+[**UpdateNetworkWirelessAirMarshalRule**](RulesApi.md#UpdateNetworkWirelessAirMarshalRule) | **Put** /networks/{networkId}/wireless/airMarshal/rules/{ruleId} | Update a rule
 [**UpdateNetworkWirelessSsidTrafficShapingRules**](RulesApi.md#UpdateNetworkWirelessSsidTrafficShapingRules) | **Put** /networks/{networkId}/wireless/ssids/{number}/trafficShaping/rules | Update the traffic shaping rules for an SSID on an MR network.
 
+
+
+## CreateNetworkWirelessAirMarshalRule
+
+> InlineResponse2019 CreateNetworkWirelessAirMarshalRule(ctx, networkId).CreateNetworkWirelessAirMarshalRule(createNetworkWirelessAirMarshalRule).Execute()
+
+Creates a new rule
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    createNetworkWirelessAirMarshalRule := *openapiclient.NewInlineObject169("Type_example", *openapiclient.NewNetworksNetworkIdWirelessAirMarshalRulesMatch()) // InlineObject169 | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RulesApi.CreateNetworkWirelessAirMarshalRule(context.Background(), networkId).CreateNetworkWirelessAirMarshalRule(createNetworkWirelessAirMarshalRule).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.CreateNetworkWirelessAirMarshalRule``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateNetworkWirelessAirMarshalRule`: InlineResponse2019
+    fmt.Fprintf(os.Stdout, "Response from `RulesApi.CreateNetworkWirelessAirMarshalRule`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateNetworkWirelessAirMarshalRuleRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createNetworkWirelessAirMarshalRule** | [**InlineObject169**](InlineObject169.md) |  | 
+
+### Return type
+
+[**InlineResponse2019**](InlineResponse2019.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## DeleteNetworkWirelessAirMarshalRule
+
+> DeleteNetworkWirelessAirMarshalRule(ctx, networkId, ruleId).Execute()
+
+Delete an Air Marshal rule.
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    ruleId := "ruleId_example" // string | Rule ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RulesApi.DeleteNetworkWirelessAirMarshalRule(context.Background(), networkId, ruleId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.DeleteNetworkWirelessAirMarshalRule``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**ruleId** | **string** | Rule ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiDeleteNetworkWirelessAirMarshalRuleRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## GetNetworkApplianceTrafficShapingRules
@@ -83,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidTrafficShapingRules
 
-> InlineResponse200190 GetNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).Execute()
+> InlineResponse200192 GetNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).Execute()
 
 Display the traffic shaping settings for a SSID on an MR network
 
@@ -112,7 +259,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.GetNetworkWirelessSsidTrafficShapingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidTrafficShapingRules`: InlineResponse200190
+    // response from `GetNetworkWirelessSsidTrafficShapingRules`: InlineResponse200192
     fmt.Fprintf(os.Stdout, "Response from `RulesApi.GetNetworkWirelessSsidTrafficShapingRules`: %v\n", resp)
 }
 ```
@@ -138,7 +285,85 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200190**](InlineResponse200190.md)
+[**InlineResponse200192**](InlineResponse200192.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessAirMarshalRules
+
+> InlineResponse200291 GetOrganizationWirelessAirMarshalRules(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+Returns the current Air Marshal rules for this organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    networkIds := []string{"Inner_example"} // []string | (optional) The set of network IDs to include. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RulesApi.GetOrganizationWirelessAirMarshalRules(context.Background(), organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.GetOrganizationWirelessAirMarshalRules``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessAirMarshalRules`: InlineResponse200291
+    fmt.Fprintf(os.Stdout, "Response from `RulesApi.GetOrganizationWirelessAirMarshalRules`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessAirMarshalRulesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **networkIds** | **[]string** | (optional) The set of network IDs to include. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200291**](InlineResponse200291.md)
 
 ### Authorization
 
@@ -226,9 +451,84 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## UpdateNetworkWirelessAirMarshalRule
+
+> InlineResponse2019 UpdateNetworkWirelessAirMarshalRule(ctx, networkId, ruleId).UpdateNetworkWirelessAirMarshalRule(updateNetworkWirelessAirMarshalRule).Execute()
+
+Update a rule
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    ruleId := "ruleId_example" // string | Rule ID
+    updateNetworkWirelessAirMarshalRule := *openapiclient.NewInlineObject170() // InlineObject170 |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RulesApi.UpdateNetworkWirelessAirMarshalRule(context.Background(), networkId, ruleId).UpdateNetworkWirelessAirMarshalRule(updateNetworkWirelessAirMarshalRule).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.UpdateNetworkWirelessAirMarshalRule``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `UpdateNetworkWirelessAirMarshalRule`: InlineResponse2019
+    fmt.Fprintf(os.Stdout, "Response from `RulesApi.UpdateNetworkWirelessAirMarshalRule`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+**ruleId** | **string** | Rule ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiUpdateNetworkWirelessAirMarshalRuleRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+ **updateNetworkWirelessAirMarshalRule** | [**InlineObject170**](InlineObject170.md) |  | 
+
+### Return type
+
+[**InlineResponse2019**](InlineResponse2019.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## UpdateNetworkWirelessSsidTrafficShapingRules
 
-> InlineResponse200190 UpdateNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).UpdateNetworkWirelessSsidTrafficShapingRules(updateNetworkWirelessSsidTrafficShapingRules).Execute()
+> InlineResponse200192 UpdateNetworkWirelessSsidTrafficShapingRules(ctx, networkId, number).UpdateNetworkWirelessSsidTrafficShapingRules(updateNetworkWirelessSsidTrafficShapingRules).Execute()
 
 Update the traffic shaping rules for an SSID on an MR network.
 
@@ -249,7 +549,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidTrafficShapingRules := *openapiclient.NewInlineObject190() // InlineObject190 |  (optional)
+    updateNetworkWirelessSsidTrafficShapingRules := *openapiclient.NewInlineObject193() // InlineObject193 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -258,7 +558,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RulesApi.UpdateNetworkWirelessSsidTrafficShapingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidTrafficShapingRules`: InlineResponse200190
+    // response from `UpdateNetworkWirelessSsidTrafficShapingRules`: InlineResponse200192
     fmt.Fprintf(os.Stdout, "Response from `RulesApi.UpdateNetworkWirelessSsidTrafficShapingRules`: %v\n", resp)
 }
 ```
@@ -281,11 +581,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidTrafficShapingRules** | [**InlineObject190**](InlineObject190.md) |  | 
+ **updateNetworkWirelessSsidTrafficShapingRules** | [**InlineObject193**](InlineObject193.md) |  | 
 
 ### Return type
 
-[**InlineResponse200190**](InlineResponse200190.md)
+[**InlineResponse200192**](InlineResponse200192.md)
 
 ### Authorization
 

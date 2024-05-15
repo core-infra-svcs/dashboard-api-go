@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchDscpToCosMappings
 
-> InlineResponse200144 GetNetworkSwitchDscpToCosMappings(ctx, networkId).Execute()
+> InlineResponse200145 GetNetworkSwitchDscpToCosMappings(ctx, networkId).Execute()
 
 Return the DSCP to CoS mappings
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DscpToCosMappingsApi.GetNetworkSwitchDscpToCosMappings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDscpToCosMappings`: InlineResponse200144
+    // response from `GetNetworkSwitchDscpToCosMappings`: InlineResponse200145
     fmt.Fprintf(os.Stdout, "Response from `DscpToCosMappingsApi.GetNetworkSwitchDscpToCosMappings`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200144**](InlineResponse200144.md)
+[**InlineResponse200145**](InlineResponse200145.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchDscpToCosMappings
 
-> InlineResponse200144 UpdateNetworkSwitchDscpToCosMappings(ctx, networkId).UpdateNetworkSwitchDscpToCosMappings(updateNetworkSwitchDscpToCosMappings).Execute()
+> InlineResponse200145 UpdateNetworkSwitchDscpToCosMappings(ctx, networkId).UpdateNetworkSwitchDscpToCosMappings(updateNetworkSwitchDscpToCosMappings).Execute()
 
 Update the DSCP to CoS mappings
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DscpToCosMappingsApi.UpdateNetworkSwitchDscpToCosMappings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchDscpToCosMappings`: InlineResponse200144
+    // response from `UpdateNetworkSwitchDscpToCosMappings`: InlineResponse200145
     fmt.Fprintf(os.Stdout, "Response from `DscpToCosMappingsApi.UpdateNetworkSwitchDscpToCosMappings`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200144**](InlineResponse200144.md)
+[**InlineResponse200145**](InlineResponse200145.md)
 
 ### Authorization
 

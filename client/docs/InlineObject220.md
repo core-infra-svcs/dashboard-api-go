@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the configuration template | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
+**Name** | **string** | The name of the new role. Must be unique. This parameter is required. | 
+**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices.md) | Device tag on which this specified permission is applied. | [optional] 
+**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks**](OrganizationsOrganizationIdCameraRolesAppliedOnNetworks.md) | Network tag on which this specified permission is applied. | [optional] 
+**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide.md) | Permissions to be applied org wide. | [optional] 
 
 ## Methods
 
 ### NewInlineObject220
 
-`func NewInlineObject220() *InlineObject220`
+`func NewInlineObject220(name string, ) *InlineObject220`
 
 NewInlineObject220 instantiates a new InlineObject220 object
 This constructor will assign default values to properties that have it defined,
@@ -45,36 +47,81 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject220) HasName() bool`
+### GetAppliedOnDevices
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject220) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices`
 
-### GetTimeZone
+GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
 
-`func (o *InlineObject220) GetTimeZone() string`
+### GetAppliedOnDevicesOk
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+`func (o *InlineObject220) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices, bool)`
 
-### GetTimeZoneOk
-
-`func (o *InlineObject220) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetAppliedOnDevices
 
-`func (o *InlineObject220) SetTimeZone(v string)`
+`func (o *InlineObject220) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices)`
 
-SetTimeZone sets TimeZone field to given value.
+SetAppliedOnDevices sets AppliedOnDevices field to given value.
 
-### HasTimeZone
+### HasAppliedOnDevices
 
-`func (o *InlineObject220) HasTimeZone() bool`
+`func (o *InlineObject220) HasAppliedOnDevices() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasAppliedOnDevices returns a boolean if a field has been set.
+
+### GetAppliedOnNetworks
+
+`func (o *InlineObject220) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks`
+
+GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
+
+### GetAppliedOnNetworksOk
+
+`func (o *InlineObject220) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnNetworks, bool)`
+
+GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppliedOnNetworks
+
+`func (o *InlineObject220) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesAppliedOnNetworks)`
+
+SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
+
+### HasAppliedOnNetworks
+
+`func (o *InlineObject220) HasAppliedOnNetworks() bool`
+
+HasAppliedOnNetworks returns a boolean if a field has been set.
+
+### GetAppliedOrgWide
+
+`func (o *InlineObject220) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide`
+
+GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
+
+### GetAppliedOrgWideOk
+
+`func (o *InlineObject220) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide, bool)`
+
+GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppliedOrgWide
+
+`func (o *InlineObject220) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide)`
+
+SetAppliedOrgWide sets AppliedOrgWide field to given value.
+
+### HasAppliedOrgWide
+
+`func (o *InlineObject220) HasAppliedOrgWide() bool`
+
+HasAppliedOrgWide returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

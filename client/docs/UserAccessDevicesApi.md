@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUserAccessDevices
 
-> []InlineResponse200132 GetNetworkSmUserAccessDevices(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200133 GetNetworkSmUserAccessDevices(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List User Access Devices and its Trusted Access Connections
 
@@ -113,7 +113,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UserAccessDevicesApi.GetNetworkSmUserAccessDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUserAccessDevices`: []InlineResponse200132
+    // response from `GetNetworkSmUserAccessDevices`: []InlineResponse200133
     fmt.Fprintf(os.Stdout, "Response from `UserAccessDevicesApi.GetNetworkSmUserAccessDevices`: %v\n", resp)
 }
 ```
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200132**](InlineResponse200132.md)
+[**[]InlineResponse200133**](InlineResponse200133.md)
 
 ### Authorization
 

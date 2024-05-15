@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorRelationships
 
-> []InlineResponse200107 GetNetworkSensorRelationships(ctx, networkId).Execute()
+> []InlineResponse200108 GetNetworkSensorRelationships(ctx, networkId).Execute()
 
 List the sensor roles for devices in a given network
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RelationshipsApi.GetNetworkSensorRelationships``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorRelationships`: []InlineResponse200107
+    // response from `GetNetworkSensorRelationships`: []InlineResponse200108
     fmt.Fprintf(os.Stdout, "Response from `RelationshipsApi.GetNetworkSensorRelationships`: %v\n", resp)
 }
 ```
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200107**](InlineResponse200107.md)
+[**[]InlineResponse200108**](InlineResponse200108.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchRoutingOspf
 
-> InlineResponse200152 GetNetworkSwitchRoutingOspf(ctx, networkId).Execute()
+> InlineResponse200153 GetNetworkSwitchRoutingOspf(ctx, networkId).Execute()
 
 Return layer 3 OSPF routing configuration
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OspfApi.GetNetworkSwitchRoutingOspf``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingOspf`: InlineResponse200152
+    // response from `GetNetworkSwitchRoutingOspf`: InlineResponse200153
     fmt.Fprintf(os.Stdout, "Response from `OspfApi.GetNetworkSwitchRoutingOspf`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200152**](InlineResponse200152.md)
+[**InlineResponse200153**](InlineResponse200153.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchRoutingOspf
 
-> InlineResponse200152 UpdateNetworkSwitchRoutingOspf(ctx, networkId).UpdateNetworkSwitchRoutingOspf(updateNetworkSwitchRoutingOspf).Execute()
+> InlineResponse200153 UpdateNetworkSwitchRoutingOspf(ctx, networkId).UpdateNetworkSwitchRoutingOspf(updateNetworkSwitchRoutingOspf).Execute()
 
 Update layer 3 OSPF routing configuration
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OspfApi.UpdateNetworkSwitchRoutingOspf``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchRoutingOspf`: InlineResponse200152
+    // response from `UpdateNetworkSwitchRoutingOspf`: InlineResponse200153
     fmt.Fprintf(os.Stdout, "Response from `OspfApi.UpdateNetworkSwitchRoutingOspf`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200152**](InlineResponse200152.md)
+[**InlineResponse200153**](InlineResponse200153.md)
 
 ### Authorization
 

@@ -4,13 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
-**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
-**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
-**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
-**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**EslEnabled** | Pointer to **bool** | Whether ESL is enabled on this network. | [optional] 
+**NetworkId** | Pointer to **string** | The network ID | [optional] 
+**DefaultPolicy** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs. (blocked by default) | [optional] 
 
 ## Methods
 
@@ -31,180 +26,55 @@ NewInlineResponse200166WithDefaults instantiates a new InlineResponse200166 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScanningEnabled
+### GetNetworkId
 
-`func (o *InlineResponse200166) GetScanningEnabled() bool`
+`func (o *InlineResponse200166) GetNetworkId() string`
 
-GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetScanningEnabledOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200166) GetScanningEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200166) GetNetworkIdOk() (*string, bool)`
 
-GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScanningEnabled
+### SetNetworkId
 
-`func (o *InlineResponse200166) SetScanningEnabled(v bool)`
+`func (o *InlineResponse200166) SetNetworkId(v string)`
 
-SetScanningEnabled sets ScanningEnabled field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasScanningEnabled
+### HasNetworkId
 
-`func (o *InlineResponse200166) HasScanningEnabled() bool`
+`func (o *InlineResponse200166) HasNetworkId() bool`
 
-HasScanningEnabled returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetAdvertisingEnabled
+### GetDefaultPolicy
 
-`func (o *InlineResponse200166) GetAdvertisingEnabled() bool`
+`func (o *InlineResponse200166) GetDefaultPolicy() string`
 
-GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetAdvertisingEnabledOk
+### GetDefaultPolicyOk
 
-`func (o *InlineResponse200166) GetAdvertisingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200166) GetDefaultPolicyOk() (*string, bool)`
 
-GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertisingEnabled
+### SetDefaultPolicy
 
-`func (o *InlineResponse200166) SetAdvertisingEnabled(v bool)`
+`func (o *InlineResponse200166) SetDefaultPolicy(v string)`
 
-SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasAdvertisingEnabled
+### HasDefaultPolicy
 
-`func (o *InlineResponse200166) HasAdvertisingEnabled() bool`
+`func (o *InlineResponse200166) HasDefaultPolicy() bool`
 
-HasAdvertisingEnabled returns a boolean if a field has been set.
-
-### GetUuid
-
-`func (o *InlineResponse200166) GetUuid() string`
-
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
-
-### GetUuidOk
-
-`func (o *InlineResponse200166) GetUuidOk() (*string, bool)`
-
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUuid
-
-`func (o *InlineResponse200166) SetUuid(v string)`
-
-SetUuid sets Uuid field to given value.
-
-### HasUuid
-
-`func (o *InlineResponse200166) HasUuid() bool`
-
-HasUuid returns a boolean if a field has been set.
-
-### GetMajorMinorAssignmentMode
-
-`func (o *InlineResponse200166) GetMajorMinorAssignmentMode() string`
-
-GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
-
-### GetMajorMinorAssignmentModeOk
-
-`func (o *InlineResponse200166) GetMajorMinorAssignmentModeOk() (*string, bool)`
-
-GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMajorMinorAssignmentMode
-
-`func (o *InlineResponse200166) SetMajorMinorAssignmentMode(v string)`
-
-SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
-
-### HasMajorMinorAssignmentMode
-
-`func (o *InlineResponse200166) HasMajorMinorAssignmentMode() bool`
-
-HasMajorMinorAssignmentMode returns a boolean if a field has been set.
-
-### GetMajor
-
-`func (o *InlineResponse200166) GetMajor() int32`
-
-GetMajor returns the Major field if non-nil, zero value otherwise.
-
-### GetMajorOk
-
-`func (o *InlineResponse200166) GetMajorOk() (*int32, bool)`
-
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMajor
-
-`func (o *InlineResponse200166) SetMajor(v int32)`
-
-SetMajor sets Major field to given value.
-
-### HasMajor
-
-`func (o *InlineResponse200166) HasMajor() bool`
-
-HasMajor returns a boolean if a field has been set.
-
-### GetMinor
-
-`func (o *InlineResponse200166) GetMinor() int32`
-
-GetMinor returns the Minor field if non-nil, zero value otherwise.
-
-### GetMinorOk
-
-`func (o *InlineResponse200166) GetMinorOk() (*int32, bool)`
-
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinor
-
-`func (o *InlineResponse200166) SetMinor(v int32)`
-
-SetMinor sets Minor field to given value.
-
-### HasMinor
-
-`func (o *InlineResponse200166) HasMinor() bool`
-
-HasMinor returns a boolean if a field has been set.
-
-### GetEslEnabled
-
-`func (o *InlineResponse200166) GetEslEnabled() bool`
-
-GetEslEnabled returns the EslEnabled field if non-nil, zero value otherwise.
-
-### GetEslEnabledOk
-
-`func (o *InlineResponse200166) GetEslEnabledOk() (*bool, bool)`
-
-GetEslEnabledOk returns a tuple with the EslEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEslEnabled
-
-`func (o *InlineResponse200166) SetEslEnabled(v bool)`
-
-SetEslEnabled sets EslEnabled field to given value.
-
-### HasEslEnabled
-
-`func (o *InlineResponse200166) HasEslEnabled() bool`
-
-HasEslEnabled returns a boolean if a field has been set.
+HasDefaultPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

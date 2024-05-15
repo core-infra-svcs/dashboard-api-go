@@ -105,7 +105,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidDeviceTypeGroupPolicies := *openapiclient.NewInlineObject181() // InlineObject181 |  (optional)
+    updateNetworkWirelessSsidDeviceTypeGroupPolicies := *openapiclient.NewInlineObject184() // InlineObject184 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidDeviceTypeGroupPolicies** | [**InlineObject181**](InlineObject181.md) |  | 
+ **updateNetworkWirelessSsidDeviceTypeGroupPolicies** | [**InlineObject184**](InlineObject184.md) |  | 
 
 ### Return type
 

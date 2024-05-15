@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkSwitchAccessPolicy
 
-> InlineResponse200138 CreateNetworkSwitchAccessPolicy(ctx, networkId).CreateNetworkSwitchAccessPolicy(createNetworkSwitchAccessPolicy).Execute()
+> InlineResponse200139 CreateNetworkSwitchAccessPolicy(ctx, networkId).CreateNetworkSwitchAccessPolicy(createNetworkSwitchAccessPolicy).Execute()
 
 Create an access policy for a switch network
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AccessPoliciesApi.CreateNetworkSwitchAccessPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchAccessPolicy`: InlineResponse200138
+    // response from `CreateNetworkSwitchAccessPolicy`: InlineResponse200139
     fmt.Fprintf(os.Stdout, "Response from `AccessPoliciesApi.CreateNetworkSwitchAccessPolicy`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200138**](InlineResponse200138.md)
+[**InlineResponse200139**](InlineResponse200139.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchAccessPolicies
 
-> []InlineResponse200138 GetNetworkSwitchAccessPolicies(ctx, networkId).Execute()
+> []InlineResponse200139 GetNetworkSwitchAccessPolicies(ctx, networkId).Execute()
 
 List the access policies for a switch network
 
@@ -185,7 +185,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AccessPoliciesApi.GetNetworkSwitchAccessPolicies``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAccessPolicies`: []InlineResponse200138
+    // response from `GetNetworkSwitchAccessPolicies`: []InlineResponse200139
     fmt.Fprintf(os.Stdout, "Response from `AccessPoliciesApi.GetNetworkSwitchAccessPolicies`: %v\n", resp)
 }
 ```
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200138**](InlineResponse200138.md)
+[**[]InlineResponse200139**](InlineResponse200139.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchAccessPolicy
 
-> InlineResponse200138 GetNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).Execute()
+> InlineResponse200139 GetNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).Execute()
 
 Return a specific access policy for a switch network
 
@@ -256,7 +256,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AccessPoliciesApi.GetNetworkSwitchAccessPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAccessPolicy`: InlineResponse200138
+    // response from `GetNetworkSwitchAccessPolicy`: InlineResponse200139
     fmt.Fprintf(os.Stdout, "Response from `AccessPoliciesApi.GetNetworkSwitchAccessPolicy`: %v\n", resp)
 }
 ```
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200138**](InlineResponse200138.md)
+[**InlineResponse200139**](InlineResponse200139.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchAccessPolicy
 
-> InlineResponse200138 UpdateNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).UpdateNetworkSwitchAccessPolicy(updateNetworkSwitchAccessPolicy).Execute()
+> InlineResponse200139 UpdateNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).UpdateNetworkSwitchAccessPolicy(updateNetworkSwitchAccessPolicy).Execute()
 
 Update an access policy for a switch network
 
@@ -330,7 +330,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AccessPoliciesApi.UpdateNetworkSwitchAccessPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchAccessPolicy`: InlineResponse200138
+    // response from `UpdateNetworkSwitchAccessPolicy`: InlineResponse200139
     fmt.Fprintf(os.Stdout, "Response from `AccessPoliciesApi.UpdateNetworkSwitchAccessPolicy`: %v\n", resp)
 }
 ```
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200138**](InlineResponse200138.md)
+[**InlineResponse200139**](InlineResponse200139.md)
 
 ### Authorization
 

@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkWebhooksHttpServer
 
-> InlineResponse200163 CreateNetworkWebhooksHttpServer(ctx, networkId).CreateNetworkWebhooksHttpServer(createNetworkWebhooksHttpServer).Execute()
+> InlineResponse200164 CreateNetworkWebhooksHttpServer(ctx, networkId).CreateNetworkWebhooksHttpServer(createNetworkWebhooksHttpServer).Execute()
 
 Add an HTTP server to a network
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `HttpServersApi.CreateNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWebhooksHttpServer`: InlineResponse200163
+    // response from `CreateNetworkWebhooksHttpServer`: InlineResponse200164
     fmt.Fprintf(os.Stdout, "Response from `HttpServersApi.CreateNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200163**](InlineResponse200163.md)
+[**InlineResponse200164**](InlineResponse200164.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksHttpServer
 
-> InlineResponse200163 GetNetworkWebhooksHttpServer(ctx, networkId, httpServerId).Execute()
+> InlineResponse200164 GetNetworkWebhooksHttpServer(ctx, networkId, httpServerId).Execute()
 
 Return an HTTP server for a network
 
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `HttpServersApi.GetNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksHttpServer`: InlineResponse200163
+    // response from `GetNetworkWebhooksHttpServer`: InlineResponse200164
     fmt.Fprintf(os.Stdout, "Response from `HttpServersApi.GetNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200163**](InlineResponse200163.md)
+[**InlineResponse200164**](InlineResponse200164.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksHttpServers
 
-> []InlineResponse200163 GetNetworkWebhooksHttpServers(ctx, networkId).Execute()
+> []InlineResponse200164 GetNetworkWebhooksHttpServers(ctx, networkId).Execute()
 
 List the HTTP servers for a network
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `HttpServersApi.GetNetworkWebhooksHttpServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksHttpServers`: []InlineResponse200163
+    // response from `GetNetworkWebhooksHttpServers`: []InlineResponse200164
     fmt.Fprintf(os.Stdout, "Response from `HttpServersApi.GetNetworkWebhooksHttpServers`: %v\n", resp)
 }
 ```
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200163**](InlineResponse200163.md)
+[**[]InlineResponse200164**](InlineResponse200164.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWebhooksHttpServer
 
-> InlineResponse200163 UpdateNetworkWebhooksHttpServer(ctx, networkId, httpServerId).UpdateNetworkWebhooksHttpServer(updateNetworkWebhooksHttpServer).Execute()
+> InlineResponse200164 UpdateNetworkWebhooksHttpServer(ctx, networkId, httpServerId).UpdateNetworkWebhooksHttpServer(updateNetworkWebhooksHttpServer).Execute()
 
 Update an HTTP server
 
@@ -330,7 +330,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `HttpServersApi.UpdateNetworkWebhooksHttpServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWebhooksHttpServer`: InlineResponse200163
+    // response from `UpdateNetworkWebhooksHttpServer`: InlineResponse200164
     fmt.Fprintf(os.Stdout, "Response from `HttpServersApi.UpdateNetworkWebhooksHttpServer`: %v\n", resp)
 }
 ```
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200163**](InlineResponse200163.md)
+[**InlineResponse200164**](InlineResponse200164.md)
 
 ### Authorization
 

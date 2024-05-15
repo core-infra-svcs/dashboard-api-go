@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSensorAlertsProfile
 
-> InlineResponse200105 CreateNetworkSensorAlertsProfile(ctx, networkId).CreateNetworkSensorAlertsProfile(createNetworkSensorAlertsProfile).Execute()
+> InlineResponse200106 CreateNetworkSensorAlertsProfile(ctx, networkId).CreateNetworkSensorAlertsProfile(createNetworkSensorAlertsProfile).Execute()
 
 Creates a sensor alert profile for a network.
 
@@ -128,7 +128,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.CreateNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSensorAlertsProfile`: InlineResponse200105
+    // response from `CreateNetworkSensorAlertsProfile`: InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.CreateNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200105**](InlineResponse200105.md)
+[**InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 
@@ -471,7 +471,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsCurrentOverviewByMetric
 
-> InlineResponse200103 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
+> InlineResponse200104 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
 
 Return an overview of currently alerting sensors by metric
 
@@ -499,7 +499,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetNetworkSensorAlertsCurrentOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse200103
+    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse200104
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetNetworkSensorAlertsCurrentOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -523,7 +523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200103**](InlineResponse200103.md)
+[**InlineResponse200104**](InlineResponse200104.md)
 
 ### Authorization
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsOverviewByMetric
 
-> []InlineResponse200104 GetNetworkSensorAlertsOverviewByMetric(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200105 GetNetworkSensorAlertsOverviewByMetric(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Return an overview of alert occurrences over a timespan, by metric
 
@@ -573,7 +573,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetNetworkSensorAlertsOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsOverviewByMetric`: []InlineResponse200104
+    // response from `GetNetworkSensorAlertsOverviewByMetric`: []InlineResponse200105
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetNetworkSensorAlertsOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -601,7 +601,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200104**](InlineResponse200104.md)
+[**[]InlineResponse200105**](InlineResponse200105.md)
 
 ### Authorization
 
@@ -619,7 +619,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsProfile
 
-> InlineResponse200105 GetNetworkSensorAlertsProfile(ctx, networkId, id).Execute()
+> InlineResponse200106 GetNetworkSensorAlertsProfile(ctx, networkId, id).Execute()
 
 Show details of a sensor alert profile for a network.
 
@@ -648,7 +648,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsProfile`: InlineResponse200105
+    // response from `GetNetworkSensorAlertsProfile`: InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -674,7 +674,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200105**](InlineResponse200105.md)
+[**InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 
@@ -692,7 +692,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsProfiles
 
-> []InlineResponse200105 GetNetworkSensorAlertsProfiles(ctx, networkId).Execute()
+> []InlineResponse200106 GetNetworkSensorAlertsProfiles(ctx, networkId).Execute()
 
 Lists all sensor alert profiles for a network.
 
@@ -720,7 +720,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetNetworkSensorAlertsProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsProfiles`: []InlineResponse200105
+    // response from `GetNetworkSensorAlertsProfiles`: []InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetNetworkSensorAlertsProfiles`: %v\n", resp)
 }
 ```
@@ -744,7 +744,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200105**](InlineResponse200105.md)
+[**[]InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 
@@ -762,7 +762,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorMqttBroker
 
-> InlineResponse200106 GetNetworkSensorMqttBroker(ctx, networkId, mqttBrokerId).Execute()
+> InlineResponse200107 GetNetworkSensorMqttBroker(ctx, networkId, mqttBrokerId).Execute()
 
 Return the sensor settings of an MQTT broker
 
@@ -791,7 +791,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetNetworkSensorMqttBroker``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorMqttBroker`: InlineResponse200106
+    // response from `GetNetworkSensorMqttBroker`: InlineResponse200107
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetNetworkSensorMqttBroker`: %v\n", resp)
 }
 ```
@@ -817,7 +817,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200106**](InlineResponse200106.md)
+[**InlineResponse200107**](InlineResponse200107.md)
 
 ### Authorization
 
@@ -835,7 +835,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorMqttBrokers
 
-> []InlineResponse200106 GetNetworkSensorMqttBrokers(ctx, networkId).Execute()
+> []InlineResponse200107 GetNetworkSensorMqttBrokers(ctx, networkId).Execute()
 
 List the sensor settings of all MQTT brokers for this network
 
@@ -863,7 +863,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetNetworkSensorMqttBrokers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorMqttBrokers`: []InlineResponse200106
+    // response from `GetNetworkSensorMqttBrokers`: []InlineResponse200107
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetNetworkSensorMqttBrokers`: %v\n", resp)
 }
 ```
@@ -887,7 +887,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200106**](InlineResponse200106.md)
+[**[]InlineResponse200107**](InlineResponse200107.md)
 
 ### Authorization
 
@@ -905,7 +905,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorRelationships
 
-> []InlineResponse200107 GetNetworkSensorRelationships(ctx, networkId).Execute()
+> []InlineResponse200108 GetNetworkSensorRelationships(ctx, networkId).Execute()
 
 List the sensor roles for devices in a given network
 
@@ -933,7 +933,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetNetworkSensorRelationships``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorRelationships`: []InlineResponse200107
+    // response from `GetNetworkSensorRelationships`: []InlineResponse200108
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetNetworkSensorRelationships`: %v\n", resp)
 }
 ```
@@ -957,7 +957,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200107**](InlineResponse200107.md)
+[**[]InlineResponse200108**](InlineResponse200108.md)
 
 ### Authorization
 
@@ -975,7 +975,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSensorReadingsHistory
 
-> []InlineResponse200257 GetOrganizationSensorReadingsHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
+> []InlineResponse200265 GetOrganizationSensorReadingsHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
 
 Return all reported readings from sensors in a given timespan, sorted by timestamp
 
@@ -1012,7 +1012,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetOrganizationSensorReadingsHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorReadingsHistory`: []InlineResponse200257
+    // response from `GetOrganizationSensorReadingsHistory`: []InlineResponse200265
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetOrganizationSensorReadingsHistory`: %v\n", resp)
 }
 ```
@@ -1045,7 +1045,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200257**](InlineResponse200257.md)
+[**[]InlineResponse200265**](InlineResponse200265.md)
 
 ### Authorization
 
@@ -1063,7 +1063,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSensorReadingsLatest
 
-> []InlineResponse200258 GetOrganizationSensorReadingsLatest(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
+> []InlineResponse200266 GetOrganizationSensorReadingsLatest(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
 
 Return the latest available reading for each metric from each sensor, sorted by sensor serial
 
@@ -1097,7 +1097,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.GetOrganizationSensorReadingsLatest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorReadingsLatest`: []InlineResponse200258
+    // response from `GetOrganizationSensorReadingsLatest`: []InlineResponse200266
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.GetOrganizationSensorReadingsLatest`: %v\n", resp)
 }
 ```
@@ -1127,7 +1127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200258**](InlineResponse200258.md)
+[**[]InlineResponse200266**](InlineResponse200266.md)
 
 ### Authorization
 
@@ -1217,7 +1217,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSensorAlertsProfile
 
-> InlineResponse200105 UpdateNetworkSensorAlertsProfile(ctx, networkId, id).UpdateNetworkSensorAlertsProfile(updateNetworkSensorAlertsProfile).Execute()
+> InlineResponse200106 UpdateNetworkSensorAlertsProfile(ctx, networkId, id).UpdateNetworkSensorAlertsProfile(updateNetworkSensorAlertsProfile).Execute()
 
 Updates a sensor alert profile for a network.
 
@@ -1247,7 +1247,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.UpdateNetworkSensorAlertsProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSensorAlertsProfile`: InlineResponse200105
+    // response from `UpdateNetworkSensorAlertsProfile`: InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.UpdateNetworkSensorAlertsProfile`: %v\n", resp)
 }
 ```
@@ -1274,7 +1274,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200105**](InlineResponse200105.md)
+[**InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 
@@ -1292,7 +1292,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSensorMqttBroker
 
-> InlineResponse200106 UpdateNetworkSensorMqttBroker(ctx, networkId, mqttBrokerId).UpdateNetworkSensorMqttBroker(updateNetworkSensorMqttBroker).Execute()
+> InlineResponse200107 UpdateNetworkSensorMqttBroker(ctx, networkId, mqttBrokerId).UpdateNetworkSensorMqttBroker(updateNetworkSensorMqttBroker).Execute()
 
 Update the sensor settings of an MQTT broker
 
@@ -1322,7 +1322,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SensorApi.UpdateNetworkSensorMqttBroker``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSensorMqttBroker`: InlineResponse200106
+    // response from `UpdateNetworkSensorMqttBroker`: InlineResponse200107
     fmt.Fprintf(os.Stdout, "Response from `SensorApi.UpdateNetworkSensorMqttBroker`: %v\n", resp)
 }
 ```
@@ -1349,7 +1349,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200106**](InlineResponse200106.md)
+[**InlineResponse200107**](InlineResponse200107.md)
 
 ### Authorization
 

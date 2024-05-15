@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules**](OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**Enabled** | Pointer to **bool** | Is the alert config enabled | [optional] 
+**Type** | Pointer to **string** | The alert type | [optional] 
+**AlertCondition** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesAlertCondition1**](OrganizationsOrganizationIdAlertsProfilesAlertCondition1.md) |  | [optional] 
+**Recipients** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | [optional] 
+**NetworkTags** | Pointer to **[]string** | Networks with these tags will be monitored for the alert | [optional] 
+**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
 
 ## Methods
 
@@ -26,55 +30,155 @@ NewInlineObject209WithDefaults instantiates a new InlineObject209 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetEnabled
 
-`func (o *InlineObject209) GetRules() []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules`
+`func (o *InlineObject209) GetEnabled() bool`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetEnabledOk
 
-`func (o *InlineObject209) GetRulesOk() (*[]OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules, bool)`
+`func (o *InlineObject209) GetEnabledOk() (*bool, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetEnabled
 
-`func (o *InlineObject209) SetRules(v []OrganizationsOrganizationIdApplianceVpnVpnFirewallRulesRules)`
+`func (o *InlineObject209) SetEnabled(v bool)`
 
-SetRules sets Rules field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRules
+### HasEnabled
 
-`func (o *InlineObject209) HasRules() bool`
+`func (o *InlineObject209) HasEnabled() bool`
 
-HasRules returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSyslogDefaultRule
+### GetType
 
-`func (o *InlineObject209) GetSyslogDefaultRule() bool`
+`func (o *InlineObject209) GetType() string`
 
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetSyslogDefaultRuleOk
+### GetTypeOk
 
-`func (o *InlineObject209) GetSyslogDefaultRuleOk() (*bool, bool)`
+`func (o *InlineObject209) GetTypeOk() (*string, bool)`
 
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSyslogDefaultRule
+### SetType
 
-`func (o *InlineObject209) SetSyslogDefaultRule(v bool)`
+`func (o *InlineObject209) SetType(v string)`
 
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+SetType sets Type field to given value.
 
-### HasSyslogDefaultRule
+### HasType
 
-`func (o *InlineObject209) HasSyslogDefaultRule() bool`
+`func (o *InlineObject209) HasType() bool`
 
-HasSyslogDefaultRule returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetAlertCondition
+
+`func (o *InlineObject209) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition1`
+
+GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+
+### GetAlertConditionOk
+
+`func (o *InlineObject209) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition1, bool)`
+
+GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertCondition
+
+`func (o *InlineObject209) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition1)`
+
+SetAlertCondition sets AlertCondition field to given value.
+
+### HasAlertCondition
+
+`func (o *InlineObject209) HasAlertCondition() bool`
+
+HasAlertCondition returns a boolean if a field has been set.
+
+### GetRecipients
+
+`func (o *InlineObject209) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
+
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+
+### GetRecipientsOk
+
+`func (o *InlineObject209) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
+
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecipients
+
+`func (o *InlineObject209) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
+
+SetRecipients sets Recipients field to given value.
+
+### HasRecipients
+
+`func (o *InlineObject209) HasRecipients() bool`
+
+HasRecipients returns a boolean if a field has been set.
+
+### GetNetworkTags
+
+`func (o *InlineObject209) GetNetworkTags() []string`
+
+GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
+
+### GetNetworkTagsOk
+
+`func (o *InlineObject209) GetNetworkTagsOk() (*[]string, bool)`
+
+GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkTags
+
+`func (o *InlineObject209) SetNetworkTags(v []string)`
+
+SetNetworkTags sets NetworkTags field to given value.
+
+### HasNetworkTags
+
+`func (o *InlineObject209) HasNetworkTags() bool`
+
+HasNetworkTags returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineObject209) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineObject209) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineObject209) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineObject209) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

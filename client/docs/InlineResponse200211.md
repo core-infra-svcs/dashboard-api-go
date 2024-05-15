@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
+**Peers** | Pointer to [**[]InlineResponse200211Peers**](InlineResponse200211Peers.md) | The list of VPN peers | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200211WithDefaults instantiates a new InlineResponse200211 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBrandingPolicyIds
+### GetPeers
 
-`func (o *InlineResponse200211) GetBrandingPolicyIds() []string`
+`func (o *InlineResponse200211) GetPeers() []InlineResponse200211Peers`
 
-GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetBrandingPolicyIdsOk
+### GetPeersOk
 
-`func (o *InlineResponse200211) GetBrandingPolicyIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200211) GetPeersOk() (*[]InlineResponse200211Peers, bool)`
 
-GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBrandingPolicyIds
+### SetPeers
 
-`func (o *InlineResponse200211) SetBrandingPolicyIds(v []string)`
+`func (o *InlineResponse200211) SetPeers(v []InlineResponse200211Peers)`
 
-SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
+SetPeers sets Peers field to given value.
 
-### HasBrandingPolicyIds
+### HasPeers
 
-`func (o *InlineResponse200211) HasBrandingPolicyIds() bool`
+`func (o *InlineResponse200211) HasPeers() bool`
 
-HasBrandingPolicyIds returns a boolean if a field has been set.
+HasPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

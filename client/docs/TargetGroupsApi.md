@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkSmTargetGroup
 
-> InlineResponse200130 CreateNetworkSmTargetGroup(ctx, networkId).CreateNetworkSmTargetGroup(createNetworkSmTargetGroup).Execute()
+> InlineResponse200131 CreateNetworkSmTargetGroup(ctx, networkId).CreateNetworkSmTargetGroup(createNetworkSmTargetGroup).Execute()
 
 Add a target group
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.CreateNetworkSmTargetGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSmTargetGroup`: InlineResponse200130
+    // response from `CreateNetworkSmTargetGroup`: InlineResponse200131
     fmt.Fprintf(os.Stdout, "Response from `TargetGroupsApi.CreateNetworkSmTargetGroup`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200130**](InlineResponse200130.md)
+[**InlineResponse200131**](InlineResponse200131.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmTargetGroup
 
-> InlineResponse200130 GetNetworkSmTargetGroup(ctx, networkId, targetGroupId).WithDetails(withDetails).Execute()
+> InlineResponse200131 GetNetworkSmTargetGroup(ctx, networkId, targetGroupId).WithDetails(withDetails).Execute()
 
 Return a target group
 
@@ -187,7 +187,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.GetNetworkSmTargetGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmTargetGroup`: InlineResponse200130
+    // response from `GetNetworkSmTargetGroup`: InlineResponse200131
     fmt.Fprintf(os.Stdout, "Response from `TargetGroupsApi.GetNetworkSmTargetGroup`: %v\n", resp)
 }
 ```
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200130**](InlineResponse200130.md)
+[**InlineResponse200131**](InlineResponse200131.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmTargetGroups
 
-> []InlineResponse200130 GetNetworkSmTargetGroups(ctx, networkId).WithDetails(withDetails).Execute()
+> []InlineResponse200131 GetNetworkSmTargetGroups(ctx, networkId).WithDetails(withDetails).Execute()
 
 List the target groups in this network
 
@@ -261,7 +261,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.GetNetworkSmTargetGroups``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmTargetGroups`: []InlineResponse200130
+    // response from `GetNetworkSmTargetGroups`: []InlineResponse200131
     fmt.Fprintf(os.Stdout, "Response from `TargetGroupsApi.GetNetworkSmTargetGroups`: %v\n", resp)
 }
 ```
@@ -286,7 +286,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200130**](InlineResponse200130.md)
+[**[]InlineResponse200131**](InlineResponse200131.md)
 
 ### Authorization
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSmTargetGroup
 
-> InlineResponse200130 UpdateNetworkSmTargetGroup(ctx, networkId, targetGroupId).UpdateNetworkSmTargetGroup(updateNetworkSmTargetGroup).Execute()
+> InlineResponse200131 UpdateNetworkSmTargetGroup(ctx, networkId, targetGroupId).UpdateNetworkSmTargetGroup(updateNetworkSmTargetGroup).Execute()
 
 Update a target group
 
@@ -334,7 +334,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.UpdateNetworkSmTargetGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSmTargetGroup`: InlineResponse200130
+    // response from `UpdateNetworkSmTargetGroup`: InlineResponse200131
     fmt.Fprintf(os.Stdout, "Response from `TargetGroupsApi.UpdateNetworkSmTargetGroup`: %v\n", resp)
 }
 ```
@@ -361,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200130**](InlineResponse200130.md)
+[**InlineResponse200131**](InlineResponse200131.md)
 
 ### Authorization
 

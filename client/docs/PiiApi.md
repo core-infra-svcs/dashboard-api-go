@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkPiiRequest
 
-> InlineResponse200101 CreateNetworkPiiRequest(ctx, networkId).CreateNetworkPiiRequest(createNetworkPiiRequest).Execute()
+> InlineResponse200102 CreateNetworkPiiRequest(ctx, networkId).CreateNetworkPiiRequest(createNetworkPiiRequest).Execute()
 
 Submit a new delete or restrict processing PII request
 
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiApi.CreateNetworkPiiRequest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkPiiRequest`: InlineResponse200101
+    // response from `CreateNetworkPiiRequest`: InlineResponse200102
     fmt.Fprintf(os.Stdout, "Response from `PiiApi.CreateNetworkPiiRequest`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200101**](InlineResponse200101.md)
+[**InlineResponse200102**](InlineResponse200102.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPiiPiiKeys
 
-> map[string]InlineResponse200100 GetNetworkPiiPiiKeys(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
+> map[string]InlineResponse200101 GetNetworkPiiPiiKeys(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
 
 List the keys required to access Personally Identifiable Information (PII) for a given identifier
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiApi.GetNetworkPiiPiiKeys``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiPiiKeys`: map[string]InlineResponse200100
+    // response from `GetNetworkPiiPiiKeys`: map[string]InlineResponse200101
     fmt.Fprintf(os.Stdout, "Response from `PiiApi.GetNetworkPiiPiiKeys`: %v\n", resp)
 }
 ```
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**map[string]InlineResponse200100**](InlineResponse200100.md)
+[**map[string]InlineResponse200101**](InlineResponse200101.md)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPiiRequest
 
-> InlineResponse200101 GetNetworkPiiRequest(ctx, networkId, requestId).Execute()
+> InlineResponse200102 GetNetworkPiiRequest(ctx, networkId, requestId).Execute()
 
 Return a PII request
 
@@ -270,7 +270,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiApi.GetNetworkPiiRequest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiRequest`: InlineResponse200101
+    // response from `GetNetworkPiiRequest`: InlineResponse200102
     fmt.Fprintf(os.Stdout, "Response from `PiiApi.GetNetworkPiiRequest`: %v\n", resp)
 }
 ```
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200101**](InlineResponse200101.md)
+[**InlineResponse200102**](InlineResponse200102.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPiiRequests
 
-> []InlineResponse200101 GetNetworkPiiRequests(ctx, networkId).Execute()
+> []InlineResponse200102 GetNetworkPiiRequests(ctx, networkId).Execute()
 
 List the PII requests for this network or organization
 
@@ -342,7 +342,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiApi.GetNetworkPiiRequests``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiRequests`: []InlineResponse200101
+    // response from `GetNetworkPiiRequests`: []InlineResponse200102
     fmt.Fprintf(os.Stdout, "Response from `PiiApi.GetNetworkPiiRequests`: %v\n", resp)
 }
 ```
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200101**](InlineResponse200101.md)
+[**[]InlineResponse200102**](InlineResponse200102.md)
 
 ### Authorization
 

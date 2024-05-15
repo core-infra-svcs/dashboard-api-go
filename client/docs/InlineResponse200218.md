@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
-**Licenses** | Pointer to [**[]InlineResponse200218Licenses**](InlineResponse200218Licenses.md) | The licenses claimed | [optional] 
+**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200218WithDefaults instantiates a new InlineResponse200218 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetBrandingPolicyIds
 
-`func (o *InlineResponse200218) GetOrders() []string`
+`func (o *InlineResponse200218) GetBrandingPolicyIds() []string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetBrandingPolicyIdsOk
 
-`func (o *InlineResponse200218) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineResponse200218) GetBrandingPolicyIdsOk() (*[]string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetBrandingPolicyIds
 
-`func (o *InlineResponse200218) SetOrders(v []string)`
+`func (o *InlineResponse200218) SetBrandingPolicyIds(v []string)`
 
-SetOrders sets Orders field to given value.
+SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
 
-### HasOrders
+### HasBrandingPolicyIds
 
-`func (o *InlineResponse200218) HasOrders() bool`
+`func (o *InlineResponse200218) HasBrandingPolicyIds() bool`
 
-HasOrders returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineResponse200218) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineResponse200218) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineResponse200218) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineResponse200218) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
-
-### GetLicenses
-
-`func (o *InlineResponse200218) GetLicenses() []InlineResponse200218Licenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineResponse200218) GetLicensesOk() (*[]InlineResponse200218Licenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineResponse200218) SetLicenses(v []InlineResponse200218Licenses)`
-
-SetLicenses sets Licenses field to given value.
-
-### HasLicenses
-
-`func (o *InlineResponse200218) HasLicenses() bool`
-
-HasLicenses returns a boolean if a field has been set.
+HasBrandingPolicyIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

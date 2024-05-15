@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApiRequests
 
-> []InlineResponse200201 GetOrganizationApiRequests(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).AdminId(adminId).Path(path).Method(method).ResponseCode(responseCode).SourceIp(sourceIp).UserAgent(userAgent).Version(version).OperationIds(operationIds).Execute()
+> []InlineResponse200203 GetOrganizationApiRequests(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).AdminId(adminId).Path(path).Method(method).ResponseCode(responseCode).SourceIp(sourceIp).UserAgent(userAgent).Version(version).OperationIds(operationIds).Execute()
 
 List the API requests made by an organization
 
@@ -54,7 +54,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApiRequestsApi.GetOrganizationApiRequests``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequests`: []InlineResponse200201
+    // response from `GetOrganizationApiRequests`: []InlineResponse200203
     fmt.Fprintf(os.Stdout, "Response from `ApiRequestsApi.GetOrganizationApiRequests`: %v\n", resp)
 }
 ```
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200201**](InlineResponse200201.md)
+[**[]InlineResponse200203**](InlineResponse200203.md)
 
 ### Authorization
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRequestsOverview
 
-> InlineResponse200202 GetOrganizationApiRequestsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200204 GetOrganizationApiRequestsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return an aggregated overview of API requests data
 
@@ -141,7 +141,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApiRequestsApi.GetOrganizationApiRequestsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequestsOverview`: InlineResponse200202
+    // response from `GetOrganizationApiRequestsOverview`: InlineResponse200204
     fmt.Fprintf(os.Stdout, "Response from `ApiRequestsApi.GetOrganizationApiRequestsOverview`: %v\n", resp)
 }
 ```
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200202**](InlineResponse200202.md)
+[**InlineResponse200204**](InlineResponse200204.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRequestsOverviewResponseCodesByInterval
 
-> []InlineResponse200203 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
+> []InlineResponse200205 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
 
 Tracks organizations' API requests by response code across a given time period
 
@@ -223,7 +223,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApiRequestsApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200203
+    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200205
     fmt.Fprintf(os.Stdout, "Response from `ApiRequestsApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval`: %v\n", resp)
 }
 ```
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200203**](InlineResponse200203.md)
+[**[]InlineResponse200205**](InlineResponse200205.md)
 
 ### Authorization
 

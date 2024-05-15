@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
 
-> InlineResponse200142 CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId).CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
+> InlineResponse200143 CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId).CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
 
 Add a server to be trusted by Dynamic ARP Inspection on this network
 
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DhcpServerPolicyApi.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse200142
+    // response from `CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse200143
     fmt.Fprintf(os.Stdout, "Response from `DhcpServerPolicyApi.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200142**](InlineResponse200142.md)
+[**InlineResponse200143**](InlineResponse200143.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpServerPolicy
 
-> InlineResponse200141 GetNetworkSwitchDhcpServerPolicy(ctx, networkId).Execute()
+> InlineResponse200142 GetNetworkSwitchDhcpServerPolicy(ctx, networkId).Execute()
 
 Return the DHCP server settings
 
@@ -187,7 +187,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DhcpServerPolicyApi.GetNetworkSwitchDhcpServerPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpServerPolicy`: InlineResponse200141
+    // response from `GetNetworkSwitchDhcpServerPolicy`: InlineResponse200142
     fmt.Fprintf(os.Stdout, "Response from `DhcpServerPolicyApi.GetNetworkSwitchDhcpServerPolicy`: %v\n", resp)
 }
 ```
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200141**](InlineResponse200141.md)
+[**InlineResponse200142**](InlineResponse200142.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers
 
-> []InlineResponse200142 GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200143 GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the list of servers trusted by Dynamic ARP Inspection on this network
 
@@ -260,7 +260,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DhcpServerPolicyApi.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers`: []InlineResponse200142
+    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers`: []InlineResponse200143
     fmt.Fprintf(os.Stdout, "Response from `DhcpServerPolicyApi.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers`: %v\n", resp)
 }
 ```
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200142**](InlineResponse200142.md)
+[**[]InlineResponse200143**](InlineResponse200143.md)
 
 ### Authorization
 
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice
 
-> []InlineResponse200143 GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200144 GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the devices that have a Dynamic ARP Inspection warning and their warnings
 
@@ -336,7 +336,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DhcpServerPolicyApi.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: []InlineResponse200143
+    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: []InlineResponse200144
     fmt.Fprintf(os.Stdout, "Response from `DhcpServerPolicyApi.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: %v\n", resp)
 }
 ```
@@ -363,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200143**](InlineResponse200143.md)
+[**[]InlineResponse200144**](InlineResponse200144.md)
 
 ### Authorization
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchDhcpServerPolicy
 
-> InlineResponse200141 UpdateNetworkSwitchDhcpServerPolicy(ctx, networkId).UpdateNetworkSwitchDhcpServerPolicy(updateNetworkSwitchDhcpServerPolicy).Execute()
+> InlineResponse200142 UpdateNetworkSwitchDhcpServerPolicy(ctx, networkId).UpdateNetworkSwitchDhcpServerPolicy(updateNetworkSwitchDhcpServerPolicy).Execute()
 
 Update the DHCP server settings
 
@@ -410,7 +410,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DhcpServerPolicyApi.UpdateNetworkSwitchDhcpServerPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchDhcpServerPolicy`: InlineResponse200141
+    // response from `UpdateNetworkSwitchDhcpServerPolicy`: InlineResponse200142
     fmt.Fprintf(os.Stdout, "Response from `DhcpServerPolicyApi.UpdateNetworkSwitchDhcpServerPolicy`: %v\n", resp)
 }
 ```
@@ -435,7 +435,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200141**](InlineResponse200141.md)
+[**InlineResponse200142**](InlineResponse200142.md)
 
 ### Authorization
 
@@ -453,7 +453,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
 
-> InlineResponse200142 UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId, trustedServerId).UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
+> InlineResponse200143 UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId, trustedServerId).UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
 
 Update a server that is trusted by Dynamic ARP Inspection on this network
 
@@ -483,7 +483,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DhcpServerPolicyApi.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse200142
+    // response from `UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse200143
     fmt.Fprintf(os.Stdout, "Response from `DhcpServerPolicyApi.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: %v\n", resp)
 }
 ```
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200142**](InlineResponse200142.md)
+[**InlineResponse200143**](InlineResponse200143.md)
 
 ### Authorization
 

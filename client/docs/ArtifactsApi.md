@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationCameraCustomAnalyticsArtifact
 
-> InlineResponse20112 CreateOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId).CreateOrganizationCameraCustomAnalyticsArtifact(createOrganizationCameraCustomAnalyticsArtifact).Execute()
+> InlineResponse20113 CreateOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId).CreateOrganizationCameraCustomAnalyticsArtifact(createOrganizationCameraCustomAnalyticsArtifact).Execute()
 
 Create custom analytics artifact
 
@@ -33,7 +33,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject213() // InlineObject213 |  (optional)
+    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject218() // InlineObject218 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ArtifactsApi.CreateOrganizationCameraCustomAnalyticsArtifact``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationCameraCustomAnalyticsArtifact`: InlineResponse20112
+    // response from `CreateOrganizationCameraCustomAnalyticsArtifact`: InlineResponse20113
     fmt.Fprintf(os.Stdout, "Response from `ArtifactsApi.CreateOrganizationCameraCustomAnalyticsArtifact`: %v\n", resp)
 }
 ```
@@ -63,11 +63,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraCu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject213**](InlineObject213.md) |  | 
+ **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject218**](InlineObject218.md) |  | 
 
 ### Return type
 
-[**InlineResponse20112**](InlineResponse20112.md)
+[**InlineResponse20113**](InlineResponse20113.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraCustomAnalyticsArtifact
 
-> InlineResponse200214 GetOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId, artifactId).Execute()
+> InlineResponse200221 GetOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId, artifactId).Execute()
 
 Get Custom Analytics Artifact
 
@@ -185,7 +185,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ArtifactsApi.GetOrganizationCameraCustomAnalyticsArtifact``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraCustomAnalyticsArtifact`: InlineResponse200214
+    // response from `GetOrganizationCameraCustomAnalyticsArtifact`: InlineResponse200221
     fmt.Fprintf(os.Stdout, "Response from `ArtifactsApi.GetOrganizationCameraCustomAnalyticsArtifact`: %v\n", resp)
 }
 ```
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200214**](InlineResponse200214.md)
+[**InlineResponse200221**](InlineResponse200221.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraCustomAnalyticsArtifacts
 
-> []InlineResponse200214 GetOrganizationCameraCustomAnalyticsArtifacts(ctx, organizationId).Execute()
+> []InlineResponse200221 GetOrganizationCameraCustomAnalyticsArtifacts(ctx, organizationId).Execute()
 
 List Custom Analytics Artifacts
 
@@ -257,7 +257,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ArtifactsApi.GetOrganizationCameraCustomAnalyticsArtifacts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraCustomAnalyticsArtifacts`: []InlineResponse200214
+    // response from `GetOrganizationCameraCustomAnalyticsArtifacts`: []InlineResponse200221
     fmt.Fprintf(os.Stdout, "Response from `ArtifactsApi.GetOrganizationCameraCustomAnalyticsArtifacts`: %v\n", resp)
 }
 ```
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200214**](InlineResponse200214.md)
+[**[]InlineResponse200221**](InlineResponse200221.md)
 
 ### Authorization
 

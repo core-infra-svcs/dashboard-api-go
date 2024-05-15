@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSnmp
 
-> InlineResponse200134 GetNetworkSnmp(ctx, networkId).Execute()
+> InlineResponse200135 GetNetworkSnmp(ctx, networkId).Execute()
 
 Return the SNMP settings for a network
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SnmpApi.GetNetworkSnmp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSnmp`: InlineResponse200134
+    // response from `GetNetworkSnmp`: InlineResponse200135
     fmt.Fprintf(os.Stdout, "Response from `SnmpApi.GetNetworkSnmp`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200134**](InlineResponse200134.md)
+[**InlineResponse200135**](InlineResponse200135.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSnmp
 
-> InlineResponse200264 GetOrganizationSnmp(ctx, organizationId).Execute()
+> InlineResponse200272 GetOrganizationSnmp(ctx, organizationId).Execute()
 
 Return the SNMP settings for an organization
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SnmpApi.GetOrganizationSnmp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSnmp`: InlineResponse200264
+    // response from `GetOrganizationSnmp`: InlineResponse200272
     fmt.Fprintf(os.Stdout, "Response from `SnmpApi.GetOrganizationSnmp`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200264**](InlineResponse200264.md)
+[**InlineResponse200272**](InlineResponse200272.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSnmp
 
-> InlineResponse200134 UpdateNetworkSnmp(ctx, networkId).UpdateNetworkSnmp(updateNetworkSnmp).Execute()
+> InlineResponse200135 UpdateNetworkSnmp(ctx, networkId).UpdateNetworkSnmp(updateNetworkSnmp).Execute()
 
 Update the SNMP settings for a network
 
@@ -182,7 +182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SnmpApi.UpdateNetworkSnmp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSnmp`: InlineResponse200134
+    // response from `UpdateNetworkSnmp`: InlineResponse200135
     fmt.Fprintf(os.Stdout, "Response from `SnmpApi.UpdateNetworkSnmp`: %v\n", resp)
 }
 ```
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200134**](InlineResponse200134.md)
+[**InlineResponse200135**](InlineResponse200135.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSnmp
 
-> InlineResponse200264 UpdateOrganizationSnmp(ctx, organizationId).UpdateOrganizationSnmp(updateOrganizationSnmp).Execute()
+> InlineResponse200272 UpdateOrganizationSnmp(ctx, organizationId).UpdateOrganizationSnmp(updateOrganizationSnmp).Execute()
 
 Update the SNMP settings for an organization
 
@@ -245,7 +245,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationSnmp := *openapiclient.NewInlineObject253() // InlineObject253 |  (optional)
+    updateOrganizationSnmp := *openapiclient.NewInlineObject258() // InlineObject258 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -254,7 +254,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SnmpApi.UpdateOrganizationSnmp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSnmp`: InlineResponse200264
+    // response from `UpdateOrganizationSnmp`: InlineResponse200272
     fmt.Fprintf(os.Stdout, "Response from `SnmpApi.UpdateOrganizationSnmp`: %v\n", resp)
 }
 ```
@@ -275,11 +275,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSnmpRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSnmp** | [**InlineObject253**](InlineObject253.md) |  | 
+ **updateOrganizationSnmp** | [**InlineObject258**](InlineObject258.md) |  | 
 
 ### Return type
 
-[**InlineResponse200264**](InlineResponse200264.md)
+[**InlineResponse200272**](InlineResponse200272.md)
 
 ### Authorization
 

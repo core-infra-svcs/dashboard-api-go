@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkWirelessRfProfile
 
-> InlineResponse200179 CreateNetworkWirelessRfProfile(ctx, networkId).CreateNetworkWirelessRfProfile(createNetworkWirelessRfProfile).Execute()
+> InlineResponse200181 CreateNetworkWirelessRfProfile(ctx, networkId).CreateNetworkWirelessRfProfile(createNetworkWirelessRfProfile).Execute()
 
 Creates new RF profile for this network
 
@@ -112,7 +112,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWirelessRfProfile := *openapiclient.NewInlineObject176("Name_example", "BandSelectionType_example") // InlineObject176 | 
+    createNetworkWirelessRfProfile := *openapiclient.NewInlineObject179("Name_example", "BandSelectionType_example") // InlineObject179 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -121,7 +121,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.CreateNetworkWirelessRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWirelessRfProfile`: InlineResponse200179
+    // response from `CreateNetworkWirelessRfProfile`: InlineResponse200181
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.CreateNetworkWirelessRfProfile`: %v\n", resp)
 }
 ```
@@ -142,11 +142,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWirelessRfPro
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWirelessRfProfile** | [**InlineObject176**](InlineObject176.md) |  | 
+ **createNetworkWirelessRfProfile** | [**InlineObject179**](InlineObject179.md) |  | 
 
 ### Return type
 
-[**InlineResponse200179**](InlineResponse200179.md)
+[**InlineResponse200181**](InlineResponse200181.md)
 
 ### Authorization
 
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessRfProfile
 
-> InlineResponse200179 GetNetworkWirelessRfProfile(ctx, networkId, rfProfileId).Execute()
+> InlineResponse200181 GetNetworkWirelessRfProfile(ctx, networkId, rfProfileId).Execute()
 
 Return a RF profile
 
@@ -478,7 +478,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.GetNetworkWirelessRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessRfProfile`: InlineResponse200179
+    // response from `GetNetworkWirelessRfProfile`: InlineResponse200181
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.GetNetworkWirelessRfProfile`: %v\n", resp)
 }
 ```
@@ -504,7 +504,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200179**](InlineResponse200179.md)
+[**InlineResponse200181**](InlineResponse200181.md)
 
 ### Authorization
 
@@ -522,7 +522,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessRfProfiles
 
-> InlineResponse200179 GetNetworkWirelessRfProfiles(ctx, networkId).IncludeTemplateProfiles(includeTemplateProfiles).Execute()
+> InlineResponse200181 GetNetworkWirelessRfProfiles(ctx, networkId).IncludeTemplateProfiles(includeTemplateProfiles).Execute()
 
 List RF profiles for this network
 
@@ -551,7 +551,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.GetNetworkWirelessRfProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessRfProfiles`: InlineResponse200179
+    // response from `GetNetworkWirelessRfProfiles`: InlineResponse200181
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.GetNetworkWirelessRfProfiles`: %v\n", resp)
 }
 ```
@@ -576,7 +576,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200179**](InlineResponse200179.md)
+[**InlineResponse200181**](InlineResponse200181.md)
 
 ### Authorization
 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessRfProfilesAssignmentsByDevice
 
-> []InlineResponse200289 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
+> []InlineResponse200301 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
 
 List the RF profiles of an organization by device
 
@@ -618,7 +618,7 @@ func main() {
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     networkIds := []string{"Inner_example"} // []string | Optional parameter to filter devices by network. (optional)
-    productTypes := []string{"ProductTypes_example"} // []string | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. (optional)
+    productTypes := []string{"ProductTypes_example"} // []string | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. (optional)
     name := "name_example" // string | Optional parameter to filter RF profiles by device name. All returned devices will have a name that contains the search term or is an exact match. (optional)
     mac := "mac_example" // string | Optional parameter to filter RF profiles by device MAC address. All returned devices will have a MAC address that contains the search term or is an exact match. (optional)
     serial := "serial_example" // string | Optional parameter to filter RF profiles by device serial number. All returned devices will have a serial number that contains the search term or is an exact match. (optional)
@@ -634,7 +634,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200289
+    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200301
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -659,7 +659,7 @@ Name | Type | Description  | Notes
  **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **networkIds** | **[]string** | Optional parameter to filter devices by network. | 
- **productTypes** | **[]string** | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. | 
+ **productTypes** | **[]string** | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. | 
  **name** | **string** | Optional parameter to filter RF profiles by device name. All returned devices will have a name that contains the search term or is an exact match. | 
  **mac** | **string** | Optional parameter to filter RF profiles by device MAC address. All returned devices will have a MAC address that contains the search term or is an exact match. | 
  **serial** | **string** | Optional parameter to filter RF profiles by device serial number. All returned devices will have a serial number that contains the search term or is an exact match. | 
@@ -670,7 +670,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200289**](InlineResponse200289.md)
+[**[]InlineResponse200301**](InlineResponse200301.md)
 
 ### Authorization
 
@@ -763,7 +763,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessRfProfile
 
-> InlineResponse200179 UpdateNetworkWirelessRfProfile(ctx, networkId, rfProfileId).UpdateNetworkWirelessRfProfile(updateNetworkWirelessRfProfile).Execute()
+> InlineResponse200181 UpdateNetworkWirelessRfProfile(ctx, networkId, rfProfileId).UpdateNetworkWirelessRfProfile(updateNetworkWirelessRfProfile).Execute()
 
 Updates specified RF profile for this network
 
@@ -784,7 +784,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     rfProfileId := "rfProfileId_example" // string | Rf profile ID
-    updateNetworkWirelessRfProfile := *openapiclient.NewInlineObject177() // InlineObject177 |  (optional)
+    updateNetworkWirelessRfProfile := *openapiclient.NewInlineObject180() // InlineObject180 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -793,7 +793,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RfProfilesApi.UpdateNetworkWirelessRfProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessRfProfile`: InlineResponse200179
+    // response from `UpdateNetworkWirelessRfProfile`: InlineResponse200181
     fmt.Fprintf(os.Stdout, "Response from `RfProfilesApi.UpdateNetworkWirelessRfProfile`: %v\n", resp)
 }
 ```
@@ -816,11 +816,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessRfProfile** | [**InlineObject177**](InlineObject177.md) |  | 
+ **updateNetworkWirelessRfProfile** | [**InlineObject180**](InlineObject180.md) |  | 
 
 ### Return type
 
-[**InlineResponse200179**](InlineResponse200179.md)
+[**InlineResponse200181**](InlineResponse200181.md)
 
 ### Authorization
 

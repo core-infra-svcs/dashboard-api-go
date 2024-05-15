@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkCameraWirelessProfile
 
-> InlineResponse20072 CreateNetworkCameraWirelessProfile(ctx, networkId).CreateNetworkCameraWirelessProfile(createNetworkCameraWirelessProfile).Execute()
+> InlineResponse20073 CreateNetworkCameraWirelessProfile(ctx, networkId).CreateNetworkCameraWirelessProfile(createNetworkCameraWirelessProfile).Execute()
 
 Creates a new camera wireless profile for this network.
 
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WirelessProfilesApi.CreateNetworkCameraWirelessProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkCameraWirelessProfile`: InlineResponse20072
+    // response from `CreateNetworkCameraWirelessProfile`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `WirelessProfilesApi.CreateNetworkCameraWirelessProfile`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCameraWirelessProfile
 
-> InlineResponse20072 GetNetworkCameraWirelessProfile(ctx, networkId, wirelessProfileId).Execute()
+> InlineResponse20073 GetNetworkCameraWirelessProfile(ctx, networkId, wirelessProfileId).Execute()
 
 Retrieve a single camera wireless profile.
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WirelessProfilesApi.GetNetworkCameraWirelessProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCameraWirelessProfile`: InlineResponse20072
+    // response from `GetNetworkCameraWirelessProfile`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `WirelessProfilesApi.GetNetworkCameraWirelessProfile`: %v\n", resp)
 }
 ```
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCameraWirelessProfiles
 
-> []InlineResponse20072 GetNetworkCameraWirelessProfiles(ctx, networkId).Execute()
+> []InlineResponse20073 GetNetworkCameraWirelessProfiles(ctx, networkId).Execute()
 
 List the camera wireless profiles for this network.
 
@@ -330,7 +330,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WirelessProfilesApi.GetNetworkCameraWirelessProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCameraWirelessProfiles`: []InlineResponse20072
+    // response from `GetNetworkCameraWirelessProfiles`: []InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `WirelessProfilesApi.GetNetworkCameraWirelessProfiles`: %v\n", resp)
 }
 ```
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20072**](InlineResponse20072.md)
+[**[]InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCameraWirelessProfile
 
-> InlineResponse20072 UpdateNetworkCameraWirelessProfile(ctx, networkId, wirelessProfileId).UpdateNetworkCameraWirelessProfile(updateNetworkCameraWirelessProfile).Execute()
+> InlineResponse20073 UpdateNetworkCameraWirelessProfile(ctx, networkId, wirelessProfileId).UpdateNetworkCameraWirelessProfile(updateNetworkCameraWirelessProfile).Execute()
 
 Update an existing camera wireless profile in this network.
 
@@ -474,7 +474,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WirelessProfilesApi.UpdateNetworkCameraWirelessProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCameraWirelessProfile`: InlineResponse20072
+    // response from `UpdateNetworkCameraWirelessProfile`: InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `WirelessProfilesApi.UpdateNetworkCameraWirelessProfile`: %v\n", resp)
 }
 ```
@@ -501,7 +501,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20072**](InlineResponse20072.md)
+[**InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 

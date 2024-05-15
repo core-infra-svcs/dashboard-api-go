@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchMtu
 
-> InlineResponse200146 GetNetworkSwitchMtu(ctx, networkId).Execute()
+> InlineResponse200147 GetNetworkSwitchMtu(ctx, networkId).Execute()
 
 Return the MTU configuration
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MtuApi.GetNetworkSwitchMtu``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchMtu`: InlineResponse200146
+    // response from `GetNetworkSwitchMtu`: InlineResponse200147
     fmt.Fprintf(os.Stdout, "Response from `MtuApi.GetNetworkSwitchMtu`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200146**](InlineResponse200146.md)
+[**InlineResponse200147**](InlineResponse200147.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchMtu
 
-> InlineResponse200146 UpdateNetworkSwitchMtu(ctx, networkId).UpdateNetworkSwitchMtu(updateNetworkSwitchMtu).Execute()
+> InlineResponse200147 UpdateNetworkSwitchMtu(ctx, networkId).UpdateNetworkSwitchMtu(updateNetworkSwitchMtu).Execute()
 
 Update the MTU configuration
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MtuApi.UpdateNetworkSwitchMtu``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchMtu`: InlineResponse200146
+    // response from `UpdateNetworkSwitchMtu`: InlineResponse200147
     fmt.Fprintf(os.Stdout, "Response from `MtuApi.UpdateNetworkSwitchMtu`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200146**](InlineResponse200146.md)
+[**InlineResponse200147**](InlineResponse200147.md)
 
 ### Authorization
 

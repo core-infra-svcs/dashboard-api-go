@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchStormControl
 
-> InlineResponse200156 GetNetworkSwitchStormControl(ctx, networkId).Execute()
+> InlineResponse200157 GetNetworkSwitchStormControl(ctx, networkId).Execute()
 
 Return the storm control configuration for a switch network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StormControlApi.GetNetworkSwitchStormControl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStormControl`: InlineResponse200156
+    // response from `GetNetworkSwitchStormControl`: InlineResponse200157
     fmt.Fprintf(os.Stdout, "Response from `StormControlApi.GetNetworkSwitchStormControl`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200156**](InlineResponse200156.md)
+[**InlineResponse200157**](InlineResponse200157.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStormControl
 
-> InlineResponse200156 UpdateNetworkSwitchStormControl(ctx, networkId).UpdateNetworkSwitchStormControl(updateNetworkSwitchStormControl).Execute()
+> InlineResponse200157 UpdateNetworkSwitchStormControl(ctx, networkId).UpdateNetworkSwitchStormControl(updateNetworkSwitchStormControl).Execute()
 
 Update the storm control configuration for a switch network
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StormControlApi.UpdateNetworkSwitchStormControl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStormControl`: InlineResponse200156
+    // response from `UpdateNetworkSwitchStormControl`: InlineResponse200157
     fmt.Fprintf(os.Stdout, "Response from `StormControlApi.UpdateNetworkSwitchStormControl`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200156**](InlineResponse200156.md)
+[**InlineResponse200157**](InlineResponse200157.md)
 
 ### Authorization
 

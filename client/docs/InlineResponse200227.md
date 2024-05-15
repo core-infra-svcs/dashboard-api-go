@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, at which the event happened | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice.md) |  | [optional] 
-**Details** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork.md) |  | [optional] 
+**Usage** | Pointer to [**InlineResponse200227Usage**](InlineResponse200227Usage.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200227Counts**](InlineResponse200227Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse200227WithDefaults instantiates a new InlineResponse200227 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetUsage
 
-`func (o *InlineResponse200227) GetTs() time.Time`
+`func (o *InlineResponse200227) GetUsage() InlineResponse200227Usage`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetUsageOk
 
-`func (o *InlineResponse200227) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200227) GetUsageOk() (*InlineResponse200227Usage, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetUsage
 
-`func (o *InlineResponse200227) SetTs(v time.Time)`
+`func (o *InlineResponse200227) SetUsage(v InlineResponse200227Usage)`
 
-SetTs sets Ts field to given value.
+SetUsage sets Usage field to given value.
 
-### HasTs
+### HasUsage
 
-`func (o *InlineResponse200227) HasTs() bool`
+`func (o *InlineResponse200227) HasUsage() bool`
 
-HasTs returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
-### GetDevice
+### GetCounts
 
-`func (o *InlineResponse200227) GetDevice() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice`
+`func (o *InlineResponse200227) GetCounts() InlineResponse200227Counts`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetCountsOk
 
-`func (o *InlineResponse200227) GetDeviceOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice, bool)`
+`func (o *InlineResponse200227) GetCountsOk() (*InlineResponse200227Counts, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetCounts
 
-`func (o *InlineResponse200227) SetDevice(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice)`
+`func (o *InlineResponse200227) SetCounts(v InlineResponse200227Counts)`
 
-SetDevice sets Device field to given value.
+SetCounts sets Counts field to given value.
 
-### HasDevice
+### HasCounts
 
-`func (o *InlineResponse200227) HasDevice() bool`
+`func (o *InlineResponse200227) HasCounts() bool`
 
-HasDevice returns a boolean if a field has been set.
-
-### GetDetails
-
-`func (o *InlineResponse200227) GetDetails() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails`
-
-GetDetails returns the Details field if non-nil, zero value otherwise.
-
-### GetDetailsOk
-
-`func (o *InlineResponse200227) GetDetailsOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails, bool)`
-
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetails
-
-`func (o *InlineResponse200227) SetDetails(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails)`
-
-SetDetails sets Details field to given value.
-
-### HasDetails
-
-`func (o *InlineResponse200227) HasDetails() bool`
-
-HasDetails returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200227) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200227) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200227) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200227) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

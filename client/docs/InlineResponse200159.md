@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
-**CustomPieChartItems** | Pointer to [**[]InlineResponse200159CustomPieChartItems**](InlineResponse200159CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
+**Servers** | Pointer to [**[]InlineResponse200159Servers**](InlineResponse200159Servers.md) | List of the syslog servers for this network | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200159WithDefaults instantiates a new InlineResponse200159 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetServers
 
-`func (o *InlineResponse200159) GetMode() string`
+`func (o *InlineResponse200159) GetServers() []InlineResponse200159Servers`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetServers returns the Servers field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetServersOk
 
-`func (o *InlineResponse200159) GetModeOk() (*string, bool)`
+`func (o *InlineResponse200159) GetServersOk() (*[]InlineResponse200159Servers, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetServers
 
-`func (o *InlineResponse200159) SetMode(v string)`
+`func (o *InlineResponse200159) SetServers(v []InlineResponse200159Servers)`
 
-SetMode sets Mode field to given value.
+SetServers sets Servers field to given value.
 
-### HasMode
+### HasServers
 
-`func (o *InlineResponse200159) HasMode() bool`
+`func (o *InlineResponse200159) HasServers() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetCustomPieChartItems
-
-`func (o *InlineResponse200159) GetCustomPieChartItems() []InlineResponse200159CustomPieChartItems`
-
-GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
-
-### GetCustomPieChartItemsOk
-
-`func (o *InlineResponse200159) GetCustomPieChartItemsOk() (*[]InlineResponse200159CustomPieChartItems, bool)`
-
-GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCustomPieChartItems
-
-`func (o *InlineResponse200159) SetCustomPieChartItems(v []InlineResponse200159CustomPieChartItems)`
-
-SetCustomPieChartItems sets CustomPieChartItems field to given value.
-
-### HasCustomPieChartItems
-
-`func (o *InlineResponse200159) HasCustomPieChartItems() bool`
-
-HasCustomPieChartItems returns a boolean if a field has been set.
+HasServers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

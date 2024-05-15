@@ -4,13 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Meraki auth user id | [optional] 
-**Email** | Pointer to **string** | Email address of the user | [optional] 
-**Name** | Pointer to **string** | Name of the user | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
-**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
-**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
-**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**WanGoodput** | Pointer to **int32** | WAN goodput (Number of useful information bits delivered over a WAN per unit of time) | [optional] 
+**LanGoodput** | Pointer to **int32** | LAN goodput (Number of useful information bits delivered over a LAN per unit of time) | [optional] 
+**WanLatencyMs** | Pointer to **float32** | WAN latency in milliseconds | [optional] 
+**LanLatencyMs** | Pointer to **float32** | LAN latency in milliseconds | [optional] 
+**WanLossPercent** | Pointer to **float32** | WAN loss percentage | [optional] 
+**LanLossPercent** | Pointer to **float32** | LAN loss percentage | [optional] 
+**ResponseDuration** | Pointer to **int32** | Duration of the response, in milliseconds | [optional] 
+**Sent** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**Recv** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**NumClients** | Pointer to **int32** | Number of clients | [optional] 
 
 ## Methods
 
@@ -31,180 +36,305 @@ NewInlineResponse20096WithDefaults instantiates a new InlineResponse20096 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStartTs
 
-`func (o *InlineResponse20096) GetId() string`
+`func (o *InlineResponse20096) GetStartTs() time.Time`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse20096) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20096) GetStartTsOk() (*time.Time, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStartTs
 
-`func (o *InlineResponse20096) SetId(v string)`
+`func (o *InlineResponse20096) SetStartTs(v time.Time)`
 
-SetId sets Id field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasId
+### HasStartTs
 
-`func (o *InlineResponse20096) HasId() bool`
+`func (o *InlineResponse20096) HasStartTs() bool`
 
-HasId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetEmail
+### GetEndTs
 
-`func (o *InlineResponse20096) GetEmail() string`
+`func (o *InlineResponse20096) GetEndTs() time.Time`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetEndTsOk
 
-`func (o *InlineResponse20096) GetEmailOk() (*string, bool)`
+`func (o *InlineResponse20096) GetEndTsOk() (*time.Time, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetEndTs
 
-`func (o *InlineResponse20096) SetEmail(v string)`
+`func (o *InlineResponse20096) SetEndTs(v time.Time)`
 
-SetEmail sets Email field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasEmail
+### HasEndTs
 
-`func (o *InlineResponse20096) HasEmail() bool`
+`func (o *InlineResponse20096) HasEndTs() bool`
 
-HasEmail returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetName
+### GetWanGoodput
 
-`func (o *InlineResponse20096) GetName() string`
+`func (o *InlineResponse20096) GetWanGoodput() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetWanGoodput returns the WanGoodput field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetWanGoodputOk
 
-`func (o *InlineResponse20096) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20096) GetWanGoodputOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetWanGoodputOk returns a tuple with the WanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetWanGoodput
 
-`func (o *InlineResponse20096) SetName(v string)`
+`func (o *InlineResponse20096) SetWanGoodput(v int32)`
 
-SetName sets Name field to given value.
+SetWanGoodput sets WanGoodput field to given value.
 
-### HasName
+### HasWanGoodput
 
-`func (o *InlineResponse20096) HasName() bool`
+`func (o *InlineResponse20096) HasWanGoodput() bool`
 
-HasName returns a boolean if a field has been set.
+HasWanGoodput returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetLanGoodput
 
-`func (o *InlineResponse20096) GetCreatedAt() time.Time`
+`func (o *InlineResponse20096) GetLanGoodput() int32`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetLanGoodput returns the LanGoodput field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetLanGoodputOk
 
-`func (o *InlineResponse20096) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse20096) GetLanGoodputOk() (*int32, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetLanGoodputOk returns a tuple with the LanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetLanGoodput
 
-`func (o *InlineResponse20096) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse20096) SetLanGoodput(v int32)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetLanGoodput sets LanGoodput field to given value.
 
-### HasCreatedAt
+### HasLanGoodput
 
-`func (o *InlineResponse20096) HasCreatedAt() bool`
+`func (o *InlineResponse20096) HasLanGoodput() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasLanGoodput returns a boolean if a field has been set.
 
-### GetAccountType
+### GetWanLatencyMs
 
-`func (o *InlineResponse20096) GetAccountType() string`
+`func (o *InlineResponse20096) GetWanLatencyMs() float32`
 
-GetAccountType returns the AccountType field if non-nil, zero value otherwise.
+GetWanLatencyMs returns the WanLatencyMs field if non-nil, zero value otherwise.
 
-### GetAccountTypeOk
+### GetWanLatencyMsOk
 
-`func (o *InlineResponse20096) GetAccountTypeOk() (*string, bool)`
+`func (o *InlineResponse20096) GetWanLatencyMsOk() (*float32, bool)`
 
-GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
+GetWanLatencyMsOk returns a tuple with the WanLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountType
+### SetWanLatencyMs
 
-`func (o *InlineResponse20096) SetAccountType(v string)`
+`func (o *InlineResponse20096) SetWanLatencyMs(v float32)`
 
-SetAccountType sets AccountType field to given value.
+SetWanLatencyMs sets WanLatencyMs field to given value.
 
-### HasAccountType
+### HasWanLatencyMs
 
-`func (o *InlineResponse20096) HasAccountType() bool`
+`func (o *InlineResponse20096) HasWanLatencyMs() bool`
 
-HasAccountType returns a boolean if a field has been set.
+HasWanLatencyMs returns a boolean if a field has been set.
 
-### GetIsAdmin
+### GetLanLatencyMs
 
-`func (o *InlineResponse20096) GetIsAdmin() bool`
+`func (o *InlineResponse20096) GetLanLatencyMs() float32`
 
-GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
+GetLanLatencyMs returns the LanLatencyMs field if non-nil, zero value otherwise.
 
-### GetIsAdminOk
+### GetLanLatencyMsOk
 
-`func (o *InlineResponse20096) GetIsAdminOk() (*bool, bool)`
+`func (o *InlineResponse20096) GetLanLatencyMsOk() (*float32, bool)`
 
-GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
+GetLanLatencyMsOk returns a tuple with the LanLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsAdmin
+### SetLanLatencyMs
 
-`func (o *InlineResponse20096) SetIsAdmin(v bool)`
+`func (o *InlineResponse20096) SetLanLatencyMs(v float32)`
 
-SetIsAdmin sets IsAdmin field to given value.
+SetLanLatencyMs sets LanLatencyMs field to given value.
 
-### HasIsAdmin
+### HasLanLatencyMs
 
-`func (o *InlineResponse20096) HasIsAdmin() bool`
+`func (o *InlineResponse20096) HasLanLatencyMs() bool`
 
-HasIsAdmin returns a boolean if a field has been set.
+HasLanLatencyMs returns a boolean if a field has been set.
 
-### GetAuthorizations
+### GetWanLossPercent
 
-`func (o *InlineResponse20096) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
+`func (o *InlineResponse20096) GetWanLossPercent() float32`
 
-GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+GetWanLossPercent returns the WanLossPercent field if non-nil, zero value otherwise.
 
-### GetAuthorizationsOk
+### GetWanLossPercentOk
 
-`func (o *InlineResponse20096) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
+`func (o *InlineResponse20096) GetWanLossPercentOk() (*float32, bool)`
 
-GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+GetWanLossPercentOk returns a tuple with the WanLossPercent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthorizations
+### SetWanLossPercent
 
-`func (o *InlineResponse20096) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
+`func (o *InlineResponse20096) SetWanLossPercent(v float32)`
 
-SetAuthorizations sets Authorizations field to given value.
+SetWanLossPercent sets WanLossPercent field to given value.
 
-### HasAuthorizations
+### HasWanLossPercent
 
-`func (o *InlineResponse20096) HasAuthorizations() bool`
+`func (o *InlineResponse20096) HasWanLossPercent() bool`
 
-HasAuthorizations returns a boolean if a field has been set.
+HasWanLossPercent returns a boolean if a field has been set.
+
+### GetLanLossPercent
+
+`func (o *InlineResponse20096) GetLanLossPercent() float32`
+
+GetLanLossPercent returns the LanLossPercent field if non-nil, zero value otherwise.
+
+### GetLanLossPercentOk
+
+`func (o *InlineResponse20096) GetLanLossPercentOk() (*float32, bool)`
+
+GetLanLossPercentOk returns a tuple with the LanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanLossPercent
+
+`func (o *InlineResponse20096) SetLanLossPercent(v float32)`
+
+SetLanLossPercent sets LanLossPercent field to given value.
+
+### HasLanLossPercent
+
+`func (o *InlineResponse20096) HasLanLossPercent() bool`
+
+HasLanLossPercent returns a boolean if a field has been set.
+
+### GetResponseDuration
+
+`func (o *InlineResponse20096) GetResponseDuration() int32`
+
+GetResponseDuration returns the ResponseDuration field if non-nil, zero value otherwise.
+
+### GetResponseDurationOk
+
+`func (o *InlineResponse20096) GetResponseDurationOk() (*int32, bool)`
+
+GetResponseDurationOk returns a tuple with the ResponseDuration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResponseDuration
+
+`func (o *InlineResponse20096) SetResponseDuration(v int32)`
+
+SetResponseDuration sets ResponseDuration field to given value.
+
+### HasResponseDuration
+
+`func (o *InlineResponse20096) HasResponseDuration() bool`
+
+HasResponseDuration returns a boolean if a field has been set.
+
+### GetSent
+
+`func (o *InlineResponse20096) GetSent() int32`
+
+GetSent returns the Sent field if non-nil, zero value otherwise.
+
+### GetSentOk
+
+`func (o *InlineResponse20096) GetSentOk() (*int32, bool)`
+
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSent
+
+`func (o *InlineResponse20096) SetSent(v int32)`
+
+SetSent sets Sent field to given value.
+
+### HasSent
+
+`func (o *InlineResponse20096) HasSent() bool`
+
+HasSent returns a boolean if a field has been set.
+
+### GetRecv
+
+`func (o *InlineResponse20096) GetRecv() int32`
+
+GetRecv returns the Recv field if non-nil, zero value otherwise.
+
+### GetRecvOk
+
+`func (o *InlineResponse20096) GetRecvOk() (*int32, bool)`
+
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecv
+
+`func (o *InlineResponse20096) SetRecv(v int32)`
+
+SetRecv sets Recv field to given value.
+
+### HasRecv
+
+`func (o *InlineResponse20096) HasRecv() bool`
+
+HasRecv returns a boolean if a field has been set.
+
+### GetNumClients
+
+`func (o *InlineResponse20096) GetNumClients() int32`
+
+GetNumClients returns the NumClients field if non-nil, zero value otherwise.
+
+### GetNumClientsOk
+
+`func (o *InlineResponse20096) GetNumClientsOk() (*int32, bool)`
+
+GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumClients
+
+`func (o *InlineResponse20096) SetNumClients(v int32)`
+
+SetNumClients sets NumClients field to given value.
+
+### HasNumClients
+
+`func (o *InlineResponse20096) HasNumClients() bool`
+
+HasNumClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

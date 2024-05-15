@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **LocalStatusPageEnabled** | Pointer to **bool** | Enables / disables the local device status pages (&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://my.meraki.com/&#39;&gt;my.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://ap.meraki.com/&#39;&gt;ap.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://switch.meraki.com/&#39;&gt;switch.meraki.com, &lt;/a&gt;&lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;http://wired.meraki.com/&#39;&gt;wired.meraki.com&lt;/a&gt;). Optional (defaults to false) | [optional] 
 **RemoteStatusPageEnabled** | Pointer to **bool** | Enables / disables access to the device status page (&lt;a target&#x3D;&#39;_blank&#39;&gt;http://[device&#39;s LAN IP])&lt;/a&gt;. Optional. Can only be set if localStatusPageEnabled is set to true | [optional] 
 **LocalStatusPage** | Pointer to [**NetworksNetworkIdSettingsLocalStatusPage**](NetworksNetworkIdSettingsLocalStatusPage.md) |  | [optional] 
-**SecurePort** | Pointer to [**InlineResponse200108SecurePort**](InlineResponse200108SecurePort.md) |  | [optional] 
+**SecurePort** | Pointer to [**InlineResponse200109SecurePort**](InlineResponse200109SecurePort.md) |  | [optional] 
 **NamedVlans** | Pointer to [**NetworksNetworkIdSettingsNamedVlans**](NetworksNetworkIdSettingsNamedVlans.md) |  | [optional] 
 
 ## Methods
@@ -106,20 +106,20 @@ HasLocalStatusPage returns a boolean if a field has been set.
 
 ### GetSecurePort
 
-`func (o *InlineObject112) GetSecurePort() InlineResponse200108SecurePort`
+`func (o *InlineObject112) GetSecurePort() InlineResponse200109SecurePort`
 
 GetSecurePort returns the SecurePort field if non-nil, zero value otherwise.
 
 ### GetSecurePortOk
 
-`func (o *InlineObject112) GetSecurePortOk() (*InlineResponse200108SecurePort, bool)`
+`func (o *InlineObject112) GetSecurePortOk() (*InlineResponse200109SecurePort, bool)`
 
 GetSecurePortOk returns a tuple with the SecurePort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSecurePort
 
-`func (o *InlineObject112) SetSecurePort(v InlineResponse200108SecurePort)`
+`func (o *InlineObject112) SetSecurePort(v InlineResponse200109SecurePort)`
 
 SetSecurePort sets SecurePort field to given value.
 

@@ -4,15 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InterfaceId** | Pointer to **string** | The id | [optional] 
-**Name** | Pointer to **string** | The name | [optional] 
-**Subnet** | Pointer to **string** | IPv4 subnet | [optional] 
-**InterfaceIp** | Pointer to **string** | IPv4 address | [optional] 
-**MulticastRouting** | Pointer to **string** | Multicast routing status | [optional] 
-**VlanId** | Pointer to **int32** | VLAN id | [optional] 
-**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings**](DevicesSerialSwitchRoutingInterfacesOspfSettings.md) |  | [optional] 
-**OspfV3** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfV3**](DevicesSerialSwitchRoutingInterfacesOspfV3.md) |  | [optional] 
-**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv6**](DevicesSerialSwitchRoutingInterfacesIpv6.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
+**Name** | Pointer to **string** | Name of the Switch stack | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
 
 ## Methods
 
@@ -33,30 +27,30 @@ NewInlineResponse200155WithDefaults instantiates a new InlineResponse200155 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaceId
+### GetId
 
-`func (o *InlineResponse200155) GetInterfaceId() string`
+`func (o *InlineResponse200155) GetId() string`
 
-GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetInterfaceIdOk
+### GetIdOk
 
-`func (o *InlineResponse200155) GetInterfaceIdOk() (*string, bool)`
+`func (o *InlineResponse200155) GetIdOk() (*string, bool)`
 
-GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceId
+### SetId
 
-`func (o *InlineResponse200155) SetInterfaceId(v string)`
+`func (o *InlineResponse200155) SetId(v string)`
 
-SetInterfaceId sets InterfaceId field to given value.
+SetId sets Id field to given value.
 
-### HasInterfaceId
+### HasId
 
-`func (o *InlineResponse200155) HasInterfaceId() bool`
+`func (o *InlineResponse200155) HasId() bool`
 
-HasInterfaceId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -83,180 +77,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSubnet
+### GetSerials
 
-`func (o *InlineResponse200155) GetSubnet() string`
+`func (o *InlineResponse200155) GetSerials() []string`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetSerialsOk
 
-`func (o *InlineResponse200155) GetSubnetOk() (*string, bool)`
+`func (o *InlineResponse200155) GetSerialsOk() (*[]string, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetSerials
 
-`func (o *InlineResponse200155) SetSubnet(v string)`
+`func (o *InlineResponse200155) SetSerials(v []string)`
 
-SetSubnet sets Subnet field to given value.
+SetSerials sets Serials field to given value.
 
-### HasSubnet
+### HasSerials
 
-`func (o *InlineResponse200155) HasSubnet() bool`
+`func (o *InlineResponse200155) HasSerials() bool`
 
-HasSubnet returns a boolean if a field has been set.
-
-### GetInterfaceIp
-
-`func (o *InlineResponse200155) GetInterfaceIp() string`
-
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
-
-### GetInterfaceIpOk
-
-`func (o *InlineResponse200155) GetInterfaceIpOk() (*string, bool)`
-
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInterfaceIp
-
-`func (o *InlineResponse200155) SetInterfaceIp(v string)`
-
-SetInterfaceIp sets InterfaceIp field to given value.
-
-### HasInterfaceIp
-
-`func (o *InlineResponse200155) HasInterfaceIp() bool`
-
-HasInterfaceIp returns a boolean if a field has been set.
-
-### GetMulticastRouting
-
-`func (o *InlineResponse200155) GetMulticastRouting() string`
-
-GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
-
-### GetMulticastRoutingOk
-
-`func (o *InlineResponse200155) GetMulticastRoutingOk() (*string, bool)`
-
-GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMulticastRouting
-
-`func (o *InlineResponse200155) SetMulticastRouting(v string)`
-
-SetMulticastRouting sets MulticastRouting field to given value.
-
-### HasMulticastRouting
-
-`func (o *InlineResponse200155) HasMulticastRouting() bool`
-
-HasMulticastRouting returns a boolean if a field has been set.
-
-### GetVlanId
-
-`func (o *InlineResponse200155) GetVlanId() int32`
-
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
-
-### GetVlanIdOk
-
-`func (o *InlineResponse200155) GetVlanIdOk() (*int32, bool)`
-
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVlanId
-
-`func (o *InlineResponse200155) SetVlanId(v int32)`
-
-SetVlanId sets VlanId field to given value.
-
-### HasVlanId
-
-`func (o *InlineResponse200155) HasVlanId() bool`
-
-HasVlanId returns a boolean if a field has been set.
-
-### GetOspfSettings
-
-`func (o *InlineResponse200155) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings`
-
-GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
-
-### GetOspfSettingsOk
-
-`func (o *InlineResponse200155) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings, bool)`
-
-GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOspfSettings
-
-`func (o *InlineResponse200155) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings)`
-
-SetOspfSettings sets OspfSettings field to given value.
-
-### HasOspfSettings
-
-`func (o *InlineResponse200155) HasOspfSettings() bool`
-
-HasOspfSettings returns a boolean if a field has been set.
-
-### GetOspfV3
-
-`func (o *InlineResponse200155) GetOspfV3() DevicesSerialSwitchRoutingInterfacesOspfV3`
-
-GetOspfV3 returns the OspfV3 field if non-nil, zero value otherwise.
-
-### GetOspfV3Ok
-
-`func (o *InlineResponse200155) GetOspfV3Ok() (*DevicesSerialSwitchRoutingInterfacesOspfV3, bool)`
-
-GetOspfV3Ok returns a tuple with the OspfV3 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOspfV3
-
-`func (o *InlineResponse200155) SetOspfV3(v DevicesSerialSwitchRoutingInterfacesOspfV3)`
-
-SetOspfV3 sets OspfV3 field to given value.
-
-### HasOspfV3
-
-`func (o *InlineResponse200155) HasOspfV3() bool`
-
-HasOspfV3 returns a boolean if a field has been set.
-
-### GetIpv6
-
-`func (o *InlineResponse200155) GetIpv6() DevicesSerialSwitchRoutingInterfacesIpv6`
-
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
-
-### GetIpv6Ok
-
-`func (o *InlineResponse200155) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesIpv6, bool)`
-
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv6
-
-`func (o *InlineResponse200155) SetIpv6(v DevicesSerialSwitchRoutingInterfacesIpv6)`
-
-SetIpv6 sets Ipv6 field to given value.
-
-### HasIpv6
-
-`func (o *InlineResponse200155) HasIpv6() bool`
-
-HasIpv6 returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

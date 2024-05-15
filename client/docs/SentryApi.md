@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSmSentryPoliciesAssignmentsByNetwork
 
-> []InlineResponse200262 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200270 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the Sentry Policies for an organization ordered in ascending order of priority
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SentryApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200262
+    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200270
     fmt.Fprintf(os.Stdout, "Response from `SentryApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: %v\n", resp)
 }
 ```
@@ -71,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200262**](InlineResponse200262.md)
+[**[]InlineResponse200270**](InlineResponse200270.md)
 
 ### Authorization
 
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSmSentryPoliciesAssignments
 
-> InlineResponse200261 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
+> InlineResponse200269 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
 
 Update an Organizations Sentry Policies using the provided list
 
@@ -109,7 +109,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject252([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject252 | 
+    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject257([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject257 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -118,7 +118,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SentryApi.UpdateOrganizationSmSentryPoliciesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200261
+    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200269
     fmt.Fprintf(os.Stdout, "Response from `SentryApi.UpdateOrganizationSmSentryPoliciesAssignments`: %v\n", resp)
 }
 ```
@@ -139,11 +139,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSmSentry
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject252**](InlineObject252.md) |  | 
+ **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject257**](InlineObject257.md) |  | 
 
 ### Return type
 
-[**InlineResponse200261**](InlineResponse200261.md)
+[**InlineResponse200269**](InlineResponse200269.md)
 
 ### Authorization
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
+**Name** | **string** | The name of the organization | 
+**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject195
 
-`func NewInlineObject195() *InlineObject195`
+`func NewInlineObject195(name string, ) *InlineObject195`
 
 NewInlineObject195 instantiates a new InlineObject195 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,50 @@ NewInlineObject195WithDefaults instantiates a new InlineObject195 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetName
 
-`func (o *InlineObject195) GetConfirmed() bool`
+`func (o *InlineObject195) GetName() string`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetNameOk
 
-`func (o *InlineObject195) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject195) GetNameOk() (*string, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetName
 
-`func (o *InlineObject195) SetConfirmed(v bool)`
+`func (o *InlineObject195) SetName(v string)`
 
-SetConfirmed sets Confirmed field to given value.
+SetName sets Name field to given value.
 
-### HasConfirmed
 
-`func (o *InlineObject195) HasConfirmed() bool`
+### GetManagement
 
-HasConfirmed returns a boolean if a field has been set.
+`func (o *InlineObject195) GetManagement() OrganizationsManagement1`
 
-### GetSynchronous
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-`func (o *InlineObject195) GetSynchronous() bool`
+### GetManagementOk
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+`func (o *InlineObject195) GetManagementOk() (*OrganizationsManagement1, bool)`
 
-### GetSynchronousOk
-
-`func (o *InlineObject195) GetSynchronousOk() (*bool, bool)`
-
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetManagement
 
-`func (o *InlineObject195) SetSynchronous(v bool)`
+`func (o *InlineObject195) SetManagement(v OrganizationsManagement1)`
 
-SetSynchronous sets Synchronous field to given value.
+SetManagement sets Management field to given value.
 
-### HasSynchronous
+### HasManagement
 
-`func (o *InlineObject195) HasSynchronous() bool`
+`func (o *InlineObject195) HasManagement() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

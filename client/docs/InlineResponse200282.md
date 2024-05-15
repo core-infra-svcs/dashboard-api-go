@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**Name** | Pointer to **string** | Name of the SSID | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
+**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200282WithDefaults instantiates a new InlineResponse200282 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetName
 
-`func (o *InlineResponse200282) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200282) GetName() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetNameOk
 
-`func (o *InlineResponse200282) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200282) GetNameOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetName
 
-`func (o *InlineResponse200282) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200282) SetName(v string)`
 
-SetNetwork sets Network field to given value.
+SetName sets Name field to given value.
 
-### HasNetwork
+### HasName
 
-`func (o *InlineResponse200282) HasNetwork() bool`
+`func (o *InlineResponse200282) HasName() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetByBand
+### GetUsage
 
-`func (o *InlineResponse200282) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
+`func (o *InlineResponse200282) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
 
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetByBandOk
+### GetUsageOk
 
-`func (o *InlineResponse200282) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
+`func (o *InlineResponse200282) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
 
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByBand
+### SetUsage
 
-`func (o *InlineResponse200282) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
+`func (o *InlineResponse200282) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
 
-SetByBand sets ByBand field to given value.
+SetUsage sets Usage field to given value.
 
-### HasByBand
+### HasUsage
 
-`func (o *InlineResponse200282) HasByBand() bool`
+`func (o *InlineResponse200282) HasUsage() bool`
 
-HasByBand returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
+
+### GetClients
+
+`func (o *InlineResponse200282) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
+
+GetClients returns the Clients field if non-nil, zero value otherwise.
+
+### GetClientsOk
+
+`func (o *InlineResponse200282) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
+
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClients
+
+`func (o *InlineResponse200282) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
+
+SetClients sets Clients field to given value.
+
+### HasClients
+
+`func (o *InlineResponse200282) HasClients() bool`
+
+HasClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

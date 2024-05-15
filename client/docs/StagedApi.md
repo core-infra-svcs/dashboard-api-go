@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkFirmwareUpgradesStagedEvent
 
-> InlineResponse20089 CreateNetworkFirmwareUpgradesStagedEvent(ctx, networkId).CreateNetworkFirmwareUpgradesStagedEvent(createNetworkFirmwareUpgradesStagedEvent).Execute()
+> InlineResponse20090 CreateNetworkFirmwareUpgradesStagedEvent(ctx, networkId).CreateNetworkFirmwareUpgradesStagedEvent(createNetworkFirmwareUpgradesStagedEvent).Execute()
 
 Create a Staged Upgrade Event for a network
 
@@ -50,7 +50,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.CreateNetworkFirmwareUpgradesStagedEvent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkFirmwareUpgradesStagedEvent`: InlineResponse20089
+    // response from `CreateNetworkFirmwareUpgradesStagedEvent`: InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.CreateNetworkFirmwareUpgradesStagedEvent`: %v\n", resp)
 }
 ```
@@ -75,7 +75,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20089**](InlineResponse20089.md)
+[**InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkFirmwareUpgradesStagedGroup
 
-> InlineResponse20090 CreateNetworkFirmwareUpgradesStagedGroup(ctx, networkId).CreateNetworkFirmwareUpgradesStagedGroup(createNetworkFirmwareUpgradesStagedGroup).Execute()
+> InlineResponse20091 CreateNetworkFirmwareUpgradesStagedGroup(ctx, networkId).CreateNetworkFirmwareUpgradesStagedGroup(createNetworkFirmwareUpgradesStagedGroup).Execute()
 
 Create a Staged Upgrade Group for a network
 
@@ -122,7 +122,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.CreateNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20090
+    // response from `CreateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20091
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.CreateNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
 }
 ```
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20090**](InlineResponse20090.md)
+[**InlineResponse20091**](InlineResponse20091.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ Name | Type | Description  | Notes
 
 ## DeferNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20089 DeferNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
+> InlineResponse20090 DeferNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
 
 Postpone by 1 week all pending staged upgrade stages for a network
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.DeferNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DeferNetworkFirmwareUpgradesStagedEvents`: InlineResponse20089
+    // response from `DeferNetworkFirmwareUpgradesStagedEvents`: InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.DeferNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20089**](InlineResponse20089.md)
+[**InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20089 GetNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
+> InlineResponse20090 GetNetworkFirmwareUpgradesStagedEvents(ctx, networkId).Execute()
 
 Get the Staged Upgrade Event from a network
 
@@ -334,7 +334,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.GetNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedEvents`: InlineResponse20089
+    // response from `GetNetworkFirmwareUpgradesStagedEvents`: InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.GetNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20089**](InlineResponse20089.md)
+[**InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedGroup
 
-> InlineResponse20090 GetNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).Execute()
+> InlineResponse20091 GetNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).Execute()
 
 Get a Staged Upgrade Group from a network
 
@@ -405,7 +405,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.GetNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedGroup`: InlineResponse20090
+    // response from `GetNetworkFirmwareUpgradesStagedGroup`: InlineResponse20091
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.GetNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
 }
 ```
@@ -431,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20090**](InlineResponse20090.md)
+[**InlineResponse20091**](InlineResponse20091.md)
 
 ### Authorization
 
@@ -449,7 +449,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedGroups
 
-> []InlineResponse20090 GetNetworkFirmwareUpgradesStagedGroups(ctx, networkId).Execute()
+> []InlineResponse20091 GetNetworkFirmwareUpgradesStagedGroups(ctx, networkId).Execute()
 
 List of Staged Upgrade Groups in a network
 
@@ -477,7 +477,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.GetNetworkFirmwareUpgradesStagedGroups``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedGroups`: []InlineResponse20090
+    // response from `GetNetworkFirmwareUpgradesStagedGroups`: []InlineResponse20091
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.GetNetworkFirmwareUpgradesStagedGroups`: %v\n", resp)
 }
 ```
@@ -501,7 +501,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20090**](InlineResponse20090.md)
+[**[]InlineResponse20091**](InlineResponse20091.md)
 
 ### Authorization
 
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkFirmwareUpgradesStagedStages
 
-> []InlineResponse20091 GetNetworkFirmwareUpgradesStagedStages(ctx, networkId).Execute()
+> []InlineResponse20092 GetNetworkFirmwareUpgradesStagedStages(ctx, networkId).Execute()
 
 Order of Staged Upgrade Groups in a network
 
@@ -547,7 +547,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.GetNetworkFirmwareUpgradesStagedStages``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkFirmwareUpgradesStagedStages`: []InlineResponse20091
+    // response from `GetNetworkFirmwareUpgradesStagedStages`: []InlineResponse20092
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.GetNetworkFirmwareUpgradesStagedStages`: %v\n", resp)
 }
 ```
@@ -571,7 +571,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20091**](InlineResponse20091.md)
+[**[]InlineResponse20092**](InlineResponse20092.md)
 
 ### Authorization
 
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 
 ## RollbacksNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20089 RollbacksNetworkFirmwareUpgradesStagedEvents(ctx, networkId).RollbacksNetworkFirmwareUpgradesStagedEvents(rollbacksNetworkFirmwareUpgradesStagedEvents).Execute()
+> InlineResponse20090 RollbacksNetworkFirmwareUpgradesStagedEvents(ctx, networkId).RollbacksNetworkFirmwareUpgradesStagedEvents(rollbacksNetworkFirmwareUpgradesStagedEvents).Execute()
 
 Rollback a Staged Upgrade Event for a network
 
@@ -618,7 +618,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.RollbacksNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RollbacksNetworkFirmwareUpgradesStagedEvents`: InlineResponse20089
+    // response from `RollbacksNetworkFirmwareUpgradesStagedEvents`: InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.RollbacksNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -643,7 +643,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20089**](InlineResponse20089.md)
+[**InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -661,7 +661,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedEvents
 
-> InlineResponse20089 UpdateNetworkFirmwareUpgradesStagedEvents(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedEvents(updateNetworkFirmwareUpgradesStagedEvents).Execute()
+> InlineResponse20090 UpdateNetworkFirmwareUpgradesStagedEvents(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedEvents(updateNetworkFirmwareUpgradesStagedEvents).Execute()
 
 Update the Staged Upgrade Event for a network
 
@@ -690,7 +690,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.UpdateNetworkFirmwareUpgradesStagedEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedEvents`: InlineResponse20089
+    // response from `UpdateNetworkFirmwareUpgradesStagedEvents`: InlineResponse20090
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.UpdateNetworkFirmwareUpgradesStagedEvents`: %v\n", resp)
 }
 ```
@@ -715,7 +715,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20089**](InlineResponse20089.md)
+[**InlineResponse20090**](InlineResponse20090.md)
 
 ### Authorization
 
@@ -733,7 +733,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedGroup
 
-> InlineResponse20090 UpdateNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).UpdateNetworkFirmwareUpgradesStagedGroup(updateNetworkFirmwareUpgradesStagedGroup).Execute()
+> InlineResponse20091 UpdateNetworkFirmwareUpgradesStagedGroup(ctx, networkId, groupId).UpdateNetworkFirmwareUpgradesStagedGroup(updateNetworkFirmwareUpgradesStagedGroup).Execute()
 
 Update a Staged Upgrade Group for a network
 
@@ -763,7 +763,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.UpdateNetworkFirmwareUpgradesStagedGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20090
+    // response from `UpdateNetworkFirmwareUpgradesStagedGroup`: InlineResponse20091
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.UpdateNetworkFirmwareUpgradesStagedGroup`: %v\n", resp)
 }
 ```
@@ -790,7 +790,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20090**](InlineResponse20090.md)
+[**InlineResponse20091**](InlineResponse20091.md)
 
 ### Authorization
 
@@ -808,7 +808,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkFirmwareUpgradesStagedStages
 
-> []InlineResponse20091 UpdateNetworkFirmwareUpgradesStagedStages(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedStages(updateNetworkFirmwareUpgradesStagedStages).Execute()
+> []InlineResponse20092 UpdateNetworkFirmwareUpgradesStagedStages(ctx, networkId).UpdateNetworkFirmwareUpgradesStagedStages(updateNetworkFirmwareUpgradesStagedStages).Execute()
 
 Assign Staged Upgrade Group order in the sequence.
 
@@ -837,7 +837,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StagedApi.UpdateNetworkFirmwareUpgradesStagedStages``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkFirmwareUpgradesStagedStages`: []InlineResponse20091
+    // response from `UpdateNetworkFirmwareUpgradesStagedStages`: []InlineResponse20092
     fmt.Fprintf(os.Stdout, "Response from `StagedApi.UpdateNetworkFirmwareUpgradesStagedStages`: %v\n", resp)
 }
 ```
@@ -862,7 +862,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20091**](InlineResponse20091.md)
+[**[]InlineResponse20092**](InlineResponse20092.md)
 
 ### Authorization
 

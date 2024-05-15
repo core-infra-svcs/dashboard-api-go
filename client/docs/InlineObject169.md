@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
-**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
+**Type** | **string** | Indicates if this rule will allow, block, or alert. | 
+**Match** | [**NetworksNetworkIdWirelessAirMarshalRulesMatch**](NetworksNetworkIdWirelessAirMarshalRulesMatch.md) |  | 
 
 ## Methods
 
 ### NewInlineObject169
 
-`func NewInlineObject169() *InlineObject169`
+`func NewInlineObject169(type_ string, match NetworksNetworkIdWirelessAirMarshalRulesMatch, ) *InlineObject169`
 
 NewInlineObject169 instantiates a new InlineObject169 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +26,45 @@ NewInlineObject169WithDefaults instantiates a new InlineObject169 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetType
 
-`func (o *InlineObject169) GetEnabled() bool`
+`func (o *InlineObject169) GetType() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetTypeOk
 
-`func (o *InlineObject169) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject169) GetTypeOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetType
 
-`func (o *InlineObject169) SetEnabled(v bool)`
+`func (o *InlineObject169) SetType(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetType sets Type field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject169) HasEnabled() bool`
+### GetMatch
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject169) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesMatch`
 
-### GetVlanId
+GetMatch returns the Match field if non-nil, zero value otherwise.
 
-`func (o *InlineObject169) GetVlanId() int32`
+### GetMatchOk
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+`func (o *InlineObject169) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesMatch, bool)`
 
-### GetVlanIdOk
-
-`func (o *InlineObject169) GetVlanIdOk() (*int32, bool)`
-
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetMatch
 
-`func (o *InlineObject169) SetVlanId(v int32)`
+`func (o *InlineObject169) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesMatch)`
 
-SetVlanId sets VlanId field to given value.
+SetMatch sets Match field to given value.
 
-### HasVlanId
-
-`func (o *InlineObject169) HasVlanId() bool`
-
-HasVlanId returns a boolean if a field has been set.
-
-### GetProtocols
-
-`func (o *InlineObject169) GetProtocols() []string`
-
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
-
-### GetProtocolsOk
-
-`func (o *InlineObject169) GetProtocolsOk() (*[]string, bool)`
-
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProtocols
-
-`func (o *InlineObject169) SetProtocols(v []string)`
-
-SetProtocols sets Protocols field to given value.
-
-### HasProtocols
-
-`func (o *InlineObject169) HasProtocols() bool`
-
-HasProtocols returns a boolean if a field has been set.
-
-### GetAccessPoints
-
-`func (o *InlineObject169) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
-
-GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
-
-### GetAccessPointsOk
-
-`func (o *InlineObject169) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
-
-GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessPoints
-
-`func (o *InlineObject169) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
-
-SetAccessPoints sets AccessPoints field to given value.
-
-### HasAccessPoints
-
-`func (o *InlineObject169) HasAccessPoints() bool`
-
-HasAccessPoints returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

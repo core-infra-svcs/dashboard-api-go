@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationEarlyAccessFeaturesOptIn
 
-> InlineResponse200235 CreateOrganizationEarlyAccessFeaturesOptIn(ctx, organizationId).CreateOrganizationEarlyAccessFeaturesOptIn(createOrganizationEarlyAccessFeaturesOptIn).Execute()
+> InlineResponse200243 CreateOrganizationEarlyAccessFeaturesOptIn(ctx, organizationId).CreateOrganizationEarlyAccessFeaturesOptIn(createOrganizationEarlyAccessFeaturesOptIn).Execute()
 
 Create a new early access feature opt-in for an organization
 
@@ -35,7 +35,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject222("ShortName_example") // InlineObject222 | 
+    createOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject227("ShortName_example") // InlineObject227 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FeaturesApi.CreateOrganizationEarlyAccessFeaturesOptIn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationEarlyAccessFeaturesOptIn`: InlineResponse200235
+    // response from `CreateOrganizationEarlyAccessFeaturesOptIn`: InlineResponse200243
     fmt.Fprintf(os.Stdout, "Response from `FeaturesApi.CreateOrganizationEarlyAccessFeaturesOptIn`: %v\n", resp)
 }
 ```
@@ -65,11 +65,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationEarlyAcc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject222**](InlineObject222.md) |  | 
+ **createOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject227**](InlineObject227.md) |  | 
 
 ### Return type
 
-[**InlineResponse200235**](InlineResponse200235.md)
+[**InlineResponse200243**](InlineResponse200243.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationEarlyAccessFeatures
 
-> []InlineResponse200234 GetOrganizationEarlyAccessFeatures(ctx, organizationId).Execute()
+> []InlineResponse200242 GetOrganizationEarlyAccessFeatures(ctx, organizationId).Execute()
 
 List the available early access features for organization
 
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FeaturesApi.GetOrganizationEarlyAccessFeatures``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationEarlyAccessFeatures`: []InlineResponse200234
+    // response from `GetOrganizationEarlyAccessFeatures`: []InlineResponse200242
     fmt.Fprintf(os.Stdout, "Response from `FeaturesApi.GetOrganizationEarlyAccessFeatures`: %v\n", resp)
 }
 ```
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200234**](InlineResponse200234.md)
+[**[]InlineResponse200242**](InlineResponse200242.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationEarlyAccessFeaturesOptIn
 
-> InlineResponse200235 GetOrganizationEarlyAccessFeaturesOptIn(ctx, organizationId, optInId).Execute()
+> InlineResponse200243 GetOrganizationEarlyAccessFeaturesOptIn(ctx, organizationId, optInId).Execute()
 
 Show an early access feature opt-in for an organization
 
@@ -257,7 +257,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FeaturesApi.GetOrganizationEarlyAccessFeaturesOptIn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationEarlyAccessFeaturesOptIn`: InlineResponse200235
+    // response from `GetOrganizationEarlyAccessFeaturesOptIn`: InlineResponse200243
     fmt.Fprintf(os.Stdout, "Response from `FeaturesApi.GetOrganizationEarlyAccessFeaturesOptIn`: %v\n", resp)
 }
 ```
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200235**](InlineResponse200235.md)
+[**InlineResponse200243**](InlineResponse200243.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationEarlyAccessFeaturesOptIns
 
-> InlineResponse200235 GetOrganizationEarlyAccessFeaturesOptIns(ctx, organizationId).Execute()
+> InlineResponse200243 GetOrganizationEarlyAccessFeaturesOptIns(ctx, organizationId).Execute()
 
 List the early access feature opt-ins for an organization
 
@@ -329,7 +329,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FeaturesApi.GetOrganizationEarlyAccessFeaturesOptIns``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationEarlyAccessFeaturesOptIns`: InlineResponse200235
+    // response from `GetOrganizationEarlyAccessFeaturesOptIns`: InlineResponse200243
     fmt.Fprintf(os.Stdout, "Response from `FeaturesApi.GetOrganizationEarlyAccessFeaturesOptIns`: %v\n", resp)
 }
 ```
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200235**](InlineResponse200235.md)
+[**InlineResponse200243**](InlineResponse200243.md)
 
 ### Authorization
 
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationEarlyAccessFeaturesOptIn
 
-> InlineResponse200235 UpdateOrganizationEarlyAccessFeaturesOptIn(ctx, organizationId, optInId).UpdateOrganizationEarlyAccessFeaturesOptIn(updateOrganizationEarlyAccessFeaturesOptIn).Execute()
+> InlineResponse200243 UpdateOrganizationEarlyAccessFeaturesOptIn(ctx, organizationId, optInId).UpdateOrganizationEarlyAccessFeaturesOptIn(updateOrganizationEarlyAccessFeaturesOptIn).Execute()
 
 Update an early access feature opt-in for an organization
 
@@ -392,7 +392,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     optInId := "optInId_example" // string | Opt in ID
-    updateOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject223() // InlineObject223 |  (optional)
+    updateOrganizationEarlyAccessFeaturesOptIn := *openapiclient.NewInlineObject228() // InlineObject228 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -401,7 +401,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FeaturesApi.UpdateOrganizationEarlyAccessFeaturesOptIn``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationEarlyAccessFeaturesOptIn`: InlineResponse200235
+    // response from `UpdateOrganizationEarlyAccessFeaturesOptIn`: InlineResponse200243
     fmt.Fprintf(os.Stdout, "Response from `FeaturesApi.UpdateOrganizationEarlyAccessFeaturesOptIn`: %v\n", resp)
 }
 ```
@@ -424,11 +424,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject223**](InlineObject223.md) |  | 
+ **updateOrganizationEarlyAccessFeaturesOptIn** | [**InlineObject228**](InlineObject228.md) |  | 
 
 ### Return type
 
-[**InlineResponse200235**](InlineResponse200235.md)
+[**InlineResponse200243**](InlineResponse200243.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSyslogServers
 
-> InlineResponse200158 GetNetworkSyslogServers(ctx, networkId).Execute()
+> InlineResponse200159 GetNetworkSyslogServers(ctx, networkId).Execute()
 
 List the syslog servers for a network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SyslogServersApi.GetNetworkSyslogServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSyslogServers`: InlineResponse200158
+    // response from `GetNetworkSyslogServers`: InlineResponse200159
     fmt.Fprintf(os.Stdout, "Response from `SyslogServersApi.GetNetworkSyslogServers`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200158**](InlineResponse200158.md)
+[**InlineResponse200159**](InlineResponse200159.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSyslogServers
 
-> InlineResponse200158 UpdateNetworkSyslogServers(ctx, networkId).UpdateNetworkSyslogServers(updateNetworkSyslogServers).Execute()
+> InlineResponse200159 UpdateNetworkSyslogServers(ctx, networkId).UpdateNetworkSyslogServers(updateNetworkSyslogServers).Execute()
 
 Update the syslog servers for a network
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SyslogServersApi.UpdateNetworkSyslogServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSyslogServers`: InlineResponse200158
+    // response from `UpdateNetworkSyslogServers`: InlineResponse200159
     fmt.Fprintf(os.Stdout, "Response from `SyslogServersApi.UpdateNetworkSyslogServers`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200158**](InlineResponse200158.md)
+[**InlineResponse200159**](InlineResponse200159.md)
 
 ### Authorization
 

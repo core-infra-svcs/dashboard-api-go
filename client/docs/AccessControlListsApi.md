@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchAccessControlLists
 
-> InlineResponse200137 GetNetworkSwitchAccessControlLists(ctx, networkId).Execute()
+> InlineResponse200138 GetNetworkSwitchAccessControlLists(ctx, networkId).Execute()
 
 Return the access control lists for a MS network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AccessControlListsApi.GetNetworkSwitchAccessControlLists``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAccessControlLists`: InlineResponse200137
+    // response from `GetNetworkSwitchAccessControlLists`: InlineResponse200138
     fmt.Fprintf(os.Stdout, "Response from `AccessControlListsApi.GetNetworkSwitchAccessControlLists`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200137**](InlineResponse200137.md)
+[**InlineResponse200138**](InlineResponse200138.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchAccessControlLists
 
-> InlineResponse200137 UpdateNetworkSwitchAccessControlLists(ctx, networkId).UpdateNetworkSwitchAccessControlLists(updateNetworkSwitchAccessControlLists).Execute()
+> InlineResponse200138 UpdateNetworkSwitchAccessControlLists(ctx, networkId).UpdateNetworkSwitchAccessControlLists(updateNetworkSwitchAccessControlLists).Execute()
 
 Update the access control lists for a MS network
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AccessControlListsApi.UpdateNetworkSwitchAccessControlLists``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchAccessControlLists`: InlineResponse200137
+    // response from `UpdateNetworkSwitchAccessControlLists`: InlineResponse200138
     fmt.Fprintf(os.Stdout, "Response from `AccessControlListsApi.UpdateNetworkSwitchAccessControlLists`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200137**](InlineResponse200137.md)
+[**InlineResponse200138**](InlineResponse200138.md)
 
 ### Authorization
 

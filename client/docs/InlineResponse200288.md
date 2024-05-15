@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
-**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
+**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
+**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
+**Example** | Pointer to [**InlineResponse200288Example**](InlineResponse200288Example.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200288WithDefaults instantiates a new InlineResponse200288 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDownstream
+### GetAlertTypeId
 
-`func (o *InlineResponse200288) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
+`func (o *InlineResponse200288) GetAlertTypeId() string`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetAlertTypeIdOk
 
-`func (o *InlineResponse200288) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
+`func (o *InlineResponse200288) GetAlertTypeIdOk() (*string, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetAlertTypeId
 
-`func (o *InlineResponse200288) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
+`func (o *InlineResponse200288) SetAlertTypeId(v string)`
 
-SetDownstream sets Downstream field to given value.
+SetAlertTypeId sets AlertTypeId field to given value.
 
-### HasDownstream
+### HasAlertTypeId
 
-`func (o *InlineResponse200288) HasDownstream() bool`
+`func (o *InlineResponse200288) HasAlertTypeId() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasAlertTypeId returns a boolean if a field has been set.
 
-### GetUpstream
+### GetAlertType
 
-`func (o *InlineResponse200288) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+`func (o *InlineResponse200288) GetAlertType() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetAlertType returns the AlertType field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetAlertTypeOk
 
-`func (o *InlineResponse200288) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+`func (o *InlineResponse200288) GetAlertTypeOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetAlertType
 
-`func (o *InlineResponse200288) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+`func (o *InlineResponse200288) SetAlertType(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetAlertType sets AlertType field to given value.
 
-### HasUpstream
+### HasAlertType
 
-`func (o *InlineResponse200288) HasUpstream() bool`
+`func (o *InlineResponse200288) HasAlertType() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasAlertType returns a boolean if a field has been set.
 
-### GetNetwork
+### GetExample
 
-`func (o *InlineResponse200288) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
+`func (o *InlineResponse200288) GetExample() InlineResponse200288Example`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetExample returns the Example field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetExampleOk
 
-`func (o *InlineResponse200288) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
+`func (o *InlineResponse200288) GetExampleOk() (*InlineResponse200288Example, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetExample
 
-`func (o *InlineResponse200288) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
+`func (o *InlineResponse200288) SetExample(v InlineResponse200288Example)`
 
-SetNetwork sets Network field to given value.
+SetExample sets Example field to given value.
 
-### HasNetwork
+### HasExample
 
-`func (o *InlineResponse200288) HasNetwork() bool`
+`func (o *InlineResponse200288) HasExample() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasExample returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

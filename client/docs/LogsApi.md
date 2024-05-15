@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationWebhooksLogs
 
-> []InlineResponse200280 GetOrganizationWebhooksLogs(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Url(url).Execute()
+> []InlineResponse200290 GetOrganizationWebhooksLogs(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Url(url).Execute()
 
 Return the log of webhook POSTs sent
 
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LogsApi.GetOrganizationWebhooksLogs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksLogs`: []InlineResponse200280
+    // response from `GetOrganizationWebhooksLogs`: []InlineResponse200290
     fmt.Fprintf(os.Stdout, "Response from `LogsApi.GetOrganizationWebhooksLogs`: %v\n", resp)
 }
 ```
@@ -76,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200280**](InlineResponse200280.md)
+[**[]InlineResponse200290**](InlineResponse200290.md)
 
 ### Authorization
 

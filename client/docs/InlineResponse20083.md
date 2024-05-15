@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | The serials of the devices | [optional] 
+**Received** | Pointer to **float32** | Usage received by the client on a given day | [optional] 
+**Sent** | Pointer to **float32** | Usage sent by the client on a given day | [optional] 
+**Ts** | Pointer to **time.Time** | The day&#39;s timestamp | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse20083WithDefaults instantiates a new InlineResponse20083 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetReceived
 
-`func (o *InlineResponse20083) GetSerials() []string`
+`func (o *InlineResponse20083) GetReceived() float32`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetReceived returns the Received field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetReceivedOk
 
-`func (o *InlineResponse20083) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse20083) GetReceivedOk() (*float32, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetReceived
 
-`func (o *InlineResponse20083) SetSerials(v []string)`
+`func (o *InlineResponse20083) SetReceived(v float32)`
 
-SetSerials sets Serials field to given value.
+SetReceived sets Received field to given value.
 
-### HasSerials
+### HasReceived
 
-`func (o *InlineResponse20083) HasSerials() bool`
+`func (o *InlineResponse20083) HasReceived() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasReceived returns a boolean if a field has been set.
+
+### GetSent
+
+`func (o *InlineResponse20083) GetSent() float32`
+
+GetSent returns the Sent field if non-nil, zero value otherwise.
+
+### GetSentOk
+
+`func (o *InlineResponse20083) GetSentOk() (*float32, bool)`
+
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSent
+
+`func (o *InlineResponse20083) SetSent(v float32)`
+
+SetSent sets Sent field to given value.
+
+### HasSent
+
+`func (o *InlineResponse20083) HasSent() bool`
+
+HasSent returns a boolean if a field has been set.
+
+### GetTs
+
+`func (o *InlineResponse20083) GetTs() time.Time`
+
+GetTs returns the Ts field if non-nil, zero value otherwise.
+
+### GetTsOk
+
+`func (o *InlineResponse20083) GetTsOk() (*time.Time, bool)`
+
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTs
+
+`func (o *InlineResponse20083) SetTs(v time.Time)`
+
+SetTs sets Ts field to given value.
+
+### HasTs
+
+`func (o *InlineResponse20083) HasTs() bool`
+
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Device serial | [optional] 
-**Model** | Pointer to **string** | Device model. | [optional] 
-**Tags** | Pointer to **string** | Device tags. | [optional] 
-**Wifi0** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for first wifi radio of device. | [optional] 
-**Wifi1** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for second wifi radio of device. | [optional] 
+**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
+**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
+**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
+**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
+**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse20099WithDefaults instantiates a new InlineResponse20099 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetReportingEnabled
 
-`func (o *InlineResponse20099) GetSerial() string`
+`func (o *InlineResponse20099) GetReportingEnabled() bool`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetReportingEnabledOk
 
-`func (o *InlineResponse20099) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse20099) GetReportingEnabledOk() (*bool, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetReportingEnabled
 
-`func (o *InlineResponse20099) SetSerial(v string)`
+`func (o *InlineResponse20099) SetReportingEnabled(v bool)`
 
-SetSerial sets Serial field to given value.
+SetReportingEnabled sets ReportingEnabled field to given value.
 
-### HasSerial
+### HasReportingEnabled
 
-`func (o *InlineResponse20099) HasSerial() bool`
+`func (o *InlineResponse20099) HasReportingEnabled() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasReportingEnabled returns a boolean if a field has been set.
 
-### GetModel
+### GetCollectorIp
 
-`func (o *InlineResponse20099) GetModel() string`
+`func (o *InlineResponse20099) GetCollectorIp() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetCollectorIpOk
 
-`func (o *InlineResponse20099) GetModelOk() (*string, bool)`
+`func (o *InlineResponse20099) GetCollectorIpOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetCollectorIp
 
-`func (o *InlineResponse20099) SetModel(v string)`
+`func (o *InlineResponse20099) SetCollectorIp(v string)`
 
-SetModel sets Model field to given value.
+SetCollectorIp sets CollectorIp field to given value.
 
-### HasModel
+### HasCollectorIp
 
-`func (o *InlineResponse20099) HasModel() bool`
+`func (o *InlineResponse20099) HasCollectorIp() bool`
 
-HasModel returns a boolean if a field has been set.
+HasCollectorIp returns a boolean if a field has been set.
 
-### GetTags
+### GetCollectorPort
 
-`func (o *InlineResponse20099) GetTags() string`
+`func (o *InlineResponse20099) GetCollectorPort() int32`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetCollectorPortOk
 
-`func (o *InlineResponse20099) GetTagsOk() (*string, bool)`
+`func (o *InlineResponse20099) GetCollectorPortOk() (*int32, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetCollectorPort
 
-`func (o *InlineResponse20099) SetTags(v string)`
+`func (o *InlineResponse20099) SetCollectorPort(v int32)`
 
-SetTags sets Tags field to given value.
+SetCollectorPort sets CollectorPort field to given value.
 
-### HasTags
+### HasCollectorPort
 
-`func (o *InlineResponse20099) HasTags() bool`
+`func (o *InlineResponse20099) HasCollectorPort() bool`
 
-HasTags returns a boolean if a field has been set.
+HasCollectorPort returns a boolean if a field has been set.
 
-### GetWifi0
+### GetEtaEnabled
 
-`func (o *InlineResponse20099) GetWifi0() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+`func (o *InlineResponse20099) GetEtaEnabled() bool`
 
-GetWifi0 returns the Wifi0 field if non-nil, zero value otherwise.
+GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
 
-### GetWifi0Ok
+### GetEtaEnabledOk
 
-`func (o *InlineResponse20099) GetWifi0Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+`func (o *InlineResponse20099) GetEtaEnabledOk() (*bool, bool)`
 
-GetWifi0Ok returns a tuple with the Wifi0 field if it's non-nil, zero value otherwise
+GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi0
+### SetEtaEnabled
 
-`func (o *InlineResponse20099) SetWifi0(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+`func (o *InlineResponse20099) SetEtaEnabled(v bool)`
 
-SetWifi0 sets Wifi0 field to given value.
+SetEtaEnabled sets EtaEnabled field to given value.
 
-### HasWifi0
+### HasEtaEnabled
 
-`func (o *InlineResponse20099) HasWifi0() bool`
+`func (o *InlineResponse20099) HasEtaEnabled() bool`
 
-HasWifi0 returns a boolean if a field has been set.
+HasEtaEnabled returns a boolean if a field has been set.
 
-### GetWifi1
+### GetEtaDstPort
 
-`func (o *InlineResponse20099) GetWifi1() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+`func (o *InlineResponse20099) GetEtaDstPort() int32`
 
-GetWifi1 returns the Wifi1 field if non-nil, zero value otherwise.
+GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
 
-### GetWifi1Ok
+### GetEtaDstPortOk
 
-`func (o *InlineResponse20099) GetWifi1Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+`func (o *InlineResponse20099) GetEtaDstPortOk() (*int32, bool)`
 
-GetWifi1Ok returns a tuple with the Wifi1 field if it's non-nil, zero value otherwise
+GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi1
+### SetEtaDstPort
 
-`func (o *InlineResponse20099) SetWifi1(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+`func (o *InlineResponse20099) SetEtaDstPort(v int32)`
 
-SetWifi1 sets Wifi1 field to given value.
+SetEtaDstPort sets EtaDstPort field to given value.
 
-### HasWifi1
+### HasEtaDstPort
 
-`func (o *InlineResponse20099) HasWifi1() bool`
+`func (o *InlineResponse20099) HasEtaDstPort() bool`
 
-HasWifi1 returns a boolean if a field has been set.
+HasEtaDstPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

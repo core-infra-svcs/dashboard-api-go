@@ -1852,7 +1852,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkBluetoothClient
 
-> map[string]interface{} GetNetworkBluetoothClient(ctx, networkId, bluetoothClientId).IncludeConnectivityHistory(includeConnectivityHistory).ConnectivityHistoryTimespan(connectivityHistoryTimespan).Execute()
+> InlineResponse20071 GetNetworkBluetoothClient(ctx, networkId, bluetoothClientId).IncludeConnectivityHistory(includeConnectivityHistory).ConnectivityHistoryTimespan(connectivityHistoryTimespan).Execute()
 
 Return a Bluetooth client
 
@@ -1883,7 +1883,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkBluetoothClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkBluetoothClient`: map[string]interface{}
+    // response from `GetNetworkBluetoothClient`: InlineResponse20071
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkBluetoothClient`: %v\n", resp)
 }
 ```
@@ -1911,7 +1911,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse20071**](InlineResponse20071.md)
 
 ### Authorization
 
@@ -1929,7 +1929,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkBluetoothClients
 
-> []map[string]interface{} GetNetworkBluetoothClients(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).IncludeConnectivityHistory(includeConnectivityHistory).Execute()
+> []InlineResponse20071 GetNetworkBluetoothClients(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).IncludeConnectivityHistory(includeConnectivityHistory).Execute()
 
 List the Bluetooth clients seen by APs in this network
 
@@ -1963,7 +1963,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkBluetoothClients``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkBluetoothClients`: []map[string]interface{}
+    // response from `GetNetworkBluetoothClients`: []InlineResponse20071
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkBluetoothClients`: %v\n", resp)
 }
 ```
@@ -1993,7 +1993,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse20071**](InlineResponse20071.md)
 
 ### Authorization
 
@@ -2011,7 +2011,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClient
 
-> InlineResponse20079 GetNetworkClient(ctx, networkId, clientId).Execute()
+> InlineResponse20080 GetNetworkClient(ctx, networkId, clientId).Execute()
 
 Return the client associated with the given identifier
 
@@ -2040,7 +2040,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClient`: InlineResponse20079
+    // response from `GetNetworkClient`: InlineResponse20080
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkClient`: %v\n", resp)
 }
 ```
@@ -2066,7 +2066,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20079**](InlineResponse20079.md)
+[**InlineResponse20080**](InlineResponse20080.md)
 
 ### Authorization
 
@@ -2084,7 +2084,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClientTrafficHistory
 
-> []InlineResponse20081 GetNetworkClientTrafficHistory(ctx, networkId, clientId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20082 GetNetworkClientTrafficHistory(ctx, networkId, clientId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the client's network traffic data over time
 
@@ -2116,7 +2116,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkClientTrafficHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClientTrafficHistory`: []InlineResponse20081
+    // response from `GetNetworkClientTrafficHistory`: []InlineResponse20082
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkClientTrafficHistory`: %v\n", resp)
 }
 ```
@@ -2145,7 +2145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20081**](InlineResponse20081.md)
+[**[]InlineResponse20082**](InlineResponse20082.md)
 
 ### Authorization
 
@@ -2163,7 +2163,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClientUsageHistory
 
-> []InlineResponse20082 GetNetworkClientUsageHistory(ctx, networkId, clientId).Execute()
+> []InlineResponse20083 GetNetworkClientUsageHistory(ctx, networkId, clientId).Execute()
 
 Return the client's daily usage history
 
@@ -2192,7 +2192,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkClientUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClientUsageHistory`: []InlineResponse20082
+    // response from `GetNetworkClientUsageHistory`: []InlineResponse20083
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkClientUsageHistory`: %v\n", resp)
 }
 ```
@@ -2218,7 +2218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20082**](InlineResponse20082.md)
+[**[]InlineResponse20083**](InlineResponse20083.md)
 
 ### Authorization
 
@@ -2236,7 +2236,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClients
 
-> InlineResponse20076 GetNetworkClients(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Statuses(statuses).Ip(ip).Ip6(ip6).Ip6Local(ip6Local).Mac(mac).Os(os).PskGroup(pskGroup).Description(description).Vlan(vlan).NamedVlan(namedVlan).RecentDeviceConnections(recentDeviceConnections).Execute()
+> InlineResponse20077 GetNetworkClients(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Statuses(statuses).Ip(ip).Ip6(ip6).Ip6Local(ip6Local).Mac(mac).Os(os).PskGroup(pskGroup).Description(description).Vlan(vlan).NamedVlan(namedVlan).RecentDeviceConnections(recentDeviceConnections).Execute()
 
 List the clients that have used this network in the timespan
 
@@ -2280,7 +2280,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkClients``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClients`: InlineResponse20076
+    // response from `GetNetworkClients`: InlineResponse20077
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkClients`: %v\n", resp)
 }
 ```
@@ -2320,7 +2320,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20076**](InlineResponse20076.md)
+[**InlineResponse20077**](InlineResponse20077.md)
 
 ### Authorization
 
@@ -2424,7 +2424,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClientsBandwidthUsageHistory
 
-> []InlineResponse20077 GetNetworkClientsBandwidthUsageHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse20078 GetNetworkClientsBandwidthUsageHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns a timeseries of total traffic consumption rates for all clients on a network within a given timespan, in megabits per second.
 
@@ -2458,7 +2458,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkClientsBandwidthUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClientsBandwidthUsageHistory`: []InlineResponse20077
+    // response from `GetNetworkClientsBandwidthUsageHistory`: []InlineResponse20078
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkClientsBandwidthUsageHistory`: %v\n", resp)
 }
 ```
@@ -2488,7 +2488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20077**](InlineResponse20077.md)
+[**[]InlineResponse20078**](InlineResponse20078.md)
 
 ### Authorization
 
@@ -2506,7 +2506,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClientsOverview
 
-> InlineResponse20078 GetNetworkClientsOverview(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
+> InlineResponse20079 GetNetworkClientsOverview(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
 
 Return overview statistics for network clients
 
@@ -2538,7 +2538,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkClientsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClientsOverview`: InlineResponse20078
+    // response from `GetNetworkClientsOverview`: InlineResponse20079
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkClientsOverview`: %v\n", resp)
 }
 ```
@@ -2566,7 +2566,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20078**](InlineResponse20078.md)
+[**InlineResponse20079**](InlineResponse20079.md)
 
 ### Authorization
 
@@ -2670,7 +2670,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkEvents
 
-> InlineResponse20085 GetNetworkEvents(ctx, networkId).ProductType(productType).IncludedEventTypes(includedEventTypes).ExcludedEventTypes(excludedEventTypes).DeviceMac(deviceMac).DeviceSerial(deviceSerial).DeviceName(deviceName).ClientIp(clientIp).ClientMac(clientMac).ClientName(clientName).SmDeviceMac(smDeviceMac).SmDeviceName(smDeviceName).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse20086 GetNetworkEvents(ctx, networkId).ProductType(productType).IncludedEventTypes(includedEventTypes).ExcludedEventTypes(excludedEventTypes).DeviceMac(deviceMac).DeviceSerial(deviceSerial).DeviceName(deviceName).ClientIp(clientIp).ClientMac(clientMac).ClientName(clientName).SmDeviceMac(smDeviceMac).SmDeviceName(smDeviceName).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the events for the network
 
@@ -2690,7 +2690,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    productType := "productType_example" // string | The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, and cellularGateway (optional)
+    productType := "productType_example" // string | The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and secureConnect (optional)
     includedEventTypes := []string{"Inner_example"} // []string | A list of event types. The returned events will be filtered to only include events with these types. (optional)
     excludedEventTypes := []string{"Inner_example"} // []string | A list of event types. The returned events will be filtered to exclude events with these types. (optional)
     deviceMac := "deviceMac_example" // string | The MAC address of the Meraki device which the list of events will be filtered with (optional)
@@ -2712,7 +2712,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkEvents`: InlineResponse20085
+    // response from `GetNetworkEvents`: InlineResponse20086
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkEvents`: %v\n", resp)
 }
 ```
@@ -2733,7 +2733,7 @@ Other parameters are passed through a pointer to a apiGetNetworkEventsRequest st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **productType** | **string** | The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, and cellularGateway | 
+ **productType** | **string** | The product type to fetch events for. This parameter is required for networks with multiple device types. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and secureConnect | 
  **includedEventTypes** | **[]string** | A list of event types. The returned events will be filtered to only include events with these types. | 
  **excludedEventTypes** | **[]string** | A list of event types. The returned events will be filtered to exclude events with these types. | 
  **deviceMac** | **string** | The MAC address of the Meraki device which the list of events will be filtered with | 
@@ -2750,7 +2750,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20085**](InlineResponse20085.md)
+[**InlineResponse20086**](InlineResponse20086.md)
 
 ### Authorization
 
@@ -2768,7 +2768,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkEventsEventTypes
 
-> []InlineResponse20086 GetNetworkEventsEventTypes(ctx, networkId).Execute()
+> []InlineResponse20087 GetNetworkEventsEventTypes(ctx, networkId).Execute()
 
 List the event type to human-readable description
 
@@ -2796,7 +2796,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkEventsEventTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkEventsEventTypes`: []InlineResponse20086
+    // response from `GetNetworkEventsEventTypes`: []InlineResponse20087
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkEventsEventTypes`: %v\n", resp)
 }
 ```
@@ -2820,7 +2820,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20086**](InlineResponse20086.md)
+[**[]InlineResponse20087**](InlineResponse20087.md)
 
 ### Authorization
 
@@ -2838,7 +2838,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkInsightApplicationHealthByTime
 
-> []InlineResponse20095 GetNetworkInsightApplicationHealthByTime(ctx, networkId, applicationId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
+> []InlineResponse20096 GetNetworkInsightApplicationHealthByTime(ctx, networkId, applicationId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
 
 Get application health by time
 
@@ -2871,7 +2871,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkInsightApplicationHealthByTime``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkInsightApplicationHealthByTime`: []InlineResponse20095
+    // response from `GetNetworkInsightApplicationHealthByTime`: []InlineResponse20096
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkInsightApplicationHealthByTime`: %v\n", resp)
 }
 ```
@@ -2901,7 +2901,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20095**](InlineResponse20095.md)
+[**[]InlineResponse20096**](InlineResponse20096.md)
 
 ### Authorization
 
@@ -2919,7 +2919,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkNetworkHealthChannelUtilization
 
-> []InlineResponse20099 GetNetworkNetworkHealthChannelUtilization(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200100 GetNetworkNetworkHealthChannelUtilization(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Get the channel utilization over each radio for all APs in a network.
 
@@ -2954,7 +2954,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkNetworkHealthChannelUtilization``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkNetworkHealthChannelUtilization`: []InlineResponse20099
+    // response from `GetNetworkNetworkHealthChannelUtilization`: []InlineResponse200100
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkNetworkHealthChannelUtilization`: %v\n", resp)
 }
 ```
@@ -2985,7 +2985,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20099**](InlineResponse20099.md)
+[**[]InlineResponse200100**](InlineResponse200100.md)
 
 ### Authorization
 
@@ -3003,7 +3003,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsCurrentOverviewByMetric
 
-> InlineResponse200103 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
+> InlineResponse200104 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
 
 Return an overview of currently alerting sensors by metric
 
@@ -3031,7 +3031,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkSensorAlertsCurrentOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse200103
+    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse200104
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkSensorAlertsCurrentOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -3055,7 +3055,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200103**](InlineResponse200103.md)
+[**InlineResponse200104**](InlineResponse200104.md)
 
 ### Authorization
 
@@ -3073,7 +3073,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsOverviewByMetric
 
-> []InlineResponse200104 GetNetworkSensorAlertsOverviewByMetric(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200105 GetNetworkSensorAlertsOverviewByMetric(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Return an overview of alert occurrences over a timespan, by metric
 
@@ -3105,7 +3105,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkSensorAlertsOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsOverviewByMetric`: []InlineResponse200104
+    // response from `GetNetworkSensorAlertsOverviewByMetric`: []InlineResponse200105
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkSensorAlertsOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -3133,7 +3133,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200104**](InlineResponse200104.md)
+[**[]InlineResponse200105**](InlineResponse200105.md)
 
 ### Authorization
 
@@ -3151,7 +3151,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceCellularUsageHistory
 
-> []InlineResponse200116 GetNetworkSmDeviceCellularUsageHistory(ctx, networkId, deviceId).Execute()
+> []InlineResponse200117 GetNetworkSmDeviceCellularUsageHistory(ctx, networkId, deviceId).Execute()
 
 Return the client's daily cellular data usage history
 
@@ -3180,7 +3180,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkSmDeviceCellularUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceCellularUsageHistory`: []InlineResponse200116
+    // response from `GetNetworkSmDeviceCellularUsageHistory`: []InlineResponse200117
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkSmDeviceCellularUsageHistory`: %v\n", resp)
 }
 ```
@@ -3206,7 +3206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200116**](InlineResponse200116.md)
+[**[]InlineResponse200117**](InlineResponse200117.md)
 
 ### Authorization
 
@@ -3224,7 +3224,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceConnectivity
 
-> []InlineResponse200118 GetNetworkSmDeviceConnectivity(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200119 GetNetworkSmDeviceConnectivity(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns historical connectivity data (whether a device is regularly checking in to Dashboard).
 
@@ -3256,7 +3256,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkSmDeviceConnectivity``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceConnectivity`: []InlineResponse200118
+    // response from `GetNetworkSmDeviceConnectivity`: []InlineResponse200119
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkSmDeviceConnectivity`: %v\n", resp)
 }
 ```
@@ -3285,7 +3285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200118**](InlineResponse200118.md)
+[**[]InlineResponse200119**](InlineResponse200119.md)
 
 ### Authorization
 
@@ -3303,7 +3303,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceDesktopLogs
 
-> []InlineResponse200119 GetNetworkSmDeviceDesktopLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200120 GetNetworkSmDeviceDesktopLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return historical records of various Systems Manager network connection details for desktop devices.
 
@@ -3335,7 +3335,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkSmDeviceDesktopLogs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceDesktopLogs`: []InlineResponse200119
+    // response from `GetNetworkSmDeviceDesktopLogs`: []InlineResponse200120
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkSmDeviceDesktopLogs`: %v\n", resp)
 }
 ```
@@ -3364,7 +3364,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200119**](InlineResponse200119.md)
+[**[]InlineResponse200120**](InlineResponse200120.md)
 
 ### Authorization
 
@@ -3382,7 +3382,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceDeviceCommandLogs
 
-> []InlineResponse200120 GetNetworkSmDeviceDeviceCommandLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200121 GetNetworkSmDeviceDeviceCommandLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return historical records of commands sent to Systems Manager devices
 
@@ -3414,7 +3414,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkSmDeviceDeviceCommandLogs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceDeviceCommandLogs`: []InlineResponse200120
+    // response from `GetNetworkSmDeviceDeviceCommandLogs`: []InlineResponse200121
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkSmDeviceDeviceCommandLogs`: %v\n", resp)
 }
 ```
@@ -3443,7 +3443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200120**](InlineResponse200120.md)
+[**[]InlineResponse200121**](InlineResponse200121.md)
 
 ### Authorization
 
@@ -3461,7 +3461,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDevicePerformanceHistory
 
-> []InlineResponse200123 GetNetworkSmDevicePerformanceHistory(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200124 GetNetworkSmDevicePerformanceHistory(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return historical records of various Systems Manager client metrics for desktop devices.
 
@@ -3493,7 +3493,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkSmDevicePerformanceHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDevicePerformanceHistory`: []InlineResponse200123
+    // response from `GetNetworkSmDevicePerformanceHistory`: []InlineResponse200124
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkSmDevicePerformanceHistory`: %v\n", resp)
 }
 ```
@@ -3522,7 +3522,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200123**](InlineResponse200123.md)
+[**[]InlineResponse200124**](InlineResponse200124.md)
 
 ### Authorization
 
@@ -3540,7 +3540,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSplashLoginAttempts
 
-> []InlineResponse200135 GetNetworkSplashLoginAttempts(ctx, networkId).SsidNumber(ssidNumber).LoginIdentifier(loginIdentifier).Timespan(timespan).Execute()
+> []InlineResponse200136 GetNetworkSplashLoginAttempts(ctx, networkId).SsidNumber(ssidNumber).LoginIdentifier(loginIdentifier).Timespan(timespan).Execute()
 
 List the splash login attempts for a network
 
@@ -3571,7 +3571,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkSplashLoginAttempts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSplashLoginAttempts`: []InlineResponse200135
+    // response from `GetNetworkSplashLoginAttempts`: []InlineResponse200136
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkSplashLoginAttempts`: %v\n", resp)
 }
 ```
@@ -3598,7 +3598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200135**](InlineResponse200135.md)
+[**[]InlineResponse200136**](InlineResponse200136.md)
 
 ### Authorization
 
@@ -3836,7 +3836,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessChannelUtilizationHistory
 
-> []InlineResponse200167 GetNetworkWirelessChannelUtilizationHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Execute()
+> []InlineResponse200169 GetNetworkWirelessChannelUtilizationHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Execute()
 
 Return AP channel utilization over time for a device or network client
 
@@ -3873,7 +3873,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessChannelUtilizationHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessChannelUtilizationHistory`: []InlineResponse200167
+    // response from `GetNetworkWirelessChannelUtilizationHistory`: []InlineResponse200169
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessChannelUtilizationHistory`: %v\n", resp)
 }
 ```
@@ -3906,7 +3906,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200167**](InlineResponse200167.md)
+[**[]InlineResponse200169**](InlineResponse200169.md)
 
 ### Authorization
 
@@ -3924,7 +3924,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessClientConnectionStats
 
-> InlineResponse200169 GetNetworkWirelessClientConnectionStats(ctx, networkId, clientId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
+> InlineResponse200171 GetNetworkWirelessClientConnectionStats(ctx, networkId, clientId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
 
 Aggregated connectivity info for a given client on this network
 
@@ -3960,7 +3960,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessClientConnectionStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessClientConnectionStats`: InlineResponse200169
+    // response from `GetNetworkWirelessClientConnectionStats`: InlineResponse200171
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessClientConnectionStats`: %v\n", resp)
 }
 ```
@@ -3993,7 +3993,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200169**](InlineResponse200169.md)
+[**InlineResponse200171**](InlineResponse200171.md)
 
 ### Authorization
 
@@ -4011,7 +4011,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessClientConnectivityEvents
 
-> []InlineResponse200170 GetNetworkWirelessClientConnectivityEvents(ctx, networkId, clientId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Types(types).Band(band).SsidNumber(ssidNumber).IncludedSeverities(includedSeverities).DeviceSerial(deviceSerial).Execute()
+> []InlineResponse200172 GetNetworkWirelessClientConnectivityEvents(ctx, networkId, clientId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Types(types).Band(band).SsidNumber(ssidNumber).IncludedSeverities(includedSeverities).DeviceSerial(deviceSerial).Execute()
 
 List the wireless connectivity events for a client within a network in the timespan.
 
@@ -4051,7 +4051,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessClientConnectivityEvents``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessClientConnectivityEvents`: []InlineResponse200170
+    // response from `GetNetworkWirelessClientConnectivityEvents`: []InlineResponse200172
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessClientConnectivityEvents`: %v\n", resp)
 }
 ```
@@ -4088,7 +4088,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200170**](InlineResponse200170.md)
+[**[]InlineResponse200172**](InlineResponse200172.md)
 
 ### Authorization
 
@@ -4106,7 +4106,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessClientCountHistory
 
-> []InlineResponse200168 GetNetworkWirelessClientCountHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
+> []InlineResponse200170 GetNetworkWirelessClientCountHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
 
 Return wireless client counts over time for a network, device, or network client
 
@@ -4144,7 +4144,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessClientCountHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessClientCountHistory`: []InlineResponse200168
+    // response from `GetNetworkWirelessClientCountHistory`: []InlineResponse200170
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessClientCountHistory`: %v\n", resp)
 }
 ```
@@ -4178,7 +4178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200168**](InlineResponse200168.md)
+[**[]InlineResponse200170**](InlineResponse200170.md)
 
 ### Authorization
 
@@ -4196,7 +4196,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessClientLatencyHistory
 
-> []InlineResponse200171 GetNetworkWirelessClientLatencyHistory(ctx, networkId, clientId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
+> []InlineResponse200173 GetNetworkWirelessClientLatencyHistory(ctx, networkId, clientId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
 
 Return the latency history for a client
 
@@ -4229,7 +4229,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessClientLatencyHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessClientLatencyHistory`: []InlineResponse200171
+    // response from `GetNetworkWirelessClientLatencyHistory`: []InlineResponse200173
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessClientLatencyHistory`: %v\n", resp)
 }
 ```
@@ -4259,7 +4259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200171**](InlineResponse200171.md)
+[**[]InlineResponse200173**](InlineResponse200173.md)
 
 ### Authorization
 
@@ -4536,7 +4536,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessConnectionStats
 
-> InlineResponse200172 GetNetworkWirelessConnectionStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
+> InlineResponse200174 GetNetworkWirelessConnectionStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
 
 Aggregated connectivity info for this network
 
@@ -4571,7 +4571,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessConnectionStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessConnectionStats`: InlineResponse200172
+    // response from `GetNetworkWirelessConnectionStats`: InlineResponse200174
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessConnectionStats`: %v\n", resp)
 }
 ```
@@ -4602,7 +4602,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200172**](InlineResponse200172.md)
+[**InlineResponse200174**](InlineResponse200174.md)
 
 ### Authorization
 
@@ -4620,7 +4620,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessDataRateHistory
 
-> []InlineResponse200173 GetNetworkWirelessDataRateHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
+> []InlineResponse200175 GetNetworkWirelessDataRateHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
 
 Return PHY data rates over time for a network, device, or network client
 
@@ -4658,7 +4658,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessDataRateHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessDataRateHistory`: []InlineResponse200173
+    // response from `GetNetworkWirelessDataRateHistory`: []InlineResponse200175
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessDataRateHistory`: %v\n", resp)
 }
 ```
@@ -4692,7 +4692,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200173**](InlineResponse200173.md)
+[**[]InlineResponse200175**](InlineResponse200175.md)
 
 ### Authorization
 
@@ -4880,7 +4880,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessFailedConnections
 
-> []InlineResponse200176 GetNetworkWirelessFailedConnections(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Serial(serial).ClientId(clientId).Execute()
+> []InlineResponse200178 GetNetworkWirelessFailedConnections(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Serial(serial).ClientId(clientId).Execute()
 
 List of all failed client connection events on this network in a given time range
 
@@ -4917,7 +4917,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessFailedConnections``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessFailedConnections`: []InlineResponse200176
+    // response from `GetNetworkWirelessFailedConnections`: []InlineResponse200178
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessFailedConnections`: %v\n", resp)
 }
 ```
@@ -4950,7 +4950,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200176**](InlineResponse200176.md)
+[**[]InlineResponse200178**](InlineResponse200178.md)
 
 ### Authorization
 
@@ -4968,7 +4968,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessLatencyHistory
 
-> []InlineResponse200177 GetNetworkWirelessLatencyHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).AccessCategory(accessCategory).Execute()
+> []InlineResponse200179 GetNetworkWirelessLatencyHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).AccessCategory(accessCategory).Execute()
 
 Return average wireless latency over time for a network, device, or network client
 
@@ -5007,7 +5007,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessLatencyHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessLatencyHistory`: []InlineResponse200177
+    // response from `GetNetworkWirelessLatencyHistory`: []InlineResponse200179
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessLatencyHistory`: %v\n", resp)
 }
 ```
@@ -5042,7 +5042,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200177**](InlineResponse200177.md)
+[**[]InlineResponse200179**](InlineResponse200179.md)
 
 ### Authorization
 
@@ -5146,7 +5146,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessMeshStatuses
 
-> []InlineResponse200178 GetNetworkWirelessMeshStatuses(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200180 GetNetworkWirelessMeshStatuses(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless mesh statuses for repeaters
 
@@ -5177,7 +5177,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessMeshStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessMeshStatuses`: []InlineResponse200178
+    // response from `GetNetworkWirelessMeshStatuses`: []InlineResponse200180
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessMeshStatuses`: %v\n", resp)
 }
 ```
@@ -5204,7 +5204,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200178**](InlineResponse200178.md)
+[**[]InlineResponse200180**](InlineResponse200180.md)
 
 ### Authorization
 
@@ -5222,7 +5222,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSignalQualityHistory
 
-> []InlineResponse200181 GetNetworkWirelessSignalQualityHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
+> []InlineResponse200183 GetNetworkWirelessSignalQualityHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
 
 Return signal quality (SNR/RSSI) over time for a device or network client
 
@@ -5260,7 +5260,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessSignalQualityHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSignalQualityHistory`: []InlineResponse200181
+    // response from `GetNetworkWirelessSignalQualityHistory`: []InlineResponse200183
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessSignalQualityHistory`: %v\n", resp)
 }
 ```
@@ -5294,7 +5294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200181**](InlineResponse200181.md)
+[**[]InlineResponse200183**](InlineResponse200183.md)
 
 ### Authorization
 
@@ -5312,7 +5312,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessUsageHistory
 
-> []InlineResponse200191 GetNetworkWirelessUsageHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
+> []InlineResponse200193 GetNetworkWirelessUsageHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
 
 Return AP usage over time for a device or network client
 
@@ -5350,7 +5350,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetNetworkWirelessUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessUsageHistory`: []InlineResponse200191
+    // response from `GetNetworkWirelessUsageHistory`: []InlineResponse200193
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetNetworkWirelessUsageHistory`: %v\n", resp)
 }
 ```
@@ -5384,7 +5384,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200191**](InlineResponse200191.md)
+[**[]InlineResponse200193**](InlineResponse200193.md)
 
 ### Authorization
 
@@ -5402,7 +5402,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyOverview
 
-> InlineResponse200196 GetOrganizationAdaptivePolicyOverview(ctx, organizationId).Execute()
+> InlineResponse200198 GetOrganizationAdaptivePolicyOverview(ctx, organizationId).Execute()
 
 Returns adaptive policy aggregate statistics for an organization
 
@@ -5430,7 +5430,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationAdaptivePolicyOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyOverview`: InlineResponse200196
+    // response from `GetOrganizationAdaptivePolicyOverview`: InlineResponse200198
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationAdaptivePolicyOverview`: %v\n", resp)
 }
 ```
@@ -5454,7 +5454,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200196**](InlineResponse200196.md)
+[**InlineResponse200198**](InlineResponse200198.md)
 
 ### Authorization
 
@@ -5472,7 +5472,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRequests
 
-> []InlineResponse200201 GetOrganizationApiRequests(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).AdminId(adminId).Path(path).Method(method).ResponseCode(responseCode).SourceIp(sourceIp).UserAgent(userAgent).Version(version).OperationIds(operationIds).Execute()
+> []InlineResponse200203 GetOrganizationApiRequests(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).AdminId(adminId).Path(path).Method(method).ResponseCode(responseCode).SourceIp(sourceIp).UserAgent(userAgent).Version(version).OperationIds(operationIds).Execute()
 
 List the API requests made by an organization
 
@@ -5514,7 +5514,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationApiRequests``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequests`: []InlineResponse200201
+    // response from `GetOrganizationApiRequests`: []InlineResponse200203
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationApiRequests`: %v\n", resp)
 }
 ```
@@ -5552,7 +5552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200201**](InlineResponse200201.md)
+[**[]InlineResponse200203**](InlineResponse200203.md)
 
 ### Authorization
 
@@ -5570,7 +5570,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRequestsOverview
 
-> InlineResponse200202 GetOrganizationApiRequestsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200204 GetOrganizationApiRequestsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return an aggregated overview of API requests data
 
@@ -5601,7 +5601,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationApiRequestsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequestsOverview`: InlineResponse200202
+    // response from `GetOrganizationApiRequestsOverview`: InlineResponse200204
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationApiRequestsOverview`: %v\n", resp)
 }
 ```
@@ -5628,7 +5628,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200202**](InlineResponse200202.md)
+[**InlineResponse200204**](InlineResponse200204.md)
 
 ### Authorization
 
@@ -5646,7 +5646,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRequestsOverviewResponseCodesByInterval
 
-> []InlineResponse200203 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
+> []InlineResponse200205 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
 
 Tracks organizations' API requests by response code across a given time period
 
@@ -5683,7 +5683,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200203
+    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200205
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval`: %v\n", resp)
 }
 ```
@@ -5716,7 +5716,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200203**](InlineResponse200203.md)
+[**[]InlineResponse200205**](InlineResponse200205.md)
 
 ### Authorization
 
@@ -5818,7 +5818,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinkStatuses
 
-> []InlineResponse200205 GetOrganizationApplianceUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200207 GetOrganizationApplianceUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MX and Z series appliances in the organization
 
@@ -5852,7 +5852,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationApplianceUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinkStatuses`: []InlineResponse200205
+    // response from `GetOrganizationApplianceUplinkStatuses`: []InlineResponse200207
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationApplianceUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -5882,7 +5882,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200205**](InlineResponse200205.md)
+[**[]InlineResponse200207**](InlineResponse200207.md)
 
 ### Authorization
 
@@ -5900,7 +5900,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksUsageByNetwork
 
-> []InlineResponse200207 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200209 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get the sent and received bytes for each uplink of all MX and Z networks within an organization
 
@@ -5931,7 +5931,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationApplianceUplinksUsageByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200207
+    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200209
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationApplianceUplinksUsageByNetwork`: %v\n", resp)
 }
 ```
@@ -5958,7 +5958,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200207**](InlineResponse200207.md)
+[**[]InlineResponse200209**](InlineResponse200209.md)
 
 ### Authorization
 
@@ -6060,7 +6060,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnStatuses
 
-> InlineResponse200208 GetOrganizationApplianceVpnStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200210 GetOrganizationApplianceVpnStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Show VPN status for networks in an organization
 
@@ -6092,7 +6092,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationApplianceVpnStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnStatuses`: InlineResponse200208
+    // response from `GetOrganizationApplianceVpnStatuses`: InlineResponse200210
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationApplianceVpnStatuses`: %v\n", resp)
 }
 ```
@@ -6120,7 +6120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200208**](InlineResponse200208.md)
+[**InlineResponse200210**](InlineResponse200210.md)
 
 ### Authorization
 
@@ -6138,7 +6138,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayUplinkStatuses
 
-> []InlineResponse200217 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200224 GetOrganizationCellularGatewayUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MG cellular gateway in the organization
 
@@ -6172,7 +6172,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationCellularGatewayUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200217
+    // response from `GetOrganizationCellularGatewayUplinkStatuses`: []InlineResponse200224
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationCellularGatewayUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -6202,7 +6202,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200217**](InlineResponse200217.md)
+[**[]InlineResponse200224**](InlineResponse200224.md)
 
 ### Authorization
 
@@ -6220,7 +6220,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationClientsBandwidthUsageHistory
 
-> []InlineResponse200219 GetOrganizationClientsBandwidthUsageHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200226 GetOrganizationClientsBandwidthUsageHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return data usage (in megabits per second) over time for all clients in the given organization within a given time range.
 
@@ -6251,7 +6251,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationClientsBandwidthUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationClientsBandwidthUsageHistory`: []InlineResponse200219
+    // response from `GetOrganizationClientsBandwidthUsageHistory`: []InlineResponse200226
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationClientsBandwidthUsageHistory`: %v\n", resp)
 }
 ```
@@ -6278,7 +6278,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200219**](InlineResponse200219.md)
+[**[]InlineResponse200226**](InlineResponse200226.md)
 
 ### Authorization
 
@@ -6296,7 +6296,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationClientsOverview
 
-> InlineResponse200220 GetOrganizationClientsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200227 GetOrganizationClientsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return summary information around client data usage (in kb) across the given organization.
 
@@ -6327,7 +6327,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationClientsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationClientsOverview`: InlineResponse200220
+    // response from `GetOrganizationClientsOverview`: InlineResponse200227
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationClientsOverview`: %v\n", resp)
 }
 ```
@@ -6354,7 +6354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200220**](InlineResponse200220.md)
+[**InlineResponse200227**](InlineResponse200227.md)
 
 ### Authorization
 
@@ -6372,7 +6372,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigurationChanges
 
-> []InlineResponse200225 GetOrganizationConfigurationChanges(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkId(networkId).AdminId(adminId).Execute()
+> []InlineResponse200232 GetOrganizationConfigurationChanges(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkId(networkId).AdminId(adminId).Execute()
 
 View the Change Log for your organization
 
@@ -6408,7 +6408,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationConfigurationChanges``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigurationChanges`: []InlineResponse200225
+    // response from `GetOrganizationConfigurationChanges`: []InlineResponse200232
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationConfigurationChanges`: %v\n", resp)
 }
 ```
@@ -6440,7 +6440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200225**](InlineResponse200225.md)
+[**[]InlineResponse200232**](InlineResponse200232.md)
 
 ### Authorization
 
@@ -6458,7 +6458,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesAvailabilities
 
-> []InlineResponse200226 GetOrganizationDevicesAvailabilities(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200233 GetOrganizationDevicesAvailabilities(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the availability information for devices in an organization
 
@@ -6494,7 +6494,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationDevicesAvailabilities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesAvailabilities`: []InlineResponse200226
+    // response from `GetOrganizationDevicesAvailabilities`: []InlineResponse200233
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationDevicesAvailabilities`: %v\n", resp)
 }
 ```
@@ -6526,7 +6526,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200226**](InlineResponse200226.md)
+[**[]InlineResponse200233**](InlineResponse200233.md)
 
 ### Authorization
 
@@ -6544,7 +6544,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesAvailabilitiesChangeHistory
 
-> []InlineResponse200227 GetOrganizationDevicesAvailabilitiesChangeHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Serials(serials).ProductTypes(productTypes).NetworkIds(networkIds).Statuses(statuses).Execute()
+> []InlineResponse200234 GetOrganizationDevicesAvailabilitiesChangeHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Serials(serials).ProductTypes(productTypes).NetworkIds(networkIds).Statuses(statuses).Execute()
 
 List the availability history information for devices in an organization.
 
@@ -6582,7 +6582,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationDevicesAvailabilitiesChangeHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesAvailabilitiesChangeHistory`: []InlineResponse200227
+    // response from `GetOrganizationDevicesAvailabilitiesChangeHistory`: []InlineResponse200234
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationDevicesAvailabilitiesChangeHistory`: %v\n", resp)
 }
 ```
@@ -6616,7 +6616,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200227**](InlineResponse200227.md)
+[**[]InlineResponse200234**](InlineResponse200234.md)
 
 ### Authorization
 
@@ -6634,7 +6634,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesPowerModulesStatusesByDevice
 
-> []InlineResponse200228 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200236 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the most recent status information for power modules in rackmount MX and MS devices that support them
 
@@ -6670,7 +6670,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationDevicesPowerModulesStatusesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200228
+    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200236
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationDevicesPowerModulesStatusesByDevice`: %v\n", resp)
 }
 ```
@@ -6702,7 +6702,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200228**](InlineResponse200228.md)
+[**[]InlineResponse200236**](InlineResponse200236.md)
 
 ### Authorization
 
@@ -6720,7 +6720,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesProvisioningStatuses
 
-> []InlineResponse200229 GetOrganizationDevicesProvisioningStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Status(status).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200237 GetOrganizationDevicesProvisioningStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Status(status).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the provisioning statuses information for devices in an organization.
 
@@ -6757,7 +6757,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationDevicesProvisioningStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesProvisioningStatuses`: []InlineResponse200229
+    // response from `GetOrganizationDevicesProvisioningStatuses`: []InlineResponse200237
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationDevicesProvisioningStatuses`: %v\n", resp)
 }
 ```
@@ -6790,7 +6790,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200229**](InlineResponse200229.md)
+[**[]InlineResponse200237**](InlineResponse200237.md)
 
 ### Authorization
 
@@ -6808,7 +6808,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatuses
 
-> []InlineResponse200230 GetOrganizationDevicesStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Statuses(statuses).ProductTypes(productTypes).Models(models).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200238 GetOrganizationDevicesStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Statuses(statuses).ProductTypes(productTypes).Models(models).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the status of every Meraki device in the organization
 
@@ -6834,7 +6834,7 @@ func main() {
     networkIds := []string{"Inner_example"} // []string | Optional parameter to filter devices by network ids. (optional)
     serials := []string{"Inner_example"} // []string | Optional parameter to filter devices by serials. (optional)
     statuses := []string{"Statuses_example"} // []string | Optional parameter to filter devices by statuses. Valid statuses are [\"online\", \"alerting\", \"offline\", \"dormant\"]. (optional)
-    productTypes := []string{"ProductTypes_example"} // []string | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. (optional)
+    productTypes := []string{"ProductTypes_example"} // []string | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. (optional)
     models := []string{"Inner_example"} // []string | Optional parameter to filter devices by models. (optional)
     tags := []string{"Inner_example"} // []string | An optional parameter to filter devices by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below). (optional)
     tagsFilterType := "tagsFilterType_example" // string | An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return devices which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected. (optional)
@@ -6846,7 +6846,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationDevicesStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatuses`: []InlineResponse200230
+    // response from `GetOrganizationDevicesStatuses`: []InlineResponse200238
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationDevicesStatuses`: %v\n", resp)
 }
 ```
@@ -6873,14 +6873,14 @@ Name | Type | Description  | Notes
  **networkIds** | **[]string** | Optional parameter to filter devices by network ids. | 
  **serials** | **[]string** | Optional parameter to filter devices by serials. | 
  **statuses** | **[]string** | Optional parameter to filter devices by statuses. Valid statuses are [\&quot;online\&quot;, \&quot;alerting\&quot;, \&quot;offline\&quot;, \&quot;dormant\&quot;]. | 
- **productTypes** | **[]string** | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. | 
+ **productTypes** | **[]string** | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. | 
  **models** | **[]string** | Optional parameter to filter devices by models. | 
  **tags** | **[]string** | An optional parameter to filter devices by tags. The filtering is case-sensitive. If tags are included, &#39;tagsFilterType&#39; should also be included (see below). | 
  **tagsFilterType** | **string** | An optional parameter of value &#39;withAnyTags&#39; or &#39;withAllTags&#39; to indicate whether to return devices which contain ANY or ALL of the included tags. If no type is included, &#39;withAnyTags&#39; will be selected. | 
 
 ### Return type
 
-[**[]InlineResponse200230**](InlineResponse200230.md)
+[**[]InlineResponse200238**](InlineResponse200238.md)
 
 ### Authorization
 
@@ -6898,7 +6898,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatusesOverview
 
-> InlineResponse200231 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
+> InlineResponse200239 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
 
 Return an overview of current device statuses
 
@@ -6918,7 +6918,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    productTypes := []string{"ProductTypes_example"} // []string | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. (optional)
+    productTypes := []string{"ProductTypes_example"} // []string | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. (optional)
     networkIds := []string{"Inner_example"} // []string | An optional parameter to filter device statuses by network. (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -6928,7 +6928,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationDevicesStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200231
+    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200239
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationDevicesStatusesOverview`: %v\n", resp)
 }
 ```
@@ -6949,12 +6949,12 @@ Other parameters are passed through a pointer to a apiGetOrganizationDevicesStat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **productTypes** | **[]string** | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. | 
+ **productTypes** | **[]string** | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. | 
  **networkIds** | **[]string** | An optional parameter to filter device statuses by network. | 
 
 ### Return type
 
-[**InlineResponse200231**](InlineResponse200231.md)
+[**InlineResponse200239**](InlineResponse200239.md)
 
 ### Authorization
 
@@ -6972,7 +6972,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksAddressesByDevice
 
-> []InlineResponse200232 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200240 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the current uplink addresses for devices in an organization.
 
@@ -7008,7 +7008,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationDevicesUplinksAddressesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200232
+    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200240
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationDevicesUplinksAddressesByDevice`: %v\n", resp)
 }
 ```
@@ -7040,7 +7040,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200232**](InlineResponse200232.md)
+[**[]InlineResponse200240**](InlineResponse200240.md)
 
 ### Authorization
 
@@ -7058,7 +7058,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksLossAndLatency
 
-> []InlineResponse200233 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
+> []InlineResponse200241 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
 
 Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
 
@@ -7091,7 +7091,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationDevicesUplinksLossAndLatency``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200233
+    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200241
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationDevicesUplinksLossAndLatency`: %v\n", resp)
 }
 ```
@@ -7120,7 +7120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200233**](InlineResponse200233.md)
+[**[]InlineResponse200241**](InlineResponse200241.md)
 
 ### Authorization
 
@@ -7138,7 +7138,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicensesOverview
 
-> InlineResponse200247 GetOrganizationLicensesOverview(ctx, organizationId).Execute()
+> InlineResponse200255 GetOrganizationLicensesOverview(ctx, organizationId).Execute()
 
 Return an overview of the license state for an organization
 
@@ -7166,7 +7166,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationLicensesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicensesOverview`: InlineResponse200247
+    // response from `GetOrganizationLicensesOverview`: InlineResponse200255
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationLicensesOverview`: %v\n", resp)
 }
 ```
@@ -7190,7 +7190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200247**](InlineResponse200247.md)
+[**InlineResponse200255**](InlineResponse200255.md)
 
 ### Authorization
 
@@ -7280,7 +7280,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSensorReadingsHistory
 
-> []InlineResponse200257 GetOrganizationSensorReadingsHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
+> []InlineResponse200265 GetOrganizationSensorReadingsHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
 
 Return all reported readings from sensors in a given timespan, sorted by timestamp
 
@@ -7317,7 +7317,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSensorReadingsHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorReadingsHistory`: []InlineResponse200257
+    // response from `GetOrganizationSensorReadingsHistory`: []InlineResponse200265
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSensorReadingsHistory`: %v\n", resp)
 }
 ```
@@ -7350,7 +7350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200257**](InlineResponse200257.md)
+[**[]InlineResponse200265**](InlineResponse200265.md)
 
 ### Authorization
 
@@ -7368,7 +7368,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSensorReadingsLatest
 
-> []InlineResponse200258 GetOrganizationSensorReadingsLatest(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
+> []InlineResponse200266 GetOrganizationSensorReadingsLatest(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Metrics(metrics).Execute()
 
 Return the latest available reading for each metric from each sensor, sorted by sensor serial
 
@@ -7402,7 +7402,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSensorReadingsLatest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSensorReadingsLatest`: []InlineResponse200258
+    // response from `GetOrganizationSensorReadingsLatest`: []InlineResponse200266
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSensorReadingsLatest`: %v\n", resp)
 }
 ```
@@ -7432,7 +7432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200258**](InlineResponse200258.md)
+[**[]InlineResponse200266**](InlineResponse200266.md)
 
 ### Authorization
 
@@ -7450,7 +7450,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummarySwitchPowerHistory
 
-> []InlineResponse200265 GetOrganizationSummarySwitchPowerHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200275 GetOrganizationSummarySwitchPowerHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the total PoE power draw for all switch ports in the organization over the requested timespan (by default the last 24 hours)
 
@@ -7481,7 +7481,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSummarySwitchPowerHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummarySwitchPowerHistory`: []InlineResponse200265
+    // response from `GetOrganizationSummarySwitchPowerHistory`: []InlineResponse200275
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSummarySwitchPowerHistory`: %v\n", resp)
 }
 ```
@@ -7508,7 +7508,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200265**](InlineResponse200265.md)
+[**[]InlineResponse200275**](InlineResponse200275.md)
 
 ### Authorization
 
@@ -7526,7 +7526,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopAppliancesByUtilization
 
-> []InlineResponse200266 GetOrganizationSummaryTopAppliancesByUtilization(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200276 GetOrganizationSummaryTopAppliancesByUtilization(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return the top 10 appliances sorted by utilization over given time range.
 
@@ -7557,7 +7557,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSummaryTopAppliancesByUtilization``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopAppliancesByUtilization`: []InlineResponse200266
+    // response from `GetOrganizationSummaryTopAppliancesByUtilization`: []InlineResponse200276
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSummaryTopAppliancesByUtilization`: %v\n", resp)
 }
 ```
@@ -7584,7 +7584,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200266**](InlineResponse200266.md)
+[**[]InlineResponse200276**](InlineResponse200276.md)
 
 ### Authorization
 
@@ -7602,7 +7602,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopClientsByUsage
 
-> []InlineResponse200267 GetOrganizationSummaryTopClientsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200277 GetOrganizationSummaryTopClientsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 clients by data usage (in mb) over given time range.
 
@@ -7633,7 +7633,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSummaryTopClientsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsByUsage`: []InlineResponse200267
+    // response from `GetOrganizationSummaryTopClientsByUsage`: []InlineResponse200277
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSummaryTopClientsByUsage`: %v\n", resp)
 }
 ```
@@ -7660,7 +7660,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200267**](InlineResponse200267.md)
+[**[]InlineResponse200277**](InlineResponse200277.md)
 
 ### Authorization
 
@@ -7678,7 +7678,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopClientsManufacturersByUsage
 
-> []InlineResponse200268 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200278 GetOrganizationSummaryTopClientsManufacturersByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top clients by data usage (in mb) over given time range, grouped by manufacturer.
 
@@ -7709,7 +7709,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSummaryTopClientsManufacturersByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200268
+    // response from `GetOrganizationSummaryTopClientsManufacturersByUsage`: []InlineResponse200278
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSummaryTopClientsManufacturersByUsage`: %v\n", resp)
 }
 ```
@@ -7736,7 +7736,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200268**](InlineResponse200268.md)
+[**[]InlineResponse200278**](InlineResponse200278.md)
 
 ### Authorization
 
@@ -7754,7 +7754,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopDevicesByUsage
 
-> []InlineResponse200269 GetOrganizationSummaryTopDevicesByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200279 GetOrganizationSummaryTopDevicesByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 devices sorted by data usage over given time range
 
@@ -7785,7 +7785,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSummaryTopDevicesByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopDevicesByUsage`: []InlineResponse200269
+    // response from `GetOrganizationSummaryTopDevicesByUsage`: []InlineResponse200279
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSummaryTopDevicesByUsage`: %v\n", resp)
 }
 ```
@@ -7812,7 +7812,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200269**](InlineResponse200269.md)
+[**[]InlineResponse200279**](InlineResponse200279.md)
 
 ### Authorization
 
@@ -7830,7 +7830,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopDevicesModelsByUsage
 
-> []InlineResponse200270 GetOrganizationSummaryTopDevicesModelsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200280 GetOrganizationSummaryTopDevicesModelsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 device models sorted by data usage over given time range
 
@@ -7861,7 +7861,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSummaryTopDevicesModelsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopDevicesModelsByUsage`: []InlineResponse200270
+    // response from `GetOrganizationSummaryTopDevicesModelsByUsage`: []InlineResponse200280
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSummaryTopDevicesModelsByUsage`: %v\n", resp)
 }
 ```
@@ -7888,7 +7888,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200270**](InlineResponse200270.md)
+[**[]InlineResponse200280**](InlineResponse200280.md)
 
 ### Authorization
 
@@ -7906,7 +7906,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopNetworksByStatus
 
-> []InlineResponse200271 GetOrganizationSummaryTopNetworksByStatus(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200281 GetOrganizationSummaryTopNetworksByStatus(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the client and status overview information for the networks in an organization
 
@@ -7937,7 +7937,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSummaryTopNetworksByStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopNetworksByStatus`: []InlineResponse200271
+    // response from `GetOrganizationSummaryTopNetworksByStatus`: []InlineResponse200281
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSummaryTopNetworksByStatus`: %v\n", resp)
 }
 ```
@@ -7964,7 +7964,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200271**](InlineResponse200271.md)
+[**[]InlineResponse200281**](InlineResponse200281.md)
 
 ### Authorization
 
@@ -7982,7 +7982,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopSsidsByUsage
 
-> []InlineResponse200272 GetOrganizationSummaryTopSsidsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200282 GetOrganizationSummaryTopSsidsByUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 ssids by data usage over given time range
 
@@ -8013,7 +8013,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSummaryTopSsidsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopSsidsByUsage`: []InlineResponse200272
+    // response from `GetOrganizationSummaryTopSsidsByUsage`: []InlineResponse200282
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSummaryTopSsidsByUsage`: %v\n", resp)
 }
 ```
@@ -8040,7 +8040,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200272**](InlineResponse200272.md)
+[**[]InlineResponse200282**](InlineResponse200282.md)
 
 ### Authorization
 
@@ -8058,7 +8058,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopSwitchesByEnergyUsage
 
-> []InlineResponse200273 GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200283 GetOrganizationSummaryTopSwitchesByEnergyUsage(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 switches by energy usage over given time range
 
@@ -8089,7 +8089,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSummaryTopSwitchesByEnergyUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopSwitchesByEnergyUsage`: []InlineResponse200273
+    // response from `GetOrganizationSummaryTopSwitchesByEnergyUsage`: []InlineResponse200283
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSummaryTopSwitchesByEnergyUsage`: %v\n", resp)
 }
 ```
@@ -8116,7 +8116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200273**](InlineResponse200273.md)
+[**[]InlineResponse200283**](InlineResponse200283.md)
 
 ### Authorization
 
@@ -8134,7 +8134,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsOverview
 
-> InlineResponse200276 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200286 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the counts of all active ports for the requested timespan, grouped by speed
 
@@ -8165,7 +8165,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationSwitchPortsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200276
+    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200286
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationSwitchPortsOverview`: %v\n", resp)
 }
 ```
@@ -8192,7 +8192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200276**](InlineResponse200276.md)
+[**InlineResponse200286**](InlineResponse200286.md)
 
 ### Authorization
 
@@ -8210,7 +8210,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationUplinksStatuses
 
-> []InlineResponse200277 GetOrganizationUplinksStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200287 GetOrganizationUplinksStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MX, MG and Z series devices in the organization
 
@@ -8244,7 +8244,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationUplinksStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationUplinksStatuses`: []InlineResponse200277
+    // response from `GetOrganizationUplinksStatuses`: []InlineResponse200287
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationUplinksStatuses`: %v\n", resp)
 }
 ```
@@ -8274,7 +8274,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200277**](InlineResponse200277.md)
+[**[]InlineResponse200287**](InlineResponse200287.md)
 
 ### Authorization
 
@@ -8292,7 +8292,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWebhooksAlertTypes
 
-> InlineResponse200278 GetOrganizationWebhooksAlertTypes(ctx, organizationId).ProductType(productType).Execute()
+> InlineResponse200288 GetOrganizationWebhooksAlertTypes(ctx, organizationId).ProductType(productType).Execute()
 
 Return a list of alert types to be used with managing webhook alerts
 
@@ -8321,7 +8321,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationWebhooksAlertTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksAlertTypes`: InlineResponse200278
+    // response from `GetOrganizationWebhooksAlertTypes`: InlineResponse200288
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationWebhooksAlertTypes`: %v\n", resp)
 }
 ```
@@ -8346,7 +8346,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200278**](InlineResponse200278.md)
+[**InlineResponse200288**](InlineResponse200288.md)
 
 ### Authorization
 
@@ -8364,7 +8364,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWebhooksLogs
 
-> []InlineResponse200280 GetOrganizationWebhooksLogs(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Url(url).Execute()
+> []InlineResponse200290 GetOrganizationWebhooksLogs(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Url(url).Execute()
 
 Return the log of webhook POSTs sent
 
@@ -8399,7 +8399,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationWebhooksLogs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksLogs`: []InlineResponse200280
+    // response from `GetOrganizationWebhooksLogs`: []InlineResponse200290
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationWebhooksLogs`: %v\n", resp)
 }
 ```
@@ -8430,7 +8430,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200280**](InlineResponse200280.md)
+[**[]InlineResponse200290**](InlineResponse200290.md)
 
 ### Authorization
 
@@ -8448,7 +8448,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationByDevice
 
-> []InlineResponse200281 GetOrganizationWirelessDevicesChannelUtilizationByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200293 GetOrganizationWirelessDevicesChannelUtilizationByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get average channel utilization for all bands in a network, split by AP
 
@@ -8485,7 +8485,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationWirelessDevicesChannelUtilizationByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationByDevice`: []InlineResponse200281
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationByDevice`: []InlineResponse200293
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationWirelessDevicesChannelUtilizationByDevice`: %v\n", resp)
 }
 ```
@@ -8518,7 +8518,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200281**](InlineResponse200281.md)
+[**[]InlineResponse200293**](InlineResponse200293.md)
 
 ### Authorization
 
@@ -8536,7 +8536,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationByNetwork
 
-> []InlineResponse200282 GetOrganizationWirelessDevicesChannelUtilizationByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200294 GetOrganizationWirelessDevicesChannelUtilizationByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get average channel utilization across all bands for all networks in the organization
 
@@ -8573,7 +8573,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationWirelessDevicesChannelUtilizationByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: []InlineResponse200282
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: []InlineResponse200294
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: %v\n", resp)
 }
 ```
@@ -8606,7 +8606,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200282**](InlineResponse200282.md)
+[**[]InlineResponse200294**](InlineResponse200294.md)
 
 ### Authorization
 
@@ -8624,7 +8624,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval
 
-> []InlineResponse200283 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200295 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands, segmented by device.
 
@@ -8661,7 +8661,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200283
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200295
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -8694,7 +8694,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200283**](InlineResponse200283.md)
+[**[]InlineResponse200295**](InlineResponse200295.md)
 
 ### Authorization
 
@@ -8712,7 +8712,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval
 
-> []InlineResponse200284 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200296 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands
 
@@ -8749,7 +8749,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200284
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200296
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: %v\n", resp)
 }
 ```
@@ -8782,7 +8782,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200284**](InlineResponse200284.md)
+[**[]InlineResponse200296**](InlineResponse200296.md)
 
 ### Authorization
 
@@ -8800,7 +8800,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesEthernetStatuses
 
-> []InlineResponse200285 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200297 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the most recent Ethernet link speed, duplex, aggregation and power mode and status information for wireless devices.
 
@@ -8832,7 +8832,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationWirelessDevicesEthernetStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200285
+    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200297
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationWirelessDevicesEthernetStatuses`: %v\n", resp)
 }
 ```
@@ -8860,7 +8860,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200285**](InlineResponse200285.md)
+[**[]InlineResponse200297**](InlineResponse200297.md)
 
 ### Authorization
 
@@ -8878,7 +8878,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByClient
 
-> []InlineResponse200286 GetOrganizationWirelessDevicesPacketLossByClient(ctx, organizationId).NetworkIds(networkIds).Ssids(ssids).Bands(bands).Macs(macs).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200298 GetOrganizationWirelessDevicesPacketLossByClient(ctx, organizationId).NetworkIds(networkIds).Ssids(ssids).Bands(bands).Macs(macs).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all clients in the organization.
 
@@ -8916,7 +8916,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationWirelessDevicesPacketLossByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByClient`: []InlineResponse200286
+    // response from `GetOrganizationWirelessDevicesPacketLossByClient`: []InlineResponse200298
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationWirelessDevicesPacketLossByClient`: %v\n", resp)
 }
 ```
@@ -8950,7 +8950,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200286**](InlineResponse200286.md)
+[**[]InlineResponse200298**](InlineResponse200298.md)
 
 ### Authorization
 
@@ -8968,7 +8968,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByDevice
 
-> []InlineResponse200287 GetOrganizationWirelessDevicesPacketLossByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200299 GetOrganizationWirelessDevicesPacketLossByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all devices in the organization
 
@@ -9006,7 +9006,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationWirelessDevicesPacketLossByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByDevice`: []InlineResponse200287
+    // response from `GetOrganizationWirelessDevicesPacketLossByDevice`: []InlineResponse200299
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationWirelessDevicesPacketLossByDevice`: %v\n", resp)
 }
 ```
@@ -9040,7 +9040,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200287**](InlineResponse200287.md)
+[**[]InlineResponse200299**](InlineResponse200299.md)
 
 ### Authorization
 
@@ -9058,7 +9058,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByNetwork
 
-> []InlineResponse200288 GetOrganizationWirelessDevicesPacketLossByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200300 GetOrganizationWirelessDevicesPacketLossByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all networks in the organization.
 
@@ -9096,7 +9096,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MonitorApi.GetOrganizationWirelessDevicesPacketLossByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByNetwork`: []InlineResponse200288
+    // response from `GetOrganizationWirelessDevicesPacketLossByNetwork`: []InlineResponse200300
     fmt.Fprintf(os.Stdout, "Response from `MonitorApi.GetOrganizationWirelessDevicesPacketLossByNetwork`: %v\n", resp)
 }
 ```
@@ -9130,7 +9130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200288**](InlineResponse200288.md)
+[**[]InlineResponse200300**](InlineResponse200300.md)
 
 ### Authorization
 

@@ -376,7 +376,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicensingCotermLicenses
 
-> []InlineResponse200248 GetOrganizationLicensingCotermLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
+> []InlineResponse200256 GetOrganizationLicensingCotermLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
 
 List the licenses in a coterm organization
 
@@ -409,7 +409,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensingApi.GetOrganizationLicensingCotermLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicensingCotermLicenses`: []InlineResponse200248
+    // response from `GetOrganizationLicensingCotermLicenses`: []InlineResponse200256
     fmt.Fprintf(os.Stdout, "Response from `LicensingApi.GetOrganizationLicensingCotermLicenses`: %v\n", resp)
 }
 ```
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200248**](InlineResponse200248.md)
+[**[]InlineResponse200256**](InlineResponse200256.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 ## MoveOrganizationLicensingCotermLicenses
 
-> InlineResponse200249 MoveOrganizationLicensingCotermLicenses(ctx, organizationId).MoveOrganizationLicensingCotermLicenses(moveOrganizationLicensingCotermLicenses).Execute()
+> InlineResponse200257 MoveOrganizationLicensingCotermLicenses(ctx, organizationId).MoveOrganizationLicensingCotermLicenses(moveOrganizationLicensingCotermLicenses).Execute()
 
 Moves a license to a different organization (coterm only)
 
@@ -476,7 +476,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    moveOrganizationLicensingCotermLicenses := *openapiclient.NewInlineObject237(*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(), []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses("Key_example", []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveCounts{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveCounts("Model_example", int32(123))})}) // InlineObject237 | 
+    moveOrganizationLicensingCotermLicenses := *openapiclient.NewInlineObject242(*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(), []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses("Key_example", []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveCounts{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveCounts("Model_example", int32(123))})}) // InlineObject242 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -485,7 +485,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensingApi.MoveOrganizationLicensingCotermLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveOrganizationLicensingCotermLicenses`: InlineResponse200249
+    // response from `MoveOrganizationLicensingCotermLicenses`: InlineResponse200257
     fmt.Fprintf(os.Stdout, "Response from `LicensingApi.MoveOrganizationLicensingCotermLicenses`: %v\n", resp)
 }
 ```
@@ -506,11 +506,11 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensingC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicensingCotermLicenses** | [**InlineObject237**](InlineObject237.md) |  | 
+ **moveOrganizationLicensingCotermLicenses** | [**InlineObject242**](InlineObject242.md) |  | 
 
 ### Return type
 
-[**InlineResponse200249**](InlineResponse200249.md)
+[**InlineResponse200257**](InlineResponse200257.md)
 
 ### Authorization
 

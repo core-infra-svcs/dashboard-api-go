@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **VlanId** | Pointer to **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | [optional] 
 **DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route.         This IP address must exist in a subnet with a routed interface. Required if this is the first IPv4 interface. | [optional] 
 **OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings1**](DevicesSerialSwitchRoutingInterfacesOspfSettings1.md) |  | [optional] 
-**OspfV3** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfV31**](DevicesSerialSwitchRoutingInterfacesOspfV31.md) |  | [optional] 
 **Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv61**](DevicesSerialSwitchRoutingInterfacesIpv61.md) |  | [optional] 
 
 ## Methods
@@ -207,31 +206,6 @@ SetOspfSettings sets OspfSettings field to given value.
 `func (o *InlineObject27) HasOspfSettings() bool`
 
 HasOspfSettings returns a boolean if a field has been set.
-
-### GetOspfV3
-
-`func (o *InlineObject27) GetOspfV3() DevicesSerialSwitchRoutingInterfacesOspfV31`
-
-GetOspfV3 returns the OspfV3 field if non-nil, zero value otherwise.
-
-### GetOspfV3Ok
-
-`func (o *InlineObject27) GetOspfV3Ok() (*DevicesSerialSwitchRoutingInterfacesOspfV31, bool)`
-
-GetOspfV3Ok returns a tuple with the OspfV3 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOspfV3
-
-`func (o *InlineObject27) SetOspfV3(v DevicesSerialSwitchRoutingInterfacesOspfV31)`
-
-SetOspfV3 sets OspfV3 field to given value.
-
-### HasOspfV3
-
-`func (o *InlineObject27) HasOspfV3() bool`
-
-HasOspfV3 returns a boolean if a field has been set.
 
 ### GetIpv6
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Camera** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
 **CellularGateway** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
 **Sensor** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
+**SecureConnect** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
 **SwitchCatalyst** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
 
 ## Methods
@@ -180,6 +181,31 @@ SetSensor sets Sensor field to given value.
 `func (o *NetworksNetworkIdFirmwareUpgradesProducts) HasSensor() bool`
 
 HasSensor returns a boolean if a field has been set.
+
+### GetSecureConnect
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSecureConnect() NetworksNetworkIdFirmwareUpgradesProductsWireless`
+
+GetSecureConnect returns the SecureConnect field if non-nil, zero value otherwise.
+
+### GetSecureConnectOk
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetSecureConnectOk() (*NetworksNetworkIdFirmwareUpgradesProductsWireless, bool)`
+
+GetSecureConnectOk returns a tuple with the SecureConnect field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecureConnect
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetSecureConnect(v NetworksNetworkIdFirmwareUpgradesProductsWireless)`
+
+SetSecureConnect sets SecureConnect field to given value.
+
+### HasSecureConnect
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) HasSecureConnect() bool`
+
+HasSecureConnect returns a boolean if a field has been set.
 
 ### GetSwitchCatalyst
 

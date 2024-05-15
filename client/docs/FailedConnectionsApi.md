@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessFailedConnections
 
-> []InlineResponse200176 GetNetworkWirelessFailedConnections(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Serial(serial).ClientId(clientId).Execute()
+> []InlineResponse200178 GetNetworkWirelessFailedConnections(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Serial(serial).ClientId(clientId).Execute()
 
 List of all failed client connection events on this network in a given time range
 
@@ -47,7 +47,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FailedConnectionsApi.GetNetworkWirelessFailedConnections``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessFailedConnections`: []InlineResponse200176
+    // response from `GetNetworkWirelessFailedConnections`: []InlineResponse200178
     fmt.Fprintf(os.Stdout, "Response from `FailedConnectionsApi.GetNetworkWirelessFailedConnections`: %v\n", resp)
 }
 ```
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200176**](InlineResponse200176.md)
+[**[]InlineResponse200178**](InlineResponse200178.md)
 
 ### Authorization
 

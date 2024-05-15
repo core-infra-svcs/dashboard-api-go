@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse200220Usage**](InlineResponse200220Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200220Counts**](InlineResponse200220Counts.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
+**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
+**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200220WithDefaults instantiates a new InlineResponse200220 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetNetworkId
 
-`func (o *InlineResponse200220) GetUsage() InlineResponse200220Usage`
+`func (o *InlineResponse200220) GetNetworkId() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200220) GetUsageOk() (*InlineResponse200220Usage, bool)`
+`func (o *InlineResponse200220) GetNetworkIdOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetNetworkId
 
-`func (o *InlineResponse200220) SetUsage(v InlineResponse200220Usage)`
+`func (o *InlineResponse200220) SetNetworkId(v string)`
 
-SetUsage sets Usage field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasUsage
+### HasNetworkId
 
-`func (o *InlineResponse200220) HasUsage() bool`
+`func (o *InlineResponse200220) HasNetworkId() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetCounts
+### GetSerial
 
-`func (o *InlineResponse200220) GetCounts() InlineResponse200220Counts`
+`func (o *InlineResponse200220) GetSerial() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetSerialOk
 
-`func (o *InlineResponse200220) GetCountsOk() (*InlineResponse200220Counts, bool)`
+`func (o *InlineResponse200220) GetSerialOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetSerial
 
-`func (o *InlineResponse200220) SetCounts(v InlineResponse200220Counts)`
+`func (o *InlineResponse200220) SetSerial(v string)`
 
-SetCounts sets Counts field to given value.
+SetSerial sets Serial field to given value.
 
-### HasCounts
+### HasSerial
 
-`func (o *InlineResponse200220) HasCounts() bool`
+`func (o *InlineResponse200220) HasSerial() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
+
+### GetBoundaries
+
+`func (o *InlineResponse200220) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries`
+
+GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
+
+### GetBoundariesOk
+
+`func (o *InlineResponse200220) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries, bool)`
+
+GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBoundaries
+
+`func (o *InlineResponse200220) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries)`
+
+SetBoundaries sets Boundaries field to given value.
+
+### HasBoundaries
+
+`func (o *InlineResponse200220) HasBoundaries() bool`
+
+HasBoundaries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

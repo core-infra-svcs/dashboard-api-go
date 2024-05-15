@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSmUserDeviceProfiles
 
-> []InlineResponse200121 GetNetworkSmUserDeviceProfiles(ctx, networkId, userId).Execute()
+> []InlineResponse200122 GetNetworkSmUserDeviceProfiles(ctx, networkId, userId).Execute()
 
 Get the profiles associated with a user
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsersApi.GetNetworkSmUserDeviceProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUserDeviceProfiles`: []InlineResponse200121
+    // response from `GetNetworkSmUserDeviceProfiles`: []InlineResponse200122
     fmt.Fprintf(os.Stdout, "Response from `UsersApi.GetNetworkSmUserDeviceProfiles`: %v\n", resp)
 }
 ```
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200121**](InlineResponse200121.md)
+[**[]InlineResponse200122**](InlineResponse200122.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUserSoftwares
 
-> []InlineResponse200126 GetNetworkSmUserSoftwares(ctx, networkId, userId).Execute()
+> []InlineResponse200127 GetNetworkSmUserSoftwares(ctx, networkId, userId).Execute()
 
 Get a list of softwares associated with a user
 
@@ -114,7 +114,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsersApi.GetNetworkSmUserSoftwares``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUserSoftwares`: []InlineResponse200126
+    // response from `GetNetworkSmUserSoftwares`: []InlineResponse200127
     fmt.Fprintf(os.Stdout, "Response from `UsersApi.GetNetworkSmUserSoftwares`: %v\n", resp)
 }
 ```
@@ -140,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200126**](InlineResponse200126.md)
+[**[]InlineResponse200127**](InlineResponse200127.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUsers
 
-> []InlineResponse200133 GetNetworkSmUsers(ctx, networkId).Ids(ids).Usernames(usernames).Emails(emails).Scope(scope).Execute()
+> []InlineResponse200134 GetNetworkSmUsers(ctx, networkId).Ids(ids).Usernames(usernames).Emails(emails).Scope(scope).Execute()
 
 List the owners in an SM network with various specified fields and filters
 
@@ -190,7 +190,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsersApi.GetNetworkSmUsers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUsers`: []InlineResponse200133
+    // response from `GetNetworkSmUsers`: []InlineResponse200134
     fmt.Fprintf(os.Stdout, "Response from `UsersApi.GetNetworkSmUsers`: %v\n", resp)
 }
 ```
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200133**](InlineResponse200133.md)
+[**[]InlineResponse200134**](InlineResponse200134.md)
 
 ### Authorization
 

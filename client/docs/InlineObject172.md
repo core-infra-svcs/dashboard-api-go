@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | AP port profile name | 
-**Ports** | [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts1.md) | AP ports configuration | 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable alternate management interface | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management interface VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39;, &#39;syslog&#39; or &#39;ldap&#39; | [optional] 
+**AccessPoints** | Pointer to [**[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints**](NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints.md) | Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put &#39;accessPoints&#39; in the body when updating template networks. Also, an empty &#39;accessPoints&#39; array will remove all previous static IP assignments | [optional] 
 
 ## Methods
 
 ### NewInlineObject172
 
-`func NewInlineObject172(name string, ports []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, ) *InlineObject172`
+`func NewInlineObject172() *InlineObject172`
 
 NewInlineObject172 instantiates a new InlineObject172 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +28,105 @@ NewInlineObject172WithDefaults instantiates a new InlineObject172 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject172) GetName() string`
+`func (o *InlineObject172) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject172) GetNameOk() (*string, bool)`
+`func (o *InlineObject172) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject172) SetName(v string)`
+`func (o *InlineObject172) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetPorts
+`func (o *InlineObject172) HasEnabled() bool`
 
-`func (o *InlineObject172) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1`
+HasEnabled returns a boolean if a field has been set.
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+### GetVlanId
 
-### GetPortsOk
+`func (o *InlineObject172) GetVlanId() int32`
 
-`func (o *InlineObject172) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, bool)`
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+### GetVlanIdOk
+
+`func (o *InlineObject172) GetVlanIdOk() (*int32, bool)`
+
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetVlanId
 
-`func (o *InlineObject172) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1)`
+`func (o *InlineObject172) SetVlanId(v int32)`
 
-SetPorts sets Ports field to given value.
+SetVlanId sets VlanId field to given value.
 
+### HasVlanId
 
-### GetUsbPorts
+`func (o *InlineObject172) HasVlanId() bool`
 
-`func (o *InlineObject172) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
+HasVlanId returns a boolean if a field has been set.
 
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+### GetProtocols
 
-### GetUsbPortsOk
+`func (o *InlineObject172) GetProtocols() []string`
 
-`func (o *InlineObject172) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
 
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+### GetProtocolsOk
+
+`func (o *InlineObject172) GetProtocolsOk() (*[]string, bool)`
+
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsbPorts
+### SetProtocols
 
-`func (o *InlineObject172) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
+`func (o *InlineObject172) SetProtocols(v []string)`
 
-SetUsbPorts sets UsbPorts field to given value.
+SetProtocols sets Protocols field to given value.
 
-### HasUsbPorts
+### HasProtocols
 
-`func (o *InlineObject172) HasUsbPorts() bool`
+`func (o *InlineObject172) HasProtocols() bool`
 
-HasUsbPorts returns a boolean if a field has been set.
+HasProtocols returns a boolean if a field has been set.
+
+### GetAccessPoints
+
+`func (o *InlineObject172) GetAccessPoints() []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints`
+
+GetAccessPoints returns the AccessPoints field if non-nil, zero value otherwise.
+
+### GetAccessPointsOk
+
+`func (o *InlineObject172) GetAccessPointsOk() (*[]NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints, bool)`
+
+GetAccessPointsOk returns a tuple with the AccessPoints field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessPoints
+
+`func (o *InlineObject172) SetAccessPoints(v []NetworksNetworkIdWirelessAlternateManagementInterfaceAccessPoints)`
+
+SetAccessPoints sets AccessPoints field to given value.
+
+### HasAccessPoints
+
+`func (o *InlineObject172) HasAccessPoints() bool`
+
+HasAccessPoints returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200185Rules**](InlineResponse200185Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
-**AllowLanAccess** | Pointer to **bool** | Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional) | [optional] 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on this SSID. | [optional] 
+**Rules** | Pointer to [**[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules**](NetworksNetworkIdGroupPoliciesBonjourForwardingRules.md) | List of bonjour forwarding rules. | [optional] 
+**Exception** | Pointer to [**InlineResponse200185Exception**](InlineResponse200185Exception.md) |  | [optional] 
 
 ## Methods
 
@@ -26,22 +27,47 @@ NewInlineObject183WithDefaults instantiates a new InlineObject183 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
+### GetEnabled
+
+`func (o *InlineObject183) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineObject183) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineObject183) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineObject183) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
 ### GetRules
 
-`func (o *InlineObject183) GetRules() []InlineResponse200185Rules`
+`func (o *InlineObject183) GetRules() []NetworksNetworkIdGroupPoliciesBonjourForwardingRules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineObject183) GetRulesOk() (*[]InlineResponse200185Rules, bool)`
+`func (o *InlineObject183) GetRulesOk() (*[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineObject183) SetRules(v []InlineResponse200185Rules)`
+`func (o *InlineObject183) SetRules(v []NetworksNetworkIdGroupPoliciesBonjourForwardingRules)`
 
 SetRules sets Rules field to given value.
 
@@ -51,30 +77,30 @@ SetRules sets Rules field to given value.
 
 HasRules returns a boolean if a field has been set.
 
-### GetAllowLanAccess
+### GetException
 
-`func (o *InlineObject183) GetAllowLanAccess() bool`
+`func (o *InlineObject183) GetException() InlineResponse200185Exception`
 
-GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
+GetException returns the Exception field if non-nil, zero value otherwise.
 
-### GetAllowLanAccessOk
+### GetExceptionOk
 
-`func (o *InlineObject183) GetAllowLanAccessOk() (*bool, bool)`
+`func (o *InlineObject183) GetExceptionOk() (*InlineResponse200185Exception, bool)`
 
-GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowLanAccess
+### SetException
 
-`func (o *InlineObject183) SetAllowLanAccess(v bool)`
+`func (o *InlineObject183) SetException(v InlineResponse200185Exception)`
 
-SetAllowLanAccess sets AllowLanAccess field to given value.
+SetException sets Exception field to given value.
 
-### HasAllowLanAccess
+### HasException
 
-`func (o *InlineObject183) HasAllowLanAccess() bool`
+`func (o *InlineObject183) HasException() bool`
 
-HasAllowLanAccess returns a boolean if a field has been set.
+HasException returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

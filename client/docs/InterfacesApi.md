@@ -906,7 +906,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStackRoutingInterface
 
-> InlineResponse200155 UpdateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterface(updateNetworkSwitchStackRoutingInterface).Execute()
+> InlineResponse200156 UpdateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterface(updateNetworkSwitchStackRoutingInterface).Execute()
 
 Update a layer 3 interface for a switch stack
 
@@ -937,7 +937,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InterfacesApi.UpdateNetworkSwitchStackRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStackRoutingInterface`: InlineResponse200155
+    // response from `UpdateNetworkSwitchStackRoutingInterface`: InlineResponse200156
     fmt.Fprintf(os.Stdout, "Response from `InterfacesApi.UpdateNetworkSwitchStackRoutingInterface`: %v\n", resp)
 }
 ```
@@ -966,7 +966,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200155**](InlineResponse200155.md)
+[**InlineResponse200156**](InlineResponse200156.md)
 
 ### Authorization
 

@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## AssignOrganizationLicensesSeats
 
-> InlineResponse200244 AssignOrganizationLicensesSeats(ctx, organizationId).AssignOrganizationLicensesSeats(assignOrganizationLicensesSeats).Execute()
+> InlineResponse200252 AssignOrganizationLicensesSeats(ctx, organizationId).AssignOrganizationLicensesSeats(assignOrganizationLicensesSeats).Execute()
 
 Assign SM seats to a network
 
@@ -39,7 +39,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    assignOrganizationLicensesSeats := *openapiclient.NewInlineObject232("LicenseId_example", "NetworkId_example", int32(123)) // InlineObject232 | 
+    assignOrganizationLicensesSeats := *openapiclient.NewInlineObject237("LicenseId_example", "NetworkId_example", int32(123)) // InlineObject237 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -48,7 +48,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensesApi.AssignOrganizationLicensesSeats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `AssignOrganizationLicensesSeats`: InlineResponse200244
+    // response from `AssignOrganizationLicensesSeats`: InlineResponse200252
     fmt.Fprintf(os.Stdout, "Response from `LicensesApi.AssignOrganizationLicensesSeats`: %v\n", resp)
 }
 ```
@@ -69,11 +69,11 @@ Other parameters are passed through a pointer to a apiAssignOrganizationLicenses
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **assignOrganizationLicensesSeats** | [**InlineObject232**](InlineObject232.md) |  | 
+ **assignOrganizationLicensesSeats** | [**InlineObject237**](InlineObject237.md) |  | 
 
 ### Return type
 
-[**InlineResponse200244**](InlineResponse200244.md)
+[**InlineResponse200252**](InlineResponse200252.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicense
 
-> InlineResponse200243 GetOrganizationLicense(ctx, organizationId, licenseId).Execute()
+> InlineResponse200251 GetOrganizationLicense(ctx, organizationId, licenseId).Execute()
 
 Display a license
 
@@ -120,7 +120,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensesApi.GetOrganizationLicense``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicense`: InlineResponse200243
+    // response from `GetOrganizationLicense`: InlineResponse200251
     fmt.Fprintf(os.Stdout, "Response from `LicensesApi.GetOrganizationLicense`: %v\n", resp)
 }
 ```
@@ -146,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200243**](InlineResponse200243.md)
+[**InlineResponse200251**](InlineResponse200251.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicenses
 
-> []InlineResponse200243 GetOrganizationLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).DeviceSerial(deviceSerial).NetworkId(networkId).State(state).Execute()
+> []InlineResponse200251 GetOrganizationLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).DeviceSerial(deviceSerial).NetworkId(networkId).State(state).Execute()
 
 List the licenses for an organization
 
@@ -198,7 +198,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensesApi.GetOrganizationLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicenses`: []InlineResponse200243
+    // response from `GetOrganizationLicenses`: []InlineResponse200251
     fmt.Fprintf(os.Stdout, "Response from `LicensesApi.GetOrganizationLicenses`: %v\n", resp)
 }
 ```
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200243**](InlineResponse200243.md)
+[**[]InlineResponse200251**](InlineResponse200251.md)
 
 ### Authorization
 
@@ -246,7 +246,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicensesOverview
 
-> InlineResponse200247 GetOrganizationLicensesOverview(ctx, organizationId).Execute()
+> InlineResponse200255 GetOrganizationLicensesOverview(ctx, organizationId).Execute()
 
 Return an overview of the license state for an organization
 
@@ -274,7 +274,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensesApi.GetOrganizationLicensesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicensesOverview`: InlineResponse200247
+    // response from `GetOrganizationLicensesOverview`: InlineResponse200255
     fmt.Fprintf(os.Stdout, "Response from `LicensesApi.GetOrganizationLicensesOverview`: %v\n", resp)
 }
 ```
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200247**](InlineResponse200247.md)
+[**InlineResponse200255**](InlineResponse200255.md)
 
 ### Authorization
 
@@ -316,7 +316,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicensingCotermLicenses
 
-> []InlineResponse200248 GetOrganizationLicensingCotermLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
+> []InlineResponse200256 GetOrganizationLicensingCotermLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
 
 List the licenses in a coterm organization
 
@@ -349,7 +349,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensesApi.GetOrganizationLicensingCotermLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicensingCotermLicenses`: []InlineResponse200248
+    // response from `GetOrganizationLicensingCotermLicenses`: []InlineResponse200256
     fmt.Fprintf(os.Stdout, "Response from `LicensesApi.GetOrganizationLicensingCotermLicenses`: %v\n", resp)
 }
 ```
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200248**](InlineResponse200248.md)
+[**[]InlineResponse200256**](InlineResponse200256.md)
 
 ### Authorization
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ## MoveOrganizationLicenses
 
-> InlineResponse200245 MoveOrganizationLicenses(ctx, organizationId).MoveOrganizationLicenses(moveOrganizationLicenses).Execute()
+> InlineResponse200253 MoveOrganizationLicenses(ctx, organizationId).MoveOrganizationLicenses(moveOrganizationLicenses).Execute()
 
 Move licenses to another organization
 
@@ -416,7 +416,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    moveOrganizationLicenses := *openapiclient.NewInlineObject233("DestOrganizationId_example", []string{"LicenseIds_example"}) // InlineObject233 | 
+    moveOrganizationLicenses := *openapiclient.NewInlineObject238("DestOrganizationId_example", []string{"LicenseIds_example"}) // InlineObject238 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -425,7 +425,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensesApi.MoveOrganizationLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveOrganizationLicenses`: InlineResponse200245
+    // response from `MoveOrganizationLicenses`: InlineResponse200253
     fmt.Fprintf(os.Stdout, "Response from `LicensesApi.MoveOrganizationLicenses`: %v\n", resp)
 }
 ```
@@ -446,11 +446,11 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensesRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicenses** | [**InlineObject233**](InlineObject233.md) |  | 
+ **moveOrganizationLicenses** | [**InlineObject238**](InlineObject238.md) |  | 
 
 ### Return type
 
-[**InlineResponse200245**](InlineResponse200245.md)
+[**InlineResponse200253**](InlineResponse200253.md)
 
 ### Authorization
 
@@ -468,7 +468,7 @@ Name | Type | Description  | Notes
 
 ## MoveOrganizationLicensesSeats
 
-> InlineResponse200246 MoveOrganizationLicensesSeats(ctx, organizationId).MoveOrganizationLicensesSeats(moveOrganizationLicensesSeats).Execute()
+> InlineResponse200254 MoveOrganizationLicensesSeats(ctx, organizationId).MoveOrganizationLicensesSeats(moveOrganizationLicensesSeats).Execute()
 
 Move SM seats to another organization
 
@@ -488,7 +488,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    moveOrganizationLicensesSeats := *openapiclient.NewInlineObject234("DestOrganizationId_example", "LicenseId_example", int32(123)) // InlineObject234 | 
+    moveOrganizationLicensesSeats := *openapiclient.NewInlineObject239("DestOrganizationId_example", "LicenseId_example", int32(123)) // InlineObject239 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -497,7 +497,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensesApi.MoveOrganizationLicensesSeats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveOrganizationLicensesSeats`: InlineResponse200246
+    // response from `MoveOrganizationLicensesSeats`: InlineResponse200254
     fmt.Fprintf(os.Stdout, "Response from `LicensesApi.MoveOrganizationLicensesSeats`: %v\n", resp)
 }
 ```
@@ -518,11 +518,11 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensesSe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicensesSeats** | [**InlineObject234**](InlineObject234.md) |  | 
+ **moveOrganizationLicensesSeats** | [**InlineObject239**](InlineObject239.md) |  | 
 
 ### Return type
 
-[**InlineResponse200246**](InlineResponse200246.md)
+[**InlineResponse200254**](InlineResponse200254.md)
 
 ### Authorization
 
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 
 ## MoveOrganizationLicensingCotermLicenses
 
-> InlineResponse200249 MoveOrganizationLicensingCotermLicenses(ctx, organizationId).MoveOrganizationLicensingCotermLicenses(moveOrganizationLicensingCotermLicenses).Execute()
+> InlineResponse200257 MoveOrganizationLicensingCotermLicenses(ctx, organizationId).MoveOrganizationLicensingCotermLicenses(moveOrganizationLicensingCotermLicenses).Execute()
 
 Moves a license to a different organization (coterm only)
 
@@ -560,7 +560,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    moveOrganizationLicensingCotermLicenses := *openapiclient.NewInlineObject237(*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(), []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses("Key_example", []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveCounts{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveCounts("Model_example", int32(123))})}) // InlineObject237 | 
+    moveOrganizationLicensingCotermLicenses := *openapiclient.NewInlineObject242(*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(), []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses("Key_example", []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveCounts{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveCounts("Model_example", int32(123))})}) // InlineObject242 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -569,7 +569,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensesApi.MoveOrganizationLicensingCotermLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveOrganizationLicensingCotermLicenses`: InlineResponse200249
+    // response from `MoveOrganizationLicensingCotermLicenses`: InlineResponse200257
     fmt.Fprintf(os.Stdout, "Response from `LicensesApi.MoveOrganizationLicensingCotermLicenses`: %v\n", resp)
 }
 ```
@@ -590,11 +590,11 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensingC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicensingCotermLicenses** | [**InlineObject237**](InlineObject237.md) |  | 
+ **moveOrganizationLicensingCotermLicenses** | [**InlineObject242**](InlineObject242.md) |  | 
 
 ### Return type
 
-[**InlineResponse200249**](InlineResponse200249.md)
+[**InlineResponse200257**](InlineResponse200257.md)
 
 ### Authorization
 
@@ -612,7 +612,7 @@ Name | Type | Description  | Notes
 
 ## RenewOrganizationLicensesSeats
 
-> InlineResponse200244 RenewOrganizationLicensesSeats(ctx, organizationId).RenewOrganizationLicensesSeats(renewOrganizationLicensesSeats).Execute()
+> InlineResponse200252 RenewOrganizationLicensesSeats(ctx, organizationId).RenewOrganizationLicensesSeats(renewOrganizationLicensesSeats).Execute()
 
 Renew SM seats of a license
 
@@ -632,7 +632,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    renewOrganizationLicensesSeats := *openapiclient.NewInlineObject235("LicenseIdToRenew_example", "UnusedLicenseId_example") // InlineObject235 | 
+    renewOrganizationLicensesSeats := *openapiclient.NewInlineObject240("LicenseIdToRenew_example", "UnusedLicenseId_example") // InlineObject240 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -641,7 +641,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensesApi.RenewOrganizationLicensesSeats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RenewOrganizationLicensesSeats`: InlineResponse200244
+    // response from `RenewOrganizationLicensesSeats`: InlineResponse200252
     fmt.Fprintf(os.Stdout, "Response from `LicensesApi.RenewOrganizationLicensesSeats`: %v\n", resp)
 }
 ```
@@ -662,11 +662,11 @@ Other parameters are passed through a pointer to a apiRenewOrganizationLicensesS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **renewOrganizationLicensesSeats** | [**InlineObject235**](InlineObject235.md) |  | 
+ **renewOrganizationLicensesSeats** | [**InlineObject240**](InlineObject240.md) |  | 
 
 ### Return type
 
-[**InlineResponse200244**](InlineResponse200244.md)
+[**InlineResponse200252**](InlineResponse200252.md)
 
 ### Authorization
 
@@ -684,7 +684,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationLicense
 
-> InlineResponse200243 UpdateOrganizationLicense(ctx, organizationId, licenseId).UpdateOrganizationLicense(updateOrganizationLicense).Execute()
+> InlineResponse200251 UpdateOrganizationLicense(ctx, organizationId, licenseId).UpdateOrganizationLicense(updateOrganizationLicense).Execute()
 
 Update a license
 
@@ -705,7 +705,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     licenseId := "licenseId_example" // string | License ID
-    updateOrganizationLicense := *openapiclient.NewInlineObject236() // InlineObject236 |  (optional)
+    updateOrganizationLicense := *openapiclient.NewInlineObject241() // InlineObject241 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -714,7 +714,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensesApi.UpdateOrganizationLicense``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationLicense`: InlineResponse200243
+    // response from `UpdateOrganizationLicense`: InlineResponse200251
     fmt.Fprintf(os.Stdout, "Response from `LicensesApi.UpdateOrganizationLicense`: %v\n", resp)
 }
 ```
@@ -737,11 +737,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationLicense** | [**InlineObject236**](InlineObject236.md) |  | 
+ **updateOrganizationLicense** | [**InlineObject241**](InlineObject241.md) |  | 
 
 ### Return type
 
-[**InlineResponse200243**](InlineResponse200243.md)
+[**InlineResponse200251**](InlineResponse200251.md)
 
 ### Authorization
 

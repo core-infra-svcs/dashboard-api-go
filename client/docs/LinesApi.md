@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationCameraBoundariesLinesByDevice
 
-> []InlineResponse200213 GetOrganizationCameraBoundariesLinesByDevice(ctx, organizationId).Serials(serials).Execute()
+> []InlineResponse200220 GetOrganizationCameraBoundariesLinesByDevice(ctx, organizationId).Serials(serials).Execute()
 
 Returns all configured crossingline boundaries of cameras
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LinesApi.GetOrganizationCameraBoundariesLinesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraBoundariesLinesByDevice`: []InlineResponse200213
+    // response from `GetOrganizationCameraBoundariesLinesByDevice`: []InlineResponse200220
     fmt.Fprintf(os.Stdout, "Response from `LinesApi.GetOrganizationCameraBoundariesLinesByDevice`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200213**](InlineResponse200213.md)
+[**[]InlineResponse200220**](InlineResponse200220.md)
 
 ### Authorization
 

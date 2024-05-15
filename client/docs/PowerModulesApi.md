@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationDevicesPowerModulesStatusesByDevice
 
-> []InlineResponse200228 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200236 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the most recent status information for power modules in rackmount MX and MS devices that support them
 
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PowerModulesApi.GetOrganizationDevicesPowerModulesStatusesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200228
+    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200236
     fmt.Fprintf(os.Stdout, "Response from `PowerModulesApi.GetOrganizationDevicesPowerModulesStatusesByDevice`: %v\n", resp)
 }
 ```
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200228**](InlineResponse200228.md)
+[**[]InlineResponse200236**](InlineResponse200236.md)
 
 ### Authorization
 

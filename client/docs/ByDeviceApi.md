@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice
 
-> []InlineResponse200143 GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200144 GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the devices that have a Dynamic ARP Inspection warning and their warnings
 
@@ -52,7 +52,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: []InlineResponse200143
+    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: []InlineResponse200144
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: %v\n", resp)
 }
 ```
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200143**](InlineResponse200143.md)
+[**[]InlineResponse200144**](InlineResponse200144.md)
 
 ### Authorization
 
@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkVlanProfilesAssignmentsByDevice
 
-> []InlineResponse200161 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
+> []InlineResponse200162 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
 
 Get the assigned VLAN Profiles for devices in a network
 
@@ -131,7 +131,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetNetworkVlanProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse200161
+    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse200162
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetNetworkVlanProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200161**](InlineResponse200161.md)
+[**[]InlineResponse200162**](InlineResponse200162.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraBoundariesAreasByDevice
 
-> []InlineResponse200212 GetOrganizationCameraBoundariesAreasByDevice(ctx, organizationId).Serials(serials).Execute()
+> []InlineResponse200219 GetOrganizationCameraBoundariesAreasByDevice(ctx, organizationId).Serials(serials).Execute()
 
 Returns all configured area boundaries of cameras
 
@@ -208,7 +208,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetOrganizationCameraBoundariesAreasByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraBoundariesAreasByDevice`: []InlineResponse200212
+    // response from `GetOrganizationCameraBoundariesAreasByDevice`: []InlineResponse200219
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetOrganizationCameraBoundariesAreasByDevice`: %v\n", resp)
 }
 ```
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200212**](InlineResponse200212.md)
+[**[]InlineResponse200219**](InlineResponse200219.md)
 
 ### Authorization
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraBoundariesLinesByDevice
 
-> []InlineResponse200213 GetOrganizationCameraBoundariesLinesByDevice(ctx, organizationId).Serials(serials).Execute()
+> []InlineResponse200220 GetOrganizationCameraBoundariesLinesByDevice(ctx, organizationId).Serials(serials).Execute()
 
 Returns all configured crossingline boundaries of cameras
 
@@ -280,7 +280,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetOrganizationCameraBoundariesLinesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraBoundariesLinesByDevice`: []InlineResponse200213
+    // response from `GetOrganizationCameraBoundariesLinesByDevice`: []InlineResponse200220
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetOrganizationCameraBoundariesLinesByDevice`: %v\n", resp)
 }
 ```
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200213**](InlineResponse200213.md)
+[**[]InlineResponse200220**](InlineResponse200220.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesPowerModulesStatusesByDevice
 
-> []InlineResponse200228 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200236 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the most recent status information for power modules in rackmount MX and MS devices that support them
 
@@ -359,7 +359,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetOrganizationDevicesPowerModulesStatusesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200228
+    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200236
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetOrganizationDevicesPowerModulesStatusesByDevice`: %v\n", resp)
 }
 ```
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200228**](InlineResponse200228.md)
+[**[]InlineResponse200236**](InlineResponse200236.md)
 
 ### Authorization
 
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksAddressesByDevice
 
-> []InlineResponse200232 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200240 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the current uplink addresses for devices in an organization.
 
@@ -445,7 +445,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetOrganizationDevicesUplinksAddressesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200232
+    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200240
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetOrganizationDevicesUplinksAddressesByDevice`: %v\n", resp)
 }
 ```
@@ -477,7 +477,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200232**](InlineResponse200232.md)
+[**[]InlineResponse200240**](InlineResponse200240.md)
 
 ### Authorization
 
@@ -495,7 +495,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFirmwareUpgradesByDevice
 
-> []InlineResponse200237 GetOrganizationFirmwareUpgradesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Macs(macs).FirmwareUpgradeBatchIds(firmwareUpgradeBatchIds).UpgradeStatuses(upgradeStatuses).Execute()
+> []InlineResponse200245 GetOrganizationFirmwareUpgradesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Macs(macs).FirmwareUpgradeBatchIds(firmwareUpgradeBatchIds).UpgradeStatuses(upgradeStatuses).Execute()
 
 Get firmware upgrade status for the filtered devices
 
@@ -531,7 +531,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetOrganizationFirmwareUpgradesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFirmwareUpgradesByDevice`: []InlineResponse200237
+    // response from `GetOrganizationFirmwareUpgradesByDevice`: []InlineResponse200245
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetOrganizationFirmwareUpgradesByDevice`: %v\n", resp)
 }
 ```
@@ -563,7 +563,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200237**](InlineResponse200237.md)
+[**[]InlineResponse200245**](InlineResponse200245.md)
 
 ### Authorization
 
@@ -581,7 +581,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationByDevice
 
-> []InlineResponse200281 GetOrganizationWirelessDevicesChannelUtilizationByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200293 GetOrganizationWirelessDevicesChannelUtilizationByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get average channel utilization for all bands in a network, split by AP
 
@@ -618,7 +618,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetOrganizationWirelessDevicesChannelUtilizationByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationByDevice`: []InlineResponse200281
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationByDevice`: []InlineResponse200293
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetOrganizationWirelessDevicesChannelUtilizationByDevice`: %v\n", resp)
 }
 ```
@@ -651,7 +651,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200281**](InlineResponse200281.md)
+[**[]InlineResponse200293**](InlineResponse200293.md)
 
 ### Authorization
 
@@ -669,7 +669,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval
 
-> []InlineResponse200283 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200295 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands, segmented by device.
 
@@ -706,7 +706,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200283
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200295
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -739,7 +739,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200283**](InlineResponse200283.md)
+[**[]InlineResponse200295**](InlineResponse200295.md)
 
 ### Authorization
 
@@ -757,7 +757,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByDevice
 
-> []InlineResponse200287 GetOrganizationWirelessDevicesPacketLossByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200299 GetOrganizationWirelessDevicesPacketLossByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all devices in the organization
 
@@ -795,7 +795,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetOrganizationWirelessDevicesPacketLossByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByDevice`: []InlineResponse200287
+    // response from `GetOrganizationWirelessDevicesPacketLossByDevice`: []InlineResponse200299
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetOrganizationWirelessDevicesPacketLossByDevice`: %v\n", resp)
 }
 ```
@@ -829,7 +829,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200287**](InlineResponse200287.md)
+[**[]InlineResponse200299**](InlineResponse200299.md)
 
 ### Authorization
 
@@ -847,7 +847,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessRfProfilesAssignmentsByDevice
 
-> []InlineResponse200289 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
+> []InlineResponse200301 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
 
 List the RF profiles of an organization by device
 
@@ -871,7 +871,7 @@ func main() {
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     networkIds := []string{"Inner_example"} // []string | Optional parameter to filter devices by network. (optional)
-    productTypes := []string{"ProductTypes_example"} // []string | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. (optional)
+    productTypes := []string{"ProductTypes_example"} // []string | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. (optional)
     name := "name_example" // string | Optional parameter to filter RF profiles by device name. All returned devices will have a name that contains the search term or is an exact match. (optional)
     mac := "mac_example" // string | Optional parameter to filter RF profiles by device MAC address. All returned devices will have a MAC address that contains the search term or is an exact match. (optional)
     serial := "serial_example" // string | Optional parameter to filter RF profiles by device serial number. All returned devices will have a serial number that contains the search term or is an exact match. (optional)
@@ -887,7 +887,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200289
+    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200301
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -912,7 +912,7 @@ Name | Type | Description  | Notes
  **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **networkIds** | **[]string** | Optional parameter to filter devices by network. | 
- **productTypes** | **[]string** | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. | 
+ **productTypes** | **[]string** | Optional parameter to filter devices by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. | 
  **name** | **string** | Optional parameter to filter RF profiles by device name. All returned devices will have a name that contains the search term or is an exact match. | 
  **mac** | **string** | Optional parameter to filter RF profiles by device MAC address. All returned devices will have a MAC address that contains the search term or is an exact match. | 
  **serial** | **string** | Optional parameter to filter RF profiles by device serial number. All returned devices will have a serial number that contains the search term or is an exact match. | 
@@ -923,7 +923,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200289**](InlineResponse200289.md)
+[**[]InlineResponse200301**](InlineResponse200301.md)
 
 ### Authorization
 
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessSsidsStatusesByDevice
 
-> InlineResponse200290 GetOrganizationWirelessSsidsStatusesByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Bssids(bssids).HideDisabled(hideDisabled).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200302 GetOrganizationWirelessSsidsStatusesByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Bssids(bssids).HideDisabled(hideDisabled).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List status information of all BSSIDs in your organization
 
@@ -964,7 +964,7 @@ func main() {
     networkIds := []string{"Inner_example"} // []string | Optional parameter to filter the result set by the included set of network IDs (optional)
     serials := []string{"Inner_example"} // []string | A list of serial numbers. The returned devices will be filtered to only include these serials. (optional)
     bssids := []string{"Inner_example"} // []string | A list of BSSIDs. The returned devices will be filtered to only include these BSSIDs. (optional)
-    hideDisabled := true // bool | If true, the returned devices will not include disabled SSIDs. (default: false) (optional)
+    hideDisabled := true // bool | If true, the returned devices will not include disabled SSIDs. (default: true) (optional)
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 500. Default is 100. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -976,7 +976,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByDeviceApi.GetOrganizationWirelessSsidsStatusesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessSsidsStatusesByDevice`: InlineResponse200290
+    // response from `GetOrganizationWirelessSsidsStatusesByDevice`: InlineResponse200302
     fmt.Fprintf(os.Stdout, "Response from `ByDeviceApi.GetOrganizationWirelessSsidsStatusesByDevice`: %v\n", resp)
 }
 ```
@@ -1000,14 +1000,14 @@ Name | Type | Description  | Notes
  **networkIds** | **[]string** | Optional parameter to filter the result set by the included set of network IDs | 
  **serials** | **[]string** | A list of serial numbers. The returned devices will be filtered to only include these serials. | 
  **bssids** | **[]string** | A list of BSSIDs. The returned devices will be filtered to only include these BSSIDs. | 
- **hideDisabled** | **bool** | If true, the returned devices will not include disabled SSIDs. (default: false) | 
+ **hideDisabled** | **bool** | If true, the returned devices will not include disabled SSIDs. (default: true) | 
  **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 500. Default is 100. | 
  **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
 
 ### Return type
 
-[**InlineResponse200290**](InlineResponse200290.md)
+[**InlineResponse200302**](InlineResponse200302.md)
 
 ### Authorization
 

@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseId** | **string** | The ID of the SM license to assign seats from | 
-**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
-**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
+**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
 
 ## Methods
 
 ### NewInlineObject232
 
-`func NewInlineObject232(licenseId string, networkId string, seatCount int32, ) *InlineObject232`
+`func NewInlineObject232(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject232`
 
 NewInlineObject232 instantiates a new InlineObject232 object
 This constructor will assign default values to properties that have it defined,
@@ -27,64 +25,24 @@ NewInlineObject232WithDefaults instantiates a new InlineObject232 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseId
+### GetSwaps
 
-`func (o *InlineObject232) GetLicenseId() string`
+`func (o *InlineObject232) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetSwapsOk
 
-`func (o *InlineObject232) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineObject232) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetSwaps
 
-`func (o *InlineObject232) SetLicenseId(v string)`
+`func (o *InlineObject232) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
 
-SetLicenseId sets LicenseId field to given value.
-
-
-### GetNetworkId
-
-`func (o *InlineObject232) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineObject232) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineObject232) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-
-### GetSeatCount
-
-`func (o *InlineObject232) GetSeatCount() int32`
-
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
-
-### GetSeatCountOk
-
-`func (o *InlineObject232) GetSeatCountOk() (*int32, bool)`
-
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeatCount
-
-`func (o *InlineObject232) SetSeatCount(v int32)`
-
-SetSeatCount sets SeatCount field to given value.
+SetSwaps sets Swaps field to given value.
 
 
 

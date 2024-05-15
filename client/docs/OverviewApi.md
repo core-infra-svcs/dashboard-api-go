@@ -12,7 +12,12 @@ Method | HTTP request | Description
 [**GetOrganizationApiRequestsOverview**](OverviewApi.md#GetOrganizationApiRequestsOverview) | **Get** /organizations/{organizationId}/apiRequests/overview | Return an aggregated overview of API requests data
 [**GetOrganizationApiRequestsOverviewResponseCodesByInterval**](OverviewApi.md#GetOrganizationApiRequestsOverviewResponseCodesByInterval) | **Get** /organizations/{organizationId}/apiRequests/overview/responseCodes/byInterval | Tracks organizations&#39; API requests by response code across a given time period
 [**GetOrganizationApplianceUplinksStatusesOverview**](OverviewApi.md#GetOrganizationApplianceUplinksStatusesOverview) | **Get** /organizations/{organizationId}/appliance/uplinks/statuses/overview | Returns an overview of uplink statuses
+[**GetOrganizationAssuranceAlertsOverview**](OverviewApi.md#GetOrganizationAssuranceAlertsOverview) | **Get** /organizations/{organizationId}/assurance/alerts/overview | Return overview of active health alerts for an organization
+[**GetOrganizationAssuranceAlertsOverviewByNetwork**](OverviewApi.md#GetOrganizationAssuranceAlertsOverviewByNetwork) | **Get** /organizations/{organizationId}/assurance/alerts/overview/byNetwork | Return a Summary of Alerts grouped by network and severity
+[**GetOrganizationAssuranceAlertsOverviewByType**](OverviewApi.md#GetOrganizationAssuranceAlertsOverviewByType) | **Get** /organizations/{organizationId}/assurance/alerts/overview/byType | Return a Summary of Alerts grouped by type and severity
+[**GetOrganizationAssuranceAlertsOverviewHistorical**](OverviewApi.md#GetOrganizationAssuranceAlertsOverviewHistorical) | **Get** /organizations/{organizationId}/assurance/alerts/overview/historical | Returns historical health alert overviews
 [**GetOrganizationClientsOverview**](OverviewApi.md#GetOrganizationClientsOverview) | **Get** /organizations/{organizationId}/clients/overview | Return summary information around client data usage (in kb) across the given organization.
+[**GetOrganizationDevicesOverviewByModel**](OverviewApi.md#GetOrganizationDevicesOverviewByModel) | **Get** /organizations/{organizationId}/devices/overview/byModel | Lists the count for each device model
 [**GetOrganizationDevicesStatusesOverview**](OverviewApi.md#GetOrganizationDevicesStatusesOverview) | **Get** /organizations/{organizationId}/devices/statuses/overview | Return an overview of current device statuses
 [**GetOrganizationLicensesOverview**](OverviewApi.md#GetOrganizationLicensesOverview) | **Get** /organizations/{organizationId}/licenses/overview | Return an overview of the license state for an organization
 [**GetOrganizationSwitchPortsOverview**](OverviewApi.md#GetOrganizationSwitchPortsOverview) | **Get** /organizations/{organizationId}/switch/ports/overview | Returns the counts of all active ports for the requested timespan, grouped by speed
@@ -99,7 +104,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClientsOverview
 
-> InlineResponse20078 GetNetworkClientsOverview(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
+> InlineResponse20079 GetNetworkClientsOverview(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
 
 Return overview statistics for network clients
 
@@ -131,7 +136,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetNetworkClientsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClientsOverview`: InlineResponse20078
+    // response from `GetNetworkClientsOverview`: InlineResponse20079
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetNetworkClientsOverview`: %v\n", resp)
 }
 ```
@@ -159,7 +164,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20078**](InlineResponse20078.md)
+[**InlineResponse20079**](InlineResponse20079.md)
 
 ### Authorization
 
@@ -177,7 +182,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsCurrentOverviewByMetric
 
-> InlineResponse200103 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
+> InlineResponse200104 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
 
 Return an overview of currently alerting sensors by metric
 
@@ -205,7 +210,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetNetworkSensorAlertsCurrentOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse200103
+    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse200104
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetNetworkSensorAlertsCurrentOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -229,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200103**](InlineResponse200103.md)
+[**InlineResponse200104**](InlineResponse200104.md)
 
 ### Authorization
 
@@ -247,7 +252,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsOverviewByMetric
 
-> []InlineResponse200104 GetNetworkSensorAlertsOverviewByMetric(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200105 GetNetworkSensorAlertsOverviewByMetric(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Return an overview of alert occurrences over a timespan, by metric
 
@@ -279,7 +284,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetNetworkSensorAlertsOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsOverviewByMetric`: []InlineResponse200104
+    // response from `GetNetworkSensorAlertsOverviewByMetric`: []InlineResponse200105
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetNetworkSensorAlertsOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -307,7 +312,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200104**](InlineResponse200104.md)
+[**[]InlineResponse200105**](InlineResponse200105.md)
 
 ### Authorization
 
@@ -325,7 +330,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyOverview
 
-> InlineResponse200196 GetOrganizationAdaptivePolicyOverview(ctx, organizationId).Execute()
+> InlineResponse200198 GetOrganizationAdaptivePolicyOverview(ctx, organizationId).Execute()
 
 Returns adaptive policy aggregate statistics for an organization
 
@@ -353,7 +358,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationAdaptivePolicyOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyOverview`: InlineResponse200196
+    // response from `GetOrganizationAdaptivePolicyOverview`: InlineResponse200198
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationAdaptivePolicyOverview`: %v\n", resp)
 }
 ```
@@ -377,7 +382,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200196**](InlineResponse200196.md)
+[**InlineResponse200198**](InlineResponse200198.md)
 
 ### Authorization
 
@@ -395,7 +400,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRequestsOverview
 
-> InlineResponse200202 GetOrganizationApiRequestsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200204 GetOrganizationApiRequestsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return an aggregated overview of API requests data
 
@@ -426,7 +431,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationApiRequestsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequestsOverview`: InlineResponse200202
+    // response from `GetOrganizationApiRequestsOverview`: InlineResponse200204
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationApiRequestsOverview`: %v\n", resp)
 }
 ```
@@ -453,7 +458,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200202**](InlineResponse200202.md)
+[**InlineResponse200204**](InlineResponse200204.md)
 
 ### Authorization
 
@@ -471,7 +476,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApiRequestsOverviewResponseCodesByInterval
 
-> []InlineResponse200203 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
+> []InlineResponse200205 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
 
 Tracks organizations' API requests by response code across a given time period
 
@@ -508,7 +513,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200203
+    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200205
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval`: %v\n", resp)
 }
 ```
@@ -541,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200203**](InlineResponse200203.md)
+[**[]InlineResponse200205**](InlineResponse200205.md)
 
 ### Authorization
 
@@ -559,7 +564,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksStatusesOverview
 
-> InlineResponse200206 GetOrganizationApplianceUplinksStatusesOverview(ctx, organizationId).Execute()
+> InlineResponse200208 GetOrganizationApplianceUplinksStatusesOverview(ctx, organizationId).Execute()
 
 Returns an overview of uplink statuses
 
@@ -587,7 +592,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationApplianceUplinksStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksStatusesOverview`: InlineResponse200206
+    // response from `GetOrganizationApplianceUplinksStatusesOverview`: InlineResponse200208
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationApplianceUplinksStatusesOverview`: %v\n", resp)
 }
 ```
@@ -611,7 +616,397 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200206**](InlineResponse200206.md)
+[**InlineResponse200208**](InlineResponse200208.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationAssuranceAlertsOverview
+
+> InlineResponse200213 GetOrganizationAssuranceAlertsOverview(ctx, organizationId).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+
+Return overview of active health alerts for an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    networkId := "networkId_example" // string | Optional parameter to filter alerts overview by network ids. (optional)
+    severity := "severity_example" // string | Optional parameter to filter alerts overview by severity type. (optional)
+    types := []string{"Types_example"} // []string | Optional parameter to filter by alert type. (optional)
+    tsStart := time.Now() // time.Time | Optional parameter to filter by starting timestamp (optional)
+    tsEnd := time.Now() // time.Time | Optional parameter to filter by end timestamp (optional)
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter by primary device serial (optional)
+    deviceTypes := []string{"DeviceTypes_example"} // []string | Optional parameter to filter by device types (optional)
+    deviceTags := []string{"Inner_example"} // []string | Optional parameter to filter by device tags (optional)
+    active := true // bool | Optional parameter to filter by active alerts defaults to true (optional)
+    dismissed := true // bool | Optional parameter to filter by dismissed alerts defaults to false (optional)
+    resolved := true // bool | Optional parameter to filter by resolved alerts defaults to false (optional)
+    suppressAlertsForOfflineNodes := true // bool | When set to true the api will only return connectivity alerts for a given device if that device is in an offline state. This only applies to devices. This is ignored when resolved is true. Example:  If a Switch has a VLan Mismatch and is Unreachable. only the Unreachable alert will be returned. Defaults to false. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.OverviewApi.GetOrganizationAssuranceAlertsOverview(context.Background(), organizationId).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationAssuranceAlertsOverview``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationAssuranceAlertsOverview`: InlineResponse200213
+    fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationAssuranceAlertsOverview`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationAssuranceAlertsOverviewRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **networkId** | **string** | Optional parameter to filter alerts overview by network ids. | 
+ **severity** | **string** | Optional parameter to filter alerts overview by severity type. | 
+ **types** | **[]string** | Optional parameter to filter by alert type. | 
+ **tsStart** | **time.Time** | Optional parameter to filter by starting timestamp | 
+ **tsEnd** | **time.Time** | Optional parameter to filter by end timestamp | 
+ **serials** | **[]string** | Optional parameter to filter by primary device serial | 
+ **deviceTypes** | **[]string** | Optional parameter to filter by device types | 
+ **deviceTags** | **[]string** | Optional parameter to filter by device tags | 
+ **active** | **bool** | Optional parameter to filter by active alerts defaults to true | 
+ **dismissed** | **bool** | Optional parameter to filter by dismissed alerts defaults to false | 
+ **resolved** | **bool** | Optional parameter to filter by resolved alerts defaults to false | 
+ **suppressAlertsForOfflineNodes** | **bool** | When set to true the api will only return connectivity alerts for a given device if that device is in an offline state. This only applies to devices. This is ignored when resolved is true. Example:  If a Switch has a VLan Mismatch and is Unreachable. only the Unreachable alert will be returned. Defaults to false. | 
+
+### Return type
+
+[**InlineResponse200213**](InlineResponse200213.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationAssuranceAlertsOverviewByNetwork
+
+> InlineResponse200214 GetOrganizationAssuranceAlertsOverviewByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+
+Return a Summary of Alerts grouped by network and severity
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    sortOrder := "sortOrder_example" // string | Sorted order of entries. Order options are 'ascending' and 'descending'. Default is 'ascending'. (optional)
+    networkId := "networkId_example" // string | Optional parameter to filter alerts overview by network id. (optional)
+    severity := "severity_example" // string | Optional parameter to filter alerts overview by severity type. (optional)
+    types := []string{"Types_example"} // []string | Optional parameter to filter by alert type. (optional)
+    tsStart := time.Now() // time.Time | Optional parameter to filter by starting timestamp (optional)
+    tsEnd := time.Now() // time.Time | Optional parameter to filter by end timestamp (optional)
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter by primary device serial (optional)
+    deviceTypes := []string{"DeviceTypes_example"} // []string | Optional parameter to filter by device types (optional)
+    deviceTags := []string{"Inner_example"} // []string | Optional parameter to filter by device tags (optional)
+    active := true // bool | Optional parameter to filter by active alerts defaults to true (optional)
+    dismissed := true // bool | Optional parameter to filter by dismissed alerts defaults to false (optional)
+    resolved := true // bool | Optional parameter to filter by resolved alerts defaults to false (optional)
+    suppressAlertsForOfflineNodes := true // bool | When set to true the api will only return connectivity alerts for a given device if that device is in an offline state. This only applies to devices. This is ignored when resolved is true. Example:  If a Switch has a VLan Mismatch and is Unreachable. only the Unreachable alert will be returned. Defaults to false. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.OverviewApi.GetOrganizationAssuranceAlertsOverviewByNetwork(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationAssuranceAlertsOverviewByNetwork``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationAssuranceAlertsOverviewByNetwork`: InlineResponse200214
+    fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationAssuranceAlertsOverviewByNetwork`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationAssuranceAlertsOverviewByNetworkRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **sortOrder** | **string** | Sorted order of entries. Order options are &#39;ascending&#39; and &#39;descending&#39;. Default is &#39;ascending&#39;. | 
+ **networkId** | **string** | Optional parameter to filter alerts overview by network id. | 
+ **severity** | **string** | Optional parameter to filter alerts overview by severity type. | 
+ **types** | **[]string** | Optional parameter to filter by alert type. | 
+ **tsStart** | **time.Time** | Optional parameter to filter by starting timestamp | 
+ **tsEnd** | **time.Time** | Optional parameter to filter by end timestamp | 
+ **serials** | **[]string** | Optional parameter to filter by primary device serial | 
+ **deviceTypes** | **[]string** | Optional parameter to filter by device types | 
+ **deviceTags** | **[]string** | Optional parameter to filter by device tags | 
+ **active** | **bool** | Optional parameter to filter by active alerts defaults to true | 
+ **dismissed** | **bool** | Optional parameter to filter by dismissed alerts defaults to false | 
+ **resolved** | **bool** | Optional parameter to filter by resolved alerts defaults to false | 
+ **suppressAlertsForOfflineNodes** | **bool** | When set to true the api will only return connectivity alerts for a given device if that device is in an offline state. This only applies to devices. This is ignored when resolved is true. Example:  If a Switch has a VLan Mismatch and is Unreachable. only the Unreachable alert will be returned. Defaults to false. | 
+
+### Return type
+
+[**InlineResponse200214**](InlineResponse200214.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationAssuranceAlertsOverviewByType
+
+> InlineResponse200215 GetOrganizationAssuranceAlertsOverviewByType(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+
+Return a Summary of Alerts grouped by type and severity
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    sortOrder := "sortOrder_example" // string | Sorted order of entries. Order options are 'ascending' and 'descending'. Default is 'ascending'. (optional)
+    networkId := "networkId_example" // string | Optional parameter to filter alerts overview by network ids. (optional)
+    severity := "severity_example" // string | Optional parameter to filter alerts overview by severity type. (optional)
+    types := []string{"Types_example"} // []string | Optional parameter to filter by alert type. (optional)
+    tsStart := time.Now() // time.Time | Optional parameter to filter by starting timestamp (optional)
+    tsEnd := time.Now() // time.Time | Optional parameter to filter by end timestamp (optional)
+    sortBy := "sortBy_example" // string | Optional parameter to set column to sort by. (optional)
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter by primary device serial (optional)
+    deviceTypes := []string{"DeviceTypes_example"} // []string | Optional parameter to filter by device types (optional)
+    deviceTags := []string{"Inner_example"} // []string | Optional parameter to filter by device tags (optional)
+    active := true // bool | Optional parameter to filter by active alerts defaults to true (optional)
+    dismissed := true // bool | Optional parameter to filter by dismissed alerts defaults to false (optional)
+    resolved := true // bool | Optional parameter to filter by resolved alerts defaults to false (optional)
+    suppressAlertsForOfflineNodes := true // bool | When set to true the api will only return connectivity alerts for a given device if that device is in an offline state. This only applies to devices. This is ignored when resolved is true. Example:  If a Switch has a VLan Mismatch and is Unreachable. only the Unreachable alert will be returned. Defaults to false. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.OverviewApi.GetOrganizationAssuranceAlertsOverviewByType(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationAssuranceAlertsOverviewByType``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationAssuranceAlertsOverviewByType`: InlineResponse200215
+    fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationAssuranceAlertsOverviewByType`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationAssuranceAlertsOverviewByTypeRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **sortOrder** | **string** | Sorted order of entries. Order options are &#39;ascending&#39; and &#39;descending&#39;. Default is &#39;ascending&#39;. | 
+ **networkId** | **string** | Optional parameter to filter alerts overview by network ids. | 
+ **severity** | **string** | Optional parameter to filter alerts overview by severity type. | 
+ **types** | **[]string** | Optional parameter to filter by alert type. | 
+ **tsStart** | **time.Time** | Optional parameter to filter by starting timestamp | 
+ **tsEnd** | **time.Time** | Optional parameter to filter by end timestamp | 
+ **sortBy** | **string** | Optional parameter to set column to sort by. | 
+ **serials** | **[]string** | Optional parameter to filter by primary device serial | 
+ **deviceTypes** | **[]string** | Optional parameter to filter by device types | 
+ **deviceTags** | **[]string** | Optional parameter to filter by device tags | 
+ **active** | **bool** | Optional parameter to filter by active alerts defaults to true | 
+ **dismissed** | **bool** | Optional parameter to filter by dismissed alerts defaults to false | 
+ **resolved** | **bool** | Optional parameter to filter by resolved alerts defaults to false | 
+ **suppressAlertsForOfflineNodes** | **bool** | When set to true the api will only return connectivity alerts for a given device if that device is in an offline state. This only applies to devices. This is ignored when resolved is true. Example:  If a Switch has a VLan Mismatch and is Unreachable. only the Unreachable alert will be returned. Defaults to false. | 
+
+### Return type
+
+[**InlineResponse200215**](InlineResponse200215.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationAssuranceAlertsOverviewHistorical
+
+> InlineResponse200216 GetOrganizationAssuranceAlertsOverviewHistorical(ctx, organizationId).SegmentDuration(segmentDuration).TsStart(tsStart).NetworkId(networkId).Severity(severity).Types(types).TsEnd(tsEnd).Serials(serials).DeviceTypes(deviceTypes).Execute()
+
+Returns historical health alert overviews
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    segmentDuration := int32(56) // int32 | Amount of time in seconds for each segment in the returned dataset
+    tsStart := time.Now() // time.Time | Parameter to define starting timestamp of historical totals
+    networkId := "networkId_example" // string | Optional parameter to filter alerts overview by network ids. (optional)
+    severity := "severity_example" // string | Optional parameter to filter alerts overview by severity type. (optional)
+    types := []string{"Types_example"} // []string | Optional parameter to filter by alert type. (optional)
+    tsEnd := time.Now() // time.Time | Optional parameter to filter by end timestamp defaults to the current time (optional)
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter by primary device serial (optional)
+    deviceTypes := []string{"DeviceTypes_example"} // []string | Optional parameter to filter by device types (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.OverviewApi.GetOrganizationAssuranceAlertsOverviewHistorical(context.Background(), organizationId).SegmentDuration(segmentDuration).TsStart(tsStart).NetworkId(networkId).Severity(severity).Types(types).TsEnd(tsEnd).Serials(serials).DeviceTypes(deviceTypes).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationAssuranceAlertsOverviewHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationAssuranceAlertsOverviewHistorical`: InlineResponse200216
+    fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationAssuranceAlertsOverviewHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationAssuranceAlertsOverviewHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **segmentDuration** | **int32** | Amount of time in seconds for each segment in the returned dataset | 
+ **tsStart** | **time.Time** | Parameter to define starting timestamp of historical totals | 
+ **networkId** | **string** | Optional parameter to filter alerts overview by network ids. | 
+ **severity** | **string** | Optional parameter to filter alerts overview by severity type. | 
+ **types** | **[]string** | Optional parameter to filter by alert type. | 
+ **tsEnd** | **time.Time** | Optional parameter to filter by end timestamp defaults to the current time | 
+ **serials** | **[]string** | Optional parameter to filter by primary device serial | 
+ **deviceTypes** | **[]string** | Optional parameter to filter by device types | 
+
+### Return type
+
+[**InlineResponse200216**](InlineResponse200216.md)
 
 ### Authorization
 
@@ -629,7 +1024,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationClientsOverview
 
-> InlineResponse200220 GetOrganizationClientsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200227 GetOrganizationClientsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return summary information around client data usage (in kb) across the given organization.
 
@@ -660,7 +1055,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationClientsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationClientsOverview`: InlineResponse200220
+    // response from `GetOrganizationClientsOverview`: InlineResponse200227
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationClientsOverview`: %v\n", resp)
 }
 ```
@@ -687,7 +1082,83 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200220**](InlineResponse200220.md)
+[**InlineResponse200227**](InlineResponse200227.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationDevicesOverviewByModel
+
+> InlineResponse200235 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
+
+Lists the count for each device model
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    models := []string{"Inner_example"} // []string | Optional parameter to filter devices by one or more models. All returned devices will have a model that is an exact match. (optional)
+    networkIds := []string{"Inner_example"} // []string | Optional parameter to filter devices by networkId. (optional)
+    productTypes := []string{"ProductTypes_example"} // []string | Optional parameter to filter device by device product types. This filter uses multiple exact matches. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.OverviewApi.GetOrganizationDevicesOverviewByModel(context.Background(), organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationDevicesOverviewByModel``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200235
+    fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationDevicesOverviewByModel`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationDevicesOverviewByModelRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **models** | **[]string** | Optional parameter to filter devices by one or more models. All returned devices will have a model that is an exact match. | 
+ **networkIds** | **[]string** | Optional parameter to filter devices by networkId. | 
+ **productTypes** | **[]string** | Optional parameter to filter device by device product types. This filter uses multiple exact matches. | 
+
+### Return type
+
+[**InlineResponse200235**](InlineResponse200235.md)
 
 ### Authorization
 
@@ -705,7 +1176,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatusesOverview
 
-> InlineResponse200231 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
+> InlineResponse200239 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
 
 Return an overview of current device statuses
 
@@ -725,7 +1196,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    productTypes := []string{"ProductTypes_example"} // []string | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. (optional)
+    productTypes := []string{"ProductTypes_example"} // []string | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. (optional)
     networkIds := []string{"Inner_example"} // []string | An optional parameter to filter device statuses by network. (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -735,7 +1206,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationDevicesStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200231
+    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200239
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationDevicesStatusesOverview`: %v\n", resp)
 }
 ```
@@ -756,12 +1227,12 @@ Other parameters are passed through a pointer to a apiGetOrganizationDevicesStat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **productTypes** | **[]string** | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor. | 
+ **productTypes** | **[]string** | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. | 
  **networkIds** | **[]string** | An optional parameter to filter device statuses by network. | 
 
 ### Return type
 
-[**InlineResponse200231**](InlineResponse200231.md)
+[**InlineResponse200239**](InlineResponse200239.md)
 
 ### Authorization
 
@@ -779,7 +1250,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicensesOverview
 
-> InlineResponse200247 GetOrganizationLicensesOverview(ctx, organizationId).Execute()
+> InlineResponse200255 GetOrganizationLicensesOverview(ctx, organizationId).Execute()
 
 Return an overview of the license state for an organization
 
@@ -807,7 +1278,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationLicensesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicensesOverview`: InlineResponse200247
+    // response from `GetOrganizationLicensesOverview`: InlineResponse200255
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationLicensesOverview`: %v\n", resp)
 }
 ```
@@ -831,7 +1302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200247**](InlineResponse200247.md)
+[**InlineResponse200255**](InlineResponse200255.md)
 
 ### Authorization
 
@@ -849,7 +1320,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsOverview
 
-> InlineResponse200276 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200286 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the counts of all active ports for the requested timespan, grouped by speed
 
@@ -880,7 +1351,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationSwitchPortsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200276
+    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200286
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationSwitchPortsOverview`: %v\n", resp)
 }
 ```
@@ -907,7 +1378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200276**](InlineResponse200276.md)
+[**InlineResponse200286**](InlineResponse200286.md)
 
 ### Authorization
 

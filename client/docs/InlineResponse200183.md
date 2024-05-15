@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
-**Exception** | Pointer to [**InlineResponse200183Exception**](InlineResponse200183Exception.md) |  | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200183Rules**](InlineResponse200183Rules.md) | Bonjour forwarding rules | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
+**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200183WithDefaults instantiates a new InlineResponse200183 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetStartTs
 
-`func (o *InlineResponse200183) GetEnabled() bool`
+`func (o *InlineResponse200183) GetStartTs() time.Time`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse200183) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200183) GetStartTsOk() (*time.Time, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetStartTs
 
-`func (o *InlineResponse200183) SetEnabled(v bool)`
+`func (o *InlineResponse200183) SetStartTs(v time.Time)`
 
-SetEnabled sets Enabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasEnabled
+### HasStartTs
 
-`func (o *InlineResponse200183) HasEnabled() bool`
+`func (o *InlineResponse200183) HasStartTs() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetException
+### GetEndTs
 
-`func (o *InlineResponse200183) GetException() InlineResponse200183Exception`
+`func (o *InlineResponse200183) GetEndTs() time.Time`
 
-GetException returns the Exception field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetExceptionOk
+### GetEndTsOk
 
-`func (o *InlineResponse200183) GetExceptionOk() (*InlineResponse200183Exception, bool)`
+`func (o *InlineResponse200183) GetEndTsOk() (*time.Time, bool)`
 
-GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetException
+### SetEndTs
 
-`func (o *InlineResponse200183) SetException(v InlineResponse200183Exception)`
+`func (o *InlineResponse200183) SetEndTs(v time.Time)`
 
-SetException sets Exception field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasException
+### HasEndTs
 
-`func (o *InlineResponse200183) HasException() bool`
+`func (o *InlineResponse200183) HasEndTs() bool`
 
-HasException returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetRules
+### GetSnr
 
-`func (o *InlineResponse200183) GetRules() []InlineResponse200183Rules`
+`func (o *InlineResponse200183) GetSnr() int32`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetSnr returns the Snr field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetSnrOk
 
-`func (o *InlineResponse200183) GetRulesOk() (*[]InlineResponse200183Rules, bool)`
+`func (o *InlineResponse200183) GetSnrOk() (*int32, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetSnr
 
-`func (o *InlineResponse200183) SetRules(v []InlineResponse200183Rules)`
+`func (o *InlineResponse200183) SetSnr(v int32)`
 
-SetRules sets Rules field to given value.
+SetSnr sets Snr field to given value.
 
-### HasRules
+### HasSnr
 
-`func (o *InlineResponse200183) HasRules() bool`
+`func (o *InlineResponse200183) HasSnr() bool`
 
-HasRules returns a boolean if a field has been set.
+HasSnr returns a boolean if a field has been set.
+
+### GetRssi
+
+`func (o *InlineResponse200183) GetRssi() int32`
+
+GetRssi returns the Rssi field if non-nil, zero value otherwise.
+
+### GetRssiOk
+
+`func (o *InlineResponse200183) GetRssiOk() (*int32, bool)`
+
+GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRssi
+
+`func (o *InlineResponse200183) SetRssi(v int32)`
+
+SetRssi sets Rssi field to given value.
+
+### HasRssi
+
+`func (o *InlineResponse200183) HasRssi() bool`
+
+HasRssi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

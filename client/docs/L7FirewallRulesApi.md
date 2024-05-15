@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidFirewallL7FirewallRules
 
-> InlineResponse200186 GetNetworkWirelessSsidFirewallL7FirewallRules(ctx, networkId, number).Execute()
+> InlineResponse200188 GetNetworkWirelessSsidFirewallL7FirewallRules(ctx, networkId, number).Execute()
 
 Return the L7 firewall rules for an SSID on an MR network
 
@@ -183,7 +183,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `L7FirewallRulesApi.GetNetworkWirelessSsidFirewallL7FirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidFirewallL7FirewallRules`: InlineResponse200186
+    // response from `GetNetworkWirelessSsidFirewallL7FirewallRules`: InlineResponse200188
     fmt.Fprintf(os.Stdout, "Response from `L7FirewallRulesApi.GetNetworkWirelessSsidFirewallL7FirewallRules`: %v\n", resp)
 }
 ```
@@ -209,7 +209,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200186**](InlineResponse200186.md)
+[**InlineResponse200188**](InlineResponse200188.md)
 
 ### Authorization
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidFirewallL7FirewallRules
 
-> InlineResponse200186 UpdateNetworkWirelessSsidFirewallL7FirewallRules(ctx, networkId, number).UpdateNetworkWirelessSsidFirewallL7FirewallRules(updateNetworkWirelessSsidFirewallL7FirewallRules).Execute()
+> InlineResponse200188 UpdateNetworkWirelessSsidFirewallL7FirewallRules(ctx, networkId, number).UpdateNetworkWirelessSsidFirewallL7FirewallRules(updateNetworkWirelessSsidFirewallL7FirewallRules).Execute()
 
 Update the L7 firewall rules of an SSID on an MR network
 
@@ -320,7 +320,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidFirewallL7FirewallRules := *openapiclient.NewInlineObject184() // InlineObject184 |  (optional)
+    updateNetworkWirelessSsidFirewallL7FirewallRules := *openapiclient.NewInlineObject187() // InlineObject187 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -329,7 +329,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `L7FirewallRulesApi.UpdateNetworkWirelessSsidFirewallL7FirewallRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidFirewallL7FirewallRules`: InlineResponse200186
+    // response from `UpdateNetworkWirelessSsidFirewallL7FirewallRules`: InlineResponse200188
     fmt.Fprintf(os.Stdout, "Response from `L7FirewallRulesApi.UpdateNetworkWirelessSsidFirewallL7FirewallRules`: %v\n", resp)
 }
 ```
@@ -352,11 +352,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidFirewallL7FirewallRules** | [**InlineObject184**](InlineObject184.md) |  | 
+ **updateNetworkWirelessSsidFirewallL7FirewallRules** | [**InlineObject187**](InlineObject187.md) |  | 
 
 ### Return type
 
-[**InlineResponse200186**](InlineResponse200186.md)
+[**InlineResponse200188**](InlineResponse200188.md)
 
 ### Authorization
 

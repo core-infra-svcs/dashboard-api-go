@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchRoutingMulticastRendezvousPoint
 
-> InlineResponse200151 CreateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId).CreateNetworkSwitchRoutingMulticastRendezvousPoint(createNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
+> InlineResponse200152 CreateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId).CreateNetworkSwitchRoutingMulticastRendezvousPoint(createNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
 
 Create a multicast rendezvous point
 
@@ -215,7 +215,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.CreateNetworkSwitchRoutingMulticastRendezvousPoint``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200151
+    // response from `CreateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200152
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.CreateNetworkSwitchRoutingMulticastRendezvousPoint`: %v\n", resp)
 }
 ```
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200151**](InlineResponse200151.md)
+[**InlineResponse200152**](InlineResponse200152.md)
 
 ### Authorization
 
@@ -1128,7 +1128,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingMulticast
 
-> InlineResponse200150 GetNetworkSwitchRoutingMulticast(ctx, networkId).Execute()
+> InlineResponse200151 GetNetworkSwitchRoutingMulticast(ctx, networkId).Execute()
 
 Return multicast settings for a network
 
@@ -1156,7 +1156,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.GetNetworkSwitchRoutingMulticast``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingMulticast`: InlineResponse200150
+    // response from `GetNetworkSwitchRoutingMulticast`: InlineResponse200151
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.GetNetworkSwitchRoutingMulticast`: %v\n", resp)
 }
 ```
@@ -1180,7 +1180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200150**](InlineResponse200150.md)
+[**InlineResponse200151**](InlineResponse200151.md)
 
 ### Authorization
 
@@ -1198,7 +1198,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingMulticastRendezvousPoint
 
-> InlineResponse200151 GetNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).Execute()
+> InlineResponse200152 GetNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).Execute()
 
 Return a multicast rendezvous point
 
@@ -1227,7 +1227,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.GetNetworkSwitchRoutingMulticastRendezvousPoint``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200151
+    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200152
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.GetNetworkSwitchRoutingMulticastRendezvousPoint`: %v\n", resp)
 }
 ```
@@ -1253,7 +1253,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200151**](InlineResponse200151.md)
+[**InlineResponse200152**](InlineResponse200152.md)
 
 ### Authorization
 
@@ -1271,7 +1271,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingMulticastRendezvousPoints
 
-> []InlineResponse200151 GetNetworkSwitchRoutingMulticastRendezvousPoints(ctx, networkId).Execute()
+> []InlineResponse200152 GetNetworkSwitchRoutingMulticastRendezvousPoints(ctx, networkId).Execute()
 
 List multicast rendezvous points
 
@@ -1299,7 +1299,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.GetNetworkSwitchRoutingMulticastRendezvousPoints``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoints`: []InlineResponse200151
+    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoints`: []InlineResponse200152
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.GetNetworkSwitchRoutingMulticastRendezvousPoints`: %v\n", resp)
 }
 ```
@@ -1323,7 +1323,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200151**](InlineResponse200151.md)
+[**[]InlineResponse200152**](InlineResponse200152.md)
 
 ### Authorization
 
@@ -1341,7 +1341,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingOspf
 
-> InlineResponse200152 GetNetworkSwitchRoutingOspf(ctx, networkId).Execute()
+> InlineResponse200153 GetNetworkSwitchRoutingOspf(ctx, networkId).Execute()
 
 Return layer 3 OSPF routing configuration
 
@@ -1369,7 +1369,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.GetNetworkSwitchRoutingOspf``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingOspf`: InlineResponse200152
+    // response from `GetNetworkSwitchRoutingOspf`: InlineResponse200153
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.GetNetworkSwitchRoutingOspf`: %v\n", resp)
 }
 ```
@@ -1393,7 +1393,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200152**](InlineResponse200152.md)
+[**InlineResponse200153**](InlineResponse200153.md)
 
 ### Authorization
 
@@ -2010,7 +2010,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchRoutingMulticast
 
-> InlineResponse200150 UpdateNetworkSwitchRoutingMulticast(ctx, networkId).UpdateNetworkSwitchRoutingMulticast(updateNetworkSwitchRoutingMulticast).Execute()
+> InlineResponse200151 UpdateNetworkSwitchRoutingMulticast(ctx, networkId).UpdateNetworkSwitchRoutingMulticast(updateNetworkSwitchRoutingMulticast).Execute()
 
 Update multicast settings for a network
 
@@ -2039,7 +2039,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.UpdateNetworkSwitchRoutingMulticast``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchRoutingMulticast`: InlineResponse200150
+    // response from `UpdateNetworkSwitchRoutingMulticast`: InlineResponse200151
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.UpdateNetworkSwitchRoutingMulticast`: %v\n", resp)
 }
 ```
@@ -2064,7 +2064,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200150**](InlineResponse200150.md)
+[**InlineResponse200151**](InlineResponse200151.md)
 
 ### Authorization
 
@@ -2082,7 +2082,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchRoutingMulticastRendezvousPoint
 
-> InlineResponse200151 UpdateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).UpdateNetworkSwitchRoutingMulticastRendezvousPoint(updateNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
+> InlineResponse200152 UpdateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).UpdateNetworkSwitchRoutingMulticastRendezvousPoint(updateNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
 
 Update a multicast rendezvous point
 
@@ -2112,7 +2112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.UpdateNetworkSwitchRoutingMulticastRendezvousPoint``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200151
+    // response from `UpdateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200152
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.UpdateNetworkSwitchRoutingMulticastRendezvousPoint`: %v\n", resp)
 }
 ```
@@ -2139,7 +2139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200151**](InlineResponse200151.md)
+[**InlineResponse200152**](InlineResponse200152.md)
 
 ### Authorization
 
@@ -2157,7 +2157,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchRoutingOspf
 
-> InlineResponse200152 UpdateNetworkSwitchRoutingOspf(ctx, networkId).UpdateNetworkSwitchRoutingOspf(updateNetworkSwitchRoutingOspf).Execute()
+> InlineResponse200153 UpdateNetworkSwitchRoutingOspf(ctx, networkId).UpdateNetworkSwitchRoutingOspf(updateNetworkSwitchRoutingOspf).Execute()
 
 Update layer 3 OSPF routing configuration
 
@@ -2186,7 +2186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.UpdateNetworkSwitchRoutingOspf``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchRoutingOspf`: InlineResponse200152
+    // response from `UpdateNetworkSwitchRoutingOspf`: InlineResponse200153
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.UpdateNetworkSwitchRoutingOspf`: %v\n", resp)
 }
 ```
@@ -2211,7 +2211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200152**](InlineResponse200152.md)
+[**InlineResponse200153**](InlineResponse200153.md)
 
 ### Authorization
 
@@ -2229,7 +2229,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStackRoutingInterface
 
-> InlineResponse200155 UpdateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterface(updateNetworkSwitchStackRoutingInterface).Execute()
+> InlineResponse200156 UpdateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterface(updateNetworkSwitchStackRoutingInterface).Execute()
 
 Update a layer 3 interface for a switch stack
 
@@ -2260,7 +2260,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RoutingApi.UpdateNetworkSwitchStackRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStackRoutingInterface`: InlineResponse200155
+    // response from `UpdateNetworkSwitchStackRoutingInterface`: InlineResponse200156
     fmt.Fprintf(os.Stdout, "Response from `RoutingApi.UpdateNetworkSwitchStackRoutingInterface`: %v\n", resp)
 }
 ```
@@ -2289,7 +2289,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200155**](InlineResponse200155.md)
+[**InlineResponse200156**](InlineResponse200156.md)
 
 ### Authorization
 

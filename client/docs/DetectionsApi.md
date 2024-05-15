@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationCameraDetectionsHistoryByBoundaryByInterval
 
-> []InlineResponse200215 GetOrganizationCameraDetectionsHistoryByBoundaryByInterval(ctx, organizationId).BoundaryIds(boundaryIds).Duration(duration).PerPage(perPage).BoundaryTypes(boundaryTypes).Execute()
+> []InlineResponse200222 GetOrganizationCameraDetectionsHistoryByBoundaryByInterval(ctx, organizationId).BoundaryIds(boundaryIds).Duration(duration).PerPage(perPage).BoundaryTypes(boundaryTypes).Execute()
 
 Returns analytics data for timespans
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DetectionsApi.GetOrganizationCameraDetectionsHistoryByBoundaryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: []InlineResponse200215
+    // response from `GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: []InlineResponse200222
     fmt.Fprintf(os.Stdout, "Response from `DetectionsApi.GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200215**](InlineResponse200215.md)
+[**[]InlineResponse200222**](InlineResponse200222.md)
 
 ### Authorization
 

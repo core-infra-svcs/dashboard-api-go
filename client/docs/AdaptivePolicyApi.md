@@ -27,7 +27,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationAdaptivePolicyAcl
 
-> InlineResponse200194 CreateOrganizationAdaptivePolicyAcl(ctx, organizationId).CreateOrganizationAdaptivePolicyAcl(createOrganizationAdaptivePolicyAcl).Execute()
+> InlineResponse200196 CreateOrganizationAdaptivePolicyAcl(ctx, organizationId).CreateOrganizationAdaptivePolicyAcl(createOrganizationAdaptivePolicyAcl).Execute()
 
 Creates new adaptive policy ACL
 
@@ -47,7 +47,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject196("Name_example", []openapiclient.OrganizationsOrganizationIdAdaptivePolicyAclsRules1{*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyAclsRules1("Policy_example", "Protocol_example")}, "IpVersion_example") // InlineObject196 | 
+    createOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject199("Name_example", []openapiclient.OrganizationsOrganizationIdAdaptivePolicyAclsRules1{*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyAclsRules1("Policy_example", "Protocol_example")}, "IpVersion_example") // InlineObject199 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -56,7 +56,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.CreateOrganizationAdaptivePolicyAcl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationAdaptivePolicyAcl`: InlineResponse200194
+    // response from `CreateOrganizationAdaptivePolicyAcl`: InlineResponse200196
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.CreateOrganizationAdaptivePolicyAcl`: %v\n", resp)
 }
 ```
@@ -77,11 +77,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyAcl** | [**InlineObject196**](InlineObject196.md) |  | 
+ **createOrganizationAdaptivePolicyAcl** | [**InlineObject199**](InlineObject199.md) |  | 
 
 ### Return type
 
-[**InlineResponse200194**](InlineResponse200194.md)
+[**InlineResponse200196**](InlineResponse200196.md)
 
 ### Authorization
 
@@ -99,7 +99,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationAdaptivePolicyGroup
 
-> InlineResponse200195 CreateOrganizationAdaptivePolicyGroup(ctx, organizationId).CreateOrganizationAdaptivePolicyGroup(createOrganizationAdaptivePolicyGroup).Execute()
+> InlineResponse200197 CreateOrganizationAdaptivePolicyGroup(ctx, organizationId).CreateOrganizationAdaptivePolicyGroup(createOrganizationAdaptivePolicyGroup).Execute()
 
 Creates a new adaptive policy group
 
@@ -119,7 +119,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject198("Name_example", int32(123)) // InlineObject198 | 
+    createOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject201("Name_example", int32(123)) // InlineObject201 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -128,7 +128,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.CreateOrganizationAdaptivePolicyGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationAdaptivePolicyGroup`: InlineResponse200195
+    // response from `CreateOrganizationAdaptivePolicyGroup`: InlineResponse200197
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.CreateOrganizationAdaptivePolicyGroup`: %v\n", resp)
 }
 ```
@@ -149,11 +149,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyGroup** | [**InlineObject198**](InlineObject198.md) |  | 
+ **createOrganizationAdaptivePolicyGroup** | [**InlineObject201**](InlineObject201.md) |  | 
 
 ### Return type
 
-[**InlineResponse200195**](InlineResponse200195.md)
+[**InlineResponse200197**](InlineResponse200197.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationAdaptivePolicyPolicy
 
-> InlineResponse200197 CreateOrganizationAdaptivePolicyPolicy(ctx, organizationId).CreateOrganizationAdaptivePolicyPolicy(createOrganizationAdaptivePolicyPolicy).Execute()
+> InlineResponse200199 CreateOrganizationAdaptivePolicyPolicy(ctx, organizationId).CreateOrganizationAdaptivePolicyPolicy(createOrganizationAdaptivePolicyPolicy).Execute()
 
 Add an Adaptive Policy
 
@@ -191,7 +191,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject200(*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1(), *openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1()) // InlineObject200 | 
+    createOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject203(*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1(), *openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1()) // InlineObject203 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -200,7 +200,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.CreateOrganizationAdaptivePolicyPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationAdaptivePolicyPolicy`: InlineResponse200197
+    // response from `CreateOrganizationAdaptivePolicyPolicy`: InlineResponse200199
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.CreateOrganizationAdaptivePolicyPolicy`: %v\n", resp)
 }
 ```
@@ -221,11 +221,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyPolicy** | [**InlineObject200**](InlineObject200.md) |  | 
+ **createOrganizationAdaptivePolicyPolicy** | [**InlineObject203**](InlineObject203.md) |  | 
 
 ### Return type
 
-[**InlineResponse200197**](InlineResponse200197.md)
+[**InlineResponse200199**](InlineResponse200199.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyAcl
 
-> InlineResponse200194 GetOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).Execute()
+> InlineResponse200196 GetOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).Execute()
 
 Returns the adaptive policy ACL information
 
@@ -485,7 +485,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicyAcl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyAcl`: InlineResponse200194
+    // response from `GetOrganizationAdaptivePolicyAcl`: InlineResponse200196
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.GetOrganizationAdaptivePolicyAcl`: %v\n", resp)
 }
 ```
@@ -511,7 +511,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200194**](InlineResponse200194.md)
+[**InlineResponse200196**](InlineResponse200196.md)
 
 ### Authorization
 
@@ -529,7 +529,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyAcls
 
-> []InlineResponse200194 GetOrganizationAdaptivePolicyAcls(ctx, organizationId).Execute()
+> []InlineResponse200196 GetOrganizationAdaptivePolicyAcls(ctx, organizationId).Execute()
 
 List adaptive policy ACLs in a organization
 
@@ -557,7 +557,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicyAcls``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyAcls`: []InlineResponse200194
+    // response from `GetOrganizationAdaptivePolicyAcls`: []InlineResponse200196
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.GetOrganizationAdaptivePolicyAcls`: %v\n", resp)
 }
 ```
@@ -581,7 +581,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200194**](InlineResponse200194.md)
+[**[]InlineResponse200196**](InlineResponse200196.md)
 
 ### Authorization
 
@@ -599,7 +599,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyGroup
 
-> InlineResponse200195 GetOrganizationAdaptivePolicyGroup(ctx, organizationId, id).Execute()
+> InlineResponse200197 GetOrganizationAdaptivePolicyGroup(ctx, organizationId, id).Execute()
 
 Returns an adaptive policy group
 
@@ -628,7 +628,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicyGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyGroup`: InlineResponse200195
+    // response from `GetOrganizationAdaptivePolicyGroup`: InlineResponse200197
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.GetOrganizationAdaptivePolicyGroup`: %v\n", resp)
 }
 ```
@@ -654,7 +654,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200195**](InlineResponse200195.md)
+[**InlineResponse200197**](InlineResponse200197.md)
 
 ### Authorization
 
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyGroups
 
-> []InlineResponse200195 GetOrganizationAdaptivePolicyGroups(ctx, organizationId).Execute()
+> []InlineResponse200197 GetOrganizationAdaptivePolicyGroups(ctx, organizationId).Execute()
 
 List adaptive policy groups in a organization
 
@@ -700,7 +700,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicyGroups``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyGroups`: []InlineResponse200195
+    // response from `GetOrganizationAdaptivePolicyGroups`: []InlineResponse200197
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.GetOrganizationAdaptivePolicyGroups`: %v\n", resp)
 }
 ```
@@ -724,7 +724,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200195**](InlineResponse200195.md)
+[**[]InlineResponse200197**](InlineResponse200197.md)
 
 ### Authorization
 
@@ -742,7 +742,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyOverview
 
-> InlineResponse200196 GetOrganizationAdaptivePolicyOverview(ctx, organizationId).Execute()
+> InlineResponse200198 GetOrganizationAdaptivePolicyOverview(ctx, organizationId).Execute()
 
 Returns adaptive policy aggregate statistics for an organization
 
@@ -770,7 +770,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicyOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyOverview`: InlineResponse200196
+    // response from `GetOrganizationAdaptivePolicyOverview`: InlineResponse200198
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.GetOrganizationAdaptivePolicyOverview`: %v\n", resp)
 }
 ```
@@ -794,7 +794,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200196**](InlineResponse200196.md)
+[**InlineResponse200198**](InlineResponse200198.md)
 
 ### Authorization
 
@@ -812,7 +812,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyPolicies
 
-> []InlineResponse200197 GetOrganizationAdaptivePolicyPolicies(ctx, organizationId).Execute()
+> []InlineResponse200199 GetOrganizationAdaptivePolicyPolicies(ctx, organizationId).Execute()
 
 List adaptive policies in an organization
 
@@ -840,7 +840,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicyPolicies``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyPolicies`: []InlineResponse200197
+    // response from `GetOrganizationAdaptivePolicyPolicies`: []InlineResponse200199
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.GetOrganizationAdaptivePolicyPolicies`: %v\n", resp)
 }
 ```
@@ -864,7 +864,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200197**](InlineResponse200197.md)
+[**[]InlineResponse200199**](InlineResponse200199.md)
 
 ### Authorization
 
@@ -882,7 +882,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyPolicy
 
-> InlineResponse200197 GetOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).Execute()
+> InlineResponse200199 GetOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).Execute()
 
 Return an adaptive policy
 
@@ -911,7 +911,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicyPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyPolicy`: InlineResponse200197
+    // response from `GetOrganizationAdaptivePolicyPolicy`: InlineResponse200199
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.GetOrganizationAdaptivePolicyPolicy`: %v\n", resp)
 }
 ```
@@ -937,7 +937,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200197**](InlineResponse200197.md)
+[**InlineResponse200199**](InlineResponse200199.md)
 
 ### Authorization
 
@@ -955,7 +955,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicySettings
 
-> InlineResponse200198 GetOrganizationAdaptivePolicySettings(ctx, organizationId).Execute()
+> InlineResponse200200 GetOrganizationAdaptivePolicySettings(ctx, organizationId).Execute()
 
 Returns global adaptive policy settings in an organization
 
@@ -983,7 +983,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.GetOrganizationAdaptivePolicySettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicySettings`: InlineResponse200198
+    // response from `GetOrganizationAdaptivePolicySettings`: InlineResponse200200
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.GetOrganizationAdaptivePolicySettings`: %v\n", resp)
 }
 ```
@@ -1007,7 +1007,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200198**](InlineResponse200198.md)
+[**InlineResponse200200**](InlineResponse200200.md)
 
 ### Authorization
 
@@ -1025,7 +1025,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdaptivePolicyAcl
 
-> InlineResponse200194 UpdateOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).UpdateOrganizationAdaptivePolicyAcl(updateOrganizationAdaptivePolicyAcl).Execute()
+> InlineResponse200196 UpdateOrganizationAdaptivePolicyAcl(ctx, organizationId, aclId).UpdateOrganizationAdaptivePolicyAcl(updateOrganizationAdaptivePolicyAcl).Execute()
 
 Updates an adaptive policy ACL
 
@@ -1046,7 +1046,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     aclId := "aclId_example" // string | Acl ID
-    updateOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject197() // InlineObject197 |  (optional)
+    updateOrganizationAdaptivePolicyAcl := *openapiclient.NewInlineObject200() // InlineObject200 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1055,7 +1055,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyAcl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationAdaptivePolicyAcl`: InlineResponse200194
+    // response from `UpdateOrganizationAdaptivePolicyAcl`: InlineResponse200196
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyAcl`: %v\n", resp)
 }
 ```
@@ -1078,11 +1078,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyAcl** | [**InlineObject197**](InlineObject197.md) |  | 
+ **updateOrganizationAdaptivePolicyAcl** | [**InlineObject200**](InlineObject200.md) |  | 
 
 ### Return type
 
-[**InlineResponse200194**](InlineResponse200194.md)
+[**InlineResponse200196**](InlineResponse200196.md)
 
 ### Authorization
 
@@ -1100,7 +1100,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdaptivePolicyGroup
 
-> InlineResponse200195 UpdateOrganizationAdaptivePolicyGroup(ctx, organizationId, id).UpdateOrganizationAdaptivePolicyGroup(updateOrganizationAdaptivePolicyGroup).Execute()
+> InlineResponse200197 UpdateOrganizationAdaptivePolicyGroup(ctx, organizationId, id).UpdateOrganizationAdaptivePolicyGroup(updateOrganizationAdaptivePolicyGroup).Execute()
 
 Updates an adaptive policy group
 
@@ -1121,7 +1121,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     id := "id_example" // string | ID
-    updateOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject199() // InlineObject199 |  (optional)
+    updateOrganizationAdaptivePolicyGroup := *openapiclient.NewInlineObject202() // InlineObject202 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1130,7 +1130,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationAdaptivePolicyGroup`: InlineResponse200195
+    // response from `UpdateOrganizationAdaptivePolicyGroup`: InlineResponse200197
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyGroup`: %v\n", resp)
 }
 ```
@@ -1153,11 +1153,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyGroup** | [**InlineObject199**](InlineObject199.md) |  | 
+ **updateOrganizationAdaptivePolicyGroup** | [**InlineObject202**](InlineObject202.md) |  | 
 
 ### Return type
 
-[**InlineResponse200195**](InlineResponse200195.md)
+[**InlineResponse200197**](InlineResponse200197.md)
 
 ### Authorization
 
@@ -1175,7 +1175,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdaptivePolicyPolicy
 
-> InlineResponse200197 UpdateOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).UpdateOrganizationAdaptivePolicyPolicy(updateOrganizationAdaptivePolicyPolicy).Execute()
+> InlineResponse200199 UpdateOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).UpdateOrganizationAdaptivePolicyPolicy(updateOrganizationAdaptivePolicyPolicy).Execute()
 
 Update an Adaptive Policy
 
@@ -1196,7 +1196,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     id := "id_example" // string | ID
-    updateOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject201() // InlineObject201 |  (optional)
+    updateOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject204() // InlineObject204 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1205,7 +1205,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationAdaptivePolicyPolicy`: InlineResponse200197
+    // response from `UpdateOrganizationAdaptivePolicyPolicy`: InlineResponse200199
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicyPolicy`: %v\n", resp)
 }
 ```
@@ -1228,11 +1228,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyPolicy** | [**InlineObject201**](InlineObject201.md) |  | 
+ **updateOrganizationAdaptivePolicyPolicy** | [**InlineObject204**](InlineObject204.md) |  | 
 
 ### Return type
 
-[**InlineResponse200197**](InlineResponse200197.md)
+[**InlineResponse200199**](InlineResponse200199.md)
 
 ### Authorization
 
@@ -1250,7 +1250,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdaptivePolicySettings
 
-> InlineResponse200198 UpdateOrganizationAdaptivePolicySettings(ctx, organizationId).UpdateOrganizationAdaptivePolicySettings(updateOrganizationAdaptivePolicySettings).Execute()
+> InlineResponse200200 UpdateOrganizationAdaptivePolicySettings(ctx, organizationId).UpdateOrganizationAdaptivePolicySettings(updateOrganizationAdaptivePolicySettings).Execute()
 
 Update global adaptive policy settings
 
@@ -1270,7 +1270,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationAdaptivePolicySettings := *openapiclient.NewInlineObject202() // InlineObject202 |  (optional)
+    updateOrganizationAdaptivePolicySettings := *openapiclient.NewInlineObject205() // InlineObject205 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1279,7 +1279,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicySettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationAdaptivePolicySettings`: InlineResponse200198
+    // response from `UpdateOrganizationAdaptivePolicySettings`: InlineResponse200200
     fmt.Fprintf(os.Stdout, "Response from `AdaptivePolicyApi.UpdateOrganizationAdaptivePolicySettings`: %v\n", resp)
 }
 ```
@@ -1300,11 +1300,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationAdaptivePolicySettings** | [**InlineObject202**](InlineObject202.md) |  | 
+ **updateOrganizationAdaptivePolicySettings** | [**InlineObject205**](InlineObject205.md) |  | 
 
 ### Return type
 
-[**InlineResponse200198**](InlineResponse200198.md)
+[**InlineResponse200200**](InlineResponse200200.md)
 
 ### Authorization
 

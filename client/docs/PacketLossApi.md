@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationWirelessDevicesPacketLossByClient
 
-> []InlineResponse200286 GetOrganizationWirelessDevicesPacketLossByClient(ctx, organizationId).NetworkIds(networkIds).Ssids(ssids).Bands(bands).Macs(macs).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200298 GetOrganizationWirelessDevicesPacketLossByClient(ctx, organizationId).NetworkIds(networkIds).Ssids(ssids).Bands(bands).Macs(macs).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all clients in the organization.
 
@@ -50,7 +50,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketLossApi.GetOrganizationWirelessDevicesPacketLossByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByClient`: []InlineResponse200286
+    // response from `GetOrganizationWirelessDevicesPacketLossByClient`: []InlineResponse200298
     fmt.Fprintf(os.Stdout, "Response from `PacketLossApi.GetOrganizationWirelessDevicesPacketLossByClient`: %v\n", resp)
 }
 ```
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200286**](InlineResponse200286.md)
+[**[]InlineResponse200298**](InlineResponse200298.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByDevice
 
-> []InlineResponse200287 GetOrganizationWirelessDevicesPacketLossByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200299 GetOrganizationWirelessDevicesPacketLossByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all devices in the organization
 
@@ -140,7 +140,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketLossApi.GetOrganizationWirelessDevicesPacketLossByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByDevice`: []InlineResponse200287
+    // response from `GetOrganizationWirelessDevicesPacketLossByDevice`: []InlineResponse200299
     fmt.Fprintf(os.Stdout, "Response from `PacketLossApi.GetOrganizationWirelessDevicesPacketLossByDevice`: %v\n", resp)
 }
 ```
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200287**](InlineResponse200287.md)
+[**[]InlineResponse200299**](InlineResponse200299.md)
 
 ### Authorization
 
@@ -192,7 +192,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByNetwork
 
-> []InlineResponse200288 GetOrganizationWirelessDevicesPacketLossByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200300 GetOrganizationWirelessDevicesPacketLossByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all networks in the organization.
 
@@ -230,7 +230,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PacketLossApi.GetOrganizationWirelessDevicesPacketLossByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByNetwork`: []InlineResponse200288
+    // response from `GetOrganizationWirelessDevicesPacketLossByNetwork`: []InlineResponse200300
     fmt.Fprintf(os.Stdout, "Response from `PacketLossApi.GetOrganizationWirelessDevicesPacketLossByNetwork`: %v\n", resp)
 }
 ```
@@ -264,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200288**](InlineResponse200288.md)
+[**[]InlineResponse200300**](InlineResponse200300.md)
 
 ### Authorization
 

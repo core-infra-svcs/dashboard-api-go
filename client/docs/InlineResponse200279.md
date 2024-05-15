@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CallbackId** | Pointer to **string** | The ID of the callback | [optional] 
-**Status** | Pointer to **string** | The status of the callback | [optional] 
-**Errors** | Pointer to **[]string** | The errors returned by the callback | [optional] 
-**CreatedBy** | Pointer to [**InlineResponse200279CreatedBy**](InlineResponse200279CreatedBy.md) |  | [optional] 
-**Webhook** | Pointer to [**InlineResponse200279Webhook**](InlineResponse200279Webhook.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the device | [optional] 
+**Model** | Pointer to **string** | Model of the device | [optional] 
+**Serial** | Pointer to **string** | Serial number of the device | [optional] 
+**Mac** | Pointer to **string** | Mac address of the device | [optional] 
+**ProductType** | Pointer to **string** | Product type of the device | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage.md) |  | [optional] 
+**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageClients**](OrganizationsOrganizationIdSummaryTopDevicesByUsageClients.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +32,205 @@ NewInlineResponse200279WithDefaults instantiates a new InlineResponse200279 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCallbackId
+### GetName
 
-`func (o *InlineResponse200279) GetCallbackId() string`
+`func (o *InlineResponse200279) GetName() string`
 
-GetCallbackId returns the CallbackId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCallbackIdOk
+### GetNameOk
 
-`func (o *InlineResponse200279) GetCallbackIdOk() (*string, bool)`
+`func (o *InlineResponse200279) GetNameOk() (*string, bool)`
 
-GetCallbackIdOk returns a tuple with the CallbackId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallbackId
+### SetName
 
-`func (o *InlineResponse200279) SetCallbackId(v string)`
+`func (o *InlineResponse200279) SetName(v string)`
 
-SetCallbackId sets CallbackId field to given value.
+SetName sets Name field to given value.
 
-### HasCallbackId
+### HasName
 
-`func (o *InlineResponse200279) HasCallbackId() bool`
+`func (o *InlineResponse200279) HasName() bool`
 
-HasCallbackId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetStatus
+### GetModel
 
-`func (o *InlineResponse200279) GetStatus() string`
+`func (o *InlineResponse200279) GetModel() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetModelOk
 
-`func (o *InlineResponse200279) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200279) GetModelOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetModel
 
-`func (o *InlineResponse200279) SetStatus(v string)`
+`func (o *InlineResponse200279) SetModel(v string)`
 
-SetStatus sets Status field to given value.
+SetModel sets Model field to given value.
 
-### HasStatus
+### HasModel
 
-`func (o *InlineResponse200279) HasStatus() bool`
+`func (o *InlineResponse200279) HasModel() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetErrors
+### GetSerial
 
-`func (o *InlineResponse200279) GetErrors() []string`
+`func (o *InlineResponse200279) GetSerial() string`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetSerialOk
 
-`func (o *InlineResponse200279) GetErrorsOk() (*[]string, bool)`
+`func (o *InlineResponse200279) GetSerialOk() (*string, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetSerial
 
-`func (o *InlineResponse200279) SetErrors(v []string)`
+`func (o *InlineResponse200279) SetSerial(v string)`
 
-SetErrors sets Errors field to given value.
+SetSerial sets Serial field to given value.
 
-### HasErrors
+### HasSerial
 
-`func (o *InlineResponse200279) HasErrors() bool`
+`func (o *InlineResponse200279) HasSerial() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetCreatedBy
+### GetMac
 
-`func (o *InlineResponse200279) GetCreatedBy() InlineResponse200279CreatedBy`
+`func (o *InlineResponse200279) GetMac() string`
 
-GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetCreatedByOk
+### GetMacOk
 
-`func (o *InlineResponse200279) GetCreatedByOk() (*InlineResponse200279CreatedBy, bool)`
+`func (o *InlineResponse200279) GetMacOk() (*string, bool)`
 
-GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedBy
+### SetMac
 
-`func (o *InlineResponse200279) SetCreatedBy(v InlineResponse200279CreatedBy)`
+`func (o *InlineResponse200279) SetMac(v string)`
 
-SetCreatedBy sets CreatedBy field to given value.
+SetMac sets Mac field to given value.
 
-### HasCreatedBy
+### HasMac
 
-`func (o *InlineResponse200279) HasCreatedBy() bool`
+`func (o *InlineResponse200279) HasMac() bool`
 
-HasCreatedBy returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetWebhook
+### GetProductType
 
-`func (o *InlineResponse200279) GetWebhook() InlineResponse200279Webhook`
+`func (o *InlineResponse200279) GetProductType() string`
 
-GetWebhook returns the Webhook field if non-nil, zero value otherwise.
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
 
-### GetWebhookOk
+### GetProductTypeOk
 
-`func (o *InlineResponse200279) GetWebhookOk() (*InlineResponse200279Webhook, bool)`
+`func (o *InlineResponse200279) GetProductTypeOk() (*string, bool)`
 
-GetWebhookOk returns a tuple with the Webhook field if it's non-nil, zero value otherwise
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWebhook
+### SetProductType
 
-`func (o *InlineResponse200279) SetWebhook(v InlineResponse200279Webhook)`
+`func (o *InlineResponse200279) SetProductType(v string)`
 
-SetWebhook sets Webhook field to given value.
+SetProductType sets ProductType field to given value.
 
-### HasWebhook
+### HasProductType
 
-`func (o *InlineResponse200279) HasWebhook() bool`
+`func (o *InlineResponse200279) HasProductType() bool`
 
-HasWebhook returns a boolean if a field has been set.
+HasProductType returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200279) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200279) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200279) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200279) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetUsage
+
+`func (o *InlineResponse200279) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse200279) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse200279) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse200279) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
+
+### GetClients
+
+`func (o *InlineResponse200279) GetClients() OrganizationsOrganizationIdSummaryTopDevicesByUsageClients`
+
+GetClients returns the Clients field if non-nil, zero value otherwise.
+
+### GetClientsOk
+
+`func (o *InlineResponse200279) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageClients, bool)`
+
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClients
+
+`func (o *InlineResponse200279) SetClients(v OrganizationsOrganizationIdSummaryTopDevicesByUsageClients)`
+
+SetClients sets Clients field to given value.
+
+### HasClients
+
+`func (o *InlineResponse200279) HasClients() bool`
+
+HasClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

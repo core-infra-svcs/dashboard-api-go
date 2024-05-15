@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkClientPolicy
 
-> InlineResponse20080 GetNetworkClientPolicy(ctx, networkId, clientId).Execute()
+> InlineResponse20081 GetNetworkClientPolicy(ctx, networkId, clientId).Execute()
 
 Return the policy assigned to a client on the network
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PolicyApi.GetNetworkClientPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClientPolicy`: InlineResponse20080
+    // response from `GetNetworkClientPolicy`: InlineResponse20081
     fmt.Fprintf(os.Stdout, "Response from `PolicyApi.GetNetworkClientPolicy`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20080**](InlineResponse20080.md)
+[**InlineResponse20081**](InlineResponse20081.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkClientPolicy
 
-> InlineResponse20080 UpdateNetworkClientPolicy(ctx, networkId, clientId).UpdateNetworkClientPolicy(updateNetworkClientPolicy).Execute()
+> InlineResponse20081 UpdateNetworkClientPolicy(ctx, networkId, clientId).UpdateNetworkClientPolicy(updateNetworkClientPolicy).Execute()
 
 Update the policy assigned to a client on the network
 
@@ -114,7 +114,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PolicyApi.UpdateNetworkClientPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkClientPolicy`: InlineResponse20080
+    // response from `UpdateNetworkClientPolicy`: InlineResponse20081
     fmt.Fprintf(os.Stdout, "Response from `PolicyApi.UpdateNetworkClientPolicy`: %v\n", resp)
 }
 ```
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20080**](InlineResponse20080.md)
+[**InlineResponse20081**](InlineResponse20081.md)
 
 ### Authorization
 

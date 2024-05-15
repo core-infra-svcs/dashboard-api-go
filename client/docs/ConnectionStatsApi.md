@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessClientConnectionStats
 
-> InlineResponse200169 GetNetworkWirelessClientConnectionStats(ctx, networkId, clientId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
+> InlineResponse200171 GetNetworkWirelessClientConnectionStats(ctx, networkId, clientId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
 
 Aggregated connectivity info for a given client on this network
 
@@ -134,7 +134,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectionStatsApi.GetNetworkWirelessClientConnectionStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessClientConnectionStats`: InlineResponse200169
+    // response from `GetNetworkWirelessClientConnectionStats`: InlineResponse200171
     fmt.Fprintf(os.Stdout, "Response from `ConnectionStatsApi.GetNetworkWirelessClientConnectionStats`: %v\n", resp)
 }
 ```
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200169**](InlineResponse200169.md)
+[**InlineResponse200171**](InlineResponse200171.md)
 
 ### Authorization
 
@@ -269,7 +269,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessConnectionStats
 
-> InlineResponse200172 GetNetworkWirelessConnectionStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
+> InlineResponse200174 GetNetworkWirelessConnectionStats(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Band(band).Ssid(ssid).Vlan(vlan).ApTag(apTag).Execute()
 
 Aggregated connectivity info for this network
 
@@ -304,7 +304,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectionStatsApi.GetNetworkWirelessConnectionStats``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessConnectionStats`: InlineResponse200172
+    // response from `GetNetworkWirelessConnectionStats`: InlineResponse200174
     fmt.Fprintf(os.Stdout, "Response from `ConnectionStatsApi.GetNetworkWirelessConnectionStats`: %v\n", resp)
 }
 ```
@@ -335,7 +335,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200172**](InlineResponse200172.md)
+[**InlineResponse200174**](InlineResponse200174.md)
 
 ### Authorization
 

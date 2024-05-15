@@ -13,7 +13,11 @@ Name | Type | Description | Notes
 **Cidr** | Pointer to **string** | CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN. | [optional] 
 **Mask** | Pointer to **int32** | Mask used for the subnet of all bound to the template networks. Applicable only for template network. | [optional] 
 **Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
+**DhcpHandling** | Pointer to **string** | The appliance&#39;s handling of DHCP requests on this VLAN. One of: &#39;Run a DHCP server&#39;, &#39;Relay DHCP to another server&#39; or &#39;Do not respond to DHCP requests&#39; | [optional] 
+**DhcpLeaseTime** | Pointer to **string** | The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39; | [optional] 
 **MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceVlansMandatoryDhcp**](NetworksNetworkIdApplianceVlansMandatoryDhcp.md) |  | [optional] 
+**DhcpBootOptionsEnabled** | Pointer to **bool** | Use DHCP boot options specified in other properties | [optional] 
+**DhcpOptions** | Pointer to [**[]NetworksNetworkIdApplianceVlansDhcpOptions**](NetworksNetworkIdApplianceVlansDhcpOptions.md) | The list of DHCP options that will be included in DHCP responses. Each object in the list should have \&quot;code\&quot;, \&quot;type\&quot;, and \&quot;value\&quot; properties. | [optional] 
 
 ## Methods
 
@@ -249,6 +253,56 @@ SetIpv6 sets Ipv6 field to given value.
 
 HasIpv6 returns a boolean if a field has been set.
 
+### GetDhcpHandling
+
+`func (o *InlineObject70) GetDhcpHandling() string`
+
+GetDhcpHandling returns the DhcpHandling field if non-nil, zero value otherwise.
+
+### GetDhcpHandlingOk
+
+`func (o *InlineObject70) GetDhcpHandlingOk() (*string, bool)`
+
+GetDhcpHandlingOk returns a tuple with the DhcpHandling field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpHandling
+
+`func (o *InlineObject70) SetDhcpHandling(v string)`
+
+SetDhcpHandling sets DhcpHandling field to given value.
+
+### HasDhcpHandling
+
+`func (o *InlineObject70) HasDhcpHandling() bool`
+
+HasDhcpHandling returns a boolean if a field has been set.
+
+### GetDhcpLeaseTime
+
+`func (o *InlineObject70) GetDhcpLeaseTime() string`
+
+GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+
+### GetDhcpLeaseTimeOk
+
+`func (o *InlineObject70) GetDhcpLeaseTimeOk() (*string, bool)`
+
+GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpLeaseTime
+
+`func (o *InlineObject70) SetDhcpLeaseTime(v string)`
+
+SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+
+### HasDhcpLeaseTime
+
+`func (o *InlineObject70) HasDhcpLeaseTime() bool`
+
+HasDhcpLeaseTime returns a boolean if a field has been set.
+
 ### GetMandatoryDhcp
 
 `func (o *InlineObject70) GetMandatoryDhcp() NetworksNetworkIdApplianceVlansMandatoryDhcp`
@@ -273,6 +327,56 @@ SetMandatoryDhcp sets MandatoryDhcp field to given value.
 `func (o *InlineObject70) HasMandatoryDhcp() bool`
 
 HasMandatoryDhcp returns a boolean if a field has been set.
+
+### GetDhcpBootOptionsEnabled
+
+`func (o *InlineObject70) GetDhcpBootOptionsEnabled() bool`
+
+GetDhcpBootOptionsEnabled returns the DhcpBootOptionsEnabled field if non-nil, zero value otherwise.
+
+### GetDhcpBootOptionsEnabledOk
+
+`func (o *InlineObject70) GetDhcpBootOptionsEnabledOk() (*bool, bool)`
+
+GetDhcpBootOptionsEnabledOk returns a tuple with the DhcpBootOptionsEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpBootOptionsEnabled
+
+`func (o *InlineObject70) SetDhcpBootOptionsEnabled(v bool)`
+
+SetDhcpBootOptionsEnabled sets DhcpBootOptionsEnabled field to given value.
+
+### HasDhcpBootOptionsEnabled
+
+`func (o *InlineObject70) HasDhcpBootOptionsEnabled() bool`
+
+HasDhcpBootOptionsEnabled returns a boolean if a field has been set.
+
+### GetDhcpOptions
+
+`func (o *InlineObject70) GetDhcpOptions() []NetworksNetworkIdApplianceVlansDhcpOptions`
+
+GetDhcpOptions returns the DhcpOptions field if non-nil, zero value otherwise.
+
+### GetDhcpOptionsOk
+
+`func (o *InlineObject70) GetDhcpOptionsOk() (*[]NetworksNetworkIdApplianceVlansDhcpOptions, bool)`
+
+GetDhcpOptionsOk returns a tuple with the DhcpOptions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDhcpOptions
+
+`func (o *InlineObject70) SetDhcpOptions(v []NetworksNetworkIdApplianceVlansDhcpOptions)`
+
+SetDhcpOptions sets DhcpOptions field to given value.
+
+### HasDhcpOptions
+
+`func (o *InlineObject70) HasDhcpOptions() bool`
+
+HasDhcpOptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

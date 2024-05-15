@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
-**Name** | Pointer to **string** | The name of the configuration template | [optional] 
-**ProductTypes** | Pointer to **[]string** | The product types of the configuration template | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
+**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
+**Type** | Pointer to **string** | The boundary type | [optional] 
+**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200222WithDefaults instantiates a new InlineResponse200222 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetBoundaryId
 
-`func (o *InlineResponse200222) GetId() string`
+`func (o *InlineResponse200222) GetBoundaryId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetBoundaryIdOk
 
-`func (o *InlineResponse200222) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200222) GetBoundaryIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetBoundaryId
 
-`func (o *InlineResponse200222) SetId(v string)`
+`func (o *InlineResponse200222) SetBoundaryId(v string)`
 
-SetId sets Id field to given value.
+SetBoundaryId sets BoundaryId field to given value.
 
-### HasId
+### HasBoundaryId
 
-`func (o *InlineResponse200222) HasId() bool`
+`func (o *InlineResponse200222) HasBoundaryId() bool`
 
-HasId returns a boolean if a field has been set.
+HasBoundaryId returns a boolean if a field has been set.
 
-### GetName
+### GetType
 
-`func (o *InlineResponse200222) GetName() string`
+`func (o *InlineResponse200222) GetType() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTypeOk
 
-`func (o *InlineResponse200222) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200222) GetTypeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetType
 
-`func (o *InlineResponse200222) SetName(v string)`
+`func (o *InlineResponse200222) SetType(v string)`
 
-SetName sets Name field to given value.
+SetType sets Type field to given value.
 
-### HasName
+### HasType
 
-`func (o *InlineResponse200222) HasName() bool`
+`func (o *InlineResponse200222) HasType() bool`
 
-HasName returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetProductTypes
+### GetResults
 
-`func (o *InlineResponse200222) GetProductTypes() []string`
+`func (o *InlineResponse200222) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
 
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+GetResults returns the Results field if non-nil, zero value otherwise.
 
-### GetProductTypesOk
+### GetResultsOk
 
-`func (o *InlineResponse200222) GetProductTypesOk() (*[]string, bool)`
+`func (o *InlineResponse200222) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
 
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductTypes
+### SetResults
 
-`func (o *InlineResponse200222) SetProductTypes(v []string)`
+`func (o *InlineResponse200222) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
 
-SetProductTypes sets ProductTypes field to given value.
+SetResults sets Results field to given value.
 
-### HasProductTypes
+### HasResults
 
-`func (o *InlineResponse200222) HasProductTypes() bool`
+`func (o *InlineResponse200222) HasResults() bool`
 
-HasProductTypes returns a boolean if a field has been set.
-
-### GetTimeZone
-
-`func (o *InlineResponse200222) GetTimeZone() string`
-
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
-
-### GetTimeZoneOk
-
-`func (o *InlineResponse200222) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeZone
-
-`func (o *InlineResponse200222) SetTimeZone(v string)`
-
-SetTimeZone sets TimeZone field to given value.
-
-### HasTimeZone
-
-`func (o *InlineResponse200222) HasTimeZone() bool`
-
-HasTimeZone returns a boolean if a field has been set.
+HasResults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

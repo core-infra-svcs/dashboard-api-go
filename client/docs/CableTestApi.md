@@ -4,7 +4,7 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateDeviceLiveToolsCableTest**](CableTestApi.md#CreateDeviceLiveToolsCableTest) | **Post** /devices/{serial}/liveTools/cableTest | Enqueue a job to perform a cable test for the device on the specified ports.
+[**CreateDeviceLiveToolsCableTest**](CableTestApi.md#CreateDeviceLiveToolsCableTest) | **Post** /devices/{serial}/liveTools/cableTest | Enqueue a job to perform a cable test for the device on the specified ports
 [**GetDeviceLiveToolsCableTest**](CableTestApi.md#GetDeviceLiveToolsCableTest) | **Get** /devices/{serial}/liveTools/cableTest/{id} | Return a cable test live tool job.
 
 
@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 > InlineResponse2012 CreateDeviceLiveToolsCableTest(ctx, serial).CreateDeviceLiveToolsCableTest(createDeviceLiveToolsCableTest).Execute()
 
-Enqueue a job to perform a cable test for the device on the specified ports.
+Enqueue a job to perform a cable test for the device on the specified ports
 
 
 

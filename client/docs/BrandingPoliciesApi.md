@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationBrandingPolicy
 
-> InlineResponse20111 CreateOrganizationBrandingPolicy(ctx, organizationId).CreateOrganizationBrandingPolicy(createOrganizationBrandingPolicy).Execute()
+> InlineResponse20112 CreateOrganizationBrandingPolicy(ctx, organizationId).CreateOrganizationBrandingPolicy(createOrganizationBrandingPolicy).Execute()
 
 Add a new branding policy to an organization
 
@@ -36,7 +36,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationBrandingPolicy := *openapiclient.NewInlineObject210() // InlineObject210 |  (optional)
+    createOrganizationBrandingPolicy := *openapiclient.NewInlineObject215() // InlineObject215 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BrandingPoliciesApi.CreateOrganizationBrandingPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationBrandingPolicy`: InlineResponse20111
+    // response from `CreateOrganizationBrandingPolicy`: InlineResponse20112
     fmt.Fprintf(os.Stdout, "Response from `BrandingPoliciesApi.CreateOrganizationBrandingPolicy`: %v\n", resp)
 }
 ```
@@ -66,11 +66,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationBranding
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationBrandingPolicy** | [**InlineObject210**](InlineObject210.md) |  | 
+ **createOrganizationBrandingPolicy** | [**InlineObject215**](InlineObject215.md) |  | 
 
 ### Return type
 
-[**InlineResponse20111**](InlineResponse20111.md)
+[**InlineResponse20112**](InlineResponse20112.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationBrandingPolicies
 
-> []InlineResponse200210 GetOrganizationBrandingPolicies(ctx, organizationId).Execute()
+> []InlineResponse200217 GetOrganizationBrandingPolicies(ctx, organizationId).Execute()
 
 List the branding policies of an organization
 
@@ -187,7 +187,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BrandingPoliciesApi.GetOrganizationBrandingPolicies``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationBrandingPolicies`: []InlineResponse200210
+    // response from `GetOrganizationBrandingPolicies`: []InlineResponse200217
     fmt.Fprintf(os.Stdout, "Response from `BrandingPoliciesApi.GetOrganizationBrandingPolicies`: %v\n", resp)
 }
 ```
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200210**](InlineResponse200210.md)
+[**[]InlineResponse200217**](InlineResponse200217.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationBrandingPoliciesPriorities
 
-> InlineResponse200211 GetOrganizationBrandingPoliciesPriorities(ctx, organizationId).Execute()
+> InlineResponse200218 GetOrganizationBrandingPoliciesPriorities(ctx, organizationId).Execute()
 
 Return the branding policy IDs of an organization in priority order
 
@@ -257,7 +257,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BrandingPoliciesApi.GetOrganizationBrandingPoliciesPriorities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationBrandingPoliciesPriorities`: InlineResponse200211
+    // response from `GetOrganizationBrandingPoliciesPriorities`: InlineResponse200218
     fmt.Fprintf(os.Stdout, "Response from `BrandingPoliciesApi.GetOrganizationBrandingPoliciesPriorities`: %v\n", resp)
 }
 ```
@@ -281,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200211**](InlineResponse200211.md)
+[**InlineResponse200218**](InlineResponse200218.md)
 
 ### Authorization
 
@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationBrandingPolicy
 
-> InlineResponse200210 GetOrganizationBrandingPolicy(ctx, organizationId, brandingPolicyId).Execute()
+> InlineResponse200217 GetOrganizationBrandingPolicy(ctx, organizationId, brandingPolicyId).Execute()
 
 Return a branding policy
 
@@ -328,7 +328,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BrandingPoliciesApi.GetOrganizationBrandingPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationBrandingPolicy`: InlineResponse200210
+    // response from `GetOrganizationBrandingPolicy`: InlineResponse200217
     fmt.Fprintf(os.Stdout, "Response from `BrandingPoliciesApi.GetOrganizationBrandingPolicy`: %v\n", resp)
 }
 ```
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200210**](InlineResponse200210.md)
+[**InlineResponse200217**](InlineResponse200217.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationBrandingPoliciesPriorities
 
-> InlineResponse200211 UpdateOrganizationBrandingPoliciesPriorities(ctx, organizationId).UpdateOrganizationBrandingPoliciesPriorities(updateOrganizationBrandingPoliciesPriorities).Execute()
+> InlineResponse200218 UpdateOrganizationBrandingPoliciesPriorities(ctx, organizationId).UpdateOrganizationBrandingPoliciesPriorities(updateOrganizationBrandingPoliciesPriorities).Execute()
 
 Update the priority ordering of an organization's branding policies.
 
@@ -392,7 +392,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationBrandingPoliciesPriorities := *openapiclient.NewInlineObject211() // InlineObject211 |  (optional)
+    updateOrganizationBrandingPoliciesPriorities := *openapiclient.NewInlineObject216() // InlineObject216 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -401,7 +401,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BrandingPoliciesApi.UpdateOrganizationBrandingPoliciesPriorities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationBrandingPoliciesPriorities`: InlineResponse200211
+    // response from `UpdateOrganizationBrandingPoliciesPriorities`: InlineResponse200218
     fmt.Fprintf(os.Stdout, "Response from `BrandingPoliciesApi.UpdateOrganizationBrandingPoliciesPriorities`: %v\n", resp)
 }
 ```
@@ -422,11 +422,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationBranding
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationBrandingPoliciesPriorities** | [**InlineObject211**](InlineObject211.md) |  | 
+ **updateOrganizationBrandingPoliciesPriorities** | [**InlineObject216**](InlineObject216.md) |  | 
 
 ### Return type
 
-[**InlineResponse200211**](InlineResponse200211.md)
+[**InlineResponse200218**](InlineResponse200218.md)
 
 ### Authorization
 
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationBrandingPolicy
 
-> InlineResponse200210 UpdateOrganizationBrandingPolicy(ctx, organizationId, brandingPolicyId).UpdateOrganizationBrandingPolicy(updateOrganizationBrandingPolicy).Execute()
+> InlineResponse200217 UpdateOrganizationBrandingPolicy(ctx, organizationId, brandingPolicyId).UpdateOrganizationBrandingPolicy(updateOrganizationBrandingPolicy).Execute()
 
 Update a branding policy
 
@@ -465,7 +465,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     brandingPolicyId := "brandingPolicyId_example" // string | Branding policy ID
-    updateOrganizationBrandingPolicy := *openapiclient.NewInlineObject212() // InlineObject212 |  (optional)
+    updateOrganizationBrandingPolicy := *openapiclient.NewInlineObject217() // InlineObject217 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -474,7 +474,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BrandingPoliciesApi.UpdateOrganizationBrandingPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationBrandingPolicy`: InlineResponse200210
+    // response from `UpdateOrganizationBrandingPolicy`: InlineResponse200217
     fmt.Fprintf(os.Stdout, "Response from `BrandingPoliciesApi.UpdateOrganizationBrandingPolicy`: %v\n", resp)
 }
 ```
@@ -497,11 +497,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationBrandingPolicy** | [**InlineObject212**](InlineObject212.md) |  | 
+ **updateOrganizationBrandingPolicy** | [**InlineObject217**](InlineObject217.md) |  | 
 
 ### Return type
 
-[**InlineResponse200210**](InlineResponse200210.md)
+[**InlineResponse200217**](InlineResponse200217.md)
 
 ### Authorization
 

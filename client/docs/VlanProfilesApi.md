@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkVlanProfile
 
-> InlineResponse200160 CreateNetworkVlanProfile(ctx, networkId).CreateNetworkVlanProfile(createNetworkVlanProfile).Execute()
+> InlineResponse200161 CreateNetworkVlanProfile(ctx, networkId).CreateNetworkVlanProfile(createNetworkVlanProfile).Execute()
 
 Create a VLAN profile for a network
 
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlanProfilesApi.CreateNetworkVlanProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkVlanProfile`: InlineResponse200160
+    // response from `CreateNetworkVlanProfile`: InlineResponse200161
     fmt.Fprintf(os.Stdout, "Response from `VlanProfilesApi.CreateNetworkVlanProfile`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200160**](InlineResponse200160.md)
+[**InlineResponse200161**](InlineResponse200161.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkVlanProfile
 
-> InlineResponse200160 GetNetworkVlanProfile(ctx, networkId, iname).Execute()
+> InlineResponse200161 GetNetworkVlanProfile(ctx, networkId, iname).Execute()
 
 Get an existing VLAN profile of a network
 
@@ -188,7 +188,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlanProfilesApi.GetNetworkVlanProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfile`: InlineResponse200160
+    // response from `GetNetworkVlanProfile`: InlineResponse200161
     fmt.Fprintf(os.Stdout, "Response from `VlanProfilesApi.GetNetworkVlanProfile`: %v\n", resp)
 }
 ```
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200160**](InlineResponse200160.md)
+[**InlineResponse200161**](InlineResponse200161.md)
 
 ### Authorization
 
@@ -232,7 +232,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkVlanProfiles
 
-> []InlineResponse200160 GetNetworkVlanProfiles(ctx, networkId).Execute()
+> []InlineResponse200161 GetNetworkVlanProfiles(ctx, networkId).Execute()
 
 List VLAN profiles for a network
 
@@ -260,7 +260,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlanProfilesApi.GetNetworkVlanProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfiles`: []InlineResponse200160
+    // response from `GetNetworkVlanProfiles`: []InlineResponse200161
     fmt.Fprintf(os.Stdout, "Response from `VlanProfilesApi.GetNetworkVlanProfiles`: %v\n", resp)
 }
 ```
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200160**](InlineResponse200160.md)
+[**[]InlineResponse200161**](InlineResponse200161.md)
 
 ### Authorization
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkVlanProfilesAssignmentsByDevice
 
-> []InlineResponse200161 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
+> []InlineResponse200162 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
 
 Get the assigned VLAN Profiles for devices in a network
 
@@ -336,7 +336,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlanProfilesApi.GetNetworkVlanProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse200161
+    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse200162
     fmt.Fprintf(os.Stdout, "Response from `VlanProfilesApi.GetNetworkVlanProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200161**](InlineResponse200161.md)
+[**[]InlineResponse200162**](InlineResponse200162.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ## ReassignNetworkVlanProfilesAssignments
 
-> InlineResponse200162 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
+> InlineResponse200163 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
 
 Update the assigned VLAN Profile for devices in a network
 
@@ -413,7 +413,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlanProfilesApi.ReassignNetworkVlanProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse200162
+    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse200163
     fmt.Fprintf(os.Stdout, "Response from `VlanProfilesApi.ReassignNetworkVlanProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200162**](InlineResponse200162.md)
+[**InlineResponse200163**](InlineResponse200163.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkVlanProfile
 
-> InlineResponse200160 UpdateNetworkVlanProfile(ctx, networkId, iname).UpdateNetworkVlanProfile(updateNetworkVlanProfile).Execute()
+> InlineResponse200161 UpdateNetworkVlanProfile(ctx, networkId, iname).UpdateNetworkVlanProfile(updateNetworkVlanProfile).Execute()
 
 Update an existing VLAN profile of a network
 
@@ -486,7 +486,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlanProfilesApi.UpdateNetworkVlanProfile``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkVlanProfile`: InlineResponse200160
+    // response from `UpdateNetworkVlanProfile`: InlineResponse200161
     fmt.Fprintf(os.Stdout, "Response from `VlanProfilesApi.UpdateNetworkVlanProfile`: %v\n", resp)
 }
 ```
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200160**](InlineResponse200160.md)
+[**InlineResponse200161**](InlineResponse200161.md)
 
 ### Authorization
 

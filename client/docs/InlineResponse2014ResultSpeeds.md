@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Downstream** | Pointer to **int32** | Shows the download speed from shard (Mbps) | [optional] 
+**Downstream** | Pointer to **float32** | Shows the download speed from shard (Mbps) | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetDownstream
 
-`func (o *InlineResponse2014ResultSpeeds) GetDownstream() int32`
+`func (o *InlineResponse2014ResultSpeeds) GetDownstream() float32`
 
 GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
 ### GetDownstreamOk
 
-`func (o *InlineResponse2014ResultSpeeds) GetDownstreamOk() (*int32, bool)`
+`func (o *InlineResponse2014ResultSpeeds) GetDownstreamOk() (*float32, bool)`
 
 GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDownstream
 
-`func (o *InlineResponse2014ResultSpeeds) SetDownstream(v int32)`
+`func (o *InlineResponse2014ResultSpeeds) SetDownstream(v float32)`
 
 SetDownstream sets Downstream field to given value.
 

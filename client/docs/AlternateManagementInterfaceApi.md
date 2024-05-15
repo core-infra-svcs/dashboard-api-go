@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchAlternateManagementInterface
 
-> InlineResponse200139 GetNetworkSwitchAlternateManagementInterface(ctx, networkId).Execute()
+> InlineResponse200140 GetNetworkSwitchAlternateManagementInterface(ctx, networkId).Execute()
 
 Return the switch alternate management interface for the network
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlternateManagementInterfaceApi.GetNetworkSwitchAlternateManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAlternateManagementInterface`: InlineResponse200139
+    // response from `GetNetworkSwitchAlternateManagementInterface`: InlineResponse200140
     fmt.Fprintf(os.Stdout, "Response from `AlternateManagementInterfaceApi.GetNetworkSwitchAlternateManagementInterface`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200139**](InlineResponse200139.md)
+[**InlineResponse200140**](InlineResponse200140.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchAlternateManagementInterface
 
-> InlineResponse200139 UpdateNetworkSwitchAlternateManagementInterface(ctx, networkId).UpdateNetworkSwitchAlternateManagementInterface(updateNetworkSwitchAlternateManagementInterface).Execute()
+> InlineResponse200140 UpdateNetworkSwitchAlternateManagementInterface(ctx, networkId).UpdateNetworkSwitchAlternateManagementInterface(updateNetworkSwitchAlternateManagementInterface).Execute()
 
 Update the switch alternate management interface for the network
 
@@ -255,7 +255,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlternateManagementInterfaceApi.UpdateNetworkSwitchAlternateManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchAlternateManagementInterface`: InlineResponse200139
+    // response from `UpdateNetworkSwitchAlternateManagementInterface`: InlineResponse200140
     fmt.Fprintf(os.Stdout, "Response from `AlternateManagementInterfaceApi.UpdateNetworkSwitchAlternateManagementInterface`: %v\n", resp)
 }
 ```
@@ -280,7 +280,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200139**](InlineResponse200139.md)
+[**InlineResponse200140**](InlineResponse200140.md)
 
 ### Authorization
 
@@ -318,7 +318,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessAlternateManagementInterface := *openapiclient.NewInlineObject169() // InlineObject169 |  (optional)
+    updateNetworkWirelessAlternateManagementInterface := *openapiclient.NewInlineObject172() // InlineObject172 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -348,7 +348,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessAlter
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessAlternateManagementInterface** | [**InlineObject169**](InlineObject169.md) |  | 
+ **updateNetworkWirelessAlternateManagementInterface** | [**InlineObject172**](InlineObject172.md) |  | 
 
 ### Return type
 

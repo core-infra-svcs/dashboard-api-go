@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApiRequestsOverviewResponseCodesByInterval
 
-> []InlineResponse200203 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
+> []InlineResponse200205 GetOrganizationApiRequestsOverviewResponseCodesByInterval(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Version(version).OperationIds(operationIds).SourceIps(sourceIps).AdminIds(adminIds).UserAgent(userAgent).Execute()
 
 Tracks organizations' API requests by response code across a given time period
 
@@ -50,7 +50,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200203
+    // response from `GetOrganizationApiRequestsOverviewResponseCodesByInterval`: []InlineResponse200205
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationApiRequestsOverviewResponseCodesByInterval`: %v\n", resp)
 }
 ```
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200203**](InlineResponse200203.md)
+[**[]InlineResponse200205**](InlineResponse200205.md)
 
 ### Authorization
 
@@ -101,7 +101,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraDetectionsHistoryByBoundaryByInterval
 
-> []InlineResponse200215 GetOrganizationCameraDetectionsHistoryByBoundaryByInterval(ctx, organizationId).BoundaryIds(boundaryIds).Duration(duration).PerPage(perPage).BoundaryTypes(boundaryTypes).Execute()
+> []InlineResponse200222 GetOrganizationCameraDetectionsHistoryByBoundaryByInterval(ctx, organizationId).BoundaryIds(boundaryIds).Duration(duration).PerPage(perPage).BoundaryTypes(boundaryTypes).Execute()
 
 Returns analytics data for timespans
 
@@ -133,7 +133,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationCameraDetectionsHistoryByBoundaryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: []InlineResponse200215
+    // response from `GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: []InlineResponse200222
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: %v\n", resp)
 }
 ```
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200215**](InlineResponse200215.md)
+[**[]InlineResponse200222**](InlineResponse200222.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval
 
-> []InlineResponse200283 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200295 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands, segmented by device.
 
@@ -216,7 +216,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200283
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200295
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200283**](InlineResponse200283.md)
+[**[]InlineResponse200295**](InlineResponse200295.md)
 
 ### Authorization
 
@@ -267,7 +267,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval
 
-> []InlineResponse200284 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200296 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands
 
@@ -304,7 +304,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByIntervalApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200284
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200296
     fmt.Fprintf(os.Stdout, "Response from `ByIntervalApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: %v\n", resp)
 }
 ```
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200284**](InlineResponse200284.md)
+[**[]InlineResponse200296**](InlineResponse200296.md)
 
 ### Authorization
 

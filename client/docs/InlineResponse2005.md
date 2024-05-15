@@ -13,11 +13,9 @@ Name | Type | Description | Notes
 **NetworkId** | Pointer to **string** | ID of the network the device belongs to | [optional] 
 **Serial** | Pointer to **string** | Serial number of the device | [optional] 
 **Model** | Pointer to **string** | Model of the device | [optional] 
-**Imei** | Pointer to **string** | IMEI of the device, if applicable | [optional] 
 **Mac** | Pointer to **string** | MAC address of the device | [optional] 
 **LanIp** | Pointer to **string** | LAN IP address of the device | [optional] 
 **Firmware** | Pointer to **string** | Firmware version of the device | [optional] 
-**ProductType** | Pointer to **string** | Product type of the device | [optional] 
 **FloorPlanId** | Pointer to **string** | The floor plan to associate to this device. null disassociates the device from the floorplan. | [optional] 
 **Details** | Pointer to [**[]InlineResponse2005Details**](InlineResponse2005Details.md) | Additional device information | [optional] 
 **BeaconIdParams** | Pointer to [**InlineResponse2005BeaconIdParams**](InlineResponse2005BeaconIdParams.md) |  | [optional] 
@@ -266,31 +264,6 @@ SetModel sets Model field to given value.
 
 HasModel returns a boolean if a field has been set.
 
-### GetImei
-
-`func (o *InlineResponse2005) GetImei() string`
-
-GetImei returns the Imei field if non-nil, zero value otherwise.
-
-### GetImeiOk
-
-`func (o *InlineResponse2005) GetImeiOk() (*string, bool)`
-
-GetImeiOk returns a tuple with the Imei field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetImei
-
-`func (o *InlineResponse2005) SetImei(v string)`
-
-SetImei sets Imei field to given value.
-
-### HasImei
-
-`func (o *InlineResponse2005) HasImei() bool`
-
-HasImei returns a boolean if a field has been set.
-
 ### GetMac
 
 `func (o *InlineResponse2005) GetMac() string`
@@ -365,31 +338,6 @@ SetFirmware sets Firmware field to given value.
 `func (o *InlineResponse2005) HasFirmware() bool`
 
 HasFirmware returns a boolean if a field has been set.
-
-### GetProductType
-
-`func (o *InlineResponse2005) GetProductType() string`
-
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
-
-### GetProductTypeOk
-
-`func (o *InlineResponse2005) GetProductTypeOk() (*string, bool)`
-
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductType
-
-`func (o *InlineResponse2005) SetProductType(v string)`
-
-SetProductType sets ProductType field to given value.
-
-### HasProductType
-
-`func (o *InlineResponse2005) HasProductType() bool`
-
-HasProductType returns a boolean if a field has been set.
 
 ### GetFloorPlanId
 

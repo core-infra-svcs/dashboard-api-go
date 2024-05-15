@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | AP port profile name | [optional] 
-**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts.md) | AP ports configuration | [optional] 
+**Name** | **string** | AP port profile name | 
+**Ports** | [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts1.md) | AP ports configuration | 
 **UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
 
 ## Methods
 
 ### NewInlineObject175
 
-`func NewInlineObject175() *InlineObject175`
+`func NewInlineObject175(name string, ports []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, ) *InlineObject175`
 
 NewInlineObject175 instantiates a new InlineObject175 object
 This constructor will assign default values to properties that have it defined,
@@ -46,36 +46,26 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject175) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetPorts
 
-`func (o *InlineObject175) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts`
+`func (o *InlineObject175) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1`
 
 GetPorts returns the Ports field if non-nil, zero value otherwise.
 
 ### GetPortsOk
 
-`func (o *InlineObject175) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts, bool)`
+`func (o *InlineObject175) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, bool)`
 
 GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPorts
 
-`func (o *InlineObject175) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts)`
+`func (o *InlineObject175) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1)`
 
 SetPorts sets Ports field to given value.
 
-### HasPorts
-
-`func (o *InlineObject175) HasPorts() bool`
-
-HasPorts returns a boolean if a field has been set.
 
 ### GetUsbPorts
 

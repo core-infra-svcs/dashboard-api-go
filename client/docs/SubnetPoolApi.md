@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkCellularGatewaySubnetPool
 
-> InlineResponse20074 GetNetworkCellularGatewaySubnetPool(ctx, networkId).Execute()
+> InlineResponse20075 GetNetworkCellularGatewaySubnetPool(ctx, networkId).Execute()
 
 Return the subnet pool and mask configured for MGs in the network.
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SubnetPoolApi.GetNetworkCellularGatewaySubnetPool``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewaySubnetPool`: InlineResponse20074
+    // response from `GetNetworkCellularGatewaySubnetPool`: InlineResponse20075
     fmt.Fprintf(os.Stdout, "Response from `SubnetPoolApi.GetNetworkCellularGatewaySubnetPool`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20074**](InlineResponse20074.md)
+[**InlineResponse20075**](InlineResponse20075.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewaySubnetPool
 
-> InlineResponse20074 UpdateNetworkCellularGatewaySubnetPool(ctx, networkId).UpdateNetworkCellularGatewaySubnetPool(updateNetworkCellularGatewaySubnetPool).Execute()
+> InlineResponse20075 UpdateNetworkCellularGatewaySubnetPool(ctx, networkId).UpdateNetworkCellularGatewaySubnetPool(updateNetworkCellularGatewaySubnetPool).Execute()
 
 Update the subnet pool and mask configuration for MGs in the network.
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SubnetPoolApi.UpdateNetworkCellularGatewaySubnetPool``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewaySubnetPool`: InlineResponse20074
+    // response from `UpdateNetworkCellularGatewaySubnetPool`: InlineResponse20075
     fmt.Fprintf(os.Stdout, "Response from `SubnetPoolApi.UpdateNetworkCellularGatewaySubnetPool`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20074**](InlineResponse20074.md)
+[**InlineResponse20075**](InlineResponse20075.md)
 
 ### Authorization
 

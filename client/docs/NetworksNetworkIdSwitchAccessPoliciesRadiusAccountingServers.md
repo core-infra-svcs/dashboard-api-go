@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ServerId** | Pointer to **string** | unique ID of the RADIUS accounting server. Leave this empty when new entry is created | [optional] 
 **OrganizationRadiusServerId** | Pointer to **string** | Organization wide RADIUS server ID. This value will be empty if this RADIUS server is not an organization wide RADIUS server | [optional] 
 **Host** | Pointer to **string** | Public IP address of the RADIUS accounting server | [optional] 
 **Port** | Pointer to **int32** | UDP port that the RADIUS Accounting server listens on for access requests | [optional] 
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewNetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServersWithDefaults instantiates a new NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetServerId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers) GetServerId() string`
+
+GetServerId returns the ServerId field if non-nil, zero value otherwise.
+
+### GetServerIdOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers) GetServerIdOk() (*string, bool)`
+
+GetServerIdOk returns a tuple with the ServerId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetServerId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers) SetServerId(v string)`
+
+SetServerId sets ServerId field to given value.
+
+### HasServerId
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadiusAccountingServers) HasServerId() bool`
+
+HasServerId returns a boolean if a field has been set.
 
 ### GetOrganizationRadiusServerId
 
