@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
-**LicenseId** | **string** | The ID of the SM license to move the seats from | 
-**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
+**LicenseId** | **string** | The ID of the SM license to assign seats from | 
+**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
+**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
 
 ## Methods
 
 ### NewInlineObject239
 
-`func NewInlineObject239(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject239`
+`func NewInlineObject239(licenseId string, networkId string, seatCount int32, ) *InlineObject239`
 
 NewInlineObject239 instantiates a new InlineObject239 object
 This constructor will assign default values to properties that have it defined,
@@ -26,26 +26,6 @@ will change when the set of required properties is changed
 NewInlineObject239WithDefaults instantiates a new InlineObject239 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetDestOrganizationId
-
-`func (o *InlineObject239) GetDestOrganizationId() string`
-
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
-
-### GetDestOrganizationIdOk
-
-`func (o *InlineObject239) GetDestOrganizationIdOk() (*string, bool)`
-
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestOrganizationId
-
-`func (o *InlineObject239) SetDestOrganizationId(v string)`
-
-SetDestOrganizationId sets DestOrganizationId field to given value.
-
 
 ### GetLicenseId
 
@@ -65,6 +45,26 @@ and a boolean to check if the value has been set.
 `func (o *InlineObject239) SetLicenseId(v string)`
 
 SetLicenseId sets LicenseId field to given value.
+
+
+### GetNetworkId
+
+`func (o *InlineObject239) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineObject239) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineObject239) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
 
 
 ### GetSeatCount

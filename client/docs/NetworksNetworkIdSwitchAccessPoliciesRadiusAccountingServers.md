@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ServerId** | Pointer to **string** | unique ID of the RADIUS accounting server. Leave this empty when new entry is created | [optional] 
+**ServerId** | Pointer to **string** | Unique ID of the RADIUS accounting server | [optional] 
 **OrganizationRadiusServerId** | Pointer to **string** | Organization wide RADIUS server ID. This value will be empty if this RADIUS server is not an organization wide RADIUS server | [optional] 
 **Host** | Pointer to **string** | Public IP address of the RADIUS accounting server | [optional] 
 **Port** | Pointer to **int32** | UDP port that the RADIUS Accounting server listens on for access requests | [optional] 

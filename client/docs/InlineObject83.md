@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
-**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
+**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG of the network. Possible values are &#39;30 minutes&#39;, &#39;1 hour&#39;, &#39;4 hours&#39;, &#39;12 hours&#39;, &#39;1 day&#39; or &#39;1 week&#39;. | [optional] 
+**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG of the network. Possible values are: &#39;upstream_dns&#39;, &#39;google_dns&#39;, &#39;opendns&#39;, &#39;custom&#39;. | [optional] 
+**DnsCustomNameservers** | Pointer to **[]string** | list of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39; | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject83WithDefaults instantiates a new InlineObject83 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMask
+### GetDhcpLeaseTime
 
-`func (o *InlineObject83) GetMask() int32`
+`func (o *InlineObject83) GetDhcpLeaseTime() string`
 
-GetMask returns the Mask field if non-nil, zero value otherwise.
+GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
 
-### GetMaskOk
+### GetDhcpLeaseTimeOk
 
-`func (o *InlineObject83) GetMaskOk() (*int32, bool)`
+`func (o *InlineObject83) GetDhcpLeaseTimeOk() (*string, bool)`
 
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMask
+### SetDhcpLeaseTime
 
-`func (o *InlineObject83) SetMask(v int32)`
+`func (o *InlineObject83) SetDhcpLeaseTime(v string)`
 
-SetMask sets Mask field to given value.
+SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
 
-### HasMask
+### HasDhcpLeaseTime
 
-`func (o *InlineObject83) HasMask() bool`
+`func (o *InlineObject83) HasDhcpLeaseTime() bool`
 
-HasMask returns a boolean if a field has been set.
+HasDhcpLeaseTime returns a boolean if a field has been set.
 
-### GetCidr
+### GetDnsNameservers
 
-`func (o *InlineObject83) GetCidr() string`
+`func (o *InlineObject83) GetDnsNameservers() string`
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
 
-### GetCidrOk
+### GetDnsNameserversOk
 
-`func (o *InlineObject83) GetCidrOk() (*string, bool)`
+`func (o *InlineObject83) GetDnsNameserversOk() (*string, bool)`
 
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetDnsNameservers
 
-`func (o *InlineObject83) SetCidr(v string)`
+`func (o *InlineObject83) SetDnsNameservers(v string)`
 
-SetCidr sets Cidr field to given value.
+SetDnsNameservers sets DnsNameservers field to given value.
 
-### HasCidr
+### HasDnsNameservers
 
-`func (o *InlineObject83) HasCidr() bool`
+`func (o *InlineObject83) HasDnsNameservers() bool`
 
-HasCidr returns a boolean if a field has been set.
+HasDnsNameservers returns a boolean if a field has been set.
+
+### GetDnsCustomNameservers
+
+`func (o *InlineObject83) GetDnsCustomNameservers() []string`
+
+GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+
+### GetDnsCustomNameserversOk
+
+`func (o *InlineObject83) GetDnsCustomNameserversOk() (*[]string, bool)`
+
+GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDnsCustomNameservers
+
+`func (o *InlineObject83) SetDnsCustomNameservers(v []string)`
+
+SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+
+### HasDnsCustomNameservers
+
+`func (o *InlineObject83) HasDnsCustomNameservers() bool`
+
+HasDnsCustomNameservers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

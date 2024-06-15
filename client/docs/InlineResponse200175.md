@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
-**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
-**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
+**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
+**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
+**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
+**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
+**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200175WithDefaults instantiates a new InlineResponse200175 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetAssoc
 
-`func (o *InlineResponse200175) GetStartTs() time.Time`
+`func (o *InlineResponse200175) GetAssoc() int32`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetAssoc returns the Assoc field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetAssocOk
 
-`func (o *InlineResponse200175) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200175) GetAssocOk() (*int32, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetAssoc
 
-`func (o *InlineResponse200175) SetStartTs(v time.Time)`
+`func (o *InlineResponse200175) SetAssoc(v int32)`
 
-SetStartTs sets StartTs field to given value.
+SetAssoc sets Assoc field to given value.
 
-### HasStartTs
+### HasAssoc
 
-`func (o *InlineResponse200175) HasStartTs() bool`
+`func (o *InlineResponse200175) HasAssoc() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasAssoc returns a boolean if a field has been set.
 
-### GetEndTs
+### GetAuth
 
-`func (o *InlineResponse200175) GetEndTs() time.Time`
+`func (o *InlineResponse200175) GetAuth() int32`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetAuth returns the Auth field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetAuthOk
 
-`func (o *InlineResponse200175) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200175) GetAuthOk() (*int32, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetAuth
 
-`func (o *InlineResponse200175) SetEndTs(v time.Time)`
+`func (o *InlineResponse200175) SetAuth(v int32)`
 
-SetEndTs sets EndTs field to given value.
+SetAuth sets Auth field to given value.
 
-### HasEndTs
+### HasAuth
 
-`func (o *InlineResponse200175) HasEndTs() bool`
+`func (o *InlineResponse200175) HasAuth() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasAuth returns a boolean if a field has been set.
 
-### GetAverageKbps
+### GetDhcp
 
-`func (o *InlineResponse200175) GetAverageKbps() int32`
+`func (o *InlineResponse200175) GetDhcp() int32`
 
-GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
+GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
 
-### GetAverageKbpsOk
+### GetDhcpOk
 
-`func (o *InlineResponse200175) GetAverageKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200175) GetDhcpOk() (*int32, bool)`
 
-GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
+GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAverageKbps
+### SetDhcp
 
-`func (o *InlineResponse200175) SetAverageKbps(v int32)`
+`func (o *InlineResponse200175) SetDhcp(v int32)`
 
-SetAverageKbps sets AverageKbps field to given value.
+SetDhcp sets Dhcp field to given value.
 
-### HasAverageKbps
+### HasDhcp
 
-`func (o *InlineResponse200175) HasAverageKbps() bool`
+`func (o *InlineResponse200175) HasDhcp() bool`
 
-HasAverageKbps returns a boolean if a field has been set.
+HasDhcp returns a boolean if a field has been set.
 
-### GetDownloadKbps
+### GetDns
 
-`func (o *InlineResponse200175) GetDownloadKbps() int32`
+`func (o *InlineResponse200175) GetDns() int32`
 
-GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
+GetDns returns the Dns field if non-nil, zero value otherwise.
 
-### GetDownloadKbpsOk
+### GetDnsOk
 
-`func (o *InlineResponse200175) GetDownloadKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200175) GetDnsOk() (*int32, bool)`
 
-GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
+GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownloadKbps
+### SetDns
 
-`func (o *InlineResponse200175) SetDownloadKbps(v int32)`
+`func (o *InlineResponse200175) SetDns(v int32)`
 
-SetDownloadKbps sets DownloadKbps field to given value.
+SetDns sets Dns field to given value.
 
-### HasDownloadKbps
+### HasDns
 
-`func (o *InlineResponse200175) HasDownloadKbps() bool`
+`func (o *InlineResponse200175) HasDns() bool`
 
-HasDownloadKbps returns a boolean if a field has been set.
+HasDns returns a boolean if a field has been set.
 
-### GetUploadKbps
+### GetSuccess
 
-`func (o *InlineResponse200175) GetUploadKbps() int32`
+`func (o *InlineResponse200175) GetSuccess() int32`
 
-GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetUploadKbpsOk
+### GetSuccessOk
 
-`func (o *InlineResponse200175) GetUploadKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200175) GetSuccessOk() (*int32, bool)`
 
-GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUploadKbps
+### SetSuccess
 
-`func (o *InlineResponse200175) SetUploadKbps(v int32)`
+`func (o *InlineResponse200175) SetSuccess(v int32)`
 
-SetUploadKbps sets UploadKbps field to given value.
+SetSuccess sets Success field to given value.
 
-### HasUploadKbps
+### HasSuccess
 
-`func (o *InlineResponse200175) HasUploadKbps() bool`
+`func (o *InlineResponse200175) HasSuccess() bool`
 
-HasUploadKbps returns a boolean if a field has been set.
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

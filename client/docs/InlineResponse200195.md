@@ -4,18 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
-**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
-**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
-**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
+**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200195
 
-`func NewInlineResponse200195(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse200195`
+`func NewInlineResponse200195() *InlineResponse200195`
 
 NewInlineResponse200195 instantiates a new InlineResponse200195 object
 This constructor will assign default values to properties that have it defined,
@@ -30,150 +29,130 @@ NewInlineResponse200195WithDefaults instantiates a new InlineResponse200195 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStartTs
 
-`func (o *InlineResponse200195) GetId() string`
+`func (o *InlineResponse200195) GetStartTs() time.Time`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStartTsOk
 
-`func (o *InlineResponse200195) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200195) GetStartTsOk() (*time.Time, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStartTs
 
-`func (o *InlineResponse200195) SetId(v string)`
+`func (o *InlineResponse200195) SetStartTs(v time.Time)`
 
-SetId sets Id field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasId
+### HasStartTs
 
-`func (o *InlineResponse200195) HasId() bool`
+`func (o *InlineResponse200195) HasStartTs() bool`
 
-HasId returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetEndTs
 
-`func (o *InlineResponse200195) GetOrganizationId() string`
+`func (o *InlineResponse200195) GetEndTs() time.Time`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetEndTsOk
 
-`func (o *InlineResponse200195) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200195) GetEndTsOk() (*time.Time, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetEndTs
 
-`func (o *InlineResponse200195) SetOrganizationId(v string)`
+`func (o *InlineResponse200195) SetEndTs(v time.Time)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasOrganizationId
+### HasEndTs
 
-`func (o *InlineResponse200195) HasOrganizationId() bool`
+`func (o *InlineResponse200195) HasEndTs() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetConfirmed
+### GetTotalKbps
 
-`func (o *InlineResponse200195) GetConfirmed() bool`
+`func (o *InlineResponse200195) GetTotalKbps() int32`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetTotalKbpsOk
 
-`func (o *InlineResponse200195) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineResponse200195) GetTotalKbpsOk() (*int32, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetTotalKbps
 
-`func (o *InlineResponse200195) SetConfirmed(v bool)`
+`func (o *InlineResponse200195) SetTotalKbps(v int32)`
 
-SetConfirmed sets Confirmed field to given value.
+SetTotalKbps sets TotalKbps field to given value.
 
-### HasConfirmed
+### HasTotalKbps
 
-`func (o *InlineResponse200195) HasConfirmed() bool`
+`func (o *InlineResponse200195) HasTotalKbps() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasTotalKbps returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetSentKbps
 
-`func (o *InlineResponse200195) GetSynchronous() bool`
+`func (o *InlineResponse200195) GetSentKbps() int32`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetSentKbpsOk
 
-`func (o *InlineResponse200195) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineResponse200195) GetSentKbpsOk() (*int32, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetSentKbps
 
-`func (o *InlineResponse200195) SetSynchronous(v bool)`
+`func (o *InlineResponse200195) SetSentKbps(v int32)`
 
-SetSynchronous sets Synchronous field to given value.
+SetSentKbps sets SentKbps field to given value.
 
-### HasSynchronous
+### HasSentKbps
 
-`func (o *InlineResponse200195) HasSynchronous() bool`
+`func (o *InlineResponse200195) HasSentKbps() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasSentKbps returns a boolean if a field has been set.
 
-### GetStatus
+### GetReceivedKbps
 
-`func (o *InlineResponse200195) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
+`func (o *InlineResponse200195) GetReceivedKbps() int32`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetReceivedKbpsOk
 
-`func (o *InlineResponse200195) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
+`func (o *InlineResponse200195) GetReceivedKbpsOk() (*int32, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetReceivedKbps
 
-`func (o *InlineResponse200195) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
+`func (o *InlineResponse200195) SetReceivedKbps(v int32)`
 
-SetStatus sets Status field to given value.
+SetReceivedKbps sets ReceivedKbps field to given value.
 
-### HasStatus
+### HasReceivedKbps
 
-`func (o *InlineResponse200195) HasStatus() bool`
+`func (o *InlineResponse200195) HasReceivedKbps() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetActions
-
-`func (o *InlineResponse200195) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
-
-GetActions returns the Actions field if non-nil, zero value otherwise.
-
-### GetActionsOk
-
-`func (o *InlineResponse200195) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
-
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActions
-
-`func (o *InlineResponse200195) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
-
-SetActions sets Actions field to given value.
-
+HasReceivedKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SegmentStart** | **time.Time** | Starting datetime of the segment in iso8601 format | 
-**Totals** | [**InlineResponse200216Totals**](InlineResponse200216Totals.md) |  | 
-**ByAlertType** | [**[]InlineResponse200216ByAlertType**](InlineResponse200216ByAlertType.md) | Totals by Type | 
+**NetworkId** | **string** | id | 
+**NetworkName** | **string** | Name | 
+**AlertCount** | **int32** | Total Alerts | 
+**SeverityCounts** | [**[]InlineResponse200216SeverityCounts**](InlineResponse200216SeverityCounts.md) | Alerts By Severity | 
 
 ## Methods
 
 ### NewInlineResponse200216Items
 
-`func NewInlineResponse200216Items(segmentStart time.Time, totals InlineResponse200216Totals, byAlertType []InlineResponse200216ByAlertType, ) *InlineResponse200216Items`
+`func NewInlineResponse200216Items(networkId string, networkName string, alertCount int32, severityCounts []InlineResponse200216SeverityCounts, ) *InlineResponse200216Items`
 
 NewInlineResponse200216Items instantiates a new InlineResponse200216Items object
 This constructor will assign default values to properties that have it defined,
@@ -27,64 +28,84 @@ NewInlineResponse200216ItemsWithDefaults instantiates a new InlineResponse200216
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSegmentStart
+### GetNetworkId
 
-`func (o *InlineResponse200216Items) GetSegmentStart() time.Time`
+`func (o *InlineResponse200216Items) GetNetworkId() string`
 
-GetSegmentStart returns the SegmentStart field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetSegmentStartOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200216Items) GetSegmentStartOk() (*time.Time, bool)`
+`func (o *InlineResponse200216Items) GetNetworkIdOk() (*string, bool)`
 
-GetSegmentStartOk returns a tuple with the SegmentStart field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSegmentStart
+### SetNetworkId
 
-`func (o *InlineResponse200216Items) SetSegmentStart(v time.Time)`
+`func (o *InlineResponse200216Items) SetNetworkId(v string)`
 
-SetSegmentStart sets SegmentStart field to given value.
+SetNetworkId sets NetworkId field to given value.
 
 
-### GetTotals
+### GetNetworkName
 
-`func (o *InlineResponse200216Items) GetTotals() InlineResponse200216Totals`
+`func (o *InlineResponse200216Items) GetNetworkName() string`
 
-GetTotals returns the Totals field if non-nil, zero value otherwise.
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-### GetTotalsOk
+### GetNetworkNameOk
 
-`func (o *InlineResponse200216Items) GetTotalsOk() (*InlineResponse200216Totals, bool)`
+`func (o *InlineResponse200216Items) GetNetworkNameOk() (*string, bool)`
 
-GetTotalsOk returns a tuple with the Totals field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotals
+### SetNetworkName
 
-`func (o *InlineResponse200216Items) SetTotals(v InlineResponse200216Totals)`
+`func (o *InlineResponse200216Items) SetNetworkName(v string)`
 
-SetTotals sets Totals field to given value.
+SetNetworkName sets NetworkName field to given value.
 
 
-### GetByAlertType
+### GetAlertCount
 
-`func (o *InlineResponse200216Items) GetByAlertType() []InlineResponse200216ByAlertType`
+`func (o *InlineResponse200216Items) GetAlertCount() int32`
 
-GetByAlertType returns the ByAlertType field if non-nil, zero value otherwise.
+GetAlertCount returns the AlertCount field if non-nil, zero value otherwise.
 
-### GetByAlertTypeOk
+### GetAlertCountOk
 
-`func (o *InlineResponse200216Items) GetByAlertTypeOk() (*[]InlineResponse200216ByAlertType, bool)`
+`func (o *InlineResponse200216Items) GetAlertCountOk() (*int32, bool)`
 
-GetByAlertTypeOk returns a tuple with the ByAlertType field if it's non-nil, zero value otherwise
+GetAlertCountOk returns a tuple with the AlertCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByAlertType
+### SetAlertCount
 
-`func (o *InlineResponse200216Items) SetByAlertType(v []InlineResponse200216ByAlertType)`
+`func (o *InlineResponse200216Items) SetAlertCount(v int32)`
 
-SetByAlertType sets ByAlertType field to given value.
+SetAlertCount sets AlertCount field to given value.
+
+
+### GetSeverityCounts
+
+`func (o *InlineResponse200216Items) GetSeverityCounts() []InlineResponse200216SeverityCounts`
+
+GetSeverityCounts returns the SeverityCounts field if non-nil, zero value otherwise.
+
+### GetSeverityCountsOk
+
+`func (o *InlineResponse200216Items) GetSeverityCountsOk() (*[]InlineResponse200216SeverityCounts, bool)`
+
+GetSeverityCountsOk returns a tuple with the SeverityCounts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeverityCounts
+
+`func (o *InlineResponse200216Items) SetSeverityCounts(v []InlineResponse200216SeverityCounts)`
+
+SetSeverityCounts sets SeverityCounts field to given value.
 
 
 

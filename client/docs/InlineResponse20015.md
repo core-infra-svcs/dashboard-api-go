@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Sims** | Pointer to [**[]InlineResponse20015Sims**](InlineResponse20015Sims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
-**SimOrdering** | Pointer to **[]string** | Specifies which SIMs to use for primary and secondary. Required for devices with 3 or more SIMs. | [optional] 
+**SimOrdering** | Pointer to **[]string** | Specifies the ordering of all SIMs for an MG: primary, secondary, and not-in-use (when applicable). It&#39;s required for devices with 3 or more SIMs and can be used in place of &#39;isPrimary&#39; for dual-SIM devices. To indicate eSIM, use &#39;sim3&#39;. Sim failover will occur only between primary and secondary sim slots. | [optional] 
 **SimFailover** | Pointer to [**InlineResponse20015SimFailover**](InlineResponse20015SimFailover.md) |  | [optional] 
 
 ## Methods

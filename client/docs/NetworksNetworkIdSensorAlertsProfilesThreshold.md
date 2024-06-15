@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Water** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdWater**](NetworksNetworkIdSensorAlertsProfilesThresholdWater.md) |  | [optional] 
 **Door** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdDoor**](NetworksNetworkIdSensorAlertsProfilesThresholdDoor.md) |  | [optional] 
 **Tvoc** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdTvoc**](NetworksNetworkIdSensorAlertsProfilesThresholdTvoc.md) |  | [optional] 
+**Co2** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdCo2**](NetworksNetworkIdSensorAlertsProfilesThresholdCo2.md) |  | [optional] 
 **Pm25** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdPm25**](NetworksNetworkIdSensorAlertsProfilesThresholdPm25.md) |  | [optional] 
 **Noise** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdNoise**](NetworksNetworkIdSensorAlertsProfilesThresholdNoise.md) |  | [optional] 
 **IndoorAirQuality** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesThresholdIndoorAirQuality**](NetworksNetworkIdSensorAlertsProfilesThresholdIndoorAirQuality.md) |  | [optional] 
@@ -163,6 +164,31 @@ SetTvoc sets Tvoc field to given value.
 `func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) HasTvoc() bool`
 
 HasTvoc returns a boolean if a field has been set.
+
+### GetCo2
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetCo2() NetworksNetworkIdSensorAlertsProfilesThresholdCo2`
+
+GetCo2 returns the Co2 field if non-nil, zero value otherwise.
+
+### GetCo2Ok
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) GetCo2Ok() (*NetworksNetworkIdSensorAlertsProfilesThresholdCo2, bool)`
+
+GetCo2Ok returns a tuple with the Co2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCo2
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) SetCo2(v NetworksNetworkIdSensorAlertsProfilesThresholdCo2)`
+
+SetCo2 sets Co2 field to given value.
+
+### HasCo2
+
+`func (o *NetworksNetworkIdSensorAlertsProfilesThreshold) HasCo2() bool`
+
+HasCo2 returns a boolean if a field has been set.
 
 ### GetPm25
 

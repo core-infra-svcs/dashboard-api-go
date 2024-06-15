@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
-**Name** | Pointer to **string** | Switch template name | [optional] 
-**Model** | Pointer to **string** | Switch model | [optional] 
+**ClientId** | Pointer to **string** | The ID of the client | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**Manufacturer** | Pointer to **string** | Manufacturer of the client | [optional] 
+**Records** | Pointer to [**[]InlineResponse200230Records**](InlineResponse200230Records.md) | The clients that appear on any networks within an organization | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200230WithDefaults instantiates a new InlineResponse200230 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchProfileId
+### GetClientId
 
-`func (o *InlineResponse200230) GetSwitchProfileId() string`
+`func (o *InlineResponse200230) GetClientId() string`
 
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetSwitchProfileIdOk
+### GetClientIdOk
 
-`func (o *InlineResponse200230) GetSwitchProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200230) GetClientIdOk() (*string, bool)`
 
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfileId
+### SetClientId
 
-`func (o *InlineResponse200230) SetSwitchProfileId(v string)`
+`func (o *InlineResponse200230) SetClientId(v string)`
 
-SetSwitchProfileId sets SwitchProfileId field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasSwitchProfileId
+### HasClientId
 
-`func (o *InlineResponse200230) HasSwitchProfileId() bool`
+`func (o *InlineResponse200230) HasClientId() bool`
 
-HasSwitchProfileId returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
 
-### GetName
+### GetMac
 
-`func (o *InlineResponse200230) GetName() string`
+`func (o *InlineResponse200230) GetMac() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMacOk
 
-`func (o *InlineResponse200230) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200230) GetMacOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMac
 
-`func (o *InlineResponse200230) SetName(v string)`
+`func (o *InlineResponse200230) SetMac(v string)`
 
-SetName sets Name field to given value.
+SetMac sets Mac field to given value.
 
-### HasName
+### HasMac
 
-`func (o *InlineResponse200230) HasName() bool`
+`func (o *InlineResponse200230) HasMac() bool`
 
-HasName returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetModel
+### GetManufacturer
 
-`func (o *InlineResponse200230) GetModel() string`
+`func (o *InlineResponse200230) GetManufacturer() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetManufacturerOk
 
-`func (o *InlineResponse200230) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200230) GetManufacturerOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetManufacturer
 
-`func (o *InlineResponse200230) SetModel(v string)`
+`func (o *InlineResponse200230) SetManufacturer(v string)`
 
-SetModel sets Model field to given value.
+SetManufacturer sets Manufacturer field to given value.
 
-### HasModel
+### HasManufacturer
 
-`func (o *InlineResponse200230) HasModel() bool`
+`func (o *InlineResponse200230) HasManufacturer() bool`
 
-HasModel returns a boolean if a field has been set.
+HasManufacturer returns a boolean if a field has been set.
+
+### GetRecords
+
+`func (o *InlineResponse200230) GetRecords() []InlineResponse200230Records`
+
+GetRecords returns the Records field if non-nil, zero value otherwise.
+
+### GetRecordsOk
+
+`func (o *InlineResponse200230) GetRecordsOk() (*[]InlineResponse200230Records, bool)`
+
+GetRecordsOk returns a tuple with the Records field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecords
+
+`func (o *InlineResponse200230) SetRecords(v []InlineResponse200230Records)`
+
+SetRecords sets Records field to given value.
+
+### HasRecords
+
+`func (o *InlineResponse200230) HasRecords() bool`
+
+HasRecords returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

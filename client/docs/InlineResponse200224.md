@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network Id | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Model** | Pointer to **string** | Device model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks.md) | Uplinks info | [optional] 
+**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
+**Type** | Pointer to **string** | The boundary type | [optional] 
+**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200224WithDefaults instantiates a new InlineResponse200224 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetBoundaryId
 
-`func (o *InlineResponse200224) GetNetworkId() string`
+`func (o *InlineResponse200224) GetBoundaryId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetBoundaryIdOk
 
-`func (o *InlineResponse200224) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200224) GetBoundaryIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetBoundaryId
 
-`func (o *InlineResponse200224) SetNetworkId(v string)`
+`func (o *InlineResponse200224) SetBoundaryId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetBoundaryId sets BoundaryId field to given value.
 
-### HasNetworkId
+### HasBoundaryId
 
-`func (o *InlineResponse200224) HasNetworkId() bool`
+`func (o *InlineResponse200224) HasBoundaryId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasBoundaryId returns a boolean if a field has been set.
 
-### GetSerial
+### GetType
 
-`func (o *InlineResponse200224) GetSerial() string`
+`func (o *InlineResponse200224) GetType() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetTypeOk
 
-`func (o *InlineResponse200224) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200224) GetTypeOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetType
 
-`func (o *InlineResponse200224) SetSerial(v string)`
+`func (o *InlineResponse200224) SetType(v string)`
 
-SetSerial sets Serial field to given value.
+SetType sets Type field to given value.
 
-### HasSerial
+### HasType
 
-`func (o *InlineResponse200224) HasSerial() bool`
+`func (o *InlineResponse200224) HasType() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetModel
+### GetResults
 
-`func (o *InlineResponse200224) GetModel() string`
+`func (o *InlineResponse200224) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetResults returns the Results field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetResultsOk
 
-`func (o *InlineResponse200224) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200224) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetResults
 
-`func (o *InlineResponse200224) SetModel(v string)`
+`func (o *InlineResponse200224) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
 
-SetModel sets Model field to given value.
+SetResults sets Results field to given value.
 
-### HasModel
+### HasResults
 
-`func (o *InlineResponse200224) HasModel() bool`
+`func (o *InlineResponse200224) HasResults() bool`
 
-HasModel returns a boolean if a field has been set.
-
-### GetLastReportedAt
-
-`func (o *InlineResponse200224) GetLastReportedAt() time.Time`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse200224) GetLastReportedAtOk() (*time.Time, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse200224) SetLastReportedAt(v time.Time)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-### HasLastReportedAt
-
-`func (o *InlineResponse200224) HasLastReportedAt() bool`
-
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse200224) GetUplinks() []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse200224) GetUplinksOk() (*[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse200224) SetUplinks(v []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse200224) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
+HasResults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

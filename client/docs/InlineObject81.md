@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destinations** | Pointer to [**[]NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations**](NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations.md) | The list of connectivity monitoring destinations | [optional] 
+**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
+**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesSsid1**](NetworksNetworkIdCameraWirelessProfilesSsid1.md) |  | [optional] 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineObject81WithDefaults instantiates a new InlineObject81 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestinations
+### GetName
 
-`func (o *InlineObject81) GetDestinations() []NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations`
+`func (o *InlineObject81) GetName() string`
 
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDestinationsOk
+### GetNameOk
 
-`func (o *InlineObject81) GetDestinationsOk() (*[]NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations, bool)`
+`func (o *InlineObject81) GetNameOk() (*string, bool)`
 
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinations
+### SetName
 
-`func (o *InlineObject81) SetDestinations(v []NetworksNetworkIdCellularGatewayConnectivityMonitoringDestinationsDestinations)`
+`func (o *InlineObject81) SetName(v string)`
 
-SetDestinations sets Destinations field to given value.
+SetName sets Name field to given value.
 
-### HasDestinations
+### HasName
 
-`func (o *InlineObject81) HasDestinations() bool`
+`func (o *InlineObject81) HasName() bool`
 
-HasDestinations returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetSsid
+
+`func (o *InlineObject81) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid1`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineObject81) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid1, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineObject81) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid1)`
+
+SetSsid sets Ssid field to given value.
+
+### HasSsid
+
+`func (o *InlineObject81) HasSsid() bool`
+
+HasSsid returns a boolean if a field has been set.
+
+### GetIdentity
+
+`func (o *InlineObject81) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineObject81) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineObject81) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineObject81) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

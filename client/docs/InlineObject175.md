@@ -4,15 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | AP port profile name | 
-**Ports** | [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts1.md) | AP ports configuration | 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
+**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
+**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
+**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
+**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
+**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
+**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
 
 ## Methods
 
 ### NewInlineObject175
 
-`func NewInlineObject175(name string, ports []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, ) *InlineObject175`
+`func NewInlineObject175() *InlineObject175`
 
 NewInlineObject175 instantiates a new InlineObject175 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +30,155 @@ NewInlineObject175WithDefaults instantiates a new InlineObject175 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetScanningEnabled
 
-`func (o *InlineObject175) GetName() string`
+`func (o *InlineObject175) GetScanningEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetScanningEnabledOk
 
-`func (o *InlineObject175) GetNameOk() (*string, bool)`
+`func (o *InlineObject175) GetScanningEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetScanningEnabled
 
-`func (o *InlineObject175) SetName(v string)`
+`func (o *InlineObject175) SetScanningEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetScanningEnabled sets ScanningEnabled field to given value.
 
+### HasScanningEnabled
 
-### GetPorts
+`func (o *InlineObject175) HasScanningEnabled() bool`
 
-`func (o *InlineObject175) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1`
+HasScanningEnabled returns a boolean if a field has been set.
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+### GetAdvertisingEnabled
 
-### GetPortsOk
+`func (o *InlineObject175) GetAdvertisingEnabled() bool`
 
-`func (o *InlineObject175) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, bool)`
+GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+### GetAdvertisingEnabledOk
+
+`func (o *InlineObject175) GetAdvertisingEnabledOk() (*bool, bool)`
+
+GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetAdvertisingEnabled
 
-`func (o *InlineObject175) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1)`
+`func (o *InlineObject175) SetAdvertisingEnabled(v bool)`
 
-SetPorts sets Ports field to given value.
+SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
 
+### HasAdvertisingEnabled
 
-### GetUsbPorts
+`func (o *InlineObject175) HasAdvertisingEnabled() bool`
 
-`func (o *InlineObject175) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
+HasAdvertisingEnabled returns a boolean if a field has been set.
 
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+### GetUuid
 
-### GetUsbPortsOk
+`func (o *InlineObject175) GetUuid() string`
 
-`func (o *InlineObject175) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
+GetUuid returns the Uuid field if non-nil, zero value otherwise.
 
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+### GetUuidOk
+
+`func (o *InlineObject175) GetUuidOk() (*string, bool)`
+
+GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsbPorts
+### SetUuid
 
-`func (o *InlineObject175) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
+`func (o *InlineObject175) SetUuid(v string)`
 
-SetUsbPorts sets UsbPorts field to given value.
+SetUuid sets Uuid field to given value.
 
-### HasUsbPorts
+### HasUuid
 
-`func (o *InlineObject175) HasUsbPorts() bool`
+`func (o *InlineObject175) HasUuid() bool`
 
-HasUsbPorts returns a boolean if a field has been set.
+HasUuid returns a boolean if a field has been set.
+
+### GetMajorMinorAssignmentMode
+
+`func (o *InlineObject175) GetMajorMinorAssignmentMode() string`
+
+GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
+
+### GetMajorMinorAssignmentModeOk
+
+`func (o *InlineObject175) GetMajorMinorAssignmentModeOk() (*string, bool)`
+
+GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajorMinorAssignmentMode
+
+`func (o *InlineObject175) SetMajorMinorAssignmentMode(v string)`
+
+SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
+
+### HasMajorMinorAssignmentMode
+
+`func (o *InlineObject175) HasMajorMinorAssignmentMode() bool`
+
+HasMajorMinorAssignmentMode returns a boolean if a field has been set.
+
+### GetMajor
+
+`func (o *InlineObject175) GetMajor() int32`
+
+GetMajor returns the Major field if non-nil, zero value otherwise.
+
+### GetMajorOk
+
+`func (o *InlineObject175) GetMajorOk() (*int32, bool)`
+
+GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajor
+
+`func (o *InlineObject175) SetMajor(v int32)`
+
+SetMajor sets Major field to given value.
+
+### HasMajor
+
+`func (o *InlineObject175) HasMajor() bool`
+
+HasMajor returns a boolean if a field has been set.
+
+### GetMinor
+
+`func (o *InlineObject175) GetMinor() int32`
+
+GetMinor returns the Minor field if non-nil, zero value otherwise.
+
+### GetMinorOk
+
+`func (o *InlineObject175) GetMinorOk() (*int32, bool)`
+
+GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMinor
+
+`func (o *InlineObject175) SetMinor(v int32)`
+
+SetMinor sets Minor field to given value.
+
+### HasMinor
+
+`func (o *InlineObject175) HasMinor() bool`
+
+HasMinor returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

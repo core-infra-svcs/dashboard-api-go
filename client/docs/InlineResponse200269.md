@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200269Items**](InlineResponse200269Items.md) | Sentry Group Policies for the Organization keyed by Network Id | [optional] 
+**Items** | Pointer to [**[]InlineResponse200269Items**](InlineResponse200269Items.md) | Array of Limited Access Roles | [optional] 
+**Meta** | Pointer to [**InlineResponse200269Meta**](InlineResponse200269Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -49,6 +50,31 @@ SetItems sets Items field to given value.
 `func (o *InlineResponse200269) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200269) GetMeta() InlineResponse200269Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200269) GetMetaOk() (*InlineResponse200269Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200269) SetMeta(v InlineResponse200269Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200269) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

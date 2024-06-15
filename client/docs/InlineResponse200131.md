@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of this target group. | [optional] 
-**Name** | Pointer to **string** | The name of this target group. | [optional] 
-**Scope** | Pointer to **string** | The scope of the target group. | [optional] 
-**Tags** | Pointer to **[]string** | The tags of the target group. | [optional] 
+**Id** | Pointer to **string** | ID of a profile. | [optional] 
+**Name** | Pointer to **string** | Name of a profile. | [optional] 
+**Description** | Pointer to **string** | Description of a profile. | [optional] 
+**Scope** | Pointer to **string** | Scope of a profile. | [optional] 
+**Tags** | Pointer to **[]string** | Tags of a profile. | [optional] 
+**PayloadTypes** | Pointer to **[]string** | Payloads in the profile. | [optional] 
 
 ## Methods
 
@@ -78,6 +80,31 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### GetDescription
+
+`func (o *InlineResponse200131) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse200131) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse200131) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse200131) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
 ### GetScope
 
 `func (o *InlineResponse200131) GetScope() string`
@@ -127,6 +154,31 @@ SetTags sets Tags field to given value.
 `func (o *InlineResponse200131) HasTags() bool`
 
 HasTags returns a boolean if a field has been set.
+
+### GetPayloadTypes
+
+`func (o *InlineResponse200131) GetPayloadTypes() []string`
+
+GetPayloadTypes returns the PayloadTypes field if non-nil, zero value otherwise.
+
+### GetPayloadTypesOk
+
+`func (o *InlineResponse200131) GetPayloadTypesOk() (*[]string, bool)`
+
+GetPayloadTypesOk returns a tuple with the PayloadTypes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTypes
+
+`func (o *InlineResponse200131) SetPayloadTypes(v []string)`
+
+SetPayloadTypes sets PayloadTypes field to given value.
+
+### HasPayloadTypes
+
+`func (o *InlineResponse200131) HasPayloadTypes() bool`
+
+HasPayloadTypes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

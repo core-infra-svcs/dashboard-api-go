@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**InlineResponse200288Example**](InlineResponse200288Example.md) |  | [optional] 
+**SourceSerial** | Pointer to **string** | Serial number of the source switch (must be on a network not bound to a template) | [optional] 
+**TargetSerials** | Pointer to **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200288WithDefaults instantiates a new InlineResponse200288 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetSourceSerial
 
-`func (o *InlineResponse200288) GetAlertTypeId() string`
+`func (o *InlineResponse200288) GetSourceSerial() string`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetSourceSerialOk
 
-`func (o *InlineResponse200288) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200288) GetSourceSerialOk() (*string, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetSourceSerial
 
-`func (o *InlineResponse200288) SetAlertTypeId(v string)`
+`func (o *InlineResponse200288) SetSourceSerial(v string)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetSourceSerial sets SourceSerial field to given value.
 
-### HasAlertTypeId
+### HasSourceSerial
 
-`func (o *InlineResponse200288) HasAlertTypeId() bool`
+`func (o *InlineResponse200288) HasSourceSerial() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasSourceSerial returns a boolean if a field has been set.
 
-### GetAlertType
+### GetTargetSerials
 
-`func (o *InlineResponse200288) GetAlertType() string`
+`func (o *InlineResponse200288) GetTargetSerials() []string`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetTargetSerialsOk
 
-`func (o *InlineResponse200288) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200288) GetTargetSerialsOk() (*[]string, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetTargetSerials
 
-`func (o *InlineResponse200288) SetAlertType(v string)`
+`func (o *InlineResponse200288) SetTargetSerials(v []string)`
 
-SetAlertType sets AlertType field to given value.
+SetTargetSerials sets TargetSerials field to given value.
 
-### HasAlertType
+### HasTargetSerials
 
-`func (o *InlineResponse200288) HasAlertType() bool`
+`func (o *InlineResponse200288) HasTargetSerials() bool`
 
-HasAlertType returns a boolean if a field has been set.
-
-### GetExample
-
-`func (o *InlineResponse200288) GetExample() InlineResponse200288Example`
-
-GetExample returns the Example field if non-nil, zero value otherwise.
-
-### GetExampleOk
-
-`func (o *InlineResponse200288) GetExampleOk() (*InlineResponse200288Example, bool)`
-
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExample
-
-`func (o *InlineResponse200288) SetExample(v InlineResponse200288Example)`
-
-SetExample sets Example field to given value.
-
-### HasExample
-
-`func (o *InlineResponse200288) HasExample() bool`
-
-HasExample returns a boolean if a field has been set.
+HasTargetSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

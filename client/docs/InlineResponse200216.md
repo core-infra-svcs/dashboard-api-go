@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200216Items**](InlineResponse200216Items.md) | Historical Severity Counts | 
+**Items** | [**[]InlineResponse200216Items**](InlineResponse200216Items.md) | Alert Counts by Network | 
 **Meta** | [**InlineResponse200216Meta**](InlineResponse200216Meta.md) |  | 
 
 ## Methods

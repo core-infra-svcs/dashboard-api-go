@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | **string** | The serial of a device | 
+**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100 | 
 
 ## Methods
 
 ### NewInlineObject90
 
-`func NewInlineObject90(serial string, ) *InlineObject90`
+`func NewInlineObject90(size string, ) *InlineObject90`
 
 NewInlineObject90 instantiates a new InlineObject90 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject90WithDefaults instantiates a new InlineObject90 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetSize
 
-`func (o *InlineObject90) GetSerial() string`
+`func (o *InlineObject90) GetSize() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSize returns the Size field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSizeOk
 
-`func (o *InlineObject90) GetSerialOk() (*string, bool)`
+`func (o *InlineObject90) GetSizeOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSize
 
-`func (o *InlineObject90) SetSerial(v string)`
+`func (o *InlineObject90) SetSize(v string)`
 
-SetSerial sets Serial field to given value.
+SetSize sets Size field to given value.
 
 
 

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
-**StpBridgePriority** | Pointer to [**[]InlineResponse200158StpBridgePriority**](InlineResponse200158StpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200158WithDefaults instantiates a new InlineResponse200158 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRstpEnabled
+### GetBroadcastThreshold
 
-`func (o *InlineResponse200158) GetRstpEnabled() bool`
+`func (o *InlineResponse200158) GetBroadcastThreshold() int32`
 
-GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetRstpEnabledOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineResponse200158) GetRstpEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200158) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRstpEnabled
+### SetBroadcastThreshold
 
-`func (o *InlineResponse200158) SetRstpEnabled(v bool)`
+`func (o *InlineResponse200158) SetBroadcastThreshold(v int32)`
 
-SetRstpEnabled sets RstpEnabled field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasRstpEnabled
+### HasBroadcastThreshold
 
-`func (o *InlineResponse200158) HasRstpEnabled() bool`
+`func (o *InlineResponse200158) HasBroadcastThreshold() bool`
 
-HasRstpEnabled returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetStpBridgePriority
+### GetMulticastThreshold
 
-`func (o *InlineResponse200158) GetStpBridgePriority() []InlineResponse200158StpBridgePriority`
+`func (o *InlineResponse200158) GetMulticastThreshold() int32`
 
-GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetStpBridgePriorityOk
+### GetMulticastThresholdOk
 
-`func (o *InlineResponse200158) GetStpBridgePriorityOk() (*[]InlineResponse200158StpBridgePriority, bool)`
+`func (o *InlineResponse200158) GetMulticastThresholdOk() (*int32, bool)`
 
-GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStpBridgePriority
+### SetMulticastThreshold
 
-`func (o *InlineResponse200158) SetStpBridgePriority(v []InlineResponse200158StpBridgePriority)`
+`func (o *InlineResponse200158) SetMulticastThreshold(v int32)`
 
-SetStpBridgePriority sets StpBridgePriority field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasStpBridgePriority
+### HasMulticastThreshold
 
-`func (o *InlineResponse200158) HasStpBridgePriority() bool`
+`func (o *InlineResponse200158) HasMulticastThreshold() bool`
 
-HasStpBridgePriority returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
+
+### GetUnknownUnicastThreshold
+
+`func (o *InlineResponse200158) GetUnknownUnicastThreshold() int32`
+
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+
+### GetUnknownUnicastThresholdOk
+
+`func (o *InlineResponse200158) GetUnknownUnicastThresholdOk() (*int32, bool)`
+
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnknownUnicastThreshold
+
+`func (o *InlineResponse200158) SetUnknownUnicastThreshold(v int32)`
+
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+
+### HasUnknownUnicastThreshold
+
+`func (o *InlineResponse200158) HasUnknownUnicastThreshold() bool`
+
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

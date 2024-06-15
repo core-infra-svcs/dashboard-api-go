@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | List of AP serials | 
-**ProfileId** | **string** | AP profile ID | 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
 
 ## Methods
 
 ### NewInlineObject176
 
-`func NewInlineObject176(serials []string, profileId string, ) *InlineObject176`
+`func NewInlineObject176() *InlineObject176`
 
 NewInlineObject176 instantiates a new InlineObject176 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,55 @@ NewInlineObject176WithDefaults instantiates a new InlineObject176 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetHostname
 
-`func (o *InlineObject176) GetSerials() []string`
+`func (o *InlineObject176) GetHostname() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetHostnameOk
 
-`func (o *InlineObject176) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject176) GetHostnameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetHostname
 
-`func (o *InlineObject176) SetSerials(v []string)`
+`func (o *InlineObject176) SetHostname(v string)`
 
-SetSerials sets Serials field to given value.
+SetHostname sets Hostname field to given value.
 
+### HasHostname
 
-### GetProfileId
+`func (o *InlineObject176) HasHostname() bool`
 
-`func (o *InlineObject176) GetProfileId() string`
+HasHostname returns a boolean if a field has been set.
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+### GetEnabled
 
-### GetProfileIdOk
+`func (o *InlineObject176) GetEnabled() bool`
 
-`func (o *InlineObject176) GetProfileIdOk() (*string, bool)`
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+### GetEnabledOk
+
+`func (o *InlineObject176) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetEnabled
 
-`func (o *InlineObject176) SetProfileId(v string)`
+`func (o *InlineObject176) SetEnabled(v bool)`
 
-SetProfileId sets ProfileId field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
+
+`func (o *InlineObject176) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

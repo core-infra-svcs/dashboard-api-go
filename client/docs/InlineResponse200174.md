@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
-**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
-**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
-**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
-**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
+**T0** | Pointer to **int32** | The latency history bucket start time in seconds | [optional] 
+**T1** | Pointer to **int32** | The latency history bucket end time in seconds | [optional] 
+**LatencyBinsByCategory** | Pointer to [**NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory**](NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200174WithDefaults instantiates a new InlineResponse200174 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssoc
+### GetT0
 
-`func (o *InlineResponse200174) GetAssoc() int32`
+`func (o *InlineResponse200174) GetT0() int32`
 
-GetAssoc returns the Assoc field if non-nil, zero value otherwise.
+GetT0 returns the T0 field if non-nil, zero value otherwise.
 
-### GetAssocOk
+### GetT0Ok
 
-`func (o *InlineResponse200174) GetAssocOk() (*int32, bool)`
+`func (o *InlineResponse200174) GetT0Ok() (*int32, bool)`
 
-GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
+GetT0Ok returns a tuple with the T0 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssoc
+### SetT0
 
-`func (o *InlineResponse200174) SetAssoc(v int32)`
+`func (o *InlineResponse200174) SetT0(v int32)`
 
-SetAssoc sets Assoc field to given value.
+SetT0 sets T0 field to given value.
 
-### HasAssoc
+### HasT0
 
-`func (o *InlineResponse200174) HasAssoc() bool`
+`func (o *InlineResponse200174) HasT0() bool`
 
-HasAssoc returns a boolean if a field has been set.
+HasT0 returns a boolean if a field has been set.
 
-### GetAuth
+### GetT1
 
-`func (o *InlineResponse200174) GetAuth() int32`
+`func (o *InlineResponse200174) GetT1() int32`
 
-GetAuth returns the Auth field if non-nil, zero value otherwise.
+GetT1 returns the T1 field if non-nil, zero value otherwise.
 
-### GetAuthOk
+### GetT1Ok
 
-`func (o *InlineResponse200174) GetAuthOk() (*int32, bool)`
+`func (o *InlineResponse200174) GetT1Ok() (*int32, bool)`
 
-GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
+GetT1Ok returns a tuple with the T1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuth
+### SetT1
 
-`func (o *InlineResponse200174) SetAuth(v int32)`
+`func (o *InlineResponse200174) SetT1(v int32)`
 
-SetAuth sets Auth field to given value.
+SetT1 sets T1 field to given value.
 
-### HasAuth
+### HasT1
 
-`func (o *InlineResponse200174) HasAuth() bool`
+`func (o *InlineResponse200174) HasT1() bool`
 
-HasAuth returns a boolean if a field has been set.
+HasT1 returns a boolean if a field has been set.
 
-### GetDhcp
+### GetLatencyBinsByCategory
 
-`func (o *InlineResponse200174) GetDhcp() int32`
+`func (o *InlineResponse200174) GetLatencyBinsByCategory() NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory`
 
-GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
+GetLatencyBinsByCategory returns the LatencyBinsByCategory field if non-nil, zero value otherwise.
 
-### GetDhcpOk
+### GetLatencyBinsByCategoryOk
 
-`func (o *InlineResponse200174) GetDhcpOk() (*int32, bool)`
+`func (o *InlineResponse200174) GetLatencyBinsByCategoryOk() (*NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory, bool)`
 
-GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
+GetLatencyBinsByCategoryOk returns a tuple with the LatencyBinsByCategory field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcp
+### SetLatencyBinsByCategory
 
-`func (o *InlineResponse200174) SetDhcp(v int32)`
+`func (o *InlineResponse200174) SetLatencyBinsByCategory(v NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory)`
 
-SetDhcp sets Dhcp field to given value.
+SetLatencyBinsByCategory sets LatencyBinsByCategory field to given value.
 
-### HasDhcp
+### HasLatencyBinsByCategory
 
-`func (o *InlineResponse200174) HasDhcp() bool`
+`func (o *InlineResponse200174) HasLatencyBinsByCategory() bool`
 
-HasDhcp returns a boolean if a field has been set.
-
-### GetDns
-
-`func (o *InlineResponse200174) GetDns() int32`
-
-GetDns returns the Dns field if non-nil, zero value otherwise.
-
-### GetDnsOk
-
-`func (o *InlineResponse200174) GetDnsOk() (*int32, bool)`
-
-GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDns
-
-`func (o *InlineResponse200174) SetDns(v int32)`
-
-SetDns sets Dns field to given value.
-
-### HasDns
-
-`func (o *InlineResponse200174) HasDns() bool`
-
-HasDns returns a boolean if a field has been set.
-
-### GetSuccess
-
-`func (o *InlineResponse200174) GetSuccess() int32`
-
-GetSuccess returns the Success field if non-nil, zero value otherwise.
-
-### GetSuccessOk
-
-`func (o *InlineResponse200174) GetSuccessOk() (*int32, bool)`
-
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSuccess
-
-`func (o *InlineResponse200174) SetSuccess(v int32)`
-
-SetSuccess sets Success field to given value.
-
-### HasSuccess
-
-`func (o *InlineResponse200174) HasSuccess() bool`
-
-HasSuccess returns a boolean if a field has been set.
+HasLatencyBinsByCategory returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

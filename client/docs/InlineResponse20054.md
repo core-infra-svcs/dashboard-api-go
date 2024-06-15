@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WanTrafficUplinkPreferences** | Pointer to [**[]NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences**](NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences.md) | policies with respective traffic filters for an MX network | [optional] 
+**Assigned** | Pointer to [**[]InlineResponse20054Assigned**](InlineResponse20054Assigned.md) | RF Profiles | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20054WithDefaults instantiates a new InlineResponse20054 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWanTrafficUplinkPreferences
+### GetAssigned
 
-`func (o *InlineResponse20054) GetWanTrafficUplinkPreferences() []NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences`
+`func (o *InlineResponse20054) GetAssigned() []InlineResponse20054Assigned`
 
-GetWanTrafficUplinkPreferences returns the WanTrafficUplinkPreferences field if non-nil, zero value otherwise.
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
 
-### GetWanTrafficUplinkPreferencesOk
+### GetAssignedOk
 
-`func (o *InlineResponse20054) GetWanTrafficUplinkPreferencesOk() (*[]NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences, bool)`
+`func (o *InlineResponse20054) GetAssignedOk() (*[]InlineResponse20054Assigned, bool)`
 
-GetWanTrafficUplinkPreferencesOk returns a tuple with the WanTrafficUplinkPreferences field if it's non-nil, zero value otherwise
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWanTrafficUplinkPreferences
+### SetAssigned
 
-`func (o *InlineResponse20054) SetWanTrafficUplinkPreferences(v []NetworksNetworkIdApplianceSdwanInternetPoliciesWanTrafficUplinkPreferences)`
+`func (o *InlineResponse20054) SetAssigned(v []InlineResponse20054Assigned)`
 
-SetWanTrafficUplinkPreferences sets WanTrafficUplinkPreferences field to given value.
+SetAssigned sets Assigned field to given value.
 
-### HasWanTrafficUplinkPreferences
+### HasAssigned
 
-`func (o *InlineResponse20054) HasWanTrafficUplinkPreferences() bool`
+`func (o *InlineResponse20054) HasAssigned() bool`
 
-HasWanTrafficUplinkPreferences returns a boolean if a field has been set.
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

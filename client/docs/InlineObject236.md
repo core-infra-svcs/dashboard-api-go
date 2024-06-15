@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
+**Devices** | [**[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices.md) | A set of device imports to commit | 
 
 ## Methods
 
 ### NewInlineObject236
 
-`func NewInlineObject236() *InlineObject236`
+`func NewInlineObject236(devices []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices, ) *InlineObject236`
 
 NewInlineObject236 instantiates a new InlineObject236 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject236WithDefaults instantiates a new InlineObject236 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetDevices
 
-`func (o *InlineObject236) GetSerials() []string`
+`func (o *InlineObject236) GetDevices() []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetDevicesOk
 
-`func (o *InlineObject236) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject236) GetDevicesOk() (*[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetDevices
 
-`func (o *InlineObject236) SetSerials(v []string)`
+`func (o *InlineObject236) SetDevices(v []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices)`
 
-SetSerials sets Serials field to given value.
+SetDevices sets Devices field to given value.
 
-### HasSerials
-
-`func (o *InlineObject236) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,12 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the switch. | [optional] 
-**Serial** | Pointer to **string** | The serial number of the switch. | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the switch. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSwitchPortsBySwitchNetwork**](OrganizationsOrganizationIdSwitchPortsBySwitchNetwork.md) |  | [optional] 
-**Model** | Pointer to **string** | The model of the switch. | [optional] 
-**Ports** | Pointer to [**[]OrganizationsOrganizationIdSwitchPortsBySwitchPorts**](OrganizationsOrganizationIdSwitchPortsBySwitchPorts.md) | Ports belonging to the switch | [optional] 
+**NetworkId** | Pointer to **string** | Network identifier | [optional] 
+**Name** | Pointer to **string** | Network name | [optional] 
+**Url** | Pointer to **string** | Network clients list URL | [optional] 
+**Tags** | Pointer to **[]string** | Network tags | [optional] 
+**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopNetworksByStatusClients**](OrganizationsOrganizationIdSummaryTopNetworksByStatusClients.md) |  | [optional] 
+**Statuses** | Pointer to [**OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses**](OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses.md) |  | [optional] 
+**Devices** | Pointer to [**OrganizationsOrganizationIdSummaryTopNetworksByStatusDevices**](OrganizationsOrganizationIdSummaryTopNetworksByStatusDevices.md) |  | [optional] 
+**ProductTypes** | Pointer to **[]string** | Product types in network | [optional] 
 
 ## Methods
 
@@ -29,6 +31,31 @@ will change when the set of required properties is changed
 NewInlineResponse200285WithDefaults instantiates a new InlineResponse200285 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetNetworkId
+
+`func (o *InlineResponse200285) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse200285) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse200285) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse200285) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -55,130 +82,155 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSerial
+### GetUrl
 
-`func (o *InlineResponse200285) GetSerial() string`
+`func (o *InlineResponse200285) GetUrl() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetUrlOk
 
-`func (o *InlineResponse200285) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200285) GetUrlOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetUrl
 
-`func (o *InlineResponse200285) SetSerial(v string)`
+`func (o *InlineResponse200285) SetUrl(v string)`
 
-SetSerial sets Serial field to given value.
+SetUrl sets Url field to given value.
 
-### HasSerial
+### HasUrl
 
-`func (o *InlineResponse200285) HasSerial() bool`
+`func (o *InlineResponse200285) HasUrl() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetMac
+### GetTags
 
-`func (o *InlineResponse200285) GetMac() string`
+`func (o *InlineResponse200285) GetTags() []string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetTagsOk
 
-`func (o *InlineResponse200285) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200285) GetTagsOk() (*[]string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetTags
 
-`func (o *InlineResponse200285) SetMac(v string)`
+`func (o *InlineResponse200285) SetTags(v []string)`
 
-SetMac sets Mac field to given value.
+SetTags sets Tags field to given value.
 
-### HasMac
+### HasTags
 
-`func (o *InlineResponse200285) HasMac() bool`
+`func (o *InlineResponse200285) HasTags() bool`
 
-HasMac returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetNetwork
+### GetClients
 
-`func (o *InlineResponse200285) GetNetwork() OrganizationsOrganizationIdSwitchPortsBySwitchNetwork`
+`func (o *InlineResponse200285) GetClients() OrganizationsOrganizationIdSummaryTopNetworksByStatusClients`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetClientsOk
 
-`func (o *InlineResponse200285) GetNetworkOk() (*OrganizationsOrganizationIdSwitchPortsBySwitchNetwork, bool)`
+`func (o *InlineResponse200285) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopNetworksByStatusClients, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetClients
 
-`func (o *InlineResponse200285) SetNetwork(v OrganizationsOrganizationIdSwitchPortsBySwitchNetwork)`
+`func (o *InlineResponse200285) SetClients(v OrganizationsOrganizationIdSummaryTopNetworksByStatusClients)`
 
-SetNetwork sets Network field to given value.
+SetClients sets Clients field to given value.
 
-### HasNetwork
+### HasClients
 
-`func (o *InlineResponse200285) HasNetwork() bool`
+`func (o *InlineResponse200285) HasClients() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasClients returns a boolean if a field has been set.
 
-### GetModel
+### GetStatuses
 
-`func (o *InlineResponse200285) GetModel() string`
+`func (o *InlineResponse200285) GetStatuses() OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetStatuses returns the Statuses field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetStatusesOk
 
-`func (o *InlineResponse200285) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200285) GetStatusesOk() (*OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetStatusesOk returns a tuple with the Statuses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetStatuses
 
-`func (o *InlineResponse200285) SetModel(v string)`
+`func (o *InlineResponse200285) SetStatuses(v OrganizationsOrganizationIdSummaryTopNetworksByStatusStatuses)`
 
-SetModel sets Model field to given value.
+SetStatuses sets Statuses field to given value.
 
-### HasModel
+### HasStatuses
 
-`func (o *InlineResponse200285) HasModel() bool`
+`func (o *InlineResponse200285) HasStatuses() bool`
 
-HasModel returns a boolean if a field has been set.
+HasStatuses returns a boolean if a field has been set.
 
-### GetPorts
+### GetDevices
 
-`func (o *InlineResponse200285) GetPorts() []OrganizationsOrganizationIdSwitchPortsBySwitchPorts`
+`func (o *InlineResponse200285) GetDevices() OrganizationsOrganizationIdSummaryTopNetworksByStatusDevices`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetDevicesOk
 
-`func (o *InlineResponse200285) GetPortsOk() (*[]OrganizationsOrganizationIdSwitchPortsBySwitchPorts, bool)`
+`func (o *InlineResponse200285) GetDevicesOk() (*OrganizationsOrganizationIdSummaryTopNetworksByStatusDevices, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetDevices
 
-`func (o *InlineResponse200285) SetPorts(v []OrganizationsOrganizationIdSwitchPortsBySwitchPorts)`
+`func (o *InlineResponse200285) SetDevices(v OrganizationsOrganizationIdSummaryTopNetworksByStatusDevices)`
 
-SetPorts sets Ports field to given value.
+SetDevices sets Devices field to given value.
 
-### HasPorts
+### HasDevices
 
-`func (o *InlineResponse200285) HasPorts() bool`
+`func (o *InlineResponse200285) HasDevices() bool`
 
-HasPorts returns a boolean if a field has been set.
+HasDevices returns a boolean if a field has been set.
+
+### GetProductTypes
+
+`func (o *InlineResponse200285) GetProductTypes() []string`
+
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+
+### GetProductTypesOk
+
+`func (o *InlineResponse200285) GetProductTypesOk() (*[]string, bool)`
+
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductTypes
+
+`func (o *InlineResponse200285) SetProductTypes(v []string)`
+
+SetProductTypes sets ProductTypes field to given value.
+
+### HasProductTypes
+
+`func (o *InlineResponse200285) HasProductTypes() bool`
+
+HasProductTypes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

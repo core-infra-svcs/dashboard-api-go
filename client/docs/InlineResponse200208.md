@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200208Counts**](InlineResponse200208Counts.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse20065**](InlineResponse20065.md) | VPN exclusion rules by network | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200208WithDefaults instantiates a new InlineResponse200208 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetItems
 
-`func (o *InlineResponse200208) GetCounts() InlineResponse200208Counts`
+`func (o *InlineResponse200208) GetItems() []InlineResponse20065`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetItemsOk
 
-`func (o *InlineResponse200208) GetCountsOk() (*InlineResponse200208Counts, bool)`
+`func (o *InlineResponse200208) GetItemsOk() (*[]InlineResponse20065, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetItems
 
-`func (o *InlineResponse200208) SetCounts(v InlineResponse200208Counts)`
+`func (o *InlineResponse200208) SetItems(v []InlineResponse20065)`
 
-SetCounts sets Counts field to given value.
+SetItems sets Items field to given value.
 
-### HasCounts
+### HasItems
 
-`func (o *InlineResponse200208) HasCounts() bool`
+`func (o *InlineResponse200208) HasItems() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

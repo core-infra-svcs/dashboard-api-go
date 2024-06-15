@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LogEvent** | **string** | The type of log event this is recording, e.g. download or opening a banner | 
-**Timestamp** | **int32** | A JavaScript UTC datetime stamp for when the even occurred | 
-**TargetOS** | Pointer to **string** | The name of the onboarding distro being downloaded | [optional] 
-**Request** | Pointer to **string** | Used to describe if this event was the result of a redirect. E.g. a query param if an info banner is being used | [optional] 
+**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
+**Licenses** | Pointer to [**[]OrganizationsOrganizationIdInventoryClaimLicenses**](OrganizationsOrganizationIdInventoryClaimLicenses.md) | The licenses that should be claimed | [optional] 
 
 ## Methods
 
 ### NewInlineObject233
 
-`func NewInlineObject233(logEvent string, timestamp int32, ) *InlineObject233`
+`func NewInlineObject233() *InlineObject233`
 
 NewInlineObject233 instantiates a new InlineObject233 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +27,80 @@ NewInlineObject233WithDefaults instantiates a new InlineObject233 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLogEvent
+### GetOrders
 
-`func (o *InlineObject233) GetLogEvent() string`
+`func (o *InlineObject233) GetOrders() []string`
 
-GetLogEvent returns the LogEvent field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetLogEventOk
+### GetOrdersOk
 
-`func (o *InlineObject233) GetLogEventOk() (*string, bool)`
+`func (o *InlineObject233) GetOrdersOk() (*[]string, bool)`
 
-GetLogEventOk returns a tuple with the LogEvent field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLogEvent
+### SetOrders
 
-`func (o *InlineObject233) SetLogEvent(v string)`
+`func (o *InlineObject233) SetOrders(v []string)`
 
-SetLogEvent sets LogEvent field to given value.
+SetOrders sets Orders field to given value.
 
+### HasOrders
 
-### GetTimestamp
+`func (o *InlineObject233) HasOrders() bool`
 
-`func (o *InlineObject233) GetTimestamp() int32`
+HasOrders returns a boolean if a field has been set.
 
-GetTimestamp returns the Timestamp field if non-nil, zero value otherwise.
+### GetSerials
 
-### GetTimestampOk
+`func (o *InlineObject233) GetSerials() []string`
 
-`func (o *InlineObject233) GetTimestampOk() (*int32, bool)`
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-GetTimestampOk returns a tuple with the Timestamp field if it's non-nil, zero value otherwise
+### GetSerialsOk
+
+`func (o *InlineObject233) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimestamp
+### SetSerials
 
-`func (o *InlineObject233) SetTimestamp(v int32)`
+`func (o *InlineObject233) SetSerials(v []string)`
 
-SetTimestamp sets Timestamp field to given value.
+SetSerials sets Serials field to given value.
 
+### HasSerials
 
-### GetTargetOS
+`func (o *InlineObject233) HasSerials() bool`
 
-`func (o *InlineObject233) GetTargetOS() string`
+HasSerials returns a boolean if a field has been set.
 
-GetTargetOS returns the TargetOS field if non-nil, zero value otherwise.
+### GetLicenses
 
-### GetTargetOSOk
+`func (o *InlineObject233) GetLicenses() []OrganizationsOrganizationIdInventoryClaimLicenses`
 
-`func (o *InlineObject233) GetTargetOSOk() (*string, bool)`
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-GetTargetOSOk returns a tuple with the TargetOS field if it's non-nil, zero value otherwise
+### GetLicensesOk
+
+`func (o *InlineObject233) GetLicensesOk() (*[]OrganizationsOrganizationIdInventoryClaimLicenses, bool)`
+
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetOS
+### SetLicenses
 
-`func (o *InlineObject233) SetTargetOS(v string)`
+`func (o *InlineObject233) SetLicenses(v []OrganizationsOrganizationIdInventoryClaimLicenses)`
 
-SetTargetOS sets TargetOS field to given value.
+SetLicenses sets Licenses field to given value.
 
-### HasTargetOS
+### HasLicenses
 
-`func (o *InlineObject233) HasTargetOS() bool`
+`func (o *InlineObject233) HasLicenses() bool`
 
-HasTargetOS returns a boolean if a field has been set.
-
-### GetRequest
-
-`func (o *InlineObject233) GetRequest() string`
-
-GetRequest returns the Request field if non-nil, zero value otherwise.
-
-### GetRequestOk
-
-`func (o *InlineObject233) GetRequestOk() (*string, bool)`
-
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequest
-
-`func (o *InlineObject233) SetRequest(v string)`
-
-SetRequest sets Request field to given value.
-
-### HasRequest
-
-`func (o *InlineObject233) HasRequest() bool`
-
-HasRequest returns a boolean if a field has been set.
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

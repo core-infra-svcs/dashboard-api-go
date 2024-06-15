@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
-**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesSsid1**](NetworksNetworkIdCameraWirelessProfilesSsid1.md) |  | [optional] 
+**Name** | **string** | The name of the camera wireless profile. This parameter is required. | 
+**Ssid** | [**NetworksNetworkIdCameraWirelessProfilesSsid1**](NetworksNetworkIdCameraWirelessProfilesSsid1.md) |  | 
 **Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject80
 
-`func NewInlineObject80() *InlineObject80`
+`func NewInlineObject80(name string, ssid NetworksNetworkIdCameraWirelessProfilesSsid1, ) *InlineObject80`
 
 NewInlineObject80 instantiates a new InlineObject80 object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject80) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetSsid
 
@@ -71,11 +66,6 @@ and a boolean to check if the value has been set.
 
 SetSsid sets Ssid field to given value.
 
-### HasSsid
-
-`func (o *InlineObject80) HasSsid() bool`
-
-HasSsid returns a boolean if a field has been set.
 
 ### GetIdentity
 

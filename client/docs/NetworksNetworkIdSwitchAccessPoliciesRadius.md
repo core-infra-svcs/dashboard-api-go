@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **CriticalAuth** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth**](NetworksNetworkIdSwitchAccessPoliciesRadiusCriticalAuth.md) |  | [optional] 
 **FailedAuthVlanId** | Pointer to **int32** | VLAN that clients will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
 **ReAuthenticationInterval** | Pointer to **int32** | Re-authentication period in seconds. Will be null if hostMode is Multi-Auth | [optional] 
+**Cache** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusCache**](NetworksNetworkIdSwitchAccessPoliciesRadiusCache.md) |  | [optional] 
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetReAuthenticationInterval sets ReAuthenticationInterval field to given value.
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) HasReAuthenticationInterval() bool`
 
 HasReAuthenticationInterval returns a boolean if a field has been set.
+
+### GetCache
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetCache() NetworksNetworkIdSwitchAccessPoliciesRadiusCache`
+
+GetCache returns the Cache field if non-nil, zero value otherwise.
+
+### GetCacheOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetCacheOk() (*NetworksNetworkIdSwitchAccessPoliciesRadiusCache, bool)`
+
+GetCacheOk returns a tuple with the Cache field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCache
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) SetCache(v NetworksNetworkIdSwitchAccessPoliciesRadiusCache)`
+
+SetCache sets Cache field to given value.
+
+### HasCache
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) HasCache() bool`
+
+HasCache returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

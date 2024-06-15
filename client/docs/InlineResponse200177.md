@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200177WithDefaults instantiates a new InlineResponse200177 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetProfileId
+### GetHostname
 
-`func (o *InlineResponse200177) GetProfileId() string`
+`func (o *InlineResponse200177) GetHostname() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetHostnameOk
 
-`func (o *InlineResponse200177) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200177) GetHostnameOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetHostname
 
-`func (o *InlineResponse200177) SetProfileId(v string)`
+`func (o *InlineResponse200177) SetHostname(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetHostname sets Hostname field to given value.
 
-### HasProfileId
+### HasHostname
 
-`func (o *InlineResponse200177) HasProfileId() bool`
+`func (o *InlineResponse200177) HasHostname() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasHostname returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse200177) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse200177) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse200177) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse200177) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

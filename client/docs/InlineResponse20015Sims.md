@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Slot** | Pointer to **string** | SIM slot being configured. Must be &#39;sim1&#39; on single-sim devices. | [optional] 
-**IsPrimary** | Pointer to **bool** | If true, this SIM is used for boot. Must be true on single-SIM devices. | [optional] [default to false]
+**Slot** | Pointer to **string** | SIM slot being configured. Must be &#39;sim1&#39; on single-sim devices. Use &#39;sim3&#39; for eSIM. | [optional] 
+**IsPrimary** | Pointer to **bool** | If true, this SIM is activated on platform bootup. It must be true on single-SIM devices and is a required field for dual-SIM MGs unless it is being configured using &#39;simOrdering&#39;. | [optional] [default to false]
 **Apns** | Pointer to [**[]InlineResponse20015Apns**](InlineResponse20015Apns.md) | APN configurations. If empty, the default APN will be used. | [optional] 
 
 ## Methods

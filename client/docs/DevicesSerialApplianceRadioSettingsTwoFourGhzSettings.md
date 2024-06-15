@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Channel** | Pointer to **int32** | Sets a manual channel for 2.4 GHz. Can be &#39;1&#39;, &#39;2&#39;, &#39;3&#39;, &#39;4&#39;, &#39;5&#39;, &#39;6&#39;, &#39;7&#39;, &#39;8&#39;, &#39;9&#39;, &#39;10&#39;, &#39;11&#39;, &#39;12&#39;, &#39;13&#39; or &#39;14&#39; or null for using auto channel. | [optional] 
-**TargetPower** | Pointer to **int32** | Set a manual target power for 2.4 GHz. Can be between &#39;5&#39; or &#39;30&#39; or null for using auto power range. | [optional] 
+**TargetPower** | Pointer to **int32** | Set a manual target power for 2.4 GHz (dBm). Enter null for using auto power range. | [optional] 
 
 ## Methods
 

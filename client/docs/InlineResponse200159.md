@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Servers** | Pointer to [**[]InlineResponse200159Servers**](InlineResponse200159Servers.md) | List of the syslog servers for this network | [optional] 
+**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
+**StpBridgePriority** | Pointer to [**[]InlineResponse200159StpBridgePriority**](InlineResponse200159StpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200159WithDefaults instantiates a new InlineResponse200159 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetServers
+### GetRstpEnabled
 
-`func (o *InlineResponse200159) GetServers() []InlineResponse200159Servers`
+`func (o *InlineResponse200159) GetRstpEnabled() bool`
 
-GetServers returns the Servers field if non-nil, zero value otherwise.
+GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
 
-### GetServersOk
+### GetRstpEnabledOk
 
-`func (o *InlineResponse200159) GetServersOk() (*[]InlineResponse200159Servers, bool)`
+`func (o *InlineResponse200159) GetRstpEnabledOk() (*bool, bool)`
 
-GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
+GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetServers
+### SetRstpEnabled
 
-`func (o *InlineResponse200159) SetServers(v []InlineResponse200159Servers)`
+`func (o *InlineResponse200159) SetRstpEnabled(v bool)`
 
-SetServers sets Servers field to given value.
+SetRstpEnabled sets RstpEnabled field to given value.
 
-### HasServers
+### HasRstpEnabled
 
-`func (o *InlineResponse200159) HasServers() bool`
+`func (o *InlineResponse200159) HasRstpEnabled() bool`
 
-HasServers returns a boolean if a field has been set.
+HasRstpEnabled returns a boolean if a field has been set.
+
+### GetStpBridgePriority
+
+`func (o *InlineResponse200159) GetStpBridgePriority() []InlineResponse200159StpBridgePriority`
+
+GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
+
+### GetStpBridgePriorityOk
+
+`func (o *InlineResponse200159) GetStpBridgePriorityOk() (*[]InlineResponse200159StpBridgePriority, bool)`
+
+GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStpBridgePriority
+
+`func (o *InlineResponse200159) SetStpBridgePriority(v []InlineResponse200159StpBridgePriority)`
+
+SetStpBridgePriority sets StpBridgePriority field to given value.
+
+### HasStpBridgePriority
+
+`func (o *InlineResponse200159) HasStpBridgePriority() bool`
+
+HasStpBridgePriority returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

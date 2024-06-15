@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the device. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**CallbackId** | Pointer to **string** | The ID of the callback | [optional] 
+**Status** | Pointer to **string** | The status of the callback | [optional] 
+**Errors** | Pointer to **[]string** | The errors returned by the callback | [optional] 
+**CreatedBy** | Pointer to [**InlineResponse200293CreatedBy**](InlineResponse200293CreatedBy.md) |  | [optional] 
+**Webhook** | Pointer to [**InlineResponse200293Webhook**](InlineResponse200293Webhook.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200293WithDefaults instantiates a new InlineResponse200293 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetCallbackId
 
-`func (o *InlineResponse200293) GetSerial() string`
+`func (o *InlineResponse200293) GetCallbackId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetCallbackId returns the CallbackId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetCallbackIdOk
 
-`func (o *InlineResponse200293) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200293) GetCallbackIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetCallbackIdOk returns a tuple with the CallbackId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetCallbackId
 
-`func (o *InlineResponse200293) SetSerial(v string)`
+`func (o *InlineResponse200293) SetCallbackId(v string)`
 
-SetSerial sets Serial field to given value.
+SetCallbackId sets CallbackId field to given value.
 
-### HasSerial
+### HasCallbackId
 
-`func (o *InlineResponse200293) HasSerial() bool`
+`func (o *InlineResponse200293) HasCallbackId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasCallbackId returns a boolean if a field has been set.
 
-### GetMac
+### GetStatus
 
-`func (o *InlineResponse200293) GetMac() string`
+`func (o *InlineResponse200293) GetStatus() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetStatusOk
 
-`func (o *InlineResponse200293) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200293) GetStatusOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetStatus
 
-`func (o *InlineResponse200293) SetMac(v string)`
+`func (o *InlineResponse200293) SetStatus(v string)`
 
-SetMac sets Mac field to given value.
+SetStatus sets Status field to given value.
 
-### HasMac
+### HasStatus
 
-`func (o *InlineResponse200293) HasMac() bool`
+`func (o *InlineResponse200293) HasStatus() bool`
 
-HasMac returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetNetwork
+### GetErrors
 
-`func (o *InlineResponse200293) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200293) GetErrors() []string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetErrorsOk
 
-`func (o *InlineResponse200293) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200293) GetErrorsOk() (*[]string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetErrors
 
-`func (o *InlineResponse200293) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200293) SetErrors(v []string)`
 
-SetNetwork sets Network field to given value.
+SetErrors sets Errors field to given value.
 
-### HasNetwork
+### HasErrors
 
-`func (o *InlineResponse200293) HasNetwork() bool`
+`func (o *InlineResponse200293) HasErrors() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
-### GetByBand
+### GetCreatedBy
 
-`func (o *InlineResponse200293) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
+`func (o *InlineResponse200293) GetCreatedBy() InlineResponse200293CreatedBy`
 
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
+GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
 
-### GetByBandOk
+### GetCreatedByOk
 
-`func (o *InlineResponse200293) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
+`func (o *InlineResponse200293) GetCreatedByOk() (*InlineResponse200293CreatedBy, bool)`
 
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
+GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByBand
+### SetCreatedBy
 
-`func (o *InlineResponse200293) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
+`func (o *InlineResponse200293) SetCreatedBy(v InlineResponse200293CreatedBy)`
 
-SetByBand sets ByBand field to given value.
+SetCreatedBy sets CreatedBy field to given value.
 
-### HasByBand
+### HasCreatedBy
 
-`func (o *InlineResponse200293) HasByBand() bool`
+`func (o *InlineResponse200293) HasCreatedBy() bool`
 
-HasByBand returns a boolean if a field has been set.
+HasCreatedBy returns a boolean if a field has been set.
+
+### GetWebhook
+
+`func (o *InlineResponse200293) GetWebhook() InlineResponse200293Webhook`
+
+GetWebhook returns the Webhook field if non-nil, zero value otherwise.
+
+### GetWebhookOk
+
+`func (o *InlineResponse200293) GetWebhookOk() (*InlineResponse200293Webhook, bool)`
+
+GetWebhookOk returns a tuple with the Webhook field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWebhook
+
+`func (o *InlineResponse200293) SetWebhook(v InlineResponse200293Webhook)`
+
+SetWebhook sets Webhook field to given value.
+
+### HasWebhook
+
+`func (o *InlineResponse200293) HasWebhook() bool`
+
+HasWebhook returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

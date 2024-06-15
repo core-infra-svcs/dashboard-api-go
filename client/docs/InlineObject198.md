@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
+**Name** | Pointer to **string** | The name of the organization | [optional] 
+**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
+**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject198WithDefaults instantiates a new InlineObject198 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetName
 
-`func (o *InlineObject198) GetConfirmed() bool`
+`func (o *InlineObject198) GetName() string`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetNameOk
 
-`func (o *InlineObject198) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject198) GetNameOk() (*string, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetName
 
-`func (o *InlineObject198) SetConfirmed(v bool)`
+`func (o *InlineObject198) SetName(v string)`
 
-SetConfirmed sets Confirmed field to given value.
+SetName sets Name field to given value.
 
-### HasConfirmed
+### HasName
 
-`func (o *InlineObject198) HasConfirmed() bool`
+`func (o *InlineObject198) HasName() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetManagement
 
-`func (o *InlineObject198) GetSynchronous() bool`
+`func (o *InlineObject198) GetManagement() OrganizationsManagement1`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetManagementOk
 
-`func (o *InlineObject198) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject198) GetManagementOk() (*OrganizationsManagement1, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetManagement
 
-`func (o *InlineObject198) SetSynchronous(v bool)`
+`func (o *InlineObject198) SetManagement(v OrganizationsManagement1)`
 
-SetSynchronous sets Synchronous field to given value.
+SetManagement sets Management field to given value.
 
-### HasSynchronous
+### HasManagement
 
-`func (o *InlineObject198) HasSynchronous() bool`
+`func (o *InlineObject198) HasManagement() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
+
+### GetApi
+
+`func (o *InlineObject198) GetApi() OrganizationsOrganizationIdApi`
+
+GetApi returns the Api field if non-nil, zero value otherwise.
+
+### GetApiOk
+
+`func (o *InlineObject198) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
+
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApi
+
+`func (o *InlineObject198) SetApi(v OrganizationsOrganizationIdApi)`
+
+SetApi sets Api field to given value.
+
+### HasApi
+
+`func (o *InlineObject198) HasApi() bool`
+
+HasApi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**Category** | Pointer to **string** | Name of the Application Category | [optional] 
+**Total** | Pointer to **float32** | Total usage of the Application Category, in megabytes | [optional] 
+**Downstream** | Pointer to **float32** | Downstream usage of the Application Category, in megabytes | [optional] 
+**Upstream** | Pointer to **float32** | Upstream usage of the Application Category, in megabytes | [optional] 
+**Percentage** | Pointer to **float32** | Percent usage of the Application Category | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200280WithDefaults instantiates a new InlineResponse200280 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetCategory
 
-`func (o *InlineResponse200280) GetModel() string`
+`func (o *InlineResponse200280) GetCategory() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetCategoryOk
 
-`func (o *InlineResponse200280) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200280) GetCategoryOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetCategory
 
-`func (o *InlineResponse200280) SetModel(v string)`
+`func (o *InlineResponse200280) SetCategory(v string)`
 
-SetModel sets Model field to given value.
+SetCategory sets Category field to given value.
 
-### HasModel
+### HasCategory
 
-`func (o *InlineResponse200280) HasModel() bool`
+`func (o *InlineResponse200280) HasCategory() bool`
 
-HasModel returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetCount
+### GetTotal
 
-`func (o *InlineResponse200280) GetCount() int32`
+`func (o *InlineResponse200280) GetTotal() float32`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetTotalOk
 
-`func (o *InlineResponse200280) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse200280) GetTotalOk() (*float32, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetTotal
 
-`func (o *InlineResponse200280) SetCount(v int32)`
+`func (o *InlineResponse200280) SetTotal(v float32)`
 
-SetCount sets Count field to given value.
+SetTotal sets Total field to given value.
 
-### HasCount
+### HasTotal
 
-`func (o *InlineResponse200280) HasCount() bool`
+`func (o *InlineResponse200280) HasTotal() bool`
 
-HasCount returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetUsage
+### GetDownstream
 
-`func (o *InlineResponse200280) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
+`func (o *InlineResponse200280) GetDownstream() float32`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200280) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
+`func (o *InlineResponse200280) GetDownstreamOk() (*float32, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetDownstream
 
-`func (o *InlineResponse200280) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
+`func (o *InlineResponse200280) SetDownstream(v float32)`
 
-SetUsage sets Usage field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasUsage
+### HasDownstream
 
-`func (o *InlineResponse200280) HasUsage() bool`
+`func (o *InlineResponse200280) HasDownstream() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
+
+### GetUpstream
+
+`func (o *InlineResponse200280) GetUpstream() float32`
+
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+
+### GetUpstreamOk
+
+`func (o *InlineResponse200280) GetUpstreamOk() (*float32, bool)`
+
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpstream
+
+`func (o *InlineResponse200280) SetUpstream(v float32)`
+
+SetUpstream sets Upstream field to given value.
+
+### HasUpstream
+
+`func (o *InlineResponse200280) HasUpstream() bool`
+
+HasUpstream returns a boolean if a field has been set.
+
+### GetPercentage
+
+`func (o *InlineResponse200280) GetPercentage() float32`
+
+GetPercentage returns the Percentage field if non-nil, zero value otherwise.
+
+### GetPercentageOk
+
+`func (o *InlineResponse200280) GetPercentageOk() (*float32, bool)`
+
+GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPercentage
+
+`func (o *InlineResponse200280) SetPercentage(v float32)`
+
+SetPercentage sets Percentage field to given value.
+
+### HasPercentage
+
+`func (o *InlineResponse200280) HasPercentage() bool`
+
+HasPercentage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
