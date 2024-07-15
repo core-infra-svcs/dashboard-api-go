@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 **Profile** | Pointer to [**DevicesSerialSwitchPortsProfile**](DevicesSerialSwitchPortsProfile.md) |  | [optional] 
 **Module** | Pointer to [**DevicesSerialSwitchPortsModule**](DevicesSerialSwitchPortsModule.md) |  | [optional] 
 **Mirror** | Pointer to [**DevicesSerialSwitchPortsMirror**](DevicesSerialSwitchPortsMirror.md) |  | [optional] 
+**Dot3az** | Pointer to [**OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az**](OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az.md) |  | [optional] 
 
 ## Methods
 
@@ -725,6 +726,31 @@ SetMirror sets Mirror field to given value.
 `func (o *InlineResponse200233) HasMirror() bool`
 
 HasMirror returns a boolean if a field has been set.
+
+### GetDot3az
+
+`func (o *InlineResponse200233) GetDot3az() OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az`
+
+GetDot3az returns the Dot3az field if non-nil, zero value otherwise.
+
+### GetDot3azOk
+
+`func (o *InlineResponse200233) GetDot3azOk() (*OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az, bool)`
+
+GetDot3azOk returns a tuple with the Dot3az field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDot3az
+
+`func (o *InlineResponse200233) SetDot3az(v OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az)`
+
+SetDot3az sets Dot3az field to given value.
+
+### HasDot3az
+
+`func (o *InlineResponse200233) HasDot3az() bool`
+
+HasDot3az returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

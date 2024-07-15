@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationSmAdminsRole
 
-> InlineResponse200269Items CreateOrganizationSmAdminsRole(ctx, organizationId).CreateOrganizationSmAdminsRole(createOrganizationSmAdminsRole).Execute()
+> InlineResponse200270Items CreateOrganizationSmAdminsRole(ctx, organizationId).CreateOrganizationSmAdminsRole(createOrganizationSmAdminsRole).Execute()
 
 Create a Limited Access Role
 
@@ -294,7 +294,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationSmAdminsRole := *openapiclient.NewInlineObject257("Name_example") // InlineObject257 | 
+    createOrganizationSmAdminsRole := *openapiclient.NewInlineObject258("Name_example") // InlineObject258 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -303,7 +303,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.CreateOrganizationSmAdminsRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationSmAdminsRole`: InlineResponse200269Items
+    // response from `CreateOrganizationSmAdminsRole`: InlineResponse200270Items
     fmt.Fprintf(os.Stdout, "Response from `SmApi.CreateOrganizationSmAdminsRole`: %v\n", resp)
 }
 ```
@@ -324,11 +324,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSmAdmins
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSmAdminsRole** | [**InlineObject257**](InlineObject257.md) |  | 
+ **createOrganizationSmAdminsRole** | [**InlineObject258**](InlineObject258.md) |  | 
 
 ### Return type
 
-[**InlineResponse200269Items**](InlineResponse200269Items.md)
+[**InlineResponse200270Items**](InlineResponse200270Items.md)
 
 ### Authorization
 
@@ -2217,7 +2217,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmAdminsRole
 
-> InlineResponse200269Items GetOrganizationSmAdminsRole(ctx, organizationId, roleId).Execute()
+> InlineResponse200270Items GetOrganizationSmAdminsRole(ctx, organizationId, roleId).Execute()
 
 Return a Limited Access Role
 
@@ -2246,7 +2246,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmAdminsRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmAdminsRole`: InlineResponse200269Items
+    // response from `GetOrganizationSmAdminsRole`: InlineResponse200270Items
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmAdminsRole`: %v\n", resp)
 }
 ```
@@ -2272,7 +2272,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200269Items**](InlineResponse200269Items.md)
+[**InlineResponse200270Items**](InlineResponse200270Items.md)
 
 ### Authorization
 
@@ -2290,7 +2290,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmAdminsRoles
 
-> InlineResponse200269 GetOrganizationSmAdminsRoles(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200270 GetOrganizationSmAdminsRoles(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the Limited Access Roles for an organization
 
@@ -2321,7 +2321,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmAdminsRoles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmAdminsRoles`: InlineResponse200269
+    // response from `GetOrganizationSmAdminsRoles`: InlineResponse200270
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmAdminsRoles`: %v\n", resp)
 }
 ```
@@ -2348,7 +2348,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200269**](InlineResponse200269.md)
+[**InlineResponse200270**](InlineResponse200270.md)
 
 ### Authorization
 
@@ -2366,7 +2366,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmApnsCert
 
-> InlineResponse200270 GetOrganizationSmApnsCert(ctx, organizationId).Execute()
+> InlineResponse200271 GetOrganizationSmApnsCert(ctx, organizationId).Execute()
 
 Get the organization's APNS certificate
 
@@ -2394,7 +2394,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmApnsCert``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmApnsCert`: InlineResponse200270
+    // response from `GetOrganizationSmApnsCert`: InlineResponse200271
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmApnsCert`: %v\n", resp)
 }
 ```
@@ -2418,7 +2418,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200270**](InlineResponse200270.md)
+[**InlineResponse200271**](InlineResponse200271.md)
 
 ### Authorization
 
@@ -2436,7 +2436,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmSentryPoliciesAssignmentsByNetwork
 
-> []InlineResponse200272 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200273 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the Sentry Policies for an organization ordered in ascending order of priority
 
@@ -2468,7 +2468,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200272
+    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200273
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: %v\n", resp)
 }
 ```
@@ -2496,7 +2496,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200272**](InlineResponse200272.md)
+[**[]InlineResponse200273**](InlineResponse200273.md)
 
 ### Authorization
 
@@ -2514,7 +2514,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmVppAccount
 
-> InlineResponse200273 GetOrganizationSmVppAccount(ctx, organizationId, vppAccountId).Execute()
+> InlineResponse200274 GetOrganizationSmVppAccount(ctx, organizationId, vppAccountId).Execute()
 
 Get a hash containing the unparsed token of the VPP account with the given ID
 
@@ -2543,7 +2543,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmVppAccount``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmVppAccount`: InlineResponse200273
+    // response from `GetOrganizationSmVppAccount`: InlineResponse200274
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmVppAccount`: %v\n", resp)
 }
 ```
@@ -2569,7 +2569,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200273**](InlineResponse200273.md)
+[**InlineResponse200274**](InlineResponse200274.md)
 
 ### Authorization
 
@@ -2587,7 +2587,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmVppAccounts
 
-> []InlineResponse200273 GetOrganizationSmVppAccounts(ctx, organizationId).Execute()
+> []InlineResponse200274 GetOrganizationSmVppAccounts(ctx, organizationId).Execute()
 
 List the VPP accounts in the organization
 
@@ -2615,7 +2615,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.GetOrganizationSmVppAccounts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmVppAccounts`: []InlineResponse200273
+    // response from `GetOrganizationSmVppAccounts`: []InlineResponse200274
     fmt.Fprintf(os.Stdout, "Response from `SmApi.GetOrganizationSmVppAccounts`: %v\n", resp)
 }
 ```
@@ -2639,7 +2639,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200273**](InlineResponse200273.md)
+[**[]InlineResponse200274**](InlineResponse200274.md)
 
 ### Authorization
 
@@ -3460,7 +3460,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSmAdminsRole
 
-> InlineResponse200269Items UpdateOrganizationSmAdminsRole(ctx, organizationId, roleId).UpdateOrganizationSmAdminsRole(updateOrganizationSmAdminsRole).Execute()
+> InlineResponse200270Items UpdateOrganizationSmAdminsRole(ctx, organizationId, roleId).UpdateOrganizationSmAdminsRole(updateOrganizationSmAdminsRole).Execute()
 
 Update a Limited Access Role
 
@@ -3481,7 +3481,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     roleId := "roleId_example" // string | Role ID
-    updateOrganizationSmAdminsRole := *openapiclient.NewInlineObject258() // InlineObject258 |  (optional)
+    updateOrganizationSmAdminsRole := *openapiclient.NewInlineObject259() // InlineObject259 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3490,7 +3490,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.UpdateOrganizationSmAdminsRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSmAdminsRole`: InlineResponse200269Items
+    // response from `UpdateOrganizationSmAdminsRole`: InlineResponse200270Items
     fmt.Fprintf(os.Stdout, "Response from `SmApi.UpdateOrganizationSmAdminsRole`: %v\n", resp)
 }
 ```
@@ -3513,11 +3513,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationSmAdminsRole** | [**InlineObject258**](InlineObject258.md) |  | 
+ **updateOrganizationSmAdminsRole** | [**InlineObject259**](InlineObject259.md) |  | 
 
 ### Return type
 
-[**InlineResponse200269Items**](InlineResponse200269Items.md)
+[**InlineResponse200270Items**](InlineResponse200270Items.md)
 
 ### Authorization
 
@@ -3535,7 +3535,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSmSentryPoliciesAssignments
 
-> InlineResponse200271 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
+> InlineResponse200272 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
 
 Update an Organizations Sentry Policies using the provided list
 
@@ -3555,7 +3555,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject259([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject259 | 
+    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject260([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject260 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3564,7 +3564,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SmApi.UpdateOrganizationSmSentryPoliciesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200271
+    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200272
     fmt.Fprintf(os.Stdout, "Response from `SmApi.UpdateOrganizationSmSentryPoliciesAssignments`: %v\n", resp)
 }
 ```
@@ -3585,11 +3585,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSmSentry
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject259**](InlineObject259.md) |  | 
+ **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject260**](InlineObject260.md) |  | 
 
 ### Return type
 
-[**InlineResponse200271**](InlineResponse200271.md)
+[**InlineResponse200272**](InlineResponse200272.md)
 
 ### Authorization
 

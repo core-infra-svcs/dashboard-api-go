@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Camera** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
 **CellularGateway** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
 **Sensor** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
+**WirelessController** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
 **SecureConnect** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
 **SwitchCatalyst** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProductsWireless**](NetworksNetworkIdFirmwareUpgradesProductsWireless.md) |  | [optional] 
 
@@ -181,6 +182,31 @@ SetSensor sets Sensor field to given value.
 `func (o *NetworksNetworkIdFirmwareUpgradesProducts) HasSensor() bool`
 
 HasSensor returns a boolean if a field has been set.
+
+### GetWirelessController
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetWirelessController() NetworksNetworkIdFirmwareUpgradesProductsWireless`
+
+GetWirelessController returns the WirelessController field if non-nil, zero value otherwise.
+
+### GetWirelessControllerOk
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) GetWirelessControllerOk() (*NetworksNetworkIdFirmwareUpgradesProductsWireless, bool)`
+
+GetWirelessControllerOk returns a tuple with the WirelessController field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWirelessController
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) SetWirelessController(v NetworksNetworkIdFirmwareUpgradesProductsWireless)`
+
+SetWirelessController sets WirelessController field to given value.
+
+### HasWirelessController
+
+`func (o *NetworksNetworkIdFirmwareUpgradesProducts) HasWirelessController() bool`
+
+HasWirelessController returns a boolean if a field has been set.
 
 ### GetSecureConnect
 

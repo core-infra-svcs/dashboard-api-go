@@ -741,7 +741,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWebhooksAlertTypes
 
-> InlineResponse200292 GetOrganizationWebhooksAlertTypes(ctx, organizationId).ProductType(productType).Execute()
+> InlineResponse200293 GetOrganizationWebhooksAlertTypes(ctx, organizationId).ProductType(productType).Execute()
 
 Return a list of alert types to be used with managing webhook alerts
 
@@ -770,7 +770,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.GetOrganizationWebhooksAlertTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksAlertTypes`: InlineResponse200292
+    // response from `GetOrganizationWebhooksAlertTypes`: InlineResponse200293
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.GetOrganizationWebhooksAlertTypes`: %v\n", resp)
 }
 ```
@@ -795,7 +795,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200292**](InlineResponse200292.md)
+[**InlineResponse200293**](InlineResponse200293.md)
 
 ### Authorization
 
@@ -813,7 +813,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWebhooksCallbacksStatus
 
-> InlineResponse200293 GetOrganizationWebhooksCallbacksStatus(ctx, organizationId, callbackId).Execute()
+> InlineResponse200294 GetOrganizationWebhooksCallbacksStatus(ctx, organizationId, callbackId).Execute()
 
 Return the status of an API callback
 
@@ -842,7 +842,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.GetOrganizationWebhooksCallbacksStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksCallbacksStatus`: InlineResponse200293
+    // response from `GetOrganizationWebhooksCallbacksStatus`: InlineResponse200294
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.GetOrganizationWebhooksCallbacksStatus`: %v\n", resp)
 }
 ```
@@ -868,7 +868,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200293**](InlineResponse200293.md)
+[**InlineResponse200294**](InlineResponse200294.md)
 
 ### Authorization
 
@@ -886,7 +886,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWebhooksLogs
 
-> []InlineResponse200294 GetOrganizationWebhooksLogs(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Url(url).Execute()
+> []InlineResponse200295 GetOrganizationWebhooksLogs(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Url(url).Execute()
 
 Return the log of webhook POSTs sent
 
@@ -921,7 +921,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhooksApi.GetOrganizationWebhooksLogs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWebhooksLogs`: []InlineResponse200294
+    // response from `GetOrganizationWebhooksLogs`: []InlineResponse200295
     fmt.Fprintf(os.Stdout, "Response from `WebhooksApi.GetOrganizationWebhooksLogs`: %v\n", resp)
 }
 ```
@@ -952,7 +952,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200294**](InlineResponse200294.md)
+[**[]InlineResponse200295**](InlineResponse200295.md)
 
 ### Authorization
 

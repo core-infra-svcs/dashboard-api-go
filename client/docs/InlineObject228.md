@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **FlexibleStackingEnabled** | Pointer to **bool** | For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled. | [optional] 
 **DaiTrusted** | Pointer to **bool** | If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic. | [optional] 
 **Profile** | Pointer to [**DevicesSerialSwitchPortsProfile**](DevicesSerialSwitchPortsProfile.md) |  | [optional] 
+**Dot3az** | Pointer to [**OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az**](OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az.md) |  | [optional] 
 
 ## Methods
 
@@ -621,6 +622,31 @@ SetProfile sets Profile field to given value.
 `func (o *InlineObject228) HasProfile() bool`
 
 HasProfile returns a boolean if a field has been set.
+
+### GetDot3az
+
+`func (o *InlineObject228) GetDot3az() OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az`
+
+GetDot3az returns the Dot3az field if non-nil, zero value otherwise.
+
+### GetDot3azOk
+
+`func (o *InlineObject228) GetDot3azOk() (*OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az, bool)`
+
+GetDot3azOk returns a tuple with the Dot3az field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDot3az
+
+`func (o *InlineObject228) SetDot3az(v OrganizationsOrganizationIdConfigTemplatesConfigTemplateIdSwitchProfilesProfileIdPortsDot3az)`
+
+SetDot3az sets Dot3az field to given value.
+
+### HasDot3az
+
+`func (o *InlineObject228) HasDot3az() bool`
+
+HasDot3az returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

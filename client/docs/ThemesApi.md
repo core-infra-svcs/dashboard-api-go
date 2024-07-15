@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationSplashTheme
 
-> InlineResponse200276 CreateOrganizationSplashTheme(ctx, organizationId).CreateOrganizationSplashTheme(createOrganizationSplashTheme).Execute()
+> InlineResponse200277 CreateOrganizationSplashTheme(ctx, organizationId).CreateOrganizationSplashTheme(createOrganizationSplashTheme).Execute()
 
 Create a Splash Theme
 
@@ -33,7 +33,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationSplashTheme := *openapiclient.NewInlineObject261() // InlineObject261 |  (optional)
+    createOrganizationSplashTheme := *openapiclient.NewInlineObject262() // InlineObject262 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ThemesApi.CreateOrganizationSplashTheme``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationSplashTheme`: InlineResponse200276
+    // response from `CreateOrganizationSplashTheme`: InlineResponse200277
     fmt.Fprintf(os.Stdout, "Response from `ThemesApi.CreateOrganizationSplashTheme`: %v\n", resp)
 }
 ```
@@ -63,11 +63,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSplashTh
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSplashTheme** | [**InlineObject261**](InlineObject261.md) |  | 
+ **createOrganizationSplashTheme** | [**InlineObject262**](InlineObject262.md) |  | 
 
 ### Return type
 
-[**InlineResponse200276**](InlineResponse200276.md)
+[**InlineResponse200277**](InlineResponse200277.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationSplashThemeAsset
 
-> InlineResponse200275 CreateOrganizationSplashThemeAsset(ctx, organizationId, themeIdentifier).CreateOrganizationSplashThemeAsset(createOrganizationSplashThemeAsset).Execute()
+> InlineResponse200276 CreateOrganizationSplashThemeAsset(ctx, organizationId, themeIdentifier).CreateOrganizationSplashThemeAsset(createOrganizationSplashThemeAsset).Execute()
 
 Create a Splash Theme Asset
 
@@ -106,7 +106,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     themeIdentifier := "themeIdentifier_example" // string | Theme identifier
-    createOrganizationSplashThemeAsset := *openapiclient.NewInlineObject262() // InlineObject262 |  (optional)
+    createOrganizationSplashThemeAsset := *openapiclient.NewInlineObject263() // InlineObject263 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -115,7 +115,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ThemesApi.CreateOrganizationSplashThemeAsset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationSplashThemeAsset`: InlineResponse200275
+    // response from `CreateOrganizationSplashThemeAsset`: InlineResponse200276
     fmt.Fprintf(os.Stdout, "Response from `ThemesApi.CreateOrganizationSplashThemeAsset`: %v\n", resp)
 }
 ```
@@ -138,11 +138,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createOrganizationSplashThemeAsset** | [**InlineObject262**](InlineObject262.md) |  | 
+ **createOrganizationSplashThemeAsset** | [**InlineObject263**](InlineObject263.md) |  | 
 
 ### Return type
 
-[**InlineResponse200275**](InlineResponse200275.md)
+[**InlineResponse200276**](InlineResponse200276.md)
 
 ### Authorization
 
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSplashThemes
 
-> []InlineResponse200276 GetOrganizationSplashThemes(ctx, organizationId).Execute()
+> []InlineResponse200277 GetOrganizationSplashThemes(ctx, organizationId).Execute()
 
 List Splash Themes
 
@@ -259,7 +259,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ThemesApi.GetOrganizationSplashThemes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSplashThemes`: []InlineResponse200276
+    // response from `GetOrganizationSplashThemes`: []InlineResponse200277
     fmt.Fprintf(os.Stdout, "Response from `ThemesApi.GetOrganizationSplashThemes`: %v\n", resp)
 }
 ```
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200276**](InlineResponse200276.md)
+[**[]InlineResponse200277**](InlineResponse200277.md)
 
 ### Authorization
 

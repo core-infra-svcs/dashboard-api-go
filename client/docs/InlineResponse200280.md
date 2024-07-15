@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Name of the Application Category | [optional] 
-**Total** | Pointer to **float32** | Total usage of the Application Category, in megabytes | [optional] 
-**Downstream** | Pointer to **float32** | Downstream usage of the Application Category, in megabytes | [optional] 
-**Upstream** | Pointer to **float32** | Upstream usage of the Application Category, in megabytes | [optional] 
-**Percentage** | Pointer to **float32** | Percent usage of the Application Category | [optional] 
+**Application** | Pointer to **string** | Name of the Application | [optional] 
+**Total** | Pointer to **float32** | Total usage of the Application, in megabytes | [optional] 
+**Downstream** | Pointer to **float32** | Downstream usage of the Application, in megabytes | [optional] 
+**Upstream** | Pointer to **float32** | Upstream usage of the Application, in megabytes | [optional] 
+**Percentage** | Pointer to **float32** | Percent usage of the Application | [optional] 
 
 ## Methods
 
@@ -29,30 +29,30 @@ NewInlineResponse200280WithDefaults instantiates a new InlineResponse200280 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetApplication
 
-`func (o *InlineResponse200280) GetCategory() string`
+`func (o *InlineResponse200280) GetApplication() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetApplication returns the Application field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetApplicationOk
 
-`func (o *InlineResponse200280) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200280) GetApplicationOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetApplication
 
-`func (o *InlineResponse200280) SetCategory(v string)`
+`func (o *InlineResponse200280) SetApplication(v string)`
 
-SetCategory sets Category field to given value.
+SetApplication sets Application field to given value.
 
-### HasCategory
+### HasApplication
 
-`func (o *InlineResponse200280) HasCategory() bool`
+`func (o *InlineResponse200280) HasApplication() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasApplication returns a boolean if a field has been set.
 
 ### GetTotal
 

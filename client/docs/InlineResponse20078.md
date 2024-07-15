@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **SmInstalled** | Pointer to **bool** | Status of SM for the client | [optional] 
 **RecentDeviceMac** | Pointer to **string** | The MAC address of the node that the device was last connected to | [optional] 
 **Status** | Pointer to **string** | The connection status of the client | [optional] 
-**Usage** | Pointer to [**InlineResponse20078Usage**](InlineResponse20078Usage.md) |  | [optional] 
+**Usage** | Pointer to [**NetworksNetworkIdClientsUsage**](NetworksNetworkIdClientsUsage.md) |  | [optional] 
 **NamedVlan** | Pointer to **string** | Named VLAN of the client | [optional] 
 **AdaptivePolicyGroup** | Pointer to **string** | The adaptive policy group of the client | [optional] 
 **DeviceTypePrediction** | Pointer to **string** | Prediction of the client&#39;s device type | [optional] 
@@ -479,20 +479,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetUsage
 
-`func (o *InlineResponse20078) GetUsage() InlineResponse20078Usage`
+`func (o *InlineResponse20078) GetUsage() NetworksNetworkIdClientsUsage`
 
 GetUsage returns the Usage field if non-nil, zero value otherwise.
 
 ### GetUsageOk
 
-`func (o *InlineResponse20078) GetUsageOk() (*InlineResponse20078Usage, bool)`
+`func (o *InlineResponse20078) GetUsageOk() (*NetworksNetworkIdClientsUsage, bool)`
 
 GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUsage
 
-`func (o *InlineResponse20078) SetUsage(v InlineResponse20078Usage)`
+`func (o *InlineResponse20078) SetUsage(v NetworksNetworkIdClientsUsage)`
 
 SetUsage sets Usage field to given value.
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **Camera** | Pointer to [**InlineResponse20089ProductsWireless**](InlineResponse20089ProductsWireless.md) |  | [optional] 
 **CellularGateway** | Pointer to [**InlineResponse20089ProductsWireless**](InlineResponse20089ProductsWireless.md) |  | [optional] 
 **Sensor** | Pointer to [**InlineResponse20089ProductsWireless**](InlineResponse20089ProductsWireless.md) |  | [optional] 
+**WirelessController** | Pointer to [**InlineResponse20089ProductsWireless**](InlineResponse20089ProductsWireless.md) |  | [optional] 
 **SecureConnect** | Pointer to [**InlineResponse20089ProductsWireless**](InlineResponse20089ProductsWireless.md) |  | [optional] 
 
 ## Methods
@@ -180,6 +181,31 @@ SetSensor sets Sensor field to given value.
 `func (o *InlineResponse20089Products) HasSensor() bool`
 
 HasSensor returns a boolean if a field has been set.
+
+### GetWirelessController
+
+`func (o *InlineResponse20089Products) GetWirelessController() InlineResponse20089ProductsWireless`
+
+GetWirelessController returns the WirelessController field if non-nil, zero value otherwise.
+
+### GetWirelessControllerOk
+
+`func (o *InlineResponse20089Products) GetWirelessControllerOk() (*InlineResponse20089ProductsWireless, bool)`
+
+GetWirelessControllerOk returns a tuple with the WirelessController field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWirelessController
+
+`func (o *InlineResponse20089Products) SetWirelessController(v InlineResponse20089ProductsWireless)`
+
+SetWirelessController sets WirelessController field to given value.
+
+### HasWirelessController
+
+`func (o *InlineResponse20089Products) HasWirelessController() bool`
+
+HasWirelessController returns a boolean if a field has been set.
 
 ### GetSecureConnect
 

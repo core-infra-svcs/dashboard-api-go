@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationSmAdminsRole
 
-> InlineResponse200269Items CreateOrganizationSmAdminsRole(ctx, organizationId).CreateOrganizationSmAdminsRole(createOrganizationSmAdminsRole).Execute()
+> InlineResponse200270Items CreateOrganizationSmAdminsRole(ctx, organizationId).CreateOrganizationSmAdminsRole(createOrganizationSmAdminsRole).Execute()
 
 Create a Limited Access Role
 
@@ -110,7 +110,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationSmAdminsRole := *openapiclient.NewInlineObject257("Name_example") // InlineObject257 | 
+    createOrganizationSmAdminsRole := *openapiclient.NewInlineObject258("Name_example") // InlineObject258 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -119,7 +119,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdminsApi.CreateOrganizationSmAdminsRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationSmAdminsRole`: InlineResponse200269Items
+    // response from `CreateOrganizationSmAdminsRole`: InlineResponse200270Items
     fmt.Fprintf(os.Stdout, "Response from `AdminsApi.CreateOrganizationSmAdminsRole`: %v\n", resp)
 }
 ```
@@ -140,11 +140,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationSmAdmins
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationSmAdminsRole** | [**InlineObject257**](InlineObject257.md) |  | 
+ **createOrganizationSmAdminsRole** | [**InlineObject258**](InlineObject258.md) |  | 
 
 ### Return type
 
-[**InlineResponse200269Items**](InlineResponse200269Items.md)
+[**InlineResponse200270Items**](InlineResponse200270Items.md)
 
 ### Authorization
 
@@ -374,7 +374,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmAdminsRole
 
-> InlineResponse200269Items GetOrganizationSmAdminsRole(ctx, organizationId, roleId).Execute()
+> InlineResponse200270Items GetOrganizationSmAdminsRole(ctx, organizationId, roleId).Execute()
 
 Return a Limited Access Role
 
@@ -403,7 +403,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdminsApi.GetOrganizationSmAdminsRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmAdminsRole`: InlineResponse200269Items
+    // response from `GetOrganizationSmAdminsRole`: InlineResponse200270Items
     fmt.Fprintf(os.Stdout, "Response from `AdminsApi.GetOrganizationSmAdminsRole`: %v\n", resp)
 }
 ```
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200269Items**](InlineResponse200269Items.md)
+[**InlineResponse200270Items**](InlineResponse200270Items.md)
 
 ### Authorization
 
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmAdminsRoles
 
-> InlineResponse200269 GetOrganizationSmAdminsRoles(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200270 GetOrganizationSmAdminsRoles(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the Limited Access Roles for an organization
 
@@ -478,7 +478,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdminsApi.GetOrganizationSmAdminsRoles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmAdminsRoles`: InlineResponse200269
+    // response from `GetOrganizationSmAdminsRoles`: InlineResponse200270
     fmt.Fprintf(os.Stdout, "Response from `AdminsApi.GetOrganizationSmAdminsRoles`: %v\n", resp)
 }
 ```
@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200269**](InlineResponse200269.md)
+[**InlineResponse200270**](InlineResponse200270.md)
 
 ### Authorization
 
@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSmAdminsRole
 
-> InlineResponse200269Items UpdateOrganizationSmAdminsRole(ctx, organizationId, roleId).UpdateOrganizationSmAdminsRole(updateOrganizationSmAdminsRole).Execute()
+> InlineResponse200270Items UpdateOrganizationSmAdminsRole(ctx, organizationId, roleId).UpdateOrganizationSmAdminsRole(updateOrganizationSmAdminsRole).Execute()
 
 Update a Limited Access Role
 
@@ -619,7 +619,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     roleId := "roleId_example" // string | Role ID
-    updateOrganizationSmAdminsRole := *openapiclient.NewInlineObject258() // InlineObject258 |  (optional)
+    updateOrganizationSmAdminsRole := *openapiclient.NewInlineObject259() // InlineObject259 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -628,7 +628,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AdminsApi.UpdateOrganizationSmAdminsRole``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSmAdminsRole`: InlineResponse200269Items
+    // response from `UpdateOrganizationSmAdminsRole`: InlineResponse200270Items
     fmt.Fprintf(os.Stdout, "Response from `AdminsApi.UpdateOrganizationSmAdminsRole`: %v\n", resp)
 }
 ```
@@ -651,11 +651,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationSmAdminsRole** | [**InlineObject258**](InlineObject258.md) |  | 
+ **updateOrganizationSmAdminsRole** | [**InlineObject259**](InlineObject259.md) |  | 
 
 ### Return type
 
-[**InlineResponse200269Items**](InlineResponse200269Items.md)
+[**InlineResponse200270Items**](InlineResponse200270Items.md)
 
 ### Authorization
 

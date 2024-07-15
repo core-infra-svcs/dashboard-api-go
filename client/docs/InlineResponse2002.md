@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **ProductTypes** | Pointer to **[]string** | Products the subscription has entitlements for | [optional] 
 **Entitlements** | Pointer to [**[]AdministeredLicensingSubscriptionSubscriptionsEntitlements**](AdministeredLicensingSubscriptionSubscriptionsEntitlements.md) | Entitlement info | [optional] 
 **Counts** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsCounts**](AdministeredLicensingSubscriptionSubscriptionsCounts.md) |  | [optional] 
+**EnterpriseAgreement** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsEnterpriseAgreement**](AdministeredLicensingSubscriptionSubscriptionsEnterpriseAgreement.md) |  | [optional] 
 
 ## Methods
 
@@ -309,6 +310,31 @@ SetCounts sets Counts field to given value.
 `func (o *InlineResponse2002) HasCounts() bool`
 
 HasCounts returns a boolean if a field has been set.
+
+### GetEnterpriseAgreement
+
+`func (o *InlineResponse2002) GetEnterpriseAgreement() AdministeredLicensingSubscriptionSubscriptionsEnterpriseAgreement`
+
+GetEnterpriseAgreement returns the EnterpriseAgreement field if non-nil, zero value otherwise.
+
+### GetEnterpriseAgreementOk
+
+`func (o *InlineResponse2002) GetEnterpriseAgreementOk() (*AdministeredLicensingSubscriptionSubscriptionsEnterpriseAgreement, bool)`
+
+GetEnterpriseAgreementOk returns a tuple with the EnterpriseAgreement field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnterpriseAgreement
+
+`func (o *InlineResponse2002) SetEnterpriseAgreement(v AdministeredLicensingSubscriptionSubscriptionsEnterpriseAgreement)`
+
+SetEnterpriseAgreement sets EnterpriseAgreement field to given value.
+
+### HasEnterpriseAgreement
+
+`func (o *InlineResponse2002) HasEnterpriseAgreement() bool`
+
+HasEnterpriseAgreement returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

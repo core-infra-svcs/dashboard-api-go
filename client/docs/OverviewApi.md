@@ -1100,7 +1100,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesOverviewByModel
 
-> InlineResponse200237 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
+> InlineResponse200238 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
 
 Lists the count for each device model
 
@@ -1131,7 +1131,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationDevicesOverviewByModel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200237
+    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200238
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationDevicesOverviewByModel`: %v\n", resp)
 }
 ```
@@ -1158,7 +1158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200237**](InlineResponse200237.md)
+[**InlineResponse200238**](InlineResponse200238.md)
 
 ### Authorization
 
@@ -1176,7 +1176,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatusesOverview
 
-> InlineResponse200241 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
+> InlineResponse200242 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
 
 Return an overview of current device statuses
 
@@ -1196,7 +1196,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    productTypes := []string{"ProductTypes_example"} // []string | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. (optional)
+    productTypes := []string{"ProductTypes_example"} // []string | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, wirelessController, and secureConnect. (optional)
     networkIds := []string{"Inner_example"} // []string | An optional parameter to filter device statuses by network. (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -1206,7 +1206,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationDevicesStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200241
+    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200242
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationDevicesStatusesOverview`: %v\n", resp)
 }
 ```
@@ -1227,12 +1227,12 @@ Other parameters are passed through a pointer to a apiGetOrganizationDevicesStat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **productTypes** | **[]string** | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect. | 
+ **productTypes** | **[]string** | An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, wirelessController, and secureConnect. | 
  **networkIds** | **[]string** | An optional parameter to filter device statuses by network. | 
 
 ### Return type
 
-[**InlineResponse200241**](InlineResponse200241.md)
+[**InlineResponse200242**](InlineResponse200242.md)
 
 ### Authorization
 
@@ -1250,7 +1250,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicensesOverview
 
-> InlineResponse200257 GetOrganizationLicensesOverview(ctx, organizationId).Execute()
+> InlineResponse200258 GetOrganizationLicensesOverview(ctx, organizationId).Execute()
 
 Return an overview of the license state for an organization
 
@@ -1278,7 +1278,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationLicensesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicensesOverview`: InlineResponse200257
+    // response from `GetOrganizationLicensesOverview`: InlineResponse200258
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationLicensesOverview`: %v\n", resp)
 }
 ```
@@ -1302,7 +1302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200257**](InlineResponse200257.md)
+[**InlineResponse200258**](InlineResponse200258.md)
 
 ### Authorization
 
@@ -1320,7 +1320,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsOverview
 
-> InlineResponse200290 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200291 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the counts of all active ports for the requested timespan, grouped by speed
 
@@ -1351,7 +1351,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `OverviewApi.GetOrganizationSwitchPortsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200290
+    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200291
     fmt.Fprintf(os.Stdout, "Response from `OverviewApi.GetOrganizationSwitchPortsOverview`: %v\n", resp)
 }
 ```
@@ -1378,7 +1378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200290**](InlineResponse200290.md)
+[**InlineResponse200291**](InlineResponse200291.md)
 
 ### Authorization
 

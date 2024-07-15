@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**Name** | **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
+**Category** | Pointer to **string** | Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
 **ObjectIds** | Pointer to **[]int32** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
 
 ## Methods
 
 ### NewInlineObject250
 
-`func NewInlineObject250() *InlineObject250`
+`func NewInlineObject250(name string, ) *InlineObject250`
 
 NewInlineObject250 instantiates a new InlineObject250 object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +46,31 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject250) HasName() bool`
+### GetCategory
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject250) GetCategory() string`
+
+GetCategory returns the Category field if non-nil, zero value otherwise.
+
+### GetCategoryOk
+
+`func (o *InlineObject250) GetCategoryOk() (*string, bool)`
+
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCategory
+
+`func (o *InlineObject250) SetCategory(v string)`
+
+SetCategory sets Category field to given value.
+
+### HasCategory
+
+`func (o *InlineObject250) HasCategory() bool`
+
+HasCategory returns a boolean if a field has been set.
 
 ### GetObjectIds
 

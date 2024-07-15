@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationPolicyObject
 
-> InlineResponse200262 CreateOrganizationPolicyObject(ctx, organizationId).CreateOrganizationPolicyObject(createOrganizationPolicyObject).Execute()
+> InlineResponse200263 CreateOrganizationPolicyObject(ctx, organizationId).CreateOrganizationPolicyObject(createOrganizationPolicyObject).Execute()
 
 Creates a new Policy Object.
 
@@ -39,7 +39,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationPolicyObject := *openapiclient.NewInlineObject248("Name_example", "Category_example", "Type_example") // InlineObject248 | 
+    createOrganizationPolicyObject := *openapiclient.NewInlineObject249("Name_example", "Category_example", "Type_example") // InlineObject249 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -48,7 +48,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PolicyObjectsApi.CreateOrganizationPolicyObject``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationPolicyObject`: InlineResponse200262
+    // response from `CreateOrganizationPolicyObject`: InlineResponse200263
     fmt.Fprintf(os.Stdout, "Response from `PolicyObjectsApi.CreateOrganizationPolicyObject`: %v\n", resp)
 }
 ```
@@ -69,11 +69,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicyOb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPolicyObject** | [**InlineObject248**](InlineObject248.md) |  | 
+ **createOrganizationPolicyObject** | [**InlineObject249**](InlineObject249.md) |  | 
 
 ### Return type
 
-[**InlineResponse200262**](InlineResponse200262.md)
+[**InlineResponse200263**](InlineResponse200263.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationPolicyObjectsGroup
 
-> InlineResponse200263 CreateOrganizationPolicyObjectsGroup(ctx, organizationId).CreateOrganizationPolicyObjectsGroup(createOrganizationPolicyObjectsGroup).Execute()
+> InlineResponse200264 CreateOrganizationPolicyObjectsGroup(ctx, organizationId).CreateOrganizationPolicyObjectsGroup(createOrganizationPolicyObjectsGroup).Execute()
 
 Creates a new Policy Object Group.
 
@@ -111,7 +111,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject249("Name_example") // InlineObject249 | 
+    createOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject250("Name_example") // InlineObject250 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -120,7 +120,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PolicyObjectsApi.CreateOrganizationPolicyObjectsGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationPolicyObjectsGroup`: InlineResponse200263
+    // response from `CreateOrganizationPolicyObjectsGroup`: InlineResponse200264
     fmt.Fprintf(os.Stdout, "Response from `PolicyObjectsApi.CreateOrganizationPolicyObjectsGroup`: %v\n", resp)
 }
 ```
@@ -141,11 +141,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationPolicyOb
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationPolicyObjectsGroup** | [**InlineObject249**](InlineObject249.md) |  | 
+ **createOrganizationPolicyObjectsGroup** | [**InlineObject250**](InlineObject250.md) |  | 
 
 ### Return type
 
-[**InlineResponse200263**](InlineResponse200263.md)
+[**InlineResponse200264**](InlineResponse200264.md)
 
 ### Authorization
 
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPolicyObject
 
-> InlineResponse200262 GetOrganizationPolicyObject(ctx, organizationId, policyObjectId).Execute()
+> InlineResponse200263 GetOrganizationPolicyObject(ctx, organizationId, policyObjectId).Execute()
 
 Shows details of a Policy Object.
 
@@ -334,7 +334,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PolicyObjectsApi.GetOrganizationPolicyObject``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPolicyObject`: InlineResponse200262
+    // response from `GetOrganizationPolicyObject`: InlineResponse200263
     fmt.Fprintf(os.Stdout, "Response from `PolicyObjectsApi.GetOrganizationPolicyObject`: %v\n", resp)
 }
 ```
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200262**](InlineResponse200262.md)
+[**InlineResponse200263**](InlineResponse200263.md)
 
 ### Authorization
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPolicyObjects
 
-> InlineResponse200262 GetOrganizationPolicyObjects(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200263 GetOrganizationPolicyObjects(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Lists Policy Objects belonging to the organization.
 
@@ -409,7 +409,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PolicyObjectsApi.GetOrganizationPolicyObjects``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPolicyObjects`: InlineResponse200262
+    // response from `GetOrganizationPolicyObjects`: InlineResponse200263
     fmt.Fprintf(os.Stdout, "Response from `PolicyObjectsApi.GetOrganizationPolicyObjects`: %v\n", resp)
 }
 ```
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200262**](InlineResponse200262.md)
+[**InlineResponse200263**](InlineResponse200263.md)
 
 ### Authorization
 
@@ -454,7 +454,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPolicyObjectsGroup
 
-> InlineResponse200263 GetOrganizationPolicyObjectsGroup(ctx, organizationId, policyObjectGroupId).Execute()
+> InlineResponse200264 GetOrganizationPolicyObjectsGroup(ctx, organizationId, policyObjectGroupId).Execute()
 
 Shows details of a Policy Object Group.
 
@@ -483,7 +483,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PolicyObjectsApi.GetOrganizationPolicyObjectsGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPolicyObjectsGroup`: InlineResponse200263
+    // response from `GetOrganizationPolicyObjectsGroup`: InlineResponse200264
     fmt.Fprintf(os.Stdout, "Response from `PolicyObjectsApi.GetOrganizationPolicyObjectsGroup`: %v\n", resp)
 }
 ```
@@ -509,7 +509,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200263**](InlineResponse200263.md)
+[**InlineResponse200264**](InlineResponse200264.md)
 
 ### Authorization
 
@@ -527,7 +527,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationPolicyObjectsGroups
 
-> InlineResponse200263 GetOrganizationPolicyObjectsGroups(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200264 GetOrganizationPolicyObjectsGroups(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Lists Policy Object Groups belonging to the organization.
 
@@ -558,7 +558,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PolicyObjectsApi.GetOrganizationPolicyObjectsGroups``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationPolicyObjectsGroups`: InlineResponse200263
+    // response from `GetOrganizationPolicyObjectsGroups`: InlineResponse200264
     fmt.Fprintf(os.Stdout, "Response from `PolicyObjectsApi.GetOrganizationPolicyObjectsGroups`: %v\n", resp)
 }
 ```
@@ -585,7 +585,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200263**](InlineResponse200263.md)
+[**InlineResponse200264**](InlineResponse200264.md)
 
 ### Authorization
 
@@ -603,7 +603,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationPolicyObject
 
-> InlineResponse200262 UpdateOrganizationPolicyObject(ctx, organizationId, policyObjectId).UpdateOrganizationPolicyObject(updateOrganizationPolicyObject).Execute()
+> InlineResponse200263 UpdateOrganizationPolicyObject(ctx, organizationId, policyObjectId).UpdateOrganizationPolicyObject(updateOrganizationPolicyObject).Execute()
 
 Updates a Policy Object.
 
@@ -624,7 +624,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     policyObjectId := "policyObjectId_example" // string | Policy object ID
-    updateOrganizationPolicyObject := *openapiclient.NewInlineObject251() // InlineObject251 |  (optional)
+    updateOrganizationPolicyObject := *openapiclient.NewInlineObject252() // InlineObject252 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -633,7 +633,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PolicyObjectsApi.UpdateOrganizationPolicyObject``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationPolicyObject`: InlineResponse200262
+    // response from `UpdateOrganizationPolicyObject`: InlineResponse200263
     fmt.Fprintf(os.Stdout, "Response from `PolicyObjectsApi.UpdateOrganizationPolicyObject`: %v\n", resp)
 }
 ```
@@ -656,11 +656,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPolicyObject** | [**InlineObject251**](InlineObject251.md) |  | 
+ **updateOrganizationPolicyObject** | [**InlineObject252**](InlineObject252.md) |  | 
 
 ### Return type
 
-[**InlineResponse200262**](InlineResponse200262.md)
+[**InlineResponse200263**](InlineResponse200263.md)
 
 ### Authorization
 
@@ -678,7 +678,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationPolicyObjectsGroup
 
-> InlineResponse200263 UpdateOrganizationPolicyObjectsGroup(ctx, organizationId, policyObjectGroupId).UpdateOrganizationPolicyObjectsGroup(updateOrganizationPolicyObjectsGroup).Execute()
+> InlineResponse200264 UpdateOrganizationPolicyObjectsGroup(ctx, organizationId, policyObjectGroupId).UpdateOrganizationPolicyObjectsGroup(updateOrganizationPolicyObjectsGroup).Execute()
 
 Updates a Policy Object Group.
 
@@ -699,7 +699,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     policyObjectGroupId := "policyObjectGroupId_example" // string | Policy object group ID
-    updateOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject250() // InlineObject250 |  (optional)
+    updateOrganizationPolicyObjectsGroup := *openapiclient.NewInlineObject251() // InlineObject251 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -708,7 +708,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PolicyObjectsApi.UpdateOrganizationPolicyObjectsGroup``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationPolicyObjectsGroup`: InlineResponse200263
+    // response from `UpdateOrganizationPolicyObjectsGroup`: InlineResponse200264
     fmt.Fprintf(os.Stdout, "Response from `PolicyObjectsApi.UpdateOrganizationPolicyObjectsGroup`: %v\n", resp)
 }
 ```
@@ -731,11 +731,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationPolicyObjectsGroup** | [**InlineObject250**](InlineObject250.md) |  | 
+ **updateOrganizationPolicyObjectsGroup** | [**InlineObject251**](InlineObject251.md) |  | 
 
 ### Return type
 
-[**InlineResponse200263**](InlineResponse200263.md)
+[**InlineResponse200264**](InlineResponse200264.md)
 
 ### Authorization
 

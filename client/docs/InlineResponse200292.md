@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**InlineResponse200292Example**](InlineResponse200292Example.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | Network identifier | [optional] 
+**Serial** | Pointer to **string** | The uplink serial | [optional] 
+**Model** | Pointer to **string** | The uplink model | [optional] 
+**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
+**HighAvailability** | Pointer to [**OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability**](OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability.md) |  | [optional] 
+**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdUplinksStatusesUplinks**](OrganizationsOrganizationIdUplinksStatusesUplinks.md) | Uplinks | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse200292WithDefaults instantiates a new InlineResponse200292 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetNetworkId
 
-`func (o *InlineResponse200292) GetAlertTypeId() string`
+`func (o *InlineResponse200292) GetNetworkId() string`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200292) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200292) GetNetworkIdOk() (*string, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetNetworkId
 
-`func (o *InlineResponse200292) SetAlertTypeId(v string)`
+`func (o *InlineResponse200292) SetNetworkId(v string)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasAlertTypeId
+### HasNetworkId
 
-`func (o *InlineResponse200292) HasAlertTypeId() bool`
+`func (o *InlineResponse200292) HasNetworkId() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetAlertType
+### GetSerial
 
-`func (o *InlineResponse200292) GetAlertType() string`
+`func (o *InlineResponse200292) GetSerial() string`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetSerialOk
 
-`func (o *InlineResponse200292) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200292) GetSerialOk() (*string, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetSerial
 
-`func (o *InlineResponse200292) SetAlertType(v string)`
+`func (o *InlineResponse200292) SetSerial(v string)`
 
-SetAlertType sets AlertType field to given value.
+SetSerial sets Serial field to given value.
 
-### HasAlertType
+### HasSerial
 
-`func (o *InlineResponse200292) HasAlertType() bool`
+`func (o *InlineResponse200292) HasSerial() bool`
 
-HasAlertType returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetExample
+### GetModel
 
-`func (o *InlineResponse200292) GetExample() InlineResponse200292Example`
+`func (o *InlineResponse200292) GetModel() string`
 
-GetExample returns the Example field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetExampleOk
+### GetModelOk
 
-`func (o *InlineResponse200292) GetExampleOk() (*InlineResponse200292Example, bool)`
+`func (o *InlineResponse200292) GetModelOk() (*string, bool)`
 
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExample
+### SetModel
 
-`func (o *InlineResponse200292) SetExample(v InlineResponse200292Example)`
+`func (o *InlineResponse200292) SetModel(v string)`
 
-SetExample sets Example field to given value.
+SetModel sets Model field to given value.
 
-### HasExample
+### HasModel
 
-`func (o *InlineResponse200292) HasExample() bool`
+`func (o *InlineResponse200292) HasModel() bool`
 
-HasExample returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
+
+### GetLastReportedAt
+
+`func (o *InlineResponse200292) GetLastReportedAt() time.Time`
+
+GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
+
+### GetLastReportedAtOk
+
+`func (o *InlineResponse200292) GetLastReportedAtOk() (*time.Time, bool)`
+
+GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastReportedAt
+
+`func (o *InlineResponse200292) SetLastReportedAt(v time.Time)`
+
+SetLastReportedAt sets LastReportedAt field to given value.
+
+### HasLastReportedAt
+
+`func (o *InlineResponse200292) HasLastReportedAt() bool`
+
+HasLastReportedAt returns a boolean if a field has been set.
+
+### GetHighAvailability
+
+`func (o *InlineResponse200292) GetHighAvailability() OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability`
+
+GetHighAvailability returns the HighAvailability field if non-nil, zero value otherwise.
+
+### GetHighAvailabilityOk
+
+`func (o *InlineResponse200292) GetHighAvailabilityOk() (*OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability, bool)`
+
+GetHighAvailabilityOk returns a tuple with the HighAvailability field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHighAvailability
+
+`func (o *InlineResponse200292) SetHighAvailability(v OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability)`
+
+SetHighAvailability sets HighAvailability field to given value.
+
+### HasHighAvailability
+
+`func (o *InlineResponse200292) HasHighAvailability() bool`
+
+HasHighAvailability returns a boolean if a field has been set.
+
+### GetUplinks
+
+`func (o *InlineResponse200292) GetUplinks() []OrganizationsOrganizationIdUplinksStatusesUplinks`
+
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+
+### GetUplinksOk
+
+`func (o *InlineResponse200292) GetUplinksOk() (*[]OrganizationsOrganizationIdUplinksStatusesUplinks, bool)`
+
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinks
+
+`func (o *InlineResponse200292) SetUplinks(v []OrganizationsOrganizationIdUplinksStatusesUplinks)`
+
+SetUplinks sets Uplinks field to given value.
+
+### HasUplinks
+
+`func (o *InlineResponse200292) HasUplinks() bool`
+
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
