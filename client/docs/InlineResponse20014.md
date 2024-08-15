@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
-**RtspUrl** | Pointer to **string** | External rstp url. Will only be returned if external rtsp stream is exposed | [optional] 
+**Enabled** | Pointer to **bool** | Whether custom analytics is enabled | [optional] 
+**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
+**Parameters** | Pointer to [**[]InlineResponse20014Parameters**](InlineResponse20014Parameters.md) | Parameters for the custom analytics workload | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20014WithDefaults instantiates a new InlineResponse20014 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetExternalRtspEnabled
+### GetEnabled
 
-`func (o *InlineResponse20014) GetExternalRtspEnabled() bool`
+`func (o *InlineResponse20014) GetEnabled() bool`
 
-GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetExternalRtspEnabledOk
+### GetEnabledOk
 
-`func (o *InlineResponse20014) GetExternalRtspEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20014) GetEnabledOk() (*bool, bool)`
 
-GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExternalRtspEnabled
+### SetEnabled
 
-`func (o *InlineResponse20014) SetExternalRtspEnabled(v bool)`
+`func (o *InlineResponse20014) SetEnabled(v bool)`
 
-SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasExternalRtspEnabled
+### HasEnabled
 
-`func (o *InlineResponse20014) HasExternalRtspEnabled() bool`
+`func (o *InlineResponse20014) HasEnabled() bool`
 
-HasExternalRtspEnabled returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetRtspUrl
+### GetArtifactId
 
-`func (o *InlineResponse20014) GetRtspUrl() string`
+`func (o *InlineResponse20014) GetArtifactId() string`
 
-GetRtspUrl returns the RtspUrl field if non-nil, zero value otherwise.
+GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
 
-### GetRtspUrlOk
+### GetArtifactIdOk
 
-`func (o *InlineResponse20014) GetRtspUrlOk() (*string, bool)`
+`func (o *InlineResponse20014) GetArtifactIdOk() (*string, bool)`
 
-GetRtspUrlOk returns a tuple with the RtspUrl field if it's non-nil, zero value otherwise
+GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRtspUrl
+### SetArtifactId
 
-`func (o *InlineResponse20014) SetRtspUrl(v string)`
+`func (o *InlineResponse20014) SetArtifactId(v string)`
 
-SetRtspUrl sets RtspUrl field to given value.
+SetArtifactId sets ArtifactId field to given value.
 
-### HasRtspUrl
+### HasArtifactId
 
-`func (o *InlineResponse20014) HasRtspUrl() bool`
+`func (o *InlineResponse20014) HasArtifactId() bool`
 
-HasRtspUrl returns a boolean if a field has been set.
+HasArtifactId returns a boolean if a field has been set.
+
+### GetParameters
+
+`func (o *InlineResponse20014) GetParameters() []InlineResponse20014Parameters`
+
+GetParameters returns the Parameters field if non-nil, zero value otherwise.
+
+### GetParametersOk
+
+`func (o *InlineResponse20014) GetParametersOk() (*[]InlineResponse20014Parameters, bool)`
+
+GetParametersOk returns a tuple with the Parameters field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetParameters
+
+`func (o *InlineResponse20014) SetParameters(v []InlineResponse20014Parameters)`
+
+SetParameters sets Parameters field to given value.
+
+### HasParameters
+
+`func (o *InlineResponse20014) HasParameters() bool`
+
+HasParameters returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

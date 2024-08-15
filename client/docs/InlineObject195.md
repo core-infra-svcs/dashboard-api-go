@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
 **DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200194Rules**](InlineResponse200194Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200195Rules**](InlineResponse200195Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasDefaultRulesEnabled returns a boolean if a field has been set.
 
 ### GetRules
 
-`func (o *InlineObject195) GetRules() []InlineResponse200194Rules`
+`func (o *InlineObject195) GetRules() []InlineResponse200195Rules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineObject195) GetRulesOk() (*[]InlineResponse200194Rules, bool)`
+`func (o *InlineObject195) GetRulesOk() (*[]InlineResponse200195Rules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineObject195) SetRules(v []InlineResponse200194Rules)`
+`func (o *InlineObject195) SetRules(v []InlineResponse200195Rules)`
 
 SetRules sets Rules field to given value.
 

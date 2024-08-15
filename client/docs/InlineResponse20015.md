@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Sims** | Pointer to [**[]InlineResponse20015Sims**](InlineResponse20015Sims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
-**SimOrdering** | Pointer to **[]string** | Specifies the ordering of all SIMs for an MG: primary, secondary, and not-in-use (when applicable). It&#39;s required for devices with 3 or more SIMs and can be used in place of &#39;isPrimary&#39; for dual-SIM devices. To indicate eSIM, use &#39;sim3&#39;. Sim failover will occur only between primary and secondary sim slots. | [optional] 
-**SimFailover** | Pointer to [**InlineResponse20015SimFailover**](InlineResponse20015SimFailover.md) |  | [optional] 
+**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
+**RtspUrl** | Pointer to **string** | External rstp url. Will only be returned if external rtsp stream is exposed | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse20015WithDefaults instantiates a new InlineResponse20015 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSims
+### GetExternalRtspEnabled
 
-`func (o *InlineResponse20015) GetSims() []InlineResponse20015Sims`
+`func (o *InlineResponse20015) GetExternalRtspEnabled() bool`
 
-GetSims returns the Sims field if non-nil, zero value otherwise.
+GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
 
-### GetSimsOk
+### GetExternalRtspEnabledOk
 
-`func (o *InlineResponse20015) GetSimsOk() (*[]InlineResponse20015Sims, bool)`
+`func (o *InlineResponse20015) GetExternalRtspEnabledOk() (*bool, bool)`
 
-GetSimsOk returns a tuple with the Sims field if it's non-nil, zero value otherwise
+GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSims
+### SetExternalRtspEnabled
 
-`func (o *InlineResponse20015) SetSims(v []InlineResponse20015Sims)`
+`func (o *InlineResponse20015) SetExternalRtspEnabled(v bool)`
 
-SetSims sets Sims field to given value.
+SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
 
-### HasSims
+### HasExternalRtspEnabled
 
-`func (o *InlineResponse20015) HasSims() bool`
+`func (o *InlineResponse20015) HasExternalRtspEnabled() bool`
 
-HasSims returns a boolean if a field has been set.
+HasExternalRtspEnabled returns a boolean if a field has been set.
 
-### GetSimOrdering
+### GetRtspUrl
 
-`func (o *InlineResponse20015) GetSimOrdering() []string`
+`func (o *InlineResponse20015) GetRtspUrl() string`
 
-GetSimOrdering returns the SimOrdering field if non-nil, zero value otherwise.
+GetRtspUrl returns the RtspUrl field if non-nil, zero value otherwise.
 
-### GetSimOrderingOk
+### GetRtspUrlOk
 
-`func (o *InlineResponse20015) GetSimOrderingOk() (*[]string, bool)`
+`func (o *InlineResponse20015) GetRtspUrlOk() (*string, bool)`
 
-GetSimOrderingOk returns a tuple with the SimOrdering field if it's non-nil, zero value otherwise
+GetRtspUrlOk returns a tuple with the RtspUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSimOrdering
+### SetRtspUrl
 
-`func (o *InlineResponse20015) SetSimOrdering(v []string)`
+`func (o *InlineResponse20015) SetRtspUrl(v string)`
 
-SetSimOrdering sets SimOrdering field to given value.
+SetRtspUrl sets RtspUrl field to given value.
 
-### HasSimOrdering
+### HasRtspUrl
 
-`func (o *InlineResponse20015) HasSimOrdering() bool`
+`func (o *InlineResponse20015) HasRtspUrl() bool`
 
-HasSimOrdering returns a boolean if a field has been set.
-
-### GetSimFailover
-
-`func (o *InlineResponse20015) GetSimFailover() InlineResponse20015SimFailover`
-
-GetSimFailover returns the SimFailover field if non-nil, zero value otherwise.
-
-### GetSimFailoverOk
-
-`func (o *InlineResponse20015) GetSimFailoverOk() (*InlineResponse20015SimFailover, bool)`
-
-GetSimFailoverOk returns a tuple with the SimFailover field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSimFailover
-
-`func (o *InlineResponse20015) SetSimFailover(v InlineResponse20015SimFailover)`
-
-SetSimFailover sets SimFailover field to given value.
-
-### HasSimFailover
-
-`func (o *InlineResponse20015) HasSimFailover() bool`
-
-HasSimFailover returns a boolean if a field has been set.
+HasRtspUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

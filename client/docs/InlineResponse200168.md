@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]InlineResponse200168Plans**](InlineResponse200168Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**NetworkId** | Pointer to **string** | The network ID | [optional] 
+**DefaultPolicy** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs. (blocked by default) | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200168WithDefaults instantiates a new InlineResponse200168 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetNetworkId
 
-`func (o *InlineResponse200168) GetCurrency() string`
+`func (o *InlineResponse200168) GetNetworkId() string`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200168) GetCurrencyOk() (*string, bool)`
+`func (o *InlineResponse200168) GetNetworkIdOk() (*string, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetNetworkId
 
-`func (o *InlineResponse200168) SetCurrency(v string)`
+`func (o *InlineResponse200168) SetNetworkId(v string)`
 
-SetCurrency sets Currency field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasCurrency
+### HasNetworkId
 
-`func (o *InlineResponse200168) HasCurrency() bool`
+`func (o *InlineResponse200168) HasNetworkId() bool`
 
-HasCurrency returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetPlans
+### GetDefaultPolicy
 
-`func (o *InlineResponse200168) GetPlans() []InlineResponse200168Plans`
+`func (o *InlineResponse200168) GetDefaultPolicy() string`
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetPlansOk
+### GetDefaultPolicyOk
 
-`func (o *InlineResponse200168) GetPlansOk() (*[]InlineResponse200168Plans, bool)`
+`func (o *InlineResponse200168) GetDefaultPolicyOk() (*string, bool)`
 
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetDefaultPolicy
 
-`func (o *InlineResponse200168) SetPlans(v []InlineResponse200168Plans)`
+`func (o *InlineResponse200168) SetDefaultPolicy(v string)`
 
-SetPlans sets Plans field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasPlans
+### HasDefaultPolicy
 
-`func (o *InlineResponse200168) HasPlans() bool`
+`func (o *InlineResponse200168) HasDefaultPolicy() bool`
 
-HasPlans returns a boolean if a field has been set.
+HasDefaultPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

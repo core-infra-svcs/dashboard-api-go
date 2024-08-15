@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID associated with the SAML role | [optional] 
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks**](OrganizationsOrganizationIdSamlRolesNetworks.md) | The list of networks that the SAML administrator has privileges on | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags**](OrganizationsOrganizationIdSamlRolesTags.md) | The list of tags that the SAML administrator has privleges on | [optional] 
-**Camera** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesCamera**](OrganizationsOrganizationIdSamlRolesCamera.md) | The list of camera access privileges for SAML administrator | [optional] 
+**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
+**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineResponse200267WithDefaults instantiates a new InlineResponse200267 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetIdpId
 
-`func (o *InlineResponse200267) GetId() string`
+`func (o *InlineResponse200267) GetIdpId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetIdpId returns the IdpId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetIdpIdOk
 
-`func (o *InlineResponse200267) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200267) GetIdpIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetIdpId
 
-`func (o *InlineResponse200267) SetId(v string)`
+`func (o *InlineResponse200267) SetIdpId(v string)`
 
-SetId sets Id field to given value.
+SetIdpId sets IdpId field to given value.
 
-### HasId
+### HasIdpId
 
-`func (o *InlineResponse200267) HasId() bool`
+`func (o *InlineResponse200267) HasIdpId() bool`
 
-HasId returns a boolean if a field has been set.
+HasIdpId returns a boolean if a field has been set.
 
-### GetRole
+### GetConsumerUrl
 
-`func (o *InlineResponse200267) GetRole() string`
+`func (o *InlineResponse200267) GetConsumerUrl() string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetConsumerUrlOk
 
-`func (o *InlineResponse200267) GetRoleOk() (*string, bool)`
+`func (o *InlineResponse200267) GetConsumerUrlOk() (*string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetConsumerUrl
 
-`func (o *InlineResponse200267) SetRole(v string)`
+`func (o *InlineResponse200267) SetConsumerUrl(v string)`
 
-SetRole sets Role field to given value.
+SetConsumerUrl sets ConsumerUrl field to given value.
 
-### HasRole
+### HasConsumerUrl
 
-`func (o *InlineResponse200267) HasRole() bool`
+`func (o *InlineResponse200267) HasConsumerUrl() bool`
 
-HasRole returns a boolean if a field has been set.
+HasConsumerUrl returns a boolean if a field has been set.
 
-### GetOrgAccess
+### GetX509certSha1Fingerprint
 
-`func (o *InlineResponse200267) GetOrgAccess() string`
+`func (o *InlineResponse200267) GetX509certSha1Fingerprint() string`
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetOrgAccessOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineResponse200267) GetOrgAccessOk() (*string, bool)`
+`func (o *InlineResponse200267) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetX509certSha1Fingerprint
 
-`func (o *InlineResponse200267) SetOrgAccess(v string)`
+`func (o *InlineResponse200267) SetX509certSha1Fingerprint(v string)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
-### HasOrgAccess
+### HasX509certSha1Fingerprint
 
-`func (o *InlineResponse200267) HasOrgAccess() bool`
+`func (o *InlineResponse200267) HasX509certSha1Fingerprint() bool`
 
-HasOrgAccess returns a boolean if a field has been set.
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
 
-### GetNetworks
+### GetSloLogoutUrl
 
-`func (o *InlineResponse200267) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks`
+`func (o *InlineResponse200267) GetSloLogoutUrl() string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetSloLogoutUrlOk
 
-`func (o *InlineResponse200267) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks, bool)`
+`func (o *InlineResponse200267) GetSloLogoutUrlOk() (*string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetSloLogoutUrl
 
-`func (o *InlineResponse200267) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks)`
+`func (o *InlineResponse200267) SetSloLogoutUrl(v string)`
 
-SetNetworks sets Networks field to given value.
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
 
-### HasNetworks
+### HasSloLogoutUrl
 
-`func (o *InlineResponse200267) HasNetworks() bool`
+`func (o *InlineResponse200267) HasSloLogoutUrl() bool`
 
-HasNetworks returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200267) GetTags() []OrganizationsOrganizationIdSamlRolesTags`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200267) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200267) SetTags(v []OrganizationsOrganizationIdSamlRolesTags)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200267) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetCamera
-
-`func (o *InlineResponse200267) GetCamera() []OrganizationsOrganizationIdSamlRolesCamera`
-
-GetCamera returns the Camera field if non-nil, zero value otherwise.
-
-### GetCameraOk
-
-`func (o *InlineResponse200267) GetCameraOk() (*[]OrganizationsOrganizationIdSamlRolesCamera, bool)`
-
-GetCameraOk returns a tuple with the Camera field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCamera
-
-`func (o *InlineResponse200267) SetCamera(v []OrganizationsOrganizationIdSamlRolesCamera)`
-
-SetCamera sets Camera field to given value.
-
-### HasCamera
-
-`func (o *InlineResponse200267) HasCamera() bool`
-
-HasCamera returns a boolean if a field has been set.
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

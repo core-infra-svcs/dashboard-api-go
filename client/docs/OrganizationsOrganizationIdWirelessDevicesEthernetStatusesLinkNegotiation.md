@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Duplex** | Pointer to **string** | The duplex mode of the port. Can be &#39;full&#39; or &#39;half&#39; | [optional] 
-**Speed** | Pointer to **int32** | The speed of the port | [optional] 
+**Duplex** | Pointer to **string** | The duplex mode of the port. Can be &#39;full&#39; or &#39;half&#39; will return null on Catalyst devices | [optional] 
+**Speed** | Pointer to **int32** | Show the speed of the port. The port speed will return null on Catalyst devices | [optional] 
 
 ## Methods
 

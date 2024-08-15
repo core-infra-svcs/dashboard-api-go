@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationAssuranceAlertsOverviewByType
 
-> InlineResponse200217 GetOrganizationAssuranceAlertsOverviewByType(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+> InlineResponse200218 GetOrganizationAssuranceAlertsOverviewByType(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
 
 Return a Summary of Alerts grouped by type and severity
 
@@ -40,6 +40,7 @@ func main() {
     types := []string{"Types_example"} // []string | Optional parameter to filter by alert type. (optional)
     tsStart := time.Now() // time.Time | Optional parameter to filter by starting timestamp (optional)
     tsEnd := time.Now() // time.Time | Optional parameter to filter by end timestamp (optional)
+    category := "category_example" // string | Optional parameter to filter by category. (optional)
     sortBy := "sortBy_example" // string | Optional parameter to set column to sort by. (optional)
     serials := []string{"Inner_example"} // []string | Optional parameter to filter by primary device serial (optional)
     deviceTypes := []string{"DeviceTypes_example"} // []string | Optional parameter to filter by device types (optional)
@@ -51,12 +52,12 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ByTypeApi.GetOrganizationAssuranceAlertsOverviewByType(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+    resp, r, err := apiClient.ByTypeApi.GetOrganizationAssuranceAlertsOverviewByType(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).SortBy(sortBy).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ByTypeApi.GetOrganizationAssuranceAlertsOverviewByType``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsOverviewByType`: InlineResponse200217
+    // response from `GetOrganizationAssuranceAlertsOverviewByType`: InlineResponse200218
     fmt.Fprintf(os.Stdout, "Response from `ByTypeApi.GetOrganizationAssuranceAlertsOverviewByType`: %v\n", resp)
 }
 ```
@@ -86,6 +87,7 @@ Name | Type | Description  | Notes
  **types** | **[]string** | Optional parameter to filter by alert type. | 
  **tsStart** | **time.Time** | Optional parameter to filter by starting timestamp | 
  **tsEnd** | **time.Time** | Optional parameter to filter by end timestamp | 
+ **category** | **string** | Optional parameter to filter by category. | 
  **sortBy** | **string** | Optional parameter to set column to sort by. | 
  **serials** | **[]string** | Optional parameter to filter by primary device serial | 
  **deviceTypes** | **[]string** | Optional parameter to filter by device types | 
@@ -97,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200217**](InlineResponse200217.md)
+[**InlineResponse200218**](InlineResponse200218.md)
 
 ### Authorization
 

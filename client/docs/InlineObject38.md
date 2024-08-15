@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultDestinations** | Pointer to [**InlineResponse20045DefaultDestinations**](InlineResponse20045DefaultDestinations.md) |  | [optional] 
-**Alerts** | Pointer to [**[]InlineResponse20045Alerts**](InlineResponse20045Alerts.md) | Alert-specific configuration for each type. Only alerts that pertain to the network can be updated. | [optional] 
-**Muting** | Pointer to [**InlineResponse20045Muting**](InlineResponse20045Muting.md) |  | [optional] 
+**DefaultDestinations** | Pointer to [**InlineResponse20046DefaultDestinations**](InlineResponse20046DefaultDestinations.md) |  | [optional] 
+**Alerts** | Pointer to [**[]InlineResponse20046Alerts**](InlineResponse20046Alerts.md) | Alert-specific configuration for each type. Only alerts that pertain to the network can be updated. | [optional] 
+**Muting** | Pointer to [**InlineResponse20046Muting**](InlineResponse20046Muting.md) |  | [optional] 
 
 ## Methods
 
@@ -29,20 +29,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetDefaultDestinations
 
-`func (o *InlineObject38) GetDefaultDestinations() InlineResponse20045DefaultDestinations`
+`func (o *InlineObject38) GetDefaultDestinations() InlineResponse20046DefaultDestinations`
 
 GetDefaultDestinations returns the DefaultDestinations field if non-nil, zero value otherwise.
 
 ### GetDefaultDestinationsOk
 
-`func (o *InlineObject38) GetDefaultDestinationsOk() (*InlineResponse20045DefaultDestinations, bool)`
+`func (o *InlineObject38) GetDefaultDestinationsOk() (*InlineResponse20046DefaultDestinations, bool)`
 
 GetDefaultDestinationsOk returns a tuple with the DefaultDestinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDefaultDestinations
 
-`func (o *InlineObject38) SetDefaultDestinations(v InlineResponse20045DefaultDestinations)`
+`func (o *InlineObject38) SetDefaultDestinations(v InlineResponse20046DefaultDestinations)`
 
 SetDefaultDestinations sets DefaultDestinations field to given value.
 
@@ -54,20 +54,20 @@ HasDefaultDestinations returns a boolean if a field has been set.
 
 ### GetAlerts
 
-`func (o *InlineObject38) GetAlerts() []InlineResponse20045Alerts`
+`func (o *InlineObject38) GetAlerts() []InlineResponse20046Alerts`
 
 GetAlerts returns the Alerts field if non-nil, zero value otherwise.
 
 ### GetAlertsOk
 
-`func (o *InlineObject38) GetAlertsOk() (*[]InlineResponse20045Alerts, bool)`
+`func (o *InlineObject38) GetAlertsOk() (*[]InlineResponse20046Alerts, bool)`
 
 GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAlerts
 
-`func (o *InlineObject38) SetAlerts(v []InlineResponse20045Alerts)`
+`func (o *InlineObject38) SetAlerts(v []InlineResponse20046Alerts)`
 
 SetAlerts sets Alerts field to given value.
 
@@ -79,20 +79,20 @@ HasAlerts returns a boolean if a field has been set.
 
 ### GetMuting
 
-`func (o *InlineObject38) GetMuting() InlineResponse20045Muting`
+`func (o *InlineObject38) GetMuting() InlineResponse20046Muting`
 
 GetMuting returns the Muting field if non-nil, zero value otherwise.
 
 ### GetMutingOk
 
-`func (o *InlineObject38) GetMutingOk() (*InlineResponse20045Muting, bool)`
+`func (o *InlineObject38) GetMutingOk() (*InlineResponse20046Muting, bool)`
 
 GetMutingOk returns a tuple with the Muting field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMuting
 
-`func (o *InlineObject38) SetMuting(v InlineResponse20045Muting)`
+`func (o *InlineObject38) SetMuting(v InlineResponse20046Muting)`
 
 SetMuting sets Muting field to given value.
 

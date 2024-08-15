@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceName** | Pointer to **string** | Name of the MG. | [optional] 
-**DeviceLanIp** | Pointer to **string** | Lan IP of the MG | [optional] 
-**DeviceSubnet** | Pointer to **string** | Subnet configuration of the MG. | [optional] 
-**FixedIpAssignments** | Pointer to [**[]InlineResponse20016FixedIpAssignments**](InlineResponse20016FixedIpAssignments.md) | list of all fixed IP assignments for a single MG | [optional] 
-**ReservedIpRanges** | Pointer to [**[]InlineResponse20016ReservedIpRanges**](InlineResponse20016ReservedIpRanges.md) | list of all reserved IP ranges for a single MG | [optional] 
+**Sims** | Pointer to [**[]InlineResponse20016Sims**](InlineResponse20016Sims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
+**SimOrdering** | Pointer to **[]string** | Specifies the ordering of all SIMs for an MG: primary, secondary, and not-in-use (when applicable). It&#39;s required for devices with 3 or more SIMs and can be used in place of &#39;isPrimary&#39; for dual-SIM devices. To indicate eSIM, use &#39;sim3&#39;. Sim failover will occur only between primary and secondary sim slots. | [optional] 
+**SimFailover** | Pointer to [**InlineResponse20016SimFailover**](InlineResponse20016SimFailover.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse20016WithDefaults instantiates a new InlineResponse20016 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeviceName
+### GetSims
 
-`func (o *InlineResponse20016) GetDeviceName() string`
+`func (o *InlineResponse20016) GetSims() []InlineResponse20016Sims`
 
-GetDeviceName returns the DeviceName field if non-nil, zero value otherwise.
+GetSims returns the Sims field if non-nil, zero value otherwise.
 
-### GetDeviceNameOk
+### GetSimsOk
 
-`func (o *InlineResponse20016) GetDeviceNameOk() (*string, bool)`
+`func (o *InlineResponse20016) GetSimsOk() (*[]InlineResponse20016Sims, bool)`
 
-GetDeviceNameOk returns a tuple with the DeviceName field if it's non-nil, zero value otherwise
+GetSimsOk returns a tuple with the Sims field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceName
+### SetSims
 
-`func (o *InlineResponse20016) SetDeviceName(v string)`
+`func (o *InlineResponse20016) SetSims(v []InlineResponse20016Sims)`
 
-SetDeviceName sets DeviceName field to given value.
+SetSims sets Sims field to given value.
 
-### HasDeviceName
+### HasSims
 
-`func (o *InlineResponse20016) HasDeviceName() bool`
+`func (o *InlineResponse20016) HasSims() bool`
 
-HasDeviceName returns a boolean if a field has been set.
+HasSims returns a boolean if a field has been set.
 
-### GetDeviceLanIp
+### GetSimOrdering
 
-`func (o *InlineResponse20016) GetDeviceLanIp() string`
+`func (o *InlineResponse20016) GetSimOrdering() []string`
 
-GetDeviceLanIp returns the DeviceLanIp field if non-nil, zero value otherwise.
+GetSimOrdering returns the SimOrdering field if non-nil, zero value otherwise.
 
-### GetDeviceLanIpOk
+### GetSimOrderingOk
 
-`func (o *InlineResponse20016) GetDeviceLanIpOk() (*string, bool)`
+`func (o *InlineResponse20016) GetSimOrderingOk() (*[]string, bool)`
 
-GetDeviceLanIpOk returns a tuple with the DeviceLanIp field if it's non-nil, zero value otherwise
+GetSimOrderingOk returns a tuple with the SimOrdering field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceLanIp
+### SetSimOrdering
 
-`func (o *InlineResponse20016) SetDeviceLanIp(v string)`
+`func (o *InlineResponse20016) SetSimOrdering(v []string)`
 
-SetDeviceLanIp sets DeviceLanIp field to given value.
+SetSimOrdering sets SimOrdering field to given value.
 
-### HasDeviceLanIp
+### HasSimOrdering
 
-`func (o *InlineResponse20016) HasDeviceLanIp() bool`
+`func (o *InlineResponse20016) HasSimOrdering() bool`
 
-HasDeviceLanIp returns a boolean if a field has been set.
+HasSimOrdering returns a boolean if a field has been set.
 
-### GetDeviceSubnet
+### GetSimFailover
 
-`func (o *InlineResponse20016) GetDeviceSubnet() string`
+`func (o *InlineResponse20016) GetSimFailover() InlineResponse20016SimFailover`
 
-GetDeviceSubnet returns the DeviceSubnet field if non-nil, zero value otherwise.
+GetSimFailover returns the SimFailover field if non-nil, zero value otherwise.
 
-### GetDeviceSubnetOk
+### GetSimFailoverOk
 
-`func (o *InlineResponse20016) GetDeviceSubnetOk() (*string, bool)`
+`func (o *InlineResponse20016) GetSimFailoverOk() (*InlineResponse20016SimFailover, bool)`
 
-GetDeviceSubnetOk returns a tuple with the DeviceSubnet field if it's non-nil, zero value otherwise
+GetSimFailoverOk returns a tuple with the SimFailover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceSubnet
+### SetSimFailover
 
-`func (o *InlineResponse20016) SetDeviceSubnet(v string)`
+`func (o *InlineResponse20016) SetSimFailover(v InlineResponse20016SimFailover)`
 
-SetDeviceSubnet sets DeviceSubnet field to given value.
+SetSimFailover sets SimFailover field to given value.
 
-### HasDeviceSubnet
+### HasSimFailover
 
-`func (o *InlineResponse20016) HasDeviceSubnet() bool`
+`func (o *InlineResponse20016) HasSimFailover() bool`
 
-HasDeviceSubnet returns a boolean if a field has been set.
-
-### GetFixedIpAssignments
-
-`func (o *InlineResponse20016) GetFixedIpAssignments() []InlineResponse20016FixedIpAssignments`
-
-GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
-
-### GetFixedIpAssignmentsOk
-
-`func (o *InlineResponse20016) GetFixedIpAssignmentsOk() (*[]InlineResponse20016FixedIpAssignments, bool)`
-
-GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFixedIpAssignments
-
-`func (o *InlineResponse20016) SetFixedIpAssignments(v []InlineResponse20016FixedIpAssignments)`
-
-SetFixedIpAssignments sets FixedIpAssignments field to given value.
-
-### HasFixedIpAssignments
-
-`func (o *InlineResponse20016) HasFixedIpAssignments() bool`
-
-HasFixedIpAssignments returns a boolean if a field has been set.
-
-### GetReservedIpRanges
-
-`func (o *InlineResponse20016) GetReservedIpRanges() []InlineResponse20016ReservedIpRanges`
-
-GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
-
-### GetReservedIpRangesOk
-
-`func (o *InlineResponse20016) GetReservedIpRangesOk() (*[]InlineResponse20016ReservedIpRanges, bool)`
-
-GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReservedIpRanges
-
-`func (o *InlineResponse20016) SetReservedIpRanges(v []InlineResponse20016ReservedIpRanges)`
-
-SetReservedIpRanges sets ReservedIpRanges field to given value.
-
-### HasReservedIpRanges
-
-`func (o *InlineResponse20016) HasReservedIpRanges() bool`
-
-HasReservedIpRanges returns a boolean if a field has been set.
+HasSimFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

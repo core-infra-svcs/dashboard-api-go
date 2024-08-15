@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200167**](InlineResponse200167.md) | List of settings | [optional] 
+**Items** | Pointer to [**[]InlineResponse200297Items**](InlineResponse200297Items.md) | List of rules | [optional] 
 **Meta** | Pointer to [**InlineResponse200297Meta**](InlineResponse200297Meta.md) |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200297) GetItems() []InlineResponse200167`
+`func (o *InlineResponse200297) GetItems() []InlineResponse200297Items`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200297) GetItemsOk() (*[]InlineResponse200167, bool)`
+`func (o *InlineResponse200297) GetItemsOk() (*[]InlineResponse200297Items, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200297) SetItems(v []InlineResponse200167)`
+`func (o *InlineResponse200297) SetItems(v []InlineResponse200297Items)`
 
 SetItems sets Items field to given value.
 

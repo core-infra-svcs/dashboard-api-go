@@ -4,7 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BasicServiceSets** | Pointer to [**[]InlineResponse20042BasicServiceSets**](InlineResponse20042BasicServiceSets.md) | SSID status list | [optional] 
+**ApEslId** | Pointer to **int32** | An identifier for the device used by the ESL system | [optional] 
+**Serial** | Pointer to **string** | The serial number of the device | [optional] 
+**Channel** | Pointer to **string** | Desired ESL channel for the device, or &#39;Auto&#39; (case insensitive) to use the recommended channel | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this device | [optional] 
+**NetworkId** | Pointer to **string** | The identifier for the device&#39;s network | [optional] 
+**Hostname** | Pointer to **string** | Hostname of the ESL management service | [optional] 
+**Provider** | Pointer to **string** | The service providing ESL functionality | [optional] 
 
 ## Methods
 
@@ -25,30 +31,180 @@ NewInlineResponse20042WithDefaults instantiates a new InlineResponse20042 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBasicServiceSets
+### GetApEslId
 
-`func (o *InlineResponse20042) GetBasicServiceSets() []InlineResponse20042BasicServiceSets`
+`func (o *InlineResponse20042) GetApEslId() int32`
 
-GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
+GetApEslId returns the ApEslId field if non-nil, zero value otherwise.
 
-### GetBasicServiceSetsOk
+### GetApEslIdOk
 
-`func (o *InlineResponse20042) GetBasicServiceSetsOk() (*[]InlineResponse20042BasicServiceSets, bool)`
+`func (o *InlineResponse20042) GetApEslIdOk() (*int32, bool)`
 
-GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
+GetApEslIdOk returns a tuple with the ApEslId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBasicServiceSets
+### SetApEslId
 
-`func (o *InlineResponse20042) SetBasicServiceSets(v []InlineResponse20042BasicServiceSets)`
+`func (o *InlineResponse20042) SetApEslId(v int32)`
 
-SetBasicServiceSets sets BasicServiceSets field to given value.
+SetApEslId sets ApEslId field to given value.
 
-### HasBasicServiceSets
+### HasApEslId
 
-`func (o *InlineResponse20042) HasBasicServiceSets() bool`
+`func (o *InlineResponse20042) HasApEslId() bool`
 
-HasBasicServiceSets returns a boolean if a field has been set.
+HasApEslId returns a boolean if a field has been set.
+
+### GetSerial
+
+`func (o *InlineResponse20042) GetSerial() string`
+
+GetSerial returns the Serial field if non-nil, zero value otherwise.
+
+### GetSerialOk
+
+`func (o *InlineResponse20042) GetSerialOk() (*string, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerial
+
+`func (o *InlineResponse20042) SetSerial(v string)`
+
+SetSerial sets Serial field to given value.
+
+### HasSerial
+
+`func (o *InlineResponse20042) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetChannel
+
+`func (o *InlineResponse20042) GetChannel() string`
+
+GetChannel returns the Channel field if non-nil, zero value otherwise.
+
+### GetChannelOk
+
+`func (o *InlineResponse20042) GetChannelOk() (*string, bool)`
+
+GetChannelOk returns a tuple with the Channel field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetChannel
+
+`func (o *InlineResponse20042) SetChannel(v string)`
+
+SetChannel sets Channel field to given value.
+
+### HasChannel
+
+`func (o *InlineResponse20042) HasChannel() bool`
+
+HasChannel returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse20042) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse20042) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse20042) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse20042) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetNetworkId
+
+`func (o *InlineResponse20042) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineResponse20042) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineResponse20042) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+### HasNetworkId
+
+`func (o *InlineResponse20042) HasNetworkId() bool`
+
+HasNetworkId returns a boolean if a field has been set.
+
+### GetHostname
+
+`func (o *InlineResponse20042) GetHostname() string`
+
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
+
+### GetHostnameOk
+
+`func (o *InlineResponse20042) GetHostnameOk() (*string, bool)`
+
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHostname
+
+`func (o *InlineResponse20042) SetHostname(v string)`
+
+SetHostname sets Hostname field to given value.
+
+### HasHostname
+
+`func (o *InlineResponse20042) HasHostname() bool`
+
+HasHostname returns a boolean if a field has been set.
+
+### GetProvider
+
+`func (o *InlineResponse20042) GetProvider() string`
+
+GetProvider returns the Provider field if non-nil, zero value otherwise.
+
+### GetProviderOk
+
+`func (o *InlineResponse20042) GetProviderOk() (*string, bool)`
+
+GetProviderOk returns a tuple with the Provider field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProvider
+
+`func (o *InlineResponse20042) SetProvider(v string)`
+
+SetProvider sets Provider field to given value.
+
+### HasProvider
+
+`func (o *InlineResponse20042) HasProvider() bool`
+
+HasProvider returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

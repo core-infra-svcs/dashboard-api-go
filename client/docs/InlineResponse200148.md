@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse200148Overrides**](InlineResponse200148Overrides.md) | Override MTU size for individual switches or switch templates.       An empty array will clear overrides. | [optional] 
+**Id** | Pointer to **string** | The ID for the link aggregation. | [optional] 
+**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | The ID for the link aggregation. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200148WithDefaults instantiates a new InlineResponse200148 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultMtuSize
+### GetId
 
-`func (o *InlineResponse200148) GetDefaultMtuSize() int32`
+`func (o *InlineResponse200148) GetId() string`
 
-GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDefaultMtuSizeOk
+### GetIdOk
 
-`func (o *InlineResponse200148) GetDefaultMtuSizeOk() (*int32, bool)`
+`func (o *InlineResponse200148) GetIdOk() (*string, bool)`
 
-GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultMtuSize
+### SetId
 
-`func (o *InlineResponse200148) SetDefaultMtuSize(v int32)`
+`func (o *InlineResponse200148) SetId(v string)`
 
-SetDefaultMtuSize sets DefaultMtuSize field to given value.
+SetId sets Id field to given value.
 
-### HasDefaultMtuSize
+### HasId
 
-`func (o *InlineResponse200148) HasDefaultMtuSize() bool`
+`func (o *InlineResponse200148) HasId() bool`
 
-HasDefaultMtuSize returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetOverrides
+### GetSwitchPorts
 
-`func (o *InlineResponse200148) GetOverrides() []InlineResponse200148Overrides`
+`func (o *InlineResponse200148) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
 
-### GetOverridesOk
+### GetSwitchPortsOk
 
-`func (o *InlineResponse200148) GetOverridesOk() (*[]InlineResponse200148Overrides, bool)`
+`func (o *InlineResponse200148) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
 
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetSwitchPorts
 
-`func (o *InlineResponse200148) SetOverrides(v []InlineResponse200148Overrides)`
+`func (o *InlineResponse200148) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
 
-SetOverrides sets Overrides field to given value.
+SetSwitchPorts sets SwitchPorts field to given value.
 
-### HasOverrides
+### HasSwitchPorts
 
-`func (o *InlineResponse200148) HasOverrides() bool`
+`func (o *InlineResponse200148) HasSwitchPorts() bool`
 
-HasOverrides returns a boolean if a field has been set.
+HasSwitchPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

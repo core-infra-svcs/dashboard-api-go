@@ -4,8 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200200Counts**](InlineResponse200200Counts.md) |  | [optional] 
-**Limits** | Pointer to [**InlineResponse200200Limits**](InlineResponse200200Limits.md) |  | [optional] 
+**GroupId** | Pointer to **string** | The ID of the adaptive policy group | [optional] 
+**Name** | Pointer to **string** | The name of the adaptive policy group | [optional] 
+**Sgt** | Pointer to **int32** | The security group tag for the adaptive policy group | [optional] 
+**Description** | Pointer to **string** | The description for the adaptive policy group | [optional] 
+**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects for the adaptive policy group | [optional] 
+**IsDefaultGroup** | Pointer to **bool** | Whether the adaptive policy group is the default group | [optional] 
+**RequiredIpMappings** | Pointer to **[]string** | List of required IP mappings for the adaptive policy group | [optional] 
+**CreatedAt** | Pointer to **string** | Created at timestamp for the adaptive policy group | [optional] 
+**UpdatedAt** | Pointer to **string** | Updated at timestamp for the adaptive policy group | [optional] 
 
 ## Methods
 
@@ -26,55 +33,230 @@ NewInlineResponse200200WithDefaults instantiates a new InlineResponse200200 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetGroupId
 
-`func (o *InlineResponse200200) GetCounts() InlineResponse200200Counts`
+`func (o *InlineResponse200200) GetGroupId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetGroupId returns the GroupId field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetGroupIdOk
 
-`func (o *InlineResponse200200) GetCountsOk() (*InlineResponse200200Counts, bool)`
+`func (o *InlineResponse200200) GetGroupIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetGroupId
 
-`func (o *InlineResponse200200) SetCounts(v InlineResponse200200Counts)`
+`func (o *InlineResponse200200) SetGroupId(v string)`
 
-SetCounts sets Counts field to given value.
+SetGroupId sets GroupId field to given value.
 
-### HasCounts
+### HasGroupId
 
-`func (o *InlineResponse200200) HasCounts() bool`
+`func (o *InlineResponse200200) HasGroupId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasGroupId returns a boolean if a field has been set.
 
-### GetLimits
+### GetName
 
-`func (o *InlineResponse200200) GetLimits() InlineResponse200200Limits`
+`func (o *InlineResponse200200) GetName() string`
 
-GetLimits returns the Limits field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLimitsOk
+### GetNameOk
 
-`func (o *InlineResponse200200) GetLimitsOk() (*InlineResponse200200Limits, bool)`
+`func (o *InlineResponse200200) GetNameOk() (*string, bool)`
 
-GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimits
+### SetName
 
-`func (o *InlineResponse200200) SetLimits(v InlineResponse200200Limits)`
+`func (o *InlineResponse200200) SetName(v string)`
 
-SetLimits sets Limits field to given value.
+SetName sets Name field to given value.
 
-### HasLimits
+### HasName
 
-`func (o *InlineResponse200200) HasLimits() bool`
+`func (o *InlineResponse200200) HasName() bool`
 
-HasLimits returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetSgt
+
+`func (o *InlineResponse200200) GetSgt() int32`
+
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
+
+### GetSgtOk
+
+`func (o *InlineResponse200200) GetSgtOk() (*int32, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSgt
+
+`func (o *InlineResponse200200) SetSgt(v int32)`
+
+SetSgt sets Sgt field to given value.
+
+### HasSgt
+
+`func (o *InlineResponse200200) HasSgt() bool`
+
+HasSgt returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse200200) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse200200) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse200200) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse200200) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetPolicyObjects
+
+`func (o *InlineResponse200200) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
+
+GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
+
+### GetPolicyObjectsOk
+
+`func (o *InlineResponse200200) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
+
+GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPolicyObjects
+
+`func (o *InlineResponse200200) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
+
+SetPolicyObjects sets PolicyObjects field to given value.
+
+### HasPolicyObjects
+
+`func (o *InlineResponse200200) HasPolicyObjects() bool`
+
+HasPolicyObjects returns a boolean if a field has been set.
+
+### GetIsDefaultGroup
+
+`func (o *InlineResponse200200) GetIsDefaultGroup() bool`
+
+GetIsDefaultGroup returns the IsDefaultGroup field if non-nil, zero value otherwise.
+
+### GetIsDefaultGroupOk
+
+`func (o *InlineResponse200200) GetIsDefaultGroupOk() (*bool, bool)`
+
+GetIsDefaultGroupOk returns a tuple with the IsDefaultGroup field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsDefaultGroup
+
+`func (o *InlineResponse200200) SetIsDefaultGroup(v bool)`
+
+SetIsDefaultGroup sets IsDefaultGroup field to given value.
+
+### HasIsDefaultGroup
+
+`func (o *InlineResponse200200) HasIsDefaultGroup() bool`
+
+HasIsDefaultGroup returns a boolean if a field has been set.
+
+### GetRequiredIpMappings
+
+`func (o *InlineResponse200200) GetRequiredIpMappings() []string`
+
+GetRequiredIpMappings returns the RequiredIpMappings field if non-nil, zero value otherwise.
+
+### GetRequiredIpMappingsOk
+
+`func (o *InlineResponse200200) GetRequiredIpMappingsOk() (*[]string, bool)`
+
+GetRequiredIpMappingsOk returns a tuple with the RequiredIpMappings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequiredIpMappings
+
+`func (o *InlineResponse200200) SetRequiredIpMappings(v []string)`
+
+SetRequiredIpMappings sets RequiredIpMappings field to given value.
+
+### HasRequiredIpMappings
+
+`func (o *InlineResponse200200) HasRequiredIpMappings() bool`
+
+HasRequiredIpMappings returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200200) GetCreatedAt() string`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200200) GetCreatedAtOk() (*string, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200200) SetCreatedAt(v string)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200200) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200200) GetUpdatedAt() string`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200200) GetUpdatedAtOk() (*string, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200200) SetUpdatedAt(v string)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200200) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

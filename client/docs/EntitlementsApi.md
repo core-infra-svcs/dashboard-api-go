@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetAdministeredLicensingSubscriptionEntitlements
 
-> InlineResponse2001 GetAdministeredLicensingSubscriptionEntitlements(ctx).Skus(skus).Execute()
+> InlineResponse2002 GetAdministeredLicensingSubscriptionEntitlements(ctx).Skus(skus).Execute()
 
 Retrieve the list of purchasable entitlements
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `EntitlementsApi.GetAdministeredLicensingSubscriptionEntitlements``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetAdministeredLicensingSubscriptionEntitlements`: InlineResponse2001
+    // response from `GetAdministeredLicensingSubscriptionEntitlements`: InlineResponse2002
     fmt.Fprintf(os.Stdout, "Response from `EntitlementsApi.GetAdministeredLicensingSubscriptionEntitlements`: %v\n", resp)
 }
 ```
@@ -58,7 +58,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

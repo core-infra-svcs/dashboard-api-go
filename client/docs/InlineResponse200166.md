@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
-**Type** | Pointer to **string** | The type of the payload template | [optional] 
-**Name** | Pointer to **string** | The name of the payload template | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
-**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
-**Sharing** | Pointer to [**NetworksNetworkIdWebhooksPayloadTemplatesSharing**](NetworksNetworkIdWebhooksPayloadTemplatesSharing.md) |  | [optional] 
+**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
+**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
@@ -30,55 +29,30 @@ NewInlineResponse200166WithDefaults instantiates a new InlineResponse200166 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPayloadTemplateId
+### GetId
 
-`func (o *InlineResponse200166) GetPayloadTemplateId() string`
+`func (o *InlineResponse200166) GetId() string`
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateIdOk
+### GetIdOk
 
-`func (o *InlineResponse200166) GetPayloadTemplateIdOk() (*string, bool)`
+`func (o *InlineResponse200166) GetIdOk() (*string, bool)`
 
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetId
 
-`func (o *InlineResponse200166) SetPayloadTemplateId(v string)`
+`func (o *InlineResponse200166) SetId(v string)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetId sets Id field to given value.
 
-### HasPayloadTemplateId
+### HasId
 
-`func (o *InlineResponse200166) HasPayloadTemplateId() bool`
+`func (o *InlineResponse200166) HasId() bool`
 
-HasPayloadTemplateId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200166) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200166) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200166) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse200166) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -105,80 +79,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetHeaders
+### GetUrl
 
-`func (o *InlineResponse200166) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
+`func (o *InlineResponse200166) GetUrl() string`
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetHeadersOk
+### GetUrlOk
 
-`func (o *InlineResponse200166) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
+`func (o *InlineResponse200166) GetUrlOk() (*string, bool)`
 
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetUrl
 
-`func (o *InlineResponse200166) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
+`func (o *InlineResponse200166) SetUrl(v string)`
 
-SetHeaders sets Headers field to given value.
+SetUrl sets Url field to given value.
 
-### HasHeaders
+### HasUrl
 
-`func (o *InlineResponse200166) HasHeaders() bool`
+`func (o *InlineResponse200166) HasUrl() bool`
 
-HasHeaders returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetBody
+### GetNetworkId
 
-`func (o *InlineResponse200166) GetBody() string`
+`func (o *InlineResponse200166) GetNetworkId() string`
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetBodyOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200166) GetBodyOk() (*string, bool)`
+`func (o *InlineResponse200166) GetNetworkIdOk() (*string, bool)`
 
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetNetworkId
 
-`func (o *InlineResponse200166) SetBody(v string)`
+`func (o *InlineResponse200166) SetNetworkId(v string)`
 
-SetBody sets Body field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasBody
+### HasNetworkId
 
-`func (o *InlineResponse200166) HasBody() bool`
+`func (o *InlineResponse200166) HasNetworkId() bool`
 
-HasBody returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetSharing
+### GetPayloadTemplate
 
-`func (o *InlineResponse200166) GetSharing() NetworksNetworkIdWebhooksPayloadTemplatesSharing`
+`func (o *InlineResponse200166) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
 
-GetSharing returns the Sharing field if non-nil, zero value otherwise.
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
 
-### GetSharingOk
+### GetPayloadTemplateOk
 
-`func (o *InlineResponse200166) GetSharingOk() (*NetworksNetworkIdWebhooksPayloadTemplatesSharing, bool)`
+`func (o *InlineResponse200166) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
 
-GetSharingOk returns a tuple with the Sharing field if it's non-nil, zero value otherwise
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharing
+### SetPayloadTemplate
 
-`func (o *InlineResponse200166) SetSharing(v NetworksNetworkIdWebhooksPayloadTemplatesSharing)`
+`func (o *InlineResponse200166) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
 
-SetSharing sets Sharing field to given value.
+SetPayloadTemplate sets PayloadTemplate field to given value.
 
-### HasSharing
+### HasPayloadTemplate
 
-`func (o *InlineResponse200166) HasSharing() bool`
+`func (o *InlineResponse200166) HasPayloadTemplate() bool`
 
-HasSharing returns a boolean if a field has been set.
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

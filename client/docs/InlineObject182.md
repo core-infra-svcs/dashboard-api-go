@@ -5,6 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
+**IsIndoorDefault** | Pointer to **bool** | Set this profile as the default indoor rf profile. If the profile ID is one of &#39;indoor&#39; or &#39;outdoor&#39;,   then a new profile will be created from the respective ID and set as the default | [optional] 
+**IsOutdoorDefault** | Pointer to **bool** | Set this profile as the default outdoor rf profile. If the profile ID is one of &#39;indoor&#39; or &#39;outdoor&#39;,   then a new profile will be created from the respective ID and set as the default | [optional] 
 **ClientBalancingEnabled** | Pointer to **bool** | Steers client to best available access point. Can be either true or false. | [optional] 
 **MinBitrateType** | Pointer to **string** | Minimum bitrate can be set to either &#39;band&#39; or &#39;ssid&#39;. | [optional] 
 **BandSelectionType** | Pointer to **string** | Band selection can be set to either &#39;ssid&#39; or &#39;ap&#39;. | [optional] 
@@ -12,7 +14,7 @@ Name | Type | Description | Notes
 **TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
 **FiveGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
 **SixGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings.md) |  | [optional] 
-**Transmission** | Pointer to [**InlineResponse200183Transmission**](InlineResponse200183Transmission.md) |  | [optional] 
+**Transmission** | Pointer to [**InlineResponse200184Transmission**](InlineResponse200184Transmission.md) |  | [optional] 
 **PerSsidSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesPerSsidSettings**](NetworksNetworkIdWirelessRfProfilesPerSsidSettings.md) |  | [optional] 
 **FlexRadios** | Pointer to [**NetworksNetworkIdWirelessRfProfilesFlexRadios**](NetworksNetworkIdWirelessRfProfilesFlexRadios.md) |  | [optional] 
 
@@ -59,6 +61,56 @@ SetName sets Name field to given value.
 `func (o *InlineObject182) HasName() bool`
 
 HasName returns a boolean if a field has been set.
+
+### GetIsIndoorDefault
+
+`func (o *InlineObject182) GetIsIndoorDefault() bool`
+
+GetIsIndoorDefault returns the IsIndoorDefault field if non-nil, zero value otherwise.
+
+### GetIsIndoorDefaultOk
+
+`func (o *InlineObject182) GetIsIndoorDefaultOk() (*bool, bool)`
+
+GetIsIndoorDefaultOk returns a tuple with the IsIndoorDefault field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsIndoorDefault
+
+`func (o *InlineObject182) SetIsIndoorDefault(v bool)`
+
+SetIsIndoorDefault sets IsIndoorDefault field to given value.
+
+### HasIsIndoorDefault
+
+`func (o *InlineObject182) HasIsIndoorDefault() bool`
+
+HasIsIndoorDefault returns a boolean if a field has been set.
+
+### GetIsOutdoorDefault
+
+`func (o *InlineObject182) GetIsOutdoorDefault() bool`
+
+GetIsOutdoorDefault returns the IsOutdoorDefault field if non-nil, zero value otherwise.
+
+### GetIsOutdoorDefaultOk
+
+`func (o *InlineObject182) GetIsOutdoorDefaultOk() (*bool, bool)`
+
+GetIsOutdoorDefaultOk returns a tuple with the IsOutdoorDefault field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsOutdoorDefault
+
+`func (o *InlineObject182) SetIsOutdoorDefault(v bool)`
+
+SetIsOutdoorDefault sets IsOutdoorDefault field to given value.
+
+### HasIsOutdoorDefault
+
+`func (o *InlineObject182) HasIsOutdoorDefault() bool`
+
+HasIsOutdoorDefault returns a boolean if a field has been set.
 
 ### GetClientBalancingEnabled
 
@@ -237,20 +289,20 @@ HasSixGhzSettings returns a boolean if a field has been set.
 
 ### GetTransmission
 
-`func (o *InlineObject182) GetTransmission() InlineResponse200183Transmission`
+`func (o *InlineObject182) GetTransmission() InlineResponse200184Transmission`
 
 GetTransmission returns the Transmission field if non-nil, zero value otherwise.
 
 ### GetTransmissionOk
 
-`func (o *InlineObject182) GetTransmissionOk() (*InlineResponse200183Transmission, bool)`
+`func (o *InlineObject182) GetTransmissionOk() (*InlineResponse200184Transmission, bool)`
 
 GetTransmissionOk returns a tuple with the Transmission field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTransmission
 
-`func (o *InlineObject182) SetTransmission(v InlineResponse200183Transmission)`
+`func (o *InlineObject182) SetTransmission(v InlineResponse200184Transmission)`
 
 SetTransmission sets Transmission field to given value.
 

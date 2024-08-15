@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WakeOnLanId** | Pointer to **string** | ID of the Wake-on-LAN job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request | [optional] 
-**Status** | Pointer to **string** | Status of the Wake-on-LAN request | [optional] 
-**Request** | Pointer to [**InlineResponse2015Request**](InlineResponse2015Request.md) |  | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**ThroughputTestId** | Pointer to **string** | ID of throughput test job | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your throughput test request | [optional] 
+**Status** | Pointer to **string** | Status of the throughput test request | [optional] 
+**Result** | Pointer to [**InlineResponse2014Result**](InlineResponse2014Result.md) |  | [optional] 
+**Request** | Pointer to [**InlineResponse2014Request**](InlineResponse2014Request.md) |  | [optional] 
+**Error** | Pointer to **string** | Description of the error. | [optional] 
 
 ## Methods
 
@@ -29,30 +30,30 @@ NewInlineResponse20024WithDefaults instantiates a new InlineResponse20024 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWakeOnLanId
+### GetThroughputTestId
 
-`func (o *InlineResponse20024) GetWakeOnLanId() string`
+`func (o *InlineResponse20024) GetThroughputTestId() string`
 
-GetWakeOnLanId returns the WakeOnLanId field if non-nil, zero value otherwise.
+GetThroughputTestId returns the ThroughputTestId field if non-nil, zero value otherwise.
 
-### GetWakeOnLanIdOk
+### GetThroughputTestIdOk
 
-`func (o *InlineResponse20024) GetWakeOnLanIdOk() (*string, bool)`
+`func (o *InlineResponse20024) GetThroughputTestIdOk() (*string, bool)`
 
-GetWakeOnLanIdOk returns a tuple with the WakeOnLanId field if it's non-nil, zero value otherwise
+GetThroughputTestIdOk returns a tuple with the ThroughputTestId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWakeOnLanId
+### SetThroughputTestId
 
-`func (o *InlineResponse20024) SetWakeOnLanId(v string)`
+`func (o *InlineResponse20024) SetThroughputTestId(v string)`
 
-SetWakeOnLanId sets WakeOnLanId field to given value.
+SetThroughputTestId sets ThroughputTestId field to given value.
 
-### HasWakeOnLanId
+### HasThroughputTestId
 
-`func (o *InlineResponse20024) HasWakeOnLanId() bool`
+`func (o *InlineResponse20024) HasThroughputTestId() bool`
 
-HasWakeOnLanId returns a boolean if a field has been set.
+HasThroughputTestId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -104,22 +105,47 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
+### GetResult
+
+`func (o *InlineResponse20024) GetResult() InlineResponse2014Result`
+
+GetResult returns the Result field if non-nil, zero value otherwise.
+
+### GetResultOk
+
+`func (o *InlineResponse20024) GetResultOk() (*InlineResponse2014Result, bool)`
+
+GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResult
+
+`func (o *InlineResponse20024) SetResult(v InlineResponse2014Result)`
+
+SetResult sets Result field to given value.
+
+### HasResult
+
+`func (o *InlineResponse20024) HasResult() bool`
+
+HasResult returns a boolean if a field has been set.
+
 ### GetRequest
 
-`func (o *InlineResponse20024) GetRequest() InlineResponse2015Request`
+`func (o *InlineResponse20024) GetRequest() InlineResponse2014Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse20024) GetRequestOk() (*InlineResponse2015Request, bool)`
+`func (o *InlineResponse20024) GetRequestOk() (*InlineResponse2014Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse20024) SetRequest(v InlineResponse2015Request)`
+`func (o *InlineResponse20024) SetRequest(v InlineResponse2014Request)`
 
 SetRequest sets Request field to given value.
 

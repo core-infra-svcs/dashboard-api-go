@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Link Aggregation enabled flag | [optional] 
-**Speed** | Pointer to **int32** | Link Aggregation speed | [optional] 
+**Enabled** | Pointer to **bool** | Link Aggregation enabled flag will return null on Catalyst devices | [optional] 
+**Speed** | Pointer to **int32** | Link Aggregation speed will return null on Catalyst devices | [optional] 
 
 ## Methods
 

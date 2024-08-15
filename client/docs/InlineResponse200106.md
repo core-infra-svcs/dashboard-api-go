@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
-**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
-**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
+**SupportedMetrics** | Pointer to **[]string** | List of metrics that are supported for alerts, based on available sensor devices in the network | [optional] 
+**Counts** | Pointer to [**InlineResponse200106Counts**](InlineResponse200106Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -27,72 +26,47 @@ NewInlineResponse200106WithDefaults instantiates a new InlineResponse200106 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetSupportedMetrics
 
-`func (o *InlineResponse200106) GetStartTs() time.Time`
+`func (o *InlineResponse200106) GetSupportedMetrics() []string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetSupportedMetrics returns the SupportedMetrics field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetSupportedMetricsOk
 
-`func (o *InlineResponse200106) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200106) GetSupportedMetricsOk() (*[]string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetSupportedMetricsOk returns a tuple with the SupportedMetrics field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetSupportedMetrics
 
-`func (o *InlineResponse200106) SetStartTs(v time.Time)`
+`func (o *InlineResponse200106) SetSupportedMetrics(v []string)`
 
-SetStartTs sets StartTs field to given value.
+SetSupportedMetrics sets SupportedMetrics field to given value.
 
-### HasStartTs
+### HasSupportedMetrics
 
-`func (o *InlineResponse200106) HasStartTs() bool`
+`func (o *InlineResponse200106) HasSupportedMetrics() bool`
 
-HasStartTs returns a boolean if a field has been set.
-
-### GetEndTs
-
-`func (o *InlineResponse200106) GetEndTs() time.Time`
-
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
-
-### GetEndTsOk
-
-`func (o *InlineResponse200106) GetEndTsOk() (*time.Time, bool)`
-
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEndTs
-
-`func (o *InlineResponse200106) SetEndTs(v time.Time)`
-
-SetEndTs sets EndTs field to given value.
-
-### HasEndTs
-
-`func (o *InlineResponse200106) HasEndTs() bool`
-
-HasEndTs returns a boolean if a field has been set.
+HasSupportedMetrics returns a boolean if a field has been set.
 
 ### GetCounts
 
-`func (o *InlineResponse200106) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
+`func (o *InlineResponse200106) GetCounts() InlineResponse200106Counts`
 
 GetCounts returns the Counts field if non-nil, zero value otherwise.
 
 ### GetCountsOk
 
-`func (o *InlineResponse200106) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
+`func (o *InlineResponse200106) GetCountsOk() (*InlineResponse200106Counts, bool)`
 
 GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCounts
 
-`func (o *InlineResponse200106) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
+`func (o *InlineResponse200106) SetCounts(v InlineResponse200106Counts)`
 
 SetCounts sets Counts field to given value.
 

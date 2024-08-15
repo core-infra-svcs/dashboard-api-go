@@ -4,18 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SubscriptionId** | Pointer to **string** | Subscription&#39;s ID | [optional] 
-**Name** | Pointer to **string** | Subscription name | [optional] 
-**Description** | Pointer to **string** | Subscription description | [optional] 
-**Status** | Pointer to **string** | Subscription status | [optional] 
-**StartDate** | Pointer to **time.Time** | Subscription start date | [optional] 
-**EndDate** | Pointer to **time.Time** | Subscription expiration date | [optional] 
-**WebOrderId** | Pointer to **string** | Web order id | [optional] 
-**Type** | Pointer to **string** | Subscription type | [optional] 
-**ProductTypes** | Pointer to **[]string** | Products the subscription has entitlements for | [optional] 
-**Entitlements** | Pointer to [**[]AdministeredLicensingSubscriptionSubscriptionsEntitlements**](AdministeredLicensingSubscriptionSubscriptionsEntitlements.md) | Entitlement info | [optional] 
-**Counts** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsCounts**](AdministeredLicensingSubscriptionSubscriptionsCounts.md) |  | [optional] 
-**EnterpriseAgreement** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsEnterpriseAgreement**](AdministeredLicensingSubscriptionSubscriptionsEnterpriseAgreement.md) |  | [optional] 
+**Sku** | Pointer to **string** | The SKU identifier of the entitlement | [optional] 
+**Name** | Pointer to **string** | The user-facing name of the entitlement | [optional] 
+**ProductType** | Pointer to **string** | The product type of the entitlement | [optional] 
+**ProductClass** | Pointer to **string** | The product class associated with the entitlement | [optional] 
+**FeatureTier** | Pointer to **string** | The feature tier associated with the entitlement (null for add-ons) | [optional] 
+**IsAddOn** | Pointer to **bool** | Whether or not the entitlement is an add-on | [optional] 
 
 ## Methods
 
@@ -36,30 +30,30 @@ NewInlineResponse2002WithDefaults instantiates a new InlineResponse2002 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubscriptionId
+### GetSku
 
-`func (o *InlineResponse2002) GetSubscriptionId() string`
+`func (o *InlineResponse2002) GetSku() string`
 
-GetSubscriptionId returns the SubscriptionId field if non-nil, zero value otherwise.
+GetSku returns the Sku field if non-nil, zero value otherwise.
 
-### GetSubscriptionIdOk
+### GetSkuOk
 
-`func (o *InlineResponse2002) GetSubscriptionIdOk() (*string, bool)`
+`func (o *InlineResponse2002) GetSkuOk() (*string, bool)`
 
-GetSubscriptionIdOk returns a tuple with the SubscriptionId field if it's non-nil, zero value otherwise
+GetSkuOk returns a tuple with the Sku field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubscriptionId
+### SetSku
 
-`func (o *InlineResponse2002) SetSubscriptionId(v string)`
+`func (o *InlineResponse2002) SetSku(v string)`
 
-SetSubscriptionId sets SubscriptionId field to given value.
+SetSku sets Sku field to given value.
 
-### HasSubscriptionId
+### HasSku
 
-`func (o *InlineResponse2002) HasSubscriptionId() bool`
+`func (o *InlineResponse2002) HasSku() bool`
 
-HasSubscriptionId returns a boolean if a field has been set.
+HasSku returns a boolean if a field has been set.
 
 ### GetName
 
@@ -86,255 +80,105 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDescription
+### GetProductType
 
-`func (o *InlineResponse2002) GetDescription() string`
+`func (o *InlineResponse2002) GetProductType() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetProductTypeOk
 
-`func (o *InlineResponse2002) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse2002) GetProductTypeOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetProductType
 
-`func (o *InlineResponse2002) SetDescription(v string)`
+`func (o *InlineResponse2002) SetProductType(v string)`
 
-SetDescription sets Description field to given value.
+SetProductType sets ProductType field to given value.
 
-### HasDescription
+### HasProductType
 
-`func (o *InlineResponse2002) HasDescription() bool`
+`func (o *InlineResponse2002) HasProductType() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasProductType returns a boolean if a field has been set.
 
-### GetStatus
+### GetProductClass
 
-`func (o *InlineResponse2002) GetStatus() string`
+`func (o *InlineResponse2002) GetProductClass() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetProductClass returns the ProductClass field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetProductClassOk
 
-`func (o *InlineResponse2002) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse2002) GetProductClassOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetProductClassOk returns a tuple with the ProductClass field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetProductClass
 
-`func (o *InlineResponse2002) SetStatus(v string)`
+`func (o *InlineResponse2002) SetProductClass(v string)`
 
-SetStatus sets Status field to given value.
+SetProductClass sets ProductClass field to given value.
 
-### HasStatus
+### HasProductClass
 
-`func (o *InlineResponse2002) HasStatus() bool`
+`func (o *InlineResponse2002) HasProductClass() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasProductClass returns a boolean if a field has been set.
 
-### GetStartDate
+### GetFeatureTier
 
-`func (o *InlineResponse2002) GetStartDate() time.Time`
+`func (o *InlineResponse2002) GetFeatureTier() string`
 
-GetStartDate returns the StartDate field if non-nil, zero value otherwise.
+GetFeatureTier returns the FeatureTier field if non-nil, zero value otherwise.
 
-### GetStartDateOk
+### GetFeatureTierOk
 
-`func (o *InlineResponse2002) GetStartDateOk() (*time.Time, bool)`
+`func (o *InlineResponse2002) GetFeatureTierOk() (*string, bool)`
 
-GetStartDateOk returns a tuple with the StartDate field if it's non-nil, zero value otherwise
+GetFeatureTierOk returns a tuple with the FeatureTier field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartDate
+### SetFeatureTier
 
-`func (o *InlineResponse2002) SetStartDate(v time.Time)`
+`func (o *InlineResponse2002) SetFeatureTier(v string)`
 
-SetStartDate sets StartDate field to given value.
+SetFeatureTier sets FeatureTier field to given value.
 
-### HasStartDate
+### HasFeatureTier
 
-`func (o *InlineResponse2002) HasStartDate() bool`
+`func (o *InlineResponse2002) HasFeatureTier() bool`
 
-HasStartDate returns a boolean if a field has been set.
+HasFeatureTier returns a boolean if a field has been set.
 
-### GetEndDate
+### GetIsAddOn
 
-`func (o *InlineResponse2002) GetEndDate() time.Time`
+`func (o *InlineResponse2002) GetIsAddOn() bool`
 
-GetEndDate returns the EndDate field if non-nil, zero value otherwise.
+GetIsAddOn returns the IsAddOn field if non-nil, zero value otherwise.
 
-### GetEndDateOk
+### GetIsAddOnOk
 
-`func (o *InlineResponse2002) GetEndDateOk() (*time.Time, bool)`
+`func (o *InlineResponse2002) GetIsAddOnOk() (*bool, bool)`
 
-GetEndDateOk returns a tuple with the EndDate field if it's non-nil, zero value otherwise
+GetIsAddOnOk returns a tuple with the IsAddOn field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndDate
+### SetIsAddOn
 
-`func (o *InlineResponse2002) SetEndDate(v time.Time)`
+`func (o *InlineResponse2002) SetIsAddOn(v bool)`
 
-SetEndDate sets EndDate field to given value.
+SetIsAddOn sets IsAddOn field to given value.
 
-### HasEndDate
+### HasIsAddOn
 
-`func (o *InlineResponse2002) HasEndDate() bool`
+`func (o *InlineResponse2002) HasIsAddOn() bool`
 
-HasEndDate returns a boolean if a field has been set.
-
-### GetWebOrderId
-
-`func (o *InlineResponse2002) GetWebOrderId() string`
-
-GetWebOrderId returns the WebOrderId field if non-nil, zero value otherwise.
-
-### GetWebOrderIdOk
-
-`func (o *InlineResponse2002) GetWebOrderIdOk() (*string, bool)`
-
-GetWebOrderIdOk returns a tuple with the WebOrderId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWebOrderId
-
-`func (o *InlineResponse2002) SetWebOrderId(v string)`
-
-SetWebOrderId sets WebOrderId field to given value.
-
-### HasWebOrderId
-
-`func (o *InlineResponse2002) HasWebOrderId() bool`
-
-HasWebOrderId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse2002) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse2002) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse2002) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *InlineResponse2002) HasType() bool`
-
-HasType returns a boolean if a field has been set.
-
-### GetProductTypes
-
-`func (o *InlineResponse2002) GetProductTypes() []string`
-
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
-
-### GetProductTypesOk
-
-`func (o *InlineResponse2002) GetProductTypesOk() (*[]string, bool)`
-
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductTypes
-
-`func (o *InlineResponse2002) SetProductTypes(v []string)`
-
-SetProductTypes sets ProductTypes field to given value.
-
-### HasProductTypes
-
-`func (o *InlineResponse2002) HasProductTypes() bool`
-
-HasProductTypes returns a boolean if a field has been set.
-
-### GetEntitlements
-
-`func (o *InlineResponse2002) GetEntitlements() []AdministeredLicensingSubscriptionSubscriptionsEntitlements`
-
-GetEntitlements returns the Entitlements field if non-nil, zero value otherwise.
-
-### GetEntitlementsOk
-
-`func (o *InlineResponse2002) GetEntitlementsOk() (*[]AdministeredLicensingSubscriptionSubscriptionsEntitlements, bool)`
-
-GetEntitlementsOk returns a tuple with the Entitlements field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEntitlements
-
-`func (o *InlineResponse2002) SetEntitlements(v []AdministeredLicensingSubscriptionSubscriptionsEntitlements)`
-
-SetEntitlements sets Entitlements field to given value.
-
-### HasEntitlements
-
-`func (o *InlineResponse2002) HasEntitlements() bool`
-
-HasEntitlements returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse2002) GetCounts() AdministeredLicensingSubscriptionSubscriptionsCounts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse2002) GetCountsOk() (*AdministeredLicensingSubscriptionSubscriptionsCounts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse2002) SetCounts(v AdministeredLicensingSubscriptionSubscriptionsCounts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse2002) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
-
-### GetEnterpriseAgreement
-
-`func (o *InlineResponse2002) GetEnterpriseAgreement() AdministeredLicensingSubscriptionSubscriptionsEnterpriseAgreement`
-
-GetEnterpriseAgreement returns the EnterpriseAgreement field if non-nil, zero value otherwise.
-
-### GetEnterpriseAgreementOk
-
-`func (o *InlineResponse2002) GetEnterpriseAgreementOk() (*AdministeredLicensingSubscriptionSubscriptionsEnterpriseAgreement, bool)`
-
-GetEnterpriseAgreementOk returns a tuple with the EnterpriseAgreement field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnterpriseAgreement
-
-`func (o *InlineResponse2002) SetEnterpriseAgreement(v AdministeredLicensingSubscriptionSubscriptionsEnterpriseAgreement)`
-
-SetEnterpriseAgreement sets EnterpriseAgreement field to given value.
-
-### HasEnterpriseAgreement
-
-`func (o *InlineResponse2002) HasEnterpriseAgreement() bool`
-
-HasEnterpriseAgreement returns a boolean if a field has been set.
+HasIsAddOn returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

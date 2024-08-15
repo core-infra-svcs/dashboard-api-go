@@ -4,13 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AdaptivePolicyId** | Pointer to **string** | The ID for the adaptive policy | [optional] 
-**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup.md) |  | [optional] 
-**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup.md) |  | [optional] 
-**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls.md) | The access control lists for the adaptive policy | [optional] 
-**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL | [optional] 
-**CreatedAt** | Pointer to **string** | The created at timestamp for the adaptive policy | [optional] 
-**UpdatedAt** | Pointer to **string** | The updated at timestamp for the adaptive policy | [optional] 
+**Counts** | Pointer to [**InlineResponse200201Counts**](InlineResponse200201Counts.md) |  | [optional] 
+**Limits** | Pointer to [**InlineResponse200201Limits**](InlineResponse200201Limits.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +26,55 @@ NewInlineResponse200201WithDefaults instantiates a new InlineResponse200201 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAdaptivePolicyId
+### GetCounts
 
-`func (o *InlineResponse200201) GetAdaptivePolicyId() string`
+`func (o *InlineResponse200201) GetCounts() InlineResponse200201Counts`
 
-GetAdaptivePolicyId returns the AdaptivePolicyId field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetAdaptivePolicyIdOk
+### GetCountsOk
 
-`func (o *InlineResponse200201) GetAdaptivePolicyIdOk() (*string, bool)`
+`func (o *InlineResponse200201) GetCountsOk() (*InlineResponse200201Counts, bool)`
 
-GetAdaptivePolicyIdOk returns a tuple with the AdaptivePolicyId field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdaptivePolicyId
+### SetCounts
 
-`func (o *InlineResponse200201) SetAdaptivePolicyId(v string)`
+`func (o *InlineResponse200201) SetCounts(v InlineResponse200201Counts)`
 
-SetAdaptivePolicyId sets AdaptivePolicyId field to given value.
+SetCounts sets Counts field to given value.
 
-### HasAdaptivePolicyId
+### HasCounts
 
-`func (o *InlineResponse200201) HasAdaptivePolicyId() bool`
+`func (o *InlineResponse200201) HasCounts() bool`
 
-HasAdaptivePolicyId returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
-### GetSourceGroup
+### GetLimits
 
-`func (o *InlineResponse200201) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup`
+`func (o *InlineResponse200201) GetLimits() InlineResponse200201Limits`
 
-GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
+GetLimits returns the Limits field if non-nil, zero value otherwise.
 
-### GetSourceGroupOk
+### GetLimitsOk
 
-`func (o *InlineResponse200201) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup, bool)`
+`func (o *InlineResponse200201) GetLimitsOk() (*InlineResponse200201Limits, bool)`
 
-GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
+GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceGroup
+### SetLimits
 
-`func (o *InlineResponse200201) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup)`
+`func (o *InlineResponse200201) SetLimits(v InlineResponse200201Limits)`
 
-SetSourceGroup sets SourceGroup field to given value.
+SetLimits sets Limits field to given value.
 
-### HasSourceGroup
+### HasLimits
 
-`func (o *InlineResponse200201) HasSourceGroup() bool`
+`func (o *InlineResponse200201) HasLimits() bool`
 
-HasSourceGroup returns a boolean if a field has been set.
-
-### GetDestinationGroup
-
-`func (o *InlineResponse200201) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup`
-
-GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
-
-### GetDestinationGroupOk
-
-`func (o *InlineResponse200201) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup, bool)`
-
-GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDestinationGroup
-
-`func (o *InlineResponse200201) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup)`
-
-SetDestinationGroup sets DestinationGroup field to given value.
-
-### HasDestinationGroup
-
-`func (o *InlineResponse200201) HasDestinationGroup() bool`
-
-HasDestinationGroup returns a boolean if a field has been set.
-
-### GetAcls
-
-`func (o *InlineResponse200201) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls`
-
-GetAcls returns the Acls field if non-nil, zero value otherwise.
-
-### GetAclsOk
-
-`func (o *InlineResponse200201) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls, bool)`
-
-GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAcls
-
-`func (o *InlineResponse200201) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls)`
-
-SetAcls sets Acls field to given value.
-
-### HasAcls
-
-`func (o *InlineResponse200201) HasAcls() bool`
-
-HasAcls returns a boolean if a field has been set.
-
-### GetLastEntryRule
-
-`func (o *InlineResponse200201) GetLastEntryRule() string`
-
-GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
-
-### GetLastEntryRuleOk
-
-`func (o *InlineResponse200201) GetLastEntryRuleOk() (*string, bool)`
-
-GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastEntryRule
-
-`func (o *InlineResponse200201) SetLastEntryRule(v string)`
-
-SetLastEntryRule sets LastEntryRule field to given value.
-
-### HasLastEntryRule
-
-`func (o *InlineResponse200201) HasLastEntryRule() bool`
-
-HasLastEntryRule returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200201) GetCreatedAt() string`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200201) GetCreatedAtOk() (*string, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200201) SetCreatedAt(v string)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200201) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200201) GetUpdatedAt() string`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200201) GetUpdatedAtOk() (*string, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200201) SetUpdatedAt(v string)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200201) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

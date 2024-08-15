@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SubscriptionId** | Pointer to **string** | Subscription ID | [optional] 
-**Networks** | Pointer to [**[]InlineResponse2004Networks**](InlineResponse2004Networks.md) | Unbound networks | [optional] 
-**Errors** | Pointer to **[]string** | Array of errors if failed | [optional] 
-**InsufficientEntitlements** | Pointer to [**[]AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesViolationsMissingEntitlements**](AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesViolationsMissingEntitlements.md) | A list of entitlements required to successfully bind the networks to the subscription | [optional] 
+**Subscription** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesSubscription**](AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesSubscription.md) |  | [optional] 
+**Violations** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesViolations**](AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesViolations.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse2004WithDefaults instantiates a new InlineResponse2004 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubscriptionId
+### GetSubscription
 
-`func (o *InlineResponse2004) GetSubscriptionId() string`
+`func (o *InlineResponse2004) GetSubscription() AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesSubscription`
 
-GetSubscriptionId returns the SubscriptionId field if non-nil, zero value otherwise.
+GetSubscription returns the Subscription field if non-nil, zero value otherwise.
 
-### GetSubscriptionIdOk
+### GetSubscriptionOk
 
-`func (o *InlineResponse2004) GetSubscriptionIdOk() (*string, bool)`
+`func (o *InlineResponse2004) GetSubscriptionOk() (*AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesSubscription, bool)`
 
-GetSubscriptionIdOk returns a tuple with the SubscriptionId field if it's non-nil, zero value otherwise
+GetSubscriptionOk returns a tuple with the Subscription field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubscriptionId
+### SetSubscription
 
-`func (o *InlineResponse2004) SetSubscriptionId(v string)`
+`func (o *InlineResponse2004) SetSubscription(v AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesSubscription)`
 
-SetSubscriptionId sets SubscriptionId field to given value.
+SetSubscription sets Subscription field to given value.
 
-### HasSubscriptionId
+### HasSubscription
 
-`func (o *InlineResponse2004) HasSubscriptionId() bool`
+`func (o *InlineResponse2004) HasSubscription() bool`
 
-HasSubscriptionId returns a boolean if a field has been set.
+HasSubscription returns a boolean if a field has been set.
 
-### GetNetworks
+### GetViolations
 
-`func (o *InlineResponse2004) GetNetworks() []InlineResponse2004Networks`
+`func (o *InlineResponse2004) GetViolations() AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesViolations`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetViolations returns the Violations field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetViolationsOk
 
-`func (o *InlineResponse2004) GetNetworksOk() (*[]InlineResponse2004Networks, bool)`
+`func (o *InlineResponse2004) GetViolationsOk() (*AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesViolations, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetViolationsOk returns a tuple with the Violations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetViolations
 
-`func (o *InlineResponse2004) SetNetworks(v []InlineResponse2004Networks)`
+`func (o *InlineResponse2004) SetViolations(v AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesViolations)`
 
-SetNetworks sets Networks field to given value.
+SetViolations sets Violations field to given value.
 
-### HasNetworks
+### HasViolations
 
-`func (o *InlineResponse2004) HasNetworks() bool`
+`func (o *InlineResponse2004) HasViolations() bool`
 
-HasNetworks returns a boolean if a field has been set.
-
-### GetErrors
-
-`func (o *InlineResponse2004) GetErrors() []string`
-
-GetErrors returns the Errors field if non-nil, zero value otherwise.
-
-### GetErrorsOk
-
-`func (o *InlineResponse2004) GetErrorsOk() (*[]string, bool)`
-
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetErrors
-
-`func (o *InlineResponse2004) SetErrors(v []string)`
-
-SetErrors sets Errors field to given value.
-
-### HasErrors
-
-`func (o *InlineResponse2004) HasErrors() bool`
-
-HasErrors returns a boolean if a field has been set.
-
-### GetInsufficientEntitlements
-
-`func (o *InlineResponse2004) GetInsufficientEntitlements() []AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesViolationsMissingEntitlements`
-
-GetInsufficientEntitlements returns the InsufficientEntitlements field if non-nil, zero value otherwise.
-
-### GetInsufficientEntitlementsOk
-
-`func (o *InlineResponse2004) GetInsufficientEntitlementsOk() (*[]AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesViolationsMissingEntitlements, bool)`
-
-GetInsufficientEntitlementsOk returns a tuple with the InsufficientEntitlements field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInsufficientEntitlements
-
-`func (o *InlineResponse2004) SetInsufficientEntitlements(v []AdministeredLicensingSubscriptionSubscriptionsComplianceStatusesViolationsMissingEntitlements)`
-
-SetInsufficientEntitlements sets InsufficientEntitlements field to given value.
-
-### HasInsufficientEntitlements
-
-`func (o *InlineResponse2004) HasInsufficientEntitlements() bool`
-
-HasInsufficientEntitlements returns a boolean if a field has been set.
+HasViolations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

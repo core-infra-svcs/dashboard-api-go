@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the manufacturer | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**Mac** | Pointer to **string** | MAC address of client | [optional] 
+**Id** | Pointer to **string** | ID of client | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork**](OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork.md) |  | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -52,47 +54,97 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetClients
+### GetMac
 
-`func (o *InlineResponse200283) GetClients() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients`
+`func (o *InlineResponse200283) GetMac() string`
 
-GetClients returns the Clients field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetClientsOk
+### GetMacOk
 
-`func (o *InlineResponse200283) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients, bool)`
+`func (o *InlineResponse200283) GetMacOk() (*string, bool)`
 
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClients
+### SetMac
 
-`func (o *InlineResponse200283) SetClients(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients)`
+`func (o *InlineResponse200283) SetMac(v string)`
 
-SetClients sets Clients field to given value.
+SetMac sets Mac field to given value.
 
-### HasClients
+### HasMac
 
-`func (o *InlineResponse200283) HasClients() bool`
+`func (o *InlineResponse200283) HasMac() bool`
 
-HasClients returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *InlineResponse200283) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200283) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200283) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse200283) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200283) GetNetwork() OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200283) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200283) SetNetwork(v OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200283) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 ### GetUsage
 
-`func (o *InlineResponse200283) GetUsage() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage`
+`func (o *InlineResponse200283) GetUsage() OrganizationsOrganizationIdSummaryTopClientsByUsageUsage`
 
 GetUsage returns the Usage field if non-nil, zero value otherwise.
 
 ### GetUsageOk
 
-`func (o *InlineResponse200283) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage, bool)`
+`func (o *InlineResponse200283) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageUsage, bool)`
 
 GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUsage
 
-`func (o *InlineResponse200283) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage)`
+`func (o *InlineResponse200283) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsByUsageUsage)`
 
 SetUsage sets Usage field to given value.
 

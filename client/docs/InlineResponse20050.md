@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApplicationCategories** | Pointer to [**[]InlineResponse20050ApplicationCategories**](InlineResponse20050ApplicationCategories.md) |  The L7 firewall application categories and their associated applications for an MX network | [optional] 
+**Rules** | Pointer to [**[]InlineResponse20049Rules**](InlineResponse20049Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
+**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse20050WithDefaults instantiates a new InlineResponse20050 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApplicationCategories
+### GetRules
 
-`func (o *InlineResponse20050) GetApplicationCategories() []InlineResponse20050ApplicationCategories`
+`func (o *InlineResponse20050) GetRules() []InlineResponse20049Rules`
 
-GetApplicationCategories returns the ApplicationCategories field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetApplicationCategoriesOk
+### GetRulesOk
 
-`func (o *InlineResponse20050) GetApplicationCategoriesOk() (*[]InlineResponse20050ApplicationCategories, bool)`
+`func (o *InlineResponse20050) GetRulesOk() (*[]InlineResponse20049Rules, bool)`
 
-GetApplicationCategoriesOk returns a tuple with the ApplicationCategories field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplicationCategories
+### SetRules
 
-`func (o *InlineResponse20050) SetApplicationCategories(v []InlineResponse20050ApplicationCategories)`
+`func (o *InlineResponse20050) SetRules(v []InlineResponse20049Rules)`
 
-SetApplicationCategories sets ApplicationCategories field to given value.
+SetRules sets Rules field to given value.
 
-### HasApplicationCategories
+### HasRules
 
-`func (o *InlineResponse20050) HasApplicationCategories() bool`
+`func (o *InlineResponse20050) HasRules() bool`
 
-HasApplicationCategories returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
+
+### GetSyslogDefaultRule
+
+`func (o *InlineResponse20050) GetSyslogDefaultRule() bool`
+
+GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+
+### GetSyslogDefaultRuleOk
+
+`func (o *InlineResponse20050) GetSyslogDefaultRuleOk() (*bool, bool)`
+
+GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSyslogDefaultRule
+
+`func (o *InlineResponse20050) SetSyslogDefaultRule(v bool)`
+
+SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+
+### HasSyslogDefaultRule
+
+`func (o *InlineResponse20050) HasSyslogDefaultRule() bool`
+
+HasSyslogDefaultRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

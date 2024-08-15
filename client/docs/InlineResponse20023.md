@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ThroughputTestId** | Pointer to **string** | ID of throughput test job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your throughput test request | [optional] 
-**Status** | Pointer to **string** | Status of the throughput test request | [optional] 
-**Result** | Pointer to [**InlineResponse2014Result**](InlineResponse2014Result.md) |  | [optional] 
-**Request** | Pointer to [**InlineResponse2014Request**](InlineResponse2014Request.md) |  | [optional] 
-**Error** | Pointer to **string** | Description of the error. | [optional] 
+**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ping request. | [optional] 
+**Results** | Pointer to [**InlineResponse20022Results**](InlineResponse20022Results.md) |  | [optional] 
+**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
@@ -30,30 +30,30 @@ NewInlineResponse20023WithDefaults instantiates a new InlineResponse20023 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetThroughputTestId
+### GetPingId
 
-`func (o *InlineResponse20023) GetThroughputTestId() string`
+`func (o *InlineResponse20023) GetPingId() string`
 
-GetThroughputTestId returns the ThroughputTestId field if non-nil, zero value otherwise.
+GetPingId returns the PingId field if non-nil, zero value otherwise.
 
-### GetThroughputTestIdOk
+### GetPingIdOk
 
-`func (o *InlineResponse20023) GetThroughputTestIdOk() (*string, bool)`
+`func (o *InlineResponse20023) GetPingIdOk() (*string, bool)`
 
-GetThroughputTestIdOk returns a tuple with the ThroughputTestId field if it's non-nil, zero value otherwise
+GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetThroughputTestId
+### SetPingId
 
-`func (o *InlineResponse20023) SetThroughputTestId(v string)`
+`func (o *InlineResponse20023) SetPingId(v string)`
 
-SetThroughputTestId sets ThroughputTestId field to given value.
+SetPingId sets PingId field to given value.
 
-### HasThroughputTestId
+### HasPingId
 
-`func (o *InlineResponse20023) HasThroughputTestId() bool`
+`func (o *InlineResponse20023) HasPingId() bool`
 
-HasThroughputTestId returns a boolean if a field has been set.
+HasPingId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -80,6 +80,31 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### GetRequest
+
+`func (o *InlineResponse20023) GetRequest() InlineResponse2013Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20023) GetRequestOk() (*InlineResponse2013Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20023) SetRequest(v InlineResponse2013Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20023) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
 ### GetStatus
 
 `func (o *InlineResponse20023) GetStatus() string`
@@ -105,80 +130,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetResult
+### GetResults
 
-`func (o *InlineResponse20023) GetResult() InlineResponse2014Result`
+`func (o *InlineResponse20023) GetResults() InlineResponse20022Results`
 
-GetResult returns the Result field if non-nil, zero value otherwise.
+GetResults returns the Results field if non-nil, zero value otherwise.
 
-### GetResultOk
+### GetResultsOk
 
-`func (o *InlineResponse20023) GetResultOk() (*InlineResponse2014Result, bool)`
+`func (o *InlineResponse20023) GetResultsOk() (*InlineResponse20022Results, bool)`
 
-GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResult
+### SetResults
 
-`func (o *InlineResponse20023) SetResult(v InlineResponse2014Result)`
+`func (o *InlineResponse20023) SetResults(v InlineResponse20022Results)`
 
-SetResult sets Result field to given value.
+SetResults sets Results field to given value.
 
-### HasResult
+### HasResults
 
-`func (o *InlineResponse20023) HasResult() bool`
+`func (o *InlineResponse20023) HasResults() bool`
 
-HasResult returns a boolean if a field has been set.
+HasResults returns a boolean if a field has been set.
 
-### GetRequest
+### GetCallback
 
-`func (o *InlineResponse20023) GetRequest() InlineResponse2014Request`
+`func (o *InlineResponse20023) GetCallback() InlineResponse2011Callback`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetCallbackOk
 
-`func (o *InlineResponse20023) GetRequestOk() (*InlineResponse2014Request, bool)`
+`func (o *InlineResponse20023) GetCallbackOk() (*InlineResponse2011Callback, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetCallback
 
-`func (o *InlineResponse20023) SetRequest(v InlineResponse2014Request)`
+`func (o *InlineResponse20023) SetCallback(v InlineResponse2011Callback)`
 
-SetRequest sets Request field to given value.
+SetCallback sets Callback field to given value.
 
-### HasRequest
+### HasCallback
 
-`func (o *InlineResponse20023) HasRequest() bool`
+`func (o *InlineResponse20023) HasCallback() bool`
 
-HasRequest returns a boolean if a field has been set.
-
-### GetError
-
-`func (o *InlineResponse20023) GetError() string`
-
-GetError returns the Error field if non-nil, zero value otherwise.
-
-### GetErrorOk
-
-`func (o *InlineResponse20023) GetErrorOk() (*string, bool)`
-
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetError
-
-`func (o *InlineResponse20023) SetError(v string)`
-
-SetError sets Error field to given value.
-
-### HasError
-
-`func (o *InlineResponse20023) HasError() bool`
-
-HasError returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

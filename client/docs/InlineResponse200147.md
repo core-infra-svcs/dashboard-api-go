@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID for the link aggregation. | [optional] 
-**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | The ID for the link aggregation. | [optional] 
+**Mappings** | Pointer to [**[]InlineResponse200147Mappings**](InlineResponse200147Mappings.md) | An array of DSCP to CoS mappings. An empty array will reset the mappings to default. | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200147WithDefaults instantiates a new InlineResponse200147 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetMappings
 
-`func (o *InlineResponse200147) GetId() string`
+`func (o *InlineResponse200147) GetMappings() []InlineResponse200147Mappings`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetMappings returns the Mappings field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetMappingsOk
 
-`func (o *InlineResponse200147) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200147) GetMappingsOk() (*[]InlineResponse200147Mappings, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetMappingsOk returns a tuple with the Mappings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetMappings
 
-`func (o *InlineResponse200147) SetId(v string)`
+`func (o *InlineResponse200147) SetMappings(v []InlineResponse200147Mappings)`
 
-SetId sets Id field to given value.
+SetMappings sets Mappings field to given value.
 
-### HasId
+### HasMappings
 
-`func (o *InlineResponse200147) HasId() bool`
+`func (o *InlineResponse200147) HasMappings() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetSwitchPorts
-
-`func (o *InlineResponse200147) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
-
-GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
-
-### GetSwitchPortsOk
-
-`func (o *InlineResponse200147) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
-
-GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSwitchPorts
-
-`func (o *InlineResponse200147) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
-
-SetSwitchPorts sets SwitchPorts field to given value.
-
-### HasSwitchPorts
-
-`func (o *InlineResponse200147) HasSwitchPorts() bool`
-
-HasSwitchPorts returns a boolean if a field has been set.
+HasMappings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

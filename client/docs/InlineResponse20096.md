@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
-**Category** | Pointer to **string** | Category of the alert | [optional] 
-**Type** | Pointer to **string** | Alert type | [optional] 
-**Severity** | Pointer to **string** | Severity of the alert | [optional] 
-**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
+**GroupPolicyId** | Pointer to **string** | The ID of the group policy | [optional] 
+**Scheduling** | Pointer to [**NetworksNetworkIdGroupPoliciesScheduling**](NetworksNetworkIdGroupPoliciesScheduling.md) |  | [optional] 
+**Bandwidth** | Pointer to [**NetworksNetworkIdGroupPoliciesBandwidth**](NetworksNetworkIdGroupPoliciesBandwidth.md) |  | [optional] 
+**FirewallAndTrafficShaping** | Pointer to [**NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping**](NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping.md) |  | [optional] 
+**ContentFiltering** | Pointer to [**NetworksNetworkIdGroupPoliciesContentFiltering**](NetworksNetworkIdGroupPoliciesContentFiltering.md) |  | [optional] 
+**SplashAuthSettings** | Pointer to **string** | Whether clients bound to your policy will bypass splash authorization or behave according to the network&#39;s rules. Can be one of &#39;network default&#39; or &#39;bypass&#39;. Only available if your network has a wireless configuration. | [optional] 
+**VlanTagging** | Pointer to [**NetworksNetworkIdGroupPoliciesVlanTagging**](NetworksNetworkIdGroupPoliciesVlanTagging.md) |  | [optional] 
+**BonjourForwarding** | Pointer to [**NetworksNetworkIdGroupPoliciesBonjourForwarding**](NetworksNetworkIdGroupPoliciesBonjourForwarding.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +32,205 @@ NewInlineResponse20096WithDefaults instantiates a new InlineResponse20096 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetGroupPolicyId
 
-`func (o *InlineResponse20096) GetId() string`
+`func (o *InlineResponse20096) GetGroupPolicyId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse20096) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20096) GetGroupPolicyIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetGroupPolicyId
 
-`func (o *InlineResponse20096) SetId(v string)`
+`func (o *InlineResponse20096) SetGroupPolicyId(v string)`
 
-SetId sets Id field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasId
+### HasGroupPolicyId
 
-`func (o *InlineResponse20096) HasId() bool`
+`func (o *InlineResponse20096) HasGroupPolicyId() bool`
 
-HasId returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
-### GetCategory
+### GetScheduling
 
-`func (o *InlineResponse20096) GetCategory() string`
+`func (o *InlineResponse20096) GetScheduling() NetworksNetworkIdGroupPoliciesScheduling`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetScheduling returns the Scheduling field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetSchedulingOk
 
-`func (o *InlineResponse20096) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse20096) GetSchedulingOk() (*NetworksNetworkIdGroupPoliciesScheduling, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetSchedulingOk returns a tuple with the Scheduling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetScheduling
 
-`func (o *InlineResponse20096) SetCategory(v string)`
+`func (o *InlineResponse20096) SetScheduling(v NetworksNetworkIdGroupPoliciesScheduling)`
 
-SetCategory sets Category field to given value.
+SetScheduling sets Scheduling field to given value.
 
-### HasCategory
+### HasScheduling
 
-`func (o *InlineResponse20096) HasCategory() bool`
+`func (o *InlineResponse20096) HasScheduling() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasScheduling returns a boolean if a field has been set.
 
-### GetType
+### GetBandwidth
 
-`func (o *InlineResponse20096) GetType() string`
+`func (o *InlineResponse20096) GetBandwidth() NetworksNetworkIdGroupPoliciesBandwidth`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetBandwidth returns the Bandwidth field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetBandwidthOk
 
-`func (o *InlineResponse20096) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse20096) GetBandwidthOk() (*NetworksNetworkIdGroupPoliciesBandwidth, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetBandwidthOk returns a tuple with the Bandwidth field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetBandwidth
 
-`func (o *InlineResponse20096) SetType(v string)`
+`func (o *InlineResponse20096) SetBandwidth(v NetworksNetworkIdGroupPoliciesBandwidth)`
 
-SetType sets Type field to given value.
+SetBandwidth sets Bandwidth field to given value.
 
-### HasType
+### HasBandwidth
 
-`func (o *InlineResponse20096) HasType() bool`
+`func (o *InlineResponse20096) HasBandwidth() bool`
 
-HasType returns a boolean if a field has been set.
+HasBandwidth returns a boolean if a field has been set.
 
-### GetSeverity
+### GetFirewallAndTrafficShaping
 
-`func (o *InlineResponse20096) GetSeverity() string`
+`func (o *InlineResponse20096) GetFirewallAndTrafficShaping() NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping`
 
-GetSeverity returns the Severity field if non-nil, zero value otherwise.
+GetFirewallAndTrafficShaping returns the FirewallAndTrafficShaping field if non-nil, zero value otherwise.
 
-### GetSeverityOk
+### GetFirewallAndTrafficShapingOk
 
-`func (o *InlineResponse20096) GetSeverityOk() (*string, bool)`
+`func (o *InlineResponse20096) GetFirewallAndTrafficShapingOk() (*NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping, bool)`
 
-GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
+GetFirewallAndTrafficShapingOk returns a tuple with the FirewallAndTrafficShaping field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSeverity
+### SetFirewallAndTrafficShaping
 
-`func (o *InlineResponse20096) SetSeverity(v string)`
+`func (o *InlineResponse20096) SetFirewallAndTrafficShaping(v NetworksNetworkIdGroupPoliciesFirewallAndTrafficShaping)`
 
-SetSeverity sets Severity field to given value.
+SetFirewallAndTrafficShaping sets FirewallAndTrafficShaping field to given value.
 
-### HasSeverity
+### HasFirewallAndTrafficShaping
 
-`func (o *InlineResponse20096) HasSeverity() bool`
+`func (o *InlineResponse20096) HasFirewallAndTrafficShaping() bool`
 
-HasSeverity returns a boolean if a field has been set.
+HasFirewallAndTrafficShaping returns a boolean if a field has been set.
 
-### GetScope
+### GetContentFiltering
 
-`func (o *InlineResponse20096) GetScope() NetworksNetworkIdHealthAlertsScope`
+`func (o *InlineResponse20096) GetContentFiltering() NetworksNetworkIdGroupPoliciesContentFiltering`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetContentFiltering returns the ContentFiltering field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetContentFilteringOk
 
-`func (o *InlineResponse20096) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
+`func (o *InlineResponse20096) GetContentFilteringOk() (*NetworksNetworkIdGroupPoliciesContentFiltering, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetContentFilteringOk returns a tuple with the ContentFiltering field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetContentFiltering
 
-`func (o *InlineResponse20096) SetScope(v NetworksNetworkIdHealthAlertsScope)`
+`func (o *InlineResponse20096) SetContentFiltering(v NetworksNetworkIdGroupPoliciesContentFiltering)`
 
-SetScope sets Scope field to given value.
+SetContentFiltering sets ContentFiltering field to given value.
 
-### HasScope
+### HasContentFiltering
 
-`func (o *InlineResponse20096) HasScope() bool`
+`func (o *InlineResponse20096) HasContentFiltering() bool`
 
-HasScope returns a boolean if a field has been set.
+HasContentFiltering returns a boolean if a field has been set.
+
+### GetSplashAuthSettings
+
+`func (o *InlineResponse20096) GetSplashAuthSettings() string`
+
+GetSplashAuthSettings returns the SplashAuthSettings field if non-nil, zero value otherwise.
+
+### GetSplashAuthSettingsOk
+
+`func (o *InlineResponse20096) GetSplashAuthSettingsOk() (*string, bool)`
+
+GetSplashAuthSettingsOk returns a tuple with the SplashAuthSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSplashAuthSettings
+
+`func (o *InlineResponse20096) SetSplashAuthSettings(v string)`
+
+SetSplashAuthSettings sets SplashAuthSettings field to given value.
+
+### HasSplashAuthSettings
+
+`func (o *InlineResponse20096) HasSplashAuthSettings() bool`
+
+HasSplashAuthSettings returns a boolean if a field has been set.
+
+### GetVlanTagging
+
+`func (o *InlineResponse20096) GetVlanTagging() NetworksNetworkIdGroupPoliciesVlanTagging`
+
+GetVlanTagging returns the VlanTagging field if non-nil, zero value otherwise.
+
+### GetVlanTaggingOk
+
+`func (o *InlineResponse20096) GetVlanTaggingOk() (*NetworksNetworkIdGroupPoliciesVlanTagging, bool)`
+
+GetVlanTaggingOk returns a tuple with the VlanTagging field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanTagging
+
+`func (o *InlineResponse20096) SetVlanTagging(v NetworksNetworkIdGroupPoliciesVlanTagging)`
+
+SetVlanTagging sets VlanTagging field to given value.
+
+### HasVlanTagging
+
+`func (o *InlineResponse20096) HasVlanTagging() bool`
+
+HasVlanTagging returns a boolean if a field has been set.
+
+### GetBonjourForwarding
+
+`func (o *InlineResponse20096) GetBonjourForwarding() NetworksNetworkIdGroupPoliciesBonjourForwarding`
+
+GetBonjourForwarding returns the BonjourForwarding field if non-nil, zero value otherwise.
+
+### GetBonjourForwardingOk
+
+`func (o *InlineResponse20096) GetBonjourForwardingOk() (*NetworksNetworkIdGroupPoliciesBonjourForwarding, bool)`
+
+GetBonjourForwardingOk returns a tuple with the BonjourForwarding field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBonjourForwarding
+
+`func (o *InlineResponse20096) SetBonjourForwarding(v NetworksNetworkIdGroupPoliciesBonjourForwarding)`
+
+SetBonjourForwarding sets BonjourForwarding field to given value.
+
+### HasBonjourForwarding
+
+`func (o *InlineResponse20096) HasBonjourForwarding() bool`
+
+HasBonjourForwarding returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

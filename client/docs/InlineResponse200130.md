@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreatedAt** | Pointer to **string** | When the Meraki record for the wlanList was created. | [optional] 
-**Id** | Pointer to **string** | The Meraki managed Id of the wlanList record. | [optional] 
-**Xml** | Pointer to **string** | An XML string containing the WLAN List for the device. | [optional] 
+**Success** | Pointer to **bool** | Boolean indicating whether the operation was completed successfully. | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200130WithDefaults instantiates a new InlineResponse200130 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCreatedAt
+### GetSuccess
 
-`func (o *InlineResponse200130) GetCreatedAt() string`
+`func (o *InlineResponse200130) GetSuccess() bool`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetSuccess returns the Success field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetSuccessOk
 
-`func (o *InlineResponse200130) GetCreatedAtOk() (*string, bool)`
+`func (o *InlineResponse200130) GetSuccessOk() (*bool, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetSuccess
 
-`func (o *InlineResponse200130) SetCreatedAt(v string)`
+`func (o *InlineResponse200130) SetSuccess(v bool)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetSuccess sets Success field to given value.
 
-### HasCreatedAt
+### HasSuccess
 
-`func (o *InlineResponse200130) HasCreatedAt() bool`
+`func (o *InlineResponse200130) HasSuccess() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetId
-
-`func (o *InlineResponse200130) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200130) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200130) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200130) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetXml
-
-`func (o *InlineResponse200130) GetXml() string`
-
-GetXml returns the Xml field if non-nil, zero value otherwise.
-
-### GetXmlOk
-
-`func (o *InlineResponse200130) GetXmlOk() (*string, bool)`
-
-GetXmlOk returns a tuple with the Xml field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetXml
-
-`func (o *InlineResponse200130) SetXml(v string)`
-
-SetXml sets Xml field to given value.
-
-### HasXml
-
-`func (o *InlineResponse200130) HasXml() bool`
-
-HasXml returns a boolean if a field has been set.
+HasSuccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200189Rules**](InlineResponse200189Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200190Rules**](InlineResponse200190Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
 **AllowLanAccess** | Pointer to **bool** | Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional) | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetRules
 
-`func (o *InlineObject188) GetRules() []InlineResponse200189Rules`
+`func (o *InlineObject188) GetRules() []InlineResponse200190Rules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineObject188) GetRulesOk() (*[]InlineResponse200189Rules, bool)`
+`func (o *InlineObject188) GetRulesOk() (*[]InlineResponse200190Rules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineObject188) SetRules(v []InlineResponse200189Rules)`
+`func (o *InlineObject188) SetRules(v []InlineResponse200190Rules)`
 
 SetRules sets Rules field to given value.
 

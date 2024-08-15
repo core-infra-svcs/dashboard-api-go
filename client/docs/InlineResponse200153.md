@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RendezvousPointId** | Pointer to **string** | The id. | [optional] 
-**Serial** | Pointer to **string** | The serial. | [optional] 
-**InterfaceName** | Pointer to **string** | The name of the interface to use. | [optional] 
-**InterfaceIp** | Pointer to **string** | The IP address of the interface to use. | [optional] 
-**MulticastGroup** | Pointer to **string** | &#39;Any&#39;, or the IP address of a multicast group. | [optional] 
+**DefaultSettings** | Pointer to [**InlineResponse200153DefaultSettings**](InlineResponse200153DefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200153Overrides**](InlineResponse200153Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200153WithDefaults instantiates a new InlineResponse200153 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRendezvousPointId
+### GetDefaultSettings
 
-`func (o *InlineResponse200153) GetRendezvousPointId() string`
+`func (o *InlineResponse200153) GetDefaultSettings() InlineResponse200153DefaultSettings`
 
-GetRendezvousPointId returns the RendezvousPointId field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetRendezvousPointIdOk
+### GetDefaultSettingsOk
 
-`func (o *InlineResponse200153) GetRendezvousPointIdOk() (*string, bool)`
+`func (o *InlineResponse200153) GetDefaultSettingsOk() (*InlineResponse200153DefaultSettings, bool)`
 
-GetRendezvousPointIdOk returns a tuple with the RendezvousPointId field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRendezvousPointId
+### SetDefaultSettings
 
-`func (o *InlineResponse200153) SetRendezvousPointId(v string)`
+`func (o *InlineResponse200153) SetDefaultSettings(v InlineResponse200153DefaultSettings)`
 
-SetRendezvousPointId sets RendezvousPointId field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
-### HasRendezvousPointId
+### HasDefaultSettings
 
-`func (o *InlineResponse200153) HasRendezvousPointId() bool`
+`func (o *InlineResponse200153) HasDefaultSettings() bool`
 
-HasRendezvousPointId returns a boolean if a field has been set.
+HasDefaultSettings returns a boolean if a field has been set.
 
-### GetSerial
+### GetOverrides
 
-`func (o *InlineResponse200153) GetSerial() string`
+`func (o *InlineResponse200153) GetOverrides() []InlineResponse200153Overrides`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetOverridesOk
 
-`func (o *InlineResponse200153) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200153) GetOverridesOk() (*[]InlineResponse200153Overrides, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetOverrides
 
-`func (o *InlineResponse200153) SetSerial(v string)`
+`func (o *InlineResponse200153) SetOverrides(v []InlineResponse200153Overrides)`
 
-SetSerial sets Serial field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasSerial
+### HasOverrides
 
-`func (o *InlineResponse200153) HasSerial() bool`
+`func (o *InlineResponse200153) HasOverrides() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetInterfaceName
-
-`func (o *InlineResponse200153) GetInterfaceName() string`
-
-GetInterfaceName returns the InterfaceName field if non-nil, zero value otherwise.
-
-### GetInterfaceNameOk
-
-`func (o *InlineResponse200153) GetInterfaceNameOk() (*string, bool)`
-
-GetInterfaceNameOk returns a tuple with the InterfaceName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInterfaceName
-
-`func (o *InlineResponse200153) SetInterfaceName(v string)`
-
-SetInterfaceName sets InterfaceName field to given value.
-
-### HasInterfaceName
-
-`func (o *InlineResponse200153) HasInterfaceName() bool`
-
-HasInterfaceName returns a boolean if a field has been set.
-
-### GetInterfaceIp
-
-`func (o *InlineResponse200153) GetInterfaceIp() string`
-
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
-
-### GetInterfaceIpOk
-
-`func (o *InlineResponse200153) GetInterfaceIpOk() (*string, bool)`
-
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInterfaceIp
-
-`func (o *InlineResponse200153) SetInterfaceIp(v string)`
-
-SetInterfaceIp sets InterfaceIp field to given value.
-
-### HasInterfaceIp
-
-`func (o *InlineResponse200153) HasInterfaceIp() bool`
-
-HasInterfaceIp returns a boolean if a field has been set.
-
-### GetMulticastGroup
-
-`func (o *InlineResponse200153) GetMulticastGroup() string`
-
-GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
-
-### GetMulticastGroupOk
-
-`func (o *InlineResponse200153) GetMulticastGroupOk() (*string, bool)`
-
-GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMulticastGroup
-
-`func (o *InlineResponse200153) SetMulticastGroup(v string)`
-
-SetMulticastGroup sets MulticastGroup field to given value.
-
-### HasMulticastGroup
-
-`func (o *InlineResponse200153) HasMulticastGroup() bool`
-
-HasMulticastGroup returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

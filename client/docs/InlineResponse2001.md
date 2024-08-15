@@ -4,12 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Sku** | Pointer to **string** | The SKU identifier of the entitlement | [optional] 
-**Name** | Pointer to **string** | The user-facing name of the entitlement | [optional] 
-**ProductType** | Pointer to **string** | The product type of the entitlement | [optional] 
-**ProductClass** | Pointer to **string** | The product class associated with the entitlement | [optional] 
-**FeatureTier** | Pointer to **string** | The feature tier associated with the entitlement (null for add-ons) | [optional] 
-**IsAddOn** | Pointer to **bool** | Whether or not the entitlement is an add-on | [optional] 
+**Suffix** | Pointer to **string** | Last 4 characters of the API key | [optional] 
+**CreatedAt** | Pointer to **string** | Date that the API key was created | [optional] 
 
 ## Methods
 
@@ -30,155 +26,55 @@ NewInlineResponse2001WithDefaults instantiates a new InlineResponse2001 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSku
+### GetSuffix
 
-`func (o *InlineResponse2001) GetSku() string`
+`func (o *InlineResponse2001) GetSuffix() string`
 
-GetSku returns the Sku field if non-nil, zero value otherwise.
+GetSuffix returns the Suffix field if non-nil, zero value otherwise.
 
-### GetSkuOk
+### GetSuffixOk
 
-`func (o *InlineResponse2001) GetSkuOk() (*string, bool)`
+`func (o *InlineResponse2001) GetSuffixOk() (*string, bool)`
 
-GetSkuOk returns a tuple with the Sku field if it's non-nil, zero value otherwise
+GetSuffixOk returns a tuple with the Suffix field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSku
+### SetSuffix
 
-`func (o *InlineResponse2001) SetSku(v string)`
+`func (o *InlineResponse2001) SetSuffix(v string)`
 
-SetSku sets Sku field to given value.
+SetSuffix sets Suffix field to given value.
 
-### HasSku
+### HasSuffix
 
-`func (o *InlineResponse2001) HasSku() bool`
+`func (o *InlineResponse2001) HasSuffix() bool`
 
-HasSku returns a boolean if a field has been set.
+HasSuffix returns a boolean if a field has been set.
 
-### GetName
+### GetCreatedAt
 
-`func (o *InlineResponse2001) GetName() string`
+`func (o *InlineResponse2001) GetCreatedAt() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse2001) GetNameOk() (*string, bool)`
+`func (o *InlineResponse2001) GetCreatedAtOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCreatedAt
 
-`func (o *InlineResponse2001) SetName(v string)`
+`func (o *InlineResponse2001) SetCreatedAt(v string)`
 
-SetName sets Name field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasName
+### HasCreatedAt
 
-`func (o *InlineResponse2001) HasName() bool`
+`func (o *InlineResponse2001) HasCreatedAt() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetProductType
-
-`func (o *InlineResponse2001) GetProductType() string`
-
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
-
-### GetProductTypeOk
-
-`func (o *InlineResponse2001) GetProductTypeOk() (*string, bool)`
-
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductType
-
-`func (o *InlineResponse2001) SetProductType(v string)`
-
-SetProductType sets ProductType field to given value.
-
-### HasProductType
-
-`func (o *InlineResponse2001) HasProductType() bool`
-
-HasProductType returns a boolean if a field has been set.
-
-### GetProductClass
-
-`func (o *InlineResponse2001) GetProductClass() string`
-
-GetProductClass returns the ProductClass field if non-nil, zero value otherwise.
-
-### GetProductClassOk
-
-`func (o *InlineResponse2001) GetProductClassOk() (*string, bool)`
-
-GetProductClassOk returns a tuple with the ProductClass field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductClass
-
-`func (o *InlineResponse2001) SetProductClass(v string)`
-
-SetProductClass sets ProductClass field to given value.
-
-### HasProductClass
-
-`func (o *InlineResponse2001) HasProductClass() bool`
-
-HasProductClass returns a boolean if a field has been set.
-
-### GetFeatureTier
-
-`func (o *InlineResponse2001) GetFeatureTier() string`
-
-GetFeatureTier returns the FeatureTier field if non-nil, zero value otherwise.
-
-### GetFeatureTierOk
-
-`func (o *InlineResponse2001) GetFeatureTierOk() (*string, bool)`
-
-GetFeatureTierOk returns a tuple with the FeatureTier field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFeatureTier
-
-`func (o *InlineResponse2001) SetFeatureTier(v string)`
-
-SetFeatureTier sets FeatureTier field to given value.
-
-### HasFeatureTier
-
-`func (o *InlineResponse2001) HasFeatureTier() bool`
-
-HasFeatureTier returns a boolean if a field has been set.
-
-### GetIsAddOn
-
-`func (o *InlineResponse2001) GetIsAddOn() bool`
-
-GetIsAddOn returns the IsAddOn field if non-nil, zero value otherwise.
-
-### GetIsAddOnOk
-
-`func (o *InlineResponse2001) GetIsAddOnOk() (*bool, bool)`
-
-GetIsAddOnOk returns a tuple with the IsAddOn field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsAddOn
-
-`func (o *InlineResponse2001) SetIsAddOn(v bool)`
-
-SetIsAddOn sets IsAddOn field to given value.
-
-### HasIsAddOn
-
-`func (o *InlineResponse2001) HasIsAddOn() bool`
-
-HasIsAddOn returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

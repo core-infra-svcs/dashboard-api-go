@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Peers** | Pointer to [**[]InlineResponse200213Peers**](InlineResponse200213Peers.md) | The list of VPN peers | [optional] 
+**Vpnstatusentities** | Pointer to [**[]InlineResponse200213Vpnstatusentities**](InlineResponse200213Vpnstatusentities.md) | The list of VPN Status for networks | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200213WithDefaults instantiates a new InlineResponse200213 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPeers
+### GetVpnstatusentities
 
-`func (o *InlineResponse200213) GetPeers() []InlineResponse200213Peers`
+`func (o *InlineResponse200213) GetVpnstatusentities() []InlineResponse200213Vpnstatusentities`
 
-GetPeers returns the Peers field if non-nil, zero value otherwise.
+GetVpnstatusentities returns the Vpnstatusentities field if non-nil, zero value otherwise.
 
-### GetPeersOk
+### GetVpnstatusentitiesOk
 
-`func (o *InlineResponse200213) GetPeersOk() (*[]InlineResponse200213Peers, bool)`
+`func (o *InlineResponse200213) GetVpnstatusentitiesOk() (*[]InlineResponse200213Vpnstatusentities, bool)`
 
-GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
+GetVpnstatusentitiesOk returns a tuple with the Vpnstatusentities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeers
+### SetVpnstatusentities
 
-`func (o *InlineResponse200213) SetPeers(v []InlineResponse200213Peers)`
+`func (o *InlineResponse200213) SetVpnstatusentities(v []InlineResponse200213Vpnstatusentities)`
 
-SetPeers sets Peers field to given value.
+SetVpnstatusentities sets Vpnstatusentities field to given value.
 
-### HasPeers
+### HasVpnstatusentities
 
-`func (o *InlineResponse200213) HasPeers() bool`
+`func (o *InlineResponse200213) HasVpnstatusentities() bool`
 
-HasPeers returns a boolean if a field has been set.
+HasVpnstatusentities returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

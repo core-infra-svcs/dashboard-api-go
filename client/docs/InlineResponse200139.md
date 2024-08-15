@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200139Rules**](InlineResponse200139Rules.md) | An ordered array of the access control list rules | [optional] 
+**ResultingNetworks** | Pointer to [**[]InlineResponse20044**](InlineResponse20044.md) | Networks after the split | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200139WithDefaults instantiates a new InlineResponse200139 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetResultingNetworks
 
-`func (o *InlineResponse200139) GetRules() []InlineResponse200139Rules`
+`func (o *InlineResponse200139) GetResultingNetworks() []InlineResponse20044`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetResultingNetworks returns the ResultingNetworks field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetResultingNetworksOk
 
-`func (o *InlineResponse200139) GetRulesOk() (*[]InlineResponse200139Rules, bool)`
+`func (o *InlineResponse200139) GetResultingNetworksOk() (*[]InlineResponse20044, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetResultingNetworksOk returns a tuple with the ResultingNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetResultingNetworks
 
-`func (o *InlineResponse200139) SetRules(v []InlineResponse200139Rules)`
+`func (o *InlineResponse200139) SetResultingNetworks(v []InlineResponse20044)`
 
-SetRules sets Rules field to given value.
+SetResultingNetworks sets ResultingNetworks field to given value.
 
-### HasRules
+### HasResultingNetworks
 
-`func (o *InlineResponse200139) HasRules() bool`
+`func (o *InlineResponse200139) HasResultingNetworks() bool`
 
-HasRules returns a boolean if a field has been set.
+HasResultingNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

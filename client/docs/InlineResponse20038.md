@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Addresses** | Pointer to [**[]InlineResponse20038Addresses**](InlineResponse20038Addresses.md) | configured alternate management interface addresses | [optional] 
+**Enabled** | Pointer to **bool** | Enable or disable warm spare for a switch | [optional] 
+**PrimarySerial** | Pointer to **string** | Serial number of the primary switch | [optional] 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare switch | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse20038WithDefaults instantiates a new InlineResponse20038 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAddresses
+### GetEnabled
 
-`func (o *InlineResponse20038) GetAddresses() []InlineResponse20038Addresses`
+`func (o *InlineResponse20038) GetEnabled() bool`
 
-GetAddresses returns the Addresses field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetAddressesOk
+### GetEnabledOk
 
-`func (o *InlineResponse20038) GetAddressesOk() (*[]InlineResponse20038Addresses, bool)`
+`func (o *InlineResponse20038) GetEnabledOk() (*bool, bool)`
 
-GetAddressesOk returns a tuple with the Addresses field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddresses
+### SetEnabled
 
-`func (o *InlineResponse20038) SetAddresses(v []InlineResponse20038Addresses)`
+`func (o *InlineResponse20038) SetEnabled(v bool)`
 
-SetAddresses sets Addresses field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasAddresses
+### HasEnabled
 
-`func (o *InlineResponse20038) HasAddresses() bool`
+`func (o *InlineResponse20038) HasEnabled() bool`
 
-HasAddresses returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
+
+### GetPrimarySerial
+
+`func (o *InlineResponse20038) GetPrimarySerial() string`
+
+GetPrimarySerial returns the PrimarySerial field if non-nil, zero value otherwise.
+
+### GetPrimarySerialOk
+
+`func (o *InlineResponse20038) GetPrimarySerialOk() (*string, bool)`
+
+GetPrimarySerialOk returns a tuple with the PrimarySerial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrimarySerial
+
+`func (o *InlineResponse20038) SetPrimarySerial(v string)`
+
+SetPrimarySerial sets PrimarySerial field to given value.
+
+### HasPrimarySerial
+
+`func (o *InlineResponse20038) HasPrimarySerial() bool`
+
+HasPrimarySerial returns a boolean if a field has been set.
+
+### GetSpareSerial
+
+`func (o *InlineResponse20038) GetSpareSerial() string`
+
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
+
+### GetSpareSerialOk
+
+`func (o *InlineResponse20038) GetSpareSerialOk() (*string, bool)`
+
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpareSerial
+
+`func (o *InlineResponse20038) SetSpareSerial(v string)`
+
+SetSpareSerial sets SpareSerial field to given value.
+
+### HasSpareSerial
+
+`func (o *InlineResponse20038) HasSpareSerial() bool`
+
+HasSpareSerial returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

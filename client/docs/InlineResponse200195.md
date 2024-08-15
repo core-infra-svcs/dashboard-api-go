@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
-**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
-**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200195Rules**](InlineResponse200195Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200195WithDefaults instantiates a new InlineResponse200195 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetTrafficShapingEnabled
 
-`func (o *InlineResponse200195) GetStartTs() time.Time`
+`func (o *InlineResponse200195) GetTrafficShapingEnabled() bool`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineResponse200195) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200195) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetTrafficShapingEnabled
 
-`func (o *InlineResponse200195) SetStartTs(v time.Time)`
+`func (o *InlineResponse200195) SetTrafficShapingEnabled(v bool)`
 
-SetStartTs sets StartTs field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasStartTs
+### HasTrafficShapingEnabled
 
-`func (o *InlineResponse200195) HasStartTs() bool`
+`func (o *InlineResponse200195) HasTrafficShapingEnabled() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetEndTs
+### GetDefaultRulesEnabled
 
-`func (o *InlineResponse200195) GetEndTs() time.Time`
+`func (o *InlineResponse200195) GetDefaultRulesEnabled() bool`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineResponse200195) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200195) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetDefaultRulesEnabled
 
-`func (o *InlineResponse200195) SetEndTs(v time.Time)`
+`func (o *InlineResponse200195) SetDefaultRulesEnabled(v bool)`
 
-SetEndTs sets EndTs field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasEndTs
+### HasDefaultRulesEnabled
 
-`func (o *InlineResponse200195) HasEndTs() bool`
+`func (o *InlineResponse200195) HasDefaultRulesEnabled() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetTotalKbps
+### GetRules
 
-`func (o *InlineResponse200195) GetTotalKbps() int32`
+`func (o *InlineResponse200195) GetRules() []InlineResponse200195Rules`
 
-GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetTotalKbpsOk
+### GetRulesOk
 
-`func (o *InlineResponse200195) GetTotalKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200195) GetRulesOk() (*[]InlineResponse200195Rules, bool)`
 
-GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotalKbps
+### SetRules
 
-`func (o *InlineResponse200195) SetTotalKbps(v int32)`
+`func (o *InlineResponse200195) SetRules(v []InlineResponse200195Rules)`
 
-SetTotalKbps sets TotalKbps field to given value.
+SetRules sets Rules field to given value.
 
-### HasTotalKbps
+### HasRules
 
-`func (o *InlineResponse200195) HasTotalKbps() bool`
+`func (o *InlineResponse200195) HasRules() bool`
 
-HasTotalKbps returns a boolean if a field has been set.
-
-### GetSentKbps
-
-`func (o *InlineResponse200195) GetSentKbps() int32`
-
-GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
-
-### GetSentKbpsOk
-
-`func (o *InlineResponse200195) GetSentKbpsOk() (*int32, bool)`
-
-GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSentKbps
-
-`func (o *InlineResponse200195) SetSentKbps(v int32)`
-
-SetSentKbps sets SentKbps field to given value.
-
-### HasSentKbps
-
-`func (o *InlineResponse200195) HasSentKbps() bool`
-
-HasSentKbps returns a boolean if a field has been set.
-
-### GetReceivedKbps
-
-`func (o *InlineResponse200195) GetReceivedKbps() int32`
-
-GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
-
-### GetReceivedKbpsOk
-
-`func (o *InlineResponse200195) GetReceivedKbpsOk() (*int32, bool)`
-
-GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReceivedKbps
-
-`func (o *InlineResponse200195) SetReceivedKbps(v int32)`
-
-SetReceivedKbps sets ReceivedKbps field to given value.
-
-### HasReceivedKbps
-
-`func (o *InlineResponse200195) HasReceivedKbps() bool`
-
-HasReceivedKbps returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether custom analytics is enabled | [optional] 
-**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
-**Parameters** | Pointer to [**[]InlineResponse20013Parameters**](InlineResponse20013Parameters.md) | Parameters for the custom analytics workload | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time | [optional] 
+**Entrances** | Pointer to **int32** | The number of entrances | [optional] 
+**AverageCount** | Pointer to **float32** | The average count | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse20013WithDefaults instantiates a new InlineResponse20013 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetStartTs
 
-`func (o *InlineResponse20013) GetEnabled() bool`
+`func (o *InlineResponse20013) GetStartTs() time.Time`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse20013) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20013) GetStartTsOk() (*time.Time, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetStartTs
 
-`func (o *InlineResponse20013) SetEnabled(v bool)`
+`func (o *InlineResponse20013) SetStartTs(v time.Time)`
 
-SetEnabled sets Enabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasEnabled
+### HasStartTs
 
-`func (o *InlineResponse20013) HasEnabled() bool`
+`func (o *InlineResponse20013) HasStartTs() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetArtifactId
+### GetEndTs
 
-`func (o *InlineResponse20013) GetArtifactId() string`
+`func (o *InlineResponse20013) GetEndTs() time.Time`
 
-GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetArtifactIdOk
+### GetEndTsOk
 
-`func (o *InlineResponse20013) GetArtifactIdOk() (*string, bool)`
+`func (o *InlineResponse20013) GetEndTsOk() (*time.Time, bool)`
 
-GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArtifactId
+### SetEndTs
 
-`func (o *InlineResponse20013) SetArtifactId(v string)`
+`func (o *InlineResponse20013) SetEndTs(v time.Time)`
 
-SetArtifactId sets ArtifactId field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasArtifactId
+### HasEndTs
 
-`func (o *InlineResponse20013) HasArtifactId() bool`
+`func (o *InlineResponse20013) HasEndTs() bool`
 
-HasArtifactId returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetParameters
+### GetEntrances
 
-`func (o *InlineResponse20013) GetParameters() []InlineResponse20013Parameters`
+`func (o *InlineResponse20013) GetEntrances() int32`
 
-GetParameters returns the Parameters field if non-nil, zero value otherwise.
+GetEntrances returns the Entrances field if non-nil, zero value otherwise.
 
-### GetParametersOk
+### GetEntrancesOk
 
-`func (o *InlineResponse20013) GetParametersOk() (*[]InlineResponse20013Parameters, bool)`
+`func (o *InlineResponse20013) GetEntrancesOk() (*int32, bool)`
 
-GetParametersOk returns a tuple with the Parameters field if it's non-nil, zero value otherwise
+GetEntrancesOk returns a tuple with the Entrances field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetParameters
+### SetEntrances
 
-`func (o *InlineResponse20013) SetParameters(v []InlineResponse20013Parameters)`
+`func (o *InlineResponse20013) SetEntrances(v int32)`
 
-SetParameters sets Parameters field to given value.
+SetEntrances sets Entrances field to given value.
 
-### HasParameters
+### HasEntrances
 
-`func (o *InlineResponse20013) HasParameters() bool`
+`func (o *InlineResponse20013) HasEntrances() bool`
 
-HasParameters returns a boolean if a field has been set.
+HasEntrances returns a boolean if a field has been set.
+
+### GetAverageCount
+
+`func (o *InlineResponse20013) GetAverageCount() float32`
+
+GetAverageCount returns the AverageCount field if non-nil, zero value otherwise.
+
+### GetAverageCountOk
+
+`func (o *InlineResponse20013) GetAverageCountOk() (*float32, bool)`
+
+GetAverageCountOk returns a tuple with the AverageCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAverageCount
+
+`func (o *InlineResponse20013) SetAverageCount(v float32)`
+
+SetAverageCount sets AverageCount field to given value.
+
+### HasAverageCount
+
+`func (o *InlineResponse20013) HasAverageCount() bool`
+
+HasAverageCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
