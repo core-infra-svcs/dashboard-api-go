@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
 **Subnet** | Pointer to **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | [optional] 
 **NextHopIp** | Pointer to **string** | IP address of the next hop device to which the device sends its traffic for the subnet | [optional] 
+**ManagementNextHop** | Pointer to **string** | Optional fallback IP address for management traffic | [optional] 
 **AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
 **PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
 
@@ -103,6 +104,31 @@ SetNextHopIp sets NextHopIp field to given value.
 `func (o *InlineObject156) HasNextHopIp() bool`
 
 HasNextHopIp returns a boolean if a field has been set.
+
+### GetManagementNextHop
+
+`func (o *InlineObject156) GetManagementNextHop() string`
+
+GetManagementNextHop returns the ManagementNextHop field if non-nil, zero value otherwise.
+
+### GetManagementNextHopOk
+
+`func (o *InlineObject156) GetManagementNextHopOk() (*string, bool)`
+
+GetManagementNextHopOk returns a tuple with the ManagementNextHop field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManagementNextHop
+
+`func (o *InlineObject156) SetManagementNextHop(v string)`
+
+SetManagementNextHop sets ManagementNextHop field to given value.
+
+### HasManagementNextHop
+
+`func (o *InlineObject156) HasManagementNextHop() bool`
+
+HasManagementNextHop returns a boolean if a field has been set.
 
 ### GetAdvertiseViaOspfEnabled
 

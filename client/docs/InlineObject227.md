@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the configuration template | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
+**Swaps** | [**[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps**](OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps.md) | Each object represents a swap for one eSIM | 
 
 ## Methods
 
 ### NewInlineObject227
 
-`func NewInlineObject227() *InlineObject227`
+`func NewInlineObject227(swaps []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, ) *InlineObject227`
 
 NewInlineObject227 instantiates a new InlineObject227 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject227WithDefaults instantiates a new InlineObject227 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSwaps
 
-`func (o *InlineObject227) GetName() string`
+`func (o *InlineObject227) GetSwaps() []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSwapsOk
 
-`func (o *InlineObject227) GetNameOk() (*string, bool)`
+`func (o *InlineObject227) GetSwapsOk() (*[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSwaps
 
-`func (o *InlineObject227) SetName(v string)`
+`func (o *InlineObject227) SetSwaps(v []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps)`
 
-SetName sets Name field to given value.
+SetSwaps sets Swaps field to given value.
 
-### HasName
-
-`func (o *InlineObject227) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetTimeZone
-
-`func (o *InlineObject227) GetTimeZone() string`
-
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
-
-### GetTimeZoneOk
-
-`func (o *InlineObject227) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeZone
-
-`func (o *InlineObject227) SetTimeZone(v string)`
-
-SetTimeZone sets TimeZone field to given value.
-
-### HasTimeZone
-
-`func (o *InlineObject227) HasTimeZone() bool`
-
-HasTimeZone returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

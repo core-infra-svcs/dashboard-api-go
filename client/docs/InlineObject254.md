@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**X509certSha1Fingerprint** | **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**Name** | **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
+**Category** | Pointer to **string** | Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
+**ObjectIds** | Pointer to **[]int32** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
 
 ## Methods
 
 ### NewInlineObject254
 
-`func NewInlineObject254(x509certSha1Fingerprint string, ) *InlineObject254`
+`func NewInlineObject254(name string, ) *InlineObject254`
 
 NewInlineObject254 instantiates a new InlineObject254 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,75 @@ NewInlineObject254WithDefaults instantiates a new InlineObject254 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetX509certSha1Fingerprint
+### GetName
 
-`func (o *InlineObject254) GetX509certSha1Fingerprint() string`
+`func (o *InlineObject254) GetName() string`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetNameOk
 
-`func (o *InlineObject254) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineObject254) GetNameOk() (*string, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetName
 
-`func (o *InlineObject254) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineObject254) SetName(v string)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetName sets Name field to given value.
 
 
-### GetSloLogoutUrl
+### GetCategory
 
-`func (o *InlineObject254) GetSloLogoutUrl() string`
+`func (o *InlineObject254) GetCategory() string`
 
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetSloLogoutUrlOk
+### GetCategoryOk
 
-`func (o *InlineObject254) GetSloLogoutUrlOk() (*string, bool)`
+`func (o *InlineObject254) GetCategoryOk() (*string, bool)`
 
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSloLogoutUrl
+### SetCategory
 
-`func (o *InlineObject254) SetSloLogoutUrl(v string)`
+`func (o *InlineObject254) SetCategory(v string)`
 
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
+SetCategory sets Category field to given value.
 
-### HasSloLogoutUrl
+### HasCategory
 
-`func (o *InlineObject254) HasSloLogoutUrl() bool`
+`func (o *InlineObject254) HasCategory() bool`
 
-HasSloLogoutUrl returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
+
+### GetObjectIds
+
+`func (o *InlineObject254) GetObjectIds() []int32`
+
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
+
+### GetObjectIdsOk
+
+`func (o *InlineObject254) GetObjectIdsOk() (*[]int32, bool)`
+
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetObjectIds
+
+`func (o *InlineObject254) SetObjectIds(v []int32)`
+
+SetObjectIds sets ObjectIds field to given value.
+
+### HasObjectIds
+
+`func (o *InlineObject254) HasObjectIds() bool`
+
+HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

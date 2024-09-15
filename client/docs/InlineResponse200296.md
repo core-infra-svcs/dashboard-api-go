@@ -4,14 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertType** | Pointer to **string** | Type of alert that the webhook is delivering | [optional] 
-**LoggedAt** | Pointer to **time.Time** | When the webhook log was created, in ISO8601 format | [optional] 
-**NetworkId** | Pointer to **string** | Network ID for the webhook log | [optional] 
-**OrganizationId** | Pointer to **string** | ID for the webhook log&#39;s organization | [optional] 
-**ResponseCode** | Pointer to **int32** | Response code from the webhook | [optional] 
-**ResponseDuration** | Pointer to **int32** | Duration of the response, in milliseconds | [optional] 
-**SentAt** | Pointer to **time.Time** | When the webhook was sent, in ISO8601 format | [optional] 
-**Url** | Pointer to **string** | URL where the webhook was sent | [optional] 
+**SourceSerial** | Pointer to **string** | Serial number of the source switch (must be on a network not bound to a template) | [optional] 
+**TargetSerials** | Pointer to **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | [optional] 
 
 ## Methods
 
@@ -32,205 +26,55 @@ NewInlineResponse200296WithDefaults instantiates a new InlineResponse200296 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertType
+### GetSourceSerial
 
-`func (o *InlineResponse200296) GetAlertType() string`
+`func (o *InlineResponse200296) GetSourceSerial() string`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetSourceSerialOk
 
-`func (o *InlineResponse200296) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200296) GetSourceSerialOk() (*string, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetSourceSerial
 
-`func (o *InlineResponse200296) SetAlertType(v string)`
+`func (o *InlineResponse200296) SetSourceSerial(v string)`
 
-SetAlertType sets AlertType field to given value.
+SetSourceSerial sets SourceSerial field to given value.
 
-### HasAlertType
+### HasSourceSerial
 
-`func (o *InlineResponse200296) HasAlertType() bool`
+`func (o *InlineResponse200296) HasSourceSerial() bool`
 
-HasAlertType returns a boolean if a field has been set.
+HasSourceSerial returns a boolean if a field has been set.
 
-### GetLoggedAt
+### GetTargetSerials
 
-`func (o *InlineResponse200296) GetLoggedAt() time.Time`
+`func (o *InlineResponse200296) GetTargetSerials() []string`
 
-GetLoggedAt returns the LoggedAt field if non-nil, zero value otherwise.
+GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
 
-### GetLoggedAtOk
+### GetTargetSerialsOk
 
-`func (o *InlineResponse200296) GetLoggedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200296) GetTargetSerialsOk() (*[]string, bool)`
 
-GetLoggedAtOk returns a tuple with the LoggedAt field if it's non-nil, zero value otherwise
+GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLoggedAt
+### SetTargetSerials
 
-`func (o *InlineResponse200296) SetLoggedAt(v time.Time)`
+`func (o *InlineResponse200296) SetTargetSerials(v []string)`
 
-SetLoggedAt sets LoggedAt field to given value.
+SetTargetSerials sets TargetSerials field to given value.
 
-### HasLoggedAt
+### HasTargetSerials
 
-`func (o *InlineResponse200296) HasLoggedAt() bool`
+`func (o *InlineResponse200296) HasTargetSerials() bool`
 
-HasLoggedAt returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse200296) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse200296) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse200296) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse200296) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetOrganizationId
-
-`func (o *InlineResponse200296) GetOrganizationId() string`
-
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
-
-### GetOrganizationIdOk
-
-`func (o *InlineResponse200296) GetOrganizationIdOk() (*string, bool)`
-
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrganizationId
-
-`func (o *InlineResponse200296) SetOrganizationId(v string)`
-
-SetOrganizationId sets OrganizationId field to given value.
-
-### HasOrganizationId
-
-`func (o *InlineResponse200296) HasOrganizationId() bool`
-
-HasOrganizationId returns a boolean if a field has been set.
-
-### GetResponseCode
-
-`func (o *InlineResponse200296) GetResponseCode() int32`
-
-GetResponseCode returns the ResponseCode field if non-nil, zero value otherwise.
-
-### GetResponseCodeOk
-
-`func (o *InlineResponse200296) GetResponseCodeOk() (*int32, bool)`
-
-GetResponseCodeOk returns a tuple with the ResponseCode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResponseCode
-
-`func (o *InlineResponse200296) SetResponseCode(v int32)`
-
-SetResponseCode sets ResponseCode field to given value.
-
-### HasResponseCode
-
-`func (o *InlineResponse200296) HasResponseCode() bool`
-
-HasResponseCode returns a boolean if a field has been set.
-
-### GetResponseDuration
-
-`func (o *InlineResponse200296) GetResponseDuration() int32`
-
-GetResponseDuration returns the ResponseDuration field if non-nil, zero value otherwise.
-
-### GetResponseDurationOk
-
-`func (o *InlineResponse200296) GetResponseDurationOk() (*int32, bool)`
-
-GetResponseDurationOk returns a tuple with the ResponseDuration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResponseDuration
-
-`func (o *InlineResponse200296) SetResponseDuration(v int32)`
-
-SetResponseDuration sets ResponseDuration field to given value.
-
-### HasResponseDuration
-
-`func (o *InlineResponse200296) HasResponseDuration() bool`
-
-HasResponseDuration returns a boolean if a field has been set.
-
-### GetSentAt
-
-`func (o *InlineResponse200296) GetSentAt() time.Time`
-
-GetSentAt returns the SentAt field if non-nil, zero value otherwise.
-
-### GetSentAtOk
-
-`func (o *InlineResponse200296) GetSentAtOk() (*time.Time, bool)`
-
-GetSentAtOk returns a tuple with the SentAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSentAt
-
-`func (o *InlineResponse200296) SetSentAt(v time.Time)`
-
-SetSentAt sets SentAt field to given value.
-
-### HasSentAt
-
-`func (o *InlineResponse200296) HasSentAt() bool`
-
-HasSentAt returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse200296) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200296) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200296) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse200296) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
+HasTargetSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

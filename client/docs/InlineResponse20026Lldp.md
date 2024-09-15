@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SystemName** | Pointer to **string** | Device system name | [optional] 
 **PortId** | Pointer to **string** | ID for the port | [optional] 
-**ManagementAddress** | Pointer to **string** | Management mac address | [optional] 
+**ManagementAddress** | Pointer to **string** | Management IP address | [optional] 
 **SourcePort** | Pointer to **string** | Source port | [optional] 
 
 ## Methods

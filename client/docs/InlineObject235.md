@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject235
 
-`func NewInlineObject235(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject235`
+`func NewInlineObject235() *InlineObject235`
 
 NewInlineObject235 instantiates a new InlineObject235 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject235WithDefaults instantiates a new InlineObject235 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwaps
+### GetLimitScopeToNetworks
 
-`func (o *InlineObject235) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
+`func (o *InlineObject235) GetLimitScopeToNetworks() []string`
 
-GetSwaps returns the Swaps field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetSwapsOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineObject235) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
+`func (o *InlineObject235) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwaps
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject235) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
+`func (o *InlineObject235) SetLimitScopeToNetworks(v []string)`
 
-SetSwaps sets Swaps field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
+### HasLimitScopeToNetworks
+
+`func (o *InlineObject235) HasLimitScopeToNetworks() bool`
+
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

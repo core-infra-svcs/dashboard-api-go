@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseId** | **string** | The ID of the SM license to assign seats from | 
-**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
-**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
+**LogEvent** | **string** | The type of log event this is recording, e.g. download or opening a banner | 
+**Timestamp** | **int32** | A JavaScript UTC datetime stamp for when the even occurred | 
+**TargetOS** | Pointer to **string** | The name of the onboarding distro being downloaded | [optional] 
+**Request** | Pointer to **string** | Used to describe if this event was the result of a redirect. E.g. a query param if an info banner is being used | [optional] 
 
 ## Methods
 
 ### NewInlineObject240
 
-`func NewInlineObject240(licenseId string, networkId string, seatCount int32, ) *InlineObject240`
+`func NewInlineObject240(logEvent string, timestamp int32, ) *InlineObject240`
 
 NewInlineObject240 instantiates a new InlineObject240 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +28,95 @@ NewInlineObject240WithDefaults instantiates a new InlineObject240 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseId
+### GetLogEvent
 
-`func (o *InlineObject240) GetLicenseId() string`
+`func (o *InlineObject240) GetLogEvent() string`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetLogEvent returns the LogEvent field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetLogEventOk
 
-`func (o *InlineObject240) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineObject240) GetLogEventOk() (*string, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetLogEventOk returns a tuple with the LogEvent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetLogEvent
 
-`func (o *InlineObject240) SetLicenseId(v string)`
+`func (o *InlineObject240) SetLogEvent(v string)`
 
-SetLicenseId sets LicenseId field to given value.
+SetLogEvent sets LogEvent field to given value.
 
 
-### GetNetworkId
+### GetTimestamp
 
-`func (o *InlineObject240) GetNetworkId() string`
+`func (o *InlineObject240) GetTimestamp() int32`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetTimestamp returns the Timestamp field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetTimestampOk
 
-`func (o *InlineObject240) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineObject240) GetTimestampOk() (*int32, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetTimestampOk returns a tuple with the Timestamp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetTimestamp
 
-`func (o *InlineObject240) SetNetworkId(v string)`
+`func (o *InlineObject240) SetTimestamp(v int32)`
 
-SetNetworkId sets NetworkId field to given value.
+SetTimestamp sets Timestamp field to given value.
 
 
-### GetSeatCount
+### GetTargetOS
 
-`func (o *InlineObject240) GetSeatCount() int32`
+`func (o *InlineObject240) GetTargetOS() string`
 
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+GetTargetOS returns the TargetOS field if non-nil, zero value otherwise.
 
-### GetSeatCountOk
+### GetTargetOSOk
 
-`func (o *InlineObject240) GetSeatCountOk() (*int32, bool)`
+`func (o *InlineObject240) GetTargetOSOk() (*string, bool)`
 
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+GetTargetOSOk returns a tuple with the TargetOS field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSeatCount
+### SetTargetOS
 
-`func (o *InlineObject240) SetSeatCount(v int32)`
+`func (o *InlineObject240) SetTargetOS(v string)`
 
-SetSeatCount sets SeatCount field to given value.
+SetTargetOS sets TargetOS field to given value.
 
+### HasTargetOS
+
+`func (o *InlineObject240) HasTargetOS() bool`
+
+HasTargetOS returns a boolean if a field has been set.
+
+### GetRequest
+
+`func (o *InlineObject240) GetRequest() string`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineObject240) GetRequestOk() (*string, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineObject240) SetRequest(v string)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineObject240) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **EndDate** | Pointer to **time.Time** | Subscription expiration date | [optional] 
 **WebOrderId** | Pointer to **string** | Web order id | [optional] 
 **Type** | Pointer to **string** | Subscription type | [optional] 
+**SmartAccountStatus** | Pointer to **string** | Smart account status | [optional] 
+**SmartAccount** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsSmartAccount**](AdministeredLicensingSubscriptionSubscriptionsSmartAccount.md) |  | [optional] 
 **ProductTypes** | Pointer to **[]string** | Products the subscription has entitlements for | [optional] 
 **Entitlements** | Pointer to [**[]AdministeredLicensingSubscriptionSubscriptionsEntitlements**](AdministeredLicensingSubscriptionSubscriptionsEntitlements.md) | Entitlement info | [optional] 
 **Counts** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsCounts**](AdministeredLicensingSubscriptionSubscriptionsCounts.md) |  | [optional] 
@@ -235,6 +237,56 @@ SetType sets Type field to given value.
 `func (o *InlineResponse2003) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetSmartAccountStatus
+
+`func (o *InlineResponse2003) GetSmartAccountStatus() string`
+
+GetSmartAccountStatus returns the SmartAccountStatus field if non-nil, zero value otherwise.
+
+### GetSmartAccountStatusOk
+
+`func (o *InlineResponse2003) GetSmartAccountStatusOk() (*string, bool)`
+
+GetSmartAccountStatusOk returns a tuple with the SmartAccountStatus field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSmartAccountStatus
+
+`func (o *InlineResponse2003) SetSmartAccountStatus(v string)`
+
+SetSmartAccountStatus sets SmartAccountStatus field to given value.
+
+### HasSmartAccountStatus
+
+`func (o *InlineResponse2003) HasSmartAccountStatus() bool`
+
+HasSmartAccountStatus returns a boolean if a field has been set.
+
+### GetSmartAccount
+
+`func (o *InlineResponse2003) GetSmartAccount() AdministeredLicensingSubscriptionSubscriptionsSmartAccount`
+
+GetSmartAccount returns the SmartAccount field if non-nil, zero value otherwise.
+
+### GetSmartAccountOk
+
+`func (o *InlineResponse2003) GetSmartAccountOk() (*AdministeredLicensingSubscriptionSubscriptionsSmartAccount, bool)`
+
+GetSmartAccountOk returns a tuple with the SmartAccount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSmartAccount
+
+`func (o *InlineResponse2003) SetSmartAccount(v AdministeredLicensingSubscriptionSubscriptionsSmartAccount)`
+
+SetSmartAccount sets SmartAccount field to given value.
+
+### HasSmartAccount
+
+`func (o *InlineResponse2003) HasSmartAccount() bool`
+
+HasSmartAccount returns a boolean if a field has been set.
 
 ### GetProductTypes
 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **AudioRecordingEnabled** | Pointer to **bool** | Whether or not to record audio. Can be either true or false. Defaults to false. | [optional] 
 **CloudArchiveEnabled** | Pointer to **bool** | Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false. | [optional] 
 **MotionDetectorVersion** | Pointer to **int32** | The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2. | [optional] 
+**SmartRetention** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention**](NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention.md) |  | [optional] 
 **ScheduleId** | Pointer to **string** | Schedule for which this camera will record video, or &#39;null&#39; to always record. | [optional] 
 **MaxRetentionDays** | Pointer to **int32** | The maximum number of days for which the data will be stored, or &#39;null&#39; to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days. | [optional] 
 **VideoSettings** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings.md) |  | [optional] 
@@ -182,6 +183,31 @@ SetMotionDetectorVersion sets MotionDetectorVersion field to given value.
 `func (o *InlineObject79) HasMotionDetectorVersion() bool`
 
 HasMotionDetectorVersion returns a boolean if a field has been set.
+
+### GetSmartRetention
+
+`func (o *InlineObject79) GetSmartRetention() NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention`
+
+GetSmartRetention returns the SmartRetention field if non-nil, zero value otherwise.
+
+### GetSmartRetentionOk
+
+`func (o *InlineObject79) GetSmartRetentionOk() (*NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention, bool)`
+
+GetSmartRetentionOk returns a tuple with the SmartRetention field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSmartRetention
+
+`func (o *InlineObject79) SetSmartRetention(v NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention)`
+
+SetSmartRetention sets SmartRetention field to given value.
+
+### HasSmartRetention
+
+`func (o *InlineObject79) HasSmartRetention() bool`
+
+HasSmartRetention returns a boolean if a field has been set.
 
 ### GetScheduleId
 

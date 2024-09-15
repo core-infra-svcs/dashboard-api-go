@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**InlineResponse200294Example**](InlineResponse200294Example.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the SSID | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
+**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200294WithDefaults instantiates a new InlineResponse200294 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetName
 
-`func (o *InlineResponse200294) GetAlertTypeId() string`
+`func (o *InlineResponse200294) GetName() string`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetNameOk
 
-`func (o *InlineResponse200294) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200294) GetNameOk() (*string, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetName
 
-`func (o *InlineResponse200294) SetAlertTypeId(v string)`
+`func (o *InlineResponse200294) SetName(v string)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetName sets Name field to given value.
 
-### HasAlertTypeId
+### HasName
 
-`func (o *InlineResponse200294) HasAlertTypeId() bool`
+`func (o *InlineResponse200294) HasName() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetAlertType
+### GetUsage
 
-`func (o *InlineResponse200294) GetAlertType() string`
+`func (o *InlineResponse200294) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetUsageOk
 
-`func (o *InlineResponse200294) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200294) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetUsage
 
-`func (o *InlineResponse200294) SetAlertType(v string)`
+`func (o *InlineResponse200294) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
 
-SetAlertType sets AlertType field to given value.
+SetUsage sets Usage field to given value.
 
-### HasAlertType
+### HasUsage
 
-`func (o *InlineResponse200294) HasAlertType() bool`
+`func (o *InlineResponse200294) HasUsage() bool`
 
-HasAlertType returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
-### GetExample
+### GetClients
 
-`func (o *InlineResponse200294) GetExample() InlineResponse200294Example`
+`func (o *InlineResponse200294) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
 
-GetExample returns the Example field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetExampleOk
+### GetClientsOk
 
-`func (o *InlineResponse200294) GetExampleOk() (*InlineResponse200294Example, bool)`
+`func (o *InlineResponse200294) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
 
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExample
+### SetClients
 
-`func (o *InlineResponse200294) SetExample(v InlineResponse200294Example)`
+`func (o *InlineResponse200294) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
 
-SetExample sets Example field to given value.
+SetClients sets Clients field to given value.
 
-### HasExample
+### HasClients
 
-`func (o *InlineResponse200294) HasExample() bool`
+`func (o *InlineResponse200294) HasClients() bool`
 
-HasExample returns a boolean if a field has been set.
+HasClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

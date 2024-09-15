@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **Url** | Pointer to **string** | URL to the network Dashboard UI | [optional] 
 **Notes** | Pointer to **string** | Notes for the network | [optional] 
 **IsBoundToConfigTemplate** | Pointer to **bool** | If the network is bound to a config template | [optional] 
+**IsVirtual** | Pointer to **bool** | If the network is virtual | [optional] 
 
 ## Methods
 
@@ -283,6 +284,31 @@ SetIsBoundToConfigTemplate sets IsBoundToConfigTemplate field to given value.
 `func (o *InlineResponse20044) HasIsBoundToConfigTemplate() bool`
 
 HasIsBoundToConfigTemplate returns a boolean if a field has been set.
+
+### GetIsVirtual
+
+`func (o *InlineResponse20044) GetIsVirtual() bool`
+
+GetIsVirtual returns the IsVirtual field if non-nil, zero value otherwise.
+
+### GetIsVirtualOk
+
+`func (o *InlineResponse20044) GetIsVirtualOk() (*bool, bool)`
+
+GetIsVirtualOk returns a tuple with the IsVirtual field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsVirtual
+
+`func (o *InlineResponse20044) SetIsVirtual(v bool)`
+
+SetIsVirtual sets IsVirtual field to given value.
+
+### HasIsVirtual
+
+`func (o *InlineResponse20044) HasIsVirtual() bool`
+
+HasIsVirtual returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

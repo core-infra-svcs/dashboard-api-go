@@ -5,8 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DeviceId** | Pointer to **string** | ID for the device | [optional] 
+**Name** | Pointer to **string** | Name for the device | [optional] 
+**Model** | Pointer to **string** | Model for the device | [optional] 
+**Version** | Pointer to **string** | Version for the device | [optional] 
 **PortId** | Pointer to **string** | ID for the port | [optional] 
-**Address** | Pointer to **string** | MAC address | [optional] 
+**Address** | Pointer to **string** | Management IP address | [optional] 
 **SourcePort** | Pointer to **string** | Source port | [optional] 
 
 ## Methods
@@ -52,6 +55,81 @@ SetDeviceId sets DeviceId field to given value.
 `func (o *InlineResponse20026Cdp) HasDeviceId() bool`
 
 HasDeviceId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse20026Cdp) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse20026Cdp) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse20026Cdp) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse20026Cdp) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse20026Cdp) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse20026Cdp) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse20026Cdp) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse20026Cdp) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetVersion
+
+`func (o *InlineResponse20026Cdp) GetVersion() string`
+
+GetVersion returns the Version field if non-nil, zero value otherwise.
+
+### GetVersionOk
+
+`func (o *InlineResponse20026Cdp) GetVersionOk() (*string, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVersion
+
+`func (o *InlineResponse20026Cdp) SetVersion(v string)`
+
+SetVersion sets Version field to given value.
+
+### HasVersion
+
+`func (o *InlineResponse20026Cdp) HasVersion() bool`
+
+HasVersion returns a boolean if a field has been set.
 
 ### GetPortId
 

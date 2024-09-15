@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CallbackId** | Pointer to **string** | The ID of the callback | [optional] 
-**Status** | Pointer to **string** | The status of the callback | [optional] 
-**Errors** | Pointer to **[]string** | The errors returned by the callback | [optional] 
-**CreatedBy** | Pointer to [**InlineResponse200295CreatedBy**](InlineResponse200295CreatedBy.md) |  | [optional] 
-**Webhook** | Pointer to [**InlineResponse200295Webhook**](InlineResponse200295Webhook.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the switch | [optional] 
+**Mac** | Pointer to **string** | Mac address of the switch | [optional] 
+**Model** | Pointer to **string** | Model of the switch | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage**](OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200295WithDefaults instantiates a new InlineResponse200295 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCallbackId
+### GetNetwork
 
-`func (o *InlineResponse200295) GetCallbackId() string`
+`func (o *InlineResponse200295) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
 
-GetCallbackId returns the CallbackId field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetCallbackIdOk
+### GetNetworkOk
 
-`func (o *InlineResponse200295) GetCallbackIdOk() (*string, bool)`
+`func (o *InlineResponse200295) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
 
-GetCallbackIdOk returns a tuple with the CallbackId field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallbackId
+### SetNetwork
 
-`func (o *InlineResponse200295) SetCallbackId(v string)`
+`func (o *InlineResponse200295) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
 
-SetCallbackId sets CallbackId field to given value.
+SetNetwork sets Network field to given value.
 
-### HasCallbackId
+### HasNetwork
 
-`func (o *InlineResponse200295) HasCallbackId() bool`
+`func (o *InlineResponse200295) HasNetwork() bool`
 
-HasCallbackId returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetStatus
+### GetName
 
-`func (o *InlineResponse200295) GetStatus() string`
+`func (o *InlineResponse200295) GetName() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetNameOk
 
-`func (o *InlineResponse200295) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200295) GetNameOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetName
 
-`func (o *InlineResponse200295) SetStatus(v string)`
+`func (o *InlineResponse200295) SetName(v string)`
 
-SetStatus sets Status field to given value.
+SetName sets Name field to given value.
 
-### HasStatus
+### HasName
 
-`func (o *InlineResponse200295) HasStatus() bool`
+`func (o *InlineResponse200295) HasName() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetErrors
+### GetMac
 
-`func (o *InlineResponse200295) GetErrors() []string`
+`func (o *InlineResponse200295) GetMac() string`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetMacOk
 
-`func (o *InlineResponse200295) GetErrorsOk() (*[]string, bool)`
+`func (o *InlineResponse200295) GetMacOk() (*string, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetMac
 
-`func (o *InlineResponse200295) SetErrors(v []string)`
+`func (o *InlineResponse200295) SetMac(v string)`
 
-SetErrors sets Errors field to given value.
+SetMac sets Mac field to given value.
 
-### HasErrors
+### HasMac
 
-`func (o *InlineResponse200295) HasErrors() bool`
+`func (o *InlineResponse200295) HasMac() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetCreatedBy
+### GetModel
 
-`func (o *InlineResponse200295) GetCreatedBy() InlineResponse200295CreatedBy`
+`func (o *InlineResponse200295) GetModel() string`
 
-GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetCreatedByOk
+### GetModelOk
 
-`func (o *InlineResponse200295) GetCreatedByOk() (*InlineResponse200295CreatedBy, bool)`
+`func (o *InlineResponse200295) GetModelOk() (*string, bool)`
 
-GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedBy
+### SetModel
 
-`func (o *InlineResponse200295) SetCreatedBy(v InlineResponse200295CreatedBy)`
+`func (o *InlineResponse200295) SetModel(v string)`
 
-SetCreatedBy sets CreatedBy field to given value.
+SetModel sets Model field to given value.
 
-### HasCreatedBy
+### HasModel
 
-`func (o *InlineResponse200295) HasCreatedBy() bool`
+`func (o *InlineResponse200295) HasModel() bool`
 
-HasCreatedBy returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetWebhook
+### GetUsage
 
-`func (o *InlineResponse200295) GetWebhook() InlineResponse200295Webhook`
+`func (o *InlineResponse200295) GetUsage() OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage`
 
-GetWebhook returns the Webhook field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetWebhookOk
+### GetUsageOk
 
-`func (o *InlineResponse200295) GetWebhookOk() (*InlineResponse200295Webhook, bool)`
+`func (o *InlineResponse200295) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage, bool)`
 
-GetWebhookOk returns a tuple with the Webhook field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWebhook
+### SetUsage
 
-`func (o *InlineResponse200295) SetWebhook(v InlineResponse200295Webhook)`
+`func (o *InlineResponse200295) SetUsage(v OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage)`
 
-SetWebhook sets Webhook field to given value.
+SetUsage sets Usage field to given value.
 
-### HasWebhook
+### HasUsage
 
-`func (o *InlineResponse200295) HasWebhook() bool`
+`func (o *InlineResponse200295) HasUsage() bool`
 
-HasWebhook returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

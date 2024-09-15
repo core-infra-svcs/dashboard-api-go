@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceSerial** | Pointer to **string** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
+**LicenseId** | **string** | The ID of the SM license to assign seats from | 
+**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
+**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
 
 ## Methods
 
 ### NewInlineObject244
 
-`func NewInlineObject244() *InlineObject244`
+`func NewInlineObject244(licenseId string, networkId string, seatCount int32, ) *InlineObject244`
 
 NewInlineObject244 instantiates a new InlineObject244 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +27,65 @@ NewInlineObject244WithDefaults instantiates a new InlineObject244 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeviceSerial
+### GetLicenseId
 
-`func (o *InlineObject244) GetDeviceSerial() string`
+`func (o *InlineObject244) GetLicenseId() string`
 
-GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-### GetDeviceSerialOk
+### GetLicenseIdOk
 
-`func (o *InlineObject244) GetDeviceSerialOk() (*string, bool)`
+`func (o *InlineObject244) GetLicenseIdOk() (*string, bool)`
 
-GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceSerial
+### SetLicenseId
 
-`func (o *InlineObject244) SetDeviceSerial(v string)`
+`func (o *InlineObject244) SetLicenseId(v string)`
 
-SetDeviceSerial sets DeviceSerial field to given value.
+SetLicenseId sets LicenseId field to given value.
 
-### HasDeviceSerial
 
-`func (o *InlineObject244) HasDeviceSerial() bool`
+### GetNetworkId
 
-HasDeviceSerial returns a boolean if a field has been set.
+`func (o *InlineObject244) GetNetworkId() string`
+
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+
+### GetNetworkIdOk
+
+`func (o *InlineObject244) GetNetworkIdOk() (*string, bool)`
+
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkId
+
+`func (o *InlineObject244) SetNetworkId(v string)`
+
+SetNetworkId sets NetworkId field to given value.
+
+
+### GetSeatCount
+
+`func (o *InlineObject244) GetSeatCount() int32`
+
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+
+### GetSeatCountOk
+
+`func (o *InlineObject244) GetSeatCountOk() (*int32, bool)`
+
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeatCount
+
+`func (o *InlineObject244) SetSeatCount(v int32)`
+
+SetSeatCount sets SeatCount field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

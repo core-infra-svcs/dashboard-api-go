@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, at which the event happened | [optional] 
-**Device** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice.md) |  | [optional] 
-**Details** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails.md) |  | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork.md) |  | [optional] 
+**ClientId** | Pointer to **string** | The ID of the client | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**Manufacturer** | Pointer to **string** | Manufacturer of the client | [optional] 
+**Records** | Pointer to [**[]InlineResponse200237Records**](InlineResponse200237Records.md) | The clients that appear on any networks within an organization | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200237WithDefaults instantiates a new InlineResponse200237 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetClientId
 
-`func (o *InlineResponse200237) GetTs() time.Time`
+`func (o *InlineResponse200237) GetClientId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetClientIdOk
 
-`func (o *InlineResponse200237) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200237) GetClientIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetClientId
 
-`func (o *InlineResponse200237) SetTs(v time.Time)`
+`func (o *InlineResponse200237) SetClientId(v string)`
 
-SetTs sets Ts field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasTs
+### HasClientId
 
-`func (o *InlineResponse200237) HasTs() bool`
+`func (o *InlineResponse200237) HasClientId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
 
-### GetDevice
+### GetMac
 
-`func (o *InlineResponse200237) GetDevice() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice`
+`func (o *InlineResponse200237) GetMac() string`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetMacOk
 
-`func (o *InlineResponse200237) GetDeviceOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice, bool)`
+`func (o *InlineResponse200237) GetMacOk() (*string, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetMac
 
-`func (o *InlineResponse200237) SetDevice(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice)`
+`func (o *InlineResponse200237) SetMac(v string)`
 
-SetDevice sets Device field to given value.
+SetMac sets Mac field to given value.
 
-### HasDevice
+### HasMac
 
-`func (o *InlineResponse200237) HasDevice() bool`
+`func (o *InlineResponse200237) HasMac() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetDetails
+### GetManufacturer
 
-`func (o *InlineResponse200237) GetDetails() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails`
+`func (o *InlineResponse200237) GetManufacturer() string`
 
-GetDetails returns the Details field if non-nil, zero value otherwise.
+GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
 
-### GetDetailsOk
+### GetManufacturerOk
 
-`func (o *InlineResponse200237) GetDetailsOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails, bool)`
+`func (o *InlineResponse200237) GetManufacturerOk() (*string, bool)`
 
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetails
+### SetManufacturer
 
-`func (o *InlineResponse200237) SetDetails(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails)`
+`func (o *InlineResponse200237) SetManufacturer(v string)`
 
-SetDetails sets Details field to given value.
+SetManufacturer sets Manufacturer field to given value.
 
-### HasDetails
+### HasManufacturer
 
-`func (o *InlineResponse200237) HasDetails() bool`
+`func (o *InlineResponse200237) HasManufacturer() bool`
 
-HasDetails returns a boolean if a field has been set.
+HasManufacturer returns a boolean if a field has been set.
 
-### GetNetwork
+### GetRecords
 
-`func (o *InlineResponse200237) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork`
+`func (o *InlineResponse200237) GetRecords() []InlineResponse200237Records`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetRecords returns the Records field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetRecordsOk
 
-`func (o *InlineResponse200237) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork, bool)`
+`func (o *InlineResponse200237) GetRecordsOk() (*[]InlineResponse200237Records, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetRecordsOk returns a tuple with the Records field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetRecords
 
-`func (o *InlineResponse200237) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork)`
+`func (o *InlineResponse200237) SetRecords(v []InlineResponse200237Records)`
 
-SetNetwork sets Network field to given value.
+SetRecords sets Records field to given value.
 
-### HasNetwork
+### HasRecords
 
-`func (o *InlineResponse200237) HasNetwork() bool`
+`func (o *InlineResponse200237) HasRecords() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasRecords returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

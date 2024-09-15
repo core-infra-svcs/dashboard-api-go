@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the configuration template | 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
-**CopyFromNetworkId** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
+**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
+**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
 
 ## Methods
 
 ### NewInlineObject226
 
-`func NewInlineObject226(name string, ) *InlineObject226`
+`func NewInlineObject226() *InlineObject226`
 
 NewInlineObject226 instantiates a new InlineObject226 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +26,55 @@ NewInlineObject226WithDefaults instantiates a new InlineObject226 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetTitle
 
-`func (o *InlineObject226) GetName() string`
+`func (o *InlineObject226) GetTitle() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTitle returns the Title field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTitleOk
 
-`func (o *InlineObject226) GetNameOk() (*string, bool)`
+`func (o *InlineObject226) GetTitleOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTitle
 
-`func (o *InlineObject226) SetName(v string)`
+`func (o *InlineObject226) SetTitle(v string)`
 
-SetName sets Name field to given value.
+SetTitle sets Title field to given value.
 
+### HasTitle
 
-### GetTimeZone
+`func (o *InlineObject226) HasTitle() bool`
 
-`func (o *InlineObject226) GetTimeZone() string`
+HasTitle returns a boolean if a field has been set.
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+### GetApiKey
 
-### GetTimeZoneOk
+`func (o *InlineObject226) GetApiKey() string`
 
-`func (o *InlineObject226) GetTimeZoneOk() (*string, bool)`
+GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+### GetApiKeyOk
+
+`func (o *InlineObject226) GetApiKeyOk() (*string, bool)`
+
+GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetApiKey
 
-`func (o *InlineObject226) SetTimeZone(v string)`
+`func (o *InlineObject226) SetApiKey(v string)`
 
-SetTimeZone sets TimeZone field to given value.
+SetApiKey sets ApiKey field to given value.
 
-### HasTimeZone
+### HasApiKey
 
-`func (o *InlineObject226) HasTimeZone() bool`
+`func (o *InlineObject226) HasApiKey() bool`
 
-HasTimeZone returns a boolean if a field has been set.
-
-### GetCopyFromNetworkId
-
-`func (o *InlineObject226) GetCopyFromNetworkId() string`
-
-GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
-
-### GetCopyFromNetworkIdOk
-
-`func (o *InlineObject226) GetCopyFromNetworkIdOk() (*string, bool)`
-
-GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCopyFromNetworkId
-
-`func (o *InlineObject226) SetCopyFromNetworkId(v string)`
-
-SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
-
-### HasCopyFromNetworkId
-
-`func (o *InlineObject226) HasCopyFromNetworkId() bool`
-
-HasCopyFromNetworkId returns a boolean if a field has been set.
+HasApiKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | The timestamp of when the client was connected to an application | [optional] 
+**Ts** | Pointer to **time.Time** | The start time from which daily traffic data was collected | [optional] 
 **Application** | Pointer to **string** | The name of the application the client is connected to | [optional] 
 **Destination** | Pointer to **string** | The IP or web address the client is connected to | [optional] 
 **Protocol** | Pointer to **string** | The client protocol | [optional] 

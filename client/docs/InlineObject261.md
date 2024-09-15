@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**V2cEnabled** | Pointer to **bool** | Boolean indicating whether SNMP version 2c is enabled for the organization. | [optional] 
-**V3Enabled** | Pointer to **bool** | Boolean indicating whether SNMP version 3 is enabled for the organization. | [optional] 
-**V3AuthMode** | Pointer to **string** | The SNMP version 3 authentication mode. Can be either &#39;MD5&#39; or &#39;SHA&#39;. | [optional] 
-**V3AuthPass** | Pointer to **string** | The SNMP version 3 authentication password. Must be at least 8 characters if specified. | [optional] 
-**V3PrivMode** | Pointer to **string** | The SNMP version 3 privacy mode. Can be either &#39;DES&#39; or &#39;AES128&#39;. | [optional] 
-**V3PrivPass** | Pointer to **string** | The SNMP version 3 privacy password. Must be at least 8 characters if specified. | [optional] 
-**PeerIps** | Pointer to **[]string** | The list of IPv4 addresses that are allowed to access the SNMP server. | [optional] 
+**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
 
 ## Methods
 
@@ -31,180 +28,105 @@ NewInlineObject261WithDefaults instantiates a new InlineObject261 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetV2cEnabled
+### GetRole
 
-`func (o *InlineObject261) GetV2cEnabled() bool`
+`func (o *InlineObject261) GetRole() string`
 
-GetV2cEnabled returns the V2cEnabled field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetV2cEnabledOk
+### GetRoleOk
 
-`func (o *InlineObject261) GetV2cEnabledOk() (*bool, bool)`
+`func (o *InlineObject261) GetRoleOk() (*string, bool)`
 
-GetV2cEnabledOk returns a tuple with the V2cEnabled field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV2cEnabled
+### SetRole
 
-`func (o *InlineObject261) SetV2cEnabled(v bool)`
+`func (o *InlineObject261) SetRole(v string)`
 
-SetV2cEnabled sets V2cEnabled field to given value.
+SetRole sets Role field to given value.
 
-### HasV2cEnabled
+### HasRole
 
-`func (o *InlineObject261) HasV2cEnabled() bool`
+`func (o *InlineObject261) HasRole() bool`
 
-HasV2cEnabled returns a boolean if a field has been set.
+HasRole returns a boolean if a field has been set.
 
-### GetV3Enabled
+### GetOrgAccess
 
-`func (o *InlineObject261) GetV3Enabled() bool`
+`func (o *InlineObject261) GetOrgAccess() string`
 
-GetV3Enabled returns the V3Enabled field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetV3EnabledOk
+### GetOrgAccessOk
 
-`func (o *InlineObject261) GetV3EnabledOk() (*bool, bool)`
+`func (o *InlineObject261) GetOrgAccessOk() (*string, bool)`
 
-GetV3EnabledOk returns a tuple with the V3Enabled field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3Enabled
+### SetOrgAccess
 
-`func (o *InlineObject261) SetV3Enabled(v bool)`
+`func (o *InlineObject261) SetOrgAccess(v string)`
 
-SetV3Enabled sets V3Enabled field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasV3Enabled
+### HasOrgAccess
 
-`func (o *InlineObject261) HasV3Enabled() bool`
+`func (o *InlineObject261) HasOrgAccess() bool`
 
-HasV3Enabled returns a boolean if a field has been set.
+HasOrgAccess returns a boolean if a field has been set.
 
-### GetV3AuthMode
+### GetTags
 
-`func (o *InlineObject261) GetV3AuthMode() string`
+`func (o *InlineObject261) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
 
-GetV3AuthMode returns the V3AuthMode field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetV3AuthModeOk
+### GetTagsOk
 
-`func (o *InlineObject261) GetV3AuthModeOk() (*string, bool)`
+`func (o *InlineObject261) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
 
-GetV3AuthModeOk returns a tuple with the V3AuthMode field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3AuthMode
+### SetTags
 
-`func (o *InlineObject261) SetV3AuthMode(v string)`
+`func (o *InlineObject261) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
 
-SetV3AuthMode sets V3AuthMode field to given value.
+SetTags sets Tags field to given value.
 
-### HasV3AuthMode
+### HasTags
 
-`func (o *InlineObject261) HasV3AuthMode() bool`
+`func (o *InlineObject261) HasTags() bool`
 
-HasV3AuthMode returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetV3AuthPass
+### GetNetworks
 
-`func (o *InlineObject261) GetV3AuthPass() string`
+`func (o *InlineObject261) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
 
-GetV3AuthPass returns the V3AuthPass field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetV3AuthPassOk
+### GetNetworksOk
 
-`func (o *InlineObject261) GetV3AuthPassOk() (*string, bool)`
+`func (o *InlineObject261) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
 
-GetV3AuthPassOk returns a tuple with the V3AuthPass field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3AuthPass
+### SetNetworks
 
-`func (o *InlineObject261) SetV3AuthPass(v string)`
+`func (o *InlineObject261) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
 
-SetV3AuthPass sets V3AuthPass field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasV3AuthPass
+### HasNetworks
 
-`func (o *InlineObject261) HasV3AuthPass() bool`
+`func (o *InlineObject261) HasNetworks() bool`
 
-HasV3AuthPass returns a boolean if a field has been set.
-
-### GetV3PrivMode
-
-`func (o *InlineObject261) GetV3PrivMode() string`
-
-GetV3PrivMode returns the V3PrivMode field if non-nil, zero value otherwise.
-
-### GetV3PrivModeOk
-
-`func (o *InlineObject261) GetV3PrivModeOk() (*string, bool)`
-
-GetV3PrivModeOk returns a tuple with the V3PrivMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3PrivMode
-
-`func (o *InlineObject261) SetV3PrivMode(v string)`
-
-SetV3PrivMode sets V3PrivMode field to given value.
-
-### HasV3PrivMode
-
-`func (o *InlineObject261) HasV3PrivMode() bool`
-
-HasV3PrivMode returns a boolean if a field has been set.
-
-### GetV3PrivPass
-
-`func (o *InlineObject261) GetV3PrivPass() string`
-
-GetV3PrivPass returns the V3PrivPass field if non-nil, zero value otherwise.
-
-### GetV3PrivPassOk
-
-`func (o *InlineObject261) GetV3PrivPassOk() (*string, bool)`
-
-GetV3PrivPassOk returns a tuple with the V3PrivPass field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetV3PrivPass
-
-`func (o *InlineObject261) SetV3PrivPass(v string)`
-
-SetV3PrivPass sets V3PrivPass field to given value.
-
-### HasV3PrivPass
-
-`func (o *InlineObject261) HasV3PrivPass() bool`
-
-HasV3PrivPass returns a boolean if a field has been set.
-
-### GetPeerIps
-
-`func (o *InlineObject261) GetPeerIps() []string`
-
-GetPeerIps returns the PeerIps field if non-nil, zero value otherwise.
-
-### GetPeerIpsOk
-
-`func (o *InlineObject261) GetPeerIpsOk() (*[]string, bool)`
-
-GetPeerIpsOk returns a tuple with the PeerIps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPeerIps
-
-`func (o *InlineObject261) SetPeerIps(v []string)`
-
-SetPeerIps sets PeerIps field to given value.
-
-### HasPeerIps
-
-`func (o *InlineObject261) HasPeerIps() bool`
-
-HasPeerIps returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

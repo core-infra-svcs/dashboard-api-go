@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | Pointer to **string** | Serial number of the source switch (must be on a network not bound to a template) | [optional] 
-**TargetSerials** | Pointer to **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | [optional] 
+**Name** | Pointer to **string** | Name of the manufacturer | [optional] 
+**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients.md) |  | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200290WithDefaults instantiates a new InlineResponse200290 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetName
 
-`func (o *InlineResponse200290) GetSourceSerial() string`
+`func (o *InlineResponse200290) GetName() string`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetNameOk
 
-`func (o *InlineResponse200290) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineResponse200290) GetNameOk() (*string, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetName
 
-`func (o *InlineResponse200290) SetSourceSerial(v string)`
+`func (o *InlineResponse200290) SetName(v string)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetName sets Name field to given value.
 
-### HasSourceSerial
+### HasName
 
-`func (o *InlineResponse200290) HasSourceSerial() bool`
+`func (o *InlineResponse200290) HasName() bool`
 
-HasSourceSerial returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetTargetSerials
+### GetClients
 
-`func (o *InlineResponse200290) GetTargetSerials() []string`
+`func (o *InlineResponse200290) GetClients() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients`
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetTargetSerialsOk
+### GetClientsOk
 
-`func (o *InlineResponse200290) GetTargetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200290) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients, bool)`
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetClients
 
-`func (o *InlineResponse200290) SetTargetSerials(v []string)`
+`func (o *InlineResponse200290) SetClients(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetClients sets Clients field to given value.
 
-### HasTargetSerials
+### HasClients
 
-`func (o *InlineResponse200290) HasTargetSerials() bool`
+`func (o *InlineResponse200290) HasClients() bool`
 
-HasTargetSerials returns a boolean if a field has been set.
+HasClients returns a boolean if a field has been set.
+
+### GetUsage
+
+`func (o *InlineResponse200290) GetUsage() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse200290) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse200290) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse200290) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

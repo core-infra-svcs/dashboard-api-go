@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of the device | [optional] 
-**Name** | Pointer to **string** | Name assigned to the device | [optional] 
-**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
-**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200249Counts**](InlineResponse200249Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineResponse200249WithDefaults instantiates a new InlineResponse200249 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetCounts
 
-`func (o *InlineResponse200249) GetSerial() string`
+`func (o *InlineResponse200249) GetCounts() InlineResponse200249Counts`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetCountsOk
 
-`func (o *InlineResponse200249) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200249) GetCountsOk() (*InlineResponse200249Counts, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetCounts
 
-`func (o *InlineResponse200249) SetSerial(v string)`
+`func (o *InlineResponse200249) SetCounts(v InlineResponse200249Counts)`
 
-SetSerial sets Serial field to given value.
+SetCounts sets Counts field to given value.
 
-### HasSerial
+### HasCounts
 
-`func (o *InlineResponse200249) HasSerial() bool`
+`func (o *InlineResponse200249) HasCounts() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200249) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200249) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200249) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200249) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetDeviceStatus
-
-`func (o *InlineResponse200249) GetDeviceStatus() string`
-
-GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
-
-### GetDeviceStatusOk
-
-`func (o *InlineResponse200249) GetDeviceStatusOk() (*string, bool)`
-
-GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceStatus
-
-`func (o *InlineResponse200249) SetDeviceStatus(v string)`
-
-SetDeviceStatus sets DeviceStatus field to given value.
-
-### HasDeviceStatus
-
-`func (o *InlineResponse200249) HasDeviceStatus() bool`
-
-HasDeviceStatus returns a boolean if a field has been set.
-
-### GetUpgrade
-
-`func (o *InlineResponse200249) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
-
-GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
-
-### GetUpgradeOk
-
-`func (o *InlineResponse200249) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
-
-GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpgrade
-
-`func (o *InlineResponse200249) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
-
-SetUpgrade sets Upgrade field to given value.
-
-### HasUpgrade
-
-`func (o *InlineResponse200249) HasUpgrade() bool`
-
-HasUpgrade returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

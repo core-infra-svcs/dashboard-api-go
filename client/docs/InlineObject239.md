@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
+**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
 
 ## Methods
 
 ### NewInlineObject239
 
-`func NewInlineObject239() *InlineObject239`
+`func NewInlineObject239(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject239`
 
 NewInlineObject239 instantiates a new InlineObject239 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject239WithDefaults instantiates a new InlineObject239 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetSwaps
 
-`func (o *InlineObject239) GetSerials() []string`
+`func (o *InlineObject239) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetSwapsOk
 
-`func (o *InlineObject239) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject239) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetSwaps
 
-`func (o *InlineObject239) SetSerials(v []string)`
+`func (o *InlineObject239) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
 
-SetSerials sets Serials field to given value.
+SetSwaps sets Swaps field to given value.
 
-### HasSerials
-
-`func (o *InlineObject239) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

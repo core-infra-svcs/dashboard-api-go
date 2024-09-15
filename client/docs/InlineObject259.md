@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Limited Access Role | [optional] 
-**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
-**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject259WithDefaults instantiates a new InlineObject259 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetX509certSha1Fingerprint
 
-`func (o *InlineObject259) GetName() string`
+`func (o *InlineObject259) GetX509certSha1Fingerprint() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineObject259) GetNameOk() (*string, bool)`
+`func (o *InlineObject259) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetX509certSha1Fingerprint
 
-`func (o *InlineObject259) SetName(v string)`
+`func (o *InlineObject259) SetX509certSha1Fingerprint(v string)`
 
-SetName sets Name field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
-### HasName
+### HasX509certSha1Fingerprint
 
-`func (o *InlineObject259) HasName() bool`
+`func (o *InlineObject259) HasX509certSha1Fingerprint() bool`
 
-HasName returns a boolean if a field has been set.
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
 
-### GetScope
+### GetSloLogoutUrl
 
-`func (o *InlineObject259) GetScope() string`
+`func (o *InlineObject259) GetSloLogoutUrl() string`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetSloLogoutUrlOk
 
-`func (o *InlineObject259) GetScopeOk() (*string, bool)`
+`func (o *InlineObject259) GetSloLogoutUrlOk() (*string, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetSloLogoutUrl
 
-`func (o *InlineObject259) SetScope(v string)`
+`func (o *InlineObject259) SetSloLogoutUrl(v string)`
 
-SetScope sets Scope field to given value.
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
 
-### HasScope
+### HasSloLogoutUrl
 
-`func (o *InlineObject259) HasScope() bool`
+`func (o *InlineObject259) HasSloLogoutUrl() bool`
 
-HasScope returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineObject259) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject259) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject259) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject259) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

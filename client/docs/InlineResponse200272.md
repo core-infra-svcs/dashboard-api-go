@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
+**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200272WithDefaults instantiates a new InlineResponse200272 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCertificate
+### GetEnabled
 
-`func (o *InlineResponse200272) GetCertificate() string`
+`func (o *InlineResponse200272) GetEnabled() bool`
 
-GetCertificate returns the Certificate field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetCertificateOk
+### GetEnabledOk
 
-`func (o *InlineResponse200272) GetCertificateOk() (*string, bool)`
+`func (o *InlineResponse200272) GetEnabledOk() (*bool, bool)`
 
-GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificate
+### SetEnabled
 
-`func (o *InlineResponse200272) SetCertificate(v string)`
+`func (o *InlineResponse200272) SetEnabled(v bool)`
 
-SetCertificate sets Certificate field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasCertificate
+### HasEnabled
 
-`func (o *InlineResponse200272) HasCertificate() bool`
+`func (o *InlineResponse200272) HasEnabled() bool`
 
-HasCertificate returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
