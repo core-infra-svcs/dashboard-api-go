@@ -4,20 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | A friendly name or description for the interface or VLAN. | 
-**Subnet** | Pointer to **string** | The network that this routed interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
-**InterfaceIp** | Pointer to **string** | The IP address this switch stack will use for layer 3 routing on this VLAN or subnet. This cannot be the same as the switch&#39;s management IP. | [optional] 
-**MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are, &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
-**VlanId** | **int32** | The VLAN this routed interface is on. VLAN must be between 1 and 4094. | 
-**DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route. This IP address must exist in a subnet with a routed interface. | [optional] 
-**OspfSettings** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings.md) |  | [optional] 
-**Ipv6** | Pointer to [**NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6**](NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6.md) |  | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]NetworksNetworkIdSwitchSettingsPowerExceptions**](NetworksNetworkIdSwitchSettingsPowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
+**UplinkClientSampling** | Pointer to [**NetworksNetworkIdSwitchSettingsUplinkClientSampling**](NetworksNetworkIdSwitchSettingsUplinkClientSampling.md) |  | [optional] 
+**MacBlocklist** | Pointer to [**NetworksNetworkIdSwitchSettingsMacBlocklist**](NetworksNetworkIdSwitchSettingsMacBlocklist.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject152
 
-`func NewInlineObject152(name string, vlanId int32, ) *InlineObject152`
+`func NewInlineObject152() *InlineObject152`
 
 NewInlineObject152 instantiates a new InlineObject152 object
 This constructor will assign default values to properties that have it defined,
@@ -32,195 +29,130 @@ NewInlineObject152WithDefaults instantiates a new InlineObject152 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetVlan
 
-`func (o *InlineObject152) GetName() string`
+`func (o *InlineObject152) GetVlan() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetVlanOk
 
-`func (o *InlineObject152) GetNameOk() (*string, bool)`
+`func (o *InlineObject152) GetVlanOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetVlan
 
-`func (o *InlineObject152) SetName(v string)`
+`func (o *InlineObject152) SetVlan(v int32)`
 
-SetName sets Name field to given value.
+SetVlan sets Vlan field to given value.
 
+### HasVlan
 
-### GetSubnet
+`func (o *InlineObject152) HasVlan() bool`
 
-`func (o *InlineObject152) GetSubnet() string`
+HasVlan returns a boolean if a field has been set.
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+### GetUseCombinedPower
 
-### GetSubnetOk
+`func (o *InlineObject152) GetUseCombinedPower() bool`
 
-`func (o *InlineObject152) GetSubnetOk() (*string, bool)`
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+### GetUseCombinedPowerOk
+
+`func (o *InlineObject152) GetUseCombinedPowerOk() (*bool, bool)`
+
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetUseCombinedPower
 
-`func (o *InlineObject152) SetSubnet(v string)`
+`func (o *InlineObject152) SetUseCombinedPower(v bool)`
 
-SetSubnet sets Subnet field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasSubnet
+### HasUseCombinedPower
 
-`func (o *InlineObject152) HasSubnet() bool`
+`func (o *InlineObject152) HasUseCombinedPower() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetInterfaceIp
+### GetPowerExceptions
 
-`func (o *InlineObject152) GetInterfaceIp() string`
+`func (o *InlineObject152) GetPowerExceptions() []NetworksNetworkIdSwitchSettingsPowerExceptions`
 
-GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetInterfaceIpOk
+### GetPowerExceptionsOk
 
-`func (o *InlineObject152) GetInterfaceIpOk() (*string, bool)`
+`func (o *InlineObject152) GetPowerExceptionsOk() (*[]NetworksNetworkIdSwitchSettingsPowerExceptions, bool)`
 
-GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaceIp
+### SetPowerExceptions
 
-`func (o *InlineObject152) SetInterfaceIp(v string)`
+`func (o *InlineObject152) SetPowerExceptions(v []NetworksNetworkIdSwitchSettingsPowerExceptions)`
 
-SetInterfaceIp sets InterfaceIp field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasInterfaceIp
+### HasPowerExceptions
 
-`func (o *InlineObject152) HasInterfaceIp() bool`
+`func (o *InlineObject152) HasPowerExceptions() bool`
 
-HasInterfaceIp returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
-### GetMulticastRouting
+### GetUplinkClientSampling
 
-`func (o *InlineObject152) GetMulticastRouting() string`
+`func (o *InlineObject152) GetUplinkClientSampling() NetworksNetworkIdSwitchSettingsUplinkClientSampling`
 
-GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
+GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
 
-### GetMulticastRoutingOk
+### GetUplinkClientSamplingOk
 
-`func (o *InlineObject152) GetMulticastRoutingOk() (*string, bool)`
+`func (o *InlineObject152) GetUplinkClientSamplingOk() (*NetworksNetworkIdSwitchSettingsUplinkClientSampling, bool)`
 
-GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
+GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastRouting
+### SetUplinkClientSampling
 
-`func (o *InlineObject152) SetMulticastRouting(v string)`
+`func (o *InlineObject152) SetUplinkClientSampling(v NetworksNetworkIdSwitchSettingsUplinkClientSampling)`
 
-SetMulticastRouting sets MulticastRouting field to given value.
+SetUplinkClientSampling sets UplinkClientSampling field to given value.
 
-### HasMulticastRouting
+### HasUplinkClientSampling
 
-`func (o *InlineObject152) HasMulticastRouting() bool`
+`func (o *InlineObject152) HasUplinkClientSampling() bool`
 
-HasMulticastRouting returns a boolean if a field has been set.
+HasUplinkClientSampling returns a boolean if a field has been set.
 
-### GetVlanId
+### GetMacBlocklist
 
-`func (o *InlineObject152) GetVlanId() int32`
+`func (o *InlineObject152) GetMacBlocklist() NetworksNetworkIdSwitchSettingsMacBlocklist`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetMacBlocklistOk
 
-`func (o *InlineObject152) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineObject152) GetMacBlocklistOk() (*NetworksNetworkIdSwitchSettingsMacBlocklist, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetMacBlocklist
 
-`func (o *InlineObject152) SetVlanId(v int32)`
+`func (o *InlineObject152) SetMacBlocklist(v NetworksNetworkIdSwitchSettingsMacBlocklist)`
 
-SetVlanId sets VlanId field to given value.
+SetMacBlocklist sets MacBlocklist field to given value.
 
+### HasMacBlocklist
 
-### GetDefaultGateway
+`func (o *InlineObject152) HasMacBlocklist() bool`
 
-`func (o *InlineObject152) GetDefaultGateway() string`
-
-GetDefaultGateway returns the DefaultGateway field if non-nil, zero value otherwise.
-
-### GetDefaultGatewayOk
-
-`func (o *InlineObject152) GetDefaultGatewayOk() (*string, bool)`
-
-GetDefaultGatewayOk returns a tuple with the DefaultGateway field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDefaultGateway
-
-`func (o *InlineObject152) SetDefaultGateway(v string)`
-
-SetDefaultGateway sets DefaultGateway field to given value.
-
-### HasDefaultGateway
-
-`func (o *InlineObject152) HasDefaultGateway() bool`
-
-HasDefaultGateway returns a boolean if a field has been set.
-
-### GetOspfSettings
-
-`func (o *InlineObject152) GetOspfSettings() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings`
-
-GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
-
-### GetOspfSettingsOk
-
-`func (o *InlineObject152) GetOspfSettingsOk() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings, bool)`
-
-GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOspfSettings
-
-`func (o *InlineObject152) SetOspfSettings(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesOspfSettings)`
-
-SetOspfSettings sets OspfSettings field to given value.
-
-### HasOspfSettings
-
-`func (o *InlineObject152) HasOspfSettings() bool`
-
-HasOspfSettings returns a boolean if a field has been set.
-
-### GetIpv6
-
-`func (o *InlineObject152) GetIpv6() NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6`
-
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
-
-### GetIpv6Ok
-
-`func (o *InlineObject152) GetIpv6Ok() (*NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6, bool)`
-
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpv6
-
-`func (o *InlineObject152) SetIpv6(v NetworksNetworkIdSwitchStacksSwitchStackIdRoutingInterfacesIpv6)`
-
-SetIpv6 sets Ipv6 field to given value.
-
-### HasIpv6
-
-`func (o *InlineObject152) HasIpv6() bool`
-
-HasIpv6 returns a boolean if a field has been set.
+HasMacBlocklist returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

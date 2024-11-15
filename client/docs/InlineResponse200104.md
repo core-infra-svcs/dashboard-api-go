@@ -4,15 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The network or organization identifier | [optional] 
-**OrganizationWide** | Pointer to **bool** | If the data returned is organization-wide. False indicates the data is network-wide. | [optional] 
-**NetworkId** | Pointer to **string** | The network identifier | [optional] 
-**Type** | Pointer to **string** | The type of PII request | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the PII request | [optional] 
-**Datasets** | Pointer to **string** | The stringified array of datasets related to the provided key that should be deleted. | [optional] 
-**Status** | Pointer to **string** | The status of the PII request | [optional] 
-**CreatedAt** | Pointer to **int32** | The request&#39;s creation time | [optional] 
-**CompletedAt** | Pointer to **int32** | The request&#39;s completion time | [optional] 
+**Id** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
+**Name** | Pointer to **string** | Name of the MQTT Broker. | [optional] 
+**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
+**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
+**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
+**Authentication** | Pointer to [**NetworksNetworkIdMqttBrokersAuthentication**](NetworksNetworkIdMqttBrokersAuthentication.md) |  | [optional] 
 
 ## Methods
 
@@ -58,205 +55,130 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetOrganizationWide
+### GetName
 
-`func (o *InlineResponse200104) GetOrganizationWide() bool`
+`func (o *InlineResponse200104) GetName() string`
 
-GetOrganizationWide returns the OrganizationWide field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetOrganizationWideOk
+### GetNameOk
 
-`func (o *InlineResponse200104) GetOrganizationWideOk() (*bool, bool)`
+`func (o *InlineResponse200104) GetNameOk() (*string, bool)`
 
-GetOrganizationWideOk returns a tuple with the OrganizationWide field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationWide
+### SetName
 
-`func (o *InlineResponse200104) SetOrganizationWide(v bool)`
+`func (o *InlineResponse200104) SetName(v string)`
 
-SetOrganizationWide sets OrganizationWide field to given value.
+SetName sets Name field to given value.
 
-### HasOrganizationWide
+### HasName
 
-`func (o *InlineResponse200104) HasOrganizationWide() bool`
+`func (o *InlineResponse200104) HasName() bool`
 
-HasOrganizationWide returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetHost
 
-`func (o *InlineResponse200104) GetNetworkId() string`
+`func (o *InlineResponse200104) GetHost() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetHost returns the Host field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetHostOk
 
-`func (o *InlineResponse200104) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200104) GetHostOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetHost
 
-`func (o *InlineResponse200104) SetNetworkId(v string)`
+`func (o *InlineResponse200104) SetHost(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetHost sets Host field to given value.
 
-### HasNetworkId
+### HasHost
 
-`func (o *InlineResponse200104) HasNetworkId() bool`
+`func (o *InlineResponse200104) HasHost() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasHost returns a boolean if a field has been set.
 
-### GetType
+### GetPort
 
-`func (o *InlineResponse200104) GetType() string`
+`func (o *InlineResponse200104) GetPort() int32`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetPortOk
 
-`func (o *InlineResponse200104) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200104) GetPortOk() (*int32, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetPort
 
-`func (o *InlineResponse200104) SetType(v string)`
+`func (o *InlineResponse200104) SetPort(v int32)`
 
-SetType sets Type field to given value.
+SetPort sets Port field to given value.
 
-### HasType
+### HasPort
 
-`func (o *InlineResponse200104) HasType() bool`
+`func (o *InlineResponse200104) HasPort() bool`
 
-HasType returns a boolean if a field has been set.
+HasPort returns a boolean if a field has been set.
 
-### GetMac
+### GetSecurity
 
-`func (o *InlineResponse200104) GetMac() string`
+`func (o *InlineResponse200104) GetSecurity() NetworksNetworkIdMqttBrokersSecurity`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetSecurity returns the Security field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetSecurityOk
 
-`func (o *InlineResponse200104) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200104) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetSecurity
 
-`func (o *InlineResponse200104) SetMac(v string)`
+`func (o *InlineResponse200104) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity)`
 
-SetMac sets Mac field to given value.
+SetSecurity sets Security field to given value.
 
-### HasMac
+### HasSecurity
 
-`func (o *InlineResponse200104) HasMac() bool`
+`func (o *InlineResponse200104) HasSecurity() bool`
 
-HasMac returns a boolean if a field has been set.
+HasSecurity returns a boolean if a field has been set.
 
-### GetDatasets
+### GetAuthentication
 
-`func (o *InlineResponse200104) GetDatasets() string`
+`func (o *InlineResponse200104) GetAuthentication() NetworksNetworkIdMqttBrokersAuthentication`
 
-GetDatasets returns the Datasets field if non-nil, zero value otherwise.
+GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
 
-### GetDatasetsOk
+### GetAuthenticationOk
 
-`func (o *InlineResponse200104) GetDatasetsOk() (*string, bool)`
+`func (o *InlineResponse200104) GetAuthenticationOk() (*NetworksNetworkIdMqttBrokersAuthentication, bool)`
 
-GetDatasetsOk returns a tuple with the Datasets field if it's non-nil, zero value otherwise
+GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDatasets
+### SetAuthentication
 
-`func (o *InlineResponse200104) SetDatasets(v string)`
+`func (o *InlineResponse200104) SetAuthentication(v NetworksNetworkIdMqttBrokersAuthentication)`
 
-SetDatasets sets Datasets field to given value.
+SetAuthentication sets Authentication field to given value.
 
-### HasDatasets
+### HasAuthentication
 
-`func (o *InlineResponse200104) HasDatasets() bool`
+`func (o *InlineResponse200104) HasAuthentication() bool`
 
-HasDatasets returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200104) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200104) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200104) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200104) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200104) GetCreatedAt() int32`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200104) GetCreatedAtOk() (*int32, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200104) SetCreatedAt(v int32)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200104) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetCompletedAt
-
-`func (o *InlineResponse200104) GetCompletedAt() int32`
-
-GetCompletedAt returns the CompletedAt field if non-nil, zero value otherwise.
-
-### GetCompletedAtOk
-
-`func (o *InlineResponse200104) GetCompletedAtOk() (*int32, bool)`
-
-GetCompletedAtOk returns a tuple with the CompletedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCompletedAt
-
-`func (o *InlineResponse200104) SetCompletedAt(v int32)`
-
-SetCompletedAt sets CompletedAt field to given value.
-
-### HasCompletedAt
-
-`func (o *InlineResponse200104) HasCompletedAt() bool`
-
-HasCompletedAt returns a boolean if a field has been set.
+HasAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

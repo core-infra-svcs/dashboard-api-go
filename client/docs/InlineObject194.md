@@ -4,22 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SplashUrl** | Pointer to **string** | [optional] The custom splash URL of the click-through splash page. Note that the URL can be configured without necessarily being used. In order to enable the custom URL, see &#39;useSplashUrl&#39; | [optional] 
-**UseSplashUrl** | Pointer to **bool** | [optional] Boolean indicating whether the users will be redirected to the custom splash url. A custom splash URL must be set if this is true. Note that depending on your SSID&#39;s access control settings, it may not be possible to use the custom splash URL. | [optional] 
-**SplashTimeout** | Pointer to **int32** | Splash timeout in minutes. This will determine how often users will see the splash page. | [optional] 
-**RedirectUrl** | Pointer to **string** | The custom redirect URL where the users will go after the splash page. | [optional] 
-**UseRedirectUrl** | Pointer to **bool** | The Boolean indicating whether the the user will be redirected to the custom redirect URL after the splash page. A custom redirect URL must be set if this is true. | [optional] 
-**WelcomeMessage** | Pointer to **string** | The welcome message for the users on the splash page. | [optional] 
-**ThemeId** | Pointer to **string** | The id of the selected splash theme. | [optional] 
-**SplashLogo** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo**](NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo.md) |  | [optional] 
-**SplashImage** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashImage**](NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashImage.md) |  | [optional] 
-**SplashPrepaidFront** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashPrepaidFront**](NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashPrepaidFront.md) |  | [optional] 
-**BlockAllTrafficBeforeSignOn** | Pointer to **bool** | How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged. | [optional] 
-**ControllerDisconnectionBehavior** | Pointer to **string** | How login attempts should be handled when the controller is unreachable. Can be either &#39;open&#39;, &#39;restricted&#39;, or &#39;default&#39;. | [optional] 
-**AllowSimultaneousLogins** | Pointer to **bool** | Whether or not to allow simultaneous logins from different devices. | [optional] 
-**GuestSponsorship** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSplashSettingsGuestSponsorship**](NetworksNetworkIdWirelessSsidsNumberSplashSettingsGuestSponsorship.md) |  | [optional] 
-**Billing** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSplashSettingsBilling**](NetworksNetworkIdWirelessSsidsNumberSplashSettingsBilling.md) |  | [optional] 
-**SentryEnrollment** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberSplashSettingsSentryEnrollment**](NetworksNetworkIdWirelessSsidsNumberSplashSettingsSentryEnrollment.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Whether or not Hotspot 2.0 for this SSID is enabled | [optional] 
+**Operator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20Operator**](NetworksNetworkIdWirelessSsidsNumberHotspot20Operator.md) |  | [optional] 
+**Venue** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberHotspot20Venue**](NetworksNetworkIdWirelessSsidsNumberHotspot20Venue.md) |  | [optional] 
+**NetworkAccessType** | Pointer to **string** | The network type of this SSID (&#39;Private network&#39;, &#39;Private network with guest access&#39;, &#39;Chargeable public network&#39;, &#39;Free public network&#39;, &#39;Personal device network&#39;, &#39;Emergency services only network&#39;, &#39;Test or experimental&#39;, &#39;Wildcard&#39;) | [optional] 
+**Domains** | Pointer to **[]string** | An array of domain names | [optional] 
+**RoamConsortOis** | Pointer to **[]string** | An array of roaming consortium OIs (hexadecimal number 3-5 octets in length) | [optional] 
+**MccMncs** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs**](NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs.md) | An array of MCC/MNC pairs | [optional] 
+**NaiRealms** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms**](NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms.md) | An array of NAI realms | [optional] 
 
 ## Methods
 
@@ -40,405 +32,205 @@ NewInlineObject194WithDefaults instantiates a new InlineObject194 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSplashUrl
+### GetEnabled
 
-`func (o *InlineObject194) GetSplashUrl() string`
+`func (o *InlineObject194) GetEnabled() bool`
 
-GetSplashUrl returns the SplashUrl field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetSplashUrlOk
+### GetEnabledOk
 
-`func (o *InlineObject194) GetSplashUrlOk() (*string, bool)`
+`func (o *InlineObject194) GetEnabledOk() (*bool, bool)`
 
-GetSplashUrlOk returns a tuple with the SplashUrl field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplashUrl
+### SetEnabled
 
-`func (o *InlineObject194) SetSplashUrl(v string)`
+`func (o *InlineObject194) SetEnabled(v bool)`
 
-SetSplashUrl sets SplashUrl field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasSplashUrl
+### HasEnabled
 
-`func (o *InlineObject194) HasSplashUrl() bool`
+`func (o *InlineObject194) HasEnabled() bool`
 
-HasSplashUrl returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetUseSplashUrl
+### GetOperator
 
-`func (o *InlineObject194) GetUseSplashUrl() bool`
+`func (o *InlineObject194) GetOperator() NetworksNetworkIdWirelessSsidsNumberHotspot20Operator`
 
-GetUseSplashUrl returns the UseSplashUrl field if non-nil, zero value otherwise.
+GetOperator returns the Operator field if non-nil, zero value otherwise.
 
-### GetUseSplashUrlOk
+### GetOperatorOk
 
-`func (o *InlineObject194) GetUseSplashUrlOk() (*bool, bool)`
+`func (o *InlineObject194) GetOperatorOk() (*NetworksNetworkIdWirelessSsidsNumberHotspot20Operator, bool)`
 
-GetUseSplashUrlOk returns a tuple with the UseSplashUrl field if it's non-nil, zero value otherwise
+GetOperatorOk returns a tuple with the Operator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUseSplashUrl
+### SetOperator
 
-`func (o *InlineObject194) SetUseSplashUrl(v bool)`
+`func (o *InlineObject194) SetOperator(v NetworksNetworkIdWirelessSsidsNumberHotspot20Operator)`
 
-SetUseSplashUrl sets UseSplashUrl field to given value.
+SetOperator sets Operator field to given value.
 
-### HasUseSplashUrl
+### HasOperator
 
-`func (o *InlineObject194) HasUseSplashUrl() bool`
+`func (o *InlineObject194) HasOperator() bool`
 
-HasUseSplashUrl returns a boolean if a field has been set.
+HasOperator returns a boolean if a field has been set.
 
-### GetSplashTimeout
+### GetVenue
 
-`func (o *InlineObject194) GetSplashTimeout() int32`
+`func (o *InlineObject194) GetVenue() NetworksNetworkIdWirelessSsidsNumberHotspot20Venue`
 
-GetSplashTimeout returns the SplashTimeout field if non-nil, zero value otherwise.
+GetVenue returns the Venue field if non-nil, zero value otherwise.
 
-### GetSplashTimeoutOk
+### GetVenueOk
 
-`func (o *InlineObject194) GetSplashTimeoutOk() (*int32, bool)`
+`func (o *InlineObject194) GetVenueOk() (*NetworksNetworkIdWirelessSsidsNumberHotspot20Venue, bool)`
 
-GetSplashTimeoutOk returns a tuple with the SplashTimeout field if it's non-nil, zero value otherwise
+GetVenueOk returns a tuple with the Venue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplashTimeout
+### SetVenue
 
-`func (o *InlineObject194) SetSplashTimeout(v int32)`
+`func (o *InlineObject194) SetVenue(v NetworksNetworkIdWirelessSsidsNumberHotspot20Venue)`
 
-SetSplashTimeout sets SplashTimeout field to given value.
+SetVenue sets Venue field to given value.
 
-### HasSplashTimeout
+### HasVenue
 
-`func (o *InlineObject194) HasSplashTimeout() bool`
+`func (o *InlineObject194) HasVenue() bool`
 
-HasSplashTimeout returns a boolean if a field has been set.
+HasVenue returns a boolean if a field has been set.
 
-### GetRedirectUrl
+### GetNetworkAccessType
 
-`func (o *InlineObject194) GetRedirectUrl() string`
+`func (o *InlineObject194) GetNetworkAccessType() string`
 
-GetRedirectUrl returns the RedirectUrl field if non-nil, zero value otherwise.
+GetNetworkAccessType returns the NetworkAccessType field if non-nil, zero value otherwise.
 
-### GetRedirectUrlOk
+### GetNetworkAccessTypeOk
 
-`func (o *InlineObject194) GetRedirectUrlOk() (*string, bool)`
+`func (o *InlineObject194) GetNetworkAccessTypeOk() (*string, bool)`
 
-GetRedirectUrlOk returns a tuple with the RedirectUrl field if it's non-nil, zero value otherwise
+GetNetworkAccessTypeOk returns a tuple with the NetworkAccessType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRedirectUrl
+### SetNetworkAccessType
 
-`func (o *InlineObject194) SetRedirectUrl(v string)`
+`func (o *InlineObject194) SetNetworkAccessType(v string)`
 
-SetRedirectUrl sets RedirectUrl field to given value.
+SetNetworkAccessType sets NetworkAccessType field to given value.
 
-### HasRedirectUrl
+### HasNetworkAccessType
 
-`func (o *InlineObject194) HasRedirectUrl() bool`
+`func (o *InlineObject194) HasNetworkAccessType() bool`
 
-HasRedirectUrl returns a boolean if a field has been set.
+HasNetworkAccessType returns a boolean if a field has been set.
 
-### GetUseRedirectUrl
+### GetDomains
 
-`func (o *InlineObject194) GetUseRedirectUrl() bool`
+`func (o *InlineObject194) GetDomains() []string`
 
-GetUseRedirectUrl returns the UseRedirectUrl field if non-nil, zero value otherwise.
+GetDomains returns the Domains field if non-nil, zero value otherwise.
 
-### GetUseRedirectUrlOk
+### GetDomainsOk
 
-`func (o *InlineObject194) GetUseRedirectUrlOk() (*bool, bool)`
+`func (o *InlineObject194) GetDomainsOk() (*[]string, bool)`
 
-GetUseRedirectUrlOk returns a tuple with the UseRedirectUrl field if it's non-nil, zero value otherwise
+GetDomainsOk returns a tuple with the Domains field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUseRedirectUrl
+### SetDomains
 
-`func (o *InlineObject194) SetUseRedirectUrl(v bool)`
+`func (o *InlineObject194) SetDomains(v []string)`
 
-SetUseRedirectUrl sets UseRedirectUrl field to given value.
+SetDomains sets Domains field to given value.
 
-### HasUseRedirectUrl
+### HasDomains
 
-`func (o *InlineObject194) HasUseRedirectUrl() bool`
+`func (o *InlineObject194) HasDomains() bool`
 
-HasUseRedirectUrl returns a boolean if a field has been set.
+HasDomains returns a boolean if a field has been set.
 
-### GetWelcomeMessage
+### GetRoamConsortOis
 
-`func (o *InlineObject194) GetWelcomeMessage() string`
+`func (o *InlineObject194) GetRoamConsortOis() []string`
 
-GetWelcomeMessage returns the WelcomeMessage field if non-nil, zero value otherwise.
+GetRoamConsortOis returns the RoamConsortOis field if non-nil, zero value otherwise.
 
-### GetWelcomeMessageOk
+### GetRoamConsortOisOk
 
-`func (o *InlineObject194) GetWelcomeMessageOk() (*string, bool)`
+`func (o *InlineObject194) GetRoamConsortOisOk() (*[]string, bool)`
 
-GetWelcomeMessageOk returns a tuple with the WelcomeMessage field if it's non-nil, zero value otherwise
+GetRoamConsortOisOk returns a tuple with the RoamConsortOis field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWelcomeMessage
+### SetRoamConsortOis
 
-`func (o *InlineObject194) SetWelcomeMessage(v string)`
+`func (o *InlineObject194) SetRoamConsortOis(v []string)`
 
-SetWelcomeMessage sets WelcomeMessage field to given value.
+SetRoamConsortOis sets RoamConsortOis field to given value.
 
-### HasWelcomeMessage
+### HasRoamConsortOis
 
-`func (o *InlineObject194) HasWelcomeMessage() bool`
+`func (o *InlineObject194) HasRoamConsortOis() bool`
 
-HasWelcomeMessage returns a boolean if a field has been set.
+HasRoamConsortOis returns a boolean if a field has been set.
 
-### GetThemeId
+### GetMccMncs
 
-`func (o *InlineObject194) GetThemeId() string`
+`func (o *InlineObject194) GetMccMncs() []NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs`
 
-GetThemeId returns the ThemeId field if non-nil, zero value otherwise.
+GetMccMncs returns the MccMncs field if non-nil, zero value otherwise.
 
-### GetThemeIdOk
+### GetMccMncsOk
 
-`func (o *InlineObject194) GetThemeIdOk() (*string, bool)`
+`func (o *InlineObject194) GetMccMncsOk() (*[]NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs, bool)`
 
-GetThemeIdOk returns a tuple with the ThemeId field if it's non-nil, zero value otherwise
+GetMccMncsOk returns a tuple with the MccMncs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetThemeId
+### SetMccMncs
 
-`func (o *InlineObject194) SetThemeId(v string)`
+`func (o *InlineObject194) SetMccMncs(v []NetworksNetworkIdWirelessSsidsNumberHotspot20MccMncs)`
 
-SetThemeId sets ThemeId field to given value.
+SetMccMncs sets MccMncs field to given value.
 
-### HasThemeId
+### HasMccMncs
 
-`func (o *InlineObject194) HasThemeId() bool`
+`func (o *InlineObject194) HasMccMncs() bool`
 
-HasThemeId returns a boolean if a field has been set.
+HasMccMncs returns a boolean if a field has been set.
 
-### GetSplashLogo
+### GetNaiRealms
 
-`func (o *InlineObject194) GetSplashLogo() NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo`
+`func (o *InlineObject194) GetNaiRealms() []NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms`
 
-GetSplashLogo returns the SplashLogo field if non-nil, zero value otherwise.
+GetNaiRealms returns the NaiRealms field if non-nil, zero value otherwise.
 
-### GetSplashLogoOk
+### GetNaiRealmsOk
 
-`func (o *InlineObject194) GetSplashLogoOk() (*NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo, bool)`
+`func (o *InlineObject194) GetNaiRealmsOk() (*[]NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms, bool)`
 
-GetSplashLogoOk returns a tuple with the SplashLogo field if it's non-nil, zero value otherwise
+GetNaiRealmsOk returns a tuple with the NaiRealms field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSplashLogo
+### SetNaiRealms
 
-`func (o *InlineObject194) SetSplashLogo(v NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashLogo)`
+`func (o *InlineObject194) SetNaiRealms(v []NetworksNetworkIdWirelessSsidsNumberHotspot20NaiRealms)`
 
-SetSplashLogo sets SplashLogo field to given value.
+SetNaiRealms sets NaiRealms field to given value.
 
-### HasSplashLogo
+### HasNaiRealms
 
-`func (o *InlineObject194) HasSplashLogo() bool`
+`func (o *InlineObject194) HasNaiRealms() bool`
 
-HasSplashLogo returns a boolean if a field has been set.
-
-### GetSplashImage
-
-`func (o *InlineObject194) GetSplashImage() NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashImage`
-
-GetSplashImage returns the SplashImage field if non-nil, zero value otherwise.
-
-### GetSplashImageOk
-
-`func (o *InlineObject194) GetSplashImageOk() (*NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashImage, bool)`
-
-GetSplashImageOk returns a tuple with the SplashImage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSplashImage
-
-`func (o *InlineObject194) SetSplashImage(v NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashImage)`
-
-SetSplashImage sets SplashImage field to given value.
-
-### HasSplashImage
-
-`func (o *InlineObject194) HasSplashImage() bool`
-
-HasSplashImage returns a boolean if a field has been set.
-
-### GetSplashPrepaidFront
-
-`func (o *InlineObject194) GetSplashPrepaidFront() NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashPrepaidFront`
-
-GetSplashPrepaidFront returns the SplashPrepaidFront field if non-nil, zero value otherwise.
-
-### GetSplashPrepaidFrontOk
-
-`func (o *InlineObject194) GetSplashPrepaidFrontOk() (*NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashPrepaidFront, bool)`
-
-GetSplashPrepaidFrontOk returns a tuple with the SplashPrepaidFront field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSplashPrepaidFront
-
-`func (o *InlineObject194) SetSplashPrepaidFront(v NetworksNetworkIdWirelessSsidsNumberSplashSettingsSplashPrepaidFront)`
-
-SetSplashPrepaidFront sets SplashPrepaidFront field to given value.
-
-### HasSplashPrepaidFront
-
-`func (o *InlineObject194) HasSplashPrepaidFront() bool`
-
-HasSplashPrepaidFront returns a boolean if a field has been set.
-
-### GetBlockAllTrafficBeforeSignOn
-
-`func (o *InlineObject194) GetBlockAllTrafficBeforeSignOn() bool`
-
-GetBlockAllTrafficBeforeSignOn returns the BlockAllTrafficBeforeSignOn field if non-nil, zero value otherwise.
-
-### GetBlockAllTrafficBeforeSignOnOk
-
-`func (o *InlineObject194) GetBlockAllTrafficBeforeSignOnOk() (*bool, bool)`
-
-GetBlockAllTrafficBeforeSignOnOk returns a tuple with the BlockAllTrafficBeforeSignOn field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBlockAllTrafficBeforeSignOn
-
-`func (o *InlineObject194) SetBlockAllTrafficBeforeSignOn(v bool)`
-
-SetBlockAllTrafficBeforeSignOn sets BlockAllTrafficBeforeSignOn field to given value.
-
-### HasBlockAllTrafficBeforeSignOn
-
-`func (o *InlineObject194) HasBlockAllTrafficBeforeSignOn() bool`
-
-HasBlockAllTrafficBeforeSignOn returns a boolean if a field has been set.
-
-### GetControllerDisconnectionBehavior
-
-`func (o *InlineObject194) GetControllerDisconnectionBehavior() string`
-
-GetControllerDisconnectionBehavior returns the ControllerDisconnectionBehavior field if non-nil, zero value otherwise.
-
-### GetControllerDisconnectionBehaviorOk
-
-`func (o *InlineObject194) GetControllerDisconnectionBehaviorOk() (*string, bool)`
-
-GetControllerDisconnectionBehaviorOk returns a tuple with the ControllerDisconnectionBehavior field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetControllerDisconnectionBehavior
-
-`func (o *InlineObject194) SetControllerDisconnectionBehavior(v string)`
-
-SetControllerDisconnectionBehavior sets ControllerDisconnectionBehavior field to given value.
-
-### HasControllerDisconnectionBehavior
-
-`func (o *InlineObject194) HasControllerDisconnectionBehavior() bool`
-
-HasControllerDisconnectionBehavior returns a boolean if a field has been set.
-
-### GetAllowSimultaneousLogins
-
-`func (o *InlineObject194) GetAllowSimultaneousLogins() bool`
-
-GetAllowSimultaneousLogins returns the AllowSimultaneousLogins field if non-nil, zero value otherwise.
-
-### GetAllowSimultaneousLoginsOk
-
-`func (o *InlineObject194) GetAllowSimultaneousLoginsOk() (*bool, bool)`
-
-GetAllowSimultaneousLoginsOk returns a tuple with the AllowSimultaneousLogins field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAllowSimultaneousLogins
-
-`func (o *InlineObject194) SetAllowSimultaneousLogins(v bool)`
-
-SetAllowSimultaneousLogins sets AllowSimultaneousLogins field to given value.
-
-### HasAllowSimultaneousLogins
-
-`func (o *InlineObject194) HasAllowSimultaneousLogins() bool`
-
-HasAllowSimultaneousLogins returns a boolean if a field has been set.
-
-### GetGuestSponsorship
-
-`func (o *InlineObject194) GetGuestSponsorship() NetworksNetworkIdWirelessSsidsNumberSplashSettingsGuestSponsorship`
-
-GetGuestSponsorship returns the GuestSponsorship field if non-nil, zero value otherwise.
-
-### GetGuestSponsorshipOk
-
-`func (o *InlineObject194) GetGuestSponsorshipOk() (*NetworksNetworkIdWirelessSsidsNumberSplashSettingsGuestSponsorship, bool)`
-
-GetGuestSponsorshipOk returns a tuple with the GuestSponsorship field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGuestSponsorship
-
-`func (o *InlineObject194) SetGuestSponsorship(v NetworksNetworkIdWirelessSsidsNumberSplashSettingsGuestSponsorship)`
-
-SetGuestSponsorship sets GuestSponsorship field to given value.
-
-### HasGuestSponsorship
-
-`func (o *InlineObject194) HasGuestSponsorship() bool`
-
-HasGuestSponsorship returns a boolean if a field has been set.
-
-### GetBilling
-
-`func (o *InlineObject194) GetBilling() NetworksNetworkIdWirelessSsidsNumberSplashSettingsBilling`
-
-GetBilling returns the Billing field if non-nil, zero value otherwise.
-
-### GetBillingOk
-
-`func (o *InlineObject194) GetBillingOk() (*NetworksNetworkIdWirelessSsidsNumberSplashSettingsBilling, bool)`
-
-GetBillingOk returns a tuple with the Billing field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBilling
-
-`func (o *InlineObject194) SetBilling(v NetworksNetworkIdWirelessSsidsNumberSplashSettingsBilling)`
-
-SetBilling sets Billing field to given value.
-
-### HasBilling
-
-`func (o *InlineObject194) HasBilling() bool`
-
-HasBilling returns a boolean if a field has been set.
-
-### GetSentryEnrollment
-
-`func (o *InlineObject194) GetSentryEnrollment() NetworksNetworkIdWirelessSsidsNumberSplashSettingsSentryEnrollment`
-
-GetSentryEnrollment returns the SentryEnrollment field if non-nil, zero value otherwise.
-
-### GetSentryEnrollmentOk
-
-`func (o *InlineObject194) GetSentryEnrollmentOk() (*NetworksNetworkIdWirelessSsidsNumberSplashSettingsSentryEnrollment, bool)`
-
-GetSentryEnrollmentOk returns a tuple with the SentryEnrollment field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSentryEnrollment
-
-`func (o *InlineObject194) SetSentryEnrollment(v NetworksNetworkIdWirelessSsidsNumberSplashSettingsSentryEnrollment)`
-
-SetSentryEnrollment sets SentryEnrollment field to given value.
-
-### HasSentryEnrollment
-
-`func (o *InlineObject194) HasSentryEnrollment() bool`
-
-HasSentryEnrollment returns a boolean if a field has been set.
+HasNaiRealms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

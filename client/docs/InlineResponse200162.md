@@ -4,8 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
-**CustomPieChartItems** | Pointer to [**[]InlineResponse200162CustomPieChartItems**](InlineResponse200162CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
+**InterfaceId** | Pointer to **string** | The id | [optional] 
+**Name** | Pointer to **string** | The name | [optional] 
+**Subnet** | Pointer to **string** | IPv4 subnet | [optional] 
+**InterfaceIp** | Pointer to **string** | IPv4 address | [optional] 
+**MulticastRouting** | Pointer to **string** | Multicast routing status | [optional] 
+**VlanId** | Pointer to **int32** | VLAN id | [optional] 
+**OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings**](DevicesSerialSwitchRoutingInterfacesOspfSettings.md) |  | [optional] 
+**OspfV3** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfV3**](DevicesSerialSwitchRoutingInterfacesOspfV3.md) |  | [optional] 
+**Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv6**](DevicesSerialSwitchRoutingInterfacesIpv6.md) |  | [optional] 
+**UplinkV4** | Pointer to **bool** | Whether this is the switch&#39;s IPv4 uplink | [optional] 
+**UplinkV6** | Pointer to **bool** | Whether this is the switch&#39;s IPv6 uplink | [optional] 
 
 ## Methods
 
@@ -26,55 +35,280 @@ NewInlineResponse200162WithDefaults instantiates a new InlineResponse200162 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetInterfaceId
 
-`func (o *InlineResponse200162) GetMode() string`
+`func (o *InlineResponse200162) GetInterfaceId() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetInterfaceId returns the InterfaceId field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetInterfaceIdOk
 
-`func (o *InlineResponse200162) GetModeOk() (*string, bool)`
+`func (o *InlineResponse200162) GetInterfaceIdOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetInterfaceIdOk returns a tuple with the InterfaceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetInterfaceId
 
-`func (o *InlineResponse200162) SetMode(v string)`
+`func (o *InlineResponse200162) SetInterfaceId(v string)`
 
-SetMode sets Mode field to given value.
+SetInterfaceId sets InterfaceId field to given value.
 
-### HasMode
+### HasInterfaceId
 
-`func (o *InlineResponse200162) HasMode() bool`
+`func (o *InlineResponse200162) HasInterfaceId() bool`
 
-HasMode returns a boolean if a field has been set.
+HasInterfaceId returns a boolean if a field has been set.
 
-### GetCustomPieChartItems
+### GetName
 
-`func (o *InlineResponse200162) GetCustomPieChartItems() []InlineResponse200162CustomPieChartItems`
+`func (o *InlineResponse200162) GetName() string`
 
-GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCustomPieChartItemsOk
+### GetNameOk
 
-`func (o *InlineResponse200162) GetCustomPieChartItemsOk() (*[]InlineResponse200162CustomPieChartItems, bool)`
+`func (o *InlineResponse200162) GetNameOk() (*string, bool)`
 
-GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPieChartItems
+### SetName
 
-`func (o *InlineResponse200162) SetCustomPieChartItems(v []InlineResponse200162CustomPieChartItems)`
+`func (o *InlineResponse200162) SetName(v string)`
 
-SetCustomPieChartItems sets CustomPieChartItems field to given value.
+SetName sets Name field to given value.
 
-### HasCustomPieChartItems
+### HasName
 
-`func (o *InlineResponse200162) HasCustomPieChartItems() bool`
+`func (o *InlineResponse200162) HasName() bool`
 
-HasCustomPieChartItems returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetSubnet
+
+`func (o *InlineResponse200162) GetSubnet() string`
+
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+
+### GetSubnetOk
+
+`func (o *InlineResponse200162) GetSubnetOk() (*string, bool)`
+
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSubnet
+
+`func (o *InlineResponse200162) SetSubnet(v string)`
+
+SetSubnet sets Subnet field to given value.
+
+### HasSubnet
+
+`func (o *InlineResponse200162) HasSubnet() bool`
+
+HasSubnet returns a boolean if a field has been set.
+
+### GetInterfaceIp
+
+`func (o *InlineResponse200162) GetInterfaceIp() string`
+
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
+
+### GetInterfaceIpOk
+
+`func (o *InlineResponse200162) GetInterfaceIpOk() (*string, bool)`
+
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInterfaceIp
+
+`func (o *InlineResponse200162) SetInterfaceIp(v string)`
+
+SetInterfaceIp sets InterfaceIp field to given value.
+
+### HasInterfaceIp
+
+`func (o *InlineResponse200162) HasInterfaceIp() bool`
+
+HasInterfaceIp returns a boolean if a field has been set.
+
+### GetMulticastRouting
+
+`func (o *InlineResponse200162) GetMulticastRouting() string`
+
+GetMulticastRouting returns the MulticastRouting field if non-nil, zero value otherwise.
+
+### GetMulticastRoutingOk
+
+`func (o *InlineResponse200162) GetMulticastRoutingOk() (*string, bool)`
+
+GetMulticastRoutingOk returns a tuple with the MulticastRouting field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMulticastRouting
+
+`func (o *InlineResponse200162) SetMulticastRouting(v string)`
+
+SetMulticastRouting sets MulticastRouting field to given value.
+
+### HasMulticastRouting
+
+`func (o *InlineResponse200162) HasMulticastRouting() bool`
+
+HasMulticastRouting returns a boolean if a field has been set.
+
+### GetVlanId
+
+`func (o *InlineResponse200162) GetVlanId() int32`
+
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+
+### GetVlanIdOk
+
+`func (o *InlineResponse200162) GetVlanIdOk() (*int32, bool)`
+
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlanId
+
+`func (o *InlineResponse200162) SetVlanId(v int32)`
+
+SetVlanId sets VlanId field to given value.
+
+### HasVlanId
+
+`func (o *InlineResponse200162) HasVlanId() bool`
+
+HasVlanId returns a boolean if a field has been set.
+
+### GetOspfSettings
+
+`func (o *InlineResponse200162) GetOspfSettings() DevicesSerialSwitchRoutingInterfacesOspfSettings`
+
+GetOspfSettings returns the OspfSettings field if non-nil, zero value otherwise.
+
+### GetOspfSettingsOk
+
+`func (o *InlineResponse200162) GetOspfSettingsOk() (*DevicesSerialSwitchRoutingInterfacesOspfSettings, bool)`
+
+GetOspfSettingsOk returns a tuple with the OspfSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfSettings
+
+`func (o *InlineResponse200162) SetOspfSettings(v DevicesSerialSwitchRoutingInterfacesOspfSettings)`
+
+SetOspfSettings sets OspfSettings field to given value.
+
+### HasOspfSettings
+
+`func (o *InlineResponse200162) HasOspfSettings() bool`
+
+HasOspfSettings returns a boolean if a field has been set.
+
+### GetOspfV3
+
+`func (o *InlineResponse200162) GetOspfV3() DevicesSerialSwitchRoutingInterfacesOspfV3`
+
+GetOspfV3 returns the OspfV3 field if non-nil, zero value otherwise.
+
+### GetOspfV3Ok
+
+`func (o *InlineResponse200162) GetOspfV3Ok() (*DevicesSerialSwitchRoutingInterfacesOspfV3, bool)`
+
+GetOspfV3Ok returns a tuple with the OspfV3 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOspfV3
+
+`func (o *InlineResponse200162) SetOspfV3(v DevicesSerialSwitchRoutingInterfacesOspfV3)`
+
+SetOspfV3 sets OspfV3 field to given value.
+
+### HasOspfV3
+
+`func (o *InlineResponse200162) HasOspfV3() bool`
+
+HasOspfV3 returns a boolean if a field has been set.
+
+### GetIpv6
+
+`func (o *InlineResponse200162) GetIpv6() DevicesSerialSwitchRoutingInterfacesIpv6`
+
+GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+
+### GetIpv6Ok
+
+`func (o *InlineResponse200162) GetIpv6Ok() (*DevicesSerialSwitchRoutingInterfacesIpv6, bool)`
+
+GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6
+
+`func (o *InlineResponse200162) SetIpv6(v DevicesSerialSwitchRoutingInterfacesIpv6)`
+
+SetIpv6 sets Ipv6 field to given value.
+
+### HasIpv6
+
+`func (o *InlineResponse200162) HasIpv6() bool`
+
+HasIpv6 returns a boolean if a field has been set.
+
+### GetUplinkV4
+
+`func (o *InlineResponse200162) GetUplinkV4() bool`
+
+GetUplinkV4 returns the UplinkV4 field if non-nil, zero value otherwise.
+
+### GetUplinkV4Ok
+
+`func (o *InlineResponse200162) GetUplinkV4Ok() (*bool, bool)`
+
+GetUplinkV4Ok returns a tuple with the UplinkV4 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinkV4
+
+`func (o *InlineResponse200162) SetUplinkV4(v bool)`
+
+SetUplinkV4 sets UplinkV4 field to given value.
+
+### HasUplinkV4
+
+`func (o *InlineResponse200162) HasUplinkV4() bool`
+
+HasUplinkV4 returns a boolean if a field has been set.
+
+### GetUplinkV6
+
+`func (o *InlineResponse200162) GetUplinkV6() bool`
+
+GetUplinkV6 returns the UplinkV6 field if non-nil, zero value otherwise.
+
+### GetUplinkV6Ok
+
+`func (o *InlineResponse200162) GetUplinkV6Ok() (*bool, bool)`
+
+GetUplinkV6Ok returns a tuple with the UplinkV6 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinkV6
+
+`func (o *InlineResponse200162) SetUplinkV6(v bool)`
+
+SetUplinkV6 sets UplinkV6 field to given value.
+
+### HasUplinkV6
+
+`func (o *InlineResponse200162) HasUplinkV6() bool`
+
+HasUplinkV6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | AP port profile name | [optional] 
-**Ports** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts**](NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts.md) | AP ports configuration | [optional] 
-**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
+**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
+**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject180WithDefaults instantiates a new InlineObject180 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetHostname
 
-`func (o *InlineObject180) GetName() string`
+`func (o *InlineObject180) GetHostname() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetHostnameOk
 
-`func (o *InlineObject180) GetNameOk() (*string, bool)`
+`func (o *InlineObject180) GetHostnameOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetHostname
 
-`func (o *InlineObject180) SetName(v string)`
+`func (o *InlineObject180) SetHostname(v string)`
 
-SetName sets Name field to given value.
+SetHostname sets Hostname field to given value.
 
-### HasName
+### HasHostname
 
-`func (o *InlineObject180) HasName() bool`
+`func (o *InlineObject180) HasHostname() bool`
 
-HasName returns a boolean if a field has been set.
+HasHostname returns a boolean if a field has been set.
 
-### GetPorts
+### GetEnabled
 
-`func (o *InlineObject180) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts`
+`func (o *InlineObject180) GetEnabled() bool`
 
-GetPorts returns the Ports field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetPortsOk
+### GetEnabledOk
 
-`func (o *InlineObject180) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts, bool)`
+`func (o *InlineObject180) GetEnabledOk() (*bool, bool)`
 
-GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPorts
+### SetEnabled
 
-`func (o *InlineObject180) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesProfileIdPorts)`
+`func (o *InlineObject180) SetEnabled(v bool)`
 
-SetPorts sets Ports field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasPorts
+### HasEnabled
 
-`func (o *InlineObject180) HasPorts() bool`
+`func (o *InlineObject180) HasEnabled() bool`
 
-HasPorts returns a boolean if a field has been set.
-
-### GetUsbPorts
-
-`func (o *InlineObject180) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
-
-GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
-
-### GetUsbPortsOk
-
-`func (o *InlineObject180) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
-
-GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsbPorts
-
-`func (o *InlineObject180) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
-
-SetUsbPorts sets UsbPorts field to given value.
-
-### HasUsbPorts
-
-`func (o *InlineObject180) HasUsbPorts() bool`
-
-HasUsbPorts returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

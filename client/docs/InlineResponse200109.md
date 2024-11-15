@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MqttBrokerId** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
-**Enabled** | Pointer to **bool** | Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data. | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**ClientId** | Pointer to **string** | ID of client | [optional] 
+**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200109WithDefaults instantiates a new InlineResponse200109 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMqttBrokerId
+### GetName
 
-`func (o *InlineResponse200109) GetMqttBrokerId() string`
+`func (o *InlineResponse200109) GetName() string`
 
-GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMqttBrokerIdOk
+### GetNameOk
 
-`func (o *InlineResponse200109) GetMqttBrokerIdOk() (*string, bool)`
+`func (o *InlineResponse200109) GetNameOk() (*string, bool)`
 
-GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMqttBrokerId
+### SetName
 
-`func (o *InlineResponse200109) SetMqttBrokerId(v string)`
+`func (o *InlineResponse200109) SetName(v string)`
 
-SetMqttBrokerId sets MqttBrokerId field to given value.
+SetName sets Name field to given value.
 
-### HasMqttBrokerId
+### HasName
 
-`func (o *InlineResponse200109) HasMqttBrokerId() bool`
+`func (o *InlineResponse200109) HasName() bool`
 
-HasMqttBrokerId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetEnabled
+### GetClientId
 
-`func (o *InlineResponse200109) GetEnabled() bool`
+`func (o *InlineResponse200109) GetClientId() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetClientIdOk
 
-`func (o *InlineResponse200109) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200109) GetClientIdOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetClientId
 
-`func (o *InlineResponse200109) SetEnabled(v bool)`
+`func (o *InlineResponse200109) SetClientId(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasEnabled
+### HasClientId
 
-`func (o *InlineResponse200109) HasEnabled() bool`
+`func (o *InlineResponse200109) HasClientId() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
+
+### GetAssigned
+
+`func (o *InlineResponse200109) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+
+### GetAssignedOk
+
+`func (o *InlineResponse200109) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssigned
+
+`func (o *InlineResponse200109) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+
+SetAssigned sets Assigned field to given value.
+
+### HasAssigned
+
+`func (o *InlineResponse200109) HasAssigned() bool`
+
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

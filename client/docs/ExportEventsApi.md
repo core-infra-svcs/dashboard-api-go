@@ -30,7 +30,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationInventoryOnboardingCloudMonitoringExportEvent := *openapiclient.NewInlineObject240("LogEvent_example", int32(123)) // InlineObject240 | 
+    createOrganizationInventoryOnboardingCloudMonitoringExportEvent := *openapiclient.NewInlineObject244("LogEvent_example", int32(123)) // InlineObject244 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -60,7 +60,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringExportEvent** | [**InlineObject240**](InlineObject240.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringExportEvent** | [**InlineObject244**](InlineObject244.md) |  | 
 
 ### Return type
 

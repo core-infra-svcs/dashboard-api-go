@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200279Items**](InlineResponse200279Items.md) | Sentry Group Policies for the Organization keyed by Network Id | [optional] 
+**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200279WithDefaults instantiates a new InlineResponse200279 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetEnabled
 
-`func (o *InlineResponse200279) GetItems() []InlineResponse200279Items`
+`func (o *InlineResponse200279) GetEnabled() bool`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200279) GetItemsOk() (*[]InlineResponse200279Items, bool)`
+`func (o *InlineResponse200279) GetEnabledOk() (*bool, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetEnabled
 
-`func (o *InlineResponse200279) SetItems(v []InlineResponse200279Items)`
+`func (o *InlineResponse200279) SetEnabled(v bool)`
 
-SetItems sets Items field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasItems
+### HasEnabled
 
-`func (o *InlineResponse200279) HasItems() bool`
+`func (o *InlineResponse200279) HasEnabled() bool`
 
-HasItems returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchStormControl
 
-> InlineResponse200159 GetNetworkSwitchStormControl(ctx, networkId).Execute()
+> InlineResponse200163 GetNetworkSwitchStormControl(ctx, networkId).Execute()
 
 Return the storm control configuration for a switch network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StormControlApi.GetNetworkSwitchStormControl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStormControl`: InlineResponse200159
+    // response from `GetNetworkSwitchStormControl`: InlineResponse200163
     fmt.Fprintf(os.Stdout, "Response from `StormControlApi.GetNetworkSwitchStormControl`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200159**](InlineResponse200159.md)
+[**InlineResponse200163**](InlineResponse200163.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStormControl
 
-> InlineResponse200159 UpdateNetworkSwitchStormControl(ctx, networkId).UpdateNetworkSwitchStormControl(updateNetworkSwitchStormControl).Execute()
+> InlineResponse200163 UpdateNetworkSwitchStormControl(ctx, networkId).UpdateNetworkSwitchStormControl(updateNetworkSwitchStormControl).Execute()
 
 Update the storm control configuration for a switch network
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchStormControl := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
+    updateNetworkSwitchStormControl := *openapiclient.NewInlineObject161() // InlineObject161 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StormControlApi.UpdateNetworkSwitchStormControl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStormControl`: InlineResponse200159
+    // response from `UpdateNetworkSwitchStormControl`: InlineResponse200163
     fmt.Fprintf(os.Stdout, "Response from `StormControlApi.UpdateNetworkSwitchStormControl`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchStormCo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchStormControl** | [**InlineObject157**](InlineObject157.md) |  | 
+ **updateNetworkSwitchStormControl** | [**InlineObject161**](InlineObject161.md) |  | 
 
 ### Return type
 
-[**InlineResponse200159**](InlineResponse200159.md)
+[**InlineResponse200163**](InlineResponse200163.md)
 
 ### Authorization
 

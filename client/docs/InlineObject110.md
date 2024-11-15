@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the sensor alert profile. | 
-**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
-**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
-**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
+**Name** | **string** | Name of the MQTT broker. | 
+**Host** | **string** | Host name/IP address where the MQTT broker runs. | 
+**Port** | **int32** | Host port though which the MQTT broker can be reached. | 
+**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity1**](NetworksNetworkIdMqttBrokersSecurity1.md) |  | [optional] 
+**Authentication** | Pointer to [**NetworksNetworkIdMqttBrokersAuthentication1**](NetworksNetworkIdMqttBrokersAuthentication1.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject110
 
-`func NewInlineObject110(name string, conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineObject110`
+`func NewInlineObject110(name string, host string, port int32, ) *InlineObject110`
 
 NewInlineObject110 instantiates a new InlineObject110 object
 This constructor will assign default values to properties that have it defined,
@@ -49,100 +49,95 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetSchedule
+### GetHost
 
-`func (o *InlineObject110) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule1`
+`func (o *InlineObject110) GetHost() string`
 
-GetSchedule returns the Schedule field if non-nil, zero value otherwise.
+GetHost returns the Host field if non-nil, zero value otherwise.
 
-### GetScheduleOk
+### GetHostOk
 
-`func (o *InlineObject110) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule1, bool)`
+`func (o *InlineObject110) GetHostOk() (*string, bool)`
 
-GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
+GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSchedule
+### SetHost
 
-`func (o *InlineObject110) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule1)`
+`func (o *InlineObject110) SetHost(v string)`
 
-SetSchedule sets Schedule field to given value.
+SetHost sets Host field to given value.
 
-### HasSchedule
 
-`func (o *InlineObject110) HasSchedule() bool`
+### GetPort
 
-HasSchedule returns a boolean if a field has been set.
+`func (o *InlineObject110) GetPort() int32`
 
-### GetConditions
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-`func (o *InlineObject110) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
+### GetPortOk
 
-GetConditions returns the Conditions field if non-nil, zero value otherwise.
+`func (o *InlineObject110) GetPortOk() (*int32, bool)`
 
-### GetConditionsOk
-
-`func (o *InlineObject110) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
-
-GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConditions
+### SetPort
 
-`func (o *InlineObject110) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
+`func (o *InlineObject110) SetPort(v int32)`
 
-SetConditions sets Conditions field to given value.
+SetPort sets Port field to given value.
 
 
-### GetRecipients
+### GetSecurity
 
-`func (o *InlineObject110) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+`func (o *InlineObject110) GetSecurity() NetworksNetworkIdMqttBrokersSecurity1`
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+GetSecurity returns the Security field if non-nil, zero value otherwise.
 
-### GetRecipientsOk
+### GetSecurityOk
 
-`func (o *InlineObject110) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+`func (o *InlineObject110) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity1, bool)`
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetSecurity
 
-`func (o *InlineObject110) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+`func (o *InlineObject110) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity1)`
 
-SetRecipients sets Recipients field to given value.
+SetSecurity sets Security field to given value.
 
-### HasRecipients
+### HasSecurity
 
-`func (o *InlineObject110) HasRecipients() bool`
+`func (o *InlineObject110) HasSecurity() bool`
 
-HasRecipients returns a boolean if a field has been set.
+HasSecurity returns a boolean if a field has been set.
 
-### GetSerials
+### GetAuthentication
 
-`func (o *InlineObject110) GetSerials() []string`
+`func (o *InlineObject110) GetAuthentication() NetworksNetworkIdMqttBrokersAuthentication1`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetAuthenticationOk
 
-`func (o *InlineObject110) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject110) GetAuthenticationOk() (*NetworksNetworkIdMqttBrokersAuthentication1, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetAuthentication
 
-`func (o *InlineObject110) SetSerials(v []string)`
+`func (o *InlineObject110) SetAuthentication(v NetworksNetworkIdMqttBrokersAuthentication1)`
 
-SetSerials sets Serials field to given value.
+SetAuthentication sets Authentication field to given value.
 
-### HasSerials
+### HasAuthentication
 
-`func (o *InlineObject110) HasSerials() bool`
+`func (o *InlineObject110) HasAuthentication() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

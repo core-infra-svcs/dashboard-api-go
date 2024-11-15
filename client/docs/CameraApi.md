@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationCameraCustomAnalyticsArtifact
 
-> InlineResponse20113 CreateOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId).CreateOrganizationCameraCustomAnalyticsArtifact(createOrganizationCameraCustomAnalyticsArtifact).Execute()
+> InlineResponse20114 CreateOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId).CreateOrganizationCameraCustomAnalyticsArtifact(createOrganizationCameraCustomAnalyticsArtifact).Execute()
 
 Create custom analytics artifact
 
@@ -218,7 +218,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject220() // InlineObject220 |  (optional)
+    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject224() // InlineObject224 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -227,7 +227,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.CreateOrganizationCameraCustomAnalyticsArtifact``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationCameraCustomAnalyticsArtifact`: InlineResponse20113
+    // response from `CreateOrganizationCameraCustomAnalyticsArtifact`: InlineResponse20114
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.CreateOrganizationCameraCustomAnalyticsArtifact`: %v\n", resp)
 }
 ```
@@ -248,11 +248,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraCu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject220**](InlineObject220.md) |  | 
+ **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject224**](InlineObject224.md) |  | 
 
 ### Return type
 
-[**InlineResponse20113**](InlineResponse20113.md)
+[**InlineResponse20114**](InlineResponse20114.md)
 
 ### Authorization
 
@@ -290,7 +290,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCameraRole := *openapiclient.NewInlineObject222("Name_example") // InlineObject222 | 
+    createOrganizationCameraRole := *openapiclient.NewInlineObject226("Name_example") // InlineObject226 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -320,7 +320,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraRo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraRole** | [**InlineObject222**](InlineObject222.md) |  | 
+ **createOrganizationCameraRole** | [**InlineObject226**](InlineObject226.md) |  | 
 
 ### Return type
 
@@ -626,7 +626,7 @@ Name | Type | Description  | Notes
 
 ## GenerateDeviceCameraSnapshot
 
-> map[string]interface{} GenerateDeviceCameraSnapshot(ctx, serial).GenerateDeviceCameraSnapshot(generateDeviceCameraSnapshot).Execute()
+> InlineResponse2022 GenerateDeviceCameraSnapshot(ctx, serial).GenerateDeviceCameraSnapshot(generateDeviceCameraSnapshot).Execute()
 
 Generate a snapshot of what the camera sees at the specified time and return a link to that image.
 
@@ -655,7 +655,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GenerateDeviceCameraSnapshot``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GenerateDeviceCameraSnapshot`: map[string]interface{}
+    // response from `GenerateDeviceCameraSnapshot`: InlineResponse2022
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GenerateDeviceCameraSnapshot`: %v\n", resp)
 }
 ```
@@ -680,7 +680,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**map[string]interface{}**
+[**InlineResponse2022**](InlineResponse2022.md)
 
 ### Authorization
 
@@ -1920,7 +1920,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraBoundariesAreasByDevice
 
-> []InlineResponse200222 GetOrganizationCameraBoundariesAreasByDevice(ctx, organizationId).Serials(serials).Execute()
+> []InlineResponse200227 GetOrganizationCameraBoundariesAreasByDevice(ctx, organizationId).Serials(serials).Execute()
 
 Returns all configured area boundaries of cameras
 
@@ -1949,7 +1949,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetOrganizationCameraBoundariesAreasByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraBoundariesAreasByDevice`: []InlineResponse200222
+    // response from `GetOrganizationCameraBoundariesAreasByDevice`: []InlineResponse200227
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetOrganizationCameraBoundariesAreasByDevice`: %v\n", resp)
 }
 ```
@@ -1974,7 +1974,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200222**](InlineResponse200222.md)
+[**[]InlineResponse200227**](InlineResponse200227.md)
 
 ### Authorization
 
@@ -1992,7 +1992,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraBoundariesLinesByDevice
 
-> []InlineResponse200223 GetOrganizationCameraBoundariesLinesByDevice(ctx, organizationId).Serials(serials).Execute()
+> []InlineResponse200228 GetOrganizationCameraBoundariesLinesByDevice(ctx, organizationId).Serials(serials).Execute()
 
 Returns all configured crossingline boundaries of cameras
 
@@ -2021,7 +2021,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetOrganizationCameraBoundariesLinesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraBoundariesLinesByDevice`: []InlineResponse200223
+    // response from `GetOrganizationCameraBoundariesLinesByDevice`: []InlineResponse200228
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetOrganizationCameraBoundariesLinesByDevice`: %v\n", resp)
 }
 ```
@@ -2046,7 +2046,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200223**](InlineResponse200223.md)
+[**[]InlineResponse200228**](InlineResponse200228.md)
 
 ### Authorization
 
@@ -2064,7 +2064,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraCustomAnalyticsArtifact
 
-> InlineResponse200224 GetOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId, artifactId).Execute()
+> InlineResponse200229 GetOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId, artifactId).Execute()
 
 Get Custom Analytics Artifact
 
@@ -2093,7 +2093,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetOrganizationCameraCustomAnalyticsArtifact``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraCustomAnalyticsArtifact`: InlineResponse200224
+    // response from `GetOrganizationCameraCustomAnalyticsArtifact`: InlineResponse200229
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetOrganizationCameraCustomAnalyticsArtifact`: %v\n", resp)
 }
 ```
@@ -2119,7 +2119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200224**](InlineResponse200224.md)
+[**InlineResponse200229**](InlineResponse200229.md)
 
 ### Authorization
 
@@ -2137,7 +2137,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraCustomAnalyticsArtifacts
 
-> []InlineResponse200224 GetOrganizationCameraCustomAnalyticsArtifacts(ctx, organizationId).Execute()
+> []InlineResponse200229 GetOrganizationCameraCustomAnalyticsArtifacts(ctx, organizationId).Execute()
 
 List Custom Analytics Artifacts
 
@@ -2165,7 +2165,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetOrganizationCameraCustomAnalyticsArtifacts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraCustomAnalyticsArtifacts`: []InlineResponse200224
+    // response from `GetOrganizationCameraCustomAnalyticsArtifacts`: []InlineResponse200229
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetOrganizationCameraCustomAnalyticsArtifacts`: %v\n", resp)
 }
 ```
@@ -2189,7 +2189,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200224**](InlineResponse200224.md)
+[**[]InlineResponse200229**](InlineResponse200229.md)
 
 ### Authorization
 
@@ -2207,7 +2207,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraDetectionsHistoryByBoundaryByInterval
 
-> []InlineResponse200225 GetOrganizationCameraDetectionsHistoryByBoundaryByInterval(ctx, organizationId).BoundaryIds(boundaryIds).Duration(duration).PerPage(perPage).BoundaryTypes(boundaryTypes).Execute()
+> []InlineResponse200230 GetOrganizationCameraDetectionsHistoryByBoundaryByInterval(ctx, organizationId).BoundaryIds(boundaryIds).Duration(duration).PerPage(perPage).BoundaryTypes(boundaryTypes).Execute()
 
 Returns analytics data for timespans
 
@@ -2239,7 +2239,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetOrganizationCameraDetectionsHistoryByBoundaryByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: []InlineResponse200225
+    // response from `GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: []InlineResponse200230
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetOrganizationCameraDetectionsHistoryByBoundaryByInterval`: %v\n", resp)
 }
 ```
@@ -2267,7 +2267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200225**](InlineResponse200225.md)
+[**[]InlineResponse200230**](InlineResponse200230.md)
 
 ### Authorization
 
@@ -2359,7 +2359,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraPermission
 
-> InlineResponse200226 GetOrganizationCameraPermission(ctx, organizationId, permissionScopeId).Execute()
+> InlineResponse200231 GetOrganizationCameraPermission(ctx, organizationId, permissionScopeId).Execute()
 
 Retrieve a single permission scope
 
@@ -2388,7 +2388,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetOrganizationCameraPermission``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraPermission`: InlineResponse200226
+    // response from `GetOrganizationCameraPermission`: InlineResponse200231
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetOrganizationCameraPermission`: %v\n", resp)
 }
 ```
@@ -2414,7 +2414,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200226**](InlineResponse200226.md)
+[**InlineResponse200231**](InlineResponse200231.md)
 
 ### Authorization
 
@@ -2432,7 +2432,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraPermissions
 
-> []InlineResponse200226 GetOrganizationCameraPermissions(ctx, organizationId).Execute()
+> []InlineResponse200231 GetOrganizationCameraPermissions(ctx, organizationId).Execute()
 
 List the permissions scopes for this organization
 
@@ -2460,7 +2460,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CameraApi.GetOrganizationCameraPermissions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraPermissions`: []InlineResponse200226
+    // response from `GetOrganizationCameraPermissions`: []InlineResponse200231
     fmt.Fprintf(os.Stdout, "Response from `CameraApi.GetOrganizationCameraPermissions`: %v\n", resp)
 }
 ```
@@ -2484,7 +2484,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200226**](InlineResponse200226.md)
+[**[]InlineResponse200231**](InlineResponse200231.md)
 
 ### Authorization
 
@@ -3175,7 +3175,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject221() // InlineObject221 |  (optional)
+    updateOrganizationCameraOnboardingStatuses := *openapiclient.NewInlineObject225() // InlineObject225 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3205,7 +3205,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationCameraOn
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationCameraOnboardingStatuses** | [**InlineObject221**](InlineObject221.md) |  | 
+ **updateOrganizationCameraOnboardingStatuses** | [**InlineObject225**](InlineObject225.md) |  | 
 
 ### Return type
 
@@ -3248,7 +3248,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     roleId := "roleId_example" // string | Role ID
-    updateOrganizationCameraRole := *openapiclient.NewInlineObject223() // InlineObject223 |  (optional)
+    updateOrganizationCameraRole := *openapiclient.NewInlineObject227() // InlineObject227 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -3280,7 +3280,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationCameraRole** | [**InlineObject223**](InlineObject223.md) |  | 
+ **updateOrganizationCameraRole** | [**InlineObject227**](InlineObject227.md) |  | 
 
 ### Return type
 

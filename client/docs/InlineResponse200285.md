@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
-**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
+**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200285WithDefaults instantiates a new InlineResponse200285 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetCertificate
 
-`func (o *InlineResponse200285) GetTs() time.Time`
+`func (o *InlineResponse200285) GetCertificate() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetCertificate returns the Certificate field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetCertificateOk
 
-`func (o *InlineResponse200285) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200285) GetCertificateOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetCertificate
 
-`func (o *InlineResponse200285) SetTs(v time.Time)`
+`func (o *InlineResponse200285) SetCertificate(v string)`
 
-SetTs sets Ts field to given value.
+SetCertificate sets Certificate field to given value.
 
-### HasTs
+### HasCertificate
 
-`func (o *InlineResponse200285) HasTs() bool`
+`func (o *InlineResponse200285) HasCertificate() bool`
 
-HasTs returns a boolean if a field has been set.
-
-### GetDraw
-
-`func (o *InlineResponse200285) GetDraw() float32`
-
-GetDraw returns the Draw field if non-nil, zero value otherwise.
-
-### GetDrawOk
-
-`func (o *InlineResponse200285) GetDrawOk() (*float32, bool)`
-
-GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDraw
-
-`func (o *InlineResponse200285) SetDraw(v float32)`
-
-SetDraw sets Draw field to given value.
-
-### HasDraw
-
-`func (o *InlineResponse200285) HasDraw() bool`
-
-HasDraw returns a boolean if a field has been set.
+HasCertificate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

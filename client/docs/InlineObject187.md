@@ -4,10 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timeout** | Pointer to **int32** | General EAP timeout in seconds. | [optional] 
-**Identity** | Pointer to [**InlineResponse200189Identity**](InlineResponse200189Identity.md) |  | [optional] 
-**MaxRetries** | Pointer to **int32** | Maximum number of general EAP retries. | [optional] 
-**EapolKey** | Pointer to [**InlineResponse200189EapolKey**](InlineResponse200189EapolKey.md) |  | [optional] 
+**MeshingEnabled** | Pointer to **bool** | Toggle for enabling or disabling meshing in a network | [optional] 
+**Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
+**LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
+**UpgradeStrategy** | Pointer to **string** | The default strategy that network devices will use to perform an upgrade. Requires firmware version MR 26.8 or higher. | [optional] 
+**LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
+**NamedVlans** | Pointer to [**NetworksNetworkIdWirelessSettingsNamedVlans**](NetworksNetworkIdWirelessSettingsNamedVlans.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +30,155 @@ NewInlineObject187WithDefaults instantiates a new InlineObject187 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTimeout
+### GetMeshingEnabled
 
-`func (o *InlineObject187) GetTimeout() int32`
+`func (o *InlineObject187) GetMeshingEnabled() bool`
 
-GetTimeout returns the Timeout field if non-nil, zero value otherwise.
+GetMeshingEnabled returns the MeshingEnabled field if non-nil, zero value otherwise.
 
-### GetTimeoutOk
+### GetMeshingEnabledOk
 
-`func (o *InlineObject187) GetTimeoutOk() (*int32, bool)`
+`func (o *InlineObject187) GetMeshingEnabledOk() (*bool, bool)`
 
-GetTimeoutOk returns a tuple with the Timeout field if it's non-nil, zero value otherwise
+GetMeshingEnabledOk returns a tuple with the MeshingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeout
+### SetMeshingEnabled
 
-`func (o *InlineObject187) SetTimeout(v int32)`
+`func (o *InlineObject187) SetMeshingEnabled(v bool)`
 
-SetTimeout sets Timeout field to given value.
+SetMeshingEnabled sets MeshingEnabled field to given value.
 
-### HasTimeout
+### HasMeshingEnabled
 
-`func (o *InlineObject187) HasTimeout() bool`
+`func (o *InlineObject187) HasMeshingEnabled() bool`
 
-HasTimeout returns a boolean if a field has been set.
+HasMeshingEnabled returns a boolean if a field has been set.
 
-### GetIdentity
+### GetIpv6BridgeEnabled
 
-`func (o *InlineObject187) GetIdentity() InlineResponse200189Identity`
+`func (o *InlineObject187) GetIpv6BridgeEnabled() bool`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetIpv6BridgeEnabled returns the Ipv6BridgeEnabled field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetIpv6BridgeEnabledOk
 
-`func (o *InlineObject187) GetIdentityOk() (*InlineResponse200189Identity, bool)`
+`func (o *InlineObject187) GetIpv6BridgeEnabledOk() (*bool, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetIpv6BridgeEnabledOk returns a tuple with the Ipv6BridgeEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetIpv6BridgeEnabled
 
-`func (o *InlineObject187) SetIdentity(v InlineResponse200189Identity)`
+`func (o *InlineObject187) SetIpv6BridgeEnabled(v bool)`
 
-SetIdentity sets Identity field to given value.
+SetIpv6BridgeEnabled sets Ipv6BridgeEnabled field to given value.
 
-### HasIdentity
+### HasIpv6BridgeEnabled
 
-`func (o *InlineObject187) HasIdentity() bool`
+`func (o *InlineObject187) HasIpv6BridgeEnabled() bool`
 
-HasIdentity returns a boolean if a field has been set.
+HasIpv6BridgeEnabled returns a boolean if a field has been set.
 
-### GetMaxRetries
+### GetLocationAnalyticsEnabled
 
-`func (o *InlineObject187) GetMaxRetries() int32`
+`func (o *InlineObject187) GetLocationAnalyticsEnabled() bool`
 
-GetMaxRetries returns the MaxRetries field if non-nil, zero value otherwise.
+GetLocationAnalyticsEnabled returns the LocationAnalyticsEnabled field if non-nil, zero value otherwise.
 
-### GetMaxRetriesOk
+### GetLocationAnalyticsEnabledOk
 
-`func (o *InlineObject187) GetMaxRetriesOk() (*int32, bool)`
+`func (o *InlineObject187) GetLocationAnalyticsEnabledOk() (*bool, bool)`
 
-GetMaxRetriesOk returns a tuple with the MaxRetries field if it's non-nil, zero value otherwise
+GetLocationAnalyticsEnabledOk returns a tuple with the LocationAnalyticsEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaxRetries
+### SetLocationAnalyticsEnabled
 
-`func (o *InlineObject187) SetMaxRetries(v int32)`
+`func (o *InlineObject187) SetLocationAnalyticsEnabled(v bool)`
 
-SetMaxRetries sets MaxRetries field to given value.
+SetLocationAnalyticsEnabled sets LocationAnalyticsEnabled field to given value.
 
-### HasMaxRetries
+### HasLocationAnalyticsEnabled
 
-`func (o *InlineObject187) HasMaxRetries() bool`
+`func (o *InlineObject187) HasLocationAnalyticsEnabled() bool`
 
-HasMaxRetries returns a boolean if a field has been set.
+HasLocationAnalyticsEnabled returns a boolean if a field has been set.
 
-### GetEapolKey
+### GetUpgradeStrategy
 
-`func (o *InlineObject187) GetEapolKey() InlineResponse200189EapolKey`
+`func (o *InlineObject187) GetUpgradeStrategy() string`
 
-GetEapolKey returns the EapolKey field if non-nil, zero value otherwise.
+GetUpgradeStrategy returns the UpgradeStrategy field if non-nil, zero value otherwise.
 
-### GetEapolKeyOk
+### GetUpgradeStrategyOk
 
-`func (o *InlineObject187) GetEapolKeyOk() (*InlineResponse200189EapolKey, bool)`
+`func (o *InlineObject187) GetUpgradeStrategyOk() (*string, bool)`
 
-GetEapolKeyOk returns a tuple with the EapolKey field if it's non-nil, zero value otherwise
+GetUpgradeStrategyOk returns a tuple with the UpgradeStrategy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEapolKey
+### SetUpgradeStrategy
 
-`func (o *InlineObject187) SetEapolKey(v InlineResponse200189EapolKey)`
+`func (o *InlineObject187) SetUpgradeStrategy(v string)`
 
-SetEapolKey sets EapolKey field to given value.
+SetUpgradeStrategy sets UpgradeStrategy field to given value.
 
-### HasEapolKey
+### HasUpgradeStrategy
 
-`func (o *InlineObject187) HasEapolKey() bool`
+`func (o *InlineObject187) HasUpgradeStrategy() bool`
 
-HasEapolKey returns a boolean if a field has been set.
+HasUpgradeStrategy returns a boolean if a field has been set.
+
+### GetLedLightsOn
+
+`func (o *InlineObject187) GetLedLightsOn() bool`
+
+GetLedLightsOn returns the LedLightsOn field if non-nil, zero value otherwise.
+
+### GetLedLightsOnOk
+
+`func (o *InlineObject187) GetLedLightsOnOk() (*bool, bool)`
+
+GetLedLightsOnOk returns a tuple with the LedLightsOn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLedLightsOn
+
+`func (o *InlineObject187) SetLedLightsOn(v bool)`
+
+SetLedLightsOn sets LedLightsOn field to given value.
+
+### HasLedLightsOn
+
+`func (o *InlineObject187) HasLedLightsOn() bool`
+
+HasLedLightsOn returns a boolean if a field has been set.
+
+### GetNamedVlans
+
+`func (o *InlineObject187) GetNamedVlans() NetworksNetworkIdWirelessSettingsNamedVlans`
+
+GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
+
+### GetNamedVlansOk
+
+`func (o *InlineObject187) GetNamedVlansOk() (*NetworksNetworkIdWirelessSettingsNamedVlans, bool)`
+
+GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNamedVlans
+
+`func (o *InlineObject187) SetNamedVlans(v NetworksNetworkIdWirelessSettingsNamedVlans)`
+
+SetNamedVlans sets NamedVlans field to given value.
+
+### HasNamedVlans
+
+`func (o *InlineObject187) HasNamedVlans() bool`
+
+HasNamedVlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

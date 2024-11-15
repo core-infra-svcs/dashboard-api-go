@@ -245,7 +245,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject212([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject212 | 
+    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject216([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject216 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -275,7 +275,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject212**](InlineObject212.md) |  | 
+ **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject216**](InlineObject216.md) |  | 
 
 ### Return type
 

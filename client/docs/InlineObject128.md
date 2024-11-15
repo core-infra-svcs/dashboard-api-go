@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | [**[]NetworksNetworkIdSwitchAccessControlListsRules**](NetworksNetworkIdSwitchAccessControlListsRules.md) | An ordered array of the access control list rules (not including the default rule). An empty array will clear the rules. | 
+**AppIds** | **[]string** | ids of applications to be uninstalled | 
 
 ## Methods
 
 ### NewInlineObject128
 
-`func NewInlineObject128(rules []NetworksNetworkIdSwitchAccessControlListsRules, ) *InlineObject128`
+`func NewInlineObject128(appIds []string, ) *InlineObject128`
 
 NewInlineObject128 instantiates a new InlineObject128 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject128WithDefaults instantiates a new InlineObject128 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetAppIds
 
-`func (o *InlineObject128) GetRules() []NetworksNetworkIdSwitchAccessControlListsRules`
+`func (o *InlineObject128) GetAppIds() []string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetAppIds returns the AppIds field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetAppIdsOk
 
-`func (o *InlineObject128) GetRulesOk() (*[]NetworksNetworkIdSwitchAccessControlListsRules, bool)`
+`func (o *InlineObject128) GetAppIdsOk() (*[]string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetAppIdsOk returns a tuple with the AppIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetAppIds
 
-`func (o *InlineObject128) SetRules(v []NetworksNetworkIdSwitchAccessControlListsRules)`
+`func (o *InlineObject128) SetAppIds(v []string)`
 
-SetRules sets Rules field to given value.
+SetAppIds sets AppIds field to given value.
 
 
 

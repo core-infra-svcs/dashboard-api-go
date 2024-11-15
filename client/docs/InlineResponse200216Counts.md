@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | **int32** | Total number of alerts on the organization | 
-**BySeverity** | [**[]InlineResponse200216CountsBySeverity**](InlineResponse200216CountsBySeverity.md) | Counts of alerts on organization by severity | 
+**ByStatus** | Pointer to [**InlineResponse200216CountsByStatus**](InlineResponse200216CountsByStatus.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200216Counts
 
-`func NewInlineResponse200216Counts(total int32, bySeverity []InlineResponse200216CountsBySeverity, ) *InlineResponse200216Counts`
+`func NewInlineResponse200216Counts() *InlineResponse200216Counts`
 
 NewInlineResponse200216Counts instantiates a new InlineResponse200216Counts object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineResponse200216CountsWithDefaults instantiates a new InlineResponse20021
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTotal
+### GetByStatus
 
-`func (o *InlineResponse200216Counts) GetTotal() int32`
+`func (o *InlineResponse200216Counts) GetByStatus() InlineResponse200216CountsByStatus`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetByStatus returns the ByStatus field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetByStatusOk
 
-`func (o *InlineResponse200216Counts) GetTotalOk() (*int32, bool)`
+`func (o *InlineResponse200216Counts) GetByStatusOk() (*InlineResponse200216CountsByStatus, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetByStatusOk returns a tuple with the ByStatus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetByStatus
 
-`func (o *InlineResponse200216Counts) SetTotal(v int32)`
+`func (o *InlineResponse200216Counts) SetByStatus(v InlineResponse200216CountsByStatus)`
 
-SetTotal sets Total field to given value.
+SetByStatus sets ByStatus field to given value.
 
+### HasByStatus
 
-### GetBySeverity
+`func (o *InlineResponse200216Counts) HasByStatus() bool`
 
-`func (o *InlineResponse200216Counts) GetBySeverity() []InlineResponse200216CountsBySeverity`
-
-GetBySeverity returns the BySeverity field if non-nil, zero value otherwise.
-
-### GetBySeverityOk
-
-`func (o *InlineResponse200216Counts) GetBySeverityOk() (*[]InlineResponse200216CountsBySeverity, bool)`
-
-GetBySeverityOk returns a tuple with the BySeverity field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBySeverity
-
-`func (o *InlineResponse200216Counts) SetBySeverity(v []InlineResponse200216CountsBySeverity)`
-
-SetBySeverity sets BySeverity field to given value.
-
+HasByStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

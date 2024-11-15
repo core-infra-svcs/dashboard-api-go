@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the dashboard administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
+**SourceGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1.md) |  | 
+**DestinationGroup** | [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1.md) |  | 
+**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: []) | [optional] 
+**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL (default: \&quot;default\&quot;) | [optional] 
 
 ## Methods
 
 ### NewInlineObject209
 
-`func NewInlineObject209() *InlineObject209`
+`func NewInlineObject209(sourceGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1, destinationGroup OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1, ) *InlineObject209`
 
 NewInlineObject209 instantiates a new InlineObject209 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +28,95 @@ NewInlineObject209WithDefaults instantiates a new InlineObject209 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSourceGroup
 
-`func (o *InlineObject209) GetName() string`
+`func (o *InlineObject209) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSourceGroupOk
 
-`func (o *InlineObject209) GetNameOk() (*string, bool)`
+`func (o *InlineObject209) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSourceGroup
 
-`func (o *InlineObject209) SetName(v string)`
+`func (o *InlineObject209) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1)`
 
-SetName sets Name field to given value.
+SetSourceGroup sets SourceGroup field to given value.
 
-### HasName
 
-`func (o *InlineObject209) HasName() bool`
+### GetDestinationGroup
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject209) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1`
 
-### GetOrgAccess
+GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
 
-`func (o *InlineObject209) GetOrgAccess() string`
+### GetDestinationGroupOk
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+`func (o *InlineObject209) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1, bool)`
 
-### GetOrgAccessOk
-
-`func (o *InlineObject209) GetOrgAccessOk() (*string, bool)`
-
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetDestinationGroup
 
-`func (o *InlineObject209) SetOrgAccess(v string)`
+`func (o *InlineObject209) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetDestinationGroup sets DestinationGroup field to given value.
 
-### HasOrgAccess
 
-`func (o *InlineObject209) HasOrgAccess() bool`
+### GetAcls
 
-HasOrgAccess returns a boolean if a field has been set.
+`func (o *InlineObject209) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1`
 
-### GetTags
+GetAcls returns the Acls field if non-nil, zero value otherwise.
 
-`func (o *InlineObject209) GetTags() []OrganizationsOrganizationIdAdminsTags1`
+### GetAclsOk
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+`func (o *InlineObject209) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1, bool)`
 
-### GetTagsOk
-
-`func (o *InlineObject209) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetAcls
 
-`func (o *InlineObject209) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
+`func (o *InlineObject209) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1)`
 
-SetTags sets Tags field to given value.
+SetAcls sets Acls field to given value.
 
-### HasTags
+### HasAcls
 
-`func (o *InlineObject209) HasTags() bool`
+`func (o *InlineObject209) HasAcls() bool`
 
-HasTags returns a boolean if a field has been set.
+HasAcls returns a boolean if a field has been set.
 
-### GetNetworks
+### GetLastEntryRule
 
-`func (o *InlineObject209) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
+`func (o *InlineObject209) GetLastEntryRule() string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetLastEntryRuleOk
 
-`func (o *InlineObject209) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
+`func (o *InlineObject209) GetLastEntryRuleOk() (*string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetLastEntryRule
 
-`func (o *InlineObject209) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
+`func (o *InlineObject209) SetLastEntryRule(v string)`
 
-SetNetworks sets Networks field to given value.
+SetLastEntryRule sets LastEntryRule field to given value.
 
-### HasNetworks
+### HasLastEntryRule
 
-`func (o *InlineObject209) HasNetworks() bool`
+`func (o *InlineObject209) HasLastEntryRule() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasLastEntryRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

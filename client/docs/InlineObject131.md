@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
-**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
-**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
-**Switches** | Pointer to [**[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches**](NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
+**Access** | Pointer to **string** | The type of SNMP access. Can be one of &#39;none&#39; (disabled), &#39;community&#39; (V1/V2c), or &#39;users&#39; (V3). | [optional] 
+**CommunityString** | Pointer to **string** | The SNMP community string. Only relevant if &#39;access&#39; is set to &#39;community&#39;. | [optional] 
+**Users** | Pointer to [**[]NetworksNetworkIdSnmpUsers**](NetworksNetworkIdSnmpUsers.md) | The list of SNMP users. Only relevant if &#39;access&#39; is set to &#39;users&#39;. | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject131WithDefaults instantiates a new InlineObject131 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetAccess
 
-`func (o *InlineObject131) GetEnabled() bool`
+`func (o *InlineObject131) GetAccess() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetAccess returns the Access field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetAccessOk
 
-`func (o *InlineObject131) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject131) GetAccessOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetAccess
 
-`func (o *InlineObject131) SetEnabled(v bool)`
+`func (o *InlineObject131) SetAccess(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetAccess sets Access field to given value.
 
-### HasEnabled
+### HasAccess
 
-`func (o *InlineObject131) HasEnabled() bool`
+`func (o *InlineObject131) HasAccess() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasAccess returns a boolean if a field has been set.
 
-### GetVlanId
+### GetCommunityString
 
-`func (o *InlineObject131) GetVlanId() int32`
+`func (o *InlineObject131) GetCommunityString() string`
 
-GetVlanId returns the VlanId field if non-nil, zero value otherwise.
+GetCommunityString returns the CommunityString field if non-nil, zero value otherwise.
 
-### GetVlanIdOk
+### GetCommunityStringOk
 
-`func (o *InlineObject131) GetVlanIdOk() (*int32, bool)`
+`func (o *InlineObject131) GetCommunityStringOk() (*string, bool)`
 
-GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
+GetCommunityStringOk returns a tuple with the CommunityString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanId
+### SetCommunityString
 
-`func (o *InlineObject131) SetVlanId(v int32)`
+`func (o *InlineObject131) SetCommunityString(v string)`
 
-SetVlanId sets VlanId field to given value.
+SetCommunityString sets CommunityString field to given value.
 
-### HasVlanId
+### HasCommunityString
 
-`func (o *InlineObject131) HasVlanId() bool`
+`func (o *InlineObject131) HasCommunityString() bool`
 
-HasVlanId returns a boolean if a field has been set.
+HasCommunityString returns a boolean if a field has been set.
 
-### GetProtocols
+### GetUsers
 
-`func (o *InlineObject131) GetProtocols() []string`
+`func (o *InlineObject131) GetUsers() []NetworksNetworkIdSnmpUsers`
 
-GetProtocols returns the Protocols field if non-nil, zero value otherwise.
+GetUsers returns the Users field if non-nil, zero value otherwise.
 
-### GetProtocolsOk
+### GetUsersOk
 
-`func (o *InlineObject131) GetProtocolsOk() (*[]string, bool)`
+`func (o *InlineObject131) GetUsersOk() (*[]NetworksNetworkIdSnmpUsers, bool)`
 
-GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
+GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocols
+### SetUsers
 
-`func (o *InlineObject131) SetProtocols(v []string)`
+`func (o *InlineObject131) SetUsers(v []NetworksNetworkIdSnmpUsers)`
 
-SetProtocols sets Protocols field to given value.
+SetUsers sets Users field to given value.
 
-### HasProtocols
+### HasUsers
 
-`func (o *InlineObject131) HasProtocols() bool`
+`func (o *InlineObject131) HasUsers() bool`
 
-HasProtocols returns a boolean if a field has been set.
-
-### GetSwitches
-
-`func (o *InlineObject131) GetSwitches() []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches`
-
-GetSwitches returns the Switches field if non-nil, zero value otherwise.
-
-### GetSwitchesOk
-
-`func (o *InlineObject131) GetSwitchesOk() (*[]NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches, bool)`
-
-GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSwitches
-
-`func (o *InlineObject131) SetSwitches(v []NetworksNetworkIdSwitchAlternateManagementInterfaceSwitches)`
-
-SetSwitches sets Switches field to given value.
-
-### HasSwitches
-
-`func (o *InlineObject131) HasSwitches() bool`
-
-HasSwitches returns a boolean if a field has been set.
+HasUsers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

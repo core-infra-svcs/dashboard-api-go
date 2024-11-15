@@ -34,7 +34,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationInventoryOnboardingCloudMonitoringExportEvent := *openapiclient.NewInlineObject240("LogEvent_example", int32(123)) // InlineObject240 | 
+    createOrganizationInventoryOnboardingCloudMonitoringExportEvent := *openapiclient.NewInlineObject244("LogEvent_example", int32(123)) // InlineObject244 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringExportEvent** | [**InlineObject240**](InlineObject240.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringExportEvent** | [**InlineObject244**](InlineObject244.md) |  | 
 
 ### Return type
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationInventoryOnboardingCloudMonitoringImport
 
-> []InlineResponse20114 CreateOrganizationInventoryOnboardingCloudMonitoringImport(ctx, organizationId).CreateOrganizationInventoryOnboardingCloudMonitoringImport(createOrganizationInventoryOnboardingCloudMonitoringImport).Execute()
+> []InlineResponse20115 CreateOrganizationInventoryOnboardingCloudMonitoringImport(ctx, organizationId).CreateOrganizationInventoryOnboardingCloudMonitoringImport(createOrganizationInventoryOnboardingCloudMonitoringImport).Execute()
 
 Commits the import operation to complete the onboarding of a device into Dashboard for monitoring.
 
@@ -106,7 +106,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationInventoryOnboardingCloudMonitoringImport := *openapiclient.NewInlineObject241([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices("DeviceId_example", "Udi_example", "NetworkId_example")}) // InlineObject241 | 
+    createOrganizationInventoryOnboardingCloudMonitoringImport := *openapiclient.NewInlineObject245([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices("DeviceId_example", "Udi_example", "NetworkId_example")}) // InlineObject245 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -115,7 +115,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CloudMonitoringApi.CreateOrganizationInventoryOnboardingCloudMonitoringImport``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationInventoryOnboardingCloudMonitoringImport`: []InlineResponse20114
+    // response from `CreateOrganizationInventoryOnboardingCloudMonitoringImport`: []InlineResponse20115
     fmt.Fprintf(os.Stdout, "Response from `CloudMonitoringApi.CreateOrganizationInventoryOnboardingCloudMonitoringImport`: %v\n", resp)
 }
 ```
@@ -136,11 +136,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringImport** | [**InlineObject241**](InlineObject241.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringImport** | [**InlineObject245**](InlineObject245.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse20114**](InlineResponse20114.md)
+[**[]InlineResponse20115**](InlineResponse20115.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ## CreateOrganizationInventoryOnboardingCloudMonitoringPrepare
 
-> []InlineResponse20115 CreateOrganizationInventoryOnboardingCloudMonitoringPrepare(ctx, organizationId).CreateOrganizationInventoryOnboardingCloudMonitoringPrepare(createOrganizationInventoryOnboardingCloudMonitoringPrepare).Execute()
+> []InlineResponse20116 CreateOrganizationInventoryOnboardingCloudMonitoringPrepare(ctx, organizationId).CreateOrganizationInventoryOnboardingCloudMonitoringPrepare(createOrganizationInventoryOnboardingCloudMonitoringPrepare).Execute()
 
 Initiates or updates an import session
 
@@ -178,7 +178,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationInventoryOnboardingCloudMonitoringPrepare := *openapiclient.NewInlineObject242([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices("Sudi_example")}) // InlineObject242 | 
+    createOrganizationInventoryOnboardingCloudMonitoringPrepare := *openapiclient.NewInlineObject246([]openapiclient.OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices{*openapiclient.NewOrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices("Sudi_example")}) // InlineObject246 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -187,7 +187,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CloudMonitoringApi.CreateOrganizationInventoryOnboardingCloudMonitoringPrepare``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationInventoryOnboardingCloudMonitoringPrepare`: []InlineResponse20115
+    // response from `CreateOrganizationInventoryOnboardingCloudMonitoringPrepare`: []InlineResponse20116
     fmt.Fprintf(os.Stdout, "Response from `CloudMonitoringApi.CreateOrganizationInventoryOnboardingCloudMonitoringPrepare`: %v\n", resp)
 }
 ```
@@ -208,11 +208,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryOnboardingCloudMonitoringPrepare** | [**InlineObject242**](InlineObject242.md) |  | 
+ **createOrganizationInventoryOnboardingCloudMonitoringPrepare** | [**InlineObject246**](InlineObject246.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse20115**](InlineResponse20115.md)
+[**[]InlineResponse20116**](InlineResponse20116.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryOnboardingCloudMonitoringImports
 
-> []InlineResponse200259 GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx, organizationId).ImportIds(importIds).Execute()
+> []InlineResponse200266 GetOrganizationInventoryOnboardingCloudMonitoringImports(ctx, organizationId).ImportIds(importIds).Execute()
 
 Check the status of a committed Import operation
 
@@ -259,7 +259,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CloudMonitoringApi.GetOrganizationInventoryOnboardingCloudMonitoringImports``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryOnboardingCloudMonitoringImports`: []InlineResponse200259
+    // response from `GetOrganizationInventoryOnboardingCloudMonitoringImports`: []InlineResponse200266
     fmt.Fprintf(os.Stdout, "Response from `CloudMonitoringApi.GetOrganizationInventoryOnboardingCloudMonitoringImports`: %v\n", resp)
 }
 ```
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200259**](InlineResponse200259.md)
+[**[]InlineResponse200266**](InlineResponse200266.md)
 
 ### Authorization
 

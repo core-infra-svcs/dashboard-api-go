@@ -4,12 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PayloadTemplateId** | Pointer to **string** | Webhook payload template Id | [optional] 
-**Type** | Pointer to **string** | The type of the payload template | [optional] 
-**Name** | Pointer to **string** | The name of the payload template | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders.md) | The payload template headers, will be rendered as a key-value pair in the webhook. | [optional] 
-**Body** | Pointer to **string** | The body of the payload template, in liquid template | [optional] 
-**Sharing** | Pointer to [**NetworksNetworkIdWebhooksPayloadTemplatesSharing**](NetworksNetworkIdWebhooksPayloadTemplatesSharing.md) |  | [optional] 
+**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
+**CustomPieChartItems** | Pointer to [**[]InlineResponse200167CustomPieChartItems**](InlineResponse200167CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
 
 ## Methods
 
@@ -30,155 +26,55 @@ NewInlineResponse200167WithDefaults instantiates a new InlineResponse200167 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPayloadTemplateId
+### GetMode
 
-`func (o *InlineResponse200167) GetPayloadTemplateId() string`
+`func (o *InlineResponse200167) GetMode() string`
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateIdOk
+### GetModeOk
 
-`func (o *InlineResponse200167) GetPayloadTemplateIdOk() (*string, bool)`
+`func (o *InlineResponse200167) GetModeOk() (*string, bool)`
 
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetMode
 
-`func (o *InlineResponse200167) SetPayloadTemplateId(v string)`
+`func (o *InlineResponse200167) SetMode(v string)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetMode sets Mode field to given value.
 
-### HasPayloadTemplateId
+### HasMode
 
-`func (o *InlineResponse200167) HasPayloadTemplateId() bool`
+`func (o *InlineResponse200167) HasMode() bool`
 
-HasPayloadTemplateId returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetType
+### GetCustomPieChartItems
 
-`func (o *InlineResponse200167) GetType() string`
+`func (o *InlineResponse200167) GetCustomPieChartItems() []InlineResponse200167CustomPieChartItems`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetCustomPieChartItemsOk
 
-`func (o *InlineResponse200167) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200167) GetCustomPieChartItemsOk() (*[]InlineResponse200167CustomPieChartItems, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetCustomPieChartItems
 
-`func (o *InlineResponse200167) SetType(v string)`
+`func (o *InlineResponse200167) SetCustomPieChartItems(v []InlineResponse200167CustomPieChartItems)`
 
-SetType sets Type field to given value.
+SetCustomPieChartItems sets CustomPieChartItems field to given value.
 
-### HasType
+### HasCustomPieChartItems
 
-`func (o *InlineResponse200167) HasType() bool`
+`func (o *InlineResponse200167) HasCustomPieChartItems() bool`
 
-HasType returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200167) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200167) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200167) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200167) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetHeaders
-
-`func (o *InlineResponse200167) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders`
-
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
-
-### GetHeadersOk
-
-`func (o *InlineResponse200167) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders, bool)`
-
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeaders
-
-`func (o *InlineResponse200167) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders)`
-
-SetHeaders sets Headers field to given value.
-
-### HasHeaders
-
-`func (o *InlineResponse200167) HasHeaders() bool`
-
-HasHeaders returns a boolean if a field has been set.
-
-### GetBody
-
-`func (o *InlineResponse200167) GetBody() string`
-
-GetBody returns the Body field if non-nil, zero value otherwise.
-
-### GetBodyOk
-
-`func (o *InlineResponse200167) GetBodyOk() (*string, bool)`
-
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBody
-
-`func (o *InlineResponse200167) SetBody(v string)`
-
-SetBody sets Body field to given value.
-
-### HasBody
-
-`func (o *InlineResponse200167) HasBody() bool`
-
-HasBody returns a boolean if a field has been set.
-
-### GetSharing
-
-`func (o *InlineResponse200167) GetSharing() NetworksNetworkIdWebhooksPayloadTemplatesSharing`
-
-GetSharing returns the Sharing field if non-nil, zero value otherwise.
-
-### GetSharingOk
-
-`func (o *InlineResponse200167) GetSharingOk() (*NetworksNetworkIdWebhooksPayloadTemplatesSharing, bool)`
-
-GetSharingOk returns a tuple with the Sharing field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSharing
-
-`func (o *InlineResponse200167) SetSharing(v NetworksNetworkIdWebhooksPayloadTemplatesSharing)`
-
-SetSharing sets Sharing field to given value.
-
-### HasSharing
-
-`func (o *InlineResponse200167) HasSharing() bool`
-
-HasSharing returns a boolean if a field has been set.
+HasCustomPieChartItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

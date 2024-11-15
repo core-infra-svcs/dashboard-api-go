@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | **string** | The serial of the switch to be added | 
+**InterfaceIp** | **string** | The IP address of the interface where the RP needs to be created. | 
+**MulticastGroup** | **string** | &#39;Any&#39;, or the IP address of a multicast group | 
 
 ## Methods
 
 ### NewInlineObject150
 
-`func NewInlineObject150(serial string, ) *InlineObject150`
+`func NewInlineObject150(interfaceIp string, multicastGroup string, ) *InlineObject150`
 
 NewInlineObject150 instantiates a new InlineObject150 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +26,44 @@ NewInlineObject150WithDefaults instantiates a new InlineObject150 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetInterfaceIp
 
-`func (o *InlineObject150) GetSerial() string`
+`func (o *InlineObject150) GetInterfaceIp() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetInterfaceIp returns the InterfaceIp field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetInterfaceIpOk
 
-`func (o *InlineObject150) GetSerialOk() (*string, bool)`
+`func (o *InlineObject150) GetInterfaceIpOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetInterfaceIpOk returns a tuple with the InterfaceIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetInterfaceIp
 
-`func (o *InlineObject150) SetSerial(v string)`
+`func (o *InlineObject150) SetInterfaceIp(v string)`
 
-SetSerial sets Serial field to given value.
+SetInterfaceIp sets InterfaceIp field to given value.
+
+
+### GetMulticastGroup
+
+`func (o *InlineObject150) GetMulticastGroup() string`
+
+GetMulticastGroup returns the MulticastGroup field if non-nil, zero value otherwise.
+
+### GetMulticastGroupOk
+
+`func (o *InlineObject150) GetMulticastGroupOk() (*string, bool)`
+
+GetMulticastGroupOk returns a tuple with the MulticastGroup field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMulticastGroup
+
+`func (o *InlineObject150) SetMulticastGroup(v string)`
+
+SetMulticastGroup sets MulticastGroup field to given value.
 
 
 

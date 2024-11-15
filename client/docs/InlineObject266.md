@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | theme name | [optional] 
-**BaseTheme** | Pointer to **string** | base theme id  | [optional] 
+**Name** | **string** | The name of the Limited Access Role | 
+**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
 
 ## Methods
 
 ### NewInlineObject266
 
-`func NewInlineObject266() *InlineObject266`
+`func NewInlineObject266(name string, ) *InlineObject266`
 
 NewInlineObject266 instantiates a new InlineObject266 object
 This constructor will assign default values to properties that have it defined,
@@ -45,36 +46,56 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject266) HasName() bool`
+### GetScope
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject266) GetScope() string`
 
-### GetBaseTheme
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-`func (o *InlineObject266) GetBaseTheme() string`
+### GetScopeOk
 
-GetBaseTheme returns the BaseTheme field if non-nil, zero value otherwise.
+`func (o *InlineObject266) GetScopeOk() (*string, bool)`
 
-### GetBaseThemeOk
-
-`func (o *InlineObject266) GetBaseThemeOk() (*string, bool)`
-
-GetBaseThemeOk returns a tuple with the BaseTheme field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBaseTheme
+### SetScope
 
-`func (o *InlineObject266) SetBaseTheme(v string)`
+`func (o *InlineObject266) SetScope(v string)`
 
-SetBaseTheme sets BaseTheme field to given value.
+SetScope sets Scope field to given value.
 
-### HasBaseTheme
+### HasScope
 
-`func (o *InlineObject266) HasBaseTheme() bool`
+`func (o *InlineObject266) HasScope() bool`
 
-HasBaseTheme returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject266) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject266) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject266) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineObject266) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

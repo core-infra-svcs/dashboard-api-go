@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]InlineResponse200193Ranges**](InlineResponse200193Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]InlineResponse200193RangesInSeconds**](InlineResponse200193RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200196Rules**](InlineResponse200196Rules.md) | An array of L7 firewall rules for this SSID. Rules will get applied in the same order user has specified in request. Empty array will clear the L7 firewall rule configuration. | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineObject193WithDefaults instantiates a new InlineObject193 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetRules
 
-`func (o *InlineObject193) GetEnabled() bool`
+`func (o *InlineObject193) GetRules() []InlineResponse200196Rules`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetRulesOk
 
-`func (o *InlineObject193) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject193) GetRulesOk() (*[]InlineResponse200196Rules, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetRules
 
-`func (o *InlineObject193) SetEnabled(v bool)`
+`func (o *InlineObject193) SetRules(v []InlineResponse200196Rules)`
 
-SetEnabled sets Enabled field to given value.
+SetRules sets Rules field to given value.
 
-### HasEnabled
+### HasRules
 
-`func (o *InlineObject193) HasEnabled() bool`
+`func (o *InlineObject193) HasRules() bool`
 
-HasEnabled returns a boolean if a field has been set.
-
-### GetRanges
-
-`func (o *InlineObject193) GetRanges() []InlineResponse200193Ranges`
-
-GetRanges returns the Ranges field if non-nil, zero value otherwise.
-
-### GetRangesOk
-
-`func (o *InlineObject193) GetRangesOk() (*[]InlineResponse200193Ranges, bool)`
-
-GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRanges
-
-`func (o *InlineObject193) SetRanges(v []InlineResponse200193Ranges)`
-
-SetRanges sets Ranges field to given value.
-
-### HasRanges
-
-`func (o *InlineObject193) HasRanges() bool`
-
-HasRanges returns a boolean if a field has been set.
-
-### GetRangesInSeconds
-
-`func (o *InlineObject193) GetRangesInSeconds() []InlineResponse200193RangesInSeconds`
-
-GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
-
-### GetRangesInSecondsOk
-
-`func (o *InlineObject193) GetRangesInSecondsOk() (*[]InlineResponse200193RangesInSeconds, bool)`
-
-GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRangesInSeconds
-
-`func (o *InlineObject193) SetRangesInSeconds(v []InlineResponse200193RangesInSeconds)`
-
-SetRangesInSeconds sets RangesInSeconds field to given value.
-
-### HasRangesInSeconds
-
-`func (o *InlineObject193) HasRangesInSeconds() bool`
-
-HasRangesInSeconds returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

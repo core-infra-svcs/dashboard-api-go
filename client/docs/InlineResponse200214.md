@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Peers** | Pointer to [**[]InlineResponse200214Peers**](InlineResponse200214Peers.md) | The list of VPN peers | [optional] 
+**Items** | Pointer to [**[]InlineResponse20066**](InlineResponse20066.md) | VPN exclusion rules by network | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200214WithDefaults instantiates a new InlineResponse200214 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPeers
+### GetItems
 
-`func (o *InlineResponse200214) GetPeers() []InlineResponse200214Peers`
+`func (o *InlineResponse200214) GetItems() []InlineResponse20066`
 
-GetPeers returns the Peers field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetPeersOk
+### GetItemsOk
 
-`func (o *InlineResponse200214) GetPeersOk() (*[]InlineResponse200214Peers, bool)`
+`func (o *InlineResponse200214) GetItemsOk() (*[]InlineResponse20066, bool)`
 
-GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeers
+### SetItems
 
-`func (o *InlineResponse200214) SetPeers(v []InlineResponse200214Peers)`
+`func (o *InlineResponse200214) SetItems(v []InlineResponse20066)`
 
-SetPeers sets Peers field to given value.
+SetItems sets Items field to given value.
 
-### HasPeers
+### HasItems
 
-`func (o *InlineResponse200214) HasPeers() bool`
+`func (o *InlineResponse200214) HasItems() bool`
 
-HasPeers returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

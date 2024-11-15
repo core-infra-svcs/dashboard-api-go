@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ThroughputTestId** | Pointer to **string** | ID of throughput test job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your throughput test request | [optional] 
-**Status** | Pointer to **string** | Status of the throughput test request | [optional] 
-**Result** | Pointer to [**InlineResponse2014Result**](InlineResponse2014Result.md) |  | [optional] 
+**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
 **Request** | Pointer to [**InlineResponse2014Request**](InlineResponse2014Request.md) |  | [optional] 
-**Error** | Pointer to **string** | Description of the error. | [optional] 
+**Status** | Pointer to **string** | Status of the ping request. | [optional] 
 **Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
@@ -31,30 +29,30 @@ NewInlineResponse2014WithDefaults instantiates a new InlineResponse2014 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetThroughputTestId
+### GetPingId
 
-`func (o *InlineResponse2014) GetThroughputTestId() string`
+`func (o *InlineResponse2014) GetPingId() string`
 
-GetThroughputTestId returns the ThroughputTestId field if non-nil, zero value otherwise.
+GetPingId returns the PingId field if non-nil, zero value otherwise.
 
-### GetThroughputTestIdOk
+### GetPingIdOk
 
-`func (o *InlineResponse2014) GetThroughputTestIdOk() (*string, bool)`
+`func (o *InlineResponse2014) GetPingIdOk() (*string, bool)`
 
-GetThroughputTestIdOk returns a tuple with the ThroughputTestId field if it's non-nil, zero value otherwise
+GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetThroughputTestId
+### SetPingId
 
-`func (o *InlineResponse2014) SetThroughputTestId(v string)`
+`func (o *InlineResponse2014) SetPingId(v string)`
 
-SetThroughputTestId sets ThroughputTestId field to given value.
+SetPingId sets PingId field to given value.
 
-### HasThroughputTestId
+### HasPingId
 
-`func (o *InlineResponse2014) HasThroughputTestId() bool`
+`func (o *InlineResponse2014) HasPingId() bool`
 
-HasThroughputTestId returns a boolean if a field has been set.
+HasPingId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -81,56 +79,6 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
-### GetStatus
-
-`func (o *InlineResponse2014) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse2014) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse2014) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse2014) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetResult
-
-`func (o *InlineResponse2014) GetResult() InlineResponse2014Result`
-
-GetResult returns the Result field if non-nil, zero value otherwise.
-
-### GetResultOk
-
-`func (o *InlineResponse2014) GetResultOk() (*InlineResponse2014Result, bool)`
-
-GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResult
-
-`func (o *InlineResponse2014) SetResult(v InlineResponse2014Result)`
-
-SetResult sets Result field to given value.
-
-### HasResult
-
-`func (o *InlineResponse2014) HasResult() bool`
-
-HasResult returns a boolean if a field has been set.
-
 ### GetRequest
 
 `func (o *InlineResponse2014) GetRequest() InlineResponse2014Request`
@@ -156,30 +104,30 @@ SetRequest sets Request field to given value.
 
 HasRequest returns a boolean if a field has been set.
 
-### GetError
+### GetStatus
 
-`func (o *InlineResponse2014) GetError() string`
+`func (o *InlineResponse2014) GetStatus() string`
 
-GetError returns the Error field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetErrorOk
+### GetStatusOk
 
-`func (o *InlineResponse2014) GetErrorOk() (*string, bool)`
+`func (o *InlineResponse2014) GetStatusOk() (*string, bool)`
 
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetError
+### SetStatus
 
-`func (o *InlineResponse2014) SetError(v string)`
+`func (o *InlineResponse2014) SetStatus(v string)`
 
-SetError sets Error field to given value.
+SetStatus sets Status field to given value.
 
-### HasError
+### HasStatus
 
-`func (o *InlineResponse2014) HasError() bool`
+`func (o *InlineResponse2014) HasStatus() bool`
 
-HasError returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
 ### GetCallback
 

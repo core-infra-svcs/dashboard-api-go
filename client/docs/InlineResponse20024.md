@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **ThroughputTestId** | Pointer to **string** | ID of throughput test job | [optional] 
 **Url** | Pointer to **string** | GET this url to check the status of your throughput test request | [optional] 
 **Status** | Pointer to **string** | Status of the throughput test request | [optional] 
-**Result** | Pointer to [**InlineResponse2014Result**](InlineResponse2014Result.md) |  | [optional] 
-**Request** | Pointer to [**InlineResponse2014Request**](InlineResponse2014Request.md) |  | [optional] 
+**Result** | Pointer to [**InlineResponse2015Result**](InlineResponse2015Result.md) |  | [optional] 
+**Request** | Pointer to [**InlineResponse2015Request**](InlineResponse2015Request.md) |  | [optional] 
 **Error** | Pointer to **string** | Description of the error. | [optional] 
 
 ## Methods
@@ -107,20 +107,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetResult
 
-`func (o *InlineResponse20024) GetResult() InlineResponse2014Result`
+`func (o *InlineResponse20024) GetResult() InlineResponse2015Result`
 
 GetResult returns the Result field if non-nil, zero value otherwise.
 
 ### GetResultOk
 
-`func (o *InlineResponse20024) GetResultOk() (*InlineResponse2014Result, bool)`
+`func (o *InlineResponse20024) GetResultOk() (*InlineResponse2015Result, bool)`
 
 GetResultOk returns a tuple with the Result field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetResult
 
-`func (o *InlineResponse20024) SetResult(v InlineResponse2014Result)`
+`func (o *InlineResponse20024) SetResult(v InlineResponse2015Result)`
 
 SetResult sets Result field to given value.
 
@@ -132,20 +132,20 @@ HasResult returns a boolean if a field has been set.
 
 ### GetRequest
 
-`func (o *InlineResponse20024) GetRequest() InlineResponse2014Request`
+`func (o *InlineResponse20024) GetRequest() InlineResponse2015Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse20024) GetRequestOk() (*InlineResponse2014Request, bool)`
+`func (o *InlineResponse20024) GetRequestOk() (*InlineResponse2015Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse20024) SetRequest(v InlineResponse2014Request)`
+`func (o *InlineResponse20024) SetRequest(v InlineResponse2015Request)`
 
 SetRequest sets Request field to given value.
 

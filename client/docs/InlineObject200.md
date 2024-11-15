@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
+**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
+**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject200WithDefaults instantiates a new InlineObject200 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetConcentrator
 
-`func (o *InlineObject200) GetConfirmed() bool`
+`func (o *InlineObject200) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetConcentratorOk
 
-`func (o *InlineObject200) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject200) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetConcentrator
 
-`func (o *InlineObject200) SetConfirmed(v bool)`
+`func (o *InlineObject200) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
 
-SetConfirmed sets Confirmed field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasConfirmed
+### HasConcentrator
 
-`func (o *InlineObject200) HasConfirmed() bool`
+`func (o *InlineObject200) HasConcentrator() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetSplitTunnel
 
-`func (o *InlineObject200) GetSynchronous() bool`
+`func (o *InlineObject200) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetSplitTunnelOk
 
-`func (o *InlineObject200) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject200) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetSplitTunnel
 
-`func (o *InlineObject200) SetSynchronous(v bool)`
+`func (o *InlineObject200) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
 
-SetSynchronous sets Synchronous field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasSynchronous
+### HasSplitTunnel
 
-`func (o *InlineObject200) HasSynchronous() bool`
+`func (o *InlineObject200) HasSplitTunnel() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
+
+### GetFailover
+
+`func (o *InlineObject200) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
+
+GetFailover returns the Failover field if non-nil, zero value otherwise.
+
+### GetFailoverOk
+
+`func (o *InlineObject200) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
+
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFailover
+
+`func (o *InlineObject200) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
+
+SetFailover sets Failover field to given value.
+
+### HasFailover
+
+`func (o *InlineObject200) HasFailover() bool`
+
+HasFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

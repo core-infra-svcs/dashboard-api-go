@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## GetNetworkVlanProfilesAssignmentsByDevice
 
-> []InlineResponse200164 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
+> []InlineResponse200169 GetNetworkVlanProfilesAssignmentsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Serials(serials).ProductTypes(productTypes).StackIds(stackIds).Execute()
 
 Get the assigned VLAN Profiles for devices in a network
 
@@ -48,7 +48,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetNetworkVlanProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse200164
+    // response from `GetNetworkVlanProfilesAssignmentsByDevice`: []InlineResponse200169
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetNetworkVlanProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200164**](InlineResponse200164.md)
+[**[]InlineResponse200169**](InlineResponse200169.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmSentryPoliciesAssignmentsByNetwork
 
-> []InlineResponse200280 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200287 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the Sentry Policies for an organization ordered in ascending order of priority
 
@@ -128,7 +128,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200280
+    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200287
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: %v\n", resp)
 }
 ```
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200280**](InlineResponse200280.md)
+[**[]InlineResponse200287**](InlineResponse200287.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessRfProfilesAssignmentsByDevice
 
-> []InlineResponse200313 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
+> []InlineResponse200323 GetOrganizationWirelessRfProfilesAssignmentsByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Name(name).Mac(mac).Serial(serial).Model(model).Macs(macs).Serials(serials).Models(models).Execute()
 
 List the RF profiles of an organization by device
 
@@ -214,7 +214,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200313
+    // response from `GetOrganizationWirelessRfProfilesAssignmentsByDevice`: []InlineResponse200323
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.GetOrganizationWirelessRfProfilesAssignmentsByDevice`: %v\n", resp)
 }
 ```
@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200313**](InlineResponse200313.md)
+[**[]InlineResponse200323**](InlineResponse200323.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 ## ReassignNetworkVlanProfilesAssignments
 
-> InlineResponse200165 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
+> InlineResponse200170 ReassignNetworkVlanProfilesAssignments(ctx, networkId).ReassignNetworkVlanProfilesAssignments(reassignNetworkVlanProfilesAssignments).Execute()
 
 Update the assigned VLAN Profile for devices in a network
 
@@ -288,7 +288,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    reassignNetworkVlanProfilesAssignments := *openapiclient.NewInlineObject163([]string{"Serials_example"}, []string{"StackIds_example"}) // InlineObject163 | 
+    reassignNetworkVlanProfilesAssignments := *openapiclient.NewInlineObject167([]string{"Serials_example"}, []string{"StackIds_example"}) // InlineObject167 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -297,7 +297,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.ReassignNetworkVlanProfilesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse200165
+    // response from `ReassignNetworkVlanProfilesAssignments`: InlineResponse200170
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.ReassignNetworkVlanProfilesAssignments`: %v\n", resp)
 }
 ```
@@ -318,11 +318,11 @@ Other parameters are passed through a pointer to a apiReassignNetworkVlanProfile
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **reassignNetworkVlanProfilesAssignments** | [**InlineObject163**](InlineObject163.md) |  | 
+ **reassignNetworkVlanProfilesAssignments** | [**InlineObject167**](InlineObject167.md) |  | 
 
 ### Return type
 
-[**InlineResponse200165**](InlineResponse200165.md)
+[**InlineResponse200170**](InlineResponse200170.md)
 
 ### Authorization
 
@@ -340,7 +340,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSmSentryPoliciesAssignments
 
-> InlineResponse200279 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
+> InlineResponse200286 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
 
 Update an Organizations Sentry Policies using the provided list
 
@@ -360,7 +360,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject264([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject264 | 
+    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject268([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject268 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -369,7 +369,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssignmentsApi.UpdateOrganizationSmSentryPoliciesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200279
+    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200286
     fmt.Fprintf(os.Stdout, "Response from `AssignmentsApi.UpdateOrganizationSmSentryPoliciesAssignments`: %v\n", resp)
 }
 ```
@@ -390,11 +390,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSmSentry
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject264**](InlineObject264.md) |  | 
+ **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject268**](InlineObject268.md) |  | 
 
 ### Return type
 
-[**InlineResponse200279**](InlineResponse200279.md)
+[**InlineResponse200286**](InlineResponse200286.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | Pointer to **[]string** | The Meraki Ids of the set of endpoints. | [optional] 
+**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
 
 ## Methods
 

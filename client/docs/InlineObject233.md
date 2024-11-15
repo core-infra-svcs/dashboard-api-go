@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to update | 
-**Details** | [**[]OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails**](OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails.md) | An array of details | 
+**Name** | **string** | The name of the new organization | 
 
 ## Methods
 
 ### NewInlineObject233
 
-`func NewInlineObject233(serials []string, details []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails, ) *InlineObject233`
+`func NewInlineObject233(name string, ) *InlineObject233`
 
 NewInlineObject233 instantiates a new InlineObject233 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject233WithDefaults instantiates a new InlineObject233 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetName
 
-`func (o *InlineObject233) GetSerials() []string`
+`func (o *InlineObject233) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineObject233) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject233) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineObject233) SetSerials(v []string)`
+`func (o *InlineObject233) SetName(v string)`
 
-SetSerials sets Serials field to given value.
-
-
-### GetDetails
-
-`func (o *InlineObject233) GetDetails() []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails`
-
-GetDetails returns the Details field if non-nil, zero value otherwise.
-
-### GetDetailsOk
-
-`func (o *InlineObject233) GetDetailsOk() (*[]OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails, bool)`
-
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDetails
-
-`func (o *InlineObject233) SetDetails(v []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails)`
-
-SetDetails sets Details field to given value.
+SetName sets Name field to given value.
 
 
 

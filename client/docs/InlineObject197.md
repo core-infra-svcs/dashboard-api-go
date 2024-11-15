@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the organization | 
-**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200198Ranges**](InlineResponse200198Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200198RangesInSeconds**](InlineResponse200198RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
 ### NewInlineObject197
 
-`func NewInlineObject197(name string, ) *InlineObject197`
+`func NewInlineObject197() *InlineObject197`
 
 NewInlineObject197 instantiates a new InlineObject197 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,80 @@ NewInlineObject197WithDefaults instantiates a new InlineObject197 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject197) GetName() string`
+`func (o *InlineObject197) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject197) GetNameOk() (*string, bool)`
+`func (o *InlineObject197) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject197) SetName(v string)`
+`func (o *InlineObject197) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
+### HasEnabled
 
-### GetManagement
+`func (o *InlineObject197) HasEnabled() bool`
 
-`func (o *InlineObject197) GetManagement() OrganizationsManagement1`
+HasEnabled returns a boolean if a field has been set.
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+### GetRanges
 
-### GetManagementOk
+`func (o *InlineObject197) GetRanges() []InlineResponse200198Ranges`
 
-`func (o *InlineObject197) GetManagementOk() (*OrganizationsManagement1, bool)`
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+### GetRangesOk
+
+`func (o *InlineObject197) GetRangesOk() (*[]InlineResponse200198Ranges, bool)`
+
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetRanges
 
-`func (o *InlineObject197) SetManagement(v OrganizationsManagement1)`
+`func (o *InlineObject197) SetRanges(v []InlineResponse200198Ranges)`
 
-SetManagement sets Management field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasManagement
+### HasRanges
 
-`func (o *InlineObject197) HasManagement() bool`
+`func (o *InlineObject197) HasRanges() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
+
+### GetRangesInSeconds
+
+`func (o *InlineObject197) GetRangesInSeconds() []InlineResponse200198RangesInSeconds`
+
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
+
+### GetRangesInSecondsOk
+
+`func (o *InlineObject197) GetRangesInSecondsOk() (*[]InlineResponse200198RangesInSeconds, bool)`
+
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRangesInSeconds
+
+`func (o *InlineObject197) SetRangesInSeconds(v []InlineResponse200198RangesInSeconds)`
+
+SetRangesInSeconds sets RangesInSeconds field to given value.
+
+### HasRangesInSeconds
+
+`func (o *InlineObject197) HasRangesInSeconds() bool`
+
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

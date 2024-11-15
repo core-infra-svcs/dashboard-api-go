@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Device serial number | [optional] 
 **Target** | Pointer to **string** | IP address or FQDN to ping | [optional] 
-**Count** | Pointer to **int32** | Number of pings to send | [optional] 
+**Count** | Pointer to **int32** | Number of pings to send. [1..5], default 5 | [optional] 
+**SourceInterface** | Pointer to **string** | The specific L3 Interface IP address to ping through | [optional] 
 
 ## Methods
 
@@ -26,31 +26,6 @@ will change when the set of required properties is changed
 NewInlineResponse2013RequestWithDefaults instantiates a new InlineResponse2013Request object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetSerial
-
-`func (o *InlineResponse2013Request) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse2013Request) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse2013Request) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse2013Request) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
 
 ### GetTarget
 
@@ -101,6 +76,31 @@ SetCount sets Count field to given value.
 `func (o *InlineResponse2013Request) HasCount() bool`
 
 HasCount returns a boolean if a field has been set.
+
+### GetSourceInterface
+
+`func (o *InlineResponse2013Request) GetSourceInterface() string`
+
+GetSourceInterface returns the SourceInterface field if non-nil, zero value otherwise.
+
+### GetSourceInterfaceOk
+
+`func (o *InlineResponse2013Request) GetSourceInterfaceOk() (*string, bool)`
+
+GetSourceInterfaceOk returns a tuple with the SourceInterface field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSourceInterface
+
+`func (o *InlineResponse2013Request) SetSourceInterface(v string)`
+
+SetSourceInterface sets SourceInterface field to given value.
+
+### HasSourceInterface
+
+`func (o *InlineResponse2013Request) HasSourceInterface() bool`
+
+HasSourceInterface returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the Identity PSK | [optional] 
-**Passphrase** | Pointer to **string** | The passphrase for client authentication | [optional] 
-**GroupPolicyId** | Pointer to **string** | The group policy to be applied to clients | [optional] 
-**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires, or &#39;null&#39; to never expire | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200195Rules**](InlineResponse200195Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
+**AllowLanAccess** | Pointer to **bool** | Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional) | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineObject192WithDefaults instantiates a new InlineObject192 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetRules
 
-`func (o *InlineObject192) GetName() string`
+`func (o *InlineObject192) GetRules() []InlineResponse200195Rules`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetRulesOk
 
-`func (o *InlineObject192) GetNameOk() (*string, bool)`
+`func (o *InlineObject192) GetRulesOk() (*[]InlineResponse200195Rules, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetRules
 
-`func (o *InlineObject192) SetName(v string)`
+`func (o *InlineObject192) SetRules(v []InlineResponse200195Rules)`
 
-SetName sets Name field to given value.
+SetRules sets Rules field to given value.
 
-### HasName
+### HasRules
 
-`func (o *InlineObject192) HasName() bool`
+`func (o *InlineObject192) HasRules() bool`
 
-HasName returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
-### GetPassphrase
+### GetAllowLanAccess
 
-`func (o *InlineObject192) GetPassphrase() string`
+`func (o *InlineObject192) GetAllowLanAccess() bool`
 
-GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
+GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
 
-### GetPassphraseOk
+### GetAllowLanAccessOk
 
-`func (o *InlineObject192) GetPassphraseOk() (*string, bool)`
+`func (o *InlineObject192) GetAllowLanAccessOk() (*bool, bool)`
 
-GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
+GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassphrase
+### SetAllowLanAccess
 
-`func (o *InlineObject192) SetPassphrase(v string)`
+`func (o *InlineObject192) SetAllowLanAccess(v bool)`
 
-SetPassphrase sets Passphrase field to given value.
+SetAllowLanAccess sets AllowLanAccess field to given value.
 
-### HasPassphrase
+### HasAllowLanAccess
 
-`func (o *InlineObject192) HasPassphrase() bool`
+`func (o *InlineObject192) HasAllowLanAccess() bool`
 
-HasPassphrase returns a boolean if a field has been set.
-
-### GetGroupPolicyId
-
-`func (o *InlineObject192) GetGroupPolicyId() string`
-
-GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
-
-### GetGroupPolicyIdOk
-
-`func (o *InlineObject192) GetGroupPolicyIdOk() (*string, bool)`
-
-GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupPolicyId
-
-`func (o *InlineObject192) SetGroupPolicyId(v string)`
-
-SetGroupPolicyId sets GroupPolicyId field to given value.
-
-### HasGroupPolicyId
-
-`func (o *InlineObject192) HasGroupPolicyId() bool`
-
-HasGroupPolicyId returns a boolean if a field has been set.
-
-### GetExpiresAt
-
-`func (o *InlineObject192) GetExpiresAt() time.Time`
-
-GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
-
-### GetExpiresAtOk
-
-`func (o *InlineObject192) GetExpiresAtOk() (*time.Time, bool)`
-
-GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExpiresAt
-
-`func (o *InlineObject192) SetExpiresAt(v time.Time)`
-
-SetExpiresAt sets ExpiresAt field to given value.
-
-### HasExpiresAt
-
-`func (o *InlineObject192) HasExpiresAt() bool`
-
-HasExpiresAt returns a boolean if a field has been set.
+HasAllowLanAccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

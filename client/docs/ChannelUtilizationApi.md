@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## GetNetworkNetworkHealthChannelUtilization
 
-> []InlineResponse200102 GetNetworkNetworkHealthChannelUtilization(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200106 GetNetworkNetworkHealthChannelUtilization(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Get the channel utilization over each radio for all APs in a network.
 
@@ -49,7 +49,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ChannelUtilizationApi.GetNetworkNetworkHealthChannelUtilization``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkNetworkHealthChannelUtilization`: []InlineResponse200102
+    // response from `GetNetworkNetworkHealthChannelUtilization`: []InlineResponse200106
     fmt.Fprintf(os.Stdout, "Response from `ChannelUtilizationApi.GetNetworkNetworkHealthChannelUtilization`: %v\n", resp)
 }
 ```
@@ -80,7 +80,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200102**](InlineResponse200102.md)
+[**[]InlineResponse200106**](InlineResponse200106.md)
 
 ### Authorization
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationByDevice
 
-> []InlineResponse200305 GetOrganizationWirelessDevicesChannelUtilizationByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200313 GetOrganizationWirelessDevicesChannelUtilizationByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get average channel utilization for all bands in a network, split by AP
 
@@ -135,7 +135,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ChannelUtilizationApi.GetOrganizationWirelessDevicesChannelUtilizationByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationByDevice`: []InlineResponse200305
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationByDevice`: []InlineResponse200313
     fmt.Fprintf(os.Stdout, "Response from `ChannelUtilizationApi.GetOrganizationWirelessDevicesChannelUtilizationByDevice`: %v\n", resp)
 }
 ```
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200305**](InlineResponse200305.md)
+[**[]InlineResponse200313**](InlineResponse200313.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationByNetwork
 
-> []InlineResponse200306 GetOrganizationWirelessDevicesChannelUtilizationByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200314 GetOrganizationWirelessDevicesChannelUtilizationByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get average channel utilization across all bands for all networks in the organization
 
@@ -223,7 +223,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ChannelUtilizationApi.GetOrganizationWirelessDevicesChannelUtilizationByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: []InlineResponse200306
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: []InlineResponse200314
     fmt.Fprintf(os.Stdout, "Response from `ChannelUtilizationApi.GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: %v\n", resp)
 }
 ```
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200306**](InlineResponse200306.md)
+[**[]InlineResponse200314**](InlineResponse200314.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval
 
-> []InlineResponse200307 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200315 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands, segmented by device.
 
@@ -311,7 +311,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ChannelUtilizationApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200307
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200315
     fmt.Fprintf(os.Stdout, "Response from `ChannelUtilizationApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -344,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200307**](InlineResponse200307.md)
+[**[]InlineResponse200315**](InlineResponse200315.md)
 
 ### Authorization
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval
 
-> []InlineResponse200308 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200316 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands
 
@@ -399,7 +399,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ChannelUtilizationApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200308
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200316
     fmt.Fprintf(os.Stdout, "Response from `ChannelUtilizationApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: %v\n", resp)
 }
 ```
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200308**](InlineResponse200308.md)
+[**[]InlineResponse200316**](InlineResponse200316.md)
 
 ### Authorization
 

@@ -7,14 +7,14 @@ Method | HTTP request | Description
 [**CreateNetworkMerakiAuthUser**](MerakiAuthUsersApi.md#CreateNetworkMerakiAuthUser) | **Post** /networks/{networkId}/merakiAuthUsers | Authorize a user configured with Meraki Authentication for a network (currently supports 802.1X, splash guest, and client VPN users, and currently, organizations have a 50,000 user cap)
 [**DeleteNetworkMerakiAuthUser**](MerakiAuthUsersApi.md#DeleteNetworkMerakiAuthUser) | **Delete** /networks/{networkId}/merakiAuthUsers/{merakiAuthUserId} | Delete an 802.1X RADIUS user, or deauthorize and optionally delete a splash guest or client VPN user.
 [**GetNetworkMerakiAuthUser**](MerakiAuthUsersApi.md#GetNetworkMerakiAuthUser) | **Get** /networks/{networkId}/merakiAuthUsers/{merakiAuthUserId} | Return the Meraki Auth splash guest, RADIUS, or client VPN user
-[**GetNetworkMerakiAuthUsers**](MerakiAuthUsersApi.md#GetNetworkMerakiAuthUsers) | **Get** /networks/{networkId}/merakiAuthUsers | List the users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a MX network)
+[**GetNetworkMerakiAuthUsers**](MerakiAuthUsersApi.md#GetNetworkMerakiAuthUsers) | **Get** /networks/{networkId}/merakiAuthUsers | List the authorized users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a MX network)
 [**UpdateNetworkMerakiAuthUser**](MerakiAuthUsersApi.md#UpdateNetworkMerakiAuthUser) | **Put** /networks/{networkId}/merakiAuthUsers/{merakiAuthUserId} | Update a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be updated)
 
 
 
 ## CreateNetworkMerakiAuthUser
 
-> InlineResponse20099 CreateNetworkMerakiAuthUser(ctx, networkId).CreateNetworkMerakiAuthUser(createNetworkMerakiAuthUser).Execute()
+> InlineResponse200103 CreateNetworkMerakiAuthUser(ctx, networkId).CreateNetworkMerakiAuthUser(createNetworkMerakiAuthUser).Execute()
 
 Authorize a user configured with Meraki Authentication for a network (currently supports 802.1X, splash guest, and client VPN users, and currently, organizations have a 50,000 user cap)
 
@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkMerakiAuthUser := *openapiclient.NewInlineObject104("Email_example", []openapiclient.NetworksNetworkIdMerakiAuthUsersAuthorizations1{*openapiclient.NewNetworksNetworkIdMerakiAuthUsersAuthorizations1()}) // InlineObject104 | 
+    createNetworkMerakiAuthUser := *openapiclient.NewInlineObject108("Email_example", []openapiclient.NetworksNetworkIdMerakiAuthUsersAuthorizations1{*openapiclient.NewNetworksNetworkIdMerakiAuthUsersAuthorizations1()}) // InlineObject108 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MerakiAuthUsersApi.CreateNetworkMerakiAuthUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkMerakiAuthUser`: InlineResponse20099
+    // response from `CreateNetworkMerakiAuthUser`: InlineResponse200103
     fmt.Fprintf(os.Stdout, "Response from `MerakiAuthUsersApi.CreateNetworkMerakiAuthUser`: %v\n", resp)
 }
 ```
@@ -64,11 +64,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkMerakiAuthUse
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkMerakiAuthUser** | [**InlineObject104**](InlineObject104.md) |  | 
+ **createNetworkMerakiAuthUser** | [**InlineObject108**](InlineObject108.md) |  | 
 
 ### Return type
 
-[**InlineResponse20099**](InlineResponse20099.md)
+[**InlineResponse200103**](InlineResponse200103.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkMerakiAuthUser
 
-> InlineResponse20099 GetNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).Execute()
+> InlineResponse200103 GetNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).Execute()
 
 Return the Meraki Auth splash guest, RADIUS, or client VPN user
 
@@ -188,7 +188,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MerakiAuthUsersApi.GetNetworkMerakiAuthUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkMerakiAuthUser`: InlineResponse20099
+    // response from `GetNetworkMerakiAuthUser`: InlineResponse200103
     fmt.Fprintf(os.Stdout, "Response from `MerakiAuthUsersApi.GetNetworkMerakiAuthUser`: %v\n", resp)
 }
 ```
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20099**](InlineResponse20099.md)
+[**InlineResponse200103**](InlineResponse200103.md)
 
 ### Authorization
 
@@ -232,9 +232,9 @@ Name | Type | Description  | Notes
 
 ## GetNetworkMerakiAuthUsers
 
-> []InlineResponse20099 GetNetworkMerakiAuthUsers(ctx, networkId).Execute()
+> []InlineResponse200103 GetNetworkMerakiAuthUsers(ctx, networkId).Execute()
 
-List the users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a MX network)
+List the authorized users configured under Meraki Authentication for a network (splash guest or RADIUS users for a wireless network, or client VPN users for a MX network)
 
 
 
@@ -260,7 +260,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MerakiAuthUsersApi.GetNetworkMerakiAuthUsers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkMerakiAuthUsers`: []InlineResponse20099
+    // response from `GetNetworkMerakiAuthUsers`: []InlineResponse200103
     fmt.Fprintf(os.Stdout, "Response from `MerakiAuthUsersApi.GetNetworkMerakiAuthUsers`: %v\n", resp)
 }
 ```
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20099**](InlineResponse20099.md)
+[**[]InlineResponse200103**](InlineResponse200103.md)
 
 ### Authorization
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkMerakiAuthUser
 
-> InlineResponse20099 UpdateNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).UpdateNetworkMerakiAuthUser(updateNetworkMerakiAuthUser).Execute()
+> InlineResponse200103 UpdateNetworkMerakiAuthUser(ctx, networkId, merakiAuthUserId).UpdateNetworkMerakiAuthUser(updateNetworkMerakiAuthUser).Execute()
 
 Update a user configured with Meraki Authentication (currently, 802.1X RADIUS, splash guest, and client VPN users can be updated)
 
@@ -323,7 +323,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     merakiAuthUserId := "merakiAuthUserId_example" // string | Meraki auth user ID
-    updateNetworkMerakiAuthUser := *openapiclient.NewInlineObject105() // InlineObject105 |  (optional)
+    updateNetworkMerakiAuthUser := *openapiclient.NewInlineObject109() // InlineObject109 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -332,7 +332,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MerakiAuthUsersApi.UpdateNetworkMerakiAuthUser``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkMerakiAuthUser`: InlineResponse20099
+    // response from `UpdateNetworkMerakiAuthUser`: InlineResponse200103
     fmt.Fprintf(os.Stdout, "Response from `MerakiAuthUsersApi.UpdateNetworkMerakiAuthUser`: %v\n", resp)
 }
 ```
@@ -355,11 +355,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkMerakiAuthUser** | [**InlineObject105**](InlineObject105.md) |  | 
+ **updateNetworkMerakiAuthUser** | [**InlineObject109**](InlineObject109.md) |  | 
 
 ### Return type
 
-[**InlineResponse20099**](InlineResponse20099.md)
+[**InlineResponse200103**](InlineResponse200103.md)
 
 ### Authorization
 

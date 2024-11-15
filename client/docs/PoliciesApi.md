@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationAdaptivePolicyPolicy
 
-> InlineResponse200202 CreateOrganizationAdaptivePolicyPolicy(ctx, organizationId).CreateOrganizationAdaptivePolicyPolicy(createOrganizationAdaptivePolicyPolicy).Execute()
+> InlineResponse200207 CreateOrganizationAdaptivePolicyPolicy(ctx, organizationId).CreateOrganizationAdaptivePolicyPolicy(createOrganizationAdaptivePolicyPolicy).Execute()
 
 Add an Adaptive Policy
 
@@ -37,7 +37,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject205(*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1(), *openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1()) // InlineObject205 | 
+    createOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject209(*openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1(), *openapiclient.NewOrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1()) // InlineObject209 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PoliciesApi.CreateOrganizationAdaptivePolicyPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationAdaptivePolicyPolicy`: InlineResponse200202
+    // response from `CreateOrganizationAdaptivePolicyPolicy`: InlineResponse200207
     fmt.Fprintf(os.Stdout, "Response from `PoliciesApi.CreateOrganizationAdaptivePolicyPolicy`: %v\n", resp)
 }
 ```
@@ -67,11 +67,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationAdaptivePolicyPolicy** | [**InlineObject205**](InlineObject205.md) |  | 
+ **createOrganizationAdaptivePolicyPolicy** | [**InlineObject209**](InlineObject209.md) |  | 
 
 ### Return type
 
-[**InlineResponse200202**](InlineResponse200202.md)
+[**InlineResponse200207**](InlineResponse200207.md)
 
 ### Authorization
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkPoliciesByClient
 
-> []InlineResponse200105 GetNetworkPoliciesByClient(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).Execute()
+> []InlineResponse200109 GetNetworkPoliciesByClient(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).Timespan(timespan).Execute()
 
 Get policies for all clients with policies
 
@@ -193,7 +193,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PoliciesApi.GetNetworkPoliciesByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPoliciesByClient`: []InlineResponse200105
+    // response from `GetNetworkPoliciesByClient`: []InlineResponse200109
     fmt.Fprintf(os.Stdout, "Response from `PoliciesApi.GetNetworkPoliciesByClient`: %v\n", resp)
 }
 ```
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200105**](InlineResponse200105.md)
+[**[]InlineResponse200109**](InlineResponse200109.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyPolicies
 
-> []InlineResponse200202 GetOrganizationAdaptivePolicyPolicies(ctx, organizationId).Execute()
+> []InlineResponse200207 GetOrganizationAdaptivePolicyPolicies(ctx, organizationId).Execute()
 
 List adaptive policies in an organization
 
@@ -268,7 +268,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PoliciesApi.GetOrganizationAdaptivePolicyPolicies``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyPolicies`: []InlineResponse200202
+    // response from `GetOrganizationAdaptivePolicyPolicies`: []InlineResponse200207
     fmt.Fprintf(os.Stdout, "Response from `PoliciesApi.GetOrganizationAdaptivePolicyPolicies`: %v\n", resp)
 }
 ```
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200202**](InlineResponse200202.md)
+[**[]InlineResponse200207**](InlineResponse200207.md)
 
 ### Authorization
 
@@ -310,7 +310,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicyPolicy
 
-> InlineResponse200202 GetOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).Execute()
+> InlineResponse200207 GetOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).Execute()
 
 Return an adaptive policy
 
@@ -339,7 +339,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PoliciesApi.GetOrganizationAdaptivePolicyPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicyPolicy`: InlineResponse200202
+    // response from `GetOrganizationAdaptivePolicyPolicy`: InlineResponse200207
     fmt.Fprintf(os.Stdout, "Response from `PoliciesApi.GetOrganizationAdaptivePolicyPolicy`: %v\n", resp)
 }
 ```
@@ -365,7 +365,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200202**](InlineResponse200202.md)
+[**InlineResponse200207**](InlineResponse200207.md)
 
 ### Authorization
 
@@ -383,7 +383,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmSentryPoliciesAssignmentsByNetwork
 
-> []InlineResponse200280 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200287 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the Sentry Policies for an organization ordered in ascending order of priority
 
@@ -415,7 +415,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PoliciesApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200280
+    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200287
     fmt.Fprintf(os.Stdout, "Response from `PoliciesApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: %v\n", resp)
 }
 ```
@@ -443,7 +443,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200280**](InlineResponse200280.md)
+[**[]InlineResponse200287**](InlineResponse200287.md)
 
 ### Authorization
 
@@ -461,7 +461,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdaptivePolicyPolicy
 
-> InlineResponse200202 UpdateOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).UpdateOrganizationAdaptivePolicyPolicy(updateOrganizationAdaptivePolicyPolicy).Execute()
+> InlineResponse200207 UpdateOrganizationAdaptivePolicyPolicy(ctx, organizationId, id).UpdateOrganizationAdaptivePolicyPolicy(updateOrganizationAdaptivePolicyPolicy).Execute()
 
 Update an Adaptive Policy
 
@@ -482,7 +482,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     id := "id_example" // string | ID
-    updateOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject206() // InlineObject206 |  (optional)
+    updateOrganizationAdaptivePolicyPolicy := *openapiclient.NewInlineObject210() // InlineObject210 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -491,7 +491,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PoliciesApi.UpdateOrganizationAdaptivePolicyPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationAdaptivePolicyPolicy`: InlineResponse200202
+    // response from `UpdateOrganizationAdaptivePolicyPolicy`: InlineResponse200207
     fmt.Fprintf(os.Stdout, "Response from `PoliciesApi.UpdateOrganizationAdaptivePolicyPolicy`: %v\n", resp)
 }
 ```
@@ -514,11 +514,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationAdaptivePolicyPolicy** | [**InlineObject206**](InlineObject206.md) |  | 
+ **updateOrganizationAdaptivePolicyPolicy** | [**InlineObject210**](InlineObject210.md) |  | 
 
 ### Return type
 
-[**InlineResponse200202**](InlineResponse200202.md)
+[**InlineResponse200207**](InlineResponse200207.md)
 
 ### Authorization
 
@@ -536,7 +536,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationSmSentryPoliciesAssignments
 
-> InlineResponse200279 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
+> InlineResponse200286 UpdateOrganizationSmSentryPoliciesAssignments(ctx, organizationId).UpdateOrganizationSmSentryPoliciesAssignments(updateOrganizationSmSentryPoliciesAssignments).Execute()
 
 Update an Organizations Sentry Policies using the provided list
 
@@ -556,7 +556,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject264([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject264 | 
+    updateOrganizationSmSentryPoliciesAssignments := *openapiclient.NewInlineObject268([]openapiclient.OrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems{*openapiclient.NewOrganizationsOrganizationIdSmSentryPoliciesAssignmentsItems("NetworkId_example")}) // InlineObject268 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -565,7 +565,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PoliciesApi.UpdateOrganizationSmSentryPoliciesAssignments``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200279
+    // response from `UpdateOrganizationSmSentryPoliciesAssignments`: InlineResponse200286
     fmt.Fprintf(os.Stdout, "Response from `PoliciesApi.UpdateOrganizationSmSentryPoliciesAssignments`: %v\n", resp)
 }
 ```
@@ -586,11 +586,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationSmSentry
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject264**](InlineObject264.md) |  | 
+ **updateOrganizationSmSentryPoliciesAssignments** | [**InlineObject268**](InlineObject268.md) |  | 
 
 ### Return type
 
-[**InlineResponse200279**](InlineResponse200279.md)
+[**InlineResponse200286**](InlineResponse200286.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Device serial number | [optional] 
+**Count** | Pointer to **int32** | Number of pings to send. [1..5], default 5 | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse2014RequestWithDefaults instantiates a new InlineResponse2014Re
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetCount
 
-`func (o *InlineResponse2014Request) GetSerial() string`
+`func (o *InlineResponse2014Request) GetCount() int32`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetCountOk
 
-`func (o *InlineResponse2014Request) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse2014Request) GetCountOk() (*int32, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetCount
 
-`func (o *InlineResponse2014Request) SetSerial(v string)`
+`func (o *InlineResponse2014Request) SetCount(v int32)`
 
-SetSerial sets Serial field to given value.
+SetCount sets Count field to given value.
 
-### HasSerial
+### HasCount
 
-`func (o *InlineResponse2014Request) HasSerial() bool`
+`func (o *InlineResponse2014Request) HasCount() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

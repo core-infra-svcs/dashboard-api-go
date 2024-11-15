@@ -106,7 +106,7 @@ Method | HTTP request | Description
 
 ## AddNetworkSwitchStack
 
-> InlineResponse200157 AddNetworkSwitchStack(ctx, networkId, switchStackId).AddNetworkSwitchStack(addNetworkSwitchStack).Execute()
+> InlineResponse200161 AddNetworkSwitchStack(ctx, networkId, switchStackId).AddNetworkSwitchStack(addNetworkSwitchStack).Execute()
 
 Add a switch to a stack
 
@@ -127,7 +127,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    addNetworkSwitchStack := *openapiclient.NewInlineObject150("Serial_example") // InlineObject150 | 
+    addNetworkSwitchStack := *openapiclient.NewInlineObject154("Serial_example") // InlineObject154 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -136,7 +136,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.AddNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `AddNetworkSwitchStack`: InlineResponse200157
+    // response from `AddNetworkSwitchStack`: InlineResponse200161
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.AddNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -159,11 +159,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **addNetworkSwitchStack** | [**InlineObject150**](InlineObject150.md) |  | 
+ **addNetworkSwitchStack** | [**InlineObject154**](InlineObject154.md) |  | 
 
 ### Return type
 
-[**InlineResponse200157**](InlineResponse200157.md)
+[**InlineResponse200161**](InlineResponse200161.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ## CloneOrganizationSwitchDevices
 
-> InlineResponse200296 CloneOrganizationSwitchDevices(ctx, organizationId).CloneOrganizationSwitchDevices(cloneOrganizationSwitchDevices).Execute()
+> InlineResponse200303 CloneOrganizationSwitchDevices(ctx, organizationId).CloneOrganizationSwitchDevices(cloneOrganizationSwitchDevices).Execute()
 
 Clone port-level and some switch-level configuration settings from a source switch to one or more target switches
 
@@ -201,7 +201,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    cloneOrganizationSwitchDevices := *openapiclient.NewInlineObject268("SourceSerial_example", []string{"TargetSerials_example"}) // InlineObject268 | 
+    cloneOrganizationSwitchDevices := *openapiclient.NewInlineObject272("SourceSerial_example", []string{"TargetSerials_example"}) // InlineObject272 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -210,7 +210,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.CloneOrganizationSwitchDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CloneOrganizationSwitchDevices`: InlineResponse200296
+    // response from `CloneOrganizationSwitchDevices`: InlineResponse200303
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.CloneOrganizationSwitchDevices`: %v\n", resp)
 }
 ```
@@ -231,11 +231,11 @@ Other parameters are passed through a pointer to a apiCloneOrganizationSwitchDev
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cloneOrganizationSwitchDevices** | [**InlineObject268**](InlineObject268.md) |  | 
+ **cloneOrganizationSwitchDevices** | [**InlineObject272**](InlineObject272.md) |  | 
 
 ### Return type
 
-[**InlineResponse200296**](InlineResponse200296.md)
+[**InlineResponse200303**](InlineResponse200303.md)
 
 ### Authorization
 
@@ -397,7 +397,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchAccessPolicy
 
-> InlineResponse200141 CreateNetworkSwitchAccessPolicy(ctx, networkId).CreateNetworkSwitchAccessPolicy(createNetworkSwitchAccessPolicy).Execute()
+> InlineResponse200145 CreateNetworkSwitchAccessPolicy(ctx, networkId).CreateNetworkSwitchAccessPolicy(createNetworkSwitchAccessPolicy).Execute()
 
 Create an access policy for a switch network
 
@@ -417,7 +417,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchAccessPolicy := *openapiclient.NewInlineObject129("Name_example", []openapiclient.NetworksNetworkIdSwitchAccessPoliciesRadiusServers1{*openapiclient.NewNetworksNetworkIdSwitchAccessPoliciesRadiusServers1()}, false, false, false, "HostMode_example", false) // InlineObject129 | 
+    createNetworkSwitchAccessPolicy := *openapiclient.NewInlineObject133("Name_example", []openapiclient.NetworksNetworkIdSwitchAccessPoliciesRadiusServers1{*openapiclient.NewNetworksNetworkIdSwitchAccessPoliciesRadiusServers1()}, false, false, false, "HostMode_example", false) // InlineObject133 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -426,7 +426,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.CreateNetworkSwitchAccessPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchAccessPolicy`: InlineResponse200141
+    // response from `CreateNetworkSwitchAccessPolicy`: InlineResponse200145
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.CreateNetworkSwitchAccessPolicy`: %v\n", resp)
 }
 ```
@@ -447,11 +447,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchAccessP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchAccessPolicy** | [**InlineObject129**](InlineObject129.md) |  | 
+ **createNetworkSwitchAccessPolicy** | [**InlineObject133**](InlineObject133.md) |  | 
 
 ### Return type
 
-[**InlineResponse200141**](InlineResponse200141.md)
+[**InlineResponse200145**](InlineResponse200145.md)
 
 ### Authorization
 
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
 
-> InlineResponse200145 CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId).CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
+> InlineResponse200149 CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId).CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
 
 Add a server to be trusted by Dynamic ARP Inspection on this network
 
@@ -489,7 +489,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer := *openapiclient.NewInlineObject133("Mac_example", int32(123), *openapiclient.NewNetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41()) // InlineObject133 | 
+    createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer := *openapiclient.NewInlineObject137("Mac_example", int32(123), *openapiclient.NewNetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41()) // InlineObject137 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -498,7 +498,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse200145
+    // response from `CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse200149
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.CreateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: %v\n", resp)
 }
 ```
@@ -519,11 +519,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchDhcpSer
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer** | [**InlineObject133**](InlineObject133.md) |  | 
+ **createNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer** | [**InlineObject137**](InlineObject137.md) |  | 
 
 ### Return type
 
-[**InlineResponse200145**](InlineResponse200145.md)
+[**InlineResponse200149**](InlineResponse200149.md)
 
 ### Authorization
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchLinkAggregation
 
-> InlineResponse200148 CreateNetworkSwitchLinkAggregation(ctx, networkId).CreateNetworkSwitchLinkAggregation(createNetworkSwitchLinkAggregation).Execute()
+> InlineResponse200152 CreateNetworkSwitchLinkAggregation(ctx, networkId).CreateNetworkSwitchLinkAggregation(createNetworkSwitchLinkAggregation).Execute()
 
 Create a link aggregation group
 
@@ -561,7 +561,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject136() // InlineObject136 |  (optional)
+    createNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject140() // InlineObject140 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -570,7 +570,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.CreateNetworkSwitchLinkAggregation``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchLinkAggregation`: InlineResponse200148
+    // response from `CreateNetworkSwitchLinkAggregation`: InlineResponse200152
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.CreateNetworkSwitchLinkAggregation`: %v\n", resp)
 }
 ```
@@ -591,11 +591,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchLinkAgg
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchLinkAggregation** | [**InlineObject136**](InlineObject136.md) |  | 
+ **createNetworkSwitchLinkAggregation** | [**InlineObject140**](InlineObject140.md) |  | 
 
 ### Return type
 
-[**InlineResponse200148**](InlineResponse200148.md)
+[**InlineResponse200152**](InlineResponse200152.md)
 
 ### Authorization
 
@@ -613,7 +613,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchPortSchedule
 
-> InlineResponse200150 CreateNetworkSwitchPortSchedule(ctx, networkId).CreateNetworkSwitchPortSchedule(createNetworkSwitchPortSchedule).Execute()
+> InlineResponse200154 CreateNetworkSwitchPortSchedule(ctx, networkId).CreateNetworkSwitchPortSchedule(createNetworkSwitchPortSchedule).Execute()
 
 Add a switch port schedule
 
@@ -633,7 +633,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchPortSchedule := *openapiclient.NewInlineObject139("Name_example") // InlineObject139 | 
+    createNetworkSwitchPortSchedule := *openapiclient.NewInlineObject143("Name_example") // InlineObject143 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -642,7 +642,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.CreateNetworkSwitchPortSchedule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchPortSchedule`: InlineResponse200150
+    // response from `CreateNetworkSwitchPortSchedule`: InlineResponse200154
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.CreateNetworkSwitchPortSchedule`: %v\n", resp)
 }
 ```
@@ -663,11 +663,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchPortSch
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchPortSchedule** | [**InlineObject139**](InlineObject139.md) |  | 
+ **createNetworkSwitchPortSchedule** | [**InlineObject143**](InlineObject143.md) |  | 
 
 ### Return type
 
-[**InlineResponse200150**](InlineResponse200150.md)
+[**InlineResponse200154**](InlineResponse200154.md)
 
 ### Authorization
 
@@ -685,7 +685,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchQosRule
 
-> InlineResponse200151 CreateNetworkSwitchQosRule(ctx, networkId).CreateNetworkSwitchQosRule(createNetworkSwitchQosRule).Execute()
+> InlineResponse200155 CreateNetworkSwitchQosRule(ctx, networkId).CreateNetworkSwitchQosRule(createNetworkSwitchQosRule).Execute()
 
 Add a quality of service rule
 
@@ -705,7 +705,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchQosRule := *openapiclient.NewInlineObject141(int32(123)) // InlineObject141 | 
+    createNetworkSwitchQosRule := *openapiclient.NewInlineObject145(int32(123)) // InlineObject145 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -714,7 +714,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.CreateNetworkSwitchQosRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchQosRule`: InlineResponse200151
+    // response from `CreateNetworkSwitchQosRule`: InlineResponse200155
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.CreateNetworkSwitchQosRule`: %v\n", resp)
 }
 ```
@@ -735,11 +735,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchQosRule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchQosRule** | [**InlineObject141**](InlineObject141.md) |  | 
+ **createNetworkSwitchQosRule** | [**InlineObject145**](InlineObject145.md) |  | 
 
 ### Return type
 
-[**InlineResponse200151**](InlineResponse200151.md)
+[**InlineResponse200155**](InlineResponse200155.md)
 
 ### Authorization
 
@@ -757,7 +757,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchRoutingMulticastRendezvousPoint
 
-> InlineResponse200154 CreateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId).CreateNetworkSwitchRoutingMulticastRendezvousPoint(createNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
+> InlineResponse200158 CreateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId).CreateNetworkSwitchRoutingMulticastRendezvousPoint(createNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
 
 Create a multicast rendezvous point
 
@@ -777,7 +777,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject145("InterfaceIp_example", "MulticastGroup_example") // InlineObject145 | 
+    createNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject149("InterfaceIp_example", "MulticastGroup_example") // InlineObject149 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -786,7 +786,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.CreateNetworkSwitchRoutingMulticastRendezvousPoint``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200154
+    // response from `CreateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200158
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.CreateNetworkSwitchRoutingMulticastRendezvousPoint`: %v\n", resp)
 }
 ```
@@ -807,11 +807,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject145**](InlineObject145.md) |  | 
+ **createNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject149**](InlineObject149.md) |  | 
 
 ### Return type
 
-[**InlineResponse200154**](InlineResponse200154.md)
+[**InlineResponse200158**](InlineResponse200158.md)
 
 ### Authorization
 
@@ -829,7 +829,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchStack
 
-> InlineResponse200157 CreateNetworkSwitchStack(ctx, networkId).CreateNetworkSwitchStack(createNetworkSwitchStack).Execute()
+> InlineResponse200161 CreateNetworkSwitchStack(ctx, networkId).CreateNetworkSwitchStack(createNetworkSwitchStack).Execute()
 
 Create a switch stack
 
@@ -849,7 +849,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchStack := *openapiclient.NewInlineObject149("Name_example", []string{"Serials_example"}) // InlineObject149 | 
+    createNetworkSwitchStack := *openapiclient.NewInlineObject153("Name_example", []string{"Serials_example"}) // InlineObject153 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -858,7 +858,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.CreateNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchStack`: InlineResponse200157
+    // response from `CreateNetworkSwitchStack`: InlineResponse200161
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.CreateNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -879,11 +879,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchStackRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchStack** | [**InlineObject149**](InlineObject149.md) |  | 
+ **createNetworkSwitchStack** | [**InlineObject153**](InlineObject153.md) |  | 
 
 ### Return type
 
-[**InlineResponse200157**](InlineResponse200157.md)
+[**InlineResponse200161**](InlineResponse200161.md)
 
 ### Authorization
 
@@ -922,7 +922,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    createNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject152("Name_example", int32(123)) // InlineObject152 | 
+    createNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject156("Name_example", int32(123)) // InlineObject156 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -954,7 +954,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingInterface** | [**InlineObject152**](InlineObject152.md) |  | 
+ **createNetworkSwitchStackRoutingInterface** | [**InlineObject156**](InlineObject156.md) |  | 
 
 ### Return type
 
@@ -997,7 +997,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject155("Subnet_example", "NextHopIp_example") // InlineObject155 | 
+    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject159("Subnet_example", "NextHopIp_example") // InlineObject159 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1029,7 +1029,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject155**](InlineObject155.md) |  | 
+ **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject159**](InlineObject159.md) |  | 
 
 ### Return type
 
@@ -2630,7 +2630,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchAccessControlLists
 
-> InlineResponse200140 GetNetworkSwitchAccessControlLists(ctx, networkId).Execute()
+> InlineResponse200144 GetNetworkSwitchAccessControlLists(ctx, networkId).Execute()
 
 Return the access control lists for a MS network
 
@@ -2658,7 +2658,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchAccessControlLists``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAccessControlLists`: InlineResponse200140
+    // response from `GetNetworkSwitchAccessControlLists`: InlineResponse200144
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchAccessControlLists`: %v\n", resp)
 }
 ```
@@ -2682,7 +2682,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200140**](InlineResponse200140.md)
+[**InlineResponse200144**](InlineResponse200144.md)
 
 ### Authorization
 
@@ -2700,7 +2700,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchAccessPolicies
 
-> []InlineResponse200141 GetNetworkSwitchAccessPolicies(ctx, networkId).Execute()
+> []InlineResponse200145 GetNetworkSwitchAccessPolicies(ctx, networkId).Execute()
 
 List the access policies for a switch network
 
@@ -2728,7 +2728,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchAccessPolicies``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAccessPolicies`: []InlineResponse200141
+    // response from `GetNetworkSwitchAccessPolicies`: []InlineResponse200145
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchAccessPolicies`: %v\n", resp)
 }
 ```
@@ -2752,7 +2752,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200141**](InlineResponse200141.md)
+[**[]InlineResponse200145**](InlineResponse200145.md)
 
 ### Authorization
 
@@ -2770,7 +2770,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchAccessPolicy
 
-> InlineResponse200141 GetNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).Execute()
+> InlineResponse200145 GetNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).Execute()
 
 Return a specific access policy for a switch network
 
@@ -2799,7 +2799,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchAccessPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAccessPolicy`: InlineResponse200141
+    // response from `GetNetworkSwitchAccessPolicy`: InlineResponse200145
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchAccessPolicy`: %v\n", resp)
 }
 ```
@@ -2825,7 +2825,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200141**](InlineResponse200141.md)
+[**InlineResponse200145**](InlineResponse200145.md)
 
 ### Authorization
 
@@ -2843,7 +2843,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchAlternateManagementInterface
 
-> InlineResponse200142 GetNetworkSwitchAlternateManagementInterface(ctx, networkId).Execute()
+> InlineResponse200146 GetNetworkSwitchAlternateManagementInterface(ctx, networkId).Execute()
 
 Return the switch alternate management interface for the network
 
@@ -2871,7 +2871,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchAlternateManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAlternateManagementInterface`: InlineResponse200142
+    // response from `GetNetworkSwitchAlternateManagementInterface`: InlineResponse200146
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchAlternateManagementInterface`: %v\n", resp)
 }
 ```
@@ -2895,7 +2895,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200142**](InlineResponse200142.md)
+[**InlineResponse200146**](InlineResponse200146.md)
 
 ### Authorization
 
@@ -2913,7 +2913,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpServerPolicy
 
-> InlineResponse200144 GetNetworkSwitchDhcpServerPolicy(ctx, networkId).Execute()
+> InlineResponse200148 GetNetworkSwitchDhcpServerPolicy(ctx, networkId).Execute()
 
 Return the DHCP server settings
 
@@ -2941,7 +2941,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchDhcpServerPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpServerPolicy`: InlineResponse200144
+    // response from `GetNetworkSwitchDhcpServerPolicy`: InlineResponse200148
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchDhcpServerPolicy`: %v\n", resp)
 }
 ```
@@ -2965,7 +2965,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200144**](InlineResponse200144.md)
+[**InlineResponse200148**](InlineResponse200148.md)
 
 ### Authorization
 
@@ -2983,7 +2983,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers
 
-> []InlineResponse200145 GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200149 GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the list of servers trusted by Dynamic ARP Inspection on this network
 
@@ -3014,7 +3014,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers`: []InlineResponse200145
+    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers`: []InlineResponse200149
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchDhcpServerPolicyArpInspectionTrustedServers`: %v\n", resp)
 }
 ```
@@ -3041,7 +3041,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200145**](InlineResponse200145.md)
+[**[]InlineResponse200149**](InlineResponse200149.md)
 
 ### Authorization
 
@@ -3059,7 +3059,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice
 
-> []InlineResponse200146 GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200150 GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the devices that have a Dynamic ARP Inspection warning and their warnings
 
@@ -3090,7 +3090,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: []InlineResponse200146
+    // response from `GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: []InlineResponse200150
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchDhcpServerPolicyArpInspectionWarningsByDevice`: %v\n", resp)
 }
 ```
@@ -3117,7 +3117,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200146**](InlineResponse200146.md)
+[**[]InlineResponse200150**](InlineResponse200150.md)
 
 ### Authorization
 
@@ -3135,7 +3135,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpV4ServersSeen
 
-> []InlineResponse200143 GetNetworkSwitchDhcpV4ServersSeen(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200147 GetNetworkSwitchDhcpV4ServersSeen(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the network's DHCPv4 servers seen within the selected timeframe (default 1 day)
 
@@ -3168,7 +3168,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchDhcpV4ServersSeen``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpV4ServersSeen`: []InlineResponse200143
+    // response from `GetNetworkSwitchDhcpV4ServersSeen`: []InlineResponse200147
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchDhcpV4ServersSeen`: %v\n", resp)
 }
 ```
@@ -3197,7 +3197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200143**](InlineResponse200143.md)
+[**[]InlineResponse200147**](InlineResponse200147.md)
 
 ### Authorization
 
@@ -3215,7 +3215,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDscpToCosMappings
 
-> InlineResponse200147 GetNetworkSwitchDscpToCosMappings(ctx, networkId).Execute()
+> InlineResponse200151 GetNetworkSwitchDscpToCosMappings(ctx, networkId).Execute()
 
 Return the DSCP to CoS mappings
 
@@ -3243,7 +3243,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchDscpToCosMappings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDscpToCosMappings`: InlineResponse200147
+    // response from `GetNetworkSwitchDscpToCosMappings`: InlineResponse200151
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchDscpToCosMappings`: %v\n", resp)
 }
 ```
@@ -3267,7 +3267,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200147**](InlineResponse200147.md)
+[**InlineResponse200151**](InlineResponse200151.md)
 
 ### Authorization
 
@@ -3285,7 +3285,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchLinkAggregations
 
-> []InlineResponse200148 GetNetworkSwitchLinkAggregations(ctx, networkId).Execute()
+> []InlineResponse200152 GetNetworkSwitchLinkAggregations(ctx, networkId).Execute()
 
 List link aggregation groups
 
@@ -3313,7 +3313,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchLinkAggregations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchLinkAggregations`: []InlineResponse200148
+    // response from `GetNetworkSwitchLinkAggregations`: []InlineResponse200152
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchLinkAggregations`: %v\n", resp)
 }
 ```
@@ -3337,7 +3337,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200148**](InlineResponse200148.md)
+[**[]InlineResponse200152**](InlineResponse200152.md)
 
 ### Authorization
 
@@ -3355,7 +3355,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchMtu
 
-> InlineResponse200149 GetNetworkSwitchMtu(ctx, networkId).Execute()
+> InlineResponse200153 GetNetworkSwitchMtu(ctx, networkId).Execute()
 
 Return the MTU configuration
 
@@ -3383,7 +3383,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchMtu``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchMtu`: InlineResponse200149
+    // response from `GetNetworkSwitchMtu`: InlineResponse200153
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchMtu`: %v\n", resp)
 }
 ```
@@ -3407,7 +3407,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200149**](InlineResponse200149.md)
+[**InlineResponse200153**](InlineResponse200153.md)
 
 ### Authorization
 
@@ -3425,7 +3425,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchPortSchedules
 
-> []InlineResponse200150 GetNetworkSwitchPortSchedules(ctx, networkId).Execute()
+> []InlineResponse200154 GetNetworkSwitchPortSchedules(ctx, networkId).Execute()
 
 List switch port schedules
 
@@ -3453,7 +3453,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchPortSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchPortSchedules`: []InlineResponse200150
+    // response from `GetNetworkSwitchPortSchedules`: []InlineResponse200154
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchPortSchedules`: %v\n", resp)
 }
 ```
@@ -3477,7 +3477,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200150**](InlineResponse200150.md)
+[**[]InlineResponse200154**](InlineResponse200154.md)
 
 ### Authorization
 
@@ -3495,7 +3495,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchQosRule
 
-> InlineResponse200151 GetNetworkSwitchQosRule(ctx, networkId, qosRuleId).Execute()
+> InlineResponse200155 GetNetworkSwitchQosRule(ctx, networkId, qosRuleId).Execute()
 
 Return a quality of service rule
 
@@ -3524,7 +3524,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchQosRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchQosRule`: InlineResponse200151
+    // response from `GetNetworkSwitchQosRule`: InlineResponse200155
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchQosRule`: %v\n", resp)
 }
 ```
@@ -3550,7 +3550,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200151**](InlineResponse200151.md)
+[**InlineResponse200155**](InlineResponse200155.md)
 
 ### Authorization
 
@@ -3568,7 +3568,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchQosRules
 
-> []InlineResponse200151 GetNetworkSwitchQosRules(ctx, networkId).Execute()
+> []InlineResponse200155 GetNetworkSwitchQosRules(ctx, networkId).Execute()
 
 List quality of service rules
 
@@ -3596,7 +3596,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchQosRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchQosRules`: []InlineResponse200151
+    // response from `GetNetworkSwitchQosRules`: []InlineResponse200155
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchQosRules`: %v\n", resp)
 }
 ```
@@ -3620,7 +3620,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200151**](InlineResponse200151.md)
+[**[]InlineResponse200155**](InlineResponse200155.md)
 
 ### Authorization
 
@@ -3638,7 +3638,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchQosRulesOrder
 
-> InlineResponse200152 GetNetworkSwitchQosRulesOrder(ctx, networkId).Execute()
+> InlineResponse200156 GetNetworkSwitchQosRulesOrder(ctx, networkId).Execute()
 
 Return the quality of service rule IDs by order in which they will be processed by the switch
 
@@ -3666,7 +3666,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchQosRulesOrder``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchQosRulesOrder`: InlineResponse200152
+    // response from `GetNetworkSwitchQosRulesOrder`: InlineResponse200156
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchQosRulesOrder`: %v\n", resp)
 }
 ```
@@ -3690,7 +3690,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200152**](InlineResponse200152.md)
+[**InlineResponse200156**](InlineResponse200156.md)
 
 ### Authorization
 
@@ -3708,7 +3708,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingMulticast
 
-> InlineResponse200153 GetNetworkSwitchRoutingMulticast(ctx, networkId).Execute()
+> InlineResponse200157 GetNetworkSwitchRoutingMulticast(ctx, networkId).Execute()
 
 Return multicast settings for a network
 
@@ -3736,7 +3736,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchRoutingMulticast``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingMulticast`: InlineResponse200153
+    // response from `GetNetworkSwitchRoutingMulticast`: InlineResponse200157
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchRoutingMulticast`: %v\n", resp)
 }
 ```
@@ -3760,7 +3760,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200153**](InlineResponse200153.md)
+[**InlineResponse200157**](InlineResponse200157.md)
 
 ### Authorization
 
@@ -3778,7 +3778,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingMulticastRendezvousPoint
 
-> InlineResponse200154 GetNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).Execute()
+> InlineResponse200158 GetNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).Execute()
 
 Return a multicast rendezvous point
 
@@ -3807,7 +3807,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchRoutingMulticastRendezvousPoint``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200154
+    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200158
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchRoutingMulticastRendezvousPoint`: %v\n", resp)
 }
 ```
@@ -3833,7 +3833,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200154**](InlineResponse200154.md)
+[**InlineResponse200158**](InlineResponse200158.md)
 
 ### Authorization
 
@@ -3851,7 +3851,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingMulticastRendezvousPoints
 
-> []InlineResponse200154 GetNetworkSwitchRoutingMulticastRendezvousPoints(ctx, networkId).Execute()
+> []InlineResponse200158 GetNetworkSwitchRoutingMulticastRendezvousPoints(ctx, networkId).Execute()
 
 List multicast rendezvous points
 
@@ -3879,7 +3879,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchRoutingMulticastRendezvousPoints``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoints`: []InlineResponse200154
+    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoints`: []InlineResponse200158
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchRoutingMulticastRendezvousPoints`: %v\n", resp)
 }
 ```
@@ -3903,7 +3903,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200154**](InlineResponse200154.md)
+[**[]InlineResponse200158**](InlineResponse200158.md)
 
 ### Authorization
 
@@ -3921,7 +3921,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingOspf
 
-> InlineResponse200155 GetNetworkSwitchRoutingOspf(ctx, networkId).Execute()
+> InlineResponse200159 GetNetworkSwitchRoutingOspf(ctx, networkId).Execute()
 
 Return layer 3 OSPF routing configuration
 
@@ -3949,7 +3949,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchRoutingOspf``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingOspf`: InlineResponse200155
+    // response from `GetNetworkSwitchRoutingOspf`: InlineResponse200159
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchRoutingOspf`: %v\n", resp)
 }
 ```
@@ -3973,7 +3973,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200155**](InlineResponse200155.md)
+[**InlineResponse200159**](InlineResponse200159.md)
 
 ### Authorization
 
@@ -3991,7 +3991,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchSettings
 
-> InlineResponse200156 GetNetworkSwitchSettings(ctx, networkId).Execute()
+> InlineResponse200160 GetNetworkSwitchSettings(ctx, networkId).Execute()
 
 Returns the switch network settings
 
@@ -4019,7 +4019,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchSettings`: InlineResponse200156
+    // response from `GetNetworkSwitchSettings`: InlineResponse200160
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchSettings`: %v\n", resp)
 }
 ```
@@ -4043,7 +4043,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200156**](InlineResponse200156.md)
+[**InlineResponse200160**](InlineResponse200160.md)
 
 ### Authorization
 
@@ -4061,7 +4061,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStack
 
-> InlineResponse200157 GetNetworkSwitchStack(ctx, networkId, switchStackId).Execute()
+> InlineResponse200161 GetNetworkSwitchStack(ctx, networkId, switchStackId).Execute()
 
 Show a switch stack
 
@@ -4090,7 +4090,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStack`: InlineResponse200157
+    // response from `GetNetworkSwitchStack`: InlineResponse200161
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -4116,7 +4116,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200157**](InlineResponse200157.md)
+[**InlineResponse200161**](InlineResponse200161.md)
 
 ### Authorization
 
@@ -4508,7 +4508,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStacks
 
-> []InlineResponse200157 GetNetworkSwitchStacks(ctx, networkId).Execute()
+> []InlineResponse200161 GetNetworkSwitchStacks(ctx, networkId).Execute()
 
 List the switch stacks in a network
 
@@ -4536,7 +4536,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchStacks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStacks`: []InlineResponse200157
+    // response from `GetNetworkSwitchStacks`: []InlineResponse200161
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchStacks`: %v\n", resp)
 }
 ```
@@ -4560,7 +4560,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200157**](InlineResponse200157.md)
+[**[]InlineResponse200161**](InlineResponse200161.md)
 
 ### Authorization
 
@@ -4578,7 +4578,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStormControl
 
-> InlineResponse200159 GetNetworkSwitchStormControl(ctx, networkId).Execute()
+> InlineResponse200163 GetNetworkSwitchStormControl(ctx, networkId).Execute()
 
 Return the storm control configuration for a switch network
 
@@ -4606,7 +4606,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchStormControl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStormControl`: InlineResponse200159
+    // response from `GetNetworkSwitchStormControl`: InlineResponse200163
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchStormControl`: %v\n", resp)
 }
 ```
@@ -4630,7 +4630,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200159**](InlineResponse200159.md)
+[**InlineResponse200163**](InlineResponse200163.md)
 
 ### Authorization
 
@@ -4648,7 +4648,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStp
 
-> InlineResponse200160 GetNetworkSwitchStp(ctx, networkId).Execute()
+> InlineResponse200164 GetNetworkSwitchStp(ctx, networkId).Execute()
 
 Returns STP settings
 
@@ -4676,7 +4676,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetNetworkSwitchStp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStp`: InlineResponse200160
+    // response from `GetNetworkSwitchStp`: InlineResponse200164
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetNetworkSwitchStp`: %v\n", resp)
 }
 ```
@@ -4700,7 +4700,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200160**](InlineResponse200160.md)
+[**InlineResponse200164**](InlineResponse200164.md)
 
 ### Authorization
 
@@ -4718,7 +4718,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse200240 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
+> InlineResponse200245 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
 
 Return a switch template port
 
@@ -4749,7 +4749,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200240
+    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200245
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -4779,7 +4779,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200240**](InlineResponse200240.md)
+[**InlineResponse200245**](InlineResponse200245.md)
 
 ### Authorization
 
@@ -4797,7 +4797,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePorts
 
-> []InlineResponse200240 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
+> []InlineResponse200245 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
 
 Return all the ports of a switch template
 
@@ -4827,7 +4827,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationConfigTemplateSwitchProfilePorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200240
+    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200245
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationConfigTemplateSwitchProfilePorts`: %v\n", resp)
 }
 ```
@@ -4855,7 +4855,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200240**](InlineResponse200240.md)
+[**[]InlineResponse200245**](InlineResponse200245.md)
 
 ### Authorization
 
@@ -4873,7 +4873,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfiles
 
-> []InlineResponse200239 GetOrganizationConfigTemplateSwitchProfiles(ctx, organizationId, configTemplateId).Execute()
+> []InlineResponse200244 GetOrganizationConfigTemplateSwitchProfiles(ctx, organizationId, configTemplateId).Execute()
 
 List the switch templates for your switch template configuration
 
@@ -4902,7 +4902,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationConfigTemplateSwitchProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfiles`: []InlineResponse200239
+    // response from `GetOrganizationConfigTemplateSwitchProfiles`: []InlineResponse200244
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationConfigTemplateSwitchProfiles`: %v\n", resp)
 }
 ```
@@ -4928,7 +4928,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200239**](InlineResponse200239.md)
+[**[]InlineResponse200244**](InlineResponse200244.md)
 
 ### Authorization
 
@@ -4946,7 +4946,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummarySwitchPowerHistory
 
-> []InlineResponse200285 GetOrganizationSummarySwitchPowerHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200292 GetOrganizationSummarySwitchPowerHistory(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the total PoE power draw for all switch ports in the organization over the requested timespan (by default the last 24 hours)
 
@@ -4977,7 +4977,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationSummarySwitchPowerHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummarySwitchPowerHistory`: []InlineResponse200285
+    // response from `GetOrganizationSummarySwitchPowerHistory`: []InlineResponse200292
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationSummarySwitchPowerHistory`: %v\n", resp)
 }
 ```
@@ -5004,7 +5004,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200285**](InlineResponse200285.md)
+[**[]InlineResponse200292**](InlineResponse200292.md)
 
 ### Authorization
 
@@ -5022,7 +5022,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsBySwitch
 
-> []InlineResponse200297 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200304 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the switchports in an organization by switch
 
@@ -5062,7 +5062,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationSwitchPortsBySwitch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsBySwitch`: []InlineResponse200297
+    // response from `GetOrganizationSwitchPortsBySwitch`: InlineResponse200304
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationSwitchPortsBySwitch`: %v\n", resp)
 }
 ```
@@ -5097,7 +5097,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200297**](InlineResponse200297.md)
+[**InlineResponse200304**](InlineResponse200304.md)
 
 ### Authorization
 
@@ -5115,7 +5115,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSwitchPortsOverview
 
-> InlineResponse200298 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> InlineResponse200305 GetOrganizationSwitchPortsOverview(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Returns the counts of all active ports for the requested timespan, grouped by speed
 
@@ -5146,7 +5146,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.GetOrganizationSwitchPortsOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200298
+    // response from `GetOrganizationSwitchPortsOverview`: InlineResponse200305
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.GetOrganizationSwitchPortsOverview`: %v\n", resp)
 }
 ```
@@ -5173,7 +5173,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200298**](InlineResponse200298.md)
+[**InlineResponse200305**](InlineResponse200305.md)
 
 ### Authorization
 
@@ -5191,7 +5191,7 @@ Name | Type | Description  | Notes
 
 ## RemoveNetworkSwitchStack
 
-> InlineResponse200157 RemoveNetworkSwitchStack(ctx, networkId, switchStackId).RemoveNetworkSwitchStack(removeNetworkSwitchStack).Execute()
+> InlineResponse200161 RemoveNetworkSwitchStack(ctx, networkId, switchStackId).RemoveNetworkSwitchStack(removeNetworkSwitchStack).Execute()
 
 Remove a switch from a stack
 
@@ -5212,7 +5212,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    removeNetworkSwitchStack := *openapiclient.NewInlineObject151("Serial_example") // InlineObject151 | 
+    removeNetworkSwitchStack := *openapiclient.NewInlineObject155("Serial_example") // InlineObject155 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5221,7 +5221,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.RemoveNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RemoveNetworkSwitchStack`: InlineResponse200157
+    // response from `RemoveNetworkSwitchStack`: InlineResponse200161
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.RemoveNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -5244,11 +5244,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **removeNetworkSwitchStack** | [**InlineObject151**](InlineObject151.md) |  | 
+ **removeNetworkSwitchStack** | [**InlineObject155**](InlineObject155.md) |  | 
 
 ### Return type
 
-[**InlineResponse200157**](InlineResponse200157.md)
+[**InlineResponse200161**](InlineResponse200161.md)
 
 ### Authorization
 
@@ -5638,7 +5638,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchAccessControlLists
 
-> InlineResponse200140 UpdateNetworkSwitchAccessControlLists(ctx, networkId).UpdateNetworkSwitchAccessControlLists(updateNetworkSwitchAccessControlLists).Execute()
+> InlineResponse200144 UpdateNetworkSwitchAccessControlLists(ctx, networkId).UpdateNetworkSwitchAccessControlLists(updateNetworkSwitchAccessControlLists).Execute()
 
 Update the access control lists for a MS network
 
@@ -5658,7 +5658,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchAccessControlLists := *openapiclient.NewInlineObject128([]openapiclient.NetworksNetworkIdSwitchAccessControlListsRules{*openapiclient.NewNetworksNetworkIdSwitchAccessControlListsRules("Policy_example", "Protocol_example", "SrcCidr_example", "DstCidr_example")}) // InlineObject128 | 
+    updateNetworkSwitchAccessControlLists := *openapiclient.NewInlineObject132([]openapiclient.NetworksNetworkIdSwitchAccessControlListsRules{*openapiclient.NewNetworksNetworkIdSwitchAccessControlListsRules("Policy_example", "Protocol_example", "SrcCidr_example", "DstCidr_example")}) // InlineObject132 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5667,7 +5667,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchAccessControlLists``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchAccessControlLists`: InlineResponse200140
+    // response from `UpdateNetworkSwitchAccessControlLists`: InlineResponse200144
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchAccessControlLists`: %v\n", resp)
 }
 ```
@@ -5688,11 +5688,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchAccessC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchAccessControlLists** | [**InlineObject128**](InlineObject128.md) |  | 
+ **updateNetworkSwitchAccessControlLists** | [**InlineObject132**](InlineObject132.md) |  | 
 
 ### Return type
 
-[**InlineResponse200140**](InlineResponse200140.md)
+[**InlineResponse200144**](InlineResponse200144.md)
 
 ### Authorization
 
@@ -5710,7 +5710,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchAccessPolicy
 
-> InlineResponse200141 UpdateNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).UpdateNetworkSwitchAccessPolicy(updateNetworkSwitchAccessPolicy).Execute()
+> InlineResponse200145 UpdateNetworkSwitchAccessPolicy(ctx, networkId, accessPolicyNumber).UpdateNetworkSwitchAccessPolicy(updateNetworkSwitchAccessPolicy).Execute()
 
 Update an access policy for a switch network
 
@@ -5731,7 +5731,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     accessPolicyNumber := "accessPolicyNumber_example" // string | Access policy number
-    updateNetworkSwitchAccessPolicy := *openapiclient.NewInlineObject130() // InlineObject130 |  (optional)
+    updateNetworkSwitchAccessPolicy := *openapiclient.NewInlineObject134() // InlineObject134 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5740,7 +5740,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchAccessPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchAccessPolicy`: InlineResponse200141
+    // response from `UpdateNetworkSwitchAccessPolicy`: InlineResponse200145
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchAccessPolicy`: %v\n", resp)
 }
 ```
@@ -5763,11 +5763,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchAccessPolicy** | [**InlineObject130**](InlineObject130.md) |  | 
+ **updateNetworkSwitchAccessPolicy** | [**InlineObject134**](InlineObject134.md) |  | 
 
 ### Return type
 
-[**InlineResponse200141**](InlineResponse200141.md)
+[**InlineResponse200145**](InlineResponse200145.md)
 
 ### Authorization
 
@@ -5785,7 +5785,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchAlternateManagementInterface
 
-> InlineResponse200142 UpdateNetworkSwitchAlternateManagementInterface(ctx, networkId).UpdateNetworkSwitchAlternateManagementInterface(updateNetworkSwitchAlternateManagementInterface).Execute()
+> InlineResponse200146 UpdateNetworkSwitchAlternateManagementInterface(ctx, networkId).UpdateNetworkSwitchAlternateManagementInterface(updateNetworkSwitchAlternateManagementInterface).Execute()
 
 Update the switch alternate management interface for the network
 
@@ -5805,7 +5805,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchAlternateManagementInterface := *openapiclient.NewInlineObject131() // InlineObject131 |  (optional)
+    updateNetworkSwitchAlternateManagementInterface := *openapiclient.NewInlineObject135() // InlineObject135 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5814,7 +5814,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchAlternateManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchAlternateManagementInterface`: InlineResponse200142
+    // response from `UpdateNetworkSwitchAlternateManagementInterface`: InlineResponse200146
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchAlternateManagementInterface`: %v\n", resp)
 }
 ```
@@ -5835,11 +5835,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchAlterna
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchAlternateManagementInterface** | [**InlineObject131**](InlineObject131.md) |  | 
+ **updateNetworkSwitchAlternateManagementInterface** | [**InlineObject135**](InlineObject135.md) |  | 
 
 ### Return type
 
-[**InlineResponse200142**](InlineResponse200142.md)
+[**InlineResponse200146**](InlineResponse200146.md)
 
 ### Authorization
 
@@ -5857,7 +5857,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchDhcpServerPolicy
 
-> InlineResponse200144 UpdateNetworkSwitchDhcpServerPolicy(ctx, networkId).UpdateNetworkSwitchDhcpServerPolicy(updateNetworkSwitchDhcpServerPolicy).Execute()
+> InlineResponse200148 UpdateNetworkSwitchDhcpServerPolicy(ctx, networkId).UpdateNetworkSwitchDhcpServerPolicy(updateNetworkSwitchDhcpServerPolicy).Execute()
 
 Update the DHCP server settings
 
@@ -5877,7 +5877,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchDhcpServerPolicy := *openapiclient.NewInlineObject132() // InlineObject132 |  (optional)
+    updateNetworkSwitchDhcpServerPolicy := *openapiclient.NewInlineObject136() // InlineObject136 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5886,7 +5886,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchDhcpServerPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchDhcpServerPolicy`: InlineResponse200144
+    // response from `UpdateNetworkSwitchDhcpServerPolicy`: InlineResponse200148
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchDhcpServerPolicy`: %v\n", resp)
 }
 ```
@@ -5907,11 +5907,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchDhcpSer
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchDhcpServerPolicy** | [**InlineObject132**](InlineObject132.md) |  | 
+ **updateNetworkSwitchDhcpServerPolicy** | [**InlineObject136**](InlineObject136.md) |  | 
 
 ### Return type
 
-[**InlineResponse200144**](InlineResponse200144.md)
+[**InlineResponse200148**](InlineResponse200148.md)
 
 ### Authorization
 
@@ -5929,7 +5929,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer
 
-> InlineResponse200145 UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId, trustedServerId).UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
+> InlineResponse200149 UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(ctx, networkId, trustedServerId).UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer(updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer).Execute()
 
 Update a server that is trusted by Dynamic ARP Inspection on this network
 
@@ -5950,7 +5950,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     trustedServerId := "trustedServerId_example" // string | Trusted server ID
-    updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer := *openapiclient.NewInlineObject134() // InlineObject134 |  (optional)
+    updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer := *openapiclient.NewInlineObject138() // InlineObject138 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5959,7 +5959,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse200145
+    // response from `UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: InlineResponse200149
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer`: %v\n", resp)
 }
 ```
@@ -5982,11 +5982,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer** | [**InlineObject134**](InlineObject134.md) |  | 
+ **updateNetworkSwitchDhcpServerPolicyArpInspectionTrustedServer** | [**InlineObject138**](InlineObject138.md) |  | 
 
 ### Return type
 
-[**InlineResponse200145**](InlineResponse200145.md)
+[**InlineResponse200149**](InlineResponse200149.md)
 
 ### Authorization
 
@@ -6004,7 +6004,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchDscpToCosMappings
 
-> InlineResponse200147 UpdateNetworkSwitchDscpToCosMappings(ctx, networkId).UpdateNetworkSwitchDscpToCosMappings(updateNetworkSwitchDscpToCosMappings).Execute()
+> InlineResponse200151 UpdateNetworkSwitchDscpToCosMappings(ctx, networkId).UpdateNetworkSwitchDscpToCosMappings(updateNetworkSwitchDscpToCosMappings).Execute()
 
 Update the DSCP to CoS mappings
 
@@ -6024,7 +6024,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchDscpToCosMappings := *openapiclient.NewInlineObject135([]openapiclient.NetworksNetworkIdSwitchDscpToCosMappingsMappings{*openapiclient.NewNetworksNetworkIdSwitchDscpToCosMappingsMappings(int32(123), int32(123))}) // InlineObject135 | 
+    updateNetworkSwitchDscpToCosMappings := *openapiclient.NewInlineObject139([]openapiclient.NetworksNetworkIdSwitchDscpToCosMappingsMappings{*openapiclient.NewNetworksNetworkIdSwitchDscpToCosMappingsMappings(int32(123), int32(123))}) // InlineObject139 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6033,7 +6033,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchDscpToCosMappings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchDscpToCosMappings`: InlineResponse200147
+    // response from `UpdateNetworkSwitchDscpToCosMappings`: InlineResponse200151
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchDscpToCosMappings`: %v\n", resp)
 }
 ```
@@ -6054,11 +6054,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchDscpToC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchDscpToCosMappings** | [**InlineObject135**](InlineObject135.md) |  | 
+ **updateNetworkSwitchDscpToCosMappings** | [**InlineObject139**](InlineObject139.md) |  | 
 
 ### Return type
 
-[**InlineResponse200147**](InlineResponse200147.md)
+[**InlineResponse200151**](InlineResponse200151.md)
 
 ### Authorization
 
@@ -6076,7 +6076,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchLinkAggregation
 
-> InlineResponse200148 UpdateNetworkSwitchLinkAggregation(ctx, networkId, linkAggregationId).UpdateNetworkSwitchLinkAggregation(updateNetworkSwitchLinkAggregation).Execute()
+> InlineResponse200152 UpdateNetworkSwitchLinkAggregation(ctx, networkId, linkAggregationId).UpdateNetworkSwitchLinkAggregation(updateNetworkSwitchLinkAggregation).Execute()
 
 Update a link aggregation group
 
@@ -6097,7 +6097,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     linkAggregationId := "linkAggregationId_example" // string | Link aggregation ID
-    updateNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject137() // InlineObject137 |  (optional)
+    updateNetworkSwitchLinkAggregation := *openapiclient.NewInlineObject141() // InlineObject141 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6106,7 +6106,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchLinkAggregation``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchLinkAggregation`: InlineResponse200148
+    // response from `UpdateNetworkSwitchLinkAggregation`: InlineResponse200152
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchLinkAggregation`: %v\n", resp)
 }
 ```
@@ -6129,11 +6129,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchLinkAggregation** | [**InlineObject137**](InlineObject137.md) |  | 
+ **updateNetworkSwitchLinkAggregation** | [**InlineObject141**](InlineObject141.md) |  | 
 
 ### Return type
 
-[**InlineResponse200148**](InlineResponse200148.md)
+[**InlineResponse200152**](InlineResponse200152.md)
 
 ### Authorization
 
@@ -6151,7 +6151,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchMtu
 
-> InlineResponse200149 UpdateNetworkSwitchMtu(ctx, networkId).UpdateNetworkSwitchMtu(updateNetworkSwitchMtu).Execute()
+> InlineResponse200153 UpdateNetworkSwitchMtu(ctx, networkId).UpdateNetworkSwitchMtu(updateNetworkSwitchMtu).Execute()
 
 Update the MTU configuration
 
@@ -6171,7 +6171,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchMtu := *openapiclient.NewInlineObject138() // InlineObject138 |  (optional)
+    updateNetworkSwitchMtu := *openapiclient.NewInlineObject142() // InlineObject142 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6180,7 +6180,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchMtu``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchMtu`: InlineResponse200149
+    // response from `UpdateNetworkSwitchMtu`: InlineResponse200153
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchMtu`: %v\n", resp)
 }
 ```
@@ -6201,11 +6201,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchMtuRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchMtu** | [**InlineObject138**](InlineObject138.md) |  | 
+ **updateNetworkSwitchMtu** | [**InlineObject142**](InlineObject142.md) |  | 
 
 ### Return type
 
-[**InlineResponse200149**](InlineResponse200149.md)
+[**InlineResponse200153**](InlineResponse200153.md)
 
 ### Authorization
 
@@ -6223,7 +6223,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchPortSchedule
 
-> InlineResponse200150 UpdateNetworkSwitchPortSchedule(ctx, networkId, portScheduleId).UpdateNetworkSwitchPortSchedule(updateNetworkSwitchPortSchedule).Execute()
+> InlineResponse200154 UpdateNetworkSwitchPortSchedule(ctx, networkId, portScheduleId).UpdateNetworkSwitchPortSchedule(updateNetworkSwitchPortSchedule).Execute()
 
 Update a switch port schedule
 
@@ -6244,7 +6244,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     portScheduleId := "portScheduleId_example" // string | Port schedule ID
-    updateNetworkSwitchPortSchedule := *openapiclient.NewInlineObject140() // InlineObject140 |  (optional)
+    updateNetworkSwitchPortSchedule := *openapiclient.NewInlineObject144() // InlineObject144 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6253,7 +6253,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchPortSchedule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchPortSchedule`: InlineResponse200150
+    // response from `UpdateNetworkSwitchPortSchedule`: InlineResponse200154
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchPortSchedule`: %v\n", resp)
 }
 ```
@@ -6276,11 +6276,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchPortSchedule** | [**InlineObject140**](InlineObject140.md) |  | 
+ **updateNetworkSwitchPortSchedule** | [**InlineObject144**](InlineObject144.md) |  | 
 
 ### Return type
 
-[**InlineResponse200150**](InlineResponse200150.md)
+[**InlineResponse200154**](InlineResponse200154.md)
 
 ### Authorization
 
@@ -6298,7 +6298,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchQosRule
 
-> InlineResponse200151 UpdateNetworkSwitchQosRule(ctx, networkId, qosRuleId).UpdateNetworkSwitchQosRule(updateNetworkSwitchQosRule).Execute()
+> InlineResponse200155 UpdateNetworkSwitchQosRule(ctx, networkId, qosRuleId).UpdateNetworkSwitchQosRule(updateNetworkSwitchQosRule).Execute()
 
 Update a quality of service rule
 
@@ -6319,7 +6319,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     qosRuleId := "qosRuleId_example" // string | Qos rule ID
-    updateNetworkSwitchQosRule := *openapiclient.NewInlineObject143() // InlineObject143 |  (optional)
+    updateNetworkSwitchQosRule := *openapiclient.NewInlineObject147() // InlineObject147 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6328,7 +6328,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchQosRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchQosRule`: InlineResponse200151
+    // response from `UpdateNetworkSwitchQosRule`: InlineResponse200155
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchQosRule`: %v\n", resp)
 }
 ```
@@ -6351,11 +6351,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchQosRule** | [**InlineObject143**](InlineObject143.md) |  | 
+ **updateNetworkSwitchQosRule** | [**InlineObject147**](InlineObject147.md) |  | 
 
 ### Return type
 
-[**InlineResponse200151**](InlineResponse200151.md)
+[**InlineResponse200155**](InlineResponse200155.md)
 
 ### Authorization
 
@@ -6373,7 +6373,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchQosRulesOrder
 
-> InlineResponse200152 UpdateNetworkSwitchQosRulesOrder(ctx, networkId).UpdateNetworkSwitchQosRulesOrder(updateNetworkSwitchQosRulesOrder).Execute()
+> InlineResponse200156 UpdateNetworkSwitchQosRulesOrder(ctx, networkId).UpdateNetworkSwitchQosRulesOrder(updateNetworkSwitchQosRulesOrder).Execute()
 
 Update the order in which the rules should be processed by the switch
 
@@ -6393,7 +6393,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchQosRulesOrder := *openapiclient.NewInlineObject142([]string{"RuleIds_example"}) // InlineObject142 | 
+    updateNetworkSwitchQosRulesOrder := *openapiclient.NewInlineObject146([]string{"RuleIds_example"}) // InlineObject146 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6402,7 +6402,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchQosRulesOrder``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchQosRulesOrder`: InlineResponse200152
+    // response from `UpdateNetworkSwitchQosRulesOrder`: InlineResponse200156
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchQosRulesOrder`: %v\n", resp)
 }
 ```
@@ -6423,11 +6423,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchQosRule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchQosRulesOrder** | [**InlineObject142**](InlineObject142.md) |  | 
+ **updateNetworkSwitchQosRulesOrder** | [**InlineObject146**](InlineObject146.md) |  | 
 
 ### Return type
 
-[**InlineResponse200152**](InlineResponse200152.md)
+[**InlineResponse200156**](InlineResponse200156.md)
 
 ### Authorization
 
@@ -6445,7 +6445,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchRoutingMulticast
 
-> InlineResponse200153 UpdateNetworkSwitchRoutingMulticast(ctx, networkId).UpdateNetworkSwitchRoutingMulticast(updateNetworkSwitchRoutingMulticast).Execute()
+> InlineResponse200157 UpdateNetworkSwitchRoutingMulticast(ctx, networkId).UpdateNetworkSwitchRoutingMulticast(updateNetworkSwitchRoutingMulticast).Execute()
 
 Update multicast settings for a network
 
@@ -6465,7 +6465,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchRoutingMulticast := *openapiclient.NewInlineObject144() // InlineObject144 |  (optional)
+    updateNetworkSwitchRoutingMulticast := *openapiclient.NewInlineObject148() // InlineObject148 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6474,7 +6474,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchRoutingMulticast``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchRoutingMulticast`: InlineResponse200153
+    // response from `UpdateNetworkSwitchRoutingMulticast`: InlineResponse200157
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchRoutingMulticast`: %v\n", resp)
 }
 ```
@@ -6495,11 +6495,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchRoutingMulticast** | [**InlineObject144**](InlineObject144.md) |  | 
+ **updateNetworkSwitchRoutingMulticast** | [**InlineObject148**](InlineObject148.md) |  | 
 
 ### Return type
 
-[**InlineResponse200153**](InlineResponse200153.md)
+[**InlineResponse200157**](InlineResponse200157.md)
 
 ### Authorization
 
@@ -6517,7 +6517,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchRoutingMulticastRendezvousPoint
 
-> InlineResponse200154 UpdateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).UpdateNetworkSwitchRoutingMulticastRendezvousPoint(updateNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
+> InlineResponse200158 UpdateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).UpdateNetworkSwitchRoutingMulticastRendezvousPoint(updateNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
 
 Update a multicast rendezvous point
 
@@ -6538,7 +6538,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     rendezvousPointId := "rendezvousPointId_example" // string | Rendezvous point ID
-    updateNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject146("InterfaceIp_example", "MulticastGroup_example") // InlineObject146 | 
+    updateNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject150("InterfaceIp_example", "MulticastGroup_example") // InlineObject150 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6547,7 +6547,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchRoutingMulticastRendezvousPoint``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200154
+    // response from `UpdateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200158
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchRoutingMulticastRendezvousPoint`: %v\n", resp)
 }
 ```
@@ -6570,11 +6570,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject146**](InlineObject146.md) |  | 
+ **updateNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject150**](InlineObject150.md) |  | 
 
 ### Return type
 
-[**InlineResponse200154**](InlineResponse200154.md)
+[**InlineResponse200158**](InlineResponse200158.md)
 
 ### Authorization
 
@@ -6592,7 +6592,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchRoutingOspf
 
-> InlineResponse200155 UpdateNetworkSwitchRoutingOspf(ctx, networkId).UpdateNetworkSwitchRoutingOspf(updateNetworkSwitchRoutingOspf).Execute()
+> InlineResponse200159 UpdateNetworkSwitchRoutingOspf(ctx, networkId).UpdateNetworkSwitchRoutingOspf(updateNetworkSwitchRoutingOspf).Execute()
 
 Update layer 3 OSPF routing configuration
 
@@ -6612,7 +6612,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchRoutingOspf := *openapiclient.NewInlineObject147() // InlineObject147 |  (optional)
+    updateNetworkSwitchRoutingOspf := *openapiclient.NewInlineObject151() // InlineObject151 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6621,7 +6621,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchRoutingOspf``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchRoutingOspf`: InlineResponse200155
+    // response from `UpdateNetworkSwitchRoutingOspf`: InlineResponse200159
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchRoutingOspf`: %v\n", resp)
 }
 ```
@@ -6642,11 +6642,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchRoutingOspf** | [**InlineObject147**](InlineObject147.md) |  | 
+ **updateNetworkSwitchRoutingOspf** | [**InlineObject151**](InlineObject151.md) |  | 
 
 ### Return type
 
-[**InlineResponse200155**](InlineResponse200155.md)
+[**InlineResponse200159**](InlineResponse200159.md)
 
 ### Authorization
 
@@ -6664,7 +6664,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchSettings
 
-> InlineResponse200156 UpdateNetworkSwitchSettings(ctx, networkId).UpdateNetworkSwitchSettings(updateNetworkSwitchSettings).Execute()
+> InlineResponse200160 UpdateNetworkSwitchSettings(ctx, networkId).UpdateNetworkSwitchSettings(updateNetworkSwitchSettings).Execute()
 
 Update switch network settings
 
@@ -6684,7 +6684,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchSettings := *openapiclient.NewInlineObject148() // InlineObject148 |  (optional)
+    updateNetworkSwitchSettings := *openapiclient.NewInlineObject152() // InlineObject152 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6693,7 +6693,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchSettings`: InlineResponse200156
+    // response from `UpdateNetworkSwitchSettings`: InlineResponse200160
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchSettings`: %v\n", resp)
 }
 ```
@@ -6714,11 +6714,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchSetting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchSettings** | [**InlineObject148**](InlineObject148.md) |  | 
+ **updateNetworkSwitchSettings** | [**InlineObject152**](InlineObject152.md) |  | 
 
 ### Return type
 
-[**InlineResponse200156**](InlineResponse200156.md)
+[**InlineResponse200160**](InlineResponse200160.md)
 
 ### Authorization
 
@@ -6736,7 +6736,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStackRoutingInterface
 
-> InlineResponse200158 UpdateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterface(updateNetworkSwitchStackRoutingInterface).Execute()
+> InlineResponse200162 UpdateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterface(updateNetworkSwitchStackRoutingInterface).Execute()
 
 Update a layer 3 interface for a switch stack
 
@@ -6758,7 +6758,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject153() // InlineObject153 |  (optional)
+    updateNetworkSwitchStackRoutingInterface := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6767,7 +6767,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchStackRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStackRoutingInterface`: InlineResponse200158
+    // response from `UpdateNetworkSwitchStackRoutingInterface`: InlineResponse200162
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchStackRoutingInterface`: %v\n", resp)
 }
 ```
@@ -6792,11 +6792,11 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterface** | [**InlineObject153**](InlineObject153.md) |  | 
+ **updateNetworkSwitchStackRoutingInterface** | [**InlineObject157**](InlineObject157.md) |  | 
 
 ### Return type
 
-[**InlineResponse200158**](InlineResponse200158.md)
+[**InlineResponse200162**](InlineResponse200162.md)
 
 ### Authorization
 
@@ -6836,7 +6836,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject154() // InlineObject154 |  (optional)
+    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject158() // InlineObject158 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6870,7 +6870,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject154**](InlineObject154.md) |  | 
+ **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject158**](InlineObject158.md) |  | 
 
 ### Return type
 
@@ -6914,7 +6914,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     staticRouteId := "staticRouteId_example" // string | Static route ID
-    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject156() // InlineObject156 |  (optional)
+    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject160() // InlineObject160 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6948,7 +6948,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject156**](InlineObject156.md) |  | 
+ **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject160**](InlineObject160.md) |  | 
 
 ### Return type
 
@@ -6970,7 +6970,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStormControl
 
-> InlineResponse200159 UpdateNetworkSwitchStormControl(ctx, networkId).UpdateNetworkSwitchStormControl(updateNetworkSwitchStormControl).Execute()
+> InlineResponse200163 UpdateNetworkSwitchStormControl(ctx, networkId).UpdateNetworkSwitchStormControl(updateNetworkSwitchStormControl).Execute()
 
 Update the storm control configuration for a switch network
 
@@ -6990,7 +6990,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchStormControl := *openapiclient.NewInlineObject157() // InlineObject157 |  (optional)
+    updateNetworkSwitchStormControl := *openapiclient.NewInlineObject161() // InlineObject161 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6999,7 +6999,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchStormControl``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStormControl`: InlineResponse200159
+    // response from `UpdateNetworkSwitchStormControl`: InlineResponse200163
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchStormControl`: %v\n", resp)
 }
 ```
@@ -7020,11 +7020,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchStormCo
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchStormControl** | [**InlineObject157**](InlineObject157.md) |  | 
+ **updateNetworkSwitchStormControl** | [**InlineObject161**](InlineObject161.md) |  | 
 
 ### Return type
 
-[**InlineResponse200159**](InlineResponse200159.md)
+[**InlineResponse200163**](InlineResponse200163.md)
 
 ### Authorization
 
@@ -7042,7 +7042,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStp
 
-> InlineResponse200160 UpdateNetworkSwitchStp(ctx, networkId).UpdateNetworkSwitchStp(updateNetworkSwitchStp).Execute()
+> InlineResponse200164 UpdateNetworkSwitchStp(ctx, networkId).UpdateNetworkSwitchStp(updateNetworkSwitchStp).Execute()
 
 Updates STP settings
 
@@ -7062,7 +7062,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchStp := *openapiclient.NewInlineObject158() // InlineObject158 |  (optional)
+    updateNetworkSwitchStp := *openapiclient.NewInlineObject162() // InlineObject162 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7071,7 +7071,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateNetworkSwitchStp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStp`: InlineResponse200160
+    // response from `UpdateNetworkSwitchStp`: InlineResponse200164
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateNetworkSwitchStp`: %v\n", resp)
 }
 ```
@@ -7092,11 +7092,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchStpRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchStp** | [**InlineObject158**](InlineObject158.md) |  | 
+ **updateNetworkSwitchStp** | [**InlineObject162**](InlineObject162.md) |  | 
 
 ### Return type
 
-[**InlineResponse200160**](InlineResponse200160.md)
+[**InlineResponse200164**](InlineResponse200164.md)
 
 ### Authorization
 
@@ -7114,7 +7114,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse200240 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
+> InlineResponse200245 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
 
 Update a switch template port
 
@@ -7137,7 +7137,7 @@ func main() {
     configTemplateId := "configTemplateId_example" // string | Config template ID
     profileId := "profileId_example" // string | Profile ID
     portId := "portId_example" // string | Port ID
-    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject232() // InlineObject232 |  (optional)
+    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject236() // InlineObject236 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7146,7 +7146,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwitchApi.UpdateOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200240
+    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200245
     fmt.Fprintf(os.Stdout, "Response from `SwitchApi.UpdateOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -7173,11 +7173,11 @@ Name | Type | Description  | Notes
 
 
 
- **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject232**](InlineObject232.md) |  | 
+ **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject236**](InlineObject236.md) |  | 
 
 ### Return type
 
-[**InlineResponse200240**](InlineResponse200240.md)
+[**InlineResponse200245**](InlineResponse200245.md)
 
 ### Authorization
 

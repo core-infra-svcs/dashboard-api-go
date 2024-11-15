@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSmDeviceCellularUsageHistory
 
-> []InlineResponse200119 GetNetworkSmDeviceCellularUsageHistory(ctx, networkId, deviceId).Execute()
+> []InlineResponse200123 GetNetworkSmDeviceCellularUsageHistory(ctx, networkId, deviceId).Execute()
 
 Return the client's daily cellular data usage history
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CellularUsageHistoryApi.GetNetworkSmDeviceCellularUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceCellularUsageHistory`: []InlineResponse200119
+    // response from `GetNetworkSmDeviceCellularUsageHistory`: []InlineResponse200123
     fmt.Fprintf(os.Stdout, "Response from `CellularUsageHistoryApi.GetNetworkSmDeviceCellularUsageHistory`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200119**](InlineResponse200119.md)
+[**[]InlineResponse200123**](InlineResponse200123.md)
 
 ### Authorization
 

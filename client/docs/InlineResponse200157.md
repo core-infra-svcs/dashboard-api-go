@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
-**Name** | Pointer to **string** | Name of the Switch stack | [optional] 
-**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
+**DefaultSettings** | Pointer to [**InlineResponse200157DefaultSettings**](InlineResponse200157DefaultSettings.md) |  | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200157Overrides**](InlineResponse200157Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200157WithDefaults instantiates a new InlineResponse200157 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetDefaultSettings
 
-`func (o *InlineResponse200157) GetId() string`
+`func (o *InlineResponse200157) GetDefaultSettings() InlineResponse200157DefaultSettings`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetDefaultSettingsOk
 
-`func (o *InlineResponse200157) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200157) GetDefaultSettingsOk() (*InlineResponse200157DefaultSettings, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetDefaultSettings
 
-`func (o *InlineResponse200157) SetId(v string)`
+`func (o *InlineResponse200157) SetDefaultSettings(v InlineResponse200157DefaultSettings)`
 
-SetId sets Id field to given value.
+SetDefaultSettings sets DefaultSettings field to given value.
 
-### HasId
+### HasDefaultSettings
 
-`func (o *InlineResponse200157) HasId() bool`
+`func (o *InlineResponse200157) HasDefaultSettings() bool`
 
-HasId returns a boolean if a field has been set.
+HasDefaultSettings returns a boolean if a field has been set.
 
-### GetName
+### GetOverrides
 
-`func (o *InlineResponse200157) GetName() string`
+`func (o *InlineResponse200157) GetOverrides() []InlineResponse200157Overrides`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetOverridesOk
 
-`func (o *InlineResponse200157) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200157) GetOverridesOk() (*[]InlineResponse200157Overrides, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetOverrides
 
-`func (o *InlineResponse200157) SetName(v string)`
+`func (o *InlineResponse200157) SetOverrides(v []InlineResponse200157Overrides)`
 
-SetName sets Name field to given value.
+SetOverrides sets Overrides field to given value.
 
-### HasName
+### HasOverrides
 
-`func (o *InlineResponse200157) HasName() bool`
+`func (o *InlineResponse200157) HasOverrides() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineResponse200157) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineResponse200157) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineResponse200157) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineResponse200157) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
+HasOverrides returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

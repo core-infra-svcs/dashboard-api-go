@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RemainderLicenses** | Pointer to [**[]InlineResponse200266**](InlineResponse200266.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
-**MovedLicenses** | Pointer to [**[]InlineResponse200266**](InlineResponse200266.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the devices that were released | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200267WithDefaults instantiates a new InlineResponse200267 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRemainderLicenses
+### GetSerials
 
-`func (o *InlineResponse200267) GetRemainderLicenses() []InlineResponse200266`
+`func (o *InlineResponse200267) GetSerials() []string`
 
-GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetRemainderLicensesOk
+### GetSerialsOk
 
-`func (o *InlineResponse200267) GetRemainderLicensesOk() (*[]InlineResponse200266, bool)`
+`func (o *InlineResponse200267) GetSerialsOk() (*[]string, bool)`
 
-GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRemainderLicenses
+### SetSerials
 
-`func (o *InlineResponse200267) SetRemainderLicenses(v []InlineResponse200266)`
+`func (o *InlineResponse200267) SetSerials(v []string)`
 
-SetRemainderLicenses sets RemainderLicenses field to given value.
+SetSerials sets Serials field to given value.
 
-### HasRemainderLicenses
+### HasSerials
 
-`func (o *InlineResponse200267) HasRemainderLicenses() bool`
+`func (o *InlineResponse200267) HasSerials() bool`
 
-HasRemainderLicenses returns a boolean if a field has been set.
-
-### GetMovedLicenses
-
-`func (o *InlineResponse200267) GetMovedLicenses() []InlineResponse200266`
-
-GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
-
-### GetMovedLicensesOk
-
-`func (o *InlineResponse200267) GetMovedLicensesOk() (*[]InlineResponse200266, bool)`
-
-GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMovedLicenses
-
-`func (o *InlineResponse200267) SetMovedLicenses(v []InlineResponse200266)`
-
-SetMovedLicenses sets MovedLicenses field to given value.
-
-### HasMovedLicenses
-
-`func (o *InlineResponse200267) HasMovedLicenses() bool`
-
-HasMovedLicenses returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

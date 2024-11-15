@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
-**Type** | Pointer to **string** | The boundary type | [optional] 
-**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
+**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
+**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
+**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200225WithDefaults instantiates a new InlineResponse200225 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBoundaryId
+### GetName
 
-`func (o *InlineResponse200225) GetBoundaryId() string`
+`func (o *InlineResponse200225) GetName() string`
 
-GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetBoundaryIdOk
+### GetNameOk
 
-`func (o *InlineResponse200225) GetBoundaryIdOk() (*string, bool)`
+`func (o *InlineResponse200225) GetNameOk() (*string, bool)`
 
-GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBoundaryId
+### SetName
 
-`func (o *InlineResponse200225) SetBoundaryId(v string)`
+`func (o *InlineResponse200225) SetName(v string)`
 
-SetBoundaryId sets BoundaryId field to given value.
+SetName sets Name field to given value.
 
-### HasBoundaryId
+### HasName
 
-`func (o *InlineResponse200225) HasBoundaryId() bool`
+`func (o *InlineResponse200225) HasName() bool`
 
-HasBoundaryId returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetType
+### GetEnabled
 
-`func (o *InlineResponse200225) GetType() string`
+`func (o *InlineResponse200225) GetEnabled() bool`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetEnabledOk
 
-`func (o *InlineResponse200225) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200225) GetEnabledOk() (*bool, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetEnabled
 
-`func (o *InlineResponse200225) SetType(v string)`
+`func (o *InlineResponse200225) SetEnabled(v bool)`
 
-SetType sets Type field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasType
+### HasEnabled
 
-`func (o *InlineResponse200225) HasType() bool`
+`func (o *InlineResponse200225) HasEnabled() bool`
 
-HasType returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetResults
+### GetAdminSettings
 
-`func (o *InlineResponse200225) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
+`func (o *InlineResponse200225) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
 
-GetResults returns the Results field if non-nil, zero value otherwise.
+GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
 
-### GetResultsOk
+### GetAdminSettingsOk
 
-`func (o *InlineResponse200225) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
+`func (o *InlineResponse200225) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
 
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResults
+### SetAdminSettings
 
-`func (o *InlineResponse200225) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
+`func (o *InlineResponse200225) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
 
-SetResults sets Results field to given value.
+SetAdminSettings sets AdminSettings field to given value.
 
-### HasResults
+### HasAdminSettings
 
-`func (o *InlineResponse200225) HasResults() bool`
+`func (o *InlineResponse200225) HasAdminSettings() bool`
 
-HasResults returns a boolean if a field has been set.
+HasAdminSettings returns a boolean if a field has been set.
+
+### GetHelpSettings
+
+`func (o *InlineResponse200225) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
+
+GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+
+### GetHelpSettingsOk
+
+`func (o *InlineResponse200225) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
+
+GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHelpSettings
+
+`func (o *InlineResponse200225) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
+
+SetHelpSettings sets HelpSettings field to given value.
+
+### HasHelpSettings
+
+`func (o *InlineResponse200225) HasHelpSettings() bool`
+
+HasHelpSettings returns a boolean if a field has been set.
+
+### GetCustomLogo
+
+`func (o *InlineResponse200225) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
+
+GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+
+### GetCustomLogoOk
+
+`func (o *InlineResponse200225) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
+
+GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCustomLogo
+
+`func (o *InlineResponse200225) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
+
+SetCustomLogo sets CustomLogo field to given value.
+
+### HasCustomLogo
+
+`func (o *InlineResponse200225) HasCustomLogo() bool`
+
+HasCustomLogo returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

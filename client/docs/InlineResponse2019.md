@@ -4,12 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse2019Network**](InlineResponse2019Network.md) |  | [optional] 
-**RuleId** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs by default. (blocked by default) | [optional] 
-**Type** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs by default. (blocked by default) | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | Updated at timestamp | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Created at timestamp | [optional] 
-**Match** | Pointer to [**InlineResponse2019Match**](InlineResponse2019Match.md) |  | [optional] 
+**Id** | Pointer to **string** | Webhook delivery identifier | [optional] 
+**Url** | Pointer to **string** | URL where the webhook was delivered | [optional] 
+**Status** | Pointer to **string** | Current status of the webhook delivery | [optional] 
 
 ## Methods
 
@@ -30,155 +27,80 @@ NewInlineResponse2019WithDefaults instantiates a new InlineResponse2019 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetId
 
-`func (o *InlineResponse2019) GetNetwork() InlineResponse2019Network`
+`func (o *InlineResponse2019) GetId() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetIdOk
 
-`func (o *InlineResponse2019) GetNetworkOk() (*InlineResponse2019Network, bool)`
+`func (o *InlineResponse2019) GetIdOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetId
 
-`func (o *InlineResponse2019) SetNetwork(v InlineResponse2019Network)`
+`func (o *InlineResponse2019) SetId(v string)`
 
-SetNetwork sets Network field to given value.
+SetId sets Id field to given value.
 
-### HasNetwork
+### HasId
 
-`func (o *InlineResponse2019) HasNetwork() bool`
+`func (o *InlineResponse2019) HasId() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetRuleId
+### GetUrl
 
-`func (o *InlineResponse2019) GetRuleId() string`
+`func (o *InlineResponse2019) GetUrl() string`
 
-GetRuleId returns the RuleId field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetRuleIdOk
+### GetUrlOk
 
-`func (o *InlineResponse2019) GetRuleIdOk() (*string, bool)`
+`func (o *InlineResponse2019) GetUrlOk() (*string, bool)`
 
-GetRuleIdOk returns a tuple with the RuleId field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRuleId
+### SetUrl
 
-`func (o *InlineResponse2019) SetRuleId(v string)`
+`func (o *InlineResponse2019) SetUrl(v string)`
 
-SetRuleId sets RuleId field to given value.
+SetUrl sets Url field to given value.
 
-### HasRuleId
+### HasUrl
 
-`func (o *InlineResponse2019) HasRuleId() bool`
+`func (o *InlineResponse2019) HasUrl() bool`
 
-HasRuleId returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetType
+### GetStatus
 
-`func (o *InlineResponse2019) GetType() string`
+`func (o *InlineResponse2019) GetStatus() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetStatusOk
 
-`func (o *InlineResponse2019) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse2019) GetStatusOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetStatus
 
-`func (o *InlineResponse2019) SetType(v string)`
+`func (o *InlineResponse2019) SetStatus(v string)`
 
-SetType sets Type field to given value.
+SetStatus sets Status field to given value.
 
-### HasType
+### HasStatus
 
-`func (o *InlineResponse2019) HasType() bool`
+`func (o *InlineResponse2019) HasStatus() bool`
 
-HasType returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse2019) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse2019) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse2019) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse2019) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse2019) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse2019) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse2019) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse2019) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetMatch
-
-`func (o *InlineResponse2019) GetMatch() InlineResponse2019Match`
-
-GetMatch returns the Match field if non-nil, zero value otherwise.
-
-### GetMatchOk
-
-`func (o *InlineResponse2019) GetMatchOk() (*InlineResponse2019Match, bool)`
-
-GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMatch
-
-`func (o *InlineResponse2019) SetMatch(v InlineResponse2019Match)`
-
-SetMatch sets Match field to given value.
-
-### HasMatch
-
-`func (o *InlineResponse2019) HasMatch() bool`
-
-HasMatch returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

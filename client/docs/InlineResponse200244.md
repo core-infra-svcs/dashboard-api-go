@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices updated | 
+**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
+**Name** | Pointer to **string** | Switch template name | [optional] 
+**Model** | Pointer to **string** | Switch model | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200244
 
-`func NewInlineResponse200244(serials []string, ) *InlineResponse200244`
+`func NewInlineResponse200244() *InlineResponse200244`
 
 NewInlineResponse200244 instantiates a new InlineResponse200244 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,80 @@ NewInlineResponse200244WithDefaults instantiates a new InlineResponse200244 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetSwitchProfileId
 
-`func (o *InlineResponse200244) GetSerials() []string`
+`func (o *InlineResponse200244) GetSwitchProfileId() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetSwitchProfileIdOk
 
-`func (o *InlineResponse200244) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200244) GetSwitchProfileIdOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetSwitchProfileId
 
-`func (o *InlineResponse200244) SetSerials(v []string)`
+`func (o *InlineResponse200244) SetSwitchProfileId(v string)`
 
-SetSerials sets Serials field to given value.
+SetSwitchProfileId sets SwitchProfileId field to given value.
 
+### HasSwitchProfileId
+
+`func (o *InlineResponse200244) HasSwitchProfileId() bool`
+
+HasSwitchProfileId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200244) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200244) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200244) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200244) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200244) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200244) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200244) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200244) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

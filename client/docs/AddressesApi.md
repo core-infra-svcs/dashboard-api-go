@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationDevicesUplinksAddressesByDevice
 
-> []InlineResponse200250 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200255 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the current uplink addresses for devices in an organization.
 
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AddressesApi.GetOrganizationDevicesUplinksAddressesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200250
+    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200255
     fmt.Fprintf(os.Stdout, "Response from `AddressesApi.GetOrganizationDevicesUplinksAddressesByDevice`: %v\n", resp)
 }
 ```
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200250**](InlineResponse200250.md)
+[**[]InlineResponse200255**](InlineResponse200255.md)
 
 ### Authorization
 

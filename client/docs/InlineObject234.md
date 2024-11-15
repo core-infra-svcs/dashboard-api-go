@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | **string** | Short name of the early access feature | 
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**Name** | **string** | The name of the configuration template | 
+**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
+**CopyFromNetworkId** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
 
 ## Methods
 
 ### NewInlineObject234
 
-`func NewInlineObject234(shortName string, ) *InlineObject234`
+`func NewInlineObject234(name string, ) *InlineObject234`
 
 NewInlineObject234 instantiates a new InlineObject234 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,75 @@ NewInlineObject234WithDefaults instantiates a new InlineObject234 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetShortName
+### GetName
 
-`func (o *InlineObject234) GetShortName() string`
+`func (o *InlineObject234) GetName() string`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetNameOk
 
-`func (o *InlineObject234) GetShortNameOk() (*string, bool)`
+`func (o *InlineObject234) GetNameOk() (*string, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetName
 
-`func (o *InlineObject234) SetShortName(v string)`
+`func (o *InlineObject234) SetName(v string)`
 
-SetShortName sets ShortName field to given value.
+SetName sets Name field to given value.
 
 
-### GetLimitScopeToNetworks
+### GetTimeZone
 
-`func (o *InlineObject234) GetLimitScopeToNetworks() []string`
+`func (o *InlineObject234) GetTimeZone() string`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetTimeZoneOk
 
-`func (o *InlineObject234) GetLimitScopeToNetworksOk() (*[]string, bool)`
+`func (o *InlineObject234) GetTimeZoneOk() (*string, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetTimeZone
 
-`func (o *InlineObject234) SetLimitScopeToNetworks(v []string)`
+`func (o *InlineObject234) SetTimeZone(v string)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasLimitScopeToNetworks
+### HasTimeZone
 
-`func (o *InlineObject234) HasLimitScopeToNetworks() bool`
+`func (o *InlineObject234) HasTimeZone() bool`
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
+
+### GetCopyFromNetworkId
+
+`func (o *InlineObject234) GetCopyFromNetworkId() string`
+
+GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
+
+### GetCopyFromNetworkIdOk
+
+`func (o *InlineObject234) GetCopyFromNetworkIdOk() (*string, bool)`
+
+GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCopyFromNetworkId
+
+`func (o *InlineObject234) SetCopyFromNetworkId(v string)`
+
+SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
+
+### HasCopyFromNetworkId
+
+`func (o *InlineObject234) HasCopyFromNetworkId() bool`
+
+HasCopyFromNetworkId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

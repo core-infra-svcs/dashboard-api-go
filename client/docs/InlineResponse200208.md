@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the access period | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the access period | [optional] 
-**Counts** | Pointer to [**[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts**](OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts.md) | list of response codes and a count of how many requests had that code in the given time period | [optional] 
+**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200208WithDefaults instantiates a new InlineResponse200208 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetEnabledNetworks
 
-`func (o *InlineResponse200208) GetStartTs() time.Time`
+`func (o *InlineResponse200208) GetEnabledNetworks() []string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetEnabledNetworksOk
 
-`func (o *InlineResponse200208) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200208) GetEnabledNetworksOk() (*[]string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetEnabledNetworks
 
-`func (o *InlineResponse200208) SetStartTs(v time.Time)`
+`func (o *InlineResponse200208) SetEnabledNetworks(v []string)`
 
-SetStartTs sets StartTs field to given value.
+SetEnabledNetworks sets EnabledNetworks field to given value.
 
-### HasStartTs
+### HasEnabledNetworks
 
-`func (o *InlineResponse200208) HasStartTs() bool`
+`func (o *InlineResponse200208) HasEnabledNetworks() bool`
 
-HasStartTs returns a boolean if a field has been set.
-
-### GetEndTs
-
-`func (o *InlineResponse200208) GetEndTs() time.Time`
-
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
-
-### GetEndTsOk
-
-`func (o *InlineResponse200208) GetEndTsOk() (*time.Time, bool)`
-
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEndTs
-
-`func (o *InlineResponse200208) SetEndTs(v time.Time)`
-
-SetEndTs sets EndTs field to given value.
-
-### HasEndTs
-
-`func (o *InlineResponse200208) HasEndTs() bool`
-
-HasEndTs returns a boolean if a field has been set.
-
-### GetCounts
-
-`func (o *InlineResponse200208) GetCounts() []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts`
-
-GetCounts returns the Counts field if non-nil, zero value otherwise.
-
-### GetCountsOk
-
-`func (o *InlineResponse200208) GetCountsOk() (*[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts, bool)`
-
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCounts
-
-`func (o *InlineResponse200208) SetCounts(v []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts)`
-
-SetCounts sets Counts field to given value.
-
-### HasCounts
-
-`func (o *InlineResponse200208) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
+HasEnabledNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

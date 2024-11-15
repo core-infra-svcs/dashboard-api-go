@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationSplashThemeAsset
 
-> InlineResponse200283 CreateOrganizationSplashThemeAsset(ctx, organizationId, themeIdentifier).CreateOrganizationSplashThemeAsset(createOrganizationSplashThemeAsset).Execute()
+> InlineResponse200290 CreateOrganizationSplashThemeAsset(ctx, organizationId, themeIdentifier).CreateOrganizationSplashThemeAsset(createOrganizationSplashThemeAsset).Execute()
 
 Create a Splash Theme Asset
 
@@ -33,7 +33,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     themeIdentifier := "themeIdentifier_example" // string | Theme identifier
-    createOrganizationSplashThemeAsset := *openapiclient.NewInlineObject267() // InlineObject267 |  (optional)
+    createOrganizationSplashThemeAsset := *openapiclient.NewInlineObject271() // InlineObject271 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssetsApi.CreateOrganizationSplashThemeAsset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationSplashThemeAsset`: InlineResponse200283
+    // response from `CreateOrganizationSplashThemeAsset`: InlineResponse200290
     fmt.Fprintf(os.Stdout, "Response from `AssetsApi.CreateOrganizationSplashThemeAsset`: %v\n", resp)
 }
 ```
@@ -65,11 +65,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createOrganizationSplashThemeAsset** | [**InlineObject267**](InlineObject267.md) |  | 
+ **createOrganizationSplashThemeAsset** | [**InlineObject271**](InlineObject271.md) |  | 
 
 ### Return type
 
-[**InlineResponse200283**](InlineResponse200283.md)
+[**InlineResponse200290**](InlineResponse200290.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSplashAsset
 
-> InlineResponse200283 GetOrganizationSplashAsset(ctx, organizationId, id).Execute()
+> InlineResponse200290 GetOrganizationSplashAsset(ctx, organizationId, id).Execute()
 
 Get a Splash Theme Asset
 
@@ -187,7 +187,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AssetsApi.GetOrganizationSplashAsset``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSplashAsset`: InlineResponse200283
+    // response from `GetOrganizationSplashAsset`: InlineResponse200290
     fmt.Fprintf(os.Stdout, "Response from `AssetsApi.GetOrganizationSplashAsset`: %v\n", resp)
 }
 ```
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200283**](InlineResponse200283.md)
+[**InlineResponse200290**](InlineResponse200290.md)
 
 ### Authorization
 

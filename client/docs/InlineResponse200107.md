@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | Start of the timespan over which sensor alerts are counted | [optional] 
-**EndTs** | Pointer to **time.Time** | End of the timespan over which sensor alerts are counted | [optional] 
-**Counts** | Pointer to [**NetworksNetworkIdSensorAlertsOverviewByMetricCounts**](NetworksNetworkIdSensorAlertsOverviewByMetricCounts.md) |  | [optional] 
+**Macs** | Pointer to **[]string** | List of mac addresses | [optional] 
+**Emails** | Pointer to **[]string** | List of email addresses | [optional] 
+**Usernames** | Pointer to **[]string** | List of usernames | [optional] 
+**Serials** | Pointer to **[]string** | List of device serials | [optional] 
+**Imeis** | Pointer to **[]string** | List of IMEIs | [optional] 
+**BluetoothMacs** | Pointer to **[]string** | List of bluetooth mac addresses | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse200107WithDefaults instantiates a new InlineResponse200107 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetMacs
 
-`func (o *InlineResponse200107) GetStartTs() time.Time`
+`func (o *InlineResponse200107) GetMacs() []string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetMacs returns the Macs field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetMacsOk
 
-`func (o *InlineResponse200107) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200107) GetMacsOk() (*[]string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetMacsOk returns a tuple with the Macs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetMacs
 
-`func (o *InlineResponse200107) SetStartTs(v time.Time)`
+`func (o *InlineResponse200107) SetMacs(v []string)`
 
-SetStartTs sets StartTs field to given value.
+SetMacs sets Macs field to given value.
 
-### HasStartTs
+### HasMacs
 
-`func (o *InlineResponse200107) HasStartTs() bool`
+`func (o *InlineResponse200107) HasMacs() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasMacs returns a boolean if a field has been set.
 
-### GetEndTs
+### GetEmails
 
-`func (o *InlineResponse200107) GetEndTs() time.Time`
+`func (o *InlineResponse200107) GetEmails() []string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetEmails returns the Emails field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetEmailsOk
 
-`func (o *InlineResponse200107) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200107) GetEmailsOk() (*[]string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetEmailsOk returns a tuple with the Emails field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetEmails
 
-`func (o *InlineResponse200107) SetEndTs(v time.Time)`
+`func (o *InlineResponse200107) SetEmails(v []string)`
 
-SetEndTs sets EndTs field to given value.
+SetEmails sets Emails field to given value.
 
-### HasEndTs
+### HasEmails
 
-`func (o *InlineResponse200107) HasEndTs() bool`
+`func (o *InlineResponse200107) HasEmails() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasEmails returns a boolean if a field has been set.
 
-### GetCounts
+### GetUsernames
 
-`func (o *InlineResponse200107) GetCounts() NetworksNetworkIdSensorAlertsOverviewByMetricCounts`
+`func (o *InlineResponse200107) GetUsernames() []string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetUsernames returns the Usernames field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetUsernamesOk
 
-`func (o *InlineResponse200107) GetCountsOk() (*NetworksNetworkIdSensorAlertsOverviewByMetricCounts, bool)`
+`func (o *InlineResponse200107) GetUsernamesOk() (*[]string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetUsernamesOk returns a tuple with the Usernames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetUsernames
 
-`func (o *InlineResponse200107) SetCounts(v NetworksNetworkIdSensorAlertsOverviewByMetricCounts)`
+`func (o *InlineResponse200107) SetUsernames(v []string)`
 
-SetCounts sets Counts field to given value.
+SetUsernames sets Usernames field to given value.
 
-### HasCounts
+### HasUsernames
 
-`func (o *InlineResponse200107) HasCounts() bool`
+`func (o *InlineResponse200107) HasUsernames() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasUsernames returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineResponse200107) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineResponse200107) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineResponse200107) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineResponse200107) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetImeis
+
+`func (o *InlineResponse200107) GetImeis() []string`
+
+GetImeis returns the Imeis field if non-nil, zero value otherwise.
+
+### GetImeisOk
+
+`func (o *InlineResponse200107) GetImeisOk() (*[]string, bool)`
+
+GetImeisOk returns a tuple with the Imeis field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImeis
+
+`func (o *InlineResponse200107) SetImeis(v []string)`
+
+SetImeis sets Imeis field to given value.
+
+### HasImeis
+
+`func (o *InlineResponse200107) HasImeis() bool`
+
+HasImeis returns a boolean if a field has been set.
+
+### GetBluetoothMacs
+
+`func (o *InlineResponse200107) GetBluetoothMacs() []string`
+
+GetBluetoothMacs returns the BluetoothMacs field if non-nil, zero value otherwise.
+
+### GetBluetoothMacsOk
+
+`func (o *InlineResponse200107) GetBluetoothMacsOk() (*[]string, bool)`
+
+GetBluetoothMacsOk returns a tuple with the BluetoothMacs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBluetoothMacs
+
+`func (o *InlineResponse200107) SetBluetoothMacs(v []string)`
+
+SetBluetoothMacs sets BluetoothMacs field to given value.
+
+### HasBluetoothMacs
+
+`func (o *InlineResponse200107) HasBluetoothMacs() bool`
+
+HasBluetoothMacs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

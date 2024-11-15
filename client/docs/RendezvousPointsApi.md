@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkSwitchRoutingMulticastRendezvousPoint
 
-> InlineResponse200154 CreateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId).CreateNetworkSwitchRoutingMulticastRendezvousPoint(createNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
+> InlineResponse200158 CreateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId).CreateNetworkSwitchRoutingMulticastRendezvousPoint(createNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
 
 Create a multicast rendezvous point
 
@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject145("InterfaceIp_example", "MulticastGroup_example") // InlineObject145 | 
+    createNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject149("InterfaceIp_example", "MulticastGroup_example") // InlineObject149 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RendezvousPointsApi.CreateNetworkSwitchRoutingMulticastRendezvousPoint``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200154
+    // response from `CreateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200158
     fmt.Fprintf(os.Stdout, "Response from `RendezvousPointsApi.CreateNetworkSwitchRoutingMulticastRendezvousPoint`: %v\n", resp)
 }
 ```
@@ -64,11 +64,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject145**](InlineObject145.md) |  | 
+ **createNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject149**](InlineObject149.md) |  | 
 
 ### Return type
 
-[**InlineResponse200154**](InlineResponse200154.md)
+[**InlineResponse200158**](InlineResponse200158.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingMulticastRendezvousPoint
 
-> InlineResponse200154 GetNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).Execute()
+> InlineResponse200158 GetNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).Execute()
 
 Return a multicast rendezvous point
 
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RendezvousPointsApi.GetNetworkSwitchRoutingMulticastRendezvousPoint``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200154
+    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200158
     fmt.Fprintf(os.Stdout, "Response from `RendezvousPointsApi.GetNetworkSwitchRoutingMulticastRendezvousPoint`: %v\n", resp)
 }
 ```
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200154**](InlineResponse200154.md)
+[**InlineResponse200158**](InlineResponse200158.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchRoutingMulticastRendezvousPoints
 
-> []InlineResponse200154 GetNetworkSwitchRoutingMulticastRendezvousPoints(ctx, networkId).Execute()
+> []InlineResponse200158 GetNetworkSwitchRoutingMulticastRendezvousPoints(ctx, networkId).Execute()
 
 List multicast rendezvous points
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RendezvousPointsApi.GetNetworkSwitchRoutingMulticastRendezvousPoints``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoints`: []InlineResponse200154
+    // response from `GetNetworkSwitchRoutingMulticastRendezvousPoints`: []InlineResponse200158
     fmt.Fprintf(os.Stdout, "Response from `RendezvousPointsApi.GetNetworkSwitchRoutingMulticastRendezvousPoints`: %v\n", resp)
 }
 ```
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200154**](InlineResponse200154.md)
+[**[]InlineResponse200158**](InlineResponse200158.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchRoutingMulticastRendezvousPoint
 
-> InlineResponse200154 UpdateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).UpdateNetworkSwitchRoutingMulticastRendezvousPoint(updateNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
+> InlineResponse200158 UpdateNetworkSwitchRoutingMulticastRendezvousPoint(ctx, networkId, rendezvousPointId).UpdateNetworkSwitchRoutingMulticastRendezvousPoint(updateNetworkSwitchRoutingMulticastRendezvousPoint).Execute()
 
 Update a multicast rendezvous point
 
@@ -321,7 +321,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     rendezvousPointId := "rendezvousPointId_example" // string | Rendezvous point ID
-    updateNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject146("InterfaceIp_example", "MulticastGroup_example") // InlineObject146 | 
+    updateNetworkSwitchRoutingMulticastRendezvousPoint := *openapiclient.NewInlineObject150("InterfaceIp_example", "MulticastGroup_example") // InlineObject150 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -330,7 +330,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `RendezvousPointsApi.UpdateNetworkSwitchRoutingMulticastRendezvousPoint``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200154
+    // response from `UpdateNetworkSwitchRoutingMulticastRendezvousPoint`: InlineResponse200158
     fmt.Fprintf(os.Stdout, "Response from `RendezvousPointsApi.UpdateNetworkSwitchRoutingMulticastRendezvousPoint`: %v\n", resp)
 }
 ```
@@ -353,11 +353,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject146**](InlineObject146.md) |  | 
+ **updateNetworkSwitchRoutingMulticastRendezvousPoint** | [**InlineObject150**](InlineObject150.md) |  | 
 
 ### Return type
 
-[**InlineResponse200154**](InlineResponse200154.md)
+[**InlineResponse200158**](InlineResponse200158.md)
 
 ### Authorization
 

@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkWirelessAirMarshalRule
 
-> InlineResponse2019 CreateNetworkWirelessAirMarshalRule(ctx, networkId).CreateNetworkWirelessAirMarshalRule(createNetworkWirelessAirMarshalRule).Execute()
+> InlineResponse20110 CreateNetworkWirelessAirMarshalRule(ctx, networkId).CreateNetworkWirelessAirMarshalRule(createNetworkWirelessAirMarshalRule).Execute()
 
 Creates a new rule
 
@@ -36,7 +36,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkWirelessAirMarshalRule := *openapiclient.NewInlineObject170("Type_example", *openapiclient.NewNetworksNetworkIdWirelessAirMarshalRulesMatch()) // InlineObject170 | 
+    createNetworkWirelessAirMarshalRule := *openapiclient.NewInlineObject174("Type_example", *openapiclient.NewNetworksNetworkIdWirelessAirMarshalRulesMatch()) // InlineObject174 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AirMarshalApi.CreateNetworkWirelessAirMarshalRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWirelessAirMarshalRule`: InlineResponse2019
+    // response from `CreateNetworkWirelessAirMarshalRule`: InlineResponse20110
     fmt.Fprintf(os.Stdout, "Response from `AirMarshalApi.CreateNetworkWirelessAirMarshalRule`: %v\n", resp)
 }
 ```
@@ -66,11 +66,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkWirelessAirMa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkWirelessAirMarshalRule** | [**InlineObject170**](InlineObject170.md) |  | 
+ **createNetworkWirelessAirMarshalRule** | [**InlineObject174**](InlineObject174.md) |  | 
 
 ### Return type
 
-[**InlineResponse2019**](InlineResponse2019.md)
+[**InlineResponse20110**](InlineResponse20110.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessAirMarshalRules
 
-> InlineResponse200303 GetOrganizationWirelessAirMarshalRules(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200310 GetOrganizationWirelessAirMarshalRules(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns the current Air Marshal rules for this organization
 
@@ -265,7 +265,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AirMarshalApi.GetOrganizationWirelessAirMarshalRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessAirMarshalRules`: InlineResponse200303
+    // response from `GetOrganizationWirelessAirMarshalRules`: InlineResponse200310
     fmt.Fprintf(os.Stdout, "Response from `AirMarshalApi.GetOrganizationWirelessAirMarshalRules`: %v\n", resp)
 }
 ```
@@ -293,7 +293,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200303**](InlineResponse200303.md)
+[**InlineResponse200310**](InlineResponse200310.md)
 
 ### Authorization
 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessAirMarshalSettingsByNetwork
 
-> InlineResponse200304 GetOrganizationWirelessAirMarshalSettingsByNetwork(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200311 GetOrganizationWirelessAirMarshalSettingsByNetwork(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns the current Air Marshal settings for this network
 
@@ -343,7 +343,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AirMarshalApi.GetOrganizationWirelessAirMarshalSettingsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessAirMarshalSettingsByNetwork`: InlineResponse200304
+    // response from `GetOrganizationWirelessAirMarshalSettingsByNetwork`: InlineResponse200311
     fmt.Fprintf(os.Stdout, "Response from `AirMarshalApi.GetOrganizationWirelessAirMarshalSettingsByNetwork`: %v\n", resp)
 }
 ```
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200304**](InlineResponse200304.md)
+[**InlineResponse200311**](InlineResponse200311.md)
 
 ### Authorization
 
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessAirMarshalRule
 
-> InlineResponse2019 UpdateNetworkWirelessAirMarshalRule(ctx, networkId, ruleId).UpdateNetworkWirelessAirMarshalRule(updateNetworkWirelessAirMarshalRule).Execute()
+> InlineResponse20110 UpdateNetworkWirelessAirMarshalRule(ctx, networkId, ruleId).UpdateNetworkWirelessAirMarshalRule(updateNetworkWirelessAirMarshalRule).Execute()
 
 Update a rule
 
@@ -410,7 +410,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     ruleId := "ruleId_example" // string | Rule ID
-    updateNetworkWirelessAirMarshalRule := *openapiclient.NewInlineObject171() // InlineObject171 |  (optional)
+    updateNetworkWirelessAirMarshalRule := *openapiclient.NewInlineObject175() // InlineObject175 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -419,7 +419,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AirMarshalApi.UpdateNetworkWirelessAirMarshalRule``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessAirMarshalRule`: InlineResponse2019
+    // response from `UpdateNetworkWirelessAirMarshalRule`: InlineResponse20110
     fmt.Fprintf(os.Stdout, "Response from `AirMarshalApi.UpdateNetworkWirelessAirMarshalRule`: %v\n", resp)
 }
 ```
@@ -442,11 +442,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessAirMarshalRule** | [**InlineObject171**](InlineObject171.md) |  | 
+ **updateNetworkWirelessAirMarshalRule** | [**InlineObject175**](InlineObject175.md) |  | 
 
 ### Return type
 
-[**InlineResponse2019**](InlineResponse2019.md)
+[**InlineResponse20110**](InlineResponse20110.md)
 
 ### Authorization
 
@@ -464,7 +464,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessAirMarshalSettings
 
-> InlineResponse200168 UpdateNetworkWirelessAirMarshalSettings(ctx, networkId).UpdateNetworkWirelessAirMarshalSettings(updateNetworkWirelessAirMarshalSettings).Execute()
+> InlineResponse200173 UpdateNetworkWirelessAirMarshalSettings(ctx, networkId).UpdateNetworkWirelessAirMarshalSettings(updateNetworkWirelessAirMarshalSettings).Execute()
 
 Updates Air Marshal settings.
 
@@ -484,7 +484,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessAirMarshalSettings := *openapiclient.NewInlineObject172("DefaultPolicy_example") // InlineObject172 | 
+    updateNetworkWirelessAirMarshalSettings := *openapiclient.NewInlineObject176("DefaultPolicy_example") // InlineObject176 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -493,7 +493,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AirMarshalApi.UpdateNetworkWirelessAirMarshalSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessAirMarshalSettings`: InlineResponse200168
+    // response from `UpdateNetworkWirelessAirMarshalSettings`: InlineResponse200173
     fmt.Fprintf(os.Stdout, "Response from `AirMarshalApi.UpdateNetworkWirelessAirMarshalSettings`: %v\n", resp)
 }
 ```
@@ -514,11 +514,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessAirMa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessAirMarshalSettings** | [**InlineObject172**](InlineObject172.md) |  | 
+ **updateNetworkWirelessAirMarshalSettings** | [**InlineObject176**](InlineObject176.md) |  | 
 
 ### Return type
 
-[**InlineResponse200168**](InlineResponse200168.md)
+[**InlineResponse200173**](InlineResponse200173.md)
 
 ### Authorization
 

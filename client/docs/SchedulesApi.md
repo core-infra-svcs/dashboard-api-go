@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidSchedules
 
-> InlineResponse200193 GetNetworkWirelessSsidSchedules(ctx, networkId, number).Execute()
+> InlineResponse200198 GetNetworkWirelessSsidSchedules(ctx, networkId, number).Execute()
 
 List the outage schedule for the SSID
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SchedulesApi.GetNetworkWirelessSsidSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidSchedules`: InlineResponse200193
+    // response from `GetNetworkWirelessSsidSchedules`: InlineResponse200198
     fmt.Fprintf(os.Stdout, "Response from `SchedulesApi.GetNetworkWirelessSsidSchedules`: %v\n", resp)
 }
 ```
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200193**](InlineResponse200193.md)
+[**InlineResponse200198**](InlineResponse200198.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidSchedules
 
-> InlineResponse200193 UpdateNetworkWirelessSsidSchedules(ctx, networkId, number).UpdateNetworkWirelessSsidSchedules(updateNetworkWirelessSsidSchedules).Execute()
+> InlineResponse200198 UpdateNetworkWirelessSsidSchedules(ctx, networkId, number).UpdateNetworkWirelessSsidSchedules(updateNetworkWirelessSsidSchedules).Execute()
 
 Update the outage schedule for the SSID
 
@@ -176,7 +176,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidSchedules := *openapiclient.NewInlineObject193() // InlineObject193 |  (optional)
+    updateNetworkWirelessSsidSchedules := *openapiclient.NewInlineObject197() // InlineObject197 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -185,7 +185,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SchedulesApi.UpdateNetworkWirelessSsidSchedules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidSchedules`: InlineResponse200193
+    // response from `UpdateNetworkWirelessSsidSchedules`: InlineResponse200198
     fmt.Fprintf(os.Stdout, "Response from `SchedulesApi.UpdateNetworkWirelessSsidSchedules`: %v\n", resp)
 }
 ```
@@ -208,11 +208,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidSchedules** | [**InlineObject193**](InlineObject193.md) |  | 
+ **updateNetworkWirelessSsidSchedules** | [**InlineObject197**](InlineObject197.md) |  | 
 
 ### Return type
 
-[**InlineResponse200193**](InlineResponse200193.md)
+[**InlineResponse200198**](InlineResponse200198.md)
 
 ### Authorization
 

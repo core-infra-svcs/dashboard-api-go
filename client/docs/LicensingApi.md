@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## GetAdministeredLicensingSubscriptionSubscriptions
 
-> []InlineResponse2003 GetAdministeredLicensingSubscriptionSubscriptions(ctx).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SubscriptionIds(subscriptionIds).OrganizationIds(organizationIds).StartDate(startDate).EndDate(endDate).Statuses(statuses).ProductTypes(productTypes).Execute()
+> []InlineResponse2003 GetAdministeredLicensingSubscriptionSubscriptions(ctx).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SubscriptionIds(subscriptionIds).OrganizationIds(organizationIds).StartDate(startDate).EndDate(endDate).Statuses(statuses).ProductTypes(productTypes).Name(name).Execute()
 
 List available subscriptions
 
@@ -254,10 +254,11 @@ func main() {
     endDate := time.Now() // time.Time | Filter subscriptions by end date, ISO 8601 format. To filter with a range of dates, use 'endDate[<option>]=?' in the request. Accepted options include lt, gt, lte, gte. (optional)
     statuses := []string{"Statuses_example"} // []string | List of statuses that returned subscriptions can have (optional)
     productTypes := []string{"ProductTypes_example"} // []string | List of product types that returned subscriptions need to have entitlements for. (optional)
+    name := "name_example" // string | Search for subscription name (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.LicensingApi.GetAdministeredLicensingSubscriptionSubscriptions(context.Background()).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SubscriptionIds(subscriptionIds).OrganizationIds(organizationIds).StartDate(startDate).EndDate(endDate).Statuses(statuses).ProductTypes(productTypes).Execute()
+    resp, r, err := apiClient.LicensingApi.GetAdministeredLicensingSubscriptionSubscriptions(context.Background()).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SubscriptionIds(subscriptionIds).OrganizationIds(organizationIds).StartDate(startDate).EndDate(endDate).Statuses(statuses).ProductTypes(productTypes).Name(name).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensingApi.GetAdministeredLicensingSubscriptionSubscriptions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -287,6 +288,7 @@ Name | Type | Description  | Notes
  **endDate** | **time.Time** | Filter subscriptions by end date, ISO 8601 format. To filter with a range of dates, use &#39;endDate[&lt;option&gt;]&#x3D;?&#39; in the request. Accepted options include lt, gt, lte, gte. | 
  **statuses** | **[]string** | List of statuses that returned subscriptions can have | 
  **productTypes** | **[]string** | List of product types that returned subscriptions need to have entitlements for. | 
+ **name** | **string** | Search for subscription name | 
 
 ### Return type
 
@@ -376,7 +378,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicensingCotermLicenses
 
-> []InlineResponse200266 GetOrganizationLicensingCotermLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
+> []InlineResponse200273 GetOrganizationLicensingCotermLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
 
 List the licenses in a coterm organization
 
@@ -409,7 +411,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensingApi.GetOrganizationLicensingCotermLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicensingCotermLicenses`: []InlineResponse200266
+    // response from `GetOrganizationLicensingCotermLicenses`: []InlineResponse200273
     fmt.Fprintf(os.Stdout, "Response from `LicensingApi.GetOrganizationLicensingCotermLicenses`: %v\n", resp)
 }
 ```
@@ -438,7 +440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200266**](InlineResponse200266.md)
+[**[]InlineResponse200273**](InlineResponse200273.md)
 
 ### Authorization
 
@@ -456,7 +458,7 @@ Name | Type | Description  | Notes
 
 ## MoveOrganizationLicensingCotermLicenses
 
-> InlineResponse200267 MoveOrganizationLicensingCotermLicenses(ctx, organizationId).MoveOrganizationLicensingCotermLicenses(moveOrganizationLicensingCotermLicenses).Execute()
+> InlineResponse200274 MoveOrganizationLicensingCotermLicenses(ctx, organizationId).MoveOrganizationLicensingCotermLicenses(moveOrganizationLicensingCotermLicenses).Execute()
 
 Moves a license to a different organization (coterm only)
 
@@ -476,7 +478,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    moveOrganizationLicensingCotermLicenses := *openapiclient.NewInlineObject249(*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(), []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses("Key_example", []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveCounts{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveCounts("Model_example", int32(123))})}) // InlineObject249 | 
+    moveOrganizationLicensingCotermLicenses := *openapiclient.NewInlineObject253(*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(), []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses("Key_example", []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveCounts{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveCounts("Model_example", int32(123))})}) // InlineObject253 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -485,7 +487,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensingApi.MoveOrganizationLicensingCotermLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveOrganizationLicensingCotermLicenses`: InlineResponse200267
+    // response from `MoveOrganizationLicensingCotermLicenses`: InlineResponse200274
     fmt.Fprintf(os.Stdout, "Response from `LicensingApi.MoveOrganizationLicensingCotermLicenses`: %v\n", resp)
 }
 ```
@@ -506,11 +508,11 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensingC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicensingCotermLicenses** | [**InlineObject249**](InlineObject249.md) |  | 
+ **moveOrganizationLicensingCotermLicenses** | [**InlineObject253**](InlineObject253.md) |  | 
 
 ### Return type
 
-[**InlineResponse200267**](InlineResponse200267.md)
+[**InlineResponse200274**](InlineResponse200274.md)
 
 ### Authorization
 

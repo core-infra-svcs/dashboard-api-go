@@ -7,12 +7,13 @@ Name | Type | Description | Notes
 **PortId** | Pointer to **string** | The string identifier of this port on the switch. This is commonly just the port number but may contain additional identifying information such as the slot and module-type if the port is located on a port module. | [optional] 
 **Enabled** | Pointer to **bool** | Whether the port is configured to be enabled. | [optional] 
 **Status** | Pointer to **string** | The current connection status of the port. | [optional] 
-**SpanningTree** | Pointer to [**DevicesSerialSwitchPortsStatusesSpanningTree**](DevicesSerialSwitchPortsStatusesSpanningTree.md) |  | [optional] 
 **IsUplink** | Pointer to **bool** | Whether the port is the switch&#39;s uplink. | [optional] 
 **Errors** | Pointer to **[]string** | All errors present on the port. | [optional] 
 **Warnings** | Pointer to **[]string** | All warnings present on the port. | [optional] 
 **Speed** | Pointer to **string** | The current data transfer rate which the port is operating at. | [optional] 
 **Duplex** | Pointer to **string** | The current duplex of a connected port. | [optional] 
+**SpanningTree** | Pointer to [**DevicesSerialSwitchPortsStatusesSpanningTree**](DevicesSerialSwitchPortsStatusesSpanningTree.md) |  | [optional] 
+**Poe** | Pointer to [**DevicesSerialSwitchPortsStatusesPoe**](DevicesSerialSwitchPortsStatusesPoe.md) |  | [optional] 
 **UsageInKb** | Pointer to [**DevicesSerialSwitchPortsStatusesUsageInKb**](DevicesSerialSwitchPortsStatusesUsageInKb.md) |  | [optional] 
 **Cdp** | Pointer to [**DevicesSerialSwitchPortsStatusesCdp**](DevicesSerialSwitchPortsStatusesCdp.md) |  | [optional] 
 **Lldp** | Pointer to [**DevicesSerialSwitchPortsStatusesLldp**](DevicesSerialSwitchPortsStatusesLldp.md) |  | [optional] 
@@ -20,7 +21,6 @@ Name | Type | Description | Notes
 **PowerUsageInWh** | Pointer to **float32** | How much power (in watt-hours) has been delivered by this port during the timespan. | [optional] 
 **TrafficInKbps** | Pointer to [**DevicesSerialSwitchPortsStatusesTrafficInKbps**](DevicesSerialSwitchPortsStatusesTrafficInKbps.md) |  | [optional] 
 **SecurePort** | Pointer to [**DevicesSerialSwitchPortsStatusesSecurePort**](DevicesSerialSwitchPortsStatusesSecurePort.md) |  | [optional] 
-**Poe** | Pointer to [**DevicesSerialSwitchPortsStatusesPoe**](DevicesSerialSwitchPortsStatusesPoe.md) |  | [optional] 
 
 ## Methods
 
@@ -115,31 +115,6 @@ SetStatus sets Status field to given value.
 `func (o *InlineResponse20033) HasStatus() bool`
 
 HasStatus returns a boolean if a field has been set.
-
-### GetSpanningTree
-
-`func (o *InlineResponse20033) GetSpanningTree() DevicesSerialSwitchPortsStatusesSpanningTree`
-
-GetSpanningTree returns the SpanningTree field if non-nil, zero value otherwise.
-
-### GetSpanningTreeOk
-
-`func (o *InlineResponse20033) GetSpanningTreeOk() (*DevicesSerialSwitchPortsStatusesSpanningTree, bool)`
-
-GetSpanningTreeOk returns a tuple with the SpanningTree field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSpanningTree
-
-`func (o *InlineResponse20033) SetSpanningTree(v DevicesSerialSwitchPortsStatusesSpanningTree)`
-
-SetSpanningTree sets SpanningTree field to given value.
-
-### HasSpanningTree
-
-`func (o *InlineResponse20033) HasSpanningTree() bool`
-
-HasSpanningTree returns a boolean if a field has been set.
 
 ### GetIsUplink
 
@@ -265,6 +240,56 @@ SetDuplex sets Duplex field to given value.
 `func (o *InlineResponse20033) HasDuplex() bool`
 
 HasDuplex returns a boolean if a field has been set.
+
+### GetSpanningTree
+
+`func (o *InlineResponse20033) GetSpanningTree() DevicesSerialSwitchPortsStatusesSpanningTree`
+
+GetSpanningTree returns the SpanningTree field if non-nil, zero value otherwise.
+
+### GetSpanningTreeOk
+
+`func (o *InlineResponse20033) GetSpanningTreeOk() (*DevicesSerialSwitchPortsStatusesSpanningTree, bool)`
+
+GetSpanningTreeOk returns a tuple with the SpanningTree field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSpanningTree
+
+`func (o *InlineResponse20033) SetSpanningTree(v DevicesSerialSwitchPortsStatusesSpanningTree)`
+
+SetSpanningTree sets SpanningTree field to given value.
+
+### HasSpanningTree
+
+`func (o *InlineResponse20033) HasSpanningTree() bool`
+
+HasSpanningTree returns a boolean if a field has been set.
+
+### GetPoe
+
+`func (o *InlineResponse20033) GetPoe() DevicesSerialSwitchPortsStatusesPoe`
+
+GetPoe returns the Poe field if non-nil, zero value otherwise.
+
+### GetPoeOk
+
+`func (o *InlineResponse20033) GetPoeOk() (*DevicesSerialSwitchPortsStatusesPoe, bool)`
+
+GetPoeOk returns a tuple with the Poe field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoe
+
+`func (o *InlineResponse20033) SetPoe(v DevicesSerialSwitchPortsStatusesPoe)`
+
+SetPoe sets Poe field to given value.
+
+### HasPoe
+
+`func (o *InlineResponse20033) HasPoe() bool`
+
+HasPoe returns a boolean if a field has been set.
 
 ### GetUsageInKb
 
@@ -440,31 +465,6 @@ SetSecurePort sets SecurePort field to given value.
 `func (o *InlineResponse20033) HasSecurePort() bool`
 
 HasSecurePort returns a boolean if a field has been set.
-
-### GetPoe
-
-`func (o *InlineResponse20033) GetPoe() DevicesSerialSwitchPortsStatusesPoe`
-
-GetPoe returns the Poe field if non-nil, zero value otherwise.
-
-### GetPoeOk
-
-`func (o *InlineResponse20033) GetPoeOk() (*DevicesSerialSwitchPortsStatusesPoe, bool)`
-
-GetPoeOk returns a tuple with the Poe field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPoe
-
-`func (o *InlineResponse20033) SetPoe(v DevicesSerialSwitchPortsStatusesPoe)`
-
-SetPoe sets Poe field to given value.
-
-### HasPoe
-
-`func (o *InlineResponse20033) HasPoe() bool`
-
-HasPoe returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

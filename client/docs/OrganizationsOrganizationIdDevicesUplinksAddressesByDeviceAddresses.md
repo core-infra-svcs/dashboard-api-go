@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **AssignmentMode** | Pointer to **string** | Indicates how the device uplink address is assigned. Available options are: static, dynamic. | [optional] 
 **Address** | Pointer to **string** | Device uplink address. | [optional] 
 **Gateway** | Pointer to **string** | Device uplink gateway address. | [optional] 
+**Nameservers** | Pointer to [**OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceNameservers**](OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceNameservers.md) |  | [optional] 
 **Public** | Pointer to [**OrganizationsOrganizationIdDevicesUplinksAddressesByDevicePublic**](OrganizationsOrganizationIdDevicesUplinksAddressesByDevicePublic.md) |  | [optional] 
 **Vlan** | Pointer to [**OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceVlan**](OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceVlan.md) |  | [optional] 
 
@@ -129,6 +130,31 @@ SetGateway sets Gateway field to given value.
 `func (o *OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceAddresses) HasGateway() bool`
 
 HasGateway returns a boolean if a field has been set.
+
+### GetNameservers
+
+`func (o *OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceAddresses) GetNameservers() OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceNameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceAddresses) GetNameserversOk() (*OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceNameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceAddresses) SetNameservers(v OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceNameservers)`
+
+SetNameservers sets Nameservers field to given value.
+
+### HasNameservers
+
+`func (o *OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceAddresses) HasNameservers() bool`
+
+HasNameservers returns a boolean if a field has been set.
 
 ### GetPublic
 

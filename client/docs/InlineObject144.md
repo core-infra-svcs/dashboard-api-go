@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultSettings** | Pointer to [**NetworksNetworkIdSwitchRoutingMulticastDefaultSettings**](NetworksNetworkIdSwitchRoutingMulticastDefaultSettings.md) |  | [optional] 
-**Overrides** | Pointer to [**[]NetworksNetworkIdSwitchRoutingMulticastOverrides**](NetworksNetworkIdSwitchRoutingMulticastOverrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings. An empty array will clear the multicast settings. | [optional] 
+**Name** | Pointer to **string** | The name for your port schedule. | [optional] 
+**PortSchedule** | Pointer to [**NetworksNetworkIdSwitchPortSchedulesPortSchedule1**](NetworksNetworkIdSwitchPortSchedulesPortSchedule1.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject144WithDefaults instantiates a new InlineObject144 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultSettings
+### GetName
 
-`func (o *InlineObject144) GetDefaultSettings() NetworksNetworkIdSwitchRoutingMulticastDefaultSettings`
+`func (o *InlineObject144) GetName() string`
 
-GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultSettingsOk
+### GetNameOk
 
-`func (o *InlineObject144) GetDefaultSettingsOk() (*NetworksNetworkIdSwitchRoutingMulticastDefaultSettings, bool)`
+`func (o *InlineObject144) GetNameOk() (*string, bool)`
 
-GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultSettings
+### SetName
 
-`func (o *InlineObject144) SetDefaultSettings(v NetworksNetworkIdSwitchRoutingMulticastDefaultSettings)`
+`func (o *InlineObject144) SetName(v string)`
 
-SetDefaultSettings sets DefaultSettings field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultSettings
+### HasName
 
-`func (o *InlineObject144) HasDefaultSettings() bool`
+`func (o *InlineObject144) HasName() bool`
 
-HasDefaultSettings returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetOverrides
+### GetPortSchedule
 
-`func (o *InlineObject144) GetOverrides() []NetworksNetworkIdSwitchRoutingMulticastOverrides`
+`func (o *InlineObject144) GetPortSchedule() NetworksNetworkIdSwitchPortSchedulesPortSchedule1`
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+GetPortSchedule returns the PortSchedule field if non-nil, zero value otherwise.
 
-### GetOverridesOk
+### GetPortScheduleOk
 
-`func (o *InlineObject144) GetOverridesOk() (*[]NetworksNetworkIdSwitchRoutingMulticastOverrides, bool)`
+`func (o *InlineObject144) GetPortScheduleOk() (*NetworksNetworkIdSwitchPortSchedulesPortSchedule1, bool)`
 
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetPortScheduleOk returns a tuple with the PortSchedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetPortSchedule
 
-`func (o *InlineObject144) SetOverrides(v []NetworksNetworkIdSwitchRoutingMulticastOverrides)`
+`func (o *InlineObject144) SetPortSchedule(v NetworksNetworkIdSwitchPortSchedulesPortSchedule1)`
 
-SetOverrides sets Overrides field to given value.
+SetPortSchedule sets PortSchedule field to given value.
 
-### HasOverrides
+### HasPortSchedule
 
-`func (o *InlineObject144) HasOverrides() bool`
+`func (o *InlineObject144) HasPortSchedule() bool`
 
-HasOverrides returns a boolean if a field has been set.
+HasPortSchedule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

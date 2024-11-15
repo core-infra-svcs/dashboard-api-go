@@ -671,7 +671,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSettings
 
-> InlineResponse200111 GetNetworkSettings(ctx, networkId).Execute()
+> InlineResponse200115 GetNetworkSettings(ctx, networkId).Execute()
 
 Return the settings for a network
 
@@ -699,7 +699,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.GetNetworkSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSettings`: InlineResponse200111
+    // response from `GetNetworkSettings`: InlineResponse200115
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.GetNetworkSettings`: %v\n", resp)
 }
 ```
@@ -723,7 +723,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200111**](InlineResponse200111.md)
+[**InlineResponse200115**](InlineResponse200115.md)
 
 ### Authorization
 
@@ -741,7 +741,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchSettings
 
-> InlineResponse200156 GetNetworkSwitchSettings(ctx, networkId).Execute()
+> InlineResponse200160 GetNetworkSwitchSettings(ctx, networkId).Execute()
 
 Returns the switch network settings
 
@@ -769,7 +769,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.GetNetworkSwitchSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchSettings`: InlineResponse200156
+    // response from `GetNetworkSwitchSettings`: InlineResponse200160
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.GetNetworkSwitchSettings`: %v\n", resp)
 }
 ```
@@ -793,7 +793,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200156**](InlineResponse200156.md)
+[**InlineResponse200160**](InlineResponse200160.md)
 
 ### Authorization
 
@@ -811,7 +811,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessBluetoothSettings
 
-> InlineResponse200170 GetNetworkWirelessBluetoothSettings(ctx, networkId).Execute()
+> InlineResponse200175 GetNetworkWirelessBluetoothSettings(ctx, networkId).Execute()
 
 Return the Bluetooth settings for a network. <a href=\"https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)\">Bluetooth settings</a> must be enabled on the network.
 
@@ -839,7 +839,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.GetNetworkWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessBluetoothSettings`: InlineResponse200170
+    // response from `GetNetworkWirelessBluetoothSettings`: InlineResponse200175
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.GetNetworkWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -863,7 +863,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200170**](InlineResponse200170.md)
+[**InlineResponse200175**](InlineResponse200175.md)
 
 ### Authorization
 
@@ -881,7 +881,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSettings
 
-> InlineResponse200185 GetNetworkWirelessSettings(ctx, networkId).Execute()
+> InlineResponse200190 GetNetworkWirelessSettings(ctx, networkId).Execute()
 
 Return the wireless settings for a network
 
@@ -909,7 +909,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.GetNetworkWirelessSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSettings`: InlineResponse200185
+    // response from `GetNetworkWirelessSettings`: InlineResponse200190
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.GetNetworkWirelessSettings`: %v\n", resp)
 }
 ```
@@ -933,7 +933,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200185**](InlineResponse200185.md)
+[**InlineResponse200190**](InlineResponse200190.md)
 
 ### Authorization
 
@@ -951,7 +951,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessSsidSplashSettings
 
-> InlineResponse200194 GetNetworkWirelessSsidSplashSettings(ctx, networkId, number).Execute()
+> InlineResponse200199 GetNetworkWirelessSsidSplashSettings(ctx, networkId, number).Execute()
 
 Display the splash page settings for the given SSID
 
@@ -980,7 +980,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.GetNetworkWirelessSsidSplashSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessSsidSplashSettings`: InlineResponse200194
+    // response from `GetNetworkWirelessSsidSplashSettings`: InlineResponse200199
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.GetNetworkWirelessSsidSplashSettings`: %v\n", resp)
 }
 ```
@@ -1006,7 +1006,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200194**](InlineResponse200194.md)
+[**InlineResponse200199**](InlineResponse200199.md)
 
 ### Authorization
 
@@ -1024,7 +1024,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAdaptivePolicySettings
 
-> InlineResponse200203 GetOrganizationAdaptivePolicySettings(ctx, organizationId).Execute()
+> InlineResponse200208 GetOrganizationAdaptivePolicySettings(ctx, organizationId).Execute()
 
 Returns global adaptive policy settings in an organization
 
@@ -1052,7 +1052,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.GetOrganizationAdaptivePolicySettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAdaptivePolicySettings`: InlineResponse200203
+    // response from `GetOrganizationAdaptivePolicySettings`: InlineResponse200208
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.GetOrganizationAdaptivePolicySettings`: %v\n", resp)
 }
 ```
@@ -1076,7 +1076,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200203**](InlineResponse200203.md)
+[**InlineResponse200208**](InlineResponse200208.md)
 
 ### Authorization
 
@@ -1094,7 +1094,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessAirMarshalSettingsByNetwork
 
-> InlineResponse200304 GetOrganizationWirelessAirMarshalSettingsByNetwork(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200311 GetOrganizationWirelessAirMarshalSettingsByNetwork(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns the current Air Marshal settings for this network
 
@@ -1126,7 +1126,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.GetOrganizationWirelessAirMarshalSettingsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessAirMarshalSettingsByNetwork`: InlineResponse200304
+    // response from `GetOrganizationWirelessAirMarshalSettingsByNetwork`: InlineResponse200311
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.GetOrganizationWirelessAirMarshalSettingsByNetwork`: %v\n", resp)
 }
 ```
@@ -1154,7 +1154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200304**](InlineResponse200304.md)
+[**InlineResponse200311**](InlineResponse200311.md)
 
 ### Authorization
 
@@ -1820,7 +1820,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSettings
 
-> InlineResponse200111 UpdateNetworkSettings(ctx, networkId).UpdateNetworkSettings(updateNetworkSettings).Execute()
+> InlineResponse200115 UpdateNetworkSettings(ctx, networkId).UpdateNetworkSettings(updateNetworkSettings).Execute()
 
 Update the settings for a network
 
@@ -1840,7 +1840,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSettings := *openapiclient.NewInlineObject113() // InlineObject113 |  (optional)
+    updateNetworkSettings := *openapiclient.NewInlineObject117() // InlineObject117 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1849,7 +1849,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.UpdateNetworkSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSettings`: InlineResponse200111
+    // response from `UpdateNetworkSettings`: InlineResponse200115
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.UpdateNetworkSettings`: %v\n", resp)
 }
 ```
@@ -1870,11 +1870,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSettingsReque
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSettings** | [**InlineObject113**](InlineObject113.md) |  | 
+ **updateNetworkSettings** | [**InlineObject117**](InlineObject117.md) |  | 
 
 ### Return type
 
-[**InlineResponse200111**](InlineResponse200111.md)
+[**InlineResponse200115**](InlineResponse200115.md)
 
 ### Authorization
 
@@ -1892,7 +1892,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchSettings
 
-> InlineResponse200156 UpdateNetworkSwitchSettings(ctx, networkId).UpdateNetworkSwitchSettings(updateNetworkSwitchSettings).Execute()
+> InlineResponse200160 UpdateNetworkSwitchSettings(ctx, networkId).UpdateNetworkSwitchSettings(updateNetworkSwitchSettings).Execute()
 
 Update switch network settings
 
@@ -1912,7 +1912,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchSettings := *openapiclient.NewInlineObject148() // InlineObject148 |  (optional)
+    updateNetworkSwitchSettings := *openapiclient.NewInlineObject152() // InlineObject152 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1921,7 +1921,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.UpdateNetworkSwitchSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchSettings`: InlineResponse200156
+    // response from `UpdateNetworkSwitchSettings`: InlineResponse200160
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.UpdateNetworkSwitchSettings`: %v\n", resp)
 }
 ```
@@ -1942,11 +1942,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchSetting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchSettings** | [**InlineObject148**](InlineObject148.md) |  | 
+ **updateNetworkSwitchSettings** | [**InlineObject152**](InlineObject152.md) |  | 
 
 ### Return type
 
-[**InlineResponse200156**](InlineResponse200156.md)
+[**InlineResponse200160**](InlineResponse200160.md)
 
 ### Authorization
 
@@ -1964,7 +1964,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessAirMarshalSettings
 
-> InlineResponse200168 UpdateNetworkWirelessAirMarshalSettings(ctx, networkId).UpdateNetworkWirelessAirMarshalSettings(updateNetworkWirelessAirMarshalSettings).Execute()
+> InlineResponse200173 UpdateNetworkWirelessAirMarshalSettings(ctx, networkId).UpdateNetworkWirelessAirMarshalSettings(updateNetworkWirelessAirMarshalSettings).Execute()
 
 Updates Air Marshal settings.
 
@@ -1984,7 +1984,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessAirMarshalSettings := *openapiclient.NewInlineObject172("DefaultPolicy_example") // InlineObject172 | 
+    updateNetworkWirelessAirMarshalSettings := *openapiclient.NewInlineObject176("DefaultPolicy_example") // InlineObject176 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1993,7 +1993,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.UpdateNetworkWirelessAirMarshalSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessAirMarshalSettings`: InlineResponse200168
+    // response from `UpdateNetworkWirelessAirMarshalSettings`: InlineResponse200173
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.UpdateNetworkWirelessAirMarshalSettings`: %v\n", resp)
 }
 ```
@@ -2014,11 +2014,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessAirMa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessAirMarshalSettings** | [**InlineObject172**](InlineObject172.md) |  | 
+ **updateNetworkWirelessAirMarshalSettings** | [**InlineObject176**](InlineObject176.md) |  | 
 
 ### Return type
 
-[**InlineResponse200168**](InlineResponse200168.md)
+[**InlineResponse200173**](InlineResponse200173.md)
 
 ### Authorization
 
@@ -2036,7 +2036,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessBluetoothSettings
 
-> InlineResponse200170 UpdateNetworkWirelessBluetoothSettings(ctx, networkId).UpdateNetworkWirelessBluetoothSettings(updateNetworkWirelessBluetoothSettings).Execute()
+> InlineResponse200175 UpdateNetworkWirelessBluetoothSettings(ctx, networkId).UpdateNetworkWirelessBluetoothSettings(updateNetworkWirelessBluetoothSettings).Execute()
 
 Update the Bluetooth settings for a network
 
@@ -2056,7 +2056,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessBluetoothSettings := *openapiclient.NewInlineObject175() // InlineObject175 |  (optional)
+    updateNetworkWirelessBluetoothSettings := *openapiclient.NewInlineObject179() // InlineObject179 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2065,7 +2065,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.UpdateNetworkWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessBluetoothSettings`: InlineResponse200170
+    // response from `UpdateNetworkWirelessBluetoothSettings`: InlineResponse200175
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.UpdateNetworkWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -2086,11 +2086,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessBluet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessBluetoothSettings** | [**InlineObject175**](InlineObject175.md) |  | 
+ **updateNetworkWirelessBluetoothSettings** | [**InlineObject179**](InlineObject179.md) |  | 
 
 ### Return type
 
-[**InlineResponse200170**](InlineResponse200170.md)
+[**InlineResponse200175**](InlineResponse200175.md)
 
 ### Authorization
 
@@ -2108,7 +2108,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSettings
 
-> InlineResponse200185 UpdateNetworkWirelessSettings(ctx, networkId).UpdateNetworkWirelessSettings(updateNetworkWirelessSettings).Execute()
+> InlineResponse200190 UpdateNetworkWirelessSettings(ctx, networkId).UpdateNetworkWirelessSettings(updateNetworkWirelessSettings).Execute()
 
 Update the wireless settings for a network
 
@@ -2128,7 +2128,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessSettings := *openapiclient.NewInlineObject183() // InlineObject183 |  (optional)
+    updateNetworkWirelessSettings := *openapiclient.NewInlineObject187() // InlineObject187 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2137,7 +2137,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.UpdateNetworkWirelessSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSettings`: InlineResponse200185
+    // response from `UpdateNetworkWirelessSettings`: InlineResponse200190
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.UpdateNetworkWirelessSettings`: %v\n", resp)
 }
 ```
@@ -2158,11 +2158,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessSetti
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessSettings** | [**InlineObject183**](InlineObject183.md) |  | 
+ **updateNetworkWirelessSettings** | [**InlineObject187**](InlineObject187.md) |  | 
 
 ### Return type
 
-[**InlineResponse200185**](InlineResponse200185.md)
+[**InlineResponse200190**](InlineResponse200190.md)
 
 ### Authorization
 
@@ -2180,7 +2180,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessSsidSplashSettings
 
-> InlineResponse200194 UpdateNetworkWirelessSsidSplashSettings(ctx, networkId, number).UpdateNetworkWirelessSsidSplashSettings(updateNetworkWirelessSsidSplashSettings).Execute()
+> InlineResponse200199 UpdateNetworkWirelessSsidSplashSettings(ctx, networkId, number).UpdateNetworkWirelessSsidSplashSettings(updateNetworkWirelessSsidSplashSettings).Execute()
 
 Modify the splash page settings for the given SSID
 
@@ -2201,7 +2201,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidSplashSettings := *openapiclient.NewInlineObject194() // InlineObject194 |  (optional)
+    updateNetworkWirelessSsidSplashSettings := *openapiclient.NewInlineObject198() // InlineObject198 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2210,7 +2210,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.UpdateNetworkWirelessSsidSplashSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessSsidSplashSettings`: InlineResponse200194
+    // response from `UpdateNetworkWirelessSsidSplashSettings`: InlineResponse200199
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.UpdateNetworkWirelessSsidSplashSettings`: %v\n", resp)
 }
 ```
@@ -2233,11 +2233,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidSplashSettings** | [**InlineObject194**](InlineObject194.md) |  | 
+ **updateNetworkWirelessSsidSplashSettings** | [**InlineObject198**](InlineObject198.md) |  | 
 
 ### Return type
 
-[**InlineResponse200194**](InlineResponse200194.md)
+[**InlineResponse200199**](InlineResponse200199.md)
 
 ### Authorization
 
@@ -2255,7 +2255,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationAdaptivePolicySettings
 
-> InlineResponse200203 UpdateOrganizationAdaptivePolicySettings(ctx, organizationId).UpdateOrganizationAdaptivePolicySettings(updateOrganizationAdaptivePolicySettings).Execute()
+> InlineResponse200208 UpdateOrganizationAdaptivePolicySettings(ctx, organizationId).UpdateOrganizationAdaptivePolicySettings(updateOrganizationAdaptivePolicySettings).Execute()
 
 Update global adaptive policy settings
 
@@ -2275,7 +2275,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationAdaptivePolicySettings := *openapiclient.NewInlineObject207() // InlineObject207 |  (optional)
+    updateOrganizationAdaptivePolicySettings := *openapiclient.NewInlineObject211() // InlineObject211 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -2284,7 +2284,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SettingsApi.UpdateOrganizationAdaptivePolicySettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationAdaptivePolicySettings`: InlineResponse200203
+    // response from `UpdateOrganizationAdaptivePolicySettings`: InlineResponse200208
     fmt.Fprintf(os.Stdout, "Response from `SettingsApi.UpdateOrganizationAdaptivePolicySettings`: %v\n", resp)
 }
 ```
@@ -2305,11 +2305,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationAdaptive
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationAdaptivePolicySettings** | [**InlineObject207**](InlineObject207.md) |  | 
+ **updateOrganizationAdaptivePolicySettings** | [**InlineObject211**](InlineObject211.md) |  | 
 
 ### Return type
 
-[**InlineResponse200203**](InlineResponse200203.md)
+[**InlineResponse200208**](InlineResponse200208.md)
 
 ### Authorization
 

@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
-**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200195Rules**](InlineResponse200195Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
 
 ## Methods
 
 ### NewInlineObject195
 
-`func NewInlineObject195() *InlineObject195`
+`func NewInlineObject195(name string, groupPolicyId string, ) *InlineObject195`
 
 NewInlineObject195 instantiates a new InlineObject195 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +28,95 @@ NewInlineObject195WithDefaults instantiates a new InlineObject195 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTrafficShapingEnabled
+### GetName
 
-`func (o *InlineObject195) GetTrafficShapingEnabled() bool`
+`func (o *InlineObject195) GetName() string`
 
-GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTrafficShapingEnabledOk
+### GetNameOk
 
-`func (o *InlineObject195) GetTrafficShapingEnabledOk() (*bool, bool)`
+`func (o *InlineObject195) GetNameOk() (*string, bool)`
 
-GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrafficShapingEnabled
+### SetName
 
-`func (o *InlineObject195) SetTrafficShapingEnabled(v bool)`
+`func (o *InlineObject195) SetName(v string)`
 
-SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
+SetName sets Name field to given value.
 
-### HasTrafficShapingEnabled
 
-`func (o *InlineObject195) HasTrafficShapingEnabled() bool`
+### GetPassphrase
 
-HasTrafficShapingEnabled returns a boolean if a field has been set.
+`func (o *InlineObject195) GetPassphrase() string`
 
-### GetDefaultRulesEnabled
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-`func (o *InlineObject195) GetDefaultRulesEnabled() bool`
+### GetPassphraseOk
 
-GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
+`func (o *InlineObject195) GetPassphraseOk() (*string, bool)`
 
-### GetDefaultRulesEnabledOk
-
-`func (o *InlineObject195) GetDefaultRulesEnabledOk() (*bool, bool)`
-
-GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultRulesEnabled
+### SetPassphrase
 
-`func (o *InlineObject195) SetDefaultRulesEnabled(v bool)`
+`func (o *InlineObject195) SetPassphrase(v string)`
 
-SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasDefaultRulesEnabled
+### HasPassphrase
 
-`func (o *InlineObject195) HasDefaultRulesEnabled() bool`
+`func (o *InlineObject195) HasPassphrase() bool`
 
-HasDefaultRulesEnabled returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetRules
+### GetGroupPolicyId
 
-`func (o *InlineObject195) GetRules() []InlineResponse200195Rules`
+`func (o *InlineObject195) GetGroupPolicyId() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineObject195) GetRulesOk() (*[]InlineResponse200195Rules, bool)`
+`func (o *InlineObject195) GetGroupPolicyIdOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetGroupPolicyId
 
-`func (o *InlineObject195) SetRules(v []InlineResponse200195Rules)`
+`func (o *InlineObject195) SetGroupPolicyId(v string)`
 
-SetRules sets Rules field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasRules
 
-`func (o *InlineObject195) HasRules() bool`
+### GetExpiresAt
 
-HasRules returns a boolean if a field has been set.
+`func (o *InlineObject195) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineObject195) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineObject195) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineObject195) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

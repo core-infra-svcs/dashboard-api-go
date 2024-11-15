@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
-**Exception** | Pointer to [**InlineResponse200188Exception**](InlineResponse200188Exception.md) |  | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200188Rules**](InlineResponse200188Rules.md) | Bonjour forwarding rules | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
+**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
+**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200188WithDefaults instantiates a new InlineResponse200188 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetSerial
 
-`func (o *InlineResponse200188) GetEnabled() bool`
+`func (o *InlineResponse200188) GetSerial() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetSerialOk
 
-`func (o *InlineResponse200188) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200188) GetSerialOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetSerial
 
-`func (o *InlineResponse200188) SetEnabled(v bool)`
+`func (o *InlineResponse200188) SetSerial(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetSerial sets Serial field to given value.
 
-### HasEnabled
+### HasSerial
 
-`func (o *InlineResponse200188) HasEnabled() bool`
+`func (o *InlineResponse200188) HasSerial() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetException
+### GetMeshRoute
 
-`func (o *InlineResponse200188) GetException() InlineResponse200188Exception`
+`func (o *InlineResponse200188) GetMeshRoute() []string`
 
-GetException returns the Exception field if non-nil, zero value otherwise.
+GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
 
-### GetExceptionOk
+### GetMeshRouteOk
 
-`func (o *InlineResponse200188) GetExceptionOk() (*InlineResponse200188Exception, bool)`
+`func (o *InlineResponse200188) GetMeshRouteOk() (*[]string, bool)`
 
-GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
+GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetException
+### SetMeshRoute
 
-`func (o *InlineResponse200188) SetException(v InlineResponse200188Exception)`
+`func (o *InlineResponse200188) SetMeshRoute(v []string)`
 
-SetException sets Exception field to given value.
+SetMeshRoute sets MeshRoute field to given value.
 
-### HasException
+### HasMeshRoute
 
-`func (o *InlineResponse200188) HasException() bool`
+`func (o *InlineResponse200188) HasMeshRoute() bool`
 
-HasException returns a boolean if a field has been set.
+HasMeshRoute returns a boolean if a field has been set.
 
-### GetRules
+### GetLatestMeshPerformance
 
-`func (o *InlineResponse200188) GetRules() []InlineResponse200188Rules`
+`func (o *InlineResponse200188) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetLatestMeshPerformanceOk
 
-`func (o *InlineResponse200188) GetRulesOk() (*[]InlineResponse200188Rules, bool)`
+`func (o *InlineResponse200188) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetLatestMeshPerformance
 
-`func (o *InlineResponse200188) SetRules(v []InlineResponse200188Rules)`
+`func (o *InlineResponse200188) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
 
-SetRules sets Rules field to given value.
+SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
 
-### HasRules
+### HasLatestMeshPerformance
 
-`func (o *InlineResponse200188) HasRules() bool`
+`func (o *InlineResponse200188) HasLatestMeshPerformance() bool`
 
-HasRules returns a boolean if a field has been set.
+HasLatestMeshPerformance returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
-**CustomPieChartItems** | Pointer to [**[]InlineResponse200162CustomPieChartItems**](InlineResponse200162CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
+**Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
+**Subnet** | Pointer to **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | [optional] 
+**NextHopIp** | Pointer to **string** | IP address of the next hop device to which the device sends its traffic for the subnet | [optional] 
+**ManagementNextHop** | Pointer to **string** | Optional fallback IP address for management traffic | [optional] 
+**AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
+**PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
 
 ## Methods
 
@@ -26,55 +30,155 @@ NewInlineObject160WithDefaults instantiates a new InlineObject160 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetName
 
-`func (o *InlineObject160) GetMode() string`
+`func (o *InlineObject160) GetName() string`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetNameOk
 
-`func (o *InlineObject160) GetModeOk() (*string, bool)`
+`func (o *InlineObject160) GetNameOk() (*string, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetName
 
-`func (o *InlineObject160) SetMode(v string)`
+`func (o *InlineObject160) SetName(v string)`
 
-SetMode sets Mode field to given value.
+SetName sets Name field to given value.
 
-### HasMode
+### HasName
 
-`func (o *InlineObject160) HasMode() bool`
+`func (o *InlineObject160) HasName() bool`
 
-HasMode returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetCustomPieChartItems
+### GetSubnet
 
-`func (o *InlineObject160) GetCustomPieChartItems() []InlineResponse200162CustomPieChartItems`
+`func (o *InlineObject160) GetSubnet() string`
 
-GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetCustomPieChartItemsOk
+### GetSubnetOk
 
-`func (o *InlineObject160) GetCustomPieChartItemsOk() (*[]InlineResponse200162CustomPieChartItems, bool)`
+`func (o *InlineObject160) GetSubnetOk() (*string, bool)`
 
-GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomPieChartItems
+### SetSubnet
 
-`func (o *InlineObject160) SetCustomPieChartItems(v []InlineResponse200162CustomPieChartItems)`
+`func (o *InlineObject160) SetSubnet(v string)`
 
-SetCustomPieChartItems sets CustomPieChartItems field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasCustomPieChartItems
+### HasSubnet
 
-`func (o *InlineObject160) HasCustomPieChartItems() bool`
+`func (o *InlineObject160) HasSubnet() bool`
 
-HasCustomPieChartItems returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
+
+### GetNextHopIp
+
+`func (o *InlineObject160) GetNextHopIp() string`
+
+GetNextHopIp returns the NextHopIp field if non-nil, zero value otherwise.
+
+### GetNextHopIpOk
+
+`func (o *InlineObject160) GetNextHopIpOk() (*string, bool)`
+
+GetNextHopIpOk returns a tuple with the NextHopIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNextHopIp
+
+`func (o *InlineObject160) SetNextHopIp(v string)`
+
+SetNextHopIp sets NextHopIp field to given value.
+
+### HasNextHopIp
+
+`func (o *InlineObject160) HasNextHopIp() bool`
+
+HasNextHopIp returns a boolean if a field has been set.
+
+### GetManagementNextHop
+
+`func (o *InlineObject160) GetManagementNextHop() string`
+
+GetManagementNextHop returns the ManagementNextHop field if non-nil, zero value otherwise.
+
+### GetManagementNextHopOk
+
+`func (o *InlineObject160) GetManagementNextHopOk() (*string, bool)`
+
+GetManagementNextHopOk returns a tuple with the ManagementNextHop field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManagementNextHop
+
+`func (o *InlineObject160) SetManagementNextHop(v string)`
+
+SetManagementNextHop sets ManagementNextHop field to given value.
+
+### HasManagementNextHop
+
+`func (o *InlineObject160) HasManagementNextHop() bool`
+
+HasManagementNextHop returns a boolean if a field has been set.
+
+### GetAdvertiseViaOspfEnabled
+
+`func (o *InlineObject160) GetAdvertiseViaOspfEnabled() bool`
+
+GetAdvertiseViaOspfEnabled returns the AdvertiseViaOspfEnabled field if non-nil, zero value otherwise.
+
+### GetAdvertiseViaOspfEnabledOk
+
+`func (o *InlineObject160) GetAdvertiseViaOspfEnabledOk() (*bool, bool)`
+
+GetAdvertiseViaOspfEnabledOk returns a tuple with the AdvertiseViaOspfEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdvertiseViaOspfEnabled
+
+`func (o *InlineObject160) SetAdvertiseViaOspfEnabled(v bool)`
+
+SetAdvertiseViaOspfEnabled sets AdvertiseViaOspfEnabled field to given value.
+
+### HasAdvertiseViaOspfEnabled
+
+`func (o *InlineObject160) HasAdvertiseViaOspfEnabled() bool`
+
+HasAdvertiseViaOspfEnabled returns a boolean if a field has been set.
+
+### GetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject160) GetPreferOverOspfRoutesEnabled() bool`
+
+GetPreferOverOspfRoutesEnabled returns the PreferOverOspfRoutesEnabled field if non-nil, zero value otherwise.
+
+### GetPreferOverOspfRoutesEnabledOk
+
+`func (o *InlineObject160) GetPreferOverOspfRoutesEnabledOk() (*bool, bool)`
+
+GetPreferOverOspfRoutesEnabledOk returns a tuple with the PreferOverOspfRoutesEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject160) SetPreferOverOspfRoutesEnabled(v bool)`
+
+SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given value.
+
+### HasPreferOverOspfRoutesEnabled
+
+`func (o *InlineObject160) HasPreferOverOspfRoutesEnabled() bool`
+
+HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnStatuses
 
-> InlineResponse200213 GetOrganizationApplianceVpnStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200218 GetOrganizationApplianceVpnStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Show VPN status for networks in an organization
 
@@ -350,7 +350,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.GetOrganizationApplianceVpnStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnStatuses`: InlineResponse200213
+    // response from `GetOrganizationApplianceVpnStatuses`: InlineResponse200218
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.GetOrganizationApplianceVpnStatuses`: %v\n", resp)
 }
 ```
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200213**](InlineResponse200213.md)
+[**InlineResponse200218**](InlineResponse200218.md)
 
 ### Authorization
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse200214 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
+> InlineResponse200219 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
 
 Return the third party VPN peers for an organization
 
@@ -424,7 +424,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.GetOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200214
+    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200219
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.GetOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -448,7 +448,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200214**](InlineResponse200214.md)
+[**InlineResponse200219**](InlineResponse200219.md)
 
 ### Authorization
 
@@ -701,7 +701,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    updateNetworkWirelessSsidVpn := *openapiclient.NewInlineObject196() // InlineObject196 |  (optional)
+    updateNetworkWirelessSsidVpn := *openapiclient.NewInlineObject200() // InlineObject200 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -733,7 +733,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkWirelessSsidVpn** | [**InlineObject196**](InlineObject196.md) |  | 
+ **updateNetworkWirelessSsidVpn** | [**InlineObject200**](InlineObject200.md) |  | 
 
 ### Return type
 
@@ -755,7 +755,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse200214 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
+> InlineResponse200219 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
 
 Update the third party VPN peers for an organization
 
@@ -775,7 +775,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceVpnThirdPartyVPNPeers := *openapiclient.NewInlineObject213([]openapiclient.OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers{*openapiclient.NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers("Name_example", []string{"PrivateSubnets_example"}, "Secret_example")}) // InlineObject213 | 
+    updateOrganizationApplianceVpnThirdPartyVPNPeers := *openapiclient.NewInlineObject217([]openapiclient.OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers{*openapiclient.NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers("Name_example", []string{"PrivateSubnets_example"}, "Secret_example")}) // InlineObject217 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -784,7 +784,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VpnApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200214
+    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200219
     fmt.Fprintf(os.Stdout, "Response from `VpnApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -805,11 +805,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceVpnThirdPartyVPNPeers** | [**InlineObject213**](InlineObject213.md) |  | 
+ **updateOrganizationApplianceVpnThirdPartyVPNPeers** | [**InlineObject217**](InlineObject217.md) |  | 
 
 ### Return type
 
-[**InlineResponse200214**](InlineResponse200214.md)
+[**InlineResponse200219**](InlineResponse200219.md)
 
 ### Authorization
 
@@ -847,7 +847,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceVpnVpnFirewallRules := *openapiclient.NewInlineObject214() // InlineObject214 |  (optional)
+    updateOrganizationApplianceVpnVpnFirewallRules := *openapiclient.NewInlineObject218() // InlineObject218 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -877,7 +877,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceVpnVpnFirewallRules** | [**InlineObject214**](InlineObject214.md) |  | 
+ **updateOrganizationApplianceVpnVpnFirewallRules** | [**InlineObject218**](InlineObject218.md) |  | 
 
 ### Return type
 

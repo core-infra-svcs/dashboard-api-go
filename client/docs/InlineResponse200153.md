@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultSettings** | Pointer to [**InlineResponse200153DefaultSettings**](InlineResponse200153DefaultSettings.md) |  | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse200153Overrides**](InlineResponse200153Overrides.md) | Array of paired switches/stacks/profiles and corresponding multicast settings.       An empty array will clear the multicast settings. | [optional] 
+**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200153Overrides**](InlineResponse200153Overrides.md) | Override MTU size for individual switches or switch templates.       An empty array will clear overrides. | [optional] 
 
 ## Methods
 
@@ -26,30 +26,30 @@ NewInlineResponse200153WithDefaults instantiates a new InlineResponse200153 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultSettings
+### GetDefaultMtuSize
 
-`func (o *InlineResponse200153) GetDefaultSettings() InlineResponse200153DefaultSettings`
+`func (o *InlineResponse200153) GetDefaultMtuSize() int32`
 
-GetDefaultSettings returns the DefaultSettings field if non-nil, zero value otherwise.
+GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
 
-### GetDefaultSettingsOk
+### GetDefaultMtuSizeOk
 
-`func (o *InlineResponse200153) GetDefaultSettingsOk() (*InlineResponse200153DefaultSettings, bool)`
+`func (o *InlineResponse200153) GetDefaultMtuSizeOk() (*int32, bool)`
 
-GetDefaultSettingsOk returns a tuple with the DefaultSettings field if it's non-nil, zero value otherwise
+GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultSettings
+### SetDefaultMtuSize
 
-`func (o *InlineResponse200153) SetDefaultSettings(v InlineResponse200153DefaultSettings)`
+`func (o *InlineResponse200153) SetDefaultMtuSize(v int32)`
 
-SetDefaultSettings sets DefaultSettings field to given value.
+SetDefaultMtuSize sets DefaultMtuSize field to given value.
 
-### HasDefaultSettings
+### HasDefaultMtuSize
 
-`func (o *InlineResponse200153) HasDefaultSettings() bool`
+`func (o *InlineResponse200153) HasDefaultMtuSize() bool`
 
-HasDefaultSettings returns a boolean if a field has been set.
+HasDefaultMtuSize returns a boolean if a field has been set.
 
 ### GetOverrides
 

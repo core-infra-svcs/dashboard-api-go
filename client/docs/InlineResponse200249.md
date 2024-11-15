@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200249Counts**](InlineResponse200249Counts.md) |  | [optional] 
+**Serials** | **[]string** | A list of serials of devices updated | 
 
 ## Methods
 
 ### NewInlineResponse200249
 
-`func NewInlineResponse200249() *InlineResponse200249`
+`func NewInlineResponse200249(serials []string, ) *InlineResponse200249`
 
 NewInlineResponse200249 instantiates a new InlineResponse200249 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineResponse200249WithDefaults instantiates a new InlineResponse200249 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetSerials
 
-`func (o *InlineResponse200249) GetCounts() InlineResponse200249Counts`
+`func (o *InlineResponse200249) GetSerials() []string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetSerialsOk
 
-`func (o *InlineResponse200249) GetCountsOk() (*InlineResponse200249Counts, bool)`
+`func (o *InlineResponse200249) GetSerialsOk() (*[]string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetSerials
 
-`func (o *InlineResponse200249) SetCounts(v InlineResponse200249Counts)`
+`func (o *InlineResponse200249) SetSerials(v []string)`
 
-SetCounts sets Counts field to given value.
+SetSerials sets Serials field to given value.
 
-### HasCounts
-
-`func (o *InlineResponse200249) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

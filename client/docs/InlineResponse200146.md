@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Switch serial. | [optional] 
-**Name** | Pointer to **string** | Switch name. | [optional] 
-**Url** | Pointer to **string** | Url link to switch. | [optional] 
-**SupportsInspection** | Pointer to **bool** | Whether this switch supports Dynamic ARP Inspection. | [optional] 
-**HasTrustedPort** | Pointer to **bool** | Whether this switch has a trusted DAI port. Always false if supportsInspection is false. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set | [optional] 
+**VlanId** | Pointer to **int32** | Alternate management VLAN, must be between 1 and 4094 | [optional] 
+**Protocols** | Pointer to **[]string** | Can be one or more of the following values: &#39;radius&#39;, &#39;snmp&#39; or &#39;syslog&#39; | [optional] 
+**Switches** | Pointer to [**[]InlineResponse200146Switches**](InlineResponse200146Switches.md) | Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put &#39;switches&#39; in the body when updating template networks. Also, an empty &#39;switches&#39; array will remove all previous assignments | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200146WithDefaults instantiates a new InlineResponse200146 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetEnabled
 
-`func (o *InlineResponse200146) GetSerial() string`
+`func (o *InlineResponse200146) GetEnabled() bool`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetEnabledOk
 
-`func (o *InlineResponse200146) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200146) GetEnabledOk() (*bool, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetEnabled
 
-`func (o *InlineResponse200146) SetSerial(v string)`
+`func (o *InlineResponse200146) SetEnabled(v bool)`
 
-SetSerial sets Serial field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasSerial
+### HasEnabled
 
-`func (o *InlineResponse200146) HasSerial() bool`
+`func (o *InlineResponse200146) HasEnabled() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetVlanId
 
-`func (o *InlineResponse200146) GetName() string`
+`func (o *InlineResponse200146) GetVlanId() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetVlanIdOk
 
-`func (o *InlineResponse200146) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200146) GetVlanIdOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetVlanId
 
-`func (o *InlineResponse200146) SetName(v string)`
+`func (o *InlineResponse200146) SetVlanId(v int32)`
 
-SetName sets Name field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasName
+### HasVlanId
 
-`func (o *InlineResponse200146) HasName() bool`
+`func (o *InlineResponse200146) HasVlanId() bool`
 
-HasName returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetUrl
+### GetProtocols
 
-`func (o *InlineResponse200146) GetUrl() string`
+`func (o *InlineResponse200146) GetProtocols() []string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetProtocols returns the Protocols field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetProtocolsOk
 
-`func (o *InlineResponse200146) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200146) GetProtocolsOk() (*[]string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetProtocolsOk returns a tuple with the Protocols field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetProtocols
 
-`func (o *InlineResponse200146) SetUrl(v string)`
+`func (o *InlineResponse200146) SetProtocols(v []string)`
 
-SetUrl sets Url field to given value.
+SetProtocols sets Protocols field to given value.
 
-### HasUrl
+### HasProtocols
 
-`func (o *InlineResponse200146) HasUrl() bool`
+`func (o *InlineResponse200146) HasProtocols() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasProtocols returns a boolean if a field has been set.
 
-### GetSupportsInspection
+### GetSwitches
 
-`func (o *InlineResponse200146) GetSupportsInspection() bool`
+`func (o *InlineResponse200146) GetSwitches() []InlineResponse200146Switches`
 
-GetSupportsInspection returns the SupportsInspection field if non-nil, zero value otherwise.
+GetSwitches returns the Switches field if non-nil, zero value otherwise.
 
-### GetSupportsInspectionOk
+### GetSwitchesOk
 
-`func (o *InlineResponse200146) GetSupportsInspectionOk() (*bool, bool)`
+`func (o *InlineResponse200146) GetSwitchesOk() (*[]InlineResponse200146Switches, bool)`
 
-GetSupportsInspectionOk returns a tuple with the SupportsInspection field if it's non-nil, zero value otherwise
+GetSwitchesOk returns a tuple with the Switches field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSupportsInspection
+### SetSwitches
 
-`func (o *InlineResponse200146) SetSupportsInspection(v bool)`
+`func (o *InlineResponse200146) SetSwitches(v []InlineResponse200146Switches)`
 
-SetSupportsInspection sets SupportsInspection field to given value.
+SetSwitches sets Switches field to given value.
 
-### HasSupportsInspection
+### HasSwitches
 
-`func (o *InlineResponse200146) HasSupportsInspection() bool`
+`func (o *InlineResponse200146) HasSwitches() bool`
 
-HasSupportsInspection returns a boolean if a field has been set.
-
-### GetHasTrustedPort
-
-`func (o *InlineResponse200146) GetHasTrustedPort() bool`
-
-GetHasTrustedPort returns the HasTrustedPort field if non-nil, zero value otherwise.
-
-### GetHasTrustedPortOk
-
-`func (o *InlineResponse200146) GetHasTrustedPortOk() (*bool, bool)`
-
-GetHasTrustedPortOk returns a tuple with the HasTrustedPort field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHasTrustedPort
-
-`func (o *InlineResponse200146) SetHasTrustedPort(v bool)`
-
-SetHasTrustedPort sets HasTrustedPort field to given value.
-
-### HasHasTrustedPort
-
-`func (o *InlineResponse200146) HasHasTrustedPort() bool`
-
-HasHasTrustedPort returns a boolean if a field has been set.
+HasSwitches returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

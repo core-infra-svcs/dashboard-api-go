@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationConfigTemplate
 
-> InlineResponse200238 CreateOrganizationConfigTemplate(ctx, organizationId).CreateOrganizationConfigTemplate(createOrganizationConfigTemplate).Execute()
+> InlineResponse200243 CreateOrganizationConfigTemplate(ctx, organizationId).CreateOrganizationConfigTemplate(createOrganizationConfigTemplate).Execute()
 
 Create a new configuration template
 
@@ -38,7 +38,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationConfigTemplate := *openapiclient.NewInlineObject230("Name_example") // InlineObject230 | 
+    createOrganizationConfigTemplate := *openapiclient.NewInlineObject234("Name_example") // InlineObject234 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -47,7 +47,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigTemplatesApi.CreateOrganizationConfigTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationConfigTemplate`: InlineResponse200238
+    // response from `CreateOrganizationConfigTemplate`: InlineResponse200243
     fmt.Fprintf(os.Stdout, "Response from `ConfigTemplatesApi.CreateOrganizationConfigTemplate`: %v\n", resp)
 }
 ```
@@ -68,11 +68,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationConfigTe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationConfigTemplate** | [**InlineObject230**](InlineObject230.md) |  | 
+ **createOrganizationConfigTemplate** | [**InlineObject234**](InlineObject234.md) |  | 
 
 ### Return type
 
-[**InlineResponse200238**](InlineResponse200238.md)
+[**InlineResponse200243**](InlineResponse200243.md)
 
 ### Authorization
 
@@ -161,7 +161,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplate
 
-> InlineResponse200238 GetOrganizationConfigTemplate(ctx, organizationId, configTemplateId).Execute()
+> InlineResponse200243 GetOrganizationConfigTemplate(ctx, organizationId, configTemplateId).Execute()
 
 Return a single configuration template
 
@@ -190,7 +190,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigTemplatesApi.GetOrganizationConfigTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplate`: InlineResponse200238
+    // response from `GetOrganizationConfigTemplate`: InlineResponse200243
     fmt.Fprintf(os.Stdout, "Response from `ConfigTemplatesApi.GetOrganizationConfigTemplate`: %v\n", resp)
 }
 ```
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200238**](InlineResponse200238.md)
+[**InlineResponse200243**](InlineResponse200243.md)
 
 ### Authorization
 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse200240 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
+> InlineResponse200245 GetOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).Execute()
 
 Return a switch template port
 
@@ -265,7 +265,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigTemplatesApi.GetOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200240
+    // response from `GetOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200245
     fmt.Fprintf(os.Stdout, "Response from `ConfigTemplatesApi.GetOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200240**](InlineResponse200240.md)
+[**InlineResponse200245**](InlineResponse200245.md)
 
 ### Authorization
 
@@ -313,7 +313,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfilePorts
 
-> []InlineResponse200240 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
+> []InlineResponse200245 GetOrganizationConfigTemplateSwitchProfilePorts(ctx, organizationId, configTemplateId, profileId).Execute()
 
 Return all the ports of a switch template
 
@@ -343,7 +343,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigTemplatesApi.GetOrganizationConfigTemplateSwitchProfilePorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200240
+    // response from `GetOrganizationConfigTemplateSwitchProfilePorts`: []InlineResponse200245
     fmt.Fprintf(os.Stdout, "Response from `ConfigTemplatesApi.GetOrganizationConfigTemplateSwitchProfilePorts`: %v\n", resp)
 }
 ```
@@ -371,7 +371,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200240**](InlineResponse200240.md)
+[**[]InlineResponse200245**](InlineResponse200245.md)
 
 ### Authorization
 
@@ -389,7 +389,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplateSwitchProfiles
 
-> []InlineResponse200239 GetOrganizationConfigTemplateSwitchProfiles(ctx, organizationId, configTemplateId).Execute()
+> []InlineResponse200244 GetOrganizationConfigTemplateSwitchProfiles(ctx, organizationId, configTemplateId).Execute()
 
 List the switch templates for your switch template configuration
 
@@ -418,7 +418,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigTemplatesApi.GetOrganizationConfigTemplateSwitchProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplateSwitchProfiles`: []InlineResponse200239
+    // response from `GetOrganizationConfigTemplateSwitchProfiles`: []InlineResponse200244
     fmt.Fprintf(os.Stdout, "Response from `ConfigTemplatesApi.GetOrganizationConfigTemplateSwitchProfiles`: %v\n", resp)
 }
 ```
@@ -444,7 +444,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200239**](InlineResponse200239.md)
+[**[]InlineResponse200244**](InlineResponse200244.md)
 
 ### Authorization
 
@@ -462,7 +462,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationConfigTemplates
 
-> []InlineResponse200238 GetOrganizationConfigTemplates(ctx, organizationId).Execute()
+> []InlineResponse200243 GetOrganizationConfigTemplates(ctx, organizationId).Execute()
 
 List the configuration templates for this organization
 
@@ -490,7 +490,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigTemplatesApi.GetOrganizationConfigTemplates``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigTemplates`: []InlineResponse200238
+    // response from `GetOrganizationConfigTemplates`: []InlineResponse200243
     fmt.Fprintf(os.Stdout, "Response from `ConfigTemplatesApi.GetOrganizationConfigTemplates`: %v\n", resp)
 }
 ```
@@ -514,7 +514,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200238**](InlineResponse200238.md)
+[**[]InlineResponse200243**](InlineResponse200243.md)
 
 ### Authorization
 
@@ -532,7 +532,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationConfigTemplate
 
-> InlineResponse200238 UpdateOrganizationConfigTemplate(ctx, organizationId, configTemplateId).UpdateOrganizationConfigTemplate(updateOrganizationConfigTemplate).Execute()
+> InlineResponse200243 UpdateOrganizationConfigTemplate(ctx, organizationId, configTemplateId).UpdateOrganizationConfigTemplate(updateOrganizationConfigTemplate).Execute()
 
 Update a configuration template
 
@@ -553,7 +553,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     configTemplateId := "configTemplateId_example" // string | Config template ID
-    updateOrganizationConfigTemplate := *openapiclient.NewInlineObject231() // InlineObject231 |  (optional)
+    updateOrganizationConfigTemplate := *openapiclient.NewInlineObject235() // InlineObject235 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -562,7 +562,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigTemplatesApi.UpdateOrganizationConfigTemplate``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationConfigTemplate`: InlineResponse200238
+    // response from `UpdateOrganizationConfigTemplate`: InlineResponse200243
     fmt.Fprintf(os.Stdout, "Response from `ConfigTemplatesApi.UpdateOrganizationConfigTemplate`: %v\n", resp)
 }
 ```
@@ -585,11 +585,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationConfigTemplate** | [**InlineObject231**](InlineObject231.md) |  | 
+ **updateOrganizationConfigTemplate** | [**InlineObject235**](InlineObject235.md) |  | 
 
 ### Return type
 
-[**InlineResponse200238**](InlineResponse200238.md)
+[**InlineResponse200243**](InlineResponse200243.md)
 
 ### Authorization
 
@@ -607,7 +607,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationConfigTemplateSwitchProfilePort
 
-> InlineResponse200240 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
+> InlineResponse200245 UpdateOrganizationConfigTemplateSwitchProfilePort(ctx, organizationId, configTemplateId, profileId, portId).UpdateOrganizationConfigTemplateSwitchProfilePort(updateOrganizationConfigTemplateSwitchProfilePort).Execute()
 
 Update a switch template port
 
@@ -630,7 +630,7 @@ func main() {
     configTemplateId := "configTemplateId_example" // string | Config template ID
     profileId := "profileId_example" // string | Profile ID
     portId := "portId_example" // string | Port ID
-    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject232() // InlineObject232 |  (optional)
+    updateOrganizationConfigTemplateSwitchProfilePort := *openapiclient.NewInlineObject236() // InlineObject236 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -639,7 +639,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigTemplatesApi.UpdateOrganizationConfigTemplateSwitchProfilePort``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200240
+    // response from `UpdateOrganizationConfigTemplateSwitchProfilePort`: InlineResponse200245
     fmt.Fprintf(os.Stdout, "Response from `ConfigTemplatesApi.UpdateOrganizationConfigTemplateSwitchProfilePort`: %v\n", resp)
 }
 ```
@@ -666,11 +666,11 @@ Name | Type | Description  | Notes
 
 
 
- **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject232**](InlineObject232.md) |  | 
+ **updateOrganizationConfigTemplateSwitchProfilePort** | [**InlineObject236**](InlineObject236.md) |  | 
 
 ### Return type
 
-[**InlineResponse200240**](InlineResponse200240.md)
+[**InlineResponse200245**](InlineResponse200245.md)
 
 ### Authorization
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | MAC address of the client | [optional] 
-**ConnectionStats** | Pointer to [**InlineResponse200173ConnectionStats**](InlineResponse200173ConnectionStats.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | The network ID | [optional] 
+**DefaultPolicy** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs. (blocked by default) | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200173WithDefaults instantiates a new InlineResponse200173 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetNetworkId
 
-`func (o *InlineResponse200173) GetMac() string`
+`func (o *InlineResponse200173) GetNetworkId() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200173) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200173) GetNetworkIdOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetNetworkId
 
-`func (o *InlineResponse200173) SetMac(v string)`
+`func (o *InlineResponse200173) SetNetworkId(v string)`
 
-SetMac sets Mac field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasMac
+### HasNetworkId
 
-`func (o *InlineResponse200173) HasMac() bool`
+`func (o *InlineResponse200173) HasNetworkId() bool`
 
-HasMac returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetConnectionStats
+### GetDefaultPolicy
 
-`func (o *InlineResponse200173) GetConnectionStats() InlineResponse200173ConnectionStats`
+`func (o *InlineResponse200173) GetDefaultPolicy() string`
 
-GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetConnectionStatsOk
+### GetDefaultPolicyOk
 
-`func (o *InlineResponse200173) GetConnectionStatsOk() (*InlineResponse200173ConnectionStats, bool)`
+`func (o *InlineResponse200173) GetDefaultPolicyOk() (*string, bool)`
 
-GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConnectionStats
+### SetDefaultPolicy
 
-`func (o *InlineResponse200173) SetConnectionStats(v InlineResponse200173ConnectionStats)`
+`func (o *InlineResponse200173) SetDefaultPolicy(v string)`
 
-SetConnectionStats sets ConnectionStats field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasConnectionStats
+### HasDefaultPolicy
 
-`func (o *InlineResponse200173) HasConnectionStats() bool`
+`func (o *InlineResponse200173) HasDefaultPolicy() bool`
 
-HasConnectionStats returns a boolean if a field has been set.
+HasDefaultPolicy returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

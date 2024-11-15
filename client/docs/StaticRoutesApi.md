@@ -189,7 +189,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject155("Subnet_example", "NextHopIp_example") // InlineObject155 | 
+    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject159("Subnet_example", "NextHopIp_example") // InlineObject159 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject155**](InlineObject155.md) |  | 
+ **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject159**](InlineObject159.md) |  | 
 
 ### Return type
 
@@ -1066,7 +1066,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     staticRouteId := "staticRouteId_example" // string | Static route ID
-    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject156() // InlineObject156 |  (optional)
+    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject160() // InlineObject160 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1100,7 +1100,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject156**](InlineObject156.md) |  | 
+ **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject160**](InlineObject160.md) |  | 
 
 ### Return type
 

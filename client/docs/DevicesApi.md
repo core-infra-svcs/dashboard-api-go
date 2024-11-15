@@ -4,6 +4,7 @@ All URIs are relative to *https://api.meraki.com/api/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**BatchNetworkFloorPlansDevicesUpdate**](DevicesApi.md#BatchNetworkFloorPlansDevicesUpdate) | **Post** /networks/{networkId}/floorPlans/devices/batchUpdate | Update floorplan assignments for a batch of devices
 [**BlinkDeviceLeds**](DevicesApi.md#BlinkDeviceLeds) | **Post** /devices/{serial}/blinkLeds | Blink the LEDs on a device
 [**BulkUpdateOrganizationDevicesDetails**](DevicesApi.md#BulkUpdateOrganizationDevicesDetails) | **Post** /organizations/{organizationId}/devices/details/bulkUpdate | Updating device details (currently only used for Catalyst devices)
 [**CheckinNetworkSmDevices**](DevicesApi.md#CheckinNetworkSmDevices) | **Post** /networks/{networkId}/sm/devices/checkin | Force check-in a set of devices
@@ -54,11 +55,23 @@ Method | HTTP request | Description
 [**GetOrganizationDevicesStatusesOverview**](DevicesApi.md#GetOrganizationDevicesStatusesOverview) | **Get** /organizations/{organizationId}/devices/statuses/overview | Return an overview of current device statuses
 [**GetOrganizationDevicesUplinksAddressesByDevice**](DevicesApi.md#GetOrganizationDevicesUplinksAddressesByDevice) | **Get** /organizations/{organizationId}/devices/uplinks/addresses/byDevice | List the current uplink addresses for devices in an organization.
 [**GetOrganizationDevicesUplinksLossAndLatency**](DevicesApi.md#GetOrganizationDevicesUplinksLossAndLatency) | **Get** /organizations/{organizationId}/devices/uplinksLossAndLatency | Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
+[**GetOrganizationFloorPlansAutoLocateDevices**](DevicesApi.md#GetOrganizationFloorPlansAutoLocateDevices) | **Get** /organizations/{organizationId}/floorPlans/autoLocate/devices | List auto locate details for each device in your organization
 [**GetOrganizationInventoryDevice**](DevicesApi.md#GetOrganizationInventoryDevice) | **Get** /organizations/{organizationId}/inventory/devices/{serial} | Return a single device from the inventory of an organization
 [**GetOrganizationInventoryDevices**](DevicesApi.md#GetOrganizationInventoryDevices) | **Get** /organizations/{organizationId}/inventory/devices | Return the device inventory for an organization
 [**GetOrganizationInventoryDevicesSwapsBulk**](DevicesApi.md#GetOrganizationInventoryDevicesSwapsBulk) | **Get** /organizations/{organizationId}/inventory/devices/swaps/bulk/{id} | List of device swaps for a given request ID ({id}).
 [**GetOrganizationSummaryTopDevicesByUsage**](DevicesApi.md#GetOrganizationSummaryTopDevicesByUsage) | **Get** /organizations/{organizationId}/summary/top/devices/byUsage | Return metrics for organization&#39;s top 10 devices sorted by data usage over given time range
 [**GetOrganizationSummaryTopDevicesModelsByUsage**](DevicesApi.md#GetOrganizationSummaryTopDevicesModelsByUsage) | **Get** /organizations/{organizationId}/summary/top/devices/models/byUsage | Return metrics for organization&#39;s top 10 device models sorted by data usage over given time range
+[**GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice**](DevicesApi.md#GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l2/byDevice | List wireless LAN controller layer 2 interfaces in an organization
+[**GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice**](DevicesApi.md#GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l2/statuses/changeHistory/byDevice | List wireless LAN controller layer 2 interfaces history status in an organization
+[**GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval**](DevicesApi.md#GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l2/usage/history/byInterval | List wireless LAN controller layer 2 interfaces history usage in an organization
+[**GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice**](DevicesApi.md#GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l3/byDevice | List wireless LAN controller layer 3 interfaces in an organization
+[**GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice**](DevicesApi.md#GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l3/statuses/changeHistory/byDevice | List wireless LAN controller layer 3 interfaces history status in an organization
+[**GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval**](DevicesApi.md#GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/l3/usage/history/byInterval | List wireless LAN controller layer 3 interfaces history usage in an organization
+[**GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice**](DevicesApi.md#GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/packets/overview/byDevice | Retrieve the packet counters for the interfaces of a Wireless LAN controller
+[**GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval**](DevicesApi.md#GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval) | **Get** /organizations/{organizationId}/wirelessController/devices/interfaces/usage/history/byInterval | Retrieve the traffic for the interfaces of a Wireless LAN controller
+[**GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory**](DevicesApi.md#GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory) | **Get** /organizations/{organizationId}/wirelessController/devices/redundancy/failover/history | List the failover events of wireless LAN controllers in an organization
+[**GetOrganizationWirelessControllerDevicesRedundancyStatuses**](DevicesApi.md#GetOrganizationWirelessControllerDevicesRedundancyStatuses) | **Get** /organizations/{organizationId}/wirelessController/devices/redundancy/statuses | List redundancy details of wireless LAN controllers in an organization
+[**GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval**](DevicesApi.md#GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval) | **Get** /organizations/{organizationId}/wirelessController/devices/system/utilization/history/byInterval | List cpu utilization data of wireless LAN controllers in an organization
 [**GetOrganizationWirelessDevicesChannelUtilizationByDevice**](DevicesApi.md#GetOrganizationWirelessDevicesChannelUtilizationByDevice) | **Get** /organizations/{organizationId}/wireless/devices/channelUtilization/byDevice | Get average channel utilization for all bands in a network, split by AP
 [**GetOrganizationWirelessDevicesChannelUtilizationByNetwork**](DevicesApi.md#GetOrganizationWirelessDevicesChannelUtilizationByNetwork) | **Get** /organizations/{organizationId}/wireless/devices/channelUtilization/byNetwork | Get average channel utilization across all bands for all networks in the organization
 [**GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval**](DevicesApi.md#GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval) | **Get** /organizations/{organizationId}/wireless/devices/channelUtilization/history/byDevice/byInterval | Get a time-series of average channel utilization for all bands, segmented by device.
@@ -67,6 +80,7 @@ Method | HTTP request | Description
 [**GetOrganizationWirelessDevicesPacketLossByClient**](DevicesApi.md#GetOrganizationWirelessDevicesPacketLossByClient) | **Get** /organizations/{organizationId}/wireless/devices/packetLoss/byClient | Get average packet loss for the given timespan for all clients in the organization.
 [**GetOrganizationWirelessDevicesPacketLossByDevice**](DevicesApi.md#GetOrganizationWirelessDevicesPacketLossByDevice) | **Get** /organizations/{organizationId}/wireless/devices/packetLoss/byDevice | Get average packet loss for the given timespan for all devices in the organization
 [**GetOrganizationWirelessDevicesPacketLossByNetwork**](DevicesApi.md#GetOrganizationWirelessDevicesPacketLossByNetwork) | **Get** /organizations/{organizationId}/wireless/devices/packetLoss/byNetwork | Get average packet loss for the given timespan for all networks in the organization.
+[**GetOrganizationWirelessDevicesWirelessControllersByDevice**](DevicesApi.md#GetOrganizationWirelessDevicesWirelessControllersByDevice) | **Get** /organizations/{organizationId}/wireless/devices/wirelessControllers/byDevice | List of Catalyst access points information
 [**InstallNetworkSmDeviceApps**](DevicesApi.md#InstallNetworkSmDeviceApps) | **Post** /networks/{networkId}/sm/devices/{deviceId}/installApps | Install applications on a device
 [**LockNetworkSmDevices**](DevicesApi.md#LockNetworkSmDevices) | **Post** /networks/{networkId}/sm/devices/lock | Lock a set of devices
 [**ModifyNetworkSmDevicesTags**](DevicesApi.md#ModifyNetworkSmDevicesTags) | **Post** /networks/{networkId}/sm/devices/modifyTags | Add, delete, or update the tags of a set of devices
@@ -85,6 +99,78 @@ Method | HTTP request | Description
 [**VmxNetworkDevicesClaim**](DevicesApi.md#VmxNetworkDevicesClaim) | **Post** /networks/{networkId}/devices/claim/vmx | Claim a vMX into a network
 [**WipeNetworkSmDevices**](DevicesApi.md#WipeNetworkSmDevices) | **Post** /networks/{networkId}/sm/devices/wipe | Wipe a device
 
+
+
+## BatchNetworkFloorPlansDevicesUpdate
+
+> InlineResponse20099 BatchNetworkFloorPlansDevicesUpdate(ctx, networkId).BatchNetworkFloorPlansDevicesUpdate(batchNetworkFloorPlansDevicesUpdate).Execute()
+
+Update floorplan assignments for a batch of devices
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    networkId := "networkId_example" // string | Network ID
+    batchNetworkFloorPlansDevicesUpdate := *openapiclient.NewInlineObject104([]openapiclient.NetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments{*openapiclient.NewNetworksNetworkIdFloorPlansDevicesBatchUpdateAssignments("Serial_example", *openapiclient.NewNetworksNetworkIdFloorPlansDevicesBatchUpdateFloorPlan("Id_example"))}) // InlineObject104 | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.BatchNetworkFloorPlansDevicesUpdate(context.Background(), networkId).BatchNetworkFloorPlansDevicesUpdate(batchNetworkFloorPlansDevicesUpdate).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.BatchNetworkFloorPlansDevicesUpdate``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `BatchNetworkFloorPlansDevicesUpdate`: InlineResponse20099
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.BatchNetworkFloorPlansDevicesUpdate`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**networkId** | **string** | Network ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiBatchNetworkFloorPlansDevicesUpdateRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **batchNetworkFloorPlansDevicesUpdate** | [**InlineObject104**](InlineObject104.md) |  | 
+
+### Return type
+
+[**InlineResponse20099**](InlineResponse20099.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## BlinkDeviceLeds
@@ -161,7 +247,7 @@ Name | Type | Description  | Notes
 
 ## BulkUpdateOrganizationDevicesDetails
 
-> InlineResponse200244 BulkUpdateOrganizationDevicesDetails(ctx, organizationId).BulkUpdateOrganizationDevicesDetails(bulkUpdateOrganizationDevicesDetails).Execute()
+> InlineResponse200249 BulkUpdateOrganizationDevicesDetails(ctx, organizationId).BulkUpdateOrganizationDevicesDetails(bulkUpdateOrganizationDevicesDetails).Execute()
 
 Updating device details (currently only used for Catalyst devices)
 
@@ -181,7 +267,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    bulkUpdateOrganizationDevicesDetails := *openapiclient.NewInlineObject233([]string{"Serials_example"}, []openapiclient.OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails{*openapiclient.NewOrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails("Name_example")}) // InlineObject233 | 
+    bulkUpdateOrganizationDevicesDetails := *openapiclient.NewInlineObject237([]string{"Serials_example"}, []openapiclient.OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails{*openapiclient.NewOrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails("Name_example")}) // InlineObject237 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -190,7 +276,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.BulkUpdateOrganizationDevicesDetails``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BulkUpdateOrganizationDevicesDetails`: InlineResponse200244
+    // response from `BulkUpdateOrganizationDevicesDetails`: InlineResponse200249
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.BulkUpdateOrganizationDevicesDetails`: %v\n", resp)
 }
 ```
@@ -211,11 +297,11 @@ Other parameters are passed through a pointer to a apiBulkUpdateOrganizationDevi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bulkUpdateOrganizationDevicesDetails** | [**InlineObject233**](InlineObject233.md) |  | 
+ **bulkUpdateOrganizationDevicesDetails** | [**InlineObject237**](InlineObject237.md) |  | 
 
 ### Return type
 
-[**InlineResponse200244**](InlineResponse200244.md)
+[**InlineResponse200249**](InlineResponse200249.md)
 
 ### Authorization
 
@@ -233,7 +319,7 @@ Name | Type | Description  | Notes
 
 ## CheckinNetworkSmDevices
 
-> InlineResponse200113 CheckinNetworkSmDevices(ctx, networkId).CheckinNetworkSmDevices(checkinNetworkSmDevices).Execute()
+> InlineResponse200117 CheckinNetworkSmDevices(ctx, networkId).CheckinNetworkSmDevices(checkinNetworkSmDevices).Execute()
 
 Force check-in a set of devices
 
@@ -253,7 +339,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    checkinNetworkSmDevices := *openapiclient.NewInlineObject115() // InlineObject115 |  (optional)
+    checkinNetworkSmDevices := *openapiclient.NewInlineObject119() // InlineObject119 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -262,7 +348,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CheckinNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CheckinNetworkSmDevices`: InlineResponse200113
+    // response from `CheckinNetworkSmDevices`: InlineResponse200117
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CheckinNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -283,11 +369,11 @@ Other parameters are passed through a pointer to a apiCheckinNetworkSmDevicesReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **checkinNetworkSmDevices** | [**InlineObject115**](InlineObject115.md) |  | 
+ **checkinNetworkSmDevices** | [**InlineObject119**](InlineObject119.md) |  | 
 
 ### Return type
 
-[**InlineResponse200113**](InlineResponse200113.md)
+[**InlineResponse200117**](InlineResponse200117.md)
 
 ### Authorization
 
@@ -379,7 +465,7 @@ Name | Type | Description  | Notes
 
 ## CloneOrganizationSwitchDevices
 
-> InlineResponse200296 CloneOrganizationSwitchDevices(ctx, organizationId).CloneOrganizationSwitchDevices(cloneOrganizationSwitchDevices).Execute()
+> InlineResponse200303 CloneOrganizationSwitchDevices(ctx, organizationId).CloneOrganizationSwitchDevices(cloneOrganizationSwitchDevices).Execute()
 
 Clone port-level and some switch-level configuration settings from a source switch to one or more target switches
 
@@ -399,7 +485,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    cloneOrganizationSwitchDevices := *openapiclient.NewInlineObject268("SourceSerial_example", []string{"TargetSerials_example"}) // InlineObject268 | 
+    cloneOrganizationSwitchDevices := *openapiclient.NewInlineObject272("SourceSerial_example", []string{"TargetSerials_example"}) // InlineObject272 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -408,7 +494,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CloneOrganizationSwitchDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CloneOrganizationSwitchDevices`: InlineResponse200296
+    // response from `CloneOrganizationSwitchDevices`: InlineResponse200303
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CloneOrganizationSwitchDevices`: %v\n", resp)
 }
 ```
@@ -429,11 +515,11 @@ Other parameters are passed through a pointer to a apiCloneOrganizationSwitchDev
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cloneOrganizationSwitchDevices** | [**InlineObject268**](InlineObject268.md) |  | 
+ **cloneOrganizationSwitchDevices** | [**InlineObject272**](InlineObject272.md) |  | 
 
 ### Return type
 
-[**InlineResponse200296**](InlineResponse200296.md)
+[**InlineResponse200303**](InlineResponse200303.md)
 
 ### Authorization
 
@@ -667,7 +753,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsPingDevice
 
-> InlineResponse2013 CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
+> InlineResponse2014 CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
 
 Enqueue a job to check connectivity status to the device
 
@@ -696,7 +782,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateDeviceLiveToolsPingDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsPingDevice`: InlineResponse2013
+    // response from `CreateDeviceLiveToolsPingDevice`: InlineResponse2014
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateDeviceLiveToolsPingDevice`: %v\n", resp)
 }
 ```
@@ -721,7 +807,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2013**](InlineResponse2013.md)
+[**InlineResponse2014**](InlineResponse2014.md)
 
 ### Authorization
 
@@ -739,7 +825,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsThroughputTest
 
-> InlineResponse2014 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
+> InlineResponse2015 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
 
 Enqueue a job to test a device throughput, the test will run for 10 secs to test throughput
 
@@ -768,7 +854,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateDeviceLiveToolsThroughputTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2014
+    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2015
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateDeviceLiveToolsThroughputTest`: %v\n", resp)
 }
 ```
@@ -793,7 +879,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2014**](InlineResponse2014.md)
+[**InlineResponse2015**](InlineResponse2015.md)
 
 ### Authorization
 
@@ -811,7 +897,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsWakeOnLan
 
-> InlineResponse2015 CreateDeviceLiveToolsWakeOnLan(ctx, serial).CreateDeviceLiveToolsWakeOnLan(createDeviceLiveToolsWakeOnLan).Execute()
+> InlineResponse2016 CreateDeviceLiveToolsWakeOnLan(ctx, serial).CreateDeviceLiveToolsWakeOnLan(createDeviceLiveToolsWakeOnLan).Execute()
 
 Enqueue a job to send a Wake-on-LAN packet from the device
 
@@ -840,7 +926,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.CreateDeviceLiveToolsWakeOnLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsWakeOnLan`: InlineResponse2015
+    // response from `CreateDeviceLiveToolsWakeOnLan`: InlineResponse2016
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.CreateDeviceLiveToolsWakeOnLan`: %v\n", resp)
 }
 ```
@@ -865,7 +951,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2015**](InlineResponse2015.md)
+[**InlineResponse2016**](InlineResponse2016.md)
 
 ### Authorization
 
@@ -903,7 +989,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationInventoryDevicesSwapsBulk := *openapiclient.NewInlineObject239([]openapiclient.OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps{*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps(*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkDevices("Old_example", "New_example"), "AfterAction_example")}) // InlineObject239 | 
+    createOrganizationInventoryDevicesSwapsBulk := *openapiclient.NewInlineObject243([]openapiclient.OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps{*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps(*openapiclient.NewOrganizationsOrganizationIdInventoryDevicesSwapsBulkDevices("Old_example", "New_example"), "AfterAction_example")}) // InlineObject243 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -933,7 +1019,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationInventor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationInventoryDevicesSwapsBulk** | [**InlineObject239**](InlineObject239.md) |  | 
+ **createOrganizationInventoryDevicesSwapsBulk** | [**InlineObject243**](InlineObject243.md) |  | 
 
 ### Return type
 
@@ -1899,7 +1985,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceCellularUsageHistory
 
-> []InlineResponse200119 GetNetworkSmDeviceCellularUsageHistory(ctx, networkId, deviceId).Execute()
+> []InlineResponse200123 GetNetworkSmDeviceCellularUsageHistory(ctx, networkId, deviceId).Execute()
 
 Return the client's daily cellular data usage history
 
@@ -1928,7 +2014,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceCellularUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceCellularUsageHistory`: []InlineResponse200119
+    // response from `GetNetworkSmDeviceCellularUsageHistory`: []InlineResponse200123
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceCellularUsageHistory`: %v\n", resp)
 }
 ```
@@ -1954,7 +2040,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200119**](InlineResponse200119.md)
+[**[]InlineResponse200123**](InlineResponse200123.md)
 
 ### Authorization
 
@@ -1972,7 +2058,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceCerts
 
-> []InlineResponse200120 GetNetworkSmDeviceCerts(ctx, networkId, deviceId).Execute()
+> []InlineResponse200124 GetNetworkSmDeviceCerts(ctx, networkId, deviceId).Execute()
 
 List the certs on a device
 
@@ -2001,7 +2087,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceCerts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceCerts`: []InlineResponse200120
+    // response from `GetNetworkSmDeviceCerts`: []InlineResponse200124
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceCerts`: %v\n", resp)
 }
 ```
@@ -2027,7 +2113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200120**](InlineResponse200120.md)
+[**[]InlineResponse200124**](InlineResponse200124.md)
 
 ### Authorization
 
@@ -2045,7 +2131,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceConnectivity
 
-> []InlineResponse200121 GetNetworkSmDeviceConnectivity(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200125 GetNetworkSmDeviceConnectivity(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns historical connectivity data (whether a device is regularly checking in to Dashboard).
 
@@ -2077,7 +2163,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceConnectivity``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceConnectivity`: []InlineResponse200121
+    // response from `GetNetworkSmDeviceConnectivity`: []InlineResponse200125
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceConnectivity`: %v\n", resp)
 }
 ```
@@ -2106,7 +2192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200121**](InlineResponse200121.md)
+[**[]InlineResponse200125**](InlineResponse200125.md)
 
 ### Authorization
 
@@ -2124,7 +2210,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceDesktopLogs
 
-> []InlineResponse200122 GetNetworkSmDeviceDesktopLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200126 GetNetworkSmDeviceDesktopLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return historical records of various Systems Manager network connection details for desktop devices.
 
@@ -2156,7 +2242,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceDesktopLogs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceDesktopLogs`: []InlineResponse200122
+    // response from `GetNetworkSmDeviceDesktopLogs`: []InlineResponse200126
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceDesktopLogs`: %v\n", resp)
 }
 ```
@@ -2185,7 +2271,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200122**](InlineResponse200122.md)
+[**[]InlineResponse200126**](InlineResponse200126.md)
 
 ### Authorization
 
@@ -2203,7 +2289,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceDeviceCommandLogs
 
-> []InlineResponse200123 GetNetworkSmDeviceDeviceCommandLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200127 GetNetworkSmDeviceDeviceCommandLogs(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return historical records of commands sent to Systems Manager devices
 
@@ -2235,7 +2321,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceDeviceCommandLogs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceDeviceCommandLogs`: []InlineResponse200123
+    // response from `GetNetworkSmDeviceDeviceCommandLogs`: []InlineResponse200127
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceDeviceCommandLogs`: %v\n", resp)
 }
 ```
@@ -2264,7 +2350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200123**](InlineResponse200123.md)
+[**[]InlineResponse200127**](InlineResponse200127.md)
 
 ### Authorization
 
@@ -2282,7 +2368,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceDeviceProfiles
 
-> []InlineResponse200124 GetNetworkSmDeviceDeviceProfiles(ctx, networkId, deviceId).Execute()
+> []InlineResponse200128 GetNetworkSmDeviceDeviceProfiles(ctx, networkId, deviceId).Execute()
 
 Get the installed profiles associated with a device
 
@@ -2311,7 +2397,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceDeviceProfiles``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceDeviceProfiles`: []InlineResponse200124
+    // response from `GetNetworkSmDeviceDeviceProfiles`: []InlineResponse200128
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceDeviceProfiles`: %v\n", resp)
 }
 ```
@@ -2337,7 +2423,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200124**](InlineResponse200124.md)
+[**[]InlineResponse200128**](InlineResponse200128.md)
 
 ### Authorization
 
@@ -2355,7 +2441,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceNetworkAdapters
 
-> []InlineResponse200125 GetNetworkSmDeviceNetworkAdapters(ctx, networkId, deviceId).Execute()
+> []InlineResponse200129 GetNetworkSmDeviceNetworkAdapters(ctx, networkId, deviceId).Execute()
 
 List the network adapters of a device
 
@@ -2384,7 +2470,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceNetworkAdapters``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceNetworkAdapters`: []InlineResponse200125
+    // response from `GetNetworkSmDeviceNetworkAdapters`: []InlineResponse200129
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceNetworkAdapters`: %v\n", resp)
 }
 ```
@@ -2410,7 +2496,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200125**](InlineResponse200125.md)
+[**[]InlineResponse200129**](InlineResponse200129.md)
 
 ### Authorization
 
@@ -2428,7 +2514,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDevicePerformanceHistory
 
-> []InlineResponse200126 GetNetworkSmDevicePerformanceHistory(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200130 GetNetworkSmDevicePerformanceHistory(ctx, networkId, deviceId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return historical records of various Systems Manager client metrics for desktop devices.
 
@@ -2460,7 +2546,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDevicePerformanceHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDevicePerformanceHistory`: []InlineResponse200126
+    // response from `GetNetworkSmDevicePerformanceHistory`: []InlineResponse200130
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDevicePerformanceHistory`: %v\n", resp)
 }
 ```
@@ -2489,7 +2575,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200126**](InlineResponse200126.md)
+[**[]InlineResponse200130**](InlineResponse200130.md)
 
 ### Authorization
 
@@ -2507,7 +2593,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceRestrictions
 
-> InlineResponse200127 GetNetworkSmDeviceRestrictions(ctx, networkId, deviceId).Execute()
+> InlineResponse200131 GetNetworkSmDeviceRestrictions(ctx, networkId, deviceId).Execute()
 
 List the restrictions on a device
 
@@ -2536,7 +2622,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceRestrictions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceRestrictions`: InlineResponse200127
+    // response from `GetNetworkSmDeviceRestrictions`: InlineResponse200131
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceRestrictions`: %v\n", resp)
 }
 ```
@@ -2562,7 +2648,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200127**](InlineResponse200127.md)
+[**InlineResponse200131**](InlineResponse200131.md)
 
 ### Authorization
 
@@ -2580,7 +2666,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceSecurityCenters
 
-> []InlineResponse200128 GetNetworkSmDeviceSecurityCenters(ctx, networkId, deviceId).Execute()
+> []InlineResponse200132 GetNetworkSmDeviceSecurityCenters(ctx, networkId, deviceId).Execute()
 
 List the security centers on a device
 
@@ -2609,7 +2695,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceSecurityCenters``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceSecurityCenters`: []InlineResponse200128
+    // response from `GetNetworkSmDeviceSecurityCenters`: []InlineResponse200132
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceSecurityCenters`: %v\n", resp)
 }
 ```
@@ -2635,7 +2721,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200128**](InlineResponse200128.md)
+[**[]InlineResponse200132**](InlineResponse200132.md)
 
 ### Authorization
 
@@ -2653,7 +2739,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceSoftwares
 
-> []InlineResponse200129 GetNetworkSmDeviceSoftwares(ctx, networkId, deviceId).Execute()
+> []InlineResponse200133 GetNetworkSmDeviceSoftwares(ctx, networkId, deviceId).Execute()
 
 Get a list of softwares associated with a device
 
@@ -2682,7 +2768,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceSoftwares``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceSoftwares`: []InlineResponse200129
+    // response from `GetNetworkSmDeviceSoftwares`: []InlineResponse200133
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceSoftwares`: %v\n", resp)
 }
 ```
@@ -2708,7 +2794,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200129**](InlineResponse200129.md)
+[**[]InlineResponse200133**](InlineResponse200133.md)
 
 ### Authorization
 
@@ -2726,7 +2812,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDeviceWlanLists
 
-> []InlineResponse200131 GetNetworkSmDeviceWlanLists(ctx, networkId, deviceId).Execute()
+> []InlineResponse200135 GetNetworkSmDeviceWlanLists(ctx, networkId, deviceId).Execute()
 
 List the saved SSID names on a device
 
@@ -2755,7 +2841,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDeviceWlanLists``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceWlanLists`: []InlineResponse200131
+    // response from `GetNetworkSmDeviceWlanLists`: []InlineResponse200135
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDeviceWlanLists`: %v\n", resp)
 }
 ```
@@ -2781,7 +2867,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200131**](InlineResponse200131.md)
+[**[]InlineResponse200135**](InlineResponse200135.md)
 
 ### Authorization
 
@@ -2799,7 +2885,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmDevices
 
-> []InlineResponse200112 GetNetworkSmDevices(ctx, networkId).Fields(fields).WifiMacs(wifiMacs).Serials(serials).Ids(ids).Uuids(uuids).SystemTypes(systemTypes).Scope(scope).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200116 GetNetworkSmDevices(ctx, networkId).Fields(fields).WifiMacs(wifiMacs).Serials(serials).Ids(ids).Uuids(uuids).SystemTypes(systemTypes).Scope(scope).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List the devices enrolled in an SM network with various specified fields and filters
 
@@ -2837,7 +2923,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDevices`: []InlineResponse200112
+    // response from `GetNetworkSmDevices`: []InlineResponse200116
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -2871,7 +2957,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200112**](InlineResponse200112.md)
+[**[]InlineResponse200116**](InlineResponse200116.md)
 
 ### Authorization
 
@@ -3163,7 +3249,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesAvailabilities
 
-> []InlineResponse200242 GetOrganizationDevicesAvailabilities(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200247 GetOrganizationDevicesAvailabilities(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Statuses(statuses).Execute()
 
 List the availability information for devices in an organization
 
@@ -3187,19 +3273,20 @@ func main() {
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     networkIds := []string{"Inner_example"} // []string | Optional parameter to filter device availabilities by network ID. This filter uses multiple exact matches. (optional)
-    productTypes := []string{"Inner_example"} // []string | Optional parameter to filter device availabilities by device product types. This filter uses multiple exact matches. Valid types are wireless, appliance, switch, camera, cellularGateway, sensor, and wirelessController (optional)
+    productTypes := []string{"Inner_example"} // []string | Optional parameter to filter device availabilities by device product types. This filter uses multiple exact matches. Valid types are wireless, appliance, switch, camera, cellularGateway, sensor, wirelessController, and campusGateway (optional)
     serials := []string{"Inner_example"} // []string | Optional parameter to filter device availabilities by device serial numbers. This filter uses multiple exact matches. (optional)
     tags := []string{"Inner_example"} // []string | An optional parameter to filter devices by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below). This filter uses multiple exact matches. (optional)
     tagsFilterType := "tagsFilterType_example" // string | An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return devices which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected. (optional)
+    statuses := []string{"Statuses_example"} // []string | Optional parameter to filter device availabilities by device status. This filter uses multiple exact matches. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DevicesApi.GetOrganizationDevicesAvailabilities(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+    resp, r, err := apiClient.DevicesApi.GetOrganizationDevicesAvailabilities(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Statuses(statuses).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesAvailabilities``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesAvailabilities`: []InlineResponse200242
+    // response from `GetOrganizationDevicesAvailabilities`: []InlineResponse200247
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesAvailabilities`: %v\n", resp)
 }
 ```
@@ -3224,14 +3311,15 @@ Name | Type | Description  | Notes
  **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **networkIds** | **[]string** | Optional parameter to filter device availabilities by network ID. This filter uses multiple exact matches. | 
- **productTypes** | **[]string** | Optional parameter to filter device availabilities by device product types. This filter uses multiple exact matches. Valid types are wireless, appliance, switch, camera, cellularGateway, sensor, and wirelessController | 
+ **productTypes** | **[]string** | Optional parameter to filter device availabilities by device product types. This filter uses multiple exact matches. Valid types are wireless, appliance, switch, camera, cellularGateway, sensor, wirelessController, and campusGateway | 
  **serials** | **[]string** | Optional parameter to filter device availabilities by device serial numbers. This filter uses multiple exact matches. | 
  **tags** | **[]string** | An optional parameter to filter devices by tags. The filtering is case-sensitive. If tags are included, &#39;tagsFilterType&#39; should also be included (see below). This filter uses multiple exact matches. | 
  **tagsFilterType** | **string** | An optional parameter of value &#39;withAnyTags&#39; or &#39;withAllTags&#39; to indicate whether to return devices which contain ANY or ALL of the included tags. If no type is included, &#39;withAnyTags&#39; will be selected. | 
+ **statuses** | **[]string** | Optional parameter to filter device availabilities by device status. This filter uses multiple exact matches. | 
 
 ### Return type
 
-[**[]InlineResponse200242**](InlineResponse200242.md)
+[**[]InlineResponse200247**](InlineResponse200247.md)
 
 ### Authorization
 
@@ -3249,7 +3337,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesAvailabilitiesChangeHistory
 
-> []InlineResponse200243 GetOrganizationDevicesAvailabilitiesChangeHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Serials(serials).ProductTypes(productTypes).NetworkIds(networkIds).Statuses(statuses).Execute()
+> []InlineResponse200248 GetOrganizationDevicesAvailabilitiesChangeHistory(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Serials(serials).ProductTypes(productTypes).NetworkIds(networkIds).Statuses(statuses).Execute()
 
 List the availability history information for devices in an organization.
 
@@ -3287,7 +3375,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesAvailabilitiesChangeHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesAvailabilitiesChangeHistory`: []InlineResponse200243
+    // response from `GetOrganizationDevicesAvailabilitiesChangeHistory`: []InlineResponse200248
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesAvailabilitiesChangeHistory`: %v\n", resp)
 }
 ```
@@ -3321,7 +3409,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200243**](InlineResponse200243.md)
+[**[]InlineResponse200248**](InlineResponse200248.md)
 
 ### Authorization
 
@@ -3339,7 +3427,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesOverviewByModel
 
-> InlineResponse200245 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
+> InlineResponse200250 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
 
 Lists the count for each device model
 
@@ -3370,7 +3458,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesOverviewByModel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200245
+    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200250
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesOverviewByModel`: %v\n", resp)
 }
 ```
@@ -3397,7 +3485,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200245**](InlineResponse200245.md)
+[**InlineResponse200250**](InlineResponse200250.md)
 
 ### Authorization
 
@@ -3415,7 +3503,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesPowerModulesStatusesByDevice
 
-> []InlineResponse200246 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200251 GetOrganizationDevicesPowerModulesStatusesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the most recent status information for power modules in rackmount MX and MS devices that support them
 
@@ -3451,7 +3539,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesPowerModulesStatusesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200246
+    // response from `GetOrganizationDevicesPowerModulesStatusesByDevice`: []InlineResponse200251
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesPowerModulesStatusesByDevice`: %v\n", resp)
 }
 ```
@@ -3483,7 +3571,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200246**](InlineResponse200246.md)
+[**[]InlineResponse200251**](InlineResponse200251.md)
 
 ### Authorization
 
@@ -3501,7 +3589,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesProvisioningStatuses
 
-> []InlineResponse200247 GetOrganizationDevicesProvisioningStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Status(status).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200252 GetOrganizationDevicesProvisioningStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Status(status).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the provisioning statuses information for devices in an organization.
 
@@ -3538,7 +3626,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesProvisioningStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesProvisioningStatuses`: []InlineResponse200247
+    // response from `GetOrganizationDevicesProvisioningStatuses`: []InlineResponse200252
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesProvisioningStatuses`: %v\n", resp)
 }
 ```
@@ -3571,7 +3659,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200247**](InlineResponse200247.md)
+[**[]InlineResponse200252**](InlineResponse200252.md)
 
 ### Authorization
 
@@ -3589,7 +3677,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatuses
 
-> []InlineResponse200248 GetOrganizationDevicesStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Statuses(statuses).ProductTypes(productTypes).Models(models).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200253 GetOrganizationDevicesStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Statuses(statuses).ProductTypes(productTypes).Models(models).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the status of every Meraki device in the organization
 
@@ -3627,7 +3715,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatuses`: []InlineResponse200248
+    // response from `GetOrganizationDevicesStatuses`: []InlineResponse200253
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesStatuses`: %v\n", resp)
 }
 ```
@@ -3661,7 +3749,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200248**](InlineResponse200248.md)
+[**[]InlineResponse200253**](InlineResponse200253.md)
 
 ### Authorization
 
@@ -3679,7 +3767,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesStatusesOverview
 
-> InlineResponse200249 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
+> InlineResponse200254 GetOrganizationDevicesStatusesOverview(ctx, organizationId).ProductTypes(productTypes).NetworkIds(networkIds).Execute()
 
 Return an overview of current device statuses
 
@@ -3709,7 +3797,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200249
+    // response from `GetOrganizationDevicesStatusesOverview`: InlineResponse200254
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesStatusesOverview`: %v\n", resp)
 }
 ```
@@ -3735,7 +3823,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200249**](InlineResponse200249.md)
+[**InlineResponse200254**](InlineResponse200254.md)
 
 ### Authorization
 
@@ -3753,7 +3841,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksAddressesByDevice
 
-> []InlineResponse200250 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
+> []InlineResponse200255 GetOrganizationDevicesUplinksAddressesByDevice(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).ProductTypes(productTypes).Serials(serials).Tags(tags).TagsFilterType(tagsFilterType).Execute()
 
 List the current uplink addresses for devices in an organization.
 
@@ -3789,7 +3877,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesUplinksAddressesByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200250
+    // response from `GetOrganizationDevicesUplinksAddressesByDevice`: []InlineResponse200255
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesUplinksAddressesByDevice`: %v\n", resp)
 }
 ```
@@ -3821,7 +3909,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200250**](InlineResponse200250.md)
+[**[]InlineResponse200255**](InlineResponse200255.md)
 
 ### Authorization
 
@@ -3839,7 +3927,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationDevicesUplinksLossAndLatency
 
-> []InlineResponse200251 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
+> []InlineResponse200256 GetOrganizationDevicesUplinksLossAndLatency(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Uplink(uplink).Ip(ip).Execute()
 
 Return the uplink loss and latency for every MX in the organization from at latest 2 minutes ago
 
@@ -3872,7 +3960,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationDevicesUplinksLossAndLatency``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200251
+    // response from `GetOrganizationDevicesUplinksLossAndLatency`: []InlineResponse200256
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationDevicesUplinksLossAndLatency`: %v\n", resp)
 }
 ```
@@ -3901,7 +3989,87 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200251**](InlineResponse200251.md)
+[**[]InlineResponse200256**](InlineResponse200256.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationFloorPlansAutoLocateDevices
+
+> []InlineResponse200261 GetOrganizationFloorPlansAutoLocateDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
+
+List auto locate details for each device in your organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 10000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    networkIds := []string{"Inner_example"} // []string | Optional parameter to filter devices by one or more network IDs (optional)
+    floorPlanIds := []string{"Inner_example"} // []string | Optional parameter to filter devices by one or more floorplan IDs (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationFloorPlansAutoLocateDevices(context.Background(), organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationFloorPlansAutoLocateDevices``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationFloorPlansAutoLocateDevices`: []InlineResponse200261
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationFloorPlansAutoLocateDevices`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationFloorPlansAutoLocateDevicesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 10000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **networkIds** | **[]string** | Optional parameter to filter devices by one or more network IDs | 
+ **floorPlanIds** | **[]string** | Optional parameter to filter devices by one or more floorplan IDs | 
+
+### Return type
+
+[**[]InlineResponse200261**](InlineResponse200261.md)
 
 ### Authorization
 
@@ -3919,7 +4087,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevice
 
-> InlineResponse200258 GetOrganizationInventoryDevice(ctx, organizationId, serial).Execute()
+> InlineResponse200265 GetOrganizationInventoryDevice(ctx, organizationId, serial).Execute()
 
 Return a single device from the inventory of an organization
 
@@ -3948,7 +4116,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationInventoryDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevice`: InlineResponse200258
+    // response from `GetOrganizationInventoryDevice`: InlineResponse200265
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationInventoryDevice`: %v\n", resp)
 }
 ```
@@ -3974,7 +4142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200258**](InlineResponse200258.md)
+[**InlineResponse200265**](InlineResponse200265.md)
 
 ### Authorization
 
@@ -3992,7 +4160,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationInventoryDevices
 
-> []InlineResponse200258 GetOrganizationInventoryDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).UsedState(usedState).Search(search).Macs(macs).NetworkIds(networkIds).Serials(serials).Models(models).OrderNumbers(orderNumbers).Tags(tags).TagsFilterType(tagsFilterType).ProductTypes(productTypes).Execute()
+> []InlineResponse200265 GetOrganizationInventoryDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).UsedState(usedState).Search(search).Macs(macs).NetworkIds(networkIds).Serials(serials).Models(models).OrderNumbers(orderNumbers).Tags(tags).TagsFilterType(tagsFilterType).ProductTypes(productTypes).Execute()
 
 Return the device inventory for an organization
 
@@ -4033,7 +4201,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationInventoryDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationInventoryDevices`: []InlineResponse200258
+    // response from `GetOrganizationInventoryDevices`: []InlineResponse200265
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationInventoryDevices`: %v\n", resp)
 }
 ```
@@ -4070,7 +4238,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200258**](InlineResponse200258.md)
+[**[]InlineResponse200265**](InlineResponse200265.md)
 
 ### Authorization
 
@@ -4161,7 +4329,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopDevicesByUsage
 
-> []InlineResponse200291 GetOrganizationSummaryTopDevicesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200298 GetOrganizationSummaryTopDevicesByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 devices sorted by data usage over given time range
 
@@ -4197,7 +4365,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationSummaryTopDevicesByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopDevicesByUsage`: []InlineResponse200291
+    // response from `GetOrganizationSummaryTopDevicesByUsage`: []InlineResponse200298
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationSummaryTopDevicesByUsage`: %v\n", resp)
 }
 ```
@@ -4229,7 +4397,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200291**](InlineResponse200291.md)
+[**[]InlineResponse200298**](InlineResponse200298.md)
 
 ### Authorization
 
@@ -4247,7 +4415,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSummaryTopDevicesModelsByUsage
 
-> []InlineResponse200292 GetOrganizationSummaryTopDevicesModelsByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200299 GetOrganizationSummaryTopDevicesModelsByUsage(ctx, organizationId).NetworkTag(networkTag).DeviceTag(deviceTag).Quantity(quantity).SsidName(ssidName).UsageUplink(usageUplink).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Return metrics for organization's top 10 device models sorted by data usage over given time range
 
@@ -4283,7 +4451,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationSummaryTopDevicesModelsByUsage``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSummaryTopDevicesModelsByUsage`: []InlineResponse200292
+    // response from `GetOrganizationSummaryTopDevicesModelsByUsage`: []InlineResponse200299
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationSummaryTopDevicesModelsByUsage`: %v\n", resp)
 }
 ```
@@ -4315,7 +4483,933 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200292**](InlineResponse200292.md)
+[**[]InlineResponse200299**](InlineResponse200299.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice
+
+> InlineResponse200328 GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List wireless LAN controller layer 2 interfaces in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice(context.Background(), organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: InlineResponse200328
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2ByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesInterfacesL2ByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200328**](InlineResponse200328.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice
+
+> InlineResponse200329 GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List wireless LAN controller layer 2 interfaces history status in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. (optional)
+    includeInterfacesWithoutChanges := true // bool | By default, interfaces without changes are omitted from the response for brevity. If you want to include the interfaces even if they have no changes, set to true. (default: false) (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice(context.Background(), organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: InlineResponse200329
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesInterfacesL2StatusesChangeHistoryByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. | 
+ **includeInterfacesWithoutChanges** | **bool** | By default, interfaces without changes are omitted from the response for brevity. If you want to include the interfaces even if they have no changes, set to true. (default: false) | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200329**](InlineResponse200329.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval
+
+> InlineResponse200330 GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List wireless LAN controller layer 2 interfaces history usage in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval(context.Background(), organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: InlineResponse200330
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByInterval`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesInterfacesL2UsageHistoryByIntervalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200330**](InlineResponse200330.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice
+
+> InlineResponse200331 GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List wireless LAN controller layer 3 interfaces in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice(context.Background(), organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: InlineResponse200331
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3ByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesInterfacesL3ByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200331**](InlineResponse200331.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice
+
+> InlineResponse200332 GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice(ctx, organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List wireless LAN controller layer 3 interfaces history status in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. (optional)
+    includeInterfacesWithoutChanges := true // bool | By default, interfaces without changes are omitted from the response for brevity. If you want to include the interfaces even if they have no changes, set to true. (default: false) (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice(context.Background(), organizationId).Serials(serials).IncludeInterfacesWithoutChanges(includeInterfacesWithoutChanges).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: InlineResponse200332
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesInterfacesL3StatusesChangeHistoryByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. | 
+ **includeInterfacesWithoutChanges** | **bool** | By default, interfaces without changes are omitted from the response for brevity. If you want to include the interfaces even if they have no changes, set to true. (default: false) | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200332**](InlineResponse200332.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval
+
+> InlineResponse200333 GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List wireless LAN controller layer 3 interfaces history usage in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval(context.Background(), organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: InlineResponse200333
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByInterval`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesInterfacesL3UsageHistoryByIntervalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200333**](InlineResponse200333.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice
+
+> InlineResponse200334 GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+Retrieve the packet counters for the interfaces of a Wireless LAN controller
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. (optional)
+    names := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its interface name. This filter uses multiple exact matches. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 1 day from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 1 day after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 1 day. The default is 1 hour. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice(context.Background(), organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: InlineResponse200334
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesInterfacesPacketsOverviewByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. | 
+ **names** | **[]string** | Optional parameter to filter wireless LAN controller by its interface name. This filter uses multiple exact matches. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 1 day from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 1 day after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 1 day. The default is 1 hour. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200334**](InlineResponse200334.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval
+
+> InlineResponse200335 GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(ctx, organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+Retrieve the traffic for the interfaces of a Wireless LAN controller
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. (optional)
+    names := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its interface name. This filter uses multiple exact matches. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval(context.Background(), organizationId).Serials(serials).Names(names).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: InlineResponse200335
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByInterval`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesInterfacesUsageHistoryByIntervalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. | 
+ **names** | **[]string** | Optional parameter to filter wireless LAN controller by its interface name. This filter uses multiple exact matches. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200335**](InlineResponse200335.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory
+
+> []InlineResponse200336 GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List the failover events of wireless LAN controllers in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory(context.Background(), organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory`: []InlineResponse200336
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesRedundancyFailoverHistory`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesRedundancyFailoverHistoryRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**[]InlineResponse200336**](InlineResponse200336.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesRedundancyStatuses
+
+> InlineResponse200337 GetOrganizationWirelessControllerDevicesRedundancyStatuses(ctx, organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List redundancy details of wireless LAN controllers in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud IDs. This filter uses multiple exact matches. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesRedundancyStatuses(context.Background(), organizationId).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesRedundancyStatuses``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesRedundancyStatuses`: InlineResponse200337
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesRedundancyStatuses`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesRedundancyStatusesRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud IDs. This filter uses multiple exact matches. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200337**](InlineResponse200337.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval
+
+> InlineResponse200338 GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval(ctx, organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List cpu utilization data of wireless LAN controllers in an organization
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval(context.Background(), organizationId).Serials(serials).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: InlineResponse200338
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByInterval`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessControllerDevicesSystemUtilizationHistoryByIntervalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **serials** | **[]string** | Optional parameter to filter wireless LAN controller by its cloud ID. This filter uses multiple exact matches. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 31 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 1000. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200338**](InlineResponse200338.md)
 
 ### Authorization
 
@@ -4333,7 +5427,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationByDevice
 
-> []InlineResponse200305 GetOrganizationWirelessDevicesChannelUtilizationByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200313 GetOrganizationWirelessDevicesChannelUtilizationByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get average channel utilization for all bands in a network, split by AP
 
@@ -4370,7 +5464,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationByDevice`: []InlineResponse200305
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationByDevice`: []InlineResponse200313
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationByDevice`: %v\n", resp)
 }
 ```
@@ -4403,7 +5497,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200305**](InlineResponse200305.md)
+[**[]InlineResponse200313**](InlineResponse200313.md)
 
 ### Authorization
 
@@ -4421,7 +5515,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationByNetwork
 
-> []InlineResponse200306 GetOrganizationWirelessDevicesChannelUtilizationByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200314 GetOrganizationWirelessDevicesChannelUtilizationByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get average channel utilization across all bands for all networks in the organization
 
@@ -4458,7 +5552,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: []InlineResponse200306
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: []InlineResponse200314
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: %v\n", resp)
 }
 ```
@@ -4491,7 +5585,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200306**](InlineResponse200306.md)
+[**[]InlineResponse200314**](InlineResponse200314.md)
 
 ### Authorization
 
@@ -4509,7 +5603,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval
 
-> []InlineResponse200307 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200315 GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands, segmented by device.
 
@@ -4546,7 +5640,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200307
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: []InlineResponse200315
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByDeviceByInterval`: %v\n", resp)
 }
 ```
@@ -4579,7 +5673,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200307**](InlineResponse200307.md)
+[**[]InlineResponse200315**](InlineResponse200315.md)
 
 ### Authorization
 
@@ -4597,7 +5691,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval
 
-> []InlineResponse200308 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200316 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands
 
@@ -4634,7 +5728,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200308
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200316
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: %v\n", resp)
 }
 ```
@@ -4667,7 +5761,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200308**](InlineResponse200308.md)
+[**[]InlineResponse200316**](InlineResponse200316.md)
 
 ### Authorization
 
@@ -4685,7 +5779,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesEthernetStatuses
 
-> []InlineResponse200309 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200317 GetOrganizationWirelessDevicesEthernetStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the most recent Ethernet link speed, duplex, aggregation and power mode and status information for wireless devices.
 
@@ -4717,7 +5811,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesEthernetStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200309
+    // response from `GetOrganizationWirelessDevicesEthernetStatuses`: []InlineResponse200317
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesEthernetStatuses`: %v\n", resp)
 }
 ```
@@ -4745,7 +5839,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200309**](InlineResponse200309.md)
+[**[]InlineResponse200317**](InlineResponse200317.md)
 
 ### Authorization
 
@@ -4763,7 +5857,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByClient
 
-> []InlineResponse200310 GetOrganizationWirelessDevicesPacketLossByClient(ctx, organizationId).NetworkIds(networkIds).Ssids(ssids).Bands(bands).Macs(macs).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200318 GetOrganizationWirelessDevicesPacketLossByClient(ctx, organizationId).NetworkIds(networkIds).Ssids(ssids).Bands(bands).Macs(macs).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all clients in the organization.
 
@@ -4801,7 +5895,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesPacketLossByClient``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByClient`: []InlineResponse200310
+    // response from `GetOrganizationWirelessDevicesPacketLossByClient`: []InlineResponse200318
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesPacketLossByClient`: %v\n", resp)
 }
 ```
@@ -4835,7 +5929,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200310**](InlineResponse200310.md)
+[**[]InlineResponse200318**](InlineResponse200318.md)
 
 ### Authorization
 
@@ -4853,7 +5947,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByDevice
 
-> []InlineResponse200311 GetOrganizationWirelessDevicesPacketLossByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200319 GetOrganizationWirelessDevicesPacketLossByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all devices in the organization
 
@@ -4891,7 +5985,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesPacketLossByDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByDevice`: []InlineResponse200311
+    // response from `GetOrganizationWirelessDevicesPacketLossByDevice`: []InlineResponse200319
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesPacketLossByDevice`: %v\n", resp)
 }
 ```
@@ -4925,7 +6019,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200311**](InlineResponse200311.md)
+[**[]InlineResponse200319**](InlineResponse200319.md)
 
 ### Authorization
 
@@ -4943,7 +6037,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByNetwork
 
-> []InlineResponse200312 GetOrganizationWirelessDevicesPacketLossByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200320 GetOrganizationWirelessDevicesPacketLossByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all networks in the organization.
 
@@ -4981,7 +6075,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesPacketLossByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByNetwork`: []InlineResponse200312
+    // response from `GetOrganizationWirelessDevicesPacketLossByNetwork`: []InlineResponse200320
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesPacketLossByNetwork`: %v\n", resp)
 }
 ```
@@ -5015,7 +6109,89 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200312**](InlineResponse200312.md)
+[**[]InlineResponse200320**](InlineResponse200320.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GetOrganizationWirelessDevicesWirelessControllersByDevice
+
+> InlineResponse200321 GetOrganizationWirelessDevicesWirelessControllersByDevice(ctx, organizationId).NetworkIds(networkIds).Serials(serials).ControllerSerials(controllerSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+
+List of Catalyst access points information
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    organizationId := "organizationId_example" // string | Organization ID
+    networkIds := []string{"Inner_example"} // []string | Optional parameter to filter access points by network ID. This filter uses multiple exact matches. (optional)
+    serials := []string{"Inner_example"} // []string | Optional parameter to filter access points by its cloud ID. This filter uses multiple exact matches. (optional)
+    controllerSerials := []string{"Inner_example"} // []string | Optional parameter to filter access points by its wireless LAN controller cloud ID. This filter uses multiple exact matches. (optional)
+    perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. (optional)
+    startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+    endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.DevicesApi.GetOrganizationWirelessDevicesWirelessControllersByDevice(context.Background(), organizationId).NetworkIds(networkIds).Serials(serials).ControllerSerials(controllerSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.GetOrganizationWirelessDevicesWirelessControllersByDevice``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetOrganizationWirelessDevicesWirelessControllersByDevice`: InlineResponse200321
+    fmt.Fprintf(os.Stdout, "Response from `DevicesApi.GetOrganizationWirelessDevicesWirelessControllersByDevice`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**organizationId** | **string** | Organization ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetOrganizationWirelessDevicesWirelessControllersByDeviceRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **networkIds** | **[]string** | Optional parameter to filter access points by network ID. This filter uses multiple exact matches. | 
+ **serials** | **[]string** | Optional parameter to filter access points by its cloud ID. This filter uses multiple exact matches. | 
+ **controllerSerials** | **[]string** | Optional parameter to filter access points by its wireless LAN controller cloud ID. This filter uses multiple exact matches. | 
+ **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 100. | 
+ **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+ **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
+
+### Return type
+
+[**InlineResponse200321**](InlineResponse200321.md)
 
 ### Authorization
 
@@ -5054,7 +6230,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     deviceId := "deviceId_example" // string | Device ID
-    installNetworkSmDeviceApps := *openapiclient.NewInlineObject123([]string{"AppIds_example"}) // InlineObject123 | 
+    installNetworkSmDeviceApps := *openapiclient.NewInlineObject127([]string{"AppIds_example"}) // InlineObject127 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5086,7 +6262,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **installNetworkSmDeviceApps** | [**InlineObject123**](InlineObject123.md) |  | 
+ **installNetworkSmDeviceApps** | [**InlineObject127**](InlineObject127.md) |  | 
 
 ### Return type
 
@@ -5108,7 +6284,7 @@ Name | Type | Description  | Notes
 
 ## LockNetworkSmDevices
 
-> InlineResponse200113 LockNetworkSmDevices(ctx, networkId).LockNetworkSmDevices(lockNetworkSmDevices).Execute()
+> InlineResponse200117 LockNetworkSmDevices(ctx, networkId).LockNetworkSmDevices(lockNetworkSmDevices).Execute()
 
 Lock a set of devices
 
@@ -5128,7 +6304,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    lockNetworkSmDevices := *openapiclient.NewInlineObject117() // InlineObject117 |  (optional)
+    lockNetworkSmDevices := *openapiclient.NewInlineObject121() // InlineObject121 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5137,7 +6313,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.LockNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `LockNetworkSmDevices`: InlineResponse200113
+    // response from `LockNetworkSmDevices`: InlineResponse200117
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.LockNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -5158,11 +6334,11 @@ Other parameters are passed through a pointer to a apiLockNetworkSmDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **lockNetworkSmDevices** | [**InlineObject117**](InlineObject117.md) |  | 
+ **lockNetworkSmDevices** | [**InlineObject121**](InlineObject121.md) |  | 
 
 ### Return type
 
-[**InlineResponse200113**](InlineResponse200113.md)
+[**InlineResponse200117**](InlineResponse200117.md)
 
 ### Authorization
 
@@ -5180,7 +6356,7 @@ Name | Type | Description  | Notes
 
 ## ModifyNetworkSmDevicesTags
 
-> []InlineResponse200115 ModifyNetworkSmDevicesTags(ctx, networkId).ModifyNetworkSmDevicesTags(modifyNetworkSmDevicesTags).Execute()
+> []InlineResponse200119 ModifyNetworkSmDevicesTags(ctx, networkId).ModifyNetworkSmDevicesTags(modifyNetworkSmDevicesTags).Execute()
 
 Add, delete, or update the tags of a set of devices
 
@@ -5200,7 +6376,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    modifyNetworkSmDevicesTags := *openapiclient.NewInlineObject118([]string{"Tags_example"}, "UpdateAction_example") // InlineObject118 | 
+    modifyNetworkSmDevicesTags := *openapiclient.NewInlineObject122([]string{"Tags_example"}, "UpdateAction_example") // InlineObject122 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5209,7 +6385,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.ModifyNetworkSmDevicesTags``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ModifyNetworkSmDevicesTags`: []InlineResponse200115
+    // response from `ModifyNetworkSmDevicesTags`: []InlineResponse200119
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.ModifyNetworkSmDevicesTags`: %v\n", resp)
 }
 ```
@@ -5230,11 +6406,11 @@ Other parameters are passed through a pointer to a apiModifyNetworkSmDevicesTags
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **modifyNetworkSmDevicesTags** | [**InlineObject118**](InlineObject118.md) |  | 
+ **modifyNetworkSmDevicesTags** | [**InlineObject122**](InlineObject122.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse200115**](InlineResponse200115.md)
+[**[]InlineResponse200119**](InlineResponse200119.md)
 
 ### Authorization
 
@@ -5252,7 +6428,7 @@ Name | Type | Description  | Notes
 
 ## MoveNetworkSmDevices
 
-> InlineResponse200116 MoveNetworkSmDevices(ctx, networkId).MoveNetworkSmDevices(moveNetworkSmDevices).Execute()
+> InlineResponse200120 MoveNetworkSmDevices(ctx, networkId).MoveNetworkSmDevices(moveNetworkSmDevices).Execute()
 
 Move a set of devices to a new network
 
@@ -5272,7 +6448,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    moveNetworkSmDevices := *openapiclient.NewInlineObject119("NewNetwork_example") // InlineObject119 | 
+    moveNetworkSmDevices := *openapiclient.NewInlineObject123("NewNetwork_example") // InlineObject123 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5281,7 +6457,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.MoveNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveNetworkSmDevices`: InlineResponse200116
+    // response from `MoveNetworkSmDevices`: InlineResponse200120
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.MoveNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -5302,11 +6478,11 @@ Other parameters are passed through a pointer to a apiMoveNetworkSmDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveNetworkSmDevices** | [**InlineObject119**](InlineObject119.md) |  | 
+ **moveNetworkSmDevices** | [**InlineObject123**](InlineObject123.md) |  | 
 
 ### Return type
 
-[**InlineResponse200116**](InlineResponse200116.md)
+[**InlineResponse200120**](InlineResponse200120.md)
 
 ### Authorization
 
@@ -5324,7 +6500,7 @@ Name | Type | Description  | Notes
 
 ## RebootDevice
 
-> InlineResponse2022 RebootDevice(ctx, serial).Execute()
+> InlineResponse2023 RebootDevice(ctx, serial).Execute()
 
 Reboot a device
 
@@ -5352,7 +6528,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.RebootDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RebootDevice`: InlineResponse2022
+    // response from `RebootDevice`: InlineResponse2023
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.RebootDevice`: %v\n", resp)
 }
 ```
@@ -5376,7 +6552,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2022**](InlineResponse2022.md)
+[**InlineResponse2023**](InlineResponse2023.md)
 
 ### Authorization
 
@@ -5394,7 +6570,7 @@ Name | Type | Description  | Notes
 
 ## RebootNetworkSmDevices
 
-> InlineResponse200117 RebootNetworkSmDevices(ctx, networkId).RebootNetworkSmDevices(rebootNetworkSmDevices).Execute()
+> InlineResponse200121 RebootNetworkSmDevices(ctx, networkId).RebootNetworkSmDevices(rebootNetworkSmDevices).Execute()
 
 Reboot a set of endpoints
 
@@ -5414,7 +6590,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    rebootNetworkSmDevices := *openapiclient.NewInlineObject120() // InlineObject120 |  (optional)
+    rebootNetworkSmDevices := *openapiclient.NewInlineObject124() // InlineObject124 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5423,7 +6599,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.RebootNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RebootNetworkSmDevices`: InlineResponse200117
+    // response from `RebootNetworkSmDevices`: InlineResponse200121
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.RebootNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -5444,11 +6620,11 @@ Other parameters are passed through a pointer to a apiRebootNetworkSmDevicesRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **rebootNetworkSmDevices** | [**InlineObject120**](InlineObject120.md) |  | 
+ **rebootNetworkSmDevices** | [**InlineObject124**](InlineObject124.md) |  | 
 
 ### Return type
 
-[**InlineResponse200117**](InlineResponse200117.md)
+[**InlineResponse200121**](InlineResponse200121.md)
 
 ### Authorization
 
@@ -5609,7 +6785,7 @@ Name | Type | Description  | Notes
 
 ## ShutdownNetworkSmDevices
 
-> InlineResponse200117 ShutdownNetworkSmDevices(ctx, networkId).ShutdownNetworkSmDevices(shutdownNetworkSmDevices).Execute()
+> InlineResponse200121 ShutdownNetworkSmDevices(ctx, networkId).ShutdownNetworkSmDevices(shutdownNetworkSmDevices).Execute()
 
 Shutdown a set of endpoints
 
@@ -5629,7 +6805,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    shutdownNetworkSmDevices := *openapiclient.NewInlineObject121() // InlineObject121 |  (optional)
+    shutdownNetworkSmDevices := *openapiclient.NewInlineObject125() // InlineObject125 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5638,7 +6814,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.ShutdownNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `ShutdownNetworkSmDevices`: InlineResponse200117
+    // response from `ShutdownNetworkSmDevices`: InlineResponse200121
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.ShutdownNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -5659,11 +6835,11 @@ Other parameters are passed through a pointer to a apiShutdownNetworkSmDevicesRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **shutdownNetworkSmDevices** | [**InlineObject121**](InlineObject121.md) |  | 
+ **shutdownNetworkSmDevices** | [**InlineObject125**](InlineObject125.md) |  | 
 
 ### Return type
 
-[**InlineResponse200117**](InlineResponse200117.md)
+[**InlineResponse200121**](InlineResponse200121.md)
 
 ### Authorization
 
@@ -5681,7 +6857,7 @@ Name | Type | Description  | Notes
 
 ## UnenrollNetworkSmDevice
 
-> InlineResponse200130 UnenrollNetworkSmDevice(ctx, networkId, deviceId).Execute()
+> InlineResponse200134 UnenrollNetworkSmDevice(ctx, networkId, deviceId).Execute()
 
 Unenroll a device
 
@@ -5710,7 +6886,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UnenrollNetworkSmDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UnenrollNetworkSmDevice`: InlineResponse200130
+    // response from `UnenrollNetworkSmDevice`: InlineResponse200134
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UnenrollNetworkSmDevice`: %v\n", resp)
 }
 ```
@@ -5736,7 +6912,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200130**](InlineResponse200130.md)
+[**InlineResponse200134**](InlineResponse200134.md)
 
 ### Authorization
 
@@ -5775,7 +6951,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     deviceId := "deviceId_example" // string | Device ID
-    uninstallNetworkSmDeviceApps := *openapiclient.NewInlineObject124([]string{"AppIds_example"}) // InlineObject124 | 
+    uninstallNetworkSmDeviceApps := *openapiclient.NewInlineObject128([]string{"AppIds_example"}) // InlineObject128 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -5807,7 +6983,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **uninstallNetworkSmDeviceApps** | [**InlineObject124**](InlineObject124.md) |  | 
+ **uninstallNetworkSmDeviceApps** | [**InlineObject128**](InlineObject128.md) |  | 
 
 ### Return type
 
@@ -6045,7 +7221,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSmDevicesFields
 
-> []InlineResponse200114 UpdateNetworkSmDevicesFields(ctx, networkId).UpdateNetworkSmDevicesFields(updateNetworkSmDevicesFields).Execute()
+> []InlineResponse200118 UpdateNetworkSmDevicesFields(ctx, networkId).UpdateNetworkSmDevicesFields(updateNetworkSmDevicesFields).Execute()
 
 Modify the fields of a device
 
@@ -6065,7 +7241,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSmDevicesFields := *openapiclient.NewInlineObject116(*openapiclient.NewNetworksNetworkIdSmDevicesFieldsDeviceFields()) // InlineObject116 | 
+    updateNetworkSmDevicesFields := *openapiclient.NewInlineObject120(*openapiclient.NewNetworksNetworkIdSmDevicesFieldsDeviceFields()) // InlineObject120 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6074,7 +7250,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.UpdateNetworkSmDevicesFields``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSmDevicesFields`: []InlineResponse200114
+    // response from `UpdateNetworkSmDevicesFields`: []InlineResponse200118
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.UpdateNetworkSmDevicesFields`: %v\n", resp)
 }
 ```
@@ -6095,11 +7271,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSmDevicesFiel
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSmDevicesFields** | [**InlineObject116**](InlineObject116.md) |  | 
+ **updateNetworkSmDevicesFields** | [**InlineObject120**](InlineObject120.md) |  | 
 
 ### Return type
 
-[**[]InlineResponse200114**](InlineResponse200114.md)
+[**[]InlineResponse200118**](InlineResponse200118.md)
 
 ### Authorization
 
@@ -6189,7 +7365,7 @@ Name | Type | Description  | Notes
 
 ## WipeNetworkSmDevices
 
-> InlineResponse200118 WipeNetworkSmDevices(ctx, networkId).WipeNetworkSmDevices(wipeNetworkSmDevices).Execute()
+> InlineResponse200122 WipeNetworkSmDevices(ctx, networkId).WipeNetworkSmDevices(wipeNetworkSmDevices).Execute()
 
 Wipe a device
 
@@ -6209,7 +7385,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    wipeNetworkSmDevices := *openapiclient.NewInlineObject122() // InlineObject122 |  (optional)
+    wipeNetworkSmDevices := *openapiclient.NewInlineObject126() // InlineObject126 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -6218,7 +7394,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DevicesApi.WipeNetworkSmDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `WipeNetworkSmDevices`: InlineResponse200118
+    // response from `WipeNetworkSmDevices`: InlineResponse200122
     fmt.Fprintf(os.Stdout, "Response from `DevicesApi.WipeNetworkSmDevices`: %v\n", resp)
 }
 ```
@@ -6239,11 +7415,11 @@ Other parameters are passed through a pointer to a apiWipeNetworkSmDevicesReques
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **wipeNetworkSmDevices** | [**InlineObject122**](InlineObject122.md) |  | 
+ **wipeNetworkSmDevices** | [**InlineObject126**](InlineObject126.md) |  | 
 
 ### Return type
 
-[**InlineResponse200118**](InlineResponse200118.md)
+[**InlineResponse200122**](InlineResponse200122.md)
 
 ### Authorization
 

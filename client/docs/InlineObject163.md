@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile.md) |  | [optional] 
-**Serials** | **[]string** | Array of Device Serials | 
-**StackIds** | **[]string** | Array of Switch Stack IDs | 
+**Servers** | [**[]NetworksNetworkIdSyslogServersServers**](NetworksNetworkIdSyslogServersServers.md) | A list of the syslog servers for this network | 
 
 ## Methods
 
 ### NewInlineObject163
 
-`func NewInlineObject163(serials []string, stackIds []string, ) *InlineObject163`
+`func NewInlineObject163(servers []NetworksNetworkIdSyslogServersServers, ) *InlineObject163`
 
 NewInlineObject163 instantiates a new InlineObject163 object
 This constructor will assign default values to properties that have it defined,
@@ -27,69 +25,24 @@ NewInlineObject163WithDefaults instantiates a new InlineObject163 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlanProfile
+### GetServers
 
-`func (o *InlineObject163) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile`
+`func (o *InlineObject163) GetServers() []NetworksNetworkIdSyslogServersServers`
 
-GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+GetServers returns the Servers field if non-nil, zero value otherwise.
 
-### GetVlanProfileOk
+### GetServersOk
 
-`func (o *InlineObject163) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile, bool)`
+`func (o *InlineObject163) GetServersOk() (*[]NetworksNetworkIdSyslogServersServers, bool)`
 
-GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+GetServersOk returns a tuple with the Servers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanProfile
+### SetServers
 
-`func (o *InlineObject163) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile)`
+`func (o *InlineObject163) SetServers(v []NetworksNetworkIdSyslogServersServers)`
 
-SetVlanProfile sets VlanProfile field to given value.
-
-### HasVlanProfile
-
-`func (o *InlineObject163) HasVlanProfile() bool`
-
-HasVlanProfile returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineObject163) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineObject163) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineObject163) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-
-### GetStackIds
-
-`func (o *InlineObject163) GetStackIds() []string`
-
-GetStackIds returns the StackIds field if non-nil, zero value otherwise.
-
-### GetStackIdsOk
-
-`func (o *InlineObject163) GetStackIdsOk() (*[]string, bool)`
-
-GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStackIds
-
-`func (o *InlineObject163) SetStackIds(v []string)`
-
-SetStackIds sets StackIds field to given value.
+SetServers sets Servers field to given value.
 
 
 

@@ -4,15 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupId** | Pointer to **string** | The ID of the adaptive policy group | [optional] 
-**Name** | Pointer to **string** | The name of the adaptive policy group | [optional] 
-**Sgt** | Pointer to **int32** | The security group tag for the adaptive policy group | [optional] 
-**Description** | Pointer to **string** | The description for the adaptive policy group | [optional] 
-**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects for the adaptive policy group | [optional] 
-**IsDefaultGroup** | Pointer to **bool** | Whether the adaptive policy group is the default group | [optional] 
-**RequiredIpMappings** | Pointer to **[]string** | List of required IP mappings for the adaptive policy group | [optional] 
-**CreatedAt** | Pointer to **string** | Created at timestamp for the adaptive policy group | [optional] 
-**UpdatedAt** | Pointer to **string** | Updated at timestamp for the adaptive policy group | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200200Rules**](InlineResponse200200Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
@@ -33,230 +27,80 @@ NewInlineResponse200200WithDefaults instantiates a new InlineResponse200200 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroupId
+### GetTrafficShapingEnabled
 
-`func (o *InlineResponse200200) GetGroupId() string`
+`func (o *InlineResponse200200) GetTrafficShapingEnabled() bool`
 
-GetGroupId returns the GroupId field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetGroupIdOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineResponse200200) GetGroupIdOk() (*string, bool)`
+`func (o *InlineResponse200200) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupId
+### SetTrafficShapingEnabled
 
-`func (o *InlineResponse200200) SetGroupId(v string)`
+`func (o *InlineResponse200200) SetTrafficShapingEnabled(v bool)`
 
-SetGroupId sets GroupId field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasGroupId
+### HasTrafficShapingEnabled
 
-`func (o *InlineResponse200200) HasGroupId() bool`
+`func (o *InlineResponse200200) HasTrafficShapingEnabled() bool`
 
-HasGroupId returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetName
+### GetDefaultRulesEnabled
 
-`func (o *InlineResponse200200) GetName() string`
+`func (o *InlineResponse200200) GetDefaultRulesEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineResponse200200) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200200) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDefaultRulesEnabled
 
-`func (o *InlineResponse200200) SetName(v string)`
+`func (o *InlineResponse200200) SetDefaultRulesEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasName
+### HasDefaultRulesEnabled
 
-`func (o *InlineResponse200200) HasName() bool`
+`func (o *InlineResponse200200) HasDefaultRulesEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetSgt
+### GetRules
 
-`func (o *InlineResponse200200) GetSgt() int32`
+`func (o *InlineResponse200200) GetRules() []InlineResponse200200Rules`
 
-GetSgt returns the Sgt field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetSgtOk
+### GetRulesOk
 
-`func (o *InlineResponse200200) GetSgtOk() (*int32, bool)`
+`func (o *InlineResponse200200) GetRulesOk() (*[]InlineResponse200200Rules, bool)`
 
-GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSgt
+### SetRules
 
-`func (o *InlineResponse200200) SetSgt(v int32)`
+`func (o *InlineResponse200200) SetRules(v []InlineResponse200200Rules)`
 
-SetSgt sets Sgt field to given value.
+SetRules sets Rules field to given value.
 
-### HasSgt
+### HasRules
 
-`func (o *InlineResponse200200) HasSgt() bool`
+`func (o *InlineResponse200200) HasRules() bool`
 
-HasSgt returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineResponse200200) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200200) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200200) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200200) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetPolicyObjects
-
-`func (o *InlineResponse200200) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
-
-GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
-
-### GetPolicyObjectsOk
-
-`func (o *InlineResponse200200) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
-
-GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPolicyObjects
-
-`func (o *InlineResponse200200) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
-
-SetPolicyObjects sets PolicyObjects field to given value.
-
-### HasPolicyObjects
-
-`func (o *InlineResponse200200) HasPolicyObjects() bool`
-
-HasPolicyObjects returns a boolean if a field has been set.
-
-### GetIsDefaultGroup
-
-`func (o *InlineResponse200200) GetIsDefaultGroup() bool`
-
-GetIsDefaultGroup returns the IsDefaultGroup field if non-nil, zero value otherwise.
-
-### GetIsDefaultGroupOk
-
-`func (o *InlineResponse200200) GetIsDefaultGroupOk() (*bool, bool)`
-
-GetIsDefaultGroupOk returns a tuple with the IsDefaultGroup field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsDefaultGroup
-
-`func (o *InlineResponse200200) SetIsDefaultGroup(v bool)`
-
-SetIsDefaultGroup sets IsDefaultGroup field to given value.
-
-### HasIsDefaultGroup
-
-`func (o *InlineResponse200200) HasIsDefaultGroup() bool`
-
-HasIsDefaultGroup returns a boolean if a field has been set.
-
-### GetRequiredIpMappings
-
-`func (o *InlineResponse200200) GetRequiredIpMappings() []string`
-
-GetRequiredIpMappings returns the RequiredIpMappings field if non-nil, zero value otherwise.
-
-### GetRequiredIpMappingsOk
-
-`func (o *InlineResponse200200) GetRequiredIpMappingsOk() (*[]string, bool)`
-
-GetRequiredIpMappingsOk returns a tuple with the RequiredIpMappings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequiredIpMappings
-
-`func (o *InlineResponse200200) SetRequiredIpMappings(v []string)`
-
-SetRequiredIpMappings sets RequiredIpMappings field to given value.
-
-### HasRequiredIpMappings
-
-`func (o *InlineResponse200200) HasRequiredIpMappings() bool`
-
-HasRequiredIpMappings returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200200) GetCreatedAt() string`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200200) GetCreatedAtOk() (*string, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200200) SetCreatedAt(v string)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200200) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200200) GetUpdatedAt() string`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200200) GetUpdatedAtOk() (*string, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200200) SetUpdatedAt(v string)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200200) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

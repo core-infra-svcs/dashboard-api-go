@@ -477,7 +477,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkApplianceVlan
 
-> InlineResponse2016 CreateNetworkApplianceVlan(ctx, networkId).CreateNetworkApplianceVlan(createNetworkApplianceVlan).Execute()
+> InlineResponse2017 CreateNetworkApplianceVlan(ctx, networkId).CreateNetworkApplianceVlan(createNetworkApplianceVlan).Execute()
 
 Add a VLAN
 
@@ -506,7 +506,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.CreateNetworkApplianceVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkApplianceVlan`: InlineResponse2016
+    // response from `CreateNetworkApplianceVlan`: InlineResponse2017
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.CreateNetworkApplianceVlan`: %v\n", resp)
 }
 ```
@@ -531,7 +531,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2016**](InlineResponse2016.md)
+[**InlineResponse2017**](InlineResponse2017.md)
 
 ### Authorization
 
@@ -4627,7 +4627,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork
 
-> InlineResponse200209 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200214 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Display VPN exclusion rules for MX networks.
 
@@ -4659,7 +4659,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200209
+    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200214
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: %v\n", resp)
 }
 ```
@@ -4687,7 +4687,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200209**](InlineResponse200209.md)
+[**InlineResponse200214**](InlineResponse200214.md)
 
 ### Authorization
 
@@ -4705,7 +4705,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinkStatuses
 
-> []InlineResponse200210 GetOrganizationApplianceUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
+> []InlineResponse200215 GetOrganizationApplianceUplinkStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Serials(serials).Iccids(iccids).Execute()
 
 List the uplink status of every Meraki MX and Z series appliances in the organization
 
@@ -4739,7 +4739,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceUplinkStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinkStatuses`: []InlineResponse200210
+    // response from `GetOrganizationApplianceUplinkStatuses`: []InlineResponse200215
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceUplinkStatuses`: %v\n", resp)
 }
 ```
@@ -4769,7 +4769,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200210**](InlineResponse200210.md)
+[**[]InlineResponse200215**](InlineResponse200215.md)
 
 ### Authorization
 
@@ -4787,7 +4787,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksStatusesOverview
 
-> InlineResponse200211 GetOrganizationApplianceUplinksStatusesOverview(ctx, organizationId).Execute()
+> InlineResponse200216 GetOrganizationApplianceUplinksStatusesOverview(ctx, organizationId).Execute()
 
 Returns an overview of uplink statuses
 
@@ -4815,7 +4815,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceUplinksStatusesOverview``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksStatusesOverview`: InlineResponse200211
+    // response from `GetOrganizationApplianceUplinksStatusesOverview`: InlineResponse200216
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceUplinksStatusesOverview`: %v\n", resp)
 }
 ```
@@ -4839,7 +4839,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200211**](InlineResponse200211.md)
+[**InlineResponse200216**](InlineResponse200216.md)
 
 ### Authorization
 
@@ -4857,7 +4857,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksUsageByNetwork
 
-> []InlineResponse200212 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200217 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get the sent and received bytes for each uplink of all MX and Z networks within an organization
 
@@ -4888,7 +4888,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceUplinksUsageByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200212
+    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200217
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceUplinksUsageByNetwork`: %v\n", resp)
 }
 ```
@@ -4915,7 +4915,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200212**](InlineResponse200212.md)
+[**[]InlineResponse200217**](InlineResponse200217.md)
 
 ### Authorization
 
@@ -5017,7 +5017,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnStatuses
 
-> InlineResponse200213 GetOrganizationApplianceVpnStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200218 GetOrganizationApplianceVpnStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Show VPN status for networks in an organization
 
@@ -5049,7 +5049,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceVpnStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnStatuses`: InlineResponse200213
+    // response from `GetOrganizationApplianceVpnStatuses`: InlineResponse200218
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceVpnStatuses`: %v\n", resp)
 }
 ```
@@ -5077,7 +5077,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200213**](InlineResponse200213.md)
+[**InlineResponse200218**](InlineResponse200218.md)
 
 ### Authorization
 
@@ -5095,7 +5095,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse200214 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
+> InlineResponse200219 GetOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).Execute()
 
 Return the third party VPN peers for an organization
 
@@ -5123,7 +5123,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.GetOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200214
+    // response from `GetOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200219
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.GetOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -5147,7 +5147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200214**](InlineResponse200214.md)
+[**InlineResponse200219**](InlineResponse200219.md)
 
 ### Authorization
 
@@ -7869,7 +7869,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject212([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject212 | 
+    updateOrganizationApplianceSecurityIntrusion := *openapiclient.NewInlineObject216([]openapiclient.OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules{*openapiclient.NewOrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules("RuleId_example")}) // InlineObject216 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7899,7 +7899,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject212**](InlineObject212.md) |  | 
+ **updateOrganizationApplianceSecurityIntrusion** | [**InlineObject216**](InlineObject216.md) |  | 
 
 ### Return type
 
@@ -7921,7 +7921,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationApplianceVpnThirdPartyVPNPeers
 
-> InlineResponse200214 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
+> InlineResponse200219 UpdateOrganizationApplianceVpnThirdPartyVPNPeers(ctx, organizationId).UpdateOrganizationApplianceVpnThirdPartyVPNPeers(updateOrganizationApplianceVpnThirdPartyVPNPeers).Execute()
 
 Update the third party VPN peers for an organization
 
@@ -7941,7 +7941,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceVpnThirdPartyVPNPeers := *openapiclient.NewInlineObject213([]openapiclient.OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers{*openapiclient.NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers("Name_example", []string{"PrivateSubnets_example"}, "Secret_example")}) // InlineObject213 | 
+    updateOrganizationApplianceVpnThirdPartyVPNPeers := *openapiclient.NewInlineObject217([]openapiclient.OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers{*openapiclient.NewOrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers("Name_example", []string{"PrivateSubnets_example"}, "Secret_example")}) // InlineObject217 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -7950,7 +7950,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ApplianceApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200214
+    // response from `UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: InlineResponse200219
     fmt.Fprintf(os.Stdout, "Response from `ApplianceApi.UpdateOrganizationApplianceVpnThirdPartyVPNPeers`: %v\n", resp)
 }
 ```
@@ -7971,11 +7971,11 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceVpnThirdPartyVPNPeers** | [**InlineObject213**](InlineObject213.md) |  | 
+ **updateOrganizationApplianceVpnThirdPartyVPNPeers** | [**InlineObject217**](InlineObject217.md) |  | 
 
 ### Return type
 
-[**InlineResponse200214**](InlineResponse200214.md)
+[**InlineResponse200219**](InlineResponse200219.md)
 
 ### Authorization
 
@@ -8013,7 +8013,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    updateOrganizationApplianceVpnVpnFirewallRules := *openapiclient.NewInlineObject214() // InlineObject214 |  (optional)
+    updateOrganizationApplianceVpnVpnFirewallRules := *openapiclient.NewInlineObject218() // InlineObject218 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -8043,7 +8043,7 @@ Other parameters are passed through a pointer to a apiUpdateOrganizationApplianc
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateOrganizationApplianceVpnVpnFirewallRules** | [**InlineObject214**](InlineObject214.md) |  | 
+ **updateOrganizationApplianceVpnVpnFirewallRules** | [**InlineObject218**](InlineObject218.md) |  | 
 
 ### Return type
 

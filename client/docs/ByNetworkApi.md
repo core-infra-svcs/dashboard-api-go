@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork
 
-> InlineResponse200209 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200214 GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Display VPN exclusion rules for MX networks.
 
@@ -49,7 +49,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByNetworkApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200209
+    // response from `GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: InlineResponse200214
     fmt.Fprintf(os.Stdout, "Response from `ByNetworkApi.GetOrganizationApplianceTrafficShapingVpnExclusionsByNetwork`: %v\n", resp)
 }
 ```
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200209**](InlineResponse200209.md)
+[**InlineResponse200214**](InlineResponse200214.md)
 
 ### Authorization
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationApplianceUplinksUsageByNetwork
 
-> []InlineResponse200212 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200217 GetOrganizationApplianceUplinksUsageByNetwork(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get the sent and received bytes for each uplink of all MX and Z networks within an organization
 
@@ -126,7 +126,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByNetworkApi.GetOrganizationApplianceUplinksUsageByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200212
+    // response from `GetOrganizationApplianceUplinksUsageByNetwork`: []InlineResponse200217
     fmt.Fprintf(os.Stdout, "Response from `ByNetworkApi.GetOrganizationApplianceUplinksUsageByNetwork`: %v\n", resp)
 }
 ```
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200212**](InlineResponse200212.md)
+[**[]InlineResponse200217**](InlineResponse200217.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationAssuranceAlertsOverviewByNetwork
 
-> InlineResponse200217 GetOrganizationAssuranceAlertsOverviewByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
+> InlineResponse200222 GetOrganizationAssuranceAlertsOverviewByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SortOrder(sortOrder).NetworkId(networkId).Severity(severity).Types(types).TsStart(tsStart).TsEnd(tsEnd).Category(category).Serials(serials).DeviceTypes(deviceTypes).DeviceTags(deviceTags).Active(active).Dismissed(dismissed).Resolved(resolved).SuppressAlertsForOfflineNodes(suppressAlertsForOfflineNodes).Execute()
 
 Return a Summary of Alerts grouped by network and severity
 
@@ -217,7 +217,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByNetworkApi.GetOrganizationAssuranceAlertsOverviewByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsOverviewByNetwork`: InlineResponse200217
+    // response from `GetOrganizationAssuranceAlertsOverviewByNetwork`: InlineResponse200222
     fmt.Fprintf(os.Stdout, "Response from `ByNetworkApi.GetOrganizationAssuranceAlertsOverviewByNetwork`: %v\n", resp)
 }
 ```
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200217**](InlineResponse200217.md)
+[**InlineResponse200222**](InlineResponse200222.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationSmSentryPoliciesAssignmentsByNetwork
 
-> []InlineResponse200280 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> []InlineResponse200287 GetOrganizationSmSentryPoliciesAssignmentsByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 List the Sentry Policies for an organization ordered in ascending order of priority
 
@@ -308,7 +308,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByNetworkApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200280
+    // response from `GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: []InlineResponse200287
     fmt.Fprintf(os.Stdout, "Response from `ByNetworkApi.GetOrganizationSmSentryPoliciesAssignmentsByNetwork`: %v\n", resp)
 }
 ```
@@ -336,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200280**](InlineResponse200280.md)
+[**[]InlineResponse200287**](InlineResponse200287.md)
 
 ### Authorization
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessAirMarshalSettingsByNetwork
 
-> InlineResponse200304 GetOrganizationWirelessAirMarshalSettingsByNetwork(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200311 GetOrganizationWirelessAirMarshalSettingsByNetwork(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Returns the current Air Marshal settings for this network
 
@@ -386,7 +386,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByNetworkApi.GetOrganizationWirelessAirMarshalSettingsByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessAirMarshalSettingsByNetwork`: InlineResponse200304
+    // response from `GetOrganizationWirelessAirMarshalSettingsByNetwork`: InlineResponse200311
     fmt.Fprintf(os.Stdout, "Response from `ByNetworkApi.GetOrganizationWirelessAirMarshalSettingsByNetwork`: %v\n", resp)
 }
 ```
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200304**](InlineResponse200304.md)
+[**InlineResponse200311**](InlineResponse200311.md)
 
 ### Authorization
 
@@ -432,7 +432,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationByNetwork
 
-> []InlineResponse200306 GetOrganizationWirelessDevicesChannelUtilizationByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200314 GetOrganizationWirelessDevicesChannelUtilizationByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get average channel utilization across all bands for all networks in the organization
 
@@ -469,7 +469,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByNetworkApi.GetOrganizationWirelessDevicesChannelUtilizationByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: []InlineResponse200306
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: []InlineResponse200314
     fmt.Fprintf(os.Stdout, "Response from `ByNetworkApi.GetOrganizationWirelessDevicesChannelUtilizationByNetwork`: %v\n", resp)
 }
 ```
@@ -502,7 +502,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200306**](InlineResponse200306.md)
+[**[]InlineResponse200314**](InlineResponse200314.md)
 
 ### Authorization
 
@@ -520,7 +520,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval
 
-> []InlineResponse200308 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200316 GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(ctx, organizationId).NetworkIds(networkIds).Serials(serials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Get a time-series of average channel utilization for all bands
 
@@ -557,7 +557,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByNetworkApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200308
+    // response from `GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: []InlineResponse200316
     fmt.Fprintf(os.Stdout, "Response from `ByNetworkApi.GetOrganizationWirelessDevicesChannelUtilizationHistoryByNetworkByInterval`: %v\n", resp)
 }
 ```
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200308**](InlineResponse200308.md)
+[**[]InlineResponse200316**](InlineResponse200316.md)
 
 ### Authorization
 
@@ -608,7 +608,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessDevicesPacketLossByNetwork
 
-> []InlineResponse200312 GetOrganizationWirelessDevicesPacketLossByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
+> []InlineResponse200320 GetOrganizationWirelessDevicesPacketLossByNetwork(ctx, organizationId).NetworkIds(networkIds).Serials(serials).Ssids(ssids).Bands(bands).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).T0(t0).T1(t1).Timespan(timespan).Execute()
 
 Get average packet loss for the given timespan for all networks in the organization.
 
@@ -646,7 +646,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByNetworkApi.GetOrganizationWirelessDevicesPacketLossByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessDevicesPacketLossByNetwork`: []InlineResponse200312
+    // response from `GetOrganizationWirelessDevicesPacketLossByNetwork`: []InlineResponse200320
     fmt.Fprintf(os.Stdout, "Response from `ByNetworkApi.GetOrganizationWirelessDevicesPacketLossByNetwork`: %v\n", resp)
 }
 ```
@@ -680,7 +680,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200312**](InlineResponse200312.md)
+[**[]InlineResponse200320**](InlineResponse200320.md)
 
 ### Authorization
 

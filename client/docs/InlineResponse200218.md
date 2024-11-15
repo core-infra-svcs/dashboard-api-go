@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200218Items**](InlineResponse200218Items.md) | Organization Alert counts by type | 
-**Meta** | [**InlineResponse200217Meta**](InlineResponse200217Meta.md) |  | 
+**Vpnstatusentities** | Pointer to [**[]InlineResponse200218Vpnstatusentities**](InlineResponse200218Vpnstatusentities.md) | The list of VPN Status for networks | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200218
 
-`func NewInlineResponse200218(items []InlineResponse200218Items, meta InlineResponse200217Meta, ) *InlineResponse200218`
+`func NewInlineResponse200218() *InlineResponse200218`
 
 NewInlineResponse200218 instantiates a new InlineResponse200218 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineResponse200218WithDefaults instantiates a new InlineResponse200218 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetVpnstatusentities
 
-`func (o *InlineResponse200218) GetItems() []InlineResponse200218Items`
+`func (o *InlineResponse200218) GetVpnstatusentities() []InlineResponse200218Vpnstatusentities`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetVpnstatusentities returns the Vpnstatusentities field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetVpnstatusentitiesOk
 
-`func (o *InlineResponse200218) GetItemsOk() (*[]InlineResponse200218Items, bool)`
+`func (o *InlineResponse200218) GetVpnstatusentitiesOk() (*[]InlineResponse200218Vpnstatusentities, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetVpnstatusentitiesOk returns a tuple with the Vpnstatusentities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetVpnstatusentities
 
-`func (o *InlineResponse200218) SetItems(v []InlineResponse200218Items)`
+`func (o *InlineResponse200218) SetVpnstatusentities(v []InlineResponse200218Vpnstatusentities)`
 
-SetItems sets Items field to given value.
+SetVpnstatusentities sets Vpnstatusentities field to given value.
 
+### HasVpnstatusentities
 
-### GetMeta
+`func (o *InlineResponse200218) HasVpnstatusentities() bool`
 
-`func (o *InlineResponse200218) GetMeta() InlineResponse200217Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200218) GetMetaOk() (*InlineResponse200217Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200218) SetMeta(v InlineResponse200217Meta)`
-
-SetMeta sets Meta field to given value.
-
+HasVpnstatusentities returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

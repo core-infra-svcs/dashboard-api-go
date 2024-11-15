@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineObject261WithDefaults instantiates a new InlineObject261 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRole
+### GetEnabled
 
-`func (o *InlineObject261) GetRole() string`
+`func (o *InlineObject261) GetEnabled() bool`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetEnabledOk
 
-`func (o *InlineObject261) GetRoleOk() (*string, bool)`
+`func (o *InlineObject261) GetEnabledOk() (*bool, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetEnabled
 
-`func (o *InlineObject261) SetRole(v string)`
+`func (o *InlineObject261) SetEnabled(v bool)`
 
-SetRole sets Role field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRole
+### HasEnabled
 
-`func (o *InlineObject261) HasRole() bool`
+`func (o *InlineObject261) HasEnabled() bool`
 
-HasRole returns a boolean if a field has been set.
-
-### GetOrgAccess
-
-`func (o *InlineObject261) GetOrgAccess() string`
-
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
-
-### GetOrgAccessOk
-
-`func (o *InlineObject261) GetOrgAccessOk() (*string, bool)`
-
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrgAccess
-
-`func (o *InlineObject261) SetOrgAccess(v string)`
-
-SetOrgAccess sets OrgAccess field to given value.
-
-### HasOrgAccess
-
-`func (o *InlineObject261) HasOrgAccess() bool`
-
-HasOrgAccess returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineObject261) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject261) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject261) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject261) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineObject261) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineObject261) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineObject261) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineObject261) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

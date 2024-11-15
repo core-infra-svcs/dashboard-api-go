@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **Module** | Pointer to [**DevicesSerialSwitchPortsModule**](DevicesSerialSwitchPortsModule.md) |  | [optional] 
 **Mirror** | Pointer to [**DevicesSerialSwitchPortsMirror**](DevicesSerialSwitchPortsMirror.md) |  | [optional] 
 **Dot3az** | Pointer to [**DevicesSerialSwitchPortsDot3az**](DevicesSerialSwitchPortsDot3az.md) |  | [optional] 
+**StackwiseVirtual** | Pointer to [**DevicesSerialSwitchPortsStackwiseVirtual**](DevicesSerialSwitchPortsStackwiseVirtual.md) |  | [optional] 
 
 ## Methods
 
@@ -855,6 +856,31 @@ SetDot3az sets Dot3az field to given value.
 `func (o *InlineResponse20031) HasDot3az() bool`
 
 HasDot3az returns a boolean if a field has been set.
+
+### GetStackwiseVirtual
+
+`func (o *InlineResponse20031) GetStackwiseVirtual() DevicesSerialSwitchPortsStackwiseVirtual`
+
+GetStackwiseVirtual returns the StackwiseVirtual field if non-nil, zero value otherwise.
+
+### GetStackwiseVirtualOk
+
+`func (o *InlineResponse20031) GetStackwiseVirtualOk() (*DevicesSerialSwitchPortsStackwiseVirtual, bool)`
+
+GetStackwiseVirtualOk returns a tuple with the StackwiseVirtual field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStackwiseVirtual
+
+`func (o *InlineResponse20031) SetStackwiseVirtual(v DevicesSerialSwitchPortsStackwiseVirtual)`
+
+SetStackwiseVirtual sets StackwiseVirtual field to given value.
+
+### HasStackwiseVirtual
+
+`func (o *InlineResponse20031) HasStackwiseVirtual() bool`
+
+HasStackwiseVirtual returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

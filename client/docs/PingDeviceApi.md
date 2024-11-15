@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceLiveToolsPingDevice
 
-> InlineResponse2013 CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
+> InlineResponse2014 CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
 
 Enqueue a job to check connectivity status to the device
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PingDeviceApi.CreateDeviceLiveToolsPingDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsPingDevice`: InlineResponse2013
+    // response from `CreateDeviceLiveToolsPingDevice`: InlineResponse2014
     fmt.Fprintf(os.Stdout, "Response from `PingDeviceApi.CreateDeviceLiveToolsPingDevice`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2013**](InlineResponse2013.md)
+[**InlineResponse2014**](InlineResponse2014.md)
 
 ### Authorization
 

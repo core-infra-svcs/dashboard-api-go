@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessElectronicShelfLabelConfiguredDevices
 
-> []InlineResponse200178 GetNetworkWirelessElectronicShelfLabelConfiguredDevices(ctx, networkId).Execute()
+> []InlineResponse200183 GetNetworkWirelessElectronicShelfLabelConfiguredDevices(ctx, networkId).Execute()
 
 Get a list of all ESL eligible devices of a network
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfiguredDevicesApi.GetNetworkWirelessElectronicShelfLabelConfiguredDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessElectronicShelfLabelConfiguredDevices`: []InlineResponse200178
+    // response from `GetNetworkWirelessElectronicShelfLabelConfiguredDevices`: []InlineResponse200183
     fmt.Fprintf(os.Stdout, "Response from `ConfiguredDevicesApi.GetNetworkWirelessElectronicShelfLabelConfiguredDevices`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200178**](InlineResponse200178.md)
+[**[]InlineResponse200183**](InlineResponse200183.md)
 
 ### Authorization
 

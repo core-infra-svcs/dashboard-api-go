@@ -365,7 +365,7 @@ func main() {
     smDeviceName := "smDeviceName_example" // string | The name of the Systems Manager device which the list of events will be filtered with (optional)
     eventDetails := "eventDetails_example" // string | The details of the event(Catalyst device only) which the list of events will be filtered with (optional)
     eventSeverity := "eventSeverity_example" // string | The severity of the event(Catalyst device only) which the list of events will be filtered with (optional)
-    isCatalyst := true // bool | Boolean indicating that whether it is a Catalyst device. For Calatyst device, eventDetails and eventSeverity can be used to filter events. (optional)
+    isCatalyst := true // bool | Boolean indicating that whether it is a Catalyst device. For Catalyst device, eventDetails and eventSeverity can be used to filter events. (optional)
     perPage := int32(56) // int32 | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10. (optional)
     startingAfter := "startingAfter_example" // string | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
     endingBefore := "endingBefore_example" // string | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. (optional)
@@ -411,7 +411,7 @@ Name | Type | Description  | Notes
  **smDeviceName** | **string** | The name of the Systems Manager device which the list of events will be filtered with | 
  **eventDetails** | **string** | The details of the event(Catalyst device only) which the list of events will be filtered with | 
  **eventSeverity** | **string** | The severity of the event(Catalyst device only) which the list of events will be filtered with | 
- **isCatalyst** | **bool** | Boolean indicating that whether it is a Catalyst device. For Calatyst device, eventDetails and eventSeverity can be used to filter events. | 
+ **isCatalyst** | **bool** | Boolean indicating that whether it is a Catalyst device. For Catalyst device, eventDetails and eventSeverity can be used to filter events. | 
  **perPage** | **int32** | The number of entries per page returned. Acceptable range is 3 - 1000. Default is 10. | 
  **startingAfter** | **string** | A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 
  **endingBefore** | **string** | A token used by the server to indicate the end of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it. | 

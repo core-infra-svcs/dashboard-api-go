@@ -4,17 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | The alert type | 
-**AlertCondition** | [**OrganizationsOrganizationIdAlertsProfilesAlertCondition1**](OrganizationsOrganizationIdAlertsProfilesAlertCondition1.md) |  | 
-**Recipients** | [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | 
-**NetworkTags** | **[]string** | Networks with these tags will be monitored for the alert | 
-**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
+**SourceGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1.md) |  | [optional] 
+**DestinationGroup** | Pointer to [**OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1.md) |  | [optional] 
+**Acls** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1**](OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1.md) | An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy | [optional] 
+**LastEntryRule** | Pointer to **string** | The rule to apply if there is no matching ACL | [optional] 
 
 ## Methods
 
 ### NewInlineObject210
 
-`func NewInlineObject210(type_ string, alertCondition OrganizationsOrganizationIdAlertsProfilesAlertCondition1, recipients OrganizationsOrganizationIdAlertsProfilesRecipients, networkTags []string, ) *InlineObject210`
+`func NewInlineObject210() *InlineObject210`
 
 NewInlineObject210 instantiates a new InlineObject210 object
 This constructor will assign default values to properties that have it defined,
@@ -29,110 +28,105 @@ NewInlineObject210WithDefaults instantiates a new InlineObject210 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetSourceGroup
 
-`func (o *InlineObject210) GetType() string`
+`func (o *InlineObject210) GetSourceGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetSourceGroup returns the SourceGroup field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetSourceGroupOk
 
-`func (o *InlineObject210) GetTypeOk() (*string, bool)`
+`func (o *InlineObject210) GetSourceGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetSourceGroupOk returns a tuple with the SourceGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetSourceGroup
 
-`func (o *InlineObject210) SetType(v string)`
+`func (o *InlineObject210) SetSourceGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesSourceGroup1)`
 
-SetType sets Type field to given value.
+SetSourceGroup sets SourceGroup field to given value.
 
+### HasSourceGroup
 
-### GetAlertCondition
+`func (o *InlineObject210) HasSourceGroup() bool`
 
-`func (o *InlineObject210) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition1`
+HasSourceGroup returns a boolean if a field has been set.
 
-GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+### GetDestinationGroup
 
-### GetAlertConditionOk
+`func (o *InlineObject210) GetDestinationGroup() OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1`
 
-`func (o *InlineObject210) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition1, bool)`
+GetDestinationGroup returns the DestinationGroup field if non-nil, zero value otherwise.
 
-GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+### GetDestinationGroupOk
+
+`func (o *InlineObject210) GetDestinationGroupOk() (*OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1, bool)`
+
+GetDestinationGroupOk returns a tuple with the DestinationGroup field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertCondition
+### SetDestinationGroup
 
-`func (o *InlineObject210) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition1)`
+`func (o *InlineObject210) SetDestinationGroup(v OrganizationsOrganizationIdAdaptivePolicyPoliciesDestinationGroup1)`
 
-SetAlertCondition sets AlertCondition field to given value.
+SetDestinationGroup sets DestinationGroup field to given value.
 
+### HasDestinationGroup
 
-### GetRecipients
+`func (o *InlineObject210) HasDestinationGroup() bool`
 
-`func (o *InlineObject210) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
+HasDestinationGroup returns a boolean if a field has been set.
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+### GetAcls
 
-### GetRecipientsOk
+`func (o *InlineObject210) GetAcls() []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1`
 
-`func (o *InlineObject210) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
+GetAcls returns the Acls field if non-nil, zero value otherwise.
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+### GetAclsOk
+
+`func (o *InlineObject210) GetAclsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1, bool)`
+
+GetAclsOk returns a tuple with the Acls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetAcls
 
-`func (o *InlineObject210) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
+`func (o *InlineObject210) SetAcls(v []OrganizationsOrganizationIdAdaptivePolicyPoliciesAcls1)`
 
-SetRecipients sets Recipients field to given value.
+SetAcls sets Acls field to given value.
 
+### HasAcls
 
-### GetNetworkTags
+`func (o *InlineObject210) HasAcls() bool`
 
-`func (o *InlineObject210) GetNetworkTags() []string`
+HasAcls returns a boolean if a field has been set.
 
-GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
+### GetLastEntryRule
 
-### GetNetworkTagsOk
+`func (o *InlineObject210) GetLastEntryRule() string`
 
-`func (o *InlineObject210) GetNetworkTagsOk() (*[]string, bool)`
+GetLastEntryRule returns the LastEntryRule field if non-nil, zero value otherwise.
 
-GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
+### GetLastEntryRuleOk
+
+`func (o *InlineObject210) GetLastEntryRuleOk() (*string, bool)`
+
+GetLastEntryRuleOk returns a tuple with the LastEntryRule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkTags
+### SetLastEntryRule
 
-`func (o *InlineObject210) SetNetworkTags(v []string)`
+`func (o *InlineObject210) SetLastEntryRule(v string)`
 
-SetNetworkTags sets NetworkTags field to given value.
+SetLastEntryRule sets LastEntryRule field to given value.
 
+### HasLastEntryRule
 
-### GetDescription
+`func (o *InlineObject210) HasLastEntryRule() bool`
 
-`func (o *InlineObject210) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject210) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject210) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject210) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasLastEntryRule returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

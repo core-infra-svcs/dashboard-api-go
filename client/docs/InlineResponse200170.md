@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
-**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
-**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
-**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
-**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**EslEnabled** | Pointer to **bool** | Whether ESL is enabled on this network. | [optional] 
+**VlanProfile** | Pointer to [**InlineResponse200170VlanProfile**](InlineResponse200170VlanProfile.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | Array of Device Serials | [optional] 
+**StackIds** | Pointer to **[]string** | Array of Switch Stack IDs | [optional] 
 
 ## Methods
 
@@ -31,180 +27,80 @@ NewInlineResponse200170WithDefaults instantiates a new InlineResponse200170 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScanningEnabled
+### GetVlanProfile
 
-`func (o *InlineResponse200170) GetScanningEnabled() bool`
+`func (o *InlineResponse200170) GetVlanProfile() InlineResponse200170VlanProfile`
 
-GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetScanningEnabledOk
+### GetVlanProfileOk
 
-`func (o *InlineResponse200170) GetScanningEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200170) GetVlanProfileOk() (*InlineResponse200170VlanProfile, bool)`
 
-GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScanningEnabled
+### SetVlanProfile
 
-`func (o *InlineResponse200170) SetScanningEnabled(v bool)`
+`func (o *InlineResponse200170) SetVlanProfile(v InlineResponse200170VlanProfile)`
 
-SetScanningEnabled sets ScanningEnabled field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
-### HasScanningEnabled
+### HasVlanProfile
 
-`func (o *InlineResponse200170) HasScanningEnabled() bool`
+`func (o *InlineResponse200170) HasVlanProfile() bool`
 
-HasScanningEnabled returns a boolean if a field has been set.
+HasVlanProfile returns a boolean if a field has been set.
 
-### GetAdvertisingEnabled
+### GetSerials
 
-`func (o *InlineResponse200170) GetAdvertisingEnabled() bool`
+`func (o *InlineResponse200170) GetSerials() []string`
 
-GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetAdvertisingEnabledOk
+### GetSerialsOk
 
-`func (o *InlineResponse200170) GetAdvertisingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200170) GetSerialsOk() (*[]string, bool)`
 
-GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertisingEnabled
+### SetSerials
 
-`func (o *InlineResponse200170) SetAdvertisingEnabled(v bool)`
+`func (o *InlineResponse200170) SetSerials(v []string)`
 
-SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
+SetSerials sets Serials field to given value.
 
-### HasAdvertisingEnabled
+### HasSerials
 
-`func (o *InlineResponse200170) HasAdvertisingEnabled() bool`
+`func (o *InlineResponse200170) HasSerials() bool`
 
-HasAdvertisingEnabled returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetUuid
+### GetStackIds
 
-`func (o *InlineResponse200170) GetUuid() string`
+`func (o *InlineResponse200170) GetStackIds() []string`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetStackIds returns the StackIds field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetStackIdsOk
 
-`func (o *InlineResponse200170) GetUuidOk() (*string, bool)`
+`func (o *InlineResponse200170) GetStackIdsOk() (*[]string, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetStackIds
 
-`func (o *InlineResponse200170) SetUuid(v string)`
+`func (o *InlineResponse200170) SetStackIds(v []string)`
 
-SetUuid sets Uuid field to given value.
+SetStackIds sets StackIds field to given value.
 
-### HasUuid
+### HasStackIds
 
-`func (o *InlineResponse200170) HasUuid() bool`
+`func (o *InlineResponse200170) HasStackIds() bool`
 
-HasUuid returns a boolean if a field has been set.
-
-### GetMajorMinorAssignmentMode
-
-`func (o *InlineResponse200170) GetMajorMinorAssignmentMode() string`
-
-GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
-
-### GetMajorMinorAssignmentModeOk
-
-`func (o *InlineResponse200170) GetMajorMinorAssignmentModeOk() (*string, bool)`
-
-GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMajorMinorAssignmentMode
-
-`func (o *InlineResponse200170) SetMajorMinorAssignmentMode(v string)`
-
-SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
-
-### HasMajorMinorAssignmentMode
-
-`func (o *InlineResponse200170) HasMajorMinorAssignmentMode() bool`
-
-HasMajorMinorAssignmentMode returns a boolean if a field has been set.
-
-### GetMajor
-
-`func (o *InlineResponse200170) GetMajor() int32`
-
-GetMajor returns the Major field if non-nil, zero value otherwise.
-
-### GetMajorOk
-
-`func (o *InlineResponse200170) GetMajorOk() (*int32, bool)`
-
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMajor
-
-`func (o *InlineResponse200170) SetMajor(v int32)`
-
-SetMajor sets Major field to given value.
-
-### HasMajor
-
-`func (o *InlineResponse200170) HasMajor() bool`
-
-HasMajor returns a boolean if a field has been set.
-
-### GetMinor
-
-`func (o *InlineResponse200170) GetMinor() int32`
-
-GetMinor returns the Minor field if non-nil, zero value otherwise.
-
-### GetMinorOk
-
-`func (o *InlineResponse200170) GetMinorOk() (*int32, bool)`
-
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinor
-
-`func (o *InlineResponse200170) SetMinor(v int32)`
-
-SetMinor sets Minor field to given value.
-
-### HasMinor
-
-`func (o *InlineResponse200170) HasMinor() bool`
-
-HasMinor returns a boolean if a field has been set.
-
-### GetEslEnabled
-
-`func (o *InlineResponse200170) GetEslEnabled() bool`
-
-GetEslEnabled returns the EslEnabled field if non-nil, zero value otherwise.
-
-### GetEslEnabledOk
-
-`func (o *InlineResponse200170) GetEslEnabledOk() (*bool, bool)`
-
-GetEslEnabledOk returns a tuple with the EslEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEslEnabled
-
-`func (o *InlineResponse200170) SetEslEnabled(v bool)`
-
-SetEslEnabled sets EslEnabled field to given value.
-
-### HasEslEnabled
-
-`func (o *InlineResponse200170) HasEslEnabled() bool`
-
-HasEslEnabled returns a boolean if a field has been set.
+HasStackIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

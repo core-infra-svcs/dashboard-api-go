@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Lldp** | Pointer to [**InlineResponse20026Lldp**](InlineResponse20026Lldp.md) |  | [optional] 
 **Cdp** | Pointer to [**InlineResponse20026Cdp**](InlineResponse20026Cdp.md) |  | [optional] 
+**DeviceMac** | Pointer to **string** | MAC address for the device | [optional] 
 **Device** | Pointer to [**InlineResponse20026Device**](InlineResponse20026Device.md) |  | [optional] 
 
 ## Methods
@@ -76,6 +77,31 @@ SetCdp sets Cdp field to given value.
 `func (o *InlineResponse20026Ports) HasCdp() bool`
 
 HasCdp returns a boolean if a field has been set.
+
+### GetDeviceMac
+
+`func (o *InlineResponse20026Ports) GetDeviceMac() string`
+
+GetDeviceMac returns the DeviceMac field if non-nil, zero value otherwise.
+
+### GetDeviceMacOk
+
+`func (o *InlineResponse20026Ports) GetDeviceMacOk() (*string, bool)`
+
+GetDeviceMacOk returns a tuple with the DeviceMac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceMac
+
+`func (o *InlineResponse20026Ports) SetDeviceMac(v string)`
+
+SetDeviceMac sets DeviceMac field to given value.
+
+### HasDeviceMac
+
+`func (o *InlineResponse20026Ports) HasDeviceMac() bool`
+
+HasDeviceMac returns a boolean if a field has been set.
 
 ### GetDevice
 

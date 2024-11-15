@@ -4,20 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the endpoints to be rebooted. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the endpoints to be rebooted. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the endpoints to be rebooted. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be rebooted. | [optional] 
-**KextPaths** | Pointer to **[]string** | The KextPaths of the endpoints to be rebooted. Available for macOS 11+ | [optional] 
-**NotifyUser** | Pointer to **bool** | Whether or not to notify the user before rebooting the endpoint. Available for macOS 11.3+ | [optional] 
-**RebuildKernelCache** | Pointer to **bool** | Whether or not to rebuild the kernel cache when rebooting the endpoint. Available for macOS 11+ | [optional] 
-**RequestRequiresNetworkTether** | Pointer to **bool** | Whether or not the request requires network tethering. Available for macOS and supervised iOS or tvOS | [optional] 
+**WifiMac** | Pointer to **string** | The wifiMac of the device to be modified. | [optional] 
+**Id** | Pointer to **string** | The id of the device to be modified. | [optional] 
+**Serial** | Pointer to **string** | The serial of the device to be modified. | [optional] 
+**DeviceFields** | [**NetworksNetworkIdSmDevicesFieldsDeviceFields**](NetworksNetworkIdSmDevicesFieldsDeviceFields.md) |  | 
 
 ## Methods
 
 ### NewInlineObject120
 
-`func NewInlineObject120() *InlineObject120`
+`func NewInlineObject120(deviceFields NetworksNetworkIdSmDevicesFieldsDeviceFields, ) *InlineObject120`
 
 NewInlineObject120 instantiates a new InlineObject120 object
 This constructor will assign default values to properties that have it defined,
@@ -32,205 +28,100 @@ NewInlineObject120WithDefaults instantiates a new InlineObject120 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetWifiMac
 
-`func (o *InlineObject120) GetWifiMacs() []string`
+`func (o *InlineObject120) GetWifiMac() string`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetWifiMacOk
 
-`func (o *InlineObject120) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject120) GetWifiMacOk() (*string, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetWifiMac
 
-`func (o *InlineObject120) SetWifiMacs(v []string)`
+`func (o *InlineObject120) SetWifiMac(v string)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetWifiMac sets WifiMac field to given value.
 
-### HasWifiMacs
+### HasWifiMac
 
-`func (o *InlineObject120) HasWifiMacs() bool`
+`func (o *InlineObject120) HasWifiMac() bool`
 
-HasWifiMacs returns a boolean if a field has been set.
+HasWifiMac returns a boolean if a field has been set.
 
-### GetIds
+### GetId
 
-`func (o *InlineObject120) GetIds() []string`
+`func (o *InlineObject120) GetId() string`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetIdOk
 
-`func (o *InlineObject120) GetIdsOk() (*[]string, bool)`
+`func (o *InlineObject120) GetIdOk() (*string, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetId
 
-`func (o *InlineObject120) SetIds(v []string)`
+`func (o *InlineObject120) SetId(v string)`
 
-SetIds sets Ids field to given value.
+SetId sets Id field to given value.
 
-### HasIds
+### HasId
 
-`func (o *InlineObject120) HasIds() bool`
+`func (o *InlineObject120) HasId() bool`
 
-HasIds returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetSerials
+### GetSerial
 
-`func (o *InlineObject120) GetSerials() []string`
+`func (o *InlineObject120) GetSerial() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetSerialOk
 
-`func (o *InlineObject120) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject120) GetSerialOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetSerial
 
-`func (o *InlineObject120) SetSerials(v []string)`
+`func (o *InlineObject120) SetSerial(v string)`
 
-SetSerials sets Serials field to given value.
+SetSerial sets Serial field to given value.
 
-### HasSerials
+### HasSerial
 
-`func (o *InlineObject120) HasSerials() bool`
+`func (o *InlineObject120) HasSerial() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetScope
+### GetDeviceFields
 
-`func (o *InlineObject120) GetScope() []string`
+`func (o *InlineObject120) GetDeviceFields() NetworksNetworkIdSmDevicesFieldsDeviceFields`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetDeviceFields returns the DeviceFields field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetDeviceFieldsOk
 
-`func (o *InlineObject120) GetScopeOk() (*[]string, bool)`
+`func (o *InlineObject120) GetDeviceFieldsOk() (*NetworksNetworkIdSmDevicesFieldsDeviceFields, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetDeviceFieldsOk returns a tuple with the DeviceFields field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetDeviceFields
 
-`func (o *InlineObject120) SetScope(v []string)`
+`func (o *InlineObject120) SetDeviceFields(v NetworksNetworkIdSmDevicesFieldsDeviceFields)`
 
-SetScope sets Scope field to given value.
+SetDeviceFields sets DeviceFields field to given value.
 
-### HasScope
-
-`func (o *InlineObject120) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
-
-### GetKextPaths
-
-`func (o *InlineObject120) GetKextPaths() []string`
-
-GetKextPaths returns the KextPaths field if non-nil, zero value otherwise.
-
-### GetKextPathsOk
-
-`func (o *InlineObject120) GetKextPathsOk() (*[]string, bool)`
-
-GetKextPathsOk returns a tuple with the KextPaths field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetKextPaths
-
-`func (o *InlineObject120) SetKextPaths(v []string)`
-
-SetKextPaths sets KextPaths field to given value.
-
-### HasKextPaths
-
-`func (o *InlineObject120) HasKextPaths() bool`
-
-HasKextPaths returns a boolean if a field has been set.
-
-### GetNotifyUser
-
-`func (o *InlineObject120) GetNotifyUser() bool`
-
-GetNotifyUser returns the NotifyUser field if non-nil, zero value otherwise.
-
-### GetNotifyUserOk
-
-`func (o *InlineObject120) GetNotifyUserOk() (*bool, bool)`
-
-GetNotifyUserOk returns a tuple with the NotifyUser field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNotifyUser
-
-`func (o *InlineObject120) SetNotifyUser(v bool)`
-
-SetNotifyUser sets NotifyUser field to given value.
-
-### HasNotifyUser
-
-`func (o *InlineObject120) HasNotifyUser() bool`
-
-HasNotifyUser returns a boolean if a field has been set.
-
-### GetRebuildKernelCache
-
-`func (o *InlineObject120) GetRebuildKernelCache() bool`
-
-GetRebuildKernelCache returns the RebuildKernelCache field if non-nil, zero value otherwise.
-
-### GetRebuildKernelCacheOk
-
-`func (o *InlineObject120) GetRebuildKernelCacheOk() (*bool, bool)`
-
-GetRebuildKernelCacheOk returns a tuple with the RebuildKernelCache field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRebuildKernelCache
-
-`func (o *InlineObject120) SetRebuildKernelCache(v bool)`
-
-SetRebuildKernelCache sets RebuildKernelCache field to given value.
-
-### HasRebuildKernelCache
-
-`func (o *InlineObject120) HasRebuildKernelCache() bool`
-
-HasRebuildKernelCache returns a boolean if a field has been set.
-
-### GetRequestRequiresNetworkTether
-
-`func (o *InlineObject120) GetRequestRequiresNetworkTether() bool`
-
-GetRequestRequiresNetworkTether returns the RequestRequiresNetworkTether field if non-nil, zero value otherwise.
-
-### GetRequestRequiresNetworkTetherOk
-
-`func (o *InlineObject120) GetRequestRequiresNetworkTetherOk() (*bool, bool)`
-
-GetRequestRequiresNetworkTetherOk returns a tuple with the RequestRequiresNetworkTether field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRequestRequiresNetworkTether
-
-`func (o *InlineObject120) SetRequestRequiresNetworkTether(v bool)`
-
-SetRequestRequiresNetworkTether sets RequestRequiresNetworkTether field to given value.
-
-### HasRequestRequiresNetworkTether
-
-`func (o *InlineObject120) HasRequestRequiresNetworkTether() bool`
-
-HasRequestRequiresNetworkTether returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

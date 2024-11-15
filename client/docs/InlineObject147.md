@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default. | [optional] 
-**HelloTimerInSeconds** | Pointer to **int32** | Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds. | [optional] 
-**DeadTimerInSeconds** | Pointer to **int32** | Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535 | [optional] 
-**Areas** | Pointer to [**[]NetworksNetworkIdSwitchRoutingOspfAreas**](NetworksNetworkIdSwitchRoutingOspfAreas.md) | OSPF areas | [optional] 
-**V3** | Pointer to [**NetworksNetworkIdSwitchRoutingOspfV3**](NetworksNetworkIdSwitchRoutingOspfV3.md) |  | [optional] 
-**Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
-**Md5AuthenticationKey** | Pointer to [**InlineResponse200155Md5AuthenticationKey**](InlineResponse200155Md5AuthenticationKey.md) |  | [optional] 
+**Vlan** | Pointer to **int32** | The VLAN of the incoming packet. A null value will match any VLAN. | [optional] 
+**Protocol** | Pointer to **string** | The protocol of the incoming packet. Default value is \&quot;ANY\&quot; | [optional] 
+**SrcPort** | Pointer to **int32** | The source port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
+**SrcPortRange** | Pointer to **string** | The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. | [optional] 
+**DstPort** | Pointer to **int32** | The destination port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
+**DstPortRange** | Pointer to **string** | The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. | [optional] 
+**Dscp** | Pointer to **int32** | DSCP tag that should be assigned to incoming packet. Set this to -1 to trust incoming DSCP. Default value is 0 | [optional] 
 
 ## Methods
 
@@ -31,180 +31,180 @@ NewInlineObject147WithDefaults instantiates a new InlineObject147 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetVlan
 
-`func (o *InlineObject147) GetEnabled() bool`
+`func (o *InlineObject147) GetVlan() int32`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetVlanOk
 
-`func (o *InlineObject147) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject147) GetVlanOk() (*int32, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetVlan
 
-`func (o *InlineObject147) SetEnabled(v bool)`
+`func (o *InlineObject147) SetVlan(v int32)`
 
-SetEnabled sets Enabled field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasEnabled
+### HasVlan
 
-`func (o *InlineObject147) HasEnabled() bool`
+`func (o *InlineObject147) HasVlan() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetHelloTimerInSeconds
+### GetProtocol
 
-`func (o *InlineObject147) GetHelloTimerInSeconds() int32`
+`func (o *InlineObject147) GetProtocol() string`
 
-GetHelloTimerInSeconds returns the HelloTimerInSeconds field if non-nil, zero value otherwise.
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
 
-### GetHelloTimerInSecondsOk
+### GetProtocolOk
 
-`func (o *InlineObject147) GetHelloTimerInSecondsOk() (*int32, bool)`
+`func (o *InlineObject147) GetProtocolOk() (*string, bool)`
 
-GetHelloTimerInSecondsOk returns a tuple with the HelloTimerInSeconds field if it's non-nil, zero value otherwise
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHelloTimerInSeconds
+### SetProtocol
 
-`func (o *InlineObject147) SetHelloTimerInSeconds(v int32)`
+`func (o *InlineObject147) SetProtocol(v string)`
 
-SetHelloTimerInSeconds sets HelloTimerInSeconds field to given value.
+SetProtocol sets Protocol field to given value.
 
-### HasHelloTimerInSeconds
+### HasProtocol
 
-`func (o *InlineObject147) HasHelloTimerInSeconds() bool`
+`func (o *InlineObject147) HasProtocol() bool`
 
-HasHelloTimerInSeconds returns a boolean if a field has been set.
+HasProtocol returns a boolean if a field has been set.
 
-### GetDeadTimerInSeconds
+### GetSrcPort
 
-`func (o *InlineObject147) GetDeadTimerInSeconds() int32`
+`func (o *InlineObject147) GetSrcPort() int32`
 
-GetDeadTimerInSeconds returns the DeadTimerInSeconds field if non-nil, zero value otherwise.
+GetSrcPort returns the SrcPort field if non-nil, zero value otherwise.
 
-### GetDeadTimerInSecondsOk
+### GetSrcPortOk
 
-`func (o *InlineObject147) GetDeadTimerInSecondsOk() (*int32, bool)`
+`func (o *InlineObject147) GetSrcPortOk() (*int32, bool)`
 
-GetDeadTimerInSecondsOk returns a tuple with the DeadTimerInSeconds field if it's non-nil, zero value otherwise
+GetSrcPortOk returns a tuple with the SrcPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeadTimerInSeconds
+### SetSrcPort
 
-`func (o *InlineObject147) SetDeadTimerInSeconds(v int32)`
+`func (o *InlineObject147) SetSrcPort(v int32)`
 
-SetDeadTimerInSeconds sets DeadTimerInSeconds field to given value.
+SetSrcPort sets SrcPort field to given value.
 
-### HasDeadTimerInSeconds
+### HasSrcPort
 
-`func (o *InlineObject147) HasDeadTimerInSeconds() bool`
+`func (o *InlineObject147) HasSrcPort() bool`
 
-HasDeadTimerInSeconds returns a boolean if a field has been set.
+HasSrcPort returns a boolean if a field has been set.
 
-### GetAreas
+### GetSrcPortRange
 
-`func (o *InlineObject147) GetAreas() []NetworksNetworkIdSwitchRoutingOspfAreas`
+`func (o *InlineObject147) GetSrcPortRange() string`
 
-GetAreas returns the Areas field if non-nil, zero value otherwise.
+GetSrcPortRange returns the SrcPortRange field if non-nil, zero value otherwise.
 
-### GetAreasOk
+### GetSrcPortRangeOk
 
-`func (o *InlineObject147) GetAreasOk() (*[]NetworksNetworkIdSwitchRoutingOspfAreas, bool)`
+`func (o *InlineObject147) GetSrcPortRangeOk() (*string, bool)`
 
-GetAreasOk returns a tuple with the Areas field if it's non-nil, zero value otherwise
+GetSrcPortRangeOk returns a tuple with the SrcPortRange field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAreas
+### SetSrcPortRange
 
-`func (o *InlineObject147) SetAreas(v []NetworksNetworkIdSwitchRoutingOspfAreas)`
+`func (o *InlineObject147) SetSrcPortRange(v string)`
 
-SetAreas sets Areas field to given value.
+SetSrcPortRange sets SrcPortRange field to given value.
 
-### HasAreas
+### HasSrcPortRange
 
-`func (o *InlineObject147) HasAreas() bool`
+`func (o *InlineObject147) HasSrcPortRange() bool`
 
-HasAreas returns a boolean if a field has been set.
+HasSrcPortRange returns a boolean if a field has been set.
 
-### GetV3
+### GetDstPort
 
-`func (o *InlineObject147) GetV3() NetworksNetworkIdSwitchRoutingOspfV3`
+`func (o *InlineObject147) GetDstPort() int32`
 
-GetV3 returns the V3 field if non-nil, zero value otherwise.
+GetDstPort returns the DstPort field if non-nil, zero value otherwise.
 
-### GetV3Ok
+### GetDstPortOk
 
-`func (o *InlineObject147) GetV3Ok() (*NetworksNetworkIdSwitchRoutingOspfV3, bool)`
+`func (o *InlineObject147) GetDstPortOk() (*int32, bool)`
 
-GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
+GetDstPortOk returns a tuple with the DstPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetV3
+### SetDstPort
 
-`func (o *InlineObject147) SetV3(v NetworksNetworkIdSwitchRoutingOspfV3)`
+`func (o *InlineObject147) SetDstPort(v int32)`
 
-SetV3 sets V3 field to given value.
+SetDstPort sets DstPort field to given value.
 
-### HasV3
+### HasDstPort
 
-`func (o *InlineObject147) HasV3() bool`
+`func (o *InlineObject147) HasDstPort() bool`
 
-HasV3 returns a boolean if a field has been set.
+HasDstPort returns a boolean if a field has been set.
 
-### GetMd5AuthenticationEnabled
+### GetDstPortRange
 
-`func (o *InlineObject147) GetMd5AuthenticationEnabled() bool`
+`func (o *InlineObject147) GetDstPortRange() string`
 
-GetMd5AuthenticationEnabled returns the Md5AuthenticationEnabled field if non-nil, zero value otherwise.
+GetDstPortRange returns the DstPortRange field if non-nil, zero value otherwise.
 
-### GetMd5AuthenticationEnabledOk
+### GetDstPortRangeOk
 
-`func (o *InlineObject147) GetMd5AuthenticationEnabledOk() (*bool, bool)`
+`func (o *InlineObject147) GetDstPortRangeOk() (*string, bool)`
 
-GetMd5AuthenticationEnabledOk returns a tuple with the Md5AuthenticationEnabled field if it's non-nil, zero value otherwise
+GetDstPortRangeOk returns a tuple with the DstPortRange field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMd5AuthenticationEnabled
+### SetDstPortRange
 
-`func (o *InlineObject147) SetMd5AuthenticationEnabled(v bool)`
+`func (o *InlineObject147) SetDstPortRange(v string)`
 
-SetMd5AuthenticationEnabled sets Md5AuthenticationEnabled field to given value.
+SetDstPortRange sets DstPortRange field to given value.
 
-### HasMd5AuthenticationEnabled
+### HasDstPortRange
 
-`func (o *InlineObject147) HasMd5AuthenticationEnabled() bool`
+`func (o *InlineObject147) HasDstPortRange() bool`
 
-HasMd5AuthenticationEnabled returns a boolean if a field has been set.
+HasDstPortRange returns a boolean if a field has been set.
 
-### GetMd5AuthenticationKey
+### GetDscp
 
-`func (o *InlineObject147) GetMd5AuthenticationKey() InlineResponse200155Md5AuthenticationKey`
+`func (o *InlineObject147) GetDscp() int32`
 
-GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
+GetDscp returns the Dscp field if non-nil, zero value otherwise.
 
-### GetMd5AuthenticationKeyOk
+### GetDscpOk
 
-`func (o *InlineObject147) GetMd5AuthenticationKeyOk() (*InlineResponse200155Md5AuthenticationKey, bool)`
+`func (o *InlineObject147) GetDscpOk() (*int32, bool)`
 
-GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
+GetDscpOk returns a tuple with the Dscp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMd5AuthenticationKey
+### SetDscp
 
-`func (o *InlineObject147) SetMd5AuthenticationKey(v InlineResponse200155Md5AuthenticationKey)`
+`func (o *InlineObject147) SetDscp(v int32)`
 
-SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
+SetDscp sets Dscp field to given value.
 
-### HasMd5AuthenticationKey
+### HasDscp
 
-`func (o *InlineObject147) HasMd5AuthenticationKey() bool`
+`func (o *InlineObject147) HasDscp() bool`
 
-HasMd5AuthenticationKey returns a boolean if a field has been set.
+HasDscp returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

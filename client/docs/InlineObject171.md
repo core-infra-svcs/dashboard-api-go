@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** | Indicates if this rule will allow, block, or alert. | [optional] 
-**Match** | Pointer to [**NetworksNetworkIdWirelessAirMarshalRulesMatch**](NetworksNetworkIdWirelessAirMarshalRulesMatch.md) |  | [optional] 
+**Name** | **string** | The name of the new template | 
+**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
+**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
 
 ## Methods
 
 ### NewInlineObject171
 
-`func NewInlineObject171() *InlineObject171`
+`func NewInlineObject171(name string, ) *InlineObject171`
 
 NewInlineObject171 instantiates a new InlineObject171 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +29,125 @@ NewInlineObject171WithDefaults instantiates a new InlineObject171 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetName
 
-`func (o *InlineObject171) GetType() string`
+`func (o *InlineObject171) GetName() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetNameOk
 
-`func (o *InlineObject171) GetTypeOk() (*string, bool)`
+`func (o *InlineObject171) GetNameOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetName
 
-`func (o *InlineObject171) SetType(v string)`
+`func (o *InlineObject171) SetName(v string)`
 
-SetType sets Type field to given value.
+SetName sets Name field to given value.
 
-### HasType
 
-`func (o *InlineObject171) HasType() bool`
+### GetBody
 
-HasType returns a boolean if a field has been set.
+`func (o *InlineObject171) GetBody() string`
 
-### GetMatch
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-`func (o *InlineObject171) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesMatch`
+### GetBodyOk
 
-GetMatch returns the Match field if non-nil, zero value otherwise.
+`func (o *InlineObject171) GetBodyOk() (*string, bool)`
 
-### GetMatchOk
-
-`func (o *InlineObject171) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesMatch, bool)`
-
-GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMatch
+### SetBody
 
-`func (o *InlineObject171) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesMatch)`
+`func (o *InlineObject171) SetBody(v string)`
 
-SetMatch sets Match field to given value.
+SetBody sets Body field to given value.
 
-### HasMatch
+### HasBody
 
-`func (o *InlineObject171) HasMatch() bool`
+`func (o *InlineObject171) HasBody() bool`
 
-HasMatch returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
+
+### GetHeaders
+
+`func (o *InlineObject171) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
+
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
+
+### GetHeadersOk
+
+`func (o *InlineObject171) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
+
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeaders
+
+`func (o *InlineObject171) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
+
+SetHeaders sets Headers field to given value.
+
+### HasHeaders
+
+`func (o *InlineObject171) HasHeaders() bool`
+
+HasHeaders returns a boolean if a field has been set.
+
+### GetBodyFile
+
+`func (o *InlineObject171) GetBodyFile() string`
+
+GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
+
+### GetBodyFileOk
+
+`func (o *InlineObject171) GetBodyFileOk() (*string, bool)`
+
+GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBodyFile
+
+`func (o *InlineObject171) SetBodyFile(v string)`
+
+SetBodyFile sets BodyFile field to given value.
+
+### HasBodyFile
+
+`func (o *InlineObject171) HasBodyFile() bool`
+
+HasBodyFile returns a boolean if a field has been set.
+
+### GetHeadersFile
+
+`func (o *InlineObject171) GetHeadersFile() string`
+
+GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
+
+### GetHeadersFileOk
+
+`func (o *InlineObject171) GetHeadersFileOk() (*string, bool)`
+
+GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeadersFile
+
+`func (o *InlineObject171) SetHeadersFile(v string)`
+
+SetHeadersFile sets HeadersFile field to given value.
+
+### HasHeadersFile
+
+`func (o *InlineObject171) HasHeadersFile() bool`
+
+HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** | One of \&quot;delete\&quot; or \&quot;restrict processing\&quot; | [optional] 
-**Datasets** | Pointer to **[]string** | The datasets related to the provided key that should be deleted. Only applies to \&quot;delete\&quot; requests. The value \&quot;all\&quot; will be expanded to all datasets applicable to this type. The datasets by applicable to each type are: mac (usage, events, traffic), email (users, loginAttempts), username (users, loginAttempts), bluetoothMac (client, connectivity), smDeviceId (device), smUserId (user) | [optional] 
-**Username** | Pointer to **string** | The username of a network log in. Only applies to \&quot;delete\&quot; requests. | [optional] 
-**Email** | Pointer to **string** | The email of a network user account. Only applies to \&quot;delete\&quot; requests. | [optional] 
-**Mac** | Pointer to **string** | The MAC of a network client device. Applies to both \&quot;restrict processing\&quot; and \&quot;delete\&quot; requests. | [optional] 
-**SmDeviceId** | Pointer to **string** | The sm_device_id of a Systems Manager device. The only way to \&quot;restrict processing\&quot; or \&quot;delete\&quot; a Systems Manager device. Must include \&quot;device\&quot; in the dataset for a \&quot;delete\&quot; request to destroy the device. | [optional] 
-**SmUserId** | Pointer to **string** | The sm_user_id of a Systems Manager user. The only way to \&quot;restrict processing\&quot; or \&quot;delete\&quot; a Systems Manager user. Must include \&quot;user\&quot; in the dataset for a \&quot;delete\&quot; request to destroy the user. | [optional] 
+**Name** | Pointer to **string** | Name of the user. Only allowed If the user is not Dashboard administrator. | [optional] 
+**Password** | Pointer to **string** | The password for this user account. Only allowed If the user is not Dashboard administrator. | [optional] 
+**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations**](NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md) | Authorization zones and expiration dates for the user. | [optional] 
 
 ## Methods
 
@@ -31,180 +28,105 @@ NewInlineObject109WithDefaults instantiates a new InlineObject109 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetName
 
-`func (o *InlineObject109) GetType() string`
+`func (o *InlineObject109) GetName() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetNameOk
 
-`func (o *InlineObject109) GetTypeOk() (*string, bool)`
+`func (o *InlineObject109) GetNameOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetName
 
-`func (o *InlineObject109) SetType(v string)`
+`func (o *InlineObject109) SetName(v string)`
 
-SetType sets Type field to given value.
+SetName sets Name field to given value.
 
-### HasType
+### HasName
 
-`func (o *InlineObject109) HasType() bool`
+`func (o *InlineObject109) HasName() bool`
 
-HasType returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDatasets
+### GetPassword
 
-`func (o *InlineObject109) GetDatasets() []string`
+`func (o *InlineObject109) GetPassword() string`
 
-GetDatasets returns the Datasets field if non-nil, zero value otherwise.
+GetPassword returns the Password field if non-nil, zero value otherwise.
 
-### GetDatasetsOk
+### GetPasswordOk
 
-`func (o *InlineObject109) GetDatasetsOk() (*[]string, bool)`
+`func (o *InlineObject109) GetPasswordOk() (*string, bool)`
 
-GetDatasetsOk returns a tuple with the Datasets field if it's non-nil, zero value otherwise
+GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDatasets
+### SetPassword
 
-`func (o *InlineObject109) SetDatasets(v []string)`
+`func (o *InlineObject109) SetPassword(v string)`
 
-SetDatasets sets Datasets field to given value.
+SetPassword sets Password field to given value.
 
-### HasDatasets
+### HasPassword
 
-`func (o *InlineObject109) HasDatasets() bool`
+`func (o *InlineObject109) HasPassword() bool`
 
-HasDatasets returns a boolean if a field has been set.
+HasPassword returns a boolean if a field has been set.
 
-### GetUsername
+### GetEmailPasswordToUser
 
-`func (o *InlineObject109) GetUsername() string`
+`func (o *InlineObject109) GetEmailPasswordToUser() bool`
 
-GetUsername returns the Username field if non-nil, zero value otherwise.
+GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
 
-### GetUsernameOk
+### GetEmailPasswordToUserOk
 
-`func (o *InlineObject109) GetUsernameOk() (*string, bool)`
+`func (o *InlineObject109) GetEmailPasswordToUserOk() (*bool, bool)`
 
-GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsername
+### SetEmailPasswordToUser
 
-`func (o *InlineObject109) SetUsername(v string)`
+`func (o *InlineObject109) SetEmailPasswordToUser(v bool)`
 
-SetUsername sets Username field to given value.
+SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
 
-### HasUsername
+### HasEmailPasswordToUser
 
-`func (o *InlineObject109) HasUsername() bool`
+`func (o *InlineObject109) HasEmailPasswordToUser() bool`
 
-HasUsername returns a boolean if a field has been set.
+HasEmailPasswordToUser returns a boolean if a field has been set.
 
-### GetEmail
+### GetAuthorizations
 
-`func (o *InlineObject109) GetEmail() string`
+`func (o *InlineObject109) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations`
 
-GetEmail returns the Email field if non-nil, zero value otherwise.
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
 
-### GetEmailOk
+### GetAuthorizationsOk
 
-`func (o *InlineObject109) GetEmailOk() (*string, bool)`
+`func (o *InlineObject109) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations, bool)`
 
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmail
+### SetAuthorizations
 
-`func (o *InlineObject109) SetEmail(v string)`
+`func (o *InlineObject109) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations)`
 
-SetEmail sets Email field to given value.
+SetAuthorizations sets Authorizations field to given value.
 
-### HasEmail
+### HasAuthorizations
 
-`func (o *InlineObject109) HasEmail() bool`
+`func (o *InlineObject109) HasAuthorizations() bool`
 
-HasEmail returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineObject109) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineObject109) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineObject109) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineObject109) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetSmDeviceId
-
-`func (o *InlineObject109) GetSmDeviceId() string`
-
-GetSmDeviceId returns the SmDeviceId field if non-nil, zero value otherwise.
-
-### GetSmDeviceIdOk
-
-`func (o *InlineObject109) GetSmDeviceIdOk() (*string, bool)`
-
-GetSmDeviceIdOk returns a tuple with the SmDeviceId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSmDeviceId
-
-`func (o *InlineObject109) SetSmDeviceId(v string)`
-
-SetSmDeviceId sets SmDeviceId field to given value.
-
-### HasSmDeviceId
-
-`func (o *InlineObject109) HasSmDeviceId() bool`
-
-HasSmDeviceId returns a boolean if a field has been set.
-
-### GetSmUserId
-
-`func (o *InlineObject109) GetSmUserId() string`
-
-GetSmUserId returns the SmUserId field if non-nil, zero value otherwise.
-
-### GetSmUserIdOk
-
-`func (o *InlineObject109) GetSmUserIdOk() (*string, bool)`
-
-GetSmUserIdOk returns a tuple with the SmUserId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSmUserId
-
-`func (o *InlineObject109) SetSmUserId(v string)`
-
-SetSmUserId sets SmUserId field to given value.
-
-### HasSmUserId
-
-`func (o *InlineObject109) HasSmUserId() bool`
-
-HasSmUserId returns a boolean if a field has been set.
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

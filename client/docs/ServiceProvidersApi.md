@@ -36,7 +36,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject225("AccountId_example", "ApiKey_example", *openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1(), "Title_example", "Username_example") // InlineObject225 | 
+    createOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject229("AccountId_example", "ApiKey_example", *openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1(), "Title_example", "Username_example") // InlineObject229 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCellular
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject225**](InlineObject225.md) |  | 
+ **createOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject229**](InlineObject229.md) |  | 
 
 ### Return type
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProviders
 
-> InlineResponse200228 GetOrganizationCellularGatewayEsimsServiceProviders(ctx, organizationId).Execute()
+> InlineResponse200233 GetOrganizationCellularGatewayEsimsServiceProviders(ctx, organizationId).Execute()
 
 Service providers customers can add accounts for.
 
@@ -187,7 +187,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ServiceProvidersApi.GetOrganizationCellularGatewayEsimsServiceProviders``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProviders`: InlineResponse200228
+    // response from `GetOrganizationCellularGatewayEsimsServiceProviders`: InlineResponse200233
     fmt.Fprintf(os.Stdout, "Response from `ServiceProvidersApi.GetOrganizationCellularGatewayEsimsServiceProviders`: %v\n", resp)
 }
 ```
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200228**](InlineResponse200228.md)
+[**InlineResponse200233**](InlineResponse200233.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProvidersAccounts
 
-> []InlineResponse200229 GetOrganizationCellularGatewayEsimsServiceProvidersAccounts(ctx, organizationId).AccountIds(accountIds).Execute()
+> []InlineResponse200234 GetOrganizationCellularGatewayEsimsServiceProvidersAccounts(ctx, organizationId).AccountIds(accountIds).Execute()
 
 Inventory of service provider accounts tied to the organization.
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ServiceProvidersApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccounts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccounts`: []InlineResponse200229
+    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccounts`: []InlineResponse200234
     fmt.Fprintf(os.Stdout, "Response from `ServiceProvidersApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccounts`: %v\n", resp)
 }
 ```
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200229**](InlineResponse200229.md)
+[**[]InlineResponse200234**](InlineResponse200234.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans
 
-> InlineResponse200230 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans(ctx, organizationId).AccountIds(accountIds).Execute()
+> InlineResponse200235 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans(ctx, organizationId).AccountIds(accountIds).Execute()
 
 The communication plans available for a given provider.
 
@@ -330,7 +330,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ServiceProvidersApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: InlineResponse200230
+    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: InlineResponse200235
     fmt.Fprintf(os.Stdout, "Response from `ServiceProvidersApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsCommunicationPlans`: %v\n", resp)
 }
 ```
@@ -355,7 +355,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200230**](InlineResponse200230.md)
+[**InlineResponse200235**](InlineResponse200235.md)
 
 ### Authorization
 
@@ -373,7 +373,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans
 
-> InlineResponse200231 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans(ctx, organizationId).AccountIds(accountIds).Execute()
+> InlineResponse200236 GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans(ctx, organizationId).AccountIds(accountIds).Execute()
 
 The rate plans available for a given provider.
 
@@ -402,7 +402,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ServiceProvidersApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans`: InlineResponse200231
+    // response from `GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans`: InlineResponse200236
     fmt.Fprintf(os.Stdout, "Response from `ServiceProvidersApi.GetOrganizationCellularGatewayEsimsServiceProvidersAccountsRatePlans`: %v\n", resp)
 }
 ```
@@ -427,7 +427,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200231**](InlineResponse200231.md)
+[**InlineResponse200236**](InlineResponse200236.md)
 
 ### Authorization
 
@@ -466,7 +466,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     accountId := "accountId_example" // string | Account ID
-    updateOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject226() // InlineObject226 |  (optional)
+    updateOrganizationCellularGatewayEsimsServiceProvidersAccount := *openapiclient.NewInlineObject230() // InlineObject230 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -498,7 +498,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject226**](InlineObject226.md) |  | 
+ **updateOrganizationCellularGatewayEsimsServiceProvidersAccount** | [**InlineObject230**](InlineObject230.md) |  | 
 
 ### Return type
 

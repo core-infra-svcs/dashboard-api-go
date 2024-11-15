@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default. | [optional] 
+**HelloTimerInSeconds** | Pointer to **int32** | Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds. | [optional] 
+**DeadTimerInSeconds** | Pointer to **int32** | Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535 | [optional] 
+**Areas** | Pointer to [**[]InlineResponse200159Areas**](InlineResponse200159Areas.md) | OSPF areas | [optional] 
+**V3** | Pointer to [**InlineResponse200159V3**](InlineResponse200159V3.md) |  | [optional] 
+**Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
+**Md5AuthenticationKey** | Pointer to [**InlineResponse200159Md5AuthenticationKey**](InlineResponse200159Md5AuthenticationKey.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineResponse200159WithDefaults instantiates a new InlineResponse200159 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetEnabled
 
-`func (o *InlineResponse200159) GetBroadcastThreshold() int32`
+`func (o *InlineResponse200159) GetEnabled() bool`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetEnabledOk
 
-`func (o *InlineResponse200159) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200159) GetEnabledOk() (*bool, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetEnabled
 
-`func (o *InlineResponse200159) SetBroadcastThreshold(v int32)`
+`func (o *InlineResponse200159) SetEnabled(v bool)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasBroadcastThreshold
+### HasEnabled
 
-`func (o *InlineResponse200159) HasBroadcastThreshold() bool`
+`func (o *InlineResponse200159) HasEnabled() bool`
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetMulticastThreshold
+### GetHelloTimerInSeconds
 
-`func (o *InlineResponse200159) GetMulticastThreshold() int32`
+`func (o *InlineResponse200159) GetHelloTimerInSeconds() int32`
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+GetHelloTimerInSeconds returns the HelloTimerInSeconds field if non-nil, zero value otherwise.
 
-### GetMulticastThresholdOk
+### GetHelloTimerInSecondsOk
 
-`func (o *InlineResponse200159) GetMulticastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200159) GetHelloTimerInSecondsOk() (*int32, bool)`
 
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetHelloTimerInSecondsOk returns a tuple with the HelloTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetHelloTimerInSeconds
 
-`func (o *InlineResponse200159) SetMulticastThreshold(v int32)`
+`func (o *InlineResponse200159) SetHelloTimerInSeconds(v int32)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetHelloTimerInSeconds sets HelloTimerInSeconds field to given value.
 
-### HasMulticastThreshold
+### HasHelloTimerInSeconds
 
-`func (o *InlineResponse200159) HasMulticastThreshold() bool`
+`func (o *InlineResponse200159) HasHelloTimerInSeconds() bool`
 
-HasMulticastThreshold returns a boolean if a field has been set.
+HasHelloTimerInSeconds returns a boolean if a field has been set.
 
-### GetUnknownUnicastThreshold
+### GetDeadTimerInSeconds
 
-`func (o *InlineResponse200159) GetUnknownUnicastThreshold() int32`
+`func (o *InlineResponse200159) GetDeadTimerInSeconds() int32`
 
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+GetDeadTimerInSeconds returns the DeadTimerInSeconds field if non-nil, zero value otherwise.
 
-### GetUnknownUnicastThresholdOk
+### GetDeadTimerInSecondsOk
 
-`func (o *InlineResponse200159) GetUnknownUnicastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200159) GetDeadTimerInSecondsOk() (*int32, bool)`
 
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+GetDeadTimerInSecondsOk returns a tuple with the DeadTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnknownUnicastThreshold
+### SetDeadTimerInSeconds
 
-`func (o *InlineResponse200159) SetUnknownUnicastThreshold(v int32)`
+`func (o *InlineResponse200159) SetDeadTimerInSeconds(v int32)`
 
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+SetDeadTimerInSeconds sets DeadTimerInSeconds field to given value.
 
-### HasUnknownUnicastThreshold
+### HasDeadTimerInSeconds
 
-`func (o *InlineResponse200159) HasUnknownUnicastThreshold() bool`
+`func (o *InlineResponse200159) HasDeadTimerInSeconds() bool`
 
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
+HasDeadTimerInSeconds returns a boolean if a field has been set.
+
+### GetAreas
+
+`func (o *InlineResponse200159) GetAreas() []InlineResponse200159Areas`
+
+GetAreas returns the Areas field if non-nil, zero value otherwise.
+
+### GetAreasOk
+
+`func (o *InlineResponse200159) GetAreasOk() (*[]InlineResponse200159Areas, bool)`
+
+GetAreasOk returns a tuple with the Areas field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAreas
+
+`func (o *InlineResponse200159) SetAreas(v []InlineResponse200159Areas)`
+
+SetAreas sets Areas field to given value.
+
+### HasAreas
+
+`func (o *InlineResponse200159) HasAreas() bool`
+
+HasAreas returns a boolean if a field has been set.
+
+### GetV3
+
+`func (o *InlineResponse200159) GetV3() InlineResponse200159V3`
+
+GetV3 returns the V3 field if non-nil, zero value otherwise.
+
+### GetV3Ok
+
+`func (o *InlineResponse200159) GetV3Ok() (*InlineResponse200159V3, bool)`
+
+GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetV3
+
+`func (o *InlineResponse200159) SetV3(v InlineResponse200159V3)`
+
+SetV3 sets V3 field to given value.
+
+### HasV3
+
+`func (o *InlineResponse200159) HasV3() bool`
+
+HasV3 returns a boolean if a field has been set.
+
+### GetMd5AuthenticationEnabled
+
+`func (o *InlineResponse200159) GetMd5AuthenticationEnabled() bool`
+
+GetMd5AuthenticationEnabled returns the Md5AuthenticationEnabled field if non-nil, zero value otherwise.
+
+### GetMd5AuthenticationEnabledOk
+
+`func (o *InlineResponse200159) GetMd5AuthenticationEnabledOk() (*bool, bool)`
+
+GetMd5AuthenticationEnabledOk returns a tuple with the Md5AuthenticationEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMd5AuthenticationEnabled
+
+`func (o *InlineResponse200159) SetMd5AuthenticationEnabled(v bool)`
+
+SetMd5AuthenticationEnabled sets Md5AuthenticationEnabled field to given value.
+
+### HasMd5AuthenticationEnabled
+
+`func (o *InlineResponse200159) HasMd5AuthenticationEnabled() bool`
+
+HasMd5AuthenticationEnabled returns a boolean if a field has been set.
+
+### GetMd5AuthenticationKey
+
+`func (o *InlineResponse200159) GetMd5AuthenticationKey() InlineResponse200159Md5AuthenticationKey`
+
+GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
+
+### GetMd5AuthenticationKeyOk
+
+`func (o *InlineResponse200159) GetMd5AuthenticationKeyOk() (*InlineResponse200159Md5AuthenticationKey, bool)`
+
+GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMd5AuthenticationKey
+
+`func (o *InlineResponse200159) SetMd5AuthenticationKey(v InlineResponse200159Md5AuthenticationKey)`
+
+SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
+
+### HasMd5AuthenticationKey
+
+`func (o *InlineResponse200159) HasMd5AuthenticationKey() bool`
+
+HasMd5AuthenticationKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

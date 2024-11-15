@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the group | [optional] 
-**Sgt** | Pointer to **int32** | SGT value of the group | [optional] 
-**Description** | Pointer to **string** | Description of the group | [optional] 
-**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) | [optional] 
+**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
+**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineObject204WithDefaults instantiates a new InlineObject204 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConfirmed
 
-`func (o *InlineObject204) GetName() string`
+`func (o *InlineObject204) GetConfirmed() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConfirmedOk
 
-`func (o *InlineObject204) GetNameOk() (*string, bool)`
+`func (o *InlineObject204) GetConfirmedOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConfirmed
 
-`func (o *InlineObject204) SetName(v string)`
+`func (o *InlineObject204) SetConfirmed(v bool)`
 
-SetName sets Name field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasName
+### HasConfirmed
 
-`func (o *InlineObject204) HasName() bool`
+`func (o *InlineObject204) HasConfirmed() bool`
 
-HasName returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
 
-### GetSgt
+### GetSynchronous
 
-`func (o *InlineObject204) GetSgt() int32`
+`func (o *InlineObject204) GetSynchronous() bool`
 
-GetSgt returns the Sgt field if non-nil, zero value otherwise.
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
 
-### GetSgtOk
+### GetSynchronousOk
 
-`func (o *InlineObject204) GetSgtOk() (*int32, bool)`
+`func (o *InlineObject204) GetSynchronousOk() (*bool, bool)`
 
-GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSgt
+### SetSynchronous
 
-`func (o *InlineObject204) SetSgt(v int32)`
+`func (o *InlineObject204) SetSynchronous(v bool)`
 
-SetSgt sets Sgt field to given value.
+SetSynchronous sets Synchronous field to given value.
 
-### HasSgt
+### HasSynchronous
 
-`func (o *InlineObject204) HasSgt() bool`
+`func (o *InlineObject204) HasSynchronous() bool`
 
-HasSgt returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineObject204) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject204) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject204) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject204) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetPolicyObjects
-
-`func (o *InlineObject204) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
-
-GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
-
-### GetPolicyObjectsOk
-
-`func (o *InlineObject204) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
-
-GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPolicyObjects
-
-`func (o *InlineObject204) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
-
-SetPolicyObjects sets PolicyObjects field to given value.
-
-### HasPolicyObjects
-
-`func (o *InlineObject204) HasPolicyObjects() bool`
-
-HasPolicyObjects returns a boolean if a field has been set.
+HasSynchronous returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,18 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
-**Cidr** | Pointer to **string** | CIDR Value of a policy object (e.g. 10.11.12.1/24\&quot;) | [optional] 
-**Fqdn** | Pointer to **string** | Fully qualified domain name of policy object (e.g. \&quot;example.com\&quot;) | [optional] 
-**Mask** | Pointer to **string** | Mask of a policy object (e.g. \&quot;255.255.0.0\&quot;) | [optional] 
-**Ip** | Pointer to **string** | IP Address of a policy object (e.g. \&quot;1.2.3.4\&quot;) | [optional] 
-**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to | [optional] 
+**Name** | **string** | The name of the combined network | 
+**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
+**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
 
 ## Methods
 
 ### NewInlineObject256
 
-`func NewInlineObject256() *InlineObject256`
+`func NewInlineObject256(name string, networkIds []string, ) *InlineObject256`
 
 NewInlineObject256 instantiates a new InlineObject256 object
 This constructor will assign default values to properties that have it defined,
@@ -49,136 +46,51 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject256) HasName() bool`
+### GetNetworkIds
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject256) GetNetworkIds() []string`
 
-### GetCidr
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-`func (o *InlineObject256) GetCidr() string`
+### GetNetworkIdsOk
 
-GetCidr returns the Cidr field if non-nil, zero value otherwise.
+`func (o *InlineObject256) GetNetworkIdsOk() (*[]string, bool)`
 
-### GetCidrOk
-
-`func (o *InlineObject256) GetCidrOk() (*string, bool)`
-
-GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCidr
+### SetNetworkIds
 
-`func (o *InlineObject256) SetCidr(v string)`
+`func (o *InlineObject256) SetNetworkIds(v []string)`
 
-SetCidr sets Cidr field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
-### HasCidr
 
-`func (o *InlineObject256) HasCidr() bool`
+### GetEnrollmentString
 
-HasCidr returns a boolean if a field has been set.
+`func (o *InlineObject256) GetEnrollmentString() string`
 
-### GetFqdn
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
 
-`func (o *InlineObject256) GetFqdn() string`
+### GetEnrollmentStringOk
 
-GetFqdn returns the Fqdn field if non-nil, zero value otherwise.
+`func (o *InlineObject256) GetEnrollmentStringOk() (*string, bool)`
 
-### GetFqdnOk
-
-`func (o *InlineObject256) GetFqdnOk() (*string, bool)`
-
-GetFqdnOk returns a tuple with the Fqdn field if it's non-nil, zero value otherwise
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFqdn
+### SetEnrollmentString
 
-`func (o *InlineObject256) SetFqdn(v string)`
+`func (o *InlineObject256) SetEnrollmentString(v string)`
 
-SetFqdn sets Fqdn field to given value.
+SetEnrollmentString sets EnrollmentString field to given value.
 
-### HasFqdn
+### HasEnrollmentString
 
-`func (o *InlineObject256) HasFqdn() bool`
+`func (o *InlineObject256) HasEnrollmentString() bool`
 
-HasFqdn returns a boolean if a field has been set.
-
-### GetMask
-
-`func (o *InlineObject256) GetMask() string`
-
-GetMask returns the Mask field if non-nil, zero value otherwise.
-
-### GetMaskOk
-
-`func (o *InlineObject256) GetMaskOk() (*string, bool)`
-
-GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMask
-
-`func (o *InlineObject256) SetMask(v string)`
-
-SetMask sets Mask field to given value.
-
-### HasMask
-
-`func (o *InlineObject256) HasMask() bool`
-
-HasMask returns a boolean if a field has been set.
-
-### GetIp
-
-`func (o *InlineObject256) GetIp() string`
-
-GetIp returns the Ip field if non-nil, zero value otherwise.
-
-### GetIpOk
-
-`func (o *InlineObject256) GetIpOk() (*string, bool)`
-
-GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIp
-
-`func (o *InlineObject256) SetIp(v string)`
-
-SetIp sets Ip field to given value.
-
-### HasIp
-
-`func (o *InlineObject256) HasIp() bool`
-
-HasIp returns a boolean if a field has been set.
-
-### GetGroupIds
-
-`func (o *InlineObject256) GetGroupIds() []string`
-
-GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
-
-### GetGroupIdsOk
-
-`func (o *InlineObject256) GetGroupIdsOk() (*[]string, bool)`
-
-GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroupIds
-
-`func (o *InlineObject256) SetGroupIds(v []string)`
-
-SetGroupIds sets GroupIds field to given value.
-
-### HasGroupIds
-
-`func (o *InlineObject256) HasGroupIds() bool`
-
-HasGroupIds returns a boolean if a field has been set.
+HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

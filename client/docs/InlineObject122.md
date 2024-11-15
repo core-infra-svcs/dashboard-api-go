@@ -4,16 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMac** | Pointer to **string** | The wifiMac of the device to be wiped. | [optional] 
-**Id** | Pointer to **string** | The id of the device to be wiped. | [optional] 
-**Serial** | Pointer to **string** | The serial of the device to be wiped. | [optional] 
-**Pin** | Pointer to **int32** | The pin number (a six digit value) for wiping a macOS device. Required only for macOS devices. | [optional] 
+**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be modified. | [optional] 
+**Ids** | Pointer to **[]string** | The ids of the devices to be modified. | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices to be modified. | [optional] 
+**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be modified. | [optional] 
+**Tags** | **[]string** | The tags to be added, deleted, or updated. | 
+**UpdateAction** | **string** | One of add, delete, or update. Only devices that have been modified will be returned. | 
 
 ## Methods
 
 ### NewInlineObject122
 
-`func NewInlineObject122() *InlineObject122`
+`func NewInlineObject122(tags []string, updateAction string, ) *InlineObject122`
 
 NewInlineObject122 instantiates a new InlineObject122 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +30,145 @@ NewInlineObject122WithDefaults instantiates a new InlineObject122 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMac
+### GetWifiMacs
 
-`func (o *InlineObject122) GetWifiMac() string`
+`func (o *InlineObject122) GetWifiMacs() []string`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetWifiMacsOk
 
-`func (o *InlineObject122) GetWifiMacOk() (*string, bool)`
+`func (o *InlineObject122) GetWifiMacsOk() (*[]string, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetWifiMacs
 
-`func (o *InlineObject122) SetWifiMac(v string)`
+`func (o *InlineObject122) SetWifiMacs(v []string)`
 
-SetWifiMac sets WifiMac field to given value.
+SetWifiMacs sets WifiMacs field to given value.
 
-### HasWifiMac
+### HasWifiMacs
 
-`func (o *InlineObject122) HasWifiMac() bool`
+`func (o *InlineObject122) HasWifiMacs() bool`
 
-HasWifiMac returns a boolean if a field has been set.
+HasWifiMacs returns a boolean if a field has been set.
 
-### GetId
+### GetIds
 
-`func (o *InlineObject122) GetId() string`
+`func (o *InlineObject122) GetIds() []string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetIdsOk
 
-`func (o *InlineObject122) GetIdOk() (*string, bool)`
+`func (o *InlineObject122) GetIdsOk() (*[]string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetIds
 
-`func (o *InlineObject122) SetId(v string)`
+`func (o *InlineObject122) SetIds(v []string)`
 
-SetId sets Id field to given value.
+SetIds sets Ids field to given value.
 
-### HasId
+### HasIds
 
-`func (o *InlineObject122) HasId() bool`
+`func (o *InlineObject122) HasIds() bool`
 
-HasId returns a boolean if a field has been set.
+HasIds returns a boolean if a field has been set.
 
-### GetSerial
+### GetSerials
 
-`func (o *InlineObject122) GetSerial() string`
+`func (o *InlineObject122) GetSerials() []string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSerialsOk
 
-`func (o *InlineObject122) GetSerialOk() (*string, bool)`
+`func (o *InlineObject122) GetSerialsOk() (*[]string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSerials
 
-`func (o *InlineObject122) SetSerial(v string)`
+`func (o *InlineObject122) SetSerials(v []string)`
 
-SetSerial sets Serial field to given value.
+SetSerials sets Serials field to given value.
 
-### HasSerial
+### HasSerials
 
-`func (o *InlineObject122) HasSerial() bool`
+`func (o *InlineObject122) HasSerials() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetPin
+### GetScope
 
-`func (o *InlineObject122) GetPin() int32`
+`func (o *InlineObject122) GetScope() []string`
 
-GetPin returns the Pin field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetPinOk
+### GetScopeOk
 
-`func (o *InlineObject122) GetPinOk() (*int32, bool)`
+`func (o *InlineObject122) GetScopeOk() (*[]string, bool)`
 
-GetPinOk returns a tuple with the Pin field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPin
+### SetScope
 
-`func (o *InlineObject122) SetPin(v int32)`
+`func (o *InlineObject122) SetScope(v []string)`
 
-SetPin sets Pin field to given value.
+SetScope sets Scope field to given value.
 
-### HasPin
+### HasScope
 
-`func (o *InlineObject122) HasPin() bool`
+`func (o *InlineObject122) HasScope() bool`
 
-HasPin returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineObject122) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineObject122) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineObject122) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+
+### GetUpdateAction
+
+`func (o *InlineObject122) GetUpdateAction() string`
+
+GetUpdateAction returns the UpdateAction field if non-nil, zero value otherwise.
+
+### GetUpdateActionOk
+
+`func (o *InlineObject122) GetUpdateActionOk() (*string, bool)`
+
+GetUpdateActionOk returns a tuple with the UpdateAction field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdateAction
+
+`func (o *InlineObject122) SetUpdateAction(v string)`
+
+SetUpdateAction sets UpdateAction field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

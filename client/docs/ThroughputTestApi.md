@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceLiveToolsThroughputTest
 
-> InlineResponse2014 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
+> InlineResponse2015 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
 
 Enqueue a job to test a device throughput, the test will run for 10 secs to test throughput
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ThroughputTestApi.CreateDeviceLiveToolsThroughputTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2014
+    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2015
     fmt.Fprintf(os.Stdout, "Response from `ThroughputTestApi.CreateDeviceLiveToolsThroughputTest`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2014**](InlineResponse2014.md)
+[**InlineResponse2015**](InlineResponse2015.md)
 
 ### Authorization
 

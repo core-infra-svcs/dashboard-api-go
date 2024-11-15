@@ -4,11 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**Application** | Pointer to **string** | Traffic application | [optional] 
+**Destination** | Pointer to **string** | Traffic destination | [optional] 
+**Protocol** | Pointer to **string** | Traffic protocol | [optional] 
+**Port** | Pointer to **int32** | Traffic port | [optional] 
+**Sent** | Pointer to **float32** | Traffic sent in kb | [optional] 
+**Recv** | Pointer to **float32** | Traffic received in kb | [optional] 
+**NumClients** | Pointer to **int32** | Number of clients with traffic | [optional] 
+**ActiveTime** | Pointer to **int32** | Active time with traffic | [optional] 
+**Flows** | Pointer to **int32** | Number of traffic flows | [optional] 
 
 ## Methods
 
@@ -29,130 +33,230 @@ NewInlineResponse200166WithDefaults instantiates a new InlineResponse200166 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetApplication
 
-`func (o *InlineResponse200166) GetId() string`
+`func (o *InlineResponse200166) GetApplication() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetApplication returns the Application field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetApplicationOk
 
-`func (o *InlineResponse200166) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200166) GetApplicationOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetApplicationOk returns a tuple with the Application field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetApplication
 
-`func (o *InlineResponse200166) SetId(v string)`
+`func (o *InlineResponse200166) SetApplication(v string)`
 
-SetId sets Id field to given value.
+SetApplication sets Application field to given value.
 
-### HasId
+### HasApplication
 
-`func (o *InlineResponse200166) HasId() bool`
+`func (o *InlineResponse200166) HasApplication() bool`
 
-HasId returns a boolean if a field has been set.
+HasApplication returns a boolean if a field has been set.
 
-### GetName
+### GetDestination
 
-`func (o *InlineResponse200166) GetName() string`
+`func (o *InlineResponse200166) GetDestination() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDestination returns the Destination field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDestinationOk
 
-`func (o *InlineResponse200166) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200166) GetDestinationOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDestination
 
-`func (o *InlineResponse200166) SetName(v string)`
+`func (o *InlineResponse200166) SetDestination(v string)`
 
-SetName sets Name field to given value.
+SetDestination sets Destination field to given value.
 
-### HasName
+### HasDestination
 
-`func (o *InlineResponse200166) HasName() bool`
+`func (o *InlineResponse200166) HasDestination() bool`
 
-HasName returns a boolean if a field has been set.
+HasDestination returns a boolean if a field has been set.
 
-### GetUrl
+### GetProtocol
 
-`func (o *InlineResponse200166) GetUrl() string`
+`func (o *InlineResponse200166) GetProtocol() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetProtocolOk
 
-`func (o *InlineResponse200166) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200166) GetProtocolOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetProtocol
 
-`func (o *InlineResponse200166) SetUrl(v string)`
+`func (o *InlineResponse200166) SetProtocol(v string)`
 
-SetUrl sets Url field to given value.
+SetProtocol sets Protocol field to given value.
 
-### HasUrl
+### HasProtocol
 
-`func (o *InlineResponse200166) HasUrl() bool`
+`func (o *InlineResponse200166) HasProtocol() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasProtocol returns a boolean if a field has been set.
 
-### GetNetworkId
+### GetPort
 
-`func (o *InlineResponse200166) GetNetworkId() string`
+`func (o *InlineResponse200166) GetPort() int32`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetPortOk
 
-`func (o *InlineResponse200166) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200166) GetPortOk() (*int32, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetPort
 
-`func (o *InlineResponse200166) SetNetworkId(v string)`
+`func (o *InlineResponse200166) SetPort(v int32)`
 
-SetNetworkId sets NetworkId field to given value.
+SetPort sets Port field to given value.
 
-### HasNetworkId
+### HasPort
 
-`func (o *InlineResponse200166) HasNetworkId() bool`
+`func (o *InlineResponse200166) HasPort() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasPort returns a boolean if a field has been set.
 
-### GetPayloadTemplate
+### GetSent
 
-`func (o *InlineResponse200166) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
+`func (o *InlineResponse200166) GetSent() float32`
 
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+GetSent returns the Sent field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateOk
+### GetSentOk
 
-`func (o *InlineResponse200166) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
+`func (o *InlineResponse200166) GetSentOk() (*float32, bool)`
 
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplate
+### SetSent
 
-`func (o *InlineResponse200166) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
+`func (o *InlineResponse200166) SetSent(v float32)`
 
-SetPayloadTemplate sets PayloadTemplate field to given value.
+SetSent sets Sent field to given value.
 
-### HasPayloadTemplate
+### HasSent
 
-`func (o *InlineResponse200166) HasPayloadTemplate() bool`
+`func (o *InlineResponse200166) HasSent() bool`
 
-HasPayloadTemplate returns a boolean if a field has been set.
+HasSent returns a boolean if a field has been set.
+
+### GetRecv
+
+`func (o *InlineResponse200166) GetRecv() float32`
+
+GetRecv returns the Recv field if non-nil, zero value otherwise.
+
+### GetRecvOk
+
+`func (o *InlineResponse200166) GetRecvOk() (*float32, bool)`
+
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecv
+
+`func (o *InlineResponse200166) SetRecv(v float32)`
+
+SetRecv sets Recv field to given value.
+
+### HasRecv
+
+`func (o *InlineResponse200166) HasRecv() bool`
+
+HasRecv returns a boolean if a field has been set.
+
+### GetNumClients
+
+`func (o *InlineResponse200166) GetNumClients() int32`
+
+GetNumClients returns the NumClients field if non-nil, zero value otherwise.
+
+### GetNumClientsOk
+
+`func (o *InlineResponse200166) GetNumClientsOk() (*int32, bool)`
+
+GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumClients
+
+`func (o *InlineResponse200166) SetNumClients(v int32)`
+
+SetNumClients sets NumClients field to given value.
+
+### HasNumClients
+
+`func (o *InlineResponse200166) HasNumClients() bool`
+
+HasNumClients returns a boolean if a field has been set.
+
+### GetActiveTime
+
+`func (o *InlineResponse200166) GetActiveTime() int32`
+
+GetActiveTime returns the ActiveTime field if non-nil, zero value otherwise.
+
+### GetActiveTimeOk
+
+`func (o *InlineResponse200166) GetActiveTimeOk() (*int32, bool)`
+
+GetActiveTimeOk returns a tuple with the ActiveTime field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActiveTime
+
+`func (o *InlineResponse200166) SetActiveTime(v int32)`
+
+SetActiveTime sets ActiveTime field to given value.
+
+### HasActiveTime
+
+`func (o *InlineResponse200166) HasActiveTime() bool`
+
+HasActiveTime returns a boolean if a field has been set.
+
+### GetFlows
+
+`func (o *InlineResponse200166) GetFlows() int32`
+
+GetFlows returns the Flows field if non-nil, zero value otherwise.
+
+### GetFlowsOk
+
+`func (o *InlineResponse200166) GetFlowsOk() (*int32, bool)`
+
+GetFlowsOk returns a tuple with the Flows field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFlows
+
+`func (o *InlineResponse200166) SetFlows(v int32)`
+
+SetFlows sets Flows field to given value.
+
+### HasFlows
+
+`func (o *InlineResponse200166) HasFlows() bool`
+
+HasFlows returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

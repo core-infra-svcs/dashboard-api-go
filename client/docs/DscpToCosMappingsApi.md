@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchDscpToCosMappings
 
-> InlineResponse200147 GetNetworkSwitchDscpToCosMappings(ctx, networkId).Execute()
+> InlineResponse200151 GetNetworkSwitchDscpToCosMappings(ctx, networkId).Execute()
 
 Return the DSCP to CoS mappings
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DscpToCosMappingsApi.GetNetworkSwitchDscpToCosMappings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDscpToCosMappings`: InlineResponse200147
+    // response from `GetNetworkSwitchDscpToCosMappings`: InlineResponse200151
     fmt.Fprintf(os.Stdout, "Response from `DscpToCosMappingsApi.GetNetworkSwitchDscpToCosMappings`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200147**](InlineResponse200147.md)
+[**InlineResponse200151**](InlineResponse200151.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchDscpToCosMappings
 
-> InlineResponse200147 UpdateNetworkSwitchDscpToCosMappings(ctx, networkId).UpdateNetworkSwitchDscpToCosMappings(updateNetworkSwitchDscpToCosMappings).Execute()
+> InlineResponse200151 UpdateNetworkSwitchDscpToCosMappings(ctx, networkId).UpdateNetworkSwitchDscpToCosMappings(updateNetworkSwitchDscpToCosMappings).Execute()
 
 Update the DSCP to CoS mappings
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchDscpToCosMappings := *openapiclient.NewInlineObject135([]openapiclient.NetworksNetworkIdSwitchDscpToCosMappingsMappings{*openapiclient.NewNetworksNetworkIdSwitchDscpToCosMappingsMappings(int32(123), int32(123))}) // InlineObject135 | 
+    updateNetworkSwitchDscpToCosMappings := *openapiclient.NewInlineObject139([]openapiclient.NetworksNetworkIdSwitchDscpToCosMappingsMappings{*openapiclient.NewNetworksNetworkIdSwitchDscpToCosMappingsMappings(int32(123), int32(123))}) // InlineObject139 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DscpToCosMappingsApi.UpdateNetworkSwitchDscpToCosMappings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchDscpToCosMappings`: InlineResponse200147
+    // response from `UpdateNetworkSwitchDscpToCosMappings`: InlineResponse200151
     fmt.Fprintf(os.Stdout, "Response from `DscpToCosMappingsApi.UpdateNetworkSwitchDscpToCosMappings`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchDscpToC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchDscpToCosMappings** | [**InlineObject135**](InlineObject135.md) |  | 
+ **updateNetworkSwitchDscpToCosMappings** | [**InlineObject139**](InlineObject139.md) |  | 
 
 ### Return type
 
-[**InlineResponse200147**](InlineResponse200147.md)
+[**InlineResponse200151**](InlineResponse200151.md)
 
 ### Authorization
 

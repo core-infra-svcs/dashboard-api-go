@@ -4,11 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Device serial | [optional] 
-**Model** | Pointer to **string** | Device model. | [optional] 
-**Tags** | Pointer to **string** | Device tags. | [optional] 
-**Wifi0** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for first wifi radio of device. | [optional] 
-**Wifi1** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for second wifi radio of device. | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**WanGoodput** | Pointer to **int32** | WAN goodput (Number of useful information bits delivered over a WAN per unit of time) | [optional] 
+**LanGoodput** | Pointer to **int32** | LAN goodput (Number of useful information bits delivered over a LAN per unit of time) | [optional] 
+**WanLatencyMs** | Pointer to **float32** | WAN latency in milliseconds | [optional] 
+**LanLatencyMs** | Pointer to **float32** | LAN latency in milliseconds | [optional] 
+**WanLossPercent** | Pointer to **float32** | WAN loss percentage | [optional] 
+**LanLossPercent** | Pointer to **float32** | LAN loss percentage | [optional] 
+**ResponseDuration** | Pointer to **int32** | Duration of the response, in milliseconds | [optional] 
+**Sent** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**Recv** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**NumClients** | Pointer to **int32** | Number of clients | [optional] 
 
 ## Methods
 
@@ -29,130 +36,305 @@ NewInlineResponse200102WithDefaults instantiates a new InlineResponse200102 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetStartTs
 
-`func (o *InlineResponse200102) GetSerial() string`
+`func (o *InlineResponse200102) GetStartTs() time.Time`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetStartTsOk
 
-`func (o *InlineResponse200102) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200102) GetStartTsOk() (*time.Time, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetStartTs
 
-`func (o *InlineResponse200102) SetSerial(v string)`
+`func (o *InlineResponse200102) SetStartTs(v time.Time)`
 
-SetSerial sets Serial field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasSerial
+### HasStartTs
 
-`func (o *InlineResponse200102) HasSerial() bool`
+`func (o *InlineResponse200102) HasStartTs() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetModel
+### GetEndTs
 
-`func (o *InlineResponse200102) GetModel() string`
+`func (o *InlineResponse200102) GetEndTs() time.Time`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetEndTsOk
 
-`func (o *InlineResponse200102) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200102) GetEndTsOk() (*time.Time, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetEndTs
 
-`func (o *InlineResponse200102) SetModel(v string)`
+`func (o *InlineResponse200102) SetEndTs(v time.Time)`
 
-SetModel sets Model field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasModel
+### HasEndTs
 
-`func (o *InlineResponse200102) HasModel() bool`
+`func (o *InlineResponse200102) HasEndTs() bool`
 
-HasModel returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetTags
+### GetWanGoodput
 
-`func (o *InlineResponse200102) GetTags() string`
+`func (o *InlineResponse200102) GetWanGoodput() int32`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetWanGoodput returns the WanGoodput field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetWanGoodputOk
 
-`func (o *InlineResponse200102) GetTagsOk() (*string, bool)`
+`func (o *InlineResponse200102) GetWanGoodputOk() (*int32, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetWanGoodputOk returns a tuple with the WanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetWanGoodput
 
-`func (o *InlineResponse200102) SetTags(v string)`
+`func (o *InlineResponse200102) SetWanGoodput(v int32)`
 
-SetTags sets Tags field to given value.
+SetWanGoodput sets WanGoodput field to given value.
 
-### HasTags
+### HasWanGoodput
 
-`func (o *InlineResponse200102) HasTags() bool`
+`func (o *InlineResponse200102) HasWanGoodput() bool`
 
-HasTags returns a boolean if a field has been set.
+HasWanGoodput returns a boolean if a field has been set.
 
-### GetWifi0
+### GetLanGoodput
 
-`func (o *InlineResponse200102) GetWifi0() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+`func (o *InlineResponse200102) GetLanGoodput() int32`
 
-GetWifi0 returns the Wifi0 field if non-nil, zero value otherwise.
+GetLanGoodput returns the LanGoodput field if non-nil, zero value otherwise.
 
-### GetWifi0Ok
+### GetLanGoodputOk
 
-`func (o *InlineResponse200102) GetWifi0Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+`func (o *InlineResponse200102) GetLanGoodputOk() (*int32, bool)`
 
-GetWifi0Ok returns a tuple with the Wifi0 field if it's non-nil, zero value otherwise
+GetLanGoodputOk returns a tuple with the LanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi0
+### SetLanGoodput
 
-`func (o *InlineResponse200102) SetWifi0(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+`func (o *InlineResponse200102) SetLanGoodput(v int32)`
 
-SetWifi0 sets Wifi0 field to given value.
+SetLanGoodput sets LanGoodput field to given value.
 
-### HasWifi0
+### HasLanGoodput
 
-`func (o *InlineResponse200102) HasWifi0() bool`
+`func (o *InlineResponse200102) HasLanGoodput() bool`
 
-HasWifi0 returns a boolean if a field has been set.
+HasLanGoodput returns a boolean if a field has been set.
 
-### GetWifi1
+### GetWanLatencyMs
 
-`func (o *InlineResponse200102) GetWifi1() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+`func (o *InlineResponse200102) GetWanLatencyMs() float32`
 
-GetWifi1 returns the Wifi1 field if non-nil, zero value otherwise.
+GetWanLatencyMs returns the WanLatencyMs field if non-nil, zero value otherwise.
 
-### GetWifi1Ok
+### GetWanLatencyMsOk
 
-`func (o *InlineResponse200102) GetWifi1Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+`func (o *InlineResponse200102) GetWanLatencyMsOk() (*float32, bool)`
 
-GetWifi1Ok returns a tuple with the Wifi1 field if it's non-nil, zero value otherwise
+GetWanLatencyMsOk returns a tuple with the WanLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi1
+### SetWanLatencyMs
 
-`func (o *InlineResponse200102) SetWifi1(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+`func (o *InlineResponse200102) SetWanLatencyMs(v float32)`
 
-SetWifi1 sets Wifi1 field to given value.
+SetWanLatencyMs sets WanLatencyMs field to given value.
 
-### HasWifi1
+### HasWanLatencyMs
 
-`func (o *InlineResponse200102) HasWifi1() bool`
+`func (o *InlineResponse200102) HasWanLatencyMs() bool`
 
-HasWifi1 returns a boolean if a field has been set.
+HasWanLatencyMs returns a boolean if a field has been set.
+
+### GetLanLatencyMs
+
+`func (o *InlineResponse200102) GetLanLatencyMs() float32`
+
+GetLanLatencyMs returns the LanLatencyMs field if non-nil, zero value otherwise.
+
+### GetLanLatencyMsOk
+
+`func (o *InlineResponse200102) GetLanLatencyMsOk() (*float32, bool)`
+
+GetLanLatencyMsOk returns a tuple with the LanLatencyMs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanLatencyMs
+
+`func (o *InlineResponse200102) SetLanLatencyMs(v float32)`
+
+SetLanLatencyMs sets LanLatencyMs field to given value.
+
+### HasLanLatencyMs
+
+`func (o *InlineResponse200102) HasLanLatencyMs() bool`
+
+HasLanLatencyMs returns a boolean if a field has been set.
+
+### GetWanLossPercent
+
+`func (o *InlineResponse200102) GetWanLossPercent() float32`
+
+GetWanLossPercent returns the WanLossPercent field if non-nil, zero value otherwise.
+
+### GetWanLossPercentOk
+
+`func (o *InlineResponse200102) GetWanLossPercentOk() (*float32, bool)`
+
+GetWanLossPercentOk returns a tuple with the WanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWanLossPercent
+
+`func (o *InlineResponse200102) SetWanLossPercent(v float32)`
+
+SetWanLossPercent sets WanLossPercent field to given value.
+
+### HasWanLossPercent
+
+`func (o *InlineResponse200102) HasWanLossPercent() bool`
+
+HasWanLossPercent returns a boolean if a field has been set.
+
+### GetLanLossPercent
+
+`func (o *InlineResponse200102) GetLanLossPercent() float32`
+
+GetLanLossPercent returns the LanLossPercent field if non-nil, zero value otherwise.
+
+### GetLanLossPercentOk
+
+`func (o *InlineResponse200102) GetLanLossPercentOk() (*float32, bool)`
+
+GetLanLossPercentOk returns a tuple with the LanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanLossPercent
+
+`func (o *InlineResponse200102) SetLanLossPercent(v float32)`
+
+SetLanLossPercent sets LanLossPercent field to given value.
+
+### HasLanLossPercent
+
+`func (o *InlineResponse200102) HasLanLossPercent() bool`
+
+HasLanLossPercent returns a boolean if a field has been set.
+
+### GetResponseDuration
+
+`func (o *InlineResponse200102) GetResponseDuration() int32`
+
+GetResponseDuration returns the ResponseDuration field if non-nil, zero value otherwise.
+
+### GetResponseDurationOk
+
+`func (o *InlineResponse200102) GetResponseDurationOk() (*int32, bool)`
+
+GetResponseDurationOk returns a tuple with the ResponseDuration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResponseDuration
+
+`func (o *InlineResponse200102) SetResponseDuration(v int32)`
+
+SetResponseDuration sets ResponseDuration field to given value.
+
+### HasResponseDuration
+
+`func (o *InlineResponse200102) HasResponseDuration() bool`
+
+HasResponseDuration returns a boolean if a field has been set.
+
+### GetSent
+
+`func (o *InlineResponse200102) GetSent() int32`
+
+GetSent returns the Sent field if non-nil, zero value otherwise.
+
+### GetSentOk
+
+`func (o *InlineResponse200102) GetSentOk() (*int32, bool)`
+
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSent
+
+`func (o *InlineResponse200102) SetSent(v int32)`
+
+SetSent sets Sent field to given value.
+
+### HasSent
+
+`func (o *InlineResponse200102) HasSent() bool`
+
+HasSent returns a boolean if a field has been set.
+
+### GetRecv
+
+`func (o *InlineResponse200102) GetRecv() int32`
+
+GetRecv returns the Recv field if non-nil, zero value otherwise.
+
+### GetRecvOk
+
+`func (o *InlineResponse200102) GetRecvOk() (*int32, bool)`
+
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecv
+
+`func (o *InlineResponse200102) SetRecv(v int32)`
+
+SetRecv sets Recv field to given value.
+
+### HasRecv
+
+`func (o *InlineResponse200102) HasRecv() bool`
+
+HasRecv returns a boolean if a field has been set.
+
+### GetNumClients
+
+`func (o *InlineResponse200102) GetNumClients() int32`
+
+GetNumClients returns the NumClients field if non-nil, zero value otherwise.
+
+### GetNumClientsOk
+
+`func (o *InlineResponse200102) GetNumClientsOk() (*int32, bool)`
+
+GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumClients
+
+`func (o *InlineResponse200102) SetNumClients(v int32)`
+
+SetNumClients sets NumClients field to given value.
+
+### HasNumClients
+
+`func (o *InlineResponse200102) HasNumClients() bool`
+
+HasNumClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

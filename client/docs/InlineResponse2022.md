@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Shows the success of the reboot | [optional] 
+**Url** | Pointer to **string** | Url for the snapshot | [optional] 
+**Expiry** | Pointer to **string** | Expiration details for snapshot image access | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse2022WithDefaults instantiates a new InlineResponse2022 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetUrl
 
-`func (o *InlineResponse2022) GetSuccess() bool`
+`func (o *InlineResponse2022) GetUrl() string`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetUrlOk
 
-`func (o *InlineResponse2022) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse2022) GetUrlOk() (*string, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetUrl
 
-`func (o *InlineResponse2022) SetSuccess(v bool)`
+`func (o *InlineResponse2022) SetUrl(v string)`
 
-SetSuccess sets Success field to given value.
+SetUrl sets Url field to given value.
 
-### HasSuccess
+### HasUrl
 
-`func (o *InlineResponse2022) HasSuccess() bool`
+`func (o *InlineResponse2022) HasUrl() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
+
+### GetExpiry
+
+`func (o *InlineResponse2022) GetExpiry() string`
+
+GetExpiry returns the Expiry field if non-nil, zero value otherwise.
+
+### GetExpiryOk
+
+`func (o *InlineResponse2022) GetExpiryOk() (*string, bool)`
+
+GetExpiryOk returns a tuple with the Expiry field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiry
+
+`func (o *InlineResponse2022) SetExpiry(v string)`
+
+SetExpiry sets Expiry field to given value.
+
+### HasExpiry
+
+`func (o *InlineResponse2022) HasExpiry() bool`
+
+HasExpiry returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

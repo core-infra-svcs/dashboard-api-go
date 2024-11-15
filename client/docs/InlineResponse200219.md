@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200219Items**](InlineResponse200219Items.md) | Historical Severity Counts | 
-**Meta** | [**InlineResponse200219Meta**](InlineResponse200219Meta.md) |  | 
+**Peers** | Pointer to [**[]InlineResponse200219Peers**](InlineResponse200219Peers.md) | The list of VPN peers | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200219
 
-`func NewInlineResponse200219(items []InlineResponse200219Items, meta InlineResponse200219Meta, ) *InlineResponse200219`
+`func NewInlineResponse200219() *InlineResponse200219`
 
 NewInlineResponse200219 instantiates a new InlineResponse200219 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineResponse200219WithDefaults instantiates a new InlineResponse200219 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetPeers
 
-`func (o *InlineResponse200219) GetItems() []InlineResponse200219Items`
+`func (o *InlineResponse200219) GetPeers() []InlineResponse200219Peers`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetPeersOk
 
-`func (o *InlineResponse200219) GetItemsOk() (*[]InlineResponse200219Items, bool)`
+`func (o *InlineResponse200219) GetPeersOk() (*[]InlineResponse200219Peers, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetPeers
 
-`func (o *InlineResponse200219) SetItems(v []InlineResponse200219Items)`
+`func (o *InlineResponse200219) SetPeers(v []InlineResponse200219Peers)`
 
-SetItems sets Items field to given value.
+SetPeers sets Peers field to given value.
 
+### HasPeers
 
-### GetMeta
+`func (o *InlineResponse200219) HasPeers() bool`
 
-`func (o *InlineResponse200219) GetMeta() InlineResponse200219Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200219) GetMetaOk() (*InlineResponse200219Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200219) SetMeta(v InlineResponse200219Meta)`
-
-SetMeta sets Meta field to given value.
-
+HasPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

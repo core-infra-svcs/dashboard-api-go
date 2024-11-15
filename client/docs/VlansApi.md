@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkApplianceVlan
 
-> InlineResponse2016 CreateNetworkApplianceVlan(ctx, networkId).CreateNetworkApplianceVlan(createNetworkApplianceVlan).Execute()
+> InlineResponse2017 CreateNetworkApplianceVlan(ctx, networkId).CreateNetworkApplianceVlan(createNetworkApplianceVlan).Execute()
 
 Add a VLAN
 
@@ -45,7 +45,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `VlansApi.CreateNetworkApplianceVlan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkApplianceVlan`: InlineResponse2016
+    // response from `CreateNetworkApplianceVlan`: InlineResponse2017
     fmt.Fprintf(os.Stdout, "Response from `VlansApi.CreateNetworkApplianceVlan`: %v\n", resp)
 }
 ```
@@ -70,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2016**](InlineResponse2016.md)
+[**InlineResponse2017**](InlineResponse2017.md)
 
 ### Authorization
 

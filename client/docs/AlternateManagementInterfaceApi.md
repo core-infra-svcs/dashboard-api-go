@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchAlternateManagementInterface
 
-> InlineResponse200142 GetNetworkSwitchAlternateManagementInterface(ctx, networkId).Execute()
+> InlineResponse200146 GetNetworkSwitchAlternateManagementInterface(ctx, networkId).Execute()
 
 Return the switch alternate management interface for the network
 
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlternateManagementInterfaceApi.GetNetworkSwitchAlternateManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchAlternateManagementInterface`: InlineResponse200142
+    // response from `GetNetworkSwitchAlternateManagementInterface`: InlineResponse200146
     fmt.Fprintf(os.Stdout, "Response from `AlternateManagementInterfaceApi.GetNetworkSwitchAlternateManagementInterface`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200142**](InlineResponse200142.md)
+[**InlineResponse200146**](InlineResponse200146.md)
 
 ### Authorization
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchAlternateManagementInterface
 
-> InlineResponse200142 UpdateNetworkSwitchAlternateManagementInterface(ctx, networkId).UpdateNetworkSwitchAlternateManagementInterface(updateNetworkSwitchAlternateManagementInterface).Execute()
+> InlineResponse200146 UpdateNetworkSwitchAlternateManagementInterface(ctx, networkId).UpdateNetworkSwitchAlternateManagementInterface(updateNetworkSwitchAlternateManagementInterface).Execute()
 
 Update the switch alternate management interface for the network
 
@@ -246,7 +246,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSwitchAlternateManagementInterface := *openapiclient.NewInlineObject131() // InlineObject131 |  (optional)
+    updateNetworkSwitchAlternateManagementInterface := *openapiclient.NewInlineObject135() // InlineObject135 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -255,7 +255,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AlternateManagementInterfaceApi.UpdateNetworkSwitchAlternateManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchAlternateManagementInterface`: InlineResponse200142
+    // response from `UpdateNetworkSwitchAlternateManagementInterface`: InlineResponse200146
     fmt.Fprintf(os.Stdout, "Response from `AlternateManagementInterfaceApi.UpdateNetworkSwitchAlternateManagementInterface`: %v\n", resp)
 }
 ```
@@ -276,11 +276,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchAlterna
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSwitchAlternateManagementInterface** | [**InlineObject131**](InlineObject131.md) |  | 
+ **updateNetworkSwitchAlternateManagementInterface** | [**InlineObject135**](InlineObject135.md) |  | 
 
 ### Return type
 
-[**InlineResponse200142**](InlineResponse200142.md)
+[**InlineResponse200146**](InlineResponse200146.md)
 
 ### Authorization
 
@@ -318,7 +318,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessAlternateManagementInterface := *openapiclient.NewInlineObject173() // InlineObject173 |  (optional)
+    updateNetworkWirelessAlternateManagementInterface := *openapiclient.NewInlineObject177() // InlineObject177 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -348,7 +348,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessAlter
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessAlternateManagementInterface** | [**InlineObject173**](InlineObject173.md) |  | 
+ **updateNetworkWirelessAlternateManagementInterface** | [**InlineObject177**](InlineObject177.md) |  | 
 
 ### Return type
 

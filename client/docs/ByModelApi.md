@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationDevicesOverviewByModel
 
-> InlineResponse200245 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
+> InlineResponse200250 GetOrganizationDevicesOverviewByModel(ctx, organizationId).Models(models).NetworkIds(networkIds).ProductTypes(productTypes).Execute()
 
 Lists the count for each device model
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByModelApi.GetOrganizationDevicesOverviewByModel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200245
+    // response from `GetOrganizationDevicesOverviewByModel`: InlineResponse200250
     fmt.Fprintf(os.Stdout, "Response from `ByModelApi.GetOrganizationDevicesOverviewByModel`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200245**](InlineResponse200245.md)
+[**InlineResponse200250**](InlineResponse200250.md)
 
 ### Authorization
 

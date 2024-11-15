@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkGroupPolicy
 
-> InlineResponse20096 CreateNetworkGroupPolicy(ctx, networkId).CreateNetworkGroupPolicy(createNetworkGroupPolicy).Execute()
+> InlineResponse200100 CreateNetworkGroupPolicy(ctx, networkId).CreateNetworkGroupPolicy(createNetworkGroupPolicy).Execute()
 
 Create a group policy
 
@@ -34,7 +34,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkGroupPolicy := *openapiclient.NewInlineObject102("Name_example") // InlineObject102 | 
+    createNetworkGroupPolicy := *openapiclient.NewInlineObject106("Name_example") // InlineObject106 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `GroupPoliciesApi.CreateNetworkGroupPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkGroupPolicy`: InlineResponse20096
+    // response from `CreateNetworkGroupPolicy`: InlineResponse200100
     fmt.Fprintf(os.Stdout, "Response from `GroupPoliciesApi.CreateNetworkGroupPolicy`: %v\n", resp)
 }
 ```
@@ -64,11 +64,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkGroupPolicyRe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkGroupPolicy** | [**InlineObject102**](InlineObject102.md) |  | 
+ **createNetworkGroupPolicy** | [**InlineObject106**](InlineObject106.md) |  | 
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse200100**](InlineResponse200100.md)
 
 ### Authorization
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkGroupPolicies
 
-> []InlineResponse20096 GetNetworkGroupPolicies(ctx, networkId).Execute()
+> []InlineResponse200100 GetNetworkGroupPolicies(ctx, networkId).Execute()
 
 List the group policies in a network
 
@@ -187,7 +187,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `GroupPoliciesApi.GetNetworkGroupPolicies``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkGroupPolicies`: []InlineResponse20096
+    // response from `GetNetworkGroupPolicies`: []InlineResponse200100
     fmt.Fprintf(os.Stdout, "Response from `GroupPoliciesApi.GetNetworkGroupPolicies`: %v\n", resp)
 }
 ```
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20096**](InlineResponse20096.md)
+[**[]InlineResponse200100**](InlineResponse200100.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkGroupPolicy
 
-> InlineResponse20096 GetNetworkGroupPolicy(ctx, networkId, groupPolicyId).Execute()
+> InlineResponse200100 GetNetworkGroupPolicy(ctx, networkId, groupPolicyId).Execute()
 
 Display a group policy
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `GroupPoliciesApi.GetNetworkGroupPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkGroupPolicy`: InlineResponse20096
+    // response from `GetNetworkGroupPolicy`: InlineResponse200100
     fmt.Fprintf(os.Stdout, "Response from `GroupPoliciesApi.GetNetworkGroupPolicy`: %v\n", resp)
 }
 ```
@@ -284,7 +284,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse200100**](InlineResponse200100.md)
 
 ### Authorization
 
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkGroupPolicy
 
-> InlineResponse20096 UpdateNetworkGroupPolicy(ctx, networkId, groupPolicyId).UpdateNetworkGroupPolicy(updateNetworkGroupPolicy).Execute()
+> InlineResponse200100 UpdateNetworkGroupPolicy(ctx, networkId, groupPolicyId).UpdateNetworkGroupPolicy(updateNetworkGroupPolicy).Execute()
 
 Update a group policy
 
@@ -323,7 +323,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     groupPolicyId := "groupPolicyId_example" // string | Group policy ID
-    updateNetworkGroupPolicy := *openapiclient.NewInlineObject103() // InlineObject103 |  (optional)
+    updateNetworkGroupPolicy := *openapiclient.NewInlineObject107() // InlineObject107 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -332,7 +332,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `GroupPoliciesApi.UpdateNetworkGroupPolicy``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkGroupPolicy`: InlineResponse20096
+    // response from `UpdateNetworkGroupPolicy`: InlineResponse200100
     fmt.Fprintf(os.Stdout, "Response from `GroupPoliciesApi.UpdateNetworkGroupPolicy`: %v\n", resp)
 }
 ```
@@ -355,11 +355,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkGroupPolicy** | [**InlineObject103**](InlineObject103.md) |  | 
+ **updateNetworkGroupPolicy** | [**InlineObject107**](InlineObject107.md) |  | 
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse200100**](InlineResponse200100.md)
 
 ### Authorization
 

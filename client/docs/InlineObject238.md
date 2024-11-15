@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
-**Licenses** | Pointer to [**[]OrganizationsOrganizationIdInventoryClaimLicenses**](OrganizationsOrganizationIdInventoryClaimLicenses.md) | The licenses that should be claimed | [optional] 
+**ShortName** | **string** | Short name of the early access feature | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject238
 
-`func NewInlineObject238() *InlineObject238`
+`func NewInlineObject238(shortName string, ) *InlineObject238`
 
 NewInlineObject238 instantiates a new InlineObject238 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineObject238WithDefaults instantiates a new InlineObject238 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetShortName
 
-`func (o *InlineObject238) GetOrders() []string`
+`func (o *InlineObject238) GetShortName() string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetShortNameOk
 
-`func (o *InlineObject238) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineObject238) GetShortNameOk() (*string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetShortName
 
-`func (o *InlineObject238) SetOrders(v []string)`
+`func (o *InlineObject238) SetShortName(v string)`
 
-SetOrders sets Orders field to given value.
+SetShortName sets ShortName field to given value.
 
-### HasOrders
 
-`func (o *InlineObject238) HasOrders() bool`
+### GetLimitScopeToNetworks
 
-HasOrders returns a boolean if a field has been set.
+`func (o *InlineObject238) GetLimitScopeToNetworks() []string`
 
-### GetSerials
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-`func (o *InlineObject238) GetSerials() []string`
+### GetLimitScopeToNetworksOk
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+`func (o *InlineObject238) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-### GetSerialsOk
-
-`func (o *InlineObject238) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject238) SetSerials(v []string)`
+`func (o *InlineObject238) SetLimitScopeToNetworks(v []string)`
 
-SetSerials sets Serials field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
-### HasSerials
+### HasLimitScopeToNetworks
 
-`func (o *InlineObject238) HasSerials() bool`
+`func (o *InlineObject238) HasLimitScopeToNetworks() bool`
 
-HasSerials returns a boolean if a field has been set.
-
-### GetLicenses
-
-`func (o *InlineObject238) GetLicenses() []OrganizationsOrganizationIdInventoryClaimLicenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineObject238) GetLicensesOk() (*[]OrganizationsOrganizationIdInventoryClaimLicenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineObject238) SetLicenses(v []OrganizationsOrganizationIdInventoryClaimLicenses)`
-
-SetLicenses sets Licenses field to given value.
-
-### HasLicenses
-
-`func (o *InlineObject238) HasLicenses() bool`
-
-HasLicenses returns a boolean if a field has been set.
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

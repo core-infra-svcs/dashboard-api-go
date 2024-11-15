@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
 **Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
-**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
+**Request** | Pointer to [**InlineResponse2014Request**](InlineResponse2014Request.md) |  | [optional] 
 **Status** | Pointer to **string** | Status of the ping request. | [optional] 
 **Results** | Pointer to [**InlineResponse20022Results**](InlineResponse20022Results.md) |  | [optional] 
 **Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
@@ -82,20 +82,20 @@ HasUrl returns a boolean if a field has been set.
 
 ### GetRequest
 
-`func (o *InlineResponse20023) GetRequest() InlineResponse2013Request`
+`func (o *InlineResponse20023) GetRequest() InlineResponse2014Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse20023) GetRequestOk() (*InlineResponse2013Request, bool)`
+`func (o *InlineResponse20023) GetRequestOk() (*InlineResponse2014Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse20023) SetRequest(v InlineResponse2013Request)`
+`func (o *InlineResponse20023) SetRequest(v InlineResponse2014Request)`
 
 SetRequest sets Request field to given value.
 

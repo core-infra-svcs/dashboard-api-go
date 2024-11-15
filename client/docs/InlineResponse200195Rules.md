@@ -4,16 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Definitions** | [**[]NetworksNetworkIdApplianceTrafficShapingRulesDefinitions**](NetworksNetworkIdApplianceTrafficShapingRulesDefinitions.md) |     A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.  | 
-**PerClientBandwidthLimits** | Pointer to [**NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits**](NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits.md) |  | [optional] 
-**DscpTagValue** | Pointer to **int32** |     The DSCP tag applied by your rule. null means &#39;Do not change DSCP tag&#39;.     For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.  | [optional] 
-**PcpTagValue** | Pointer to **int32** |     The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).     null means &#39;Do not set PCP tag&#39;.  | [optional] 
+**Comment** | Pointer to **string** | Description of the rule (optional) | [optional] 
+**Policy** | **string** | &#39;allow&#39; or &#39;deny&#39; traffic specified by this rule | 
+**Protocol** | **string** | The type of protocol (must be &#39;tcp&#39;, &#39;udp&#39;, &#39;icmp&#39;, &#39;icmp6&#39; or &#39;any&#39;) | 
+**DestPort** | Pointer to **string** | Comma-separated list of destination port(s) (integer in the range 1-65535), or &#39;any&#39; | [optional] 
+**DestCidr** | **string** | Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or &#39;any&#39; | 
 
 ## Methods
 
 ### NewInlineResponse200195Rules
 
-`func NewInlineResponse200195Rules(definitions []NetworksNetworkIdApplianceTrafficShapingRulesDefinitions, ) *InlineResponse200195Rules`
+`func NewInlineResponse200195Rules(policy string, protocol string, destCidr string, ) *InlineResponse200195Rules`
 
 NewInlineResponse200195Rules instantiates a new InlineResponse200195Rules object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +29,115 @@ NewInlineResponse200195RulesWithDefaults instantiates a new InlineResponse200195
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefinitions
+### GetComment
 
-`func (o *InlineResponse200195Rules) GetDefinitions() []NetworksNetworkIdApplianceTrafficShapingRulesDefinitions`
+`func (o *InlineResponse200195Rules) GetComment() string`
 
-GetDefinitions returns the Definitions field if non-nil, zero value otherwise.
+GetComment returns the Comment field if non-nil, zero value otherwise.
 
-### GetDefinitionsOk
+### GetCommentOk
 
-`func (o *InlineResponse200195Rules) GetDefinitionsOk() (*[]NetworksNetworkIdApplianceTrafficShapingRulesDefinitions, bool)`
+`func (o *InlineResponse200195Rules) GetCommentOk() (*string, bool)`
 
-GetDefinitionsOk returns a tuple with the Definitions field if it's non-nil, zero value otherwise
+GetCommentOk returns a tuple with the Comment field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefinitions
+### SetComment
 
-`func (o *InlineResponse200195Rules) SetDefinitions(v []NetworksNetworkIdApplianceTrafficShapingRulesDefinitions)`
+`func (o *InlineResponse200195Rules) SetComment(v string)`
 
-SetDefinitions sets Definitions field to given value.
+SetComment sets Comment field to given value.
 
+### HasComment
 
-### GetPerClientBandwidthLimits
+`func (o *InlineResponse200195Rules) HasComment() bool`
 
-`func (o *InlineResponse200195Rules) GetPerClientBandwidthLimits() NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits`
+HasComment returns a boolean if a field has been set.
 
-GetPerClientBandwidthLimits returns the PerClientBandwidthLimits field if non-nil, zero value otherwise.
+### GetPolicy
 
-### GetPerClientBandwidthLimitsOk
+`func (o *InlineResponse200195Rules) GetPolicy() string`
 
-`func (o *InlineResponse200195Rules) GetPerClientBandwidthLimitsOk() (*NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits, bool)`
+GetPolicy returns the Policy field if non-nil, zero value otherwise.
 
-GetPerClientBandwidthLimitsOk returns a tuple with the PerClientBandwidthLimits field if it's non-nil, zero value otherwise
+### GetPolicyOk
+
+`func (o *InlineResponse200195Rules) GetPolicyOk() (*string, bool)`
+
+GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPerClientBandwidthLimits
+### SetPolicy
 
-`func (o *InlineResponse200195Rules) SetPerClientBandwidthLimits(v NetworksNetworkIdApplianceTrafficShapingRulesPerClientBandwidthLimits)`
+`func (o *InlineResponse200195Rules) SetPolicy(v string)`
 
-SetPerClientBandwidthLimits sets PerClientBandwidthLimits field to given value.
+SetPolicy sets Policy field to given value.
 
-### HasPerClientBandwidthLimits
 
-`func (o *InlineResponse200195Rules) HasPerClientBandwidthLimits() bool`
+### GetProtocol
 
-HasPerClientBandwidthLimits returns a boolean if a field has been set.
+`func (o *InlineResponse200195Rules) GetProtocol() string`
 
-### GetDscpTagValue
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200195Rules) GetDscpTagValue() int32`
+### GetProtocolOk
 
-GetDscpTagValue returns the DscpTagValue field if non-nil, zero value otherwise.
+`func (o *InlineResponse200195Rules) GetProtocolOk() (*string, bool)`
 
-### GetDscpTagValueOk
-
-`func (o *InlineResponse200195Rules) GetDscpTagValueOk() (*int32, bool)`
-
-GetDscpTagValueOk returns a tuple with the DscpTagValue field if it's non-nil, zero value otherwise
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDscpTagValue
+### SetProtocol
 
-`func (o *InlineResponse200195Rules) SetDscpTagValue(v int32)`
+`func (o *InlineResponse200195Rules) SetProtocol(v string)`
 
-SetDscpTagValue sets DscpTagValue field to given value.
+SetProtocol sets Protocol field to given value.
 
-### HasDscpTagValue
 
-`func (o *InlineResponse200195Rules) HasDscpTagValue() bool`
+### GetDestPort
 
-HasDscpTagValue returns a boolean if a field has been set.
+`func (o *InlineResponse200195Rules) GetDestPort() string`
 
-### GetPcpTagValue
+GetDestPort returns the DestPort field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200195Rules) GetPcpTagValue() int32`
+### GetDestPortOk
 
-GetPcpTagValue returns the PcpTagValue field if non-nil, zero value otherwise.
+`func (o *InlineResponse200195Rules) GetDestPortOk() (*string, bool)`
 
-### GetPcpTagValueOk
-
-`func (o *InlineResponse200195Rules) GetPcpTagValueOk() (*int32, bool)`
-
-GetPcpTagValueOk returns a tuple with the PcpTagValue field if it's non-nil, zero value otherwise
+GetDestPortOk returns a tuple with the DestPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPcpTagValue
+### SetDestPort
 
-`func (o *InlineResponse200195Rules) SetPcpTagValue(v int32)`
+`func (o *InlineResponse200195Rules) SetDestPort(v string)`
 
-SetPcpTagValue sets PcpTagValue field to given value.
+SetDestPort sets DestPort field to given value.
 
-### HasPcpTagValue
+### HasDestPort
 
-`func (o *InlineResponse200195Rules) HasPcpTagValue() bool`
+`func (o *InlineResponse200195Rules) HasDestPort() bool`
 
-HasPcpTagValue returns a boolean if a field has been set.
+HasDestPort returns a boolean if a field has been set.
+
+### GetDestCidr
+
+`func (o *InlineResponse200195Rules) GetDestCidr() string`
+
+GetDestCidr returns the DestCidr field if non-nil, zero value otherwise.
+
+### GetDestCidrOk
+
+`func (o *InlineResponse200195Rules) GetDestCidrOk() (*string, bool)`
+
+GetDestCidrOk returns a tuple with the DestCidr field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDestCidr
+
+`func (o *InlineResponse200195Rules) SetDestCidr(v string)`
+
+SetDestCidr sets DestCidr field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

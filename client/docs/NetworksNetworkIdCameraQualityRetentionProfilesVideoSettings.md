@@ -4,21 +4,27 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MV21MV71** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV21MV71**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV21MV71.md) |  | [optional] 
 **MV12MV22MV72** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV12MV22MV72**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV12MV22MV72.md) |  | [optional] 
-**MV32** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV32**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV32.md) |  | [optional] 
-**MV33** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33.md) |  | [optional] 
-**MV33M** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33M**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33M.md) |  | [optional] 
 **MV12WE** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV12WE**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV12WE.md) |  | [optional] 
 **MV13** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV13**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV13.md) |  | [optional] 
 **MV13M** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV13M**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV13M.md) |  | [optional] 
+**MV21MV71** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV21MV71**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV21MV71.md) |  | [optional] 
 **MV22XMV72X** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV22XMV72X**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV22XMV72X.md) |  | [optional] 
+**MV23** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23.md) |  | [optional] 
+**MV23M** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23M**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23M.md) |  | [optional] 
+**MV23X** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23X**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23X.md) |  | [optional] 
+**MV32** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV32**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV32.md) |  | [optional] 
+**MV33** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33.md) |  | [optional] 
+**MV33M** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33M**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33M.md) |  | [optional] 
 **MV52** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV52**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV52.md) |  | [optional] 
 **MV63** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63.md) |  | [optional] 
 **MV63M** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63M**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63M.md) |  | [optional] 
+**MV63X** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63X**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63X.md) |  | [optional] 
+**MV73** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73.md) |  | [optional] 
+**MV73M** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73M**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73M.md) |  | [optional] 
+**MV73X** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73X**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73X.md) |  | [optional] 
 **MV93** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV93**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV93.md) |  | [optional] 
 **MV93M** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV93M**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV93M.md) |  | [optional] 
-**MV63X** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63X**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63X.md) |  | [optional] 
 **MV93X** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV93X**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV93X.md) |  | [optional] 
 
 ## Methods
@@ -39,31 +45,6 @@ will change when the set of required properties is changed
 NewNetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsWithDefaults instantiates a new NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetMV21MV71
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV21MV71() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV21MV71`
-
-GetMV21MV71 returns the MV21MV71 field if non-nil, zero value otherwise.
-
-### GetMV21MV71Ok
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV21MV71Ok() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV21MV71, bool)`
-
-GetMV21MV71Ok returns a tuple with the MV21MV71 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMV21MV71
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV21MV71(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV21MV71)`
-
-SetMV21MV71 sets MV21MV71 field to given value.
-
-### HasMV21MV71
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV21MV71() bool`
-
-HasMV21MV71 returns a boolean if a field has been set.
 
 ### GetMV12MV22MV72
 
@@ -89,81 +70,6 @@ SetMV12MV22MV72 sets MV12MV22MV72 field to given value.
 `func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV12MV22MV72() bool`
 
 HasMV12MV22MV72 returns a boolean if a field has been set.
-
-### GetMV32
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV32() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV32`
-
-GetMV32 returns the MV32 field if non-nil, zero value otherwise.
-
-### GetMV32Ok
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV32Ok() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV32, bool)`
-
-GetMV32Ok returns a tuple with the MV32 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMV32
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV32(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV32)`
-
-SetMV32 sets MV32 field to given value.
-
-### HasMV32
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV32() bool`
-
-HasMV32 returns a boolean if a field has been set.
-
-### GetMV33
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV33() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33`
-
-GetMV33 returns the MV33 field if non-nil, zero value otherwise.
-
-### GetMV33Ok
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV33Ok() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33, bool)`
-
-GetMV33Ok returns a tuple with the MV33 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMV33
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV33(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33)`
-
-SetMV33 sets MV33 field to given value.
-
-### HasMV33
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV33() bool`
-
-HasMV33 returns a boolean if a field has been set.
-
-### GetMV33M
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV33M() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33M`
-
-GetMV33M returns the MV33M field if non-nil, zero value otherwise.
-
-### GetMV33MOk
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV33MOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33M, bool)`
-
-GetMV33MOk returns a tuple with the MV33M field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMV33M
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV33M(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33M)`
-
-SetMV33M sets MV33M field to given value.
-
-### HasMV33M
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV33M() bool`
-
-HasMV33M returns a boolean if a field has been set.
 
 ### GetMV12WE
 
@@ -240,6 +146,31 @@ SetMV13M sets MV13M field to given value.
 
 HasMV13M returns a boolean if a field has been set.
 
+### GetMV21MV71
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV21MV71() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV21MV71`
+
+GetMV21MV71 returns the MV21MV71 field if non-nil, zero value otherwise.
+
+### GetMV21MV71Ok
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV21MV71Ok() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV21MV71, bool)`
+
+GetMV21MV71Ok returns a tuple with the MV21MV71 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV21MV71
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV21MV71(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV21MV71)`
+
+SetMV21MV71 sets MV21MV71 field to given value.
+
+### HasMV21MV71
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV21MV71() bool`
+
+HasMV21MV71 returns a boolean if a field has been set.
+
 ### GetMV22XMV72X
 
 `func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV22XMV72X() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV22XMV72X`
@@ -264,6 +195,156 @@ SetMV22XMV72X sets MV22XMV72X field to given value.
 `func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV22XMV72X() bool`
 
 HasMV22XMV72X returns a boolean if a field has been set.
+
+### GetMV23
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV23() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23`
+
+GetMV23 returns the MV23 field if non-nil, zero value otherwise.
+
+### GetMV23Ok
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV23Ok() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23, bool)`
+
+GetMV23Ok returns a tuple with the MV23 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV23
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV23(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23)`
+
+SetMV23 sets MV23 field to given value.
+
+### HasMV23
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV23() bool`
+
+HasMV23 returns a boolean if a field has been set.
+
+### GetMV23M
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV23M() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23M`
+
+GetMV23M returns the MV23M field if non-nil, zero value otherwise.
+
+### GetMV23MOk
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV23MOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23M, bool)`
+
+GetMV23MOk returns a tuple with the MV23M field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV23M
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV23M(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23M)`
+
+SetMV23M sets MV23M field to given value.
+
+### HasMV23M
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV23M() bool`
+
+HasMV23M returns a boolean if a field has been set.
+
+### GetMV23X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV23X() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23X`
+
+GetMV23X returns the MV23X field if non-nil, zero value otherwise.
+
+### GetMV23XOk
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV23XOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23X, bool)`
+
+GetMV23XOk returns a tuple with the MV23X field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV23X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV23X(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV23X)`
+
+SetMV23X sets MV23X field to given value.
+
+### HasMV23X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV23X() bool`
+
+HasMV23X returns a boolean if a field has been set.
+
+### GetMV32
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV32() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV32`
+
+GetMV32 returns the MV32 field if non-nil, zero value otherwise.
+
+### GetMV32Ok
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV32Ok() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV32, bool)`
+
+GetMV32Ok returns a tuple with the MV32 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV32
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV32(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV32)`
+
+SetMV32 sets MV32 field to given value.
+
+### HasMV32
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV32() bool`
+
+HasMV32 returns a boolean if a field has been set.
+
+### GetMV33
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV33() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33`
+
+GetMV33 returns the MV33 field if non-nil, zero value otherwise.
+
+### GetMV33Ok
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV33Ok() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33, bool)`
+
+GetMV33Ok returns a tuple with the MV33 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV33
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV33(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33)`
+
+SetMV33 sets MV33 field to given value.
+
+### HasMV33
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV33() bool`
+
+HasMV33 returns a boolean if a field has been set.
+
+### GetMV33M
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV33M() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33M`
+
+GetMV33M returns the MV33M field if non-nil, zero value otherwise.
+
+### GetMV33MOk
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV33MOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33M, bool)`
+
+GetMV33MOk returns a tuple with the MV33M field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV33M
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV33M(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV33M)`
+
+SetMV33M sets MV33M field to given value.
+
+### HasMV33M
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV33M() bool`
+
+HasMV33M returns a boolean if a field has been set.
 
 ### GetMV52
 
@@ -340,6 +421,106 @@ SetMV63M sets MV63M field to given value.
 
 HasMV63M returns a boolean if a field has been set.
 
+### GetMV63X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV63X() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63X`
+
+GetMV63X returns the MV63X field if non-nil, zero value otherwise.
+
+### GetMV63XOk
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV63XOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63X, bool)`
+
+GetMV63XOk returns a tuple with the MV63X field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV63X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV63X(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63X)`
+
+SetMV63X sets MV63X field to given value.
+
+### HasMV63X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV63X() bool`
+
+HasMV63X returns a boolean if a field has been set.
+
+### GetMV73
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV73() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73`
+
+GetMV73 returns the MV73 field if non-nil, zero value otherwise.
+
+### GetMV73Ok
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV73Ok() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73, bool)`
+
+GetMV73Ok returns a tuple with the MV73 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV73
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV73(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73)`
+
+SetMV73 sets MV73 field to given value.
+
+### HasMV73
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV73() bool`
+
+HasMV73 returns a boolean if a field has been set.
+
+### GetMV73M
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV73M() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73M`
+
+GetMV73M returns the MV73M field if non-nil, zero value otherwise.
+
+### GetMV73MOk
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV73MOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73M, bool)`
+
+GetMV73MOk returns a tuple with the MV73M field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV73M
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV73M(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73M)`
+
+SetMV73M sets MV73M field to given value.
+
+### HasMV73M
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV73M() bool`
+
+HasMV73M returns a boolean if a field has been set.
+
+### GetMV73X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV73X() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73X`
+
+GetMV73X returns the MV73X field if non-nil, zero value otherwise.
+
+### GetMV73XOk
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV73XOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73X, bool)`
+
+GetMV73XOk returns a tuple with the MV73X field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMV73X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV73X(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV73X)`
+
+SetMV73X sets MV73X field to given value.
+
+### HasMV73X
+
+`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV73X() bool`
+
+HasMV73X returns a boolean if a field has been set.
+
 ### GetMV93
 
 `func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV93() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV93`
@@ -389,31 +570,6 @@ SetMV93M sets MV93M field to given value.
 `func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV93M() bool`
 
 HasMV93M returns a boolean if a field has been set.
-
-### GetMV63X
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV63X() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63X`
-
-GetMV63X returns the MV63X field if non-nil, zero value otherwise.
-
-### GetMV63XOk
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) GetMV63XOk() (*NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63X, bool)`
-
-GetMV63XOk returns a tuple with the MV63X field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMV63X
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) SetMV63X(v NetworksNetworkIdCameraQualityRetentionProfilesVideoSettingsMV63X)`
-
-SetMV63X sets MV63X field to given value.
-
-### HasMV63X
-
-`func (o *NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings) HasMV63X() bool`
-
-HasMV63X returns a boolean if a field has been set.
 
 ### GetMV93X
 

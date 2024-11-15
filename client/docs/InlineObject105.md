@@ -4,10 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the user. Only allowed If the user is not Dashboard administrator. | [optional] 
-**Password** | Pointer to **string** | The password for this user account. Only allowed If the user is not Dashboard administrator. | [optional] 
-**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
-**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations**](NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md) | Authorization zones and expiration dates for the user. | [optional] 
+**Name** | Pointer to **string** | The name of your floor plan. | [optional] 
+**Center** | Pointer to [**NetworksNetworkIdFloorPlansFloorPlanIdCenter**](NetworksNetworkIdFloorPlansFloorPlanIdCenter.md) |  | [optional] 
+**BottomLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomLeftCorner**](NetworksNetworkIdFloorPlansBottomLeftCorner.md) |  | [optional] 
+**BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
+**TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
+**TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
+**ImageContents** | Pointer to **string** | The file contents (a base 64 encoded string) of your new image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. If you upload a new image, and you do NOT specify any new geolocation fields (&#39;center, &#39;topLeftCorner&#39;, etc), the floor plan will be recentered with no rotation in order to maintain the aspect ratio of your new image. | [optional] 
 
 ## Methods
 
@@ -53,80 +56,155 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetPassword
+### GetCenter
 
-`func (o *InlineObject105) GetPassword() string`
+`func (o *InlineObject105) GetCenter() NetworksNetworkIdFloorPlansFloorPlanIdCenter`
 
-GetPassword returns the Password field if non-nil, zero value otherwise.
+GetCenter returns the Center field if non-nil, zero value otherwise.
 
-### GetPasswordOk
+### GetCenterOk
 
-`func (o *InlineObject105) GetPasswordOk() (*string, bool)`
+`func (o *InlineObject105) GetCenterOk() (*NetworksNetworkIdFloorPlansFloorPlanIdCenter, bool)`
 
-GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
+GetCenterOk returns a tuple with the Center field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPassword
+### SetCenter
 
-`func (o *InlineObject105) SetPassword(v string)`
+`func (o *InlineObject105) SetCenter(v NetworksNetworkIdFloorPlansFloorPlanIdCenter)`
 
-SetPassword sets Password field to given value.
+SetCenter sets Center field to given value.
 
-### HasPassword
+### HasCenter
 
-`func (o *InlineObject105) HasPassword() bool`
+`func (o *InlineObject105) HasCenter() bool`
 
-HasPassword returns a boolean if a field has been set.
+HasCenter returns a boolean if a field has been set.
 
-### GetEmailPasswordToUser
+### GetBottomLeftCorner
 
-`func (o *InlineObject105) GetEmailPasswordToUser() bool`
+`func (o *InlineObject105) GetBottomLeftCorner() NetworksNetworkIdFloorPlansBottomLeftCorner`
 
-GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
+GetBottomLeftCorner returns the BottomLeftCorner field if non-nil, zero value otherwise.
 
-### GetEmailPasswordToUserOk
+### GetBottomLeftCornerOk
 
-`func (o *InlineObject105) GetEmailPasswordToUserOk() (*bool, bool)`
+`func (o *InlineObject105) GetBottomLeftCornerOk() (*NetworksNetworkIdFloorPlansBottomLeftCorner, bool)`
 
-GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
+GetBottomLeftCornerOk returns a tuple with the BottomLeftCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmailPasswordToUser
+### SetBottomLeftCorner
 
-`func (o *InlineObject105) SetEmailPasswordToUser(v bool)`
+`func (o *InlineObject105) SetBottomLeftCorner(v NetworksNetworkIdFloorPlansBottomLeftCorner)`
 
-SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
+SetBottomLeftCorner sets BottomLeftCorner field to given value.
 
-### HasEmailPasswordToUser
+### HasBottomLeftCorner
 
-`func (o *InlineObject105) HasEmailPasswordToUser() bool`
+`func (o *InlineObject105) HasBottomLeftCorner() bool`
 
-HasEmailPasswordToUser returns a boolean if a field has been set.
+HasBottomLeftCorner returns a boolean if a field has been set.
 
-### GetAuthorizations
+### GetBottomRightCorner
 
-`func (o *InlineObject105) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations`
+`func (o *InlineObject105) GetBottomRightCorner() NetworksNetworkIdFloorPlansBottomRightCorner`
 
-GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+GetBottomRightCorner returns the BottomRightCorner field if non-nil, zero value otherwise.
 
-### GetAuthorizationsOk
+### GetBottomRightCornerOk
 
-`func (o *InlineObject105) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations, bool)`
+`func (o *InlineObject105) GetBottomRightCornerOk() (*NetworksNetworkIdFloorPlansBottomRightCorner, bool)`
 
-GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+GetBottomRightCornerOk returns a tuple with the BottomRightCorner field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuthorizations
+### SetBottomRightCorner
 
-`func (o *InlineObject105) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations)`
+`func (o *InlineObject105) SetBottomRightCorner(v NetworksNetworkIdFloorPlansBottomRightCorner)`
 
-SetAuthorizations sets Authorizations field to given value.
+SetBottomRightCorner sets BottomRightCorner field to given value.
 
-### HasAuthorizations
+### HasBottomRightCorner
 
-`func (o *InlineObject105) HasAuthorizations() bool`
+`func (o *InlineObject105) HasBottomRightCorner() bool`
 
-HasAuthorizations returns a boolean if a field has been set.
+HasBottomRightCorner returns a boolean if a field has been set.
+
+### GetTopLeftCorner
+
+`func (o *InlineObject105) GetTopLeftCorner() NetworksNetworkIdFloorPlansTopLeftCorner`
+
+GetTopLeftCorner returns the TopLeftCorner field if non-nil, zero value otherwise.
+
+### GetTopLeftCornerOk
+
+`func (o *InlineObject105) GetTopLeftCornerOk() (*NetworksNetworkIdFloorPlansTopLeftCorner, bool)`
+
+GetTopLeftCornerOk returns a tuple with the TopLeftCorner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTopLeftCorner
+
+`func (o *InlineObject105) SetTopLeftCorner(v NetworksNetworkIdFloorPlansTopLeftCorner)`
+
+SetTopLeftCorner sets TopLeftCorner field to given value.
+
+### HasTopLeftCorner
+
+`func (o *InlineObject105) HasTopLeftCorner() bool`
+
+HasTopLeftCorner returns a boolean if a field has been set.
+
+### GetTopRightCorner
+
+`func (o *InlineObject105) GetTopRightCorner() NetworksNetworkIdFloorPlansTopRightCorner`
+
+GetTopRightCorner returns the TopRightCorner field if non-nil, zero value otherwise.
+
+### GetTopRightCornerOk
+
+`func (o *InlineObject105) GetTopRightCornerOk() (*NetworksNetworkIdFloorPlansTopRightCorner, bool)`
+
+GetTopRightCornerOk returns a tuple with the TopRightCorner field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTopRightCorner
+
+`func (o *InlineObject105) SetTopRightCorner(v NetworksNetworkIdFloorPlansTopRightCorner)`
+
+SetTopRightCorner sets TopRightCorner field to given value.
+
+### HasTopRightCorner
+
+`func (o *InlineObject105) HasTopRightCorner() bool`
+
+HasTopRightCorner returns a boolean if a field has been set.
+
+### GetImageContents
+
+`func (o *InlineObject105) GetImageContents() string`
+
+GetImageContents returns the ImageContents field if non-nil, zero value otherwise.
+
+### GetImageContentsOk
+
+`func (o *InlineObject105) GetImageContentsOk() (*string, bool)`
+
+GetImageContentsOk returns a tuple with the ImageContents field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImageContents
+
+`func (o *InlineObject105) SetImageContents(v string)`
+
+SetImageContents sets ImageContents field to given value.
+
+### HasImageContents
+
+`func (o *InlineObject105) HasImageContents() bool`
+
+HasImageContents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

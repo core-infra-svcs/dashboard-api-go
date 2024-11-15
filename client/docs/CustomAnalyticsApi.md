@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationCameraCustomAnalyticsArtifact
 
-> InlineResponse20113 CreateOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId).CreateOrganizationCameraCustomAnalyticsArtifact(createOrganizationCameraCustomAnalyticsArtifact).Execute()
+> InlineResponse20114 CreateOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId).CreateOrganizationCameraCustomAnalyticsArtifact(createOrganizationCameraCustomAnalyticsArtifact).Execute()
 
 Create custom analytics artifact
 
@@ -35,7 +35,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject220() // InlineObject220 |  (optional)
+    createOrganizationCameraCustomAnalyticsArtifact := *openapiclient.NewInlineObject224() // InlineObject224 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CustomAnalyticsApi.CreateOrganizationCameraCustomAnalyticsArtifact``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationCameraCustomAnalyticsArtifact`: InlineResponse20113
+    // response from `CreateOrganizationCameraCustomAnalyticsArtifact`: InlineResponse20114
     fmt.Fprintf(os.Stdout, "Response from `CustomAnalyticsApi.CreateOrganizationCameraCustomAnalyticsArtifact`: %v\n", resp)
 }
 ```
@@ -65,11 +65,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCameraCu
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject220**](InlineObject220.md) |  | 
+ **createOrganizationCameraCustomAnalyticsArtifact** | [**InlineObject224**](InlineObject224.md) |  | 
 
 ### Return type
 
-[**InlineResponse20113**](InlineResponse20113.md)
+[**InlineResponse20114**](InlineResponse20114.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraCustomAnalyticsArtifact
 
-> InlineResponse200224 GetOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId, artifactId).Execute()
+> InlineResponse200229 GetOrganizationCameraCustomAnalyticsArtifact(ctx, organizationId, artifactId).Execute()
 
 Get Custom Analytics Artifact
 
@@ -257,7 +257,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CustomAnalyticsApi.GetOrganizationCameraCustomAnalyticsArtifact``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraCustomAnalyticsArtifact`: InlineResponse200224
+    // response from `GetOrganizationCameraCustomAnalyticsArtifact`: InlineResponse200229
     fmt.Fprintf(os.Stdout, "Response from `CustomAnalyticsApi.GetOrganizationCameraCustomAnalyticsArtifact`: %v\n", resp)
 }
 ```
@@ -283,7 +283,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200224**](InlineResponse200224.md)
+[**InlineResponse200229**](InlineResponse200229.md)
 
 ### Authorization
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraCustomAnalyticsArtifacts
 
-> []InlineResponse200224 GetOrganizationCameraCustomAnalyticsArtifacts(ctx, organizationId).Execute()
+> []InlineResponse200229 GetOrganizationCameraCustomAnalyticsArtifacts(ctx, organizationId).Execute()
 
 List Custom Analytics Artifacts
 
@@ -329,7 +329,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CustomAnalyticsApi.GetOrganizationCameraCustomAnalyticsArtifacts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraCustomAnalyticsArtifacts`: []InlineResponse200224
+    // response from `GetOrganizationCameraCustomAnalyticsArtifacts`: []InlineResponse200229
     fmt.Fprintf(os.Stdout, "Response from `CustomAnalyticsApi.GetOrganizationCameraCustomAnalyticsArtifacts`: %v\n", resp)
 }
 ```
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200224**](InlineResponse200224.md)
+[**[]InlineResponse200229**](InlineResponse200229.md)
 
 ### Authorization
 

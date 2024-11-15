@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | [**InlineResponse200216Counts**](InlineResponse200216Counts.md) |  | 
+**Counts** | Pointer to [**InlineResponse200216Counts**](InlineResponse200216Counts.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200216
 
-`func NewInlineResponse200216(counts InlineResponse200216Counts, ) *InlineResponse200216`
+`func NewInlineResponse200216() *InlineResponse200216`
 
 NewInlineResponse200216 instantiates a new InlineResponse200216 object
 This constructor will assign default values to properties that have it defined,
@@ -44,6 +44,11 @@ and a boolean to check if the value has been set.
 
 SetCounts sets Counts field to given value.
 
+### HasCounts
+
+`func (o *InlineResponse200216) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

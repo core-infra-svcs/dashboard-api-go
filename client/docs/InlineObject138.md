@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse200149Overrides**](InlineResponse200149Overrides.md) | Override MTU size for individual switches or switch templates. An empty array will clear overrides. | [optional] 
+**Mac** | Pointer to **string** | The updated mac address of the trusted server | [optional] 
+**Vlan** | Pointer to **int32** | The updated VLAN of the trusted server. It must be between 1 and 4094 | [optional] 
+**Ipv4** | Pointer to [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineObject138WithDefaults instantiates a new InlineObject138 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultMtuSize
+### GetMac
 
-`func (o *InlineObject138) GetDefaultMtuSize() int32`
+`func (o *InlineObject138) GetMac() string`
 
-GetDefaultMtuSize returns the DefaultMtuSize field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetDefaultMtuSizeOk
+### GetMacOk
 
-`func (o *InlineObject138) GetDefaultMtuSizeOk() (*int32, bool)`
+`func (o *InlineObject138) GetMacOk() (*string, bool)`
 
-GetDefaultMtuSizeOk returns a tuple with the DefaultMtuSize field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultMtuSize
+### SetMac
 
-`func (o *InlineObject138) SetDefaultMtuSize(v int32)`
+`func (o *InlineObject138) SetMac(v string)`
 
-SetDefaultMtuSize sets DefaultMtuSize field to given value.
+SetMac sets Mac field to given value.
 
-### HasDefaultMtuSize
+### HasMac
 
-`func (o *InlineObject138) HasDefaultMtuSize() bool`
+`func (o *InlineObject138) HasMac() bool`
 
-HasDefaultMtuSize returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetOverrides
+### GetVlan
 
-`func (o *InlineObject138) GetOverrides() []InlineResponse200149Overrides`
+`func (o *InlineObject138) GetVlan() int32`
 
-GetOverrides returns the Overrides field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetOverridesOk
+### GetVlanOk
 
-`func (o *InlineObject138) GetOverridesOk() (*[]InlineResponse200149Overrides, bool)`
+`func (o *InlineObject138) GetVlanOk() (*int32, bool)`
 
-GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOverrides
+### SetVlan
 
-`func (o *InlineObject138) SetOverrides(v []InlineResponse200149Overrides)`
+`func (o *InlineObject138) SetVlan(v int32)`
 
-SetOverrides sets Overrides field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasOverrides
+### HasVlan
 
-`func (o *InlineObject138) HasOverrides() bool`
+`func (o *InlineObject138) HasVlan() bool`
 
-HasOverrides returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
+
+### GetIpv4
+
+`func (o *InlineObject138) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4`
+
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+
+### GetIpv4Ok
+
+`func (o *InlineObject138) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4, bool)`
+
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv4
+
+`func (o *InlineObject138) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersTrustedServerIdIpv4)`
+
+SetIpv4 sets Ipv4 field to given value.
+
+### HasIpv4
+
+`func (o *InlineObject138) HasIpv4() bool`
+
+HasIpv4 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

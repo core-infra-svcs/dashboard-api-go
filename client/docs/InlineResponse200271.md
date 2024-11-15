@@ -4,13 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Policy object ID | [optional] 
-**Name** | Pointer to **string** | Name of the Policy object group. | [optional] 
-**Category** | Pointer to **string** | Type of object groups. (NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Time Stamp of policy object creation. | [optional] 
-**UpdatedAt** | Pointer to **time.Time** | Time Stamp of policy object updation. | [optional] 
-**ObjectIds** | Pointer to **[]int32** | Policy objects associated with Network Object Group or Port Object Group | [optional] 
-**NetworkIds** | Pointer to **[]string** | Network ID&#39;s associated with the policy objects. | [optional] 
+**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the SM seats to | [optional] 
+**LicenseId** | Pointer to **string** | The ID of the SM license to move the seats from | [optional] 
+**SeatCount** | Pointer to **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | [optional] 
 
 ## Methods
 
@@ -31,180 +27,80 @@ NewInlineResponse200271WithDefaults instantiates a new InlineResponse200271 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetDestOrganizationId
 
-`func (o *InlineResponse200271) GetId() string`
+`func (o *InlineResponse200271) GetDestOrganizationId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineResponse200271) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200271) GetDestOrganizationIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetDestOrganizationId
 
-`func (o *InlineResponse200271) SetId(v string)`
+`func (o *InlineResponse200271) SetDestOrganizationId(v string)`
 
-SetId sets Id field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasId
+### HasDestOrganizationId
 
-`func (o *InlineResponse200271) HasId() bool`
+`func (o *InlineResponse200271) HasDestOrganizationId() bool`
 
-HasId returns a boolean if a field has been set.
+HasDestOrganizationId returns a boolean if a field has been set.
 
-### GetName
+### GetLicenseId
 
-`func (o *InlineResponse200271) GetName() string`
+`func (o *InlineResponse200271) GetLicenseId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetLicenseIdOk
 
-`func (o *InlineResponse200271) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200271) GetLicenseIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetLicenseId
 
-`func (o *InlineResponse200271) SetName(v string)`
+`func (o *InlineResponse200271) SetLicenseId(v string)`
 
-SetName sets Name field to given value.
+SetLicenseId sets LicenseId field to given value.
 
-### HasName
+### HasLicenseId
 
-`func (o *InlineResponse200271) HasName() bool`
+`func (o *InlineResponse200271) HasLicenseId() bool`
 
-HasName returns a boolean if a field has been set.
+HasLicenseId returns a boolean if a field has been set.
 
-### GetCategory
+### GetSeatCount
 
-`func (o *InlineResponse200271) GetCategory() string`
+`func (o *InlineResponse200271) GetSeatCount() int32`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetSeatCountOk
 
-`func (o *InlineResponse200271) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200271) GetSeatCountOk() (*int32, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetSeatCount
 
-`func (o *InlineResponse200271) SetCategory(v string)`
+`func (o *InlineResponse200271) SetSeatCount(v int32)`
 
-SetCategory sets Category field to given value.
+SetSeatCount sets SeatCount field to given value.
 
-### HasCategory
+### HasSeatCount
 
-`func (o *InlineResponse200271) HasCategory() bool`
+`func (o *InlineResponse200271) HasSeatCount() bool`
 
-HasCategory returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200271) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200271) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200271) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200271) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200271) GetUpdatedAt() time.Time`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200271) GetUpdatedAtOk() (*time.Time, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200271) SetUpdatedAt(v time.Time)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200271) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
-
-### GetObjectIds
-
-`func (o *InlineResponse200271) GetObjectIds() []int32`
-
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
-
-### GetObjectIdsOk
-
-`func (o *InlineResponse200271) GetObjectIdsOk() (*[]int32, bool)`
-
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetObjectIds
-
-`func (o *InlineResponse200271) SetObjectIds(v []int32)`
-
-SetObjectIds sets ObjectIds field to given value.
-
-### HasObjectIds
-
-`func (o *InlineResponse200271) HasObjectIds() bool`
-
-HasObjectIds returns a boolean if a field has been set.
-
-### GetNetworkIds
-
-`func (o *InlineResponse200271) GetNetworkIds() []string`
-
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
-
-### GetNetworkIdsOk
-
-`func (o *InlineResponse200271) GetNetworkIdsOk() (*[]string, bool)`
-
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkIds
-
-`func (o *InlineResponse200271) SetNetworkIds(v []string)`
-
-SetNetworkIds sets NetworkIds field to given value.
-
-### HasNetworkIds
-
-`func (o *InlineResponse200271) HasNetworkIds() bool`
-
-HasNetworkIds returns a boolean if a field has been set.
+HasSeatCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultPolicy** | **string** | Allows clients to access rogue networks. Blocked by default. | 
+**Name** | Pointer to **string** | The name of the template | [optional] 
+**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
+**BodyFile** | Pointer to **string** | A file containing liquid template used for the body of the webhook message. | [optional] 
+**HeadersFile** | Pointer to **string** | A file containing the liquid template used with the webhook headers. | [optional] 
 
 ## Methods
 
 ### NewInlineObject172
 
-`func NewInlineObject172(defaultPolicy string, ) *InlineObject172`
+`func NewInlineObject172() *InlineObject172`
 
 NewInlineObject172 instantiates a new InlineObject172 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +29,130 @@ NewInlineObject172WithDefaults instantiates a new InlineObject172 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultPolicy
+### GetName
 
-`func (o *InlineObject172) GetDefaultPolicy() string`
+`func (o *InlineObject172) GetName() string`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetNameOk
 
-`func (o *InlineObject172) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineObject172) GetNameOk() (*string, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetName
 
-`func (o *InlineObject172) SetDefaultPolicy(v string)`
+`func (o *InlineObject172) SetName(v string)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject172) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetBody
+
+`func (o *InlineObject172) GetBody() string`
+
+GetBody returns the Body field if non-nil, zero value otherwise.
+
+### GetBodyOk
+
+`func (o *InlineObject172) GetBodyOk() (*string, bool)`
+
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBody
+
+`func (o *InlineObject172) SetBody(v string)`
+
+SetBody sets Body field to given value.
+
+### HasBody
+
+`func (o *InlineObject172) HasBody() bool`
+
+HasBody returns a boolean if a field has been set.
+
+### GetHeaders
+
+`func (o *InlineObject172) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
+
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
+
+### GetHeadersOk
+
+`func (o *InlineObject172) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
+
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeaders
+
+`func (o *InlineObject172) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
+
+SetHeaders sets Headers field to given value.
+
+### HasHeaders
+
+`func (o *InlineObject172) HasHeaders() bool`
+
+HasHeaders returns a boolean if a field has been set.
+
+### GetBodyFile
+
+`func (o *InlineObject172) GetBodyFile() string`
+
+GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
+
+### GetBodyFileOk
+
+`func (o *InlineObject172) GetBodyFileOk() (*string, bool)`
+
+GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBodyFile
+
+`func (o *InlineObject172) SetBodyFile(v string)`
+
+SetBodyFile sets BodyFile field to given value.
+
+### HasBodyFile
+
+`func (o *InlineObject172) HasBodyFile() bool`
+
+HasBodyFile returns a boolean if a field has been set.
+
+### GetHeadersFile
+
+`func (o *InlineObject172) GetHeadersFile() string`
+
+GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
+
+### GetHeadersFileOk
+
+`func (o *InlineObject172) GetHeadersFileOk() (*string, bool)`
+
+GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHeadersFile
+
+`func (o *InlineObject172) SetHeadersFile(v string)`
+
+SetHeadersFile sets HeadersFile field to given value.
+
+### HasHeadersFile
+
+`func (o *InlineObject172) HasHeadersFile() bool`
+
+HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

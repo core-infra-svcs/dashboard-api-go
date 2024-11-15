@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
+**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200292WithDefaults instantiates a new InlineResponse200292 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetTs
 
-`func (o *InlineResponse200292) GetModel() string`
+`func (o *InlineResponse200292) GetTs() time.Time`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetTsOk
 
-`func (o *InlineResponse200292) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200292) GetTsOk() (*time.Time, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetTs
 
-`func (o *InlineResponse200292) SetModel(v string)`
+`func (o *InlineResponse200292) SetTs(v time.Time)`
 
-SetModel sets Model field to given value.
+SetTs sets Ts field to given value.
 
-### HasModel
+### HasTs
 
-`func (o *InlineResponse200292) HasModel() bool`
+`func (o *InlineResponse200292) HasTs() bool`
 
-HasModel returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetCount
+### GetDraw
 
-`func (o *InlineResponse200292) GetCount() int32`
+`func (o *InlineResponse200292) GetDraw() float32`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetDraw returns the Draw field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetDrawOk
 
-`func (o *InlineResponse200292) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse200292) GetDrawOk() (*float32, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetDraw
 
-`func (o *InlineResponse200292) SetCount(v int32)`
+`func (o *InlineResponse200292) SetDraw(v float32)`
 
-SetCount sets Count field to given value.
+SetDraw sets Draw field to given value.
 
-### HasCount
+### HasDraw
 
-`func (o *InlineResponse200292) HasCount() bool`
+`func (o *InlineResponse200292) HasDraw() bool`
 
-HasCount returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200292) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200292) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200292) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200292) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasDraw returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

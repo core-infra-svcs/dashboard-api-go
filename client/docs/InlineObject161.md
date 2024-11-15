@@ -4,7 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RetainConfigs** | Pointer to **bool** | Optional boolean to retain all the current configs given by the template. | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for broadcast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for multicast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for unknown unicast (dlf-destination lookup failure) traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
 
 ## Methods
 
@@ -25,30 +28,105 @@ NewInlineObject161WithDefaults instantiates a new InlineObject161 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRetainConfigs
+### GetBroadcastThreshold
 
-`func (o *InlineObject161) GetRetainConfigs() bool`
+`func (o *InlineObject161) GetBroadcastThreshold() int32`
 
-GetRetainConfigs returns the RetainConfigs field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetRetainConfigsOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineObject161) GetRetainConfigsOk() (*bool, bool)`
+`func (o *InlineObject161) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetRetainConfigsOk returns a tuple with the RetainConfigs field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRetainConfigs
+### SetBroadcastThreshold
 
-`func (o *InlineObject161) SetRetainConfigs(v bool)`
+`func (o *InlineObject161) SetBroadcastThreshold(v int32)`
 
-SetRetainConfigs sets RetainConfigs field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasRetainConfigs
+### HasBroadcastThreshold
 
-`func (o *InlineObject161) HasRetainConfigs() bool`
+`func (o *InlineObject161) HasBroadcastThreshold() bool`
 
-HasRetainConfigs returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
+
+### GetMulticastThreshold
+
+`func (o *InlineObject161) GetMulticastThreshold() int32`
+
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+
+### GetMulticastThresholdOk
+
+`func (o *InlineObject161) GetMulticastThresholdOk() (*int32, bool)`
+
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMulticastThreshold
+
+`func (o *InlineObject161) SetMulticastThreshold(v int32)`
+
+SetMulticastThreshold sets MulticastThreshold field to given value.
+
+### HasMulticastThreshold
+
+`func (o *InlineObject161) HasMulticastThreshold() bool`
+
+HasMulticastThreshold returns a boolean if a field has been set.
+
+### GetUnknownUnicastThreshold
+
+`func (o *InlineObject161) GetUnknownUnicastThreshold() int32`
+
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+
+### GetUnknownUnicastThresholdOk
+
+`func (o *InlineObject161) GetUnknownUnicastThresholdOk() (*int32, bool)`
+
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnknownUnicastThreshold
+
+`func (o *InlineObject161) SetUnknownUnicastThreshold(v int32)`
+
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+
+### HasUnknownUnicastThreshold
+
+`func (o *InlineObject161) HasUnknownUnicastThreshold() bool`
+
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
+
+### GetTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineObject161) GetTreatTheseTrafficTypesAsOneThreshold() []string`
+
+GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
+
+### GetTreatTheseTrafficTypesAsOneThresholdOk
+
+`func (o *InlineObject161) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
+
+GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineObject161) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
+
+SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
+
+### HasTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineObject161) HasTreatTheseTrafficTypesAsOneThreshold() bool`
+
+HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

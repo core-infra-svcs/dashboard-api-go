@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions1**](OrganizationsOrganizationIdActionBatchesActions1.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
-**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200200Rules**](InlineResponse200200Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
 ### NewInlineObject199
 
-`func NewInlineObject199(actions []OrganizationsOrganizationIdActionBatchesActions1, ) *InlineObject199`
+`func NewInlineObject199() *InlineObject199`
 
 NewInlineObject199 instantiates a new InlineObject199 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +27,80 @@ NewInlineObject199WithDefaults instantiates a new InlineObject199 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetTrafficShapingEnabled
 
-`func (o *InlineObject199) GetConfirmed() bool`
+`func (o *InlineObject199) GetTrafficShapingEnabled() bool`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineObject199) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject199) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetTrafficShapingEnabled
 
-`func (o *InlineObject199) SetConfirmed(v bool)`
+`func (o *InlineObject199) SetTrafficShapingEnabled(v bool)`
 
-SetConfirmed sets Confirmed field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasConfirmed
+### HasTrafficShapingEnabled
 
-`func (o *InlineObject199) HasConfirmed() bool`
+`func (o *InlineObject199) HasTrafficShapingEnabled() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetDefaultRulesEnabled
 
-`func (o *InlineObject199) GetSynchronous() bool`
+`func (o *InlineObject199) GetDefaultRulesEnabled() bool`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineObject199) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject199) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject199) SetSynchronous(v bool)`
+`func (o *InlineObject199) SetDefaultRulesEnabled(v bool)`
 
-SetSynchronous sets Synchronous field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasSynchronous
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject199) HasSynchronous() bool`
+`func (o *InlineObject199) HasDefaultRulesEnabled() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetActions
+### GetRules
 
-`func (o *InlineObject199) GetActions() []OrganizationsOrganizationIdActionBatchesActions1`
+`func (o *InlineObject199) GetRules() []InlineResponse200200Rules`
 
-GetActions returns the Actions field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetActionsOk
+### GetRulesOk
 
-`func (o *InlineObject199) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions1, bool)`
+`func (o *InlineObject199) GetRulesOk() (*[]InlineResponse200200Rules, bool)`
 
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActions
+### SetRules
 
-`func (o *InlineObject199) SetActions(v []OrganizationsOrganizationIdActionBatchesActions1)`
+`func (o *InlineObject199) SetRules(v []InlineResponse200200Rules)`
 
-SetActions sets Actions field to given value.
+SetRules sets Rules field to given value.
 
+### HasRules
 
-### GetCallback
+`func (o *InlineObject199) HasRules() bool`
 
-`func (o *InlineObject199) GetCallback() DevicesSerialLiveToolsArpTableCallback`
-
-GetCallback returns the Callback field if non-nil, zero value otherwise.
-
-### GetCallbackOk
-
-`func (o *InlineObject199) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
-
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCallback
-
-`func (o *InlineObject199) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
-
-SetCallback sets Callback field to given value.
-
-### HasCallback
-
-`func (o *InlineObject199) HasCallback() bool`
-
-HasCallback returns a boolean if a field has been set.
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

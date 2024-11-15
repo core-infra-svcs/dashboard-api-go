@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationCellularGatewayEsimsSwap
 
-> InlineResponse200232 CreateOrganizationCellularGatewayEsimsSwap(ctx, organizationId).CreateOrganizationCellularGatewayEsimsSwap(createOrganizationCellularGatewayEsimsSwap).Execute()
+> InlineResponse200237 CreateOrganizationCellularGatewayEsimsSwap(ctx, organizationId).CreateOrganizationCellularGatewayEsimsSwap(createOrganizationCellularGatewayEsimsSwap).Execute()
 
 Swap which profile an eSIM uses.
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationCellularGatewayEsimsSwap := *openapiclient.NewInlineObject227([]openapiclient.OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps{*openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps("Eid_example")}) // InlineObject227 | 
+    createOrganizationCellularGatewayEsimsSwap := *openapiclient.NewInlineObject231([]openapiclient.OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps{*openapiclient.NewOrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps("Eid_example")}) // InlineObject231 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwapApi.CreateOrganizationCellularGatewayEsimsSwap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationCellularGatewayEsimsSwap`: InlineResponse200232
+    // response from `CreateOrganizationCellularGatewayEsimsSwap`: InlineResponse200237
     fmt.Fprintf(os.Stdout, "Response from `SwapApi.CreateOrganizationCellularGatewayEsimsSwap`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationCellular
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationCellularGatewayEsimsSwap** | [**InlineObject227**](InlineObject227.md) |  | 
+ **createOrganizationCellularGatewayEsimsSwap** | [**InlineObject231**](InlineObject231.md) |  | 
 
 ### Return type
 
-[**InlineResponse200232**](InlineResponse200232.md)
+[**InlineResponse200237**](InlineResponse200237.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationCellularGatewayEsimsSwap
 
-> InlineResponse200232 UpdateOrganizationCellularGatewayEsimsSwap(ctx, id, organizationId).Execute()
+> InlineResponse200237 UpdateOrganizationCellularGatewayEsimsSwap(ctx, id, organizationId).Execute()
 
 Get the status of a profile swap.
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SwapApi.UpdateOrganizationCellularGatewayEsimsSwap``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationCellularGatewayEsimsSwap`: InlineResponse200232
+    // response from `UpdateOrganizationCellularGatewayEsimsSwap`: InlineResponse200237
     fmt.Fprintf(os.Stdout, "Response from `SwapApi.UpdateOrganizationCellularGatewayEsimsSwap`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200232**](InlineResponse200232.md)
+[**InlineResponse200237**](InlineResponse200237.md)
 
 ### Authorization
 

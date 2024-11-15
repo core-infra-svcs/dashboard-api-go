@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSyslogServers
 
-> InlineResponse200161 GetNetworkSyslogServers(ctx, networkId).Execute()
+> InlineResponse200165 GetNetworkSyslogServers(ctx, networkId).Execute()
 
 List the syslog servers for a network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SyslogServersApi.GetNetworkSyslogServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSyslogServers`: InlineResponse200161
+    // response from `GetNetworkSyslogServers`: InlineResponse200165
     fmt.Fprintf(os.Stdout, "Response from `SyslogServersApi.GetNetworkSyslogServers`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200161**](InlineResponse200161.md)
+[**InlineResponse200165**](InlineResponse200165.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSyslogServers
 
-> InlineResponse200161 UpdateNetworkSyslogServers(ctx, networkId).UpdateNetworkSyslogServers(updateNetworkSyslogServers).Execute()
+> InlineResponse200165 UpdateNetworkSyslogServers(ctx, networkId).UpdateNetworkSyslogServers(updateNetworkSyslogServers).Execute()
 
 Update the syslog servers for a network
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSyslogServers := *openapiclient.NewInlineObject159([]openapiclient.NetworksNetworkIdSyslogServersServers{*openapiclient.NewNetworksNetworkIdSyslogServersServers("Host_example", int32(123), []string{"Roles_example"})}) // InlineObject159 | 
+    updateNetworkSyslogServers := *openapiclient.NewInlineObject163([]openapiclient.NetworksNetworkIdSyslogServersServers{*openapiclient.NewNetworksNetworkIdSyslogServersServers("Host_example", int32(123), []string{"Roles_example"})}) // InlineObject163 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SyslogServersApi.UpdateNetworkSyslogServers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSyslogServers`: InlineResponse200161
+    // response from `UpdateNetworkSyslogServers`: InlineResponse200165
     fmt.Fprintf(os.Stdout, "Response from `SyslogServersApi.UpdateNetworkSyslogServers`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSyslogServers
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSyslogServers** | [**InlineObject159**](InlineObject159.md) |  | 
+ **updateNetworkSyslogServers** | [**InlineObject163**](InlineObject163.md) |  | 
 
 ### Return type
 
-[**InlineResponse200161**](InlineResponse200161.md)
+[**InlineResponse200165**](InlineResponse200165.md)
 
 ### Authorization
 

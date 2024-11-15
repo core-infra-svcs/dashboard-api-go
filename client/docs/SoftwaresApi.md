@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSmDeviceSoftwares
 
-> []InlineResponse200129 GetNetworkSmDeviceSoftwares(ctx, networkId, deviceId).Execute()
+> []InlineResponse200133 GetNetworkSmDeviceSoftwares(ctx, networkId, deviceId).Execute()
 
 Get a list of softwares associated with a device
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SoftwaresApi.GetNetworkSmDeviceSoftwares``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmDeviceSoftwares`: []InlineResponse200129
+    // response from `GetNetworkSmDeviceSoftwares`: []InlineResponse200133
     fmt.Fprintf(os.Stdout, "Response from `SoftwaresApi.GetNetworkSmDeviceSoftwares`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200129**](InlineResponse200129.md)
+[**[]InlineResponse200133**](InlineResponse200133.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSmUserSoftwares
 
-> []InlineResponse200129 GetNetworkSmUserSoftwares(ctx, networkId, userId).Execute()
+> []InlineResponse200133 GetNetworkSmUserSoftwares(ctx, networkId, userId).Execute()
 
 Get a list of softwares associated with a user
 
@@ -113,7 +113,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SoftwaresApi.GetNetworkSmUserSoftwares``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSmUserSoftwares`: []InlineResponse200129
+    // response from `GetNetworkSmUserSoftwares`: []InlineResponse200133
     fmt.Fprintf(os.Stdout, "Response from `SoftwaresApi.GetNetworkSmUserSoftwares`: %v\n", resp)
 }
 ```
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200129**](InlineResponse200129.md)
+[**[]InlineResponse200133**](InlineResponse200133.md)
 
 ### Authorization
 

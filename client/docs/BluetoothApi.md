@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessBluetoothSettings
 
-> InlineResponse200170 GetNetworkWirelessBluetoothSettings(ctx, networkId).Execute()
+> InlineResponse200175 GetNetworkWirelessBluetoothSettings(ctx, networkId).Execute()
 
 Return the Bluetooth settings for a network. <a href=\"https://documentation.meraki.com/MR/Bluetooth/Bluetooth_Low_Energy_(BLE)\">Bluetooth settings</a> must be enabled on the network.
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BluetoothApi.GetNetworkWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessBluetoothSettings`: InlineResponse200170
+    // response from `GetNetworkWirelessBluetoothSettings`: InlineResponse200175
     fmt.Fprintf(os.Stdout, "Response from `BluetoothApi.GetNetworkWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200170**](InlineResponse200170.md)
+[**InlineResponse200175**](InlineResponse200175.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessBluetoothSettings
 
-> InlineResponse200170 UpdateNetworkWirelessBluetoothSettings(ctx, networkId).UpdateNetworkWirelessBluetoothSettings(updateNetworkWirelessBluetoothSettings).Execute()
+> InlineResponse200175 UpdateNetworkWirelessBluetoothSettings(ctx, networkId).UpdateNetworkWirelessBluetoothSettings(updateNetworkWirelessBluetoothSettings).Execute()
 
 Update the Bluetooth settings for a network
 
@@ -245,7 +245,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessBluetoothSettings := *openapiclient.NewInlineObject175() // InlineObject175 |  (optional)
+    updateNetworkWirelessBluetoothSettings := *openapiclient.NewInlineObject179() // InlineObject179 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -254,7 +254,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BluetoothApi.UpdateNetworkWirelessBluetoothSettings``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessBluetoothSettings`: InlineResponse200170
+    // response from `UpdateNetworkWirelessBluetoothSettings`: InlineResponse200175
     fmt.Fprintf(os.Stdout, "Response from `BluetoothApi.UpdateNetworkWirelessBluetoothSettings`: %v\n", resp)
 }
 ```
@@ -275,11 +275,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessBluet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessBluetoothSettings** | [**InlineObject175**](InlineObject175.md) |  | 
+ **updateNetworkWirelessBluetoothSettings** | [**InlineObject179**](InlineObject179.md) |  | 
 
 ### Return type
 
-[**InlineResponse200170**](InlineResponse200170.md)
+[**InlineResponse200175**](InlineResponse200175.md)
 
 ### Authorization
 

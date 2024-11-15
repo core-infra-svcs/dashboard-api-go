@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **WakeOnLanId** | Pointer to **string** | ID of the Wake-on-LAN job | [optional] 
 **Url** | Pointer to **string** | GET this url to check the status of your ping request | [optional] 
 **Status** | Pointer to **string** | Status of the Wake-on-LAN request | [optional] 
-**Request** | Pointer to [**InlineResponse2015Request**](InlineResponse2015Request.md) |  | [optional] 
+**Request** | Pointer to [**InlineResponse2016Request**](InlineResponse2016Request.md) |  | [optional] 
 **Error** | Pointer to **string** | An error message for a failed execution | [optional] 
 
 ## Methods
@@ -106,20 +106,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetRequest
 
-`func (o *InlineResponse20025) GetRequest() InlineResponse2015Request`
+`func (o *InlineResponse20025) GetRequest() InlineResponse2016Request`
 
 GetRequest returns the Request field if non-nil, zero value otherwise.
 
 ### GetRequestOk
 
-`func (o *InlineResponse20025) GetRequestOk() (*InlineResponse2015Request, bool)`
+`func (o *InlineResponse20025) GetRequestOk() (*InlineResponse2016Request, bool)`
 
 GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRequest
 
-`func (o *InlineResponse20025) SetRequest(v InlineResponse2015Request)`
+`func (o *InlineResponse20025) SetRequest(v InlineResponse2016Request)`
 
 SetRequest sets Request field to given value.
 

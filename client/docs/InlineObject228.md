@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
-**Licenses** | Pointer to [**[]OrganizationsOrganizationIdClaimLicenses**](OrganizationsOrganizationIdClaimLicenses.md) | The licenses that should be claimed | [optional] 
+**Status** | Pointer to **string** | Status the eSIM will be updated to | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineObject228WithDefaults instantiates a new InlineObject228 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetStatus
 
-`func (o *InlineObject228) GetOrders() []string`
+`func (o *InlineObject228) GetStatus() string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetStatusOk
 
-`func (o *InlineObject228) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineObject228) GetStatusOk() (*string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetStatus
 
-`func (o *InlineObject228) SetOrders(v []string)`
+`func (o *InlineObject228) SetStatus(v string)`
 
-SetOrders sets Orders field to given value.
+SetStatus sets Status field to given value.
 
-### HasOrders
+### HasStatus
 
-`func (o *InlineObject228) HasOrders() bool`
+`func (o *InlineObject228) HasStatus() bool`
 
-HasOrders returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineObject228) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineObject228) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineObject228) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-### HasSerials
-
-`func (o *InlineObject228) HasSerials() bool`
-
-HasSerials returns a boolean if a field has been set.
-
-### GetLicenses
-
-`func (o *InlineObject228) GetLicenses() []OrganizationsOrganizationIdClaimLicenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineObject228) GetLicensesOk() (*[]OrganizationsOrganizationIdClaimLicenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineObject228) SetLicenses(v []OrganizationsOrganizationIdClaimLicenses)`
-
-SetLicenses sets Licenses field to given value.
-
-### HasLicenses
-
-`func (o *InlineObject228) HasLicenses() bool`
-
-HasLicenses returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

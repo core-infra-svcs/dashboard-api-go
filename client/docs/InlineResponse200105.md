@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
+**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
+**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
+**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
+**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
+**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200105WithDefaults instantiates a new InlineResponse200105 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetReportingEnabled
 
-`func (o *InlineResponse200105) GetName() string`
+`func (o *InlineResponse200105) GetReportingEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetReportingEnabledOk
 
-`func (o *InlineResponse200105) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200105) GetReportingEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetReportingEnabled
 
-`func (o *InlineResponse200105) SetName(v string)`
+`func (o *InlineResponse200105) SetReportingEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetReportingEnabled sets ReportingEnabled field to given value.
 
-### HasName
+### HasReportingEnabled
 
-`func (o *InlineResponse200105) HasName() bool`
+`func (o *InlineResponse200105) HasReportingEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasReportingEnabled returns a boolean if a field has been set.
 
-### GetClientId
+### GetCollectorIp
 
-`func (o *InlineResponse200105) GetClientId() string`
+`func (o *InlineResponse200105) GetCollectorIp() string`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetCollectorIpOk
 
-`func (o *InlineResponse200105) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200105) GetCollectorIpOk() (*string, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetCollectorIp
 
-`func (o *InlineResponse200105) SetClientId(v string)`
+`func (o *InlineResponse200105) SetCollectorIp(v string)`
 
-SetClientId sets ClientId field to given value.
+SetCollectorIp sets CollectorIp field to given value.
 
-### HasClientId
+### HasCollectorIp
 
-`func (o *InlineResponse200105) HasClientId() bool`
+`func (o *InlineResponse200105) HasCollectorIp() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasCollectorIp returns a boolean if a field has been set.
 
-### GetAssigned
+### GetCollectorPort
 
-`func (o *InlineResponse200105) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+`func (o *InlineResponse200105) GetCollectorPort() int32`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetCollectorPortOk
 
-`func (o *InlineResponse200105) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+`func (o *InlineResponse200105) GetCollectorPortOk() (*int32, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetCollectorPort
 
-`func (o *InlineResponse200105) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+`func (o *InlineResponse200105) SetCollectorPort(v int32)`
 
-SetAssigned sets Assigned field to given value.
+SetCollectorPort sets CollectorPort field to given value.
 
-### HasAssigned
+### HasCollectorPort
 
-`func (o *InlineResponse200105) HasAssigned() bool`
+`func (o *InlineResponse200105) HasCollectorPort() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasCollectorPort returns a boolean if a field has been set.
+
+### GetEtaEnabled
+
+`func (o *InlineResponse200105) GetEtaEnabled() bool`
+
+GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
+
+### GetEtaEnabledOk
+
+`func (o *InlineResponse200105) GetEtaEnabledOk() (*bool, bool)`
+
+GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEtaEnabled
+
+`func (o *InlineResponse200105) SetEtaEnabled(v bool)`
+
+SetEtaEnabled sets EtaEnabled field to given value.
+
+### HasEtaEnabled
+
+`func (o *InlineResponse200105) HasEtaEnabled() bool`
+
+HasEtaEnabled returns a boolean if a field has been set.
+
+### GetEtaDstPort
+
+`func (o *InlineResponse200105) GetEtaDstPort() int32`
+
+GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
+
+### GetEtaDstPortOk
+
+`func (o *InlineResponse200105) GetEtaDstPortOk() (*int32, bool)`
+
+GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEtaDstPort
+
+`func (o *InlineResponse200105) SetEtaDstPort(v int32)`
+
+SetEtaDstPort sets EtaDstPort field to given value.
+
+### HasEtaDstPort
+
+`func (o *InlineResponse200105) HasEtaDstPort() bool`
+
+HasEtaDstPort returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

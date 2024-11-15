@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationSwitchPortsBySwitch
 
-> []InlineResponse200297 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
+> InlineResponse200304 GetOrganizationSwitchPortsBySwitch(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).ConfigurationUpdatedAfter(configurationUpdatedAfter).Mac(mac).Macs(macs).Name(name).NetworkIds(networkIds).PortProfileIds(portProfileIds).Serial(serial).Serials(serials).Execute()
 
 List the switchports in an organization by switch
 
@@ -50,7 +50,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BySwitchApi.GetOrganizationSwitchPortsBySwitch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationSwitchPortsBySwitch`: []InlineResponse200297
+    // response from `GetOrganizationSwitchPortsBySwitch`: InlineResponse200304
     fmt.Fprintf(os.Stdout, "Response from `BySwitchApi.GetOrganizationSwitchPortsBySwitch`: %v\n", resp)
 }
 ```
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200297**](InlineResponse200297.md)
+[**InlineResponse200304**](InlineResponse200304.md)
 
 ### Authorization
 

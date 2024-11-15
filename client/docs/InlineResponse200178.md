@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
+**Mac** | Pointer to **string** | MAC address of the client | [optional] 
+**ConnectionStats** | Pointer to [**InlineResponse200178ConnectionStats**](InlineResponse200178ConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200178WithDefaults instantiates a new InlineResponse200178 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetHostname
+### GetMac
 
-`func (o *InlineResponse200178) GetHostname() string`
+`func (o *InlineResponse200178) GetMac() string`
 
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetHostnameOk
+### GetMacOk
 
-`func (o *InlineResponse200178) GetHostnameOk() (*string, bool)`
+`func (o *InlineResponse200178) GetMacOk() (*string, bool)`
 
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostname
+### SetMac
 
-`func (o *InlineResponse200178) SetHostname(v string)`
+`func (o *InlineResponse200178) SetMac(v string)`
 
-SetHostname sets Hostname field to given value.
+SetMac sets Mac field to given value.
 
-### HasHostname
+### HasMac
 
-`func (o *InlineResponse200178) HasHostname() bool`
+`func (o *InlineResponse200178) HasMac() bool`
 
-HasHostname returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetEnabled
+### GetConnectionStats
 
-`func (o *InlineResponse200178) GetEnabled() bool`
+`func (o *InlineResponse200178) GetConnectionStats() InlineResponse200178ConnectionStats`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetConnectionStatsOk
 
-`func (o *InlineResponse200178) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200178) GetConnectionStatsOk() (*InlineResponse200178ConnectionStats, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetConnectionStats
 
-`func (o *InlineResponse200178) SetEnabled(v bool)`
+`func (o *InlineResponse200178) SetConnectionStats(v InlineResponse200178ConnectionStats)`
 
-SetEnabled sets Enabled field to given value.
+SetConnectionStats sets ConnectionStats field to given value.
 
-### HasEnabled
+### HasConnectionStats
 
-`func (o *InlineResponse200178) HasEnabled() bool`
+`func (o *InlineResponse200178) HasConnectionStats() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchDhcpV4ServersSeen
 
-> []InlineResponse200143 GetNetworkSwitchDhcpV4ServersSeen(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200147 GetNetworkSwitchDhcpV4ServersSeen(ctx, networkId).T0(t0).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Return the network's DHCPv4 servers seen within the selected timeframe (default 1 day)
 
@@ -263,7 +263,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DhcpApi.GetNetworkSwitchDhcpV4ServersSeen``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchDhcpV4ServersSeen`: []InlineResponse200143
+    // response from `GetNetworkSwitchDhcpV4ServersSeen`: []InlineResponse200147
     fmt.Fprintf(os.Stdout, "Response from `DhcpApi.GetNetworkSwitchDhcpV4ServersSeen`: %v\n", resp)
 }
 ```
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200143**](InlineResponse200143.md)
+[**[]InlineResponse200147**](InlineResponse200147.md)
 
 ### Authorization
 
@@ -555,7 +555,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     interfaceId := "interfaceId_example" // string | Interface ID
-    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject154() // InlineObject154 |  (optional)
+    updateNetworkSwitchStackRoutingInterfaceDhcp := *openapiclient.NewInlineObject158() // InlineObject158 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -589,7 +589,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject154**](InlineObject154.md) |  | 
+ **updateNetworkSwitchStackRoutingInterfaceDhcp** | [**InlineObject158**](InlineObject158.md) |  | 
 
 ### Return type
 

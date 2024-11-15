@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]NetworksNetworkIdWirelessBillingPlans**](NetworksNetworkIdWirelessBillingPlans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**Type** | **string** | Indicates if this rule will allow, block, or alert. | 
+**Match** | [**NetworksNetworkIdWirelessAirMarshalRulesMatch**](NetworksNetworkIdWirelessAirMarshalRulesMatch.md) |  | 
 
 ## Methods
 
 ### NewInlineObject174
 
-`func NewInlineObject174() *InlineObject174`
+`func NewInlineObject174(type_ string, match NetworksNetworkIdWirelessAirMarshalRulesMatch, ) *InlineObject174`
 
 NewInlineObject174 instantiates a new InlineObject174 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject174WithDefaults instantiates a new InlineObject174 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetType
 
-`func (o *InlineObject174) GetCurrency() string`
+`func (o *InlineObject174) GetType() string`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetTypeOk
 
-`func (o *InlineObject174) GetCurrencyOk() (*string, bool)`
+`func (o *InlineObject174) GetTypeOk() (*string, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetType
 
-`func (o *InlineObject174) SetCurrency(v string)`
+`func (o *InlineObject174) SetType(v string)`
 
-SetCurrency sets Currency field to given value.
+SetType sets Type field to given value.
 
-### HasCurrency
 
-`func (o *InlineObject174) HasCurrency() bool`
+### GetMatch
 
-HasCurrency returns a boolean if a field has been set.
+`func (o *InlineObject174) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesMatch`
 
-### GetPlans
+GetMatch returns the Match field if non-nil, zero value otherwise.
 
-`func (o *InlineObject174) GetPlans() []NetworksNetworkIdWirelessBillingPlans`
+### GetMatchOk
 
-GetPlans returns the Plans field if non-nil, zero value otherwise.
+`func (o *InlineObject174) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesMatch, bool)`
 
-### GetPlansOk
-
-`func (o *InlineObject174) GetPlansOk() (*[]NetworksNetworkIdWirelessBillingPlans, bool)`
-
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPlans
+### SetMatch
 
-`func (o *InlineObject174) SetPlans(v []NetworksNetworkIdWirelessBillingPlans)`
+`func (o *InlineObject174) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesMatch)`
 
-SetPlans sets Plans field to given value.
+SetMatch sets Match field to given value.
 
-### HasPlans
-
-`func (o *InlineObject174) HasPlans() bool`
-
-HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

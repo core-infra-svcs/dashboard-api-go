@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSensorAlertsCurrentOverviewByMetric
 
-> InlineResponse200106 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
+> InlineResponse200110 GetNetworkSensorAlertsCurrentOverviewByMetric(ctx, networkId).Execute()
 
 Return an overview of currently alerting sensors by metric
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByMetricApi.GetNetworkSensorAlertsCurrentOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse200106
+    // response from `GetNetworkSensorAlertsCurrentOverviewByMetric`: InlineResponse200110
     fmt.Fprintf(os.Stdout, "Response from `ByMetricApi.GetNetworkSensorAlertsCurrentOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200106**](InlineResponse200106.md)
+[**InlineResponse200110**](InlineResponse200110.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSensorAlertsOverviewByMetric
 
-> []InlineResponse200107 GetNetworkSensorAlertsOverviewByMetric(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
+> []InlineResponse200111 GetNetworkSensorAlertsOverviewByMetric(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Interval(interval).Execute()
 
 Return an overview of alert occurrences over a timespan, by metric
 
@@ -101,10 +101,10 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. (optional)
-    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. (optional)
-    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. (optional)
-    interval := int32(56) // int32 | The time interval in seconds for returned data. The valid intervals are: 86400, 604800. The default is 604800. (optional)
+    t0 := "t0_example" // string | The beginning of the timespan for the data. The maximum lookback period is 731 days from today. (optional)
+    t1 := "t1_example" // string | The end of the timespan for the data. t1 can be a maximum of 366 days after t0. (optional)
+    timespan := float32(3.4) // float32 | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 366 days. The default is 7 days. If interval is provided, the timespan will be autocalculated. (optional)
+    interval := int32(56) // int32 | The time interval in seconds for returned data. The valid intervals are: 900, 3600, 86400, 604800, 2592000. The default is 604800. Interval is calculated if time params are provided. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -113,7 +113,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ByMetricApi.GetNetworkSensorAlertsOverviewByMetric``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSensorAlertsOverviewByMetric`: []InlineResponse200107
+    // response from `GetNetworkSensorAlertsOverviewByMetric`: []InlineResponse200111
     fmt.Fprintf(os.Stdout, "Response from `ByMetricApi.GetNetworkSensorAlertsOverviewByMetric`: %v\n", resp)
 }
 ```
@@ -134,14 +134,14 @@ Other parameters are passed through a pointer to a apiGetNetworkSensorAlertsOver
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 365 days from today. | 
- **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 31 days after t0. | 
- **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days. | 
- **interval** | **int32** | The time interval in seconds for returned data. The valid intervals are: 86400, 604800. The default is 604800. | 
+ **t0** | **string** | The beginning of the timespan for the data. The maximum lookback period is 731 days from today. | 
+ **t1** | **string** | The end of the timespan for the data. t1 can be a maximum of 366 days after t0. | 
+ **timespan** | **float32** | The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 366 days. The default is 7 days. If interval is provided, the timespan will be autocalculated. | 
+ **interval** | **int32** | The time interval in seconds for returned data. The valid intervals are: 900, 3600, 86400, 604800, 2592000. The default is 604800. Interval is calculated if time params are provided. | 
 
 ### Return type
 
-[**[]InlineResponse200107**](InlineResponse200107.md)
+[**[]InlineResponse200111**](InlineResponse200111.md)
 
 ### Authorization
 

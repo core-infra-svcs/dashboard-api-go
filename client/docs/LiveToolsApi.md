@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsPingDevice
 
-> InlineResponse2013 CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
+> InlineResponse2014 CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
 
 Enqueue a job to check connectivity status to the device
 
@@ -341,7 +341,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CreateDeviceLiveToolsPingDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsPingDevice`: InlineResponse2013
+    // response from `CreateDeviceLiveToolsPingDevice`: InlineResponse2014
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CreateDeviceLiveToolsPingDevice`: %v\n", resp)
 }
 ```
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2013**](InlineResponse2013.md)
+[**InlineResponse2014**](InlineResponse2014.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsThroughputTest
 
-> InlineResponse2014 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
+> InlineResponse2015 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
 
 Enqueue a job to test a device throughput, the test will run for 10 secs to test throughput
 
@@ -413,7 +413,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CreateDeviceLiveToolsThroughputTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2014
+    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2015
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CreateDeviceLiveToolsThroughputTest`: %v\n", resp)
 }
 ```
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2014**](InlineResponse2014.md)
+[**InlineResponse2015**](InlineResponse2015.md)
 
 ### Authorization
 
@@ -456,7 +456,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsWakeOnLan
 
-> InlineResponse2015 CreateDeviceLiveToolsWakeOnLan(ctx, serial).CreateDeviceLiveToolsWakeOnLan(createDeviceLiveToolsWakeOnLan).Execute()
+> InlineResponse2016 CreateDeviceLiveToolsWakeOnLan(ctx, serial).CreateDeviceLiveToolsWakeOnLan(createDeviceLiveToolsWakeOnLan).Execute()
 
 Enqueue a job to send a Wake-on-LAN packet from the device
 
@@ -485,7 +485,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CreateDeviceLiveToolsWakeOnLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsWakeOnLan`: InlineResponse2015
+    // response from `CreateDeviceLiveToolsWakeOnLan`: InlineResponse2016
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CreateDeviceLiveToolsWakeOnLan`: %v\n", resp)
 }
 ```
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2015**](InlineResponse2015.md)
+[**InlineResponse2016**](InlineResponse2016.md)
 
 ### Authorization
 
@@ -1038,7 +1038,7 @@ Name | Type | Description  | Notes
 
 ## RebootDevice
 
-> InlineResponse2022 RebootDevice(ctx, serial).Execute()
+> InlineResponse2023 RebootDevice(ctx, serial).Execute()
 
 Reboot a device
 
@@ -1066,7 +1066,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.RebootDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RebootDevice`: InlineResponse2022
+    // response from `RebootDevice`: InlineResponse2023
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.RebootDevice`: %v\n", resp)
 }
 ```
@@ -1090,7 +1090,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2022**](InlineResponse2022.md)
+[**InlineResponse2023**](InlineResponse2023.md)
 
 ### Authorization
 

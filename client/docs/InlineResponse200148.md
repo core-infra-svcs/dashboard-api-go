@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID for the link aggregation. | [optional] 
-**SwitchPorts** | Pointer to [**[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts**](NetworksNetworkIdSwitchLinkAggregationsSwitchPorts.md) | The ID for the link aggregation. | [optional] 
+**Alerts** | Pointer to [**InlineResponse200148Alerts**](InlineResponse200148Alerts.md) |  | [optional] 
+**DefaultPolicy** | Pointer to **string** | &#39;allow&#39; or &#39;block&#39; new DHCP servers. Default value is &#39;allow&#39;. | [optional] 
+**BlockedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set       to allow.An empty array will clear the entries. | [optional] 
+**AllowedServers** | Pointer to **[]string** | List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set       to block.An empty array will clear the entries. | [optional] 
+**ArpInspection** | Pointer to [**InlineResponse200148ArpInspection**](InlineResponse200148ArpInspection.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200148WithDefaults instantiates a new InlineResponse200148 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetAlerts
 
-`func (o *InlineResponse200148) GetId() string`
+`func (o *InlineResponse200148) GetAlerts() InlineResponse200148Alerts`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetAlertsOk
 
-`func (o *InlineResponse200148) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200148) GetAlertsOk() (*InlineResponse200148Alerts, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetAlerts
 
-`func (o *InlineResponse200148) SetId(v string)`
+`func (o *InlineResponse200148) SetAlerts(v InlineResponse200148Alerts)`
 
-SetId sets Id field to given value.
+SetAlerts sets Alerts field to given value.
 
-### HasId
+### HasAlerts
 
-`func (o *InlineResponse200148) HasId() bool`
+`func (o *InlineResponse200148) HasAlerts() bool`
 
-HasId returns a boolean if a field has been set.
+HasAlerts returns a boolean if a field has been set.
 
-### GetSwitchPorts
+### GetDefaultPolicy
 
-`func (o *InlineResponse200148) GetSwitchPorts() []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts`
+`func (o *InlineResponse200148) GetDefaultPolicy() string`
 
-GetSwitchPorts returns the SwitchPorts field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetSwitchPortsOk
+### GetDefaultPolicyOk
 
-`func (o *InlineResponse200148) GetSwitchPortsOk() (*[]NetworksNetworkIdSwitchLinkAggregationsSwitchPorts, bool)`
+`func (o *InlineResponse200148) GetDefaultPolicyOk() (*string, bool)`
 
-GetSwitchPortsOk returns a tuple with the SwitchPorts field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchPorts
+### SetDefaultPolicy
 
-`func (o *InlineResponse200148) SetSwitchPorts(v []NetworksNetworkIdSwitchLinkAggregationsSwitchPorts)`
+`func (o *InlineResponse200148) SetDefaultPolicy(v string)`
 
-SetSwitchPorts sets SwitchPorts field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasSwitchPorts
+### HasDefaultPolicy
 
-`func (o *InlineResponse200148) HasSwitchPorts() bool`
+`func (o *InlineResponse200148) HasDefaultPolicy() bool`
 
-HasSwitchPorts returns a boolean if a field has been set.
+HasDefaultPolicy returns a boolean if a field has been set.
+
+### GetBlockedServers
+
+`func (o *InlineResponse200148) GetBlockedServers() []string`
+
+GetBlockedServers returns the BlockedServers field if non-nil, zero value otherwise.
+
+### GetBlockedServersOk
+
+`func (o *InlineResponse200148) GetBlockedServersOk() (*[]string, bool)`
+
+GetBlockedServersOk returns a tuple with the BlockedServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBlockedServers
+
+`func (o *InlineResponse200148) SetBlockedServers(v []string)`
+
+SetBlockedServers sets BlockedServers field to given value.
+
+### HasBlockedServers
+
+`func (o *InlineResponse200148) HasBlockedServers() bool`
+
+HasBlockedServers returns a boolean if a field has been set.
+
+### GetAllowedServers
+
+`func (o *InlineResponse200148) GetAllowedServers() []string`
+
+GetAllowedServers returns the AllowedServers field if non-nil, zero value otherwise.
+
+### GetAllowedServersOk
+
+`func (o *InlineResponse200148) GetAllowedServersOk() (*[]string, bool)`
+
+GetAllowedServersOk returns a tuple with the AllowedServers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedServers
+
+`func (o *InlineResponse200148) SetAllowedServers(v []string)`
+
+SetAllowedServers sets AllowedServers field to given value.
+
+### HasAllowedServers
+
+`func (o *InlineResponse200148) HasAllowedServers() bool`
+
+HasAllowedServers returns a boolean if a field has been set.
+
+### GetArpInspection
+
+`func (o *InlineResponse200148) GetArpInspection() InlineResponse200148ArpInspection`
+
+GetArpInspection returns the ArpInspection field if non-nil, zero value otherwise.
+
+### GetArpInspectionOk
+
+`func (o *InlineResponse200148) GetArpInspectionOk() (*InlineResponse200148ArpInspection, bool)`
+
+GetArpInspectionOk returns a tuple with the ArpInspection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetArpInspection
+
+`func (o *InlineResponse200148) SetArpInspection(v InlineResponse200148ArpInspection)`
+
+SetArpInspection sets ArpInspection field to given value.
+
+### HasArpInspection
+
+`func (o *InlineResponse200148) HasArpInspection() bool`
+
+HasArpInspection returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

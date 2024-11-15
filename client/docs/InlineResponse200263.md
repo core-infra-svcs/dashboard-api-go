@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | Pointer to **string** | The ID of the organization to move the licenses to | [optional] 
-**LicenseIds** | Pointer to **[]string** | A list of IDs of licenses to move to the new organization | [optional] 
+**ApplicationId** | Pointer to **string** | Application identifier | [optional] 
+**Name** | Pointer to **string** | Application name | [optional] 
+**Thresholds** | Pointer to [**OrganizationsOrganizationIdInsightApplicationsThresholds**](OrganizationsOrganizationIdInsightApplicationsThresholds.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200263WithDefaults instantiates a new InlineResponse200263 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetApplicationId
 
-`func (o *InlineResponse200263) GetDestOrganizationId() string`
+`func (o *InlineResponse200263) GetApplicationId() string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetApplicationId returns the ApplicationId field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetApplicationIdOk
 
-`func (o *InlineResponse200263) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200263) GetApplicationIdOk() (*string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetApplicationIdOk returns a tuple with the ApplicationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetApplicationId
 
-`func (o *InlineResponse200263) SetDestOrganizationId(v string)`
+`func (o *InlineResponse200263) SetApplicationId(v string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetApplicationId sets ApplicationId field to given value.
 
-### HasDestOrganizationId
+### HasApplicationId
 
-`func (o *InlineResponse200263) HasDestOrganizationId() bool`
+`func (o *InlineResponse200263) HasApplicationId() bool`
 
-HasDestOrganizationId returns a boolean if a field has been set.
+HasApplicationId returns a boolean if a field has been set.
 
-### GetLicenseIds
+### GetName
 
-`func (o *InlineResponse200263) GetLicenseIds() []string`
+`func (o *InlineResponse200263) GetName() string`
 
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLicenseIdsOk
+### GetNameOk
 
-`func (o *InlineResponse200263) GetLicenseIdsOk() (*[]string, bool)`
+`func (o *InlineResponse200263) GetNameOk() (*string, bool)`
 
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIds
+### SetName
 
-`func (o *InlineResponse200263) SetLicenseIds(v []string)`
+`func (o *InlineResponse200263) SetName(v string)`
 
-SetLicenseIds sets LicenseIds field to given value.
+SetName sets Name field to given value.
 
-### HasLicenseIds
+### HasName
 
-`func (o *InlineResponse200263) HasLicenseIds() bool`
+`func (o *InlineResponse200263) HasName() bool`
 
-HasLicenseIds returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetThresholds
+
+`func (o *InlineResponse200263) GetThresholds() OrganizationsOrganizationIdInsightApplicationsThresholds`
+
+GetThresholds returns the Thresholds field if non-nil, zero value otherwise.
+
+### GetThresholdsOk
+
+`func (o *InlineResponse200263) GetThresholdsOk() (*OrganizationsOrganizationIdInsightApplicationsThresholds, bool)`
+
+GetThresholdsOk returns a tuple with the Thresholds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetThresholds
+
+`func (o *InlineResponse200263) SetThresholds(v OrganizationsOrganizationIdInsightApplicationsThresholds)`
+
+SetThresholds sets Thresholds field to given value.
+
+### HasThresholds
+
+`func (o *InlineResponse200263) HasThresholds() bool`
+
+HasThresholds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

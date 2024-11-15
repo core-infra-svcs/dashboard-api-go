@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** | The network ID | 
-**Access** | **string** | The privilege of the SAML administrator on the network. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;guest-ambassador&#39;, &#39;monitor-only&#39; or &#39;ssid-admin&#39; | 
+**Access** | **string** | The privilege of the SAML administrator on the network. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;guest-ambassador&#39;, &#39;monitor-only&#39;, &#39;ssid-admin&#39; or &#39;port-tags&#39; | 
 
 ## Methods
 

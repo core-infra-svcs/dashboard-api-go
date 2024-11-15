@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMacs** | Pointer to **[]string** | The wifiMacs of the devices to be checked-in. | [optional] 
-**Ids** | Pointer to **[]string** | The ids of the devices to be checked-in. | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices to be checked-in. | [optional] 
-**Scope** | Pointer to **[]string** | The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be checked-in. | [optional] 
+**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
+**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
+**Conditions** | Pointer to [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | [optional] 
+**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
 
 ## Methods
 
@@ -28,55 +29,105 @@ NewInlineObject115WithDefaults instantiates a new InlineObject115 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMacs
+### GetName
 
-`func (o *InlineObject115) GetWifiMacs() []string`
+`func (o *InlineObject115) GetName() string`
 
-GetWifiMacs returns the WifiMacs field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetWifiMacsOk
+### GetNameOk
 
-`func (o *InlineObject115) GetWifiMacsOk() (*[]string, bool)`
+`func (o *InlineObject115) GetNameOk() (*string, bool)`
 
-GetWifiMacsOk returns a tuple with the WifiMacs field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMacs
+### SetName
 
-`func (o *InlineObject115) SetWifiMacs(v []string)`
+`func (o *InlineObject115) SetName(v string)`
 
-SetWifiMacs sets WifiMacs field to given value.
+SetName sets Name field to given value.
 
-### HasWifiMacs
+### HasName
 
-`func (o *InlineObject115) HasWifiMacs() bool`
+`func (o *InlineObject115) HasName() bool`
 
-HasWifiMacs returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetIds
+### GetSchedule
 
-`func (o *InlineObject115) GetIds() []string`
+`func (o *InlineObject115) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule1`
 
-GetIds returns the Ids field if non-nil, zero value otherwise.
+GetSchedule returns the Schedule field if non-nil, zero value otherwise.
 
-### GetIdsOk
+### GetScheduleOk
 
-`func (o *InlineObject115) GetIdsOk() (*[]string, bool)`
+`func (o *InlineObject115) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule1, bool)`
 
-GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
+GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIds
+### SetSchedule
 
-`func (o *InlineObject115) SetIds(v []string)`
+`func (o *InlineObject115) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule1)`
 
-SetIds sets Ids field to given value.
+SetSchedule sets Schedule field to given value.
 
-### HasIds
+### HasSchedule
 
-`func (o *InlineObject115) HasIds() bool`
+`func (o *InlineObject115) HasSchedule() bool`
 
-HasIds returns a boolean if a field has been set.
+HasSchedule returns a boolean if a field has been set.
+
+### GetConditions
+
+`func (o *InlineObject115) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
+
+GetConditions returns the Conditions field if non-nil, zero value otherwise.
+
+### GetConditionsOk
+
+`func (o *InlineObject115) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
+
+GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConditions
+
+`func (o *InlineObject115) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
+
+SetConditions sets Conditions field to given value.
+
+### HasConditions
+
+`func (o *InlineObject115) HasConditions() bool`
+
+HasConditions returns a boolean if a field has been set.
+
+### GetRecipients
+
+`func (o *InlineObject115) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+
+GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+
+### GetRecipientsOk
+
+`func (o *InlineObject115) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+
+GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecipients
+
+`func (o *InlineObject115) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+
+SetRecipients sets Recipients field to given value.
+
+### HasRecipients
+
+`func (o *InlineObject115) HasRecipients() bool`
+
+HasRecipients returns a boolean if a field has been set.
 
 ### GetSerials
 
@@ -102,31 +153,6 @@ SetSerials sets Serials field to given value.
 `func (o *InlineObject115) HasSerials() bool`
 
 HasSerials returns a boolean if a field has been set.
-
-### GetScope
-
-`func (o *InlineObject115) GetScope() []string`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineObject115) GetScopeOk() (*[]string, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineObject115) SetScope(v []string)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineObject115) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessElectronicShelfLabel
 
-> InlineResponse200178 GetNetworkWirelessElectronicShelfLabel(ctx, networkId).Execute()
+> InlineResponse200183 GetNetworkWirelessElectronicShelfLabel(ctx, networkId).Execute()
 
 Return the ESL settings of a wireless network
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ElectronicShelfLabelApi.GetNetworkWirelessElectronicShelfLabel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessElectronicShelfLabel`: InlineResponse200178
+    // response from `GetNetworkWirelessElectronicShelfLabel`: InlineResponse200183
     fmt.Fprintf(os.Stdout, "Response from `ElectronicShelfLabelApi.GetNetworkWirelessElectronicShelfLabel`: %v\n", resp)
 }
 ```
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200178**](InlineResponse200178.md)
+[**InlineResponse200183**](InlineResponse200183.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessElectronicShelfLabelConfiguredDevices
 
-> []InlineResponse200178 GetNetworkWirelessElectronicShelfLabelConfiguredDevices(ctx, networkId).Execute()
+> []InlineResponse200183 GetNetworkWirelessElectronicShelfLabelConfiguredDevices(ctx, networkId).Execute()
 
 Get a list of all ESL eligible devices of a network
 
@@ -182,7 +182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ElectronicShelfLabelApi.GetNetworkWirelessElectronicShelfLabelConfiguredDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessElectronicShelfLabelConfiguredDevices`: []InlineResponse200178
+    // response from `GetNetworkWirelessElectronicShelfLabelConfiguredDevices`: []InlineResponse200183
     fmt.Fprintf(os.Stdout, "Response from `ElectronicShelfLabelApi.GetNetworkWirelessElectronicShelfLabelConfiguredDevices`: %v\n", resp)
 }
 ```
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200178**](InlineResponse200178.md)
+[**[]InlineResponse200183**](InlineResponse200183.md)
 
 ### Authorization
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessElectronicShelfLabel
 
-> InlineResponse200178 UpdateNetworkWirelessElectronicShelfLabel(ctx, networkId).UpdateNetworkWirelessElectronicShelfLabel(updateNetworkWirelessElectronicShelfLabel).Execute()
+> InlineResponse200183 UpdateNetworkWirelessElectronicShelfLabel(ctx, networkId).UpdateNetworkWirelessElectronicShelfLabel(updateNetworkWirelessElectronicShelfLabel).Execute()
 
 Update the ESL settings of a wireless network
 
@@ -316,7 +316,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkWirelessElectronicShelfLabel := *openapiclient.NewInlineObject176() // InlineObject176 |  (optional)
+    updateNetworkWirelessElectronicShelfLabel := *openapiclient.NewInlineObject180() // InlineObject180 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -325,7 +325,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ElectronicShelfLabelApi.UpdateNetworkWirelessElectronicShelfLabel``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessElectronicShelfLabel`: InlineResponse200178
+    // response from `UpdateNetworkWirelessElectronicShelfLabel`: InlineResponse200183
     fmt.Fprintf(os.Stdout, "Response from `ElectronicShelfLabelApi.UpdateNetworkWirelessElectronicShelfLabel`: %v\n", resp)
 }
 ```
@@ -346,11 +346,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkWirelessElect
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkWirelessElectronicShelfLabel** | [**InlineObject176**](InlineObject176.md) |  | 
+ **updateNetworkWirelessElectronicShelfLabel** | [**InlineObject180**](InlineObject180.md) |  | 
 
 ### Return type
 
-[**InlineResponse200178**](InlineResponse200178.md)
+[**InlineResponse200183**](InlineResponse200183.md)
 
 ### Authorization
 

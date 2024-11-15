@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vpnstatusentities** | Pointer to [**[]InlineResponse200213Vpnstatusentities**](InlineResponse200213Vpnstatusentities.md) | The list of VPN Status for networks | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the access period | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the access period | [optional] 
+**Counts** | Pointer to [**[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts**](OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts.md) | list of response codes and a count of how many requests had that code in the given time period | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200213WithDefaults instantiates a new InlineResponse200213 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVpnstatusentities
+### GetStartTs
 
-`func (o *InlineResponse200213) GetVpnstatusentities() []InlineResponse200213Vpnstatusentities`
+`func (o *InlineResponse200213) GetStartTs() time.Time`
 
-GetVpnstatusentities returns the Vpnstatusentities field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetVpnstatusentitiesOk
+### GetStartTsOk
 
-`func (o *InlineResponse200213) GetVpnstatusentitiesOk() (*[]InlineResponse200213Vpnstatusentities, bool)`
+`func (o *InlineResponse200213) GetStartTsOk() (*time.Time, bool)`
 
-GetVpnstatusentitiesOk returns a tuple with the Vpnstatusentities field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVpnstatusentities
+### SetStartTs
 
-`func (o *InlineResponse200213) SetVpnstatusentities(v []InlineResponse200213Vpnstatusentities)`
+`func (o *InlineResponse200213) SetStartTs(v time.Time)`
 
-SetVpnstatusentities sets Vpnstatusentities field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasVpnstatusentities
+### HasStartTs
 
-`func (o *InlineResponse200213) HasVpnstatusentities() bool`
+`func (o *InlineResponse200213) HasStartTs() bool`
 
-HasVpnstatusentities returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
+
+### GetEndTs
+
+`func (o *InlineResponse200213) GetEndTs() time.Time`
+
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+
+### GetEndTsOk
+
+`func (o *InlineResponse200213) GetEndTsOk() (*time.Time, bool)`
+
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEndTs
+
+`func (o *InlineResponse200213) SetEndTs(v time.Time)`
+
+SetEndTs sets EndTs field to given value.
+
+### HasEndTs
+
+`func (o *InlineResponse200213) HasEndTs() bool`
+
+HasEndTs returns a boolean if a field has been set.
+
+### GetCounts
+
+`func (o *InlineResponse200213) GetCounts() []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts`
+
+GetCounts returns the Counts field if non-nil, zero value otherwise.
+
+### GetCountsOk
+
+`func (o *InlineResponse200213) GetCountsOk() (*[]OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts, bool)`
+
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCounts
+
+`func (o *InlineResponse200213) SetCounts(v []OrganizationsOrganizationIdApiRequestsOverviewResponseCodesByIntervalCounts)`
+
+SetCounts sets Counts field to given value.
+
+### HasCounts
+
+`func (o *InlineResponse200213) HasCounts() bool`
+
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
