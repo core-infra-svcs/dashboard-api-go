@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**BlinkDeviceLeds**](LiveToolsApi.md#BlinkDeviceLeds) | **Post** /devices/{serial}/blinkLeds | Blink the LEDs on a device
 [**CreateDeviceLiveToolsArpTable**](LiveToolsApi.md#CreateDeviceLiveToolsArpTable) | **Post** /devices/{serial}/liveTools/arpTable | Enqueue a job to perform a ARP table request for the device
 [**CreateDeviceLiveToolsCableTest**](LiveToolsApi.md#CreateDeviceLiveToolsCableTest) | **Post** /devices/{serial}/liveTools/cableTest | Enqueue a job to perform a cable test for the device on the specified ports
+[**CreateDeviceLiveToolsLedsBlink**](LiveToolsApi.md#CreateDeviceLiveToolsLedsBlink) | **Post** /devices/{serial}/liveTools/leds/blink | Enqueue a job to blink LEDs on a device
 [**CreateDeviceLiveToolsPing**](LiveToolsApi.md#CreateDeviceLiveToolsPing) | **Post** /devices/{serial}/liveTools/ping | Enqueue a job to ping a target host from the device
 [**CreateDeviceLiveToolsPingDevice**](LiveToolsApi.md#CreateDeviceLiveToolsPingDevice) | **Post** /devices/{serial}/liveTools/pingDevice | Enqueue a job to check connectivity status to the device
 [**CreateDeviceLiveToolsThroughputTest**](LiveToolsApi.md#CreateDeviceLiveToolsThroughputTest) | **Post** /devices/{serial}/liveTools/throughputTest | Enqueue a job to test a device throughput, the test will run for 10 secs to test throughput
@@ -14,6 +15,7 @@ Method | HTTP request | Description
 [**CycleDeviceSwitchPorts**](LiveToolsApi.md#CycleDeviceSwitchPorts) | **Post** /devices/{serial}/switch/ports/cycle | Cycle a set of switch ports
 [**GetDeviceLiveToolsArpTable**](LiveToolsApi.md#GetDeviceLiveToolsArpTable) | **Get** /devices/{serial}/liveTools/arpTable/{arpTableId} | Return an ARP table live tool job.
 [**GetDeviceLiveToolsCableTest**](LiveToolsApi.md#GetDeviceLiveToolsCableTest) | **Get** /devices/{serial}/liveTools/cableTest/{id} | Return a cable test live tool job.
+[**GetDeviceLiveToolsLedsBlink**](LiveToolsApi.md#GetDeviceLiveToolsLedsBlink) | **Get** /devices/{serial}/liveTools/leds/blink/{ledsBlinkId} | Return a blink LEDs job
 [**GetDeviceLiveToolsPing**](LiveToolsApi.md#GetDeviceLiveToolsPing) | **Get** /devices/{serial}/liveTools/ping/{id} | Return a ping job
 [**GetDeviceLiveToolsPingDevice**](LiveToolsApi.md#GetDeviceLiveToolsPingDevice) | **Get** /devices/{serial}/liveTools/pingDevice/{id} | Return a ping device job
 [**GetDeviceLiveToolsThroughputTest**](LiveToolsApi.md#GetDeviceLiveToolsThroughputTest) | **Get** /devices/{serial}/liveTools/throughputTest/{throughputTestId} | Return a throughput test job
@@ -238,9 +240,81 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## CreateDeviceLiveToolsLedsBlink
+
+> InlineResponse2013 CreateDeviceLiveToolsLedsBlink(ctx, serial).CreateDeviceLiveToolsLedsBlink(createDeviceLiveToolsLedsBlink).Execute()
+
+Enqueue a job to blink LEDs on a device
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    createDeviceLiveToolsLedsBlink := *openapiclient.NewInlineObject18(int32(123)) // InlineObject18 | 
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.LiveToolsApi.CreateDeviceLiveToolsLedsBlink(context.Background(), serial).CreateDeviceLiveToolsLedsBlink(createDeviceLiveToolsLedsBlink).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CreateDeviceLiveToolsLedsBlink``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CreateDeviceLiveToolsLedsBlink`: InlineResponse2013
+    fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CreateDeviceLiveToolsLedsBlink`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsLedsBlinkRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **createDeviceLiveToolsLedsBlink** | [**InlineObject18**](InlineObject18.md) |  | 
+
+### Return type
+
+[**InlineResponse2013**](InlineResponse2013.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CreateDeviceLiveToolsPing
 
-> InlineResponse2013 CreateDeviceLiveToolsPing(ctx, serial).CreateDeviceLiveToolsPing(createDeviceLiveToolsPing).Execute()
+> InlineResponse2014 CreateDeviceLiveToolsPing(ctx, serial).CreateDeviceLiveToolsPing(createDeviceLiveToolsPing).Execute()
 
 Enqueue a job to ping a target host from the device
 
@@ -260,7 +334,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPing := *openapiclient.NewInlineObject18("Target_example") // InlineObject18 | 
+    createDeviceLiveToolsPing := *openapiclient.NewInlineObject19("Target_example") // InlineObject19 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -269,7 +343,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CreateDeviceLiveToolsPing``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsPing`: InlineResponse2013
+    // response from `CreateDeviceLiveToolsPing`: InlineResponse2014
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CreateDeviceLiveToolsPing`: %v\n", resp)
 }
 ```
@@ -290,11 +364,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingR
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPing** | [**InlineObject18**](InlineObject18.md) |  | 
+ **createDeviceLiveToolsPing** | [**InlineObject19**](InlineObject19.md) |  | 
 
 ### Return type
 
-[**InlineResponse2013**](InlineResponse2013.md)
+[**InlineResponse2014**](InlineResponse2014.md)
 
 ### Authorization
 
@@ -312,7 +386,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsPingDevice
 
-> InlineResponse2014 CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
+> InlineResponse2015 CreateDeviceLiveToolsPingDevice(ctx, serial).CreateDeviceLiveToolsPingDevice(createDeviceLiveToolsPingDevice).Execute()
 
 Enqueue a job to check connectivity status to the device
 
@@ -332,7 +406,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsPingDevice := *openapiclient.NewInlineObject19() // InlineObject19 |  (optional)
+    createDeviceLiveToolsPingDevice := *openapiclient.NewInlineObject20() // InlineObject20 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -341,7 +415,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CreateDeviceLiveToolsPingDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsPingDevice`: InlineResponse2014
+    // response from `CreateDeviceLiveToolsPingDevice`: InlineResponse2015
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CreateDeviceLiveToolsPingDevice`: %v\n", resp)
 }
 ```
@@ -362,11 +436,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsPingD
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsPingDevice** | [**InlineObject19**](InlineObject19.md) |  | 
+ **createDeviceLiveToolsPingDevice** | [**InlineObject20**](InlineObject20.md) |  | 
 
 ### Return type
 
-[**InlineResponse2014**](InlineResponse2014.md)
+[**InlineResponse2015**](InlineResponse2015.md)
 
 ### Authorization
 
@@ -384,7 +458,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsThroughputTest
 
-> InlineResponse2015 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
+> InlineResponse2016 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
 
 Enqueue a job to test a device throughput, the test will run for 10 secs to test throughput
 
@@ -404,7 +478,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsThroughputTest := *openapiclient.NewInlineObject20() // InlineObject20 |  (optional)
+    createDeviceLiveToolsThroughputTest := *openapiclient.NewInlineObject21() // InlineObject21 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -413,7 +487,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CreateDeviceLiveToolsThroughputTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2015
+    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2016
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CreateDeviceLiveToolsThroughputTest`: %v\n", resp)
 }
 ```
@@ -434,11 +508,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsThrou
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsThroughputTest** | [**InlineObject20**](InlineObject20.md) |  | 
+ **createDeviceLiveToolsThroughputTest** | [**InlineObject21**](InlineObject21.md) |  | 
 
 ### Return type
 
-[**InlineResponse2015**](InlineResponse2015.md)
+[**InlineResponse2016**](InlineResponse2016.md)
 
 ### Authorization
 
@@ -456,7 +530,7 @@ Name | Type | Description  | Notes
 
 ## CreateDeviceLiveToolsWakeOnLan
 
-> InlineResponse2016 CreateDeviceLiveToolsWakeOnLan(ctx, serial).CreateDeviceLiveToolsWakeOnLan(createDeviceLiveToolsWakeOnLan).Execute()
+> InlineResponse2017 CreateDeviceLiveToolsWakeOnLan(ctx, serial).CreateDeviceLiveToolsWakeOnLan(createDeviceLiveToolsWakeOnLan).Execute()
 
 Enqueue a job to send a Wake-on-LAN packet from the device
 
@@ -476,7 +550,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsWakeOnLan := *openapiclient.NewInlineObject21(int32(123), "Mac_example") // InlineObject21 | 
+    createDeviceLiveToolsWakeOnLan := *openapiclient.NewInlineObject22(int32(123), "Mac_example") // InlineObject22 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -485,7 +559,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CreateDeviceLiveToolsWakeOnLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsWakeOnLan`: InlineResponse2016
+    // response from `CreateDeviceLiveToolsWakeOnLan`: InlineResponse2017
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CreateDeviceLiveToolsWakeOnLan`: %v\n", resp)
 }
 ```
@@ -506,11 +580,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsWakeO
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsWakeOnLan** | [**InlineObject21**](InlineObject21.md) |  | 
+ **createDeviceLiveToolsWakeOnLan** | [**InlineObject22**](InlineObject22.md) |  | 
 
 ### Return type
 
-[**InlineResponse2016**](InlineResponse2016.md)
+[**InlineResponse2017**](InlineResponse2017.md)
 
 ### Authorization
 
@@ -528,7 +602,7 @@ Name | Type | Description  | Notes
 
 ## CycleDeviceSwitchPorts
 
-> InlineResponse20032 CycleDeviceSwitchPorts(ctx, serial).CycleDeviceSwitchPorts(cycleDeviceSwitchPorts).Execute()
+> InlineResponse20033 CycleDeviceSwitchPorts(ctx, serial).CycleDeviceSwitchPorts(cycleDeviceSwitchPorts).Execute()
 
 Cycle a set of switch ports
 
@@ -548,7 +622,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    cycleDeviceSwitchPorts := *openapiclient.NewInlineObject25([]string{"Ports_example"}) // InlineObject25 | 
+    cycleDeviceSwitchPorts := *openapiclient.NewInlineObject26([]string{"Ports_example"}) // InlineObject26 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -557,7 +631,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.CycleDeviceSwitchPorts``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CycleDeviceSwitchPorts`: InlineResponse20032
+    // response from `CycleDeviceSwitchPorts`: InlineResponse20033
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.CycleDeviceSwitchPorts`: %v\n", resp)
 }
 ```
@@ -578,11 +652,11 @@ Other parameters are passed through a pointer to a apiCycleDeviceSwitchPortsRequ
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **cycleDeviceSwitchPorts** | [**InlineObject25**](InlineObject25.md) |  | 
+ **cycleDeviceSwitchPorts** | [**InlineObject26**](InlineObject26.md) |  | 
 
 ### Return type
 
-[**InlineResponse20032**](InlineResponse20032.md)
+[**InlineResponse20033**](InlineResponse20033.md)
 
 ### Authorization
 
@@ -744,9 +818,82 @@ Name | Type | Description  | Notes
 [[Back to README]](../README.md)
 
 
+## GetDeviceLiveToolsLedsBlink
+
+> InlineResponse20022 GetDeviceLiveToolsLedsBlink(ctx, serial, ledsBlinkId).Execute()
+
+Return a blink LEDs job
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    serial := "serial_example" // string | Serial
+    ledsBlinkId := "ledsBlinkId_example" // string | Leds blink ID
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.LiveToolsApi.GetDeviceLiveToolsLedsBlink(context.Background(), serial, ledsBlinkId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.GetDeviceLiveToolsLedsBlink``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `GetDeviceLiveToolsLedsBlink`: InlineResponse20022
+    fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.GetDeviceLiveToolsLedsBlink`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**serial** | **string** | Serial | 
+**ledsBlinkId** | **string** | Leds blink ID | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetDeviceLiveToolsLedsBlinkRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+
+### Return type
+
+[**InlineResponse20022**](InlineResponse20022.md)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth), [meraki_api_key](../README.md#meraki_api_key)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetDeviceLiveToolsPing
 
-> InlineResponse20022 GetDeviceLiveToolsPing(ctx, serial, id).Execute()
+> InlineResponse20023 GetDeviceLiveToolsPing(ctx, serial, id).Execute()
 
 Return a ping job
 
@@ -775,7 +922,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.GetDeviceLiveToolsPing``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPing`: InlineResponse20022
+    // response from `GetDeviceLiveToolsPing`: InlineResponse20023
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.GetDeviceLiveToolsPing`: %v\n", resp)
 }
 ```
@@ -801,7 +948,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20022**](InlineResponse20022.md)
+[**InlineResponse20023**](InlineResponse20023.md)
 
 ### Authorization
 
@@ -819,7 +966,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsPingDevice
 
-> InlineResponse20023 GetDeviceLiveToolsPingDevice(ctx, serial, id).Execute()
+> InlineResponse20024 GetDeviceLiveToolsPingDevice(ctx, serial, id).Execute()
 
 Return a ping device job
 
@@ -848,7 +995,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.GetDeviceLiveToolsPingDevice``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsPingDevice`: InlineResponse20023
+    // response from `GetDeviceLiveToolsPingDevice`: InlineResponse20024
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.GetDeviceLiveToolsPingDevice`: %v\n", resp)
 }
 ```
@@ -874,7 +1021,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20023**](InlineResponse20023.md)
+[**InlineResponse20024**](InlineResponse20024.md)
 
 ### Authorization
 
@@ -892,7 +1039,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsThroughputTest
 
-> InlineResponse20024 GetDeviceLiveToolsThroughputTest(ctx, serial, throughputTestId).Execute()
+> InlineResponse20025 GetDeviceLiveToolsThroughputTest(ctx, serial, throughputTestId).Execute()
 
 Return a throughput test job
 
@@ -921,7 +1068,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.GetDeviceLiveToolsThroughputTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsThroughputTest`: InlineResponse20024
+    // response from `GetDeviceLiveToolsThroughputTest`: InlineResponse20025
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.GetDeviceLiveToolsThroughputTest`: %v\n", resp)
 }
 ```
@@ -947,7 +1094,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 
@@ -965,7 +1112,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsWakeOnLan
 
-> InlineResponse20025 GetDeviceLiveToolsWakeOnLan(ctx, serial, wakeOnLanId).Execute()
+> InlineResponse20026 GetDeviceLiveToolsWakeOnLan(ctx, serial, wakeOnLanId).Execute()
 
 Return a Wake-on-LAN job
 
@@ -994,7 +1141,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LiveToolsApi.GetDeviceLiveToolsWakeOnLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsWakeOnLan`: InlineResponse20025
+    // response from `GetDeviceLiveToolsWakeOnLan`: InlineResponse20026
     fmt.Fprintf(os.Stdout, "Response from `LiveToolsApi.GetDeviceLiveToolsWakeOnLan`: %v\n", resp)
 }
 ```
@@ -1020,7 +1167,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetDeviceManagementInterface
 
-> InlineResponse20028 GetDeviceManagementInterface(ctx, serial).Execute()
+> InlineResponse20029 GetDeviceManagementInterface(ctx, serial).Execute()
 
 Return the management interface settings for a device
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ManagementInterfaceApi.GetDeviceManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceManagementInterface`: InlineResponse20028
+    // response from `GetDeviceManagementInterface`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `ManagementInterfaceApi.GetDeviceManagementInterface`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceManagementInterface
 
-> InlineResponse20028 UpdateDeviceManagementInterface(ctx, serial).UpdateDeviceManagementInterface(updateDeviceManagementInterface).Execute()
+> InlineResponse20029 UpdateDeviceManagementInterface(ctx, serial).UpdateDeviceManagementInterface(updateDeviceManagementInterface).Execute()
 
 Update the management interface settings for a device
 
@@ -101,7 +101,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    updateDeviceManagementInterface := *openapiclient.NewInlineObject22() // InlineObject22 |  (optional)
+    updateDeviceManagementInterface := *openapiclient.NewInlineObject23() // InlineObject23 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ManagementInterfaceApi.UpdateDeviceManagementInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceManagementInterface`: InlineResponse20028
+    // response from `UpdateDeviceManagementInterface`: InlineResponse20029
     fmt.Fprintf(os.Stdout, "Response from `ManagementInterfaceApi.UpdateDeviceManagementInterface`: %v\n", resp)
 }
 ```
@@ -131,11 +131,11 @@ Other parameters are passed through a pointer to a apiUpdateDeviceManagementInte
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateDeviceManagementInterface** | [**InlineObject22**](InlineObject22.md) |  | 
+ **updateDeviceManagementInterface** | [**InlineObject23**](InlineObject23.md) |  | 
 
 ### Return type
 
-[**InlineResponse20028**](InlineResponse20028.md)
+[**InlineResponse20029**](InlineResponse20029.md)
 
 ### Authorization
 

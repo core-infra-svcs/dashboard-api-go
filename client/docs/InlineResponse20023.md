@@ -8,8 +8,7 @@ Name | Type | Description | Notes
 **Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
 **Request** | Pointer to [**InlineResponse2014Request**](InlineResponse2014Request.md) |  | [optional] 
 **Status** | Pointer to **string** | Status of the ping request. | [optional] 
-**Results** | Pointer to [**InlineResponse20022Results**](InlineResponse20022Results.md) |  | [optional] 
-**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
+**Results** | Pointer to [**InlineResponse20023Results**](InlineResponse20023Results.md) |  | [optional] 
 
 ## Methods
 
@@ -132,20 +131,20 @@ HasStatus returns a boolean if a field has been set.
 
 ### GetResults
 
-`func (o *InlineResponse20023) GetResults() InlineResponse20022Results`
+`func (o *InlineResponse20023) GetResults() InlineResponse20023Results`
 
 GetResults returns the Results field if non-nil, zero value otherwise.
 
 ### GetResultsOk
 
-`func (o *InlineResponse20023) GetResultsOk() (*InlineResponse20022Results, bool)`
+`func (o *InlineResponse20023) GetResultsOk() (*InlineResponse20023Results, bool)`
 
 GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetResults
 
-`func (o *InlineResponse20023) SetResults(v InlineResponse20022Results)`
+`func (o *InlineResponse20023) SetResults(v InlineResponse20023Results)`
 
 SetResults sets Results field to given value.
 
@@ -154,31 +153,6 @@ SetResults sets Results field to given value.
 `func (o *InlineResponse20023) HasResults() bool`
 
 HasResults returns a boolean if a field has been set.
-
-### GetCallback
-
-`func (o *InlineResponse20023) GetCallback() InlineResponse2011Callback`
-
-GetCallback returns the Callback field if non-nil, zero value otherwise.
-
-### GetCallbackOk
-
-`func (o *InlineResponse20023) GetCallbackOk() (*InlineResponse2011Callback, bool)`
-
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCallback
-
-`func (o *InlineResponse20023) SetCallback(v InlineResponse2011Callback)`
-
-SetCallback sets Callback field to given value.
-
-### HasCallback
-
-`func (o *InlineResponse20023) HasCallback() bool`
-
-HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

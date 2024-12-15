@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Wan1** | Pointer to [**DevicesSerialManagementInterfaceWan1**](DevicesSerialManagementInterfaceWan1.md) |  | [optional] 
-**Wan2** | Pointer to [**DevicesSerialManagementInterfaceWan2**](DevicesSerialManagementInterfaceWan2.md) |  | [optional] 
+**VlanId** | **int32** | The target&#39;s VLAN (1 to 4094) | 
+**Mac** | **string** | The target&#39;s MAC address | 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject22
 
-`func NewInlineObject22() *InlineObject22`
+`func NewInlineObject22(vlanId int32, mac string, ) *InlineObject22`
 
 NewInlineObject22 instantiates a new InlineObject22 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +27,70 @@ NewInlineObject22WithDefaults instantiates a new InlineObject22 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWan1
+### GetVlanId
 
-`func (o *InlineObject22) GetWan1() DevicesSerialManagementInterfaceWan1`
+`func (o *InlineObject22) GetVlanId() int32`
 
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetWan1Ok
+### GetVlanIdOk
 
-`func (o *InlineObject22) GetWan1Ok() (*DevicesSerialManagementInterfaceWan1, bool)`
+`func (o *InlineObject22) GetVlanIdOk() (*int32, bool)`
 
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan1
+### SetVlanId
 
-`func (o *InlineObject22) SetWan1(v DevicesSerialManagementInterfaceWan1)`
+`func (o *InlineObject22) SetVlanId(v int32)`
 
-SetWan1 sets Wan1 field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasWan1
 
-`func (o *InlineObject22) HasWan1() bool`
+### GetMac
 
-HasWan1 returns a boolean if a field has been set.
+`func (o *InlineObject22) GetMac() string`
 
-### GetWan2
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-`func (o *InlineObject22) GetWan2() DevicesSerialManagementInterfaceWan2`
+### GetMacOk
 
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+`func (o *InlineObject22) GetMacOk() (*string, bool)`
 
-### GetWan2Ok
-
-`func (o *InlineObject22) GetWan2Ok() (*DevicesSerialManagementInterfaceWan2, bool)`
-
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan2
+### SetMac
 
-`func (o *InlineObject22) SetWan2(v DevicesSerialManagementInterfaceWan2)`
+`func (o *InlineObject22) SetMac(v string)`
 
-SetWan2 sets Wan2 field to given value.
+SetMac sets Mac field to given value.
 
-### HasWan2
 
-`func (o *InlineObject22) HasWan2() bool`
+### GetCallback
 
-HasWan2 returns a boolean if a field has been set.
+`func (o *InlineObject22) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineObject22) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineObject22) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineObject22) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

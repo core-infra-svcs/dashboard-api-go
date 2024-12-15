@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CpuPercentUsed** | Pointer to **float32** | The percentage of CPU used as a decimal format. | [optional] 
-**MemFree** | Pointer to **int32** | Memory that is not yet in use by the system. | [optional] 
-**MemWired** | Pointer to **int32** | Memory used for core OS functions on the device. | [optional] 
-**MemActive** | Pointer to **int32** | The active RAM on the device. | [optional] 
-**MemInactive** | Pointer to **int32** | The inactive RAM on the device. | [optional] 
-**NetworkSent** | Pointer to **int32** | Network bandwith transmitted. | [optional] 
-**NetworkReceived** | Pointer to **int32** | Network bandwith received. | [optional] 
-**SwapUsed** | Pointer to **int32** | The amount of space being used on the startup disk to swap unused files to and from RAM. | [optional] 
-**DiskUsage** | Pointer to [**NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage**](NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage.md) |  | [optional] 
-**Ts** | Pointer to **string** | The time at which the performance was measured. | [optional] 
+**DhcpServer** | Pointer to **string** | The IP address of the DCHP Server. | [optional] 
+**DnsServer** | Pointer to **string** | The IP address of the DNS Server. | [optional] 
+**Gateway** | Pointer to **string** | The IP address of the Gateway. | [optional] 
+**Id** | Pointer to **string** | The Meraki Id of the network adapter record. | [optional] 
+**Ip** | Pointer to **string** | The IP address of the network adapter. | [optional] 
+**Mac** | Pointer to **string** | The MAC associated with the network adapter. | [optional] 
+**Name** | Pointer to **string** | The name of the newtwork adapter. | [optional] 
+**Subnet** | Pointer to **string** | The subnet for the network adapter. | [optional] 
 
 ## Methods
 
@@ -34,255 +32,205 @@ NewInlineResponse200130WithDefaults instantiates a new InlineResponse200130 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCpuPercentUsed
+### GetDhcpServer
 
-`func (o *InlineResponse200130) GetCpuPercentUsed() float32`
+`func (o *InlineResponse200130) GetDhcpServer() string`
 
-GetCpuPercentUsed returns the CpuPercentUsed field if non-nil, zero value otherwise.
+GetDhcpServer returns the DhcpServer field if non-nil, zero value otherwise.
 
-### GetCpuPercentUsedOk
+### GetDhcpServerOk
 
-`func (o *InlineResponse200130) GetCpuPercentUsedOk() (*float32, bool)`
+`func (o *InlineResponse200130) GetDhcpServerOk() (*string, bool)`
 
-GetCpuPercentUsedOk returns a tuple with the CpuPercentUsed field if it's non-nil, zero value otherwise
+GetDhcpServerOk returns a tuple with the DhcpServer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCpuPercentUsed
+### SetDhcpServer
 
-`func (o *InlineResponse200130) SetCpuPercentUsed(v float32)`
+`func (o *InlineResponse200130) SetDhcpServer(v string)`
 
-SetCpuPercentUsed sets CpuPercentUsed field to given value.
+SetDhcpServer sets DhcpServer field to given value.
 
-### HasCpuPercentUsed
+### HasDhcpServer
 
-`func (o *InlineResponse200130) HasCpuPercentUsed() bool`
+`func (o *InlineResponse200130) HasDhcpServer() bool`
 
-HasCpuPercentUsed returns a boolean if a field has been set.
+HasDhcpServer returns a boolean if a field has been set.
 
-### GetMemFree
+### GetDnsServer
 
-`func (o *InlineResponse200130) GetMemFree() int32`
+`func (o *InlineResponse200130) GetDnsServer() string`
 
-GetMemFree returns the MemFree field if non-nil, zero value otherwise.
+GetDnsServer returns the DnsServer field if non-nil, zero value otherwise.
 
-### GetMemFreeOk
+### GetDnsServerOk
 
-`func (o *InlineResponse200130) GetMemFreeOk() (*int32, bool)`
+`func (o *InlineResponse200130) GetDnsServerOk() (*string, bool)`
 
-GetMemFreeOk returns a tuple with the MemFree field if it's non-nil, zero value otherwise
+GetDnsServerOk returns a tuple with the DnsServer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemFree
+### SetDnsServer
 
-`func (o *InlineResponse200130) SetMemFree(v int32)`
+`func (o *InlineResponse200130) SetDnsServer(v string)`
 
-SetMemFree sets MemFree field to given value.
+SetDnsServer sets DnsServer field to given value.
 
-### HasMemFree
+### HasDnsServer
 
-`func (o *InlineResponse200130) HasMemFree() bool`
+`func (o *InlineResponse200130) HasDnsServer() bool`
 
-HasMemFree returns a boolean if a field has been set.
+HasDnsServer returns a boolean if a field has been set.
 
-### GetMemWired
+### GetGateway
 
-`func (o *InlineResponse200130) GetMemWired() int32`
+`func (o *InlineResponse200130) GetGateway() string`
 
-GetMemWired returns the MemWired field if non-nil, zero value otherwise.
+GetGateway returns the Gateway field if non-nil, zero value otherwise.
 
-### GetMemWiredOk
+### GetGatewayOk
 
-`func (o *InlineResponse200130) GetMemWiredOk() (*int32, bool)`
+`func (o *InlineResponse200130) GetGatewayOk() (*string, bool)`
 
-GetMemWiredOk returns a tuple with the MemWired field if it's non-nil, zero value otherwise
+GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemWired
+### SetGateway
 
-`func (o *InlineResponse200130) SetMemWired(v int32)`
+`func (o *InlineResponse200130) SetGateway(v string)`
 
-SetMemWired sets MemWired field to given value.
+SetGateway sets Gateway field to given value.
 
-### HasMemWired
+### HasGateway
 
-`func (o *InlineResponse200130) HasMemWired() bool`
+`func (o *InlineResponse200130) HasGateway() bool`
 
-HasMemWired returns a boolean if a field has been set.
+HasGateway returns a boolean if a field has been set.
 
-### GetMemActive
+### GetId
 
-`func (o *InlineResponse200130) GetMemActive() int32`
+`func (o *InlineResponse200130) GetId() string`
 
-GetMemActive returns the MemActive field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetMemActiveOk
+### GetIdOk
 
-`func (o *InlineResponse200130) GetMemActiveOk() (*int32, bool)`
+`func (o *InlineResponse200130) GetIdOk() (*string, bool)`
 
-GetMemActiveOk returns a tuple with the MemActive field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemActive
+### SetId
 
-`func (o *InlineResponse200130) SetMemActive(v int32)`
+`func (o *InlineResponse200130) SetId(v string)`
 
-SetMemActive sets MemActive field to given value.
+SetId sets Id field to given value.
 
-### HasMemActive
+### HasId
 
-`func (o *InlineResponse200130) HasMemActive() bool`
+`func (o *InlineResponse200130) HasId() bool`
 
-HasMemActive returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetMemInactive
+### GetIp
 
-`func (o *InlineResponse200130) GetMemInactive() int32`
+`func (o *InlineResponse200130) GetIp() string`
 
-GetMemInactive returns the MemInactive field if non-nil, zero value otherwise.
+GetIp returns the Ip field if non-nil, zero value otherwise.
 
-### GetMemInactiveOk
+### GetIpOk
 
-`func (o *InlineResponse200130) GetMemInactiveOk() (*int32, bool)`
+`func (o *InlineResponse200130) GetIpOk() (*string, bool)`
 
-GetMemInactiveOk returns a tuple with the MemInactive field if it's non-nil, zero value otherwise
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMemInactive
+### SetIp
 
-`func (o *InlineResponse200130) SetMemInactive(v int32)`
+`func (o *InlineResponse200130) SetIp(v string)`
 
-SetMemInactive sets MemInactive field to given value.
+SetIp sets Ip field to given value.
 
-### HasMemInactive
+### HasIp
 
-`func (o *InlineResponse200130) HasMemInactive() bool`
+`func (o *InlineResponse200130) HasIp() bool`
 
-HasMemInactive returns a boolean if a field has been set.
+HasIp returns a boolean if a field has been set.
 
-### GetNetworkSent
+### GetMac
 
-`func (o *InlineResponse200130) GetNetworkSent() int32`
+`func (o *InlineResponse200130) GetMac() string`
 
-GetNetworkSent returns the NetworkSent field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetNetworkSentOk
+### GetMacOk
 
-`func (o *InlineResponse200130) GetNetworkSentOk() (*int32, bool)`
+`func (o *InlineResponse200130) GetMacOk() (*string, bool)`
 
-GetNetworkSentOk returns a tuple with the NetworkSent field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkSent
+### SetMac
 
-`func (o *InlineResponse200130) SetNetworkSent(v int32)`
+`func (o *InlineResponse200130) SetMac(v string)`
 
-SetNetworkSent sets NetworkSent field to given value.
+SetMac sets Mac field to given value.
 
-### HasNetworkSent
+### HasMac
 
-`func (o *InlineResponse200130) HasNetworkSent() bool`
+`func (o *InlineResponse200130) HasMac() bool`
 
-HasNetworkSent returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetNetworkReceived
+### GetName
 
-`func (o *InlineResponse200130) GetNetworkReceived() int32`
+`func (o *InlineResponse200130) GetName() string`
 
-GetNetworkReceived returns the NetworkReceived field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkReceivedOk
+### GetNameOk
 
-`func (o *InlineResponse200130) GetNetworkReceivedOk() (*int32, bool)`
+`func (o *InlineResponse200130) GetNameOk() (*string, bool)`
 
-GetNetworkReceivedOk returns a tuple with the NetworkReceived field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkReceived
+### SetName
 
-`func (o *InlineResponse200130) SetNetworkReceived(v int32)`
+`func (o *InlineResponse200130) SetName(v string)`
 
-SetNetworkReceived sets NetworkReceived field to given value.
+SetName sets Name field to given value.
 
-### HasNetworkReceived
+### HasName
 
-`func (o *InlineResponse200130) HasNetworkReceived() bool`
+`func (o *InlineResponse200130) HasName() bool`
 
-HasNetworkReceived returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSwapUsed
+### GetSubnet
 
-`func (o *InlineResponse200130) GetSwapUsed() int32`
+`func (o *InlineResponse200130) GetSubnet() string`
 
-GetSwapUsed returns the SwapUsed field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetSwapUsedOk
+### GetSubnetOk
 
-`func (o *InlineResponse200130) GetSwapUsedOk() (*int32, bool)`
+`func (o *InlineResponse200130) GetSubnetOk() (*string, bool)`
 
-GetSwapUsedOk returns a tuple with the SwapUsed field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwapUsed
+### SetSubnet
 
-`func (o *InlineResponse200130) SetSwapUsed(v int32)`
+`func (o *InlineResponse200130) SetSubnet(v string)`
 
-SetSwapUsed sets SwapUsed field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasSwapUsed
+### HasSubnet
 
-`func (o *InlineResponse200130) HasSwapUsed() bool`
+`func (o *InlineResponse200130) HasSubnet() bool`
 
-HasSwapUsed returns a boolean if a field has been set.
-
-### GetDiskUsage
-
-`func (o *InlineResponse200130) GetDiskUsage() NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage`
-
-GetDiskUsage returns the DiskUsage field if non-nil, zero value otherwise.
-
-### GetDiskUsageOk
-
-`func (o *InlineResponse200130) GetDiskUsageOk() (*NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage, bool)`
-
-GetDiskUsageOk returns a tuple with the DiskUsage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDiskUsage
-
-`func (o *InlineResponse200130) SetDiskUsage(v NetworksNetworkIdSmDevicesDeviceIdPerformanceHistoryDiskUsage)`
-
-SetDiskUsage sets DiskUsage field to given value.
-
-### HasDiskUsage
-
-`func (o *InlineResponse200130) HasDiskUsage() bool`
-
-HasDiskUsage returns a boolean if a field has been set.
-
-### GetTs
-
-`func (o *InlineResponse200130) GetTs() string`
-
-GetTs returns the Ts field if non-nil, zero value otherwise.
-
-### GetTsOk
-
-`func (o *InlineResponse200130) GetTsOk() (*string, bool)`
-
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTs
-
-`func (o *InlineResponse200130) SetTs(v string)`
-
-SetTs sets Ts field to given value.
-
-### HasTs
-
-`func (o *InlineResponse200130) HasTs() bool`
-
-HasTs returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

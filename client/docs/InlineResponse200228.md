@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
 **Serial** | Pointer to **string** | The serial number of the camera | [optional] 
-**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries.md) |  | [optional] 
+**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries.md) |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasSerial returns a boolean if a field has been set.
 
 ### GetBoundaries
 
-`func (o *InlineResponse200228) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries`
+`func (o *InlineResponse200228) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries`
 
 GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
 
 ### GetBoundariesOk
 
-`func (o *InlineResponse200228) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries, bool)`
+`func (o *InlineResponse200228) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries, bool)`
 
 GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBoundaries
 
-`func (o *InlineResponse200228) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries)`
+`func (o *InlineResponse200228) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries)`
 
 SetBoundaries sets Boundaries field to given value.
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Smart Account ID | [optional] 
-**Name** | Pointer to **string** | The name of the smart account | [optional] 
+**Status** | Pointer to **string** | Subscription Smart Account status | [optional] 
+**Account** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsSmartAccountAccount**](AdministeredLicensingSubscriptionSubscriptionsSmartAccountAccount.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewAdministeredLicensingSubscriptionSubscriptionsSmartAccountWithDefaults instan
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetStatus
 
-`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) GetId() string`
+`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) GetStatus() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetStatusOk
 
-`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) GetIdOk() (*string, bool)`
+`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) GetStatusOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetStatus
 
-`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) SetId(v string)`
+`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) SetStatus(v string)`
 
-SetId sets Id field to given value.
+SetStatus sets Status field to given value.
 
-### HasId
+### HasStatus
 
-`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) HasId() bool`
+`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) HasStatus() bool`
 
-HasId returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetName
+### GetAccount
 
-`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) GetName() string`
+`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) GetAccount() AdministeredLicensingSubscriptionSubscriptionsSmartAccountAccount`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetAccount returns the Account field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetAccountOk
 
-`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) GetNameOk() (*string, bool)`
+`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) GetAccountOk() (*AdministeredLicensingSubscriptionSubscriptionsSmartAccountAccount, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetAccountOk returns a tuple with the Account field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetAccount
 
-`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) SetName(v string)`
+`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) SetAccount(v AdministeredLicensingSubscriptionSubscriptionsSmartAccountAccount)`
 
-SetName sets Name field to given value.
+SetAccount sets Account field to given value.
 
-### HasName
+### HasAccount
 
-`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) HasName() bool`
+`func (o *AdministeredLicensingSubscriptionSubscriptionsSmartAccount) HasAccount() bool`
 
-HasName returns a boolean if a field has been set.
+HasAccount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

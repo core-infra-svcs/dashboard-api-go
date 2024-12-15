@@ -4,16 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions1**](OrganizationsOrganizationIdActionBatchesActions1.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
-**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the organization | [optional] 
+**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
+**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject203
 
-`func NewInlineObject203(actions []OrganizationsOrganizationIdActionBatchesActions1, ) *InlineObject203`
+`func NewInlineObject203() *InlineObject203`
 
 NewInlineObject203 instantiates a new InlineObject203 object
 This constructor will assign default values to properties that have it defined,
@@ -28,100 +27,80 @@ NewInlineObject203WithDefaults instantiates a new InlineObject203 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetConfirmed
+### GetName
 
-`func (o *InlineObject203) GetConfirmed() bool`
+`func (o *InlineObject203) GetName() string`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetNameOk
 
-`func (o *InlineObject203) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineObject203) GetNameOk() (*string, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetName
 
-`func (o *InlineObject203) SetConfirmed(v bool)`
+`func (o *InlineObject203) SetName(v string)`
 
-SetConfirmed sets Confirmed field to given value.
+SetName sets Name field to given value.
 
-### HasConfirmed
+### HasName
 
-`func (o *InlineObject203) HasConfirmed() bool`
+`func (o *InlineObject203) HasName() bool`
 
-HasConfirmed returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSynchronous
+### GetManagement
 
-`func (o *InlineObject203) GetSynchronous() bool`
+`func (o *InlineObject203) GetManagement() OrganizationsManagement1`
 
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-### GetSynchronousOk
+### GetManagementOk
 
-`func (o *InlineObject203) GetSynchronousOk() (*bool, bool)`
+`func (o *InlineObject203) GetManagementOk() (*OrganizationsManagement1, bool)`
 
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSynchronous
+### SetManagement
 
-`func (o *InlineObject203) SetSynchronous(v bool)`
+`func (o *InlineObject203) SetManagement(v OrganizationsManagement1)`
 
-SetSynchronous sets Synchronous field to given value.
+SetManagement sets Management field to given value.
 
-### HasSynchronous
+### HasManagement
 
-`func (o *InlineObject203) HasSynchronous() bool`
+`func (o *InlineObject203) HasManagement() bool`
 
-HasSynchronous returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
 
-### GetActions
+### GetApi
 
-`func (o *InlineObject203) GetActions() []OrganizationsOrganizationIdActionBatchesActions1`
+`func (o *InlineObject203) GetApi() OrganizationsOrganizationIdApi`
 
-GetActions returns the Actions field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetActionsOk
+### GetApiOk
 
-`func (o *InlineObject203) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions1, bool)`
+`func (o *InlineObject203) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
 
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActions
+### SetApi
 
-`func (o *InlineObject203) SetActions(v []OrganizationsOrganizationIdActionBatchesActions1)`
+`func (o *InlineObject203) SetApi(v OrganizationsOrganizationIdApi)`
 
-SetActions sets Actions field to given value.
+SetApi sets Api field to given value.
 
+### HasApi
 
-### GetCallback
+`func (o *InlineObject203) HasApi() bool`
 
-`func (o *InlineObject203) GetCallback() DevicesSerialLiveToolsArpTableCallback`
-
-GetCallback returns the Callback field if non-nil, zero value otherwise.
-
-### GetCallbackOk
-
-`func (o *InlineObject203) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
-
-GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCallback
-
-`func (o *InlineObject203) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
-
-SetCallback sets Callback field to given value.
-
-### HasCallback
-
-`func (o *InlineObject203) HasCallback() bool`
-
-HasCallback returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

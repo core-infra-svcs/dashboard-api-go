@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Mode** | Pointer to **string** | Wireless LAN controller redundancy SSO (stateful switchover) | [optional] 
-**Enabled** | Pointer to **bool** | Wireless LAN controller redundancy enablement | [optional] 
-**Failover** | Pointer to [**InlineResponse200337Failover**](InlineResponse200337Failover.md) |  | [optional] 
-**MobilityMac** | Pointer to **string** | Wireless LAN controller redundancy mobility mac  | [optional] 
+**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
+**Readings** | Pointer to [**[]InlineResponse200334Readings**](InlineResponse200334Readings.md) | The usages of layer 3 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
 
 ## Methods
 
@@ -54,105 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetMode
+### GetReadings
 
-`func (o *InlineResponse200337Items) GetMode() string`
+`func (o *InlineResponse200337Items) GetReadings() []InlineResponse200334Readings`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetReadings returns the Readings field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetReadingsOk
 
-`func (o *InlineResponse200337Items) GetModeOk() (*string, bool)`
+`func (o *InlineResponse200337Items) GetReadingsOk() (*[]InlineResponse200334Readings, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetReadings
 
-`func (o *InlineResponse200337Items) SetMode(v string)`
+`func (o *InlineResponse200337Items) SetReadings(v []InlineResponse200334Readings)`
 
-SetMode sets Mode field to given value.
+SetReadings sets Readings field to given value.
 
-### HasMode
+### HasReadings
 
-`func (o *InlineResponse200337Items) HasMode() bool`
+`func (o *InlineResponse200337Items) HasReadings() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineResponse200337Items) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineResponse200337Items) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineResponse200337Items) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineResponse200337Items) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetFailover
-
-`func (o *InlineResponse200337Items) GetFailover() InlineResponse200337Failover`
-
-GetFailover returns the Failover field if non-nil, zero value otherwise.
-
-### GetFailoverOk
-
-`func (o *InlineResponse200337Items) GetFailoverOk() (*InlineResponse200337Failover, bool)`
-
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFailover
-
-`func (o *InlineResponse200337Items) SetFailover(v InlineResponse200337Failover)`
-
-SetFailover sets Failover field to given value.
-
-### HasFailover
-
-`func (o *InlineResponse200337Items) HasFailover() bool`
-
-HasFailover returns a boolean if a field has been set.
-
-### GetMobilityMac
-
-`func (o *InlineResponse200337Items) GetMobilityMac() string`
-
-GetMobilityMac returns the MobilityMac field if non-nil, zero value otherwise.
-
-### GetMobilityMacOk
-
-`func (o *InlineResponse200337Items) GetMobilityMacOk() (*string, bool)`
-
-GetMobilityMacOk returns a tuple with the MobilityMac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMobilityMac
-
-`func (o *InlineResponse200337Items) SetMobilityMac(v string)`
-
-SetMobilityMac sets MobilityMac field to given value.
-
-### HasMobilityMac
-
-`func (o *InlineResponse200337Items) HasMobilityMac() bool`
-
-HasMobilityMac returns a boolean if a field has been set.
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

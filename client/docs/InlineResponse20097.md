@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Status of attempt to publish auto locate job | [optional] 
+**Jobs** | Pointer to [**[]InlineResponse20097Jobs**](InlineResponse20097Jobs.md) | The newly created jobs | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20097WithDefaults instantiates a new InlineResponse20097 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetJobs
 
-`func (o *InlineResponse20097) GetSuccess() bool`
+`func (o *InlineResponse20097) GetJobs() []InlineResponse20097Jobs`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetJobs returns the Jobs field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetJobsOk
 
-`func (o *InlineResponse20097) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse20097) GetJobsOk() (*[]InlineResponse20097Jobs, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetJobsOk returns a tuple with the Jobs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetJobs
 
-`func (o *InlineResponse20097) SetSuccess(v bool)`
+`func (o *InlineResponse20097) SetJobs(v []InlineResponse20097Jobs)`
 
-SetSuccess sets Success field to given value.
+SetJobs sets Jobs field to given value.
 
-### HasSuccess
+### HasJobs
 
-`func (o *InlineResponse20097) HasSuccess() bool`
+`func (o *InlineResponse20097) HasJobs() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasJobs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

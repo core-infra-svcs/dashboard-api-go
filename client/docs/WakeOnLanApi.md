@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceLiveToolsWakeOnLan
 
-> InlineResponse2016 CreateDeviceLiveToolsWakeOnLan(ctx, serial).CreateDeviceLiveToolsWakeOnLan(createDeviceLiveToolsWakeOnLan).Execute()
+> InlineResponse2017 CreateDeviceLiveToolsWakeOnLan(ctx, serial).CreateDeviceLiveToolsWakeOnLan(createDeviceLiveToolsWakeOnLan).Execute()
 
 Enqueue a job to send a Wake-on-LAN packet from the device
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsWakeOnLan := *openapiclient.NewInlineObject21(int32(123), "Mac_example") // InlineObject21 | 
+    createDeviceLiveToolsWakeOnLan := *openapiclient.NewInlineObject22(int32(123), "Mac_example") // InlineObject22 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WakeOnLanApi.CreateDeviceLiveToolsWakeOnLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsWakeOnLan`: InlineResponse2016
+    // response from `CreateDeviceLiveToolsWakeOnLan`: InlineResponse2017
     fmt.Fprintf(os.Stdout, "Response from `WakeOnLanApi.CreateDeviceLiveToolsWakeOnLan`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsWakeO
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsWakeOnLan** | [**InlineObject21**](InlineObject21.md) |  | 
+ **createDeviceLiveToolsWakeOnLan** | [**InlineObject22**](InlineObject22.md) |  | 
 
 ### Return type
 
-[**InlineResponse2016**](InlineResponse2016.md)
+[**InlineResponse2017**](InlineResponse2017.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsWakeOnLan
 
-> InlineResponse20025 GetDeviceLiveToolsWakeOnLan(ctx, serial, wakeOnLanId).Execute()
+> InlineResponse20026 GetDeviceLiveToolsWakeOnLan(ctx, serial, wakeOnLanId).Execute()
 
 Return a Wake-on-LAN job
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WakeOnLanApi.GetDeviceLiveToolsWakeOnLan``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsWakeOnLan`: InlineResponse20025
+    // response from `GetDeviceLiveToolsWakeOnLan`: InlineResponse20026
     fmt.Fprintf(os.Stdout, "Response from `WakeOnLanApi.GetDeviceLiveToolsWakeOnLan`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20025**](InlineResponse20025.md)
+[**InlineResponse20026**](InlineResponse20026.md)
 
 ### Authorization
 

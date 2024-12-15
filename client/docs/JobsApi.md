@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## BatchNetworkFloorPlansAutoLocateJobs
 
-> InlineResponse20096 BatchNetworkFloorPlansAutoLocateJobs(ctx, networkId).BatchNetworkFloorPlansAutoLocateJobs(batchNetworkFloorPlansAutoLocateJobs).Execute()
+> InlineResponse20097 BatchNetworkFloorPlansAutoLocateJobs(ctx, networkId).BatchNetworkFloorPlansAutoLocateJobs(batchNetworkFloorPlansAutoLocateJobs).Execute()
 
 Schedule auto locate jobs for one or more floor plans in a network
 
@@ -33,7 +33,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    batchNetworkFloorPlansAutoLocateJobs := *openapiclient.NewInlineObject101([]openapiclient.NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs{*openapiclient.NewNetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs("FloorPlanId_example")}) // InlineObject101 | 
+    batchNetworkFloorPlansAutoLocateJobs := *openapiclient.NewInlineObject102([]openapiclient.NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs{*openapiclient.NewNetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs("FloorPlanId_example")}) // InlineObject102 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -42,7 +42,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `JobsApi.BatchNetworkFloorPlansAutoLocateJobs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BatchNetworkFloorPlansAutoLocateJobs`: InlineResponse20096
+    // response from `BatchNetworkFloorPlansAutoLocateJobs`: InlineResponse20097
     fmt.Fprintf(os.Stdout, "Response from `JobsApi.BatchNetworkFloorPlansAutoLocateJobs`: %v\n", resp)
 }
 ```
@@ -63,11 +63,11 @@ Other parameters are passed through a pointer to a apiBatchNetworkFloorPlansAuto
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **batchNetworkFloorPlansAutoLocateJobs** | [**InlineObject101**](InlineObject101.md) |  | 
+ **batchNetworkFloorPlansAutoLocateJobs** | [**InlineObject102**](InlineObject102.md) |  | 
 
 ### Return type
 
-[**InlineResponse20096**](InlineResponse20096.md)
+[**InlineResponse20097**](InlineResponse20097.md)
 
 ### Authorization
 
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ## PublishNetworkFloorPlansAutoLocateJob
 
-> InlineResponse20097 PublishNetworkFloorPlansAutoLocateJob(ctx, networkId, jobId).PublishNetworkFloorPlansAutoLocateJob(publishNetworkFloorPlansAutoLocateJob).Execute()
+> InlineResponse20098 PublishNetworkFloorPlansAutoLocateJob(ctx, networkId, jobId).PublishNetworkFloorPlansAutoLocateJob(publishNetworkFloorPlansAutoLocateJob).Execute()
 
 Update the status of a finished auto locate job to be published, and update device locations
 
@@ -177,7 +177,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     jobId := "jobId_example" // string | Job ID
-    publishNetworkFloorPlansAutoLocateJob := *openapiclient.NewInlineObject102() // InlineObject102 |  (optional)
+    publishNetworkFloorPlansAutoLocateJob := *openapiclient.NewInlineObject103() // InlineObject103 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `JobsApi.PublishNetworkFloorPlansAutoLocateJob``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `PublishNetworkFloorPlansAutoLocateJob`: InlineResponse20097
+    // response from `PublishNetworkFloorPlansAutoLocateJob`: InlineResponse20098
     fmt.Fprintf(os.Stdout, "Response from `JobsApi.PublishNetworkFloorPlansAutoLocateJob`: %v\n", resp)
 }
 ```
@@ -209,11 +209,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **publishNetworkFloorPlansAutoLocateJob** | [**InlineObject102**](InlineObject102.md) |  | 
+ **publishNetworkFloorPlansAutoLocateJob** | [**InlineObject103**](InlineObject103.md) |  | 
 
 ### Return type
 
-[**InlineResponse20097**](InlineResponse20097.md)
+[**InlineResponse20098**](InlineResponse20098.md)
 
 ### Authorization
 
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ## RecalculateNetworkFloorPlansAutoLocateJob
 
-> InlineResponse20098 RecalculateNetworkFloorPlansAutoLocateJob(ctx, networkId, jobId).RecalculateNetworkFloorPlansAutoLocateJob(recalculateNetworkFloorPlansAutoLocateJob).Execute()
+> InlineResponse20099 RecalculateNetworkFloorPlansAutoLocateJob(ctx, networkId, jobId).RecalculateNetworkFloorPlansAutoLocateJob(recalculateNetworkFloorPlansAutoLocateJob).Execute()
 
 Trigger auto locate recalculation for a job, and optionally set anchors
 
@@ -252,7 +252,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     jobId := "jobId_example" // string | Job ID
-    recalculateNetworkFloorPlansAutoLocateJob := *openapiclient.NewInlineObject103() // InlineObject103 |  (optional)
+    recalculateNetworkFloorPlansAutoLocateJob := *openapiclient.NewInlineObject104() // InlineObject104 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -261,7 +261,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `JobsApi.RecalculateNetworkFloorPlansAutoLocateJob``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RecalculateNetworkFloorPlansAutoLocateJob`: InlineResponse20098
+    // response from `RecalculateNetworkFloorPlansAutoLocateJob`: InlineResponse20099
     fmt.Fprintf(os.Stdout, "Response from `JobsApi.RecalculateNetworkFloorPlansAutoLocateJob`: %v\n", resp)
 }
 ```
@@ -284,11 +284,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **recalculateNetworkFloorPlansAutoLocateJob** | [**InlineObject103**](InlineObject103.md) |  | 
+ **recalculateNetworkFloorPlansAutoLocateJob** | [**InlineObject104**](InlineObject104.md) |  | 
 
 ### Return type
 
-[**InlineResponse20098**](InlineResponse20098.md)
+[**InlineResponse20099**](InlineResponse20099.md)
 
 ### Authorization
 

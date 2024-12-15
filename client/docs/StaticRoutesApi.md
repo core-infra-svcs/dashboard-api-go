@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceSwitchRoutingStaticRoute
 
-> InlineResponse20037 CreateDeviceSwitchRoutingStaticRoute(ctx, serial).CreateDeviceSwitchRoutingStaticRoute(createDeviceSwitchRoutingStaticRoute).Execute()
+> InlineResponse20038 CreateDeviceSwitchRoutingStaticRoute(ctx, serial).CreateDeviceSwitchRoutingStaticRoute(createDeviceSwitchRoutingStaticRoute).Execute()
 
 Create a layer 3 static route for a switch
 
@@ -44,7 +44,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceSwitchRoutingStaticRoute := *openapiclient.NewInlineObject30("Subnet_example", "NextHopIp_example") // InlineObject30 | 
+    createDeviceSwitchRoutingStaticRoute := *openapiclient.NewInlineObject31("Subnet_example", "NextHopIp_example") // InlineObject31 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -53,7 +53,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.CreateDeviceSwitchRoutingStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceSwitchRoutingStaticRoute`: InlineResponse20037
+    // response from `CreateDeviceSwitchRoutingStaticRoute`: InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.CreateDeviceSwitchRoutingStaticRoute`: %v\n", resp)
 }
 ```
@@ -74,11 +74,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceSwitchRoutingS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceSwitchRoutingStaticRoute** | [**InlineObject30**](InlineObject30.md) |  | 
+ **createDeviceSwitchRoutingStaticRoute** | [**InlineObject31**](InlineObject31.md) |  | 
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkApplianceStaticRoute
 
-> InlineResponse20062 CreateNetworkApplianceStaticRoute(ctx, networkId).CreateNetworkApplianceStaticRoute(createNetworkApplianceStaticRoute).Execute()
+> InlineResponse20063 CreateNetworkApplianceStaticRoute(ctx, networkId).CreateNetworkApplianceStaticRoute(createNetworkApplianceStaticRoute).Execute()
 
 Add a static route for an MX or teleworker network
 
@@ -116,7 +116,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    createNetworkApplianceStaticRoute := *openapiclient.NewInlineObject62("Name_example", "Subnet_example", "GatewayIp_example") // InlineObject62 | 
+    createNetworkApplianceStaticRoute := *openapiclient.NewInlineObject63("Name_example", "Subnet_example", "GatewayIp_example") // InlineObject63 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -125,7 +125,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.CreateNetworkApplianceStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkApplianceStaticRoute`: InlineResponse20062
+    // response from `CreateNetworkApplianceStaticRoute`: InlineResponse20063
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.CreateNetworkApplianceStaticRoute`: %v\n", resp)
 }
 ```
@@ -146,11 +146,11 @@ Other parameters are passed through a pointer to a apiCreateNetworkApplianceStat
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createNetworkApplianceStaticRoute** | [**InlineObject62**](InlineObject62.md) |  | 
+ **createNetworkApplianceStaticRoute** | [**InlineObject63**](InlineObject63.md) |  | 
 
 ### Return type
 
-[**InlineResponse20062**](InlineResponse20062.md)
+[**InlineResponse20063**](InlineResponse20063.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchStackRoutingStaticRoute
 
-> InlineResponse20037 CreateNetworkSwitchStackRoutingStaticRoute(ctx, networkId, switchStackId).CreateNetworkSwitchStackRoutingStaticRoute(createNetworkSwitchStackRoutingStaticRoute).Execute()
+> InlineResponse20038 CreateNetworkSwitchStackRoutingStaticRoute(ctx, networkId, switchStackId).CreateNetworkSwitchStackRoutingStaticRoute(createNetworkSwitchStackRoutingStaticRoute).Execute()
 
 Create a layer 3 static route for a switch stack
 
@@ -189,7 +189,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
-    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject159("Subnet_example", "NextHopIp_example") // InlineObject159 | 
+    createNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject160("Subnet_example", "NextHopIp_example") // InlineObject160 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -198,7 +198,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.CreateNetworkSwitchStackRoutingStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchStackRoutingStaticRoute`: InlineResponse20037
+    // response from `CreateNetworkSwitchStackRoutingStaticRoute`: InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.CreateNetworkSwitchStackRoutingStaticRoute`: %v\n", resp)
 }
 ```
@@ -221,11 +221,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject159**](InlineObject159.md) |  | 
+ **createNetworkSwitchStackRoutingStaticRoute** | [**InlineObject160**](InlineObject160.md) |  | 
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -459,7 +459,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingStaticRoute
 
-> InlineResponse20037 GetDeviceSwitchRoutingStaticRoute(ctx, serial, staticRouteId).Execute()
+> InlineResponse20038 GetDeviceSwitchRoutingStaticRoute(ctx, serial, staticRouteId).Execute()
 
 Return a layer 3 static route for a switch
 
@@ -488,7 +488,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.GetDeviceSwitchRoutingStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingStaticRoute`: InlineResponse20037
+    // response from `GetDeviceSwitchRoutingStaticRoute`: InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.GetDeviceSwitchRoutingStaticRoute`: %v\n", resp)
 }
 ```
@@ -514,7 +514,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -532,7 +532,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceSwitchRoutingStaticRoutes
 
-> []InlineResponse20037 GetDeviceSwitchRoutingStaticRoutes(ctx, serial).Execute()
+> []InlineResponse20038 GetDeviceSwitchRoutingStaticRoutes(ctx, serial).Execute()
 
 List layer 3 static routes for a switch
 
@@ -560,7 +560,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.GetDeviceSwitchRoutingStaticRoutes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceSwitchRoutingStaticRoutes`: []InlineResponse20037
+    // response from `GetDeviceSwitchRoutingStaticRoutes`: []InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.GetDeviceSwitchRoutingStaticRoutes`: %v\n", resp)
 }
 ```
@@ -584,7 +584,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20037**](InlineResponse20037.md)
+[**[]InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -602,7 +602,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceStaticRoute
 
-> InlineResponse20062 GetNetworkApplianceStaticRoute(ctx, networkId, staticRouteId).Execute()
+> InlineResponse20063 GetNetworkApplianceStaticRoute(ctx, networkId, staticRouteId).Execute()
 
 Return a static route for an MX or teleworker network
 
@@ -631,7 +631,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.GetNetworkApplianceStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceStaticRoute`: InlineResponse20062
+    // response from `GetNetworkApplianceStaticRoute`: InlineResponse20063
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.GetNetworkApplianceStaticRoute`: %v\n", resp)
 }
 ```
@@ -657,7 +657,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20062**](InlineResponse20062.md)
+[**InlineResponse20063**](InlineResponse20063.md)
 
 ### Authorization
 
@@ -675,7 +675,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceStaticRoutes
 
-> []InlineResponse20062 GetNetworkApplianceStaticRoutes(ctx, networkId).Execute()
+> []InlineResponse20063 GetNetworkApplianceStaticRoutes(ctx, networkId).Execute()
 
 List the static routes for an MX or teleworker network
 
@@ -703,7 +703,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.GetNetworkApplianceStaticRoutes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceStaticRoutes`: []InlineResponse20062
+    // response from `GetNetworkApplianceStaticRoutes`: []InlineResponse20063
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.GetNetworkApplianceStaticRoutes`: %v\n", resp)
 }
 ```
@@ -727,7 +727,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20062**](InlineResponse20062.md)
+[**[]InlineResponse20063**](InlineResponse20063.md)
 
 ### Authorization
 
@@ -745,7 +745,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStackRoutingStaticRoute
 
-> InlineResponse20037 GetNetworkSwitchStackRoutingStaticRoute(ctx, networkId, switchStackId, staticRouteId).Execute()
+> InlineResponse20038 GetNetworkSwitchStackRoutingStaticRoute(ctx, networkId, switchStackId, staticRouteId).Execute()
 
 Return a layer 3 static route for a switch stack
 
@@ -775,7 +775,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.GetNetworkSwitchStackRoutingStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStackRoutingStaticRoute`: InlineResponse20037
+    // response from `GetNetworkSwitchStackRoutingStaticRoute`: InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.GetNetworkSwitchStackRoutingStaticRoute`: %v\n", resp)
 }
 ```
@@ -803,7 +803,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -821,7 +821,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStackRoutingStaticRoutes
 
-> []InlineResponse20037 GetNetworkSwitchStackRoutingStaticRoutes(ctx, networkId, switchStackId).Execute()
+> []InlineResponse20038 GetNetworkSwitchStackRoutingStaticRoutes(ctx, networkId, switchStackId).Execute()
 
 List layer 3 static routes for a switch stack
 
@@ -850,7 +850,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.GetNetworkSwitchStackRoutingStaticRoutes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStackRoutingStaticRoutes`: []InlineResponse20037
+    // response from `GetNetworkSwitchStackRoutingStaticRoutes`: []InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.GetNetworkSwitchStackRoutingStaticRoutes`: %v\n", resp)
 }
 ```
@@ -876,7 +876,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20037**](InlineResponse20037.md)
+[**[]InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -894,7 +894,7 @@ Name | Type | Description  | Notes
 
 ## UpdateDeviceSwitchRoutingStaticRoute
 
-> InlineResponse20037 UpdateDeviceSwitchRoutingStaticRoute(ctx, serial, staticRouteId).UpdateDeviceSwitchRoutingStaticRoute(updateDeviceSwitchRoutingStaticRoute).Execute()
+> InlineResponse20038 UpdateDeviceSwitchRoutingStaticRoute(ctx, serial, staticRouteId).UpdateDeviceSwitchRoutingStaticRoute(updateDeviceSwitchRoutingStaticRoute).Execute()
 
 Update a layer 3 static route for a switch
 
@@ -915,7 +915,7 @@ import (
 func main() {
     serial := "serial_example" // string | Serial
     staticRouteId := "staticRouteId_example" // string | Static route ID
-    updateDeviceSwitchRoutingStaticRoute := *openapiclient.NewInlineObject31() // InlineObject31 |  (optional)
+    updateDeviceSwitchRoutingStaticRoute := *openapiclient.NewInlineObject32() // InlineObject32 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -924,7 +924,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.UpdateDeviceSwitchRoutingStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateDeviceSwitchRoutingStaticRoute`: InlineResponse20037
+    // response from `UpdateDeviceSwitchRoutingStaticRoute`: InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.UpdateDeviceSwitchRoutingStaticRoute`: %v\n", resp)
 }
 ```
@@ -947,11 +947,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateDeviceSwitchRoutingStaticRoute** | [**InlineObject31**](InlineObject31.md) |  | 
+ **updateDeviceSwitchRoutingStaticRoute** | [**InlineObject32**](InlineObject32.md) |  | 
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 
@@ -969,7 +969,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceStaticRoute
 
-> InlineResponse20062 UpdateNetworkApplianceStaticRoute(ctx, networkId, staticRouteId).UpdateNetworkApplianceStaticRoute(updateNetworkApplianceStaticRoute).Execute()
+> InlineResponse20063 UpdateNetworkApplianceStaticRoute(ctx, networkId, staticRouteId).UpdateNetworkApplianceStaticRoute(updateNetworkApplianceStaticRoute).Execute()
 
 Update a static route for an MX or teleworker network
 
@@ -990,7 +990,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     staticRouteId := "staticRouteId_example" // string | Static route ID
-    updateNetworkApplianceStaticRoute := *openapiclient.NewInlineObject63() // InlineObject63 |  (optional)
+    updateNetworkApplianceStaticRoute := *openapiclient.NewInlineObject64() // InlineObject64 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -999,7 +999,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.UpdateNetworkApplianceStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceStaticRoute`: InlineResponse20062
+    // response from `UpdateNetworkApplianceStaticRoute`: InlineResponse20063
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.UpdateNetworkApplianceStaticRoute`: %v\n", resp)
 }
 ```
@@ -1022,11 +1022,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateNetworkApplianceStaticRoute** | [**InlineObject63**](InlineObject63.md) |  | 
+ **updateNetworkApplianceStaticRoute** | [**InlineObject64**](InlineObject64.md) |  | 
 
 ### Return type
 
-[**InlineResponse20062**](InlineResponse20062.md)
+[**InlineResponse20063**](InlineResponse20063.md)
 
 ### Authorization
 
@@ -1044,7 +1044,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStackRoutingStaticRoute
 
-> InlineResponse20037 UpdateNetworkSwitchStackRoutingStaticRoute(ctx, networkId, switchStackId, staticRouteId).UpdateNetworkSwitchStackRoutingStaticRoute(updateNetworkSwitchStackRoutingStaticRoute).Execute()
+> InlineResponse20038 UpdateNetworkSwitchStackRoutingStaticRoute(ctx, networkId, switchStackId, staticRouteId).UpdateNetworkSwitchStackRoutingStaticRoute(updateNetworkSwitchStackRoutingStaticRoute).Execute()
 
 Update a layer 3 static route for a switch stack
 
@@ -1066,7 +1066,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
     staticRouteId := "staticRouteId_example" // string | Static route ID
-    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject160() // InlineObject160 |  (optional)
+    updateNetworkSwitchStackRoutingStaticRoute := *openapiclient.NewInlineObject161() // InlineObject161 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -1075,7 +1075,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StaticRoutesApi.UpdateNetworkSwitchStackRoutingStaticRoute``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStackRoutingStaticRoute`: InlineResponse20037
+    // response from `UpdateNetworkSwitchStackRoutingStaticRoute`: InlineResponse20038
     fmt.Fprintf(os.Stdout, "Response from `StaticRoutesApi.UpdateNetworkSwitchStackRoutingStaticRoute`: %v\n", resp)
 }
 ```
@@ -1100,11 +1100,11 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject160**](InlineObject160.md) |  | 
+ **updateNetworkSwitchStackRoutingStaticRoute** | [**InlineObject161**](InlineObject161.md) |  | 
 
 ### Return type
 
-[**InlineResponse20037**](InlineResponse20037.md)
+[**InlineResponse20038**](InlineResponse20038.md)
 
 ### Authorization
 

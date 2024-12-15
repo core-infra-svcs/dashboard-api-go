@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200284Items**](InlineResponse200284Items.md) | Array of Limited Access Roles | [optional] 
-**Meta** | Pointer to [**OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta**](OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta.md) |  | [optional] 
+**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
+**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200284WithDefaults instantiates a new InlineResponse200284 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetSerial
 
-`func (o *InlineResponse200284) GetItems() []InlineResponse200284Items`
+`func (o *InlineResponse200284) GetSerial() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetSerialOk
 
-`func (o *InlineResponse200284) GetItemsOk() (*[]InlineResponse200284Items, bool)`
+`func (o *InlineResponse200284) GetSerialOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetSerial
 
-`func (o *InlineResponse200284) SetItems(v []InlineResponse200284Items)`
+`func (o *InlineResponse200284) SetSerial(v string)`
 
-SetItems sets Items field to given value.
+SetSerial sets Serial field to given value.
 
-### HasItems
+### HasSerial
 
-`func (o *InlineResponse200284) HasItems() bool`
+`func (o *InlineResponse200284) HasSerial() bool`
 
-HasItems returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetMeta
+### GetNetwork
 
-`func (o *InlineResponse200284) GetMeta() OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta`
+`func (o *InlineResponse200284) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetNetworkOk
 
-`func (o *InlineResponse200284) GetMetaOk() (*OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta, bool)`
+`func (o *InlineResponse200284) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetNetwork
 
-`func (o *InlineResponse200284) SetMeta(v OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta)`
+`func (o *InlineResponse200284) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
 
-SetMeta sets Meta field to given value.
+SetNetwork sets Network field to given value.
 
-### HasMeta
+### HasNetwork
 
-`func (o *InlineResponse200284) HasMeta() bool`
+`func (o *InlineResponse200284) HasNetwork() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
+
+### GetReadings
+
+`func (o *InlineResponse200284) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
+
+GetReadings returns the Readings field if non-nil, zero value otherwise.
+
+### GetReadingsOk
+
+`func (o *InlineResponse200284) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
+
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReadings
+
+`func (o *InlineResponse200284) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
+
+SetReadings sets Readings field to given value.
+
+### HasReadings
+
+`func (o *InlineResponse200284) HasReadings() bool`
+
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

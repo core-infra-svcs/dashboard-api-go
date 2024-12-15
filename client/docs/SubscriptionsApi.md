@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## BindAdministeredLicensingSubscriptionSubscription
 
-> InlineResponse2005 BindAdministeredLicensingSubscriptionSubscription(ctx, subscriptionId).BindAdministeredLicensingSubscriptionSubscription(bindAdministeredLicensingSubscriptionSubscription).Validate(validate).Execute()
+> InlineResponse2005 BindAdministeredLicensingSubscriptionSubscription(ctx, subscriptionId).Validate(validate).BindAdministeredLicensingSubscriptionSubscription(bindAdministeredLicensingSubscriptionSubscription).Execute()
 
 Bind networks to a subscription
 
@@ -34,12 +34,12 @@ import (
 
 func main() {
     subscriptionId := "subscriptionId_example" // string | Subscription ID
-    bindAdministeredLicensingSubscriptionSubscription := *openapiclient.NewInlineObject2([]string{"NetworkIds_example"}) // InlineObject2 | 
     validate := true // bool | Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results. (optional)
+    bindAdministeredLicensingSubscriptionSubscription := *openapiclient.NewInlineObject2() // InlineObject2 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SubscriptionsApi.BindAdministeredLicensingSubscriptionSubscription(context.Background(), subscriptionId).BindAdministeredLicensingSubscriptionSubscription(bindAdministeredLicensingSubscriptionSubscription).Validate(validate).Execute()
+    resp, r, err := apiClient.SubscriptionsApi.BindAdministeredLicensingSubscriptionSubscription(context.Background(), subscriptionId).Validate(validate).BindAdministeredLicensingSubscriptionSubscription(bindAdministeredLicensingSubscriptionSubscription).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionsApi.BindAdministeredLicensingSubscriptionSubscription``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -65,8 +65,8 @@ Other parameters are passed through a pointer to a apiBindAdministeredLicensingS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bindAdministeredLicensingSubscriptionSubscription** | [**InlineObject2**](InlineObject2.md) |  | 
  **validate** | **bool** | Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results. | 
+ **bindAdministeredLicensingSubscriptionSubscription** | [**InlineObject2**](InlineObject2.md) |  | 
 
 ### Return type
 

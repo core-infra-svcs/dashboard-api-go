@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationConfigurationChanges
 
-> []InlineResponse200246 GetOrganizationConfigurationChanges(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkId(networkId).AdminId(adminId).Execute()
+> []InlineResponse200247 GetOrganizationConfigurationChanges(ctx, organizationId).T0(t0).T1(t1).Timespan(timespan).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkId(networkId).AdminId(adminId).Execute()
 
 View the Change Log for your organization
 
@@ -46,7 +46,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConfigurationChangesApi.GetOrganizationConfigurationChanges``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationConfigurationChanges`: []InlineResponse200246
+    // response from `GetOrganizationConfigurationChanges`: []InlineResponse200247
     fmt.Fprintf(os.Stdout, "Response from `ConfigurationChangesApi.GetOrganizationConfigurationChanges`: %v\n", resp)
 }
 ```
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200246**](InlineResponse200246.md)
+[**[]InlineResponse200247**](InlineResponse200247.md)
 
 ### Authorization
 

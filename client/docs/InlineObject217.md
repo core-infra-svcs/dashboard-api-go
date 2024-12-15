@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Peers** | [**[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers.md) | The list of VPN peers | 
+**AllowedRules** | [**[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules**](OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules.md) | Sets a list of specific SNORT signatures to allow | 
 
 ## Methods
 
 ### NewInlineObject217
 
-`func NewInlineObject217(peers []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, ) *InlineObject217`
+`func NewInlineObject217(allowedRules []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, ) *InlineObject217`
 
 NewInlineObject217 instantiates a new InlineObject217 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject217WithDefaults instantiates a new InlineObject217 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPeers
+### GetAllowedRules
 
-`func (o *InlineObject217) GetPeers() []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers`
+`func (o *InlineObject217) GetAllowedRules() []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules`
 
-GetPeers returns the Peers field if non-nil, zero value otherwise.
+GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
 
-### GetPeersOk
+### GetAllowedRulesOk
 
-`func (o *InlineObject217) GetPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, bool)`
+`func (o *InlineObject217) GetAllowedRulesOk() (*[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, bool)`
 
-GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
+GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPeers
+### SetAllowedRules
 
-`func (o *InlineObject217) SetPeers(v []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers)`
+`func (o *InlineObject217) SetAllowedRules(v []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules)`
 
-SetPeers sets Peers field to given value.
+SetAllowedRules sets AllowedRules field to given value.
 
 
 

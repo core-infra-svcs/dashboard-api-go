@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## BindAdministeredLicensingSubscriptionSubscription
 
-> InlineResponse2005 BindAdministeredLicensingSubscriptionSubscription(ctx, subscriptionId).BindAdministeredLicensingSubscriptionSubscription(bindAdministeredLicensingSubscriptionSubscription).Validate(validate).Execute()
+> InlineResponse2005 BindAdministeredLicensingSubscriptionSubscription(ctx, subscriptionId).Validate(validate).BindAdministeredLicensingSubscriptionSubscription(bindAdministeredLicensingSubscriptionSubscription).Execute()
 
 Bind networks to a subscription
 
@@ -37,12 +37,12 @@ import (
 
 func main() {
     subscriptionId := "subscriptionId_example" // string | Subscription ID
-    bindAdministeredLicensingSubscriptionSubscription := *openapiclient.NewInlineObject2([]string{"NetworkIds_example"}) // InlineObject2 | 
     validate := true // bool | Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results. (optional)
+    bindAdministeredLicensingSubscriptionSubscription := *openapiclient.NewInlineObject2() // InlineObject2 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.LicensingApi.BindAdministeredLicensingSubscriptionSubscription(context.Background(), subscriptionId).BindAdministeredLicensingSubscriptionSubscription(bindAdministeredLicensingSubscriptionSubscription).Validate(validate).Execute()
+    resp, r, err := apiClient.LicensingApi.BindAdministeredLicensingSubscriptionSubscription(context.Background(), subscriptionId).Validate(validate).BindAdministeredLicensingSubscriptionSubscription(bindAdministeredLicensingSubscriptionSubscription).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensingApi.BindAdministeredLicensingSubscriptionSubscription``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -68,8 +68,8 @@ Other parameters are passed through a pointer to a apiBindAdministeredLicensingS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **bindAdministeredLicensingSubscriptionSubscription** | [**InlineObject2**](InlineObject2.md) |  | 
  **validate** | **bool** | Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results. | 
+ **bindAdministeredLicensingSubscriptionSubscription** | [**InlineObject2**](InlineObject2.md) |  | 
 
 ### Return type
 
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationLicensingCotermLicenses
 
-> []InlineResponse200273 GetOrganizationLicensingCotermLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
+> []InlineResponse200274 GetOrganizationLicensingCotermLicenses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Invalidated(invalidated).Expired(expired).Execute()
 
 List the licenses in a coterm organization
 
@@ -411,7 +411,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensingApi.GetOrganizationLicensingCotermLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationLicensingCotermLicenses`: []InlineResponse200273
+    // response from `GetOrganizationLicensingCotermLicenses`: []InlineResponse200274
     fmt.Fprintf(os.Stdout, "Response from `LicensingApi.GetOrganizationLicensingCotermLicenses`: %v\n", resp)
 }
 ```
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200273**](InlineResponse200273.md)
+[**[]InlineResponse200274**](InlineResponse200274.md)
 
 ### Authorization
 
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 
 ## MoveOrganizationLicensingCotermLicenses
 
-> InlineResponse200274 MoveOrganizationLicensingCotermLicenses(ctx, organizationId).MoveOrganizationLicensingCotermLicenses(moveOrganizationLicensingCotermLicenses).Execute()
+> InlineResponse200275 MoveOrganizationLicensingCotermLicenses(ctx, organizationId).MoveOrganizationLicensingCotermLicenses(moveOrganizationLicensingCotermLicenses).Execute()
 
 Moves a license to a different organization (coterm only)
 
@@ -478,7 +478,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    moveOrganizationLicensingCotermLicenses := *openapiclient.NewInlineObject253(*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(), []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses("Key_example", []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveCounts{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveCounts("Model_example", int32(123))})}) // InlineObject253 | 
+    moveOrganizationLicensingCotermLicenses := *openapiclient.NewInlineObject254(*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveDestination(), []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses("Key_example", []openapiclient.OrganizationsOrganizationIdLicensingCotermLicensesMoveCounts{*openapiclient.NewOrganizationsOrganizationIdLicensingCotermLicensesMoveCounts("Model_example", int32(123))})}) // InlineObject254 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -487,7 +487,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LicensingApi.MoveOrganizationLicensingCotermLicenses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `MoveOrganizationLicensingCotermLicenses`: InlineResponse200274
+    // response from `MoveOrganizationLicensingCotermLicenses`: InlineResponse200275
     fmt.Fprintf(os.Stdout, "Response from `LicensingApi.MoveOrganizationLicensingCotermLicenses`: %v\n", resp)
 }
 ```
@@ -508,11 +508,11 @@ Other parameters are passed through a pointer to a apiMoveOrganizationLicensingC
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **moveOrganizationLicensingCotermLicenses** | [**InlineObject253**](InlineObject253.md) |  | 
+ **moveOrganizationLicensingCotermLicenses** | [**InlineObject254**](InlineObject254.md) |  | 
 
 ### Return type
 
-[**InlineResponse200274**](InlineResponse200274.md)
+[**InlineResponse200275**](InlineResponse200275.md)
 
 ### Authorization
 

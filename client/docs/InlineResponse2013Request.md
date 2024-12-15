@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Target** | Pointer to **string** | IP address or FQDN to ping | [optional] 
-**Count** | Pointer to **int32** | Number of pings to send. [1..5], default 5 | [optional] 
-**SourceInterface** | Pointer to **string** | The specific L3 Interface IP address to ping through | [optional] 
+**Serial** | Pointer to **string** | Device serial number | [optional] 
+**Duration** | Pointer to **int32** | The duration to blink leds in seconds | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse2013RequestWithDefaults instantiates a new InlineResponse2013Re
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTarget
+### GetSerial
 
-`func (o *InlineResponse2013Request) GetTarget() string`
+`func (o *InlineResponse2013Request) GetSerial() string`
 
-GetTarget returns the Target field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetTargetOk
+### GetSerialOk
 
-`func (o *InlineResponse2013Request) GetTargetOk() (*string, bool)`
+`func (o *InlineResponse2013Request) GetSerialOk() (*string, bool)`
 
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTarget
+### SetSerial
 
-`func (o *InlineResponse2013Request) SetTarget(v string)`
+`func (o *InlineResponse2013Request) SetSerial(v string)`
 
-SetTarget sets Target field to given value.
+SetSerial sets Serial field to given value.
 
-### HasTarget
+### HasSerial
 
-`func (o *InlineResponse2013Request) HasTarget() bool`
+`func (o *InlineResponse2013Request) HasSerial() bool`
 
-HasTarget returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetCount
+### GetDuration
 
-`func (o *InlineResponse2013Request) GetCount() int32`
+`func (o *InlineResponse2013Request) GetDuration() int32`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetDuration returns the Duration field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetDurationOk
 
-`func (o *InlineResponse2013Request) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse2013Request) GetDurationOk() (*int32, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetDuration
 
-`func (o *InlineResponse2013Request) SetCount(v int32)`
+`func (o *InlineResponse2013Request) SetDuration(v int32)`
 
-SetCount sets Count field to given value.
+SetDuration sets Duration field to given value.
 
-### HasCount
+### HasDuration
 
-`func (o *InlineResponse2013Request) HasCount() bool`
+`func (o *InlineResponse2013Request) HasDuration() bool`
 
-HasCount returns a boolean if a field has been set.
-
-### GetSourceInterface
-
-`func (o *InlineResponse2013Request) GetSourceInterface() string`
-
-GetSourceInterface returns the SourceInterface field if non-nil, zero value otherwise.
-
-### GetSourceInterfaceOk
-
-`func (o *InlineResponse2013Request) GetSourceInterfaceOk() (*string, bool)`
-
-GetSourceInterfaceOk returns a tuple with the SourceInterface field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSourceInterface
-
-`func (o *InlineResponse2013Request) SetSourceInterface(v string)`
-
-SetSourceInterface sets SourceInterface field to given value.
-
-### HasSourceInterface
-
-`func (o *InlineResponse2013Request) HasSourceInterface() bool`
-
-HasSourceInterface returns a boolean if a field has been set.
+HasDuration returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

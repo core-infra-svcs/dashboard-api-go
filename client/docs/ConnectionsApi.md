@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationWirelessControllerConnections
 
-> InlineResponse200327 GetOrganizationWirelessControllerConnections(ctx, organizationId).NetworkIds(networkIds).ControllerSerials(controllerSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200331 GetOrganizationWirelessControllerConnections(ctx, organizationId).NetworkIds(networkIds).ControllerSerials(controllerSerials).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List all access points associated with wireless LAN controllers in an organization
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectionsApi.GetOrganizationWirelessControllerConnections``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessControllerConnections`: InlineResponse200327
+    // response from `GetOrganizationWirelessControllerConnections`: InlineResponse200331
     fmt.Fprintf(os.Stdout, "Response from `ConnectionsApi.GetOrganizationWirelessControllerConnections`: %v\n", resp)
 }
 ```
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200327**](InlineResponse200327.md)
+[**InlineResponse200331**](InlineResponse200331.md)
 
 ### Authorization
 

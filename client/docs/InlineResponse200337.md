@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200337Items**](InlineResponse200337Items.md) | Wireless LAN controller redundancy statuses | [optional] 
+**Items** | Pointer to [**[]InlineResponse200337Items**](InlineResponse200337Items.md) | Wireless LAN controller layer 3 interfaces usage | [optional] 
 **Meta** | Pointer to [**OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta**](OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta.md) |  | [optional] 
 
 ## Methods

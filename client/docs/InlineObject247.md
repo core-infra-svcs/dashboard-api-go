@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
+**Devices** | [**[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices.md) | A set of devices to import (or update) | 
+**Options** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject247
 
-`func NewInlineObject247() *InlineObject247`
+`func NewInlineObject247(devices []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, ) *InlineObject247`
 
 NewInlineObject247 instantiates a new InlineObject247 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,50 @@ NewInlineObject247WithDefaults instantiates a new InlineObject247 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetDevices
 
-`func (o *InlineObject247) GetSerials() []string`
+`func (o *InlineObject247) GetDevices() []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetDevicesOk
 
-`func (o *InlineObject247) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject247) GetDevicesOk() (*[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetDevices
 
-`func (o *InlineObject247) SetSerials(v []string)`
+`func (o *InlineObject247) SetDevices(v []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices)`
 
-SetSerials sets Serials field to given value.
+SetDevices sets Devices field to given value.
 
-### HasSerials
 
-`func (o *InlineObject247) HasSerials() bool`
+### GetOptions
 
-HasSerials returns a boolean if a field has been set.
+`func (o *InlineObject247) GetOptions() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions`
+
+GetOptions returns the Options field if non-nil, zero value otherwise.
+
+### GetOptionsOk
+
+`func (o *InlineObject247) GetOptionsOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions, bool)`
+
+GetOptionsOk returns a tuple with the Options field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOptions
+
+`func (o *InlineObject247) SetOptions(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions)`
+
+SetOptions sets Options field to given value.
+
+### HasOptions
+
+`func (o *InlineObject247) HasOptions() bool`
+
+HasOptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

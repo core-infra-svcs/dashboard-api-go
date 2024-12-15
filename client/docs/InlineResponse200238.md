@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network Id | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Model** | Pointer to **string** | Device model | [optional] 
-**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks.md) | Uplinks info | [optional] 
+**Eid** | **string** | eSIM EID | 
+**Iccid** | **string** | eSIM ICCID | 
+**Status** | **string** | Swap status | 
 
 ## Methods
 
 ### NewInlineResponse200238
 
-`func NewInlineResponse200238() *InlineResponse200238`
+`func NewInlineResponse200238(eid string, iccid string, status string, ) *InlineResponse200238`
 
 NewInlineResponse200238 instantiates a new InlineResponse200238 object
 This constructor will assign default values to properties that have it defined,
@@ -29,130 +27,65 @@ NewInlineResponse200238WithDefaults instantiates a new InlineResponse200238 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetEid
 
-`func (o *InlineResponse200238) GetNetworkId() string`
+`func (o *InlineResponse200238) GetEid() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetEid returns the Eid field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetEidOk
 
-`func (o *InlineResponse200238) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200238) GetEidOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetEid
 
-`func (o *InlineResponse200238) SetNetworkId(v string)`
+`func (o *InlineResponse200238) SetEid(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetEid sets Eid field to given value.
 
-### HasNetworkId
 
-`func (o *InlineResponse200238) HasNetworkId() bool`
+### GetIccid
 
-HasNetworkId returns a boolean if a field has been set.
+`func (o *InlineResponse200238) GetIccid() string`
 
-### GetSerial
+GetIccid returns the Iccid field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200238) GetSerial() string`
+### GetIccidOk
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+`func (o *InlineResponse200238) GetIccidOk() (*string, bool)`
 
-### GetSerialOk
-
-`func (o *InlineResponse200238) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetIccidOk returns a tuple with the Iccid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetIccid
 
-`func (o *InlineResponse200238) SetSerial(v string)`
+`func (o *InlineResponse200238) SetIccid(v string)`
 
-SetSerial sets Serial field to given value.
+SetIccid sets Iccid field to given value.
 
-### HasSerial
 
-`func (o *InlineResponse200238) HasSerial() bool`
+### GetStatus
 
-HasSerial returns a boolean if a field has been set.
+`func (o *InlineResponse200238) GetStatus() string`
 
-### GetModel
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200238) GetModel() string`
+### GetStatusOk
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+`func (o *InlineResponse200238) GetStatusOk() (*string, bool)`
 
-### GetModelOk
-
-`func (o *InlineResponse200238) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetStatus
 
-`func (o *InlineResponse200238) SetModel(v string)`
+`func (o *InlineResponse200238) SetStatus(v string)`
 
-SetModel sets Model field to given value.
+SetStatus sets Status field to given value.
 
-### HasModel
-
-`func (o *InlineResponse200238) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetLastReportedAt
-
-`func (o *InlineResponse200238) GetLastReportedAt() time.Time`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse200238) GetLastReportedAtOk() (*time.Time, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse200238) SetLastReportedAt(v time.Time)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-### HasLastReportedAt
-
-`func (o *InlineResponse200238) HasLastReportedAt() bool`
-
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetUplinks
-
-`func (o *InlineResponse200238) GetUplinks() []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks`
-
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
-
-### GetUplinksOk
-
-`func (o *InlineResponse200238) GetUplinksOk() (*[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks, bool)`
-
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinks
-
-`func (o *InlineResponse200238) SetUplinks(v []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks)`
-
-SetUplinks sets Uplinks field to given value.
-
-### HasUplinks
-
-`func (o *InlineResponse200238) HasUplinks() bool`
-
-HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

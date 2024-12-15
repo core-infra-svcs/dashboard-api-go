@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** | Enable warm spare | 
-**SpareSerial** | Pointer to **string** | Serial number of the warm spare appliance | [optional] 
-**UplinkMode** | Pointer to **string** | Uplink mode, either virtual or public | [optional] 
-**VirtualIp1** | Pointer to **string** | The WAN 1 shared IP | [optional] 
-**VirtualIp2** | Pointer to **string** | The WAN 2 shared IP | [optional] 
+**Mode** | **string** | The site-to-site VPN mode. Can be one of &#39;none&#39;, &#39;spoke&#39; or &#39;hub&#39; | 
+**Hubs** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs.md) | The list of VPN hubs, in order of preference. In spoke mode, at least 1 hub is required. | [optional] 
+**Subnets** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets**](NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets.md) | The list of subnets and their VPN presence. | [optional] 
 
 ## Methods
 
 ### NewInlineObject76
 
-`func NewInlineObject76(enabled bool, ) *InlineObject76`
+`func NewInlineObject76(mode string, ) *InlineObject76`
 
 NewInlineObject76 instantiates a new InlineObject76 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +27,75 @@ NewInlineObject76WithDefaults instantiates a new InlineObject76 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetMode
 
-`func (o *InlineObject76) GetEnabled() bool`
+`func (o *InlineObject76) GetMode() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetModeOk
 
-`func (o *InlineObject76) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject76) GetModeOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetMode
 
-`func (o *InlineObject76) SetEnabled(v bool)`
+`func (o *InlineObject76) SetMode(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetMode sets Mode field to given value.
 
 
-### GetSpareSerial
+### GetHubs
 
-`func (o *InlineObject76) GetSpareSerial() string`
+`func (o *InlineObject76) GetHubs() []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs`
 
-GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
+GetHubs returns the Hubs field if non-nil, zero value otherwise.
 
-### GetSpareSerialOk
+### GetHubsOk
 
-`func (o *InlineObject76) GetSpareSerialOk() (*string, bool)`
+`func (o *InlineObject76) GetHubsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs, bool)`
 
-GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
+GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSpareSerial
+### SetHubs
 
-`func (o *InlineObject76) SetSpareSerial(v string)`
+`func (o *InlineObject76) SetHubs(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs)`
 
-SetSpareSerial sets SpareSerial field to given value.
+SetHubs sets Hubs field to given value.
 
-### HasSpareSerial
+### HasHubs
 
-`func (o *InlineObject76) HasSpareSerial() bool`
+`func (o *InlineObject76) HasHubs() bool`
 
-HasSpareSerial returns a boolean if a field has been set.
+HasHubs returns a boolean if a field has been set.
 
-### GetUplinkMode
+### GetSubnets
 
-`func (o *InlineObject76) GetUplinkMode() string`
+`func (o *InlineObject76) GetSubnets() []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets`
 
-GetUplinkMode returns the UplinkMode field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetUplinkModeOk
+### GetSubnetsOk
 
-`func (o *InlineObject76) GetUplinkModeOk() (*string, bool)`
+`func (o *InlineObject76) GetSubnetsOk() (*[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets, bool)`
 
-GetUplinkModeOk returns a tuple with the UplinkMode field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkMode
+### SetSubnets
 
-`func (o *InlineObject76) SetUplinkMode(v string)`
+`func (o *InlineObject76) SetSubnets(v []NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets)`
 
-SetUplinkMode sets UplinkMode field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasUplinkMode
+### HasSubnets
 
-`func (o *InlineObject76) HasUplinkMode() bool`
+`func (o *InlineObject76) HasSubnets() bool`
 
-HasUplinkMode returns a boolean if a field has been set.
-
-### GetVirtualIp1
-
-`func (o *InlineObject76) GetVirtualIp1() string`
-
-GetVirtualIp1 returns the VirtualIp1 field if non-nil, zero value otherwise.
-
-### GetVirtualIp1Ok
-
-`func (o *InlineObject76) GetVirtualIp1Ok() (*string, bool)`
-
-GetVirtualIp1Ok returns a tuple with the VirtualIp1 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVirtualIp1
-
-`func (o *InlineObject76) SetVirtualIp1(v string)`
-
-SetVirtualIp1 sets VirtualIp1 field to given value.
-
-### HasVirtualIp1
-
-`func (o *InlineObject76) HasVirtualIp1() bool`
-
-HasVirtualIp1 returns a boolean if a field has been set.
-
-### GetVirtualIp2
-
-`func (o *InlineObject76) GetVirtualIp2() string`
-
-GetVirtualIp2 returns the VirtualIp2 field if non-nil, zero value otherwise.
-
-### GetVirtualIp2Ok
-
-`func (o *InlineObject76) GetVirtualIp2Ok() (*string, bool)`
-
-GetVirtualIp2Ok returns a tuple with the VirtualIp2 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVirtualIp2
-
-`func (o *InlineObject76) SetVirtualIp2(v string)`
-
-SetVirtualIp2 sets VirtualIp2 field to given value.
-
-### HasVirtualIp2
-
-`func (o *InlineObject76) HasVirtualIp2() bool`
-
-HasVirtualIp2 returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

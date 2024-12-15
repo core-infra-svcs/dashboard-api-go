@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationCameraPermission
 
-> InlineResponse200231 GetOrganizationCameraPermission(ctx, organizationId, permissionScopeId).Execute()
+> InlineResponse200232 GetOrganizationCameraPermission(ctx, organizationId, permissionScopeId).Execute()
 
 Retrieve a single permission scope
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PermissionsApi.GetOrganizationCameraPermission``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraPermission`: InlineResponse200231
+    // response from `GetOrganizationCameraPermission`: InlineResponse200232
     fmt.Fprintf(os.Stdout, "Response from `PermissionsApi.GetOrganizationCameraPermission`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200231**](InlineResponse200231.md)
+[**InlineResponse200232**](InlineResponse200232.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCameraPermissions
 
-> []InlineResponse200231 GetOrganizationCameraPermissions(ctx, organizationId).Execute()
+> []InlineResponse200232 GetOrganizationCameraPermissions(ctx, organizationId).Execute()
 
 List the permissions scopes for this organization
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PermissionsApi.GetOrganizationCameraPermissions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCameraPermissions`: []InlineResponse200231
+    // response from `GetOrganizationCameraPermissions`: []InlineResponse200232
     fmt.Fprintf(os.Stdout, "Response from `PermissionsApi.GetOrganizationCameraPermissions`: %v\n", resp)
 }
 ```
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200231**](InlineResponse200231.md)
+[**[]InlineResponse200232**](InlineResponse200232.md)
 
 ### Authorization
 

@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destinations** | Pointer to [**[]InlineResponse20047Destinations**](InlineResponse20047Destinations.md) | The list of connectivity monitoring destinations | [optional] 
+**DefaultDestinations** | Pointer to [**InlineResponse20047DefaultDestinations**](InlineResponse20047DefaultDestinations.md) |  | [optional] 
+**Alerts** | Pointer to [**[]InlineResponse20047Alerts**](InlineResponse20047Alerts.md) | Alert-specific configuration for each type. Only alerts that pertain to the network can be updated. | [optional] 
+**Muting** | Pointer to [**InlineResponse20047Muting**](InlineResponse20047Muting.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse20047WithDefaults instantiates a new InlineResponse20047 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestinations
+### GetDefaultDestinations
 
-`func (o *InlineResponse20047) GetDestinations() []InlineResponse20047Destinations`
+`func (o *InlineResponse20047) GetDefaultDestinations() InlineResponse20047DefaultDestinations`
 
-GetDestinations returns the Destinations field if non-nil, zero value otherwise.
+GetDefaultDestinations returns the DefaultDestinations field if non-nil, zero value otherwise.
 
-### GetDestinationsOk
+### GetDefaultDestinationsOk
 
-`func (o *InlineResponse20047) GetDestinationsOk() (*[]InlineResponse20047Destinations, bool)`
+`func (o *InlineResponse20047) GetDefaultDestinationsOk() (*InlineResponse20047DefaultDestinations, bool)`
 
-GetDestinationsOk returns a tuple with the Destinations field if it's non-nil, zero value otherwise
+GetDefaultDestinationsOk returns a tuple with the DefaultDestinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestinations
+### SetDefaultDestinations
 
-`func (o *InlineResponse20047) SetDestinations(v []InlineResponse20047Destinations)`
+`func (o *InlineResponse20047) SetDefaultDestinations(v InlineResponse20047DefaultDestinations)`
 
-SetDestinations sets Destinations field to given value.
+SetDefaultDestinations sets DefaultDestinations field to given value.
 
-### HasDestinations
+### HasDefaultDestinations
 
-`func (o *InlineResponse20047) HasDestinations() bool`
+`func (o *InlineResponse20047) HasDefaultDestinations() bool`
 
-HasDestinations returns a boolean if a field has been set.
+HasDefaultDestinations returns a boolean if a field has been set.
+
+### GetAlerts
+
+`func (o *InlineResponse20047) GetAlerts() []InlineResponse20047Alerts`
+
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+
+### GetAlertsOk
+
+`func (o *InlineResponse20047) GetAlertsOk() (*[]InlineResponse20047Alerts, bool)`
+
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlerts
+
+`func (o *InlineResponse20047) SetAlerts(v []InlineResponse20047Alerts)`
+
+SetAlerts sets Alerts field to given value.
+
+### HasAlerts
+
+`func (o *InlineResponse20047) HasAlerts() bool`
+
+HasAlerts returns a boolean if a field has been set.
+
+### GetMuting
+
+`func (o *InlineResponse20047) GetMuting() InlineResponse20047Muting`
+
+GetMuting returns the Muting field if non-nil, zero value otherwise.
+
+### GetMutingOk
+
+`func (o *InlineResponse20047) GetMutingOk() (*InlineResponse20047Muting, bool)`
+
+GetMutingOk returns a tuple with the Muting field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMuting
+
+`func (o *InlineResponse20047) SetMuting(v InlineResponse20047Muting)`
+
+SetMuting sets Muting field to given value.
+
+### HasMuting
+
+`func (o *InlineResponse20047) HasMuting() bool`
+
+HasMuting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

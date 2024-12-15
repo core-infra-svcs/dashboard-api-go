@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]InlineResponse200224Items**](InlineResponse200224Items.md) | Historical Severity Counts | 
-**Meta** | [**InlineResponse200224Meta**](InlineResponse200224Meta.md) |  | 
+**Items** | [**[]InlineResponse200224Items**](InlineResponse200224Items.md) | Organization Alert counts by type | 
+**Meta** | [**InlineResponse200223Meta**](InlineResponse200223Meta.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200224
 
-`func NewInlineResponse200224(items []InlineResponse200224Items, meta InlineResponse200224Meta, ) *InlineResponse200224`
+`func NewInlineResponse200224(items []InlineResponse200224Items, meta InlineResponse200223Meta, ) *InlineResponse200224`
 
 NewInlineResponse200224 instantiates a new InlineResponse200224 object
 This constructor will assign default values to properties that have it defined,
@@ -48,20 +48,20 @@ SetItems sets Items field to given value.
 
 ### GetMeta
 
-`func (o *InlineResponse200224) GetMeta() InlineResponse200224Meta`
+`func (o *InlineResponse200224) GetMeta() InlineResponse200223Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200224) GetMetaOk() (*InlineResponse200224Meta, bool)`
+`func (o *InlineResponse200224) GetMetaOk() (*InlineResponse200223Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200224) SetMeta(v InlineResponse200224Meta)`
+`func (o *InlineResponse200224) SetMeta(v InlineResponse200223Meta)`
 
 SetMeta sets Meta field to given value.
 

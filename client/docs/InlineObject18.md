@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Target** | **string** | FQDN, IPv4 or IPv6 address | 
-**Count** | Pointer to **int32** | Count parameter to pass to ping. [1..5], default 5 | [optional] 
+**Duration** | **int32** | The duration in seconds to blink LEDs. | 
 **Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject18
 
-`func NewInlineObject18(target string, ) *InlineObject18`
+`func NewInlineObject18(duration int32, ) *InlineObject18`
 
 NewInlineObject18 instantiates a new InlineObject18 object
 This constructor will assign default values to properties that have it defined,
@@ -27,50 +26,25 @@ NewInlineObject18WithDefaults instantiates a new InlineObject18 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTarget
+### GetDuration
 
-`func (o *InlineObject18) GetTarget() string`
+`func (o *InlineObject18) GetDuration() int32`
 
-GetTarget returns the Target field if non-nil, zero value otherwise.
+GetDuration returns the Duration field if non-nil, zero value otherwise.
 
-### GetTargetOk
+### GetDurationOk
 
-`func (o *InlineObject18) GetTargetOk() (*string, bool)`
+`func (o *InlineObject18) GetDurationOk() (*int32, bool)`
 
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTarget
+### SetDuration
 
-`func (o *InlineObject18) SetTarget(v string)`
+`func (o *InlineObject18) SetDuration(v int32)`
 
-SetTarget sets Target field to given value.
+SetDuration sets Duration field to given value.
 
-
-### GetCount
-
-`func (o *InlineObject18) GetCount() int32`
-
-GetCount returns the Count field if non-nil, zero value otherwise.
-
-### GetCountOk
-
-`func (o *InlineObject18) GetCountOk() (*int32, bool)`
-
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCount
-
-`func (o *InlineObject18) SetCount(v int32)`
-
-SetCount sets Count field to given value.
-
-### HasCount
-
-`func (o *InlineObject18) HasCount() bool`
-
-HasCount returns a boolean if a field has been set.
 
 ### GetCallback
 

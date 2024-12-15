@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApplicationId** | Pointer to **string** | Application identifier | [optional] 
-**Name** | Pointer to **string** | Application name | [optional] 
-**Thresholds** | Pointer to [**OrganizationsOrganizationIdInsightApplicationsThresholds**](OrganizationsOrganizationIdInsightApplicationsThresholds.md) |  | [optional] 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdFloorPlansAutoLocateStatusesItems**](OrganizationsOrganizationIdFloorPlansAutoLocateStatusesItems.md) | Items in the paginated dataset | [optional] 
+**Meta** | Pointer to [**OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta**](OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200263WithDefaults instantiates a new InlineResponse200263 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApplicationId
+### GetItems
 
-`func (o *InlineResponse200263) GetApplicationId() string`
+`func (o *InlineResponse200263) GetItems() []OrganizationsOrganizationIdFloorPlansAutoLocateStatusesItems`
 
-GetApplicationId returns the ApplicationId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetApplicationIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200263) GetApplicationIdOk() (*string, bool)`
+`func (o *InlineResponse200263) GetItemsOk() (*[]OrganizationsOrganizationIdFloorPlansAutoLocateStatusesItems, bool)`
 
-GetApplicationIdOk returns a tuple with the ApplicationId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplicationId
+### SetItems
 
-`func (o *InlineResponse200263) SetApplicationId(v string)`
+`func (o *InlineResponse200263) SetItems(v []OrganizationsOrganizationIdFloorPlansAutoLocateStatusesItems)`
 
-SetApplicationId sets ApplicationId field to given value.
+SetItems sets Items field to given value.
 
-### HasApplicationId
+### HasItems
 
-`func (o *InlineResponse200263) HasApplicationId() bool`
+`func (o *InlineResponse200263) HasItems() bool`
 
-HasApplicationId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetName
+### GetMeta
 
-`func (o *InlineResponse200263) GetName() string`
+`func (o *InlineResponse200263) GetMeta() OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMetaOk
 
-`func (o *InlineResponse200263) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200263) GetMetaOk() (*OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMeta
 
-`func (o *InlineResponse200263) SetName(v string)`
+`func (o *InlineResponse200263) SetMeta(v OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta)`
 
-SetName sets Name field to given value.
+SetMeta sets Meta field to given value.
 
-### HasName
+### HasMeta
 
-`func (o *InlineResponse200263) HasName() bool`
+`func (o *InlineResponse200263) HasMeta() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetThresholds
-
-`func (o *InlineResponse200263) GetThresholds() OrganizationsOrganizationIdInsightApplicationsThresholds`
-
-GetThresholds returns the Thresholds field if non-nil, zero value otherwise.
-
-### GetThresholdsOk
-
-`func (o *InlineResponse200263) GetThresholdsOk() (*OrganizationsOrganizationIdInsightApplicationsThresholds, bool)`
-
-GetThresholdsOk returns a tuple with the Thresholds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetThresholds
-
-`func (o *InlineResponse200263) SetThresholds(v OrganizationsOrganizationIdInsightApplicationsThresholds)`
-
-SetThresholds sets Thresholds field to given value.
-
-### HasThresholds
-
-`func (o *InlineResponse200263) HasThresholds() bool`
-
-HasThresholds returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

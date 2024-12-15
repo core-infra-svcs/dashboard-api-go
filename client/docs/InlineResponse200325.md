@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200325Items**](InlineResponse200325Items.md) | Wireless LAN controller connectivity information | [optional] 
+**Items** | Pointer to [**[]InlineResponse200325Items**](InlineResponse200325Items.md) | List of Catalyst access points information | [optional] 
 **Meta** | Pointer to [**OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta**](OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta.md) |  | [optional] 
 
 ## Methods

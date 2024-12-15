@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkTraffic
 
-> []InlineResponse200166 GetNetworkTraffic(ctx, networkId).T0(t0).Timespan(timespan).DeviceType(deviceType).Execute()
+> []InlineResponse200167 GetNetworkTraffic(ctx, networkId).T0(t0).Timespan(timespan).DeviceType(deviceType).Execute()
 
 Return the traffic analysis data for this network
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TrafficApi.GetNetworkTraffic``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkTraffic`: []InlineResponse200166
+    // response from `GetNetworkTraffic`: []InlineResponse200167
     fmt.Fprintf(os.Stdout, "Response from `TrafficApi.GetNetworkTraffic`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200166**](InlineResponse200166.md)
+[**[]InlineResponse200167**](InlineResponse200167.md)
 
 ### Authorization
 

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** | Indicates if this rule will allow, block, or alert. | [optional] 
-**Match** | Pointer to [**NetworksNetworkIdWirelessAirMarshalRulesMatch**](NetworksNetworkIdWirelessAirMarshalRulesMatch.md) |  | [optional] 
+**Type** | **string** | Indicates if this rule will allow, block, or alert. | 
+**Match** | [**NetworksNetworkIdWirelessAirMarshalRulesMatch**](NetworksNetworkIdWirelessAirMarshalRulesMatch.md) |  | 
 
 ## Methods
 
 ### NewInlineObject175
 
-`func NewInlineObject175() *InlineObject175`
+`func NewInlineObject175(type_ string, match NetworksNetworkIdWirelessAirMarshalRulesMatch, ) *InlineObject175`
 
 NewInlineObject175 instantiates a new InlineObject175 object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetType sets Type field to given value.
 
-### HasType
-
-`func (o *InlineObject175) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetMatch
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetMatch sets Match field to given value.
 
-### HasMatch
-
-`func (o *InlineObject175) HasMatch() bool`
-
-HasMatch returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

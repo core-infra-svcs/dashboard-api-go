@@ -4,7 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
+**Id** | Pointer to **string** | Policy object ID | [optional] 
+**Name** | Pointer to **string** | Name of the Policy object group. | [optional] 
+**Category** | Pointer to **string** | Type of object groups. (NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup) | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time Stamp of policy object creation. | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Time Stamp of policy object updation. | [optional] 
+**ObjectIds** | Pointer to **[]int32** | Policy objects associated with Network Object Group or Port Object Group | [optional] 
+**NetworkIds** | Pointer to **[]string** | Network ID&#39;s associated with the policy objects. | [optional] 
 
 ## Methods
 
@@ -25,30 +31,180 @@ NewInlineResponse200279WithDefaults instantiates a new InlineResponse200279 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetId
 
-`func (o *InlineResponse200279) GetEnabled() bool`
+`func (o *InlineResponse200279) GetId() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetIdOk
 
-`func (o *InlineResponse200279) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200279) GetIdOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetId
 
-`func (o *InlineResponse200279) SetEnabled(v bool)`
+`func (o *InlineResponse200279) SetId(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetId sets Id field to given value.
 
-### HasEnabled
+### HasId
 
-`func (o *InlineResponse200279) HasEnabled() bool`
+`func (o *InlineResponse200279) HasId() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200279) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200279) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200279) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200279) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetCategory
+
+`func (o *InlineResponse200279) GetCategory() string`
+
+GetCategory returns the Category field if non-nil, zero value otherwise.
+
+### GetCategoryOk
+
+`func (o *InlineResponse200279) GetCategoryOk() (*string, bool)`
+
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCategory
+
+`func (o *InlineResponse200279) SetCategory(v string)`
+
+SetCategory sets Category field to given value.
+
+### HasCategory
+
+`func (o *InlineResponse200279) HasCategory() bool`
+
+HasCategory returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200279) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200279) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200279) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200279) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200279) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200279) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200279) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200279) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
+### GetObjectIds
+
+`func (o *InlineResponse200279) GetObjectIds() []int32`
+
+GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
+
+### GetObjectIdsOk
+
+`func (o *InlineResponse200279) GetObjectIdsOk() (*[]int32, bool)`
+
+GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetObjectIds
+
+`func (o *InlineResponse200279) SetObjectIds(v []int32)`
+
+SetObjectIds sets ObjectIds field to given value.
+
+### HasObjectIds
+
+`func (o *InlineResponse200279) HasObjectIds() bool`
+
+HasObjectIds returns a boolean if a field has been set.
+
+### GetNetworkIds
+
+`func (o *InlineResponse200279) GetNetworkIds() []string`
+
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+
+### GetNetworkIdsOk
+
+`func (o *InlineResponse200279) GetNetworkIdsOk() (*[]string, bool)`
+
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkIds
+
+`func (o *InlineResponse200279) SetNetworkIds(v []string)`
+
+SetNetworkIds sets NetworkIds field to given value.
+
+### HasNetworkIds
+
+`func (o *InlineResponse200279) HasNetworkIds() bool`
+
+HasNetworkIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

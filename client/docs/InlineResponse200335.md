@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200335Items**](InlineResponse200335Items.md) | Wireless LAN controller interfaces usage data | [optional] 
+**Items** | Pointer to [**[]InlineResponse200335Items**](InlineResponse200335Items.md) | Wireless LAN controller L3 interfaces | [optional] 
 **Meta** | Pointer to [**OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta**](OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta.md) |  | [optional] 
 
 ## Methods

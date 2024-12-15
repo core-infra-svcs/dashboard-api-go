@@ -10,10 +10,11 @@ Name | Type | Description | Notes
 **Status** | Pointer to **string** | Subscription status | [optional] 
 **StartDate** | Pointer to **time.Time** | Subscription start date | [optional] 
 **EndDate** | Pointer to **time.Time** | Subscription expiration date | [optional] 
+**LastUpdatedAt** | Pointer to **time.Time** | When the subscription was last changed | [optional] 
 **WebOrderId** | Pointer to **string** | Web order id | [optional] 
 **Type** | Pointer to **string** | Subscription type | [optional] 
-**SmartAccountStatus** | Pointer to **string** | Smart account status | [optional] 
 **SmartAccount** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsSmartAccount**](AdministeredLicensingSubscriptionSubscriptionsSmartAccount.md) |  | [optional] 
+**RenewalRequested** | Pointer to **bool** | Whether a renewal has been requested for the subscription | [optional] 
 **ProductTypes** | Pointer to **[]string** | Products the subscription has entitlements for | [optional] 
 **Entitlements** | Pointer to [**[]AdministeredLicensingSubscriptionSubscriptionsEntitlements**](AdministeredLicensingSubscriptionSubscriptionsEntitlements.md) | Entitlement info | [optional] 
 **Counts** | Pointer to [**AdministeredLicensingSubscriptionSubscriptionsCounts**](AdministeredLicensingSubscriptionSubscriptionsCounts.md) |  | [optional] 
@@ -188,6 +189,31 @@ SetEndDate sets EndDate field to given value.
 
 HasEndDate returns a boolean if a field has been set.
 
+### GetLastUpdatedAt
+
+`func (o *InlineResponse2003) GetLastUpdatedAt() time.Time`
+
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+
+### GetLastUpdatedAtOk
+
+`func (o *InlineResponse2003) GetLastUpdatedAtOk() (*time.Time, bool)`
+
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdatedAt
+
+`func (o *InlineResponse2003) SetLastUpdatedAt(v time.Time)`
+
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
+
+### HasLastUpdatedAt
+
+`func (o *InlineResponse2003) HasLastUpdatedAt() bool`
+
+HasLastUpdatedAt returns a boolean if a field has been set.
+
 ### GetWebOrderId
 
 `func (o *InlineResponse2003) GetWebOrderId() string`
@@ -238,31 +264,6 @@ SetType sets Type field to given value.
 
 HasType returns a boolean if a field has been set.
 
-### GetSmartAccountStatus
-
-`func (o *InlineResponse2003) GetSmartAccountStatus() string`
-
-GetSmartAccountStatus returns the SmartAccountStatus field if non-nil, zero value otherwise.
-
-### GetSmartAccountStatusOk
-
-`func (o *InlineResponse2003) GetSmartAccountStatusOk() (*string, bool)`
-
-GetSmartAccountStatusOk returns a tuple with the SmartAccountStatus field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSmartAccountStatus
-
-`func (o *InlineResponse2003) SetSmartAccountStatus(v string)`
-
-SetSmartAccountStatus sets SmartAccountStatus field to given value.
-
-### HasSmartAccountStatus
-
-`func (o *InlineResponse2003) HasSmartAccountStatus() bool`
-
-HasSmartAccountStatus returns a boolean if a field has been set.
-
 ### GetSmartAccount
 
 `func (o *InlineResponse2003) GetSmartAccount() AdministeredLicensingSubscriptionSubscriptionsSmartAccount`
@@ -287,6 +288,31 @@ SetSmartAccount sets SmartAccount field to given value.
 `func (o *InlineResponse2003) HasSmartAccount() bool`
 
 HasSmartAccount returns a boolean if a field has been set.
+
+### GetRenewalRequested
+
+`func (o *InlineResponse2003) GetRenewalRequested() bool`
+
+GetRenewalRequested returns the RenewalRequested field if non-nil, zero value otherwise.
+
+### GetRenewalRequestedOk
+
+`func (o *InlineResponse2003) GetRenewalRequestedOk() (*bool, bool)`
+
+GetRenewalRequestedOk returns a tuple with the RenewalRequested field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRenewalRequested
+
+`func (o *InlineResponse2003) SetRenewalRequested(v bool)`
+
+SetRenewalRequested sets RenewalRequested field to given value.
+
+### HasRenewalRequested
+
+`func (o *InlineResponse2003) HasRenewalRequested() bool`
+
+HasRenewalRequested returns a boolean if a field has been set.
 
 ### GetProductTypes
 

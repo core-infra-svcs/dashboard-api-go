@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkPiiPiiKeys
 
-> map[string]InlineResponse200107 GetNetworkPiiPiiKeys(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
+> map[string]InlineResponse200108 GetNetworkPiiPiiKeys(ctx, networkId).Username(username).Email(email).Mac(mac).Serial(serial).Imei(imei).BluetoothMac(bluetoothMac).Execute()
 
 List the keys required to access Personally Identifiable Information (PII) for a given identifier
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PiiKeysApi.GetNetworkPiiPiiKeys``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkPiiPiiKeys`: map[string]InlineResponse200107
+    // response from `GetNetworkPiiPiiKeys`: map[string]InlineResponse200108
     fmt.Fprintf(os.Stdout, "Response from `PiiKeysApi.GetNetworkPiiPiiKeys`: %v\n", resp)
 }
 ```
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**map[string]InlineResponse200107**](InlineResponse200107.md)
+[**map[string]InlineResponse200108**](InlineResponse200108.md)
 
 ### Authorization
 

@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**InlineResponse200307Example**](InlineResponse200307Example.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200307Counts**](InlineResponse200307Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200307WithDefaults instantiates a new InlineResponse200307 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetCounts
 
-`func (o *InlineResponse200307) GetAlertTypeId() string`
+`func (o *InlineResponse200307) GetCounts() InlineResponse200307Counts`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetCountsOk
 
-`func (o *InlineResponse200307) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200307) GetCountsOk() (*InlineResponse200307Counts, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetCounts
 
-`func (o *InlineResponse200307) SetAlertTypeId(v string)`
+`func (o *InlineResponse200307) SetCounts(v InlineResponse200307Counts)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetCounts sets Counts field to given value.
 
-### HasAlertTypeId
+### HasCounts
 
-`func (o *InlineResponse200307) HasAlertTypeId() bool`
+`func (o *InlineResponse200307) HasCounts() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
-
-### GetAlertType
-
-`func (o *InlineResponse200307) GetAlertType() string`
-
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
-
-### GetAlertTypeOk
-
-`func (o *InlineResponse200307) GetAlertTypeOk() (*string, bool)`
-
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAlertType
-
-`func (o *InlineResponse200307) SetAlertType(v string)`
-
-SetAlertType sets AlertType field to given value.
-
-### HasAlertType
-
-`func (o *InlineResponse200307) HasAlertType() bool`
-
-HasAlertType returns a boolean if a field has been set.
-
-### GetExample
-
-`func (o *InlineResponse200307) GetExample() InlineResponse200307Example`
-
-GetExample returns the Example field if non-nil, zero value otherwise.
-
-### GetExampleOk
-
-`func (o *InlineResponse200307) GetExampleOk() (*InlineResponse200307Example, bool)`
-
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExample
-
-`func (o *InlineResponse200307) SetExample(v InlineResponse200307Example)`
-
-SetExample sets Example field to given value.
-
-### HasExample
-
-`func (o *InlineResponse200307) HasExample() bool`
-
-HasExample returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

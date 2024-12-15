@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | The timestamp of current status of the interface | [optional] 
-**Status** | Pointer to **string** | The status of the interface | [optional] 
-**Warnings** | Pointer to **[]string** | All warnings present on the port | [optional] 
-**Errors** | Pointer to **[]string** | All errors present on the port | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time(UTC seconds) of the wireless LAN controller connectivity status change | [optional] 
+**EndTs** | Pointer to **string** | The end time(UTC seconds) of the wireless LAN controller connectivity status change. This attribute is set to be null by default if there&#39;s no need to assign. | [optional] 
+**Status** | Pointer to **string** | The wireless LAN controller connectivity status | [optional] 
 
 ## Methods
 
@@ -28,30 +27,55 @@ NewInlineResponse200329ChangesWithDefaults instantiates a new InlineResponse2003
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetStartTs
 
-`func (o *InlineResponse200329Changes) GetTs() time.Time`
+`func (o *InlineResponse200329Changes) GetStartTs() time.Time`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetStartTsOk
 
-`func (o *InlineResponse200329Changes) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200329Changes) GetStartTsOk() (*time.Time, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetStartTs
 
-`func (o *InlineResponse200329Changes) SetTs(v time.Time)`
+`func (o *InlineResponse200329Changes) SetStartTs(v time.Time)`
 
-SetTs sets Ts field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasTs
+### HasStartTs
 
-`func (o *InlineResponse200329Changes) HasTs() bool`
+`func (o *InlineResponse200329Changes) HasStartTs() bool`
 
-HasTs returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
+
+### GetEndTs
+
+`func (o *InlineResponse200329Changes) GetEndTs() string`
+
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+
+### GetEndTsOk
+
+`func (o *InlineResponse200329Changes) GetEndTsOk() (*string, bool)`
+
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEndTs
+
+`func (o *InlineResponse200329Changes) SetEndTs(v string)`
+
+SetEndTs sets EndTs field to given value.
+
+### HasEndTs
+
+`func (o *InlineResponse200329Changes) HasEndTs() bool`
+
+HasEndTs returns a boolean if a field has been set.
 
 ### GetStatus
 
@@ -77,56 +101,6 @@ SetStatus sets Status field to given value.
 `func (o *InlineResponse200329Changes) HasStatus() bool`
 
 HasStatus returns a boolean if a field has been set.
-
-### GetWarnings
-
-`func (o *InlineResponse200329Changes) GetWarnings() []string`
-
-GetWarnings returns the Warnings field if non-nil, zero value otherwise.
-
-### GetWarningsOk
-
-`func (o *InlineResponse200329Changes) GetWarningsOk() (*[]string, bool)`
-
-GetWarningsOk returns a tuple with the Warnings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWarnings
-
-`func (o *InlineResponse200329Changes) SetWarnings(v []string)`
-
-SetWarnings sets Warnings field to given value.
-
-### HasWarnings
-
-`func (o *InlineResponse200329Changes) HasWarnings() bool`
-
-HasWarnings returns a boolean if a field has been set.
-
-### GetErrors
-
-`func (o *InlineResponse200329Changes) GetErrors() []string`
-
-GetErrors returns the Errors field if non-nil, zero value otherwise.
-
-### GetErrorsOk
-
-`func (o *InlineResponse200329Changes) GetErrorsOk() (*[]string, bool)`
-
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetErrors
-
-`func (o *InlineResponse200329Changes) SetErrors(v []string)`
-
-SetErrors sets Errors field to given value.
-
-### HasErrors
-
-`func (o *InlineResponse200329Changes) HasErrors() bool`
-
-HasErrors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

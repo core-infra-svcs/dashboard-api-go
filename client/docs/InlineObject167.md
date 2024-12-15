@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile.md) |  | [optional] 
-**Serials** | **[]string** | Array of Device Serials | 
-**StackIds** | **[]string** | Array of Switch Stack IDs | 
+**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
+**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
+**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
+**Iname** | **string** | IName of the profile | 
 
 ## Methods
 
 ### NewInlineObject167
 
-`func NewInlineObject167(serials []string, stackIds []string, ) *InlineObject167`
+`func NewInlineObject167(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, iname string, ) *InlineObject167`
 
 NewInlineObject167 instantiates a new InlineObject167 object
 This constructor will assign default values to properties that have it defined,
@@ -27,69 +28,84 @@ NewInlineObject167WithDefaults instantiates a new InlineObject167 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlanProfile
+### GetName
 
-`func (o *InlineObject167) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile`
+`func (o *InlineObject167) GetName() string`
 
-GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetVlanProfileOk
+### GetNameOk
 
-`func (o *InlineObject167) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile, bool)`
+`func (o *InlineObject167) GetNameOk() (*string, bool)`
 
-GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanProfile
+### SetName
 
-`func (o *InlineObject167) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile)`
+`func (o *InlineObject167) SetName(v string)`
 
-SetVlanProfile sets VlanProfile field to given value.
+SetName sets Name field to given value.
 
-### HasVlanProfile
 
-`func (o *InlineObject167) HasVlanProfile() bool`
+### GetVlanNames
 
-HasVlanProfile returns a boolean if a field has been set.
+`func (o *InlineObject167) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
 
-### GetSerials
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-`func (o *InlineObject167) GetSerials() []string`
+### GetVlanNamesOk
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+`func (o *InlineObject167) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
 
-### GetSerialsOk
-
-`func (o *InlineObject167) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetVlanNames
 
-`func (o *InlineObject167) SetSerials(v []string)`
+`func (o *InlineObject167) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
 
-SetSerials sets Serials field to given value.
+SetVlanNames sets VlanNames field to given value.
 
 
-### GetStackIds
+### GetVlanGroups
 
-`func (o *InlineObject167) GetStackIds() []string`
+`func (o *InlineObject167) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
 
-GetStackIds returns the StackIds field if non-nil, zero value otherwise.
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
 
-### GetStackIdsOk
+### GetVlanGroupsOk
 
-`func (o *InlineObject167) GetStackIdsOk() (*[]string, bool)`
+`func (o *InlineObject167) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
 
-GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStackIds
+### SetVlanGroups
 
-`func (o *InlineObject167) SetStackIds(v []string)`
+`func (o *InlineObject167) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
 
-SetStackIds sets StackIds field to given value.
+SetVlanGroups sets VlanGroups field to given value.
+
+
+### GetIname
+
+`func (o *InlineObject167) GetIname() string`
+
+GetIname returns the Iname field if non-nil, zero value otherwise.
+
+### GetInameOk
+
+`func (o *InlineObject167) GetInameOk() (*string, bool)`
+
+GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIname
+
+`func (o *InlineObject167) SetIname(v string)`
+
+SetIname sets Iname field to given value.
 
 
 

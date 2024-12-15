@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
-**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
+**AccountId** | **string** | Service provider account ID | 
+**ApiKey** | **string** | Service provider account API key | 
+**ServiceProvider** | [**OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1**](OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1.md) |  | 
+**Title** | **string** | Service provider account name | 
+**Username** | **string** | Service provider account username | 
 
 ## Methods
 
 ### NewInlineObject230
 
-`func NewInlineObject230() *InlineObject230`
+`func NewInlineObject230(accountId string, apiKey string, serviceProvider OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, title string, username string, ) *InlineObject230`
 
 NewInlineObject230 instantiates a new InlineObject230 object
 This constructor will assign default values to properties that have it defined,
@@ -26,30 +29,25 @@ NewInlineObject230WithDefaults instantiates a new InlineObject230 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTitle
+### GetAccountId
 
-`func (o *InlineObject230) GetTitle() string`
+`func (o *InlineObject230) GetAccountId() string`
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+GetAccountId returns the AccountId field if non-nil, zero value otherwise.
 
-### GetTitleOk
+### GetAccountIdOk
 
-`func (o *InlineObject230) GetTitleOk() (*string, bool)`
+`func (o *InlineObject230) GetAccountIdOk() (*string, bool)`
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetAccountId
 
-`func (o *InlineObject230) SetTitle(v string)`
+`func (o *InlineObject230) SetAccountId(v string)`
 
-SetTitle sets Title field to given value.
+SetAccountId sets AccountId field to given value.
 
-### HasTitle
-
-`func (o *InlineObject230) HasTitle() bool`
-
-HasTitle returns a boolean if a field has been set.
 
 ### GetApiKey
 
@@ -70,11 +68,66 @@ and a boolean to check if the value has been set.
 
 SetApiKey sets ApiKey field to given value.
 
-### HasApiKey
 
-`func (o *InlineObject230) HasApiKey() bool`
+### GetServiceProvider
 
-HasApiKey returns a boolean if a field has been set.
+`func (o *InlineObject230) GetServiceProvider() OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1`
+
+GetServiceProvider returns the ServiceProvider field if non-nil, zero value otherwise.
+
+### GetServiceProviderOk
+
+`func (o *InlineObject230) GetServiceProviderOk() (*OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, bool)`
+
+GetServiceProviderOk returns a tuple with the ServiceProvider field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetServiceProvider
+
+`func (o *InlineObject230) SetServiceProvider(v OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1)`
+
+SetServiceProvider sets ServiceProvider field to given value.
+
+
+### GetTitle
+
+`func (o *InlineObject230) GetTitle() string`
+
+GetTitle returns the Title field if non-nil, zero value otherwise.
+
+### GetTitleOk
+
+`func (o *InlineObject230) GetTitleOk() (*string, bool)`
+
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTitle
+
+`func (o *InlineObject230) SetTitle(v string)`
+
+SetTitle sets Title field to given value.
+
+
+### GetUsername
+
+`func (o *InlineObject230) GetUsername() string`
+
+GetUsername returns the Username field if non-nil, zero value otherwise.
+
+### GetUsernameOk
+
+`func (o *InlineObject230) GetUsernameOk() (*string, bool)`
+
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsername
+
+`func (o *InlineObject230) SetUsername(v string)`
+
+SetUsername sets Username field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

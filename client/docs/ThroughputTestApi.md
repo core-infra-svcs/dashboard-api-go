@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateDeviceLiveToolsThroughputTest
 
-> InlineResponse2015 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
+> InlineResponse2016 CreateDeviceLiveToolsThroughputTest(ctx, serial).CreateDeviceLiveToolsThroughputTest(createDeviceLiveToolsThroughputTest).Execute()
 
 Enqueue a job to test a device throughput, the test will run for 10 secs to test throughput
 
@@ -31,7 +31,7 @@ import (
 
 func main() {
     serial := "serial_example" // string | Serial
-    createDeviceLiveToolsThroughputTest := *openapiclient.NewInlineObject20() // InlineObject20 |  (optional)
+    createDeviceLiveToolsThroughputTest := *openapiclient.NewInlineObject21() // InlineObject21 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ThroughputTestApi.CreateDeviceLiveToolsThroughputTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2015
+    // response from `CreateDeviceLiveToolsThroughputTest`: InlineResponse2016
     fmt.Fprintf(os.Stdout, "Response from `ThroughputTestApi.CreateDeviceLiveToolsThroughputTest`: %v\n", resp)
 }
 ```
@@ -61,11 +61,11 @@ Other parameters are passed through a pointer to a apiCreateDeviceLiveToolsThrou
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createDeviceLiveToolsThroughputTest** | [**InlineObject20**](InlineObject20.md) |  | 
+ **createDeviceLiveToolsThroughputTest** | [**InlineObject21**](InlineObject21.md) |  | 
 
 ### Return type
 
-[**InlineResponse2015**](InlineResponse2015.md)
+[**InlineResponse2016**](InlineResponse2016.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetDeviceLiveToolsThroughputTest
 
-> InlineResponse20024 GetDeviceLiveToolsThroughputTest(ctx, serial, throughputTestId).Execute()
+> InlineResponse20025 GetDeviceLiveToolsThroughputTest(ctx, serial, throughputTestId).Execute()
 
 Return a throughput test job
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ThroughputTestApi.GetDeviceLiveToolsThroughputTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceLiveToolsThroughputTest`: InlineResponse20024
+    // response from `GetDeviceLiveToolsThroughputTest`: InlineResponse20025
     fmt.Fprintf(os.Stdout, "Response from `ThroughputTestApi.GetDeviceLiveToolsThroughputTest`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20024**](InlineResponse20024.md)
+[**InlineResponse20025**](InlineResponse20025.md)
 
 ### Authorization
 

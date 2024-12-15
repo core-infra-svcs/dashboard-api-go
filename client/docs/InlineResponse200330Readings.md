@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the wireless LAN controller interface | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the wireless controller interface | [optional] 
-**Recv** | Pointer to **int32** | The volume of data, in bytes/sec, received by wireless controller interface | [optional] 
-**Send** | Pointer to **int32** | The volume of data, in bytes/sec, transmitted by wireless controller interface | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**Counts** | Pointer to [**InlineResponse200330Counts**](InlineResponse200330Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200330ReadingsWithDefaults instantiates a new InlineResponse200
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetStartTs
 
-`func (o *InlineResponse200330Readings) GetName() string`
+`func (o *InlineResponse200330Readings) GetStartTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStartTsOk
 
-`func (o *InlineResponse200330Readings) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200330Readings) GetStartTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStartTs
 
-`func (o *InlineResponse200330Readings) SetName(v string)`
+`func (o *InlineResponse200330Readings) SetStartTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasName
+### HasStartTs
 
-`func (o *InlineResponse200330Readings) HasName() bool`
+`func (o *InlineResponse200330Readings) HasStartTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetMac
+### GetEndTs
 
-`func (o *InlineResponse200330Readings) GetMac() string`
+`func (o *InlineResponse200330Readings) GetEndTs() time.Time`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetEndTsOk
 
-`func (o *InlineResponse200330Readings) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200330Readings) GetEndTsOk() (*time.Time, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetEndTs
 
-`func (o *InlineResponse200330Readings) SetMac(v string)`
+`func (o *InlineResponse200330Readings) SetEndTs(v time.Time)`
 
-SetMac sets Mac field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasMac
+### HasEndTs
 
-`func (o *InlineResponse200330Readings) HasMac() bool`
+`func (o *InlineResponse200330Readings) HasEndTs() bool`
 
-HasMac returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetRecv
+### GetCounts
 
-`func (o *InlineResponse200330Readings) GetRecv() int32`
+`func (o *InlineResponse200330Readings) GetCounts() InlineResponse200330Counts`
 
-GetRecv returns the Recv field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetRecvOk
+### GetCountsOk
 
-`func (o *InlineResponse200330Readings) GetRecvOk() (*int32, bool)`
+`func (o *InlineResponse200330Readings) GetCountsOk() (*InlineResponse200330Counts, bool)`
 
-GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecv
+### SetCounts
 
-`func (o *InlineResponse200330Readings) SetRecv(v int32)`
+`func (o *InlineResponse200330Readings) SetCounts(v InlineResponse200330Counts)`
 
-SetRecv sets Recv field to given value.
+SetCounts sets Counts field to given value.
 
-### HasRecv
+### HasCounts
 
-`func (o *InlineResponse200330Readings) HasRecv() bool`
+`func (o *InlineResponse200330Readings) HasCounts() bool`
 
-HasRecv returns a boolean if a field has been set.
-
-### GetSend
-
-`func (o *InlineResponse200330Readings) GetSend() int32`
-
-GetSend returns the Send field if non-nil, zero value otherwise.
-
-### GetSendOk
-
-`func (o *InlineResponse200330Readings) GetSendOk() (*int32, bool)`
-
-GetSendOk returns a tuple with the Send field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSend
-
-`func (o *InlineResponse200330Readings) SetSend(v int32)`
-
-SetSend sets Send field to given value.
-
-### HasSend
-
-`func (o *InlineResponse200330Readings) HasSend() bool`
-
-HasSend returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

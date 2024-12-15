@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Interfaces** | Pointer to [**[]InlineResponse200334Interfaces**](InlineResponse200334Interfaces.md) | Interfaces belongs to the wireless LAN controller | [optional] 
+**Readings** | Pointer to [**[]InlineResponse200334Readings**](InlineResponse200334Readings.md) | The usages of layer 2 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetInterfaces
+### GetReadings
 
-`func (o *InlineResponse200334Items) GetInterfaces() []InlineResponse200334Interfaces`
+`func (o *InlineResponse200334Items) GetReadings() []InlineResponse200334Readings`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetReadings returns the Readings field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetReadingsOk
 
-`func (o *InlineResponse200334Items) GetInterfacesOk() (*[]InlineResponse200334Interfaces, bool)`
+`func (o *InlineResponse200334Items) GetReadingsOk() (*[]InlineResponse200334Readings, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetReadings
 
-`func (o *InlineResponse200334Items) SetInterfaces(v []InlineResponse200334Interfaces)`
+`func (o *InlineResponse200334Items) SetReadings(v []InlineResponse200334Readings)`
 
-SetInterfaces sets Interfaces field to given value.
+SetReadings sets Readings field to given value.
 
-### HasInterfaces
+### HasReadings
 
-`func (o *InlineResponse200334Items) HasInterfaces() bool`
+`func (o *InlineResponse200334Items) HasReadings() bool`
 
-HasInterfaces returns a boolean if a field has been set.
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

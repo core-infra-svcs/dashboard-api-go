@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## UpdateNetworkApplianceSdwanInternetPolicies
 
-> InlineResponse20056 UpdateNetworkApplianceSdwanInternetPolicies(ctx, networkId).UpdateNetworkApplianceSdwanInternetPolicies(updateNetworkApplianceSdwanInternetPolicies).Execute()
+> InlineResponse20057 UpdateNetworkApplianceSdwanInternetPolicies(ctx, networkId).UpdateNetworkApplianceSdwanInternetPolicies(updateNetworkApplianceSdwanInternetPolicies).Execute()
 
 Update SDWAN internet traffic preferences for an MX network
 
@@ -30,7 +30,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkApplianceSdwanInternetPolicies := *openapiclient.NewInlineObject56() // InlineObject56 |  (optional)
+    updateNetworkApplianceSdwanInternetPolicies := *openapiclient.NewInlineObject57() // InlineObject57 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `InternetPoliciesApi.UpdateNetworkApplianceSdwanInternetPolicies``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceSdwanInternetPolicies`: InlineResponse20056
+    // response from `UpdateNetworkApplianceSdwanInternetPolicies`: InlineResponse20057
     fmt.Fprintf(os.Stdout, "Response from `InternetPoliciesApi.UpdateNetworkApplianceSdwanInternetPolicies`: %v\n", resp)
 }
 ```
@@ -60,11 +60,11 @@ Other parameters are passed through a pointer to a apiUpdateNetworkApplianceSdwa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkApplianceSdwanInternetPolicies** | [**InlineObject56**](InlineObject56.md) |  | 
+ **updateNetworkApplianceSdwanInternetPolicies** | [**InlineObject57**](InlineObject57.md) |  | 
 
 ### Return type
 
-[**InlineResponse20056**](InlineResponse20056.md)
+[**InlineResponse20057**](InlineResponse20057.md)
 
 ### Authorization
 

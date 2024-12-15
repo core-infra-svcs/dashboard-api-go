@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceWirelessStatus
 
-> InlineResponse20043 GetDeviceWirelessStatus(ctx, serial).Execute()
+> InlineResponse20044 GetDeviceWirelessStatus(ctx, serial).Execute()
 
 Return the SSID statuses of an access point
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StatusApi.GetDeviceWirelessStatus``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceWirelessStatus`: InlineResponse20043
+    // response from `GetDeviceWirelessStatus`: InlineResponse20044
     fmt.Fprintf(os.Stdout, "Response from `StatusApi.GetDeviceWirelessStatus`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20043**](InlineResponse20043.md)
+[**InlineResponse20044**](InlineResponse20044.md)
 
 ### Authorization
 

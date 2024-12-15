@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | List of network ids to bind to the subscription | 
+**NetworkIds** | Pointer to **[]string** | List of network ids to bind to the subscription | [optional] 
 
 ## Methods
 
 ### NewInlineObject2
 
-`func NewInlineObject2(networkIds []string, ) *InlineObject2`
+`func NewInlineObject2() *InlineObject2`
 
 NewInlineObject2 instantiates a new InlineObject2 object
 This constructor will assign default values to properties that have it defined,
@@ -44,6 +44,11 @@ and a boolean to check if the value has been set.
 
 SetNetworkIds sets NetworkIds field to given value.
 
+### HasNetworkIds
+
+`func (o *InlineObject2) HasNetworkIds() bool`
+
+HasNetworkIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

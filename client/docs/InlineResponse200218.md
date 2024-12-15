@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vpnstatusentities** | Pointer to [**[]InlineResponse200218Vpnstatusentities**](InlineResponse200218Vpnstatusentities.md) | The list of VPN Status for networks | [optional] 
+**NetworkId** | Pointer to **string** | Network identifier | [optional] 
+**Name** | Pointer to **string** | Network name | [optional] 
+**ByUplink** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink**](OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink.md) | Uplink usage | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200218WithDefaults instantiates a new InlineResponse200218 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVpnstatusentities
+### GetNetworkId
 
-`func (o *InlineResponse200218) GetVpnstatusentities() []InlineResponse200218Vpnstatusentities`
+`func (o *InlineResponse200218) GetNetworkId() string`
 
-GetVpnstatusentities returns the Vpnstatusentities field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetVpnstatusentitiesOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200218) GetVpnstatusentitiesOk() (*[]InlineResponse200218Vpnstatusentities, bool)`
+`func (o *InlineResponse200218) GetNetworkIdOk() (*string, bool)`
 
-GetVpnstatusentitiesOk returns a tuple with the Vpnstatusentities field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVpnstatusentities
+### SetNetworkId
 
-`func (o *InlineResponse200218) SetVpnstatusentities(v []InlineResponse200218Vpnstatusentities)`
+`func (o *InlineResponse200218) SetNetworkId(v string)`
 
-SetVpnstatusentities sets Vpnstatusentities field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasVpnstatusentities
+### HasNetworkId
 
-`func (o *InlineResponse200218) HasVpnstatusentities() bool`
+`func (o *InlineResponse200218) HasNetworkId() bool`
 
-HasVpnstatusentities returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200218) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200218) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200218) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200218) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetByUplink
+
+`func (o *InlineResponse200218) GetByUplink() []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink`
+
+GetByUplink returns the ByUplink field if non-nil, zero value otherwise.
+
+### GetByUplinkOk
+
+`func (o *InlineResponse200218) GetByUplinkOk() (*[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink, bool)`
+
+GetByUplinkOk returns a tuple with the ByUplink field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetByUplink
+
+`func (o *InlineResponse200218) SetByUplink(v []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink)`
+
+SetByUplink sets ByUplink field to given value.
+
+### HasByUplink
+
+`func (o *InlineResponse200218) HasByUplink() bool`
+
+HasByUplink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeId** | Pointer to **string** | The upgrade | [optional] 
-**UpgradeBatchId** | Pointer to **string** | The upgrade batch | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesNetwork**](OrganizationsOrganizationIdFirmwareUpgradesNetwork.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of upgrade event: [Cancelled, Completed] | [optional] 
-**Time** | Pointer to **time.Time** | Scheduled start time | [optional] 
-**CompletedAt** | Pointer to **string** | Timestamp when upgrade completed. Null if status pending. | [optional] 
-**ProductTypes** | Pointer to **string** | product upgraded [wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor] | [optional] 
-**ToVersion** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesToVersion**](OrganizationsOrganizationIdFirmwareUpgradesToVersion.md) |  | [optional] 
-**FromVersion** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesFromVersion**](OrganizationsOrganizationIdFirmwareUpgradesFromVersion.md) |  | [optional] 
+**Id** | Pointer to **string** | ID of Early Access Feature | [optional] 
+**ShortName** | Pointer to **string** | Name of Early Access Feature | [optional] 
+**LimitScopeToNetworks** | Pointer to [**[]InlineResponse200259LimitScopeToNetworks**](InlineResponse200259LimitScopeToNetworks.md) | Networks assigned to the Early Access Feature | [optional] 
+**OptOutEligibility** | Pointer to [**InlineResponse200259OptOutEligibility**](InlineResponse200259OptOutEligibility.md) |  | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time when Early Access Feature was created | [optional] 
 
 ## Methods
 
@@ -33,230 +29,130 @@ NewInlineResponse200259WithDefaults instantiates a new InlineResponse200259 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeId
+### GetId
 
-`func (o *InlineResponse200259) GetUpgradeId() string`
+`func (o *InlineResponse200259) GetId() string`
 
-GetUpgradeId returns the UpgradeId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetUpgradeIdOk
+### GetIdOk
 
-`func (o *InlineResponse200259) GetUpgradeIdOk() (*string, bool)`
+`func (o *InlineResponse200259) GetIdOk() (*string, bool)`
 
-GetUpgradeIdOk returns a tuple with the UpgradeId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeId
+### SetId
 
-`func (o *InlineResponse200259) SetUpgradeId(v string)`
+`func (o *InlineResponse200259) SetId(v string)`
 
-SetUpgradeId sets UpgradeId field to given value.
+SetId sets Id field to given value.
 
-### HasUpgradeId
+### HasId
 
-`func (o *InlineResponse200259) HasUpgradeId() bool`
+`func (o *InlineResponse200259) HasId() bool`
 
-HasUpgradeId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetUpgradeBatchId
+### GetShortName
 
-`func (o *InlineResponse200259) GetUpgradeBatchId() string`
+`func (o *InlineResponse200259) GetShortName() string`
 
-GetUpgradeBatchId returns the UpgradeBatchId field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetUpgradeBatchIdOk
+### GetShortNameOk
 
-`func (o *InlineResponse200259) GetUpgradeBatchIdOk() (*string, bool)`
+`func (o *InlineResponse200259) GetShortNameOk() (*string, bool)`
 
-GetUpgradeBatchIdOk returns a tuple with the UpgradeBatchId field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeBatchId
+### SetShortName
 
-`func (o *InlineResponse200259) SetUpgradeBatchId(v string)`
+`func (o *InlineResponse200259) SetShortName(v string)`
 
-SetUpgradeBatchId sets UpgradeBatchId field to given value.
+SetShortName sets ShortName field to given value.
 
-### HasUpgradeBatchId
+### HasShortName
 
-`func (o *InlineResponse200259) HasUpgradeBatchId() bool`
+`func (o *InlineResponse200259) HasShortName() bool`
 
-HasUpgradeBatchId returns a boolean if a field has been set.
+HasShortName returns a boolean if a field has been set.
 
-### GetNetwork
+### GetLimitScopeToNetworks
 
-`func (o *InlineResponse200259) GetNetwork() OrganizationsOrganizationIdFirmwareUpgradesNetwork`
+`func (o *InlineResponse200259) GetLimitScopeToNetworks() []InlineResponse200259LimitScopeToNetworks`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineResponse200259) GetNetworkOk() (*OrganizationsOrganizationIdFirmwareUpgradesNetwork, bool)`
+`func (o *InlineResponse200259) GetLimitScopeToNetworksOk() (*[]InlineResponse200259LimitScopeToNetworks, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetLimitScopeToNetworks
 
-`func (o *InlineResponse200259) SetNetwork(v OrganizationsOrganizationIdFirmwareUpgradesNetwork)`
+`func (o *InlineResponse200259) SetLimitScopeToNetworks(v []InlineResponse200259LimitScopeToNetworks)`
 
-SetNetwork sets Network field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
-### HasNetwork
+### HasLimitScopeToNetworks
 
-`func (o *InlineResponse200259) HasNetwork() bool`
+`func (o *InlineResponse200259) HasLimitScopeToNetworks() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
-### GetStatus
+### GetOptOutEligibility
 
-`func (o *InlineResponse200259) GetStatus() string`
+`func (o *InlineResponse200259) GetOptOutEligibility() InlineResponse200259OptOutEligibility`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetOptOutEligibility returns the OptOutEligibility field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetOptOutEligibilityOk
 
-`func (o *InlineResponse200259) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200259) GetOptOutEligibilityOk() (*InlineResponse200259OptOutEligibility, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetOptOutEligibilityOk returns a tuple with the OptOutEligibility field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetOptOutEligibility
 
-`func (o *InlineResponse200259) SetStatus(v string)`
+`func (o *InlineResponse200259) SetOptOutEligibility(v InlineResponse200259OptOutEligibility)`
 
-SetStatus sets Status field to given value.
+SetOptOutEligibility sets OptOutEligibility field to given value.
 
-### HasStatus
+### HasOptOutEligibility
 
-`func (o *InlineResponse200259) HasStatus() bool`
+`func (o *InlineResponse200259) HasOptOutEligibility() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasOptOutEligibility returns a boolean if a field has been set.
 
-### GetTime
+### GetCreatedAt
 
-`func (o *InlineResponse200259) GetTime() time.Time`
+`func (o *InlineResponse200259) GetCreatedAt() time.Time`
 
-GetTime returns the Time field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetTimeOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200259) GetTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse200259) GetCreatedAtOk() (*time.Time, bool)`
 
-GetTimeOk returns a tuple with the Time field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTime
+### SetCreatedAt
 
-`func (o *InlineResponse200259) SetTime(v time.Time)`
+`func (o *InlineResponse200259) SetCreatedAt(v time.Time)`
 
-SetTime sets Time field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasTime
+### HasCreatedAt
 
-`func (o *InlineResponse200259) HasTime() bool`
+`func (o *InlineResponse200259) HasCreatedAt() bool`
 
-HasTime returns a boolean if a field has been set.
-
-### GetCompletedAt
-
-`func (o *InlineResponse200259) GetCompletedAt() string`
-
-GetCompletedAt returns the CompletedAt field if non-nil, zero value otherwise.
-
-### GetCompletedAtOk
-
-`func (o *InlineResponse200259) GetCompletedAtOk() (*string, bool)`
-
-GetCompletedAtOk returns a tuple with the CompletedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCompletedAt
-
-`func (o *InlineResponse200259) SetCompletedAt(v string)`
-
-SetCompletedAt sets CompletedAt field to given value.
-
-### HasCompletedAt
-
-`func (o *InlineResponse200259) HasCompletedAt() bool`
-
-HasCompletedAt returns a boolean if a field has been set.
-
-### GetProductTypes
-
-`func (o *InlineResponse200259) GetProductTypes() string`
-
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
-
-### GetProductTypesOk
-
-`func (o *InlineResponse200259) GetProductTypesOk() (*string, bool)`
-
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductTypes
-
-`func (o *InlineResponse200259) SetProductTypes(v string)`
-
-SetProductTypes sets ProductTypes field to given value.
-
-### HasProductTypes
-
-`func (o *InlineResponse200259) HasProductTypes() bool`
-
-HasProductTypes returns a boolean if a field has been set.
-
-### GetToVersion
-
-`func (o *InlineResponse200259) GetToVersion() OrganizationsOrganizationIdFirmwareUpgradesToVersion`
-
-GetToVersion returns the ToVersion field if non-nil, zero value otherwise.
-
-### GetToVersionOk
-
-`func (o *InlineResponse200259) GetToVersionOk() (*OrganizationsOrganizationIdFirmwareUpgradesToVersion, bool)`
-
-GetToVersionOk returns a tuple with the ToVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetToVersion
-
-`func (o *InlineResponse200259) SetToVersion(v OrganizationsOrganizationIdFirmwareUpgradesToVersion)`
-
-SetToVersion sets ToVersion field to given value.
-
-### HasToVersion
-
-`func (o *InlineResponse200259) HasToVersion() bool`
-
-HasToVersion returns a boolean if a field has been set.
-
-### GetFromVersion
-
-`func (o *InlineResponse200259) GetFromVersion() OrganizationsOrganizationIdFirmwareUpgradesFromVersion`
-
-GetFromVersion returns the FromVersion field if non-nil, zero value otherwise.
-
-### GetFromVersionOk
-
-`func (o *InlineResponse200259) GetFromVersionOk() (*OrganizationsOrganizationIdFirmwareUpgradesFromVersion, bool)`
-
-GetFromVersionOk returns a tuple with the FromVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFromVersion
-
-`func (o *InlineResponse200259) SetFromVersion(v OrganizationsOrganizationIdFirmwareUpgradesFromVersion)`
-
-SetFromVersion sets FromVersion field to given value.
-
-### HasFromVersion
-
-`func (o *InlineResponse200259) HasFromVersion() bool`
-
-HasFromVersion returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
