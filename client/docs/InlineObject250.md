@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
-**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
+**LicenseId** | **string** | The ID of the SM license to assign seats from | 
+**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
+**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
 
 ## Methods
 
 ### NewInlineObject250
 
-`func NewInlineObject250(destOrganizationId string, licenseIds []string, ) *InlineObject250`
+`func NewInlineObject250(licenseId string, networkId string, seatCount int32, ) *InlineObject250`
 
 NewInlineObject250 instantiates a new InlineObject250 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +27,64 @@ NewInlineObject250WithDefaults instantiates a new InlineObject250 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetLicenseId
 
-`func (o *InlineObject250) GetDestOrganizationId() string`
+`func (o *InlineObject250) GetLicenseId() string`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetLicenseIdOk
 
-`func (o *InlineObject250) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject250) GetLicenseIdOk() (*string, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetLicenseId
 
-`func (o *InlineObject250) SetDestOrganizationId(v string)`
+`func (o *InlineObject250) SetLicenseId(v string)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetLicenseId sets LicenseId field to given value.
 
 
-### GetLicenseIds
+### GetNetworkId
 
-`func (o *InlineObject250) GetLicenseIds() []string`
+`func (o *InlineObject250) GetNetworkId() string`
 
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetLicenseIdsOk
+### GetNetworkIdOk
 
-`func (o *InlineObject250) GetLicenseIdsOk() (*[]string, bool)`
+`func (o *InlineObject250) GetNetworkIdOk() (*string, bool)`
 
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIds
+### SetNetworkId
 
-`func (o *InlineObject250) SetLicenseIds(v []string)`
+`func (o *InlineObject250) SetNetworkId(v string)`
 
-SetLicenseIds sets LicenseIds field to given value.
+SetNetworkId sets NetworkId field to given value.
+
+
+### GetSeatCount
+
+`func (o *InlineObject250) GetSeatCount() int32`
+
+GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+
+### GetSeatCountOk
+
+`func (o *InlineObject250) GetSeatCountOk() (*int32, bool)`
+
+GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeatCount
+
+`func (o *InlineObject250) SetSeatCount(v int32)`
+
+SetSeatCount sets SeatCount field to given value.
 
 
 

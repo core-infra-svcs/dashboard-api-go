@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Interfaces** | Pointer to [**[]InlineResponse200336Interfaces**](InlineResponse200336Interfaces.md) | layer 3 interfaces belongs to the wireless LAN controller | [optional] 
+**Readings** | Pointer to [**[]InlineResponse200336Readings**](InlineResponse200336Readings.md) | The usages of layer 2 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetInterfaces
+### GetReadings
 
-`func (o *InlineResponse200336Items) GetInterfaces() []InlineResponse200336Interfaces`
+`func (o *InlineResponse200336Items) GetReadings() []InlineResponse200336Readings`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetReadings returns the Readings field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetReadingsOk
 
-`func (o *InlineResponse200336Items) GetInterfacesOk() (*[]InlineResponse200336Interfaces, bool)`
+`func (o *InlineResponse200336Items) GetReadingsOk() (*[]InlineResponse200336Readings, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetReadings
 
-`func (o *InlineResponse200336Items) SetInterfaces(v []InlineResponse200336Interfaces)`
+`func (o *InlineResponse200336Items) SetReadings(v []InlineResponse200336Readings)`
 
-SetInterfaces sets Interfaces field to given value.
+SetReadings sets Readings field to given value.
 
-### HasInterfaces
+### HasReadings
 
-`func (o *InlineResponse200336Items) HasInterfaces() bool`
+`func (o *InlineResponse200336Items) HasReadings() bool`
 
-HasInterfaces returns a boolean if a field has been set.
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

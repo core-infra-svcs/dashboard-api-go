@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PublicIp** | **string** | The IP address that will be used to access the internal resource from the WAN | 
-**Uplink** | **string** | The physical WAN interface on which the traffic will arrive (&#39;internet1&#39; or, if available, &#39;internet2&#39;) | 
+**Uplink** | **string** | The physical WAN interface on which the traffic will arrive, formatted as &#39;internetN&#39; where N is an integer representing a valid uplink for the network&#39;s appliance | 
 **PortRules** | [**[]NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules**](NetworksNetworkIdApplianceFirewallOneToManyNatRulesPortRules.md) | An array of associated forwarding rules | 
 
 ## Methods

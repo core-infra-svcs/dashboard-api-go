@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | A descriptive name for the rule | [optional] 
 **PublicIp** | Pointer to **string** | The IP address that will be used to access the internal resource from the WAN | [optional] 
 **LanIp** | **string** | The IP address of the server or device that hosts the internal resource that you wish to make available on the WAN | 
-**Uplink** | Pointer to **string** | The physical WAN interface on which the traffic will arrive (&#39;internet1&#39; or, if available, &#39;internet2&#39;) | [optional] 
+**Uplink** | Pointer to **string** | The physical WAN interface on which the traffic will arrive, formatted as &#39;internetN&#39; where N is an integer representing a valid uplink for the network&#39;s appliance | [optional] 
 **AllowedInbound** | Pointer to [**[]NetworksNetworkIdApplianceFirewallOneToOneNatRulesAllowedInbound**](NetworksNetworkIdApplianceFirewallOneToOneNatRulesAllowedInbound.md) | The ports this mapping will provide access on, and the remote IPs that will be allowed access to the resource | [optional] 
 
 ## Methods

@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**InlineResponse200316Network**](InlineResponse200316Network.md) |  | [optional] 
-**Serial** | Pointer to **string** | Access point Serial number | [optional] 
-**Counts** | Pointer to [**InlineResponse200316Counts**](InlineResponse200316Counts.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse20111Network**](InlineResponse20111Network.md) |  | [optional] 
+**RuleId** | Pointer to **string** | Indicates whether or not clients are allowed to        connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**Type** | Pointer to **string** | Indicates whether or not clients are allowed to        connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Updated at timestamp | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Created at timestamp | [optional] 
+**Match** | Pointer to [**InlineResponse200316Match**](InlineResponse200316Match.md) |  | [optional] 
 
 ## Methods
 
@@ -29,20 +32,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetNetwork
 
-`func (o *InlineResponse200316Items) GetNetwork() InlineResponse200316Network`
+`func (o *InlineResponse200316Items) GetNetwork() InlineResponse20111Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200316Items) GetNetworkOk() (*InlineResponse200316Network, bool)`
+`func (o *InlineResponse200316Items) GetNetworkOk() (*InlineResponse20111Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200316Items) SetNetwork(v InlineResponse200316Network)`
+`func (o *InlineResponse200316Items) SetNetwork(v InlineResponse20111Network)`
 
 SetNetwork sets Network field to given value.
 
@@ -52,55 +55,130 @@ SetNetwork sets Network field to given value.
 
 HasNetwork returns a boolean if a field has been set.
 
-### GetSerial
+### GetRuleId
 
-`func (o *InlineResponse200316Items) GetSerial() string`
+`func (o *InlineResponse200316Items) GetRuleId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetRuleId returns the RuleId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetRuleIdOk
 
-`func (o *InlineResponse200316Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200316Items) GetRuleIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetRuleIdOk returns a tuple with the RuleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetRuleId
 
-`func (o *InlineResponse200316Items) SetSerial(v string)`
+`func (o *InlineResponse200316Items) SetRuleId(v string)`
 
-SetSerial sets Serial field to given value.
+SetRuleId sets RuleId field to given value.
 
-### HasSerial
+### HasRuleId
 
-`func (o *InlineResponse200316Items) HasSerial() bool`
+`func (o *InlineResponse200316Items) HasRuleId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasRuleId returns a boolean if a field has been set.
 
-### GetCounts
+### GetType
 
-`func (o *InlineResponse200316Items) GetCounts() InlineResponse200316Counts`
+`func (o *InlineResponse200316Items) GetType() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetTypeOk
 
-`func (o *InlineResponse200316Items) GetCountsOk() (*InlineResponse200316Counts, bool)`
+`func (o *InlineResponse200316Items) GetTypeOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetType
 
-`func (o *InlineResponse200316Items) SetCounts(v InlineResponse200316Counts)`
+`func (o *InlineResponse200316Items) SetType(v string)`
 
-SetCounts sets Counts field to given value.
+SetType sets Type field to given value.
 
-### HasCounts
+### HasType
 
-`func (o *InlineResponse200316Items) HasCounts() bool`
+`func (o *InlineResponse200316Items) HasType() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse200316Items) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse200316Items) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse200316Items) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse200316Items) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200316Items) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200316Items) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200316Items) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200316Items) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetMatch
+
+`func (o *InlineResponse200316Items) GetMatch() InlineResponse200316Match`
+
+GetMatch returns the Match field if non-nil, zero value otherwise.
+
+### GetMatchOk
+
+`func (o *InlineResponse200316Items) GetMatchOk() (*InlineResponse200316Match, bool)`
+
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMatch
+
+`func (o *InlineResponse200316Items) SetMatch(v InlineResponse200316Match)`
+
+SetMatch sets Match field to given value.
+
+### HasMatch
+
+`func (o *InlineResponse200316Items) HasMatch() bool`
+
+HasMatch returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

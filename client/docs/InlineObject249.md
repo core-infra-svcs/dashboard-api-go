@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseId** | **string** | The ID of the SM license to assign seats from | 
-**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
-**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
+**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
 
 ## Methods
 
 ### NewInlineObject249
 
-`func NewInlineObject249(licenseId string, networkId string, seatCount int32, ) *InlineObject249`
+`func NewInlineObject249() *InlineObject249`
 
 NewInlineObject249 instantiates a new InlineObject249 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +25,30 @@ NewInlineObject249WithDefaults instantiates a new InlineObject249 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseId
+### GetSerials
 
-`func (o *InlineObject249) GetLicenseId() string`
+`func (o *InlineObject249) GetSerials() []string`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetSerialsOk
 
-`func (o *InlineObject249) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineObject249) GetSerialsOk() (*[]string, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetSerials
 
-`func (o *InlineObject249) SetLicenseId(v string)`
+`func (o *InlineObject249) SetSerials(v []string)`
 
-SetLicenseId sets LicenseId field to given value.
+SetSerials sets Serials field to given value.
 
+### HasSerials
 
-### GetNetworkId
+`func (o *InlineObject249) HasSerials() bool`
 
-`func (o *InlineObject249) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineObject249) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineObject249) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-
-### GetSeatCount
-
-`func (o *InlineObject249) GetSeatCount() int32`
-
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
-
-### GetSeatCountOk
-
-`func (o *InlineObject249) GetSeatCountOk() (*int32, bool)`
-
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeatCount
-
-`func (o *InlineObject249) SetSeatCount(v int32)`
-
-SetSeatCount sets SeatCount field to given value.
-
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

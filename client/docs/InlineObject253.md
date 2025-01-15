@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceSerial** | Pointer to **string** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
+**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
+**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
 
 ## Methods
 
 ### NewInlineObject253
 
-`func NewInlineObject253() *InlineObject253`
+`func NewInlineObject253(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject253`
 
 NewInlineObject253 instantiates a new InlineObject253 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,45 @@ NewInlineObject253WithDefaults instantiates a new InlineObject253 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeviceSerial
+### GetLicenseIdToRenew
 
-`func (o *InlineObject253) GetDeviceSerial() string`
+`func (o *InlineObject253) GetLicenseIdToRenew() string`
 
-GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
+GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
 
-### GetDeviceSerialOk
+### GetLicenseIdToRenewOk
 
-`func (o *InlineObject253) GetDeviceSerialOk() (*string, bool)`
+`func (o *InlineObject253) GetLicenseIdToRenewOk() (*string, bool)`
 
-GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
+GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceSerial
+### SetLicenseIdToRenew
 
-`func (o *InlineObject253) SetDeviceSerial(v string)`
+`func (o *InlineObject253) SetLicenseIdToRenew(v string)`
 
-SetDeviceSerial sets DeviceSerial field to given value.
+SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
 
-### HasDeviceSerial
 
-`func (o *InlineObject253) HasDeviceSerial() bool`
+### GetUnusedLicenseId
 
-HasDeviceSerial returns a boolean if a field has been set.
+`func (o *InlineObject253) GetUnusedLicenseId() string`
+
+GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
+
+### GetUnusedLicenseIdOk
+
+`func (o *InlineObject253) GetUnusedLicenseIdOk() (*string, bool)`
+
+GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnusedLicenseId
+
+`func (o *InlineObject253) SetUnusedLicenseId(v string)`
+
+SetUnusedLicenseId sets UnusedLicenseId field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

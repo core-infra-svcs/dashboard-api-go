@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **RadiusServerTimeout** | Pointer to **int32** | The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds). | [optional] 
 **RadiusServerAttemptsLimit** | Pointer to **int32** | The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5). | [optional] 
 **RadiusFallbackEnabled** | Pointer to **bool** | Whether or not higher priority RADIUS servers should be retried after 60 seconds. | [optional] 
+**RadiusRadsec** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberRadiusRadsec**](NetworksNetworkIdWirelessSsidsNumberRadiusRadsec.md) |  | [optional] 
 **RadiusCoaEnabled** | Pointer to **bool** | If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server. | [optional] 
 **RadiusFailoverPolicy** | Pointer to **string** | This policy determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable (&#39;Deny access&#39; or &#39;Allow access&#39;) | [optional] 
 **RadiusLoadBalancingPolicy** | Pointer to **string** | This policy determines which RADIUS server will be contacted first in an authentication attempt and the ordering of any necessary retry attempts (&#39;Strict priority order&#39; or &#39;Round robin&#39;) | [optional] 
@@ -657,6 +658,31 @@ SetRadiusFallbackEnabled sets RadiusFallbackEnabled field to given value.
 `func (o *InlineObject189) HasRadiusFallbackEnabled() bool`
 
 HasRadiusFallbackEnabled returns a boolean if a field has been set.
+
+### GetRadiusRadsec
+
+`func (o *InlineObject189) GetRadiusRadsec() NetworksNetworkIdWirelessSsidsNumberRadiusRadsec`
+
+GetRadiusRadsec returns the RadiusRadsec field if non-nil, zero value otherwise.
+
+### GetRadiusRadsecOk
+
+`func (o *InlineObject189) GetRadiusRadsecOk() (*NetworksNetworkIdWirelessSsidsNumberRadiusRadsec, bool)`
+
+GetRadiusRadsecOk returns a tuple with the RadiusRadsec field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadiusRadsec
+
+`func (o *InlineObject189) SetRadiusRadsec(v NetworksNetworkIdWirelessSsidsNumberRadiusRadsec)`
+
+SetRadiusRadsec sets RadiusRadsec field to given value.
+
+### HasRadiusRadsec
+
+`func (o *InlineObject189) HasRadiusRadsec() bool`
+
+HasRadiusRadsec returns a boolean if a field has been set.
 
 ### GetRadiusCoaEnabled
 

@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200308Items**](InlineResponse200308Items.md) | Switches | [optional] 
-**Meta** | Pointer to [**OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta**](OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta.md) |  | [optional] 
+**Counts** | Pointer to [**InlineResponse200308Counts**](InlineResponse200308Counts.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200308WithDefaults instantiates a new InlineResponse200308 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetCounts
 
-`func (o *InlineResponse200308) GetItems() []InlineResponse200308Items`
+`func (o *InlineResponse200308) GetCounts() InlineResponse200308Counts`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetCountsOk
 
-`func (o *InlineResponse200308) GetItemsOk() (*[]InlineResponse200308Items, bool)`
+`func (o *InlineResponse200308) GetCountsOk() (*InlineResponse200308Counts, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetCounts
 
-`func (o *InlineResponse200308) SetItems(v []InlineResponse200308Items)`
+`func (o *InlineResponse200308) SetCounts(v InlineResponse200308Counts)`
 
-SetItems sets Items field to given value.
+SetCounts sets Counts field to given value.
 
-### HasItems
+### HasCounts
 
-`func (o *InlineResponse200308) HasItems() bool`
+`func (o *InlineResponse200308) HasCounts() bool`
 
-HasItems returns a boolean if a field has been set.
-
-### GetMeta
-
-`func (o *InlineResponse200308) GetMeta() OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200308) GetMetaOk() (*OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200308) SetMeta(v OrganizationsOrganizationIdFloorPlansAutoLocateDevicesMeta)`
-
-SetMeta sets Meta field to given value.
-
-### HasMeta
-
-`func (o *InlineResponse200308) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

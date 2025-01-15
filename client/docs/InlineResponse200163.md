@@ -13,8 +13,6 @@ Name | Type | Description | Notes
 **OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings**](DevicesSerialSwitchRoutingInterfacesOspfSettings.md) |  | [optional] 
 **OspfV3** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfV3**](DevicesSerialSwitchRoutingInterfacesOspfV3.md) |  | [optional] 
 **Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv6**](DevicesSerialSwitchRoutingInterfacesIpv6.md) |  | [optional] 
-**UplinkV4** | Pointer to **bool** | Whether this is the switch&#39;s IPv4 uplink | [optional] 
-**UplinkV6** | Pointer to **bool** | Whether this is the switch&#39;s IPv6 uplink | [optional] 
 
 ## Methods
 
@@ -259,56 +257,6 @@ SetIpv6 sets Ipv6 field to given value.
 `func (o *InlineResponse200163) HasIpv6() bool`
 
 HasIpv6 returns a boolean if a field has been set.
-
-### GetUplinkV4
-
-`func (o *InlineResponse200163) GetUplinkV4() bool`
-
-GetUplinkV4 returns the UplinkV4 field if non-nil, zero value otherwise.
-
-### GetUplinkV4Ok
-
-`func (o *InlineResponse200163) GetUplinkV4Ok() (*bool, bool)`
-
-GetUplinkV4Ok returns a tuple with the UplinkV4 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinkV4
-
-`func (o *InlineResponse200163) SetUplinkV4(v bool)`
-
-SetUplinkV4 sets UplinkV4 field to given value.
-
-### HasUplinkV4
-
-`func (o *InlineResponse200163) HasUplinkV4() bool`
-
-HasUplinkV4 returns a boolean if a field has been set.
-
-### GetUplinkV6
-
-`func (o *InlineResponse200163) GetUplinkV6() bool`
-
-GetUplinkV6 returns the UplinkV6 field if non-nil, zero value otherwise.
-
-### GetUplinkV6Ok
-
-`func (o *InlineResponse200163) GetUplinkV6Ok() (*bool, bool)`
-
-GetUplinkV6Ok returns a tuple with the UplinkV6 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUplinkV6
-
-`func (o *InlineResponse200163) SetUplinkV6(v bool)`
-
-SetUplinkV6 sets UplinkV6 field to given value.
-
-### HasUplinkV6
-
-`func (o *InlineResponse200163) HasUplinkV6() bool`
-
-HasUplinkV6 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

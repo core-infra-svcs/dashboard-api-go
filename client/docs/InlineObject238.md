@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to update | 
-**Details** | [**[]OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails**](OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails.md) | An array of details | 
+**Serials** | **[]string** | A list of Meraki Serials to migrate | 
+**Target** | **string** | The controller or management mode to which the devices will be migrated | 
 
 ## Methods
 
 ### NewInlineObject238
 
-`func NewInlineObject238(serials []string, details []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails, ) *InlineObject238`
+`func NewInlineObject238(serials []string, target string, ) *InlineObject238`
 
 NewInlineObject238 instantiates a new InlineObject238 object
 This constructor will assign default values to properties that have it defined,
@@ -46,24 +46,24 @@ and a boolean to check if the value has been set.
 SetSerials sets Serials field to given value.
 
 
-### GetDetails
+### GetTarget
 
-`func (o *InlineObject238) GetDetails() []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails`
+`func (o *InlineObject238) GetTarget() string`
 
-GetDetails returns the Details field if non-nil, zero value otherwise.
+GetTarget returns the Target field if non-nil, zero value otherwise.
 
-### GetDetailsOk
+### GetTargetOk
 
-`func (o *InlineObject238) GetDetailsOk() (*[]OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails, bool)`
+`func (o *InlineObject238) GetTargetOk() (*string, bool)`
 
-GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDetails
+### SetTarget
 
-`func (o *InlineObject238) SetDetails(v []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails)`
+`func (o *InlineObject238) SetTarget(v string)`
 
-SetDetails sets Details field to given value.
+SetTarget sets Target field to given value.
 
 
 

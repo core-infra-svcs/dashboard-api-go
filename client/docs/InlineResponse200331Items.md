@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Access points cloud ID | [optional] 
-**Controller** | Pointer to [**InlineResponse200331Controller**](InlineResponse200331Controller.md) |  | [optional] 
-**Network** | Pointer to [**InlineResponse200331Network**](InlineResponse200331Network.md) |  | [optional] 
+**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
+**Changes** | Pointer to [**[]InlineResponse200331Changes**](InlineResponse200331Changes.md) | Connectivity information of a wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -52,55 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetController
+### GetChanges
 
-`func (o *InlineResponse200331Items) GetController() InlineResponse200331Controller`
+`func (o *InlineResponse200331Items) GetChanges() []InlineResponse200331Changes`
 
-GetController returns the Controller field if non-nil, zero value otherwise.
+GetChanges returns the Changes field if non-nil, zero value otherwise.
 
-### GetControllerOk
+### GetChangesOk
 
-`func (o *InlineResponse200331Items) GetControllerOk() (*InlineResponse200331Controller, bool)`
+`func (o *InlineResponse200331Items) GetChangesOk() (*[]InlineResponse200331Changes, bool)`
 
-GetControllerOk returns a tuple with the Controller field if it's non-nil, zero value otherwise
+GetChangesOk returns a tuple with the Changes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetController
+### SetChanges
 
-`func (o *InlineResponse200331Items) SetController(v InlineResponse200331Controller)`
+`func (o *InlineResponse200331Items) SetChanges(v []InlineResponse200331Changes)`
 
-SetController sets Controller field to given value.
+SetChanges sets Changes field to given value.
 
-### HasController
+### HasChanges
 
-`func (o *InlineResponse200331Items) HasController() bool`
+`func (o *InlineResponse200331Items) HasChanges() bool`
 
-HasController returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200331Items) GetNetwork() InlineResponse200331Network`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200331Items) GetNetworkOk() (*InlineResponse200331Network, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200331Items) SetNetwork(v InlineResponse200331Network)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200331Items) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
+HasChanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

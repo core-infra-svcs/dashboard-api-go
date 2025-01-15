@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Active** | Pointer to [**InlineResponse200307CountsByStatusActive**](InlineResponse200307CountsByStatusActive.md) |  | [optional] 
-**Inactive** | Pointer to [**InlineResponse200307CountsByStatusInactive**](InlineResponse200307CountsByStatusInactive.md) |  | [optional] 
+**Online** | Pointer to **int32** | Active client count. | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200307CountsByStatusWithDefaults instantiates a new InlineRespo
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetActive
+### GetOnline
 
-`func (o *InlineResponse200307CountsByStatus) GetActive() InlineResponse200307CountsByStatusActive`
+`func (o *InlineResponse200307CountsByStatus) GetOnline() int32`
 
-GetActive returns the Active field if non-nil, zero value otherwise.
+GetOnline returns the Online field if non-nil, zero value otherwise.
 
-### GetActiveOk
+### GetOnlineOk
 
-`func (o *InlineResponse200307CountsByStatus) GetActiveOk() (*InlineResponse200307CountsByStatusActive, bool)`
+`func (o *InlineResponse200307CountsByStatus) GetOnlineOk() (*int32, bool)`
 
-GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
+GetOnlineOk returns a tuple with the Online field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActive
+### SetOnline
 
-`func (o *InlineResponse200307CountsByStatus) SetActive(v InlineResponse200307CountsByStatusActive)`
+`func (o *InlineResponse200307CountsByStatus) SetOnline(v int32)`
 
-SetActive sets Active field to given value.
+SetOnline sets Online field to given value.
 
-### HasActive
+### HasOnline
 
-`func (o *InlineResponse200307CountsByStatus) HasActive() bool`
+`func (o *InlineResponse200307CountsByStatus) HasOnline() bool`
 
-HasActive returns a boolean if a field has been set.
-
-### GetInactive
-
-`func (o *InlineResponse200307CountsByStatus) GetInactive() InlineResponse200307CountsByStatusInactive`
-
-GetInactive returns the Inactive field if non-nil, zero value otherwise.
-
-### GetInactiveOk
-
-`func (o *InlineResponse200307CountsByStatus) GetInactiveOk() (*InlineResponse200307CountsByStatusInactive, bool)`
-
-GetInactiveOk returns a tuple with the Inactive field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetInactive
-
-`func (o *InlineResponse200307CountsByStatus) SetInactive(v InlineResponse200307CountsByStatusInactive)`
-
-SetInactive sets Inactive field to given value.
-
-### HasInactive
-
-`func (o *InlineResponse200307CountsByStatus) HasInactive() bool`
-
-HasInactive returns a boolean if a field has been set.
+HasOnline returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

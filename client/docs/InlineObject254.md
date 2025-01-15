@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Destination** | [**OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination**](OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination.md) |  | 
-**Licenses** | [**[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses**](OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses.md) | The list of licenses to move | 
+**DeviceSerial** | Pointer to **string** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
 
 ## Methods
 
 ### NewInlineObject254
 
-`func NewInlineObject254(destination OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, licenses []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, ) *InlineObject254`
+`func NewInlineObject254() *InlineObject254`
 
 NewInlineObject254 instantiates a new InlineObject254 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +25,30 @@ NewInlineObject254WithDefaults instantiates a new InlineObject254 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestination
+### GetDeviceSerial
 
-`func (o *InlineObject254) GetDestination() OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
+`func (o *InlineObject254) GetDeviceSerial() string`
 
-GetDestination returns the Destination field if non-nil, zero value otherwise.
+GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
 
-### GetDestinationOk
+### GetDeviceSerialOk
 
-`func (o *InlineObject254) GetDestinationOk() (*OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, bool)`
+`func (o *InlineObject254) GetDeviceSerialOk() (*string, bool)`
 
-GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
+GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestination
+### SetDeviceSerial
 
-`func (o *InlineObject254) SetDestination(v OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination)`
+`func (o *InlineObject254) SetDeviceSerial(v string)`
 
-SetDestination sets Destination field to given value.
+SetDeviceSerial sets DeviceSerial field to given value.
 
+### HasDeviceSerial
 
-### GetLicenses
+`func (o *InlineObject254) HasDeviceSerial() bool`
 
-`func (o *InlineObject254) GetLicenses() []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses`
-
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
-
-### GetLicensesOk
-
-`func (o *InlineObject254) GetLicensesOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenses
-
-`func (o *InlineObject254) SetLicenses(v []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses)`
-
-SetLicenses sets Licenses field to given value.
-
+HasDeviceSerial returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

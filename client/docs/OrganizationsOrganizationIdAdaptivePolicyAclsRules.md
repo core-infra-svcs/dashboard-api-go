@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **Protocol** | Pointer to **string** | The type of protocol | [optional] 
 **SrcPort** | Pointer to **string** | Source port | [optional] 
 **DstPort** | Pointer to **string** | Destination port | [optional] 
+**Log** | Pointer to **bool** | If enabled, when this rule is hit an entry will be logged to the event log  | [optional] 
+**TcpEstablished** | Pointer to **bool** | If enabled, means TCP connection with this node must be established.  | [optional] 
 
 ## Methods
 
@@ -127,6 +129,56 @@ SetDstPort sets DstPort field to given value.
 `func (o *OrganizationsOrganizationIdAdaptivePolicyAclsRules) HasDstPort() bool`
 
 HasDstPort returns a boolean if a field has been set.
+
+### GetLog
+
+`func (o *OrganizationsOrganizationIdAdaptivePolicyAclsRules) GetLog() bool`
+
+GetLog returns the Log field if non-nil, zero value otherwise.
+
+### GetLogOk
+
+`func (o *OrganizationsOrganizationIdAdaptivePolicyAclsRules) GetLogOk() (*bool, bool)`
+
+GetLogOk returns a tuple with the Log field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLog
+
+`func (o *OrganizationsOrganizationIdAdaptivePolicyAclsRules) SetLog(v bool)`
+
+SetLog sets Log field to given value.
+
+### HasLog
+
+`func (o *OrganizationsOrganizationIdAdaptivePolicyAclsRules) HasLog() bool`
+
+HasLog returns a boolean if a field has been set.
+
+### GetTcpEstablished
+
+`func (o *OrganizationsOrganizationIdAdaptivePolicyAclsRules) GetTcpEstablished() bool`
+
+GetTcpEstablished returns the TcpEstablished field if non-nil, zero value otherwise.
+
+### GetTcpEstablishedOk
+
+`func (o *OrganizationsOrganizationIdAdaptivePolicyAclsRules) GetTcpEstablishedOk() (*bool, bool)`
+
+GetTcpEstablishedOk returns a tuple with the TcpEstablished field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTcpEstablished
+
+`func (o *OrganizationsOrganizationIdAdaptivePolicyAclsRules) SetTcpEstablished(v bool)`
+
+SetTcpEstablished sets TcpEstablished field to given value.
+
+### HasTcpEstablished
+
+`func (o *OrganizationsOrganizationIdAdaptivePolicyAclsRules) HasTcpEstablished() bool`
+
+HasTcpEstablished returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
