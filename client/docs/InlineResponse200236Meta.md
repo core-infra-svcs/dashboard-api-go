@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200236MetaCounts**](InlineResponse200236MetaCounts.md) |  | [optional] 
+**Counts** | [**InlineResponse200236MetaCounts**](InlineResponse200236MetaCounts.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200236Meta
 
-`func NewInlineResponse200236Meta() *InlineResponse200236Meta`
+`func NewInlineResponse200236Meta(counts InlineResponse200236MetaCounts, ) *InlineResponse200236Meta`
 
 NewInlineResponse200236Meta instantiates a new InlineResponse200236Meta object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +44,6 @@ and a boolean to check if the value has been set.
 
 SetCounts sets Counts field to given value.
 
-### HasCounts
-
-`func (o *InlineResponse200236Meta) HasCounts() bool`
-
-HasCounts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

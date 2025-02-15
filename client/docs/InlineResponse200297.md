@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Category** | Pointer to **string** | Name of the Application Category | [optional] 
-**Total** | Pointer to **float32** | Total usage of the Application Category, in megabytes | [optional] 
-**Downstream** | Pointer to **float32** | Downstream usage of the Application Category, in megabytes | [optional] 
-**Upstream** | Pointer to **float32** | Upstream usage of the Application Category, in megabytes | [optional] 
-**Percentage** | Pointer to **float32** | Percent usage of the Application Category | [optional] 
+**Serial** | Pointer to **string** | Serial number of the sensor that took the readings. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryNetwork**](OrganizationsOrganizationIdSensorReadingsHistoryNetwork.md) |  | [optional] 
+**Readings** | Pointer to [**[]OrganizationsOrganizationIdSensorReadingsLatestReadings**](OrganizationsOrganizationIdSensorReadingsLatestReadings.md) | Array of latest readings from the sensor. Each object represents a single reading for a single metric. | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200297WithDefaults instantiates a new InlineResponse200297 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCategory
+### GetSerial
 
-`func (o *InlineResponse200297) GetCategory() string`
+`func (o *InlineResponse200297) GetSerial() string`
 
-GetCategory returns the Category field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetCategoryOk
+### GetSerialOk
 
-`func (o *InlineResponse200297) GetCategoryOk() (*string, bool)`
+`func (o *InlineResponse200297) GetSerialOk() (*string, bool)`
 
-GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategory
+### SetSerial
 
-`func (o *InlineResponse200297) SetCategory(v string)`
+`func (o *InlineResponse200297) SetSerial(v string)`
 
-SetCategory sets Category field to given value.
+SetSerial sets Serial field to given value.
 
-### HasCategory
+### HasSerial
 
-`func (o *InlineResponse200297) HasCategory() bool`
+`func (o *InlineResponse200297) HasSerial() bool`
 
-HasCategory returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetTotal
+### GetNetwork
 
-`func (o *InlineResponse200297) GetTotal() float32`
+`func (o *InlineResponse200297) GetNetwork() OrganizationsOrganizationIdSensorReadingsHistoryNetwork`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetNetworkOk
 
-`func (o *InlineResponse200297) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse200297) GetNetworkOk() (*OrganizationsOrganizationIdSensorReadingsHistoryNetwork, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetNetwork
 
-`func (o *InlineResponse200297) SetTotal(v float32)`
+`func (o *InlineResponse200297) SetNetwork(v OrganizationsOrganizationIdSensorReadingsHistoryNetwork)`
 
-SetTotal sets Total field to given value.
+SetNetwork sets Network field to given value.
 
-### HasTotal
+### HasNetwork
 
-`func (o *InlineResponse200297) HasTotal() bool`
+`func (o *InlineResponse200297) HasNetwork() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetDownstream
+### GetReadings
 
-`func (o *InlineResponse200297) GetDownstream() float32`
+`func (o *InlineResponse200297) GetReadings() []OrganizationsOrganizationIdSensorReadingsLatestReadings`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetReadings returns the Readings field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetReadingsOk
 
-`func (o *InlineResponse200297) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse200297) GetReadingsOk() (*[]OrganizationsOrganizationIdSensorReadingsLatestReadings, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetReadings
 
-`func (o *InlineResponse200297) SetDownstream(v float32)`
+`func (o *InlineResponse200297) SetReadings(v []OrganizationsOrganizationIdSensorReadingsLatestReadings)`
 
-SetDownstream sets Downstream field to given value.
+SetReadings sets Readings field to given value.
 
-### HasDownstream
+### HasReadings
 
-`func (o *InlineResponse200297) HasDownstream() bool`
+`func (o *InlineResponse200297) HasReadings() bool`
 
-HasDownstream returns a boolean if a field has been set.
-
-### GetUpstream
-
-`func (o *InlineResponse200297) GetUpstream() float32`
-
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
-
-### GetUpstreamOk
-
-`func (o *InlineResponse200297) GetUpstreamOk() (*float32, bool)`
-
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpstream
-
-`func (o *InlineResponse200297) SetUpstream(v float32)`
-
-SetUpstream sets Upstream field to given value.
-
-### HasUpstream
-
-`func (o *InlineResponse200297) HasUpstream() bool`
-
-HasUpstream returns a boolean if a field has been set.
-
-### GetPercentage
-
-`func (o *InlineResponse200297) GetPercentage() float32`
-
-GetPercentage returns the Percentage field if non-nil, zero value otherwise.
-
-### GetPercentageOk
-
-`func (o *InlineResponse200297) GetPercentageOk() (*float32, bool)`
-
-GetPercentageOk returns a tuple with the Percentage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPercentage
-
-`func (o *InlineResponse200297) SetPercentage(v float32)`
-
-SetPercentage sets Percentage field to given value.
-
-### HasPercentage
-
-`func (o *InlineResponse200297) HasPercentage() bool`
-
-HasPercentage returns a boolean if a field has been set.
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

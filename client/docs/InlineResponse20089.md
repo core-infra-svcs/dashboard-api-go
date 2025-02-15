@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Message** | Pointer to **string** | A message regarding the events sent. Usually &#39;null&#39; unless there are no events | [optional] 
-**PageStartAt** | Pointer to **string** | An UTC ISO8601 string of the earliest occured at time of the listed events of the page. | [optional] 
-**PageEndAt** | Pointer to **string** | An UTC ISO8601 string of the latest occured at time of the listed events of the page. | [optional] 
-**Events** | Pointer to [**[]InlineResponse20089Events**](InlineResponse20089Events.md) | An array of events that took place in the network. | [optional] 
+**Received** | Pointer to **float32** | Usage received by the client on a given day | [optional] 
+**Sent** | Pointer to **float32** | Usage sent by the client on a given day | [optional] 
+**Ts** | Pointer to **time.Time** | The day&#39;s timestamp | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse20089WithDefaults instantiates a new InlineResponse20089 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMessage
+### GetReceived
 
-`func (o *InlineResponse20089) GetMessage() string`
+`func (o *InlineResponse20089) GetReceived() float32`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetReceived returns the Received field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetReceivedOk
 
-`func (o *InlineResponse20089) GetMessageOk() (*string, bool)`
+`func (o *InlineResponse20089) GetReceivedOk() (*float32, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetReceived
 
-`func (o *InlineResponse20089) SetMessage(v string)`
+`func (o *InlineResponse20089) SetReceived(v float32)`
 
-SetMessage sets Message field to given value.
+SetReceived sets Received field to given value.
 
-### HasMessage
+### HasReceived
 
-`func (o *InlineResponse20089) HasMessage() bool`
+`func (o *InlineResponse20089) HasReceived() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasReceived returns a boolean if a field has been set.
 
-### GetPageStartAt
+### GetSent
 
-`func (o *InlineResponse20089) GetPageStartAt() string`
+`func (o *InlineResponse20089) GetSent() float32`
 
-GetPageStartAt returns the PageStartAt field if non-nil, zero value otherwise.
+GetSent returns the Sent field if non-nil, zero value otherwise.
 
-### GetPageStartAtOk
+### GetSentOk
 
-`func (o *InlineResponse20089) GetPageStartAtOk() (*string, bool)`
+`func (o *InlineResponse20089) GetSentOk() (*float32, bool)`
 
-GetPageStartAtOk returns a tuple with the PageStartAt field if it's non-nil, zero value otherwise
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageStartAt
+### SetSent
 
-`func (o *InlineResponse20089) SetPageStartAt(v string)`
+`func (o *InlineResponse20089) SetSent(v float32)`
 
-SetPageStartAt sets PageStartAt field to given value.
+SetSent sets Sent field to given value.
 
-### HasPageStartAt
+### HasSent
 
-`func (o *InlineResponse20089) HasPageStartAt() bool`
+`func (o *InlineResponse20089) HasSent() bool`
 
-HasPageStartAt returns a boolean if a field has been set.
+HasSent returns a boolean if a field has been set.
 
-### GetPageEndAt
+### GetTs
 
-`func (o *InlineResponse20089) GetPageEndAt() string`
+`func (o *InlineResponse20089) GetTs() time.Time`
 
-GetPageEndAt returns the PageEndAt field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetPageEndAtOk
+### GetTsOk
 
-`func (o *InlineResponse20089) GetPageEndAtOk() (*string, bool)`
+`func (o *InlineResponse20089) GetTsOk() (*time.Time, bool)`
 
-GetPageEndAtOk returns a tuple with the PageEndAt field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPageEndAt
+### SetTs
 
-`func (o *InlineResponse20089) SetPageEndAt(v string)`
+`func (o *InlineResponse20089) SetTs(v time.Time)`
 
-SetPageEndAt sets PageEndAt field to given value.
+SetTs sets Ts field to given value.
 
-### HasPageEndAt
+### HasTs
 
-`func (o *InlineResponse20089) HasPageEndAt() bool`
+`func (o *InlineResponse20089) HasTs() bool`
 
-HasPageEndAt returns a boolean if a field has been set.
-
-### GetEvents
-
-`func (o *InlineResponse20089) GetEvents() []InlineResponse20089Events`
-
-GetEvents returns the Events field if non-nil, zero value otherwise.
-
-### GetEventsOk
-
-`func (o *InlineResponse20089) GetEventsOk() (*[]InlineResponse20089Events, bool)`
-
-GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEvents
-
-`func (o *InlineResponse20089) SetEvents(v []InlineResponse20089Events)`
-
-SetEvents sets Events field to given value.
-
-### HasEvents
-
-`func (o *InlineResponse20089) HasEvents() bool`
-
-HasEvents returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

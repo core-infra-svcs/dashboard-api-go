@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Status of attempt to publish auto locate job | [optional] 
+**Group** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedStagesGroup**](NetworksNetworkIdFirmwareUpgradesStagedStagesGroup.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse20098WithDefaults instantiates a new InlineResponse20098 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetGroup
 
-`func (o *InlineResponse20098) GetSuccess() bool`
+`func (o *InlineResponse20098) GetGroup() NetworksNetworkIdFirmwareUpgradesStagedStagesGroup`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetGroup returns the Group field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetGroupOk
 
-`func (o *InlineResponse20098) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse20098) GetGroupOk() (*NetworksNetworkIdFirmwareUpgradesStagedStagesGroup, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetGroupOk returns a tuple with the Group field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetGroup
 
-`func (o *InlineResponse20098) SetSuccess(v bool)`
+`func (o *InlineResponse20098) SetGroup(v NetworksNetworkIdFirmwareUpgradesStagedStagesGroup)`
 
-SetSuccess sets Success field to given value.
+SetGroup sets Group field to given value.
 
-### HasSuccess
+### HasGroup
 
-`func (o *InlineResponse20098) HasSuccess() bool`
+`func (o *InlineResponse20098) HasGroup() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasGroup returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

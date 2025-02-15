@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedRules** | [**[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules**](OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules.md) | Sets a list of specific SNORT signatures to allow | 
+**Name** | **string** | Name of profile | 
 
 ## Methods
 
 ### NewInlineObject217
 
-`func NewInlineObject217(allowedRules []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, ) *InlineObject217`
+`func NewInlineObject217(name string, ) *InlineObject217`
 
 NewInlineObject217 instantiates a new InlineObject217 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject217WithDefaults instantiates a new InlineObject217 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedRules
+### GetName
 
-`func (o *InlineObject217) GetAllowedRules() []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules`
+`func (o *InlineObject217) GetName() string`
 
-GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAllowedRulesOk
+### GetNameOk
 
-`func (o *InlineObject217) GetAllowedRulesOk() (*[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, bool)`
+`func (o *InlineObject217) GetNameOk() (*string, bool)`
 
-GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedRules
+### SetName
 
-`func (o *InlineObject217) SetAllowedRules(v []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules)`
+`func (o *InlineObject217) SetName(v string)`
 
-SetAllowedRules sets AllowedRules field to given value.
+SetName sets Name field to given value.
 
 
 

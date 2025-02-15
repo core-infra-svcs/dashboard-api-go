@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**T0** | Pointer to **int32** | The latency history bucket start time in seconds | [optional] 
-**T1** | Pointer to **int32** | The latency history bucket end time in seconds | [optional] 
-**LatencyBinsByCategory** | Pointer to [**NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory**](NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200181WithDefaults instantiates a new InlineResponse200181 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetT0
+### GetStartTs
 
-`func (o *InlineResponse200181) GetT0() int32`
+`func (o *InlineResponse200181) GetStartTs() time.Time`
 
-GetT0 returns the T0 field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetT0Ok
+### GetStartTsOk
 
-`func (o *InlineResponse200181) GetT0Ok() (*int32, bool)`
+`func (o *InlineResponse200181) GetStartTsOk() (*time.Time, bool)`
 
-GetT0Ok returns a tuple with the T0 field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetT0
+### SetStartTs
 
-`func (o *InlineResponse200181) SetT0(v int32)`
+`func (o *InlineResponse200181) SetStartTs(v time.Time)`
 
-SetT0 sets T0 field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasT0
+### HasStartTs
 
-`func (o *InlineResponse200181) HasT0() bool`
+`func (o *InlineResponse200181) HasStartTs() bool`
 
-HasT0 returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetT1
+### GetEndTs
 
-`func (o *InlineResponse200181) GetT1() int32`
+`func (o *InlineResponse200181) GetEndTs() time.Time`
 
-GetT1 returns the T1 field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetT1Ok
+### GetEndTsOk
 
-`func (o *InlineResponse200181) GetT1Ok() (*int32, bool)`
+`func (o *InlineResponse200181) GetEndTsOk() (*time.Time, bool)`
 
-GetT1Ok returns a tuple with the T1 field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetT1
+### SetEndTs
 
-`func (o *InlineResponse200181) SetT1(v int32)`
+`func (o *InlineResponse200181) SetEndTs(v time.Time)`
 
-SetT1 sets T1 field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasT1
+### HasEndTs
 
-`func (o *InlineResponse200181) HasT1() bool`
+`func (o *InlineResponse200181) HasEndTs() bool`
 
-HasT1 returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetLatencyBinsByCategory
+### GetClientCount
 
-`func (o *InlineResponse200181) GetLatencyBinsByCategory() NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory`
+`func (o *InlineResponse200181) GetClientCount() int32`
 
-GetLatencyBinsByCategory returns the LatencyBinsByCategory field if non-nil, zero value otherwise.
+GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
 
-### GetLatencyBinsByCategoryOk
+### GetClientCountOk
 
-`func (o *InlineResponse200181) GetLatencyBinsByCategoryOk() (*NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory, bool)`
+`func (o *InlineResponse200181) GetClientCountOk() (*int32, bool)`
 
-GetLatencyBinsByCategoryOk returns a tuple with the LatencyBinsByCategory field if it's non-nil, zero value otherwise
+GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencyBinsByCategory
+### SetClientCount
 
-`func (o *InlineResponse200181) SetLatencyBinsByCategory(v NetworksNetworkIdWirelessClientsClientIdLatencyHistoryLatencyBinsByCategory)`
+`func (o *InlineResponse200181) SetClientCount(v int32)`
 
-SetLatencyBinsByCategory sets LatencyBinsByCategory field to given value.
+SetClientCount sets ClientCount field to given value.
 
-### HasLatencyBinsByCategory
+### HasClientCount
 
-`func (o *InlineResponse200181) HasLatencyBinsByCategory() bool`
+`func (o *InlineResponse200181) HasClientCount() bool`
 
-HasLatencyBinsByCategory returns a boolean if a field has been set.
+HasClientCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

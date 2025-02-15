@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
-**Name** | Pointer to **string** | Name of the MQTT Broker. | [optional] 
-**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
-**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
-**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity**](NetworksNetworkIdMqttBrokersSecurity.md) |  | [optional] 
-**Authentication** | Pointer to [**NetworksNetworkIdMqttBrokersAuthentication**](NetworksNetworkIdMqttBrokersAuthentication.md) |  | [optional] 
+**Id** | Pointer to **string** | Alert identifier. Value can be empty | [optional] 
+**Category** | Pointer to **string** | Category of the alert | [optional] 
+**Type** | Pointer to **string** | Alert type | [optional] 
+**Severity** | Pointer to **string** | Severity of the alert | [optional] 
+**Scope** | Pointer to [**NetworksNetworkIdHealthAlertsScope**](NetworksNetworkIdHealthAlertsScope.md) |  | [optional] 
 
 ## Methods
 
@@ -55,130 +54,105 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetName
+### GetCategory
 
-`func (o *InlineResponse200105) GetName() string`
+`func (o *InlineResponse200105) GetCategory() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCategory returns the Category field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCategoryOk
 
-`func (o *InlineResponse200105) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200105) GetCategoryOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCategory
 
-`func (o *InlineResponse200105) SetName(v string)`
+`func (o *InlineResponse200105) SetCategory(v string)`
 
-SetName sets Name field to given value.
+SetCategory sets Category field to given value.
 
-### HasName
+### HasCategory
 
-`func (o *InlineResponse200105) HasName() bool`
+`func (o *InlineResponse200105) HasCategory() bool`
 
-HasName returns a boolean if a field has been set.
+HasCategory returns a boolean if a field has been set.
 
-### GetHost
+### GetType
 
-`func (o *InlineResponse200105) GetHost() string`
+`func (o *InlineResponse200105) GetType() string`
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetHostOk
+### GetTypeOk
 
-`func (o *InlineResponse200105) GetHostOk() (*string, bool)`
+`func (o *InlineResponse200105) GetTypeOk() (*string, bool)`
 
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetType
 
-`func (o *InlineResponse200105) SetHost(v string)`
+`func (o *InlineResponse200105) SetType(v string)`
 
-SetHost sets Host field to given value.
+SetType sets Type field to given value.
 
-### HasHost
+### HasType
 
-`func (o *InlineResponse200105) HasHost() bool`
+`func (o *InlineResponse200105) HasType() bool`
 
-HasHost returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
-### GetPort
+### GetSeverity
 
-`func (o *InlineResponse200105) GetPort() int32`
+`func (o *InlineResponse200105) GetSeverity() string`
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+GetSeverity returns the Severity field if non-nil, zero value otherwise.
 
-### GetPortOk
+### GetSeverityOk
 
-`func (o *InlineResponse200105) GetPortOk() (*int32, bool)`
+`func (o *InlineResponse200105) GetSeverityOk() (*string, bool)`
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetSeverity
 
-`func (o *InlineResponse200105) SetPort(v int32)`
+`func (o *InlineResponse200105) SetSeverity(v string)`
 
-SetPort sets Port field to given value.
+SetSeverity sets Severity field to given value.
 
-### HasPort
+### HasSeverity
 
-`func (o *InlineResponse200105) HasPort() bool`
+`func (o *InlineResponse200105) HasSeverity() bool`
 
-HasPort returns a boolean if a field has been set.
+HasSeverity returns a boolean if a field has been set.
 
-### GetSecurity
+### GetScope
 
-`func (o *InlineResponse200105) GetSecurity() NetworksNetworkIdMqttBrokersSecurity`
+`func (o *InlineResponse200105) GetScope() NetworksNetworkIdHealthAlertsScope`
 
-GetSecurity returns the Security field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetSecurityOk
+### GetScopeOk
 
-`func (o *InlineResponse200105) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity, bool)`
+`func (o *InlineResponse200105) GetScopeOk() (*NetworksNetworkIdHealthAlertsScope, bool)`
 
-GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurity
+### SetScope
 
-`func (o *InlineResponse200105) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity)`
+`func (o *InlineResponse200105) SetScope(v NetworksNetworkIdHealthAlertsScope)`
 
-SetSecurity sets Security field to given value.
+SetScope sets Scope field to given value.
 
-### HasSecurity
+### HasScope
 
-`func (o *InlineResponse200105) HasSecurity() bool`
+`func (o *InlineResponse200105) HasScope() bool`
 
-HasSecurity returns a boolean if a field has been set.
-
-### GetAuthentication
-
-`func (o *InlineResponse200105) GetAuthentication() NetworksNetworkIdMqttBrokersAuthentication`
-
-GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
-
-### GetAuthenticationOk
-
-`func (o *InlineResponse200105) GetAuthenticationOk() (*NetworksNetworkIdMqttBrokersAuthentication, bool)`
-
-GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthentication
-
-`func (o *InlineResponse200105) SetAuthentication(v NetworksNetworkIdMqttBrokersAuthentication)`
-
-SetAuthentication sets Authentication field to given value.
-
-### HasAuthentication
-
-`func (o *InlineResponse200105) HasAuthentication() bool`
-
-HasAuthentication returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

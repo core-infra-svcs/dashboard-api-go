@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
-**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to Dashboard&#39;s automatically generated value. | [optional] 
+**Enabled** | Pointer to **bool** | Enable or disable warm spare for a switch | [optional] 
+**PrimarySerial** | Pointer to **string** | Serial number of the primary switch | [optional] 
+**SpareSerial** | Pointer to **string** | Serial number of the warm spare switch | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20041WithDefaults instantiates a new InlineResponse20041 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUuid
+### GetEnabled
 
-`func (o *InlineResponse20041) GetUuid() string`
+`func (o *InlineResponse20041) GetEnabled() bool`
 
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetUuidOk
+### GetEnabledOk
 
-`func (o *InlineResponse20041) GetUuidOk() (*string, bool)`
+`func (o *InlineResponse20041) GetEnabledOk() (*bool, bool)`
 
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUuid
+### SetEnabled
 
-`func (o *InlineResponse20041) SetUuid(v string)`
+`func (o *InlineResponse20041) SetEnabled(v bool)`
 
-SetUuid sets Uuid field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasUuid
+### HasEnabled
 
-`func (o *InlineResponse20041) HasUuid() bool`
+`func (o *InlineResponse20041) HasEnabled() bool`
 
-HasUuid returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetMajor
+### GetPrimarySerial
 
-`func (o *InlineResponse20041) GetMajor() int32`
+`func (o *InlineResponse20041) GetPrimarySerial() string`
 
-GetMajor returns the Major field if non-nil, zero value otherwise.
+GetPrimarySerial returns the PrimarySerial field if non-nil, zero value otherwise.
 
-### GetMajorOk
+### GetPrimarySerialOk
 
-`func (o *InlineResponse20041) GetMajorOk() (*int32, bool)`
+`func (o *InlineResponse20041) GetPrimarySerialOk() (*string, bool)`
 
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
+GetPrimarySerialOk returns a tuple with the PrimarySerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMajor
+### SetPrimarySerial
 
-`func (o *InlineResponse20041) SetMajor(v int32)`
+`func (o *InlineResponse20041) SetPrimarySerial(v string)`
 
-SetMajor sets Major field to given value.
+SetPrimarySerial sets PrimarySerial field to given value.
 
-### HasMajor
+### HasPrimarySerial
 
-`func (o *InlineResponse20041) HasMajor() bool`
+`func (o *InlineResponse20041) HasPrimarySerial() bool`
 
-HasMajor returns a boolean if a field has been set.
+HasPrimarySerial returns a boolean if a field has been set.
 
-### GetMinor
+### GetSpareSerial
 
-`func (o *InlineResponse20041) GetMinor() int32`
+`func (o *InlineResponse20041) GetSpareSerial() string`
 
-GetMinor returns the Minor field if non-nil, zero value otherwise.
+GetSpareSerial returns the SpareSerial field if non-nil, zero value otherwise.
 
-### GetMinorOk
+### GetSpareSerialOk
 
-`func (o *InlineResponse20041) GetMinorOk() (*int32, bool)`
+`func (o *InlineResponse20041) GetSpareSerialOk() (*string, bool)`
 
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
+GetSpareSerialOk returns a tuple with the SpareSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMinor
+### SetSpareSerial
 
-`func (o *InlineResponse20041) SetMinor(v int32)`
+`func (o *InlineResponse20041) SetSpareSerial(v string)`
 
-SetMinor sets Minor field to given value.
+SetSpareSerial sets SpareSerial field to given value.
 
-### HasMinor
+### HasSpareSerial
 
-`func (o *InlineResponse20041) HasMinor() bool`
+`func (o *InlineResponse20041) HasSpareSerial() bool`
 
-HasMinor returns a boolean if a field has been set.
+HasSpareSerial returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

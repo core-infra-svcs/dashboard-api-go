@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Assoc** | Pointer to **int32** | The number of failed association attempts | [optional] 
-**Auth** | Pointer to **int32** | The number of failed authentication attempts | [optional] 
-**Dhcp** | Pointer to **int32** | The number of failed DHCP attempts | [optional] 
-**Dns** | Pointer to **int32** | The number of failed DNS attempts | [optional] 
-**Success** | Pointer to **int32** | The number of successful connection attempts | [optional] 
+**Mac** | Pointer to **string** | MAC address of the client | [optional] 
+**ConnectionStats** | Pointer to [**InlineResponse200182ConnectionStats**](InlineResponse200182ConnectionStats.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse200182WithDefaults instantiates a new InlineResponse200182 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAssoc
+### GetMac
 
-`func (o *InlineResponse200182) GetAssoc() int32`
+`func (o *InlineResponse200182) GetMac() string`
 
-GetAssoc returns the Assoc field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetAssocOk
+### GetMacOk
 
-`func (o *InlineResponse200182) GetAssocOk() (*int32, bool)`
+`func (o *InlineResponse200182) GetMacOk() (*string, bool)`
 
-GetAssocOk returns a tuple with the Assoc field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssoc
+### SetMac
 
-`func (o *InlineResponse200182) SetAssoc(v int32)`
+`func (o *InlineResponse200182) SetMac(v string)`
 
-SetAssoc sets Assoc field to given value.
+SetMac sets Mac field to given value.
 
-### HasAssoc
+### HasMac
 
-`func (o *InlineResponse200182) HasAssoc() bool`
+`func (o *InlineResponse200182) HasMac() bool`
 
-HasAssoc returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetAuth
+### GetConnectionStats
 
-`func (o *InlineResponse200182) GetAuth() int32`
+`func (o *InlineResponse200182) GetConnectionStats() InlineResponse200182ConnectionStats`
 
-GetAuth returns the Auth field if non-nil, zero value otherwise.
+GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
 
-### GetAuthOk
+### GetConnectionStatsOk
 
-`func (o *InlineResponse200182) GetAuthOk() (*int32, bool)`
+`func (o *InlineResponse200182) GetConnectionStatsOk() (*InlineResponse200182ConnectionStats, bool)`
 
-GetAuthOk returns a tuple with the Auth field if it's non-nil, zero value otherwise
+GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAuth
+### SetConnectionStats
 
-`func (o *InlineResponse200182) SetAuth(v int32)`
+`func (o *InlineResponse200182) SetConnectionStats(v InlineResponse200182ConnectionStats)`
 
-SetAuth sets Auth field to given value.
+SetConnectionStats sets ConnectionStats field to given value.
 
-### HasAuth
+### HasConnectionStats
 
-`func (o *InlineResponse200182) HasAuth() bool`
+`func (o *InlineResponse200182) HasConnectionStats() bool`
 
-HasAuth returns a boolean if a field has been set.
-
-### GetDhcp
-
-`func (o *InlineResponse200182) GetDhcp() int32`
-
-GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
-
-### GetDhcpOk
-
-`func (o *InlineResponse200182) GetDhcpOk() (*int32, bool)`
-
-GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDhcp
-
-`func (o *InlineResponse200182) SetDhcp(v int32)`
-
-SetDhcp sets Dhcp field to given value.
-
-### HasDhcp
-
-`func (o *InlineResponse200182) HasDhcp() bool`
-
-HasDhcp returns a boolean if a field has been set.
-
-### GetDns
-
-`func (o *InlineResponse200182) GetDns() int32`
-
-GetDns returns the Dns field if non-nil, zero value otherwise.
-
-### GetDnsOk
-
-`func (o *InlineResponse200182) GetDnsOk() (*int32, bool)`
-
-GetDnsOk returns a tuple with the Dns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDns
-
-`func (o *InlineResponse200182) SetDns(v int32)`
-
-SetDns sets Dns field to given value.
-
-### HasDns
-
-`func (o *InlineResponse200182) HasDns() bool`
-
-HasDns returns a boolean if a field has been set.
-
-### GetSuccess
-
-`func (o *InlineResponse200182) GetSuccess() int32`
-
-GetSuccess returns the Success field if non-nil, zero value otherwise.
-
-### GetSuccessOk
-
-`func (o *InlineResponse200182) GetSuccessOk() (*int32, bool)`
-
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSuccess
-
-`func (o *InlineResponse200182) SetSuccess(v int32)`
-
-SetSuccess sets Success field to given value.
-
-### HasSuccess
-
-`func (o *InlineResponse200182) HasSuccess() bool`
-
-HasSuccess returns a boolean if a field has been set.
+HasConnectionStats returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

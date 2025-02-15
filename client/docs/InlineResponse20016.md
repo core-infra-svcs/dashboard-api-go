@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Sims** | Pointer to [**[]InlineResponse20016Sims**](InlineResponse20016Sims.md) | List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged. | [optional] 
-**SimOrdering** | Pointer to **[]string** | Specifies the ordering of all SIMs for an MG: primary, secondary, and not-in-use (when applicable). It&#39;s required for devices with 3 or more SIMs and can be used in place of &#39;isPrimary&#39; for dual-SIM devices. To indicate eSIM, use &#39;sim3&#39;. Sim failover will occur only between primary and secondary sim slots. | [optional] 
-**SimFailover** | Pointer to [**InlineResponse20016SimFailover**](InlineResponse20016SimFailover.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Whether custom analytics is enabled | [optional] 
+**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
+**Parameters** | Pointer to [**[]InlineResponse20016Parameters**](InlineResponse20016Parameters.md) | Parameters for the custom analytics workload | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20016WithDefaults instantiates a new InlineResponse20016 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSims
+### GetEnabled
 
-`func (o *InlineResponse20016) GetSims() []InlineResponse20016Sims`
+`func (o *InlineResponse20016) GetEnabled() bool`
 
-GetSims returns the Sims field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetSimsOk
+### GetEnabledOk
 
-`func (o *InlineResponse20016) GetSimsOk() (*[]InlineResponse20016Sims, bool)`
+`func (o *InlineResponse20016) GetEnabledOk() (*bool, bool)`
 
-GetSimsOk returns a tuple with the Sims field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSims
+### SetEnabled
 
-`func (o *InlineResponse20016) SetSims(v []InlineResponse20016Sims)`
+`func (o *InlineResponse20016) SetEnabled(v bool)`
 
-SetSims sets Sims field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasSims
+### HasEnabled
 
-`func (o *InlineResponse20016) HasSims() bool`
+`func (o *InlineResponse20016) HasEnabled() bool`
 
-HasSims returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetSimOrdering
+### GetArtifactId
 
-`func (o *InlineResponse20016) GetSimOrdering() []string`
+`func (o *InlineResponse20016) GetArtifactId() string`
 
-GetSimOrdering returns the SimOrdering field if non-nil, zero value otherwise.
+GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
 
-### GetSimOrderingOk
+### GetArtifactIdOk
 
-`func (o *InlineResponse20016) GetSimOrderingOk() (*[]string, bool)`
+`func (o *InlineResponse20016) GetArtifactIdOk() (*string, bool)`
 
-GetSimOrderingOk returns a tuple with the SimOrdering field if it's non-nil, zero value otherwise
+GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSimOrdering
+### SetArtifactId
 
-`func (o *InlineResponse20016) SetSimOrdering(v []string)`
+`func (o *InlineResponse20016) SetArtifactId(v string)`
 
-SetSimOrdering sets SimOrdering field to given value.
+SetArtifactId sets ArtifactId field to given value.
 
-### HasSimOrdering
+### HasArtifactId
 
-`func (o *InlineResponse20016) HasSimOrdering() bool`
+`func (o *InlineResponse20016) HasArtifactId() bool`
 
-HasSimOrdering returns a boolean if a field has been set.
+HasArtifactId returns a boolean if a field has been set.
 
-### GetSimFailover
+### GetParameters
 
-`func (o *InlineResponse20016) GetSimFailover() InlineResponse20016SimFailover`
+`func (o *InlineResponse20016) GetParameters() []InlineResponse20016Parameters`
 
-GetSimFailover returns the SimFailover field if non-nil, zero value otherwise.
+GetParameters returns the Parameters field if non-nil, zero value otherwise.
 
-### GetSimFailoverOk
+### GetParametersOk
 
-`func (o *InlineResponse20016) GetSimFailoverOk() (*InlineResponse20016SimFailover, bool)`
+`func (o *InlineResponse20016) GetParametersOk() (*[]InlineResponse20016Parameters, bool)`
 
-GetSimFailoverOk returns a tuple with the SimFailover field if it's non-nil, zero value otherwise
+GetParametersOk returns a tuple with the Parameters field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSimFailover
+### SetParameters
 
-`func (o *InlineResponse20016) SetSimFailover(v InlineResponse20016SimFailover)`
+`func (o *InlineResponse20016) SetParameters(v []InlineResponse20016Parameters)`
 
-SetSimFailover sets SimFailover field to given value.
+SetParameters sets Parameters field to given value.
 
-### HasSimFailover
+### HasParameters
 
-`func (o *InlineResponse20016) HasSimFailover() bool`
+`func (o *InlineResponse20016) HasParameters() bool`
 
-HasSimFailover returns a boolean if a field has been set.
+HasParameters returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

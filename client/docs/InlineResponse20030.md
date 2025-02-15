@@ -4,13 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CommandId** | Pointer to **string** | ID to check the status of the command request | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Time when the command was triggered | [optional] 
-**CompletedAt** | Pointer to **time.Time** | Time when the command was completed | [optional] 
-**CreatedBy** | Pointer to [**DevicesSerialSensorCommandsCreatedBy**](DevicesSerialSensorCommandsCreatedBy.md) |  | [optional] 
-**Operation** | Pointer to **string** | Operation run on the sensor | [optional] 
-**Status** | Pointer to **string** | Status of the command request | [optional] 
-**Errors** | Pointer to **[]string** | Array of errors if failed | [optional] 
+**StartTime** | Pointer to **time.Time** | Start time of the sample | [optional] 
+**EndTime** | Pointer to **time.Time** | End time of the sample | [optional] 
+**LossPercent** | Pointer to **float32** | Percentage of packets lost | [optional] 
+**LatencyMs** | Pointer to **float32** | Latency in milliseconds | [optional] 
+**Goodput** | Pointer to **int32** | Number of useful information bits delivered | [optional] 
+**Jitter** | Pointer to **float32** | Jitter, in milliseconds | [optional] 
 
 ## Methods
 
@@ -31,180 +30,155 @@ NewInlineResponse20030WithDefaults instantiates a new InlineResponse20030 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCommandId
+### GetStartTime
 
-`func (o *InlineResponse20030) GetCommandId() string`
+`func (o *InlineResponse20030) GetStartTime() time.Time`
 
-GetCommandId returns the CommandId field if non-nil, zero value otherwise.
+GetStartTime returns the StartTime field if non-nil, zero value otherwise.
 
-### GetCommandIdOk
+### GetStartTimeOk
 
-`func (o *InlineResponse20030) GetCommandIdOk() (*string, bool)`
+`func (o *InlineResponse20030) GetStartTimeOk() (*time.Time, bool)`
 
-GetCommandIdOk returns a tuple with the CommandId field if it's non-nil, zero value otherwise
+GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCommandId
+### SetStartTime
 
-`func (o *InlineResponse20030) SetCommandId(v string)`
+`func (o *InlineResponse20030) SetStartTime(v time.Time)`
 
-SetCommandId sets CommandId field to given value.
+SetStartTime sets StartTime field to given value.
 
-### HasCommandId
+### HasStartTime
 
-`func (o *InlineResponse20030) HasCommandId() bool`
+`func (o *InlineResponse20030) HasStartTime() bool`
 
-HasCommandId returns a boolean if a field has been set.
+HasStartTime returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetEndTime
 
-`func (o *InlineResponse20030) GetCreatedAt() time.Time`
+`func (o *InlineResponse20030) GetEndTime() time.Time`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetEndTime returns the EndTime field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetEndTimeOk
 
-`func (o *InlineResponse20030) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse20030) GetEndTimeOk() (*time.Time, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetEndTime
 
-`func (o *InlineResponse20030) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse20030) SetEndTime(v time.Time)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetEndTime sets EndTime field to given value.
 
-### HasCreatedAt
+### HasEndTime
 
-`func (o *InlineResponse20030) HasCreatedAt() bool`
+`func (o *InlineResponse20030) HasEndTime() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasEndTime returns a boolean if a field has been set.
 
-### GetCompletedAt
+### GetLossPercent
 
-`func (o *InlineResponse20030) GetCompletedAt() time.Time`
+`func (o *InlineResponse20030) GetLossPercent() float32`
 
-GetCompletedAt returns the CompletedAt field if non-nil, zero value otherwise.
+GetLossPercent returns the LossPercent field if non-nil, zero value otherwise.
 
-### GetCompletedAtOk
+### GetLossPercentOk
 
-`func (o *InlineResponse20030) GetCompletedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse20030) GetLossPercentOk() (*float32, bool)`
 
-GetCompletedAtOk returns a tuple with the CompletedAt field if it's non-nil, zero value otherwise
+GetLossPercentOk returns a tuple with the LossPercent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCompletedAt
+### SetLossPercent
 
-`func (o *InlineResponse20030) SetCompletedAt(v time.Time)`
+`func (o *InlineResponse20030) SetLossPercent(v float32)`
 
-SetCompletedAt sets CompletedAt field to given value.
+SetLossPercent sets LossPercent field to given value.
 
-### HasCompletedAt
+### HasLossPercent
 
-`func (o *InlineResponse20030) HasCompletedAt() bool`
+`func (o *InlineResponse20030) HasLossPercent() bool`
 
-HasCompletedAt returns a boolean if a field has been set.
+HasLossPercent returns a boolean if a field has been set.
 
-### GetCreatedBy
+### GetLatencyMs
 
-`func (o *InlineResponse20030) GetCreatedBy() DevicesSerialSensorCommandsCreatedBy`
+`func (o *InlineResponse20030) GetLatencyMs() float32`
 
-GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
+GetLatencyMs returns the LatencyMs field if non-nil, zero value otherwise.
 
-### GetCreatedByOk
+### GetLatencyMsOk
 
-`func (o *InlineResponse20030) GetCreatedByOk() (*DevicesSerialSensorCommandsCreatedBy, bool)`
+`func (o *InlineResponse20030) GetLatencyMsOk() (*float32, bool)`
 
-GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
+GetLatencyMsOk returns a tuple with the LatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedBy
+### SetLatencyMs
 
-`func (o *InlineResponse20030) SetCreatedBy(v DevicesSerialSensorCommandsCreatedBy)`
+`func (o *InlineResponse20030) SetLatencyMs(v float32)`
 
-SetCreatedBy sets CreatedBy field to given value.
+SetLatencyMs sets LatencyMs field to given value.
 
-### HasCreatedBy
+### HasLatencyMs
 
-`func (o *InlineResponse20030) HasCreatedBy() bool`
+`func (o *InlineResponse20030) HasLatencyMs() bool`
 
-HasCreatedBy returns a boolean if a field has been set.
+HasLatencyMs returns a boolean if a field has been set.
 
-### GetOperation
+### GetGoodput
 
-`func (o *InlineResponse20030) GetOperation() string`
+`func (o *InlineResponse20030) GetGoodput() int32`
 
-GetOperation returns the Operation field if non-nil, zero value otherwise.
+GetGoodput returns the Goodput field if non-nil, zero value otherwise.
 
-### GetOperationOk
+### GetGoodputOk
 
-`func (o *InlineResponse20030) GetOperationOk() (*string, bool)`
+`func (o *InlineResponse20030) GetGoodputOk() (*int32, bool)`
 
-GetOperationOk returns a tuple with the Operation field if it's non-nil, zero value otherwise
+GetGoodputOk returns a tuple with the Goodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOperation
+### SetGoodput
 
-`func (o *InlineResponse20030) SetOperation(v string)`
+`func (o *InlineResponse20030) SetGoodput(v int32)`
 
-SetOperation sets Operation field to given value.
+SetGoodput sets Goodput field to given value.
 
-### HasOperation
+### HasGoodput
 
-`func (o *InlineResponse20030) HasOperation() bool`
+`func (o *InlineResponse20030) HasGoodput() bool`
 
-HasOperation returns a boolean if a field has been set.
+HasGoodput returns a boolean if a field has been set.
 
-### GetStatus
+### GetJitter
 
-`func (o *InlineResponse20030) GetStatus() string`
+`func (o *InlineResponse20030) GetJitter() float32`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetJitter returns the Jitter field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetJitterOk
 
-`func (o *InlineResponse20030) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20030) GetJitterOk() (*float32, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetJitterOk returns a tuple with the Jitter field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetJitter
 
-`func (o *InlineResponse20030) SetStatus(v string)`
+`func (o *InlineResponse20030) SetJitter(v float32)`
 
-SetStatus sets Status field to given value.
+SetJitter sets Jitter field to given value.
 
-### HasStatus
+### HasJitter
 
-`func (o *InlineResponse20030) HasStatus() bool`
+`func (o *InlineResponse20030) HasJitter() bool`
 
-HasStatus returns a boolean if a field has been set.
-
-### GetErrors
-
-`func (o *InlineResponse20030) GetErrors() []string`
-
-GetErrors returns the Errors field if non-nil, zero value otherwise.
-
-### GetErrorsOk
-
-`func (o *InlineResponse20030) GetErrorsOk() (*[]string, bool)`
-
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetErrors
-
-`func (o *InlineResponse20030) SetErrors(v []string)`
-
-SetErrors sets Errors field to given value.
-
-### HasErrors
-
-`func (o *InlineResponse20030) HasErrors() bool`
-
-HasErrors returns a boolean if a field has been set.
+HasJitter returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

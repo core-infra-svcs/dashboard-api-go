@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to **bool** | Boolean indicating whether the operation was completed successfully. | [optional] 
+**Restrictions** | Pointer to [**[]InlineResponse200135Restrictions**](InlineResponse200135Restrictions.md) | The list of restrictions for the device | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200135WithDefaults instantiates a new InlineResponse200135 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSuccess
+### GetRestrictions
 
-`func (o *InlineResponse200135) GetSuccess() bool`
+`func (o *InlineResponse200135) GetRestrictions() []InlineResponse200135Restrictions`
 
-GetSuccess returns the Success field if non-nil, zero value otherwise.
+GetRestrictions returns the Restrictions field if non-nil, zero value otherwise.
 
-### GetSuccessOk
+### GetRestrictionsOk
 
-`func (o *InlineResponse200135) GetSuccessOk() (*bool, bool)`
+`func (o *InlineResponse200135) GetRestrictionsOk() (*[]InlineResponse200135Restrictions, bool)`
 
-GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
+GetRestrictionsOk returns a tuple with the Restrictions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSuccess
+### SetRestrictions
 
-`func (o *InlineResponse200135) SetSuccess(v bool)`
+`func (o *InlineResponse200135) SetRestrictions(v []InlineResponse200135Restrictions)`
 
-SetSuccess sets Success field to given value.
+SetRestrictions sets Restrictions field to given value.
 
-### HasSuccess
+### HasRestrictions
 
-`func (o *InlineResponse200135) HasSuccess() bool`
+`func (o *InlineResponse200135) HasRestrictions() bool`
 
-HasSuccess returns a boolean if a field has been set.
+HasRestrictions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

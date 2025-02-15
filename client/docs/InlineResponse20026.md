@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WakeOnLanId** | Pointer to **string** | ID of the Wake-on-LAN job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request | [optional] 
-**Status** | Pointer to **string** | Status of the Wake-on-LAN request | [optional] 
-**Request** | Pointer to [**InlineResponse2017Request**](InlineResponse2017Request.md) |  | [optional] 
-**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
+**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**Request** | Pointer to [**InlineResponse2015Request**](InlineResponse2015Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ping request. | [optional] 
+**Results** | Pointer to [**InlineResponse20025Results**](InlineResponse20025Results.md) |  | [optional] 
+**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
@@ -29,30 +30,30 @@ NewInlineResponse20026WithDefaults instantiates a new InlineResponse20026 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWakeOnLanId
+### GetPingId
 
-`func (o *InlineResponse20026) GetWakeOnLanId() string`
+`func (o *InlineResponse20026) GetPingId() string`
 
-GetWakeOnLanId returns the WakeOnLanId field if non-nil, zero value otherwise.
+GetPingId returns the PingId field if non-nil, zero value otherwise.
 
-### GetWakeOnLanIdOk
+### GetPingIdOk
 
-`func (o *InlineResponse20026) GetWakeOnLanIdOk() (*string, bool)`
+`func (o *InlineResponse20026) GetPingIdOk() (*string, bool)`
 
-GetWakeOnLanIdOk returns a tuple with the WakeOnLanId field if it's non-nil, zero value otherwise
+GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWakeOnLanId
+### SetPingId
 
-`func (o *InlineResponse20026) SetWakeOnLanId(v string)`
+`func (o *InlineResponse20026) SetPingId(v string)`
 
-SetWakeOnLanId sets WakeOnLanId field to given value.
+SetPingId sets PingId field to given value.
 
-### HasWakeOnLanId
+### HasPingId
 
-`func (o *InlineResponse20026) HasWakeOnLanId() bool`
+`func (o *InlineResponse20026) HasPingId() bool`
 
-HasWakeOnLanId returns a boolean if a field has been set.
+HasPingId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -79,6 +80,31 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### GetRequest
+
+`func (o *InlineResponse20026) GetRequest() InlineResponse2015Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20026) GetRequestOk() (*InlineResponse2015Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20026) SetRequest(v InlineResponse2015Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20026) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
 ### GetStatus
 
 `func (o *InlineResponse20026) GetStatus() string`
@@ -104,55 +130,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetRequest
+### GetResults
 
-`func (o *InlineResponse20026) GetRequest() InlineResponse2017Request`
+`func (o *InlineResponse20026) GetResults() InlineResponse20025Results`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetResults returns the Results field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetResultsOk
 
-`func (o *InlineResponse20026) GetRequestOk() (*InlineResponse2017Request, bool)`
+`func (o *InlineResponse20026) GetResultsOk() (*InlineResponse20025Results, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetResults
 
-`func (o *InlineResponse20026) SetRequest(v InlineResponse2017Request)`
+`func (o *InlineResponse20026) SetResults(v InlineResponse20025Results)`
 
-SetRequest sets Request field to given value.
+SetResults sets Results field to given value.
 
-### HasRequest
+### HasResults
 
-`func (o *InlineResponse20026) HasRequest() bool`
+`func (o *InlineResponse20026) HasResults() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasResults returns a boolean if a field has been set.
 
-### GetError
+### GetCallback
 
-`func (o *InlineResponse20026) GetError() string`
+`func (o *InlineResponse20026) GetCallback() InlineResponse2011Callback`
 
-GetError returns the Error field if non-nil, zero value otherwise.
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-### GetErrorOk
+### GetCallbackOk
 
-`func (o *InlineResponse20026) GetErrorOk() (*string, bool)`
+`func (o *InlineResponse20026) GetCallbackOk() (*InlineResponse2011Callback, bool)`
 
-GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetError
+### SetCallback
 
-`func (o *InlineResponse20026) SetError(v string)`
+`func (o *InlineResponse20026) SetCallback(v InlineResponse2011Callback)`
 
-SetError sets Error field to given value.
+SetCallback sets Callback field to given value.
 
-### HasError
+### HasCallback
 
-`func (o *InlineResponse20026) HasError() bool`
+`func (o *InlineResponse20026) HasCallback() bool`
 
-HasError returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

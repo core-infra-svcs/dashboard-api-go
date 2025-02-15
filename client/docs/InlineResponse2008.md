@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Interfaces** | Pointer to [**InlineResponse2008Interfaces**](InlineResponse2008Interfaces.md) |  | [optional] 
+**PerfScore** | Pointer to **float32** | Utilization for the MX device | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse2008WithDefaults instantiates a new InlineResponse2008 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetInterfaces
+### GetPerfScore
 
-`func (o *InlineResponse2008) GetInterfaces() InlineResponse2008Interfaces`
+`func (o *InlineResponse2008) GetPerfScore() float32`
 
-GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
+GetPerfScore returns the PerfScore field if non-nil, zero value otherwise.
 
-### GetInterfacesOk
+### GetPerfScoreOk
 
-`func (o *InlineResponse2008) GetInterfacesOk() (*InlineResponse2008Interfaces, bool)`
+`func (o *InlineResponse2008) GetPerfScoreOk() (*float32, bool)`
 
-GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
+GetPerfScoreOk returns a tuple with the PerfScore field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInterfaces
+### SetPerfScore
 
-`func (o *InlineResponse2008) SetInterfaces(v InlineResponse2008Interfaces)`
+`func (o *InlineResponse2008) SetPerfScore(v float32)`
 
-SetInterfaces sets Interfaces field to given value.
+SetPerfScore sets PerfScore field to given value.
 
-### HasInterfaces
+### HasPerfScore
 
-`func (o *InlineResponse2008) HasInterfaces() bool`
+`func (o *InlineResponse2008) HasPerfScore() bool`
 
-HasInterfaces returns a boolean if a field has been set.
+HasPerfScore returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

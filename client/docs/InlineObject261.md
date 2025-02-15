@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
-**ObjectIds** | Pointer to **[]int32** | A list of Policy Object ID&#39;s that this NetworkObjectGroup should be associated to (note: these ID&#39;s will replace the existing associated Policy Objects) | [optional] 
+**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
+**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
 
 ## Methods
 
 ### NewInlineObject261
 
-`func NewInlineObject261() *InlineObject261`
+`func NewInlineObject261(destOrganizationId string, licenseIds []string, ) *InlineObject261`
 
 NewInlineObject261 instantiates a new InlineObject261 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject261WithDefaults instantiates a new InlineObject261 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDestOrganizationId
 
-`func (o *InlineObject261) GetName() string`
+`func (o *InlineObject261) GetDestOrganizationId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDestOrganizationIdOk
 
-`func (o *InlineObject261) GetNameOk() (*string, bool)`
+`func (o *InlineObject261) GetDestOrganizationIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDestOrganizationId
 
-`func (o *InlineObject261) SetName(v string)`
+`func (o *InlineObject261) SetDestOrganizationId(v string)`
 
-SetName sets Name field to given value.
+SetDestOrganizationId sets DestOrganizationId field to given value.
 
-### HasName
 
-`func (o *InlineObject261) HasName() bool`
+### GetLicenseIds
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject261) GetLicenseIds() []string`
 
-### GetObjectIds
+GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
 
-`func (o *InlineObject261) GetObjectIds() []int32`
+### GetLicenseIdsOk
 
-GetObjectIds returns the ObjectIds field if non-nil, zero value otherwise.
+`func (o *InlineObject261) GetLicenseIdsOk() (*[]string, bool)`
 
-### GetObjectIdsOk
-
-`func (o *InlineObject261) GetObjectIdsOk() (*[]int32, bool)`
-
-GetObjectIdsOk returns a tuple with the ObjectIds field if it's non-nil, zero value otherwise
+GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetObjectIds
+### SetLicenseIds
 
-`func (o *InlineObject261) SetObjectIds(v []int32)`
+`func (o *InlineObject261) SetLicenseIds(v []string)`
 
-SetObjectIds sets ObjectIds field to given value.
+SetLicenseIds sets LicenseIds field to given value.
 
-### HasObjectIds
-
-`func (o *InlineObject261) HasObjectIds() bool`
-
-HasObjectIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

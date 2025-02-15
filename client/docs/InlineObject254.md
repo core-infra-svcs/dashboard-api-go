@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceSerial** | Pointer to **string** | The serial number of the device to assign this license to. Set this to  null to unassign the license. If a different license is already active on the device, this parameter will control queueing/dequeuing this license. | [optional] 
+**Orders** | Pointer to **[]string** | The numbers of the orders that should be claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices that should be claimed | [optional] 
+**Licenses** | Pointer to [**[]OrganizationsOrganizationIdInventoryClaimLicenses**](OrganizationsOrganizationIdInventoryClaimLicenses.md) | The licenses that should be claimed | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineObject254WithDefaults instantiates a new InlineObject254 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeviceSerial
+### GetOrders
 
-`func (o *InlineObject254) GetDeviceSerial() string`
+`func (o *InlineObject254) GetOrders() []string`
 
-GetDeviceSerial returns the DeviceSerial field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetDeviceSerialOk
+### GetOrdersOk
 
-`func (o *InlineObject254) GetDeviceSerialOk() (*string, bool)`
+`func (o *InlineObject254) GetOrdersOk() (*[]string, bool)`
 
-GetDeviceSerialOk returns a tuple with the DeviceSerial field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceSerial
+### SetOrders
 
-`func (o *InlineObject254) SetDeviceSerial(v string)`
+`func (o *InlineObject254) SetOrders(v []string)`
 
-SetDeviceSerial sets DeviceSerial field to given value.
+SetOrders sets Orders field to given value.
 
-### HasDeviceSerial
+### HasOrders
 
-`func (o *InlineObject254) HasDeviceSerial() bool`
+`func (o *InlineObject254) HasOrders() bool`
 
-HasDeviceSerial returns a boolean if a field has been set.
+HasOrders returns a boolean if a field has been set.
+
+### GetSerials
+
+`func (o *InlineObject254) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineObject254) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineObject254) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
+### HasSerials
+
+`func (o *InlineObject254) HasSerials() bool`
+
+HasSerials returns a boolean if a field has been set.
+
+### GetLicenses
+
+`func (o *InlineObject254) GetLicenses() []OrganizationsOrganizationIdInventoryClaimLicenses`
+
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+
+### GetLicensesOk
+
+`func (o *InlineObject254) GetLicensesOk() (*[]OrganizationsOrganizationIdInventoryClaimLicenses, bool)`
+
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenses
+
+`func (o *InlineObject254) SetLicenses(v []OrganizationsOrganizationIdInventoryClaimLicenses)`
+
+SetLicenses sets Licenses field to given value.
+
+### HasLicenses
+
+`func (o *InlineObject254) HasLicenses() bool`
+
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

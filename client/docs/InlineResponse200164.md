@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BroadcastThreshold** | Pointer to **int32** | Broadcast threshold. | [optional] 
-**MulticastThreshold** | Pointer to **int32** | Multicast threshold. | [optional] 
-**UnknownUnicastThreshold** | Pointer to **int32** | Unknown Unicast threshold. | [optional] 
-**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]InlineResponse200164PowerExceptions**](InlineResponse200164PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
+**UplinkClientSampling** | Pointer to [**InlineResponse200164UplinkClientSampling**](InlineResponse200164UplinkClientSampling.md) |  | [optional] 
+**MacBlocklist** | Pointer to [**InlineResponse200164MacBlocklist**](InlineResponse200164MacBlocklist.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200164WithDefaults instantiates a new InlineResponse200164 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBroadcastThreshold
+### GetVlan
 
-`func (o *InlineResponse200164) GetBroadcastThreshold() int32`
+`func (o *InlineResponse200164) GetVlan() int32`
 
-GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetBroadcastThresholdOk
+### GetVlanOk
 
-`func (o *InlineResponse200164) GetBroadcastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200164) GetVlanOk() (*int32, bool)`
 
-GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBroadcastThreshold
+### SetVlan
 
-`func (o *InlineResponse200164) SetBroadcastThreshold(v int32)`
+`func (o *InlineResponse200164) SetVlan(v int32)`
 
-SetBroadcastThreshold sets BroadcastThreshold field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasBroadcastThreshold
+### HasVlan
 
-`func (o *InlineResponse200164) HasBroadcastThreshold() bool`
+`func (o *InlineResponse200164) HasVlan() bool`
 
-HasBroadcastThreshold returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetMulticastThreshold
+### GetUseCombinedPower
 
-`func (o *InlineResponse200164) GetMulticastThreshold() int32`
+`func (o *InlineResponse200164) GetUseCombinedPower() bool`
 
-GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-### GetMulticastThresholdOk
+### GetUseCombinedPowerOk
 
-`func (o *InlineResponse200164) GetMulticastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200164) GetUseCombinedPowerOk() (*bool, bool)`
 
-GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMulticastThreshold
+### SetUseCombinedPower
 
-`func (o *InlineResponse200164) SetMulticastThreshold(v int32)`
+`func (o *InlineResponse200164) SetUseCombinedPower(v bool)`
 
-SetMulticastThreshold sets MulticastThreshold field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasMulticastThreshold
+### HasUseCombinedPower
 
-`func (o *InlineResponse200164) HasMulticastThreshold() bool`
+`func (o *InlineResponse200164) HasUseCombinedPower() bool`
 
-HasMulticastThreshold returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetUnknownUnicastThreshold
+### GetPowerExceptions
 
-`func (o *InlineResponse200164) GetUnknownUnicastThreshold() int32`
+`func (o *InlineResponse200164) GetPowerExceptions() []InlineResponse200164PowerExceptions`
 
-GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetUnknownUnicastThresholdOk
+### GetPowerExceptionsOk
 
-`func (o *InlineResponse200164) GetUnknownUnicastThresholdOk() (*int32, bool)`
+`func (o *InlineResponse200164) GetPowerExceptionsOk() (*[]InlineResponse200164PowerExceptions, bool)`
 
-GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUnknownUnicastThreshold
+### SetPowerExceptions
 
-`func (o *InlineResponse200164) SetUnknownUnicastThreshold(v int32)`
+`func (o *InlineResponse200164) SetPowerExceptions(v []InlineResponse200164PowerExceptions)`
 
-SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasUnknownUnicastThreshold
+### HasPowerExceptions
 
-`func (o *InlineResponse200164) HasUnknownUnicastThreshold() bool`
+`func (o *InlineResponse200164) HasPowerExceptions() bool`
 
-HasUnknownUnicastThreshold returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
-### GetTreatTheseTrafficTypesAsOneThreshold
+### GetUplinkClientSampling
 
-`func (o *InlineResponse200164) GetTreatTheseTrafficTypesAsOneThreshold() []string`
+`func (o *InlineResponse200164) GetUplinkClientSampling() InlineResponse200164UplinkClientSampling`
 
-GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
+GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
 
-### GetTreatTheseTrafficTypesAsOneThresholdOk
+### GetUplinkClientSamplingOk
 
-`func (o *InlineResponse200164) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
+`func (o *InlineResponse200164) GetUplinkClientSamplingOk() (*InlineResponse200164UplinkClientSampling, bool)`
 
-GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
+GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTreatTheseTrafficTypesAsOneThreshold
+### SetUplinkClientSampling
 
-`func (o *InlineResponse200164) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
+`func (o *InlineResponse200164) SetUplinkClientSampling(v InlineResponse200164UplinkClientSampling)`
 
-SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
+SetUplinkClientSampling sets UplinkClientSampling field to given value.
 
-### HasTreatTheseTrafficTypesAsOneThreshold
+### HasUplinkClientSampling
 
-`func (o *InlineResponse200164) HasTreatTheseTrafficTypesAsOneThreshold() bool`
+`func (o *InlineResponse200164) HasUplinkClientSampling() bool`
 
-HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
+HasUplinkClientSampling returns a boolean if a field has been set.
+
+### GetMacBlocklist
+
+`func (o *InlineResponse200164) GetMacBlocklist() InlineResponse200164MacBlocklist`
+
+GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
+
+### GetMacBlocklistOk
+
+`func (o *InlineResponse200164) GetMacBlocklistOk() (*InlineResponse200164MacBlocklist, bool)`
+
+GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMacBlocklist
+
+`func (o *InlineResponse200164) SetMacBlocklist(v InlineResponse200164MacBlocklist)`
+
+SetMacBlocklist sets MacBlocklist field to given value.
+
+### HasMacBlocklist
+
+`func (o *InlineResponse200164) HasMacBlocklist() bool`
+
+HasMacBlocklist returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

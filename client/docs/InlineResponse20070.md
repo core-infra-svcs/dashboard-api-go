@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Whether BGP is enabled on the appliance | [optional] 
-**AsNumber** | Pointer to **int32** | The number of the Autonomous System to which the appliance belongs | [optional] 
-**IbgpHoldTimer** | Pointer to **int32** | The iBGP hold time in seconds | [optional] 
-**Neighbors** | Pointer to [**[]InlineResponse20070Neighbors**](InlineResponse20070Neighbors.md) | List of eBGP neighbor configurations | [optional] 
+**StartTime** | Pointer to **time.Time** | Start time of interval | [optional] 
+**EndTime** | Pointer to **time.Time** | End time of interval | [optional] 
+**ByInterface** | Pointer to [**[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface**](NetworksNetworkIdApplianceUplinksUsageHistoryByInterface.md) | List of usage data for each interface | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse20070WithDefaults instantiates a new InlineResponse20070 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetStartTime
 
-`func (o *InlineResponse20070) GetEnabled() bool`
+`func (o *InlineResponse20070) GetStartTime() time.Time`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetStartTime returns the StartTime field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetStartTimeOk
 
-`func (o *InlineResponse20070) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20070) GetStartTimeOk() (*time.Time, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetStartTime
 
-`func (o *InlineResponse20070) SetEnabled(v bool)`
+`func (o *InlineResponse20070) SetStartTime(v time.Time)`
 
-SetEnabled sets Enabled field to given value.
+SetStartTime sets StartTime field to given value.
 
-### HasEnabled
+### HasStartTime
 
-`func (o *InlineResponse20070) HasEnabled() bool`
+`func (o *InlineResponse20070) HasStartTime() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasStartTime returns a boolean if a field has been set.
 
-### GetAsNumber
+### GetEndTime
 
-`func (o *InlineResponse20070) GetAsNumber() int32`
+`func (o *InlineResponse20070) GetEndTime() time.Time`
 
-GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
+GetEndTime returns the EndTime field if non-nil, zero value otherwise.
 
-### GetAsNumberOk
+### GetEndTimeOk
 
-`func (o *InlineResponse20070) GetAsNumberOk() (*int32, bool)`
+`func (o *InlineResponse20070) GetEndTimeOk() (*time.Time, bool)`
 
-GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
+GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAsNumber
+### SetEndTime
 
-`func (o *InlineResponse20070) SetAsNumber(v int32)`
+`func (o *InlineResponse20070) SetEndTime(v time.Time)`
 
-SetAsNumber sets AsNumber field to given value.
+SetEndTime sets EndTime field to given value.
 
-### HasAsNumber
+### HasEndTime
 
-`func (o *InlineResponse20070) HasAsNumber() bool`
+`func (o *InlineResponse20070) HasEndTime() bool`
 
-HasAsNumber returns a boolean if a field has been set.
+HasEndTime returns a boolean if a field has been set.
 
-### GetIbgpHoldTimer
+### GetByInterface
 
-`func (o *InlineResponse20070) GetIbgpHoldTimer() int32`
+`func (o *InlineResponse20070) GetByInterface() []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface`
 
-GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
+GetByInterface returns the ByInterface field if non-nil, zero value otherwise.
 
-### GetIbgpHoldTimerOk
+### GetByInterfaceOk
 
-`func (o *InlineResponse20070) GetIbgpHoldTimerOk() (*int32, bool)`
+`func (o *InlineResponse20070) GetByInterfaceOk() (*[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface, bool)`
 
-GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
+GetByInterfaceOk returns a tuple with the ByInterface field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIbgpHoldTimer
+### SetByInterface
 
-`func (o *InlineResponse20070) SetIbgpHoldTimer(v int32)`
+`func (o *InlineResponse20070) SetByInterface(v []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface)`
 
-SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
+SetByInterface sets ByInterface field to given value.
 
-### HasIbgpHoldTimer
+### HasByInterface
 
-`func (o *InlineResponse20070) HasIbgpHoldTimer() bool`
+`func (o *InlineResponse20070) HasByInterface() bool`
 
-HasIbgpHoldTimer returns a boolean if a field has been set.
-
-### GetNeighbors
-
-`func (o *InlineResponse20070) GetNeighbors() []InlineResponse20070Neighbors`
-
-GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
-
-### GetNeighborsOk
-
-`func (o *InlineResponse20070) GetNeighborsOk() (*[]InlineResponse20070Neighbors, bool)`
-
-GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNeighbors
-
-`func (o *InlineResponse20070) SetNeighbors(v []InlineResponse20070Neighbors)`
-
-SetNeighbors sets Neighbors field to given value.
-
-### HasNeighbors
-
-`func (o *InlineResponse20070) HasNeighbors() bool`
-
-HasNeighbors returns a boolean if a field has been set.
+HasByInterface returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

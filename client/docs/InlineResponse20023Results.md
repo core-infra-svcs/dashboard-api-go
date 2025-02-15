@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Sent** | Pointer to **int32** | Number of packets sent | [optional] 
-**Received** | Pointer to **int32** | Number of packets received | [optional] 
-**Loss** | Pointer to [**InlineResponse20023ResultsLoss**](InlineResponse20023ResultsLoss.md) |  | [optional] 
-**Latencies** | Pointer to [**InlineResponse20023ResultsLatencies**](InlineResponse20023ResultsLatencies.md) |  | [optional] 
-**Replies** | Pointer to [**[]InlineResponse20023ResultsReplies**](InlineResponse20023ResultsReplies.md) | Received packets | [optional] 
+**Port** | Pointer to **string** | The port for which the test was performed. | [optional] 
+**Status** | Pointer to **string** | The current status of the port. If the cable test is still being performed on the port, \&quot;in-progress\&quot; is used. If an error occurred during the cable test, \&quot;error\&quot; is used and the error property will be populated. | [optional] 
+**SpeedMbps** | Pointer to **int32** | Speed in Mbps.  A speed of 0 indicates the port is down or the port speed is automatic. | [optional] 
+**Error** | Pointer to **string** | If an error occurred during the cable test, the error message will be populated here. | [optional] 
+**Pairs** | Pointer to [**[]InlineResponse20023Pairs**](InlineResponse20023Pairs.md) | Results for each twisted pair within the cable. | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse20023ResultsWithDefaults instantiates a new InlineResponse20023
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSent
+### GetPort
 
-`func (o *InlineResponse20023Results) GetSent() int32`
+`func (o *InlineResponse20023Results) GetPort() string`
 
-GetSent returns the Sent field if non-nil, zero value otherwise.
+GetPort returns the Port field if non-nil, zero value otherwise.
 
-### GetSentOk
+### GetPortOk
 
-`func (o *InlineResponse20023Results) GetSentOk() (*int32, bool)`
+`func (o *InlineResponse20023Results) GetPortOk() (*string, bool)`
 
-GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSent
+### SetPort
 
-`func (o *InlineResponse20023Results) SetSent(v int32)`
+`func (o *InlineResponse20023Results) SetPort(v string)`
 
-SetSent sets Sent field to given value.
+SetPort sets Port field to given value.
 
-### HasSent
+### HasPort
 
-`func (o *InlineResponse20023Results) HasSent() bool`
+`func (o *InlineResponse20023Results) HasPort() bool`
 
-HasSent returns a boolean if a field has been set.
+HasPort returns a boolean if a field has been set.
 
-### GetReceived
+### GetStatus
 
-`func (o *InlineResponse20023Results) GetReceived() int32`
+`func (o *InlineResponse20023Results) GetStatus() string`
 
-GetReceived returns the Received field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetReceivedOk
+### GetStatusOk
 
-`func (o *InlineResponse20023Results) GetReceivedOk() (*int32, bool)`
+`func (o *InlineResponse20023Results) GetStatusOk() (*string, bool)`
 
-GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReceived
+### SetStatus
 
-`func (o *InlineResponse20023Results) SetReceived(v int32)`
+`func (o *InlineResponse20023Results) SetStatus(v string)`
 
-SetReceived sets Received field to given value.
+SetStatus sets Status field to given value.
 
-### HasReceived
+### HasStatus
 
-`func (o *InlineResponse20023Results) HasReceived() bool`
+`func (o *InlineResponse20023Results) HasStatus() bool`
 
-HasReceived returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetLoss
+### GetSpeedMbps
 
-`func (o *InlineResponse20023Results) GetLoss() InlineResponse20023ResultsLoss`
+`func (o *InlineResponse20023Results) GetSpeedMbps() int32`
 
-GetLoss returns the Loss field if non-nil, zero value otherwise.
+GetSpeedMbps returns the SpeedMbps field if non-nil, zero value otherwise.
 
-### GetLossOk
+### GetSpeedMbpsOk
 
-`func (o *InlineResponse20023Results) GetLossOk() (*InlineResponse20023ResultsLoss, bool)`
+`func (o *InlineResponse20023Results) GetSpeedMbpsOk() (*int32, bool)`
 
-GetLossOk returns a tuple with the Loss field if it's non-nil, zero value otherwise
+GetSpeedMbpsOk returns a tuple with the SpeedMbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLoss
+### SetSpeedMbps
 
-`func (o *InlineResponse20023Results) SetLoss(v InlineResponse20023ResultsLoss)`
+`func (o *InlineResponse20023Results) SetSpeedMbps(v int32)`
 
-SetLoss sets Loss field to given value.
+SetSpeedMbps sets SpeedMbps field to given value.
 
-### HasLoss
+### HasSpeedMbps
 
-`func (o *InlineResponse20023Results) HasLoss() bool`
+`func (o *InlineResponse20023Results) HasSpeedMbps() bool`
 
-HasLoss returns a boolean if a field has been set.
+HasSpeedMbps returns a boolean if a field has been set.
 
-### GetLatencies
+### GetError
 
-`func (o *InlineResponse20023Results) GetLatencies() InlineResponse20023ResultsLatencies`
+`func (o *InlineResponse20023Results) GetError() string`
 
-GetLatencies returns the Latencies field if non-nil, zero value otherwise.
+GetError returns the Error field if non-nil, zero value otherwise.
 
-### GetLatenciesOk
+### GetErrorOk
 
-`func (o *InlineResponse20023Results) GetLatenciesOk() (*InlineResponse20023ResultsLatencies, bool)`
+`func (o *InlineResponse20023Results) GetErrorOk() (*string, bool)`
 
-GetLatenciesOk returns a tuple with the Latencies field if it's non-nil, zero value otherwise
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencies
+### SetError
 
-`func (o *InlineResponse20023Results) SetLatencies(v InlineResponse20023ResultsLatencies)`
+`func (o *InlineResponse20023Results) SetError(v string)`
 
-SetLatencies sets Latencies field to given value.
+SetError sets Error field to given value.
 
-### HasLatencies
+### HasError
 
-`func (o *InlineResponse20023Results) HasLatencies() bool`
+`func (o *InlineResponse20023Results) HasError() bool`
 
-HasLatencies returns a boolean if a field has been set.
+HasError returns a boolean if a field has been set.
 
-### GetReplies
+### GetPairs
 
-`func (o *InlineResponse20023Results) GetReplies() []InlineResponse20023ResultsReplies`
+`func (o *InlineResponse20023Results) GetPairs() []InlineResponse20023Pairs`
 
-GetReplies returns the Replies field if non-nil, zero value otherwise.
+GetPairs returns the Pairs field if non-nil, zero value otherwise.
 
-### GetRepliesOk
+### GetPairsOk
 
-`func (o *InlineResponse20023Results) GetRepliesOk() (*[]InlineResponse20023ResultsReplies, bool)`
+`func (o *InlineResponse20023Results) GetPairsOk() (*[]InlineResponse20023Pairs, bool)`
 
-GetRepliesOk returns a tuple with the Replies field if it's non-nil, zero value otherwise
+GetPairsOk returns a tuple with the Pairs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReplies
+### SetPairs
 
-`func (o *InlineResponse20023Results) SetReplies(v []InlineResponse20023ResultsReplies)`
+`func (o *InlineResponse20023Results) SetPairs(v []InlineResponse20023Pairs)`
 
-SetReplies sets Replies field to given value.
+SetPairs sets Pairs field to given value.
 
-### HasReplies
+### HasPairs
 
-`func (o *InlineResponse20023Results) HasReplies() bool`
+`func (o *InlineResponse20023Results) HasPairs() bool`
 
-HasReplies returns a boolean if a field has been set.
+HasPairs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

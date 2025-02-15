@@ -4,9 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
-**Exception** | Pointer to [**InlineResponse200194Exception**](InlineResponse200194Exception.md) |  | [optional] 
-**Rules** | Pointer to [**[]InlineResponse200194Rules**](InlineResponse200194Rules.md) | Bonjour forwarding rules | [optional] 
+**MeshingEnabled** | Pointer to **bool** | Toggle for enabling or disabling meshing in a network | [optional] 
+**Ipv6BridgeEnabled** | Pointer to **bool** | Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode) | [optional] 
+**LocationAnalyticsEnabled** | Pointer to **bool** | Toggle for enabling or disabling location analytics for your network | [optional] 
+**UpgradeStrategy** | Pointer to **string** | The default strategy that network devices will use to perform an upgrade. Requires firmware version MR 26.8 or higher. | [optional] 
+**LedLightsOn** | Pointer to **bool** | Toggle for enabling or disabling LED lights on all APs in the network (making them run dark) | [optional] 
+**NamedVlans** | Pointer to [**InlineResponse200194NamedVlans**](InlineResponse200194NamedVlans.md) |  | [optional] 
+**RegulatoryDomain** | Pointer to [**InlineResponse200194RegulatoryDomain**](InlineResponse200194RegulatoryDomain.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +31,180 @@ NewInlineResponse200194WithDefaults instantiates a new InlineResponse200194 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetMeshingEnabled
 
-`func (o *InlineResponse200194) GetEnabled() bool`
+`func (o *InlineResponse200194) GetMeshingEnabled() bool`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetMeshingEnabled returns the MeshingEnabled field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetMeshingEnabledOk
 
-`func (o *InlineResponse200194) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200194) GetMeshingEnabledOk() (*bool, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetMeshingEnabledOk returns a tuple with the MeshingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetMeshingEnabled
 
-`func (o *InlineResponse200194) SetEnabled(v bool)`
+`func (o *InlineResponse200194) SetMeshingEnabled(v bool)`
 
-SetEnabled sets Enabled field to given value.
+SetMeshingEnabled sets MeshingEnabled field to given value.
 
-### HasEnabled
+### HasMeshingEnabled
 
-`func (o *InlineResponse200194) HasEnabled() bool`
+`func (o *InlineResponse200194) HasMeshingEnabled() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasMeshingEnabled returns a boolean if a field has been set.
 
-### GetException
+### GetIpv6BridgeEnabled
 
-`func (o *InlineResponse200194) GetException() InlineResponse200194Exception`
+`func (o *InlineResponse200194) GetIpv6BridgeEnabled() bool`
 
-GetException returns the Exception field if non-nil, zero value otherwise.
+GetIpv6BridgeEnabled returns the Ipv6BridgeEnabled field if non-nil, zero value otherwise.
 
-### GetExceptionOk
+### GetIpv6BridgeEnabledOk
 
-`func (o *InlineResponse200194) GetExceptionOk() (*InlineResponse200194Exception, bool)`
+`func (o *InlineResponse200194) GetIpv6BridgeEnabledOk() (*bool, bool)`
 
-GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
+GetIpv6BridgeEnabledOk returns a tuple with the Ipv6BridgeEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetException
+### SetIpv6BridgeEnabled
 
-`func (o *InlineResponse200194) SetException(v InlineResponse200194Exception)`
+`func (o *InlineResponse200194) SetIpv6BridgeEnabled(v bool)`
 
-SetException sets Exception field to given value.
+SetIpv6BridgeEnabled sets Ipv6BridgeEnabled field to given value.
 
-### HasException
+### HasIpv6BridgeEnabled
 
-`func (o *InlineResponse200194) HasException() bool`
+`func (o *InlineResponse200194) HasIpv6BridgeEnabled() bool`
 
-HasException returns a boolean if a field has been set.
+HasIpv6BridgeEnabled returns a boolean if a field has been set.
 
-### GetRules
+### GetLocationAnalyticsEnabled
 
-`func (o *InlineResponse200194) GetRules() []InlineResponse200194Rules`
+`func (o *InlineResponse200194) GetLocationAnalyticsEnabled() bool`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetLocationAnalyticsEnabled returns the LocationAnalyticsEnabled field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetLocationAnalyticsEnabledOk
 
-`func (o *InlineResponse200194) GetRulesOk() (*[]InlineResponse200194Rules, bool)`
+`func (o *InlineResponse200194) GetLocationAnalyticsEnabledOk() (*bool, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetLocationAnalyticsEnabledOk returns a tuple with the LocationAnalyticsEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetLocationAnalyticsEnabled
 
-`func (o *InlineResponse200194) SetRules(v []InlineResponse200194Rules)`
+`func (o *InlineResponse200194) SetLocationAnalyticsEnabled(v bool)`
 
-SetRules sets Rules field to given value.
+SetLocationAnalyticsEnabled sets LocationAnalyticsEnabled field to given value.
 
-### HasRules
+### HasLocationAnalyticsEnabled
 
-`func (o *InlineResponse200194) HasRules() bool`
+`func (o *InlineResponse200194) HasLocationAnalyticsEnabled() bool`
 
-HasRules returns a boolean if a field has been set.
+HasLocationAnalyticsEnabled returns a boolean if a field has been set.
+
+### GetUpgradeStrategy
+
+`func (o *InlineResponse200194) GetUpgradeStrategy() string`
+
+GetUpgradeStrategy returns the UpgradeStrategy field if non-nil, zero value otherwise.
+
+### GetUpgradeStrategyOk
+
+`func (o *InlineResponse200194) GetUpgradeStrategyOk() (*string, bool)`
+
+GetUpgradeStrategyOk returns a tuple with the UpgradeStrategy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpgradeStrategy
+
+`func (o *InlineResponse200194) SetUpgradeStrategy(v string)`
+
+SetUpgradeStrategy sets UpgradeStrategy field to given value.
+
+### HasUpgradeStrategy
+
+`func (o *InlineResponse200194) HasUpgradeStrategy() bool`
+
+HasUpgradeStrategy returns a boolean if a field has been set.
+
+### GetLedLightsOn
+
+`func (o *InlineResponse200194) GetLedLightsOn() bool`
+
+GetLedLightsOn returns the LedLightsOn field if non-nil, zero value otherwise.
+
+### GetLedLightsOnOk
+
+`func (o *InlineResponse200194) GetLedLightsOnOk() (*bool, bool)`
+
+GetLedLightsOnOk returns a tuple with the LedLightsOn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLedLightsOn
+
+`func (o *InlineResponse200194) SetLedLightsOn(v bool)`
+
+SetLedLightsOn sets LedLightsOn field to given value.
+
+### HasLedLightsOn
+
+`func (o *InlineResponse200194) HasLedLightsOn() bool`
+
+HasLedLightsOn returns a boolean if a field has been set.
+
+### GetNamedVlans
+
+`func (o *InlineResponse200194) GetNamedVlans() InlineResponse200194NamedVlans`
+
+GetNamedVlans returns the NamedVlans field if non-nil, zero value otherwise.
+
+### GetNamedVlansOk
+
+`func (o *InlineResponse200194) GetNamedVlansOk() (*InlineResponse200194NamedVlans, bool)`
+
+GetNamedVlansOk returns a tuple with the NamedVlans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNamedVlans
+
+`func (o *InlineResponse200194) SetNamedVlans(v InlineResponse200194NamedVlans)`
+
+SetNamedVlans sets NamedVlans field to given value.
+
+### HasNamedVlans
+
+`func (o *InlineResponse200194) HasNamedVlans() bool`
+
+HasNamedVlans returns a boolean if a field has been set.
+
+### GetRegulatoryDomain
+
+`func (o *InlineResponse200194) GetRegulatoryDomain() InlineResponse200194RegulatoryDomain`
+
+GetRegulatoryDomain returns the RegulatoryDomain field if non-nil, zero value otherwise.
+
+### GetRegulatoryDomainOk
+
+`func (o *InlineResponse200194) GetRegulatoryDomainOk() (*InlineResponse200194RegulatoryDomain, bool)`
+
+GetRegulatoryDomainOk returns a tuple with the RegulatoryDomain field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRegulatoryDomain
+
+`func (o *InlineResponse200194) SetRegulatoryDomain(v InlineResponse200194RegulatoryDomain)`
+
+SetRegulatoryDomain sets RegulatoryDomain field to given value.
+
+### HasRegulatoryDomain
+
+`func (o *InlineResponse200194) HasRegulatoryDomain() bool`
+
+HasRegulatoryDomain returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

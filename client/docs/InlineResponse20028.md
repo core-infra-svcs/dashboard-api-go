@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTime** | Pointer to **time.Time** | Start time of the sample | [optional] 
-**EndTime** | Pointer to **time.Time** | End time of the sample | [optional] 
-**LossPercent** | Pointer to **float32** | Percentage of packets lost | [optional] 
-**LatencyMs** | Pointer to **float32** | Latency in milliseconds | [optional] 
-**Goodput** | Pointer to **int32** | Number of useful information bits delivered | [optional] 
-**Jitter** | Pointer to **float32** | Jitter, in milliseconds | [optional] 
+**WakeOnLanId** | Pointer to **string** | ID of the Wake-on-LAN job | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ping request | [optional] 
+**Status** | Pointer to **string** | Status of the Wake-on-LAN request | [optional] 
+**Request** | Pointer to [**InlineResponse2017Request**](InlineResponse2017Request.md) |  | [optional] 
+**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse20028WithDefaults instantiates a new InlineResponse20028 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTime
+### GetWakeOnLanId
 
-`func (o *InlineResponse20028) GetStartTime() time.Time`
+`func (o *InlineResponse20028) GetWakeOnLanId() string`
 
-GetStartTime returns the StartTime field if non-nil, zero value otherwise.
+GetWakeOnLanId returns the WakeOnLanId field if non-nil, zero value otherwise.
 
-### GetStartTimeOk
+### GetWakeOnLanIdOk
 
-`func (o *InlineResponse20028) GetStartTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse20028) GetWakeOnLanIdOk() (*string, bool)`
 
-GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
+GetWakeOnLanIdOk returns a tuple with the WakeOnLanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTime
+### SetWakeOnLanId
 
-`func (o *InlineResponse20028) SetStartTime(v time.Time)`
+`func (o *InlineResponse20028) SetWakeOnLanId(v string)`
 
-SetStartTime sets StartTime field to given value.
+SetWakeOnLanId sets WakeOnLanId field to given value.
 
-### HasStartTime
+### HasWakeOnLanId
 
-`func (o *InlineResponse20028) HasStartTime() bool`
+`func (o *InlineResponse20028) HasWakeOnLanId() bool`
 
-HasStartTime returns a boolean if a field has been set.
+HasWakeOnLanId returns a boolean if a field has been set.
 
-### GetEndTime
+### GetUrl
 
-`func (o *InlineResponse20028) GetEndTime() time.Time`
+`func (o *InlineResponse20028) GetUrl() string`
 
-GetEndTime returns the EndTime field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetEndTimeOk
+### GetUrlOk
 
-`func (o *InlineResponse20028) GetEndTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse20028) GetUrlOk() (*string, bool)`
 
-GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTime
+### SetUrl
 
-`func (o *InlineResponse20028) SetEndTime(v time.Time)`
+`func (o *InlineResponse20028) SetUrl(v string)`
 
-SetEndTime sets EndTime field to given value.
+SetUrl sets Url field to given value.
 
-### HasEndTime
+### HasUrl
 
-`func (o *InlineResponse20028) HasEndTime() bool`
+`func (o *InlineResponse20028) HasUrl() bool`
 
-HasEndTime returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetLossPercent
+### GetStatus
 
-`func (o *InlineResponse20028) GetLossPercent() float32`
+`func (o *InlineResponse20028) GetStatus() string`
 
-GetLossPercent returns the LossPercent field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetLossPercentOk
+### GetStatusOk
 
-`func (o *InlineResponse20028) GetLossPercentOk() (*float32, bool)`
+`func (o *InlineResponse20028) GetStatusOk() (*string, bool)`
 
-GetLossPercentOk returns a tuple with the LossPercent field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLossPercent
+### SetStatus
 
-`func (o *InlineResponse20028) SetLossPercent(v float32)`
+`func (o *InlineResponse20028) SetStatus(v string)`
 
-SetLossPercent sets LossPercent field to given value.
+SetStatus sets Status field to given value.
 
-### HasLossPercent
+### HasStatus
 
-`func (o *InlineResponse20028) HasLossPercent() bool`
+`func (o *InlineResponse20028) HasStatus() bool`
 
-HasLossPercent returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetLatencyMs
+### GetRequest
 
-`func (o *InlineResponse20028) GetLatencyMs() float32`
+`func (o *InlineResponse20028) GetRequest() InlineResponse2017Request`
 
-GetLatencyMs returns the LatencyMs field if non-nil, zero value otherwise.
+GetRequest returns the Request field if non-nil, zero value otherwise.
 
-### GetLatencyMsOk
+### GetRequestOk
 
-`func (o *InlineResponse20028) GetLatencyMsOk() (*float32, bool)`
+`func (o *InlineResponse20028) GetRequestOk() (*InlineResponse2017Request, bool)`
 
-GetLatencyMsOk returns a tuple with the LatencyMs field if it's non-nil, zero value otherwise
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatencyMs
+### SetRequest
 
-`func (o *InlineResponse20028) SetLatencyMs(v float32)`
+`func (o *InlineResponse20028) SetRequest(v InlineResponse2017Request)`
 
-SetLatencyMs sets LatencyMs field to given value.
+SetRequest sets Request field to given value.
 
-### HasLatencyMs
+### HasRequest
 
-`func (o *InlineResponse20028) HasLatencyMs() bool`
+`func (o *InlineResponse20028) HasRequest() bool`
 
-HasLatencyMs returns a boolean if a field has been set.
+HasRequest returns a boolean if a field has been set.
 
-### GetGoodput
+### GetError
 
-`func (o *InlineResponse20028) GetGoodput() int32`
+`func (o *InlineResponse20028) GetError() string`
 
-GetGoodput returns the Goodput field if non-nil, zero value otherwise.
+GetError returns the Error field if non-nil, zero value otherwise.
 
-### GetGoodputOk
+### GetErrorOk
 
-`func (o *InlineResponse20028) GetGoodputOk() (*int32, bool)`
+`func (o *InlineResponse20028) GetErrorOk() (*string, bool)`
 
-GetGoodputOk returns a tuple with the Goodput field if it's non-nil, zero value otherwise
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGoodput
+### SetError
 
-`func (o *InlineResponse20028) SetGoodput(v int32)`
+`func (o *InlineResponse20028) SetError(v string)`
 
-SetGoodput sets Goodput field to given value.
+SetError sets Error field to given value.
 
-### HasGoodput
+### HasError
 
-`func (o *InlineResponse20028) HasGoodput() bool`
+`func (o *InlineResponse20028) HasError() bool`
 
-HasGoodput returns a boolean if a field has been set.
-
-### GetJitter
-
-`func (o *InlineResponse20028) GetJitter() float32`
-
-GetJitter returns the Jitter field if non-nil, zero value otherwise.
-
-### GetJitterOk
-
-`func (o *InlineResponse20028) GetJitterOk() (*float32, bool)`
-
-GetJitterOk returns a tuple with the Jitter field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetJitter
-
-`func (o *InlineResponse20028) SetJitter(v float32)`
-
-SetJitter sets Jitter field to given value.
-
-### HasJitter
-
-`func (o *InlineResponse20028) HasJitter() bool`
-
-HasJitter returns a boolean if a field has been set.
+HasError returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

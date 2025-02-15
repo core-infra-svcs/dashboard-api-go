@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | A list of network ids (limit: 15). | 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
 ### NewInlineObject275
 
-`func NewInlineObject275(networkIds []string, ) *InlineObject275`
+`func NewInlineObject275() *InlineObject275`
 
 NewInlineObject275 instantiates a new InlineObject275 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject275WithDefaults instantiates a new InlineObject275 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetX509certSha1Fingerprint
 
-`func (o *InlineObject275) GetNetworkIds() []string`
+`func (o *InlineObject275) GetX509certSha1Fingerprint() string`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetX509certSha1FingerprintOk
 
-`func (o *InlineObject275) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject275) GetX509certSha1FingerprintOk() (*string, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetX509certSha1Fingerprint
 
-`func (o *InlineObject275) SetNetworkIds(v []string)`
+`func (o *InlineObject275) SetX509certSha1Fingerprint(v string)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
 
+### HasX509certSha1Fingerprint
+
+`func (o *InlineObject275) HasX509certSha1Fingerprint() bool`
+
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
+
+### GetSloLogoutUrl
+
+`func (o *InlineObject275) GetSloLogoutUrl() string`
+
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+
+### GetSloLogoutUrlOk
+
+`func (o *InlineObject275) GetSloLogoutUrlOk() (*string, bool)`
+
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSloLogoutUrl
+
+`func (o *InlineObject275) SetSloLogoutUrl(v string)`
+
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
+
+### HasSloLogoutUrl
+
+`func (o *InlineObject275) HasSloLogoutUrl() bool`
+
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

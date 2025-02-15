@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | The serials of the devices | [optional] 
-**Errors** | Pointer to [**[]InlineResponse20087Errors**](InlineResponse20087Errors.md) | Errors for devices that were not added | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
+**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20087WithDefaults instantiates a new InlineResponse20087 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetMac
 
-`func (o *InlineResponse20087) GetSerials() []string`
+`func (o *InlineResponse20087) GetMac() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetMacOk
 
-`func (o *InlineResponse20087) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse20087) GetMacOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetMac
 
-`func (o *InlineResponse20087) SetSerials(v []string)`
+`func (o *InlineResponse20087) SetMac(v string)`
 
-SetSerials sets Serials field to given value.
+SetMac sets Mac field to given value.
 
-### HasSerials
+### HasMac
 
-`func (o *InlineResponse20087) HasSerials() bool`
+`func (o *InlineResponse20087) HasMac() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetErrors
+### GetDevicePolicy
 
-`func (o *InlineResponse20087) GetErrors() []InlineResponse20087Errors`
+`func (o *InlineResponse20087) GetDevicePolicy() string`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetDevicePolicyOk
 
-`func (o *InlineResponse20087) GetErrorsOk() (*[]InlineResponse20087Errors, bool)`
+`func (o *InlineResponse20087) GetDevicePolicyOk() (*string, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetDevicePolicy
 
-`func (o *InlineResponse20087) SetErrors(v []InlineResponse20087Errors)`
+`func (o *InlineResponse20087) SetDevicePolicy(v string)`
 
-SetErrors sets Errors field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
-### HasErrors
+### HasDevicePolicy
 
-`func (o *InlineResponse20087) HasErrors() bool`
+`func (o *InlineResponse20087) HasDevicePolicy() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasDevicePolicy returns a boolean if a field has been set.
+
+### GetGroupPolicyId
+
+`func (o *InlineResponse20087) GetGroupPolicyId() string`
+
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
+
+### GetGroupPolicyIdOk
+
+`func (o *InlineResponse20087) GetGroupPolicyIdOk() (*string, bool)`
+
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupPolicyId
+
+`func (o *InlineResponse20087) SetGroupPolicyId(v string)`
+
+SetGroupPolicyId sets GroupPolicyId field to given value.
+
+### HasGroupPolicyId
+
+`func (o *InlineResponse20087) HasGroupPolicyId() bool`
+
+HasGroupPolicyId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

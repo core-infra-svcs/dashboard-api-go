@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Model** | Pointer to **string** | The device model | [optional] 
-**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200300Items**](InlineResponse200300Items.md) | Sentry Group Policies for the Organization keyed by the Network or Locale Id the Policy belongs to | [optional] 
+**Meta** | Pointer to [**InlineResponse200219Meta**](InlineResponse200219Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200301WithDefaults instantiates a new InlineResponse200301 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetModel
+### GetItems
 
-`func (o *InlineResponse200301) GetModel() string`
+`func (o *InlineResponse200301) GetItems() []InlineResponse200300Items`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetItemsOk
 
-`func (o *InlineResponse200301) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200301) GetItemsOk() (*[]InlineResponse200300Items, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetItems
 
-`func (o *InlineResponse200301) SetModel(v string)`
+`func (o *InlineResponse200301) SetItems(v []InlineResponse200300Items)`
 
-SetModel sets Model field to given value.
+SetItems sets Items field to given value.
 
-### HasModel
+### HasItems
 
-`func (o *InlineResponse200301) HasModel() bool`
+`func (o *InlineResponse200301) HasItems() bool`
 
-HasModel returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetCount
+### GetMeta
 
-`func (o *InlineResponse200301) GetCount() int32`
+`func (o *InlineResponse200301) GetMeta() InlineResponse200219Meta`
 
-GetCount returns the Count field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetCountOk
+### GetMetaOk
 
-`func (o *InlineResponse200301) GetCountOk() (*int32, bool)`
+`func (o *InlineResponse200301) GetMetaOk() (*InlineResponse200219Meta, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCount
+### SetMeta
 
-`func (o *InlineResponse200301) SetCount(v int32)`
+`func (o *InlineResponse200301) SetMeta(v InlineResponse200219Meta)`
 
-SetCount sets Count field to given value.
+SetMeta sets Meta field to given value.
 
-### HasCount
+### HasMeta
 
-`func (o *InlineResponse200301) HasCount() bool`
+`func (o *InlineResponse200301) HasMeta() bool`
 
-HasCount returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200301) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200301) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200301) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200301) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Service provider name. | [optional] 
-**Logo** | Pointer to [**InlineResponse200234Logo**](InlineResponse200234Logo.md) |  | [optional] 
-**IsBootstrap** | Pointer to **bool** | Indicates if service provider is the bootstrap provider. | [optional] 
-**Terms** | Pointer to [**InlineResponse200234Terms**](InlineResponse200234Terms.md) |  | [optional] 
+**NetworkId** | **string** | id | 
+**NetworkName** | **string** | Name | 
+**AlertCount** | **int32** | Total Alerts | 
+**SeverityCounts** | [**[]InlineResponse200234SeverityCounts**](InlineResponse200234SeverityCounts.md) | Alerts By Severity | 
 
 ## Methods
 
 ### NewInlineResponse200234Items
 
-`func NewInlineResponse200234Items() *InlineResponse200234Items`
+`func NewInlineResponse200234Items(networkId string, networkName string, alertCount int32, severityCounts []InlineResponse200234SeverityCounts, ) *InlineResponse200234Items`
 
 NewInlineResponse200234Items instantiates a new InlineResponse200234Items object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +28,85 @@ NewInlineResponse200234ItemsWithDefaults instantiates a new InlineResponse200234
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetNetworkId
 
-`func (o *InlineResponse200234Items) GetName() string`
+`func (o *InlineResponse200234Items) GetNetworkId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200234Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200234Items) GetNetworkIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNetworkId
 
-`func (o *InlineResponse200234Items) SetName(v string)`
+`func (o *InlineResponse200234Items) SetNetworkId(v string)`
 
-SetName sets Name field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasName
 
-`func (o *InlineResponse200234Items) HasName() bool`
+### GetNetworkName
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineResponse200234Items) GetNetworkName() string`
 
-### GetLogo
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200234Items) GetLogo() InlineResponse200234Logo`
+### GetNetworkNameOk
 
-GetLogo returns the Logo field if non-nil, zero value otherwise.
+`func (o *InlineResponse200234Items) GetNetworkNameOk() (*string, bool)`
 
-### GetLogoOk
-
-`func (o *InlineResponse200234Items) GetLogoOk() (*InlineResponse200234Logo, bool)`
-
-GetLogoOk returns a tuple with the Logo field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLogo
+### SetNetworkName
 
-`func (o *InlineResponse200234Items) SetLogo(v InlineResponse200234Logo)`
+`func (o *InlineResponse200234Items) SetNetworkName(v string)`
 
-SetLogo sets Logo field to given value.
+SetNetworkName sets NetworkName field to given value.
 
-### HasLogo
 
-`func (o *InlineResponse200234Items) HasLogo() bool`
+### GetAlertCount
 
-HasLogo returns a boolean if a field has been set.
+`func (o *InlineResponse200234Items) GetAlertCount() int32`
 
-### GetIsBootstrap
+GetAlertCount returns the AlertCount field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200234Items) GetIsBootstrap() bool`
+### GetAlertCountOk
 
-GetIsBootstrap returns the IsBootstrap field if non-nil, zero value otherwise.
+`func (o *InlineResponse200234Items) GetAlertCountOk() (*int32, bool)`
 
-### GetIsBootstrapOk
-
-`func (o *InlineResponse200234Items) GetIsBootstrapOk() (*bool, bool)`
-
-GetIsBootstrapOk returns a tuple with the IsBootstrap field if it's non-nil, zero value otherwise
+GetAlertCountOk returns a tuple with the AlertCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsBootstrap
+### SetAlertCount
 
-`func (o *InlineResponse200234Items) SetIsBootstrap(v bool)`
+`func (o *InlineResponse200234Items) SetAlertCount(v int32)`
 
-SetIsBootstrap sets IsBootstrap field to given value.
+SetAlertCount sets AlertCount field to given value.
 
-### HasIsBootstrap
 
-`func (o *InlineResponse200234Items) HasIsBootstrap() bool`
+### GetSeverityCounts
 
-HasIsBootstrap returns a boolean if a field has been set.
+`func (o *InlineResponse200234Items) GetSeverityCounts() []InlineResponse200234SeverityCounts`
 
-### GetTerms
+GetSeverityCounts returns the SeverityCounts field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200234Items) GetTerms() InlineResponse200234Terms`
+### GetSeverityCountsOk
 
-GetTerms returns the Terms field if non-nil, zero value otherwise.
+`func (o *InlineResponse200234Items) GetSeverityCountsOk() (*[]InlineResponse200234SeverityCounts, bool)`
 
-### GetTermsOk
-
-`func (o *InlineResponse200234Items) GetTermsOk() (*InlineResponse200234Terms, bool)`
-
-GetTermsOk returns a tuple with the Terms field if it's non-nil, zero value otherwise
+GetSeverityCountsOk returns a tuple with the SeverityCounts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTerms
+### SetSeverityCounts
 
-`func (o *InlineResponse200234Items) SetTerms(v InlineResponse200234Terms)`
+`func (o *InlineResponse200234Items) SetSeverityCounts(v []InlineResponse200234SeverityCounts)`
 
-SetTerms sets Terms field to given value.
+SetSeverityCounts sets SeverityCounts field to given value.
 
-### HasTerms
-
-`func (o *InlineResponse200234Items) HasTerms() bool`
-
-HasTerms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

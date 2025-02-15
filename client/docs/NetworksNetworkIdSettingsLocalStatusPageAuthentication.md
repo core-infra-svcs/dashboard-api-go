@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Enables / disables the authentication on Local Status page(s). | [optional] 
+**Username** | Pointer to **string** | The username used for Local Status Page(s). | [optional] 
 **Password** | Pointer to **string** | The password used for Local Status Page(s). Set this to null to clear the password. | [optional] 
 
 ## Methods
@@ -50,6 +51,31 @@ SetEnabled sets Enabled field to given value.
 `func (o *NetworksNetworkIdSettingsLocalStatusPageAuthentication) HasEnabled() bool`
 
 HasEnabled returns a boolean if a field has been set.
+
+### GetUsername
+
+`func (o *NetworksNetworkIdSettingsLocalStatusPageAuthentication) GetUsername() string`
+
+GetUsername returns the Username field if non-nil, zero value otherwise.
+
+### GetUsernameOk
+
+`func (o *NetworksNetworkIdSettingsLocalStatusPageAuthentication) GetUsernameOk() (*string, bool)`
+
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsername
+
+`func (o *NetworksNetworkIdSettingsLocalStatusPageAuthentication) SetUsername(v string)`
+
+SetUsername sets Username field to given value.
+
+### HasUsername
+
+`func (o *NetworksNetworkIdSettingsLocalStatusPageAuthentication) HasUsername() bool`
+
+HasUsername returns a boolean if a field has been set.
 
 ### GetPassword
 

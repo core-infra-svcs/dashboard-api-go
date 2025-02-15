@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200344Intervals**](InlineResponse200344Intervals.md) | Time interval snapshots of CPU usage data of the wireless LAN controller | [optional] 
+**Serial** | Pointer to **string** | Unique serial number for device. | [optional] 
+**Name** | Pointer to **string** | Name of device. | [optional] 
+**Network** | Pointer to [**InlineResponse200344Network**](InlineResponse200344Network.md) |  | [optional] 
+**BasicServiceSets** | Pointer to [**[]InlineResponse200344BasicServiceSets**](InlineResponse200344BasicServiceSets.md) | Status information for wireless access points. | [optional] 
 
 ## Methods
 
@@ -51,30 +53,80 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetIntervals
+### GetName
 
-`func (o *InlineResponse200344Items) GetIntervals() []InlineResponse200344Intervals`
+`func (o *InlineResponse200344Items) GetName() string`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetNameOk
 
-`func (o *InlineResponse200344Items) GetIntervalsOk() (*[]InlineResponse200344Intervals, bool)`
+`func (o *InlineResponse200344Items) GetNameOk() (*string, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetName
 
-`func (o *InlineResponse200344Items) SetIntervals(v []InlineResponse200344Intervals)`
+`func (o *InlineResponse200344Items) SetName(v string)`
 
-SetIntervals sets Intervals field to given value.
+SetName sets Name field to given value.
 
-### HasIntervals
+### HasName
 
-`func (o *InlineResponse200344Items) HasIntervals() bool`
+`func (o *InlineResponse200344Items) HasName() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200344Items) GetNetwork() InlineResponse200344Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200344Items) GetNetworkOk() (*InlineResponse200344Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200344Items) SetNetwork(v InlineResponse200344Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200344Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetBasicServiceSets
+
+`func (o *InlineResponse200344Items) GetBasicServiceSets() []InlineResponse200344BasicServiceSets`
+
+GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
+
+### GetBasicServiceSetsOk
+
+`func (o *InlineResponse200344Items) GetBasicServiceSetsOk() (*[]InlineResponse200344BasicServiceSets, bool)`
+
+GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBasicServiceSets
+
+`func (o *InlineResponse200344Items) SetBasicServiceSets(v []InlineResponse200344BasicServiceSets)`
+
+SetBasicServiceSets sets BasicServiceSets field to given value.
+
+### HasBasicServiceSets
+
+`func (o *InlineResponse200344Items) HasBasicServiceSets() bool`
+
+HasBasicServiceSets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200334Items**](InlineResponse200334Items.md) | Wireless LAN controller L2 interfaces | [optional] 
-**Meta** | Pointer to [**InlineResponse200250Meta**](InlineResponse200250Meta.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the channel utilization interval. | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the channel utilization interval. | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
+**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200334WithDefaults instantiates a new InlineResponse200334 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetStartTs
 
-`func (o *InlineResponse200334) GetItems() []InlineResponse200334Items`
+`func (o *InlineResponse200334) GetStartTs() time.Time`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetStartTsOk
 
-`func (o *InlineResponse200334) GetItemsOk() (*[]InlineResponse200334Items, bool)`
+`func (o *InlineResponse200334) GetStartTsOk() (*time.Time, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetStartTs
 
-`func (o *InlineResponse200334) SetItems(v []InlineResponse200334Items)`
+`func (o *InlineResponse200334) SetStartTs(v time.Time)`
 
-SetItems sets Items field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasItems
+### HasStartTs
 
-`func (o *InlineResponse200334) HasItems() bool`
+`func (o *InlineResponse200334) HasStartTs() bool`
 
-HasItems returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetMeta
+### GetEndTs
 
-`func (o *InlineResponse200334) GetMeta() InlineResponse200250Meta`
+`func (o *InlineResponse200334) GetEndTs() time.Time`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetEndTsOk
 
-`func (o *InlineResponse200334) GetMetaOk() (*InlineResponse200250Meta, bool)`
+`func (o *InlineResponse200334) GetEndTsOk() (*time.Time, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetEndTs
 
-`func (o *InlineResponse200334) SetMeta(v InlineResponse200250Meta)`
+`func (o *InlineResponse200334) SetEndTs(v time.Time)`
 
-SetMeta sets Meta field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasMeta
+### HasEndTs
 
-`func (o *InlineResponse200334) HasMeta() bool`
+`func (o *InlineResponse200334) HasEndTs() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200334) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200334) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200334) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200334) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
+
+### GetByBand
+
+`func (o *InlineResponse200334) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
+
+GetByBand returns the ByBand field if non-nil, zero value otherwise.
+
+### GetByBandOk
+
+`func (o *InlineResponse200334) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
+
+GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetByBand
+
+`func (o *InlineResponse200334) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
+
+SetByBand sets ByBand field to given value.
+
+### HasByBand
+
+`func (o *InlineResponse200334) HasByBand() bool`
+
+HasByBand returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

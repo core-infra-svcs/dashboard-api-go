@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
-**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
-**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings.md) |  | [optional] 
-**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | Network identifier | [optional] 
+**Serial** | Pointer to **string** | The uplink serial | [optional] 
+**Model** | Pointer to **string** | The uplink model | [optional] 
+**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
+**HighAvailability** | Pointer to [**OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability**](OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability.md) |  | [optional] 
+**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinkStatusesUplinks**](OrganizationsOrganizationIdApplianceUplinkStatusesUplinks.md) | Uplinks | [optional] 
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewInlineResponse200226WithDefaults instantiates a new InlineResponse200226 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetNetworkId
 
-`func (o *InlineResponse200226) GetName() string`
+`func (o *InlineResponse200226) GetNetworkId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200226) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200226) GetNetworkIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNetworkId
 
-`func (o *InlineResponse200226) SetName(v string)`
+`func (o *InlineResponse200226) SetNetworkId(v string)`
 
-SetName sets Name field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasName
+### HasNetworkId
 
-`func (o *InlineResponse200226) HasName() bool`
+`func (o *InlineResponse200226) HasNetworkId() bool`
 
-HasName returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetEnabled
+### GetSerial
 
-`func (o *InlineResponse200226) GetEnabled() bool`
+`func (o *InlineResponse200226) GetSerial() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetSerialOk
 
-`func (o *InlineResponse200226) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200226) GetSerialOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetSerial
 
-`func (o *InlineResponse200226) SetEnabled(v bool)`
+`func (o *InlineResponse200226) SetSerial(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetSerial sets Serial field to given value.
 
-### HasEnabled
+### HasSerial
 
-`func (o *InlineResponse200226) HasEnabled() bool`
+`func (o *InlineResponse200226) HasSerial() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetAdminSettings
+### GetModel
 
-`func (o *InlineResponse200226) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
+`func (o *InlineResponse200226) GetModel() string`
 
-GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetAdminSettingsOk
+### GetModelOk
 
-`func (o *InlineResponse200226) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
+`func (o *InlineResponse200226) GetModelOk() (*string, bool)`
 
-GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminSettings
+### SetModel
 
-`func (o *InlineResponse200226) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
+`func (o *InlineResponse200226) SetModel(v string)`
 
-SetAdminSettings sets AdminSettings field to given value.
+SetModel sets Model field to given value.
 
-### HasAdminSettings
+### HasModel
 
-`func (o *InlineResponse200226) HasAdminSettings() bool`
+`func (o *InlineResponse200226) HasModel() bool`
 
-HasAdminSettings returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetHelpSettings
+### GetLastReportedAt
 
-`func (o *InlineResponse200226) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings`
+`func (o *InlineResponse200226) GetLastReportedAt() time.Time`
 
-GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
 
-### GetHelpSettingsOk
+### GetLastReportedAtOk
 
-`func (o *InlineResponse200226) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings, bool)`
+`func (o *InlineResponse200226) GetLastReportedAtOk() (*time.Time, bool)`
 
-GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHelpSettings
+### SetLastReportedAt
 
-`func (o *InlineResponse200226) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings)`
+`func (o *InlineResponse200226) SetLastReportedAt(v time.Time)`
 
-SetHelpSettings sets HelpSettings field to given value.
+SetLastReportedAt sets LastReportedAt field to given value.
 
-### HasHelpSettings
+### HasLastReportedAt
 
-`func (o *InlineResponse200226) HasHelpSettings() bool`
+`func (o *InlineResponse200226) HasLastReportedAt() bool`
 
-HasHelpSettings returns a boolean if a field has been set.
+HasLastReportedAt returns a boolean if a field has been set.
 
-### GetCustomLogo
+### GetHighAvailability
 
-`func (o *InlineResponse200226) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
+`func (o *InlineResponse200226) GetHighAvailability() OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability`
 
-GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+GetHighAvailability returns the HighAvailability field if non-nil, zero value otherwise.
 
-### GetCustomLogoOk
+### GetHighAvailabilityOk
 
-`func (o *InlineResponse200226) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
+`func (o *InlineResponse200226) GetHighAvailabilityOk() (*OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability, bool)`
 
-GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+GetHighAvailabilityOk returns a tuple with the HighAvailability field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomLogo
+### SetHighAvailability
 
-`func (o *InlineResponse200226) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
+`func (o *InlineResponse200226) SetHighAvailability(v OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability)`
 
-SetCustomLogo sets CustomLogo field to given value.
+SetHighAvailability sets HighAvailability field to given value.
 
-### HasCustomLogo
+### HasHighAvailability
 
-`func (o *InlineResponse200226) HasCustomLogo() bool`
+`func (o *InlineResponse200226) HasHighAvailability() bool`
 
-HasCustomLogo returns a boolean if a field has been set.
+HasHighAvailability returns a boolean if a field has been set.
+
+### GetUplinks
+
+`func (o *InlineResponse200226) GetUplinks() []OrganizationsOrganizationIdApplianceUplinkStatusesUplinks`
+
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+
+### GetUplinksOk
+
+`func (o *InlineResponse200226) GetUplinksOk() (*[]OrganizationsOrganizationIdApplianceUplinkStatusesUplinks, bool)`
+
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinks
+
+`func (o *InlineResponse200226) SetUplinks(v []OrganizationsOrganizationIdApplianceUplinkStatusesUplinks)`
+
+SetUplinks sets Uplinks field to given value.
+
+### HasUplinks
+
+`func (o *InlineResponse200226) HasUplinks() bool`
+
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**TotalKbps** | Pointer to **int32** | Total usage in kilobytes-per-second | [optional] 
-**SentKbps** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
-**ReceivedKbps** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200202Ranges**](InlineResponse200202Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200202RangesInSeconds**](InlineResponse200202RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200202WithDefaults instantiates a new InlineResponse200202 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetEnabled
 
-`func (o *InlineResponse200202) GetStartTs() time.Time`
+`func (o *InlineResponse200202) GetEnabled() bool`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200202) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200202) GetEnabledOk() (*bool, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetEnabled
 
-`func (o *InlineResponse200202) SetStartTs(v time.Time)`
+`func (o *InlineResponse200202) SetEnabled(v bool)`
 
-SetStartTs sets StartTs field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasStartTs
+### HasEnabled
 
-`func (o *InlineResponse200202) HasStartTs() bool`
+`func (o *InlineResponse200202) HasEnabled() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetEndTs
+### GetRanges
 
-`func (o *InlineResponse200202) GetEndTs() time.Time`
+`func (o *InlineResponse200202) GetRanges() []InlineResponse200202Ranges`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetRangesOk
 
-`func (o *InlineResponse200202) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200202) GetRangesOk() (*[]InlineResponse200202Ranges, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetRanges
 
-`func (o *InlineResponse200202) SetEndTs(v time.Time)`
+`func (o *InlineResponse200202) SetRanges(v []InlineResponse200202Ranges)`
 
-SetEndTs sets EndTs field to given value.
+SetRanges sets Ranges field to given value.
 
-### HasEndTs
+### HasRanges
 
-`func (o *InlineResponse200202) HasEndTs() bool`
+`func (o *InlineResponse200202) HasRanges() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasRanges returns a boolean if a field has been set.
 
-### GetTotalKbps
+### GetRangesInSeconds
 
-`func (o *InlineResponse200202) GetTotalKbps() int32`
+`func (o *InlineResponse200202) GetRangesInSeconds() []InlineResponse200202RangesInSeconds`
 
-GetTotalKbps returns the TotalKbps field if non-nil, zero value otherwise.
+GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
-### GetTotalKbpsOk
+### GetRangesInSecondsOk
 
-`func (o *InlineResponse200202) GetTotalKbpsOk() (*int32, bool)`
+`func (o *InlineResponse200202) GetRangesInSecondsOk() (*[]InlineResponse200202RangesInSeconds, bool)`
 
-GetTotalKbpsOk returns a tuple with the TotalKbps field if it's non-nil, zero value otherwise
+GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotalKbps
+### SetRangesInSeconds
 
-`func (o *InlineResponse200202) SetTotalKbps(v int32)`
+`func (o *InlineResponse200202) SetRangesInSeconds(v []InlineResponse200202RangesInSeconds)`
 
-SetTotalKbps sets TotalKbps field to given value.
+SetRangesInSeconds sets RangesInSeconds field to given value.
 
-### HasTotalKbps
+### HasRangesInSeconds
 
-`func (o *InlineResponse200202) HasTotalKbps() bool`
+`func (o *InlineResponse200202) HasRangesInSeconds() bool`
 
-HasTotalKbps returns a boolean if a field has been set.
-
-### GetSentKbps
-
-`func (o *InlineResponse200202) GetSentKbps() int32`
-
-GetSentKbps returns the SentKbps field if non-nil, zero value otherwise.
-
-### GetSentKbpsOk
-
-`func (o *InlineResponse200202) GetSentKbpsOk() (*int32, bool)`
-
-GetSentKbpsOk returns a tuple with the SentKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSentKbps
-
-`func (o *InlineResponse200202) SetSentKbps(v int32)`
-
-SetSentKbps sets SentKbps field to given value.
-
-### HasSentKbps
-
-`func (o *InlineResponse200202) HasSentKbps() bool`
-
-HasSentKbps returns a boolean if a field has been set.
-
-### GetReceivedKbps
-
-`func (o *InlineResponse200202) GetReceivedKbps() int32`
-
-GetReceivedKbps returns the ReceivedKbps field if non-nil, zero value otherwise.
-
-### GetReceivedKbpsOk
-
-`func (o *InlineResponse200202) GetReceivedKbpsOk() (*int32, bool)`
-
-GetReceivedKbpsOk returns a tuple with the ReceivedKbps field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReceivedKbps
-
-`func (o *InlineResponse200202) SetReceivedKbps(v int32)`
-
-SetReceivedKbps sets ReceivedKbps field to given value.
-
-### HasReceivedKbps
-
-`func (o *InlineResponse200202) HasReceivedKbps() bool`
-
-HasReceivedKbps returns a boolean if a field has been set.
+HasRangesInSeconds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200197Rules**](InlineResponse200197Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
+**Exception** | Pointer to [**InlineResponse200197Exception**](InlineResponse200197Exception.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200197Rules**](InlineResponse200197Rules.md) | Bonjour forwarding rules | [optional] 
 
 ## Methods
 
@@ -24,6 +26,56 @@ will change when the set of required properties is changed
 NewInlineResponse200197WithDefaults instantiates a new InlineResponse200197 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetEnabled
+
+`func (o *InlineResponse200197) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse200197) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse200197) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse200197) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetException
+
+`func (o *InlineResponse200197) GetException() InlineResponse200197Exception`
+
+GetException returns the Exception field if non-nil, zero value otherwise.
+
+### GetExceptionOk
+
+`func (o *InlineResponse200197) GetExceptionOk() (*InlineResponse200197Exception, bool)`
+
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetException
+
+`func (o *InlineResponse200197) SetException(v InlineResponse200197Exception)`
+
+SetException sets Exception field to given value.
+
+### HasException
+
+`func (o *InlineResponse200197) HasException() bool`
+
+HasException returns a boolean if a field has been set.
 
 ### GetRules
 

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
-**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
-**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
-**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode for the cellular gateways in the network. (Passthrough/Routed) | [optional] 
+**Cidr** | Pointer to **string** | CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool. | [optional] 
+**Mask** | Pointer to **int32** | Mask used for the subnet of all MGs in  this network. | [optional] 
+**Subnets** | Pointer to [**[]InlineResponse20081Subnets**](InlineResponse20081Subnets.md) | List of subnets of all MGs in this network. | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse20081WithDefaults instantiates a new InlineResponse20081 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetDeploymentMode
 
-`func (o *InlineResponse20081) GetTs() time.Time`
+`func (o *InlineResponse20081) GetDeploymentMode() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetDeploymentModeOk
 
-`func (o *InlineResponse20081) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse20081) GetDeploymentModeOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetDeploymentMode
 
-`func (o *InlineResponse20081) SetTs(v time.Time)`
+`func (o *InlineResponse20081) SetDeploymentMode(v string)`
 
-SetTs sets Ts field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
-### HasTs
+### HasDeploymentMode
 
-`func (o *InlineResponse20081) HasTs() bool`
+`func (o *InlineResponse20081) HasDeploymentMode() bool`
 
-HasTs returns a boolean if a field has been set.
+HasDeploymentMode returns a boolean if a field has been set.
 
-### GetTotal
+### GetCidr
 
-`func (o *InlineResponse20081) GetTotal() float32`
+`func (o *InlineResponse20081) GetCidr() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetCidrOk
 
-`func (o *InlineResponse20081) GetTotalOk() (*float32, bool)`
+`func (o *InlineResponse20081) GetCidrOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetCidr
 
-`func (o *InlineResponse20081) SetTotal(v float32)`
+`func (o *InlineResponse20081) SetCidr(v string)`
 
-SetTotal sets Total field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasTotal
+### HasCidr
 
-`func (o *InlineResponse20081) HasTotal() bool`
+`func (o *InlineResponse20081) HasCidr() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
 
-### GetUpstream
+### GetMask
 
-`func (o *InlineResponse20081) GetUpstream() float32`
+`func (o *InlineResponse20081) GetMask() int32`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetMask returns the Mask field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetMaskOk
 
-`func (o *InlineResponse20081) GetUpstreamOk() (*float32, bool)`
+`func (o *InlineResponse20081) GetMaskOk() (*int32, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetMask
 
-`func (o *InlineResponse20081) SetUpstream(v float32)`
+`func (o *InlineResponse20081) SetMask(v int32)`
 
-SetUpstream sets Upstream field to given value.
+SetMask sets Mask field to given value.
 
-### HasUpstream
+### HasMask
 
-`func (o *InlineResponse20081) HasUpstream() bool`
+`func (o *InlineResponse20081) HasMask() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasMask returns a boolean if a field has been set.
 
-### GetDownstream
+### GetSubnets
 
-`func (o *InlineResponse20081) GetDownstream() float32`
+`func (o *InlineResponse20081) GetSubnets() []InlineResponse20081Subnets`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetSubnets returns the Subnets field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetSubnetsOk
 
-`func (o *InlineResponse20081) GetDownstreamOk() (*float32, bool)`
+`func (o *InlineResponse20081) GetSubnetsOk() (*[]InlineResponse20081Subnets, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetSubnets
 
-`func (o *InlineResponse20081) SetDownstream(v float32)`
+`func (o *InlineResponse20081) SetSubnets(v []InlineResponse20081Subnets)`
 
-SetDownstream sets Downstream field to given value.
+SetSubnets sets Subnets field to given value.
 
-### HasDownstream
+### HasSubnets
 
-`func (o *InlineResponse20081) HasDownstream() bool`
+`func (o *InlineResponse20081) HasSubnets() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasSubnets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

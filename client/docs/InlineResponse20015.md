@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
-**RtspUrl** | Pointer to **string** | External rstp url. Will only be returned if external rtsp stream is exposed | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time | [optional] 
+**Entrances** | Pointer to **int32** | The number of entrances | [optional] 
+**AverageCount** | Pointer to **float32** | The average count | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20015WithDefaults instantiates a new InlineResponse20015 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetExternalRtspEnabled
+### GetStartTs
 
-`func (o *InlineResponse20015) GetExternalRtspEnabled() bool`
+`func (o *InlineResponse20015) GetStartTs() time.Time`
 
-GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetExternalRtspEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse20015) GetExternalRtspEnabledOk() (*bool, bool)`
+`func (o *InlineResponse20015) GetStartTsOk() (*time.Time, bool)`
 
-GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExternalRtspEnabled
+### SetStartTs
 
-`func (o *InlineResponse20015) SetExternalRtspEnabled(v bool)`
+`func (o *InlineResponse20015) SetStartTs(v time.Time)`
 
-SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasExternalRtspEnabled
+### HasStartTs
 
-`func (o *InlineResponse20015) HasExternalRtspEnabled() bool`
+`func (o *InlineResponse20015) HasStartTs() bool`
 
-HasExternalRtspEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetRtspUrl
+### GetEndTs
 
-`func (o *InlineResponse20015) GetRtspUrl() string`
+`func (o *InlineResponse20015) GetEndTs() time.Time`
 
-GetRtspUrl returns the RtspUrl field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetRtspUrlOk
+### GetEndTsOk
 
-`func (o *InlineResponse20015) GetRtspUrlOk() (*string, bool)`
+`func (o *InlineResponse20015) GetEndTsOk() (*time.Time, bool)`
 
-GetRtspUrlOk returns a tuple with the RtspUrl field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRtspUrl
+### SetEndTs
 
-`func (o *InlineResponse20015) SetRtspUrl(v string)`
+`func (o *InlineResponse20015) SetEndTs(v time.Time)`
 
-SetRtspUrl sets RtspUrl field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasRtspUrl
+### HasEndTs
 
-`func (o *InlineResponse20015) HasRtspUrl() bool`
+`func (o *InlineResponse20015) HasEndTs() bool`
 
-HasRtspUrl returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetEntrances
+
+`func (o *InlineResponse20015) GetEntrances() int32`
+
+GetEntrances returns the Entrances field if non-nil, zero value otherwise.
+
+### GetEntrancesOk
+
+`func (o *InlineResponse20015) GetEntrancesOk() (*int32, bool)`
+
+GetEntrancesOk returns a tuple with the Entrances field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEntrances
+
+`func (o *InlineResponse20015) SetEntrances(v int32)`
+
+SetEntrances sets Entrances field to given value.
+
+### HasEntrances
+
+`func (o *InlineResponse20015) HasEntrances() bool`
+
+HasEntrances returns a boolean if a field has been set.
+
+### GetAverageCount
+
+`func (o *InlineResponse20015) GetAverageCount() float32`
+
+GetAverageCount returns the AverageCount field if non-nil, zero value otherwise.
+
+### GetAverageCountOk
+
+`func (o *InlineResponse20015) GetAverageCountOk() (*float32, bool)`
+
+GetAverageCountOk returns a tuple with the AverageCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAverageCount
+
+`func (o *InlineResponse20015) SetAverageCount(v float32)`
+
+SetAverageCount sets AverageCount field to given value.
+
+### HasAverageCount
+
+`func (o *InlineResponse20015) HasAverageCount() bool`
+
+HasAverageCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

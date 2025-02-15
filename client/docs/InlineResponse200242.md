@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Usage** | Pointer to [**InlineResponse200242Usage**](InlineResponse200242Usage.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200242Counts**](InlineResponse200242Counts.md) |  | [optional] 
+**BoundaryId** | Pointer to **string** | The boundary id | [optional] 
+**Type** | Pointer to **string** | The boundary type | [optional] 
+**Results** | Pointer to [**OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults**](OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200242WithDefaults instantiates a new InlineResponse200242 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUsage
+### GetBoundaryId
 
-`func (o *InlineResponse200242) GetUsage() InlineResponse200242Usage`
+`func (o *InlineResponse200242) GetBoundaryId() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetBoundaryId returns the BoundaryId field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetBoundaryIdOk
 
-`func (o *InlineResponse200242) GetUsageOk() (*InlineResponse200242Usage, bool)`
+`func (o *InlineResponse200242) GetBoundaryIdOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetBoundaryIdOk returns a tuple with the BoundaryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetBoundaryId
 
-`func (o *InlineResponse200242) SetUsage(v InlineResponse200242Usage)`
+`func (o *InlineResponse200242) SetBoundaryId(v string)`
 
-SetUsage sets Usage field to given value.
+SetBoundaryId sets BoundaryId field to given value.
 
-### HasUsage
+### HasBoundaryId
 
-`func (o *InlineResponse200242) HasUsage() bool`
+`func (o *InlineResponse200242) HasBoundaryId() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasBoundaryId returns a boolean if a field has been set.
 
-### GetCounts
+### GetType
 
-`func (o *InlineResponse200242) GetCounts() InlineResponse200242Counts`
+`func (o *InlineResponse200242) GetType() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetTypeOk
 
-`func (o *InlineResponse200242) GetCountsOk() (*InlineResponse200242Counts, bool)`
+`func (o *InlineResponse200242) GetTypeOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetType
 
-`func (o *InlineResponse200242) SetCounts(v InlineResponse200242Counts)`
+`func (o *InlineResponse200242) SetType(v string)`
 
-SetCounts sets Counts field to given value.
+SetType sets Type field to given value.
 
-### HasCounts
+### HasType
 
-`func (o *InlineResponse200242) HasCounts() bool`
+`func (o *InlineResponse200242) HasType() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
+
+### GetResults
+
+`func (o *InlineResponse200242) GetResults() OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults`
+
+GetResults returns the Results field if non-nil, zero value otherwise.
+
+### GetResultsOk
+
+`func (o *InlineResponse200242) GetResultsOk() (*OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults, bool)`
+
+GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResults
+
+`func (o *InlineResponse200242) SetResults(v OrganizationsOrganizationIdCameraDetectionsHistoryByBoundaryByIntervalResults)`
+
+SetResults sets Results field to given value.
+
+### HasResults
+
+`func (o *InlineResponse200242) HasResults() bool`
+
+HasResults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

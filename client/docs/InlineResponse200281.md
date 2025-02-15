@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
+**Serials** | Pointer to **[]string** | Serials of the devices that were released | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200281WithDefaults instantiates a new InlineResponse200281 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetSerials
 
-`func (o *InlineResponse200281) GetEnabled() bool`
+`func (o *InlineResponse200281) GetSerials() []string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetSerialsOk
 
-`func (o *InlineResponse200281) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200281) GetSerialsOk() (*[]string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetSerials
 
-`func (o *InlineResponse200281) SetEnabled(v bool)`
+`func (o *InlineResponse200281) SetSerials(v []string)`
 
-SetEnabled sets Enabled field to given value.
+SetSerials sets Serials field to given value.
 
-### HasEnabled
+### HasSerials
 
-`func (o *InlineResponse200281) HasEnabled() bool`
+`func (o *InlineResponse200281) HasSerials() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

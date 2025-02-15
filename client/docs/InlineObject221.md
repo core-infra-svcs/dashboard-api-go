@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertIds** | **[]string** | Array of alert IDs to restore | 
+**Hostname** | **string** | Hostname for the DNS record | 
+**Address** | **string** | IP for the DNS record | 
+**Profile** | [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | 
 
 ## Methods
 
 ### NewInlineObject221
 
-`func NewInlineObject221(alertIds []string, ) *InlineObject221`
+`func NewInlineObject221(hostname string, address string, profile OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, ) *InlineObject221`
 
 NewInlineObject221 instantiates a new InlineObject221 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +27,64 @@ NewInlineObject221WithDefaults instantiates a new InlineObject221 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertIds
+### GetHostname
 
-`func (o *InlineObject221) GetAlertIds() []string`
+`func (o *InlineObject221) GetHostname() string`
 
-GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetAlertIdsOk
+### GetHostnameOk
 
-`func (o *InlineObject221) GetAlertIdsOk() (*[]string, bool)`
+`func (o *InlineObject221) GetHostnameOk() (*string, bool)`
 
-GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertIds
+### SetHostname
 
-`func (o *InlineObject221) SetAlertIds(v []string)`
+`func (o *InlineObject221) SetHostname(v string)`
 
-SetAlertIds sets AlertIds field to given value.
+SetHostname sets Hostname field to given value.
+
+
+### GetAddress
+
+`func (o *InlineObject221) GetAddress() string`
+
+GetAddress returns the Address field if non-nil, zero value otherwise.
+
+### GetAddressOk
+
+`func (o *InlineObject221) GetAddressOk() (*string, bool)`
+
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAddress
+
+`func (o *InlineObject221) SetAddress(v string)`
+
+SetAddress sets Address field to given value.
+
+
+### GetProfile
+
+`func (o *InlineObject221) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile`
+
+GetProfile returns the Profile field if non-nil, zero value otherwise.
+
+### GetProfileOk
+
+`func (o *InlineObject221) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, bool)`
+
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProfile
+
+`func (o *InlineObject221) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile)`
+
+SetProfile sets Profile field to given value.
 
 
 

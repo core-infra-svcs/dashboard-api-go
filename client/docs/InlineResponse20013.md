@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **StartTs** | Pointer to **time.Time** | The start time | [optional] 
 **EndTs** | Pointer to **time.Time** | The end time | [optional] 
+**ZoneId** | Pointer to **int32** | The zone id | [optional] 
 **Entrances** | Pointer to **int32** | The number of entrances | [optional] 
 **AverageCount** | Pointer to **float32** | The average count | [optional] 
 
@@ -77,6 +78,31 @@ SetEndTs sets EndTs field to given value.
 `func (o *InlineResponse20013) HasEndTs() bool`
 
 HasEndTs returns a boolean if a field has been set.
+
+### GetZoneId
+
+`func (o *InlineResponse20013) GetZoneId() int32`
+
+GetZoneId returns the ZoneId field if non-nil, zero value otherwise.
+
+### GetZoneIdOk
+
+`func (o *InlineResponse20013) GetZoneIdOk() (*int32, bool)`
+
+GetZoneIdOk returns a tuple with the ZoneId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetZoneId
+
+`func (o *InlineResponse20013) SetZoneId(v int32)`
+
+SetZoneId sets ZoneId field to given value.
+
+### HasZoneId
+
+`func (o *InlineResponse20013) HasZoneId() bool`
+
+HasZoneId returns a boolean if a field has been set.
 
 ### GetEntrances
 

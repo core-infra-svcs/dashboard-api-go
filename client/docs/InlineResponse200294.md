@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
-**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
+**IdpId** | Pointer to **string** | ID associated with the SAML Identity Provider (IdP) | [optional] 
+**ConsumerUrl** | Pointer to **string** | URL that is consuming SAML Identity Provider (IdP) | [optional] 
+**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
+**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200294WithDefaults instantiates a new InlineResponse200294 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetIdpId
 
-`func (o *InlineResponse200294) GetTs() time.Time`
+`func (o *InlineResponse200294) GetIdpId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetIdpId returns the IdpId field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetIdpIdOk
 
-`func (o *InlineResponse200294) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200294) GetIdpIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetIdpIdOk returns a tuple with the IdpId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetIdpId
 
-`func (o *InlineResponse200294) SetTs(v time.Time)`
+`func (o *InlineResponse200294) SetIdpId(v string)`
 
-SetTs sets Ts field to given value.
+SetIdpId sets IdpId field to given value.
 
-### HasTs
+### HasIdpId
 
-`func (o *InlineResponse200294) HasTs() bool`
+`func (o *InlineResponse200294) HasIdpId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasIdpId returns a boolean if a field has been set.
 
-### GetDraw
+### GetConsumerUrl
 
-`func (o *InlineResponse200294) GetDraw() float32`
+`func (o *InlineResponse200294) GetConsumerUrl() string`
 
-GetDraw returns the Draw field if non-nil, zero value otherwise.
+GetConsumerUrl returns the ConsumerUrl field if non-nil, zero value otherwise.
 
-### GetDrawOk
+### GetConsumerUrlOk
 
-`func (o *InlineResponse200294) GetDrawOk() (*float32, bool)`
+`func (o *InlineResponse200294) GetConsumerUrlOk() (*string, bool)`
 
-GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
+GetConsumerUrlOk returns a tuple with the ConsumerUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDraw
+### SetConsumerUrl
 
-`func (o *InlineResponse200294) SetDraw(v float32)`
+`func (o *InlineResponse200294) SetConsumerUrl(v string)`
 
-SetDraw sets Draw field to given value.
+SetConsumerUrl sets ConsumerUrl field to given value.
 
-### HasDraw
+### HasConsumerUrl
 
-`func (o *InlineResponse200294) HasDraw() bool`
+`func (o *InlineResponse200294) HasConsumerUrl() bool`
 
-HasDraw returns a boolean if a field has been set.
+HasConsumerUrl returns a boolean if a field has been set.
+
+### GetX509certSha1Fingerprint
+
+`func (o *InlineResponse200294) GetX509certSha1Fingerprint() string`
+
+GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+
+### GetX509certSha1FingerprintOk
+
+`func (o *InlineResponse200294) GetX509certSha1FingerprintOk() (*string, bool)`
+
+GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetX509certSha1Fingerprint
+
+`func (o *InlineResponse200294) SetX509certSha1Fingerprint(v string)`
+
+SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+
+### HasX509certSha1Fingerprint
+
+`func (o *InlineResponse200294) HasX509certSha1Fingerprint() bool`
+
+HasX509certSha1Fingerprint returns a boolean if a field has been set.
+
+### GetSloLogoutUrl
+
+`func (o *InlineResponse200294) GetSloLogoutUrl() string`
+
+GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+
+### GetSloLogoutUrlOk
+
+`func (o *InlineResponse200294) GetSloLogoutUrlOk() (*string, bool)`
+
+GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSloLogoutUrl
+
+`func (o *InlineResponse200294) SetSloLogoutUrl(v string)`
+
+SetSloLogoutUrl sets SloLogoutUrl field to given value.
+
+### HasSloLogoutUrl
+
+`func (o *InlineResponse200294) HasSloLogoutUrl() bool`
+
+HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

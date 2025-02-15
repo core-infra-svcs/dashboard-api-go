@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200234Items**](InlineResponse200234Items.md) | List Cellular Service Providers | [optional] 
-**Meta** | Pointer to [**InlineResponse200234Meta**](InlineResponse200234Meta.md) |  | [optional] 
+**Items** | [**[]InlineResponse200234Items**](InlineResponse200234Items.md) | Alert Counts by Network | 
+**Meta** | [**InlineResponse200234Meta**](InlineResponse200234Meta.md) |  | 
 
 ## Methods
 
 ### NewInlineResponse200234
 
-`func NewInlineResponse200234() *InlineResponse200234`
+`func NewInlineResponse200234(items []InlineResponse200234Items, meta InlineResponse200234Meta, ) *InlineResponse200234`
 
 NewInlineResponse200234 instantiates a new InlineResponse200234 object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetItems sets Items field to given value.
 
-### HasItems
-
-`func (o *InlineResponse200234) HasItems() bool`
-
-HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetMeta sets Meta field to given value.
 
-### HasMeta
-
-`func (o *InlineResponse200234) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

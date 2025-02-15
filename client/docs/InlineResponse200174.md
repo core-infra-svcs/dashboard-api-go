@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The network ID | [optional] 
-**DefaultPolicy** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs. (blocked by default) | [optional] 
+**VlanProfile** | Pointer to [**InlineResponse200174VlanProfile**](InlineResponse200174VlanProfile.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | Array of Device Serials | [optional] 
+**StackIds** | Pointer to **[]string** | Array of Switch Stack IDs | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200174WithDefaults instantiates a new InlineResponse200174 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetVlanProfile
 
-`func (o *InlineResponse200174) GetNetworkId() string`
+`func (o *InlineResponse200174) GetVlanProfile() InlineResponse200174VlanProfile`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetVlanProfileOk
 
-`func (o *InlineResponse200174) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200174) GetVlanProfileOk() (*InlineResponse200174VlanProfile, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetVlanProfile
 
-`func (o *InlineResponse200174) SetNetworkId(v string)`
+`func (o *InlineResponse200174) SetVlanProfile(v InlineResponse200174VlanProfile)`
 
-SetNetworkId sets NetworkId field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
-### HasNetworkId
+### HasVlanProfile
 
-`func (o *InlineResponse200174) HasNetworkId() bool`
+`func (o *InlineResponse200174) HasVlanProfile() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasVlanProfile returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetSerials
 
-`func (o *InlineResponse200174) GetDefaultPolicy() string`
+`func (o *InlineResponse200174) GetSerials() []string`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetSerialsOk
 
-`func (o *InlineResponse200174) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineResponse200174) GetSerialsOk() (*[]string, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetSerials
 
-`func (o *InlineResponse200174) SetDefaultPolicy(v string)`
+`func (o *InlineResponse200174) SetSerials(v []string)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetSerials sets Serials field to given value.
 
-### HasDefaultPolicy
+### HasSerials
 
-`func (o *InlineResponse200174) HasDefaultPolicy() bool`
+`func (o *InlineResponse200174) HasSerials() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
+
+### GetStackIds
+
+`func (o *InlineResponse200174) GetStackIds() []string`
+
+GetStackIds returns the StackIds field if non-nil, zero value otherwise.
+
+### GetStackIdsOk
+
+`func (o *InlineResponse200174) GetStackIdsOk() (*[]string, bool)`
+
+GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStackIds
+
+`func (o *InlineResponse200174) SetStackIds(v []string)`
+
+SetStackIds sets StackIds field to given value.
+
+### HasStackIds
+
+`func (o *InlineResponse200174) HasStackIds() bool`
+
+HasStackIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

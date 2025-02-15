@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
+**Serials** | **[]string** | A list of serials of devices to update | 
+**Details** | [**[]OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails**](OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails.md) | An array of details | 
 
 ## Methods
 
 ### NewInlineObject249
 
-`func NewInlineObject249() *InlineObject249`
+`func NewInlineObject249(serials []string, details []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails, ) *InlineObject249`
 
 NewInlineObject249 instantiates a new InlineObject249 object
 This constructor will assign default values to properties that have it defined,
@@ -44,11 +45,26 @@ and a boolean to check if the value has been set.
 
 SetSerials sets Serials field to given value.
 
-### HasSerials
 
-`func (o *InlineObject249) HasSerials() bool`
+### GetDetails
 
-HasSerials returns a boolean if a field has been set.
+`func (o *InlineObject249) GetDetails() []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails`
+
+GetDetails returns the Details field if non-nil, zero value otherwise.
+
+### GetDetailsOk
+
+`func (o *InlineObject249) GetDetailsOk() (*[]OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails, bool)`
+
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetails
+
+`func (o *InlineObject249) SetDetails(v []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails)`
+
+SetDetails sets Details field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

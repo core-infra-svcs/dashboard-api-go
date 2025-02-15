@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Boolean for updating SAML SSO enabled settings. | [optional] 
+**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
+**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
 
 ## Methods
 
 ### NewInlineObject263
 
-`func NewInlineObject263() *InlineObject263`
+`func NewInlineObject263(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject263`
 
 NewInlineObject263 instantiates a new InlineObject263 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +26,45 @@ NewInlineObject263WithDefaults instantiates a new InlineObject263 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetLicenseIdToRenew
 
-`func (o *InlineObject263) GetEnabled() bool`
+`func (o *InlineObject263) GetLicenseIdToRenew() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetLicenseIdToRenewOk
 
-`func (o *InlineObject263) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject263) GetLicenseIdToRenewOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetLicenseIdToRenew
 
-`func (o *InlineObject263) SetEnabled(v bool)`
+`func (o *InlineObject263) SetLicenseIdToRenew(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject263) HasEnabled() bool`
+### GetUnusedLicenseId
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject263) GetUnusedLicenseId() string`
+
+GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
+
+### GetUnusedLicenseIdOk
+
+`func (o *InlineObject263) GetUnusedLicenseIdOk() (*string, bool)`
+
+GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnusedLicenseId
+
+`func (o *InlineObject263) SetUnusedLicenseId(v string)`
+
+SetUnusedLicenseId sets UnusedLicenseId field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

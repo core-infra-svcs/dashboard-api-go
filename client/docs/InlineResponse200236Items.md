@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountId** | Pointer to **string** | Account ID of plans to be fetched | [optional] 
-**Apns** | Pointer to [**[]InlineResponse200236Apns**](InlineResponse200236Apns.md) | Available APNs | [optional] 
-**Name** | Pointer to **string** | Communication plan name | [optional] 
+**SegmentStart** | **time.Time** | Starting datetime of the segment in iso8601 format | 
+**Totals** | [**InlineResponse200236Totals**](InlineResponse200236Totals.md) |  | 
+**ByAlertType** | [**[]InlineResponse200236ByAlertType**](InlineResponse200236ByAlertType.md) | Totals by Type | 
 
 ## Methods
 
 ### NewInlineResponse200236Items
 
-`func NewInlineResponse200236Items() *InlineResponse200236Items`
+`func NewInlineResponse200236Items(segmentStart time.Time, totals InlineResponse200236Totals, byAlertType []InlineResponse200236ByAlertType, ) *InlineResponse200236Items`
 
 NewInlineResponse200236Items instantiates a new InlineResponse200236Items object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +27,65 @@ NewInlineResponse200236ItemsWithDefaults instantiates a new InlineResponse200236
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccountId
+### GetSegmentStart
 
-`func (o *InlineResponse200236Items) GetAccountId() string`
+`func (o *InlineResponse200236Items) GetSegmentStart() time.Time`
 
-GetAccountId returns the AccountId field if non-nil, zero value otherwise.
+GetSegmentStart returns the SegmentStart field if non-nil, zero value otherwise.
 
-### GetAccountIdOk
+### GetSegmentStartOk
 
-`func (o *InlineResponse200236Items) GetAccountIdOk() (*string, bool)`
+`func (o *InlineResponse200236Items) GetSegmentStartOk() (*time.Time, bool)`
 
-GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
+GetSegmentStartOk returns a tuple with the SegmentStart field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountId
+### SetSegmentStart
 
-`func (o *InlineResponse200236Items) SetAccountId(v string)`
+`func (o *InlineResponse200236Items) SetSegmentStart(v time.Time)`
 
-SetAccountId sets AccountId field to given value.
+SetSegmentStart sets SegmentStart field to given value.
 
-### HasAccountId
 
-`func (o *InlineResponse200236Items) HasAccountId() bool`
+### GetTotals
 
-HasAccountId returns a boolean if a field has been set.
+`func (o *InlineResponse200236Items) GetTotals() InlineResponse200236Totals`
 
-### GetApns
+GetTotals returns the Totals field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200236Items) GetApns() []InlineResponse200236Apns`
+### GetTotalsOk
 
-GetApns returns the Apns field if non-nil, zero value otherwise.
+`func (o *InlineResponse200236Items) GetTotalsOk() (*InlineResponse200236Totals, bool)`
 
-### GetApnsOk
-
-`func (o *InlineResponse200236Items) GetApnsOk() (*[]InlineResponse200236Apns, bool)`
-
-GetApnsOk returns a tuple with the Apns field if it's non-nil, zero value otherwise
+GetTotalsOk returns a tuple with the Totals field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApns
+### SetTotals
 
-`func (o *InlineResponse200236Items) SetApns(v []InlineResponse200236Apns)`
+`func (o *InlineResponse200236Items) SetTotals(v InlineResponse200236Totals)`
 
-SetApns sets Apns field to given value.
+SetTotals sets Totals field to given value.
 
-### HasApns
 
-`func (o *InlineResponse200236Items) HasApns() bool`
+### GetByAlertType
 
-HasApns returns a boolean if a field has been set.
+`func (o *InlineResponse200236Items) GetByAlertType() []InlineResponse200236ByAlertType`
 
-### GetName
+GetByAlertType returns the ByAlertType field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200236Items) GetName() string`
+### GetByAlertTypeOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse200236Items) GetByAlertTypeOk() (*[]InlineResponse200236ByAlertType, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse200236Items) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetByAlertTypeOk returns a tuple with the ByAlertType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetByAlertType
 
-`func (o *InlineResponse200236Items) SetName(v string)`
+`func (o *InlineResponse200236Items) SetByAlertType(v []InlineResponse200236ByAlertType)`
 
-SetName sets Name field to given value.
+SetByAlertType sets ByAlertType field to given value.
 
-### HasName
-
-`func (o *InlineResponse200236Items) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

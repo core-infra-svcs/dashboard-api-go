@@ -4,14 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | device ID | [optional] 
-**Name** | Pointer to **string** | device name | [optional] 
-**SystemType** | Pointer to **string** | system type | [optional] 
-**Mac** | Pointer to **string** | mac address | [optional] 
-**Username** | Pointer to **string** | username | [optional] 
-**Email** | Pointer to **string** | user email | [optional] 
-**Tags** | Pointer to **[]string** | device tags | [optional] 
-**TrustedAccessConnections** | Pointer to [**[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections**](NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections.md) | Array of trusted access configs | [optional] 
+**Id** | Pointer to **string** | ID of a profile. | [optional] 
+**Name** | Pointer to **string** | Name of a profile. | [optional] 
+**Description** | Pointer to **string** | Description of a profile. | [optional] 
+**Scope** | Pointer to **string** | Scope of a profile. | [optional] 
+**Tags** | Pointer to **[]string** | Tags of a profile. | [optional] 
+**PayloadTypes** | Pointer to **[]string** | Payloads in the profile. | [optional] 
 
 ## Methods
 
@@ -82,105 +80,55 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSystemType
+### GetDescription
 
-`func (o *InlineResponse200140) GetSystemType() string`
+`func (o *InlineResponse200140) GetDescription() string`
 
-GetSystemType returns the SystemType field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetSystemTypeOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200140) GetSystemTypeOk() (*string, bool)`
+`func (o *InlineResponse200140) GetDescriptionOk() (*string, bool)`
 
-GetSystemTypeOk returns a tuple with the SystemType field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSystemType
+### SetDescription
 
-`func (o *InlineResponse200140) SetSystemType(v string)`
+`func (o *InlineResponse200140) SetDescription(v string)`
 
-SetSystemType sets SystemType field to given value.
+SetDescription sets Description field to given value.
 
-### HasSystemType
+### HasDescription
 
-`func (o *InlineResponse200140) HasSystemType() bool`
+`func (o *InlineResponse200140) HasDescription() bool`
 
-HasSystemType returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetMac
+### GetScope
 
-`func (o *InlineResponse200140) GetMac() string`
+`func (o *InlineResponse200140) GetScope() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetScope returns the Scope field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetScopeOk
 
-`func (o *InlineResponse200140) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200140) GetScopeOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetScope
 
-`func (o *InlineResponse200140) SetMac(v string)`
+`func (o *InlineResponse200140) SetScope(v string)`
 
-SetMac sets Mac field to given value.
+SetScope sets Scope field to given value.
 
-### HasMac
+### HasScope
 
-`func (o *InlineResponse200140) HasMac() bool`
+`func (o *InlineResponse200140) HasScope() bool`
 
-HasMac returns a boolean if a field has been set.
-
-### GetUsername
-
-`func (o *InlineResponse200140) GetUsername() string`
-
-GetUsername returns the Username field if non-nil, zero value otherwise.
-
-### GetUsernameOk
-
-`func (o *InlineResponse200140) GetUsernameOk() (*string, bool)`
-
-GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsername
-
-`func (o *InlineResponse200140) SetUsername(v string)`
-
-SetUsername sets Username field to given value.
-
-### HasUsername
-
-`func (o *InlineResponse200140) HasUsername() bool`
-
-HasUsername returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *InlineResponse200140) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *InlineResponse200140) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *InlineResponse200140) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *InlineResponse200140) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
+HasScope returns a boolean if a field has been set.
 
 ### GetTags
 
@@ -207,30 +155,30 @@ SetTags sets Tags field to given value.
 
 HasTags returns a boolean if a field has been set.
 
-### GetTrustedAccessConnections
+### GetPayloadTypes
 
-`func (o *InlineResponse200140) GetTrustedAccessConnections() []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections`
+`func (o *InlineResponse200140) GetPayloadTypes() []string`
 
-GetTrustedAccessConnections returns the TrustedAccessConnections field if non-nil, zero value otherwise.
+GetPayloadTypes returns the PayloadTypes field if non-nil, zero value otherwise.
 
-### GetTrustedAccessConnectionsOk
+### GetPayloadTypesOk
 
-`func (o *InlineResponse200140) GetTrustedAccessConnectionsOk() (*[]NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections, bool)`
+`func (o *InlineResponse200140) GetPayloadTypesOk() (*[]string, bool)`
 
-GetTrustedAccessConnectionsOk returns a tuple with the TrustedAccessConnections field if it's non-nil, zero value otherwise
+GetPayloadTypesOk returns a tuple with the PayloadTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTrustedAccessConnections
+### SetPayloadTypes
 
-`func (o *InlineResponse200140) SetTrustedAccessConnections(v []NetworksNetworkIdSmUserAccessDevicesTrustedAccessConnections)`
+`func (o *InlineResponse200140) SetPayloadTypes(v []string)`
 
-SetTrustedAccessConnections sets TrustedAccessConnections field to given value.
+SetPayloadTypes sets PayloadTypes field to given value.
 
-### HasTrustedAccessConnections
+### HasPayloadTypes
 
-`func (o *InlineResponse200140) HasTrustedAccessConnections() bool`
+`func (o *InlineResponse200140) HasPayloadTypes() bool`
 
-HasTrustedAccessConnections returns a boolean if a field has been set.
+HasPayloadTypes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

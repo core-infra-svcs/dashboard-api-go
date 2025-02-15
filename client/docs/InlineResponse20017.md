@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceName** | Pointer to **string** | Name of the MG. | [optional] 
-**DeviceLanIp** | Pointer to **string** | Lan IP of the MG | [optional] 
-**DeviceSubnet** | Pointer to **string** | Subnet configuration of the MG. | [optional] 
-**FixedIpAssignments** | Pointer to [**[]InlineResponse20017FixedIpAssignments**](InlineResponse20017FixedIpAssignments.md) | list of all fixed IP assignments for a single MG | [optional] 
-**ReservedIpRanges** | Pointer to [**[]InlineResponse20017ReservedIpRanges**](InlineResponse20017ReservedIpRanges.md) | list of all reserved IP ranges for a single MG | [optional] 
+**ExternalRtspEnabled** | Pointer to **bool** | Boolean indicating if external rtsp stream is exposed | [optional] 
+**RtspUrl** | Pointer to **string** | External rstp url. Will only be returned if external rtsp stream is exposed | [optional] 
 
 ## Methods
 
@@ -29,130 +26,55 @@ NewInlineResponse20017WithDefaults instantiates a new InlineResponse20017 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDeviceName
+### GetExternalRtspEnabled
 
-`func (o *InlineResponse20017) GetDeviceName() string`
+`func (o *InlineResponse20017) GetExternalRtspEnabled() bool`
 
-GetDeviceName returns the DeviceName field if non-nil, zero value otherwise.
+GetExternalRtspEnabled returns the ExternalRtspEnabled field if non-nil, zero value otherwise.
 
-### GetDeviceNameOk
+### GetExternalRtspEnabledOk
 
-`func (o *InlineResponse20017) GetDeviceNameOk() (*string, bool)`
+`func (o *InlineResponse20017) GetExternalRtspEnabledOk() (*bool, bool)`
 
-GetDeviceNameOk returns a tuple with the DeviceName field if it's non-nil, zero value otherwise
+GetExternalRtspEnabledOk returns a tuple with the ExternalRtspEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceName
+### SetExternalRtspEnabled
 
-`func (o *InlineResponse20017) SetDeviceName(v string)`
+`func (o *InlineResponse20017) SetExternalRtspEnabled(v bool)`
 
-SetDeviceName sets DeviceName field to given value.
+SetExternalRtspEnabled sets ExternalRtspEnabled field to given value.
 
-### HasDeviceName
+### HasExternalRtspEnabled
 
-`func (o *InlineResponse20017) HasDeviceName() bool`
+`func (o *InlineResponse20017) HasExternalRtspEnabled() bool`
 
-HasDeviceName returns a boolean if a field has been set.
+HasExternalRtspEnabled returns a boolean if a field has been set.
 
-### GetDeviceLanIp
+### GetRtspUrl
 
-`func (o *InlineResponse20017) GetDeviceLanIp() string`
+`func (o *InlineResponse20017) GetRtspUrl() string`
 
-GetDeviceLanIp returns the DeviceLanIp field if non-nil, zero value otherwise.
+GetRtspUrl returns the RtspUrl field if non-nil, zero value otherwise.
 
-### GetDeviceLanIpOk
+### GetRtspUrlOk
 
-`func (o *InlineResponse20017) GetDeviceLanIpOk() (*string, bool)`
+`func (o *InlineResponse20017) GetRtspUrlOk() (*string, bool)`
 
-GetDeviceLanIpOk returns a tuple with the DeviceLanIp field if it's non-nil, zero value otherwise
+GetRtspUrlOk returns a tuple with the RtspUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceLanIp
+### SetRtspUrl
 
-`func (o *InlineResponse20017) SetDeviceLanIp(v string)`
+`func (o *InlineResponse20017) SetRtspUrl(v string)`
 
-SetDeviceLanIp sets DeviceLanIp field to given value.
+SetRtspUrl sets RtspUrl field to given value.
 
-### HasDeviceLanIp
+### HasRtspUrl
 
-`func (o *InlineResponse20017) HasDeviceLanIp() bool`
+`func (o *InlineResponse20017) HasRtspUrl() bool`
 
-HasDeviceLanIp returns a boolean if a field has been set.
-
-### GetDeviceSubnet
-
-`func (o *InlineResponse20017) GetDeviceSubnet() string`
-
-GetDeviceSubnet returns the DeviceSubnet field if non-nil, zero value otherwise.
-
-### GetDeviceSubnetOk
-
-`func (o *InlineResponse20017) GetDeviceSubnetOk() (*string, bool)`
-
-GetDeviceSubnetOk returns a tuple with the DeviceSubnet field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceSubnet
-
-`func (o *InlineResponse20017) SetDeviceSubnet(v string)`
-
-SetDeviceSubnet sets DeviceSubnet field to given value.
-
-### HasDeviceSubnet
-
-`func (o *InlineResponse20017) HasDeviceSubnet() bool`
-
-HasDeviceSubnet returns a boolean if a field has been set.
-
-### GetFixedIpAssignments
-
-`func (o *InlineResponse20017) GetFixedIpAssignments() []InlineResponse20017FixedIpAssignments`
-
-GetFixedIpAssignments returns the FixedIpAssignments field if non-nil, zero value otherwise.
-
-### GetFixedIpAssignmentsOk
-
-`func (o *InlineResponse20017) GetFixedIpAssignmentsOk() (*[]InlineResponse20017FixedIpAssignments, bool)`
-
-GetFixedIpAssignmentsOk returns a tuple with the FixedIpAssignments field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFixedIpAssignments
-
-`func (o *InlineResponse20017) SetFixedIpAssignments(v []InlineResponse20017FixedIpAssignments)`
-
-SetFixedIpAssignments sets FixedIpAssignments field to given value.
-
-### HasFixedIpAssignments
-
-`func (o *InlineResponse20017) HasFixedIpAssignments() bool`
-
-HasFixedIpAssignments returns a boolean if a field has been set.
-
-### GetReservedIpRanges
-
-`func (o *InlineResponse20017) GetReservedIpRanges() []InlineResponse20017ReservedIpRanges`
-
-GetReservedIpRanges returns the ReservedIpRanges field if non-nil, zero value otherwise.
-
-### GetReservedIpRangesOk
-
-`func (o *InlineResponse20017) GetReservedIpRangesOk() (*[]InlineResponse20017ReservedIpRanges, bool)`
-
-GetReservedIpRangesOk returns a tuple with the ReservedIpRanges field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReservedIpRanges
-
-`func (o *InlineResponse20017) SetReservedIpRanges(v []InlineResponse20017ReservedIpRanges)`
-
-SetReservedIpRanges sets ReservedIpRanges field to given value.
-
-### HasReservedIpRanges
-
-`func (o *InlineResponse20017) HasReservedIpRanges() bool`
-
-HasReservedIpRanges returns a boolean if a field has been set.
+HasRtspUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

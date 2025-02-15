@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertIds** | **[]string** | Array of alert IDs to dismiss | 
+**Name** | **string** | Name of profile | 
 
 ## Methods
 
 ### NewInlineObject220
 
-`func NewInlineObject220(alertIds []string, ) *InlineObject220`
+`func NewInlineObject220(name string, ) *InlineObject220`
 
 NewInlineObject220 instantiates a new InlineObject220 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject220WithDefaults instantiates a new InlineObject220 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertIds
+### GetName
 
-`func (o *InlineObject220) GetAlertIds() []string`
+`func (o *InlineObject220) GetName() string`
 
-GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAlertIdsOk
+### GetNameOk
 
-`func (o *InlineObject220) GetAlertIdsOk() (*[]string, bool)`
+`func (o *InlineObject220) GetNameOk() (*string, bool)`
 
-GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertIds
+### SetName
 
-`func (o *InlineObject220) SetAlertIds(v []string)`
+`func (o *InlineObject220) SetName(v string)`
 
-SetAlertIds sets AlertIds field to given value.
+SetName sets Name field to given value.
 
 
 

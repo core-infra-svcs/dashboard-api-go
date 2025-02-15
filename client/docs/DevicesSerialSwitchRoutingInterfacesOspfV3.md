@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Area** | Pointer to **string** | Area id | [optional] 
+**Area** | Pointer to **string** | Area ID | [optional] 
 **Cost** | Pointer to **int32** | OSPF Cost | [optional] 
 **IsPassiveEnabled** | Pointer to **bool** | Disable sending Hello packets on this interface&#39;s IPv6 area | [optional] 
 

@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | **string** | Short name of the early access feature | 
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**AccountId** | **string** | Service provider account ID | 
+**ApiKey** | **string** | Service provider account API key | 
+**ServiceProvider** | [**OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1**](OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1.md) |  | 
+**Title** | **string** | Service provider account name | 
+**Username** | **string** | Service provider account username | 
 
 ## Methods
 
 ### NewInlineObject240
 
-`func NewInlineObject240(shortName string, ) *InlineObject240`
+`func NewInlineObject240(accountId string, apiKey string, serviceProvider OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, title string, username string, ) *InlineObject240`
 
 NewInlineObject240 instantiates a new InlineObject240 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +29,105 @@ NewInlineObject240WithDefaults instantiates a new InlineObject240 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetShortName
+### GetAccountId
 
-`func (o *InlineObject240) GetShortName() string`
+`func (o *InlineObject240) GetAccountId() string`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetAccountId returns the AccountId field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetAccountIdOk
 
-`func (o *InlineObject240) GetShortNameOk() (*string, bool)`
+`func (o *InlineObject240) GetAccountIdOk() (*string, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetAccountId
 
-`func (o *InlineObject240) SetShortName(v string)`
+`func (o *InlineObject240) SetAccountId(v string)`
 
-SetShortName sets ShortName field to given value.
+SetAccountId sets AccountId field to given value.
 
 
-### GetLimitScopeToNetworks
+### GetApiKey
 
-`func (o *InlineObject240) GetLimitScopeToNetworks() []string`
+`func (o *InlineObject240) GetApiKey() string`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetApiKeyOk
 
-`func (o *InlineObject240) GetLimitScopeToNetworksOk() (*[]string, bool)`
+`func (o *InlineObject240) GetApiKeyOk() (*string, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetApiKey
 
-`func (o *InlineObject240) SetLimitScopeToNetworks(v []string)`
+`func (o *InlineObject240) SetApiKey(v string)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetApiKey sets ApiKey field to given value.
 
-### HasLimitScopeToNetworks
 
-`func (o *InlineObject240) HasLimitScopeToNetworks() bool`
+### GetServiceProvider
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+`func (o *InlineObject240) GetServiceProvider() OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1`
+
+GetServiceProvider returns the ServiceProvider field if non-nil, zero value otherwise.
+
+### GetServiceProviderOk
+
+`func (o *InlineObject240) GetServiceProviderOk() (*OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1, bool)`
+
+GetServiceProviderOk returns a tuple with the ServiceProvider field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetServiceProvider
+
+`func (o *InlineObject240) SetServiceProvider(v OrganizationsOrganizationIdCellularGatewayEsimsServiceProvidersAccountsServiceProvider1)`
+
+SetServiceProvider sets ServiceProvider field to given value.
+
+
+### GetTitle
+
+`func (o *InlineObject240) GetTitle() string`
+
+GetTitle returns the Title field if non-nil, zero value otherwise.
+
+### GetTitleOk
+
+`func (o *InlineObject240) GetTitleOk() (*string, bool)`
+
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTitle
+
+`func (o *InlineObject240) SetTitle(v string)`
+
+SetTitle sets Title field to given value.
+
+
+### GetUsername
+
+`func (o *InlineObject240) GetUsername() string`
+
+GetUsername returns the Username field if non-nil, zero value otherwise.
+
+### GetUsernameOk
+
+`func (o *InlineObject240) GetUsernameOk() (*string, bool)`
+
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsername
+
+`func (o *InlineObject240) SetUsername(v string)`
+
+SetUsername sets Username field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

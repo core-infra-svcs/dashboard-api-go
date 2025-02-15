@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetDeviceApplianceDhcpSubnets
 
-> []map[string]interface{} GetDeviceApplianceDhcpSubnets(ctx, serial).Execute()
+> []InlineResponse2007 GetDeviceApplianceDhcpSubnets(ctx, serial).Execute()
 
 Return the DHCP subnet information for an appliance
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SubnetsApi.GetDeviceApplianceDhcpSubnets``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetDeviceApplianceDhcpSubnets`: []map[string]interface{}
+    // response from `GetDeviceApplianceDhcpSubnets`: []InlineResponse2007
     fmt.Fprintf(os.Stdout, "Response from `SubnetsApi.GetDeviceApplianceDhcpSubnets`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**[]map[string]interface{}**
+[**[]InlineResponse2007**](InlineResponse2007.md)
 
 ### Authorization
 

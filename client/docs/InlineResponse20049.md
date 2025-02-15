@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Service** | Pointer to **string** | Appliance service name | [optional] 
-**Access** | Pointer to **string** | A string indicating the rule for which IPs are allowed to use the specified service | [optional] 
-**AllowedIps** | Pointer to **[]string** | An array of allowed IPs that can access the service | [optional] 
+**DefaultDestinations** | Pointer to [**InlineResponse20049DefaultDestinations**](InlineResponse20049DefaultDestinations.md) |  | [optional] 
+**Alerts** | Pointer to [**[]InlineResponse20049Alerts**](InlineResponse20049Alerts.md) | Alert-specific configuration for each type. Only alerts that pertain to the network can be updated. | [optional] 
+**Muting** | Pointer to [**InlineResponse20049Muting**](InlineResponse20049Muting.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20049WithDefaults instantiates a new InlineResponse20049 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetService
+### GetDefaultDestinations
 
-`func (o *InlineResponse20049) GetService() string`
+`func (o *InlineResponse20049) GetDefaultDestinations() InlineResponse20049DefaultDestinations`
 
-GetService returns the Service field if non-nil, zero value otherwise.
+GetDefaultDestinations returns the DefaultDestinations field if non-nil, zero value otherwise.
 
-### GetServiceOk
+### GetDefaultDestinationsOk
 
-`func (o *InlineResponse20049) GetServiceOk() (*string, bool)`
+`func (o *InlineResponse20049) GetDefaultDestinationsOk() (*InlineResponse20049DefaultDestinations, bool)`
 
-GetServiceOk returns a tuple with the Service field if it's non-nil, zero value otherwise
+GetDefaultDestinationsOk returns a tuple with the DefaultDestinations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetService
+### SetDefaultDestinations
 
-`func (o *InlineResponse20049) SetService(v string)`
+`func (o *InlineResponse20049) SetDefaultDestinations(v InlineResponse20049DefaultDestinations)`
 
-SetService sets Service field to given value.
+SetDefaultDestinations sets DefaultDestinations field to given value.
 
-### HasService
+### HasDefaultDestinations
 
-`func (o *InlineResponse20049) HasService() bool`
+`func (o *InlineResponse20049) HasDefaultDestinations() bool`
 
-HasService returns a boolean if a field has been set.
+HasDefaultDestinations returns a boolean if a field has been set.
 
-### GetAccess
+### GetAlerts
 
-`func (o *InlineResponse20049) GetAccess() string`
+`func (o *InlineResponse20049) GetAlerts() []InlineResponse20049Alerts`
 
-GetAccess returns the Access field if non-nil, zero value otherwise.
+GetAlerts returns the Alerts field if non-nil, zero value otherwise.
 
-### GetAccessOk
+### GetAlertsOk
 
-`func (o *InlineResponse20049) GetAccessOk() (*string, bool)`
+`func (o *InlineResponse20049) GetAlertsOk() (*[]InlineResponse20049Alerts, bool)`
 
-GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
+GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccess
+### SetAlerts
 
-`func (o *InlineResponse20049) SetAccess(v string)`
+`func (o *InlineResponse20049) SetAlerts(v []InlineResponse20049Alerts)`
 
-SetAccess sets Access field to given value.
+SetAlerts sets Alerts field to given value.
 
-### HasAccess
+### HasAlerts
 
-`func (o *InlineResponse20049) HasAccess() bool`
+`func (o *InlineResponse20049) HasAlerts() bool`
 
-HasAccess returns a boolean if a field has been set.
+HasAlerts returns a boolean if a field has been set.
 
-### GetAllowedIps
+### GetMuting
 
-`func (o *InlineResponse20049) GetAllowedIps() []string`
+`func (o *InlineResponse20049) GetMuting() InlineResponse20049Muting`
 
-GetAllowedIps returns the AllowedIps field if non-nil, zero value otherwise.
+GetMuting returns the Muting field if non-nil, zero value otherwise.
 
-### GetAllowedIpsOk
+### GetMutingOk
 
-`func (o *InlineResponse20049) GetAllowedIpsOk() (*[]string, bool)`
+`func (o *InlineResponse20049) GetMutingOk() (*InlineResponse20049Muting, bool)`
 
-GetAllowedIpsOk returns a tuple with the AllowedIps field if it's non-nil, zero value otherwise
+GetMutingOk returns a tuple with the Muting field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedIps
+### SetMuting
 
-`func (o *InlineResponse20049) SetAllowedIps(v []string)`
+`func (o *InlineResponse20049) SetMuting(v InlineResponse20049Muting)`
 
-SetAllowedIps sets AllowedIps field to given value.
+SetMuting sets Muting field to given value.
 
-### HasAllowedIps
+### HasMuting
 
-`func (o *InlineResponse20049) HasAllowedIps() bool`
+`func (o *InlineResponse20049) HasMuting() bool`
 
-HasAllowedIps returns a boolean if a field has been set.
+HasMuting returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

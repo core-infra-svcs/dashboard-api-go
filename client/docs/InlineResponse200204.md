@@ -4,18 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
-**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
-**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
-**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
-**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200204Rules**](InlineResponse200204Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200204
 
-`func NewInlineResponse200204(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse200204`
+`func NewInlineResponse200204() *InlineResponse200204`
 
 NewInlineResponse200204 instantiates a new InlineResponse200204 object
 This constructor will assign default values to properties that have it defined,
@@ -30,150 +27,80 @@ NewInlineResponse200204WithDefaults instantiates a new InlineResponse200204 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetTrafficShapingEnabled
 
-`func (o *InlineResponse200204) GetId() string`
+`func (o *InlineResponse200204) GetTrafficShapingEnabled() bool`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineResponse200204) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200204) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetTrafficShapingEnabled
 
-`func (o *InlineResponse200204) SetId(v string)`
+`func (o *InlineResponse200204) SetTrafficShapingEnabled(v bool)`
 
-SetId sets Id field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
-### HasId
+### HasTrafficShapingEnabled
 
-`func (o *InlineResponse200204) HasId() bool`
+`func (o *InlineResponse200204) HasTrafficShapingEnabled() bool`
 
-HasId returns a boolean if a field has been set.
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetDefaultRulesEnabled
 
-`func (o *InlineResponse200204) GetOrganizationId() string`
+`func (o *InlineResponse200204) GetDefaultRulesEnabled() bool`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetDefaultRulesEnabledOk
 
-`func (o *InlineResponse200204) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200204) GetDefaultRulesEnabledOk() (*bool, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetDefaultRulesEnabled
 
-`func (o *InlineResponse200204) SetOrganizationId(v string)`
+`func (o *InlineResponse200204) SetDefaultRulesEnabled(v bool)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasOrganizationId
+### HasDefaultRulesEnabled
 
-`func (o *InlineResponse200204) HasOrganizationId() bool`
+`func (o *InlineResponse200204) HasDefaultRulesEnabled() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
 
-### GetConfirmed
+### GetRules
 
-`func (o *InlineResponse200204) GetConfirmed() bool`
+`func (o *InlineResponse200204) GetRules() []InlineResponse200204Rules`
 
-GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
+GetRules returns the Rules field if non-nil, zero value otherwise.
 
-### GetConfirmedOk
+### GetRulesOk
 
-`func (o *InlineResponse200204) GetConfirmedOk() (*bool, bool)`
+`func (o *InlineResponse200204) GetRulesOk() (*[]InlineResponse200204Rules, bool)`
 
-GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConfirmed
+### SetRules
 
-`func (o *InlineResponse200204) SetConfirmed(v bool)`
+`func (o *InlineResponse200204) SetRules(v []InlineResponse200204Rules)`
 
-SetConfirmed sets Confirmed field to given value.
+SetRules sets Rules field to given value.
 
-### HasConfirmed
+### HasRules
 
-`func (o *InlineResponse200204) HasConfirmed() bool`
+`func (o *InlineResponse200204) HasRules() bool`
 
-HasConfirmed returns a boolean if a field has been set.
-
-### GetSynchronous
-
-`func (o *InlineResponse200204) GetSynchronous() bool`
-
-GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
-
-### GetSynchronousOk
-
-`func (o *InlineResponse200204) GetSynchronousOk() (*bool, bool)`
-
-GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSynchronous
-
-`func (o *InlineResponse200204) SetSynchronous(v bool)`
-
-SetSynchronous sets Synchronous field to given value.
-
-### HasSynchronous
-
-`func (o *InlineResponse200204) HasSynchronous() bool`
-
-HasSynchronous returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200204) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200204) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200204) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200204) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetActions
-
-`func (o *InlineResponse200204) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
-
-GetActions returns the Actions field if non-nil, zero value otherwise.
-
-### GetActionsOk
-
-`func (o *InlineResponse200204) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
-
-GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActions
-
-`func (o *InlineResponse200204) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
-
-SetActions sets Actions field to given value.
-
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

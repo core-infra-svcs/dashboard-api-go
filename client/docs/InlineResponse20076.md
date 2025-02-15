@@ -4,11 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the camera wireless profile. | [optional] 
-**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
-**AppliedDeviceCount** | Pointer to **int32** | The count of the applied devices. | [optional] 
-**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesSsid**](NetworksNetworkIdCameraWirelessProfilesSsid.md) |  | [optional] 
-**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
+**Id** | Pointer to **string** | Network ID | [optional] 
+**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Network name | [optional] 
+**ProductTypes** | Pointer to **[]string** | List of the product types that the network supports | [optional] 
+**TimeZone** | Pointer to **string** | Timezone of the network | [optional] 
+**Tags** | Pointer to **[]string** | Network tags | [optional] 
+**EnrollmentString** | Pointer to **string** | Enrollment string for the network | [optional] 
+**Url** | Pointer to **string** | URL to the network Dashboard UI | [optional] 
+**Notes** | Pointer to **string** | Notes for the network | [optional] 
+**IsBoundToConfigTemplate** | Pointer to **bool** | If the network is bound to a config template | [optional] 
+**ConfigTemplateId** | Pointer to **string** | ID of the config template the network is being bound to | [optional] 
 
 ## Methods
 
@@ -54,6 +60,31 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
+### GetOrganizationId
+
+`func (o *InlineResponse20076) GetOrganizationId() string`
+
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+
+### GetOrganizationIdOk
+
+`func (o *InlineResponse20076) GetOrganizationIdOk() (*string, bool)`
+
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrganizationId
+
+`func (o *InlineResponse20076) SetOrganizationId(v string)`
+
+SetOrganizationId sets OrganizationId field to given value.
+
+### HasOrganizationId
+
+`func (o *InlineResponse20076) HasOrganizationId() bool`
+
+HasOrganizationId returns a boolean if a field has been set.
+
 ### GetName
 
 `func (o *InlineResponse20076) GetName() string`
@@ -79,80 +110,205 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetAppliedDeviceCount
+### GetProductTypes
 
-`func (o *InlineResponse20076) GetAppliedDeviceCount() int32`
+`func (o *InlineResponse20076) GetProductTypes() []string`
 
-GetAppliedDeviceCount returns the AppliedDeviceCount field if non-nil, zero value otherwise.
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
 
-### GetAppliedDeviceCountOk
+### GetProductTypesOk
 
-`func (o *InlineResponse20076) GetAppliedDeviceCountOk() (*int32, bool)`
+`func (o *InlineResponse20076) GetProductTypesOk() (*[]string, bool)`
 
-GetAppliedDeviceCountOk returns a tuple with the AppliedDeviceCount field if it's non-nil, zero value otherwise
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppliedDeviceCount
+### SetProductTypes
 
-`func (o *InlineResponse20076) SetAppliedDeviceCount(v int32)`
+`func (o *InlineResponse20076) SetProductTypes(v []string)`
 
-SetAppliedDeviceCount sets AppliedDeviceCount field to given value.
+SetProductTypes sets ProductTypes field to given value.
 
-### HasAppliedDeviceCount
+### HasProductTypes
 
-`func (o *InlineResponse20076) HasAppliedDeviceCount() bool`
+`func (o *InlineResponse20076) HasProductTypes() bool`
 
-HasAppliedDeviceCount returns a boolean if a field has been set.
+HasProductTypes returns a boolean if a field has been set.
 
-### GetSsid
+### GetTimeZone
 
-`func (o *InlineResponse20076) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid`
+`func (o *InlineResponse20076) GetTimeZone() string`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetTimeZoneOk
 
-`func (o *InlineResponse20076) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid, bool)`
+`func (o *InlineResponse20076) GetTimeZoneOk() (*string, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetTimeZone
 
-`func (o *InlineResponse20076) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid)`
+`func (o *InlineResponse20076) SetTimeZone(v string)`
 
-SetSsid sets Ssid field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasSsid
+### HasTimeZone
 
-`func (o *InlineResponse20076) HasSsid() bool`
+`func (o *InlineResponse20076) HasTimeZone() bool`
 
-HasSsid returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
-### GetIdentity
+### GetTags
 
-`func (o *InlineResponse20076) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+`func (o *InlineResponse20076) GetTags() []string`
 
-GetIdentity returns the Identity field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetIdentityOk
+### GetTagsOk
 
-`func (o *InlineResponse20076) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+`func (o *InlineResponse20076) GetTagsOk() (*[]string, bool)`
 
-GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIdentity
+### SetTags
 
-`func (o *InlineResponse20076) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+`func (o *InlineResponse20076) SetTags(v []string)`
 
-SetIdentity sets Identity field to given value.
+SetTags sets Tags field to given value.
 
-### HasIdentity
+### HasTags
 
-`func (o *InlineResponse20076) HasIdentity() bool`
+`func (o *InlineResponse20076) HasTags() bool`
 
-HasIdentity returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetEnrollmentString
+
+`func (o *InlineResponse20076) GetEnrollmentString() string`
+
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
+
+### GetEnrollmentStringOk
+
+`func (o *InlineResponse20076) GetEnrollmentStringOk() (*string, bool)`
+
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnrollmentString
+
+`func (o *InlineResponse20076) SetEnrollmentString(v string)`
+
+SetEnrollmentString sets EnrollmentString field to given value.
+
+### HasEnrollmentString
+
+`func (o *InlineResponse20076) HasEnrollmentString() bool`
+
+HasEnrollmentString returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse20076) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse20076) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse20076) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse20076) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineResponse20076) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineResponse20076) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineResponse20076) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineResponse20076) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetIsBoundToConfigTemplate
+
+`func (o *InlineResponse20076) GetIsBoundToConfigTemplate() bool`
+
+GetIsBoundToConfigTemplate returns the IsBoundToConfigTemplate field if non-nil, zero value otherwise.
+
+### GetIsBoundToConfigTemplateOk
+
+`func (o *InlineResponse20076) GetIsBoundToConfigTemplateOk() (*bool, bool)`
+
+GetIsBoundToConfigTemplateOk returns a tuple with the IsBoundToConfigTemplate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsBoundToConfigTemplate
+
+`func (o *InlineResponse20076) SetIsBoundToConfigTemplate(v bool)`
+
+SetIsBoundToConfigTemplate sets IsBoundToConfigTemplate field to given value.
+
+### HasIsBoundToConfigTemplate
+
+`func (o *InlineResponse20076) HasIsBoundToConfigTemplate() bool`
+
+HasIsBoundToConfigTemplate returns a boolean if a field has been set.
+
+### GetConfigTemplateId
+
+`func (o *InlineResponse20076) GetConfigTemplateId() string`
+
+GetConfigTemplateId returns the ConfigTemplateId field if non-nil, zero value otherwise.
+
+### GetConfigTemplateIdOk
+
+`func (o *InlineResponse20076) GetConfigTemplateIdOk() (*string, bool)`
+
+GetConfigTemplateIdOk returns a tuple with the ConfigTemplateId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConfigTemplateId
+
+`func (o *InlineResponse20076) SetConfigTemplateId(v string)`
+
+SetConfigTemplateId sets ConfigTemplateId field to given value.
+
+### HasConfigTemplateId
+
+`func (o *InlineResponse20076) HasConfigTemplateId() bool`
+
+HasConfigTemplateId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
+**Serial** | Pointer to **string** | Device serial | [optional] 
+**Model** | Pointer to **string** | Device model. | [optional] 
+**Tags** | Pointer to **string** | Device tags. | [optional] 
+**Wifi0** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for first wifi radio of device. | [optional] 
+**Wifi1** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for second wifi radio of device. | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200110WithDefaults instantiates a new InlineResponse200110 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSerial
 
-`func (o *InlineResponse200110) GetName() string`
+`func (o *InlineResponse200110) GetSerial() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialOk
 
-`func (o *InlineResponse200110) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200110) GetSerialOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerial
 
-`func (o *InlineResponse200110) SetName(v string)`
+`func (o *InlineResponse200110) SetSerial(v string)`
 
-SetName sets Name field to given value.
+SetSerial sets Serial field to given value.
 
-### HasName
+### HasSerial
 
-`func (o *InlineResponse200110) HasName() bool`
+`func (o *InlineResponse200110) HasSerial() bool`
 
-HasName returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetClientId
+### GetModel
 
-`func (o *InlineResponse200110) GetClientId() string`
+`func (o *InlineResponse200110) GetModel() string`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetModelOk
 
-`func (o *InlineResponse200110) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200110) GetModelOk() (*string, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetModel
 
-`func (o *InlineResponse200110) SetClientId(v string)`
+`func (o *InlineResponse200110) SetModel(v string)`
 
-SetClientId sets ClientId field to given value.
+SetModel sets Model field to given value.
 
-### HasClientId
+### HasModel
 
-`func (o *InlineResponse200110) HasClientId() bool`
+`func (o *InlineResponse200110) HasModel() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetAssigned
+### GetTags
 
-`func (o *InlineResponse200110) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+`func (o *InlineResponse200110) GetTags() string`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetTagsOk
 
-`func (o *InlineResponse200110) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+`func (o *InlineResponse200110) GetTagsOk() (*string, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetTags
 
-`func (o *InlineResponse200110) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+`func (o *InlineResponse200110) SetTags(v string)`
 
-SetAssigned sets Assigned field to given value.
+SetTags sets Tags field to given value.
 
-### HasAssigned
+### HasTags
 
-`func (o *InlineResponse200110) HasAssigned() bool`
+`func (o *InlineResponse200110) HasTags() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetWifi0
+
+`func (o *InlineResponse200110) GetWifi0() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+
+GetWifi0 returns the Wifi0 field if non-nil, zero value otherwise.
+
+### GetWifi0Ok
+
+`func (o *InlineResponse200110) GetWifi0Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+
+GetWifi0Ok returns a tuple with the Wifi0 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifi0
+
+`func (o *InlineResponse200110) SetWifi0(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+
+SetWifi0 sets Wifi0 field to given value.
+
+### HasWifi0
+
+`func (o *InlineResponse200110) HasWifi0() bool`
+
+HasWifi0 returns a boolean if a field has been set.
+
+### GetWifi1
+
+`func (o *InlineResponse200110) GetWifi1() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+
+GetWifi1 returns the Wifi1 field if non-nil, zero value otherwise.
+
+### GetWifi1Ok
+
+`func (o *InlineResponse200110) GetWifi1Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+
+GetWifi1Ok returns a tuple with the Wifi1 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWifi1
+
+`func (o *InlineResponse200110) SetWifi1(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+
+SetWifi1 sets Wifi1 field to given value.
+
+### HasWifi1
+
+`func (o *InlineResponse200110) HasWifi1() bool`
+
+HasWifi1 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

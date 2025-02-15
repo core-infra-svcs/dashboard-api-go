@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DdnsHostnames** | Pointer to [**InlineResponse20029DdnsHostnames**](InlineResponse20029DdnsHostnames.md) |  | [optional] 
-**Wan1** | Pointer to [**InlineResponse20029Wan1**](InlineResponse20029Wan1.md) |  | [optional] 
-**Wan2** | Pointer to [**InlineResponse20029Wan2**](InlineResponse20029Wan2.md) |  | [optional] 
+**SourceMac** | Pointer to **string** | Source MAC address | [optional] 
+**Ports** | Pointer to [**map[string]InlineResponse20029Ports**](InlineResponse20029Ports.md) | Mapping of ports to lldp and/or cdp information | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse20029WithDefaults instantiates a new InlineResponse20029 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDdnsHostnames
+### GetSourceMac
 
-`func (o *InlineResponse20029) GetDdnsHostnames() InlineResponse20029DdnsHostnames`
+`func (o *InlineResponse20029) GetSourceMac() string`
 
-GetDdnsHostnames returns the DdnsHostnames field if non-nil, zero value otherwise.
+GetSourceMac returns the SourceMac field if non-nil, zero value otherwise.
 
-### GetDdnsHostnamesOk
+### GetSourceMacOk
 
-`func (o *InlineResponse20029) GetDdnsHostnamesOk() (*InlineResponse20029DdnsHostnames, bool)`
+`func (o *InlineResponse20029) GetSourceMacOk() (*string, bool)`
 
-GetDdnsHostnamesOk returns a tuple with the DdnsHostnames field if it's non-nil, zero value otherwise
+GetSourceMacOk returns a tuple with the SourceMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDdnsHostnames
+### SetSourceMac
 
-`func (o *InlineResponse20029) SetDdnsHostnames(v InlineResponse20029DdnsHostnames)`
+`func (o *InlineResponse20029) SetSourceMac(v string)`
 
-SetDdnsHostnames sets DdnsHostnames field to given value.
+SetSourceMac sets SourceMac field to given value.
 
-### HasDdnsHostnames
+### HasSourceMac
 
-`func (o *InlineResponse20029) HasDdnsHostnames() bool`
+`func (o *InlineResponse20029) HasSourceMac() bool`
 
-HasDdnsHostnames returns a boolean if a field has been set.
+HasSourceMac returns a boolean if a field has been set.
 
-### GetWan1
+### GetPorts
 
-`func (o *InlineResponse20029) GetWan1() InlineResponse20029Wan1`
+`func (o *InlineResponse20029) GetPorts() map[string]InlineResponse20029Ports`
 
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetWan1Ok
+### GetPortsOk
 
-`func (o *InlineResponse20029) GetWan1Ok() (*InlineResponse20029Wan1, bool)`
+`func (o *InlineResponse20029) GetPortsOk() (*map[string]InlineResponse20029Ports, bool)`
 
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan1
+### SetPorts
 
-`func (o *InlineResponse20029) SetWan1(v InlineResponse20029Wan1)`
+`func (o *InlineResponse20029) SetPorts(v map[string]InlineResponse20029Ports)`
 
-SetWan1 sets Wan1 field to given value.
+SetPorts sets Ports field to given value.
 
-### HasWan1
+### HasPorts
 
-`func (o *InlineResponse20029) HasWan1() bool`
+`func (o *InlineResponse20029) HasPorts() bool`
 
-HasWan1 returns a boolean if a field has been set.
-
-### GetWan2
-
-`func (o *InlineResponse20029) GetWan2() InlineResponse20029Wan2`
-
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
-
-### GetWan2Ok
-
-`func (o *InlineResponse20029) GetWan2Ok() (*InlineResponse20029Wan2, bool)`
-
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWan2
-
-`func (o *InlineResponse20029) SetWan2(v InlineResponse20029Wan2)`
-
-SetWan2 sets Wan2 field to given value.
-
-### HasWan2
-
-`func (o *InlineResponse20029) HasWan2() bool`
-
-HasWan2 returns a boolean if a field has been set.
+HasPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

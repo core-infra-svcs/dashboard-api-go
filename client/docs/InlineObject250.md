@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseId** | **string** | The ID of the SM license to assign seats from | 
-**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
-**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
+**ShortName** | **string** | Short name of the early access feature | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject250
 
-`func NewInlineObject250(licenseId string, networkId string, seatCount int32, ) *InlineObject250`
+`func NewInlineObject250(shortName string, ) *InlineObject250`
 
 NewInlineObject250 instantiates a new InlineObject250 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +26,50 @@ NewInlineObject250WithDefaults instantiates a new InlineObject250 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseId
+### GetShortName
 
-`func (o *InlineObject250) GetLicenseId() string`
+`func (o *InlineObject250) GetShortName() string`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetShortNameOk
 
-`func (o *InlineObject250) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineObject250) GetShortNameOk() (*string, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetShortName
 
-`func (o *InlineObject250) SetLicenseId(v string)`
+`func (o *InlineObject250) SetShortName(v string)`
 
-SetLicenseId sets LicenseId field to given value.
+SetShortName sets ShortName field to given value.
 
 
-### GetNetworkId
+### GetLimitScopeToNetworks
 
-`func (o *InlineObject250) GetNetworkId() string`
+`func (o *InlineObject250) GetLimitScopeToNetworks() []string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineObject250) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineObject250) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject250) SetNetworkId(v string)`
+`func (o *InlineObject250) SetLimitScopeToNetworks(v []string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
+### HasLimitScopeToNetworks
 
-### GetSeatCount
+`func (o *InlineObject250) HasLimitScopeToNetworks() bool`
 
-`func (o *InlineObject250) GetSeatCount() int32`
-
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
-
-### GetSeatCountOk
-
-`func (o *InlineObject250) GetSeatCountOk() (*int32, bool)`
-
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeatCount
-
-`func (o *InlineObject250) SetSeatCount(v int32)`
-
-SetSeatCount sets SeatCount field to given value.
-
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

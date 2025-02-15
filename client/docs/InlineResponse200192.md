@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**Snr** | Pointer to **int32** | Signal to noise ratio | [optional] 
-**Rssi** | Pointer to **int32** | Received signal strength indicator | [optional] 
+**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
+**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
+**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200192WithDefaults instantiates a new InlineResponse200192 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetSerial
 
-`func (o *InlineResponse200192) GetStartTs() time.Time`
+`func (o *InlineResponse200192) GetSerial() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetSerialOk
 
-`func (o *InlineResponse200192) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200192) GetSerialOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetSerial
 
-`func (o *InlineResponse200192) SetStartTs(v time.Time)`
+`func (o *InlineResponse200192) SetSerial(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetSerial sets Serial field to given value.
 
-### HasStartTs
+### HasSerial
 
-`func (o *InlineResponse200192) HasStartTs() bool`
+`func (o *InlineResponse200192) HasSerial() bool`
 
-HasStartTs returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetEndTs
+### GetMeshRoute
 
-`func (o *InlineResponse200192) GetEndTs() time.Time`
+`func (o *InlineResponse200192) GetMeshRoute() []string`
 
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
+GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
 
-### GetEndTsOk
+### GetMeshRouteOk
 
-`func (o *InlineResponse200192) GetEndTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200192) GetMeshRouteOk() (*[]string, bool)`
 
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
+GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTs
+### SetMeshRoute
 
-`func (o *InlineResponse200192) SetEndTs(v time.Time)`
+`func (o *InlineResponse200192) SetMeshRoute(v []string)`
 
-SetEndTs sets EndTs field to given value.
+SetMeshRoute sets MeshRoute field to given value.
 
-### HasEndTs
+### HasMeshRoute
 
-`func (o *InlineResponse200192) HasEndTs() bool`
+`func (o *InlineResponse200192) HasMeshRoute() bool`
 
-HasEndTs returns a boolean if a field has been set.
+HasMeshRoute returns a boolean if a field has been set.
 
-### GetSnr
+### GetLatestMeshPerformance
 
-`func (o *InlineResponse200192) GetSnr() int32`
+`func (o *InlineResponse200192) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
 
-GetSnr returns the Snr field if non-nil, zero value otherwise.
+GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
 
-### GetSnrOk
+### GetLatestMeshPerformanceOk
 
-`func (o *InlineResponse200192) GetSnrOk() (*int32, bool)`
+`func (o *InlineResponse200192) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
 
-GetSnrOk returns a tuple with the Snr field if it's non-nil, zero value otherwise
+GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSnr
+### SetLatestMeshPerformance
 
-`func (o *InlineResponse200192) SetSnr(v int32)`
+`func (o *InlineResponse200192) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
 
-SetSnr sets Snr field to given value.
+SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
 
-### HasSnr
+### HasLatestMeshPerformance
 
-`func (o *InlineResponse200192) HasSnr() bool`
+`func (o *InlineResponse200192) HasLatestMeshPerformance() bool`
 
-HasSnr returns a boolean if a field has been set.
-
-### GetRssi
-
-`func (o *InlineResponse200192) GetRssi() int32`
-
-GetRssi returns the Rssi field if non-nil, zero value otherwise.
-
-### GetRssiOk
-
-`func (o *InlineResponse200192) GetRssiOk() (*int32, bool)`
-
-GetRssiOk returns a tuple with the Rssi field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRssi
-
-`func (o *InlineResponse200192) SetRssi(v int32)`
-
-SetRssi sets Rssi field to given value.
-
-### HasRssi
-
-`func (o *InlineResponse200192) HasRssi() bool`
-
-HasRssi returns a boolean if a field has been set.
+HasLatestMeshPerformance returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

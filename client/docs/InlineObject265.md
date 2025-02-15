@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**Destination** | [**OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination**](OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination.md) |  | 
+**Licenses** | [**[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses**](OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses.md) | The list of licenses to move | 
 
 ## Methods
 
 ### NewInlineObject265
 
-`func NewInlineObject265() *InlineObject265`
+`func NewInlineObject265(destination OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, licenses []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, ) *InlineObject265`
 
 NewInlineObject265 instantiates a new InlineObject265 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject265WithDefaults instantiates a new InlineObject265 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetX509certSha1Fingerprint
+### GetDestination
 
-`func (o *InlineObject265) GetX509certSha1Fingerprint() string`
+`func (o *InlineObject265) GetDestination() OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetDestination returns the Destination field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetDestinationOk
 
-`func (o *InlineObject265) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineObject265) GetDestinationOk() (*OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetDestination
 
-`func (o *InlineObject265) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineObject265) SetDestination(v OrganizationsOrganizationIdLicensingCotermLicensesMoveDestination)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetDestination sets Destination field to given value.
 
-### HasX509certSha1Fingerprint
 
-`func (o *InlineObject265) HasX509certSha1Fingerprint() bool`
+### GetLicenses
 
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
+`func (o *InlineObject265) GetLicenses() []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses`
 
-### GetSloLogoutUrl
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-`func (o *InlineObject265) GetSloLogoutUrl() string`
+### GetLicensesOk
 
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+`func (o *InlineObject265) GetLicensesOk() (*[]OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses, bool)`
 
-### GetSloLogoutUrlOk
-
-`func (o *InlineObject265) GetSloLogoutUrlOk() (*string, bool)`
-
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSloLogoutUrl
+### SetLicenses
 
-`func (o *InlineObject265) SetSloLogoutUrl(v string)`
+`func (o *InlineObject265) SetLicenses(v []OrganizationsOrganizationIdLicensingCotermLicensesMoveLicenses)`
 
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
+SetLicenses sets Licenses field to given value.
 
-### HasSloLogoutUrl
-
-`func (o *InlineObject265) HasSloLogoutUrl() bool`
-
-HasSloLogoutUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

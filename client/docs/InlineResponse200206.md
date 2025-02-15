@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GroupId** | Pointer to **string** | The ID of the adaptive policy group | [optional] 
-**Name** | Pointer to **string** | The name of the adaptive policy group | [optional] 
-**Sgt** | Pointer to **int32** | The security group tag for the adaptive policy group | [optional] 
-**Description** | Pointer to **string** | The description for the adaptive policy group | [optional] 
-**PolicyObjects** | Pointer to [**[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects**](OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects.md) | The policy objects for the adaptive policy group | [optional] 
-**IsDefaultGroup** | Pointer to **bool** | Whether the adaptive policy group is the default group | [optional] 
-**RequiredIpMappings** | Pointer to **[]string** | List of required IP mappings for the adaptive policy group | [optional] 
-**CreatedAt** | Pointer to **string** | Created at timestamp for the adaptive policy group | [optional] 
-**UpdatedAt** | Pointer to **string** | Updated at timestamp for the adaptive policy group | [optional] 
+**Id** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Organization name | [optional] 
+**Url** | Pointer to **string** | Organization URL | [optional] 
+**Api** | Pointer to [**OrganizationsApi**](OrganizationsApi.md) |  | [optional] 
+**Licensing** | Pointer to [**OrganizationsLicensing**](OrganizationsLicensing.md) |  | [optional] 
+**Cloud** | Pointer to [**OrganizationsCloud**](OrganizationsCloud.md) |  | [optional] 
+**Management** | Pointer to [**OrganizationsManagement**](OrganizationsManagement.md) |  | [optional] 
 
 ## Methods
 
@@ -33,30 +31,30 @@ NewInlineResponse200206WithDefaults instantiates a new InlineResponse200206 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetGroupId
+### GetId
 
-`func (o *InlineResponse200206) GetGroupId() string`
+`func (o *InlineResponse200206) GetId() string`
 
-GetGroupId returns the GroupId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetGroupIdOk
+### GetIdOk
 
-`func (o *InlineResponse200206) GetGroupIdOk() (*string, bool)`
+`func (o *InlineResponse200206) GetIdOk() (*string, bool)`
 
-GetGroupIdOk returns a tuple with the GroupId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetGroupId
+### SetId
 
-`func (o *InlineResponse200206) SetGroupId(v string)`
+`func (o *InlineResponse200206) SetId(v string)`
 
-SetGroupId sets GroupId field to given value.
+SetId sets Id field to given value.
 
-### HasGroupId
+### HasId
 
-`func (o *InlineResponse200206) HasGroupId() bool`
+`func (o *InlineResponse200206) HasId() bool`
 
-HasGroupId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -83,180 +81,130 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetSgt
+### GetUrl
 
-`func (o *InlineResponse200206) GetSgt() int32`
+`func (o *InlineResponse200206) GetUrl() string`
 
-GetSgt returns the Sgt field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetSgtOk
+### GetUrlOk
 
-`func (o *InlineResponse200206) GetSgtOk() (*int32, bool)`
+`func (o *InlineResponse200206) GetUrlOk() (*string, bool)`
 
-GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSgt
+### SetUrl
 
-`func (o *InlineResponse200206) SetSgt(v int32)`
+`func (o *InlineResponse200206) SetUrl(v string)`
 
-SetSgt sets Sgt field to given value.
+SetUrl sets Url field to given value.
 
-### HasSgt
+### HasUrl
 
-`func (o *InlineResponse200206) HasSgt() bool`
+`func (o *InlineResponse200206) HasUrl() bool`
 
-HasSgt returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
-### GetDescription
+### GetApi
 
-`func (o *InlineResponse200206) GetDescription() string`
+`func (o *InlineResponse200206) GetApi() OrganizationsApi`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetApiOk
 
-`func (o *InlineResponse200206) GetDescriptionOk() (*string, bool)`
+`func (o *InlineResponse200206) GetApiOk() (*OrganizationsApi, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetApi
 
-`func (o *InlineResponse200206) SetDescription(v string)`
+`func (o *InlineResponse200206) SetApi(v OrganizationsApi)`
 
-SetDescription sets Description field to given value.
+SetApi sets Api field to given value.
 
-### HasDescription
+### HasApi
 
-`func (o *InlineResponse200206) HasDescription() bool`
+`func (o *InlineResponse200206) HasApi() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
-### GetPolicyObjects
+### GetLicensing
 
-`func (o *InlineResponse200206) GetPolicyObjects() []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects`
+`func (o *InlineResponse200206) GetLicensing() OrganizationsLicensing`
 
-GetPolicyObjects returns the PolicyObjects field if non-nil, zero value otherwise.
+GetLicensing returns the Licensing field if non-nil, zero value otherwise.
 
-### GetPolicyObjectsOk
+### GetLicensingOk
 
-`func (o *InlineResponse200206) GetPolicyObjectsOk() (*[]OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects, bool)`
+`func (o *InlineResponse200206) GetLicensingOk() (*OrganizationsLicensing, bool)`
 
-GetPolicyObjectsOk returns a tuple with the PolicyObjects field if it's non-nil, zero value otherwise
+GetLicensingOk returns a tuple with the Licensing field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicyObjects
+### SetLicensing
 
-`func (o *InlineResponse200206) SetPolicyObjects(v []OrganizationsOrganizationIdAdaptivePolicyGroupsPolicyObjects)`
+`func (o *InlineResponse200206) SetLicensing(v OrganizationsLicensing)`
 
-SetPolicyObjects sets PolicyObjects field to given value.
+SetLicensing sets Licensing field to given value.
 
-### HasPolicyObjects
+### HasLicensing
 
-`func (o *InlineResponse200206) HasPolicyObjects() bool`
+`func (o *InlineResponse200206) HasLicensing() bool`
 
-HasPolicyObjects returns a boolean if a field has been set.
+HasLicensing returns a boolean if a field has been set.
 
-### GetIsDefaultGroup
+### GetCloud
 
-`func (o *InlineResponse200206) GetIsDefaultGroup() bool`
+`func (o *InlineResponse200206) GetCloud() OrganizationsCloud`
 
-GetIsDefaultGroup returns the IsDefaultGroup field if non-nil, zero value otherwise.
+GetCloud returns the Cloud field if non-nil, zero value otherwise.
 
-### GetIsDefaultGroupOk
+### GetCloudOk
 
-`func (o *InlineResponse200206) GetIsDefaultGroupOk() (*bool, bool)`
+`func (o *InlineResponse200206) GetCloudOk() (*OrganizationsCloud, bool)`
 
-GetIsDefaultGroupOk returns a tuple with the IsDefaultGroup field if it's non-nil, zero value otherwise
+GetCloudOk returns a tuple with the Cloud field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsDefaultGroup
+### SetCloud
 
-`func (o *InlineResponse200206) SetIsDefaultGroup(v bool)`
+`func (o *InlineResponse200206) SetCloud(v OrganizationsCloud)`
 
-SetIsDefaultGroup sets IsDefaultGroup field to given value.
+SetCloud sets Cloud field to given value.
 
-### HasIsDefaultGroup
+### HasCloud
 
-`func (o *InlineResponse200206) HasIsDefaultGroup() bool`
+`func (o *InlineResponse200206) HasCloud() bool`
 
-HasIsDefaultGroup returns a boolean if a field has been set.
+HasCloud returns a boolean if a field has been set.
 
-### GetRequiredIpMappings
+### GetManagement
 
-`func (o *InlineResponse200206) GetRequiredIpMappings() []string`
+`func (o *InlineResponse200206) GetManagement() OrganizationsManagement`
 
-GetRequiredIpMappings returns the RequiredIpMappings field if non-nil, zero value otherwise.
+GetManagement returns the Management field if non-nil, zero value otherwise.
 
-### GetRequiredIpMappingsOk
+### GetManagementOk
 
-`func (o *InlineResponse200206) GetRequiredIpMappingsOk() (*[]string, bool)`
+`func (o *InlineResponse200206) GetManagementOk() (*OrganizationsManagement, bool)`
 
-GetRequiredIpMappingsOk returns a tuple with the RequiredIpMappings field if it's non-nil, zero value otherwise
+GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequiredIpMappings
+### SetManagement
 
-`func (o *InlineResponse200206) SetRequiredIpMappings(v []string)`
+`func (o *InlineResponse200206) SetManagement(v OrganizationsManagement)`
 
-SetRequiredIpMappings sets RequiredIpMappings field to given value.
+SetManagement sets Management field to given value.
 
-### HasRequiredIpMappings
+### HasManagement
 
-`func (o *InlineResponse200206) HasRequiredIpMappings() bool`
+`func (o *InlineResponse200206) HasManagement() bool`
 
-HasRequiredIpMappings returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200206) GetCreatedAt() string`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200206) GetCreatedAtOk() (*string, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200206) SetCreatedAt(v string)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200206) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
-
-### GetUpdatedAt
-
-`func (o *InlineResponse200206) GetUpdatedAt() string`
-
-GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
-
-### GetUpdatedAtOk
-
-`func (o *InlineResponse200206) GetUpdatedAtOk() (*string, bool)`
-
-GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpdatedAt
-
-`func (o *InlineResponse200206) SetUpdatedAt(v string)`
-
-SetUpdatedAt sets UpdatedAt field to given value.
-
-### HasUpdatedAt
-
-`func (o *InlineResponse200206) HasUpdatedAt() bool`
-
-HasUpdatedAt returns a boolean if a field has been set.
+HasManagement returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

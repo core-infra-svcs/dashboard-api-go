@@ -4,24 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **string** | ID of the health alert | 
-**CategoryType** | **string** | Category type that the health alert belongs to | 
-**Network** | [**OrganizationsOrganizationIdAssuranceAlertsNetwork**](OrganizationsOrganizationIdAssuranceAlertsNetwork.md) |  | 
-**StartedAt** | **time.Time** | Time when the alert started | 
-**ResolvedAt** | Pointer to **time.Time** | Time when the alert was resolved | [optional] 
-**DismissedAt** | Pointer to **time.Time** | Time when the alert was dismissed | [optional] 
-**DeviceType** | Pointer to **string** | Device Type that the alert occurred on | [optional] 
-**Type** | **string** | Alert Type | 
-**Title** | **string** | Human Readable Title for Alert type | 
-**Description** | Pointer to **string** | Description of the alert | [optional] 
-**Severity** | **string** | Alert severity | 
-**Scope** | Pointer to [**OrganizationsOrganizationIdAssuranceAlertsScope**](OrganizationsOrganizationIdAssuranceAlertsScope.md) |  | [optional] 
+**RecordId** | Pointer to **string** | Record ID | [optional] 
+**Hostname** | Pointer to **string** | Hostname for the DNS record | [optional] 
+**Address** | Pointer to **string** | IP for the DNS record | [optional] 
+**Profile** | Pointer to [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200221
 
-`func NewInlineResponse200221(id string, categoryType string, network OrganizationsOrganizationIdAssuranceAlertsNetwork, startedAt time.Time, type_ string, title string, severity string, ) *InlineResponse200221`
+`func NewInlineResponse200221() *InlineResponse200221`
 
 NewInlineResponse200221 instantiates a new InlineResponse200221 object
 This constructor will assign default values to properties that have it defined,
@@ -36,270 +28,105 @@ NewInlineResponse200221WithDefaults instantiates a new InlineResponse200221 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetRecordId
 
-`func (o *InlineResponse200221) GetId() string`
+`func (o *InlineResponse200221) GetRecordId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetRecordId returns the RecordId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetRecordIdOk
 
-`func (o *InlineResponse200221) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200221) GetRecordIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetRecordIdOk returns a tuple with the RecordId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetRecordId
 
-`func (o *InlineResponse200221) SetId(v string)`
+`func (o *InlineResponse200221) SetRecordId(v string)`
 
-SetId sets Id field to given value.
+SetRecordId sets RecordId field to given value.
 
+### HasRecordId
 
-### GetCategoryType
+`func (o *InlineResponse200221) HasRecordId() bool`
 
-`func (o *InlineResponse200221) GetCategoryType() string`
+HasRecordId returns a boolean if a field has been set.
 
-GetCategoryType returns the CategoryType field if non-nil, zero value otherwise.
+### GetHostname
 
-### GetCategoryTypeOk
+`func (o *InlineResponse200221) GetHostname() string`
 
-`func (o *InlineResponse200221) GetCategoryTypeOk() (*string, bool)`
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-GetCategoryTypeOk returns a tuple with the CategoryType field if it's non-nil, zero value otherwise
+### GetHostnameOk
+
+`func (o *InlineResponse200221) GetHostnameOk() (*string, bool)`
+
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCategoryType
+### SetHostname
 
-`func (o *InlineResponse200221) SetCategoryType(v string)`
+`func (o *InlineResponse200221) SetHostname(v string)`
 
-SetCategoryType sets CategoryType field to given value.
+SetHostname sets Hostname field to given value.
 
+### HasHostname
 
-### GetNetwork
+`func (o *InlineResponse200221) HasHostname() bool`
 
-`func (o *InlineResponse200221) GetNetwork() OrganizationsOrganizationIdAssuranceAlertsNetwork`
+HasHostname returns a boolean if a field has been set.
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+### GetAddress
 
-### GetNetworkOk
+`func (o *InlineResponse200221) GetAddress() string`
 
-`func (o *InlineResponse200221) GetNetworkOk() (*OrganizationsOrganizationIdAssuranceAlertsNetwork, bool)`
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+### GetAddressOk
+
+`func (o *InlineResponse200221) GetAddressOk() (*string, bool)`
+
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetAddress
 
-`func (o *InlineResponse200221) SetNetwork(v OrganizationsOrganizationIdAssuranceAlertsNetwork)`
+`func (o *InlineResponse200221) SetAddress(v string)`
 
-SetNetwork sets Network field to given value.
+SetAddress sets Address field to given value.
 
+### HasAddress
 
-### GetStartedAt
+`func (o *InlineResponse200221) HasAddress() bool`
 
-`func (o *InlineResponse200221) GetStartedAt() time.Time`
+HasAddress returns a boolean if a field has been set.
 
-GetStartedAt returns the StartedAt field if non-nil, zero value otherwise.
+### GetProfile
 
-### GetStartedAtOk
+`func (o *InlineResponse200221) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile`
 
-`func (o *InlineResponse200221) GetStartedAtOk() (*time.Time, bool)`
+GetProfile returns the Profile field if non-nil, zero value otherwise.
 
-GetStartedAtOk returns a tuple with the StartedAt field if it's non-nil, zero value otherwise
+### GetProfileOk
+
+`func (o *InlineResponse200221) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, bool)`
+
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartedAt
+### SetProfile
 
-`func (o *InlineResponse200221) SetStartedAt(v time.Time)`
+`func (o *InlineResponse200221) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile)`
 
-SetStartedAt sets StartedAt field to given value.
+SetProfile sets Profile field to given value.
 
+### HasProfile
 
-### GetResolvedAt
+`func (o *InlineResponse200221) HasProfile() bool`
 
-`func (o *InlineResponse200221) GetResolvedAt() time.Time`
-
-GetResolvedAt returns the ResolvedAt field if non-nil, zero value otherwise.
-
-### GetResolvedAtOk
-
-`func (o *InlineResponse200221) GetResolvedAtOk() (*time.Time, bool)`
-
-GetResolvedAtOk returns a tuple with the ResolvedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResolvedAt
-
-`func (o *InlineResponse200221) SetResolvedAt(v time.Time)`
-
-SetResolvedAt sets ResolvedAt field to given value.
-
-### HasResolvedAt
-
-`func (o *InlineResponse200221) HasResolvedAt() bool`
-
-HasResolvedAt returns a boolean if a field has been set.
-
-### GetDismissedAt
-
-`func (o *InlineResponse200221) GetDismissedAt() time.Time`
-
-GetDismissedAt returns the DismissedAt field if non-nil, zero value otherwise.
-
-### GetDismissedAtOk
-
-`func (o *InlineResponse200221) GetDismissedAtOk() (*time.Time, bool)`
-
-GetDismissedAtOk returns a tuple with the DismissedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDismissedAt
-
-`func (o *InlineResponse200221) SetDismissedAt(v time.Time)`
-
-SetDismissedAt sets DismissedAt field to given value.
-
-### HasDismissedAt
-
-`func (o *InlineResponse200221) HasDismissedAt() bool`
-
-HasDismissedAt returns a boolean if a field has been set.
-
-### GetDeviceType
-
-`func (o *InlineResponse200221) GetDeviceType() string`
-
-GetDeviceType returns the DeviceType field if non-nil, zero value otherwise.
-
-### GetDeviceTypeOk
-
-`func (o *InlineResponse200221) GetDeviceTypeOk() (*string, bool)`
-
-GetDeviceTypeOk returns a tuple with the DeviceType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceType
-
-`func (o *InlineResponse200221) SetDeviceType(v string)`
-
-SetDeviceType sets DeviceType field to given value.
-
-### HasDeviceType
-
-`func (o *InlineResponse200221) HasDeviceType() bool`
-
-HasDeviceType returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *InlineResponse200221) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *InlineResponse200221) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *InlineResponse200221) SetType(v string)`
-
-SetType sets Type field to given value.
-
-
-### GetTitle
-
-`func (o *InlineResponse200221) GetTitle() string`
-
-GetTitle returns the Title field if non-nil, zero value otherwise.
-
-### GetTitleOk
-
-`func (o *InlineResponse200221) GetTitleOk() (*string, bool)`
-
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTitle
-
-`func (o *InlineResponse200221) SetTitle(v string)`
-
-SetTitle sets Title field to given value.
-
-
-### GetDescription
-
-`func (o *InlineResponse200221) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineResponse200221) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineResponse200221) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineResponse200221) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
-
-### GetSeverity
-
-`func (o *InlineResponse200221) GetSeverity() string`
-
-GetSeverity returns the Severity field if non-nil, zero value otherwise.
-
-### GetSeverityOk
-
-`func (o *InlineResponse200221) GetSeverityOk() (*string, bool)`
-
-GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeverity
-
-`func (o *InlineResponse200221) SetSeverity(v string)`
-
-SetSeverity sets Severity field to given value.
-
-
-### GetScope
-
-`func (o *InlineResponse200221) GetScope() OrganizationsOrganizationIdAssuranceAlertsScope`
-
-GetScope returns the Scope field if non-nil, zero value otherwise.
-
-### GetScopeOk
-
-`func (o *InlineResponse200221) GetScopeOk() (*OrganizationsOrganizationIdAssuranceAlertsScope, bool)`
-
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetScope
-
-`func (o *InlineResponse200221) SetScope(v OrganizationsOrganizationIdAssuranceAlertsScope)`
-
-SetScope sets Scope field to given value.
-
-### HasScope
-
-`func (o *InlineResponse200221) HasScope() bool`
-
-HasScope returns a boolean if a field has been set.
+HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

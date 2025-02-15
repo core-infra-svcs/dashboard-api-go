@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
-**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
-**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
-**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
+**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
+**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200241WithDefaults instantiates a new InlineResponse200241 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetArtifactId
 
-`func (o *InlineResponse200241) GetTs() time.Time`
+`func (o *InlineResponse200241) GetArtifactId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetArtifactIdOk
 
-`func (o *InlineResponse200241) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200241) GetArtifactIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetArtifactId
 
-`func (o *InlineResponse200241) SetTs(v time.Time)`
+`func (o *InlineResponse200241) SetArtifactId(v string)`
 
-SetTs sets Ts field to given value.
+SetArtifactId sets ArtifactId field to given value.
 
-### HasTs
+### HasArtifactId
 
-`func (o *InlineResponse200241) HasTs() bool`
+`func (o *InlineResponse200241) HasArtifactId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasArtifactId returns a boolean if a field has been set.
 
-### GetTotal
+### GetOrganizationId
 
-`func (o *InlineResponse200241) GetTotal() int32`
+`func (o *InlineResponse200241) GetOrganizationId() string`
 
-GetTotal returns the Total field if non-nil, zero value otherwise.
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
 
-### GetTotalOk
+### GetOrganizationIdOk
 
-`func (o *InlineResponse200241) GetTotalOk() (*int32, bool)`
+`func (o *InlineResponse200241) GetOrganizationIdOk() (*string, bool)`
 
-GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTotal
+### SetOrganizationId
 
-`func (o *InlineResponse200241) SetTotal(v int32)`
+`func (o *InlineResponse200241) SetOrganizationId(v string)`
 
-SetTotal sets Total field to given value.
+SetOrganizationId sets OrganizationId field to given value.
 
-### HasTotal
+### HasOrganizationId
 
-`func (o *InlineResponse200241) HasTotal() bool`
+`func (o *InlineResponse200241) HasOrganizationId() bool`
 
-HasTotal returns a boolean if a field has been set.
+HasOrganizationId returns a boolean if a field has been set.
 
-### GetUpstream
+### GetName
 
-`func (o *InlineResponse200241) GetUpstream() int32`
+`func (o *InlineResponse200241) GetName() string`
 
-GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUpstreamOk
+### GetNameOk
 
-`func (o *InlineResponse200241) GetUpstreamOk() (*int32, bool)`
+`func (o *InlineResponse200241) GetNameOk() (*string, bool)`
 
-GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpstream
+### SetName
 
-`func (o *InlineResponse200241) SetUpstream(v int32)`
+`func (o *InlineResponse200241) SetName(v string)`
 
-SetUpstream sets Upstream field to given value.
+SetName sets Name field to given value.
 
-### HasUpstream
+### HasName
 
-`func (o *InlineResponse200241) HasUpstream() bool`
+`func (o *InlineResponse200241) HasName() bool`
 
-HasUpstream returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDownstream
+### GetStatus
 
-`func (o *InlineResponse200241) GetDownstream() int32`
+`func (o *InlineResponse200241) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
 
-GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetDownstreamOk
+### GetStatusOk
 
-`func (o *InlineResponse200241) GetDownstreamOk() (*int32, bool)`
+`func (o *InlineResponse200241) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
 
-GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownstream
+### SetStatus
 
-`func (o *InlineResponse200241) SetDownstream(v int32)`
+`func (o *InlineResponse200241) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
 
-SetDownstream sets Downstream field to given value.
+SetStatus sets Status field to given value.
 
-### HasDownstream
+### HasStatus
 
-`func (o *InlineResponse200241) HasDownstream() bool`
+`func (o *InlineResponse200241) HasStatus() bool`
 
-HasDownstream returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

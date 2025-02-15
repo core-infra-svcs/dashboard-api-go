@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
-**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
+**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200189WithDefaults instantiates a new InlineResponse200189 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetProfileId
 
-`func (o *InlineResponse200189) GetSerial() string`
+`func (o *InlineResponse200189) GetProfileId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200189) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200189) GetProfileIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetProfileId
 
-`func (o *InlineResponse200189) SetSerial(v string)`
+`func (o *InlineResponse200189) SetProfileId(v string)`
 
-SetSerial sets Serial field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasSerial
+### HasProfileId
 
-`func (o *InlineResponse200189) HasSerial() bool`
+`func (o *InlineResponse200189) HasProfileId() bool`
 
-HasSerial returns a boolean if a field has been set.
-
-### GetMeshRoute
-
-`func (o *InlineResponse200189) GetMeshRoute() []string`
-
-GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
-
-### GetMeshRouteOk
-
-`func (o *InlineResponse200189) GetMeshRouteOk() (*[]string, bool)`
-
-GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeshRoute
-
-`func (o *InlineResponse200189) SetMeshRoute(v []string)`
-
-SetMeshRoute sets MeshRoute field to given value.
-
-### HasMeshRoute
-
-`func (o *InlineResponse200189) HasMeshRoute() bool`
-
-HasMeshRoute returns a boolean if a field has been set.
-
-### GetLatestMeshPerformance
-
-`func (o *InlineResponse200189) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
-
-GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
-
-### GetLatestMeshPerformanceOk
-
-`func (o *InlineResponse200189) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
-
-GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLatestMeshPerformance
-
-`func (o *InlineResponse200189) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
-
-SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
-
-### HasLatestMeshPerformance
-
-`func (o *InlineResponse200189) HasLatestMeshPerformance() bool`
-
-HasLatestMeshPerformance returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

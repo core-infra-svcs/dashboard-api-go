@@ -4,13 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | License status (Co-termination licensing only) | [optional] 
-**ExpirationDate** | Pointer to **string** | License expiration date (Co-termination licensing only) | [optional] 
-**LicensedDeviceCounts** | Pointer to **map[string]int32** | License counts (Co-termination licensing only) | [optional] 
-**LicenseCount** | Pointer to **int32** | Total number of licenses (Per-device licensing only) | [optional] 
-**States** | Pointer to [**InlineResponse200274States**](InlineResponse200274States.md) |  | [optional] 
-**LicenseTypes** | Pointer to [**[]InlineResponse200274LicenseTypes**](InlineResponse200274LicenseTypes.md) | Data by license type (Per-device licensing only) | [optional] 
-**SystemsManager** | Pointer to [**InlineResponse200274SystemsManager**](InlineResponse200274SystemsManager.md) |  | [optional] 
+**Serial** | Pointer to **string** | Serial of the device | [optional] 
+**Name** | Pointer to **string** | Name assigned to the device | [optional] 
+**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
+**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
 
 ## Methods
 
@@ -31,180 +28,105 @@ NewInlineResponse200274WithDefaults instantiates a new InlineResponse200274 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetSerial
 
-`func (o *InlineResponse200274) GetStatus() string`
+`func (o *InlineResponse200274) GetSerial() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetSerialOk
 
-`func (o *InlineResponse200274) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200274) GetSerialOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetSerial
 
-`func (o *InlineResponse200274) SetStatus(v string)`
+`func (o *InlineResponse200274) SetSerial(v string)`
 
-SetStatus sets Status field to given value.
+SetSerial sets Serial field to given value.
 
-### HasStatus
+### HasSerial
 
-`func (o *InlineResponse200274) HasStatus() bool`
+`func (o *InlineResponse200274) HasSerial() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetExpirationDate
+### GetName
 
-`func (o *InlineResponse200274) GetExpirationDate() string`
+`func (o *InlineResponse200274) GetName() string`
 
-GetExpirationDate returns the ExpirationDate field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetExpirationDateOk
+### GetNameOk
 
-`func (o *InlineResponse200274) GetExpirationDateOk() (*string, bool)`
+`func (o *InlineResponse200274) GetNameOk() (*string, bool)`
 
-GetExpirationDateOk returns a tuple with the ExpirationDate field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetExpirationDate
+### SetName
 
-`func (o *InlineResponse200274) SetExpirationDate(v string)`
+`func (o *InlineResponse200274) SetName(v string)`
 
-SetExpirationDate sets ExpirationDate field to given value.
+SetName sets Name field to given value.
 
-### HasExpirationDate
+### HasName
 
-`func (o *InlineResponse200274) HasExpirationDate() bool`
+`func (o *InlineResponse200274) HasName() bool`
 
-HasExpirationDate returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetLicensedDeviceCounts
+### GetDeviceStatus
 
-`func (o *InlineResponse200274) GetLicensedDeviceCounts() map[string]int32`
+`func (o *InlineResponse200274) GetDeviceStatus() string`
 
-GetLicensedDeviceCounts returns the LicensedDeviceCounts field if non-nil, zero value otherwise.
+GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
 
-### GetLicensedDeviceCountsOk
+### GetDeviceStatusOk
 
-`func (o *InlineResponse200274) GetLicensedDeviceCountsOk() (*map[string]int32, bool)`
+`func (o *InlineResponse200274) GetDeviceStatusOk() (*string, bool)`
 
-GetLicensedDeviceCountsOk returns a tuple with the LicensedDeviceCounts field if it's non-nil, zero value otherwise
+GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicensedDeviceCounts
+### SetDeviceStatus
 
-`func (o *InlineResponse200274) SetLicensedDeviceCounts(v map[string]int32)`
+`func (o *InlineResponse200274) SetDeviceStatus(v string)`
 
-SetLicensedDeviceCounts sets LicensedDeviceCounts field to given value.
+SetDeviceStatus sets DeviceStatus field to given value.
 
-### HasLicensedDeviceCounts
+### HasDeviceStatus
 
-`func (o *InlineResponse200274) HasLicensedDeviceCounts() bool`
+`func (o *InlineResponse200274) HasDeviceStatus() bool`
 
-HasLicensedDeviceCounts returns a boolean if a field has been set.
+HasDeviceStatus returns a boolean if a field has been set.
 
-### GetLicenseCount
+### GetUpgrade
 
-`func (o *InlineResponse200274) GetLicenseCount() int32`
+`func (o *InlineResponse200274) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
 
-GetLicenseCount returns the LicenseCount field if non-nil, zero value otherwise.
+GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
 
-### GetLicenseCountOk
+### GetUpgradeOk
 
-`func (o *InlineResponse200274) GetLicenseCountOk() (*int32, bool)`
+`func (o *InlineResponse200274) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
 
-GetLicenseCountOk returns a tuple with the LicenseCount field if it's non-nil, zero value otherwise
+GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseCount
+### SetUpgrade
 
-`func (o *InlineResponse200274) SetLicenseCount(v int32)`
+`func (o *InlineResponse200274) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
 
-SetLicenseCount sets LicenseCount field to given value.
+SetUpgrade sets Upgrade field to given value.
 
-### HasLicenseCount
+### HasUpgrade
 
-`func (o *InlineResponse200274) HasLicenseCount() bool`
+`func (o *InlineResponse200274) HasUpgrade() bool`
 
-HasLicenseCount returns a boolean if a field has been set.
-
-### GetStates
-
-`func (o *InlineResponse200274) GetStates() InlineResponse200274States`
-
-GetStates returns the States field if non-nil, zero value otherwise.
-
-### GetStatesOk
-
-`func (o *InlineResponse200274) GetStatesOk() (*InlineResponse200274States, bool)`
-
-GetStatesOk returns a tuple with the States field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStates
-
-`func (o *InlineResponse200274) SetStates(v InlineResponse200274States)`
-
-SetStates sets States field to given value.
-
-### HasStates
-
-`func (o *InlineResponse200274) HasStates() bool`
-
-HasStates returns a boolean if a field has been set.
-
-### GetLicenseTypes
-
-`func (o *InlineResponse200274) GetLicenseTypes() []InlineResponse200274LicenseTypes`
-
-GetLicenseTypes returns the LicenseTypes field if non-nil, zero value otherwise.
-
-### GetLicenseTypesOk
-
-`func (o *InlineResponse200274) GetLicenseTypesOk() (*[]InlineResponse200274LicenseTypes, bool)`
-
-GetLicenseTypesOk returns a tuple with the LicenseTypes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseTypes
-
-`func (o *InlineResponse200274) SetLicenseTypes(v []InlineResponse200274LicenseTypes)`
-
-SetLicenseTypes sets LicenseTypes field to given value.
-
-### HasLicenseTypes
-
-`func (o *InlineResponse200274) HasLicenseTypes() bool`
-
-HasLicenseTypes returns a boolean if a field has been set.
-
-### GetSystemsManager
-
-`func (o *InlineResponse200274) GetSystemsManager() InlineResponse200274SystemsManager`
-
-GetSystemsManager returns the SystemsManager field if non-nil, zero value otherwise.
-
-### GetSystemsManagerOk
-
-`func (o *InlineResponse200274) GetSystemsManagerOk() (*InlineResponse200274SystemsManager, bool)`
-
-GetSystemsManagerOk returns a tuple with the SystemsManager field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSystemsManager
-
-`func (o *InlineResponse200274) SetSystemsManager(v InlineResponse200274SystemsManager)`
-
-SetSystemsManager sets SystemsManager field to given value.
-
-### HasSystemsManager
-
-`func (o *InlineResponse200274) HasSystemsManager() bool`
-
-HasSystemsManager returns a boolean if a field has been set.
+HasUpgrade returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

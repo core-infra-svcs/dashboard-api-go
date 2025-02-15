@@ -4,8 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200341Intervals**](InlineResponse200341Intervals.md) | Time interval snapshots of interfaces usage data of the wireless LAN controller | [optional] 
+**Network** | Pointer to [**InlineResponse200341Network**](InlineResponse200341Network.md) |  | [optional] 
+**Serial** | Pointer to **string** | AP cloud ID | [optional] 
+**Controller** | Pointer to [**InlineResponse200341Controller**](InlineResponse200341Controller.md) |  | [optional] 
+**JoinedAt** | Pointer to **string** | The time when AP joins wireless controller | [optional] 
+**Model** | Pointer to **string** | AP model | [optional] 
+**Tags** | Pointer to [**[]InlineResponse200341Tags**](InlineResponse200341Tags.md) | The tags of the catalyst access point | [optional] 
+**Mode** | Pointer to **string** | AP mode (local, flex, etc.) | [optional] 
+**CountryCode** | Pointer to **string** | Country code (2 characters) | [optional] 
+**Details** | Pointer to [**[]InlineResponse200341Details**](InlineResponse200341Details.md) | Catalyst access point details | [optional] 
 
 ## Methods
 
@@ -25,6 +32,31 @@ will change when the set of required properties is changed
 NewInlineResponse200341ItemsWithDefaults instantiates a new InlineResponse200341Items object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetNetwork
+
+`func (o *InlineResponse200341Items) GetNetwork() InlineResponse200341Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200341Items) GetNetworkOk() (*InlineResponse200341Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200341Items) SetNetwork(v InlineResponse200341Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200341Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 ### GetSerial
 
@@ -51,30 +83,180 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetIntervals
+### GetController
 
-`func (o *InlineResponse200341Items) GetIntervals() []InlineResponse200341Intervals`
+`func (o *InlineResponse200341Items) GetController() InlineResponse200341Controller`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetController returns the Controller field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetControllerOk
 
-`func (o *InlineResponse200341Items) GetIntervalsOk() (*[]InlineResponse200341Intervals, bool)`
+`func (o *InlineResponse200341Items) GetControllerOk() (*InlineResponse200341Controller, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetControllerOk returns a tuple with the Controller field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetController
 
-`func (o *InlineResponse200341Items) SetIntervals(v []InlineResponse200341Intervals)`
+`func (o *InlineResponse200341Items) SetController(v InlineResponse200341Controller)`
 
-SetIntervals sets Intervals field to given value.
+SetController sets Controller field to given value.
 
-### HasIntervals
+### HasController
 
-`func (o *InlineResponse200341Items) HasIntervals() bool`
+`func (o *InlineResponse200341Items) HasController() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasController returns a boolean if a field has been set.
+
+### GetJoinedAt
+
+`func (o *InlineResponse200341Items) GetJoinedAt() string`
+
+GetJoinedAt returns the JoinedAt field if non-nil, zero value otherwise.
+
+### GetJoinedAtOk
+
+`func (o *InlineResponse200341Items) GetJoinedAtOk() (*string, bool)`
+
+GetJoinedAtOk returns a tuple with the JoinedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetJoinedAt
+
+`func (o *InlineResponse200341Items) SetJoinedAt(v string)`
+
+SetJoinedAt sets JoinedAt field to given value.
+
+### HasJoinedAt
+
+`func (o *InlineResponse200341Items) HasJoinedAt() bool`
+
+HasJoinedAt returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200341Items) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200341Items) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200341Items) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200341Items) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200341Items) GetTags() []InlineResponse200341Tags`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200341Items) GetTagsOk() (*[]InlineResponse200341Tags, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200341Items) SetTags(v []InlineResponse200341Tags)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200341Items) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
+
+### GetMode
+
+`func (o *InlineResponse200341Items) GetMode() string`
+
+GetMode returns the Mode field if non-nil, zero value otherwise.
+
+### GetModeOk
+
+`func (o *InlineResponse200341Items) GetModeOk() (*string, bool)`
+
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMode
+
+`func (o *InlineResponse200341Items) SetMode(v string)`
+
+SetMode sets Mode field to given value.
+
+### HasMode
+
+`func (o *InlineResponse200341Items) HasMode() bool`
+
+HasMode returns a boolean if a field has been set.
+
+### GetCountryCode
+
+`func (o *InlineResponse200341Items) GetCountryCode() string`
+
+GetCountryCode returns the CountryCode field if non-nil, zero value otherwise.
+
+### GetCountryCodeOk
+
+`func (o *InlineResponse200341Items) GetCountryCodeOk() (*string, bool)`
+
+GetCountryCodeOk returns a tuple with the CountryCode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCountryCode
+
+`func (o *InlineResponse200341Items) SetCountryCode(v string)`
+
+SetCountryCode sets CountryCode field to given value.
+
+### HasCountryCode
+
+`func (o *InlineResponse200341Items) HasCountryCode() bool`
+
+HasCountryCode returns a boolean if a field has been set.
+
+### GetDetails
+
+`func (o *InlineResponse200341Items) GetDetails() []InlineResponse200341Details`
+
+GetDetails returns the Details field if non-nil, zero value otherwise.
+
+### GetDetailsOk
+
+`func (o *InlineResponse200341Items) GetDetailsOk() (*[]InlineResponse200341Details, bool)`
+
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetails
+
+`func (o *InlineResponse200341Items) SetDetails(v []InlineResponse200341Details)`
+
+SetDetails sets Details field to given value.
+
+### HasDetails
+
+`func (o *InlineResponse200341Items) HasDetails() bool`
+
+HasDetails returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
-**Licenses** | Pointer to [**[]InlineResponse200240Licenses**](InlineResponse200240Licenses.md) | The licenses claimed | [optional] 
+**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
+**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
+**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200240WithDefaults instantiates a new InlineResponse200240 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetNetworkId
 
-`func (o *InlineResponse200240) GetOrders() []string`
+`func (o *InlineResponse200240) GetNetworkId() string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200240) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineResponse200240) GetNetworkIdOk() (*string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetNetworkId
 
-`func (o *InlineResponse200240) SetOrders(v []string)`
+`func (o *InlineResponse200240) SetNetworkId(v string)`
 
-SetOrders sets Orders field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasOrders
+### HasNetworkId
 
-`func (o *InlineResponse200240) HasOrders() bool`
+`func (o *InlineResponse200240) HasNetworkId() bool`
 
-HasOrders returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetSerials
+### GetSerial
 
-`func (o *InlineResponse200240) GetSerials() []string`
+`func (o *InlineResponse200240) GetSerial() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetSerialOk
 
-`func (o *InlineResponse200240) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200240) GetSerialOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetSerial
 
-`func (o *InlineResponse200240) SetSerials(v []string)`
+`func (o *InlineResponse200240) SetSerial(v string)`
 
-SetSerials sets Serials field to given value.
+SetSerial sets Serial field to given value.
 
-### HasSerials
+### HasSerial
 
-`func (o *InlineResponse200240) HasSerials() bool`
+`func (o *InlineResponse200240) HasSerial() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetLicenses
+### GetBoundaries
 
-`func (o *InlineResponse200240) GetLicenses() []InlineResponse200240Licenses`
+`func (o *InlineResponse200240) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries`
 
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
 
-### GetLicensesOk
+### GetBoundariesOk
 
-`func (o *InlineResponse200240) GetLicensesOk() (*[]InlineResponse200240Licenses, bool)`
+`func (o *InlineResponse200240) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries, bool)`
 
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenses
+### SetBoundaries
 
-`func (o *InlineResponse200240) SetLicenses(v []InlineResponse200240Licenses)`
+`func (o *InlineResponse200240) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries)`
 
-SetLicenses sets Licenses field to given value.
+SetBoundaries sets Boundaries field to given value.
 
-### HasLicenses
+### HasBoundaries
 
-`func (o *InlineResponse200240) HasLicenses() bool`
+`func (o *InlineResponse200240) HasBoundaries() bool`
 
-HasLicenses returns a boolean if a field has been set.
+HasBoundaries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

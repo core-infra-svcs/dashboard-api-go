@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]InlineResponse200199Ranges**](InlineResponse200199Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]InlineResponse200199RangesInSeconds**](InlineResponse200199RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Ranges** | Pointer to [**[]InlineResponse200202Ranges**](InlineResponse200202Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
+**RangesInSeconds** | Pointer to [**[]InlineResponse200202RangesInSeconds**](InlineResponse200202RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
 
 ## Methods
 
@@ -54,20 +54,20 @@ HasEnabled returns a boolean if a field has been set.
 
 ### GetRanges
 
-`func (o *InlineObject198) GetRanges() []InlineResponse200199Ranges`
+`func (o *InlineObject198) GetRanges() []InlineResponse200202Ranges`
 
 GetRanges returns the Ranges field if non-nil, zero value otherwise.
 
 ### GetRangesOk
 
-`func (o *InlineObject198) GetRangesOk() (*[]InlineResponse200199Ranges, bool)`
+`func (o *InlineObject198) GetRangesOk() (*[]InlineResponse200202Ranges, bool)`
 
 GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRanges
 
-`func (o *InlineObject198) SetRanges(v []InlineResponse200199Ranges)`
+`func (o *InlineObject198) SetRanges(v []InlineResponse200202Ranges)`
 
 SetRanges sets Ranges field to given value.
 
@@ -79,20 +79,20 @@ HasRanges returns a boolean if a field has been set.
 
 ### GetRangesInSeconds
 
-`func (o *InlineObject198) GetRangesInSeconds() []InlineResponse200199RangesInSeconds`
+`func (o *InlineObject198) GetRangesInSeconds() []InlineResponse200202RangesInSeconds`
 
 GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
 
 ### GetRangesInSecondsOk
 
-`func (o *InlineObject198) GetRangesInSecondsOk() (*[]InlineResponse200199RangesInSeconds, bool)`
+`func (o *InlineObject198) GetRangesInSecondsOk() (*[]InlineResponse200202RangesInSeconds, bool)`
 
 GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRangesInSeconds
 
-`func (o *InlineObject198) SetRangesInSeconds(v []InlineResponse200199RangesInSeconds)`
+`func (o *InlineObject198) SetRangesInSeconds(v []InlineResponse200202RangesInSeconds)`
 
 SetRangesInSeconds sets RangesInSeconds field to given value.
 

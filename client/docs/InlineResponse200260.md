@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of Early Access Feature | [optional] 
-**ShortName** | Pointer to **string** | Name of Early Access Feature | [optional] 
-**LimitScopeToNetworks** | Pointer to [**[]InlineResponse200260LimitScopeToNetworks**](InlineResponse200260LimitScopeToNetworks.md) | Networks assigned to the Early Access Feature | [optional] 
-**OptOutEligibility** | Pointer to [**InlineResponse200260OptOutEligibility**](InlineResponse200260OptOutEligibility.md) |  | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Time when Early Access Feature was created | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, at which the event happened | [optional] 
+**Device** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice.md) |  | [optional] 
+**Details** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +28,105 @@ NewInlineResponse200260WithDefaults instantiates a new InlineResponse200260 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetTs
 
-`func (o *InlineResponse200260) GetId() string`
+`func (o *InlineResponse200260) GetTs() time.Time`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetTsOk
 
-`func (o *InlineResponse200260) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200260) GetTsOk() (*time.Time, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetTs
 
-`func (o *InlineResponse200260) SetId(v string)`
+`func (o *InlineResponse200260) SetTs(v time.Time)`
 
-SetId sets Id field to given value.
+SetTs sets Ts field to given value.
 
-### HasId
+### HasTs
 
-`func (o *InlineResponse200260) HasId() bool`
+`func (o *InlineResponse200260) HasTs() bool`
 
-HasId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetShortName
+### GetDevice
 
-`func (o *InlineResponse200260) GetShortName() string`
+`func (o *InlineResponse200260) GetDevice() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetDeviceOk
 
-`func (o *InlineResponse200260) GetShortNameOk() (*string, bool)`
+`func (o *InlineResponse200260) GetDeviceOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetDevice
 
-`func (o *InlineResponse200260) SetShortName(v string)`
+`func (o *InlineResponse200260) SetDevice(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice)`
 
-SetShortName sets ShortName field to given value.
+SetDevice sets Device field to given value.
 
-### HasShortName
+### HasDevice
 
-`func (o *InlineResponse200260) HasShortName() bool`
+`func (o *InlineResponse200260) HasDevice() bool`
 
-HasShortName returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetLimitScopeToNetworks
+### GetDetails
 
-`func (o *InlineResponse200260) GetLimitScopeToNetworks() []InlineResponse200260LimitScopeToNetworks`
+`func (o *InlineResponse200260) GetDetails() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetDetails returns the Details field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetDetailsOk
 
-`func (o *InlineResponse200260) GetLimitScopeToNetworksOk() (*[]InlineResponse200260LimitScopeToNetworks, bool)`
+`func (o *InlineResponse200260) GetDetailsOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetDetails
 
-`func (o *InlineResponse200260) SetLimitScopeToNetworks(v []InlineResponse200260LimitScopeToNetworks)`
+`func (o *InlineResponse200260) SetDetails(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetDetails sets Details field to given value.
 
-### HasLimitScopeToNetworks
+### HasDetails
 
-`func (o *InlineResponse200260) HasLimitScopeToNetworks() bool`
+`func (o *InlineResponse200260) HasDetails() bool`
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+HasDetails returns a boolean if a field has been set.
 
-### GetOptOutEligibility
+### GetNetwork
 
-`func (o *InlineResponse200260) GetOptOutEligibility() InlineResponse200260OptOutEligibility`
+`func (o *InlineResponse200260) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork`
 
-GetOptOutEligibility returns the OptOutEligibility field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetOptOutEligibilityOk
+### GetNetworkOk
 
-`func (o *InlineResponse200260) GetOptOutEligibilityOk() (*InlineResponse200260OptOutEligibility, bool)`
+`func (o *InlineResponse200260) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork, bool)`
 
-GetOptOutEligibilityOk returns a tuple with the OptOutEligibility field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOptOutEligibility
+### SetNetwork
 
-`func (o *InlineResponse200260) SetOptOutEligibility(v InlineResponse200260OptOutEligibility)`
+`func (o *InlineResponse200260) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork)`
 
-SetOptOutEligibility sets OptOutEligibility field to given value.
+SetNetwork sets Network field to given value.
 
-### HasOptOutEligibility
+### HasNetwork
 
-`func (o *InlineResponse200260) HasOptOutEligibility() bool`
+`func (o *InlineResponse200260) HasNetwork() bool`
 
-HasOptOutEligibility returns a boolean if a field has been set.
-
-### GetCreatedAt
-
-`func (o *InlineResponse200260) GetCreatedAt() time.Time`
-
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
-
-### GetCreatedAtOk
-
-`func (o *InlineResponse200260) GetCreatedAtOk() (*time.Time, bool)`
-
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedAt
-
-`func (o *InlineResponse200260) SetCreatedAt(v time.Time)`
-
-SetCreatedAt sets CreatedAt field to given value.
-
-### HasCreatedAt
-
-`func (o *InlineResponse200260) HasCreatedAt() bool`
-
-HasCreatedAt returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

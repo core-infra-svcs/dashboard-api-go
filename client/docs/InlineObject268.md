@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the Limited Access Role | 
-**Scope** | Pointer to **string** | The scope of the Limited Access Role | [optional] 
-**Tags** | Pointer to **[]string** | The tags of the Limited Access Role | [optional] 
+**Name** | **string** | The name of the combined network | 
+**NetworkIds** | **[]string** | A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network | 
+**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by &#39;-network_type&#39;. If left empty, all exisitng enrollment strings will be deleted. | [optional] 
 
 ## Methods
 
 ### NewInlineObject268
 
-`func NewInlineObject268(name string, ) *InlineObject268`
+`func NewInlineObject268(name string, networkIds []string, ) *InlineObject268`
 
 NewInlineObject268 instantiates a new InlineObject268 object
 This constructor will assign default values to properties that have it defined,
@@ -47,55 +47,50 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetScope
+### GetNetworkIds
 
-`func (o *InlineObject268) GetScope() string`
+`func (o *InlineObject268) GetNetworkIds() []string`
 
-GetScope returns the Scope field if non-nil, zero value otherwise.
+GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
 
-### GetScopeOk
+### GetNetworkIdsOk
 
-`func (o *InlineObject268) GetScopeOk() (*string, bool)`
+`func (o *InlineObject268) GetNetworkIdsOk() (*[]string, bool)`
 
-GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScope
+### SetNetworkIds
 
-`func (o *InlineObject268) SetScope(v string)`
+`func (o *InlineObject268) SetNetworkIds(v []string)`
 
-SetScope sets Scope field to given value.
+SetNetworkIds sets NetworkIds field to given value.
 
-### HasScope
 
-`func (o *InlineObject268) HasScope() bool`
+### GetEnrollmentString
 
-HasScope returns a boolean if a field has been set.
+`func (o *InlineObject268) GetEnrollmentString() string`
 
-### GetTags
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
 
-`func (o *InlineObject268) GetTags() []string`
+### GetEnrollmentStringOk
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+`func (o *InlineObject268) GetEnrollmentStringOk() (*string, bool)`
 
-### GetTagsOk
-
-`func (o *InlineObject268) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetEnrollmentString
 
-`func (o *InlineObject268) SetTags(v []string)`
+`func (o *InlineObject268) SetEnrollmentString(v string)`
 
-SetTags sets Tags field to given value.
+SetEnrollmentString sets EnrollmentString field to given value.
 
-### HasTags
+### HasEnrollmentString
 
-`func (o *InlineObject268) HasTags() bool`
+`func (o *InlineObject268) HasEnrollmentString() bool`
 
-HasTags returns a boolean if a field has been set.
+HasEnrollmentString returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

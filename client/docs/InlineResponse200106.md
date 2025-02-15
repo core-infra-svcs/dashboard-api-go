@@ -4,11 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ReportingEnabled** | Pointer to **bool** | Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false). | [optional] 
-**CollectorIp** | Pointer to **string** | The IPv4 address of the NetFlow collector. | [optional] 
-**CollectorPort** | Pointer to **int32** | The port that the NetFlow collector will be listening on. | [optional] 
-**EtaEnabled** | Pointer to **bool** | Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false). | [optional] 
-**EtaDstPort** | Pointer to **int32** | The port that the Encrypted Traffic Analytics collector will be listening on. | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**WanGoodput** | Pointer to **int32** | WAN goodput (Number of useful information bits delivered over a WAN per unit of time) | [optional] 
+**LanGoodput** | Pointer to **int32** | LAN goodput (Number of useful information bits delivered over a LAN per unit of time) | [optional] 
+**WanLatencyMs** | Pointer to **float32** | WAN latency in milliseconds | [optional] 
+**LanLatencyMs** | Pointer to **float32** | LAN latency in milliseconds | [optional] 
+**WanLossPercent** | Pointer to **float32** | WAN loss percentage | [optional] 
+**LanLossPercent** | Pointer to **float32** | LAN loss percentage | [optional] 
+**ResponseDuration** | Pointer to **int32** | Duration of the response, in milliseconds | [optional] 
+**Sent** | Pointer to **int32** | Sent kilobytes-per-second | [optional] 
+**Recv** | Pointer to **int32** | Received kilobytes-per-second | [optional] 
+**NumClients** | Pointer to **int32** | Number of clients | [optional] 
 
 ## Methods
 
@@ -29,130 +36,305 @@ NewInlineResponse200106WithDefaults instantiates a new InlineResponse200106 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetReportingEnabled
+### GetStartTs
 
-`func (o *InlineResponse200106) GetReportingEnabled() bool`
+`func (o *InlineResponse200106) GetStartTs() time.Time`
 
-GetReportingEnabled returns the ReportingEnabled field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetReportingEnabledOk
+### GetStartTsOk
 
-`func (o *InlineResponse200106) GetReportingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200106) GetStartTsOk() (*time.Time, bool)`
 
-GetReportingEnabledOk returns a tuple with the ReportingEnabled field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReportingEnabled
+### SetStartTs
 
-`func (o *InlineResponse200106) SetReportingEnabled(v bool)`
+`func (o *InlineResponse200106) SetStartTs(v time.Time)`
 
-SetReportingEnabled sets ReportingEnabled field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasReportingEnabled
+### HasStartTs
 
-`func (o *InlineResponse200106) HasReportingEnabled() bool`
+`func (o *InlineResponse200106) HasStartTs() bool`
 
-HasReportingEnabled returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetCollectorIp
+### GetEndTs
 
-`func (o *InlineResponse200106) GetCollectorIp() string`
+`func (o *InlineResponse200106) GetEndTs() time.Time`
 
-GetCollectorIp returns the CollectorIp field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetCollectorIpOk
+### GetEndTsOk
 
-`func (o *InlineResponse200106) GetCollectorIpOk() (*string, bool)`
+`func (o *InlineResponse200106) GetEndTsOk() (*time.Time, bool)`
 
-GetCollectorIpOk returns a tuple with the CollectorIp field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCollectorIp
+### SetEndTs
 
-`func (o *InlineResponse200106) SetCollectorIp(v string)`
+`func (o *InlineResponse200106) SetEndTs(v time.Time)`
 
-SetCollectorIp sets CollectorIp field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasCollectorIp
+### HasEndTs
 
-`func (o *InlineResponse200106) HasCollectorIp() bool`
+`func (o *InlineResponse200106) HasEndTs() bool`
 
-HasCollectorIp returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetCollectorPort
+### GetWanGoodput
 
-`func (o *InlineResponse200106) GetCollectorPort() int32`
+`func (o *InlineResponse200106) GetWanGoodput() int32`
 
-GetCollectorPort returns the CollectorPort field if non-nil, zero value otherwise.
+GetWanGoodput returns the WanGoodput field if non-nil, zero value otherwise.
 
-### GetCollectorPortOk
+### GetWanGoodputOk
 
-`func (o *InlineResponse200106) GetCollectorPortOk() (*int32, bool)`
+`func (o *InlineResponse200106) GetWanGoodputOk() (*int32, bool)`
 
-GetCollectorPortOk returns a tuple with the CollectorPort field if it's non-nil, zero value otherwise
+GetWanGoodputOk returns a tuple with the WanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCollectorPort
+### SetWanGoodput
 
-`func (o *InlineResponse200106) SetCollectorPort(v int32)`
+`func (o *InlineResponse200106) SetWanGoodput(v int32)`
 
-SetCollectorPort sets CollectorPort field to given value.
+SetWanGoodput sets WanGoodput field to given value.
 
-### HasCollectorPort
+### HasWanGoodput
 
-`func (o *InlineResponse200106) HasCollectorPort() bool`
+`func (o *InlineResponse200106) HasWanGoodput() bool`
 
-HasCollectorPort returns a boolean if a field has been set.
+HasWanGoodput returns a boolean if a field has been set.
 
-### GetEtaEnabled
+### GetLanGoodput
 
-`func (o *InlineResponse200106) GetEtaEnabled() bool`
+`func (o *InlineResponse200106) GetLanGoodput() int32`
 
-GetEtaEnabled returns the EtaEnabled field if non-nil, zero value otherwise.
+GetLanGoodput returns the LanGoodput field if non-nil, zero value otherwise.
 
-### GetEtaEnabledOk
+### GetLanGoodputOk
 
-`func (o *InlineResponse200106) GetEtaEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200106) GetLanGoodputOk() (*int32, bool)`
 
-GetEtaEnabledOk returns a tuple with the EtaEnabled field if it's non-nil, zero value otherwise
+GetLanGoodputOk returns a tuple with the LanGoodput field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEtaEnabled
+### SetLanGoodput
 
-`func (o *InlineResponse200106) SetEtaEnabled(v bool)`
+`func (o *InlineResponse200106) SetLanGoodput(v int32)`
 
-SetEtaEnabled sets EtaEnabled field to given value.
+SetLanGoodput sets LanGoodput field to given value.
 
-### HasEtaEnabled
+### HasLanGoodput
 
-`func (o *InlineResponse200106) HasEtaEnabled() bool`
+`func (o *InlineResponse200106) HasLanGoodput() bool`
 
-HasEtaEnabled returns a boolean if a field has been set.
+HasLanGoodput returns a boolean if a field has been set.
 
-### GetEtaDstPort
+### GetWanLatencyMs
 
-`func (o *InlineResponse200106) GetEtaDstPort() int32`
+`func (o *InlineResponse200106) GetWanLatencyMs() float32`
 
-GetEtaDstPort returns the EtaDstPort field if non-nil, zero value otherwise.
+GetWanLatencyMs returns the WanLatencyMs field if non-nil, zero value otherwise.
 
-### GetEtaDstPortOk
+### GetWanLatencyMsOk
 
-`func (o *InlineResponse200106) GetEtaDstPortOk() (*int32, bool)`
+`func (o *InlineResponse200106) GetWanLatencyMsOk() (*float32, bool)`
 
-GetEtaDstPortOk returns a tuple with the EtaDstPort field if it's non-nil, zero value otherwise
+GetWanLatencyMsOk returns a tuple with the WanLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEtaDstPort
+### SetWanLatencyMs
 
-`func (o *InlineResponse200106) SetEtaDstPort(v int32)`
+`func (o *InlineResponse200106) SetWanLatencyMs(v float32)`
 
-SetEtaDstPort sets EtaDstPort field to given value.
+SetWanLatencyMs sets WanLatencyMs field to given value.
 
-### HasEtaDstPort
+### HasWanLatencyMs
 
-`func (o *InlineResponse200106) HasEtaDstPort() bool`
+`func (o *InlineResponse200106) HasWanLatencyMs() bool`
 
-HasEtaDstPort returns a boolean if a field has been set.
+HasWanLatencyMs returns a boolean if a field has been set.
+
+### GetLanLatencyMs
+
+`func (o *InlineResponse200106) GetLanLatencyMs() float32`
+
+GetLanLatencyMs returns the LanLatencyMs field if non-nil, zero value otherwise.
+
+### GetLanLatencyMsOk
+
+`func (o *InlineResponse200106) GetLanLatencyMsOk() (*float32, bool)`
+
+GetLanLatencyMsOk returns a tuple with the LanLatencyMs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanLatencyMs
+
+`func (o *InlineResponse200106) SetLanLatencyMs(v float32)`
+
+SetLanLatencyMs sets LanLatencyMs field to given value.
+
+### HasLanLatencyMs
+
+`func (o *InlineResponse200106) HasLanLatencyMs() bool`
+
+HasLanLatencyMs returns a boolean if a field has been set.
+
+### GetWanLossPercent
+
+`func (o *InlineResponse200106) GetWanLossPercent() float32`
+
+GetWanLossPercent returns the WanLossPercent field if non-nil, zero value otherwise.
+
+### GetWanLossPercentOk
+
+`func (o *InlineResponse200106) GetWanLossPercentOk() (*float32, bool)`
+
+GetWanLossPercentOk returns a tuple with the WanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWanLossPercent
+
+`func (o *InlineResponse200106) SetWanLossPercent(v float32)`
+
+SetWanLossPercent sets WanLossPercent field to given value.
+
+### HasWanLossPercent
+
+`func (o *InlineResponse200106) HasWanLossPercent() bool`
+
+HasWanLossPercent returns a boolean if a field has been set.
+
+### GetLanLossPercent
+
+`func (o *InlineResponse200106) GetLanLossPercent() float32`
+
+GetLanLossPercent returns the LanLossPercent field if non-nil, zero value otherwise.
+
+### GetLanLossPercentOk
+
+`func (o *InlineResponse200106) GetLanLossPercentOk() (*float32, bool)`
+
+GetLanLossPercentOk returns a tuple with the LanLossPercent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanLossPercent
+
+`func (o *InlineResponse200106) SetLanLossPercent(v float32)`
+
+SetLanLossPercent sets LanLossPercent field to given value.
+
+### HasLanLossPercent
+
+`func (o *InlineResponse200106) HasLanLossPercent() bool`
+
+HasLanLossPercent returns a boolean if a field has been set.
+
+### GetResponseDuration
+
+`func (o *InlineResponse200106) GetResponseDuration() int32`
+
+GetResponseDuration returns the ResponseDuration field if non-nil, zero value otherwise.
+
+### GetResponseDurationOk
+
+`func (o *InlineResponse200106) GetResponseDurationOk() (*int32, bool)`
+
+GetResponseDurationOk returns a tuple with the ResponseDuration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResponseDuration
+
+`func (o *InlineResponse200106) SetResponseDuration(v int32)`
+
+SetResponseDuration sets ResponseDuration field to given value.
+
+### HasResponseDuration
+
+`func (o *InlineResponse200106) HasResponseDuration() bool`
+
+HasResponseDuration returns a boolean if a field has been set.
+
+### GetSent
+
+`func (o *InlineResponse200106) GetSent() int32`
+
+GetSent returns the Sent field if non-nil, zero value otherwise.
+
+### GetSentOk
+
+`func (o *InlineResponse200106) GetSentOk() (*int32, bool)`
+
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSent
+
+`func (o *InlineResponse200106) SetSent(v int32)`
+
+SetSent sets Sent field to given value.
+
+### HasSent
+
+`func (o *InlineResponse200106) HasSent() bool`
+
+HasSent returns a boolean if a field has been set.
+
+### GetRecv
+
+`func (o *InlineResponse200106) GetRecv() int32`
+
+GetRecv returns the Recv field if non-nil, zero value otherwise.
+
+### GetRecvOk
+
+`func (o *InlineResponse200106) GetRecvOk() (*int32, bool)`
+
+GetRecvOk returns a tuple with the Recv field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRecv
+
+`func (o *InlineResponse200106) SetRecv(v int32)`
+
+SetRecv sets Recv field to given value.
+
+### HasRecv
+
+`func (o *InlineResponse200106) HasRecv() bool`
+
+HasRecv returns a boolean if a field has been set.
+
+### GetNumClients
+
+`func (o *InlineResponse200106) GetNumClients() int32`
+
+GetNumClients returns the NumClients field if non-nil, zero value otherwise.
+
+### GetNumClientsOk
+
+`func (o *InlineResponse200106) GetNumClientsOk() (*int32, bool)`
+
+GetNumClientsOk returns a tuple with the NumClients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNumClients
+
+`func (o *InlineResponse200106) SetNumClients(v int32)`
+
+SetNumClients sets NumClients field to given value.
+
+### HasNumClients
+
+`func (o *InlineResponse200106) HasNumClients() bool`
+
+HasNumClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

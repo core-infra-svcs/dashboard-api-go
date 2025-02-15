@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | Network identifier | [optional] 
-**Name** | Pointer to **string** | Network name | [optional] 
-**ByUplink** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink**](OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink.md) | Uplink usage | [optional] 
+**ProfileId** | Pointer to **string** | Profile ID | [optional] 
+**Name** | Pointer to **string** | Name of profile | [optional] 
 
 ## Methods
 
@@ -27,30 +26,30 @@ NewInlineResponse200218WithDefaults instantiates a new InlineResponse200218 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetProfileId
 
-`func (o *InlineResponse200218) GetNetworkId() string`
+`func (o *InlineResponse200218) GetProfileId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200218) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200218) GetProfileIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetProfileId
 
-`func (o *InlineResponse200218) SetNetworkId(v string)`
+`func (o *InlineResponse200218) SetProfileId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasNetworkId
+### HasProfileId
 
-`func (o *InlineResponse200218) HasNetworkId() bool`
+`func (o *InlineResponse200218) HasProfileId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -76,31 +75,6 @@ SetName sets Name field to given value.
 `func (o *InlineResponse200218) HasName() bool`
 
 HasName returns a boolean if a field has been set.
-
-### GetByUplink
-
-`func (o *InlineResponse200218) GetByUplink() []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink`
-
-GetByUplink returns the ByUplink field if non-nil, zero value otherwise.
-
-### GetByUplinkOk
-
-`func (o *InlineResponse200218) GetByUplinkOk() (*[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink, bool)`
-
-GetByUplinkOk returns a tuple with the ByUplink field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByUplink
-
-`func (o *InlineResponse200218) SetByUplink(v []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink)`
-
-SetByUplink sets ByUplink field to given value.
-
-### HasByUplink
-
-`func (o *InlineResponse200218) HasByUplink() bool`
-
-HasByUplink returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

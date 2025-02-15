@@ -4,16 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of the device | [optional] 
-**Name** | Pointer to **string** | Name assigned to the device | [optional] 
-**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
-**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
+**Serials** | **[]string** | A list of serials of devices updated | 
 
 ## Methods
 
 ### NewInlineResponse200262
 
-`func NewInlineResponse200262() *InlineResponse200262`
+`func NewInlineResponse200262(serials []string, ) *InlineResponse200262`
 
 NewInlineResponse200262 instantiates a new InlineResponse200262 object
 This constructor will assign default values to properties that have it defined,
@@ -28,105 +25,25 @@ NewInlineResponse200262WithDefaults instantiates a new InlineResponse200262 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetSerials
 
-`func (o *InlineResponse200262) GetSerial() string`
+`func (o *InlineResponse200262) GetSerials() []string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSerialsOk
 
-`func (o *InlineResponse200262) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200262) GetSerialsOk() (*[]string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSerials
 
-`func (o *InlineResponse200262) SetSerial(v string)`
+`func (o *InlineResponse200262) SetSerials(v []string)`
 
-SetSerial sets Serial field to given value.
+SetSerials sets Serials field to given value.
 
-### HasSerial
-
-`func (o *InlineResponse200262) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200262) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200262) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200262) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200262) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetDeviceStatus
-
-`func (o *InlineResponse200262) GetDeviceStatus() string`
-
-GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
-
-### GetDeviceStatusOk
-
-`func (o *InlineResponse200262) GetDeviceStatusOk() (*string, bool)`
-
-GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceStatus
-
-`func (o *InlineResponse200262) SetDeviceStatus(v string)`
-
-SetDeviceStatus sets DeviceStatus field to given value.
-
-### HasDeviceStatus
-
-`func (o *InlineResponse200262) HasDeviceStatus() bool`
-
-HasDeviceStatus returns a boolean if a field has been set.
-
-### GetUpgrade
-
-`func (o *InlineResponse200262) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
-
-GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
-
-### GetUpgradeOk
-
-`func (o *InlineResponse200262) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
-
-GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpgrade
-
-`func (o *InlineResponse200262) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
-
-SetUpgrade sets Upgrade field to given value.
-
-### HasUpgrade
-
-`func (o *InlineResponse200262) HasUpgrade() bool`
-
-HasUpgrade returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse20050Rules**](InlineResponse20050Rules.md) | An ordered array of the firewall rules (not including the default rule) | [optional] 
-**SyslogDefaultRule** | Pointer to **bool** | Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional) | [optional] 
+**Service** | Pointer to **string** | Appliance service name | [optional] 
+**Access** | Pointer to **string** | A string indicating the rule for which IPs are allowed to use the specified service | [optional] 
+**AllowedIps** | Pointer to **[]string** | An array of allowed IPs that can access the service | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse20051WithDefaults instantiates a new InlineResponse20051 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetService
 
-`func (o *InlineResponse20051) GetRules() []InlineResponse20050Rules`
+`func (o *InlineResponse20051) GetService() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetService returns the Service field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetServiceOk
 
-`func (o *InlineResponse20051) GetRulesOk() (*[]InlineResponse20050Rules, bool)`
+`func (o *InlineResponse20051) GetServiceOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetServiceOk returns a tuple with the Service field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetService
 
-`func (o *InlineResponse20051) SetRules(v []InlineResponse20050Rules)`
+`func (o *InlineResponse20051) SetService(v string)`
 
-SetRules sets Rules field to given value.
+SetService sets Service field to given value.
 
-### HasRules
+### HasService
 
-`func (o *InlineResponse20051) HasRules() bool`
+`func (o *InlineResponse20051) HasService() bool`
 
-HasRules returns a boolean if a field has been set.
+HasService returns a boolean if a field has been set.
 
-### GetSyslogDefaultRule
+### GetAccess
 
-`func (o *InlineResponse20051) GetSyslogDefaultRule() bool`
+`func (o *InlineResponse20051) GetAccess() string`
 
-GetSyslogDefaultRule returns the SyslogDefaultRule field if non-nil, zero value otherwise.
+GetAccess returns the Access field if non-nil, zero value otherwise.
 
-### GetSyslogDefaultRuleOk
+### GetAccessOk
 
-`func (o *InlineResponse20051) GetSyslogDefaultRuleOk() (*bool, bool)`
+`func (o *InlineResponse20051) GetAccessOk() (*string, bool)`
 
-GetSyslogDefaultRuleOk returns a tuple with the SyslogDefaultRule field if it's non-nil, zero value otherwise
+GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSyslogDefaultRule
+### SetAccess
 
-`func (o *InlineResponse20051) SetSyslogDefaultRule(v bool)`
+`func (o *InlineResponse20051) SetAccess(v string)`
 
-SetSyslogDefaultRule sets SyslogDefaultRule field to given value.
+SetAccess sets Access field to given value.
 
-### HasSyslogDefaultRule
+### HasAccess
 
-`func (o *InlineResponse20051) HasSyslogDefaultRule() bool`
+`func (o *InlineResponse20051) HasAccess() bool`
 
-HasSyslogDefaultRule returns a boolean if a field has been set.
+HasAccess returns a boolean if a field has been set.
+
+### GetAllowedIps
+
+`func (o *InlineResponse20051) GetAllowedIps() []string`
+
+GetAllowedIps returns the AllowedIps field if non-nil, zero value otherwise.
+
+### GetAllowedIpsOk
+
+`func (o *InlineResponse20051) GetAllowedIpsOk() (*[]string, bool)`
+
+GetAllowedIpsOk returns a tuple with the AllowedIps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowedIps
+
+`func (o *InlineResponse20051) SetAllowedIps(v []string)`
+
+SetAllowedIps sets AllowedIps field to given value.
+
+### HasAllowedIps
+
+`func (o *InlineResponse20051) HasAllowedIps() bool`
+
+HasAllowedIps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

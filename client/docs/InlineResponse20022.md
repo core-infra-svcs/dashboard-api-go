@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LedsBlinkId** | Pointer to **string** | ID of led blink job | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your leds blink request | [optional] 
-**Status** | Pointer to **string** | Status of the leds blink request | [optional] 
-**Request** | Pointer to [**InlineResponse2013Request**](InlineResponse2013Request.md) |  | [optional] 
-**Error** | Pointer to **string** | An error message for a failed Blink LEDs execution, if present | [optional] 
+**ArpTableId** | Pointer to **string** | Id of the ARP table request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your ARP table request. | [optional] 
+**Request** | Pointer to [**InlineResponse2011Request**](InlineResponse2011Request.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the ARP table request. | [optional] 
+**Entries** | Pointer to [**[]InlineResponse20022Entries**](InlineResponse20022Entries.md) | The ARP table entries | [optional] 
+**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -29,30 +30,30 @@ NewInlineResponse20022WithDefaults instantiates a new InlineResponse20022 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLedsBlinkId
+### GetArpTableId
 
-`func (o *InlineResponse20022) GetLedsBlinkId() string`
+`func (o *InlineResponse20022) GetArpTableId() string`
 
-GetLedsBlinkId returns the LedsBlinkId field if non-nil, zero value otherwise.
+GetArpTableId returns the ArpTableId field if non-nil, zero value otherwise.
 
-### GetLedsBlinkIdOk
+### GetArpTableIdOk
 
-`func (o *InlineResponse20022) GetLedsBlinkIdOk() (*string, bool)`
+`func (o *InlineResponse20022) GetArpTableIdOk() (*string, bool)`
 
-GetLedsBlinkIdOk returns a tuple with the LedsBlinkId field if it's non-nil, zero value otherwise
+GetArpTableIdOk returns a tuple with the ArpTableId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLedsBlinkId
+### SetArpTableId
 
-`func (o *InlineResponse20022) SetLedsBlinkId(v string)`
+`func (o *InlineResponse20022) SetArpTableId(v string)`
 
-SetLedsBlinkId sets LedsBlinkId field to given value.
+SetArpTableId sets ArpTableId field to given value.
 
-### HasLedsBlinkId
+### HasArpTableId
 
-`func (o *InlineResponse20022) HasLedsBlinkId() bool`
+`func (o *InlineResponse20022) HasArpTableId() bool`
 
-HasLedsBlinkId returns a boolean if a field has been set.
+HasArpTableId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -79,6 +80,31 @@ SetUrl sets Url field to given value.
 
 HasUrl returns a boolean if a field has been set.
 
+### GetRequest
+
+`func (o *InlineResponse20022) GetRequest() InlineResponse2011Request`
+
+GetRequest returns the Request field if non-nil, zero value otherwise.
+
+### GetRequestOk
+
+`func (o *InlineResponse20022) GetRequestOk() (*InlineResponse2011Request, bool)`
+
+GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequest
+
+`func (o *InlineResponse20022) SetRequest(v InlineResponse2011Request)`
+
+SetRequest sets Request field to given value.
+
+### HasRequest
+
+`func (o *InlineResponse20022) HasRequest() bool`
+
+HasRequest returns a boolean if a field has been set.
+
 ### GetStatus
 
 `func (o *InlineResponse20022) GetStatus() string`
@@ -104,30 +130,30 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetRequest
+### GetEntries
 
-`func (o *InlineResponse20022) GetRequest() InlineResponse2013Request`
+`func (o *InlineResponse20022) GetEntries() []InlineResponse20022Entries`
 
-GetRequest returns the Request field if non-nil, zero value otherwise.
+GetEntries returns the Entries field if non-nil, zero value otherwise.
 
-### GetRequestOk
+### GetEntriesOk
 
-`func (o *InlineResponse20022) GetRequestOk() (*InlineResponse2013Request, bool)`
+`func (o *InlineResponse20022) GetEntriesOk() (*[]InlineResponse20022Entries, bool)`
 
-GetRequestOk returns a tuple with the Request field if it's non-nil, zero value otherwise
+GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRequest
+### SetEntries
 
-`func (o *InlineResponse20022) SetRequest(v InlineResponse2013Request)`
+`func (o *InlineResponse20022) SetEntries(v []InlineResponse20022Entries)`
 
-SetRequest sets Request field to given value.
+SetEntries sets Entries field to given value.
 
-### HasRequest
+### HasEntries
 
-`func (o *InlineResponse20022) HasRequest() bool`
+`func (o *InlineResponse20022) HasEntries() bool`
 
-HasRequest returns a boolean if a field has been set.
+HasEntries returns a boolean if a field has been set.
 
 ### GetError
 

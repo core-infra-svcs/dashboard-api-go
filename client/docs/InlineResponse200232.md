@@ -4,15 +4,24 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Permission scope id | [optional] 
-**Name** | Pointer to **string** | Name of permission scope | [optional] 
-**Level** | Pointer to **string** | Permission scope level | [optional] 
+**Id** | **string** | ID of the health alert | 
+**CategoryType** | **string** | Category type that the health alert belongs to | 
+**Network** | [**OrganizationsOrganizationIdAssuranceAlertsNetwork**](OrganizationsOrganizationIdAssuranceAlertsNetwork.md) |  | 
+**StartedAt** | **time.Time** | Time when the alert started | 
+**ResolvedAt** | Pointer to **time.Time** | Time when the alert was resolved | [optional] 
+**DismissedAt** | Pointer to **time.Time** | Time when the alert was dismissed | [optional] 
+**DeviceType** | Pointer to **string** | Device Type that the alert occurred on | [optional] 
+**Type** | **string** | Alert Type | 
+**Title** | **string** | Human Readable Title for Alert type | 
+**Description** | Pointer to **string** | Description of the alert | [optional] 
+**Severity** | **string** | Alert severity | 
+**Scope** | Pointer to [**OrganizationsOrganizationIdAssuranceAlertsScope**](OrganizationsOrganizationIdAssuranceAlertsScope.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200232
 
-`func NewInlineResponse200232() *InlineResponse200232`
+`func NewInlineResponse200232(id string, categoryType string, network OrganizationsOrganizationIdAssuranceAlertsNetwork, startedAt time.Time, type_ string, title string, severity string, ) *InlineResponse200232`
 
 NewInlineResponse200232 instantiates a new InlineResponse200232 object
 This constructor will assign default values to properties that have it defined,
@@ -46,61 +55,251 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
 
-`func (o *InlineResponse200232) HasId() bool`
+### GetCategoryType
 
-HasId returns a boolean if a field has been set.
+`func (o *InlineResponse200232) GetCategoryType() string`
 
-### GetName
+GetCategoryType returns the CategoryType field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200232) GetName() string`
+### GetCategoryTypeOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse200232) GetCategoryTypeOk() (*string, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse200232) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCategoryTypeOk returns a tuple with the CategoryType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCategoryType
 
-`func (o *InlineResponse200232) SetName(v string)`
+`func (o *InlineResponse200232) SetCategoryType(v string)`
 
-SetName sets Name field to given value.
+SetCategoryType sets CategoryType field to given value.
 
-### HasName
 
-`func (o *InlineResponse200232) HasName() bool`
+### GetNetwork
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineResponse200232) GetNetwork() OrganizationsOrganizationIdAssuranceAlertsNetwork`
 
-### GetLevel
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200232) GetLevel() string`
+### GetNetworkOk
 
-GetLevel returns the Level field if non-nil, zero value otherwise.
+`func (o *InlineResponse200232) GetNetworkOk() (*OrganizationsOrganizationIdAssuranceAlertsNetwork, bool)`
 
-### GetLevelOk
-
-`func (o *InlineResponse200232) GetLevelOk() (*string, bool)`
-
-GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLevel
+### SetNetwork
 
-`func (o *InlineResponse200232) SetLevel(v string)`
+`func (o *InlineResponse200232) SetNetwork(v OrganizationsOrganizationIdAssuranceAlertsNetwork)`
 
-SetLevel sets Level field to given value.
+SetNetwork sets Network field to given value.
 
-### HasLevel
 
-`func (o *InlineResponse200232) HasLevel() bool`
+### GetStartedAt
 
-HasLevel returns a boolean if a field has been set.
+`func (o *InlineResponse200232) GetStartedAt() time.Time`
+
+GetStartedAt returns the StartedAt field if non-nil, zero value otherwise.
+
+### GetStartedAtOk
+
+`func (o *InlineResponse200232) GetStartedAtOk() (*time.Time, bool)`
+
+GetStartedAtOk returns a tuple with the StartedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStartedAt
+
+`func (o *InlineResponse200232) SetStartedAt(v time.Time)`
+
+SetStartedAt sets StartedAt field to given value.
+
+
+### GetResolvedAt
+
+`func (o *InlineResponse200232) GetResolvedAt() time.Time`
+
+GetResolvedAt returns the ResolvedAt field if non-nil, zero value otherwise.
+
+### GetResolvedAtOk
+
+`func (o *InlineResponse200232) GetResolvedAtOk() (*time.Time, bool)`
+
+GetResolvedAtOk returns a tuple with the ResolvedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResolvedAt
+
+`func (o *InlineResponse200232) SetResolvedAt(v time.Time)`
+
+SetResolvedAt sets ResolvedAt field to given value.
+
+### HasResolvedAt
+
+`func (o *InlineResponse200232) HasResolvedAt() bool`
+
+HasResolvedAt returns a boolean if a field has been set.
+
+### GetDismissedAt
+
+`func (o *InlineResponse200232) GetDismissedAt() time.Time`
+
+GetDismissedAt returns the DismissedAt field if non-nil, zero value otherwise.
+
+### GetDismissedAtOk
+
+`func (o *InlineResponse200232) GetDismissedAtOk() (*time.Time, bool)`
+
+GetDismissedAtOk returns a tuple with the DismissedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDismissedAt
+
+`func (o *InlineResponse200232) SetDismissedAt(v time.Time)`
+
+SetDismissedAt sets DismissedAt field to given value.
+
+### HasDismissedAt
+
+`func (o *InlineResponse200232) HasDismissedAt() bool`
+
+HasDismissedAt returns a boolean if a field has been set.
+
+### GetDeviceType
+
+`func (o *InlineResponse200232) GetDeviceType() string`
+
+GetDeviceType returns the DeviceType field if non-nil, zero value otherwise.
+
+### GetDeviceTypeOk
+
+`func (o *InlineResponse200232) GetDeviceTypeOk() (*string, bool)`
+
+GetDeviceTypeOk returns a tuple with the DeviceType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceType
+
+`func (o *InlineResponse200232) SetDeviceType(v string)`
+
+SetDeviceType sets DeviceType field to given value.
+
+### HasDeviceType
+
+`func (o *InlineResponse200232) HasDeviceType() bool`
+
+HasDeviceType returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse200232) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse200232) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse200232) SetType(v string)`
+
+SetType sets Type field to given value.
+
+
+### GetTitle
+
+`func (o *InlineResponse200232) GetTitle() string`
+
+GetTitle returns the Title field if non-nil, zero value otherwise.
+
+### GetTitleOk
+
+`func (o *InlineResponse200232) GetTitleOk() (*string, bool)`
+
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTitle
+
+`func (o *InlineResponse200232) SetTitle(v string)`
+
+SetTitle sets Title field to given value.
+
+
+### GetDescription
+
+`func (o *InlineResponse200232) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse200232) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse200232) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse200232) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetSeverity
+
+`func (o *InlineResponse200232) GetSeverity() string`
+
+GetSeverity returns the Severity field if non-nil, zero value otherwise.
+
+### GetSeverityOk
+
+`func (o *InlineResponse200232) GetSeverityOk() (*string, bool)`
+
+GetSeverityOk returns a tuple with the Severity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeverity
+
+`func (o *InlineResponse200232) SetSeverity(v string)`
+
+SetSeverity sets Severity field to given value.
+
+
+### GetScope
+
+`func (o *InlineResponse200232) GetScope() OrganizationsOrganizationIdAssuranceAlertsScope`
+
+GetScope returns the Scope field if non-nil, zero value otherwise.
+
+### GetScopeOk
+
+`func (o *InlineResponse200232) GetScopeOk() (*OrganizationsOrganizationIdAssuranceAlertsScope, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScope
+
+`func (o *InlineResponse200232) SetScope(v OrganizationsOrganizationIdAssuranceAlertsScope)`
+
+SetScope sets Scope field to given value.
+
+### HasScope
+
+`func (o *InlineResponse200232) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

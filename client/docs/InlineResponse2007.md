@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The device serial | [optional] 
-**RfProfileId** | Pointer to **string** | RF Profile ID | [optional] 
-**TwoFourGhzSettings** | Pointer to [**InlineResponse2007TwoFourGhzSettings**](InlineResponse2007TwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**InlineResponse2007FiveGhzSettings**](InlineResponse2007FiveGhzSettings.md) |  | [optional] 
+**Subnet** | Pointer to **string** | Subnet | [optional] 
+**VlanId** | Pointer to **int32** | VLAN ID | [optional] 
+**UsedCount** | Pointer to **int32** | Count of used IP addresses in subnet | [optional] 
+**FreeCount** | Pointer to **int32** | Count of free IP addresses in subnet | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse2007WithDefaults instantiates a new InlineResponse2007 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetSubnet
 
-`func (o *InlineResponse2007) GetSerial() string`
+`func (o *InlineResponse2007) GetSubnet() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetSubnetOk
 
-`func (o *InlineResponse2007) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse2007) GetSubnetOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetSubnet
 
-`func (o *InlineResponse2007) SetSerial(v string)`
+`func (o *InlineResponse2007) SetSubnet(v string)`
 
-SetSerial sets Serial field to given value.
+SetSubnet sets Subnet field to given value.
 
-### HasSerial
+### HasSubnet
 
-`func (o *InlineResponse2007) HasSerial() bool`
+`func (o *InlineResponse2007) HasSubnet() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasSubnet returns a boolean if a field has been set.
 
-### GetRfProfileId
+### GetVlanId
 
-`func (o *InlineResponse2007) GetRfProfileId() string`
+`func (o *InlineResponse2007) GetVlanId() int32`
 
-GetRfProfileId returns the RfProfileId field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetRfProfileIdOk
+### GetVlanIdOk
 
-`func (o *InlineResponse2007) GetRfProfileIdOk() (*string, bool)`
+`func (o *InlineResponse2007) GetVlanIdOk() (*int32, bool)`
 
-GetRfProfileIdOk returns a tuple with the RfProfileId field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRfProfileId
+### SetVlanId
 
-`func (o *InlineResponse2007) SetRfProfileId(v string)`
+`func (o *InlineResponse2007) SetVlanId(v int32)`
 
-SetRfProfileId sets RfProfileId field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasRfProfileId
+### HasVlanId
 
-`func (o *InlineResponse2007) HasRfProfileId() bool`
+`func (o *InlineResponse2007) HasVlanId() bool`
 
-HasRfProfileId returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetTwoFourGhzSettings
+### GetUsedCount
 
-`func (o *InlineResponse2007) GetTwoFourGhzSettings() InlineResponse2007TwoFourGhzSettings`
+`func (o *InlineResponse2007) GetUsedCount() int32`
 
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
+GetUsedCount returns the UsedCount field if non-nil, zero value otherwise.
 
-### GetTwoFourGhzSettingsOk
+### GetUsedCountOk
 
-`func (o *InlineResponse2007) GetTwoFourGhzSettingsOk() (*InlineResponse2007TwoFourGhzSettings, bool)`
+`func (o *InlineResponse2007) GetUsedCountOk() (*int32, bool)`
 
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
+GetUsedCountOk returns a tuple with the UsedCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTwoFourGhzSettings
+### SetUsedCount
 
-`func (o *InlineResponse2007) SetTwoFourGhzSettings(v InlineResponse2007TwoFourGhzSettings)`
+`func (o *InlineResponse2007) SetUsedCount(v int32)`
 
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
+SetUsedCount sets UsedCount field to given value.
 
-### HasTwoFourGhzSettings
+### HasUsedCount
 
-`func (o *InlineResponse2007) HasTwoFourGhzSettings() bool`
+`func (o *InlineResponse2007) HasUsedCount() bool`
 
-HasTwoFourGhzSettings returns a boolean if a field has been set.
+HasUsedCount returns a boolean if a field has been set.
 
-### GetFiveGhzSettings
+### GetFreeCount
 
-`func (o *InlineResponse2007) GetFiveGhzSettings() InlineResponse2007FiveGhzSettings`
+`func (o *InlineResponse2007) GetFreeCount() int32`
 
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
+GetFreeCount returns the FreeCount field if non-nil, zero value otherwise.
 
-### GetFiveGhzSettingsOk
+### GetFreeCountOk
 
-`func (o *InlineResponse2007) GetFiveGhzSettingsOk() (*InlineResponse2007FiveGhzSettings, bool)`
+`func (o *InlineResponse2007) GetFreeCountOk() (*int32, bool)`
 
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
+GetFreeCountOk returns a tuple with the FreeCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFiveGhzSettings
+### SetFreeCount
 
-`func (o *InlineResponse2007) SetFiveGhzSettings(v InlineResponse2007FiveGhzSettings)`
+`func (o *InlineResponse2007) SetFreeCount(v int32)`
 
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
+SetFreeCount sets FreeCount field to given value.
 
-### HasFiveGhzSettings
+### HasFreeCount
 
-`func (o *InlineResponse2007) HasFiveGhzSettings() bool`
+`func (o *InlineResponse2007) HasFreeCount() bool`
 
-HasFiveGhzSettings returns a boolean if a field has been set.
+HasFreeCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

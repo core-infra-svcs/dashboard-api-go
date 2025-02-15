@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
+**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject241WithDefaults instantiates a new InlineObject241 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLimitScopeToNetworks
+### GetTitle
 
-`func (o *InlineObject241) GetLimitScopeToNetworks() []string`
+`func (o *InlineObject241) GetTitle() string`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetTitle returns the Title field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetTitleOk
 
-`func (o *InlineObject241) GetLimitScopeToNetworksOk() (*[]string, bool)`
+`func (o *InlineObject241) GetTitleOk() (*string, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetTitle
 
-`func (o *InlineObject241) SetLimitScopeToNetworks(v []string)`
+`func (o *InlineObject241) SetTitle(v string)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetTitle sets Title field to given value.
 
-### HasLimitScopeToNetworks
+### HasTitle
 
-`func (o *InlineObject241) HasLimitScopeToNetworks() bool`
+`func (o *InlineObject241) HasTitle() bool`
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+HasTitle returns a boolean if a field has been set.
+
+### GetApiKey
+
+`func (o *InlineObject241) GetApiKey() string`
+
+GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
+
+### GetApiKeyOk
+
+`func (o *InlineObject241) GetApiKeyOk() (*string, bool)`
+
+GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApiKey
+
+`func (o *InlineObject241) SetApiKey(v string)`
+
+SetApiKey sets ApiKey field to given value.
+
+### HasApiKey
+
+`func (o *InlineObject241) HasApiKey() bool`
+
+HasApiKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

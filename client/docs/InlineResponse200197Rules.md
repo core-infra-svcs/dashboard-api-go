@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Policy** | Pointer to **string** | &#39;Deny&#39; traffic specified by this rule | [optional] 
-**Type** | Pointer to **string** | Type of the L7 firewall rule. One of: &#39;application&#39;, &#39;applicationCategory&#39;, &#39;host&#39;, &#39;port&#39;, &#39;ipRange&#39; | [optional] 
-**Value** | Pointer to **string** | The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected. | [optional] 
+**Description** | Pointer to **string** | Desctiption of the bonjour forwarding rule | [optional] 
+**VlanId** | Pointer to **string** | The ID of the service VLAN. Required | [optional] 
+**Services** | Pointer to **[]string** | A list of Bonjour services. At least one service must be specified. Available services are &#39;All Services&#39;, &#39;AFP&#39;, &#39;AirPlay&#39;, &#39;Apple screen share&#39;, &#39;BitTorrent&#39;, &#39;Chromecast&#39;, &#39;FTP&#39;, &#39;iChat&#39;, &#39;iTunes&#39;, &#39;Printers&#39;, &#39;Samba&#39;, &#39;Scanners&#39;, &#39;Spotify&#39; and &#39;SSH&#39; | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200197RulesWithDefaults instantiates a new InlineResponse200197
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPolicy
+### GetDescription
 
-`func (o *InlineResponse200197Rules) GetPolicy() string`
+`func (o *InlineResponse200197Rules) GetDescription() string`
 
-GetPolicy returns the Policy field if non-nil, zero value otherwise.
+GetDescription returns the Description field if non-nil, zero value otherwise.
 
-### GetPolicyOk
+### GetDescriptionOk
 
-`func (o *InlineResponse200197Rules) GetPolicyOk() (*string, bool)`
+`func (o *InlineResponse200197Rules) GetDescriptionOk() (*string, bool)`
 
-GetPolicyOk returns a tuple with the Policy field if it's non-nil, zero value otherwise
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicy
+### SetDescription
 
-`func (o *InlineResponse200197Rules) SetPolicy(v string)`
+`func (o *InlineResponse200197Rules) SetDescription(v string)`
 
-SetPolicy sets Policy field to given value.
+SetDescription sets Description field to given value.
 
-### HasPolicy
+### HasDescription
 
-`func (o *InlineResponse200197Rules) HasPolicy() bool`
+`func (o *InlineResponse200197Rules) HasDescription() bool`
 
-HasPolicy returns a boolean if a field has been set.
+HasDescription returns a boolean if a field has been set.
 
-### GetType
+### GetVlanId
 
-`func (o *InlineResponse200197Rules) GetType() string`
+`func (o *InlineResponse200197Rules) GetVlanId() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetVlanId returns the VlanId field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetVlanIdOk
 
-`func (o *InlineResponse200197Rules) GetTypeOk() (*string, bool)`
+`func (o *InlineResponse200197Rules) GetVlanIdOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetVlanIdOk returns a tuple with the VlanId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetVlanId
 
-`func (o *InlineResponse200197Rules) SetType(v string)`
+`func (o *InlineResponse200197Rules) SetVlanId(v string)`
 
-SetType sets Type field to given value.
+SetVlanId sets VlanId field to given value.
 
-### HasType
+### HasVlanId
 
-`func (o *InlineResponse200197Rules) HasType() bool`
+`func (o *InlineResponse200197Rules) HasVlanId() bool`
 
-HasType returns a boolean if a field has been set.
+HasVlanId returns a boolean if a field has been set.
 
-### GetValue
+### GetServices
 
-`func (o *InlineResponse200197Rules) GetValue() string`
+`func (o *InlineResponse200197Rules) GetServices() []string`
 
-GetValue returns the Value field if non-nil, zero value otherwise.
+GetServices returns the Services field if non-nil, zero value otherwise.
 
-### GetValueOk
+### GetServicesOk
 
-`func (o *InlineResponse200197Rules) GetValueOk() (*string, bool)`
+`func (o *InlineResponse200197Rules) GetServicesOk() (*[]string, bool)`
 
-GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
+GetServicesOk returns a tuple with the Services field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetValue
+### SetServices
 
-`func (o *InlineResponse200197Rules) SetValue(v string)`
+`func (o *InlineResponse200197Rules) SetServices(v []string)`
 
-SetValue sets Value field to given value.
+SetServices sets Services field to given value.
 
-### HasValue
+### HasServices
 
-`func (o *InlineResponse200197Rules) HasValue() bool`
+`func (o *InlineResponse200197Rules) HasServices() bool`
 
-HasValue returns a boolean if a field has been set.
+HasServices returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

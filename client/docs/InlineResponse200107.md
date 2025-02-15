@@ -4,11 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Device serial | [optional] 
-**Model** | Pointer to **string** | Device model. | [optional] 
-**Tags** | Pointer to **string** | Device tags. | [optional] 
-**Wifi0** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for first wifi radio of device. | [optional] 
-**Wifi1** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for second wifi radio of device. | [optional] 
+**Id** | Pointer to **string** | Meraki auth user id | [optional] 
+**Email** | Pointer to **string** | Email address of the user | [optional] 
+**Name** | Pointer to **string** | Name of the user | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Creation time of the user | [optional] 
+**AccountType** | Pointer to **string** | Authorization type for user. | [optional] 
+**IsAdmin** | Pointer to **bool** | Whether or not the user is a Dashboard administrator | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersAuthorizations**](NetworksNetworkIdMerakiAuthUsersAuthorizations.md) | User authorization info | [optional] 
 
 ## Methods
 
@@ -29,130 +31,180 @@ NewInlineResponse200107WithDefaults instantiates a new InlineResponse200107 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetId
 
-`func (o *InlineResponse200107) GetSerial() string`
+`func (o *InlineResponse200107) GetId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetIdOk
 
-`func (o *InlineResponse200107) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200107) GetIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetId
 
-`func (o *InlineResponse200107) SetSerial(v string)`
+`func (o *InlineResponse200107) SetId(v string)`
 
-SetSerial sets Serial field to given value.
+SetId sets Id field to given value.
 
-### HasSerial
+### HasId
 
-`func (o *InlineResponse200107) HasSerial() bool`
+`func (o *InlineResponse200107) HasId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetModel
+### GetEmail
 
-`func (o *InlineResponse200107) GetModel() string`
+`func (o *InlineResponse200107) GetEmail() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetEmailOk
 
-`func (o *InlineResponse200107) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200107) GetEmailOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetEmail
 
-`func (o *InlineResponse200107) SetModel(v string)`
+`func (o *InlineResponse200107) SetEmail(v string)`
 
-SetModel sets Model field to given value.
+SetEmail sets Email field to given value.
 
-### HasModel
+### HasEmail
 
-`func (o *InlineResponse200107) HasModel() bool`
+`func (o *InlineResponse200107) HasEmail() bool`
 
-HasModel returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetTags
+### GetName
 
-`func (o *InlineResponse200107) GetTags() string`
+`func (o *InlineResponse200107) GetName() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetNameOk
 
-`func (o *InlineResponse200107) GetTagsOk() (*string, bool)`
+`func (o *InlineResponse200107) GetNameOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetName
 
-`func (o *InlineResponse200107) SetTags(v string)`
+`func (o *InlineResponse200107) SetName(v string)`
 
-SetTags sets Tags field to given value.
+SetName sets Name field to given value.
 
-### HasTags
+### HasName
 
-`func (o *InlineResponse200107) HasTags() bool`
+`func (o *InlineResponse200107) HasName() bool`
 
-HasTags returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetWifi0
+### GetCreatedAt
 
-`func (o *InlineResponse200107) GetWifi0() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+`func (o *InlineResponse200107) GetCreatedAt() time.Time`
 
-GetWifi0 returns the Wifi0 field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetWifi0Ok
+### GetCreatedAtOk
 
-`func (o *InlineResponse200107) GetWifi0Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+`func (o *InlineResponse200107) GetCreatedAtOk() (*time.Time, bool)`
 
-GetWifi0Ok returns a tuple with the Wifi0 field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi0
+### SetCreatedAt
 
-`func (o *InlineResponse200107) SetWifi0(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+`func (o *InlineResponse200107) SetCreatedAt(v time.Time)`
 
-SetWifi0 sets Wifi0 field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasWifi0
+### HasCreatedAt
 
-`func (o *InlineResponse200107) HasWifi0() bool`
+`func (o *InlineResponse200107) HasCreatedAt() bool`
 
-HasWifi0 returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetWifi1
+### GetAccountType
 
-`func (o *InlineResponse200107) GetWifi1() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
+`func (o *InlineResponse200107) GetAccountType() string`
 
-GetWifi1 returns the Wifi1 field if non-nil, zero value otherwise.
+GetAccountType returns the AccountType field if non-nil, zero value otherwise.
 
-### GetWifi1Ok
+### GetAccountTypeOk
 
-`func (o *InlineResponse200107) GetWifi1Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
+`func (o *InlineResponse200107) GetAccountTypeOk() (*string, bool)`
 
-GetWifi1Ok returns a tuple with the Wifi1 field if it's non-nil, zero value otherwise
+GetAccountTypeOk returns a tuple with the AccountType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifi1
+### SetAccountType
 
-`func (o *InlineResponse200107) SetWifi1(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
+`func (o *InlineResponse200107) SetAccountType(v string)`
 
-SetWifi1 sets Wifi1 field to given value.
+SetAccountType sets AccountType field to given value.
 
-### HasWifi1
+### HasAccountType
 
-`func (o *InlineResponse200107) HasWifi1() bool`
+`func (o *InlineResponse200107) HasAccountType() bool`
 
-HasWifi1 returns a boolean if a field has been set.
+HasAccountType returns a boolean if a field has been set.
+
+### GetIsAdmin
+
+`func (o *InlineResponse200107) GetIsAdmin() bool`
+
+GetIsAdmin returns the IsAdmin field if non-nil, zero value otherwise.
+
+### GetIsAdminOk
+
+`func (o *InlineResponse200107) GetIsAdminOk() (*bool, bool)`
+
+GetIsAdminOk returns a tuple with the IsAdmin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsAdmin
+
+`func (o *InlineResponse200107) SetIsAdmin(v bool)`
+
+SetIsAdmin sets IsAdmin field to given value.
+
+### HasIsAdmin
+
+`func (o *InlineResponse200107) HasIsAdmin() bool`
+
+HasIsAdmin returns a boolean if a field has been set.
+
+### GetAuthorizations
+
+`func (o *InlineResponse200107) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersAuthorizations`
+
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
+
+### GetAuthorizationsOk
+
+`func (o *InlineResponse200107) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersAuthorizations, bool)`
+
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthorizations
+
+`func (o *InlineResponse200107) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersAuthorizations)`
+
+SetAuthorizations sets Authorizations field to given value.
+
+### HasAuthorizations
+
+`func (o *InlineResponse200107) HasAuthorizations() bool`
+
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

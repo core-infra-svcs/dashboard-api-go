@@ -14,12 +14,18 @@ Name | Type | Description | Notes
 **IpAssignedBy** | Pointer to **string** | The way in which the IP is assigned | [optional] 
 **Provider** | Pointer to **string** | Network Provider | [optional] 
 **SignalStat** | Pointer to [**OrganizationsOrganizationIdCellularGatewayUplinkStatusesSignalStat**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesSignalStat.md) |  | [optional] 
+**Mcc** | Pointer to **string** | Mobile Country Code | [optional] 
+**Mnc** | Pointer to **string** | Mobile Network Code | [optional] 
+**Roaming** | Pointer to [**OrganizationsOrganizationIdCellularGatewayUplinkStatusesRoaming**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesRoaming.md) |  | [optional] 
 **ConnectionType** | Pointer to **string** | Connection Type | [optional] 
 **Apn** | Pointer to **string** | Access Point Name | [optional] 
 **Dns1** | Pointer to **string** | Primary DNS IP | [optional] 
 **Dns2** | Pointer to **string** | Secondary DNS IP | [optional] 
 **SignalType** | Pointer to **string** | Signal Type | [optional] 
+**Mtu** | Pointer to **int32** | Maximum Transmission Unit | [optional] 
 **Iccid** | Pointer to **string** | Integrated Circuit Card Identification Number | [optional] 
+**Imsi** | Pointer to **string** | International Mobile Subscriber Identity | [optional] 
+**Msisdn** | Pointer to **string** | Mobile Station Integrated Services Digital Network | [optional] 
 
 ## Methods
 
@@ -290,6 +296,81 @@ SetSignalStat sets SignalStat field to given value.
 
 HasSignalStat returns a boolean if a field has been set.
 
+### GetMcc
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetMcc() string`
+
+GetMcc returns the Mcc field if non-nil, zero value otherwise.
+
+### GetMccOk
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetMccOk() (*string, bool)`
+
+GetMccOk returns a tuple with the Mcc field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMcc
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) SetMcc(v string)`
+
+SetMcc sets Mcc field to given value.
+
+### HasMcc
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) HasMcc() bool`
+
+HasMcc returns a boolean if a field has been set.
+
+### GetMnc
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetMnc() string`
+
+GetMnc returns the Mnc field if non-nil, zero value otherwise.
+
+### GetMncOk
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetMncOk() (*string, bool)`
+
+GetMncOk returns a tuple with the Mnc field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMnc
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) SetMnc(v string)`
+
+SetMnc sets Mnc field to given value.
+
+### HasMnc
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) HasMnc() bool`
+
+HasMnc returns a boolean if a field has been set.
+
+### GetRoaming
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetRoaming() OrganizationsOrganizationIdCellularGatewayUplinkStatusesRoaming`
+
+GetRoaming returns the Roaming field if non-nil, zero value otherwise.
+
+### GetRoamingOk
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetRoamingOk() (*OrganizationsOrganizationIdCellularGatewayUplinkStatusesRoaming, bool)`
+
+GetRoamingOk returns a tuple with the Roaming field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRoaming
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) SetRoaming(v OrganizationsOrganizationIdCellularGatewayUplinkStatusesRoaming)`
+
+SetRoaming sets Roaming field to given value.
+
+### HasRoaming
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) HasRoaming() bool`
+
+HasRoaming returns a boolean if a field has been set.
+
 ### GetConnectionType
 
 `func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetConnectionType() string`
@@ -415,6 +496,31 @@ SetSignalType sets SignalType field to given value.
 
 HasSignalType returns a boolean if a field has been set.
 
+### GetMtu
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetMtu() int32`
+
+GetMtu returns the Mtu field if non-nil, zero value otherwise.
+
+### GetMtuOk
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetMtuOk() (*int32, bool)`
+
+GetMtuOk returns a tuple with the Mtu field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMtu
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) SetMtu(v int32)`
+
+SetMtu sets Mtu field to given value.
+
+### HasMtu
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) HasMtu() bool`
+
+HasMtu returns a boolean if a field has been set.
+
 ### GetIccid
 
 `func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetIccid() string`
@@ -439,6 +545,56 @@ SetIccid sets Iccid field to given value.
 `func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) HasIccid() bool`
 
 HasIccid returns a boolean if a field has been set.
+
+### GetImsi
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetImsi() string`
+
+GetImsi returns the Imsi field if non-nil, zero value otherwise.
+
+### GetImsiOk
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetImsiOk() (*string, bool)`
+
+GetImsiOk returns a tuple with the Imsi field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImsi
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) SetImsi(v string)`
+
+SetImsi sets Imsi field to given value.
+
+### HasImsi
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) HasImsi() bool`
+
+HasImsi returns a boolean if a field has been set.
+
+### GetMsisdn
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetMsisdn() string`
+
+GetMsisdn returns the Msisdn field if non-nil, zero value otherwise.
+
+### GetMsisdnOk
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) GetMsisdnOk() (*string, bool)`
+
+GetMsisdnOk returns a tuple with the Msisdn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMsisdn
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) SetMsisdn(v string)`
+
+SetMsisdn sets Msisdn field to given value.
+
+### HasMsisdn
+
+`func (o *OrganizationsOrganizationIdUplinksStatusesUplinks) HasMsisdn() bool`
+
+HasMsisdn returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
