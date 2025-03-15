@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | A list of serials of devices to claim | 
+**Ssids** | [**NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids**](NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids.md) |  | 
 
 ## Methods
 
 ### NewInlineObject90
 
-`func NewInlineObject90(serials []string, ) *InlineObject90`
+`func NewInlineObject90(ssids NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, ) *InlineObject90`
 
 NewInlineObject90 instantiates a new InlineObject90 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject90WithDefaults instantiates a new InlineObject90 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetSsids
 
-`func (o *InlineObject90) GetSerials() []string`
+`func (o *InlineObject90) GetSsids() NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetSsids returns the Ssids field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetSsidsOk
 
-`func (o *InlineObject90) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject90) GetSsidsOk() (*NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetSsidsOk returns a tuple with the Ssids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetSsids
 
-`func (o *InlineObject90) SetSerials(v []string)`
+`func (o *InlineObject90) SetSsids(v NetworksNetworkIdClientsClientIdSplashAuthorizationStatusSsids)`
 
-SetSerials sets Serials field to given value.
+SetSsids sets Ssids field to given value.
 
 
 

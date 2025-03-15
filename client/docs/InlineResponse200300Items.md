@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The Id of the Network | [optional] 
-**Policies** | Pointer to [**[]InlineResponse200300Policies**](InlineResponse200300Policies.md) | Array of Sentry Group Policies for the Network | [optional] 
+**RoleId** | Pointer to **string** | The Id of the limited access role | [optional] 
+**Name** | Pointer to **string** | The name of the limited access role | [optional] 
+**Scope** | Pointer to **string** | The scope of the limited access role | [optional] 
+**Tags** | Pointer to **[]string** | The tags of the limited access role | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200300ItemsWithDefaults instantiates a new InlineResponse200300
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetRoleId
 
-`func (o *InlineResponse200300Items) GetNetworkId() string`
+`func (o *InlineResponse200300Items) GetRoleId() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetRoleId returns the RoleId field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetRoleIdOk
 
-`func (o *InlineResponse200300Items) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200300Items) GetRoleIdOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetRoleIdOk returns a tuple with the RoleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetRoleId
 
-`func (o *InlineResponse200300Items) SetNetworkId(v string)`
+`func (o *InlineResponse200300Items) SetRoleId(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetRoleId sets RoleId field to given value.
 
-### HasNetworkId
+### HasRoleId
 
-`func (o *InlineResponse200300Items) HasNetworkId() bool`
+`func (o *InlineResponse200300Items) HasRoleId() bool`
 
-HasNetworkId returns a boolean if a field has been set.
+HasRoleId returns a boolean if a field has been set.
 
-### GetPolicies
+### GetName
 
-`func (o *InlineResponse200300Items) GetPolicies() []InlineResponse200300Policies`
+`func (o *InlineResponse200300Items) GetName() string`
 
-GetPolicies returns the Policies field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetPoliciesOk
+### GetNameOk
 
-`func (o *InlineResponse200300Items) GetPoliciesOk() (*[]InlineResponse200300Policies, bool)`
+`func (o *InlineResponse200300Items) GetNameOk() (*string, bool)`
 
-GetPoliciesOk returns a tuple with the Policies field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPolicies
+### SetName
 
-`func (o *InlineResponse200300Items) SetPolicies(v []InlineResponse200300Policies)`
+`func (o *InlineResponse200300Items) SetName(v string)`
 
-SetPolicies sets Policies field to given value.
+SetName sets Name field to given value.
 
-### HasPolicies
+### HasName
 
-`func (o *InlineResponse200300Items) HasPolicies() bool`
+`func (o *InlineResponse200300Items) HasName() bool`
 
-HasPolicies returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetScope
+
+`func (o *InlineResponse200300Items) GetScope() string`
+
+GetScope returns the Scope field if non-nil, zero value otherwise.
+
+### GetScopeOk
+
+`func (o *InlineResponse200300Items) GetScopeOk() (*string, bool)`
+
+GetScopeOk returns a tuple with the Scope field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetScope
+
+`func (o *InlineResponse200300Items) SetScope(v string)`
+
+SetScope sets Scope field to given value.
+
+### HasScope
+
+`func (o *InlineResponse200300Items) HasScope() bool`
+
+HasScope returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200300Items) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200300Items) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200300Items) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200300Items) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

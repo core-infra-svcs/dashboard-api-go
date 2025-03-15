@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CallbackId** | Pointer to **string** | The ID of the callback | [optional] 
-**Status** | Pointer to **string** | The status of the callback | [optional] 
-**Errors** | Pointer to **[]string** | The errors returned by the callback | [optional] 
-**CreatedBy** | Pointer to [**InlineResponse200326CreatedBy**](InlineResponse200326CreatedBy.md) |  | [optional] 
-**Webhook** | Pointer to [**InlineResponse200326Webhook**](InlineResponse200326Webhook.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | Network identifier | [optional] 
+**Serial** | Pointer to **string** | The uplink serial | [optional] 
+**Model** | Pointer to **string** | The uplink model | [optional] 
+**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
+**HighAvailability** | Pointer to [**OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability**](OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability.md) |  | [optional] 
+**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdUplinksStatusesUplinks**](OrganizationsOrganizationIdUplinksStatusesUplinks.md) | Uplinks | [optional] 
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewInlineResponse200326WithDefaults instantiates a new InlineResponse200326 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCallbackId
+### GetNetworkId
 
-`func (o *InlineResponse200326) GetCallbackId() string`
+`func (o *InlineResponse200326) GetNetworkId() string`
 
-GetCallbackId returns the CallbackId field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetCallbackIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200326) GetCallbackIdOk() (*string, bool)`
+`func (o *InlineResponse200326) GetNetworkIdOk() (*string, bool)`
 
-GetCallbackIdOk returns a tuple with the CallbackId field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallbackId
+### SetNetworkId
 
-`func (o *InlineResponse200326) SetCallbackId(v string)`
+`func (o *InlineResponse200326) SetNetworkId(v string)`
 
-SetCallbackId sets CallbackId field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasCallbackId
+### HasNetworkId
 
-`func (o *InlineResponse200326) HasCallbackId() bool`
+`func (o *InlineResponse200326) HasNetworkId() bool`
 
-HasCallbackId returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetStatus
+### GetSerial
 
-`func (o *InlineResponse200326) GetStatus() string`
+`func (o *InlineResponse200326) GetSerial() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetSerialOk
 
-`func (o *InlineResponse200326) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200326) GetSerialOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetSerial
 
-`func (o *InlineResponse200326) SetStatus(v string)`
+`func (o *InlineResponse200326) SetSerial(v string)`
 
-SetStatus sets Status field to given value.
+SetSerial sets Serial field to given value.
 
-### HasStatus
+### HasSerial
 
-`func (o *InlineResponse200326) HasStatus() bool`
+`func (o *InlineResponse200326) HasSerial() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetErrors
+### GetModel
 
-`func (o *InlineResponse200326) GetErrors() []string`
+`func (o *InlineResponse200326) GetModel() string`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetModelOk
 
-`func (o *InlineResponse200326) GetErrorsOk() (*[]string, bool)`
+`func (o *InlineResponse200326) GetModelOk() (*string, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetModel
 
-`func (o *InlineResponse200326) SetErrors(v []string)`
+`func (o *InlineResponse200326) SetModel(v string)`
 
-SetErrors sets Errors field to given value.
+SetModel sets Model field to given value.
 
-### HasErrors
+### HasModel
 
-`func (o *InlineResponse200326) HasErrors() bool`
+`func (o *InlineResponse200326) HasModel() bool`
 
-HasErrors returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetCreatedBy
+### GetLastReportedAt
 
-`func (o *InlineResponse200326) GetCreatedBy() InlineResponse200326CreatedBy`
+`func (o *InlineResponse200326) GetLastReportedAt() time.Time`
 
-GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
+GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
 
-### GetCreatedByOk
+### GetLastReportedAtOk
 
-`func (o *InlineResponse200326) GetCreatedByOk() (*InlineResponse200326CreatedBy, bool)`
+`func (o *InlineResponse200326) GetLastReportedAtOk() (*time.Time, bool)`
 
-GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
+GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedBy
+### SetLastReportedAt
 
-`func (o *InlineResponse200326) SetCreatedBy(v InlineResponse200326CreatedBy)`
+`func (o *InlineResponse200326) SetLastReportedAt(v time.Time)`
 
-SetCreatedBy sets CreatedBy field to given value.
+SetLastReportedAt sets LastReportedAt field to given value.
 
-### HasCreatedBy
+### HasLastReportedAt
 
-`func (o *InlineResponse200326) HasCreatedBy() bool`
+`func (o *InlineResponse200326) HasLastReportedAt() bool`
 
-HasCreatedBy returns a boolean if a field has been set.
+HasLastReportedAt returns a boolean if a field has been set.
 
-### GetWebhook
+### GetHighAvailability
 
-`func (o *InlineResponse200326) GetWebhook() InlineResponse200326Webhook`
+`func (o *InlineResponse200326) GetHighAvailability() OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability`
 
-GetWebhook returns the Webhook field if non-nil, zero value otherwise.
+GetHighAvailability returns the HighAvailability field if non-nil, zero value otherwise.
 
-### GetWebhookOk
+### GetHighAvailabilityOk
 
-`func (o *InlineResponse200326) GetWebhookOk() (*InlineResponse200326Webhook, bool)`
+`func (o *InlineResponse200326) GetHighAvailabilityOk() (*OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability, bool)`
 
-GetWebhookOk returns a tuple with the Webhook field if it's non-nil, zero value otherwise
+GetHighAvailabilityOk returns a tuple with the HighAvailability field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWebhook
+### SetHighAvailability
 
-`func (o *InlineResponse200326) SetWebhook(v InlineResponse200326Webhook)`
+`func (o *InlineResponse200326) SetHighAvailability(v OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability)`
 
-SetWebhook sets Webhook field to given value.
+SetHighAvailability sets HighAvailability field to given value.
 
-### HasWebhook
+### HasHighAvailability
 
-`func (o *InlineResponse200326) HasWebhook() bool`
+`func (o *InlineResponse200326) HasHighAvailability() bool`
 
-HasWebhook returns a boolean if a field has been set.
+HasHighAvailability returns a boolean if a field has been set.
+
+### GetUplinks
+
+`func (o *InlineResponse200326) GetUplinks() []OrganizationsOrganizationIdUplinksStatusesUplinks`
+
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+
+### GetUplinksOk
+
+`func (o *InlineResponse200326) GetUplinksOk() (*[]OrganizationsOrganizationIdUplinksStatusesUplinks, bool)`
+
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinks
+
+`func (o *InlineResponse200326) SetUplinks(v []OrganizationsOrganizationIdUplinksStatusesUplinks)`
+
+SetUplinks sets Uplinks field to given value.
+
+### HasUplinks
+
+`func (o *InlineResponse200326) HasUplinks() bool`
+
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

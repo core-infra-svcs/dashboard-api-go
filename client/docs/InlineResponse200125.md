@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ids** | Pointer to **[]string** | The Meraki Ids of the set of endpoints. | [optional] 
+**Ids** | Pointer to **[]string** | The Meraki Ids of the set of devices. | [optional] 
+**NewNetwork** | Pointer to **string** | The network to which the devices was moved. | [optional] 
 
 ## Methods
 
@@ -49,6 +50,31 @@ SetIds sets Ids field to given value.
 `func (o *InlineResponse200125) HasIds() bool`
 
 HasIds returns a boolean if a field has been set.
+
+### GetNewNetwork
+
+`func (o *InlineResponse200125) GetNewNetwork() string`
+
+GetNewNetwork returns the NewNetwork field if non-nil, zero value otherwise.
+
+### GetNewNetworkOk
+
+`func (o *InlineResponse200125) GetNewNetworkOk() (*string, bool)`
+
+GetNewNetworkOk returns a tuple with the NewNetwork field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNewNetwork
+
+`func (o *InlineResponse200125) SetNewNetwork(v string)`
+
+SetNewNetwork sets NewNetwork field to given value.
+
+### HasNewNetwork
+
+`func (o *InlineResponse200125) HasNewNetwork() bool`
+
+HasNewNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | [**InlineResponse200233Counts**](InlineResponse200233Counts.md) |  | 
+**Peers** | Pointer to [**[]InlineResponse200233Peers**](InlineResponse200233Peers.md) | The list of VPN peers | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200233
 
-`func NewInlineResponse200233(counts InlineResponse200233Counts, ) *InlineResponse200233`
+`func NewInlineResponse200233() *InlineResponse200233`
 
 NewInlineResponse200233 instantiates a new InlineResponse200233 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineResponse200233WithDefaults instantiates a new InlineResponse200233 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetPeers
 
-`func (o *InlineResponse200233) GetCounts() InlineResponse200233Counts`
+`func (o *InlineResponse200233) GetPeers() []InlineResponse200233Peers`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetPeersOk
 
-`func (o *InlineResponse200233) GetCountsOk() (*InlineResponse200233Counts, bool)`
+`func (o *InlineResponse200233) GetPeersOk() (*[]InlineResponse200233Peers, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetPeers
 
-`func (o *InlineResponse200233) SetCounts(v InlineResponse200233Counts)`
+`func (o *InlineResponse200233) SetPeers(v []InlineResponse200233Peers)`
 
-SetCounts sets Counts field to given value.
+SetPeers sets Peers field to given value.
 
+### HasPeers
+
+`func (o *InlineResponse200233) HasPeers() bool`
+
+HasPeers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

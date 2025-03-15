@@ -4,20 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Time, in ISO8601 format, when the configuration change was made. | [optional] 
-**AdminName** | Pointer to **string** | The name of the admin who made the configuration change. | [optional] 
-**AdminEmail** | Pointer to **string** | The email address of the admin who made the configuration change. This attribute may be null. | [optional] 
-**AdminId** | Pointer to **string** | The ID of the admin who made the configuration change. This attribute may be null. | [optional] 
-**NetworkName** | Pointer to **string** | The name of the network that the configuration change was applied to. This attribute may be null. | [optional] 
-**NetworkId** | Pointer to **string** | The ID of the network that the configuration change was applied to. This attribute may be null. | [optional] 
-**NetworkUrl** | Pointer to **string** | The url of the network that the configuration change was applied to. This attribute may be null. | [optional] 
-**SsidName** | Pointer to **string** | The name of the ssid that the configuration change was applied to, if applicable. This attribute may be null. | [optional] 
-**SsidNumber** | Pointer to **int32** | The ssid number that the configuration change was applied to, if applicable. This attribute may be null. | [optional] 
-**Page** | Pointer to **string** | The name of the Meraki Dashboard page on which the configuration change was made. | [optional] 
-**Label** | Pointer to **string** | Description of the configuration change. | [optional] 
-**OldValue** | Pointer to **string** | The value of the configuration, before the change was applied. | [optional] 
-**NewValue** | Pointer to **string** | The value of the configuration, after the change was applied. | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdConfigurationChangesClient**](OrganizationsOrganizationIdConfigurationChangesClient.md) |  | [optional] 
+**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
+**Name** | Pointer to **string** | Switch template name | [optional] 
+**Model** | Pointer to **string** | Switch model | [optional] 
 
 ## Methods
 
@@ -38,355 +27,80 @@ NewInlineResponse200258WithDefaults instantiates a new InlineResponse200258 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetSwitchProfileId
 
-`func (o *InlineResponse200258) GetTs() time.Time`
+`func (o *InlineResponse200258) GetSwitchProfileId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetSwitchProfileIdOk
 
-`func (o *InlineResponse200258) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200258) GetSwitchProfileIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetSwitchProfileId
 
-`func (o *InlineResponse200258) SetTs(v time.Time)`
+`func (o *InlineResponse200258) SetSwitchProfileId(v string)`
 
-SetTs sets Ts field to given value.
+SetSwitchProfileId sets SwitchProfileId field to given value.
 
-### HasTs
+### HasSwitchProfileId
 
-`func (o *InlineResponse200258) HasTs() bool`
+`func (o *InlineResponse200258) HasSwitchProfileId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasSwitchProfileId returns a boolean if a field has been set.
 
-### GetAdminName
+### GetName
 
-`func (o *InlineResponse200258) GetAdminName() string`
+`func (o *InlineResponse200258) GetName() string`
 
-GetAdminName returns the AdminName field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAdminNameOk
+### GetNameOk
 
-`func (o *InlineResponse200258) GetAdminNameOk() (*string, bool)`
+`func (o *InlineResponse200258) GetNameOk() (*string, bool)`
 
-GetAdminNameOk returns a tuple with the AdminName field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminName
+### SetName
 
-`func (o *InlineResponse200258) SetAdminName(v string)`
+`func (o *InlineResponse200258) SetName(v string)`
 
-SetAdminName sets AdminName field to given value.
+SetName sets Name field to given value.
 
-### HasAdminName
+### HasName
 
-`func (o *InlineResponse200258) HasAdminName() bool`
+`func (o *InlineResponse200258) HasName() bool`
 
-HasAdminName returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetAdminEmail
+### GetModel
 
-`func (o *InlineResponse200258) GetAdminEmail() string`
+`func (o *InlineResponse200258) GetModel() string`
 
-GetAdminEmail returns the AdminEmail field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetAdminEmailOk
+### GetModelOk
 
-`func (o *InlineResponse200258) GetAdminEmailOk() (*string, bool)`
+`func (o *InlineResponse200258) GetModelOk() (*string, bool)`
 
-GetAdminEmailOk returns a tuple with the AdminEmail field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminEmail
+### SetModel
 
-`func (o *InlineResponse200258) SetAdminEmail(v string)`
+`func (o *InlineResponse200258) SetModel(v string)`
 
-SetAdminEmail sets AdminEmail field to given value.
+SetModel sets Model field to given value.
 
-### HasAdminEmail
+### HasModel
 
-`func (o *InlineResponse200258) HasAdminEmail() bool`
+`func (o *InlineResponse200258) HasModel() bool`
 
-HasAdminEmail returns a boolean if a field has been set.
-
-### GetAdminId
-
-`func (o *InlineResponse200258) GetAdminId() string`
-
-GetAdminId returns the AdminId field if non-nil, zero value otherwise.
-
-### GetAdminIdOk
-
-`func (o *InlineResponse200258) GetAdminIdOk() (*string, bool)`
-
-GetAdminIdOk returns a tuple with the AdminId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdminId
-
-`func (o *InlineResponse200258) SetAdminId(v string)`
-
-SetAdminId sets AdminId field to given value.
-
-### HasAdminId
-
-`func (o *InlineResponse200258) HasAdminId() bool`
-
-HasAdminId returns a boolean if a field has been set.
-
-### GetNetworkName
-
-`func (o *InlineResponse200258) GetNetworkName() string`
-
-GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
-
-### GetNetworkNameOk
-
-`func (o *InlineResponse200258) GetNetworkNameOk() (*string, bool)`
-
-GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkName
-
-`func (o *InlineResponse200258) SetNetworkName(v string)`
-
-SetNetworkName sets NetworkName field to given value.
-
-### HasNetworkName
-
-`func (o *InlineResponse200258) HasNetworkName() bool`
-
-HasNetworkName returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse200258) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse200258) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse200258) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse200258) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetNetworkUrl
-
-`func (o *InlineResponse200258) GetNetworkUrl() string`
-
-GetNetworkUrl returns the NetworkUrl field if non-nil, zero value otherwise.
-
-### GetNetworkUrlOk
-
-`func (o *InlineResponse200258) GetNetworkUrlOk() (*string, bool)`
-
-GetNetworkUrlOk returns a tuple with the NetworkUrl field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkUrl
-
-`func (o *InlineResponse200258) SetNetworkUrl(v string)`
-
-SetNetworkUrl sets NetworkUrl field to given value.
-
-### HasNetworkUrl
-
-`func (o *InlineResponse200258) HasNetworkUrl() bool`
-
-HasNetworkUrl returns a boolean if a field has been set.
-
-### GetSsidName
-
-`func (o *InlineResponse200258) GetSsidName() string`
-
-GetSsidName returns the SsidName field if non-nil, zero value otherwise.
-
-### GetSsidNameOk
-
-`func (o *InlineResponse200258) GetSsidNameOk() (*string, bool)`
-
-GetSsidNameOk returns a tuple with the SsidName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsidName
-
-`func (o *InlineResponse200258) SetSsidName(v string)`
-
-SetSsidName sets SsidName field to given value.
-
-### HasSsidName
-
-`func (o *InlineResponse200258) HasSsidName() bool`
-
-HasSsidName returns a boolean if a field has been set.
-
-### GetSsidNumber
-
-`func (o *InlineResponse200258) GetSsidNumber() int32`
-
-GetSsidNumber returns the SsidNumber field if non-nil, zero value otherwise.
-
-### GetSsidNumberOk
-
-`func (o *InlineResponse200258) GetSsidNumberOk() (*int32, bool)`
-
-GetSsidNumberOk returns a tuple with the SsidNumber field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsidNumber
-
-`func (o *InlineResponse200258) SetSsidNumber(v int32)`
-
-SetSsidNumber sets SsidNumber field to given value.
-
-### HasSsidNumber
-
-`func (o *InlineResponse200258) HasSsidNumber() bool`
-
-HasSsidNumber returns a boolean if a field has been set.
-
-### GetPage
-
-`func (o *InlineResponse200258) GetPage() string`
-
-GetPage returns the Page field if non-nil, zero value otherwise.
-
-### GetPageOk
-
-`func (o *InlineResponse200258) GetPageOk() (*string, bool)`
-
-GetPageOk returns a tuple with the Page field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPage
-
-`func (o *InlineResponse200258) SetPage(v string)`
-
-SetPage sets Page field to given value.
-
-### HasPage
-
-`func (o *InlineResponse200258) HasPage() bool`
-
-HasPage returns a boolean if a field has been set.
-
-### GetLabel
-
-`func (o *InlineResponse200258) GetLabel() string`
-
-GetLabel returns the Label field if non-nil, zero value otherwise.
-
-### GetLabelOk
-
-`func (o *InlineResponse200258) GetLabelOk() (*string, bool)`
-
-GetLabelOk returns a tuple with the Label field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLabel
-
-`func (o *InlineResponse200258) SetLabel(v string)`
-
-SetLabel sets Label field to given value.
-
-### HasLabel
-
-`func (o *InlineResponse200258) HasLabel() bool`
-
-HasLabel returns a boolean if a field has been set.
-
-### GetOldValue
-
-`func (o *InlineResponse200258) GetOldValue() string`
-
-GetOldValue returns the OldValue field if non-nil, zero value otherwise.
-
-### GetOldValueOk
-
-`func (o *InlineResponse200258) GetOldValueOk() (*string, bool)`
-
-GetOldValueOk returns a tuple with the OldValue field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOldValue
-
-`func (o *InlineResponse200258) SetOldValue(v string)`
-
-SetOldValue sets OldValue field to given value.
-
-### HasOldValue
-
-`func (o *InlineResponse200258) HasOldValue() bool`
-
-HasOldValue returns a boolean if a field has been set.
-
-### GetNewValue
-
-`func (o *InlineResponse200258) GetNewValue() string`
-
-GetNewValue returns the NewValue field if non-nil, zero value otherwise.
-
-### GetNewValueOk
-
-`func (o *InlineResponse200258) GetNewValueOk() (*string, bool)`
-
-GetNewValueOk returns a tuple with the NewValue field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNewValue
-
-`func (o *InlineResponse200258) SetNewValue(v string)`
-
-SetNewValue sets NewValue field to given value.
-
-### HasNewValue
-
-`func (o *InlineResponse200258) HasNewValue() bool`
-
-HasNewValue returns a boolean if a field has been set.
-
-### GetClient
-
-`func (o *InlineResponse200258) GetClient() OrganizationsOrganizationIdConfigurationChangesClient`
-
-GetClient returns the Client field if non-nil, zero value otherwise.
-
-### GetClientOk
-
-`func (o *InlineResponse200258) GetClientOk() (*OrganizationsOrganizationIdConfigurationChangesClient, bool)`
-
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClient
-
-`func (o *InlineResponse200258) SetClient(v OrganizationsOrganizationIdConfigurationChangesClient)`
-
-SetClient sets Client field to given value.
-
-### HasClient
-
-`func (o *InlineResponse200258) HasClient() bool`
-
-HasClient returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

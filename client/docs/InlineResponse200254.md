@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientId** | Pointer to **string** | The ID of the client | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the client | [optional] 
-**Manufacturer** | Pointer to **string** | Manufacturer of the client | [optional] 
-**Records** | Pointer to [**[]InlineResponse200254Records**](InlineResponse200254Records.md) | The clients that appear on any networks within an organization | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp for the bandwidth usage snapshot. | [optional] 
+**Total** | Pointer to **int32** | Total bandwidth usage, in mbps. | [optional] 
+**Upstream** | Pointer to **int32** | Uploaded data, in mbps. | [optional] 
+**Downstream** | Pointer to **int32** | Downloaded data, in mbps. | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200254WithDefaults instantiates a new InlineResponse200254 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientId
+### GetTs
 
-`func (o *InlineResponse200254) GetClientId() string`
+`func (o *InlineResponse200254) GetTs() time.Time`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetTsOk
 
-`func (o *InlineResponse200254) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200254) GetTsOk() (*time.Time, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetTs
 
-`func (o *InlineResponse200254) SetClientId(v string)`
+`func (o *InlineResponse200254) SetTs(v time.Time)`
 
-SetClientId sets ClientId field to given value.
+SetTs sets Ts field to given value.
 
-### HasClientId
+### HasTs
 
-`func (o *InlineResponse200254) HasClientId() bool`
+`func (o *InlineResponse200254) HasTs() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetMac
+### GetTotal
 
-`func (o *InlineResponse200254) GetMac() string`
+`func (o *InlineResponse200254) GetTotal() int32`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetTotalOk
 
-`func (o *InlineResponse200254) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200254) GetTotalOk() (*int32, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetTotal
 
-`func (o *InlineResponse200254) SetMac(v string)`
+`func (o *InlineResponse200254) SetTotal(v int32)`
 
-SetMac sets Mac field to given value.
+SetTotal sets Total field to given value.
 
-### HasMac
+### HasTotal
 
-`func (o *InlineResponse200254) HasMac() bool`
+`func (o *InlineResponse200254) HasTotal() bool`
 
-HasMac returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
 
-### GetManufacturer
+### GetUpstream
 
-`func (o *InlineResponse200254) GetManufacturer() string`
+`func (o *InlineResponse200254) GetUpstream() int32`
 
-GetManufacturer returns the Manufacturer field if non-nil, zero value otherwise.
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
 
-### GetManufacturerOk
+### GetUpstreamOk
 
-`func (o *InlineResponse200254) GetManufacturerOk() (*string, bool)`
+`func (o *InlineResponse200254) GetUpstreamOk() (*int32, bool)`
 
-GetManufacturerOk returns a tuple with the Manufacturer field if it's non-nil, zero value otherwise
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManufacturer
+### SetUpstream
 
-`func (o *InlineResponse200254) SetManufacturer(v string)`
+`func (o *InlineResponse200254) SetUpstream(v int32)`
 
-SetManufacturer sets Manufacturer field to given value.
+SetUpstream sets Upstream field to given value.
 
-### HasManufacturer
+### HasUpstream
 
-`func (o *InlineResponse200254) HasManufacturer() bool`
+`func (o *InlineResponse200254) HasUpstream() bool`
 
-HasManufacturer returns a boolean if a field has been set.
+HasUpstream returns a boolean if a field has been set.
 
-### GetRecords
+### GetDownstream
 
-`func (o *InlineResponse200254) GetRecords() []InlineResponse200254Records`
+`func (o *InlineResponse200254) GetDownstream() int32`
 
-GetRecords returns the Records field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetRecordsOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200254) GetRecordsOk() (*[]InlineResponse200254Records, bool)`
+`func (o *InlineResponse200254) GetDownstreamOk() (*int32, bool)`
 
-GetRecordsOk returns a tuple with the Records field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecords
+### SetDownstream
 
-`func (o *InlineResponse200254) SetRecords(v []InlineResponse200254Records)`
+`func (o *InlineResponse200254) SetDownstream(v int32)`
 
-SetRecords sets Records field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasRecords
+### HasDownstream
 
-`func (o *InlineResponse200254) HasRecords() bool`
+`func (o *InlineResponse200254) HasDownstream() bool`
 
-HasRecords returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

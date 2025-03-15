@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
 **Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
+**Client** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient.md) |  | [optional] 
 **Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
 
 ## Methods
@@ -76,6 +77,31 @@ SetUpstream sets Upstream field to given value.
 `func (o *InlineResponse200338) HasUpstream() bool`
 
 HasUpstream returns a boolean if a field has been set.
+
+### GetClient
+
+`func (o *InlineResponse200338) GetClient() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient`
+
+GetClient returns the Client field if non-nil, zero value otherwise.
+
+### GetClientOk
+
+`func (o *InlineResponse200338) GetClientOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient, bool)`
+
+GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClient
+
+`func (o *InlineResponse200338) SetClient(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientClient)`
+
+SetClient sets Client field to given value.
+
+### HasClient
+
+`func (o *InlineResponse200338) HasClient() bool`
+
+HasClient returns a boolean if a field has been set.
 
 ### GetNetwork
 

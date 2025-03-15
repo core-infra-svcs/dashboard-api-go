@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of profile | 
-**Hostnames** | **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | 
-**Nameservers** | [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers.md) |  | 
+**Hostname** | Pointer to **string** | Hostname for the DNS record | [optional] 
+**Address** | Pointer to **string** | IP for the DNS record | [optional] 
+**Profile** | Pointer to [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject223
 
-`func NewInlineObject223(name string, hostnames []string, nameservers OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers, ) *InlineObject223`
+`func NewInlineObject223() *InlineObject223`
 
 NewInlineObject223 instantiates a new InlineObject223 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +27,80 @@ NewInlineObject223WithDefaults instantiates a new InlineObject223 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetHostname
 
-`func (o *InlineObject223) GetName() string`
+`func (o *InlineObject223) GetHostname() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetHostname returns the Hostname field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetHostnameOk
 
-`func (o *InlineObject223) GetNameOk() (*string, bool)`
+`func (o *InlineObject223) GetHostnameOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetHostname
 
-`func (o *InlineObject223) SetName(v string)`
+`func (o *InlineObject223) SetHostname(v string)`
 
-SetName sets Name field to given value.
+SetHostname sets Hostname field to given value.
 
+### HasHostname
 
-### GetHostnames
+`func (o *InlineObject223) HasHostname() bool`
 
-`func (o *InlineObject223) GetHostnames() []string`
+HasHostname returns a boolean if a field has been set.
 
-GetHostnames returns the Hostnames field if non-nil, zero value otherwise.
+### GetAddress
 
-### GetHostnamesOk
+`func (o *InlineObject223) GetAddress() string`
 
-`func (o *InlineObject223) GetHostnamesOk() (*[]string, bool)`
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-GetHostnamesOk returns a tuple with the Hostnames field if it's non-nil, zero value otherwise
+### GetAddressOk
+
+`func (o *InlineObject223) GetAddressOk() (*string, bool)`
+
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostnames
+### SetAddress
 
-`func (o *InlineObject223) SetHostnames(v []string)`
+`func (o *InlineObject223) SetAddress(v string)`
 
-SetHostnames sets Hostnames field to given value.
+SetAddress sets Address field to given value.
 
+### HasAddress
 
-### GetNameservers
+`func (o *InlineObject223) HasAddress() bool`
 
-`func (o *InlineObject223) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers`
+HasAddress returns a boolean if a field has been set.
 
-GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+### GetProfile
 
-### GetNameserversOk
+`func (o *InlineObject223) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile`
 
-`func (o *InlineObject223) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers, bool)`
+GetProfile returns the Profile field if non-nil, zero value otherwise.
 
-GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+### GetProfileOk
+
+`func (o *InlineObject223) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, bool)`
+
+GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNameservers
+### SetProfile
 
-`func (o *InlineObject223) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers)`
+`func (o *InlineObject223) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile)`
 
-SetNameservers sets Nameservers field to given value.
+SetProfile sets Profile field to given value.
 
+### HasProfile
+
+`func (o *InlineObject223) HasProfile() bool`
+
+HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

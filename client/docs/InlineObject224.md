@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems.md) | List containing the network ID and Profile ID | 
+**Name** | **string** | Name of profile | 
+**Hostnames** | **[]string** | The hostname patterns to match for redirection. For more information on Split DNS hostname pattern formatting, please consult the Split DNS KB. | 
+**Nameservers** | [**OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers**](OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers.md) |  | 
 
 ## Methods
 
 ### NewInlineObject224
 
-`func NewInlineObject224(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, ) *InlineObject224`
+`func NewInlineObject224(name string, hostnames []string, nameservers OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers, ) *InlineObject224`
 
 NewInlineObject224 instantiates a new InlineObject224 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +27,64 @@ NewInlineObject224WithDefaults instantiates a new InlineObject224 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineObject224) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems`
+`func (o *InlineObject224) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineObject224) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, bool)`
+`func (o *InlineObject224) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineObject224) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems)`
+`func (o *InlineObject224) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
+
+
+### GetHostnames
+
+`func (o *InlineObject224) GetHostnames() []string`
+
+GetHostnames returns the Hostnames field if non-nil, zero value otherwise.
+
+### GetHostnamesOk
+
+`func (o *InlineObject224) GetHostnamesOk() (*[]string, bool)`
+
+GetHostnamesOk returns a tuple with the Hostnames field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHostnames
+
+`func (o *InlineObject224) SetHostnames(v []string)`
+
+SetHostnames sets Hostnames field to given value.
+
+
+### GetNameservers
+
+`func (o *InlineObject224) GetNameservers() OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineObject224) GetNameserversOk() (*OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineObject224) SetNameservers(v OrganizationsOrganizationIdApplianceDnsSplitProfilesNameservers)`
+
+SetNameservers sets Nameservers field to given value.
 
 
 

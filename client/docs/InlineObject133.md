@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | [**[]NetworksNetworkIdSwitchAccessControlListsRules**](NetworksNetworkIdSwitchAccessControlListsRules.md) | An ordered array of the access control list rules (not including the default rule). An empty array will clear the rules. | 
+**Access** | Pointer to **string** | The type of SNMP access. Can be one of &#39;none&#39; (disabled), &#39;community&#39; (V1/V2c), or &#39;users&#39; (V3). | [optional] 
+**CommunityString** | Pointer to **string** | The SNMP community string. Only relevant if &#39;access&#39; is set to &#39;community&#39;. | [optional] 
+**Users** | Pointer to [**[]NetworksNetworkIdSnmpUsers**](NetworksNetworkIdSnmpUsers.md) | The list of SNMP users. Only relevant if &#39;access&#39; is set to &#39;users&#39;. | [optional] 
 
 ## Methods
 
 ### NewInlineObject133
 
-`func NewInlineObject133(rules []NetworksNetworkIdSwitchAccessControlListsRules, ) *InlineObject133`
+`func NewInlineObject133() *InlineObject133`
 
 NewInlineObject133 instantiates a new InlineObject133 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +27,80 @@ NewInlineObject133WithDefaults instantiates a new InlineObject133 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetAccess
 
-`func (o *InlineObject133) GetRules() []NetworksNetworkIdSwitchAccessControlListsRules`
+`func (o *InlineObject133) GetAccess() string`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetAccess returns the Access field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetAccessOk
 
-`func (o *InlineObject133) GetRulesOk() (*[]NetworksNetworkIdSwitchAccessControlListsRules, bool)`
+`func (o *InlineObject133) GetAccessOk() (*string, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetAccessOk returns a tuple with the Access field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetAccess
 
-`func (o *InlineObject133) SetRules(v []NetworksNetworkIdSwitchAccessControlListsRules)`
+`func (o *InlineObject133) SetAccess(v string)`
 
-SetRules sets Rules field to given value.
+SetAccess sets Access field to given value.
 
+### HasAccess
+
+`func (o *InlineObject133) HasAccess() bool`
+
+HasAccess returns a boolean if a field has been set.
+
+### GetCommunityString
+
+`func (o *InlineObject133) GetCommunityString() string`
+
+GetCommunityString returns the CommunityString field if non-nil, zero value otherwise.
+
+### GetCommunityStringOk
+
+`func (o *InlineObject133) GetCommunityStringOk() (*string, bool)`
+
+GetCommunityStringOk returns a tuple with the CommunityString field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCommunityString
+
+`func (o *InlineObject133) SetCommunityString(v string)`
+
+SetCommunityString sets CommunityString field to given value.
+
+### HasCommunityString
+
+`func (o *InlineObject133) HasCommunityString() bool`
+
+HasCommunityString returns a boolean if a field has been set.
+
+### GetUsers
+
+`func (o *InlineObject133) GetUsers() []NetworksNetworkIdSnmpUsers`
+
+GetUsers returns the Users field if non-nil, zero value otherwise.
+
+### GetUsersOk
+
+`func (o *InlineObject133) GetUsersOk() (*[]NetworksNetworkIdSnmpUsers, bool)`
+
+GetUsersOk returns a tuple with the Users field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsers
+
+`func (o *InlineObject133) SetUsers(v []NetworksNetworkIdSnmpUsers)`
+
+SetUsers sets Users field to given value.
+
+### HasUsers
+
+`func (o *InlineObject133) HasUsers() bool`
+
+HasUsers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

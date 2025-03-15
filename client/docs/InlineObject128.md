@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AppIds** | **[]string** | ids of applications to be installed | 
-**Force** | Pointer to **bool** | By default, installation of an app which is believed to already be present on the device will be skipped. If you&#39;d like to force the installation of the app, set this parameter to true. | [optional] 
+**WifiMac** | Pointer to **string** | The wifiMac of the device to be wiped. | [optional] 
+**Id** | Pointer to **string** | The id of the device to be wiped. | [optional] 
+**Serial** | Pointer to **string** | The serial of the device to be wiped. | [optional] 
+**Pin** | Pointer to **int32** | The pin number (a six digit value) for wiping a macOS device. Required only for macOS devices. | [optional] 
 
 ## Methods
 
 ### NewInlineObject128
 
-`func NewInlineObject128(appIds []string, ) *InlineObject128`
+`func NewInlineObject128() *InlineObject128`
 
 NewInlineObject128 instantiates a new InlineObject128 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +28,105 @@ NewInlineObject128WithDefaults instantiates a new InlineObject128 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAppIds
+### GetWifiMac
 
-`func (o *InlineObject128) GetAppIds() []string`
+`func (o *InlineObject128) GetWifiMac() string`
 
-GetAppIds returns the AppIds field if non-nil, zero value otherwise.
+GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
 
-### GetAppIdsOk
+### GetWifiMacOk
 
-`func (o *InlineObject128) GetAppIdsOk() (*[]string, bool)`
+`func (o *InlineObject128) GetWifiMacOk() (*string, bool)`
 
-GetAppIdsOk returns a tuple with the AppIds field if it's non-nil, zero value otherwise
+GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAppIds
+### SetWifiMac
 
-`func (o *InlineObject128) SetAppIds(v []string)`
+`func (o *InlineObject128) SetWifiMac(v string)`
 
-SetAppIds sets AppIds field to given value.
+SetWifiMac sets WifiMac field to given value.
 
+### HasWifiMac
 
-### GetForce
+`func (o *InlineObject128) HasWifiMac() bool`
 
-`func (o *InlineObject128) GetForce() bool`
+HasWifiMac returns a boolean if a field has been set.
 
-GetForce returns the Force field if non-nil, zero value otherwise.
+### GetId
 
-### GetForceOk
+`func (o *InlineObject128) GetId() string`
 
-`func (o *InlineObject128) GetForceOk() (*bool, bool)`
+GetId returns the Id field if non-nil, zero value otherwise.
 
-GetForceOk returns a tuple with the Force field if it's non-nil, zero value otherwise
+### GetIdOk
+
+`func (o *InlineObject128) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetForce
+### SetId
 
-`func (o *InlineObject128) SetForce(v bool)`
+`func (o *InlineObject128) SetId(v string)`
 
-SetForce sets Force field to given value.
+SetId sets Id field to given value.
 
-### HasForce
+### HasId
 
-`func (o *InlineObject128) HasForce() bool`
+`func (o *InlineObject128) HasId() bool`
 
-HasForce returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
+
+### GetSerial
+
+`func (o *InlineObject128) GetSerial() string`
+
+GetSerial returns the Serial field if non-nil, zero value otherwise.
+
+### GetSerialOk
+
+`func (o *InlineObject128) GetSerialOk() (*string, bool)`
+
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerial
+
+`func (o *InlineObject128) SetSerial(v string)`
+
+SetSerial sets Serial field to given value.
+
+### HasSerial
+
+`func (o *InlineObject128) HasSerial() bool`
+
+HasSerial returns a boolean if a field has been set.
+
+### GetPin
+
+`func (o *InlineObject128) GetPin() int32`
+
+GetPin returns the Pin field if non-nil, zero value otherwise.
+
+### GetPinOk
+
+`func (o *InlineObject128) GetPinOk() (*int32, bool)`
+
+GetPinOk returns a tuple with the Pin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPin
+
+`func (o *InlineObject128) SetPin(v int32)`
+
+SetPin sets Pin field to given value.
+
+### HasPin
+
+`func (o *InlineObject128) HasPin() bool`
+
+HasPin returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

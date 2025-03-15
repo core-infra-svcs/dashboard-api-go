@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | MAC address of the client | [optional] 
-**ConnectionStats** | Pointer to [**InlineResponse200182ConnectionStats**](InlineResponse200182ConnectionStats.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**ClientCount** | Pointer to **int32** | Number of connected clients | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200182WithDefaults instantiates a new InlineResponse200182 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetStartTs
 
-`func (o *InlineResponse200182) GetMac() string`
+`func (o *InlineResponse200182) GetStartTs() time.Time`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetStartTsOk
 
-`func (o *InlineResponse200182) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200182) GetStartTsOk() (*time.Time, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetStartTs
 
-`func (o *InlineResponse200182) SetMac(v string)`
+`func (o *InlineResponse200182) SetStartTs(v time.Time)`
 
-SetMac sets Mac field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasMac
+### HasStartTs
 
-`func (o *InlineResponse200182) HasMac() bool`
+`func (o *InlineResponse200182) HasStartTs() bool`
 
-HasMac returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetConnectionStats
+### GetEndTs
 
-`func (o *InlineResponse200182) GetConnectionStats() InlineResponse200182ConnectionStats`
+`func (o *InlineResponse200182) GetEndTs() time.Time`
 
-GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetConnectionStatsOk
+### GetEndTsOk
 
-`func (o *InlineResponse200182) GetConnectionStatsOk() (*InlineResponse200182ConnectionStats, bool)`
+`func (o *InlineResponse200182) GetEndTsOk() (*time.Time, bool)`
 
-GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConnectionStats
+### SetEndTs
 
-`func (o *InlineResponse200182) SetConnectionStats(v InlineResponse200182ConnectionStats)`
+`func (o *InlineResponse200182) SetEndTs(v time.Time)`
 
-SetConnectionStats sets ConnectionStats field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasConnectionStats
+### HasEndTs
 
-`func (o *InlineResponse200182) HasConnectionStats() bool`
+`func (o *InlineResponse200182) HasEndTs() bool`
 
-HasConnectionStats returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetClientCount
+
+`func (o *InlineResponse200182) GetClientCount() int32`
+
+GetClientCount returns the ClientCount field if non-nil, zero value otherwise.
+
+### GetClientCountOk
+
+`func (o *InlineResponse200182) GetClientCountOk() (*int32, bool)`
+
+GetClientCountOk returns a tuple with the ClientCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClientCount
+
+`func (o *InlineResponse200182) SetClientCount(v int32)`
+
+SetClientCount sets ClientCount field to given value.
+
+### HasClientCount
+
+`func (o *InlineResponse200182) HasClientCount() bool`
+
+HasClientCount returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

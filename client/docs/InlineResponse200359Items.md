@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Network** | Pointer to [**InlineResponse200346Network**](InlineResponse200346Network.md) |  | [optional] 
-**Counts** | Pointer to [**InlineResponse200359Counts**](InlineResponse200359Counts.md) |  | [optional] 
-**Redundancy** | Pointer to [**InlineResponse200359Redundancy**](InlineResponse200359Redundancy.md) |  | [optional] 
-**Firmware** | Pointer to [**InlineResponse200359Firmware**](InlineResponse200359Firmware.md) |  | [optional] 
+**Mode** | Pointer to **string** | Wireless LAN controller redundancy SSO (stateful switchover) | [optional] 
+**Enabled** | Pointer to **bool** | Wireless LAN controller redundancy enablement | [optional] 
+**Failover** | Pointer to [**InlineResponse200359Failover**](InlineResponse200359Failover.md) |  | [optional] 
+**MobilityMac** | Pointer to **string** | Wireless LAN controller redundancy mobility mac  | [optional] 
 
 ## Methods
 
@@ -54,105 +54,105 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetNetwork
+### GetMode
 
-`func (o *InlineResponse200359Items) GetNetwork() InlineResponse200346Network`
+`func (o *InlineResponse200359Items) GetMode() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetModeOk
 
-`func (o *InlineResponse200359Items) GetNetworkOk() (*InlineResponse200346Network, bool)`
+`func (o *InlineResponse200359Items) GetModeOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetMode
 
-`func (o *InlineResponse200359Items) SetNetwork(v InlineResponse200346Network)`
+`func (o *InlineResponse200359Items) SetMode(v string)`
 
-SetNetwork sets Network field to given value.
+SetMode sets Mode field to given value.
 
-### HasNetwork
+### HasMode
 
-`func (o *InlineResponse200359Items) HasNetwork() bool`
+`func (o *InlineResponse200359Items) HasMode() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasMode returns a boolean if a field has been set.
 
-### GetCounts
+### GetEnabled
 
-`func (o *InlineResponse200359Items) GetCounts() InlineResponse200359Counts`
+`func (o *InlineResponse200359Items) GetEnabled() bool`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200359Items) GetCountsOk() (*InlineResponse200359Counts, bool)`
+`func (o *InlineResponse200359Items) GetEnabledOk() (*bool, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetEnabled
 
-`func (o *InlineResponse200359Items) SetCounts(v InlineResponse200359Counts)`
+`func (o *InlineResponse200359Items) SetEnabled(v bool)`
 
-SetCounts sets Counts field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasCounts
+### HasEnabled
 
-`func (o *InlineResponse200359Items) HasCounts() bool`
+`func (o *InlineResponse200359Items) HasEnabled() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetRedundancy
+### GetFailover
 
-`func (o *InlineResponse200359Items) GetRedundancy() InlineResponse200359Redundancy`
+`func (o *InlineResponse200359Items) GetFailover() InlineResponse200359Failover`
 
-GetRedundancy returns the Redundancy field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetRedundancyOk
+### GetFailoverOk
 
-`func (o *InlineResponse200359Items) GetRedundancyOk() (*InlineResponse200359Redundancy, bool)`
+`func (o *InlineResponse200359Items) GetFailoverOk() (*InlineResponse200359Failover, bool)`
 
-GetRedundancyOk returns a tuple with the Redundancy field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRedundancy
+### SetFailover
 
-`func (o *InlineResponse200359Items) SetRedundancy(v InlineResponse200359Redundancy)`
+`func (o *InlineResponse200359Items) SetFailover(v InlineResponse200359Failover)`
 
-SetRedundancy sets Redundancy field to given value.
+SetFailover sets Failover field to given value.
 
-### HasRedundancy
+### HasFailover
 
-`func (o *InlineResponse200359Items) HasRedundancy() bool`
+`func (o *InlineResponse200359Items) HasFailover() bool`
 
-HasRedundancy returns a boolean if a field has been set.
+HasFailover returns a boolean if a field has been set.
 
-### GetFirmware
+### GetMobilityMac
 
-`func (o *InlineResponse200359Items) GetFirmware() InlineResponse200359Firmware`
+`func (o *InlineResponse200359Items) GetMobilityMac() string`
 
-GetFirmware returns the Firmware field if non-nil, zero value otherwise.
+GetMobilityMac returns the MobilityMac field if non-nil, zero value otherwise.
 
-### GetFirmwareOk
+### GetMobilityMacOk
 
-`func (o *InlineResponse200359Items) GetFirmwareOk() (*InlineResponse200359Firmware, bool)`
+`func (o *InlineResponse200359Items) GetMobilityMacOk() (*string, bool)`
 
-GetFirmwareOk returns a tuple with the Firmware field if it's non-nil, zero value otherwise
+GetMobilityMacOk returns a tuple with the MobilityMac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFirmware
+### SetMobilityMac
 
-`func (o *InlineResponse200359Items) SetFirmware(v InlineResponse200359Firmware)`
+`func (o *InlineResponse200359Items) SetMobilityMac(v string)`
 
-SetFirmware sets Firmware field to given value.
+SetMobilityMac sets MobilityMac field to given value.
 
-### HasFirmware
+### HasMobilityMac
 
-`func (o *InlineResponse200359Items) HasFirmware() bool`
+`func (o *InlineResponse200359Items) HasMobilityMac() bool`
 
-HasFirmware returns a boolean if a field has been set.
+HasMobilityMac returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

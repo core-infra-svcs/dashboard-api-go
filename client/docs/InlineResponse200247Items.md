@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountId** | Pointer to **string** | Account ID of plans to be fetched | [optional] 
-**Apns** | Pointer to [**[]InlineResponse200247Apns**](InlineResponse200247Apns.md) | Available APNs | [optional] 
-**Name** | Pointer to **string** | Communication plan name | [optional] 
+**Name** | Pointer to **string** | Service provider name. | [optional] 
+**Logo** | Pointer to [**InlineResponse200247Logo**](InlineResponse200247Logo.md) |  | [optional] 
+**IsBootstrap** | Pointer to **bool** | Indicates if service provider is the bootstrap provider. | [optional] 
+**Terms** | Pointer to [**InlineResponse200247Terms**](InlineResponse200247Terms.md) |  | [optional] 
 
 ## Methods
 
@@ -26,56 +27,6 @@ will change when the set of required properties is changed
 NewInlineResponse200247ItemsWithDefaults instantiates a new InlineResponse200247Items object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetAccountId
-
-`func (o *InlineResponse200247Items) GetAccountId() string`
-
-GetAccountId returns the AccountId field if non-nil, zero value otherwise.
-
-### GetAccountIdOk
-
-`func (o *InlineResponse200247Items) GetAccountIdOk() (*string, bool)`
-
-GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccountId
-
-`func (o *InlineResponse200247Items) SetAccountId(v string)`
-
-SetAccountId sets AccountId field to given value.
-
-### HasAccountId
-
-`func (o *InlineResponse200247Items) HasAccountId() bool`
-
-HasAccountId returns a boolean if a field has been set.
-
-### GetApns
-
-`func (o *InlineResponse200247Items) GetApns() []InlineResponse200247Apns`
-
-GetApns returns the Apns field if non-nil, zero value otherwise.
-
-### GetApnsOk
-
-`func (o *InlineResponse200247Items) GetApnsOk() (*[]InlineResponse200247Apns, bool)`
-
-GetApnsOk returns a tuple with the Apns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApns
-
-`func (o *InlineResponse200247Items) SetApns(v []InlineResponse200247Apns)`
-
-SetApns sets Apns field to given value.
-
-### HasApns
-
-`func (o *InlineResponse200247Items) HasApns() bool`
-
-HasApns returns a boolean if a field has been set.
 
 ### GetName
 
@@ -101,6 +52,81 @@ SetName sets Name field to given value.
 `func (o *InlineResponse200247Items) HasName() bool`
 
 HasName returns a boolean if a field has been set.
+
+### GetLogo
+
+`func (o *InlineResponse200247Items) GetLogo() InlineResponse200247Logo`
+
+GetLogo returns the Logo field if non-nil, zero value otherwise.
+
+### GetLogoOk
+
+`func (o *InlineResponse200247Items) GetLogoOk() (*InlineResponse200247Logo, bool)`
+
+GetLogoOk returns a tuple with the Logo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLogo
+
+`func (o *InlineResponse200247Items) SetLogo(v InlineResponse200247Logo)`
+
+SetLogo sets Logo field to given value.
+
+### HasLogo
+
+`func (o *InlineResponse200247Items) HasLogo() bool`
+
+HasLogo returns a boolean if a field has been set.
+
+### GetIsBootstrap
+
+`func (o *InlineResponse200247Items) GetIsBootstrap() bool`
+
+GetIsBootstrap returns the IsBootstrap field if non-nil, zero value otherwise.
+
+### GetIsBootstrapOk
+
+`func (o *InlineResponse200247Items) GetIsBootstrapOk() (*bool, bool)`
+
+GetIsBootstrapOk returns a tuple with the IsBootstrap field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsBootstrap
+
+`func (o *InlineResponse200247Items) SetIsBootstrap(v bool)`
+
+SetIsBootstrap sets IsBootstrap field to given value.
+
+### HasIsBootstrap
+
+`func (o *InlineResponse200247Items) HasIsBootstrap() bool`
+
+HasIsBootstrap returns a boolean if a field has been set.
+
+### GetTerms
+
+`func (o *InlineResponse200247Items) GetTerms() InlineResponse200247Terms`
+
+GetTerms returns the Terms field if non-nil, zero value otherwise.
+
+### GetTermsOk
+
+`func (o *InlineResponse200247Items) GetTermsOk() (*InlineResponse200247Terms, bool)`
+
+GetTermsOk returns a tuple with the Terms field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTerms
+
+`func (o *InlineResponse200247Items) SetTerms(v InlineResponse200247Terms)`
+
+SetTerms sets Terms field to given value.
+
+### HasTerms
+
+`func (o *InlineResponse200247Items) HasTerms() bool`
+
+HasTerms returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

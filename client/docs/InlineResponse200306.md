@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
-**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
+**Id** | Pointer to **string** | Splash theme asset id | [optional] 
+**Name** | Pointer to **string** | Splash theme asset name | [optional] 
+**FileData** | Pointer to **string** | Splash theme asset file date base64 encoded | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200306WithDefaults instantiates a new InlineResponse200306 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetId
 
-`func (o *InlineResponse200306) GetTs() time.Time`
+`func (o *InlineResponse200306) GetId() string`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetIdOk
 
-`func (o *InlineResponse200306) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200306) GetIdOk() (*string, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetId
 
-`func (o *InlineResponse200306) SetTs(v time.Time)`
+`func (o *InlineResponse200306) SetId(v string)`
 
-SetTs sets Ts field to given value.
+SetId sets Id field to given value.
 
-### HasTs
+### HasId
 
-`func (o *InlineResponse200306) HasTs() bool`
+`func (o *InlineResponse200306) HasId() bool`
 
-HasTs returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetDraw
+### GetName
 
-`func (o *InlineResponse200306) GetDraw() float32`
+`func (o *InlineResponse200306) GetName() string`
 
-GetDraw returns the Draw field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDrawOk
+### GetNameOk
 
-`func (o *InlineResponse200306) GetDrawOk() (*float32, bool)`
+`func (o *InlineResponse200306) GetNameOk() (*string, bool)`
 
-GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDraw
+### SetName
 
-`func (o *InlineResponse200306) SetDraw(v float32)`
+`func (o *InlineResponse200306) SetName(v string)`
 
-SetDraw sets Draw field to given value.
+SetName sets Name field to given value.
 
-### HasDraw
+### HasName
 
-`func (o *InlineResponse200306) HasDraw() bool`
+`func (o *InlineResponse200306) HasName() bool`
 
-HasDraw returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetFileData
+
+`func (o *InlineResponse200306) GetFileData() string`
+
+GetFileData returns the FileData field if non-nil, zero value otherwise.
+
+### GetFileDataOk
+
+`func (o *InlineResponse200306) GetFileDataOk() (*string, bool)`
+
+GetFileDataOk returns a tuple with the FileData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFileData
+
+`func (o *InlineResponse200306) SetFileData(v string)`
+
+SetFileData sets FileData field to given value.
+
+### HasFileData
+
+`func (o *InlineResponse200306) HasFileData() bool`
+
+HasFileData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

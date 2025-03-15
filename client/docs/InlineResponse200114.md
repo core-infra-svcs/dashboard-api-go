@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SupportedMetrics** | Pointer to **[]string** | List of metrics that are supported for alerts, based on available sensor devices in the network | [optional] 
-**Counts** | Pointer to [**InlineResponse200114Counts**](InlineResponse200114Counts.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of client | [optional] 
+**ClientId** | Pointer to **string** | ID of client | [optional] 
+**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200114WithDefaults instantiates a new InlineResponse200114 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSupportedMetrics
+### GetName
 
-`func (o *InlineResponse200114) GetSupportedMetrics() []string`
+`func (o *InlineResponse200114) GetName() string`
 
-GetSupportedMetrics returns the SupportedMetrics field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSupportedMetricsOk
+### GetNameOk
 
-`func (o *InlineResponse200114) GetSupportedMetricsOk() (*[]string, bool)`
+`func (o *InlineResponse200114) GetNameOk() (*string, bool)`
 
-GetSupportedMetricsOk returns a tuple with the SupportedMetrics field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSupportedMetrics
+### SetName
 
-`func (o *InlineResponse200114) SetSupportedMetrics(v []string)`
+`func (o *InlineResponse200114) SetName(v string)`
 
-SetSupportedMetrics sets SupportedMetrics field to given value.
+SetName sets Name field to given value.
 
-### HasSupportedMetrics
+### HasName
 
-`func (o *InlineResponse200114) HasSupportedMetrics() bool`
+`func (o *InlineResponse200114) HasName() bool`
 
-HasSupportedMetrics returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetCounts
+### GetClientId
 
-`func (o *InlineResponse200114) GetCounts() InlineResponse200114Counts`
+`func (o *InlineResponse200114) GetClientId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetClientId returns the ClientId field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetClientIdOk
 
-`func (o *InlineResponse200114) GetCountsOk() (*InlineResponse200114Counts, bool)`
+`func (o *InlineResponse200114) GetClientIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetClientId
 
-`func (o *InlineResponse200114) SetCounts(v InlineResponse200114Counts)`
+`func (o *InlineResponse200114) SetClientId(v string)`
 
-SetCounts sets Counts field to given value.
+SetClientId sets ClientId field to given value.
 
-### HasCounts
+### HasClientId
 
-`func (o *InlineResponse200114) HasCounts() bool`
+`func (o *InlineResponse200114) HasClientId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasClientId returns a boolean if a field has been set.
+
+### GetAssigned
+
+`func (o *InlineResponse200114) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+
+GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+
+### GetAssignedOk
+
+`func (o *InlineResponse200114) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+
+GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAssigned
+
+`func (o *InlineResponse200114) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+
+SetAssigned sets Assigned field to given value.
+
+### HasAssigned
+
+`func (o *InlineResponse200114) HasAssigned() bool`
+
+HasAssigned returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

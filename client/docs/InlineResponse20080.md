@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DhcpLeaseTime** | Pointer to **string** | DHCP Lease time for all MG in the network. | [optional] 
-**DnsNameservers** | Pointer to **string** | DNS name servers mode for all MG in the network. | [optional] 
-**DnsCustomNameservers** | Pointer to **[]string** | List of fixed IPs representing the the DNS Name servers when the mode is &#39;custom&#39;. | [optional] 
+**Id** | Pointer to **string** | The ID of the camera wireless profile. | [optional] 
+**Name** | Pointer to **string** | The name of the camera wireless profile. | [optional] 
+**AppliedDeviceCount** | Pointer to **int32** | The count of the applied devices. | [optional] 
+**Ssid** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesSsid**](NetworksNetworkIdCameraWirelessProfilesSsid.md) |  | [optional] 
+**Identity** | Pointer to [**NetworksNetworkIdCameraWirelessProfilesIdentity**](NetworksNetworkIdCameraWirelessProfilesIdentity.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse20080WithDefaults instantiates a new InlineResponse20080 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDhcpLeaseTime
+### GetId
 
-`func (o *InlineResponse20080) GetDhcpLeaseTime() string`
+`func (o *InlineResponse20080) GetId() string`
 
-GetDhcpLeaseTime returns the DhcpLeaseTime field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetDhcpLeaseTimeOk
+### GetIdOk
 
-`func (o *InlineResponse20080) GetDhcpLeaseTimeOk() (*string, bool)`
+`func (o *InlineResponse20080) GetIdOk() (*string, bool)`
 
-GetDhcpLeaseTimeOk returns a tuple with the DhcpLeaseTime field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcpLeaseTime
+### SetId
 
-`func (o *InlineResponse20080) SetDhcpLeaseTime(v string)`
+`func (o *InlineResponse20080) SetId(v string)`
 
-SetDhcpLeaseTime sets DhcpLeaseTime field to given value.
+SetId sets Id field to given value.
 
-### HasDhcpLeaseTime
+### HasId
 
-`func (o *InlineResponse20080) HasDhcpLeaseTime() bool`
+`func (o *InlineResponse20080) HasId() bool`
 
-HasDhcpLeaseTime returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetDnsNameservers
+### GetName
 
-`func (o *InlineResponse20080) GetDnsNameservers() string`
+`func (o *InlineResponse20080) GetName() string`
 
-GetDnsNameservers returns the DnsNameservers field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDnsNameserversOk
+### GetNameOk
 
-`func (o *InlineResponse20080) GetDnsNameserversOk() (*string, bool)`
+`func (o *InlineResponse20080) GetNameOk() (*string, bool)`
 
-GetDnsNameserversOk returns a tuple with the DnsNameservers field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsNameservers
+### SetName
 
-`func (o *InlineResponse20080) SetDnsNameservers(v string)`
+`func (o *InlineResponse20080) SetName(v string)`
 
-SetDnsNameservers sets DnsNameservers field to given value.
+SetName sets Name field to given value.
 
-### HasDnsNameservers
+### HasName
 
-`func (o *InlineResponse20080) HasDnsNameservers() bool`
+`func (o *InlineResponse20080) HasName() bool`
 
-HasDnsNameservers returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetDnsCustomNameservers
+### GetAppliedDeviceCount
 
-`func (o *InlineResponse20080) GetDnsCustomNameservers() []string`
+`func (o *InlineResponse20080) GetAppliedDeviceCount() int32`
 
-GetDnsCustomNameservers returns the DnsCustomNameservers field if non-nil, zero value otherwise.
+GetAppliedDeviceCount returns the AppliedDeviceCount field if non-nil, zero value otherwise.
 
-### GetDnsCustomNameserversOk
+### GetAppliedDeviceCountOk
 
-`func (o *InlineResponse20080) GetDnsCustomNameserversOk() (*[]string, bool)`
+`func (o *InlineResponse20080) GetAppliedDeviceCountOk() (*int32, bool)`
 
-GetDnsCustomNameserversOk returns a tuple with the DnsCustomNameservers field if it's non-nil, zero value otherwise
+GetAppliedDeviceCountOk returns a tuple with the AppliedDeviceCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDnsCustomNameservers
+### SetAppliedDeviceCount
 
-`func (o *InlineResponse20080) SetDnsCustomNameservers(v []string)`
+`func (o *InlineResponse20080) SetAppliedDeviceCount(v int32)`
 
-SetDnsCustomNameservers sets DnsCustomNameservers field to given value.
+SetAppliedDeviceCount sets AppliedDeviceCount field to given value.
 
-### HasDnsCustomNameservers
+### HasAppliedDeviceCount
 
-`func (o *InlineResponse20080) HasDnsCustomNameservers() bool`
+`func (o *InlineResponse20080) HasAppliedDeviceCount() bool`
 
-HasDnsCustomNameservers returns a boolean if a field has been set.
+HasAppliedDeviceCount returns a boolean if a field has been set.
+
+### GetSsid
+
+`func (o *InlineResponse20080) GetSsid() NetworksNetworkIdCameraWirelessProfilesSsid`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineResponse20080) GetSsidOk() (*NetworksNetworkIdCameraWirelessProfilesSsid, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineResponse20080) SetSsid(v NetworksNetworkIdCameraWirelessProfilesSsid)`
+
+SetSsid sets Ssid field to given value.
+
+### HasSsid
+
+`func (o *InlineResponse20080) HasSsid() bool`
+
+HasSsid returns a boolean if a field has been set.
+
+### GetIdentity
+
+`func (o *InlineResponse20080) GetIdentity() NetworksNetworkIdCameraWirelessProfilesIdentity`
+
+GetIdentity returns the Identity field if non-nil, zero value otherwise.
+
+### GetIdentityOk
+
+`func (o *InlineResponse20080) GetIdentityOk() (*NetworksNetworkIdCameraWirelessProfilesIdentity, bool)`
+
+GetIdentityOk returns a tuple with the Identity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIdentity
+
+`func (o *InlineResponse20080) SetIdentity(v NetworksNetworkIdCameraWirelessProfilesIdentity)`
+
+SetIdentity sets Identity field to given value.
+
+### HasIdentity
+
+`func (o *InlineResponse20080) HasIdentity() bool`
+
+HasIdentity returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

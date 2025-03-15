@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200219Items**](InlineResponse200219Items.md) | List of local DNS profile assignment | [optional] 
-**Meta** | Pointer to [**InlineResponse200219Meta**](InlineResponse200219Meta.md) |  | [optional] 
+**ProfileId** | Pointer to **string** | Profile ID | [optional] 
+**Name** | Pointer to **string** | Name of profile | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200219WithDefaults instantiates a new InlineResponse200219 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetProfileId
 
-`func (o *InlineResponse200219) GetItems() []InlineResponse200219Items`
+`func (o *InlineResponse200219) GetProfileId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200219) GetItemsOk() (*[]InlineResponse200219Items, bool)`
+`func (o *InlineResponse200219) GetProfileIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetProfileId
 
-`func (o *InlineResponse200219) SetItems(v []InlineResponse200219Items)`
+`func (o *InlineResponse200219) SetProfileId(v string)`
 
-SetItems sets Items field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasItems
+### HasProfileId
 
-`func (o *InlineResponse200219) HasItems() bool`
+`func (o *InlineResponse200219) HasProfileId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
-### GetMeta
+### GetName
 
-`func (o *InlineResponse200219) GetMeta() InlineResponse200219Meta`
+`func (o *InlineResponse200219) GetName() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetNameOk
 
-`func (o *InlineResponse200219) GetMetaOk() (*InlineResponse200219Meta, bool)`
+`func (o *InlineResponse200219) GetNameOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetName
 
-`func (o *InlineResponse200219) SetMeta(v InlineResponse200219Meta)`
+`func (o *InlineResponse200219) SetName(v string)`
 
-SetMeta sets Meta field to given value.
+SetName sets Name field to given value.
 
-### HasMeta
+### HasName
 
-`func (o *InlineResponse200219) HasMeta() bool`
+`func (o *InlineResponse200219) HasName() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

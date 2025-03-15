@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
-**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
+**Name** | Pointer to **string** | File name. Will overwrite files with same name. | [optional] 
+**Content** | Pointer to **string** | a file containing the asset content | [optional] 
 
 ## Methods
 
 ### NewInlineObject284
 
-`func NewInlineObject284(sourceSerial string, targetSerials []string, ) *InlineObject284`
+`func NewInlineObject284() *InlineObject284`
 
 NewInlineObject284 instantiates a new InlineObject284 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,55 @@ NewInlineObject284WithDefaults instantiates a new InlineObject284 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetName
 
-`func (o *InlineObject284) GetSourceSerial() string`
+`func (o *InlineObject284) GetName() string`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetNameOk
 
-`func (o *InlineObject284) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineObject284) GetNameOk() (*string, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetName
 
-`func (o *InlineObject284) SetSourceSerial(v string)`
+`func (o *InlineObject284) SetName(v string)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetTargetSerials
+`func (o *InlineObject284) HasName() bool`
 
-`func (o *InlineObject284) GetTargetSerials() []string`
+HasName returns a boolean if a field has been set.
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+### GetContent
 
-### GetTargetSerialsOk
+`func (o *InlineObject284) GetContent() string`
 
-`func (o *InlineObject284) GetTargetSerialsOk() (*[]string, bool)`
+GetContent returns the Content field if non-nil, zero value otherwise.
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+### GetContentOk
+
+`func (o *InlineObject284) GetContentOk() (*string, bool)`
+
+GetContentOk returns a tuple with the Content field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetContent
 
-`func (o *InlineObject284) SetTargetSerials(v []string)`
+`func (o *InlineObject284) SetContent(v string)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetContent sets Content field to given value.
 
+### HasContent
+
+`func (o *InlineObject284) HasContent() bool`
+
+HasContent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

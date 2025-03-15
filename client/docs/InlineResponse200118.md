@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Device** | Pointer to [**NetworksNetworkIdSensorRelationshipsDevice**](NetworksNetworkIdSensorRelationshipsDevice.md) |  | [optional] 
-**Relationships** | Pointer to [**NetworksNetworkIdSensorRelationshipsRelationships**](NetworksNetworkIdSensorRelationshipsRelationships.md) |  | [optional] 
+**MqttBrokerId** | Pointer to **string** | ID of the MQTT Broker. | [optional] 
+**Enabled** | Pointer to **bool** | Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200118WithDefaults instantiates a new InlineResponse200118 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevice
+### GetMqttBrokerId
 
-`func (o *InlineResponse200118) GetDevice() NetworksNetworkIdSensorRelationshipsDevice`
+`func (o *InlineResponse200118) GetMqttBrokerId() string`
 
-GetDevice returns the Device field if non-nil, zero value otherwise.
+GetMqttBrokerId returns the MqttBrokerId field if non-nil, zero value otherwise.
 
-### GetDeviceOk
+### GetMqttBrokerIdOk
 
-`func (o *InlineResponse200118) GetDeviceOk() (*NetworksNetworkIdSensorRelationshipsDevice, bool)`
+`func (o *InlineResponse200118) GetMqttBrokerIdOk() (*string, bool)`
 
-GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
+GetMqttBrokerIdOk returns a tuple with the MqttBrokerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevice
+### SetMqttBrokerId
 
-`func (o *InlineResponse200118) SetDevice(v NetworksNetworkIdSensorRelationshipsDevice)`
+`func (o *InlineResponse200118) SetMqttBrokerId(v string)`
 
-SetDevice sets Device field to given value.
+SetMqttBrokerId sets MqttBrokerId field to given value.
 
-### HasDevice
+### HasMqttBrokerId
 
-`func (o *InlineResponse200118) HasDevice() bool`
+`func (o *InlineResponse200118) HasMqttBrokerId() bool`
 
-HasDevice returns a boolean if a field has been set.
+HasMqttBrokerId returns a boolean if a field has been set.
 
-### GetRelationships
+### GetEnabled
 
-`func (o *InlineResponse200118) GetRelationships() NetworksNetworkIdSensorRelationshipsRelationships`
+`func (o *InlineResponse200118) GetEnabled() bool`
 
-GetRelationships returns the Relationships field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRelationshipsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200118) GetRelationshipsOk() (*NetworksNetworkIdSensorRelationshipsRelationships, bool)`
+`func (o *InlineResponse200118) GetEnabledOk() (*bool, bool)`
 
-GetRelationshipsOk returns a tuple with the Relationships field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRelationships
+### SetEnabled
 
-`func (o *InlineResponse200118) SetRelationships(v NetworksNetworkIdSensorRelationshipsRelationships)`
+`func (o *InlineResponse200118) SetEnabled(v bool)`
 
-SetRelationships sets Relationships field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRelationships
+### HasEnabled
 
-`func (o *InlineResponse200118) HasRelationships() bool`
+`func (o *InlineResponse200118) HasEnabled() bool`
 
-HasRelationships returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

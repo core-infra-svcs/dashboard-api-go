@@ -4,14 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | **string** | Indicates if this rule will allow, block, or alert. | 
-**Match** | [**NetworksNetworkIdWirelessAirMarshalRulesMatch**](NetworksNetworkIdWirelessAirMarshalRulesMatch.md) |  | 
+**Url** | **string** | The URL where the test webhook will be sent | 
+**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to an empty string. | [optional] [default to ""]
+**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
+**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
+**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
 
 ## Methods
 
 ### NewInlineObject175
 
-`func NewInlineObject175(type_ string, match NetworksNetworkIdWirelessAirMarshalRulesMatch, ) *InlineObject175`
+`func NewInlineObject175(url string, ) *InlineObject175`
 
 NewInlineObject175 instantiates a new InlineObject175 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +29,125 @@ NewInlineObject175WithDefaults instantiates a new InlineObject175 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetType
+### GetUrl
 
-`func (o *InlineObject175) GetType() string`
+`func (o *InlineObject175) GetUrl() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetUrlOk
 
-`func (o *InlineObject175) GetTypeOk() (*string, bool)`
+`func (o *InlineObject175) GetUrlOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetUrl
 
-`func (o *InlineObject175) SetType(v string)`
+`func (o *InlineObject175) SetUrl(v string)`
 
-SetType sets Type field to given value.
+SetUrl sets Url field to given value.
 
 
-### GetMatch
+### GetSharedSecret
 
-`func (o *InlineObject175) GetMatch() NetworksNetworkIdWirelessAirMarshalRulesMatch`
+`func (o *InlineObject175) GetSharedSecret() string`
 
-GetMatch returns the Match field if non-nil, zero value otherwise.
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-### GetMatchOk
+### GetSharedSecretOk
 
-`func (o *InlineObject175) GetMatchOk() (*NetworksNetworkIdWirelessAirMarshalRulesMatch, bool)`
+`func (o *InlineObject175) GetSharedSecretOk() (*string, bool)`
 
-GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMatch
+### SetSharedSecret
 
-`func (o *InlineObject175) SetMatch(v NetworksNetworkIdWirelessAirMarshalRulesMatch)`
+`func (o *InlineObject175) SetSharedSecret(v string)`
 
-SetMatch sets Match field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
+### HasSharedSecret
+
+`func (o *InlineObject175) HasSharedSecret() bool`
+
+HasSharedSecret returns a boolean if a field has been set.
+
+### GetPayloadTemplateId
+
+`func (o *InlineObject175) GetPayloadTemplateId() string`
+
+GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateIdOk
+
+`func (o *InlineObject175) GetPayloadTemplateIdOk() (*string, bool)`
+
+GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplateId
+
+`func (o *InlineObject175) SetPayloadTemplateId(v string)`
+
+SetPayloadTemplateId sets PayloadTemplateId field to given value.
+
+### HasPayloadTemplateId
+
+`func (o *InlineObject175) HasPayloadTemplateId() bool`
+
+HasPayloadTemplateId returns a boolean if a field has been set.
+
+### GetPayloadTemplateName
+
+`func (o *InlineObject175) GetPayloadTemplateName() string`
+
+GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
+
+### GetPayloadTemplateNameOk
+
+`func (o *InlineObject175) GetPayloadTemplateNameOk() (*string, bool)`
+
+GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPayloadTemplateName
+
+`func (o *InlineObject175) SetPayloadTemplateName(v string)`
+
+SetPayloadTemplateName sets PayloadTemplateName field to given value.
+
+### HasPayloadTemplateName
+
+`func (o *InlineObject175) HasPayloadTemplateName() bool`
+
+HasPayloadTemplateName returns a boolean if a field has been set.
+
+### GetAlertTypeId
+
+`func (o *InlineObject175) GetAlertTypeId() string`
+
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+
+### GetAlertTypeIdOk
+
+`func (o *InlineObject175) GetAlertTypeIdOk() (*string, bool)`
+
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAlertTypeId
+
+`func (o *InlineObject175) SetAlertTypeId(v string)`
+
+SetAlertTypeId sets AlertTypeId field to given value.
+
+### HasAlertTypeId
+
+`func (o *InlineObject175) HasAlertTypeId() bool`
+
+HasAlertTypeId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

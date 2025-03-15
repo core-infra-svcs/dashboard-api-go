@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Readings** | Pointer to [**[]InlineResponse200350Readings**](InlineResponse200350Readings.md) | The usages of layer 3 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
+**Interfaces** | Pointer to [**[]InlineResponse200353Interfaces**](InlineResponse200353Interfaces.md) | Layer 3 interfaces belongs to the wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetReadings
+### GetInterfaces
 
-`func (o *InlineResponse200353Items) GetReadings() []InlineResponse200350Readings`
+`func (o *InlineResponse200353Items) GetInterfaces() []InlineResponse200353Interfaces`
 
-GetReadings returns the Readings field if non-nil, zero value otherwise.
+GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
 
-### GetReadingsOk
+### GetInterfacesOk
 
-`func (o *InlineResponse200353Items) GetReadingsOk() (*[]InlineResponse200350Readings, bool)`
+`func (o *InlineResponse200353Items) GetInterfacesOk() (*[]InlineResponse200353Interfaces, bool)`
 
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
+GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetReadings
+### SetInterfaces
 
-`func (o *InlineResponse200353Items) SetReadings(v []InlineResponse200350Readings)`
+`func (o *InlineResponse200353Items) SetInterfaces(v []InlineResponse200353Interfaces)`
 
-SetReadings sets Readings field to given value.
+SetInterfaces sets Interfaces field to given value.
 
-### HasReadings
+### HasInterfaces
 
-`func (o *InlineResponse200353Items) HasReadings() bool`
+`func (o *InlineResponse200353Items) HasInterfaces() bool`
 
-HasReadings returns a boolean if a field has been set.
+HasInterfaces returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

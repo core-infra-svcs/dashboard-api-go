@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | **[]string** | List of AP serials | 
-**ProfileId** | **string** | AP profile ID | 
+**Name** | **string** | AP port profile name | 
+**Ports** | [**[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesPorts1.md) | AP ports configuration | 
+**UsbPorts** | Pointer to [**[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1**](NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1.md) | AP usb ports configuration | [optional] 
 
 ## Methods
 
 ### NewInlineObject183
 
-`func NewInlineObject183(serials []string, profileId string, ) *InlineObject183`
+`func NewInlineObject183(name string, ports []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, ) *InlineObject183`
 
 NewInlineObject183 instantiates a new InlineObject183 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +27,70 @@ NewInlineObject183WithDefaults instantiates a new InlineObject183 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetName
 
-`func (o *InlineObject183) GetSerials() []string`
+`func (o *InlineObject183) GetName() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNameOk
 
-`func (o *InlineObject183) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject183) GetNameOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetName
 
-`func (o *InlineObject183) SetSerials(v []string)`
+`func (o *InlineObject183) SetName(v string)`
 
-SetSerials sets Serials field to given value.
+SetName sets Name field to given value.
 
 
-### GetProfileId
+### GetPorts
 
-`func (o *InlineObject183) GetProfileId() string`
+`func (o *InlineObject183) GetPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetPorts returns the Ports field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetPortsOk
 
-`func (o *InlineObject183) GetProfileIdOk() (*string, bool)`
+`func (o *InlineObject183) GetPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesPorts1, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetPorts
 
-`func (o *InlineObject183) SetProfileId(v string)`
+`func (o *InlineObject183) SetPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesPorts1)`
 
-SetProfileId sets ProfileId field to given value.
+SetPorts sets Ports field to given value.
 
+
+### GetUsbPorts
+
+`func (o *InlineObject183) GetUsbPorts() []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1`
+
+GetUsbPorts returns the UsbPorts field if non-nil, zero value otherwise.
+
+### GetUsbPortsOk
+
+`func (o *InlineObject183) GetUsbPortsOk() (*[]NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1, bool)`
+
+GetUsbPortsOk returns a tuple with the UsbPorts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsbPorts
+
+`func (o *InlineObject183) SetUsbPorts(v []NetworksNetworkIdWirelessEthernetPortsProfilesUsbPorts1)`
+
+SetUsbPorts sets UsbPorts field to given value.
+
+### HasUsbPorts
+
+`func (o *InlineObject183) HasUsbPorts() bool`
+
+HasUsbPorts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

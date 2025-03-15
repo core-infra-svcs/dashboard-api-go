@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | **string** | Short name of the early access feature | 
-**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
+**Serials** | **[]string** | A list of serials of devices to update | 
+**Details** | [**[]OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails**](OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails.md) | An array of details | 
 
 ## Methods
 
 ### NewInlineObject250
 
-`func NewInlineObject250(shortName string, ) *InlineObject250`
+`func NewInlineObject250(serials []string, details []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails, ) *InlineObject250`
 
 NewInlineObject250 instantiates a new InlineObject250 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,45 @@ NewInlineObject250WithDefaults instantiates a new InlineObject250 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetShortName
+### GetSerials
 
-`func (o *InlineObject250) GetShortName() string`
+`func (o *InlineObject250) GetSerials() []string`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetSerialsOk
 
-`func (o *InlineObject250) GetShortNameOk() (*string, bool)`
+`func (o *InlineObject250) GetSerialsOk() (*[]string, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetSerials
 
-`func (o *InlineObject250) SetShortName(v string)`
+`func (o *InlineObject250) SetSerials(v []string)`
 
-SetShortName sets ShortName field to given value.
+SetSerials sets Serials field to given value.
 
 
-### GetLimitScopeToNetworks
+### GetDetails
 
-`func (o *InlineObject250) GetLimitScopeToNetworks() []string`
+`func (o *InlineObject250) GetDetails() []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetDetails returns the Details field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetDetailsOk
 
-`func (o *InlineObject250) GetLimitScopeToNetworksOk() (*[]string, bool)`
+`func (o *InlineObject250) GetDetailsOk() (*[]OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetDetails
 
-`func (o *InlineObject250) SetLimitScopeToNetworks(v []string)`
+`func (o *InlineObject250) SetDetails(v []OrganizationsOrganizationIdDevicesDetailsBulkUpdateDetails)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetDetails sets Details field to given value.
 
-### HasLimitScopeToNetworks
-
-`func (o *InlineObject250) HasLimitScopeToNetworks() bool`
-
-HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

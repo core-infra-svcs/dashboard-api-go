@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of Early Access Feature | [optional] 
-**ShortName** | Pointer to **string** | Name of Early Access Feature | [optional] 
-**LimitScopeToNetworks** | Pointer to [**[]InlineResponse200272LimitScopeToNetworks**](InlineResponse200272LimitScopeToNetworks.md) | Networks assigned to the Early Access Feature | [optional] 
-**OptOutEligibility** | Pointer to [**InlineResponse200272OptOutEligibility**](InlineResponse200272OptOutEligibility.md) |  | [optional] 
-**CreatedAt** | Pointer to **time.Time** | Time when Early Access Feature was created | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Serial** | Pointer to **string** | Serial of MX device | [optional] 
+**Uplink** | Pointer to **string** | Uplink interface (wan1, wan2, or cellular) | [optional] 
+**Ip** | Pointer to **string** | IP address of uplink | [optional] 
+**TimeSeries** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries**](OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries.md) | Loss and latency timeseries data | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200272WithDefaults instantiates a new InlineResponse200272 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetNetworkId
 
-`func (o *InlineResponse200272) GetId() string`
+`func (o *InlineResponse200272) GetNetworkId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200272) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200272) GetNetworkIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetNetworkId
 
-`func (o *InlineResponse200272) SetId(v string)`
+`func (o *InlineResponse200272) SetNetworkId(v string)`
 
-SetId sets Id field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasId
+### HasNetworkId
 
-`func (o *InlineResponse200272) HasId() bool`
+`func (o *InlineResponse200272) HasNetworkId() bool`
 
-HasId returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetShortName
+### GetSerial
 
-`func (o *InlineResponse200272) GetShortName() string`
+`func (o *InlineResponse200272) GetSerial() string`
 
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetShortNameOk
+### GetSerialOk
 
-`func (o *InlineResponse200272) GetShortNameOk() (*string, bool)`
+`func (o *InlineResponse200272) GetSerialOk() (*string, bool)`
 
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetShortName
+### SetSerial
 
-`func (o *InlineResponse200272) SetShortName(v string)`
+`func (o *InlineResponse200272) SetSerial(v string)`
 
-SetShortName sets ShortName field to given value.
+SetSerial sets Serial field to given value.
 
-### HasShortName
+### HasSerial
 
-`func (o *InlineResponse200272) HasShortName() bool`
+`func (o *InlineResponse200272) HasSerial() bool`
 
-HasShortName returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetLimitScopeToNetworks
+### GetUplink
 
-`func (o *InlineResponse200272) GetLimitScopeToNetworks() []InlineResponse200272LimitScopeToNetworks`
+`func (o *InlineResponse200272) GetUplink() string`
 
-GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
 
-### GetLimitScopeToNetworksOk
+### GetUplinkOk
 
-`func (o *InlineResponse200272) GetLimitScopeToNetworksOk() (*[]InlineResponse200272LimitScopeToNetworks, bool)`
+`func (o *InlineResponse200272) GetUplinkOk() (*string, bool)`
 
-GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLimitScopeToNetworks
+### SetUplink
 
-`func (o *InlineResponse200272) SetLimitScopeToNetworks(v []InlineResponse200272LimitScopeToNetworks)`
+`func (o *InlineResponse200272) SetUplink(v string)`
 
-SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
+SetUplink sets Uplink field to given value.
 
-### HasLimitScopeToNetworks
+### HasUplink
 
-`func (o *InlineResponse200272) HasLimitScopeToNetworks() bool`
+`func (o *InlineResponse200272) HasUplink() bool`
 
-HasLimitScopeToNetworks returns a boolean if a field has been set.
+HasUplink returns a boolean if a field has been set.
 
-### GetOptOutEligibility
+### GetIp
 
-`func (o *InlineResponse200272) GetOptOutEligibility() InlineResponse200272OptOutEligibility`
+`func (o *InlineResponse200272) GetIp() string`
 
-GetOptOutEligibility returns the OptOutEligibility field if non-nil, zero value otherwise.
+GetIp returns the Ip field if non-nil, zero value otherwise.
 
-### GetOptOutEligibilityOk
+### GetIpOk
 
-`func (o *InlineResponse200272) GetOptOutEligibilityOk() (*InlineResponse200272OptOutEligibility, bool)`
+`func (o *InlineResponse200272) GetIpOk() (*string, bool)`
 
-GetOptOutEligibilityOk returns a tuple with the OptOutEligibility field if it's non-nil, zero value otherwise
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOptOutEligibility
+### SetIp
 
-`func (o *InlineResponse200272) SetOptOutEligibility(v InlineResponse200272OptOutEligibility)`
+`func (o *InlineResponse200272) SetIp(v string)`
 
-SetOptOutEligibility sets OptOutEligibility field to given value.
+SetIp sets Ip field to given value.
 
-### HasOptOutEligibility
+### HasIp
 
-`func (o *InlineResponse200272) HasOptOutEligibility() bool`
+`func (o *InlineResponse200272) HasIp() bool`
 
-HasOptOutEligibility returns a boolean if a field has been set.
+HasIp returns a boolean if a field has been set.
 
-### GetCreatedAt
+### GetTimeSeries
 
-`func (o *InlineResponse200272) GetCreatedAt() time.Time`
+`func (o *InlineResponse200272) GetTimeSeries() []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries`
 
-GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+GetTimeSeries returns the TimeSeries field if non-nil, zero value otherwise.
 
-### GetCreatedAtOk
+### GetTimeSeriesOk
 
-`func (o *InlineResponse200272) GetCreatedAtOk() (*time.Time, bool)`
+`func (o *InlineResponse200272) GetTimeSeriesOk() (*[]OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries, bool)`
 
-GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+GetTimeSeriesOk returns a tuple with the TimeSeries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatedAt
+### SetTimeSeries
 
-`func (o *InlineResponse200272) SetCreatedAt(v time.Time)`
+`func (o *InlineResponse200272) SetTimeSeries(v []OrganizationsOrganizationIdDevicesUplinksLossAndLatencyTimeSeries)`
 
-SetCreatedAt sets CreatedAt field to given value.
+SetTimeSeries sets TimeSeries field to given value.
 
-### HasCreatedAt
+### HasTimeSeries
 
-`func (o *InlineResponse200272) HasCreatedAt() bool`
+`func (o *InlineResponse200272) HasTimeSeries() bool`
 
-HasCreatedAt returns a boolean if a field has been set.
+HasTimeSeries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

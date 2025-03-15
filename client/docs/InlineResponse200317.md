@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | Pointer to **string** | Serial number of the source switch (must be on a network not bound to a template) | [optional] 
-**TargetSerials** | Pointer to **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | [optional] 
+**Name** | Pointer to **string** | Name of the SSID | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage**](OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage.md) |  | [optional] 
+**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopSsidsByUsageClients**](OrganizationsOrganizationIdSummaryTopSsidsByUsageClients.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200317WithDefaults instantiates a new InlineResponse200317 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetName
 
-`func (o *InlineResponse200317) GetSourceSerial() string`
+`func (o *InlineResponse200317) GetName() string`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetNameOk
 
-`func (o *InlineResponse200317) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineResponse200317) GetNameOk() (*string, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetName
 
-`func (o *InlineResponse200317) SetSourceSerial(v string)`
+`func (o *InlineResponse200317) SetName(v string)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetName sets Name field to given value.
 
-### HasSourceSerial
+### HasName
 
-`func (o *InlineResponse200317) HasSourceSerial() bool`
+`func (o *InlineResponse200317) HasName() bool`
 
-HasSourceSerial returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetTargetSerials
+### GetUsage
 
-`func (o *InlineResponse200317) GetTargetSerials() []string`
+`func (o *InlineResponse200317) GetUsage() OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage`
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+GetUsage returns the Usage field if non-nil, zero value otherwise.
 
-### GetTargetSerialsOk
+### GetUsageOk
 
-`func (o *InlineResponse200317) GetTargetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200317) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage, bool)`
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetUsage
 
-`func (o *InlineResponse200317) SetTargetSerials(v []string)`
+`func (o *InlineResponse200317) SetUsage(v OrganizationsOrganizationIdSummaryTopSsidsByUsageUsage)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetUsage sets Usage field to given value.
 
-### HasTargetSerials
+### HasUsage
 
-`func (o *InlineResponse200317) HasTargetSerials() bool`
+`func (o *InlineResponse200317) HasUsage() bool`
 
-HasTargetSerials returns a boolean if a field has been set.
+HasUsage returns a boolean if a field has been set.
+
+### GetClients
+
+`func (o *InlineResponse200317) GetClients() OrganizationsOrganizationIdSummaryTopSsidsByUsageClients`
+
+GetClients returns the Clients field if non-nil, zero value otherwise.
+
+### GetClientsOk
+
+`func (o *InlineResponse200317) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopSsidsByUsageClients, bool)`
+
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClients
+
+`func (o *InlineResponse200317) SetClients(v OrganizationsOrganizationIdSummaryTopSsidsByUsageClients)`
+
+SetClients sets Clients field to given value.
+
+### HasClients
+
+`func (o *InlineResponse200317) HasClients() bool`
+
+HasClients returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

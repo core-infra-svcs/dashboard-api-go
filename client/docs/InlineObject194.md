@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200200Rules**](InlineResponse200200Rules.md) | An array of L7 firewall rules for this SSID. Rules will get applied in the same order user has specified in request. Empty array will clear the L7 firewall rule configuration. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200200Rules**](InlineResponse200200Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
+**AllowLanAccess** | Pointer to **bool** | Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional) | [optional] 
 
 ## Methods
 
@@ -49,6 +50,31 @@ SetRules sets Rules field to given value.
 `func (o *InlineObject194) HasRules() bool`
 
 HasRules returns a boolean if a field has been set.
+
+### GetAllowLanAccess
+
+`func (o *InlineObject194) GetAllowLanAccess() bool`
+
+GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
+
+### GetAllowLanAccessOk
+
+`func (o *InlineObject194) GetAllowLanAccessOk() (*bool, bool)`
+
+GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAllowLanAccess
+
+`func (o *InlineObject194) SetAllowLanAccess(v bool)`
+
+SetAllowLanAccess sets AllowLanAccess field to given value.
+
+### HasAllowLanAccess
+
+`func (o *InlineObject194) HasAllowLanAccess() bool`
+
+HasAllowLanAccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

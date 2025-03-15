@@ -4,14 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the certificate. | [optional] 
-**NotValidAfter** | Pointer to **string** | The date after which the certificate is no longer valid. | [optional] 
-**NotValidBefore** | Pointer to **string** | The date before which the certificate is not valid. | [optional] 
-**CertPem** | Pointer to **string** | The PEM of the certificate. | [optional] 
-**DeviceId** | Pointer to **string** | The Meraki managed device Id. | [optional] 
-**Issuer** | Pointer to **string** | The certificate issuer. | [optional] 
-**Subject** | Pointer to **string** | The subject of the certificate. | [optional] 
-**Id** | Pointer to **string** | The Meraki Id of the certificate record. | [optional] 
+**Received** | Pointer to **float32** | The amount of cellular data received by the device. | [optional] 
+**Sent** | Pointer to **float32** | The amount of cellular sent received by the device. | [optional] 
+**Ts** | Pointer to **string** | When the cellular usage data was collected. | [optional] 
 
 ## Methods
 
@@ -32,205 +27,80 @@ NewInlineResponse200128WithDefaults instantiates a new InlineResponse200128 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetReceived
 
-`func (o *InlineResponse200128) GetName() string`
+`func (o *InlineResponse200128) GetReceived() float32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetReceived returns the Received field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetReceivedOk
 
-`func (o *InlineResponse200128) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200128) GetReceivedOk() (*float32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetReceivedOk returns a tuple with the Received field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetReceived
 
-`func (o *InlineResponse200128) SetName(v string)`
+`func (o *InlineResponse200128) SetReceived(v float32)`
 
-SetName sets Name field to given value.
+SetReceived sets Received field to given value.
 
-### HasName
+### HasReceived
 
-`func (o *InlineResponse200128) HasName() bool`
+`func (o *InlineResponse200128) HasReceived() bool`
 
-HasName returns a boolean if a field has been set.
+HasReceived returns a boolean if a field has been set.
 
-### GetNotValidAfter
+### GetSent
 
-`func (o *InlineResponse200128) GetNotValidAfter() string`
+`func (o *InlineResponse200128) GetSent() float32`
 
-GetNotValidAfter returns the NotValidAfter field if non-nil, zero value otherwise.
+GetSent returns the Sent field if non-nil, zero value otherwise.
 
-### GetNotValidAfterOk
+### GetSentOk
 
-`func (o *InlineResponse200128) GetNotValidAfterOk() (*string, bool)`
+`func (o *InlineResponse200128) GetSentOk() (*float32, bool)`
 
-GetNotValidAfterOk returns a tuple with the NotValidAfter field if it's non-nil, zero value otherwise
+GetSentOk returns a tuple with the Sent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotValidAfter
+### SetSent
 
-`func (o *InlineResponse200128) SetNotValidAfter(v string)`
+`func (o *InlineResponse200128) SetSent(v float32)`
 
-SetNotValidAfter sets NotValidAfter field to given value.
+SetSent sets Sent field to given value.
 
-### HasNotValidAfter
+### HasSent
 
-`func (o *InlineResponse200128) HasNotValidAfter() bool`
+`func (o *InlineResponse200128) HasSent() bool`
 
-HasNotValidAfter returns a boolean if a field has been set.
+HasSent returns a boolean if a field has been set.
 
-### GetNotValidBefore
+### GetTs
 
-`func (o *InlineResponse200128) GetNotValidBefore() string`
+`func (o *InlineResponse200128) GetTs() string`
 
-GetNotValidBefore returns the NotValidBefore field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetNotValidBeforeOk
+### GetTsOk
 
-`func (o *InlineResponse200128) GetNotValidBeforeOk() (*string, bool)`
+`func (o *InlineResponse200128) GetTsOk() (*string, bool)`
 
-GetNotValidBeforeOk returns a tuple with the NotValidBefore field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotValidBefore
+### SetTs
 
-`func (o *InlineResponse200128) SetNotValidBefore(v string)`
+`func (o *InlineResponse200128) SetTs(v string)`
 
-SetNotValidBefore sets NotValidBefore field to given value.
+SetTs sets Ts field to given value.
 
-### HasNotValidBefore
+### HasTs
 
-`func (o *InlineResponse200128) HasNotValidBefore() bool`
+`func (o *InlineResponse200128) HasTs() bool`
 
-HasNotValidBefore returns a boolean if a field has been set.
-
-### GetCertPem
-
-`func (o *InlineResponse200128) GetCertPem() string`
-
-GetCertPem returns the CertPem field if non-nil, zero value otherwise.
-
-### GetCertPemOk
-
-`func (o *InlineResponse200128) GetCertPemOk() (*string, bool)`
-
-GetCertPemOk returns a tuple with the CertPem field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCertPem
-
-`func (o *InlineResponse200128) SetCertPem(v string)`
-
-SetCertPem sets CertPem field to given value.
-
-### HasCertPem
-
-`func (o *InlineResponse200128) HasCertPem() bool`
-
-HasCertPem returns a boolean if a field has been set.
-
-### GetDeviceId
-
-`func (o *InlineResponse200128) GetDeviceId() string`
-
-GetDeviceId returns the DeviceId field if non-nil, zero value otherwise.
-
-### GetDeviceIdOk
-
-`func (o *InlineResponse200128) GetDeviceIdOk() (*string, bool)`
-
-GetDeviceIdOk returns a tuple with the DeviceId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceId
-
-`func (o *InlineResponse200128) SetDeviceId(v string)`
-
-SetDeviceId sets DeviceId field to given value.
-
-### HasDeviceId
-
-`func (o *InlineResponse200128) HasDeviceId() bool`
-
-HasDeviceId returns a boolean if a field has been set.
-
-### GetIssuer
-
-`func (o *InlineResponse200128) GetIssuer() string`
-
-GetIssuer returns the Issuer field if non-nil, zero value otherwise.
-
-### GetIssuerOk
-
-`func (o *InlineResponse200128) GetIssuerOk() (*string, bool)`
-
-GetIssuerOk returns a tuple with the Issuer field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIssuer
-
-`func (o *InlineResponse200128) SetIssuer(v string)`
-
-SetIssuer sets Issuer field to given value.
-
-### HasIssuer
-
-`func (o *InlineResponse200128) HasIssuer() bool`
-
-HasIssuer returns a boolean if a field has been set.
-
-### GetSubject
-
-`func (o *InlineResponse200128) GetSubject() string`
-
-GetSubject returns the Subject field if non-nil, zero value otherwise.
-
-### GetSubjectOk
-
-`func (o *InlineResponse200128) GetSubjectOk() (*string, bool)`
-
-GetSubjectOk returns a tuple with the Subject field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSubject
-
-`func (o *InlineResponse200128) SetSubject(v string)`
-
-SetSubject sets Subject field to given value.
-
-### HasSubject
-
-`func (o *InlineResponse200128) HasSubject() bool`
-
-HasSubject returns a boolean if a field has been set.
-
-### GetId
-
-`func (o *InlineResponse200128) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineResponse200128) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineResponse200128) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineResponse200128) HasId() bool`
-
-HasId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

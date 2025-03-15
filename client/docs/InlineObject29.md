@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route.         This IP address must exist in a subnet with a routed interface. Required if this is the first IPv4 interface. | [optional] 
 **OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings1**](DevicesSerialSwitchRoutingInterfacesOspfSettings1.md) |  | [optional] 
 **Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv61**](DevicesSerialSwitchRoutingInterfacesIpv61.md) |  | [optional] 
-**Vrf** | Pointer to **map[string]interface{}** | The VRF settings of the interface. | [optional] 
 
 ## Methods
 
@@ -232,31 +231,6 @@ SetIpv6 sets Ipv6 field to given value.
 `func (o *InlineObject29) HasIpv6() bool`
 
 HasIpv6 returns a boolean if a field has been set.
-
-### GetVrf
-
-`func (o *InlineObject29) GetVrf() map[string]interface{}`
-
-GetVrf returns the Vrf field if non-nil, zero value otherwise.
-
-### GetVrfOk
-
-`func (o *InlineObject29) GetVrfOk() (*map[string]interface{}, bool)`
-
-GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVrf
-
-`func (o *InlineObject29) SetVrf(v map[string]interface{})`
-
-SetVrf sets Vrf field to given value.
-
-### HasVrf
-
-`func (o *InlineObject29) HasVrf() bool`
-
-HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

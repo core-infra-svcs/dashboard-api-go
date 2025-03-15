@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200355Intervals**](InlineResponse200355Intervals.md) | Time interval snapshots of interfaces usage data of the wireless LAN controller | [optional] 
+**Readings** | Pointer to [**[]InlineResponse200352Readings**](InlineResponse200352Readings.md) | The usages of layer 3 interfaces of the wireless LAN controller. Usage is in bytes | [optional] 
 
 ## Methods
 
@@ -51,30 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetIntervals
+### GetReadings
 
-`func (o *InlineResponse200355Items) GetIntervals() []InlineResponse200355Intervals`
+`func (o *InlineResponse200355Items) GetReadings() []InlineResponse200352Readings`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetReadings returns the Readings field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetReadingsOk
 
-`func (o *InlineResponse200355Items) GetIntervalsOk() (*[]InlineResponse200355Intervals, bool)`
+`func (o *InlineResponse200355Items) GetReadingsOk() (*[]InlineResponse200352Readings, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetReadings
 
-`func (o *InlineResponse200355Items) SetIntervals(v []InlineResponse200355Intervals)`
+`func (o *InlineResponse200355Items) SetReadings(v []InlineResponse200352Readings)`
 
-SetIntervals sets Intervals field to given value.
+SetReadings sets Readings field to given value.
 
-### HasIntervals
+### HasReadings
 
-`func (o *InlineResponse200355Items) HasIntervals() bool`
+`func (o *InlineResponse200355Items) HasReadings() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasReadings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

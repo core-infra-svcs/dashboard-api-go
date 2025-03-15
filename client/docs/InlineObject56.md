@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
-**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
+**Name** | **string** | The name of the new profile. Must be unique. This param is required on creation. | 
+**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings**](NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings.md) |  | [optional] 
+**FiveGhzSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesFiveGhzSettings**](NetworksNetworkIdApplianceRfProfilesFiveGhzSettings.md) |  | [optional] 
 **PerSsidSettings** | Pointer to [**NetworksNetworkIdApplianceRfProfilesPerSsidSettings**](NetworksNetworkIdApplianceRfProfilesPerSsidSettings.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject56
 
-`func NewInlineObject56() *InlineObject56`
+`func NewInlineObject56(name string, ) *InlineObject56`
 
 NewInlineObject56 instantiates a new InlineObject56 object
 This constructor will assign default values to properties that have it defined,
@@ -47,28 +47,23 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject56) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetTwoFourGhzSettings
 
-`func (o *InlineObject56) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings`
+`func (o *InlineObject56) GetTwoFourGhzSettings() NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings`
 
 GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
 
 ### GetTwoFourGhzSettingsOk
 
-`func (o *InlineObject56) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings, bool)`
+`func (o *InlineObject56) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings, bool)`
 
 GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTwoFourGhzSettings
 
-`func (o *InlineObject56) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdTwoFourGhzSettings)`
+`func (o *InlineObject56) SetTwoFourGhzSettings(v NetworksNetworkIdApplianceRfProfilesTwoFourGhzSettings)`
 
 SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
 
@@ -80,20 +75,20 @@ HasTwoFourGhzSettings returns a boolean if a field has been set.
 
 ### GetFiveGhzSettings
 
-`func (o *InlineObject56) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings`
+`func (o *InlineObject56) GetFiveGhzSettings() NetworksNetworkIdApplianceRfProfilesFiveGhzSettings`
 
 GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
 
 ### GetFiveGhzSettingsOk
 
-`func (o *InlineObject56) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings, bool)`
+`func (o *InlineObject56) GetFiveGhzSettingsOk() (*NetworksNetworkIdApplianceRfProfilesFiveGhzSettings, bool)`
 
 GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFiveGhzSettings
 
-`func (o *InlineObject56) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesRfProfileIdFiveGhzSettings)`
+`func (o *InlineObject56) SetFiveGhzSettings(v NetworksNetworkIdApplianceRfProfilesFiveGhzSettings)`
 
 SetFiveGhzSettings sets FiveGhzSettings field to given value.
 

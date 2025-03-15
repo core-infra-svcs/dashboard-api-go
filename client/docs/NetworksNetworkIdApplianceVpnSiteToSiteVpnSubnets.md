@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **LocalSubnet** | **string** | The CIDR notation subnet used within the VPN | 
 **UseVpn** | Pointer to **bool** | Indicates the presence of the subnet in the VPN | [optional] 
+**Nat** | Pointer to [**InlineResponse20075Nat**](InlineResponse20075Nat.md) |  | [optional] 
 
 ## Methods
 
@@ -70,6 +71,31 @@ SetUseVpn sets UseVpn field to given value.
 `func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) HasUseVpn() bool`
 
 HasUseVpn returns a boolean if a field has been set.
+
+### GetNat
+
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) GetNat() InlineResponse20075Nat`
+
+GetNat returns the Nat field if non-nil, zero value otherwise.
+
+### GetNatOk
+
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) GetNatOk() (*InlineResponse20075Nat, bool)`
+
+GetNatOk returns a tuple with the Nat field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNat
+
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) SetNat(v InlineResponse20075Nat)`
+
+SetNat sets Nat field to given value.
+
+### HasNat
+
+`func (o *NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets) HasNat() bool`
+
+HasNat returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

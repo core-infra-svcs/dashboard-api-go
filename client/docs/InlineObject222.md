@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Hostname for the DNS record | [optional] 
-**Address** | Pointer to **string** | IP for the DNS record | [optional] 
-**Profile** | Pointer to [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | [optional] 
+**Hostname** | **string** | Hostname for the DNS record | 
+**Address** | **string** | IP for the DNS record | 
+**Profile** | [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | 
 
 ## Methods
 
 ### NewInlineObject222
 
-`func NewInlineObject222() *InlineObject222`
+`func NewInlineObject222(hostname string, address string, profile OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, ) *InlineObject222`
 
 NewInlineObject222 instantiates a new InlineObject222 object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetHostname sets Hostname field to given value.
 
-### HasHostname
-
-`func (o *InlineObject222) HasHostname() bool`
-
-HasHostname returns a boolean if a field has been set.
 
 ### GetAddress
 
@@ -71,11 +66,6 @@ and a boolean to check if the value has been set.
 
 SetAddress sets Address field to given value.
 
-### HasAddress
-
-`func (o *InlineObject222) HasAddress() bool`
-
-HasAddress returns a boolean if a field has been set.
 
 ### GetProfile
 
@@ -96,11 +86,6 @@ and a boolean to check if the value has been set.
 
 SetProfile sets Profile field to given value.
 
-### HasProfile
-
-`func (o *InlineObject222) HasProfile() bool`
-
-HasProfile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
