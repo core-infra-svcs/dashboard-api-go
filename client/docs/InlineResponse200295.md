@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
+**ResultingNetwork** | Pointer to [**InlineResponse200295ResultingNetwork**](InlineResponse200295ResultingNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200295WithDefaults instantiates a new InlineResponse200295 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetResultingNetwork
 
-`func (o *InlineResponse200295) GetEnabled() bool`
+`func (o *InlineResponse200295) GetResultingNetwork() InlineResponse200295ResultingNetwork`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetResultingNetworkOk
 
-`func (o *InlineResponse200295) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200295) GetResultingNetworkOk() (*InlineResponse200295ResultingNetwork, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetResultingNetwork
 
-`func (o *InlineResponse200295) SetEnabled(v bool)`
+`func (o *InlineResponse200295) SetResultingNetwork(v InlineResponse200295ResultingNetwork)`
 
-SetEnabled sets Enabled field to given value.
+SetResultingNetwork sets ResultingNetwork field to given value.
 
-### HasEnabled
+### HasResultingNetwork
 
-`func (o *InlineResponse200295) HasEnabled() bool`
+`func (o *InlineResponse200295) HasResultingNetwork() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasResultingNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

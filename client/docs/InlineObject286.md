@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkIds** | **[]string** | A list of network ids (limit: 15). | 
+**Name** | Pointer to **string** | File name. Will overwrite files with same name. | [optional] 
+**Content** | Pointer to **string** | a file containing the asset content | [optional] 
 
 ## Methods
 
 ### NewInlineObject286
 
-`func NewInlineObject286(networkIds []string, ) *InlineObject286`
+`func NewInlineObject286() *InlineObject286`
 
 NewInlineObject286 instantiates a new InlineObject286 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject286WithDefaults instantiates a new InlineObject286 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkIds
+### GetName
 
-`func (o *InlineObject286) GetNetworkIds() []string`
+`func (o *InlineObject286) GetName() string`
 
-GetNetworkIds returns the NetworkIds field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkIdsOk
+### GetNameOk
 
-`func (o *InlineObject286) GetNetworkIdsOk() (*[]string, bool)`
+`func (o *InlineObject286) GetNameOk() (*string, bool)`
 
-GetNetworkIdsOk returns a tuple with the NetworkIds field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkIds
+### SetName
 
-`func (o *InlineObject286) SetNetworkIds(v []string)`
+`func (o *InlineObject286) SetName(v string)`
 
-SetNetworkIds sets NetworkIds field to given value.
+SetName sets Name field to given value.
 
+### HasName
+
+`func (o *InlineObject286) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetContent
+
+`func (o *InlineObject286) GetContent() string`
+
+GetContent returns the Content field if non-nil, zero value otherwise.
+
+### GetContentOk
+
+`func (o *InlineObject286) GetContentOk() (*string, bool)`
+
+GetContentOk returns a tuple with the Content field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContent
+
+`func (o *InlineObject286) SetContent(v string)`
+
+SetContent sets Content field to given value.
+
+### HasContent
+
+`func (o *InlineObject286) HasContent() bool`
+
+HasContent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

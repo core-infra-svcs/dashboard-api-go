@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **Conditions** | Pointer to [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | [optional] 
 **Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
 **Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
+**IncludeSensorUrl** | Pointer to **bool** | Include dashboard link to sensor in messages (default: true). | [optional] 
+**Message** | Pointer to **string** | A custom message that will appear in email and text message alerts. | [optional] 
 
 ## Methods
 
@@ -153,6 +155,56 @@ SetSerials sets Serials field to given value.
 `func (o *InlineObject117) HasSerials() bool`
 
 HasSerials returns a boolean if a field has been set.
+
+### GetIncludeSensorUrl
+
+`func (o *InlineObject117) GetIncludeSensorUrl() bool`
+
+GetIncludeSensorUrl returns the IncludeSensorUrl field if non-nil, zero value otherwise.
+
+### GetIncludeSensorUrlOk
+
+`func (o *InlineObject117) GetIncludeSensorUrlOk() (*bool, bool)`
+
+GetIncludeSensorUrlOk returns a tuple with the IncludeSensorUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIncludeSensorUrl
+
+`func (o *InlineObject117) SetIncludeSensorUrl(v bool)`
+
+SetIncludeSensorUrl sets IncludeSensorUrl field to given value.
+
+### HasIncludeSensorUrl
+
+`func (o *InlineObject117) HasIncludeSensorUrl() bool`
+
+HasIncludeSensorUrl returns a boolean if a field has been set.
+
+### GetMessage
+
+`func (o *InlineObject117) GetMessage() string`
+
+GetMessage returns the Message field if non-nil, zero value otherwise.
+
+### GetMessageOk
+
+`func (o *InlineObject117) GetMessageOk() (*string, bool)`
+
+GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMessage
+
+`func (o *InlineObject117) SetMessage(v string)`
+
+SetMessage sets Message field to given value.
+
+### HasMessage
+
+`func (o *InlineObject117) HasMessage() bool`
+
+HasMessage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

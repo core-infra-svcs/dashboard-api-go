@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseId** | **string** | The ID of the SM license to assign seats from | 
-**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
-**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
+**Devices** | [**[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices.md) | A set of devices to import (or update) | 
+**Options** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject261
 
-`func NewInlineObject261(licenseId string, networkId string, seatCount int32, ) *InlineObject261`
+`func NewInlineObject261(devices []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, ) *InlineObject261`
 
 NewInlineObject261 instantiates a new InlineObject261 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +26,50 @@ NewInlineObject261WithDefaults instantiates a new InlineObject261 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseId
+### GetDevices
 
-`func (o *InlineObject261) GetLicenseId() string`
+`func (o *InlineObject261) GetDevices() []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetDevicesOk
 
-`func (o *InlineObject261) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineObject261) GetDevicesOk() (*[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetDevices
 
-`func (o *InlineObject261) SetLicenseId(v string)`
+`func (o *InlineObject261) SetDevices(v []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices)`
 
-SetLicenseId sets LicenseId field to given value.
+SetDevices sets Devices field to given value.
 
 
-### GetNetworkId
+### GetOptions
 
-`func (o *InlineObject261) GetNetworkId() string`
+`func (o *InlineObject261) GetOptions() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetOptions returns the Options field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetOptionsOk
 
-`func (o *InlineObject261) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineObject261) GetOptionsOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetOptionsOk returns a tuple with the Options field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetOptions
 
-`func (o *InlineObject261) SetNetworkId(v string)`
+`func (o *InlineObject261) SetOptions(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions)`
 
-SetNetworkId sets NetworkId field to given value.
+SetOptions sets Options field to given value.
 
+### HasOptions
 
-### GetSeatCount
+`func (o *InlineObject261) HasOptions() bool`
 
-`func (o *InlineObject261) GetSeatCount() int32`
-
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
-
-### GetSeatCountOk
-
-`func (o *InlineObject261) GetSeatCountOk() (*int32, bool)`
-
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeatCount
-
-`func (o *InlineObject261) SetSeatCount(v int32)`
-
-SetSeatCount sets SeatCount field to given value.
-
+HasOptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

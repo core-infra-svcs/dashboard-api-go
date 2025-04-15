@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
 **TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
 **TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
-**FloorNumber** | Pointer to **int32** | The floor number of the floors within the building | [optional] 
+**FloorNumber** | Pointer to **float32** | The floor number of the floors within the building | [optional] 
 **ImageContents** | **string** | The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. | 
 
 ## Methods
@@ -179,20 +179,20 @@ HasTopRightCorner returns a boolean if a field has been set.
 
 ### GetFloorNumber
 
-`func (o *InlineObject102) GetFloorNumber() int32`
+`func (o *InlineObject102) GetFloorNumber() float32`
 
 GetFloorNumber returns the FloorNumber field if non-nil, zero value otherwise.
 
 ### GetFloorNumberOk
 
-`func (o *InlineObject102) GetFloorNumberOk() (*int32, bool)`
+`func (o *InlineObject102) GetFloorNumberOk() (*float32, bool)`
 
 GetFloorNumberOk returns a tuple with the FloorNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFloorNumber
 
-`func (o *InlineObject102) SetFloorNumber(v int32)`
+`func (o *InlineObject102) SetFloorNumber(v float32)`
 
 SetFloorNumber sets FloorNumber field to given value.
 

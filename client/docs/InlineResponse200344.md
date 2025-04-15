@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EstimatedCompletedAt** | Pointer to **string** | Estimated time of completion. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200344Items**](InlineResponse200344Items.md) | The top-level property containing all power mode data. | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200344WithDefaults instantiates a new InlineResponse200344 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEstimatedCompletedAt
+### GetItems
 
-`func (o *InlineResponse200344) GetEstimatedCompletedAt() string`
+`func (o *InlineResponse200344) GetItems() []InlineResponse200344Items`
 
-GetEstimatedCompletedAt returns the EstimatedCompletedAt field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetEstimatedCompletedAtOk
+### GetItemsOk
 
-`func (o *InlineResponse200344) GetEstimatedCompletedAtOk() (*string, bool)`
+`func (o *InlineResponse200344) GetItemsOk() (*[]InlineResponse200344Items, bool)`
 
-GetEstimatedCompletedAtOk returns a tuple with the EstimatedCompletedAt field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEstimatedCompletedAt
+### SetItems
 
-`func (o *InlineResponse200344) SetEstimatedCompletedAt(v string)`
+`func (o *InlineResponse200344) SetItems(v []InlineResponse200344Items)`
 
-SetEstimatedCompletedAt sets EstimatedCompletedAt field to given value.
+SetItems sets Items field to given value.
 
-### HasEstimatedCompletedAt
+### HasItems
 
-`func (o *InlineResponse200344) HasEstimatedCompletedAt() bool`
+`func (o *InlineResponse200344) HasItems() bool`
 
-HasEstimatedCompletedAt returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

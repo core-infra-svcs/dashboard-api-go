@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200302Items**](InlineResponse200302Items.md) | Sentry Group Policies for the Organization keyed by the Network or Locale Id the Policy belongs to | [optional] 
+**Items** | Pointer to [**[]InlineResponse200303Items**](InlineResponse200303Items.md) | Array of Limited Access Roles | [optional] 
 **Meta** | Pointer to [**InlineResponse200220Meta**](InlineResponse200220Meta.md) |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200303) GetItems() []InlineResponse200302Items`
+`func (o *InlineResponse200303) GetItems() []InlineResponse200303Items`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200303) GetItemsOk() (*[]InlineResponse200302Items, bool)`
+`func (o *InlineResponse200303) GetItemsOk() (*[]InlineResponse200303Items, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200303) SetItems(v []InlineResponse200302Items)`
+`func (o *InlineResponse200303) SetItems(v []InlineResponse200303Items)`
 
 SetItems sets Items field to given value.
 

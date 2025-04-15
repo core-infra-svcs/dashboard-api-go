@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Access points network ID | [optional] 
-**Url** | Pointer to **string** | Access points network URL | [optional] 
-**Name** | Pointer to **string** | Access points network name | [optional] 
+**Id** | **string** | The index of network | 
+**Name** | Pointer to **string** | The name of network | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200349Network
 
-`func NewInlineResponse200349Network() *InlineResponse200349Network`
+`func NewInlineResponse200349Network(id string, ) *InlineResponse200349Network`
 
 NewInlineResponse200349Network instantiates a new InlineResponse200349Network object
 This constructor will assign default values to properties that have it defined,
@@ -46,36 +45,6 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
-
-`func (o *InlineResponse200349Network) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetUrl
-
-`func (o *InlineResponse200349Network) GetUrl() string`
-
-GetUrl returns the Url field if non-nil, zero value otherwise.
-
-### GetUrlOk
-
-`func (o *InlineResponse200349Network) GetUrlOk() (*string, bool)`
-
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUrl
-
-`func (o *InlineResponse200349Network) SetUrl(v string)`
-
-SetUrl sets Url field to given value.
-
-### HasUrl
-
-`func (o *InlineResponse200349Network) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
 
 ### GetName
 

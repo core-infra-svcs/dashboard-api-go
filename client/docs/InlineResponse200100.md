@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **BottomRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansBottomRightCorner**](NetworksNetworkIdFloorPlansBottomRightCorner.md) |  | [optional] 
 **TopLeftCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopLeftCorner**](NetworksNetworkIdFloorPlansTopLeftCorner.md) |  | [optional] 
 **TopRightCorner** | Pointer to [**NetworksNetworkIdFloorPlansTopRightCorner**](NetworksNetworkIdFloorPlansTopRightCorner.md) |  | [optional] 
-**FloorNumber** | Pointer to **int32** | The floor number of the floor within the building. | [optional] 
+**FloorNumber** | Pointer to **float32** | The floor number of the floor within the building. | [optional] 
 
 ## Methods
 
@@ -391,20 +391,20 @@ HasTopRightCorner returns a boolean if a field has been set.
 
 ### GetFloorNumber
 
-`func (o *InlineResponse200100) GetFloorNumber() int32`
+`func (o *InlineResponse200100) GetFloorNumber() float32`
 
 GetFloorNumber returns the FloorNumber field if non-nil, zero value otherwise.
 
 ### GetFloorNumberOk
 
-`func (o *InlineResponse200100) GetFloorNumberOk() (*int32, bool)`
+`func (o *InlineResponse200100) GetFloorNumberOk() (*float32, bool)`
 
 GetFloorNumberOk returns a tuple with the FloorNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFloorNumber
 
-`func (o *InlineResponse200100) SetFloorNumber(v int32)`
+`func (o *InlineResponse200100) SetFloorNumber(v float32)`
 
 SetFloorNumber sets FloorNumber field to given value.
 

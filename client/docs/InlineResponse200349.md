@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200349Items**](InlineResponse200349Items.md) | Access points associated with Wireless LAN controllers | [optional] 
+**Items** | Pointer to [**[]InlineResponse200349Items**](InlineResponse200349Items.md) | L2 isolation allowlist items | [optional] 
 **Meta** | Pointer to [**InlineResponse200220Meta**](InlineResponse200220Meta.md) |  | [optional] 
 
 ## Methods

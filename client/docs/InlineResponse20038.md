@@ -6,14 +6,12 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **InterfaceId** | Pointer to **string** | The ID | [optional] 
 **Name** | Pointer to **string** | The name | [optional] 
-**Mode** | Pointer to **string** | The mode | [optional] 
 **Subnet** | Pointer to **string** | IPv4 subnet | [optional] 
 **InterfaceIp** | Pointer to **string** | IPv4 address | [optional] 
-**SwitchPortId** | Pointer to **string** | Switch Port ID | [optional] 
 **MulticastRouting** | Pointer to **string** | Multicast routing status | [optional] 
 **VlanId** | Pointer to **int32** | VLAN ID | [optional] 
-**UplinkV4** | Pointer to **bool** | When true, this interface is the switch&#39;s static IPv4 uplink | [optional] 
-**UplinkV6** | Pointer to **bool** | When true, this interface is the switch&#39;s static IPv6 uplink | [optional] 
+**UplinkV4** | Pointer to **bool** | When true, this interface is used as static IPv4 uplink | [optional] 
+**UplinkV6** | Pointer to **bool** | When true, this interface is used as static IPv6 uplink | [optional] 
 **OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings**](DevicesSerialSwitchRoutingInterfacesOspfSettings.md) |  | [optional] 
 **OspfV3** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfV3**](DevicesSerialSwitchRoutingInterfacesOspfV3.md) |  | [optional] 
 **Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv6**](DevicesSerialSwitchRoutingInterfacesIpv6.md) |  | [optional] 
@@ -88,31 +86,6 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetMode
-
-`func (o *InlineResponse20038) GetMode() string`
-
-GetMode returns the Mode field if non-nil, zero value otherwise.
-
-### GetModeOk
-
-`func (o *InlineResponse20038) GetModeOk() (*string, bool)`
-
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMode
-
-`func (o *InlineResponse20038) SetMode(v string)`
-
-SetMode sets Mode field to given value.
-
-### HasMode
-
-`func (o *InlineResponse20038) HasMode() bool`
-
-HasMode returns a boolean if a field has been set.
-
 ### GetSubnet
 
 `func (o *InlineResponse20038) GetSubnet() string`
@@ -162,31 +135,6 @@ SetInterfaceIp sets InterfaceIp field to given value.
 `func (o *InlineResponse20038) HasInterfaceIp() bool`
 
 HasInterfaceIp returns a boolean if a field has been set.
-
-### GetSwitchPortId
-
-`func (o *InlineResponse20038) GetSwitchPortId() string`
-
-GetSwitchPortId returns the SwitchPortId field if non-nil, zero value otherwise.
-
-### GetSwitchPortIdOk
-
-`func (o *InlineResponse20038) GetSwitchPortIdOk() (*string, bool)`
-
-GetSwitchPortIdOk returns a tuple with the SwitchPortId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSwitchPortId
-
-`func (o *InlineResponse20038) SetSwitchPortId(v string)`
-
-SetSwitchPortId sets SwitchPortId field to given value.
-
-### HasSwitchPortId
-
-`func (o *InlineResponse20038) HasSwitchPortId() bool`
-
-HasSwitchPortId returns a boolean if a field has been set.
 
 ### GetMulticastRouting
 
