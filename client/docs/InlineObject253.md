@@ -4,15 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the VoIP provider | 
-**Address** | **string** | The IP address (IPv4 only) or hostname of the media server to monitor | 
-**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
+**Serials** | **[]string** | The serial(s) of the device(s) | 
+**Name** | **string** | Name of packet capture file | 
+**OutputType** | Pointer to **string** | Output type of packet capture file. Possible values: text, pcap, cloudshark, or upload_to_cloud | [optional] 
+**Destination** | Pointer to **string** | Destination of packet capture file. Possible values: [upload_to_cloud] | [optional] 
+**Ports** | Pointer to **string** | Ports of packet capture file, comma-separated | [optional] 
+**Notes** | Pointer to **string** | Reason for taking the packet capture | [optional] 
+**Duration** | Pointer to **int32** | Duration in seconds of packet capture | [optional] 
+**FilterExpression** | Pointer to **string** | Filter expression for packet capture | [optional] 
+**Interface** | Pointer to **string** | Interface of the device | [optional] 
 
 ## Methods
 
 ### NewInlineObject253
 
-`func NewInlineObject253(name string, address string, ) *InlineObject253`
+`func NewInlineObject253(serials []string, name string, ) *InlineObject253`
 
 NewInlineObject253 instantiates a new InlineObject253 object
 This constructor will assign default values to properties that have it defined,
@@ -26,6 +32,26 @@ will change when the set of required properties is changed
 NewInlineObject253WithDefaults instantiates a new InlineObject253 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetSerials
+
+`func (o *InlineObject253) GetSerials() []string`
+
+GetSerials returns the Serials field if non-nil, zero value otherwise.
+
+### GetSerialsOk
+
+`func (o *InlineObject253) GetSerialsOk() (*[]string, bool)`
+
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSerials
+
+`func (o *InlineObject253) SetSerials(v []string)`
+
+SetSerials sets Serials field to given value.
+
 
 ### GetName
 
@@ -47,50 +73,180 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetAddress
+### GetOutputType
 
-`func (o *InlineObject253) GetAddress() string`
+`func (o *InlineObject253) GetOutputType() string`
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+GetOutputType returns the OutputType field if non-nil, zero value otherwise.
 
-### GetAddressOk
+### GetOutputTypeOk
 
-`func (o *InlineObject253) GetAddressOk() (*string, bool)`
+`func (o *InlineObject253) GetOutputTypeOk() (*string, bool)`
 
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+GetOutputTypeOk returns a tuple with the OutputType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetOutputType
 
-`func (o *InlineObject253) SetAddress(v string)`
+`func (o *InlineObject253) SetOutputType(v string)`
 
-SetAddress sets Address field to given value.
+SetOutputType sets OutputType field to given value.
 
+### HasOutputType
 
-### GetBestEffortMonitoringEnabled
+`func (o *InlineObject253) HasOutputType() bool`
 
-`func (o *InlineObject253) GetBestEffortMonitoringEnabled() bool`
+HasOutputType returns a boolean if a field has been set.
 
-GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
+### GetDestination
 
-### GetBestEffortMonitoringEnabledOk
+`func (o *InlineObject253) GetDestination() string`
 
-`func (o *InlineObject253) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
+GetDestination returns the Destination field if non-nil, zero value otherwise.
 
-GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
+### GetDestinationOk
+
+`func (o *InlineObject253) GetDestinationOk() (*string, bool)`
+
+GetDestinationOk returns a tuple with the Destination field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBestEffortMonitoringEnabled
+### SetDestination
 
-`func (o *InlineObject253) SetBestEffortMonitoringEnabled(v bool)`
+`func (o *InlineObject253) SetDestination(v string)`
 
-SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
+SetDestination sets Destination field to given value.
 
-### HasBestEffortMonitoringEnabled
+### HasDestination
 
-`func (o *InlineObject253) HasBestEffortMonitoringEnabled() bool`
+`func (o *InlineObject253) HasDestination() bool`
 
-HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
+HasDestination returns a boolean if a field has been set.
+
+### GetPorts
+
+`func (o *InlineObject253) GetPorts() string`
+
+GetPorts returns the Ports field if non-nil, zero value otherwise.
+
+### GetPortsOk
+
+`func (o *InlineObject253) GetPortsOk() (*string, bool)`
+
+GetPortsOk returns a tuple with the Ports field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPorts
+
+`func (o *InlineObject253) SetPorts(v string)`
+
+SetPorts sets Ports field to given value.
+
+### HasPorts
+
+`func (o *InlineObject253) HasPorts() bool`
+
+HasPorts returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject253) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject253) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject253) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject253) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
+
+### GetDuration
+
+`func (o *InlineObject253) GetDuration() int32`
+
+GetDuration returns the Duration field if non-nil, zero value otherwise.
+
+### GetDurationOk
+
+`func (o *InlineObject253) GetDurationOk() (*int32, bool)`
+
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDuration
+
+`func (o *InlineObject253) SetDuration(v int32)`
+
+SetDuration sets Duration field to given value.
+
+### HasDuration
+
+`func (o *InlineObject253) HasDuration() bool`
+
+HasDuration returns a boolean if a field has been set.
+
+### GetFilterExpression
+
+`func (o *InlineObject253) GetFilterExpression() string`
+
+GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
+
+### GetFilterExpressionOk
+
+`func (o *InlineObject253) GetFilterExpressionOk() (*string, bool)`
+
+GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFilterExpression
+
+`func (o *InlineObject253) SetFilterExpression(v string)`
+
+SetFilterExpression sets FilterExpression field to given value.
+
+### HasFilterExpression
+
+`func (o *InlineObject253) HasFilterExpression() bool`
+
+HasFilterExpression returns a boolean if a field has been set.
+
+### GetInterface
+
+`func (o *InlineObject253) GetInterface() string`
+
+GetInterface returns the Interface field if non-nil, zero value otherwise.
+
+### GetInterfaceOk
+
+`func (o *InlineObject253) GetInterfaceOk() (*string, bool)`
+
+GetInterfaceOk returns a tuple with the Interface field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInterface
+
+`func (o *InlineObject253) SetInterface(v string)`
+
+SetInterface sets Interface field to given value.
+
+### HasInterface
+
+`func (o *InlineObject253) HasInterface() bool`
+
+HasInterface returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

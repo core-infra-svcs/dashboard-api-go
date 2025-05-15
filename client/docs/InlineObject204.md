@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the organization | [optional] 
-**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
-**Api** | Pointer to [**OrganizationsOrganizationIdApi**](OrganizationsOrganizationIdApi.md) |  | [optional] 
+**Concentrator** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnConcentrator**](NetworksNetworkIdWirelessSsidsNumberVpnConcentrator.md) |  | [optional] 
+**SplitTunnel** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel**](NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel.md) |  | [optional] 
+**Failover** | Pointer to [**NetworksNetworkIdWirelessSsidsNumberVpnFailover**](NetworksNetworkIdWirelessSsidsNumberVpnFailover.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineObject204WithDefaults instantiates a new InlineObject204 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConcentrator
 
-`func (o *InlineObject204) GetName() string`
+`func (o *InlineObject204) GetConcentrator() NetworksNetworkIdWirelessSsidsNumberVpnConcentrator`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConcentrator returns the Concentrator field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConcentratorOk
 
-`func (o *InlineObject204) GetNameOk() (*string, bool)`
+`func (o *InlineObject204) GetConcentratorOk() (*NetworksNetworkIdWirelessSsidsNumberVpnConcentrator, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConcentratorOk returns a tuple with the Concentrator field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConcentrator
 
-`func (o *InlineObject204) SetName(v string)`
+`func (o *InlineObject204) SetConcentrator(v NetworksNetworkIdWirelessSsidsNumberVpnConcentrator)`
 
-SetName sets Name field to given value.
+SetConcentrator sets Concentrator field to given value.
 
-### HasName
+### HasConcentrator
 
-`func (o *InlineObject204) HasName() bool`
+`func (o *InlineObject204) HasConcentrator() bool`
 
-HasName returns a boolean if a field has been set.
+HasConcentrator returns a boolean if a field has been set.
 
-### GetManagement
+### GetSplitTunnel
 
-`func (o *InlineObject204) GetManagement() OrganizationsManagement1`
+`func (o *InlineObject204) GetSplitTunnel() NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel`
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+GetSplitTunnel returns the SplitTunnel field if non-nil, zero value otherwise.
 
-### GetManagementOk
+### GetSplitTunnelOk
 
-`func (o *InlineObject204) GetManagementOk() (*OrganizationsManagement1, bool)`
+`func (o *InlineObject204) GetSplitTunnelOk() (*NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel, bool)`
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+GetSplitTunnelOk returns a tuple with the SplitTunnel field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetSplitTunnel
 
-`func (o *InlineObject204) SetManagement(v OrganizationsManagement1)`
+`func (o *InlineObject204) SetSplitTunnel(v NetworksNetworkIdWirelessSsidsNumberVpnSplitTunnel)`
 
-SetManagement sets Management field to given value.
+SetSplitTunnel sets SplitTunnel field to given value.
 
-### HasManagement
+### HasSplitTunnel
 
-`func (o *InlineObject204) HasManagement() bool`
+`func (o *InlineObject204) HasSplitTunnel() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasSplitTunnel returns a boolean if a field has been set.
 
-### GetApi
+### GetFailover
 
-`func (o *InlineObject204) GetApi() OrganizationsOrganizationIdApi`
+`func (o *InlineObject204) GetFailover() NetworksNetworkIdWirelessSsidsNumberVpnFailover`
 
-GetApi returns the Api field if non-nil, zero value otherwise.
+GetFailover returns the Failover field if non-nil, zero value otherwise.
 
-### GetApiOk
+### GetFailoverOk
 
-`func (o *InlineObject204) GetApiOk() (*OrganizationsOrganizationIdApi, bool)`
+`func (o *InlineObject204) GetFailoverOk() (*NetworksNetworkIdWirelessSsidsNumberVpnFailover, bool)`
 
-GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApi
+### SetFailover
 
-`func (o *InlineObject204) SetApi(v OrganizationsOrganizationIdApi)`
+`func (o *InlineObject204) SetFailover(v NetworksNetworkIdWirelessSsidsNumberVpnFailover)`
 
-SetApi sets Api field to given value.
+SetFailover sets Failover field to given value.
 
-### HasApi
+### HasFailover
 
-`func (o *InlineObject204) HasApi() bool`
+`func (o *InlineObject204) HasFailover() bool`
 
-HasApi returns a boolean if a field has been set.
+HasFailover returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | theme id | [optional] 
-**Name** | Pointer to **string** | theme name | [optional] 
-**ThemeAssets** | Pointer to [**[]OrganizationsOrganizationIdSplashThemesThemeAssets**](OrganizationsOrganizationIdSplashThemesThemeAssets.md) | list of theme assets | [optional] 
+**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200310WithDefaults instantiates a new InlineResponse200310 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetCertificate
 
-`func (o *InlineResponse200310) GetId() string`
+`func (o *InlineResponse200310) GetCertificate() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetCertificate returns the Certificate field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetCertificateOk
 
-`func (o *InlineResponse200310) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200310) GetCertificateOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetCertificate
 
-`func (o *InlineResponse200310) SetId(v string)`
+`func (o *InlineResponse200310) SetCertificate(v string)`
 
-SetId sets Id field to given value.
+SetCertificate sets Certificate field to given value.
 
-### HasId
+### HasCertificate
 
-`func (o *InlineResponse200310) HasId() bool`
+`func (o *InlineResponse200310) HasCertificate() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200310) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200310) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200310) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200310) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetThemeAssets
-
-`func (o *InlineResponse200310) GetThemeAssets() []OrganizationsOrganizationIdSplashThemesThemeAssets`
-
-GetThemeAssets returns the ThemeAssets field if non-nil, zero value otherwise.
-
-### GetThemeAssetsOk
-
-`func (o *InlineResponse200310) GetThemeAssetsOk() (*[]OrganizationsOrganizationIdSplashThemesThemeAssets, bool)`
-
-GetThemeAssetsOk returns a tuple with the ThemeAssets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetThemeAssets
-
-`func (o *InlineResponse200310) SetThemeAssets(v []OrganizationsOrganizationIdSplashThemesThemeAssets)`
-
-SetThemeAssets sets ThemeAssets field to given value.
-
-### HasThemeAssets
-
-`func (o *InlineResponse200310) HasThemeAssets() bool`
-
-HasThemeAssets returns a boolean if a field has been set.
+HasCertificate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

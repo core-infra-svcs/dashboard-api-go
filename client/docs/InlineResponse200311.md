@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
-**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200311Items**](InlineResponse200311Items.md) | Sentry Group Policies for the Organization keyed by Network Id | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200311WithDefaults instantiates a new InlineResponse200311 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTs
+### GetItems
 
-`func (o *InlineResponse200311) GetTs() time.Time`
+`func (o *InlineResponse200311) GetItems() []InlineResponse200311Items`
 
-GetTs returns the Ts field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetTsOk
+### GetItemsOk
 
-`func (o *InlineResponse200311) GetTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200311) GetItemsOk() (*[]InlineResponse200311Items, bool)`
 
-GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTs
+### SetItems
 
-`func (o *InlineResponse200311) SetTs(v time.Time)`
+`func (o *InlineResponse200311) SetItems(v []InlineResponse200311Items)`
 
-SetTs sets Ts field to given value.
+SetItems sets Items field to given value.
 
-### HasTs
+### HasItems
 
-`func (o *InlineResponse200311) HasTs() bool`
+`func (o *InlineResponse200311) HasItems() bool`
 
-HasTs returns a boolean if a field has been set.
-
-### GetDraw
-
-`func (o *InlineResponse200311) GetDraw() float32`
-
-GetDraw returns the Draw field if non-nil, zero value otherwise.
-
-### GetDrawOk
-
-`func (o *InlineResponse200311) GetDrawOk() (*float32, bool)`
-
-GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDraw
-
-`func (o *InlineResponse200311) SetDraw(v float32)`
-
-SetDraw sets Draw field to given value.
-
-### HasDraw
-
-`func (o *InlineResponse200311) HasDraw() bool`
-
-HasDraw returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

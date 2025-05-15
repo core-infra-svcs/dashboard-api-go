@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AllowedRules** | [**[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules**](OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules.md) | Sets a list of specific SNORT signatures to allow | 
+**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems.md) | List containing the assignment ID | 
 
 ## Methods
 
 ### NewInlineObject228
 
-`func NewInlineObject228(allowedRules []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, ) *InlineObject228`
+`func NewInlineObject228(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, ) *InlineObject228`
 
 NewInlineObject228 instantiates a new InlineObject228 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject228WithDefaults instantiates a new InlineObject228 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAllowedRules
+### GetItems
 
-`func (o *InlineObject228) GetAllowedRules() []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules`
+`func (o *InlineObject228) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems`
 
-GetAllowedRules returns the AllowedRules field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetAllowedRulesOk
+### GetItemsOk
 
-`func (o *InlineObject228) GetAllowedRulesOk() (*[]OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules, bool)`
+`func (o *InlineObject228) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, bool)`
 
-GetAllowedRulesOk returns a tuple with the AllowedRules field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowedRules
+### SetItems
 
-`func (o *InlineObject228) SetAllowedRules(v []OrganizationsOrganizationIdApplianceSecurityIntrusionAllowedRules)`
+`func (o *InlineObject228) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems)`
 
-SetAllowedRules sets AllowedRules field to given value.
+SetItems sets Items field to given value.
 
 
 

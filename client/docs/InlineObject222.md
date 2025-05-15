@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | **string** | Hostname for the DNS record | 
-**Address** | **string** | IP for the DNS record | 
-**Profile** | [**OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile**](OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile.md) |  | 
+**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems.md) | List containing the assignment ID | 
 
 ## Methods
 
 ### NewInlineObject222
 
-`func NewInlineObject222(hostname string, address string, profile OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, ) *InlineObject222`
+`func NewInlineObject222(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, ) *InlineObject222`
 
 NewInlineObject222 instantiates a new InlineObject222 object
 This constructor will assign default values to properties that have it defined,
@@ -27,64 +25,24 @@ NewInlineObject222WithDefaults instantiates a new InlineObject222 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetHostname
+### GetItems
 
-`func (o *InlineObject222) GetHostname() string`
+`func (o *InlineObject222) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems`
 
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetHostnameOk
+### GetItemsOk
 
-`func (o *InlineObject222) GetHostnameOk() (*string, bool)`
+`func (o *InlineObject222) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, bool)`
 
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostname
+### SetItems
 
-`func (o *InlineObject222) SetHostname(v string)`
+`func (o *InlineObject222) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems)`
 
-SetHostname sets Hostname field to given value.
-
-
-### GetAddress
-
-`func (o *InlineObject222) GetAddress() string`
-
-GetAddress returns the Address field if non-nil, zero value otherwise.
-
-### GetAddressOk
-
-`func (o *InlineObject222) GetAddressOk() (*string, bool)`
-
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAddress
-
-`func (o *InlineObject222) SetAddress(v string)`
-
-SetAddress sets Address field to given value.
-
-
-### GetProfile
-
-`func (o *InlineObject222) GetProfile() OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile`
-
-GetProfile returns the Profile field if non-nil, zero value otherwise.
-
-### GetProfileOk
-
-`func (o *InlineObject222) GetProfileOk() (*OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile, bool)`
-
-GetProfileOk returns a tuple with the Profile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProfile
-
-`func (o *InlineObject222) SetProfile(v OrganizationsOrganizationIdApplianceDnsLocalRecordsProfile)`
-
-SetProfile sets Profile field to given value.
+SetItems sets Items field to given value.
 
 
 

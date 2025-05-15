@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | [**[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices.md) | A set of devices to import (or update) | 
-**Options** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions.md) |  | [optional] 
+**ShortName** | **string** | Short name of the early access feature | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject261
 
-`func NewInlineObject261(devices []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, ) *InlineObject261`
+`func NewInlineObject261(shortName string, ) *InlineObject261`
 
 NewInlineObject261 instantiates a new InlineObject261 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +26,50 @@ NewInlineObject261WithDefaults instantiates a new InlineObject261 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevices
+### GetShortName
 
-`func (o *InlineObject261) GetDevices() []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices`
+`func (o *InlineObject261) GetShortName() string`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetShortNameOk
 
-`func (o *InlineObject261) GetDevicesOk() (*[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, bool)`
+`func (o *InlineObject261) GetShortNameOk() (*string, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetShortName
 
-`func (o *InlineObject261) SetDevices(v []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices)`
+`func (o *InlineObject261) SetShortName(v string)`
 
-SetDevices sets Devices field to given value.
+SetShortName sets ShortName field to given value.
 
 
-### GetOptions
+### GetLimitScopeToNetworks
 
-`func (o *InlineObject261) GetOptions() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions`
+`func (o *InlineObject261) GetLimitScopeToNetworks() []string`
 
-GetOptions returns the Options field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetOptionsOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineObject261) GetOptionsOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions, bool)`
+`func (o *InlineObject261) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-GetOptionsOk returns a tuple with the Options field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOptions
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject261) SetOptions(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions)`
+`func (o *InlineObject261) SetLimitScopeToNetworks(v []string)`
 
-SetOptions sets Options field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
-### HasOptions
+### HasLimitScopeToNetworks
 
-`func (o *InlineObject261) HasOptions() bool`
+`func (o *InlineObject261) HasLimitScopeToNetworks() bool`
 
-HasOptions returns a boolean if a field has been set.
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

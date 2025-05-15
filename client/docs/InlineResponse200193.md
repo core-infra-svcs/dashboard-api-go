@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**MeshRoute** | Pointer to **[]string** | List of device serials that make up the mesh. | [optional] 
-**LatestMeshPerformance** | Pointer to [**NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance**](NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AvgLatencyMs** | Pointer to **int32** | Average latency in milliseconds | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200193WithDefaults instantiates a new InlineResponse200193 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetStartTs
 
-`func (o *InlineResponse200193) GetSerial() string`
+`func (o *InlineResponse200193) GetStartTs() time.Time`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetStartTsOk
 
-`func (o *InlineResponse200193) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200193) GetStartTsOk() (*time.Time, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetStartTs
 
-`func (o *InlineResponse200193) SetSerial(v string)`
+`func (o *InlineResponse200193) SetStartTs(v time.Time)`
 
-SetSerial sets Serial field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasSerial
+### HasStartTs
 
-`func (o *InlineResponse200193) HasSerial() bool`
+`func (o *InlineResponse200193) HasStartTs() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetMeshRoute
+### GetEndTs
 
-`func (o *InlineResponse200193) GetMeshRoute() []string`
+`func (o *InlineResponse200193) GetEndTs() time.Time`
 
-GetMeshRoute returns the MeshRoute field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetMeshRouteOk
+### GetEndTsOk
 
-`func (o *InlineResponse200193) GetMeshRouteOk() (*[]string, bool)`
+`func (o *InlineResponse200193) GetEndTsOk() (*time.Time, bool)`
 
-GetMeshRouteOk returns a tuple with the MeshRoute field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeshRoute
+### SetEndTs
 
-`func (o *InlineResponse200193) SetMeshRoute(v []string)`
+`func (o *InlineResponse200193) SetEndTs(v time.Time)`
 
-SetMeshRoute sets MeshRoute field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasMeshRoute
+### HasEndTs
 
-`func (o *InlineResponse200193) HasMeshRoute() bool`
+`func (o *InlineResponse200193) HasEndTs() bool`
 
-HasMeshRoute returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetLatestMeshPerformance
+### GetAvgLatencyMs
 
-`func (o *InlineResponse200193) GetLatestMeshPerformance() NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance`
+`func (o *InlineResponse200193) GetAvgLatencyMs() int32`
 
-GetLatestMeshPerformance returns the LatestMeshPerformance field if non-nil, zero value otherwise.
+GetAvgLatencyMs returns the AvgLatencyMs field if non-nil, zero value otherwise.
 
-### GetLatestMeshPerformanceOk
+### GetAvgLatencyMsOk
 
-`func (o *InlineResponse200193) GetLatestMeshPerformanceOk() (*NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance, bool)`
+`func (o *InlineResponse200193) GetAvgLatencyMsOk() (*int32, bool)`
 
-GetLatestMeshPerformanceOk returns a tuple with the LatestMeshPerformance field if it's non-nil, zero value otherwise
+GetAvgLatencyMsOk returns a tuple with the AvgLatencyMs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLatestMeshPerformance
+### SetAvgLatencyMs
 
-`func (o *InlineResponse200193) SetLatestMeshPerformance(v NetworksNetworkIdWirelessMeshStatusesLatestMeshPerformance)`
+`func (o *InlineResponse200193) SetAvgLatencyMs(v int32)`
 
-SetLatestMeshPerformance sets LatestMeshPerformance field to given value.
+SetAvgLatencyMs sets AvgLatencyMs field to given value.
 
-### HasLatestMeshPerformance
+### HasAvgLatencyMs
 
-`func (o *InlineResponse200193) HasLatestMeshPerformance() bool`
+`func (o *InlineResponse200193) HasAvgLatencyMs() bool`
 
-HasLatestMeshPerformance returns a boolean if a field has been set.
+HasAvgLatencyMs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

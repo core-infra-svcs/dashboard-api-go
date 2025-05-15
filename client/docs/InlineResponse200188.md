@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hostname** | Pointer to **string** | Desired ESL hostname of the network | [optional] 
-**Enabled** | Pointer to **bool** | Turn ESL features on and off for this network | [optional] 
-**Mode** | Pointer to **string** | Electronic shelf label mode of the network. Valid options are &#39;Bluetooth&#39;, &#39;high frequency&#39; | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**AverageKbps** | Pointer to **int32** | Average data rate in kilobytes-per-second | [optional] 
+**DownloadKbps** | Pointer to **int32** | Download rate in kilobytes-per-second | [optional] 
+**UploadKbps** | Pointer to **int32** | Upload rate in kilobytes-per-second | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineResponse200188WithDefaults instantiates a new InlineResponse200188 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetHostname
+### GetStartTs
 
-`func (o *InlineResponse200188) GetHostname() string`
+`func (o *InlineResponse200188) GetStartTs() time.Time`
 
-GetHostname returns the Hostname field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetHostnameOk
+### GetStartTsOk
 
-`func (o *InlineResponse200188) GetHostnameOk() (*string, bool)`
+`func (o *InlineResponse200188) GetStartTsOk() (*time.Time, bool)`
 
-GetHostnameOk returns a tuple with the Hostname field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHostname
+### SetStartTs
 
-`func (o *InlineResponse200188) SetHostname(v string)`
+`func (o *InlineResponse200188) SetStartTs(v time.Time)`
 
-SetHostname sets Hostname field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasHostname
+### HasStartTs
 
-`func (o *InlineResponse200188) HasHostname() bool`
+`func (o *InlineResponse200188) HasStartTs() bool`
 
-HasHostname returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetEnabled
+### GetEndTs
 
-`func (o *InlineResponse200188) GetEnabled() bool`
+`func (o *InlineResponse200188) GetEndTs() time.Time`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetEndTsOk
 
-`func (o *InlineResponse200188) GetEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200188) GetEndTsOk() (*time.Time, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetEndTs
 
-`func (o *InlineResponse200188) SetEnabled(v bool)`
+`func (o *InlineResponse200188) SetEndTs(v time.Time)`
 
-SetEnabled sets Enabled field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasEnabled
+### HasEndTs
 
-`func (o *InlineResponse200188) HasEnabled() bool`
+`func (o *InlineResponse200188) HasEndTs() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
 
-### GetMode
+### GetAverageKbps
 
-`func (o *InlineResponse200188) GetMode() string`
+`func (o *InlineResponse200188) GetAverageKbps() int32`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetAverageKbps returns the AverageKbps field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetAverageKbpsOk
 
-`func (o *InlineResponse200188) GetModeOk() (*string, bool)`
+`func (o *InlineResponse200188) GetAverageKbpsOk() (*int32, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetAverageKbpsOk returns a tuple with the AverageKbps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetAverageKbps
 
-`func (o *InlineResponse200188) SetMode(v string)`
+`func (o *InlineResponse200188) SetAverageKbps(v int32)`
 
-SetMode sets Mode field to given value.
+SetAverageKbps sets AverageKbps field to given value.
 
-### HasMode
+### HasAverageKbps
 
-`func (o *InlineResponse200188) HasMode() bool`
+`func (o *InlineResponse200188) HasAverageKbps() bool`
 
-HasMode returns a boolean if a field has been set.
+HasAverageKbps returns a boolean if a field has been set.
+
+### GetDownloadKbps
+
+`func (o *InlineResponse200188) GetDownloadKbps() int32`
+
+GetDownloadKbps returns the DownloadKbps field if non-nil, zero value otherwise.
+
+### GetDownloadKbpsOk
+
+`func (o *InlineResponse200188) GetDownloadKbpsOk() (*int32, bool)`
+
+GetDownloadKbpsOk returns a tuple with the DownloadKbps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownloadKbps
+
+`func (o *InlineResponse200188) SetDownloadKbps(v int32)`
+
+SetDownloadKbps sets DownloadKbps field to given value.
+
+### HasDownloadKbps
+
+`func (o *InlineResponse200188) HasDownloadKbps() bool`
+
+HasDownloadKbps returns a boolean if a field has been set.
+
+### GetUploadKbps
+
+`func (o *InlineResponse200188) GetUploadKbps() int32`
+
+GetUploadKbps returns the UploadKbps field if non-nil, zero value otherwise.
+
+### GetUploadKbpsOk
+
+`func (o *InlineResponse200188) GetUploadKbpsOk() (*int32, bool)`
+
+GetUploadKbpsOk returns a tuple with the UploadKbps field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUploadKbps
+
+`func (o *InlineResponse200188) SetUploadKbps(v int32)`
+
+SetUploadKbps sets UploadKbps field to given value.
+
+### HasUploadKbps
+
+`func (o *InlineResponse200188) HasUploadKbps() bool`
+
+HasUploadKbps returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

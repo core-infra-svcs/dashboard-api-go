@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Access points cloud ID | [optional] 
-**Controller** | Pointer to [**InlineResponse200353Controller**](InlineResponse200353Controller.md) |  | [optional] 
-**Network** | Pointer to [**InlineResponse200353Network**](InlineResponse200353Network.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Name** | Pointer to **string** | Network Name | [optional] 
+**Enabled** | Pointer to **bool** | Whether to enable collection of location and scanning analytics | [optional] 
+**Api** | Pointer to [**InlineResponse200194Api**](InlineResponse200194Api.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200353ItemsWithDefaults instantiates a new InlineResponse200353
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetNetworkId
 
-`func (o *InlineResponse200353Items) GetSerial() string`
+`func (o *InlineResponse200353Items) GetNetworkId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200353Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200353Items) GetNetworkIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetNetworkId
 
-`func (o *InlineResponse200353Items) SetSerial(v string)`
+`func (o *InlineResponse200353Items) SetNetworkId(v string)`
 
-SetSerial sets Serial field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasSerial
+### HasNetworkId
 
-`func (o *InlineResponse200353Items) HasSerial() bool`
+`func (o *InlineResponse200353Items) HasNetworkId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetController
+### GetName
 
-`func (o *InlineResponse200353Items) GetController() InlineResponse200353Controller`
+`func (o *InlineResponse200353Items) GetName() string`
 
-GetController returns the Controller field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetControllerOk
+### GetNameOk
 
-`func (o *InlineResponse200353Items) GetControllerOk() (*InlineResponse200353Controller, bool)`
+`func (o *InlineResponse200353Items) GetNameOk() (*string, bool)`
 
-GetControllerOk returns a tuple with the Controller field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetController
+### SetName
 
-`func (o *InlineResponse200353Items) SetController(v InlineResponse200353Controller)`
+`func (o *InlineResponse200353Items) SetName(v string)`
 
-SetController sets Controller field to given value.
+SetName sets Name field to given value.
 
-### HasController
+### HasName
 
-`func (o *InlineResponse200353Items) HasController() bool`
+`func (o *InlineResponse200353Items) HasName() bool`
 
-HasController returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetNetwork
+### GetEnabled
 
-`func (o *InlineResponse200353Items) GetNetwork() InlineResponse200353Network`
+`func (o *InlineResponse200353Items) GetEnabled() bool`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetEnabledOk
 
-`func (o *InlineResponse200353Items) GetNetworkOk() (*InlineResponse200353Network, bool)`
+`func (o *InlineResponse200353Items) GetEnabledOk() (*bool, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetEnabled
 
-`func (o *InlineResponse200353Items) SetNetwork(v InlineResponse200353Network)`
+`func (o *InlineResponse200353Items) SetEnabled(v bool)`
 
-SetNetwork sets Network field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasNetwork
+### HasEnabled
 
-`func (o *InlineResponse200353Items) HasNetwork() bool`
+`func (o *InlineResponse200353Items) HasEnabled() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
+
+### GetApi
+
+`func (o *InlineResponse200353Items) GetApi() InlineResponse200194Api`
+
+GetApi returns the Api field if non-nil, zero value otherwise.
+
+### GetApiOk
+
+`func (o *InlineResponse200353Items) GetApiOk() (*InlineResponse200194Api, bool)`
+
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApi
+
+`func (o *InlineResponse200353Items) SetApi(v InlineResponse200194Api)`
+
+SetApi sets Api field to given value.
+
+### HasApi
+
+`func (o *InlineResponse200353Items) HasApi() bool`
+
+HasApi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

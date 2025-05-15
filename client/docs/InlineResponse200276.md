@@ -4,10 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Serial of the device | [optional] 
-**Name** | Pointer to **string** | Name assigned to the device | [optional] 
-**DeviceStatus** | Pointer to **string** | Status of the device upgrade | [optional] 
-**Upgrade** | Pointer to [**OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade**](OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200276Items**](InlineResponse200276Items.md) | The top-level property containing all memory utilization data. | [optional] 
+**Meta** | Pointer to [**InlineResponse200276Meta**](InlineResponse200276Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +26,55 @@ NewInlineResponse200276WithDefaults instantiates a new InlineResponse200276 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetItems
 
-`func (o *InlineResponse200276) GetSerial() string`
+`func (o *InlineResponse200276) GetItems() []InlineResponse200276Items`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetItemsOk
 
-`func (o *InlineResponse200276) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200276) GetItemsOk() (*[]InlineResponse200276Items, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetItems
 
-`func (o *InlineResponse200276) SetSerial(v string)`
+`func (o *InlineResponse200276) SetItems(v []InlineResponse200276Items)`
 
-SetSerial sets Serial field to given value.
+SetItems sets Items field to given value.
 
-### HasSerial
+### HasItems
 
-`func (o *InlineResponse200276) HasSerial() bool`
+`func (o *InlineResponse200276) HasItems() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetName
+### GetMeta
 
-`func (o *InlineResponse200276) GetName() string`
+`func (o *InlineResponse200276) GetMeta() InlineResponse200276Meta`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetMetaOk
 
-`func (o *InlineResponse200276) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200276) GetMetaOk() (*InlineResponse200276Meta, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetMeta
 
-`func (o *InlineResponse200276) SetName(v string)`
+`func (o *InlineResponse200276) SetMeta(v InlineResponse200276Meta)`
 
-SetName sets Name field to given value.
+SetMeta sets Meta field to given value.
 
-### HasName
+### HasMeta
 
-`func (o *InlineResponse200276) HasName() bool`
+`func (o *InlineResponse200276) HasMeta() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetDeviceStatus
-
-`func (o *InlineResponse200276) GetDeviceStatus() string`
-
-GetDeviceStatus returns the DeviceStatus field if non-nil, zero value otherwise.
-
-### GetDeviceStatusOk
-
-`func (o *InlineResponse200276) GetDeviceStatusOk() (*string, bool)`
-
-GetDeviceStatusOk returns a tuple with the DeviceStatus field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceStatus
-
-`func (o *InlineResponse200276) SetDeviceStatus(v string)`
-
-SetDeviceStatus sets DeviceStatus field to given value.
-
-### HasDeviceStatus
-
-`func (o *InlineResponse200276) HasDeviceStatus() bool`
-
-HasDeviceStatus returns a boolean if a field has been set.
-
-### GetUpgrade
-
-`func (o *InlineResponse200276) GetUpgrade() OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade`
-
-GetUpgrade returns the Upgrade field if non-nil, zero value otherwise.
-
-### GetUpgradeOk
-
-`func (o *InlineResponse200276) GetUpgradeOk() (*OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade, bool)`
-
-GetUpgradeOk returns a tuple with the Upgrade field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUpgrade
-
-`func (o *InlineResponse200276) SetUpgrade(v OrganizationsOrganizationIdFirmwareUpgradesByDeviceUpgrade)`
-
-SetUpgrade sets Upgrade field to given value.
-
-### HasUpgrade
-
-`func (o *InlineResponse200276) HasUpgrade() bool`
-
-HasUpgrade returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,19 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the new profile. Must be unique. | [optional] 
-**IsIndoorDefault** | Pointer to **bool** | Set this profile as the default indoor rf profile. If the profile ID is one of &#39;indoor&#39; or &#39;outdoor&#39;,   then a new profile will be created from the respective ID and set as the default | [optional] 
-**IsOutdoorDefault** | Pointer to **bool** | Set this profile as the default outdoor rf profile. If the profile ID is one of &#39;indoor&#39; or &#39;outdoor&#39;,   then a new profile will be created from the respective ID and set as the default | [optional] 
-**ClientBalancingEnabled** | Pointer to **bool** | Steers client to best available access point. Can be either true or false. | [optional] 
-**MinBitrateType** | Pointer to **string** | Minimum bitrate can be set to either &#39;band&#39; or &#39;ssid&#39;. | [optional] 
-**BandSelectionType** | Pointer to **string** | Band selection can be set to either &#39;ssid&#39; or &#39;ap&#39;. | [optional] 
-**ApBandSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings.md) |  | [optional] 
-**TwoFourGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings.md) |  | [optional] 
-**FiveGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings.md) |  | [optional] 
-**SixGhzSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings**](NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings.md) |  | [optional] 
-**Transmission** | Pointer to [**InlineResponse200194Transmission**](InlineResponse200194Transmission.md) |  | [optional] 
-**PerSsidSettings** | Pointer to [**NetworksNetworkIdWirelessRfProfilesPerSsidSettings**](NetworksNetworkIdWirelessRfProfilesPerSsidSettings.md) |  | [optional] 
-**FlexRadios** | Pointer to [**NetworksNetworkIdWirelessRfProfilesFlexRadios**](NetworksNetworkIdWirelessRfProfilesFlexRadios.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Collect location and scanning analytics | [optional] 
+**Api** | Pointer to [**NetworksNetworkIdWirelessLocationScanningApi**](NetworksNetworkIdWirelessLocationScanningApi.md) |  | [optional] 
 
 ## Methods
 
@@ -37,330 +26,55 @@ NewInlineObject188WithDefaults instantiates a new InlineObject188 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabled
 
-`func (o *InlineObject188) GetName() string`
+`func (o *InlineObject188) GetEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledOk
 
-`func (o *InlineObject188) GetNameOk() (*string, bool)`
+`func (o *InlineObject188) GetEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabled
 
-`func (o *InlineObject188) SetName(v string)`
+`func (o *InlineObject188) SetEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasName
+### HasEnabled
 
-`func (o *InlineObject188) HasName() bool`
+`func (o *InlineObject188) HasEnabled() bool`
 
-HasName returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetIsIndoorDefault
+### GetApi
 
-`func (o *InlineObject188) GetIsIndoorDefault() bool`
+`func (o *InlineObject188) GetApi() NetworksNetworkIdWirelessLocationScanningApi`
 
-GetIsIndoorDefault returns the IsIndoorDefault field if non-nil, zero value otherwise.
+GetApi returns the Api field if non-nil, zero value otherwise.
 
-### GetIsIndoorDefaultOk
+### GetApiOk
 
-`func (o *InlineObject188) GetIsIndoorDefaultOk() (*bool, bool)`
+`func (o *InlineObject188) GetApiOk() (*NetworksNetworkIdWirelessLocationScanningApi, bool)`
 
-GetIsIndoorDefaultOk returns a tuple with the IsIndoorDefault field if it's non-nil, zero value otherwise
+GetApiOk returns a tuple with the Api field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsIndoorDefault
+### SetApi
 
-`func (o *InlineObject188) SetIsIndoorDefault(v bool)`
+`func (o *InlineObject188) SetApi(v NetworksNetworkIdWirelessLocationScanningApi)`
 
-SetIsIndoorDefault sets IsIndoorDefault field to given value.
+SetApi sets Api field to given value.
 
-### HasIsIndoorDefault
+### HasApi
 
-`func (o *InlineObject188) HasIsIndoorDefault() bool`
+`func (o *InlineObject188) HasApi() bool`
 
-HasIsIndoorDefault returns a boolean if a field has been set.
-
-### GetIsOutdoorDefault
-
-`func (o *InlineObject188) GetIsOutdoorDefault() bool`
-
-GetIsOutdoorDefault returns the IsOutdoorDefault field if non-nil, zero value otherwise.
-
-### GetIsOutdoorDefaultOk
-
-`func (o *InlineObject188) GetIsOutdoorDefaultOk() (*bool, bool)`
-
-GetIsOutdoorDefaultOk returns a tuple with the IsOutdoorDefault field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsOutdoorDefault
-
-`func (o *InlineObject188) SetIsOutdoorDefault(v bool)`
-
-SetIsOutdoorDefault sets IsOutdoorDefault field to given value.
-
-### HasIsOutdoorDefault
-
-`func (o *InlineObject188) HasIsOutdoorDefault() bool`
-
-HasIsOutdoorDefault returns a boolean if a field has been set.
-
-### GetClientBalancingEnabled
-
-`func (o *InlineObject188) GetClientBalancingEnabled() bool`
-
-GetClientBalancingEnabled returns the ClientBalancingEnabled field if non-nil, zero value otherwise.
-
-### GetClientBalancingEnabledOk
-
-`func (o *InlineObject188) GetClientBalancingEnabledOk() (*bool, bool)`
-
-GetClientBalancingEnabledOk returns a tuple with the ClientBalancingEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClientBalancingEnabled
-
-`func (o *InlineObject188) SetClientBalancingEnabled(v bool)`
-
-SetClientBalancingEnabled sets ClientBalancingEnabled field to given value.
-
-### HasClientBalancingEnabled
-
-`func (o *InlineObject188) HasClientBalancingEnabled() bool`
-
-HasClientBalancingEnabled returns a boolean if a field has been set.
-
-### GetMinBitrateType
-
-`func (o *InlineObject188) GetMinBitrateType() string`
-
-GetMinBitrateType returns the MinBitrateType field if non-nil, zero value otherwise.
-
-### GetMinBitrateTypeOk
-
-`func (o *InlineObject188) GetMinBitrateTypeOk() (*string, bool)`
-
-GetMinBitrateTypeOk returns a tuple with the MinBitrateType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinBitrateType
-
-`func (o *InlineObject188) SetMinBitrateType(v string)`
-
-SetMinBitrateType sets MinBitrateType field to given value.
-
-### HasMinBitrateType
-
-`func (o *InlineObject188) HasMinBitrateType() bool`
-
-HasMinBitrateType returns a boolean if a field has been set.
-
-### GetBandSelectionType
-
-`func (o *InlineObject188) GetBandSelectionType() string`
-
-GetBandSelectionType returns the BandSelectionType field if non-nil, zero value otherwise.
-
-### GetBandSelectionTypeOk
-
-`func (o *InlineObject188) GetBandSelectionTypeOk() (*string, bool)`
-
-GetBandSelectionTypeOk returns a tuple with the BandSelectionType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBandSelectionType
-
-`func (o *InlineObject188) SetBandSelectionType(v string)`
-
-SetBandSelectionType sets BandSelectionType field to given value.
-
-### HasBandSelectionType
-
-`func (o *InlineObject188) HasBandSelectionType() bool`
-
-HasBandSelectionType returns a boolean if a field has been set.
-
-### GetApBandSettings
-
-`func (o *InlineObject188) GetApBandSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings`
-
-GetApBandSettings returns the ApBandSettings field if non-nil, zero value otherwise.
-
-### GetApBandSettingsOk
-
-`func (o *InlineObject188) GetApBandSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings, bool)`
-
-GetApBandSettingsOk returns a tuple with the ApBandSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApBandSettings
-
-`func (o *InlineObject188) SetApBandSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdApBandSettings)`
-
-SetApBandSettings sets ApBandSettings field to given value.
-
-### HasApBandSettings
-
-`func (o *InlineObject188) HasApBandSettings() bool`
-
-HasApBandSettings returns a boolean if a field has been set.
-
-### GetTwoFourGhzSettings
-
-`func (o *InlineObject188) GetTwoFourGhzSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings`
-
-GetTwoFourGhzSettings returns the TwoFourGhzSettings field if non-nil, zero value otherwise.
-
-### GetTwoFourGhzSettingsOk
-
-`func (o *InlineObject188) GetTwoFourGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings, bool)`
-
-GetTwoFourGhzSettingsOk returns a tuple with the TwoFourGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTwoFourGhzSettings
-
-`func (o *InlineObject188) SetTwoFourGhzSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdTwoFourGhzSettings)`
-
-SetTwoFourGhzSettings sets TwoFourGhzSettings field to given value.
-
-### HasTwoFourGhzSettings
-
-`func (o *InlineObject188) HasTwoFourGhzSettings() bool`
-
-HasTwoFourGhzSettings returns a boolean if a field has been set.
-
-### GetFiveGhzSettings
-
-`func (o *InlineObject188) GetFiveGhzSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings`
-
-GetFiveGhzSettings returns the FiveGhzSettings field if non-nil, zero value otherwise.
-
-### GetFiveGhzSettingsOk
-
-`func (o *InlineObject188) GetFiveGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings, bool)`
-
-GetFiveGhzSettingsOk returns a tuple with the FiveGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFiveGhzSettings
-
-`func (o *InlineObject188) SetFiveGhzSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdFiveGhzSettings)`
-
-SetFiveGhzSettings sets FiveGhzSettings field to given value.
-
-### HasFiveGhzSettings
-
-`func (o *InlineObject188) HasFiveGhzSettings() bool`
-
-HasFiveGhzSettings returns a boolean if a field has been set.
-
-### GetSixGhzSettings
-
-`func (o *InlineObject188) GetSixGhzSettings() NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings`
-
-GetSixGhzSettings returns the SixGhzSettings field if non-nil, zero value otherwise.
-
-### GetSixGhzSettingsOk
-
-`func (o *InlineObject188) GetSixGhzSettingsOk() (*NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings, bool)`
-
-GetSixGhzSettingsOk returns a tuple with the SixGhzSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSixGhzSettings
-
-`func (o *InlineObject188) SetSixGhzSettings(v NetworksNetworkIdWirelessRfProfilesRfProfileIdSixGhzSettings)`
-
-SetSixGhzSettings sets SixGhzSettings field to given value.
-
-### HasSixGhzSettings
-
-`func (o *InlineObject188) HasSixGhzSettings() bool`
-
-HasSixGhzSettings returns a boolean if a field has been set.
-
-### GetTransmission
-
-`func (o *InlineObject188) GetTransmission() InlineResponse200194Transmission`
-
-GetTransmission returns the Transmission field if non-nil, zero value otherwise.
-
-### GetTransmissionOk
-
-`func (o *InlineObject188) GetTransmissionOk() (*InlineResponse200194Transmission, bool)`
-
-GetTransmissionOk returns a tuple with the Transmission field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTransmission
-
-`func (o *InlineObject188) SetTransmission(v InlineResponse200194Transmission)`
-
-SetTransmission sets Transmission field to given value.
-
-### HasTransmission
-
-`func (o *InlineObject188) HasTransmission() bool`
-
-HasTransmission returns a boolean if a field has been set.
-
-### GetPerSsidSettings
-
-`func (o *InlineObject188) GetPerSsidSettings() NetworksNetworkIdWirelessRfProfilesPerSsidSettings`
-
-GetPerSsidSettings returns the PerSsidSettings field if non-nil, zero value otherwise.
-
-### GetPerSsidSettingsOk
-
-`func (o *InlineObject188) GetPerSsidSettingsOk() (*NetworksNetworkIdWirelessRfProfilesPerSsidSettings, bool)`
-
-GetPerSsidSettingsOk returns a tuple with the PerSsidSettings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPerSsidSettings
-
-`func (o *InlineObject188) SetPerSsidSettings(v NetworksNetworkIdWirelessRfProfilesPerSsidSettings)`
-
-SetPerSsidSettings sets PerSsidSettings field to given value.
-
-### HasPerSsidSettings
-
-`func (o *InlineObject188) HasPerSsidSettings() bool`
-
-HasPerSsidSettings returns a boolean if a field has been set.
-
-### GetFlexRadios
-
-`func (o *InlineObject188) GetFlexRadios() NetworksNetworkIdWirelessRfProfilesFlexRadios`
-
-GetFlexRadios returns the FlexRadios field if non-nil, zero value otherwise.
-
-### GetFlexRadiosOk
-
-`func (o *InlineObject188) GetFlexRadiosOk() (*NetworksNetworkIdWirelessRfProfilesFlexRadios, bool)`
-
-GetFlexRadiosOk returns a tuple with the FlexRadios field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFlexRadios
-
-`func (o *InlineObject188) SetFlexRadios(v NetworksNetworkIdWirelessRfProfilesFlexRadios)`
-
-SetFlexRadios sets FlexRadios field to given value.
-
-### HasFlexRadios
-
-`func (o *InlineObject188) HasFlexRadios() bool`
-
-HasFlexRadios returns a boolean if a field has been set.
+HasApi returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

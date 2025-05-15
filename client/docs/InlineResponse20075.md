@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mode** | Pointer to **string** | The site-to-site VPN mode. | [optional] 
-**Hubs** | Pointer to [**[]InlineResponse20075Hubs**](InlineResponse20075Hubs.md) | The list of VPN hubs, in order of preference. | [optional] 
-**Subnets** | Pointer to [**[]InlineResponse20075Subnets**](InlineResponse20075Subnets.md) | The list of subnets and their VPN presence. | [optional] 
-**Subnet** | Pointer to [**InlineResponse20075Subnet**](InlineResponse20075Subnet.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Whether BGP is enabled on the appliance | [optional] 
+**AsNumber** | Pointer to **int32** | The number of the Autonomous System to which the appliance belongs | [optional] 
+**IbgpHoldTimer** | Pointer to **int32** | The iBGP hold time in seconds | [optional] 
+**Neighbors** | Pointer to [**[]InlineResponse20075Neighbors**](InlineResponse20075Neighbors.md) | List of eBGP neighbor configurations | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse20075WithDefaults instantiates a new InlineResponse20075 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMode
+### GetEnabled
 
-`func (o *InlineResponse20075) GetMode() string`
+`func (o *InlineResponse20075) GetEnabled() bool`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetEnabledOk
 
-`func (o *InlineResponse20075) GetModeOk() (*string, bool)`
+`func (o *InlineResponse20075) GetEnabledOk() (*bool, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetEnabled
 
-`func (o *InlineResponse20075) SetMode(v string)`
+`func (o *InlineResponse20075) SetEnabled(v bool)`
 
-SetMode sets Mode field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasMode
+### HasEnabled
 
-`func (o *InlineResponse20075) HasMode() bool`
+`func (o *InlineResponse20075) HasEnabled() bool`
 
-HasMode returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetHubs
+### GetAsNumber
 
-`func (o *InlineResponse20075) GetHubs() []InlineResponse20075Hubs`
+`func (o *InlineResponse20075) GetAsNumber() int32`
 
-GetHubs returns the Hubs field if non-nil, zero value otherwise.
+GetAsNumber returns the AsNumber field if non-nil, zero value otherwise.
 
-### GetHubsOk
+### GetAsNumberOk
 
-`func (o *InlineResponse20075) GetHubsOk() (*[]InlineResponse20075Hubs, bool)`
+`func (o *InlineResponse20075) GetAsNumberOk() (*int32, bool)`
 
-GetHubsOk returns a tuple with the Hubs field if it's non-nil, zero value otherwise
+GetAsNumberOk returns a tuple with the AsNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHubs
+### SetAsNumber
 
-`func (o *InlineResponse20075) SetHubs(v []InlineResponse20075Hubs)`
+`func (o *InlineResponse20075) SetAsNumber(v int32)`
 
-SetHubs sets Hubs field to given value.
+SetAsNumber sets AsNumber field to given value.
 
-### HasHubs
+### HasAsNumber
 
-`func (o *InlineResponse20075) HasHubs() bool`
+`func (o *InlineResponse20075) HasAsNumber() bool`
 
-HasHubs returns a boolean if a field has been set.
+HasAsNumber returns a boolean if a field has been set.
 
-### GetSubnets
+### GetIbgpHoldTimer
 
-`func (o *InlineResponse20075) GetSubnets() []InlineResponse20075Subnets`
+`func (o *InlineResponse20075) GetIbgpHoldTimer() int32`
 
-GetSubnets returns the Subnets field if non-nil, zero value otherwise.
+GetIbgpHoldTimer returns the IbgpHoldTimer field if non-nil, zero value otherwise.
 
-### GetSubnetsOk
+### GetIbgpHoldTimerOk
 
-`func (o *InlineResponse20075) GetSubnetsOk() (*[]InlineResponse20075Subnets, bool)`
+`func (o *InlineResponse20075) GetIbgpHoldTimerOk() (*int32, bool)`
 
-GetSubnetsOk returns a tuple with the Subnets field if it's non-nil, zero value otherwise
+GetIbgpHoldTimerOk returns a tuple with the IbgpHoldTimer field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnets
+### SetIbgpHoldTimer
 
-`func (o *InlineResponse20075) SetSubnets(v []InlineResponse20075Subnets)`
+`func (o *InlineResponse20075) SetIbgpHoldTimer(v int32)`
 
-SetSubnets sets Subnets field to given value.
+SetIbgpHoldTimer sets IbgpHoldTimer field to given value.
 
-### HasSubnets
+### HasIbgpHoldTimer
 
-`func (o *InlineResponse20075) HasSubnets() bool`
+`func (o *InlineResponse20075) HasIbgpHoldTimer() bool`
 
-HasSubnets returns a boolean if a field has been set.
+HasIbgpHoldTimer returns a boolean if a field has been set.
 
-### GetSubnet
+### GetNeighbors
 
-`func (o *InlineResponse20075) GetSubnet() InlineResponse20075Subnet`
+`func (o *InlineResponse20075) GetNeighbors() []InlineResponse20075Neighbors`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetNeighbors returns the Neighbors field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetNeighborsOk
 
-`func (o *InlineResponse20075) GetSubnetOk() (*InlineResponse20075Subnet, bool)`
+`func (o *InlineResponse20075) GetNeighborsOk() (*[]InlineResponse20075Neighbors, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetNeighborsOk returns a tuple with the Neighbors field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetNeighbors
 
-`func (o *InlineResponse20075) SetSubnet(v InlineResponse20075Subnet)`
+`func (o *InlineResponse20075) SetNeighbors(v []InlineResponse20075Neighbors)`
 
-SetSubnet sets Subnet field to given value.
+SetNeighbors sets Neighbors field to given value.
 
-### HasSubnet
+### HasNeighbors
 
-`func (o *InlineResponse20075) HasSubnet() bool`
+`func (o *InlineResponse20075) HasNeighbors() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasNeighbors returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

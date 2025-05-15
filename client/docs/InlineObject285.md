@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | theme name | [optional] 
-**BaseTheme** | Pointer to **string** | base theme id  | [optional] 
+**Name** | Pointer to **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**Cidr** | Pointer to **string** | CIDR Value of a policy object (e.g. 10.11.12.1/24\&quot;) | [optional] 
+**Fqdn** | Pointer to **string** | Fully qualified domain name of policy object (e.g. \&quot;example.com\&quot;) | [optional] 
+**Mask** | Pointer to **string** | Mask of a policy object (e.g. \&quot;255.255.0.0\&quot;) | [optional] 
+**Ip** | Pointer to **string** | IP Address of a policy object (e.g. \&quot;1.2.3.4\&quot;) | [optional] 
+**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to | [optional] 
 
 ## Methods
 
@@ -51,30 +55,130 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetBaseTheme
+### GetCidr
 
-`func (o *InlineObject285) GetBaseTheme() string`
+`func (o *InlineObject285) GetCidr() string`
 
-GetBaseTheme returns the BaseTheme field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetBaseThemeOk
+### GetCidrOk
 
-`func (o *InlineObject285) GetBaseThemeOk() (*string, bool)`
+`func (o *InlineObject285) GetCidrOk() (*string, bool)`
 
-GetBaseThemeOk returns a tuple with the BaseTheme field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBaseTheme
+### SetCidr
 
-`func (o *InlineObject285) SetBaseTheme(v string)`
+`func (o *InlineObject285) SetCidr(v string)`
 
-SetBaseTheme sets BaseTheme field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasBaseTheme
+### HasCidr
 
-`func (o *InlineObject285) HasBaseTheme() bool`
+`func (o *InlineObject285) HasCidr() bool`
 
-HasBaseTheme returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
+
+### GetFqdn
+
+`func (o *InlineObject285) GetFqdn() string`
+
+GetFqdn returns the Fqdn field if non-nil, zero value otherwise.
+
+### GetFqdnOk
+
+`func (o *InlineObject285) GetFqdnOk() (*string, bool)`
+
+GetFqdnOk returns a tuple with the Fqdn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFqdn
+
+`func (o *InlineObject285) SetFqdn(v string)`
+
+SetFqdn sets Fqdn field to given value.
+
+### HasFqdn
+
+`func (o *InlineObject285) HasFqdn() bool`
+
+HasFqdn returns a boolean if a field has been set.
+
+### GetMask
+
+`func (o *InlineObject285) GetMask() string`
+
+GetMask returns the Mask field if non-nil, zero value otherwise.
+
+### GetMaskOk
+
+`func (o *InlineObject285) GetMaskOk() (*string, bool)`
+
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMask
+
+`func (o *InlineObject285) SetMask(v string)`
+
+SetMask sets Mask field to given value.
+
+### HasMask
+
+`func (o *InlineObject285) HasMask() bool`
+
+HasMask returns a boolean if a field has been set.
+
+### GetIp
+
+`func (o *InlineObject285) GetIp() string`
+
+GetIp returns the Ip field if non-nil, zero value otherwise.
+
+### GetIpOk
+
+`func (o *InlineObject285) GetIpOk() (*string, bool)`
+
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIp
+
+`func (o *InlineObject285) SetIp(v string)`
+
+SetIp sets Ip field to given value.
+
+### HasIp
+
+`func (o *InlineObject285) HasIp() bool`
+
+HasIp returns a boolean if a field has been set.
+
+### GetGroupIds
+
+`func (o *InlineObject285) GetGroupIds() []string`
+
+GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
+
+### GetGroupIdsOk
+
+`func (o *InlineObject285) GetGroupIdsOk() (*[]string, bool)`
+
+GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupIds
+
+`func (o *InlineObject285) SetGroupIds(v []string)`
+
+SetGroupIds sets GroupIds field to given value.
+
+### HasGroupIds
+
+`func (o *InlineObject285) HasGroupIds() bool`
+
+HasGroupIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

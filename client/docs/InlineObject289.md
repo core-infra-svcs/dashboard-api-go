@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient.md) |  | 
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid.md) |  | 
-**Network** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork.md) |  | 
+**Role** | **string** | The role of the SAML administrator | 
+**OrgAccess** | **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; | 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
 
 ## Methods
 
 ### NewInlineObject289
 
-`func NewInlineObject289(client OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient, ssid OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, network OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, ) *InlineObject289`
+`func NewInlineObject289(role string, orgAccess string, ) *InlineObject289`
 
 NewInlineObject289 instantiates a new InlineObject289 object
 This constructor will assign default values to properties that have it defined,
@@ -28,90 +28,95 @@ NewInlineObject289WithDefaults instantiates a new InlineObject289 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetRole
 
-`func (o *InlineObject289) GetDescription() string`
+`func (o *InlineObject289) GetRole() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetRole returns the Role field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetRoleOk
 
-`func (o *InlineObject289) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject289) GetRoleOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetRole
 
-`func (o *InlineObject289) SetDescription(v string)`
+`func (o *InlineObject289) SetRole(v string)`
 
-SetDescription sets Description field to given value.
+SetRole sets Role field to given value.
 
-### HasDescription
 
-`func (o *InlineObject289) HasDescription() bool`
+### GetOrgAccess
 
-HasDescription returns a boolean if a field has been set.
+`func (o *InlineObject289) GetOrgAccess() string`
 
-### GetClient
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-`func (o *InlineObject289) GetClient() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient`
+### GetOrgAccessOk
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+`func (o *InlineObject289) GetOrgAccessOk() (*string, bool)`
 
-### GetClientOk
-
-`func (o *InlineObject289) GetClientOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient, bool)`
-
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetOrgAccess
 
-`func (o *InlineObject289) SetClient(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient)`
+`func (o *InlineObject289) SetOrgAccess(v string)`
 
-SetClient sets Client field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
 
-### GetSsid
+### GetTags
 
-`func (o *InlineObject289) GetSsid() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
+`func (o *InlineObject289) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
 
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetSsidOk
+### GetTagsOk
 
-`func (o *InlineObject289) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, bool)`
+`func (o *InlineObject289) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
 
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSsid
+### SetTags
 
-`func (o *InlineObject289) SetSsid(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid)`
+`func (o *InlineObject289) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
 
-SetSsid sets Ssid field to given value.
+SetTags sets Tags field to given value.
 
+### HasTags
 
-### GetNetwork
+`func (o *InlineObject289) HasTags() bool`
 
-`func (o *InlineObject289) GetNetwork() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
+HasTags returns a boolean if a field has been set.
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+### GetNetworks
 
-### GetNetworkOk
+`func (o *InlineObject289) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
 
-`func (o *InlineObject289) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, bool)`
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+### GetNetworksOk
+
+`func (o *InlineObject289) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
+
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetNetworks
 
-`func (o *InlineObject289) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork)`
+`func (o *InlineObject289) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
 
-SetNetwork sets Network field to given value.
+SetNetworks sets Networks field to given value.
 
+### HasNetworks
+
+`func (o *InlineObject289) HasNetworks() bool`
+
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

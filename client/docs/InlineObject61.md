@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
-**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
-**DynamicDns** | Pointer to [**NetworksNetworkIdApplianceSettingsDynamicDns**](NetworksNetworkIdApplianceSettingsDynamicDns.md) |  | [optional] 
+**Mode** | **string** | Set mode to &#39;enabled&#39; to enable malware prevention, otherwise &#39;disabled&#39; | 
+**AllowedUrls** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls**](NetworksNetworkIdApplianceSecurityMalwareAllowedUrls.md) | The urls that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
+**AllowedFiles** | Pointer to [**[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles**](NetworksNetworkIdApplianceSecurityMalwareAllowedFiles.md) | The sha256 digests of files that should be permitted by the malware detection engine. If omitted, the current config will remain unchanged. This is available only if your network supports AMP allow listing | [optional] 
 
 ## Methods
 
 ### NewInlineObject61
 
-`func NewInlineObject61() *InlineObject61`
+`func NewInlineObject61(mode string, ) *InlineObject61`
 
 NewInlineObject61 instantiates a new InlineObject61 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +27,75 @@ NewInlineObject61WithDefaults instantiates a new InlineObject61 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetClientTrackingMethod
+### GetMode
 
-`func (o *InlineObject61) GetClientTrackingMethod() string`
+`func (o *InlineObject61) GetMode() string`
 
-GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
+GetMode returns the Mode field if non-nil, zero value otherwise.
 
-### GetClientTrackingMethodOk
+### GetModeOk
 
-`func (o *InlineObject61) GetClientTrackingMethodOk() (*string, bool)`
+`func (o *InlineObject61) GetModeOk() (*string, bool)`
 
-GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
+GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTrackingMethod
+### SetMode
 
-`func (o *InlineObject61) SetClientTrackingMethod(v string)`
+`func (o *InlineObject61) SetMode(v string)`
 
-SetClientTrackingMethod sets ClientTrackingMethod field to given value.
+SetMode sets Mode field to given value.
 
-### HasClientTrackingMethod
 
-`func (o *InlineObject61) HasClientTrackingMethod() bool`
+### GetAllowedUrls
 
-HasClientTrackingMethod returns a boolean if a field has been set.
+`func (o *InlineObject61) GetAllowedUrls() []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls`
 
-### GetDeploymentMode
+GetAllowedUrls returns the AllowedUrls field if non-nil, zero value otherwise.
 
-`func (o *InlineObject61) GetDeploymentMode() string`
+### GetAllowedUrlsOk
 
-GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
+`func (o *InlineObject61) GetAllowedUrlsOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedUrls, bool)`
 
-### GetDeploymentModeOk
-
-`func (o *InlineObject61) GetDeploymentModeOk() (*string, bool)`
-
-GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
+GetAllowedUrlsOk returns a tuple with the AllowedUrls field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeploymentMode
+### SetAllowedUrls
 
-`func (o *InlineObject61) SetDeploymentMode(v string)`
+`func (o *InlineObject61) SetAllowedUrls(v []NetworksNetworkIdApplianceSecurityMalwareAllowedUrls)`
 
-SetDeploymentMode sets DeploymentMode field to given value.
+SetAllowedUrls sets AllowedUrls field to given value.
 
-### HasDeploymentMode
+### HasAllowedUrls
 
-`func (o *InlineObject61) HasDeploymentMode() bool`
+`func (o *InlineObject61) HasAllowedUrls() bool`
 
-HasDeploymentMode returns a boolean if a field has been set.
+HasAllowedUrls returns a boolean if a field has been set.
 
-### GetDynamicDns
+### GetAllowedFiles
 
-`func (o *InlineObject61) GetDynamicDns() NetworksNetworkIdApplianceSettingsDynamicDns`
+`func (o *InlineObject61) GetAllowedFiles() []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles`
 
-GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
+GetAllowedFiles returns the AllowedFiles field if non-nil, zero value otherwise.
 
-### GetDynamicDnsOk
+### GetAllowedFilesOk
 
-`func (o *InlineObject61) GetDynamicDnsOk() (*NetworksNetworkIdApplianceSettingsDynamicDns, bool)`
+`func (o *InlineObject61) GetAllowedFilesOk() (*[]NetworksNetworkIdApplianceSecurityMalwareAllowedFiles, bool)`
 
-GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
+GetAllowedFilesOk returns a tuple with the AllowedFiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDynamicDns
+### SetAllowedFiles
 
-`func (o *InlineObject61) SetDynamicDns(v NetworksNetworkIdApplianceSettingsDynamicDns)`
+`func (o *InlineObject61) SetAllowedFiles(v []NetworksNetworkIdApplianceSecurityMalwareAllowedFiles)`
 
-SetDynamicDns sets DynamicDns field to given value.
+SetAllowedFiles sets AllowedFiles field to given value.
 
-### HasDynamicDns
+### HasAllowedFiles
 
-`func (o *InlineObject61) HasDynamicDns() bool`
+`func (o *InlineObject61) HasAllowedFiles() bool`
 
-HasDynamicDns returns a boolean if a field has been set.
+HasAllowedFiles returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the organization | 
-**Management** | Pointer to [**OrganizationsManagement1**](OrganizationsManagement1.md) |  | [optional] 
+**TrafficShapingEnabled** | Pointer to **bool** | Whether traffic shaping rules are applied to clients on your SSID. | [optional] 
+**DefaultRulesEnabled** | Pointer to **bool** | Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network&#39;s traffic shaping page. Note that default rules count against the rule limit of 8. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200207Rules**](InlineResponse200207Rules.md) |     An array of traffic shaping rules. Rules are applied in the order that     they are specified in. An empty list (or null) means no rules. Note that     you are allowed a maximum of 8 rules.  | [optional] 
 
 ## Methods
 
 ### NewInlineObject203
 
-`func NewInlineObject203(name string, ) *InlineObject203`
+`func NewInlineObject203() *InlineObject203`
 
 NewInlineObject203 instantiates a new InlineObject203 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +27,80 @@ NewInlineObject203WithDefaults instantiates a new InlineObject203 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetTrafficShapingEnabled
 
-`func (o *InlineObject203) GetName() string`
+`func (o *InlineObject203) GetTrafficShapingEnabled() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTrafficShapingEnabled returns the TrafficShapingEnabled field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTrafficShapingEnabledOk
 
-`func (o *InlineObject203) GetNameOk() (*string, bool)`
+`func (o *InlineObject203) GetTrafficShapingEnabledOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTrafficShapingEnabledOk returns a tuple with the TrafficShapingEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTrafficShapingEnabled
 
-`func (o *InlineObject203) SetName(v string)`
+`func (o *InlineObject203) SetTrafficShapingEnabled(v bool)`
 
-SetName sets Name field to given value.
+SetTrafficShapingEnabled sets TrafficShapingEnabled field to given value.
 
+### HasTrafficShapingEnabled
 
-### GetManagement
+`func (o *InlineObject203) HasTrafficShapingEnabled() bool`
 
-`func (o *InlineObject203) GetManagement() OrganizationsManagement1`
+HasTrafficShapingEnabled returns a boolean if a field has been set.
 
-GetManagement returns the Management field if non-nil, zero value otherwise.
+### GetDefaultRulesEnabled
 
-### GetManagementOk
+`func (o *InlineObject203) GetDefaultRulesEnabled() bool`
 
-`func (o *InlineObject203) GetManagementOk() (*OrganizationsManagement1, bool)`
+GetDefaultRulesEnabled returns the DefaultRulesEnabled field if non-nil, zero value otherwise.
 
-GetManagementOk returns a tuple with the Management field if it's non-nil, zero value otherwise
+### GetDefaultRulesEnabledOk
+
+`func (o *InlineObject203) GetDefaultRulesEnabledOk() (*bool, bool)`
+
+GetDefaultRulesEnabledOk returns a tuple with the DefaultRulesEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManagement
+### SetDefaultRulesEnabled
 
-`func (o *InlineObject203) SetManagement(v OrganizationsManagement1)`
+`func (o *InlineObject203) SetDefaultRulesEnabled(v bool)`
 
-SetManagement sets Management field to given value.
+SetDefaultRulesEnabled sets DefaultRulesEnabled field to given value.
 
-### HasManagement
+### HasDefaultRulesEnabled
 
-`func (o *InlineObject203) HasManagement() bool`
+`func (o *InlineObject203) HasDefaultRulesEnabled() bool`
 
-HasManagement returns a boolean if a field has been set.
+HasDefaultRulesEnabled returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *InlineObject203) GetRules() []InlineResponse200207Rules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *InlineObject203) GetRulesOk() (*[]InlineResponse200207Rules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *InlineObject203) SetRules(v []InlineResponse200207Rules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *InlineObject203) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

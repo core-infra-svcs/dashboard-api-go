@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Wireless LAN controller network ID | [optional] 
+**Id** | Pointer to **string** | Catalyst access point network ID | [optional] 
 
 ## Methods
 

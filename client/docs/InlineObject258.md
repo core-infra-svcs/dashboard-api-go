@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
+**Order** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder.md) | Array of schedule IDs and their priorities to reorder. | 
 
 ## Methods
 
 ### NewInlineObject258
 
-`func NewInlineObject258(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject258`
+`func NewInlineObject258(order []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, ) *InlineObject258`
 
 NewInlineObject258 instantiates a new InlineObject258 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject258WithDefaults instantiates a new InlineObject258 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwaps
+### GetOrder
 
-`func (o *InlineObject258) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
+`func (o *InlineObject258) GetOrder() []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder`
 
-GetSwaps returns the Swaps field if non-nil, zero value otherwise.
+GetOrder returns the Order field if non-nil, zero value otherwise.
 
-### GetSwapsOk
+### GetOrderOk
 
-`func (o *InlineObject258) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
+`func (o *InlineObject258) GetOrderOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, bool)`
 
-GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
+GetOrderOk returns a tuple with the Order field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwaps
+### SetOrder
 
-`func (o *InlineObject258) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
+`func (o *InlineObject258) SetOrder(v []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder)`
 
-SetSwaps sets Swaps field to given value.
+SetOrder sets Order field to given value.
 
 
 

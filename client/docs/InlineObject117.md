@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the sensor alert profile. | [optional] 
+**Name** | **string** | Name of the sensor alert profile. | 
 **Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
-**Conditions** | Pointer to [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | [optional] 
+**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
 **Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
 **Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
-**IncludeSensorUrl** | Pointer to **bool** | Include dashboard link to sensor in messages (default: true). | [optional] 
+**IncludeSensorUrl** | Pointer to **bool** | Include dashboard link to sensor in messages (default: true). | [optional] [default to true]
 **Message** | Pointer to **string** | A custom message that will appear in email and text message alerts. | [optional] 
 
 ## Methods
 
 ### NewInlineObject117
 
-`func NewInlineObject117() *InlineObject117`
+`func NewInlineObject117(name string, conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineObject117`
 
 NewInlineObject117 instantiates a new InlineObject117 object
 This constructor will assign default values to properties that have it defined,
@@ -50,11 +50,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject117) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetSchedule
 
@@ -100,11 +95,6 @@ and a boolean to check if the value has been set.
 
 SetConditions sets Conditions field to given value.
 
-### HasConditions
-
-`func (o *InlineObject117) HasConditions() bool`
-
-HasConditions returns a boolean if a field has been set.
 
 ### GetRecipients
 

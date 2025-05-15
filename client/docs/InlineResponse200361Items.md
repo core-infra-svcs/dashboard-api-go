@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200361Intervals**](InlineResponse200361Intervals.md) | Time interval snapshots of interfaces usage data of the wireless LAN controller | [optional] 
+**Serial** | Pointer to **string** | Access points cloud ID | [optional] 
+**Controller** | Pointer to [**InlineResponse200361Controller**](InlineResponse200361Controller.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200361Network**](InlineResponse200361Network.md) |  | [optional] 
 
 ## Methods
 
@@ -51,30 +52,55 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetIntervals
+### GetController
 
-`func (o *InlineResponse200361Items) GetIntervals() []InlineResponse200361Intervals`
+`func (o *InlineResponse200361Items) GetController() InlineResponse200361Controller`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetController returns the Controller field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetControllerOk
 
-`func (o *InlineResponse200361Items) GetIntervalsOk() (*[]InlineResponse200361Intervals, bool)`
+`func (o *InlineResponse200361Items) GetControllerOk() (*InlineResponse200361Controller, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetControllerOk returns a tuple with the Controller field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetController
 
-`func (o *InlineResponse200361Items) SetIntervals(v []InlineResponse200361Intervals)`
+`func (o *InlineResponse200361Items) SetController(v InlineResponse200361Controller)`
 
-SetIntervals sets Intervals field to given value.
+SetController sets Controller field to given value.
 
-### HasIntervals
+### HasController
 
-`func (o *InlineResponse200361Items) HasIntervals() bool`
+`func (o *InlineResponse200361Items) HasController() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasController returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200361Items) GetNetwork() InlineResponse200361Network`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200361Items) GetNetworkOk() (*InlineResponse200361Network, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200361Items) SetNetwork(v InlineResponse200361Network)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200361Items) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

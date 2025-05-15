@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Unique name of the artifact | [optional] 
+**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineObject236WithDefaults instantiates a new InlineObject236 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetBrandingPolicyIds
 
-`func (o *InlineObject236) GetName() string`
+`func (o *InlineObject236) GetBrandingPolicyIds() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBrandingPolicyIdsOk
 
-`func (o *InlineObject236) GetNameOk() (*string, bool)`
+`func (o *InlineObject236) GetBrandingPolicyIdsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBrandingPolicyIds
 
-`func (o *InlineObject236) SetName(v string)`
+`func (o *InlineObject236) SetBrandingPolicyIds(v []string)`
 
-SetName sets Name field to given value.
+SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
 
-### HasName
+### HasBrandingPolicyIds
 
-`func (o *InlineObject236) HasName() bool`
+`func (o *InlineObject236) HasBrandingPolicyIds() bool`
 
-HasName returns a boolean if a field has been set.
+HasBrandingPolicyIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | If true, the SSID outage schedule is enabled. | [optional] 
-**Ranges** | Pointer to [**[]InlineResponse200203Ranges**](InlineResponse200203Ranges.md) | List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence. | [optional] 
-**RangesInSeconds** | Pointer to [**[]InlineResponse200203RangesInSeconds**](InlineResponse200203RangesInSeconds.md) | List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence. | [optional] 
+**Name** | **string** | The name of the Identity PSK | 
+**Passphrase** | Pointer to **string** | The passphrase for client authentication. If left blank, one will be auto-generated. | [optional] 
+**GroupPolicyId** | **string** | The group policy to be applied to clients | 
+**ExpiresAt** | Pointer to **time.Time** | Timestamp for when the Identity PSK expires. Will not expire if left blank. | [optional] 
 
 ## Methods
 
 ### NewInlineObject199
 
-`func NewInlineObject199() *InlineObject199`
+`func NewInlineObject199(name string, groupPolicyId string, ) *InlineObject199`
 
 NewInlineObject199 instantiates a new InlineObject199 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +28,95 @@ NewInlineObject199WithDefaults instantiates a new InlineObject199 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject199) GetEnabled() bool`
+`func (o *InlineObject199) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject199) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject199) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject199) SetEnabled(v bool)`
+`func (o *InlineObject199) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
 
-`func (o *InlineObject199) HasEnabled() bool`
+### GetPassphrase
 
-HasEnabled returns a boolean if a field has been set.
+`func (o *InlineObject199) GetPassphrase() string`
 
-### GetRanges
+GetPassphrase returns the Passphrase field if non-nil, zero value otherwise.
 
-`func (o *InlineObject199) GetRanges() []InlineResponse200203Ranges`
+### GetPassphraseOk
 
-GetRanges returns the Ranges field if non-nil, zero value otherwise.
+`func (o *InlineObject199) GetPassphraseOk() (*string, bool)`
 
-### GetRangesOk
-
-`func (o *InlineObject199) GetRangesOk() (*[]InlineResponse200203Ranges, bool)`
-
-GetRangesOk returns a tuple with the Ranges field if it's non-nil, zero value otherwise
+GetPassphraseOk returns a tuple with the Passphrase field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRanges
+### SetPassphrase
 
-`func (o *InlineObject199) SetRanges(v []InlineResponse200203Ranges)`
+`func (o *InlineObject199) SetPassphrase(v string)`
 
-SetRanges sets Ranges field to given value.
+SetPassphrase sets Passphrase field to given value.
 
-### HasRanges
+### HasPassphrase
 
-`func (o *InlineObject199) HasRanges() bool`
+`func (o *InlineObject199) HasPassphrase() bool`
 
-HasRanges returns a boolean if a field has been set.
+HasPassphrase returns a boolean if a field has been set.
 
-### GetRangesInSeconds
+### GetGroupPolicyId
 
-`func (o *InlineObject199) GetRangesInSeconds() []InlineResponse200203RangesInSeconds`
+`func (o *InlineObject199) GetGroupPolicyId() string`
 
-GetRangesInSeconds returns the RangesInSeconds field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetRangesInSecondsOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineObject199) GetRangesInSecondsOk() (*[]InlineResponse200203RangesInSeconds, bool)`
+`func (o *InlineObject199) GetGroupPolicyIdOk() (*string, bool)`
 
-GetRangesInSecondsOk returns a tuple with the RangesInSeconds field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRangesInSeconds
+### SetGroupPolicyId
 
-`func (o *InlineObject199) SetRangesInSeconds(v []InlineResponse200203RangesInSeconds)`
+`func (o *InlineObject199) SetGroupPolicyId(v string)`
 
-SetRangesInSeconds sets RangesInSeconds field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasRangesInSeconds
 
-`func (o *InlineObject199) HasRangesInSeconds() bool`
+### GetExpiresAt
 
-HasRangesInSeconds returns a boolean if a field has been set.
+`func (o *InlineObject199) GetExpiresAt() time.Time`
+
+GetExpiresAt returns the ExpiresAt field if non-nil, zero value otherwise.
+
+### GetExpiresAtOk
+
+`func (o *InlineObject199) GetExpiresAtOk() (*time.Time, bool)`
+
+GetExpiresAtOk returns a tuple with the ExpiresAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetExpiresAt
+
+`func (o *InlineObject199) SetExpiresAt(v time.Time)`
+
+SetExpiresAt sets ExpiresAt field to given value.
+
+### HasExpiresAt
+
+`func (o *InlineObject199) HasExpiresAt() bool`
+
+HasExpiresAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

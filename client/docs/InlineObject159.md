@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A friendly name or description for the interface or VLAN. | [optional] 
+**Name** | **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | 
 **Subnet** | Pointer to **string** | The network that this L3 interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
 **InterfaceIp** | Pointer to **string** | The IP address that will be used for Layer 3 routing on this VLAN or subnet. This cannot be the same         as the device management IP. | [optional] 
 **MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are:         &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject159
 
-`func NewInlineObject159() *InlineObject159`
+`func NewInlineObject159(name string, ) *InlineObject159`
 
 NewInlineObject159 instantiates a new InlineObject159 object
 This constructor will assign default values to properties that have it defined,
@@ -51,11 +51,6 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
-
-`func (o *InlineObject159) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetSubnet
 

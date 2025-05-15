@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Permission scope id | [optional] 
-**Name** | Pointer to **string** | Name of permission scope | [optional] 
-**Level** | Pointer to **string** | Permission scope level | [optional] 
+**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
+**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
+**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
 
 ## Methods
 
@@ -27,30 +28,55 @@ NewInlineResponse200245WithDefaults instantiates a new InlineResponse200245 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetArtifactId
 
-`func (o *InlineResponse200245) GetId() string`
+`func (o *InlineResponse200245) GetArtifactId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetArtifactIdOk
 
-`func (o *InlineResponse200245) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200245) GetArtifactIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetArtifactId
 
-`func (o *InlineResponse200245) SetId(v string)`
+`func (o *InlineResponse200245) SetArtifactId(v string)`
 
-SetId sets Id field to given value.
+SetArtifactId sets ArtifactId field to given value.
 
-### HasId
+### HasArtifactId
 
-`func (o *InlineResponse200245) HasId() bool`
+`func (o *InlineResponse200245) HasArtifactId() bool`
 
-HasId returns a boolean if a field has been set.
+HasArtifactId returns a boolean if a field has been set.
+
+### GetOrganizationId
+
+`func (o *InlineResponse200245) GetOrganizationId() string`
+
+GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+
+### GetOrganizationIdOk
+
+`func (o *InlineResponse200245) GetOrganizationIdOk() (*string, bool)`
+
+GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOrganizationId
+
+`func (o *InlineResponse200245) SetOrganizationId(v string)`
+
+SetOrganizationId sets OrganizationId field to given value.
+
+### HasOrganizationId
+
+`func (o *InlineResponse200245) HasOrganizationId() bool`
+
+HasOrganizationId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -77,30 +103,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetLevel
+### GetStatus
 
-`func (o *InlineResponse200245) GetLevel() string`
+`func (o *InlineResponse200245) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
 
-GetLevel returns the Level field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetLevelOk
+### GetStatusOk
 
-`func (o *InlineResponse200245) GetLevelOk() (*string, bool)`
+`func (o *InlineResponse200245) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
 
-GetLevelOk returns a tuple with the Level field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLevel
+### SetStatus
 
-`func (o *InlineResponse200245) SetLevel(v string)`
+`func (o *InlineResponse200245) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
 
-SetLevel sets Level field to given value.
+SetStatus sets Status field to given value.
 
-### HasLevel
+### HasStatus
 
-`func (o *InlineResponse200245) HasLevel() bool`
+`func (o *InlineResponse200245) HasStatus() bool`
 
-HasLevel returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

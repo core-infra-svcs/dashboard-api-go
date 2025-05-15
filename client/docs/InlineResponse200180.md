@@ -4,13 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ScanningEnabled** | Pointer to **bool** | Whether APs will scan for Bluetooth enabled clients. | [optional] 
-**AdvertisingEnabled** | Pointer to **bool** | Whether APs will advertise beacons. | [optional] 
-**Uuid** | Pointer to **string** | The UUID to be used in the beacon identifier. | [optional] 
-**MajorMinorAssignmentMode** | Pointer to **string** | The way major and minor number should be assigned to nodes in the network. (&#39;Unique&#39;, &#39;Non-unique&#39;) | [optional] 
-**Major** | Pointer to **int32** | The major number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**Minor** | Pointer to **int32** | The minor number to be used in the beacon identifier. Only valid in &#39;Non-unique&#39; mode. | [optional] 
-**EslEnabled** | Pointer to **bool** | Whether ESL is enabled on this network. | [optional] 
+**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
+**Plans** | Pointer to [**[]InlineResponse200180Plans**](InlineResponse200180Plans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
 
 ## Methods
 
@@ -31,180 +26,55 @@ NewInlineResponse200180WithDefaults instantiates a new InlineResponse200180 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetScanningEnabled
+### GetCurrency
 
-`func (o *InlineResponse200180) GetScanningEnabled() bool`
+`func (o *InlineResponse200180) GetCurrency() string`
 
-GetScanningEnabled returns the ScanningEnabled field if non-nil, zero value otherwise.
+GetCurrency returns the Currency field if non-nil, zero value otherwise.
 
-### GetScanningEnabledOk
+### GetCurrencyOk
 
-`func (o *InlineResponse200180) GetScanningEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200180) GetCurrencyOk() (*string, bool)`
 
-GetScanningEnabledOk returns a tuple with the ScanningEnabled field if it's non-nil, zero value otherwise
+GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetScanningEnabled
+### SetCurrency
 
-`func (o *InlineResponse200180) SetScanningEnabled(v bool)`
+`func (o *InlineResponse200180) SetCurrency(v string)`
 
-SetScanningEnabled sets ScanningEnabled field to given value.
+SetCurrency sets Currency field to given value.
 
-### HasScanningEnabled
+### HasCurrency
 
-`func (o *InlineResponse200180) HasScanningEnabled() bool`
+`func (o *InlineResponse200180) HasCurrency() bool`
 
-HasScanningEnabled returns a boolean if a field has been set.
+HasCurrency returns a boolean if a field has been set.
 
-### GetAdvertisingEnabled
+### GetPlans
 
-`func (o *InlineResponse200180) GetAdvertisingEnabled() bool`
+`func (o *InlineResponse200180) GetPlans() []InlineResponse200180Plans`
 
-GetAdvertisingEnabled returns the AdvertisingEnabled field if non-nil, zero value otherwise.
+GetPlans returns the Plans field if non-nil, zero value otherwise.
 
-### GetAdvertisingEnabledOk
+### GetPlansOk
 
-`func (o *InlineResponse200180) GetAdvertisingEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200180) GetPlansOk() (*[]InlineResponse200180Plans, bool)`
 
-GetAdvertisingEnabledOk returns a tuple with the AdvertisingEnabled field if it's non-nil, zero value otherwise
+GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdvertisingEnabled
+### SetPlans
 
-`func (o *InlineResponse200180) SetAdvertisingEnabled(v bool)`
+`func (o *InlineResponse200180) SetPlans(v []InlineResponse200180Plans)`
 
-SetAdvertisingEnabled sets AdvertisingEnabled field to given value.
+SetPlans sets Plans field to given value.
 
-### HasAdvertisingEnabled
+### HasPlans
 
-`func (o *InlineResponse200180) HasAdvertisingEnabled() bool`
+`func (o *InlineResponse200180) HasPlans() bool`
 
-HasAdvertisingEnabled returns a boolean if a field has been set.
-
-### GetUuid
-
-`func (o *InlineResponse200180) GetUuid() string`
-
-GetUuid returns the Uuid field if non-nil, zero value otherwise.
-
-### GetUuidOk
-
-`func (o *InlineResponse200180) GetUuidOk() (*string, bool)`
-
-GetUuidOk returns a tuple with the Uuid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUuid
-
-`func (o *InlineResponse200180) SetUuid(v string)`
-
-SetUuid sets Uuid field to given value.
-
-### HasUuid
-
-`func (o *InlineResponse200180) HasUuid() bool`
-
-HasUuid returns a boolean if a field has been set.
-
-### GetMajorMinorAssignmentMode
-
-`func (o *InlineResponse200180) GetMajorMinorAssignmentMode() string`
-
-GetMajorMinorAssignmentMode returns the MajorMinorAssignmentMode field if non-nil, zero value otherwise.
-
-### GetMajorMinorAssignmentModeOk
-
-`func (o *InlineResponse200180) GetMajorMinorAssignmentModeOk() (*string, bool)`
-
-GetMajorMinorAssignmentModeOk returns a tuple with the MajorMinorAssignmentMode field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMajorMinorAssignmentMode
-
-`func (o *InlineResponse200180) SetMajorMinorAssignmentMode(v string)`
-
-SetMajorMinorAssignmentMode sets MajorMinorAssignmentMode field to given value.
-
-### HasMajorMinorAssignmentMode
-
-`func (o *InlineResponse200180) HasMajorMinorAssignmentMode() bool`
-
-HasMajorMinorAssignmentMode returns a boolean if a field has been set.
-
-### GetMajor
-
-`func (o *InlineResponse200180) GetMajor() int32`
-
-GetMajor returns the Major field if non-nil, zero value otherwise.
-
-### GetMajorOk
-
-`func (o *InlineResponse200180) GetMajorOk() (*int32, bool)`
-
-GetMajorOk returns a tuple with the Major field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMajor
-
-`func (o *InlineResponse200180) SetMajor(v int32)`
-
-SetMajor sets Major field to given value.
-
-### HasMajor
-
-`func (o *InlineResponse200180) HasMajor() bool`
-
-HasMajor returns a boolean if a field has been set.
-
-### GetMinor
-
-`func (o *InlineResponse200180) GetMinor() int32`
-
-GetMinor returns the Minor field if non-nil, zero value otherwise.
-
-### GetMinorOk
-
-`func (o *InlineResponse200180) GetMinorOk() (*int32, bool)`
-
-GetMinorOk returns a tuple with the Minor field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMinor
-
-`func (o *InlineResponse200180) SetMinor(v int32)`
-
-SetMinor sets Minor field to given value.
-
-### HasMinor
-
-`func (o *InlineResponse200180) HasMinor() bool`
-
-HasMinor returns a boolean if a field has been set.
-
-### GetEslEnabled
-
-`func (o *InlineResponse200180) GetEslEnabled() bool`
-
-GetEslEnabled returns the EslEnabled field if non-nil, zero value otherwise.
-
-### GetEslEnabledOk
-
-`func (o *InlineResponse200180) GetEslEnabledOk() (*bool, bool)`
-
-GetEslEnabledOk returns a tuple with the EslEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEslEnabled
-
-`func (o *InlineResponse200180) SetEslEnabled(v bool)`
-
-SetEslEnabled sets EslEnabled field to given value.
-
-### HasEslEnabled
-
-`func (o *InlineResponse200180) HasEslEnabled() bool`
-
-HasEslEnabled returns a boolean if a field has been set.
+HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

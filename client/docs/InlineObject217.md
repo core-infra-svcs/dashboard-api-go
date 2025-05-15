@@ -4,12 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** | Is the alert config enabled | [optional] 
-**Type** | Pointer to **string** | The alert type | [optional] 
-**AlertCondition** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesAlertCondition1**](OrganizationsOrganizationIdAlertsProfilesAlertCondition1.md) |  | [optional] 
-**Recipients** | Pointer to [**OrganizationsOrganizationIdAlertsProfilesRecipients**](OrganizationsOrganizationIdAlertsProfilesRecipients.md) |  | [optional] 
-**NetworkTags** | Pointer to **[]string** | Networks with these tags will be monitored for the alert | [optional] 
-**Description** | Pointer to **string** | User supplied description of the alert | [optional] 
+**Name** | Pointer to **string** | The name of the dashboard administrator | [optional] 
+**OrgAccess** | Pointer to **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | [optional] 
+**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
+**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
 
 ## Methods
 
@@ -30,155 +28,105 @@ NewInlineObject217WithDefaults instantiates a new InlineObject217 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabled
+### GetName
 
-`func (o *InlineObject217) GetEnabled() bool`
+`func (o *InlineObject217) GetName() string`
 
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetEnabledOk
+### GetNameOk
 
-`func (o *InlineObject217) GetEnabledOk() (*bool, bool)`
+`func (o *InlineObject217) GetNameOk() (*string, bool)`
 
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabled
+### SetName
 
-`func (o *InlineObject217) SetEnabled(v bool)`
+`func (o *InlineObject217) SetName(v string)`
 
-SetEnabled sets Enabled field to given value.
+SetName sets Name field to given value.
 
-### HasEnabled
+### HasName
 
-`func (o *InlineObject217) HasEnabled() bool`
+`func (o *InlineObject217) HasName() bool`
 
-HasEnabled returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetType
+### GetOrgAccess
 
-`func (o *InlineObject217) GetType() string`
+`func (o *InlineObject217) GetOrgAccess() string`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetOrgAccessOk
 
-`func (o *InlineObject217) GetTypeOk() (*string, bool)`
+`func (o *InlineObject217) GetOrgAccessOk() (*string, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetOrgAccess
 
-`func (o *InlineObject217) SetType(v string)`
+`func (o *InlineObject217) SetOrgAccess(v string)`
 
-SetType sets Type field to given value.
+SetOrgAccess sets OrgAccess field to given value.
 
-### HasType
+### HasOrgAccess
 
-`func (o *InlineObject217) HasType() bool`
+`func (o *InlineObject217) HasOrgAccess() bool`
 
-HasType returns a boolean if a field has been set.
+HasOrgAccess returns a boolean if a field has been set.
 
-### GetAlertCondition
+### GetTags
 
-`func (o *InlineObject217) GetAlertCondition() OrganizationsOrganizationIdAlertsProfilesAlertCondition1`
+`func (o *InlineObject217) GetTags() []OrganizationsOrganizationIdAdminsTags1`
 
-GetAlertCondition returns the AlertCondition field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetAlertConditionOk
+### GetTagsOk
 
-`func (o *InlineObject217) GetAlertConditionOk() (*OrganizationsOrganizationIdAlertsProfilesAlertCondition1, bool)`
+`func (o *InlineObject217) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
 
-GetAlertConditionOk returns a tuple with the AlertCondition field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertCondition
+### SetTags
 
-`func (o *InlineObject217) SetAlertCondition(v OrganizationsOrganizationIdAlertsProfilesAlertCondition1)`
+`func (o *InlineObject217) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
 
-SetAlertCondition sets AlertCondition field to given value.
+SetTags sets Tags field to given value.
 
-### HasAlertCondition
+### HasTags
 
-`func (o *InlineObject217) HasAlertCondition() bool`
+`func (o *InlineObject217) HasTags() bool`
 
-HasAlertCondition returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetRecipients
+### GetNetworks
 
-`func (o *InlineObject217) GetRecipients() OrganizationsOrganizationIdAlertsProfilesRecipients`
+`func (o *InlineObject217) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetRecipientsOk
+### GetNetworksOk
 
-`func (o *InlineObject217) GetRecipientsOk() (*OrganizationsOrganizationIdAlertsProfilesRecipients, bool)`
+`func (o *InlineObject217) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetNetworks
 
-`func (o *InlineObject217) SetRecipients(v OrganizationsOrganizationIdAlertsProfilesRecipients)`
+`func (o *InlineObject217) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
 
-SetRecipients sets Recipients field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasRecipients
+### HasNetworks
 
-`func (o *InlineObject217) HasRecipients() bool`
+`func (o *InlineObject217) HasNetworks() bool`
 
-HasRecipients returns a boolean if a field has been set.
-
-### GetNetworkTags
-
-`func (o *InlineObject217) GetNetworkTags() []string`
-
-GetNetworkTags returns the NetworkTags field if non-nil, zero value otherwise.
-
-### GetNetworkTagsOk
-
-`func (o *InlineObject217) GetNetworkTagsOk() (*[]string, bool)`
-
-GetNetworkTagsOk returns a tuple with the NetworkTags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkTags
-
-`func (o *InlineObject217) SetNetworkTags(v []string)`
-
-SetNetworkTags sets NetworkTags field to given value.
-
-### HasNetworkTags
-
-`func (o *InlineObject217) HasNetworkTags() bool`
-
-HasNetworkTags returns a boolean if a field has been set.
-
-### GetDescription
-
-`func (o *InlineObject217) GetDescription() string`
-
-GetDescription returns the Description field if non-nil, zero value otherwise.
-
-### GetDescriptionOk
-
-`func (o *InlineObject217) GetDescriptionOk() (*string, bool)`
-
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDescription
-
-`func (o *InlineObject217) SetDescription(v string)`
-
-SetDescription sets Description field to given value.
-
-### HasDescription
-
-`func (o *InlineObject217) HasDescription() bool`
-
-HasDescription returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

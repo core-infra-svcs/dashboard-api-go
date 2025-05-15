@@ -4,12 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Macs** | Pointer to **[]string** | List of mac addresses | [optional] 
-**Emails** | Pointer to **[]string** | List of email addresses | [optional] 
-**Usernames** | Pointer to **[]string** | List of usernames | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials | [optional] 
-**Imeis** | Pointer to **[]string** | List of IMEIs | [optional] 
-**BluetoothMacs** | Pointer to **[]string** | List of bluetooth mac addresses | [optional] 
+**Serial** | Pointer to **string** | Device serial | [optional] 
+**Model** | Pointer to **string** | Device model. | [optional] 
+**Tags** | Pointer to **string** | Device tags. | [optional] 
+**Wifi0** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for first wifi radio of device. | [optional] 
+**Wifi1** | Pointer to [**[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0**](NetworksNetworkIdNetworkHealthChannelUtilizationWifi0.md) | Channel utilization for second wifi radio of device. | [optional] 
 
 ## Methods
 
@@ -30,155 +29,130 @@ NewInlineResponse200112WithDefaults instantiates a new InlineResponse200112 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMacs
+### GetSerial
 
-`func (o *InlineResponse200112) GetMacs() []string`
+`func (o *InlineResponse200112) GetSerial() string`
 
-GetMacs returns the Macs field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetMacsOk
+### GetSerialOk
 
-`func (o *InlineResponse200112) GetMacsOk() (*[]string, bool)`
+`func (o *InlineResponse200112) GetSerialOk() (*string, bool)`
 
-GetMacsOk returns a tuple with the Macs field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMacs
+### SetSerial
 
-`func (o *InlineResponse200112) SetMacs(v []string)`
+`func (o *InlineResponse200112) SetSerial(v string)`
 
-SetMacs sets Macs field to given value.
+SetSerial sets Serial field to given value.
 
-### HasMacs
+### HasSerial
 
-`func (o *InlineResponse200112) HasMacs() bool`
+`func (o *InlineResponse200112) HasSerial() bool`
 
-HasMacs returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetEmails
+### GetModel
 
-`func (o *InlineResponse200112) GetEmails() []string`
+`func (o *InlineResponse200112) GetModel() string`
 
-GetEmails returns the Emails field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetEmailsOk
+### GetModelOk
 
-`func (o *InlineResponse200112) GetEmailsOk() (*[]string, bool)`
+`func (o *InlineResponse200112) GetModelOk() (*string, bool)`
 
-GetEmailsOk returns a tuple with the Emails field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEmails
+### SetModel
 
-`func (o *InlineResponse200112) SetEmails(v []string)`
+`func (o *InlineResponse200112) SetModel(v string)`
 
-SetEmails sets Emails field to given value.
+SetModel sets Model field to given value.
 
-### HasEmails
+### HasModel
 
-`func (o *InlineResponse200112) HasEmails() bool`
+`func (o *InlineResponse200112) HasModel() bool`
 
-HasEmails returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetUsernames
+### GetTags
 
-`func (o *InlineResponse200112) GetUsernames() []string`
+`func (o *InlineResponse200112) GetTags() string`
 
-GetUsernames returns the Usernames field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetUsernamesOk
+### GetTagsOk
 
-`func (o *InlineResponse200112) GetUsernamesOk() (*[]string, bool)`
+`func (o *InlineResponse200112) GetTagsOk() (*string, bool)`
 
-GetUsernamesOk returns a tuple with the Usernames field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsernames
+### SetTags
 
-`func (o *InlineResponse200112) SetUsernames(v []string)`
+`func (o *InlineResponse200112) SetTags(v string)`
 
-SetUsernames sets Usernames field to given value.
+SetTags sets Tags field to given value.
 
-### HasUsernames
+### HasTags
 
-`func (o *InlineResponse200112) HasUsernames() bool`
+`func (o *InlineResponse200112) HasTags() bool`
 
-HasUsernames returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
 
-### GetSerials
+### GetWifi0
 
-`func (o *InlineResponse200112) GetSerials() []string`
+`func (o *InlineResponse200112) GetWifi0() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetWifi0 returns the Wifi0 field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetWifi0Ok
 
-`func (o *InlineResponse200112) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200112) GetWifi0Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetWifi0Ok returns a tuple with the Wifi0 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetWifi0
 
-`func (o *InlineResponse200112) SetSerials(v []string)`
+`func (o *InlineResponse200112) SetWifi0(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
 
-SetSerials sets Serials field to given value.
+SetWifi0 sets Wifi0 field to given value.
 
-### HasSerials
+### HasWifi0
 
-`func (o *InlineResponse200112) HasSerials() bool`
+`func (o *InlineResponse200112) HasWifi0() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasWifi0 returns a boolean if a field has been set.
 
-### GetImeis
+### GetWifi1
 
-`func (o *InlineResponse200112) GetImeis() []string`
+`func (o *InlineResponse200112) GetWifi1() []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0`
 
-GetImeis returns the Imeis field if non-nil, zero value otherwise.
+GetWifi1 returns the Wifi1 field if non-nil, zero value otherwise.
 
-### GetImeisOk
+### GetWifi1Ok
 
-`func (o *InlineResponse200112) GetImeisOk() (*[]string, bool)`
+`func (o *InlineResponse200112) GetWifi1Ok() (*[]NetworksNetworkIdNetworkHealthChannelUtilizationWifi0, bool)`
 
-GetImeisOk returns a tuple with the Imeis field if it's non-nil, zero value otherwise
+GetWifi1Ok returns a tuple with the Wifi1 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetImeis
+### SetWifi1
 
-`func (o *InlineResponse200112) SetImeis(v []string)`
+`func (o *InlineResponse200112) SetWifi1(v []NetworksNetworkIdNetworkHealthChannelUtilizationWifi0)`
 
-SetImeis sets Imeis field to given value.
+SetWifi1 sets Wifi1 field to given value.
 
-### HasImeis
+### HasWifi1
 
-`func (o *InlineResponse200112) HasImeis() bool`
+`func (o *InlineResponse200112) HasWifi1() bool`
 
-HasImeis returns a boolean if a field has been set.
-
-### GetBluetoothMacs
-
-`func (o *InlineResponse200112) GetBluetoothMacs() []string`
-
-GetBluetoothMacs returns the BluetoothMacs field if non-nil, zero value otherwise.
-
-### GetBluetoothMacsOk
-
-`func (o *InlineResponse200112) GetBluetoothMacsOk() (*[]string, bool)`
-
-GetBluetoothMacsOk returns a tuple with the BluetoothMacs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBluetoothMacs
-
-`func (o *InlineResponse200112) SetBluetoothMacs(v []string)`
-
-SetBluetoothMacs sets BluetoothMacs field to given value.
-
-### HasBluetoothMacs
-
-`func (o *InlineResponse200112) HasBluetoothMacs() bool`
-
-HasBluetoothMacs returns a boolean if a field has been set.
+HasWifi1 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

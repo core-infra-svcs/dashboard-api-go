@@ -5,9 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | Name or description for layer 3 static route | [optional] 
-**Subnet** | Pointer to **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | [optional] 
-**NextHopIp** | Pointer to **string** | IP address of the next hop device to which the device sends its traffic for the subnet | [optional] 
-**ManagementNextHop** | Pointer to **string** | Optional fallback IP address for management traffic | [optional] 
+**Subnet** | **string** | The subnet which is routed via this static route and should be specified in CIDR notation (ex. 1.2.3.0/24) | 
+**NextHopIp** | **string** | IP address of the next hop device to which the device sends its traffic for the subnet | 
 **AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
 **PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
 
@@ -15,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject32
 
-`func NewInlineObject32() *InlineObject32`
+`func NewInlineObject32(subnet string, nextHopIp string, ) *InlineObject32`
 
 NewInlineObject32 instantiates a new InlineObject32 object
 This constructor will assign default values to properties that have it defined,
@@ -74,11 +73,6 @@ and a boolean to check if the value has been set.
 
 SetSubnet sets Subnet field to given value.
 
-### HasSubnet
-
-`func (o *InlineObject32) HasSubnet() bool`
-
-HasSubnet returns a boolean if a field has been set.
 
 ### GetNextHopIp
 
@@ -99,36 +93,6 @@ and a boolean to check if the value has been set.
 
 SetNextHopIp sets NextHopIp field to given value.
 
-### HasNextHopIp
-
-`func (o *InlineObject32) HasNextHopIp() bool`
-
-HasNextHopIp returns a boolean if a field has been set.
-
-### GetManagementNextHop
-
-`func (o *InlineObject32) GetManagementNextHop() string`
-
-GetManagementNextHop returns the ManagementNextHop field if non-nil, zero value otherwise.
-
-### GetManagementNextHopOk
-
-`func (o *InlineObject32) GetManagementNextHopOk() (*string, bool)`
-
-GetManagementNextHopOk returns a tuple with the ManagementNextHop field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetManagementNextHop
-
-`func (o *InlineObject32) SetManagementNextHop(v string)`
-
-SetManagementNextHop sets ManagementNextHop field to given value.
-
-### HasManagementNextHop
-
-`func (o *InlineObject32) HasManagementNextHop() bool`
-
-HasManagementNextHop returns a boolean if a field has been set.
 
 ### GetAdvertiseViaOspfEnabled
 

@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
-**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
+**VlanProfile** | Pointer to [**InlineResponse200176VlanProfile**](InlineResponse200176VlanProfile.md) |  | [optional] 
+**Serials** | Pointer to **[]string** | Array of Device Serials | [optional] 
+**StackIds** | Pointer to **[]string** | Array of Switch Stack IDs | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200176WithDefaults instantiates a new InlineResponse200176 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetVlanProfile
 
-`func (o *InlineResponse200176) GetId() string`
+`func (o *InlineResponse200176) GetVlanProfile() InlineResponse200176VlanProfile`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetVlanProfileOk
 
-`func (o *InlineResponse200176) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200176) GetVlanProfileOk() (*InlineResponse200176VlanProfile, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetVlanProfile
 
-`func (o *InlineResponse200176) SetId(v string)`
+`func (o *InlineResponse200176) SetVlanProfile(v InlineResponse200176VlanProfile)`
 
-SetId sets Id field to given value.
+SetVlanProfile sets VlanProfile field to given value.
 
-### HasId
+### HasVlanProfile
 
-`func (o *InlineResponse200176) HasId() bool`
+`func (o *InlineResponse200176) HasVlanProfile() bool`
 
-HasId returns a boolean if a field has been set.
+HasVlanProfile returns a boolean if a field has been set.
 
-### GetName
+### GetSerials
 
-`func (o *InlineResponse200176) GetName() string`
+`func (o *InlineResponse200176) GetSerials() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialsOk
 
-`func (o *InlineResponse200176) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200176) GetSerialsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerials
 
-`func (o *InlineResponse200176) SetName(v string)`
+`func (o *InlineResponse200176) SetSerials(v []string)`
 
-SetName sets Name field to given value.
+SetSerials sets Serials field to given value.
 
-### HasName
+### HasSerials
 
-`func (o *InlineResponse200176) HasName() bool`
+`func (o *InlineResponse200176) HasSerials() bool`
 
-HasName returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetUrl
+### GetStackIds
 
-`func (o *InlineResponse200176) GetUrl() string`
+`func (o *InlineResponse200176) GetStackIds() []string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetStackIds returns the StackIds field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetStackIdsOk
 
-`func (o *InlineResponse200176) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200176) GetStackIdsOk() (*[]string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetStackIds
 
-`func (o *InlineResponse200176) SetUrl(v string)`
+`func (o *InlineResponse200176) SetStackIds(v []string)`
 
-SetUrl sets Url field to given value.
+SetStackIds sets StackIds field to given value.
 
-### HasUrl
+### HasStackIds
 
-`func (o *InlineResponse200176) HasUrl() bool`
+`func (o *InlineResponse200176) HasStackIds() bool`
 
-HasUrl returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse200176) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse200176) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse200176) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse200176) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetPayloadTemplate
-
-`func (o *InlineResponse200176) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
-
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
-
-### GetPayloadTemplateOk
-
-`func (o *InlineResponse200176) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPayloadTemplate
-
-`func (o *InlineResponse200176) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
-
-SetPayloadTemplate sets PayloadTemplate field to given value.
-
-### HasPayloadTemplate
-
-`func (o *InlineResponse200176) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
+HasStackIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

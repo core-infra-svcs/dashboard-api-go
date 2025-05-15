@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | [**[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices.md) | A set of device imports to commit | 
+**ScheduleId** | **string** | Delete the capture schedules of the specified capture schedule id | 
 
 ## Methods
 
 ### NewInlineObject260
 
-`func NewInlineObject260(devices []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices, ) *InlineObject260`
+`func NewInlineObject260(scheduleId string, ) *InlineObject260`
 
 NewInlineObject260 instantiates a new InlineObject260 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject260WithDefaults instantiates a new InlineObject260 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevices
+### GetScheduleId
 
-`func (o *InlineObject260) GetDevices() []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices`
+`func (o *InlineObject260) GetScheduleId() string`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetScheduleIdOk
 
-`func (o *InlineObject260) GetDevicesOk() (*[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices, bool)`
+`func (o *InlineObject260) GetScheduleIdOk() (*string, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetScheduleId
 
-`func (o *InlineObject260) SetDevices(v []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringImportsDevices)`
+`func (o *InlineObject260) SetScheduleId(v string)`
 
-SetDevices sets Devices field to given value.
+SetScheduleId sets ScheduleId field to given value.
 
 
 

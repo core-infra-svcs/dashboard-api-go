@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**MacTableId** | Pointer to **string** | ID of the MAC table request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your MAC table request. | [optional] 
 **Request** | Pointer to [**InlineResponse2014Request**](InlineResponse2014Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the ping request. | [optional] 
+**Status** | Pointer to **string** | Status of the MAC table request. | [optional] 
 **Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
@@ -29,30 +29,30 @@ NewInlineResponse2014WithDefaults instantiates a new InlineResponse2014 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPingId
+### GetMacTableId
 
-`func (o *InlineResponse2014) GetPingId() string`
+`func (o *InlineResponse2014) GetMacTableId() string`
 
-GetPingId returns the PingId field if non-nil, zero value otherwise.
+GetMacTableId returns the MacTableId field if non-nil, zero value otherwise.
 
-### GetPingIdOk
+### GetMacTableIdOk
 
-`func (o *InlineResponse2014) GetPingIdOk() (*string, bool)`
+`func (o *InlineResponse2014) GetMacTableIdOk() (*string, bool)`
 
-GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
+GetMacTableIdOk returns a tuple with the MacTableId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPingId
+### SetMacTableId
 
-`func (o *InlineResponse2014) SetPingId(v string)`
+`func (o *InlineResponse2014) SetMacTableId(v string)`
 
-SetPingId sets PingId field to given value.
+SetMacTableId sets MacTableId field to given value.
 
-### HasPingId
+### HasMacTableId
 
-`func (o *InlineResponse2014) HasPingId() bool`
+`func (o *InlineResponse2014) HasMacTableId() bool`
 
-HasPingId returns a boolean if a field has been set.
+HasMacTableId returns a boolean if a field has been set.
 
 ### GetUrl
 

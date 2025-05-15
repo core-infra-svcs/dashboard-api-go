@@ -4,17 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the new template | 
-**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
-**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
-**BodyFile** | Pointer to **string** | A Base64 encoded file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
-**HeadersFile** | Pointer to **string** | A Base64 encoded file containing the liquid template used with the webhook headers. | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject173
 
-`func NewInlineObject173(name string, ) *InlineObject173`
+`func NewInlineObject173() *InlineObject173`
 
 NewInlineObject173 instantiates a new InlineObject173 object
 This constructor will assign default values to properties that have it defined,
@@ -48,106 +46,61 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
 
-### GetBody
+`func (o *InlineObject173) HasName() bool`
 
-`func (o *InlineObject173) GetBody() string`
+HasName returns a boolean if a field has been set.
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+### GetSharedSecret
 
-### GetBodyOk
+`func (o *InlineObject173) GetSharedSecret() string`
 
-`func (o *InlineObject173) GetBodyOk() (*string, bool)`
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
 
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+### GetSharedSecretOk
+
+`func (o *InlineObject173) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetSharedSecret
 
-`func (o *InlineObject173) SetBody(v string)`
+`func (o *InlineObject173) SetSharedSecret(v string)`
 
-SetBody sets Body field to given value.
+SetSharedSecret sets SharedSecret field to given value.
 
-### HasBody
+### HasSharedSecret
 
-`func (o *InlineObject173) HasBody() bool`
+`func (o *InlineObject173) HasSharedSecret() bool`
 
-HasBody returns a boolean if a field has been set.
+HasSharedSecret returns a boolean if a field has been set.
 
-### GetHeaders
+### GetPayloadTemplate
 
-`func (o *InlineObject173) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
+`func (o *InlineObject173) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate`
 
-GetHeaders returns the Headers field if non-nil, zero value otherwise.
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
 
-### GetHeadersOk
+### GetPayloadTemplateOk
 
-`func (o *InlineObject173) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
+`func (o *InlineObject173) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate, bool)`
 
-GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHeaders
+### SetPayloadTemplate
 
-`func (o *InlineObject173) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
+`func (o *InlineObject173) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate)`
 
-SetHeaders sets Headers field to given value.
+SetPayloadTemplate sets PayloadTemplate field to given value.
 
-### HasHeaders
+### HasPayloadTemplate
 
-`func (o *InlineObject173) HasHeaders() bool`
+`func (o *InlineObject173) HasPayloadTemplate() bool`
 
-HasHeaders returns a boolean if a field has been set.
-
-### GetBodyFile
-
-`func (o *InlineObject173) GetBodyFile() string`
-
-GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
-
-### GetBodyFileOk
-
-`func (o *InlineObject173) GetBodyFileOk() (*string, bool)`
-
-GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBodyFile
-
-`func (o *InlineObject173) SetBodyFile(v string)`
-
-SetBodyFile sets BodyFile field to given value.
-
-### HasBodyFile
-
-`func (o *InlineObject173) HasBodyFile() bool`
-
-HasBodyFile returns a boolean if a field has been set.
-
-### GetHeadersFile
-
-`func (o *InlineObject173) GetHeadersFile() string`
-
-GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
-
-### GetHeadersFileOk
-
-`func (o *InlineObject173) GetHeadersFileOk() (*string, bool)`
-
-GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHeadersFile
-
-`func (o *InlineObject173) SetHeadersFile(v string)`
-
-SetHeadersFile sets HeadersFile field to given value.
-
-### HasHeadersFile
-
-`func (o *InlineObject173) HasHeadersFile() bool`
-
-HasHeadersFile returns a boolean if a field has been set.
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,16 +4,18 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Role** | Pointer to **string** | The role of the SAML administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the SAML administrator on the organization. Can be one of &#39;none&#39;, &#39;read-only&#39;, &#39;full&#39; or &#39;enterprise&#39; | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesTags1**](OrganizationsOrganizationIdSamlRolesTags1.md) | The list of tags that the SAML administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdSamlRolesNetworks1**](OrganizationsOrganizationIdSamlRolesNetworks1.md) | The list of networks that the SAML administrator has privileges on | [optional] 
+**Name** | **string** | The name of the new network | 
+**ProductTypes** | **[]string** | The product type(s) of the new network. If more than one type is included, the network will be a combined network. | 
+**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
+**CopyFromNetworkId** | Pointer to **string** | The ID of the network to copy configuration from. Other provided parameters will override the copied configuration, except type which must match this network&#39;s type exactly. | [optional] 
+**Notes** | Pointer to **string** | Add any notes or additional information about this network here. | [optional] 
 
 ## Methods
 
 ### NewInlineObject280
 
-`func NewInlineObject280() *InlineObject280`
+`func NewInlineObject280(name string, productTypes []string, ) *InlineObject280`
 
 NewInlineObject280 instantiates a new InlineObject280 object
 This constructor will assign default values to properties that have it defined,
@@ -28,72 +30,62 @@ NewInlineObject280WithDefaults instantiates a new InlineObject280 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRole
+### GetName
 
-`func (o *InlineObject280) GetRole() string`
+`func (o *InlineObject280) GetName() string`
 
-GetRole returns the Role field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetRoleOk
+### GetNameOk
 
-`func (o *InlineObject280) GetRoleOk() (*string, bool)`
+`func (o *InlineObject280) GetNameOk() (*string, bool)`
 
-GetRoleOk returns a tuple with the Role field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRole
+### SetName
 
-`func (o *InlineObject280) SetRole(v string)`
+`func (o *InlineObject280) SetName(v string)`
 
-SetRole sets Role field to given value.
+SetName sets Name field to given value.
 
-### HasRole
 
-`func (o *InlineObject280) HasRole() bool`
+### GetProductTypes
 
-HasRole returns a boolean if a field has been set.
+`func (o *InlineObject280) GetProductTypes() []string`
 
-### GetOrgAccess
+GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
 
-`func (o *InlineObject280) GetOrgAccess() string`
+### GetProductTypesOk
 
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
+`func (o *InlineObject280) GetProductTypesOk() (*[]string, bool)`
 
-### GetOrgAccessOk
-
-`func (o *InlineObject280) GetOrgAccessOk() (*string, bool)`
-
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
+GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrgAccess
+### SetProductTypes
 
-`func (o *InlineObject280) SetOrgAccess(v string)`
+`func (o *InlineObject280) SetProductTypes(v []string)`
 
-SetOrgAccess sets OrgAccess field to given value.
+SetProductTypes sets ProductTypes field to given value.
 
-### HasOrgAccess
-
-`func (o *InlineObject280) HasOrgAccess() bool`
-
-HasOrgAccess returns a boolean if a field has been set.
 
 ### GetTags
 
-`func (o *InlineObject280) GetTags() []OrganizationsOrganizationIdSamlRolesTags1`
+`func (o *InlineObject280) GetTags() []string`
 
 GetTags returns the Tags field if non-nil, zero value otherwise.
 
 ### GetTagsOk
 
-`func (o *InlineObject280) GetTagsOk() (*[]OrganizationsOrganizationIdSamlRolesTags1, bool)`
+`func (o *InlineObject280) GetTagsOk() (*[]string, bool)`
 
 GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTags
 
-`func (o *InlineObject280) SetTags(v []OrganizationsOrganizationIdSamlRolesTags1)`
+`func (o *InlineObject280) SetTags(v []string)`
 
 SetTags sets Tags field to given value.
 
@@ -103,30 +95,80 @@ SetTags sets Tags field to given value.
 
 HasTags returns a boolean if a field has been set.
 
-### GetNetworks
+### GetTimeZone
 
-`func (o *InlineObject280) GetNetworks() []OrganizationsOrganizationIdSamlRolesNetworks1`
+`func (o *InlineObject280) GetTimeZone() string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetTimeZoneOk
 
-`func (o *InlineObject280) GetNetworksOk() (*[]OrganizationsOrganizationIdSamlRolesNetworks1, bool)`
+`func (o *InlineObject280) GetTimeZoneOk() (*string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetTimeZone
 
-`func (o *InlineObject280) SetNetworks(v []OrganizationsOrganizationIdSamlRolesNetworks1)`
+`func (o *InlineObject280) SetTimeZone(v string)`
 
-SetNetworks sets Networks field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasNetworks
+### HasTimeZone
 
-`func (o *InlineObject280) HasNetworks() bool`
+`func (o *InlineObject280) HasTimeZone() bool`
 
-HasNetworks returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
+
+### GetCopyFromNetworkId
+
+`func (o *InlineObject280) GetCopyFromNetworkId() string`
+
+GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
+
+### GetCopyFromNetworkIdOk
+
+`func (o *InlineObject280) GetCopyFromNetworkIdOk() (*string, bool)`
+
+GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCopyFromNetworkId
+
+`func (o *InlineObject280) SetCopyFromNetworkId(v string)`
+
+SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
+
+### HasCopyFromNetworkId
+
+`func (o *InlineObject280) HasCopyFromNetworkId() bool`
+
+HasCopyFromNetworkId returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject280) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject280) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject280) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject280) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

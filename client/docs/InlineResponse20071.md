@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTime** | Pointer to **time.Time** | Start time of interval | [optional] 
-**EndTime** | Pointer to **time.Time** | End time of interval | [optional] 
-**ByInterface** | Pointer to [**[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface**](NetworksNetworkIdApplianceUplinksUsageHistoryByInterface.md) | List of usage data for each interface | [optional] 
+**NetworkId** | **string** | ID of the network whose VPN exclusion rules are returned. | 
+**NetworkName** | **string** | Name of the network whose VPN exclusion rules are returned. | 
+**Custom** | [**[]InlineResponse20071Custom**](InlineResponse20071Custom.md) | Custom VPN exclusion rules. | 
+**MajorApplications** | [**[]InlineResponse20071MajorApplications**](InlineResponse20071MajorApplications.md) | Major Application based VPN exclusion rules. | 
 
 ## Methods
 
 ### NewInlineResponse20071
 
-`func NewInlineResponse20071() *InlineResponse20071`
+`func NewInlineResponse20071(networkId string, networkName string, custom []InlineResponse20071Custom, majorApplications []InlineResponse20071MajorApplications, ) *InlineResponse20071`
 
 NewInlineResponse20071 instantiates a new InlineResponse20071 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +28,85 @@ NewInlineResponse20071WithDefaults instantiates a new InlineResponse20071 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTime
+### GetNetworkId
 
-`func (o *InlineResponse20071) GetStartTime() time.Time`
+`func (o *InlineResponse20071) GetNetworkId() string`
 
-GetStartTime returns the StartTime field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetStartTimeOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse20071) GetStartTimeOk() (*time.Time, bool)`
+`func (o *InlineResponse20071) GetNetworkIdOk() (*string, bool)`
 
-GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTime
+### SetNetworkId
 
-`func (o *InlineResponse20071) SetStartTime(v time.Time)`
+`func (o *InlineResponse20071) SetNetworkId(v string)`
 
-SetStartTime sets StartTime field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasStartTime
 
-`func (o *InlineResponse20071) HasStartTime() bool`
+### GetNetworkName
 
-HasStartTime returns a boolean if a field has been set.
+`func (o *InlineResponse20071) GetNetworkName() string`
 
-### GetEndTime
+GetNetworkName returns the NetworkName field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20071) GetEndTime() time.Time`
+### GetNetworkNameOk
 
-GetEndTime returns the EndTime field if non-nil, zero value otherwise.
+`func (o *InlineResponse20071) GetNetworkNameOk() (*string, bool)`
 
-### GetEndTimeOk
-
-`func (o *InlineResponse20071) GetEndTimeOk() (*time.Time, bool)`
-
-GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
+GetNetworkNameOk returns a tuple with the NetworkName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEndTime
+### SetNetworkName
 
-`func (o *InlineResponse20071) SetEndTime(v time.Time)`
+`func (o *InlineResponse20071) SetNetworkName(v string)`
 
-SetEndTime sets EndTime field to given value.
+SetNetworkName sets NetworkName field to given value.
 
-### HasEndTime
 
-`func (o *InlineResponse20071) HasEndTime() bool`
+### GetCustom
 
-HasEndTime returns a boolean if a field has been set.
+`func (o *InlineResponse20071) GetCustom() []InlineResponse20071Custom`
 
-### GetByInterface
+GetCustom returns the Custom field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20071) GetByInterface() []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface`
+### GetCustomOk
 
-GetByInterface returns the ByInterface field if non-nil, zero value otherwise.
+`func (o *InlineResponse20071) GetCustomOk() (*[]InlineResponse20071Custom, bool)`
 
-### GetByInterfaceOk
-
-`func (o *InlineResponse20071) GetByInterfaceOk() (*[]NetworksNetworkIdApplianceUplinksUsageHistoryByInterface, bool)`
-
-GetByInterfaceOk returns a tuple with the ByInterface field if it's non-nil, zero value otherwise
+GetCustomOk returns a tuple with the Custom field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByInterface
+### SetCustom
 
-`func (o *InlineResponse20071) SetByInterface(v []NetworksNetworkIdApplianceUplinksUsageHistoryByInterface)`
+`func (o *InlineResponse20071) SetCustom(v []InlineResponse20071Custom)`
 
-SetByInterface sets ByInterface field to given value.
+SetCustom sets Custom field to given value.
 
-### HasByInterface
 
-`func (o *InlineResponse20071) HasByInterface() bool`
+### GetMajorApplications
 
-HasByInterface returns a boolean if a field has been set.
+`func (o *InlineResponse20071) GetMajorApplications() []InlineResponse20071MajorApplications`
+
+GetMajorApplications returns the MajorApplications field if non-nil, zero value otherwise.
+
+### GetMajorApplicationsOk
+
+`func (o *InlineResponse20071) GetMajorApplicationsOk() (*[]InlineResponse20071MajorApplications, bool)`
+
+GetMajorApplicationsOk returns a tuple with the MajorApplications field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMajorApplications
+
+`func (o *InlineResponse20071) SetMajorApplications(v []InlineResponse20071MajorApplications)`
+
+SetMajorApplications sets MajorApplications field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

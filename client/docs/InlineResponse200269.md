@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200269Counts**](InlineResponse200269Counts.md) |  | [optional] 
+**CaptureId** | Pointer to **string** | Id of packet capture file | [optional] 
+**DownloadUrl** | Pointer to **string** | Download URL of captured packet file -- Depracated | [optional] 
+**Url** | Pointer to **string** | Download URL of captured packet file | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200269WithDefaults instantiates a new InlineResponse200269 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetCaptureId
 
-`func (o *InlineResponse200269) GetCounts() InlineResponse200269Counts`
+`func (o *InlineResponse200269) GetCaptureId() string`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetCaptureId returns the CaptureId field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetCaptureIdOk
 
-`func (o *InlineResponse200269) GetCountsOk() (*InlineResponse200269Counts, bool)`
+`func (o *InlineResponse200269) GetCaptureIdOk() (*string, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetCaptureIdOk returns a tuple with the CaptureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetCaptureId
 
-`func (o *InlineResponse200269) SetCounts(v InlineResponse200269Counts)`
+`func (o *InlineResponse200269) SetCaptureId(v string)`
 
-SetCounts sets Counts field to given value.
+SetCaptureId sets CaptureId field to given value.
 
-### HasCounts
+### HasCaptureId
 
-`func (o *InlineResponse200269) HasCounts() bool`
+`func (o *InlineResponse200269) HasCaptureId() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasCaptureId returns a boolean if a field has been set.
+
+### GetDownloadUrl
+
+`func (o *InlineResponse200269) GetDownloadUrl() string`
+
+GetDownloadUrl returns the DownloadUrl field if non-nil, zero value otherwise.
+
+### GetDownloadUrlOk
+
+`func (o *InlineResponse200269) GetDownloadUrlOk() (*string, bool)`
+
+GetDownloadUrlOk returns a tuple with the DownloadUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownloadUrl
+
+`func (o *InlineResponse200269) SetDownloadUrl(v string)`
+
+SetDownloadUrl sets DownloadUrl field to given value.
+
+### HasDownloadUrl
+
+`func (o *InlineResponse200269) HasDownloadUrl() bool`
+
+HasDownloadUrl returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse200269) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse200269) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse200269) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse200269) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

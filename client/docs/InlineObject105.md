@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | Pointer to [**[]NetworksNetworkIdFloorPlansAutoLocateJobsJobIdRecalculateDevices**](NetworksNetworkIdFloorPlansAutoLocateJobsJobIdRecalculateDevices.md) | The list of devices to update anchor positions for | [optional] 
+**Devices** | Pointer to [**[]NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices**](NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices.md) | The list of devices to publish positions for | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetDevices
 
-`func (o *InlineObject105) GetDevices() []NetworksNetworkIdFloorPlansAutoLocateJobsJobIdRecalculateDevices`
+`func (o *InlineObject105) GetDevices() []NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices`
 
 GetDevices returns the Devices field if non-nil, zero value otherwise.
 
 ### GetDevicesOk
 
-`func (o *InlineObject105) GetDevicesOk() (*[]NetworksNetworkIdFloorPlansAutoLocateJobsJobIdRecalculateDevices, bool)`
+`func (o *InlineObject105) GetDevicesOk() (*[]NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices, bool)`
 
 GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDevices
 
-`func (o *InlineObject105) SetDevices(v []NetworksNetworkIdFloorPlansAutoLocateJobsJobIdRecalculateDevices)`
+`func (o *InlineObject105) SetDevices(v []NetworksNetworkIdFloorPlansAutoLocateJobsJobIdPublishDevices)`
 
 SetDevices sets Devices field to given value.
 

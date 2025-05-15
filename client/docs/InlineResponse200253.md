@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
-**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
-**Licenses** | Pointer to [**[]InlineResponse200253Licenses**](InlineResponse200253Licenses.md) | The licenses claimed | [optional] 
+**Eid** | **string** | eSIM EID | 
+**Iccid** | **string** | eSIM ICCID | 
+**Status** | **string** | Swap status | 
 
 ## Methods
 
 ### NewInlineResponse200253
 
-`func NewInlineResponse200253() *InlineResponse200253`
+`func NewInlineResponse200253(eid string, iccid string, status string, ) *InlineResponse200253`
 
 NewInlineResponse200253 instantiates a new InlineResponse200253 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +27,65 @@ NewInlineResponse200253WithDefaults instantiates a new InlineResponse200253 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrders
+### GetEid
 
-`func (o *InlineResponse200253) GetOrders() []string`
+`func (o *InlineResponse200253) GetEid() string`
 
-GetOrders returns the Orders field if non-nil, zero value otherwise.
+GetEid returns the Eid field if non-nil, zero value otherwise.
 
-### GetOrdersOk
+### GetEidOk
 
-`func (o *InlineResponse200253) GetOrdersOk() (*[]string, bool)`
+`func (o *InlineResponse200253) GetEidOk() (*string, bool)`
 
-GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
+GetEidOk returns a tuple with the Eid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrders
+### SetEid
 
-`func (o *InlineResponse200253) SetOrders(v []string)`
+`func (o *InlineResponse200253) SetEid(v string)`
 
-SetOrders sets Orders field to given value.
+SetEid sets Eid field to given value.
 
-### HasOrders
 
-`func (o *InlineResponse200253) HasOrders() bool`
+### GetIccid
 
-HasOrders returns a boolean if a field has been set.
+`func (o *InlineResponse200253) GetIccid() string`
 
-### GetSerials
+GetIccid returns the Iccid field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200253) GetSerials() []string`
+### GetIccidOk
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+`func (o *InlineResponse200253) GetIccidOk() (*string, bool)`
 
-### GetSerialsOk
-
-`func (o *InlineResponse200253) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetIccidOk returns a tuple with the Iccid field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetIccid
 
-`func (o *InlineResponse200253) SetSerials(v []string)`
+`func (o *InlineResponse200253) SetIccid(v string)`
 
-SetSerials sets Serials field to given value.
+SetIccid sets Iccid field to given value.
 
-### HasSerials
 
-`func (o *InlineResponse200253) HasSerials() bool`
+### GetStatus
 
-HasSerials returns a boolean if a field has been set.
+`func (o *InlineResponse200253) GetStatus() string`
 
-### GetLicenses
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200253) GetLicenses() []InlineResponse200253Licenses`
+### GetStatusOk
 
-GetLicenses returns the Licenses field if non-nil, zero value otherwise.
+`func (o *InlineResponse200253) GetStatusOk() (*string, bool)`
 
-### GetLicensesOk
-
-`func (o *InlineResponse200253) GetLicensesOk() (*[]InlineResponse200253Licenses, bool)`
-
-GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenses
+### SetStatus
 
-`func (o *InlineResponse200253) SetLicenses(v []InlineResponse200253Licenses)`
+`func (o *InlineResponse200253) SetStatus(v string)`
 
-SetLicenses sets Licenses field to given value.
+SetStatus sets Status field to given value.
 
-### HasLicenses
-
-`func (o *InlineResponse200253) HasLicenses() bool`
-
-HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

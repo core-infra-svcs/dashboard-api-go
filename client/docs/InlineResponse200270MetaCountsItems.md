@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | The total number of serials. | [optional] 
-**Remaining** | Pointer to **int32** | The number of serials remaining based on current pagination location within the dataset. | [optional] 
+**Total** | Pointer to **int32** | Total number of scheduled packet captures | [optional] 
 
 ## Methods
 
@@ -50,31 +49,6 @@ SetTotal sets Total field to given value.
 `func (o *InlineResponse200270MetaCountsItems) HasTotal() bool`
 
 HasTotal returns a boolean if a field has been set.
-
-### GetRemaining
-
-`func (o *InlineResponse200270MetaCountsItems) GetRemaining() int32`
-
-GetRemaining returns the Remaining field if non-nil, zero value otherwise.
-
-### GetRemainingOk
-
-`func (o *InlineResponse200270MetaCountsItems) GetRemainingOk() (*int32, bool)`
-
-GetRemainingOk returns a tuple with the Remaining field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRemaining
-
-`func (o *InlineResponse200270MetaCountsItems) SetRemaining(v int32)`
-
-SetRemaining sets Remaining field to given value.
-
-### HasRemaining
-
-`func (o *InlineResponse200270MetaCountsItems) HasRemaining() bool`
-
-HasRemaining returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

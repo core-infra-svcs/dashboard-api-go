@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Subnet** | Pointer to **string** | The subnet of the single LAN configuration | [optional] 
-**ApplianceIp** | Pointer to **string** | The appliance IP address of the single LAN | [optional] 
-**Ipv6** | Pointer to [**NetworksNetworkIdApplianceSingleLanIpv6**](NetworksNetworkIdApplianceSingleLanIpv6.md) |  | [optional] 
-**MandatoryDhcp** | Pointer to [**NetworksNetworkIdApplianceSingleLanMandatoryDhcp**](NetworksNetworkIdApplianceSingleLanMandatoryDhcp.md) |  | [optional] 
+**ClientTrackingMethod** | Pointer to **string** | Client tracking method of a network | [optional] 
+**DeploymentMode** | Pointer to **string** | Deployment mode of a network | [optional] 
+**DynamicDns** | Pointer to [**NetworksNetworkIdApplianceSettingsDynamicDns**](NetworksNetworkIdApplianceSettingsDynamicDns.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineObject62WithDefaults instantiates a new InlineObject62 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSubnet
+### GetClientTrackingMethod
 
-`func (o *InlineObject62) GetSubnet() string`
+`func (o *InlineObject62) GetClientTrackingMethod() string`
 
-GetSubnet returns the Subnet field if non-nil, zero value otherwise.
+GetClientTrackingMethod returns the ClientTrackingMethod field if non-nil, zero value otherwise.
 
-### GetSubnetOk
+### GetClientTrackingMethodOk
 
-`func (o *InlineObject62) GetSubnetOk() (*string, bool)`
+`func (o *InlineObject62) GetClientTrackingMethodOk() (*string, bool)`
 
-GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
+GetClientTrackingMethodOk returns a tuple with the ClientTrackingMethod field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSubnet
+### SetClientTrackingMethod
 
-`func (o *InlineObject62) SetSubnet(v string)`
+`func (o *InlineObject62) SetClientTrackingMethod(v string)`
 
-SetSubnet sets Subnet field to given value.
+SetClientTrackingMethod sets ClientTrackingMethod field to given value.
 
-### HasSubnet
+### HasClientTrackingMethod
 
-`func (o *InlineObject62) HasSubnet() bool`
+`func (o *InlineObject62) HasClientTrackingMethod() bool`
 
-HasSubnet returns a boolean if a field has been set.
+HasClientTrackingMethod returns a boolean if a field has been set.
 
-### GetApplianceIp
+### GetDeploymentMode
 
-`func (o *InlineObject62) GetApplianceIp() string`
+`func (o *InlineObject62) GetDeploymentMode() string`
 
-GetApplianceIp returns the ApplianceIp field if non-nil, zero value otherwise.
+GetDeploymentMode returns the DeploymentMode field if non-nil, zero value otherwise.
 
-### GetApplianceIpOk
+### GetDeploymentModeOk
 
-`func (o *InlineObject62) GetApplianceIpOk() (*string, bool)`
+`func (o *InlineObject62) GetDeploymentModeOk() (*string, bool)`
 
-GetApplianceIpOk returns a tuple with the ApplianceIp field if it's non-nil, zero value otherwise
+GetDeploymentModeOk returns a tuple with the DeploymentMode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApplianceIp
+### SetDeploymentMode
 
-`func (o *InlineObject62) SetApplianceIp(v string)`
+`func (o *InlineObject62) SetDeploymentMode(v string)`
 
-SetApplianceIp sets ApplianceIp field to given value.
+SetDeploymentMode sets DeploymentMode field to given value.
 
-### HasApplianceIp
+### HasDeploymentMode
 
-`func (o *InlineObject62) HasApplianceIp() bool`
+`func (o *InlineObject62) HasDeploymentMode() bool`
 
-HasApplianceIp returns a boolean if a field has been set.
+HasDeploymentMode returns a boolean if a field has been set.
 
-### GetIpv6
+### GetDynamicDns
 
-`func (o *InlineObject62) GetIpv6() NetworksNetworkIdApplianceSingleLanIpv6`
+`func (o *InlineObject62) GetDynamicDns() NetworksNetworkIdApplianceSettingsDynamicDns`
 
-GetIpv6 returns the Ipv6 field if non-nil, zero value otherwise.
+GetDynamicDns returns the DynamicDns field if non-nil, zero value otherwise.
 
-### GetIpv6Ok
+### GetDynamicDnsOk
 
-`func (o *InlineObject62) GetIpv6Ok() (*NetworksNetworkIdApplianceSingleLanIpv6, bool)`
+`func (o *InlineObject62) GetDynamicDnsOk() (*NetworksNetworkIdApplianceSettingsDynamicDns, bool)`
 
-GetIpv6Ok returns a tuple with the Ipv6 field if it's non-nil, zero value otherwise
+GetDynamicDnsOk returns a tuple with the DynamicDns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpv6
+### SetDynamicDns
 
-`func (o *InlineObject62) SetIpv6(v NetworksNetworkIdApplianceSingleLanIpv6)`
+`func (o *InlineObject62) SetDynamicDns(v NetworksNetworkIdApplianceSettingsDynamicDns)`
 
-SetIpv6 sets Ipv6 field to given value.
+SetDynamicDns sets DynamicDns field to given value.
 
-### HasIpv6
+### HasDynamicDns
 
-`func (o *InlineObject62) HasIpv6() bool`
+`func (o *InlineObject62) HasDynamicDns() bool`
 
-HasIpv6 returns a boolean if a field has been set.
-
-### GetMandatoryDhcp
-
-`func (o *InlineObject62) GetMandatoryDhcp() NetworksNetworkIdApplianceSingleLanMandatoryDhcp`
-
-GetMandatoryDhcp returns the MandatoryDhcp field if non-nil, zero value otherwise.
-
-### GetMandatoryDhcpOk
-
-`func (o *InlineObject62) GetMandatoryDhcpOk() (*NetworksNetworkIdApplianceSingleLanMandatoryDhcp, bool)`
-
-GetMandatoryDhcpOk returns a tuple with the MandatoryDhcp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMandatoryDhcp
-
-`func (o *InlineObject62) SetMandatoryDhcp(v NetworksNetworkIdApplianceSingleLanMandatoryDhcp)`
-
-SetMandatoryDhcp sets MandatoryDhcp field to given value.
-
-### HasMandatoryDhcp
-
-`func (o *InlineObject62) HasMandatoryDhcp() bool`
-
-HasMandatoryDhcp returns a boolean if a field has been set.
+HasDynamicDns returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

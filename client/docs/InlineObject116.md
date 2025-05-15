@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the sensor alert profile. | 
-**Schedule** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesSchedule1**](NetworksNetworkIdSensorAlertsProfilesSchedule1.md) |  | [optional] 
-**Conditions** | [**[]NetworksNetworkIdSensorAlertsProfilesConditions**](NetworksNetworkIdSensorAlertsProfilesConditions.md) | List of conditions that will cause the profile to send an alert. | 
-**Recipients** | Pointer to [**NetworksNetworkIdSensorAlertsProfilesRecipients**](NetworksNetworkIdSensorAlertsProfilesRecipients.md) |  | [optional] 
-**Serials** | Pointer to **[]string** | List of device serials assigned to this sensor alert profile. | [optional] 
-**IncludeSensorUrl** | Pointer to **bool** | Include dashboard link to sensor in messages (default: true). | [optional] [default to true]
-**Message** | Pointer to **string** | A custom message that will appear in email and text message alerts. | [optional] 
+**Type** | Pointer to **string** | One of \&quot;delete\&quot; or \&quot;restrict processing\&quot; | [optional] 
+**Datasets** | Pointer to **[]string** | The datasets related to the provided key that should be deleted. Only applies to \&quot;delete\&quot; requests. The value \&quot;all\&quot; will be expanded to all datasets applicable to this type. The datasets by applicable to each type are: mac (usage, events, traffic), email (users, loginAttempts), username (users, loginAttempts), bluetoothMac (client, connectivity), smDeviceId (device), smUserId (user) | [optional] 
+**Username** | Pointer to **string** | The username of a network log in. Only applies to \&quot;delete\&quot; requests. | [optional] 
+**Email** | Pointer to **string** | The email of a network user account. Only applies to \&quot;delete\&quot; requests. | [optional] 
+**Mac** | Pointer to **string** | The MAC of a network client device. Applies to both \&quot;restrict processing\&quot; and \&quot;delete\&quot; requests. | [optional] 
+**SmDeviceId** | Pointer to **string** | The sm_device_id of a Systems Manager device. The only way to \&quot;restrict processing\&quot; or \&quot;delete\&quot; a Systems Manager device. Must include \&quot;device\&quot; in the dataset for a \&quot;delete\&quot; request to destroy the device. | [optional] 
+**SmUserId** | Pointer to **string** | The sm_user_id of a Systems Manager user. The only way to \&quot;restrict processing\&quot; or \&quot;delete\&quot; a Systems Manager user. Must include \&quot;user\&quot; in the dataset for a \&quot;delete\&quot; request to destroy the user. | [optional] 
 
 ## Methods
 
 ### NewInlineObject116
 
-`func NewInlineObject116(name string, conditions []NetworksNetworkIdSensorAlertsProfilesConditions, ) *InlineObject116`
+`func NewInlineObject116() *InlineObject116`
 
 NewInlineObject116 instantiates a new InlineObject116 object
 This constructor will assign default values to properties that have it defined,
@@ -31,170 +31,180 @@ NewInlineObject116WithDefaults instantiates a new InlineObject116 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetType
 
-`func (o *InlineObject116) GetName() string`
+`func (o *InlineObject116) GetType() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTypeOk
 
-`func (o *InlineObject116) GetNameOk() (*string, bool)`
+`func (o *InlineObject116) GetTypeOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetType
 
-`func (o *InlineObject116) SetName(v string)`
+`func (o *InlineObject116) SetType(v string)`
 
-SetName sets Name field to given value.
+SetType sets Type field to given value.
 
+### HasType
 
-### GetSchedule
+`func (o *InlineObject116) HasType() bool`
 
-`func (o *InlineObject116) GetSchedule() NetworksNetworkIdSensorAlertsProfilesSchedule1`
+HasType returns a boolean if a field has been set.
 
-GetSchedule returns the Schedule field if non-nil, zero value otherwise.
+### GetDatasets
 
-### GetScheduleOk
+`func (o *InlineObject116) GetDatasets() []string`
 
-`func (o *InlineObject116) GetScheduleOk() (*NetworksNetworkIdSensorAlertsProfilesSchedule1, bool)`
+GetDatasets returns the Datasets field if non-nil, zero value otherwise.
 
-GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
+### GetDatasetsOk
+
+`func (o *InlineObject116) GetDatasetsOk() (*[]string, bool)`
+
+GetDatasetsOk returns a tuple with the Datasets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSchedule
+### SetDatasets
 
-`func (o *InlineObject116) SetSchedule(v NetworksNetworkIdSensorAlertsProfilesSchedule1)`
+`func (o *InlineObject116) SetDatasets(v []string)`
 
-SetSchedule sets Schedule field to given value.
+SetDatasets sets Datasets field to given value.
 
-### HasSchedule
+### HasDatasets
 
-`func (o *InlineObject116) HasSchedule() bool`
+`func (o *InlineObject116) HasDatasets() bool`
 
-HasSchedule returns a boolean if a field has been set.
+HasDatasets returns a boolean if a field has been set.
 
-### GetConditions
+### GetUsername
 
-`func (o *InlineObject116) GetConditions() []NetworksNetworkIdSensorAlertsProfilesConditions`
+`func (o *InlineObject116) GetUsername() string`
 
-GetConditions returns the Conditions field if non-nil, zero value otherwise.
+GetUsername returns the Username field if non-nil, zero value otherwise.
 
-### GetConditionsOk
+### GetUsernameOk
 
-`func (o *InlineObject116) GetConditionsOk() (*[]NetworksNetworkIdSensorAlertsProfilesConditions, bool)`
+`func (o *InlineObject116) GetUsernameOk() (*string, bool)`
 
-GetConditionsOk returns a tuple with the Conditions field if it's non-nil, zero value otherwise
+GetUsernameOk returns a tuple with the Username field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConditions
+### SetUsername
 
-`func (o *InlineObject116) SetConditions(v []NetworksNetworkIdSensorAlertsProfilesConditions)`
+`func (o *InlineObject116) SetUsername(v string)`
 
-SetConditions sets Conditions field to given value.
+SetUsername sets Username field to given value.
 
+### HasUsername
 
-### GetRecipients
+`func (o *InlineObject116) HasUsername() bool`
 
-`func (o *InlineObject116) GetRecipients() NetworksNetworkIdSensorAlertsProfilesRecipients`
+HasUsername returns a boolean if a field has been set.
 
-GetRecipients returns the Recipients field if non-nil, zero value otherwise.
+### GetEmail
 
-### GetRecipientsOk
+`func (o *InlineObject116) GetEmail() string`
 
-`func (o *InlineObject116) GetRecipientsOk() (*NetworksNetworkIdSensorAlertsProfilesRecipients, bool)`
+GetEmail returns the Email field if non-nil, zero value otherwise.
 
-GetRecipientsOk returns a tuple with the Recipients field if it's non-nil, zero value otherwise
+### GetEmailOk
+
+`func (o *InlineObject116) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRecipients
+### SetEmail
 
-`func (o *InlineObject116) SetRecipients(v NetworksNetworkIdSensorAlertsProfilesRecipients)`
+`func (o *InlineObject116) SetEmail(v string)`
 
-SetRecipients sets Recipients field to given value.
+SetEmail sets Email field to given value.
 
-### HasRecipients
+### HasEmail
 
-`func (o *InlineObject116) HasRecipients() bool`
+`func (o *InlineObject116) HasEmail() bool`
 
-HasRecipients returns a boolean if a field has been set.
+HasEmail returns a boolean if a field has been set.
 
-### GetSerials
+### GetMac
 
-`func (o *InlineObject116) GetSerials() []string`
+`func (o *InlineObject116) GetMac() string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetMacOk
 
-`func (o *InlineObject116) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject116) GetMacOk() (*string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetMac
 
-`func (o *InlineObject116) SetSerials(v []string)`
+`func (o *InlineObject116) SetMac(v string)`
 
-SetSerials sets Serials field to given value.
+SetMac sets Mac field to given value.
 
-### HasSerials
+### HasMac
 
-`func (o *InlineObject116) HasSerials() bool`
+`func (o *InlineObject116) HasMac() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetIncludeSensorUrl
+### GetSmDeviceId
 
-`func (o *InlineObject116) GetIncludeSensorUrl() bool`
+`func (o *InlineObject116) GetSmDeviceId() string`
 
-GetIncludeSensorUrl returns the IncludeSensorUrl field if non-nil, zero value otherwise.
+GetSmDeviceId returns the SmDeviceId field if non-nil, zero value otherwise.
 
-### GetIncludeSensorUrlOk
+### GetSmDeviceIdOk
 
-`func (o *InlineObject116) GetIncludeSensorUrlOk() (*bool, bool)`
+`func (o *InlineObject116) GetSmDeviceIdOk() (*string, bool)`
 
-GetIncludeSensorUrlOk returns a tuple with the IncludeSensorUrl field if it's non-nil, zero value otherwise
+GetSmDeviceIdOk returns a tuple with the SmDeviceId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIncludeSensorUrl
+### SetSmDeviceId
 
-`func (o *InlineObject116) SetIncludeSensorUrl(v bool)`
+`func (o *InlineObject116) SetSmDeviceId(v string)`
 
-SetIncludeSensorUrl sets IncludeSensorUrl field to given value.
+SetSmDeviceId sets SmDeviceId field to given value.
 
-### HasIncludeSensorUrl
+### HasSmDeviceId
 
-`func (o *InlineObject116) HasIncludeSensorUrl() bool`
+`func (o *InlineObject116) HasSmDeviceId() bool`
 
-HasIncludeSensorUrl returns a boolean if a field has been set.
+HasSmDeviceId returns a boolean if a field has been set.
 
-### GetMessage
+### GetSmUserId
 
-`func (o *InlineObject116) GetMessage() string`
+`func (o *InlineObject116) GetSmUserId() string`
 
-GetMessage returns the Message field if non-nil, zero value otherwise.
+GetSmUserId returns the SmUserId field if non-nil, zero value otherwise.
 
-### GetMessageOk
+### GetSmUserIdOk
 
-`func (o *InlineObject116) GetMessageOk() (*string, bool)`
+`func (o *InlineObject116) GetSmUserIdOk() (*string, bool)`
 
-GetMessageOk returns a tuple with the Message field if it's non-nil, zero value otherwise
+GetSmUserIdOk returns a tuple with the SmUserId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMessage
+### SetSmUserId
 
-`func (o *InlineObject116) SetMessage(v string)`
+`func (o *InlineObject116) SetSmUserId(v string)`
 
-SetMessage sets Message field to given value.
+SetSmUserId sets SmUserId field to given value.
 
-### HasMessage
+### HasSmUserId
 
-`func (o *InlineObject116) HasMessage() bool`
+`func (o *InlineObject116) HasSmUserId() bool`
 
-HasMessage returns a boolean if a field has been set.
+HasSmUserId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

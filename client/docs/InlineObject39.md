@@ -4,9 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DefaultDestinations** | Pointer to [**InlineResponse20049DefaultDestinations**](InlineResponse20049DefaultDestinations.md) |  | [optional] 
-**Alerts** | Pointer to [**[]InlineResponse20049Alerts**](InlineResponse20049Alerts.md) | Alert-specific configuration for each type. Only alerts that pertain to the network can be updated. | [optional] 
-**Muting** | Pointer to [**InlineResponse20049Muting**](InlineResponse20049Muting.md) |  | [optional] 
+**Name** | Pointer to **string** | The name of the network | [optional] 
+**TimeZone** | Pointer to **string** | The timezone of the network. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article.&lt;/a&gt; | [optional] 
+**Tags** | Pointer to **[]string** | A list of tags to be applied to the network | [optional] 
+**EnrollmentString** | Pointer to **string** | A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. | [optional] 
+**Notes** | Pointer to **string** | Add any notes or additional information about this network here. | [optional] 
 
 ## Methods
 
@@ -27,80 +29,130 @@ NewInlineObject39WithDefaults instantiates a new InlineObject39 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDefaultDestinations
+### GetName
 
-`func (o *InlineObject39) GetDefaultDestinations() InlineResponse20049DefaultDestinations`
+`func (o *InlineObject39) GetName() string`
 
-GetDefaultDestinations returns the DefaultDestinations field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDefaultDestinationsOk
+### GetNameOk
 
-`func (o *InlineObject39) GetDefaultDestinationsOk() (*InlineResponse20049DefaultDestinations, bool)`
+`func (o *InlineObject39) GetNameOk() (*string, bool)`
 
-GetDefaultDestinationsOk returns a tuple with the DefaultDestinations field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultDestinations
+### SetName
 
-`func (o *InlineObject39) SetDefaultDestinations(v InlineResponse20049DefaultDestinations)`
+`func (o *InlineObject39) SetName(v string)`
 
-SetDefaultDestinations sets DefaultDestinations field to given value.
+SetName sets Name field to given value.
 
-### HasDefaultDestinations
+### HasName
 
-`func (o *InlineObject39) HasDefaultDestinations() bool`
+`func (o *InlineObject39) HasName() bool`
 
-HasDefaultDestinations returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetAlerts
+### GetTimeZone
 
-`func (o *InlineObject39) GetAlerts() []InlineResponse20049Alerts`
+`func (o *InlineObject39) GetTimeZone() string`
 
-GetAlerts returns the Alerts field if non-nil, zero value otherwise.
+GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
 
-### GetAlertsOk
+### GetTimeZoneOk
 
-`func (o *InlineObject39) GetAlertsOk() (*[]InlineResponse20049Alerts, bool)`
+`func (o *InlineObject39) GetTimeZoneOk() (*string, bool)`
 
-GetAlertsOk returns a tuple with the Alerts field if it's non-nil, zero value otherwise
+GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlerts
+### SetTimeZone
 
-`func (o *InlineObject39) SetAlerts(v []InlineResponse20049Alerts)`
+`func (o *InlineObject39) SetTimeZone(v string)`
 
-SetAlerts sets Alerts field to given value.
+SetTimeZone sets TimeZone field to given value.
 
-### HasAlerts
+### HasTimeZone
 
-`func (o *InlineObject39) HasAlerts() bool`
+`func (o *InlineObject39) HasTimeZone() bool`
 
-HasAlerts returns a boolean if a field has been set.
+HasTimeZone returns a boolean if a field has been set.
 
-### GetMuting
+### GetTags
 
-`func (o *InlineObject39) GetMuting() InlineResponse20049Muting`
+`func (o *InlineObject39) GetTags() []string`
 
-GetMuting returns the Muting field if non-nil, zero value otherwise.
+GetTags returns the Tags field if non-nil, zero value otherwise.
 
-### GetMutingOk
+### GetTagsOk
 
-`func (o *InlineObject39) GetMutingOk() (*InlineResponse20049Muting, bool)`
+`func (o *InlineObject39) GetTagsOk() (*[]string, bool)`
 
-GetMutingOk returns a tuple with the Muting field if it's non-nil, zero value otherwise
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMuting
+### SetTags
 
-`func (o *InlineObject39) SetMuting(v InlineResponse20049Muting)`
+`func (o *InlineObject39) SetTags(v []string)`
 
-SetMuting sets Muting field to given value.
+SetTags sets Tags field to given value.
 
-### HasMuting
+### HasTags
 
-`func (o *InlineObject39) HasMuting() bool`
+`func (o *InlineObject39) HasTags() bool`
 
-HasMuting returns a boolean if a field has been set.
+HasTags returns a boolean if a field has been set.
+
+### GetEnrollmentString
+
+`func (o *InlineObject39) GetEnrollmentString() string`
+
+GetEnrollmentString returns the EnrollmentString field if non-nil, zero value otherwise.
+
+### GetEnrollmentStringOk
+
+`func (o *InlineObject39) GetEnrollmentStringOk() (*string, bool)`
+
+GetEnrollmentStringOk returns a tuple with the EnrollmentString field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnrollmentString
+
+`func (o *InlineObject39) SetEnrollmentString(v string)`
+
+SetEnrollmentString sets EnrollmentString field to given value.
+
+### HasEnrollmentString
+
+`func (o *InlineObject39) HasEnrollmentString() bool`
+
+HasEnrollmentString returns a boolean if a field has been set.
+
+### GetNotes
+
+`func (o *InlineObject39) GetNotes() string`
+
+GetNotes returns the Notes field if non-nil, zero value otherwise.
+
+### GetNotesOk
+
+`func (o *InlineObject39) GetNotesOk() (*string, bool)`
+
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNotes
+
+`func (o *InlineObject39) SetNotes(v string)`
+
+SetNotes sets Notes field to given value.
+
+### HasNotes
+
+`func (o *InlineObject39) HasNotes() bool`
+
+HasNotes returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

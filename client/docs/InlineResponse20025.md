@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PingId** | Pointer to **string** | Id to check the status of your ping request. | [optional] 
-**Url** | Pointer to **string** | GET this url to check the status of your ping request. | [optional] 
+**MacTableId** | Pointer to **string** | ID of the MAC table request. Used to check the status of the request. | [optional] 
+**Url** | Pointer to **string** | GET this url to check the status of your MAC table request. | [optional] 
 **Request** | Pointer to [**InlineResponse2014Request**](InlineResponse2014Request.md) |  | [optional] 
-**Status** | Pointer to **string** | Status of the ping request. | [optional] 
-**Results** | Pointer to [**InlineResponse20025Results**](InlineResponse20025Results.md) |  | [optional] 
+**Status** | Pointer to **string** | Status of the MAC table request. | [optional] 
+**Entries** | Pointer to [**[]InlineResponse20025Entries**](InlineResponse20025Entries.md) | MAC address table entries | [optional] 
+**Error** | Pointer to **string** | An error message for a failed execution | [optional] 
 
 ## Methods
 
@@ -29,30 +30,30 @@ NewInlineResponse20025WithDefaults instantiates a new InlineResponse20025 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPingId
+### GetMacTableId
 
-`func (o *InlineResponse20025) GetPingId() string`
+`func (o *InlineResponse20025) GetMacTableId() string`
 
-GetPingId returns the PingId field if non-nil, zero value otherwise.
+GetMacTableId returns the MacTableId field if non-nil, zero value otherwise.
 
-### GetPingIdOk
+### GetMacTableIdOk
 
-`func (o *InlineResponse20025) GetPingIdOk() (*string, bool)`
+`func (o *InlineResponse20025) GetMacTableIdOk() (*string, bool)`
 
-GetPingIdOk returns a tuple with the PingId field if it's non-nil, zero value otherwise
+GetMacTableIdOk returns a tuple with the MacTableId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPingId
+### SetMacTableId
 
-`func (o *InlineResponse20025) SetPingId(v string)`
+`func (o *InlineResponse20025) SetMacTableId(v string)`
 
-SetPingId sets PingId field to given value.
+SetMacTableId sets MacTableId field to given value.
 
-### HasPingId
+### HasMacTableId
 
-`func (o *InlineResponse20025) HasPingId() bool`
+`func (o *InlineResponse20025) HasMacTableId() bool`
 
-HasPingId returns a boolean if a field has been set.
+HasMacTableId returns a boolean if a field has been set.
 
 ### GetUrl
 
@@ -129,30 +130,55 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetResults
+### GetEntries
 
-`func (o *InlineResponse20025) GetResults() InlineResponse20025Results`
+`func (o *InlineResponse20025) GetEntries() []InlineResponse20025Entries`
 
-GetResults returns the Results field if non-nil, zero value otherwise.
+GetEntries returns the Entries field if non-nil, zero value otherwise.
 
-### GetResultsOk
+### GetEntriesOk
 
-`func (o *InlineResponse20025) GetResultsOk() (*InlineResponse20025Results, bool)`
+`func (o *InlineResponse20025) GetEntriesOk() (*[]InlineResponse20025Entries, bool)`
 
-GetResultsOk returns a tuple with the Results field if it's non-nil, zero value otherwise
+GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResults
+### SetEntries
 
-`func (o *InlineResponse20025) SetResults(v InlineResponse20025Results)`
+`func (o *InlineResponse20025) SetEntries(v []InlineResponse20025Entries)`
 
-SetResults sets Results field to given value.
+SetEntries sets Entries field to given value.
 
-### HasResults
+### HasEntries
 
-`func (o *InlineResponse20025) HasResults() bool`
+`func (o *InlineResponse20025) HasEntries() bool`
 
-HasResults returns a boolean if a field has been set.
+HasEntries returns a boolean if a field has been set.
+
+### GetError
+
+`func (o *InlineResponse20025) GetError() string`
+
+GetError returns the Error field if non-nil, zero value otherwise.
+
+### GetErrorOk
+
+`func (o *InlineResponse20025) GetErrorOk() (*string, bool)`
+
+GetErrorOk returns a tuple with the Error field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetError
+
+`func (o *InlineResponse20025) SetError(v string)`
+
+SetError sets Error field to given value.
+
+### HasError
+
+`func (o *InlineResponse20025) HasError() bool`
+
+HasError returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

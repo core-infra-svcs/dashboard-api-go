@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
+**Counts** | Pointer to [**InlineResponse200213Counts**](InlineResponse200213Counts.md) |  | [optional] 
+**Limits** | Pointer to [**InlineResponse200213Limits**](InlineResponse200213Limits.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200213WithDefaults instantiates a new InlineResponse200213 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetEnabledNetworks
+### GetCounts
 
-`func (o *InlineResponse200213) GetEnabledNetworks() []string`
+`func (o *InlineResponse200213) GetCounts() InlineResponse200213Counts`
 
-GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
+GetCounts returns the Counts field if non-nil, zero value otherwise.
 
-### GetEnabledNetworksOk
+### GetCountsOk
 
-`func (o *InlineResponse200213) GetEnabledNetworksOk() (*[]string, bool)`
+`func (o *InlineResponse200213) GetCountsOk() (*InlineResponse200213Counts, bool)`
 
-GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
+GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEnabledNetworks
+### SetCounts
 
-`func (o *InlineResponse200213) SetEnabledNetworks(v []string)`
+`func (o *InlineResponse200213) SetCounts(v InlineResponse200213Counts)`
 
-SetEnabledNetworks sets EnabledNetworks field to given value.
+SetCounts sets Counts field to given value.
 
-### HasEnabledNetworks
+### HasCounts
 
-`func (o *InlineResponse200213) HasEnabledNetworks() bool`
+`func (o *InlineResponse200213) HasCounts() bool`
 
-HasEnabledNetworks returns a boolean if a field has been set.
+HasCounts returns a boolean if a field has been set.
+
+### GetLimits
+
+`func (o *InlineResponse200213) GetLimits() InlineResponse200213Limits`
+
+GetLimits returns the Limits field if non-nil, zero value otherwise.
+
+### GetLimitsOk
+
+`func (o *InlineResponse200213) GetLimitsOk() (*InlineResponse200213Limits, bool)`
+
+GetLimitsOk returns a tuple with the Limits field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLimits
+
+`func (o *InlineResponse200213) SetLimits(v InlineResponse200213Limits)`
+
+SetLimits sets Limits field to given value.
+
+### HasLimits
+
+`func (o *InlineResponse200213) HasLimits() bool`
+
+HasLimits returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

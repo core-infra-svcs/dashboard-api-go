@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the SM seats to | 
-**LicenseId** | **string** | The ID of the SM license to move the seats from | 
-**SeatCount** | **int32** | The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license | 
+**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks.md) | List containing the network ID and the product type to disable XDR on | 
 
 ## Methods
 
 ### NewInlineObject265
 
-`func NewInlineObject265(destOrganizationId string, licenseId string, seatCount int32, ) *InlineObject265`
+`func NewInlineObject265(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, ) *InlineObject265`
 
 NewInlineObject265 instantiates a new InlineObject265 object
 This constructor will assign default values to properties that have it defined,
@@ -27,64 +25,24 @@ NewInlineObject265WithDefaults instantiates a new InlineObject265 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetNetworks
 
-`func (o *InlineObject265) GetDestOrganizationId() string`
+`func (o *InlineObject265) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetNetworksOk
 
-`func (o *InlineObject265) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject265) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetNetworks
 
-`func (o *InlineObject265) SetDestOrganizationId(v string)`
+`func (o *InlineObject265) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
-
-
-### GetLicenseId
-
-`func (o *InlineObject265) GetLicenseId() string`
-
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
-
-### GetLicenseIdOk
-
-`func (o *InlineObject265) GetLicenseIdOk() (*string, bool)`
-
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenseId
-
-`func (o *InlineObject265) SetLicenseId(v string)`
-
-SetLicenseId sets LicenseId field to given value.
-
-
-### GetSeatCount
-
-`func (o *InlineObject265) GetSeatCount() int32`
-
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
-
-### GetSeatCountOk
-
-`func (o *InlineObject265) GetSeatCountOk() (*int32, bool)`
-
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeatCount
-
-`func (o *InlineObject265) SetSeatCount(v int32)`
-
-SetSeatCount sets SeatCount field to given value.
+SetNetworks sets Networks field to given value.
 
 
 

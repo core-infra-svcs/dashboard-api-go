@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200270Items**](InlineResponse200270Items.md) | The top-level property containing all memory utilization data. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200270Items**](InlineResponse200270Items.md) | List of scheduled packet captures | [optional] 
 **Meta** | Pointer to [**InlineResponse200270Meta**](InlineResponse200270Meta.md) |  | [optional] 
 
 ## Methods

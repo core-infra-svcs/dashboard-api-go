@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Monitored media server id | [optional] 
-**Name** | Pointer to **string** | The name of the VoIP provider | [optional] 
-**Address** | Pointer to **string** | The IP address (IPv4 only) or hostname of the media server to monitor | [optional] 
-**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead | [optional] 
+**Id** | Pointer to **string** | ID of Early Access Feature | [optional] 
+**ShortName** | Pointer to **string** | Name of Early Access Feature | [optional] 
+**LimitScopeToNetworks** | Pointer to [**[]InlineResponse200280LimitScopeToNetworks**](InlineResponse200280LimitScopeToNetworks.md) | Networks assigned to the Early Access Feature | [optional] 
+**OptOutEligibility** | Pointer to [**InlineResponse200280OptOutEligibility**](InlineResponse200280OptOutEligibility.md) |  | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Time when Early Access Feature was created | [optional] 
 
 ## Methods
 
@@ -53,80 +54,105 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetName
+### GetShortName
 
-`func (o *InlineResponse200280) GetName() string`
+`func (o *InlineResponse200280) GetShortName() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetShortNameOk
 
-`func (o *InlineResponse200280) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200280) GetShortNameOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetShortName
 
-`func (o *InlineResponse200280) SetName(v string)`
+`func (o *InlineResponse200280) SetShortName(v string)`
 
-SetName sets Name field to given value.
+SetShortName sets ShortName field to given value.
 
-### HasName
+### HasShortName
 
-`func (o *InlineResponse200280) HasName() bool`
+`func (o *InlineResponse200280) HasShortName() bool`
 
-HasName returns a boolean if a field has been set.
+HasShortName returns a boolean if a field has been set.
 
-### GetAddress
+### GetLimitScopeToNetworks
 
-`func (o *InlineResponse200280) GetAddress() string`
+`func (o *InlineResponse200280) GetLimitScopeToNetworks() []InlineResponse200280LimitScopeToNetworks`
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetAddressOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineResponse200280) GetAddressOk() (*string, bool)`
+`func (o *InlineResponse200280) GetLimitScopeToNetworksOk() (*[]InlineResponse200280LimitScopeToNetworks, bool)`
 
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetLimitScopeToNetworks
 
-`func (o *InlineResponse200280) SetAddress(v string)`
+`func (o *InlineResponse200280) SetLimitScopeToNetworks(v []InlineResponse200280LimitScopeToNetworks)`
 
-SetAddress sets Address field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
-### HasAddress
+### HasLimitScopeToNetworks
 
-`func (o *InlineResponse200280) HasAddress() bool`
+`func (o *InlineResponse200280) HasLimitScopeToNetworks() bool`
 
-HasAddress returns a boolean if a field has been set.
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
-### GetBestEffortMonitoringEnabled
+### GetOptOutEligibility
 
-`func (o *InlineResponse200280) GetBestEffortMonitoringEnabled() bool`
+`func (o *InlineResponse200280) GetOptOutEligibility() InlineResponse200280OptOutEligibility`
 
-GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
+GetOptOutEligibility returns the OptOutEligibility field if non-nil, zero value otherwise.
 
-### GetBestEffortMonitoringEnabledOk
+### GetOptOutEligibilityOk
 
-`func (o *InlineResponse200280) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
+`func (o *InlineResponse200280) GetOptOutEligibilityOk() (*InlineResponse200280OptOutEligibility, bool)`
 
-GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
+GetOptOutEligibilityOk returns a tuple with the OptOutEligibility field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBestEffortMonitoringEnabled
+### SetOptOutEligibility
 
-`func (o *InlineResponse200280) SetBestEffortMonitoringEnabled(v bool)`
+`func (o *InlineResponse200280) SetOptOutEligibility(v InlineResponse200280OptOutEligibility)`
 
-SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
+SetOptOutEligibility sets OptOutEligibility field to given value.
 
-### HasBestEffortMonitoringEnabled
+### HasOptOutEligibility
 
-`func (o *InlineResponse200280) HasBestEffortMonitoringEnabled() bool`
+`func (o *InlineResponse200280) HasOptOutEligibility() bool`
 
-HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
+HasOptOutEligibility returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200280) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200280) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200280) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200280) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

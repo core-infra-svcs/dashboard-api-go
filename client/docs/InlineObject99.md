@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of the Staged Upgrade Group. Length must be 1 to 255 characters | 
-**Description** | Pointer to **string** | Description of the Staged Upgrade Group. Length must be 1 to 255 characters | [optional] 
-**IsDefault** | **bool** | Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group | 
-**AssignedDevices** | Pointer to [**NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1**](NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1.md) |  | [optional] 
+**Stages** | [**[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages**](NetworksNetworkIdFirmwareUpgradesStagedEventsStages.md) | All completed or in-progress stages in the network with their new start times. All pending stages will be canceled | 
+**Reasons** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons**](NetworksNetworkIdFirmwareUpgradesRollbacksReasons.md) | The reason for rolling back the staged upgrade | [optional] 
 
 ## Methods
 
 ### NewInlineObject99
 
-`func NewInlineObject99(name string, isDefault bool, ) *InlineObject99`
+`func NewInlineObject99(stages []NetworksNetworkIdFirmwareUpgradesStagedEventsStages, ) *InlineObject99`
 
 NewInlineObject99 instantiates a new InlineObject99 object
 This constructor will assign default values to properties that have it defined,
@@ -28,95 +26,50 @@ NewInlineObject99WithDefaults instantiates a new InlineObject99 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetStages
 
-`func (o *InlineObject99) GetName() string`
+`func (o *InlineObject99) GetStages() []NetworksNetworkIdFirmwareUpgradesStagedEventsStages`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetStages returns the Stages field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetStagesOk
 
-`func (o *InlineObject99) GetNameOk() (*string, bool)`
+`func (o *InlineObject99) GetStagesOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedEventsStages, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetStagesOk returns a tuple with the Stages field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetStages
 
-`func (o *InlineObject99) SetName(v string)`
+`func (o *InlineObject99) SetStages(v []NetworksNetworkIdFirmwareUpgradesStagedEventsStages)`
 
-SetName sets Name field to given value.
+SetStages sets Stages field to given value.
 
 
-### GetDescription
+### GetReasons
 
-`func (o *InlineObject99) GetDescription() string`
+`func (o *InlineObject99) GetReasons() []NetworksNetworkIdFirmwareUpgradesRollbacksReasons`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetReasons returns the Reasons field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetReasonsOk
 
-`func (o *InlineObject99) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject99) GetReasonsOk() (*[]NetworksNetworkIdFirmwareUpgradesRollbacksReasons, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetReasonsOk returns a tuple with the Reasons field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetReasons
 
-`func (o *InlineObject99) SetDescription(v string)`
+`func (o *InlineObject99) SetReasons(v []NetworksNetworkIdFirmwareUpgradesRollbacksReasons)`
 
-SetDescription sets Description field to given value.
+SetReasons sets Reasons field to given value.
 
-### HasDescription
+### HasReasons
 
-`func (o *InlineObject99) HasDescription() bool`
+`func (o *InlineObject99) HasReasons() bool`
 
-HasDescription returns a boolean if a field has been set.
-
-### GetIsDefault
-
-`func (o *InlineObject99) GetIsDefault() bool`
-
-GetIsDefault returns the IsDefault field if non-nil, zero value otherwise.
-
-### GetIsDefaultOk
-
-`func (o *InlineObject99) GetIsDefaultOk() (*bool, bool)`
-
-GetIsDefaultOk returns a tuple with the IsDefault field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIsDefault
-
-`func (o *InlineObject99) SetIsDefault(v bool)`
-
-SetIsDefault sets IsDefault field to given value.
-
-
-### GetAssignedDevices
-
-`func (o *InlineObject99) GetAssignedDevices() NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1`
-
-GetAssignedDevices returns the AssignedDevices field if non-nil, zero value otherwise.
-
-### GetAssignedDevicesOk
-
-`func (o *InlineObject99) GetAssignedDevicesOk() (*NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1, bool)`
-
-GetAssignedDevicesOk returns a tuple with the AssignedDevices field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAssignedDevices
-
-`func (o *InlineObject99) SetAssignedDevices(v NetworksNetworkIdFirmwareUpgradesStagedGroupsAssignedDevices1)`
-
-SetAssignedDevices sets AssignedDevices field to given value.
-
-### HasAssignedDevices
-
-`func (o *InlineObject99) HasAssignedDevices() bool`
-
-HasAssignedDevices returns a boolean if a field has been set.
+HasReasons returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

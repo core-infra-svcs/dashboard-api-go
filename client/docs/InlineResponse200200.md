@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200200Rules**](InlineResponse200200Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
-**AllowLanAccess** | Pointer to **bool** | Allows wireless client access to local LAN (boolean value - true allows access and false denies access) | [optional] 
+**Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on the SSID. | [optional] 
+**Exception** | Pointer to [**InlineResponse200200Exception**](InlineResponse200200Exception.md) |  | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200200Rules**](InlineResponse200200Rules.md) | Bonjour forwarding rules | [optional] 
 
 ## Methods
 
@@ -25,6 +26,56 @@ will change when the set of required properties is changed
 NewInlineResponse200200WithDefaults instantiates a new InlineResponse200200 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetEnabled
+
+`func (o *InlineResponse200200) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse200200) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse200200) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse200200) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetException
+
+`func (o *InlineResponse200200) GetException() InlineResponse200200Exception`
+
+GetException returns the Exception field if non-nil, zero value otherwise.
+
+### GetExceptionOk
+
+`func (o *InlineResponse200200) GetExceptionOk() (*InlineResponse200200Exception, bool)`
+
+GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetException
+
+`func (o *InlineResponse200200) SetException(v InlineResponse200200Exception)`
+
+SetException sets Exception field to given value.
+
+### HasException
+
+`func (o *InlineResponse200200) HasException() bool`
+
+HasException returns a boolean if a field has been set.
 
 ### GetRules
 
@@ -50,31 +101,6 @@ SetRules sets Rules field to given value.
 `func (o *InlineResponse200200) HasRules() bool`
 
 HasRules returns a boolean if a field has been set.
-
-### GetAllowLanAccess
-
-`func (o *InlineResponse200200) GetAllowLanAccess() bool`
-
-GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
-
-### GetAllowLanAccessOk
-
-`func (o *InlineResponse200200) GetAllowLanAccessOk() (*bool, bool)`
-
-GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAllowLanAccess
-
-`func (o *InlineResponse200200) SetAllowLanAccess(v bool)`
-
-SetAllowLanAccess sets AllowLanAccess field to given value.
-
-### HasAllowLanAccess
-
-`func (o *InlineResponse200200) HasAllowLanAccess() bool`
-
-HasAllowLanAccess returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

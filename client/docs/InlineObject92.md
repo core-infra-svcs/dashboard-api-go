@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100 | 
+**Serials** | **[]string** | A list of serials of devices to claim | 
+**DetailsByDevice** | Pointer to [**[]NetworksNetworkIdDevicesClaimDetailsByDevice**](NetworksNetworkIdDevicesClaimDetailsByDevice.md) | Optional details for claimed devices (currently only used for Catalyst devices) | [optional] 
 
 ## Methods
 
 ### NewInlineObject92
 
-`func NewInlineObject92(size string, ) *InlineObject92`
+`func NewInlineObject92(serials []string, ) *InlineObject92`
 
 NewInlineObject92 instantiates a new InlineObject92 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,50 @@ NewInlineObject92WithDefaults instantiates a new InlineObject92 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSize
+### GetSerials
 
-`func (o *InlineObject92) GetSize() string`
+`func (o *InlineObject92) GetSerials() []string`
 
-GetSize returns the Size field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetSizeOk
+### GetSerialsOk
 
-`func (o *InlineObject92) GetSizeOk() (*string, bool)`
+`func (o *InlineObject92) GetSerialsOk() (*[]string, bool)`
 
-GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSize
+### SetSerials
 
-`func (o *InlineObject92) SetSize(v string)`
+`func (o *InlineObject92) SetSerials(v []string)`
 
-SetSize sets Size field to given value.
+SetSerials sets Serials field to given value.
 
+
+### GetDetailsByDevice
+
+`func (o *InlineObject92) GetDetailsByDevice() []NetworksNetworkIdDevicesClaimDetailsByDevice`
+
+GetDetailsByDevice returns the DetailsByDevice field if non-nil, zero value otherwise.
+
+### GetDetailsByDeviceOk
+
+`func (o *InlineObject92) GetDetailsByDeviceOk() (*[]NetworksNetworkIdDevicesClaimDetailsByDevice, bool)`
+
+GetDetailsByDeviceOk returns a tuple with the DetailsByDevice field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDetailsByDevice
+
+`func (o *InlineObject92) SetDetailsByDevice(v []NetworksNetworkIdDevicesClaimDetailsByDevice)`
+
+SetDetailsByDevice sets DetailsByDevice field to given value.
+
+### HasDetailsByDevice
+
+`func (o *InlineObject92) HasDetailsByDevice() bool`
+
+HasDetailsByDevice returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

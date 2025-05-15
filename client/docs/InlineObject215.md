@@ -4,10 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the dashboard administrator | [optional] 
-**OrgAccess** | Pointer to **string** | The privilege of the dashboard administrator on the organization. Can be one of &#39;full&#39;, &#39;read-only&#39;, &#39;enterprise&#39; or &#39;none&#39; | [optional] 
-**Tags** | Pointer to [**[]OrganizationsOrganizationIdAdminsTags1**](OrganizationsOrganizationIdAdminsTags1.md) | The list of tags that the dashboard administrator has privileges on | [optional] 
-**Networks** | Pointer to [**[]OrganizationsOrganizationIdAdminsNetworks1**](OrganizationsOrganizationIdAdminsNetworks1.md) | The list of networks that the dashboard administrator has privileges on | [optional] 
+**EnabledNetworks** | Pointer to **[]string** | List of network IDs with adaptive policy enabled | [optional] 
 
 ## Methods
 
@@ -28,105 +25,30 @@ NewInlineObject215WithDefaults instantiates a new InlineObject215 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetEnabledNetworks
 
-`func (o *InlineObject215) GetName() string`
+`func (o *InlineObject215) GetEnabledNetworks() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetEnabledNetworks returns the EnabledNetworks field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetEnabledNetworksOk
 
-`func (o *InlineObject215) GetNameOk() (*string, bool)`
+`func (o *InlineObject215) GetEnabledNetworksOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetEnabledNetworksOk returns a tuple with the EnabledNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetEnabledNetworks
 
-`func (o *InlineObject215) SetName(v string)`
+`func (o *InlineObject215) SetEnabledNetworks(v []string)`
 
-SetName sets Name field to given value.
+SetEnabledNetworks sets EnabledNetworks field to given value.
 
-### HasName
+### HasEnabledNetworks
 
-`func (o *InlineObject215) HasName() bool`
+`func (o *InlineObject215) HasEnabledNetworks() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetOrgAccess
-
-`func (o *InlineObject215) GetOrgAccess() string`
-
-GetOrgAccess returns the OrgAccess field if non-nil, zero value otherwise.
-
-### GetOrgAccessOk
-
-`func (o *InlineObject215) GetOrgAccessOk() (*string, bool)`
-
-GetOrgAccessOk returns a tuple with the OrgAccess field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOrgAccess
-
-`func (o *InlineObject215) SetOrgAccess(v string)`
-
-SetOrgAccess sets OrgAccess field to given value.
-
-### HasOrgAccess
-
-`func (o *InlineObject215) HasOrgAccess() bool`
-
-HasOrgAccess returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineObject215) GetTags() []OrganizationsOrganizationIdAdminsTags1`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineObject215) GetTagsOk() (*[]OrganizationsOrganizationIdAdminsTags1, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineObject215) SetTags(v []OrganizationsOrganizationIdAdminsTags1)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineObject215) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetworks
-
-`func (o *InlineObject215) GetNetworks() []OrganizationsOrganizationIdAdminsNetworks1`
-
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
-
-### GetNetworksOk
-
-`func (o *InlineObject215) GetNetworksOk() (*[]OrganizationsOrganizationIdAdminsNetworks1, bool)`
-
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworks
-
-`func (o *InlineObject215) SetNetworks(v []OrganizationsOrganizationIdAdminsNetworks1)`
-
-SetNetworks sets Networks field to given value.
-
-### HasNetworks
-
-`func (o *InlineObject215) HasNetworks() bool`
-
-HasNetworks returns a boolean if a field has been set.
+HasEnabledNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

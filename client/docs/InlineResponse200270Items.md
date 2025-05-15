@@ -4,16 +4,21 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Unique serial number for the device | [optional] 
-**Model** | Pointer to **string** | Model of the device | [optional] 
-**Name** | Pointer to **string** | Name of the device | [optional] 
-**Mac** | Pointer to **string** | MAC address of the device | [optional] 
-**Tags** | Pointer to **[]string** | List of custom tags for the device | [optional] 
-**Provisioned** | Pointer to **int32** | The total RAM size provisioned on the device, in kB | [optional] 
-**Used** | Pointer to [**InlineResponse200270Used**](InlineResponse200270Used.md) |  | [optional] 
-**Free** | Pointer to [**InlineResponse200270Free**](InlineResponse200270Free.md) |  | [optional] 
-**Network** | Pointer to [**InlineResponse200270Network**](InlineResponse200270Network.md) |  | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200270Intervals**](InlineResponse200270Intervals.md) | Time interval snapshots of system memory utilization on the device with the most recent snapshot first | [optional] 
+**ScheduleId** | Pointer to **string** | Id of scheduled packet capture | [optional] 
+**Devices** | Pointer to [**[]InlineResponse200270Devices**](InlineResponse200270Devices.md) | Devices associated to the schedule | [optional] 
+**Name** | Pointer to **string** | Name of scheduled packet capture | [optional] 
+**Admin** | Pointer to [**InlineResponse200270Admin**](InlineResponse200270Admin.md) |  | [optional] 
+**Notes** | Pointer to **string** | Reason of scheduled packet capture | [optional] 
+**Duration** | Pointer to **int32** | Duration of scheduled packet capture | [optional] 
+**FilterExpression** | Pointer to **string** | Filter expression for the packet capture | [optional] 
+**CreatedAt** | Pointer to **string** | Time of creation of scheduled packet capture | [optional] 
+**UpdatedAt** | Pointer to **string** | Time of updation of scheduled packet capture | [optional] 
+**CaptureCount** | Pointer to **int32** | The number of pcaps captured/performed | [optional] 
+**LastCaptureId** | Pointer to **string** | Pcap log id of the latest pcap from this schedule | [optional] 
+**Enabled** | Pointer to **bool** | Whether the packet capture schedule is enabled | [optional] 
+**Priority** | Pointer to **int32** | Priority of the packet capture | [optional] 
+**Schedule** | Pointer to [**InlineResponse200270Schedule**](InlineResponse200270Schedule.md) |  | [optional] 
+**Warnings** | Pointer to **[]string** | Any warnings pertaining to the schedule and it&#39;s nodes | [optional] 
 
 ## Methods
 
@@ -34,55 +39,55 @@ NewInlineResponse200270ItemsWithDefaults instantiates a new InlineResponse200270
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetScheduleId
 
-`func (o *InlineResponse200270Items) GetSerial() string`
+`func (o *InlineResponse200270Items) GetScheduleId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetScheduleId returns the ScheduleId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetScheduleIdOk
 
-`func (o *InlineResponse200270Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200270Items) GetScheduleIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetScheduleIdOk returns a tuple with the ScheduleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetScheduleId
 
-`func (o *InlineResponse200270Items) SetSerial(v string)`
+`func (o *InlineResponse200270Items) SetScheduleId(v string)`
 
-SetSerial sets Serial field to given value.
+SetScheduleId sets ScheduleId field to given value.
 
-### HasSerial
+### HasScheduleId
 
-`func (o *InlineResponse200270Items) HasSerial() bool`
+`func (o *InlineResponse200270Items) HasScheduleId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasScheduleId returns a boolean if a field has been set.
 
-### GetModel
+### GetDevices
 
-`func (o *InlineResponse200270Items) GetModel() string`
+`func (o *InlineResponse200270Items) GetDevices() []InlineResponse200270Devices`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetDevicesOk
 
-`func (o *InlineResponse200270Items) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200270Items) GetDevicesOk() (*[]InlineResponse200270Devices, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetDevices
 
-`func (o *InlineResponse200270Items) SetModel(v string)`
+`func (o *InlineResponse200270Items) SetDevices(v []InlineResponse200270Devices)`
 
-SetModel sets Model field to given value.
+SetDevices sets Devices field to given value.
 
-### HasModel
+### HasDevices
 
-`func (o *InlineResponse200270Items) HasModel() bool`
+`func (o *InlineResponse200270Items) HasDevices() bool`
 
-HasModel returns a boolean if a field has been set.
+HasDevices returns a boolean if a field has been set.
 
 ### GetName
 
@@ -109,180 +114,305 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetMac
+### GetAdmin
 
-`func (o *InlineResponse200270Items) GetMac() string`
+`func (o *InlineResponse200270Items) GetAdmin() InlineResponse200270Admin`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetAdmin returns the Admin field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetAdminOk
 
-`func (o *InlineResponse200270Items) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200270Items) GetAdminOk() (*InlineResponse200270Admin, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetAdminOk returns a tuple with the Admin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetAdmin
 
-`func (o *InlineResponse200270Items) SetMac(v string)`
+`func (o *InlineResponse200270Items) SetAdmin(v InlineResponse200270Admin)`
 
-SetMac sets Mac field to given value.
+SetAdmin sets Admin field to given value.
 
-### HasMac
+### HasAdmin
 
-`func (o *InlineResponse200270Items) HasMac() bool`
+`func (o *InlineResponse200270Items) HasAdmin() bool`
 
-HasMac returns a boolean if a field has been set.
+HasAdmin returns a boolean if a field has been set.
 
-### GetTags
+### GetNotes
 
-`func (o *InlineResponse200270Items) GetTags() []string`
+`func (o *InlineResponse200270Items) GetNotes() string`
 
-GetTags returns the Tags field if non-nil, zero value otherwise.
+GetNotes returns the Notes field if non-nil, zero value otherwise.
 
-### GetTagsOk
+### GetNotesOk
 
-`func (o *InlineResponse200270Items) GetTagsOk() (*[]string, bool)`
+`func (o *InlineResponse200270Items) GetNotesOk() (*string, bool)`
 
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTags
+### SetNotes
 
-`func (o *InlineResponse200270Items) SetTags(v []string)`
+`func (o *InlineResponse200270Items) SetNotes(v string)`
 
-SetTags sets Tags field to given value.
+SetNotes sets Notes field to given value.
 
-### HasTags
+### HasNotes
 
-`func (o *InlineResponse200270Items) HasTags() bool`
+`func (o *InlineResponse200270Items) HasNotes() bool`
 
-HasTags returns a boolean if a field has been set.
+HasNotes returns a boolean if a field has been set.
 
-### GetProvisioned
+### GetDuration
 
-`func (o *InlineResponse200270Items) GetProvisioned() int32`
+`func (o *InlineResponse200270Items) GetDuration() int32`
 
-GetProvisioned returns the Provisioned field if non-nil, zero value otherwise.
+GetDuration returns the Duration field if non-nil, zero value otherwise.
 
-### GetProvisionedOk
+### GetDurationOk
 
-`func (o *InlineResponse200270Items) GetProvisionedOk() (*int32, bool)`
+`func (o *InlineResponse200270Items) GetDurationOk() (*int32, bool)`
 
-GetProvisionedOk returns a tuple with the Provisioned field if it's non-nil, zero value otherwise
+GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProvisioned
+### SetDuration
 
-`func (o *InlineResponse200270Items) SetProvisioned(v int32)`
+`func (o *InlineResponse200270Items) SetDuration(v int32)`
 
-SetProvisioned sets Provisioned field to given value.
+SetDuration sets Duration field to given value.
 
-### HasProvisioned
+### HasDuration
 
-`func (o *InlineResponse200270Items) HasProvisioned() bool`
+`func (o *InlineResponse200270Items) HasDuration() bool`
 
-HasProvisioned returns a boolean if a field has been set.
+HasDuration returns a boolean if a field has been set.
 
-### GetUsed
+### GetFilterExpression
 
-`func (o *InlineResponse200270Items) GetUsed() InlineResponse200270Used`
+`func (o *InlineResponse200270Items) GetFilterExpression() string`
 
-GetUsed returns the Used field if non-nil, zero value otherwise.
+GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
 
-### GetUsedOk
+### GetFilterExpressionOk
 
-`func (o *InlineResponse200270Items) GetUsedOk() (*InlineResponse200270Used, bool)`
+`func (o *InlineResponse200270Items) GetFilterExpressionOk() (*string, bool)`
 
-GetUsedOk returns a tuple with the Used field if it's non-nil, zero value otherwise
+GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsed
+### SetFilterExpression
 
-`func (o *InlineResponse200270Items) SetUsed(v InlineResponse200270Used)`
+`func (o *InlineResponse200270Items) SetFilterExpression(v string)`
 
-SetUsed sets Used field to given value.
+SetFilterExpression sets FilterExpression field to given value.
 
-### HasUsed
+### HasFilterExpression
 
-`func (o *InlineResponse200270Items) HasUsed() bool`
+`func (o *InlineResponse200270Items) HasFilterExpression() bool`
 
-HasUsed returns a boolean if a field has been set.
+HasFilterExpression returns a boolean if a field has been set.
 
-### GetFree
+### GetCreatedAt
 
-`func (o *InlineResponse200270Items) GetFree() InlineResponse200270Free`
+`func (o *InlineResponse200270Items) GetCreatedAt() string`
 
-GetFree returns the Free field if non-nil, zero value otherwise.
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-### GetFreeOk
+### GetCreatedAtOk
 
-`func (o *InlineResponse200270Items) GetFreeOk() (*InlineResponse200270Free, bool)`
+`func (o *InlineResponse200270Items) GetCreatedAtOk() (*string, bool)`
 
-GetFreeOk returns a tuple with the Free field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFree
+### SetCreatedAt
 
-`func (o *InlineResponse200270Items) SetFree(v InlineResponse200270Free)`
+`func (o *InlineResponse200270Items) SetCreatedAt(v string)`
 
-SetFree sets Free field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasFree
+### HasCreatedAt
 
-`func (o *InlineResponse200270Items) HasFree() bool`
+`func (o *InlineResponse200270Items) HasCreatedAt() bool`
 
-HasFree returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
 
-### GetNetwork
+### GetUpdatedAt
 
-`func (o *InlineResponse200270Items) GetNetwork() InlineResponse200270Network`
+`func (o *InlineResponse200270Items) GetUpdatedAt() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetUpdatedAtOk
 
-`func (o *InlineResponse200270Items) GetNetworkOk() (*InlineResponse200270Network, bool)`
+`func (o *InlineResponse200270Items) GetUpdatedAtOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetUpdatedAt
 
-`func (o *InlineResponse200270Items) SetNetwork(v InlineResponse200270Network)`
+`func (o *InlineResponse200270Items) SetUpdatedAt(v string)`
 
-SetNetwork sets Network field to given value.
+SetUpdatedAt sets UpdatedAt field to given value.
 
-### HasNetwork
+### HasUpdatedAt
 
-`func (o *InlineResponse200270Items) HasNetwork() bool`
+`func (o *InlineResponse200270Items) HasUpdatedAt() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasUpdatedAt returns a boolean if a field has been set.
 
-### GetIntervals
+### GetCaptureCount
 
-`func (o *InlineResponse200270Items) GetIntervals() []InlineResponse200270Intervals`
+`func (o *InlineResponse200270Items) GetCaptureCount() int32`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetCaptureCount returns the CaptureCount field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetCaptureCountOk
 
-`func (o *InlineResponse200270Items) GetIntervalsOk() (*[]InlineResponse200270Intervals, bool)`
+`func (o *InlineResponse200270Items) GetCaptureCountOk() (*int32, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetCaptureCountOk returns a tuple with the CaptureCount field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetCaptureCount
 
-`func (o *InlineResponse200270Items) SetIntervals(v []InlineResponse200270Intervals)`
+`func (o *InlineResponse200270Items) SetCaptureCount(v int32)`
 
-SetIntervals sets Intervals field to given value.
+SetCaptureCount sets CaptureCount field to given value.
 
-### HasIntervals
+### HasCaptureCount
 
-`func (o *InlineResponse200270Items) HasIntervals() bool`
+`func (o *InlineResponse200270Items) HasCaptureCount() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasCaptureCount returns a boolean if a field has been set.
+
+### GetLastCaptureId
+
+`func (o *InlineResponse200270Items) GetLastCaptureId() string`
+
+GetLastCaptureId returns the LastCaptureId field if non-nil, zero value otherwise.
+
+### GetLastCaptureIdOk
+
+`func (o *InlineResponse200270Items) GetLastCaptureIdOk() (*string, bool)`
+
+GetLastCaptureIdOk returns a tuple with the LastCaptureId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastCaptureId
+
+`func (o *InlineResponse200270Items) SetLastCaptureId(v string)`
+
+SetLastCaptureId sets LastCaptureId field to given value.
+
+### HasLastCaptureId
+
+`func (o *InlineResponse200270Items) HasLastCaptureId() bool`
+
+HasLastCaptureId returns a boolean if a field has been set.
+
+### GetEnabled
+
+`func (o *InlineResponse200270Items) GetEnabled() bool`
+
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
+
+### GetEnabledOk
+
+`func (o *InlineResponse200270Items) GetEnabledOk() (*bool, bool)`
+
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabled
+
+`func (o *InlineResponse200270Items) SetEnabled(v bool)`
+
+SetEnabled sets Enabled field to given value.
+
+### HasEnabled
+
+`func (o *InlineResponse200270Items) HasEnabled() bool`
+
+HasEnabled returns a boolean if a field has been set.
+
+### GetPriority
+
+`func (o *InlineResponse200270Items) GetPriority() int32`
+
+GetPriority returns the Priority field if non-nil, zero value otherwise.
+
+### GetPriorityOk
+
+`func (o *InlineResponse200270Items) GetPriorityOk() (*int32, bool)`
+
+GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPriority
+
+`func (o *InlineResponse200270Items) SetPriority(v int32)`
+
+SetPriority sets Priority field to given value.
+
+### HasPriority
+
+`func (o *InlineResponse200270Items) HasPriority() bool`
+
+HasPriority returns a boolean if a field has been set.
+
+### GetSchedule
+
+`func (o *InlineResponse200270Items) GetSchedule() InlineResponse200270Schedule`
+
+GetSchedule returns the Schedule field if non-nil, zero value otherwise.
+
+### GetScheduleOk
+
+`func (o *InlineResponse200270Items) GetScheduleOk() (*InlineResponse200270Schedule, bool)`
+
+GetScheduleOk returns a tuple with the Schedule field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSchedule
+
+`func (o *InlineResponse200270Items) SetSchedule(v InlineResponse200270Schedule)`
+
+SetSchedule sets Schedule field to given value.
+
+### HasSchedule
+
+`func (o *InlineResponse200270Items) HasSchedule() bool`
+
+HasSchedule returns a boolean if a field has been set.
+
+### GetWarnings
+
+`func (o *InlineResponse200270Items) GetWarnings() []string`
+
+GetWarnings returns the Warnings field if non-nil, zero value otherwise.
+
+### GetWarningsOk
+
+`func (o *InlineResponse200270Items) GetWarningsOk() (*[]string, bool)`
+
+GetWarningsOk returns a tuple with the Warnings field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWarnings
+
+`func (o *InlineResponse200270Items) SetWarnings(v []string)`
+
+SetWarnings sets Warnings field to given value.
+
+### HasWarnings
+
+`func (o *InlineResponse200270Items) HasWarnings() bool`
+
+HasWarnings returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

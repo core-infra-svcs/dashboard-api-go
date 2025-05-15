@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | Serials of the devices that should be released | [optional] 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineObject262WithDefaults instantiates a new InlineObject262 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetLimitScopeToNetworks
 
-`func (o *InlineObject262) GetSerials() []string`
+`func (o *InlineObject262) GetLimitScopeToNetworks() []string`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineObject262) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineObject262) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject262) SetSerials(v []string)`
+`func (o *InlineObject262) SetLimitScopeToNetworks(v []string)`
 
-SetSerials sets Serials field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
-### HasSerials
+### HasLimitScopeToNetworks
 
-`func (o *InlineObject262) HasSerials() bool`
+`func (o *InlineObject262) HasLimitScopeToNetworks() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

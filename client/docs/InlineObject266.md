@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseIdToRenew** | **string** | The ID of the SM license to renew. This license must already be assigned to an SM network | 
-**UnusedLicenseId** | **string** | The SM license to use to renew the seats on &#39;licenseIdToRenew&#39;. This license must have at least as many seats available as there are seats on &#39;licenseIdToRenew&#39; | 
+**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks.md) | List containing the network ID and the product type to enable XDR on | 
 
 ## Methods
 
 ### NewInlineObject266
 
-`func NewInlineObject266(licenseIdToRenew string, unusedLicenseId string, ) *InlineObject266`
+`func NewInlineObject266(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks, ) *InlineObject266`
 
 NewInlineObject266 instantiates a new InlineObject266 object
 This constructor will assign default values to properties that have it defined,
@@ -26,44 +25,24 @@ NewInlineObject266WithDefaults instantiates a new InlineObject266 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseIdToRenew
+### GetNetworks
 
-`func (o *InlineObject266) GetLicenseIdToRenew() string`
+`func (o *InlineObject266) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks`
 
-GetLicenseIdToRenew returns the LicenseIdToRenew field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetLicenseIdToRenewOk
+### GetNetworksOk
 
-`func (o *InlineObject266) GetLicenseIdToRenewOk() (*string, bool)`
+`func (o *InlineObject266) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks, bool)`
 
-GetLicenseIdToRenewOk returns a tuple with the LicenseIdToRenew field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIdToRenew
+### SetNetworks
 
-`func (o *InlineObject266) SetLicenseIdToRenew(v string)`
+`func (o *InlineObject266) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksEnableNetworks)`
 
-SetLicenseIdToRenew sets LicenseIdToRenew field to given value.
-
-
-### GetUnusedLicenseId
-
-`func (o *InlineObject266) GetUnusedLicenseId() string`
-
-GetUnusedLicenseId returns the UnusedLicenseId field if non-nil, zero value otherwise.
-
-### GetUnusedLicenseIdOk
-
-`func (o *InlineObject266) GetUnusedLicenseIdOk() (*string, bool)`
-
-GetUnusedLicenseIdOk returns a tuple with the UnusedLicenseId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUnusedLicenseId
-
-`func (o *InlineObject266) SetUnusedLicenseId(v string)`
-
-SetUnusedLicenseId sets UnusedLicenseId field to given value.
+SetNetworks sets Networks field to given value.
 
 
 

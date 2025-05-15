@@ -4,9 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DdnsHostnames** | Pointer to [**InlineResponse20031DdnsHostnames**](InlineResponse20031DdnsHostnames.md) |  | [optional] 
-**Wan1** | Pointer to [**InlineResponse20031Wan1**](InlineResponse20031Wan1.md) |  | [optional] 
-**Wan2** | Pointer to [**InlineResponse20031Wan2**](InlineResponse20031Wan2.md) |  | [optional] 
+**StartTime** | Pointer to **time.Time** | Start time of the sample | [optional] 
+**EndTime** | Pointer to **time.Time** | End time of the sample | [optional] 
+**LossPercent** | Pointer to **float32** | Percentage of packets lost | [optional] 
+**LatencyMs** | Pointer to **float32** | Latency in milliseconds | [optional] 
+**Goodput** | Pointer to **int32** | Number of useful information bits delivered | [optional] 
+**Jitter** | Pointer to **float32** | Jitter, in milliseconds | [optional] 
 
 ## Methods
 
@@ -27,80 +30,155 @@ NewInlineResponse20031WithDefaults instantiates a new InlineResponse20031 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDdnsHostnames
+### GetStartTime
 
-`func (o *InlineResponse20031) GetDdnsHostnames() InlineResponse20031DdnsHostnames`
+`func (o *InlineResponse20031) GetStartTime() time.Time`
 
-GetDdnsHostnames returns the DdnsHostnames field if non-nil, zero value otherwise.
+GetStartTime returns the StartTime field if non-nil, zero value otherwise.
 
-### GetDdnsHostnamesOk
+### GetStartTimeOk
 
-`func (o *InlineResponse20031) GetDdnsHostnamesOk() (*InlineResponse20031DdnsHostnames, bool)`
+`func (o *InlineResponse20031) GetStartTimeOk() (*time.Time, bool)`
 
-GetDdnsHostnamesOk returns a tuple with the DdnsHostnames field if it's non-nil, zero value otherwise
+GetStartTimeOk returns a tuple with the StartTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDdnsHostnames
+### SetStartTime
 
-`func (o *InlineResponse20031) SetDdnsHostnames(v InlineResponse20031DdnsHostnames)`
+`func (o *InlineResponse20031) SetStartTime(v time.Time)`
 
-SetDdnsHostnames sets DdnsHostnames field to given value.
+SetStartTime sets StartTime field to given value.
 
-### HasDdnsHostnames
+### HasStartTime
 
-`func (o *InlineResponse20031) HasDdnsHostnames() bool`
+`func (o *InlineResponse20031) HasStartTime() bool`
 
-HasDdnsHostnames returns a boolean if a field has been set.
+HasStartTime returns a boolean if a field has been set.
 
-### GetWan1
+### GetEndTime
 
-`func (o *InlineResponse20031) GetWan1() InlineResponse20031Wan1`
+`func (o *InlineResponse20031) GetEndTime() time.Time`
 
-GetWan1 returns the Wan1 field if non-nil, zero value otherwise.
+GetEndTime returns the EndTime field if non-nil, zero value otherwise.
 
-### GetWan1Ok
+### GetEndTimeOk
 
-`func (o *InlineResponse20031) GetWan1Ok() (*InlineResponse20031Wan1, bool)`
+`func (o *InlineResponse20031) GetEndTimeOk() (*time.Time, bool)`
 
-GetWan1Ok returns a tuple with the Wan1 field if it's non-nil, zero value otherwise
+GetEndTimeOk returns a tuple with the EndTime field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan1
+### SetEndTime
 
-`func (o *InlineResponse20031) SetWan1(v InlineResponse20031Wan1)`
+`func (o *InlineResponse20031) SetEndTime(v time.Time)`
 
-SetWan1 sets Wan1 field to given value.
+SetEndTime sets EndTime field to given value.
 
-### HasWan1
+### HasEndTime
 
-`func (o *InlineResponse20031) HasWan1() bool`
+`func (o *InlineResponse20031) HasEndTime() bool`
 
-HasWan1 returns a boolean if a field has been set.
+HasEndTime returns a boolean if a field has been set.
 
-### GetWan2
+### GetLossPercent
 
-`func (o *InlineResponse20031) GetWan2() InlineResponse20031Wan2`
+`func (o *InlineResponse20031) GetLossPercent() float32`
 
-GetWan2 returns the Wan2 field if non-nil, zero value otherwise.
+GetLossPercent returns the LossPercent field if non-nil, zero value otherwise.
 
-### GetWan2Ok
+### GetLossPercentOk
 
-`func (o *InlineResponse20031) GetWan2Ok() (*InlineResponse20031Wan2, bool)`
+`func (o *InlineResponse20031) GetLossPercentOk() (*float32, bool)`
 
-GetWan2Ok returns a tuple with the Wan2 field if it's non-nil, zero value otherwise
+GetLossPercentOk returns a tuple with the LossPercent field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWan2
+### SetLossPercent
 
-`func (o *InlineResponse20031) SetWan2(v InlineResponse20031Wan2)`
+`func (o *InlineResponse20031) SetLossPercent(v float32)`
 
-SetWan2 sets Wan2 field to given value.
+SetLossPercent sets LossPercent field to given value.
 
-### HasWan2
+### HasLossPercent
 
-`func (o *InlineResponse20031) HasWan2() bool`
+`func (o *InlineResponse20031) HasLossPercent() bool`
 
-HasWan2 returns a boolean if a field has been set.
+HasLossPercent returns a boolean if a field has been set.
+
+### GetLatencyMs
+
+`func (o *InlineResponse20031) GetLatencyMs() float32`
+
+GetLatencyMs returns the LatencyMs field if non-nil, zero value otherwise.
+
+### GetLatencyMsOk
+
+`func (o *InlineResponse20031) GetLatencyMsOk() (*float32, bool)`
+
+GetLatencyMsOk returns a tuple with the LatencyMs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLatencyMs
+
+`func (o *InlineResponse20031) SetLatencyMs(v float32)`
+
+SetLatencyMs sets LatencyMs field to given value.
+
+### HasLatencyMs
+
+`func (o *InlineResponse20031) HasLatencyMs() bool`
+
+HasLatencyMs returns a boolean if a field has been set.
+
+### GetGoodput
+
+`func (o *InlineResponse20031) GetGoodput() int32`
+
+GetGoodput returns the Goodput field if non-nil, zero value otherwise.
+
+### GetGoodputOk
+
+`func (o *InlineResponse20031) GetGoodputOk() (*int32, bool)`
+
+GetGoodputOk returns a tuple with the Goodput field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGoodput
+
+`func (o *InlineResponse20031) SetGoodput(v int32)`
+
+SetGoodput sets Goodput field to given value.
+
+### HasGoodput
+
+`func (o *InlineResponse20031) HasGoodput() bool`
+
+HasGoodput returns a boolean if a field has been set.
+
+### GetJitter
+
+`func (o *InlineResponse20031) GetJitter() float32`
+
+GetJitter returns the Jitter field if non-nil, zero value otherwise.
+
+### GetJitterOk
+
+`func (o *InlineResponse20031) GetJitterOk() (*float32, bool)`
+
+GetJitterOk returns a tuple with the Jitter field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetJitter
+
+`func (o *InlineResponse20031) SetJitter(v float32)`
+
+SetJitter sets Jitter field to given value.
+
+### HasJitter
+
+`func (o *InlineResponse20031) HasJitter() bool`
+
+HasJitter returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

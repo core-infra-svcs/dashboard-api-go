@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the manufacturer | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage.md) |  | [optional] 
+**Id** | Pointer to **string** | theme id | [optional] 
+**Name** | Pointer to **string** | theme name | [optional] 
+**ThemeAssets** | Pointer to [**[]OrganizationsOrganizationIdSplashThemesThemeAssets**](OrganizationsOrganizationIdSplashThemesThemeAssets.md) | list of theme assets | [optional] 
 
 ## Methods
 
@@ -26,6 +26,31 @@ will change when the set of required properties is changed
 NewInlineResponse200316WithDefaults instantiates a new InlineResponse200316 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineResponse200316) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200316) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200316) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse200316) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetName
 
@@ -52,55 +77,30 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetClients
+### GetThemeAssets
 
-`func (o *InlineResponse200316) GetClients() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients`
+`func (o *InlineResponse200316) GetThemeAssets() []OrganizationsOrganizationIdSplashThemesThemeAssets`
 
-GetClients returns the Clients field if non-nil, zero value otherwise.
+GetThemeAssets returns the ThemeAssets field if non-nil, zero value otherwise.
 
-### GetClientsOk
+### GetThemeAssetsOk
 
-`func (o *InlineResponse200316) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients, bool)`
+`func (o *InlineResponse200316) GetThemeAssetsOk() (*[]OrganizationsOrganizationIdSplashThemesThemeAssets, bool)`
 
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
+GetThemeAssetsOk returns a tuple with the ThemeAssets field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClients
+### SetThemeAssets
 
-`func (o *InlineResponse200316) SetClients(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageClients)`
+`func (o *InlineResponse200316) SetThemeAssets(v []OrganizationsOrganizationIdSplashThemesThemeAssets)`
 
-SetClients sets Clients field to given value.
+SetThemeAssets sets ThemeAssets field to given value.
 
-### HasClients
+### HasThemeAssets
 
-`func (o *InlineResponse200316) HasClients() bool`
+`func (o *InlineResponse200316) HasThemeAssets() bool`
 
-HasClients returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200316) GetUsage() OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200316) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200316) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsManufacturersByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200316) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
+HasThemeAssets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

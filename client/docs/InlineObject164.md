@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RstpEnabled** | Pointer to **bool** | The spanning tree protocol status in network | [optional] 
-**StpBridgePriority** | Pointer to [**[]NetworksNetworkIdSwitchStpStpBridgePriority**](NetworksNetworkIdSwitchStpStpBridgePriority.md) | STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings. | [optional] 
+**BroadcastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for broadcast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**MulticastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for multicast traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**UnknownUnicastThreshold** | Pointer to **int32** | Percentage (1 to 99) of total available port bandwidth for unknown unicast (dlf-destination lookup failure) traffic type. Default value 100 percent rate is to clear the configuration. | [optional] 
+**TreatTheseTrafficTypesAsOneThreshold** | Pointer to **[]string** | Grouped traffic types | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineObject164WithDefaults instantiates a new InlineObject164 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRstpEnabled
+### GetBroadcastThreshold
 
-`func (o *InlineObject164) GetRstpEnabled() bool`
+`func (o *InlineObject164) GetBroadcastThreshold() int32`
 
-GetRstpEnabled returns the RstpEnabled field if non-nil, zero value otherwise.
+GetBroadcastThreshold returns the BroadcastThreshold field if non-nil, zero value otherwise.
 
-### GetRstpEnabledOk
+### GetBroadcastThresholdOk
 
-`func (o *InlineObject164) GetRstpEnabledOk() (*bool, bool)`
+`func (o *InlineObject164) GetBroadcastThresholdOk() (*int32, bool)`
 
-GetRstpEnabledOk returns a tuple with the RstpEnabled field if it's non-nil, zero value otherwise
+GetBroadcastThresholdOk returns a tuple with the BroadcastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRstpEnabled
+### SetBroadcastThreshold
 
-`func (o *InlineObject164) SetRstpEnabled(v bool)`
+`func (o *InlineObject164) SetBroadcastThreshold(v int32)`
 
-SetRstpEnabled sets RstpEnabled field to given value.
+SetBroadcastThreshold sets BroadcastThreshold field to given value.
 
-### HasRstpEnabled
+### HasBroadcastThreshold
 
-`func (o *InlineObject164) HasRstpEnabled() bool`
+`func (o *InlineObject164) HasBroadcastThreshold() bool`
 
-HasRstpEnabled returns a boolean if a field has been set.
+HasBroadcastThreshold returns a boolean if a field has been set.
 
-### GetStpBridgePriority
+### GetMulticastThreshold
 
-`func (o *InlineObject164) GetStpBridgePriority() []NetworksNetworkIdSwitchStpStpBridgePriority`
+`func (o *InlineObject164) GetMulticastThreshold() int32`
 
-GetStpBridgePriority returns the StpBridgePriority field if non-nil, zero value otherwise.
+GetMulticastThreshold returns the MulticastThreshold field if non-nil, zero value otherwise.
 
-### GetStpBridgePriorityOk
+### GetMulticastThresholdOk
 
-`func (o *InlineObject164) GetStpBridgePriorityOk() (*[]NetworksNetworkIdSwitchStpStpBridgePriority, bool)`
+`func (o *InlineObject164) GetMulticastThresholdOk() (*int32, bool)`
 
-GetStpBridgePriorityOk returns a tuple with the StpBridgePriority field if it's non-nil, zero value otherwise
+GetMulticastThresholdOk returns a tuple with the MulticastThreshold field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStpBridgePriority
+### SetMulticastThreshold
 
-`func (o *InlineObject164) SetStpBridgePriority(v []NetworksNetworkIdSwitchStpStpBridgePriority)`
+`func (o *InlineObject164) SetMulticastThreshold(v int32)`
 
-SetStpBridgePriority sets StpBridgePriority field to given value.
+SetMulticastThreshold sets MulticastThreshold field to given value.
 
-### HasStpBridgePriority
+### HasMulticastThreshold
 
-`func (o *InlineObject164) HasStpBridgePriority() bool`
+`func (o *InlineObject164) HasMulticastThreshold() bool`
 
-HasStpBridgePriority returns a boolean if a field has been set.
+HasMulticastThreshold returns a boolean if a field has been set.
+
+### GetUnknownUnicastThreshold
+
+`func (o *InlineObject164) GetUnknownUnicastThreshold() int32`
+
+GetUnknownUnicastThreshold returns the UnknownUnicastThreshold field if non-nil, zero value otherwise.
+
+### GetUnknownUnicastThresholdOk
+
+`func (o *InlineObject164) GetUnknownUnicastThresholdOk() (*int32, bool)`
+
+GetUnknownUnicastThresholdOk returns a tuple with the UnknownUnicastThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUnknownUnicastThreshold
+
+`func (o *InlineObject164) SetUnknownUnicastThreshold(v int32)`
+
+SetUnknownUnicastThreshold sets UnknownUnicastThreshold field to given value.
+
+### HasUnknownUnicastThreshold
+
+`func (o *InlineObject164) HasUnknownUnicastThreshold() bool`
+
+HasUnknownUnicastThreshold returns a boolean if a field has been set.
+
+### GetTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineObject164) GetTreatTheseTrafficTypesAsOneThreshold() []string`
+
+GetTreatTheseTrafficTypesAsOneThreshold returns the TreatTheseTrafficTypesAsOneThreshold field if non-nil, zero value otherwise.
+
+### GetTreatTheseTrafficTypesAsOneThresholdOk
+
+`func (o *InlineObject164) GetTreatTheseTrafficTypesAsOneThresholdOk() (*[]string, bool)`
+
+GetTreatTheseTrafficTypesAsOneThresholdOk returns a tuple with the TreatTheseTrafficTypesAsOneThreshold field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineObject164) SetTreatTheseTrafficTypesAsOneThreshold(v []string)`
+
+SetTreatTheseTrafficTypesAsOneThreshold sets TreatTheseTrafficTypesAsOneThreshold field to given value.
+
+### HasTreatTheseTrafficTypesAsOneThreshold
+
+`func (o *InlineObject164) HasTreatTheseTrafficTypesAsOneThreshold() bool`
+
+HasTreatTheseTrafficTypesAsOneThreshold returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

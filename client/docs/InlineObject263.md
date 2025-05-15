@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LicenseId** | **string** | The ID of the SM license to assign seats from | 
-**NetworkId** | **string** | The ID of the SM network to assign the seats to | 
-**SeatCount** | **int32** | The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license | 
+**Name** | **string** | The name of the VoIP provider | 
+**Address** | **string** | The IP address (IPv4 only) or hostname of the media server to monitor | 
+**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
 
 ## Methods
 
 ### NewInlineObject263
 
-`func NewInlineObject263(licenseId string, networkId string, seatCount int32, ) *InlineObject263`
+`func NewInlineObject263(name string, address string, ) *InlineObject263`
 
 NewInlineObject263 instantiates a new InlineObject263 object
 This constructor will assign default values to properties that have it defined,
@@ -27,65 +27,70 @@ NewInlineObject263WithDefaults instantiates a new InlineObject263 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetLicenseId
+### GetName
 
-`func (o *InlineObject263) GetLicenseId() string`
+`func (o *InlineObject263) GetName() string`
 
-GetLicenseId returns the LicenseId field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetLicenseIdOk
+### GetNameOk
 
-`func (o *InlineObject263) GetLicenseIdOk() (*string, bool)`
+`func (o *InlineObject263) GetNameOk() (*string, bool)`
 
-GetLicenseIdOk returns a tuple with the LicenseId field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseId
+### SetName
 
-`func (o *InlineObject263) SetLicenseId(v string)`
+`func (o *InlineObject263) SetName(v string)`
 
-SetLicenseId sets LicenseId field to given value.
+SetName sets Name field to given value.
 
 
-### GetNetworkId
+### GetAddress
 
-`func (o *InlineObject263) GetNetworkId() string`
+`func (o *InlineObject263) GetAddress() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetAddress returns the Address field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetAddressOk
 
-`func (o *InlineObject263) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineObject263) GetAddressOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetAddress
 
-`func (o *InlineObject263) SetNetworkId(v string)`
+`func (o *InlineObject263) SetAddress(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetAddress sets Address field to given value.
 
 
-### GetSeatCount
+### GetBestEffortMonitoringEnabled
 
-`func (o *InlineObject263) GetSeatCount() int32`
+`func (o *InlineObject263) GetBestEffortMonitoringEnabled() bool`
 
-GetSeatCount returns the SeatCount field if non-nil, zero value otherwise.
+GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
 
-### GetSeatCountOk
+### GetBestEffortMonitoringEnabledOk
 
-`func (o *InlineObject263) GetSeatCountOk() (*int32, bool)`
+`func (o *InlineObject263) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
 
-GetSeatCountOk returns a tuple with the SeatCount field if it's non-nil, zero value otherwise
+GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSeatCount
+### SetBestEffortMonitoringEnabled
 
-`func (o *InlineObject263) SetSeatCount(v int32)`
+`func (o *InlineObject263) SetBestEffortMonitoringEnabled(v bool)`
 
-SetSeatCount sets SeatCount field to given value.
+SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
 
+### HasBestEffortMonitoringEnabled
+
+`func (o *InlineObject263) HasBestEffortMonitoringEnabled() bool`
+
+HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

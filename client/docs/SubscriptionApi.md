@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 ## GetAdministeredLicensingSubscriptionSubscriptions
 
-> []InlineResponse2003 GetAdministeredLicensingSubscriptionSubscriptions(ctx).OrganizationIds(organizationIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SubscriptionIds(subscriptionIds).StartDate(startDate).EndDate(endDate).Statuses(statuses).ProductTypes(productTypes).Name(name).Execute()
+> []InlineResponse2003 GetAdministeredLicensingSubscriptionSubscriptions(ctx).OrganizationIds(organizationIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SubscriptionIds(subscriptionIds).StartDate(startDate).EndDate(endDate).Statuses(statuses).ProductTypes(productTypes).Skus(skus).Name(name).Execute()
 
 List available subscriptions
 
@@ -252,11 +252,12 @@ func main() {
     endDate := time.Now() // time.Time | Filter subscriptions by end date, ISO 8601 format. To filter with a range of dates, use 'endDate[<option>]=?' in the request. Accepted options include lt, gt, lte, gte. (optional)
     statuses := []string{"Statuses_example"} // []string | List of statuses that returned subscriptions can have (optional)
     productTypes := []string{"ProductTypes_example"} // []string | List of product types that returned subscriptions need to have entitlements for. (optional)
+    skus := []string{"Inner_example"} // []string | List of SKUs that returned subscriptions need to have entitlements for. (optional)
     name := "name_example" // string | Search for subscription name (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SubscriptionApi.GetAdministeredLicensingSubscriptionSubscriptions(context.Background()).OrganizationIds(organizationIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SubscriptionIds(subscriptionIds).StartDate(startDate).EndDate(endDate).Statuses(statuses).ProductTypes(productTypes).Name(name).Execute()
+    resp, r, err := apiClient.SubscriptionApi.GetAdministeredLicensingSubscriptionSubscriptions(context.Background()).OrganizationIds(organizationIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).SubscriptionIds(subscriptionIds).StartDate(startDate).EndDate(endDate).Statuses(statuses).ProductTypes(productTypes).Skus(skus).Name(name).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `SubscriptionApi.GetAdministeredLicensingSubscriptionSubscriptions``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -286,6 +287,7 @@ Name | Type | Description  | Notes
  **endDate** | **time.Time** | Filter subscriptions by end date, ISO 8601 format. To filter with a range of dates, use &#39;endDate[&lt;option&gt;]&#x3D;?&#39; in the request. Accepted options include lt, gt, lte, gte. | 
  **statuses** | **[]string** | List of statuses that returned subscriptions can have | 
  **productTypes** | **[]string** | List of product types that returned subscriptions need to have entitlements for. | 
+ **skus** | **[]string** | List of SKUs that returned subscriptions need to have entitlements for. | 
  **name** | **string** | Search for subscription name | 
 
 ### Return type

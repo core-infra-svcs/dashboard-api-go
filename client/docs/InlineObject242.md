@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
-**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
+**Status** | Pointer to **string** | Status the eSIM will be updated to | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineObject242WithDefaults instantiates a new InlineObject242 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTitle
+### GetStatus
 
-`func (o *InlineObject242) GetTitle() string`
+`func (o *InlineObject242) GetStatus() string`
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetTitleOk
+### GetStatusOk
 
-`func (o *InlineObject242) GetTitleOk() (*string, bool)`
+`func (o *InlineObject242) GetStatusOk() (*string, bool)`
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetStatus
 
-`func (o *InlineObject242) SetTitle(v string)`
+`func (o *InlineObject242) SetStatus(v string)`
 
-SetTitle sets Title field to given value.
+SetStatus sets Status field to given value.
 
-### HasTitle
+### HasStatus
 
-`func (o *InlineObject242) HasTitle() bool`
+`func (o *InlineObject242) HasStatus() bool`
 
-HasTitle returns a boolean if a field has been set.
-
-### GetApiKey
-
-`func (o *InlineObject242) GetApiKey() string`
-
-GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
-
-### GetApiKeyOk
-
-`func (o *InlineObject242) GetApiKeyOk() (*string, bool)`
-
-GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetApiKey
-
-`func (o *InlineObject242) SetApiKey(v string)`
-
-SetApiKey sets ApiKey field to given value.
-
-### HasApiKey
-
-`func (o *InlineObject242) HasApiKey() bool`
-
-HasApiKey returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

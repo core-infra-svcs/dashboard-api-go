@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Total** | Pointer to **int32** | Total number of Communication Plans | [optional] 
-**Remaining** | Pointer to **int32** | Remaining number of Communication Plans | [optional] 
+**Total** | Pointer to **int32** | Total number of Service Providers | [optional] 
+**Remaining** | Pointer to **int32** | Remaining number of Service Providers | [optional] 
 
 ## Methods
 
