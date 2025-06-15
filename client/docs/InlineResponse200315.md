@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Splash theme asset id | [optional] 
-**Name** | Pointer to **string** | Splash theme asset name | [optional] 
-**FileData** | Pointer to **string** | Splash theme asset file date base64 encoded | [optional] 
+**Certificate** | Pointer to **string** | Organization APNS Certificate used by devices to communication with Apple | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200315WithDefaults instantiates a new InlineResponse200315 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetCertificate
 
-`func (o *InlineResponse200315) GetId() string`
+`func (o *InlineResponse200315) GetCertificate() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetCertificate returns the Certificate field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetCertificateOk
 
-`func (o *InlineResponse200315) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200315) GetCertificateOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetCertificateOk returns a tuple with the Certificate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetCertificate
 
-`func (o *InlineResponse200315) SetId(v string)`
+`func (o *InlineResponse200315) SetCertificate(v string)`
 
-SetId sets Id field to given value.
+SetCertificate sets Certificate field to given value.
 
-### HasId
+### HasCertificate
 
-`func (o *InlineResponse200315) HasId() bool`
+`func (o *InlineResponse200315) HasCertificate() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200315) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200315) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200315) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200315) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetFileData
-
-`func (o *InlineResponse200315) GetFileData() string`
-
-GetFileData returns the FileData field if non-nil, zero value otherwise.
-
-### GetFileDataOk
-
-`func (o *InlineResponse200315) GetFileDataOk() (*string, bool)`
-
-GetFileDataOk returns a tuple with the FileData field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFileData
-
-`func (o *InlineResponse200315) SetFileData(v string)`
-
-SetFileData sets FileData field to given value.
-
-### HasFileData
-
-`func (o *InlineResponse200315) HasFileData() bool`
-
-HasFileData returns a boolean if a field has been set.
+HasCertificate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

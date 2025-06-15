@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProfileId** | Pointer to **string** | The ID of a quality and retention profile to assign to the camera. The profile&#39;s settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera. | [optional] 
+**ProfileId** | Pointer to **NullableString** | The ID of a quality and retention profile to assign to the camera. The profile&#39;s settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera. | [optional] 
 **MotionBasedRetentionEnabled** | Pointer to **bool** | Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera. | [optional] 
 **AudioRecordingEnabled** | Pointer to **bool** | Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera | [optional] 
 **RestrictedBandwidthModeEnabled** | Pointer to **bool** | Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras. | [optional] 
@@ -56,6 +56,16 @@ SetProfileId sets ProfileId field to given value.
 
 HasProfileId returns a boolean if a field has been set.
 
+### SetProfileIdNil
+
+`func (o *InlineObject9) SetProfileIdNil(b bool)`
+
+ SetProfileIdNil sets the value for ProfileId to be an explicit nil
+
+### UnsetProfileId
+`func (o *InlineObject9) UnsetProfileId()`
+
+UnsetProfileId ensures that no value is present for ProfileId, not even an explicit nil
 ### GetMotionBasedRetentionEnabled
 
 `func (o *InlineObject9) GetMotionBasedRetentionEnabled() bool`

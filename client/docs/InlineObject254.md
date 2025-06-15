@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices**](OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices.md) | Device details (maximum of 20 devices allowed) | 
-**Notes** | Pointer to **string** | Reason for capture | [optional] 
-**Duration** | Pointer to **int32** | Duration of the capture in seconds | [optional] 
-**FilterExpression** | Pointer to **string** | Filter expression for the capture | [optional] 
-**Name** | **string** | Name of packet capture file | 
+**Serials** | **[]string** | A list of Meraki Serials to migrate | 
+**Target** | **string** | The controller or management mode to which the devices will be migrated | 
 
 ## Methods
 
 ### NewInlineObject254
 
-`func NewInlineObject254(devices []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, name string, ) *InlineObject254`
+`func NewInlineObject254(serials []string, target string, ) *InlineObject254`
 
 NewInlineObject254 instantiates a new InlineObject254 object
 This constructor will assign default values to properties that have it defined,
@@ -29,119 +26,44 @@ NewInlineObject254WithDefaults instantiates a new InlineObject254 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevices
+### GetSerials
 
-`func (o *InlineObject254) GetDevices() []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices`
+`func (o *InlineObject254) GetSerials() []string`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetSerialsOk
 
-`func (o *InlineObject254) GetDevicesOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices, bool)`
+`func (o *InlineObject254) GetSerialsOk() (*[]string, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetSerials
 
-`func (o *InlineObject254) SetDevices(v []OrganizationsOrganizationIdDevicesPacketCaptureCapturesBulkCreateDevices)`
+`func (o *InlineObject254) SetSerials(v []string)`
 
-SetDevices sets Devices field to given value.
+SetSerials sets Serials field to given value.
 
 
-### GetNotes
+### GetTarget
 
-`func (o *InlineObject254) GetNotes() string`
+`func (o *InlineObject254) GetTarget() string`
 
-GetNotes returns the Notes field if non-nil, zero value otherwise.
+GetTarget returns the Target field if non-nil, zero value otherwise.
 
-### GetNotesOk
+### GetTargetOk
 
-`func (o *InlineObject254) GetNotesOk() (*string, bool)`
+`func (o *InlineObject254) GetTargetOk() (*string, bool)`
 
-GetNotesOk returns a tuple with the Notes field if it's non-nil, zero value otherwise
+GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNotes
+### SetTarget
 
-`func (o *InlineObject254) SetNotes(v string)`
+`func (o *InlineObject254) SetTarget(v string)`
 
-SetNotes sets Notes field to given value.
-
-### HasNotes
-
-`func (o *InlineObject254) HasNotes() bool`
-
-HasNotes returns a boolean if a field has been set.
-
-### GetDuration
-
-`func (o *InlineObject254) GetDuration() int32`
-
-GetDuration returns the Duration field if non-nil, zero value otherwise.
-
-### GetDurationOk
-
-`func (o *InlineObject254) GetDurationOk() (*int32, bool)`
-
-GetDurationOk returns a tuple with the Duration field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDuration
-
-`func (o *InlineObject254) SetDuration(v int32)`
-
-SetDuration sets Duration field to given value.
-
-### HasDuration
-
-`func (o *InlineObject254) HasDuration() bool`
-
-HasDuration returns a boolean if a field has been set.
-
-### GetFilterExpression
-
-`func (o *InlineObject254) GetFilterExpression() string`
-
-GetFilterExpression returns the FilterExpression field if non-nil, zero value otherwise.
-
-### GetFilterExpressionOk
-
-`func (o *InlineObject254) GetFilterExpressionOk() (*string, bool)`
-
-GetFilterExpressionOk returns a tuple with the FilterExpression field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFilterExpression
-
-`func (o *InlineObject254) SetFilterExpression(v string)`
-
-SetFilterExpression sets FilterExpression field to given value.
-
-### HasFilterExpression
-
-`func (o *InlineObject254) HasFilterExpression() bool`
-
-HasFilterExpression returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineObject254) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineObject254) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineObject254) SetName(v string)`
-
-SetName sets Name field to given value.
+SetTarget sets Target field to given value.
 
 
 

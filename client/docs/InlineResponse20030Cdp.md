@@ -4,10 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Platform** | Pointer to **string** | Platform | [optional] 
 **DeviceId** | Pointer to **string** | ID for the device | [optional] 
 **Model** | Pointer to **string** | Model for the device | [optional] 
 **Version** | Pointer to **string** | Version for the device | [optional] 
 **PortId** | Pointer to **string** | ID for the port | [optional] 
+**NativeVlan** | Pointer to **int32** | Native VLAN | [optional] 
+**VtpManagementDomain** | Pointer to **string** | VTP management domain | [optional] 
+**Capabilities** | Pointer to **string** | Capabilities | [optional] 
 **Address** | Pointer to **string** | Management IP address | [optional] 
 **SourcePort** | Pointer to **string** | Source port | [optional] 
 
@@ -29,6 +33,31 @@ will change when the set of required properties is changed
 NewInlineResponse20030CdpWithDefaults instantiates a new InlineResponse20030Cdp object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetPlatform
+
+`func (o *InlineResponse20030Cdp) GetPlatform() string`
+
+GetPlatform returns the Platform field if non-nil, zero value otherwise.
+
+### GetPlatformOk
+
+`func (o *InlineResponse20030Cdp) GetPlatformOk() (*string, bool)`
+
+GetPlatformOk returns a tuple with the Platform field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPlatform
+
+`func (o *InlineResponse20030Cdp) SetPlatform(v string)`
+
+SetPlatform sets Platform field to given value.
+
+### HasPlatform
+
+`func (o *InlineResponse20030Cdp) HasPlatform() bool`
+
+HasPlatform returns a boolean if a field has been set.
 
 ### GetDeviceId
 
@@ -129,6 +158,81 @@ SetPortId sets PortId field to given value.
 `func (o *InlineResponse20030Cdp) HasPortId() bool`
 
 HasPortId returns a boolean if a field has been set.
+
+### GetNativeVlan
+
+`func (o *InlineResponse20030Cdp) GetNativeVlan() int32`
+
+GetNativeVlan returns the NativeVlan field if non-nil, zero value otherwise.
+
+### GetNativeVlanOk
+
+`func (o *InlineResponse20030Cdp) GetNativeVlanOk() (*int32, bool)`
+
+GetNativeVlanOk returns a tuple with the NativeVlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNativeVlan
+
+`func (o *InlineResponse20030Cdp) SetNativeVlan(v int32)`
+
+SetNativeVlan sets NativeVlan field to given value.
+
+### HasNativeVlan
+
+`func (o *InlineResponse20030Cdp) HasNativeVlan() bool`
+
+HasNativeVlan returns a boolean if a field has been set.
+
+### GetVtpManagementDomain
+
+`func (o *InlineResponse20030Cdp) GetVtpManagementDomain() string`
+
+GetVtpManagementDomain returns the VtpManagementDomain field if non-nil, zero value otherwise.
+
+### GetVtpManagementDomainOk
+
+`func (o *InlineResponse20030Cdp) GetVtpManagementDomainOk() (*string, bool)`
+
+GetVtpManagementDomainOk returns a tuple with the VtpManagementDomain field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVtpManagementDomain
+
+`func (o *InlineResponse20030Cdp) SetVtpManagementDomain(v string)`
+
+SetVtpManagementDomain sets VtpManagementDomain field to given value.
+
+### HasVtpManagementDomain
+
+`func (o *InlineResponse20030Cdp) HasVtpManagementDomain() bool`
+
+HasVtpManagementDomain returns a boolean if a field has been set.
+
+### GetCapabilities
+
+`func (o *InlineResponse20030Cdp) GetCapabilities() string`
+
+GetCapabilities returns the Capabilities field if non-nil, zero value otherwise.
+
+### GetCapabilitiesOk
+
+`func (o *InlineResponse20030Cdp) GetCapabilitiesOk() (*string, bool)`
+
+GetCapabilitiesOk returns a tuple with the Capabilities field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCapabilities
+
+`func (o *InlineResponse20030Cdp) SetCapabilities(v string)`
+
+SetCapabilities sets Capabilities field to given value.
+
+### HasCapabilities
+
+`func (o *InlineResponse20030Cdp) HasCapabilities() bool`
+
+HasCapabilities returns a boolean if a field has been set.
 
 ### GetAddress
 

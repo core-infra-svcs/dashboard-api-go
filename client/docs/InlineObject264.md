@@ -4,15 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the VoIP provider | [optional] 
-**Address** | Pointer to **string** | The IP address (IPv4 only) or hostname of the media server to monitor | [optional] 
-**BestEffortMonitoringEnabled** | Pointer to **bool** | Indicates that if the media server doesn&#39;t respond to ICMP pings, the nearest hop will be used in its stead. | [optional] 
+**ShortName** | **string** | Short name of the early access feature | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject264
 
-`func NewInlineObject264() *InlineObject264`
+`func NewInlineObject264(shortName string, ) *InlineObject264`
 
 NewInlineObject264 instantiates a new InlineObject264 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +26,50 @@ NewInlineObject264WithDefaults instantiates a new InlineObject264 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetShortName
 
-`func (o *InlineObject264) GetName() string`
+`func (o *InlineObject264) GetShortName() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetShortName returns the ShortName field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetShortNameOk
 
-`func (o *InlineObject264) GetNameOk() (*string, bool)`
+`func (o *InlineObject264) GetShortNameOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetShortName
 
-`func (o *InlineObject264) SetName(v string)`
+`func (o *InlineObject264) SetShortName(v string)`
 
-SetName sets Name field to given value.
+SetShortName sets ShortName field to given value.
 
-### HasName
 
-`func (o *InlineObject264) HasName() bool`
+### GetLimitScopeToNetworks
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject264) GetLimitScopeToNetworks() []string`
 
-### GetAddress
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-`func (o *InlineObject264) GetAddress() string`
+### GetLimitScopeToNetworksOk
 
-GetAddress returns the Address field if non-nil, zero value otherwise.
+`func (o *InlineObject264) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-### GetAddressOk
-
-`func (o *InlineObject264) GetAddressOk() (*string, bool)`
-
-GetAddressOk returns a tuple with the Address field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAddress
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject264) SetAddress(v string)`
+`func (o *InlineObject264) SetLimitScopeToNetworks(v []string)`
 
-SetAddress sets Address field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
-### HasAddress
+### HasLimitScopeToNetworks
 
-`func (o *InlineObject264) HasAddress() bool`
+`func (o *InlineObject264) HasLimitScopeToNetworks() bool`
 
-HasAddress returns a boolean if a field has been set.
-
-### GetBestEffortMonitoringEnabled
-
-`func (o *InlineObject264) GetBestEffortMonitoringEnabled() bool`
-
-GetBestEffortMonitoringEnabled returns the BestEffortMonitoringEnabled field if non-nil, zero value otherwise.
-
-### GetBestEffortMonitoringEnabledOk
-
-`func (o *InlineObject264) GetBestEffortMonitoringEnabledOk() (*bool, bool)`
-
-GetBestEffortMonitoringEnabledOk returns a tuple with the BestEffortMonitoringEnabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBestEffortMonitoringEnabled
-
-`func (o *InlineObject264) SetBestEffortMonitoringEnabled(v bool)`
-
-SetBestEffortMonitoringEnabled sets BestEffortMonitoringEnabled field to given value.
-
-### HasBestEffortMonitoringEnabled
-
-`func (o *InlineObject264) HasBestEffortMonitoringEnabled() bool`
-
-HasBestEffortMonitoringEnabled returns a boolean if a field has been set.
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

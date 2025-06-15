@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertIds** | **[]string** | Array of alert IDs to dismiss | 
+**Items** | Pointer to [**[]OrganizationsOrganizationIdApplianceVpnSiteToSiteIpsecPeersSlasItems**](OrganizationsOrganizationIdApplianceVpnSiteToSiteIpsecPeersSlasItems.md) | List of IPsec SLA policies | [optional] 
 
 ## Methods
 
 ### NewInlineObject233
 
-`func NewInlineObject233(alertIds []string, ) *InlineObject233`
+`func NewInlineObject233() *InlineObject233`
 
 NewInlineObject233 instantiates a new InlineObject233 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject233WithDefaults instantiates a new InlineObject233 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertIds
+### GetItems
 
-`func (o *InlineObject233) GetAlertIds() []string`
+`func (o *InlineObject233) GetItems() []OrganizationsOrganizationIdApplianceVpnSiteToSiteIpsecPeersSlasItems`
 
-GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetAlertIdsOk
+### GetItemsOk
 
-`func (o *InlineObject233) GetAlertIdsOk() (*[]string, bool)`
+`func (o *InlineObject233) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceVpnSiteToSiteIpsecPeersSlasItems, bool)`
 
-GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertIds
+### SetItems
 
-`func (o *InlineObject233) SetAlertIds(v []string)`
+`func (o *InlineObject233) SetItems(v []OrganizationsOrganizationIdApplianceVpnSiteToSiteIpsecPeersSlasItems)`
 
-SetAlertIds sets AlertIds field to given value.
+SetItems sets Items field to given value.
 
+### HasItems
+
+`func (o *InlineObject233) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **SenseEnabled** | Pointer to **bool** | Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera | [optional] 
-**MqttBrokerId** | Pointer to **string** | The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera | [optional] 
+**MqttBrokerId** | Pointer to **NullableString** | The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera | [optional] 
 **AudioDetection** | Pointer to [**DevicesSerialCameraSenseAudioDetection**](DevicesSerialCameraSenseAudioDetection.md) |  | [optional] 
 **DetectionModelId** | Pointer to **string** | The ID of the object detection model | [optional] 
 
@@ -78,6 +78,16 @@ SetMqttBrokerId sets MqttBrokerId field to given value.
 
 HasMqttBrokerId returns a boolean if a field has been set.
 
+### SetMqttBrokerIdNil
+
+`func (o *InlineObject10) SetMqttBrokerIdNil(b bool)`
+
+ SetMqttBrokerIdNil sets the value for MqttBrokerId to be an explicit nil
+
+### UnsetMqttBrokerId
+`func (o *InlineObject10) UnsetMqttBrokerId()`
+
+UnsetMqttBrokerId ensures that no value is present for MqttBrokerId, not even an explicit nil
 ### GetAudioDetection
 
 `func (o *InlineObject10) GetAudioDetection() DevicesSerialCameraSenseAudioDetection`

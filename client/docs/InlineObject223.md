@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | Name of profile | 
+**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems.md) | List containing the network ID and Profile ID | 
 
 ## Methods
 
 ### NewInlineObject223
 
-`func NewInlineObject223(name string, ) *InlineObject223`
+`func NewInlineObject223(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, ) *InlineObject223`
 
 NewInlineObject223 instantiates a new InlineObject223 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject223WithDefaults instantiates a new InlineObject223 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetItems
 
-`func (o *InlineObject223) GetName() string`
+`func (o *InlineObject223) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetItemsOk
 
-`func (o *InlineObject223) GetNameOk() (*string, bool)`
+`func (o *InlineObject223) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetItems
 
-`func (o *InlineObject223) SetName(v string)`
+`func (o *InlineObject223) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems)`
 
-SetName sets Name field to given value.
+SetItems sets Items field to given value.
 
 
 

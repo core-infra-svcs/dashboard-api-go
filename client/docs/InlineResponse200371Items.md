@@ -4,11 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Mode** | Pointer to **string** | Wireless LAN controller redundancy SSO (stateful switchover) | [optional] 
-**Enabled** | Pointer to **bool** | Wireless LAN controller redundancy enablement | [optional] 
-**Failover** | Pointer to [**InlineResponse200371Failover**](InlineResponse200371Failover.md) |  | [optional] 
-**MobilityMac** | Pointer to **string** | Wireless LAN controller redundancy mobility mac  | [optional] 
+**Serial** | Pointer to **string** | The cloud ID of the wireless LAN controller | [optional] 
+**Interfaces** | Pointer to [**[]InlineResponse200371Interfaces**](InlineResponse200371Interfaces.md) | Layer 2 interfaces belongs to the wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -54,105 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetMode
+### GetInterfaces
 
-`func (o *InlineResponse200371Items) GetMode() string`
+`func (o *InlineResponse200371Items) GetInterfaces() []InlineResponse200371Interfaces`
 
-GetMode returns the Mode field if non-nil, zero value otherwise.
+GetInterfaces returns the Interfaces field if non-nil, zero value otherwise.
 
-### GetModeOk
+### GetInterfacesOk
 
-`func (o *InlineResponse200371Items) GetModeOk() (*string, bool)`
+`func (o *InlineResponse200371Items) GetInterfacesOk() (*[]InlineResponse200371Interfaces, bool)`
 
-GetModeOk returns a tuple with the Mode field if it's non-nil, zero value otherwise
+GetInterfacesOk returns a tuple with the Interfaces field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMode
+### SetInterfaces
 
-`func (o *InlineResponse200371Items) SetMode(v string)`
+`func (o *InlineResponse200371Items) SetInterfaces(v []InlineResponse200371Interfaces)`
 
-SetMode sets Mode field to given value.
+SetInterfaces sets Interfaces field to given value.
 
-### HasMode
+### HasInterfaces
 
-`func (o *InlineResponse200371Items) HasMode() bool`
+`func (o *InlineResponse200371Items) HasInterfaces() bool`
 
-HasMode returns a boolean if a field has been set.
-
-### GetEnabled
-
-`func (o *InlineResponse200371Items) GetEnabled() bool`
-
-GetEnabled returns the Enabled field if non-nil, zero value otherwise.
-
-### GetEnabledOk
-
-`func (o *InlineResponse200371Items) GetEnabledOk() (*bool, bool)`
-
-GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEnabled
-
-`func (o *InlineResponse200371Items) SetEnabled(v bool)`
-
-SetEnabled sets Enabled field to given value.
-
-### HasEnabled
-
-`func (o *InlineResponse200371Items) HasEnabled() bool`
-
-HasEnabled returns a boolean if a field has been set.
-
-### GetFailover
-
-`func (o *InlineResponse200371Items) GetFailover() InlineResponse200371Failover`
-
-GetFailover returns the Failover field if non-nil, zero value otherwise.
-
-### GetFailoverOk
-
-`func (o *InlineResponse200371Items) GetFailoverOk() (*InlineResponse200371Failover, bool)`
-
-GetFailoverOk returns a tuple with the Failover field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFailover
-
-`func (o *InlineResponse200371Items) SetFailover(v InlineResponse200371Failover)`
-
-SetFailover sets Failover field to given value.
-
-### HasFailover
-
-`func (o *InlineResponse200371Items) HasFailover() bool`
-
-HasFailover returns a boolean if a field has been set.
-
-### GetMobilityMac
-
-`func (o *InlineResponse200371Items) GetMobilityMac() string`
-
-GetMobilityMac returns the MobilityMac field if non-nil, zero value otherwise.
-
-### GetMobilityMacOk
-
-`func (o *InlineResponse200371Items) GetMobilityMacOk() (*string, bool)`
-
-GetMobilityMacOk returns a tuple with the MobilityMac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMobilityMac
-
-`func (o *InlineResponse200371Items) SetMobilityMac(v string)`
-
-SetMobilityMac sets MobilityMac field to given value.
-
-### HasMobilityMac
-
-`func (o *InlineResponse200371Items) HasMobilityMac() bool`
-
-HasMobilityMac returns a boolean if a field has been set.
+HasInterfaces returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

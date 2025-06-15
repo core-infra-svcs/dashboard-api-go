@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200363Items**](InlineResponse200363Items.md) | Wireless LAN controller layer 2 interfaces historical status | [optional] 
+**Items** | Pointer to [**[]InlineResponse200363Items**](InlineResponse200363Items.md) | Paginated list of scanning api receivers by network ID. | [optional] 
 **Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
 
 ## Methods

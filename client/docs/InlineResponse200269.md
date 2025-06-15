@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CaptureId** | Pointer to **string** | Id of packet capture file | [optional] 
-**DownloadUrl** | Pointer to **string** | Download URL of captured packet file -- Depracated | [optional] 
-**Url** | Pointer to **string** | Download URL of captured packet file | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp, in iso8601 format, at which the event happened | [optional] 
+**Device** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice.md) |  | [optional] 
+**Details** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewInlineResponse200269WithDefaults instantiates a new InlineResponse200269 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCaptureId
+### GetTs
 
-`func (o *InlineResponse200269) GetCaptureId() string`
+`func (o *InlineResponse200269) GetTs() time.Time`
 
-GetCaptureId returns the CaptureId field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetCaptureIdOk
+### GetTsOk
 
-`func (o *InlineResponse200269) GetCaptureIdOk() (*string, bool)`
+`func (o *InlineResponse200269) GetTsOk() (*time.Time, bool)`
 
-GetCaptureIdOk returns a tuple with the CaptureId field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCaptureId
+### SetTs
 
-`func (o *InlineResponse200269) SetCaptureId(v string)`
+`func (o *InlineResponse200269) SetTs(v time.Time)`
 
-SetCaptureId sets CaptureId field to given value.
+SetTs sets Ts field to given value.
 
-### HasCaptureId
+### HasTs
 
-`func (o *InlineResponse200269) HasCaptureId() bool`
+`func (o *InlineResponse200269) HasTs() bool`
 
-HasCaptureId returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetDownloadUrl
+### GetDevice
 
-`func (o *InlineResponse200269) GetDownloadUrl() string`
+`func (o *InlineResponse200269) GetDevice() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice`
 
-GetDownloadUrl returns the DownloadUrl field if non-nil, zero value otherwise.
+GetDevice returns the Device field if non-nil, zero value otherwise.
 
-### GetDownloadUrlOk
+### GetDeviceOk
 
-`func (o *InlineResponse200269) GetDownloadUrlOk() (*string, bool)`
+`func (o *InlineResponse200269) GetDeviceOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice, bool)`
 
-GetDownloadUrlOk returns a tuple with the DownloadUrl field if it's non-nil, zero value otherwise
+GetDeviceOk returns a tuple with the Device field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDownloadUrl
+### SetDevice
 
-`func (o *InlineResponse200269) SetDownloadUrl(v string)`
+`func (o *InlineResponse200269) SetDevice(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDevice)`
 
-SetDownloadUrl sets DownloadUrl field to given value.
+SetDevice sets Device field to given value.
 
-### HasDownloadUrl
+### HasDevice
 
-`func (o *InlineResponse200269) HasDownloadUrl() bool`
+`func (o *InlineResponse200269) HasDevice() bool`
 
-HasDownloadUrl returns a boolean if a field has been set.
+HasDevice returns a boolean if a field has been set.
 
-### GetUrl
+### GetDetails
 
-`func (o *InlineResponse200269) GetUrl() string`
+`func (o *InlineResponse200269) GetDetails() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetDetails returns the Details field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetDetailsOk
 
-`func (o *InlineResponse200269) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse200269) GetDetailsOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetDetailsOk returns a tuple with the Details field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetDetails
 
-`func (o *InlineResponse200269) SetUrl(v string)`
+`func (o *InlineResponse200269) SetDetails(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryDetails)`
 
-SetUrl sets Url field to given value.
+SetDetails sets Details field to given value.
 
-### HasUrl
+### HasDetails
 
-`func (o *InlineResponse200269) HasUrl() bool`
+`func (o *InlineResponse200269) HasDetails() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasDetails returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200269) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200269) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200269) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesChangeHistoryNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200269) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

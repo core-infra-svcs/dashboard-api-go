@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Jobs** | [**[]NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs**](NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs.md) | The list of auto locate jobs to be scheduled. Up to 100 jobs can be provided in a request. | 
+**Json** | Pointer to [**[]NetworksNetworkIdFirmwareUpgradesStagedStagesJson**](NetworksNetworkIdFirmwareUpgradesStagedStagesJson.md) | Array of Staged Upgrade Groups | [optional] 
 
 ## Methods
 
 ### NewInlineObject104
 
-`func NewInlineObject104(jobs []NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs, ) *InlineObject104`
+`func NewInlineObject104() *InlineObject104`
 
 NewInlineObject104 instantiates a new InlineObject104 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject104WithDefaults instantiates a new InlineObject104 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetJobs
+### GetJson
 
-`func (o *InlineObject104) GetJobs() []NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs`
+`func (o *InlineObject104) GetJson() []NetworksNetworkIdFirmwareUpgradesStagedStagesJson`
 
-GetJobs returns the Jobs field if non-nil, zero value otherwise.
+GetJson returns the Json field if non-nil, zero value otherwise.
 
-### GetJobsOk
+### GetJsonOk
 
-`func (o *InlineObject104) GetJobsOk() (*[]NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs, bool)`
+`func (o *InlineObject104) GetJsonOk() (*[]NetworksNetworkIdFirmwareUpgradesStagedStagesJson, bool)`
 
-GetJobsOk returns a tuple with the Jobs field if it's non-nil, zero value otherwise
+GetJsonOk returns a tuple with the Json field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetJobs
+### SetJson
 
-`func (o *InlineObject104) SetJobs(v []NetworksNetworkIdFloorPlansAutoLocateJobsBatchJobs)`
+`func (o *InlineObject104) SetJson(v []NetworksNetworkIdFirmwareUpgradesStagedStagesJson)`
 
-SetJobs sets Jobs field to given value.
+SetJson sets Json field to given value.
 
+### HasJson
+
+`func (o *InlineObject104) HasJson() bool`
+
+HasJson returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

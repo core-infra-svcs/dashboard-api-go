@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | **string** | The URL where the test webhook will be sent | 
-**SharedSecret** | Pointer to **string** | The shared secret the test webhook will send. Optional. Defaults to an empty string. | [optional] [default to ""]
-**PayloadTemplateId** | Pointer to **string** | The ID of the payload template of the test webhook. Defaults to the HTTP server&#39;s template ID if one exists for the given URL, or Generic template ID otherwise | [optional] 
-**PayloadTemplateName** | Pointer to **string** | The name of the payload template. | [optional] 
-**AlertTypeId** | Pointer to **string** | The type of alert which the test webhook will send. Optional. Defaults to power_supply_down. | [optional] [default to "power_supply_down"]
+**Name** | **string** | The name of the new template | 
+**Body** | Pointer to **string** | The liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**Headers** | Pointer to [**[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1**](NetworksNetworkIdWebhooksPayloadTemplatesHeaders1.md) | The liquid template used with the webhook headers. | [optional] 
+**BodyFile** | Pointer to **string** | A Base64 encoded file containing liquid template used for the body of the webhook message. Either &#x60;body&#x60; or &#x60;bodyFile&#x60; must be specified. | [optional] 
+**HeadersFile** | Pointer to **string** | A Base64 encoded file containing the liquid template used with the webhook headers. | [optional] 
 
 ## Methods
 
 ### NewInlineObject176
 
-`func NewInlineObject176(url string, ) *InlineObject176`
+`func NewInlineObject176(name string, ) *InlineObject176`
 
 NewInlineObject176 instantiates a new InlineObject176 object
 This constructor will assign default values to properties that have it defined,
@@ -29,125 +29,135 @@ NewInlineObject176WithDefaults instantiates a new InlineObject176 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetName
 
-`func (o *InlineObject176) GetUrl() string`
+`func (o *InlineObject176) GetName() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetNameOk
 
-`func (o *InlineObject176) GetUrlOk() (*string, bool)`
+`func (o *InlineObject176) GetNameOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetName
 
-`func (o *InlineObject176) SetUrl(v string)`
+`func (o *InlineObject176) SetName(v string)`
 
-SetUrl sets Url field to given value.
+SetName sets Name field to given value.
 
 
-### GetSharedSecret
+### GetBody
 
-`func (o *InlineObject176) GetSharedSecret() string`
+`func (o *InlineObject176) GetBody() string`
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-### GetSharedSecretOk
+### GetBodyOk
 
-`func (o *InlineObject176) GetSharedSecretOk() (*string, bool)`
+`func (o *InlineObject176) GetBodyOk() (*string, bool)`
 
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetBody
 
-`func (o *InlineObject176) SetSharedSecret(v string)`
+`func (o *InlineObject176) SetBody(v string)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetBody sets Body field to given value.
 
-### HasSharedSecret
+### HasBody
 
-`func (o *InlineObject176) HasSharedSecret() bool`
+`func (o *InlineObject176) HasBody() bool`
 
-HasSharedSecret returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
 
-### GetPayloadTemplateId
+### GetHeaders
 
-`func (o *InlineObject176) GetPayloadTemplateId() string`
+`func (o *InlineObject176) GetHeaders() []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1`
 
-GetPayloadTemplateId returns the PayloadTemplateId field if non-nil, zero value otherwise.
+GetHeaders returns the Headers field if non-nil, zero value otherwise.
 
-### GetPayloadTemplateIdOk
+### GetHeadersOk
 
-`func (o *InlineObject176) GetPayloadTemplateIdOk() (*string, bool)`
+`func (o *InlineObject176) GetHeadersOk() (*[]NetworksNetworkIdWebhooksPayloadTemplatesHeaders1, bool)`
 
-GetPayloadTemplateIdOk returns a tuple with the PayloadTemplateId field if it's non-nil, zero value otherwise
+GetHeadersOk returns a tuple with the Headers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateId
+### SetHeaders
 
-`func (o *InlineObject176) SetPayloadTemplateId(v string)`
+`func (o *InlineObject176) SetHeaders(v []NetworksNetworkIdWebhooksPayloadTemplatesHeaders1)`
 
-SetPayloadTemplateId sets PayloadTemplateId field to given value.
+SetHeaders sets Headers field to given value.
 
-### HasPayloadTemplateId
+### HasHeaders
 
-`func (o *InlineObject176) HasPayloadTemplateId() bool`
+`func (o *InlineObject176) HasHeaders() bool`
 
-HasPayloadTemplateId returns a boolean if a field has been set.
+HasHeaders returns a boolean if a field has been set.
 
-### GetPayloadTemplateName
+### SetHeadersNil
 
-`func (o *InlineObject176) GetPayloadTemplateName() string`
+`func (o *InlineObject176) SetHeadersNil(b bool)`
 
-GetPayloadTemplateName returns the PayloadTemplateName field if non-nil, zero value otherwise.
+ SetHeadersNil sets the value for Headers to be an explicit nil
 
-### GetPayloadTemplateNameOk
+### UnsetHeaders
+`func (o *InlineObject176) UnsetHeaders()`
 
-`func (o *InlineObject176) GetPayloadTemplateNameOk() (*string, bool)`
+UnsetHeaders ensures that no value is present for Headers, not even an explicit nil
+### GetBodyFile
 
-GetPayloadTemplateNameOk returns a tuple with the PayloadTemplateName field if it's non-nil, zero value otherwise
+`func (o *InlineObject176) GetBodyFile() string`
+
+GetBodyFile returns the BodyFile field if non-nil, zero value otherwise.
+
+### GetBodyFileOk
+
+`func (o *InlineObject176) GetBodyFileOk() (*string, bool)`
+
+GetBodyFileOk returns a tuple with the BodyFile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplateName
+### SetBodyFile
 
-`func (o *InlineObject176) SetPayloadTemplateName(v string)`
+`func (o *InlineObject176) SetBodyFile(v string)`
 
-SetPayloadTemplateName sets PayloadTemplateName field to given value.
+SetBodyFile sets BodyFile field to given value.
 
-### HasPayloadTemplateName
+### HasBodyFile
 
-`func (o *InlineObject176) HasPayloadTemplateName() bool`
+`func (o *InlineObject176) HasBodyFile() bool`
 
-HasPayloadTemplateName returns a boolean if a field has been set.
+HasBodyFile returns a boolean if a field has been set.
 
-### GetAlertTypeId
+### GetHeadersFile
 
-`func (o *InlineObject176) GetAlertTypeId() string`
+`func (o *InlineObject176) GetHeadersFile() string`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetHeadersFile returns the HeadersFile field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetHeadersFileOk
 
-`func (o *InlineObject176) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineObject176) GetHeadersFileOk() (*string, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetHeadersFileOk returns a tuple with the HeadersFile field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetHeadersFile
 
-`func (o *InlineObject176) SetAlertTypeId(v string)`
+`func (o *InlineObject176) SetHeadersFile(v string)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetHeadersFile sets HeadersFile field to given value.
 
-### HasAlertTypeId
+### HasHeadersFile
 
-`func (o *InlineObject176) HasAlertTypeId() bool`
+`func (o *InlineObject176) HasHeadersFile() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasHeadersFile returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

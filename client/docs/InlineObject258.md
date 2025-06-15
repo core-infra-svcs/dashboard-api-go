@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Order** | [**[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder**](OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder.md) | Array of schedule IDs and their priorities to reorder. | 
+**CaptureIds** | **[]string** | Delete the packet captures of the specified capture ids | 
 
 ## Methods
 
 ### NewInlineObject258
 
-`func NewInlineObject258(order []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, ) *InlineObject258`
+`func NewInlineObject258(captureIds []string, ) *InlineObject258`
 
 NewInlineObject258 instantiates a new InlineObject258 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject258WithDefaults instantiates a new InlineObject258 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetOrder
+### GetCaptureIds
 
-`func (o *InlineObject258) GetOrder() []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder`
+`func (o *InlineObject258) GetCaptureIds() []string`
 
-GetOrder returns the Order field if non-nil, zero value otherwise.
+GetCaptureIds returns the CaptureIds field if non-nil, zero value otherwise.
 
-### GetOrderOk
+### GetCaptureIdsOk
 
-`func (o *InlineObject258) GetOrderOk() (*[]OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder, bool)`
+`func (o *InlineObject258) GetCaptureIdsOk() (*[]string, bool)`
 
-GetOrderOk returns a tuple with the Order field if it's non-nil, zero value otherwise
+GetCaptureIdsOk returns a tuple with the CaptureIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrder
+### SetCaptureIds
 
-`func (o *InlineObject258) SetOrder(v []OrganizationsOrganizationIdDevicesPacketCaptureSchedulesReorderOrder)`
+`func (o *InlineObject258) SetCaptureIds(v []string)`
 
-SetOrder sets Order field to given value.
+SetCaptureIds sets CaptureIds field to given value.
 
 
 

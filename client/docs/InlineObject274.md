@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DestOrganizationId** | **string** | The ID of the organization to move the licenses to | 
-**LicenseIds** | **[]string** | A list of IDs of licenses to move to the new organization | 
+**Devices** | [**[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices.md) | A set of devices to import (or update) | 
+**Options** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject274
 
-`func NewInlineObject274(destOrganizationId string, licenseIds []string, ) *InlineObject274`
+`func NewInlineObject274(devices []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, ) *InlineObject274`
 
 NewInlineObject274 instantiates a new InlineObject274 object
 This constructor will assign default values to properties that have it defined,
@@ -26,45 +26,50 @@ NewInlineObject274WithDefaults instantiates a new InlineObject274 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDestOrganizationId
+### GetDevices
 
-`func (o *InlineObject274) GetDestOrganizationId() string`
+`func (o *InlineObject274) GetDevices() []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices`
 
-GetDestOrganizationId returns the DestOrganizationId field if non-nil, zero value otherwise.
+GetDevices returns the Devices field if non-nil, zero value otherwise.
 
-### GetDestOrganizationIdOk
+### GetDevicesOk
 
-`func (o *InlineObject274) GetDestOrganizationIdOk() (*string, bool)`
+`func (o *InlineObject274) GetDevicesOk() (*[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, bool)`
 
-GetDestOrganizationIdOk returns a tuple with the DestOrganizationId field if it's non-nil, zero value otherwise
+GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDestOrganizationId
+### SetDevices
 
-`func (o *InlineObject274) SetDestOrganizationId(v string)`
+`func (o *InlineObject274) SetDevices(v []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices)`
 
-SetDestOrganizationId sets DestOrganizationId field to given value.
+SetDevices sets Devices field to given value.
 
 
-### GetLicenseIds
+### GetOptions
 
-`func (o *InlineObject274) GetLicenseIds() []string`
+`func (o *InlineObject274) GetOptions() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions`
 
-GetLicenseIds returns the LicenseIds field if non-nil, zero value otherwise.
+GetOptions returns the Options field if non-nil, zero value otherwise.
 
-### GetLicenseIdsOk
+### GetOptionsOk
 
-`func (o *InlineObject274) GetLicenseIdsOk() (*[]string, bool)`
+`func (o *InlineObject274) GetOptionsOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions, bool)`
 
-GetLicenseIdsOk returns a tuple with the LicenseIds field if it's non-nil, zero value otherwise
+GetOptionsOk returns a tuple with the Options field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLicenseIds
+### SetOptions
 
-`func (o *InlineObject274) SetLicenseIds(v []string)`
+`func (o *InlineObject274) SetOptions(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions)`
 
-SetLicenseIds sets LicenseIds field to given value.
+SetOptions sets Options field to given value.
 
+### HasOptions
+
+`func (o *InlineObject274) HasOptions() bool`
+
+HasOptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

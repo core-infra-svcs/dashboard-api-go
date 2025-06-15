@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **Mcc** | Pointer to **string** | Mobile Country Code | [optional] 
 **Mnc** | Pointer to **string** | Mobile Network Code | [optional] 
 **Roaming** | Pointer to [**OrganizationsOrganizationIdCellularGatewayUplinkStatusesRoaming**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesRoaming.md) |  | [optional] 
-**ConnectionType** | Pointer to **string** | Connection Type | [optional] 
+**ConnectionType** | Pointer to **string** | Connection Type (Radio Access Technology) | [optional] 
 **Apn** | Pointer to **string** | Access Point Name | [optional] 
 **Dns1** | Pointer to **string** | Primary DNS IP | [optional] 
 **Dns2** | Pointer to **string** | Secondary DNS IP | [optional] 

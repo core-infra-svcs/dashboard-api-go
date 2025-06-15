@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]OrganizationsOrganizationIdWirelessControllerDevicesRedundancyFailoverHistoryItems**](OrganizationsOrganizationIdWirelessControllerDevicesRedundancyFailoverHistoryItems.md) | Wireless LAN controller HA failover events | [optional] 
+**Items** | Pointer to [**[]InlineResponse200370Items**](InlineResponse200370Items.md) | Access points associated with Wireless LAN controllers | [optional] 
 **Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200370) GetItems() []OrganizationsOrganizationIdWirelessControllerDevicesRedundancyFailoverHistoryItems`
+`func (o *InlineResponse200370) GetItems() []InlineResponse200370Items`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200370) GetItemsOk() (*[]OrganizationsOrganizationIdWirelessControllerDevicesRedundancyFailoverHistoryItems, bool)`
+`func (o *InlineResponse200370) GetItemsOk() (*[]InlineResponse200370Items, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200370) SetItems(v []OrganizationsOrganizationIdWirelessControllerDevicesRedundancyFailoverHistoryItems)`
+`func (o *InlineResponse200370) SetItems(v []InlineResponse200370Items)`
 
 SetItems sets Items field to given value.
 

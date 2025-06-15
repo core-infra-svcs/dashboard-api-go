@@ -4,11 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the MQTT broker. | [optional] 
-**Host** | Pointer to **string** | Host name/IP address where the MQTT broker runs. | [optional] 
-**Port** | Pointer to **int32** | Host port though which the MQTT broker can be reached. | [optional] 
-**Security** | Pointer to [**NetworksNetworkIdMqttBrokersSecurity1**](NetworksNetworkIdMqttBrokersSecurity1.md) |  | [optional] 
-**Authentication** | Pointer to [**NetworksNetworkIdMqttBrokersAuthentication1**](NetworksNetworkIdMqttBrokersAuthentication1.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the user. Only allowed If the user is not Dashboard administrator. | [optional] 
+**Password** | Pointer to **string** | The password for this user account. Only allowed If the user is not Dashboard administrator. | [optional] 
+**EmailPasswordToUser** | Pointer to **bool** | Whether or not Meraki should email the password to user. Default is false. | [optional] 
+**Authorizations** | Pointer to [**[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations**](NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations.md) | Authorization zones and expiration dates for the user. | [optional] 
 
 ## Methods
 
@@ -54,105 +53,80 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetHost
+### GetPassword
 
-`func (o *InlineObject114) GetHost() string`
+`func (o *InlineObject114) GetPassword() string`
 
-GetHost returns the Host field if non-nil, zero value otherwise.
+GetPassword returns the Password field if non-nil, zero value otherwise.
 
-### GetHostOk
+### GetPasswordOk
 
-`func (o *InlineObject114) GetHostOk() (*string, bool)`
+`func (o *InlineObject114) GetPasswordOk() (*string, bool)`
 
-GetHostOk returns a tuple with the Host field if it's non-nil, zero value otherwise
+GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHost
+### SetPassword
 
-`func (o *InlineObject114) SetHost(v string)`
+`func (o *InlineObject114) SetPassword(v string)`
 
-SetHost sets Host field to given value.
+SetPassword sets Password field to given value.
 
-### HasHost
+### HasPassword
 
-`func (o *InlineObject114) HasHost() bool`
+`func (o *InlineObject114) HasPassword() bool`
 
-HasHost returns a boolean if a field has been set.
+HasPassword returns a boolean if a field has been set.
 
-### GetPort
+### GetEmailPasswordToUser
 
-`func (o *InlineObject114) GetPort() int32`
+`func (o *InlineObject114) GetEmailPasswordToUser() bool`
 
-GetPort returns the Port field if non-nil, zero value otherwise.
+GetEmailPasswordToUser returns the EmailPasswordToUser field if non-nil, zero value otherwise.
 
-### GetPortOk
+### GetEmailPasswordToUserOk
 
-`func (o *InlineObject114) GetPortOk() (*int32, bool)`
+`func (o *InlineObject114) GetEmailPasswordToUserOk() (*bool, bool)`
 
-GetPortOk returns a tuple with the Port field if it's non-nil, zero value otherwise
+GetEmailPasswordToUserOk returns a tuple with the EmailPasswordToUser field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPort
+### SetEmailPasswordToUser
 
-`func (o *InlineObject114) SetPort(v int32)`
+`func (o *InlineObject114) SetEmailPasswordToUser(v bool)`
 
-SetPort sets Port field to given value.
+SetEmailPasswordToUser sets EmailPasswordToUser field to given value.
 
-### HasPort
+### HasEmailPasswordToUser
 
-`func (o *InlineObject114) HasPort() bool`
+`func (o *InlineObject114) HasEmailPasswordToUser() bool`
 
-HasPort returns a boolean if a field has been set.
+HasEmailPasswordToUser returns a boolean if a field has been set.
 
-### GetSecurity
+### GetAuthorizations
 
-`func (o *InlineObject114) GetSecurity() NetworksNetworkIdMqttBrokersSecurity1`
+`func (o *InlineObject114) GetAuthorizations() []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations`
 
-GetSecurity returns the Security field if non-nil, zero value otherwise.
+GetAuthorizations returns the Authorizations field if non-nil, zero value otherwise.
 
-### GetSecurityOk
+### GetAuthorizationsOk
 
-`func (o *InlineObject114) GetSecurityOk() (*NetworksNetworkIdMqttBrokersSecurity1, bool)`
+`func (o *InlineObject114) GetAuthorizationsOk() (*[]NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations, bool)`
 
-GetSecurityOk returns a tuple with the Security field if it's non-nil, zero value otherwise
+GetAuthorizationsOk returns a tuple with the Authorizations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecurity
+### SetAuthorizations
 
-`func (o *InlineObject114) SetSecurity(v NetworksNetworkIdMqttBrokersSecurity1)`
+`func (o *InlineObject114) SetAuthorizations(v []NetworksNetworkIdMerakiAuthUsersMerakiAuthUserIdAuthorizations)`
 
-SetSecurity sets Security field to given value.
+SetAuthorizations sets Authorizations field to given value.
 
-### HasSecurity
+### HasAuthorizations
 
-`func (o *InlineObject114) HasSecurity() bool`
+`func (o *InlineObject114) HasAuthorizations() bool`
 
-HasSecurity returns a boolean if a field has been set.
-
-### GetAuthentication
-
-`func (o *InlineObject114) GetAuthentication() NetworksNetworkIdMqttBrokersAuthentication1`
-
-GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
-
-### GetAuthenticationOk
-
-`func (o *InlineObject114) GetAuthenticationOk() (*NetworksNetworkIdMqttBrokersAuthentication1, bool)`
-
-GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAuthentication
-
-`func (o *InlineObject114) SetAuthentication(v NetworksNetworkIdMqttBrokersAuthentication1)`
-
-SetAuthentication sets Authentication field to given value.
-
-### HasAuthentication
-
-`func (o *InlineObject114) HasAuthentication() bool`
-
-HasAuthentication returns a boolean if a field has been set.
+HasAuthorizations returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

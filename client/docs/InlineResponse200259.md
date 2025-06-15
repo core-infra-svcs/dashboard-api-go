@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
-**Name** | Pointer to **string** | The name of the configuration template | [optional] 
-**ProductTypes** | Pointer to **[]string** | The product types of the configuration template | [optional] 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
+**NetworkId** | Pointer to **string** | Network Id | [optional] 
+**Serial** | Pointer to **string** | Serial number of the device | [optional] 
+**Model** | Pointer to **string** | Device model | [optional] 
+**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
+**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks**](OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks.md) | Uplinks info | [optional] 
 
 ## Methods
 
@@ -28,105 +29,130 @@ NewInlineResponse200259WithDefaults instantiates a new InlineResponse200259 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetNetworkId
 
-`func (o *InlineResponse200259) GetId() string`
+`func (o *InlineResponse200259) GetNetworkId() string`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200259) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200259) GetNetworkIdOk() (*string, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetNetworkId
 
-`func (o *InlineResponse200259) SetId(v string)`
+`func (o *InlineResponse200259) SetNetworkId(v string)`
 
-SetId sets Id field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasId
+### HasNetworkId
 
-`func (o *InlineResponse200259) HasId() bool`
+`func (o *InlineResponse200259) HasNetworkId() bool`
 
-HasId returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetName
+### GetSerial
 
-`func (o *InlineResponse200259) GetName() string`
+`func (o *InlineResponse200259) GetSerial() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialOk
 
-`func (o *InlineResponse200259) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200259) GetSerialOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerial
 
-`func (o *InlineResponse200259) SetName(v string)`
+`func (o *InlineResponse200259) SetSerial(v string)`
 
-SetName sets Name field to given value.
+SetSerial sets Serial field to given value.
 
-### HasName
+### HasSerial
 
-`func (o *InlineResponse200259) HasName() bool`
+`func (o *InlineResponse200259) HasSerial() bool`
 
-HasName returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetProductTypes
+### GetModel
 
-`func (o *InlineResponse200259) GetProductTypes() []string`
+`func (o *InlineResponse200259) GetModel() string`
 
-GetProductTypes returns the ProductTypes field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetProductTypesOk
+### GetModelOk
 
-`func (o *InlineResponse200259) GetProductTypesOk() (*[]string, bool)`
+`func (o *InlineResponse200259) GetModelOk() (*string, bool)`
 
-GetProductTypesOk returns a tuple with the ProductTypes field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProductTypes
+### SetModel
 
-`func (o *InlineResponse200259) SetProductTypes(v []string)`
+`func (o *InlineResponse200259) SetModel(v string)`
 
-SetProductTypes sets ProductTypes field to given value.
+SetModel sets Model field to given value.
 
-### HasProductTypes
+### HasModel
 
-`func (o *InlineResponse200259) HasProductTypes() bool`
+`func (o *InlineResponse200259) HasModel() bool`
 
-HasProductTypes returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetTimeZone
+### GetLastReportedAt
 
-`func (o *InlineResponse200259) GetTimeZone() string`
+`func (o *InlineResponse200259) GetLastReportedAt() time.Time`
 
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
+GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
 
-### GetTimeZoneOk
+### GetLastReportedAtOk
 
-`func (o *InlineResponse200259) GetTimeZoneOk() (*string, bool)`
+`func (o *InlineResponse200259) GetLastReportedAtOk() (*time.Time, bool)`
 
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
+GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTimeZone
+### SetLastReportedAt
 
-`func (o *InlineResponse200259) SetTimeZone(v string)`
+`func (o *InlineResponse200259) SetLastReportedAt(v time.Time)`
 
-SetTimeZone sets TimeZone field to given value.
+SetLastReportedAt sets LastReportedAt field to given value.
 
-### HasTimeZone
+### HasLastReportedAt
 
-`func (o *InlineResponse200259) HasTimeZone() bool`
+`func (o *InlineResponse200259) HasLastReportedAt() bool`
 
-HasTimeZone returns a boolean if a field has been set.
+HasLastReportedAt returns a boolean if a field has been set.
+
+### GetUplinks
+
+`func (o *InlineResponse200259) GetUplinks() []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks`
+
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+
+### GetUplinksOk
+
+`func (o *InlineResponse200259) GetUplinksOk() (*[]OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks, bool)`
+
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinks
+
+`func (o *InlineResponse200259) SetUplinks(v []OrganizationsOrganizationIdCellularGatewayUplinkStatusesUplinks)`
+
+SetUplinks sets Uplinks field to given value.
+
+### HasUplinks
+
+`func (o *InlineResponse200259) HasUplinks() bool`
+
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

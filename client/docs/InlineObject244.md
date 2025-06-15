@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
-**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
+**Name** | Pointer to **string** | The name of the new role. Must be unique. | [optional] 
+**AppliedOnDevices** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices**](OrganizationsOrganizationIdCameraRolesAppliedOnDevices.md) | Device tag on which this specified permission is applied. | [optional] 
+**AppliedOnNetworks** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks**](OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks.md) | Network tag on which this specified permission is applied. | [optional] 
+**AppliedOrgWide** | Pointer to [**[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide**](OrganizationsOrganizationIdCameraRolesAppliedOrgWide.md) | Permissions to be applied org wide. | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineObject244WithDefaults instantiates a new InlineObject244 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetTitle
+### GetName
 
-`func (o *InlineObject244) GetTitle() string`
+`func (o *InlineObject244) GetName() string`
 
-GetTitle returns the Title field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetTitleOk
+### GetNameOk
 
-`func (o *InlineObject244) GetTitleOk() (*string, bool)`
+`func (o *InlineObject244) GetNameOk() (*string, bool)`
 
-GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTitle
+### SetName
 
-`func (o *InlineObject244) SetTitle(v string)`
+`func (o *InlineObject244) SetName(v string)`
 
-SetTitle sets Title field to given value.
+SetName sets Name field to given value.
 
-### HasTitle
+### HasName
 
-`func (o *InlineObject244) HasTitle() bool`
+`func (o *InlineObject244) HasName() bool`
 
-HasTitle returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetApiKey
+### GetAppliedOnDevices
 
-`func (o *InlineObject244) GetApiKey() string`
+`func (o *InlineObject244) GetAppliedOnDevices() []OrganizationsOrganizationIdCameraRolesAppliedOnDevices`
 
-GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
+GetAppliedOnDevices returns the AppliedOnDevices field if non-nil, zero value otherwise.
 
-### GetApiKeyOk
+### GetAppliedOnDevicesOk
 
-`func (o *InlineObject244) GetApiKeyOk() (*string, bool)`
+`func (o *InlineObject244) GetAppliedOnDevicesOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOnDevices, bool)`
 
-GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
+GetAppliedOnDevicesOk returns a tuple with the AppliedOnDevices field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApiKey
+### SetAppliedOnDevices
 
-`func (o *InlineObject244) SetApiKey(v string)`
+`func (o *InlineObject244) SetAppliedOnDevices(v []OrganizationsOrganizationIdCameraRolesAppliedOnDevices)`
 
-SetApiKey sets ApiKey field to given value.
+SetAppliedOnDevices sets AppliedOnDevices field to given value.
 
-### HasApiKey
+### HasAppliedOnDevices
 
-`func (o *InlineObject244) HasApiKey() bool`
+`func (o *InlineObject244) HasAppliedOnDevices() bool`
 
-HasApiKey returns a boolean if a field has been set.
+HasAppliedOnDevices returns a boolean if a field has been set.
+
+### GetAppliedOnNetworks
+
+`func (o *InlineObject244) GetAppliedOnNetworks() []OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks`
+
+GetAppliedOnNetworks returns the AppliedOnNetworks field if non-nil, zero value otherwise.
+
+### GetAppliedOnNetworksOk
+
+`func (o *InlineObject244) GetAppliedOnNetworksOk() (*[]OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks, bool)`
+
+GetAppliedOnNetworksOk returns a tuple with the AppliedOnNetworks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppliedOnNetworks
+
+`func (o *InlineObject244) SetAppliedOnNetworks(v []OrganizationsOrganizationIdCameraRolesRoleIdAppliedOnNetworks)`
+
+SetAppliedOnNetworks sets AppliedOnNetworks field to given value.
+
+### HasAppliedOnNetworks
+
+`func (o *InlineObject244) HasAppliedOnNetworks() bool`
+
+HasAppliedOnNetworks returns a boolean if a field has been set.
+
+### GetAppliedOrgWide
+
+`func (o *InlineObject244) GetAppliedOrgWide() []OrganizationsOrganizationIdCameraRolesAppliedOrgWide`
+
+GetAppliedOrgWide returns the AppliedOrgWide field if non-nil, zero value otherwise.
+
+### GetAppliedOrgWideOk
+
+`func (o *InlineObject244) GetAppliedOrgWideOk() (*[]OrganizationsOrganizationIdCameraRolesAppliedOrgWide, bool)`
+
+GetAppliedOrgWideOk returns a tuple with the AppliedOrgWide field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAppliedOrgWide
+
+`func (o *InlineObject244) SetAppliedOrgWide(v []OrganizationsOrganizationIdCameraRolesAppliedOrgWide)`
+
+SetAppliedOrgWide sets AppliedOrgWide field to given value.
+
+### HasAppliedOrgWide
+
+`func (o *InlineObject244) HasAppliedOrgWide() bool`
+
+HasAppliedOrgWide returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

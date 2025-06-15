@@ -30,7 +30,7 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
-    updateNetworkSmDevicesFields := *openapiclient.NewInlineObject123(*openapiclient.NewNetworksNetworkIdSmDevicesFieldsDeviceFields()) // InlineObject123 | 
+    updateNetworkSmDevicesFields := *openapiclient.NewInlineObject125(*openapiclient.NewNetworksNetworkIdSmDevicesFieldsDeviceFields()) // InlineObject125 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -60,7 +60,7 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSmDevicesFiel
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **updateNetworkSmDevicesFields** | [**InlineObject123**](InlineObject123.md) |  | 
+ **updateNetworkSmDevicesFields** | [**InlineObject125**](InlineObject125.md) |  | 
 
 ### Return type
 

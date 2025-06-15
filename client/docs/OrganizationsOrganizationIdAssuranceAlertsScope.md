@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Devices** | Pointer to [**[]OrganizationsOrganizationIdAssuranceAlertsScopeDevices**](OrganizationsOrganizationIdAssuranceAlertsScopeDevices.md) | Description of affected devices | [optional] 
 **Applications** | Pointer to **[]map[string]interface{}** | Applications affected by the alert | [optional] 
 **Peers** | Pointer to **[]map[string]interface{}** | Peers affected by the alert | [optional] 
+**Others** | Pointer to **[]map[string]interface{}** | Other affected items by the alert | [optional] 
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetPeers sets Peers field to given value.
 `func (o *OrganizationsOrganizationIdAssuranceAlertsScope) HasPeers() bool`
 
 HasPeers returns a boolean if a field has been set.
+
+### GetOthers
+
+`func (o *OrganizationsOrganizationIdAssuranceAlertsScope) GetOthers() []map[string]interface{}`
+
+GetOthers returns the Others field if non-nil, zero value otherwise.
+
+### GetOthersOk
+
+`func (o *OrganizationsOrganizationIdAssuranceAlertsScope) GetOthersOk() (*[]map[string]interface{}, bool)`
+
+GetOthersOk returns a tuple with the Others field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOthers
+
+`func (o *OrganizationsOrganizationIdAssuranceAlertsScope) SetOthers(v []map[string]interface{})`
+
+SetOthers sets Others field to given value.
+
+### HasOthers
+
+`func (o *OrganizationsOrganizationIdAssuranceAlertsScope) HasOthers() bool`
+
+HasOthers returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

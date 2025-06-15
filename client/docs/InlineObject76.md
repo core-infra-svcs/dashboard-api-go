@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | The name of the VLAN | [optional] 
 **Subnet** | Pointer to **string** | The subnet of the VLAN | [optional] 
 **ApplianceIp** | Pointer to **string** | The local IP of the appliance on the VLAN | [optional] 
-**GroupPolicyId** | Pointer to **string** | The id of the desired group policy to apply to the VLAN | [optional] 
+**GroupPolicyId** | Pointer to **NullableString** | The id of the desired group policy to apply to the VLAN | [optional] 
 **VpnNatSubnet** | Pointer to **string** | The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN | [optional] 
 **DhcpHandling** | Pointer to **string** | The appliance&#39;s handling of DHCP requests on this VLAN. One of: &#39;Run a DHCP server&#39;, &#39;Relay DHCP to another server&#39; or &#39;Do not respond to DHCP requests&#39; | [optional] 
 **DhcpRelayServerIps** | Pointer to **[]string** | The IPs of the DHCP servers that DHCP requests should be relayed to | [optional] 
@@ -144,6 +144,16 @@ SetGroupPolicyId sets GroupPolicyId field to given value.
 
 HasGroupPolicyId returns a boolean if a field has been set.
 
+### SetGroupPolicyIdNil
+
+`func (o *InlineObject76) SetGroupPolicyIdNil(b bool)`
+
+ SetGroupPolicyIdNil sets the value for GroupPolicyId to be an explicit nil
+
+### UnsetGroupPolicyId
+`func (o *InlineObject76) UnsetGroupPolicyId()`
+
+UnsetGroupPolicyId ensures that no value is present for GroupPolicyId, not even an explicit nil
 ### GetVpnNatSubnet
 
 `func (o *InlineObject76) GetVpnNatSubnet() string`

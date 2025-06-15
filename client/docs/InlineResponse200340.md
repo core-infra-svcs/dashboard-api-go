@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200179**](InlineResponse200179.md) | List of settings | [optional] 
-**Meta** | Pointer to [**InlineResponse200340Meta**](InlineResponse200340Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200340Items**](InlineResponse200340Items.md) | Switches | [optional] 
+**Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse200340) GetItems() []InlineResponse200179`
+`func (o *InlineResponse200340) GetItems() []InlineResponse200340Items`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse200340) GetItemsOk() (*[]InlineResponse200179, bool)`
+`func (o *InlineResponse200340) GetItemsOk() (*[]InlineResponse200340Items, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse200340) SetItems(v []InlineResponse200179)`
+`func (o *InlineResponse200340) SetItems(v []InlineResponse200340Items)`
 
 SetItems sets Items field to given value.
 
@@ -53,20 +53,20 @@ HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200340) GetMeta() InlineResponse200340Meta`
+`func (o *InlineResponse200340) GetMeta() InlineResponse200222Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200340) GetMetaOk() (*InlineResponse200340Meta, bool)`
+`func (o *InlineResponse200340) GetMetaOk() (*InlineResponse200222Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200340) SetMeta(v InlineResponse200340Meta)`
+`func (o *InlineResponse200340) SetMeta(v InlineResponse200222Meta)`
 
 SetMeta sets Meta field to given value.
 

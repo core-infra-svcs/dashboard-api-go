@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**Mac** | Pointer to **string** | MAC address of client | [optional] 
-**Id** | Pointer to **string** | ID of client | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork**](OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopClientsByUsageUsage**](OrganizationsOrganizationIdSummaryTopClientsByUsageUsage.md) |  | [optional] 
+**Id** | Pointer to **string** | Splash theme asset id | [optional] 
+**Name** | Pointer to **string** | Splash theme asset name | [optional] 
+**FileData** | Pointer to **string** | Splash theme asset file date base64 encoded | [optional] 
 
 ## Methods
 
@@ -28,56 +26,6 @@ will change when the set of required properties is changed
 NewInlineResponse200321WithDefaults instantiates a new InlineResponse200321 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetName
-
-`func (o *InlineResponse200321) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200321) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200321) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200321) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineResponse200321) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200321) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200321) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse200321) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
 
 ### GetId
 
@@ -104,55 +52,55 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetNetwork
+### GetName
 
-`func (o *InlineResponse200321) GetNetwork() OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork`
+`func (o *InlineResponse200321) GetName() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetNameOk
 
-`func (o *InlineResponse200321) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork, bool)`
+`func (o *InlineResponse200321) GetNameOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetName
 
-`func (o *InlineResponse200321) SetNetwork(v OrganizationsOrganizationIdSummaryTopClientsByUsageNetwork)`
+`func (o *InlineResponse200321) SetName(v string)`
 
-SetNetwork sets Network field to given value.
+SetName sets Name field to given value.
 
-### HasNetwork
+### HasName
 
-`func (o *InlineResponse200321) HasNetwork() bool`
+`func (o *InlineResponse200321) HasName() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetUsage
+### GetFileData
 
-`func (o *InlineResponse200321) GetUsage() OrganizationsOrganizationIdSummaryTopClientsByUsageUsage`
+`func (o *InlineResponse200321) GetFileData() string`
 
-GetUsage returns the Usage field if non-nil, zero value otherwise.
+GetFileData returns the FileData field if non-nil, zero value otherwise.
 
-### GetUsageOk
+### GetFileDataOk
 
-`func (o *InlineResponse200321) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopClientsByUsageUsage, bool)`
+`func (o *InlineResponse200321) GetFileDataOk() (*string, bool)`
 
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+GetFileDataOk returns a tuple with the FileData field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsage
+### SetFileData
 
-`func (o *InlineResponse200321) SetUsage(v OrganizationsOrganizationIdSummaryTopClientsByUsageUsage)`
+`func (o *InlineResponse200321) SetFileData(v string)`
 
-SetUsage sets Usage field to given value.
+SetFileData sets FileData field to given value.
 
-### HasUsage
+### HasFileData
 
-`func (o *InlineResponse200321) HasUsage() bool`
+`func (o *InlineResponse200321) HasFileData() bool`
 
-HasUsage returns a boolean if a field has been set.
+HasFileData returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

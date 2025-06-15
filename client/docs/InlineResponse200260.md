@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SwitchProfileId** | Pointer to **string** | Switch template id | [optional] 
-**Name** | Pointer to **string** | Switch template name | [optional] 
-**Model** | Pointer to **string** | Switch model | [optional] 
+**Orders** | Pointer to **[]string** | The numbers of the orders claimed | [optional] 
+**Serials** | Pointer to **[]string** | The serials of the devices claimed | [optional] 
+**Licenses** | Pointer to [**[]InlineResponse200260Licenses**](InlineResponse200260Licenses.md) | The licenses claimed | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse200260WithDefaults instantiates a new InlineResponse200260 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwitchProfileId
+### GetOrders
 
-`func (o *InlineResponse200260) GetSwitchProfileId() string`
+`func (o *InlineResponse200260) GetOrders() []string`
 
-GetSwitchProfileId returns the SwitchProfileId field if non-nil, zero value otherwise.
+GetOrders returns the Orders field if non-nil, zero value otherwise.
 
-### GetSwitchProfileIdOk
+### GetOrdersOk
 
-`func (o *InlineResponse200260) GetSwitchProfileIdOk() (*string, bool)`
+`func (o *InlineResponse200260) GetOrdersOk() (*[]string, bool)`
 
-GetSwitchProfileIdOk returns a tuple with the SwitchProfileId field if it's non-nil, zero value otherwise
+GetOrdersOk returns a tuple with the Orders field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwitchProfileId
+### SetOrders
 
-`func (o *InlineResponse200260) SetSwitchProfileId(v string)`
+`func (o *InlineResponse200260) SetOrders(v []string)`
 
-SetSwitchProfileId sets SwitchProfileId field to given value.
+SetOrders sets Orders field to given value.
 
-### HasSwitchProfileId
+### HasOrders
 
-`func (o *InlineResponse200260) HasSwitchProfileId() bool`
+`func (o *InlineResponse200260) HasOrders() bool`
 
-HasSwitchProfileId returns a boolean if a field has been set.
+HasOrders returns a boolean if a field has been set.
 
-### GetName
+### GetSerials
 
-`func (o *InlineResponse200260) GetName() string`
+`func (o *InlineResponse200260) GetSerials() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerials returns the Serials field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialsOk
 
-`func (o *InlineResponse200260) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200260) GetSerialsOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerials
 
-`func (o *InlineResponse200260) SetName(v string)`
+`func (o *InlineResponse200260) SetSerials(v []string)`
 
-SetName sets Name field to given value.
+SetSerials sets Serials field to given value.
 
-### HasName
+### HasSerials
 
-`func (o *InlineResponse200260) HasName() bool`
+`func (o *InlineResponse200260) HasSerials() bool`
 
-HasName returns a boolean if a field has been set.
+HasSerials returns a boolean if a field has been set.
 
-### GetModel
+### GetLicenses
 
-`func (o *InlineResponse200260) GetModel() string`
+`func (o *InlineResponse200260) GetLicenses() []InlineResponse200260Licenses`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetLicenses returns the Licenses field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetLicensesOk
 
-`func (o *InlineResponse200260) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200260) GetLicensesOk() (*[]InlineResponse200260Licenses, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetLicensesOk returns a tuple with the Licenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetLicenses
 
-`func (o *InlineResponse200260) SetModel(v string)`
+`func (o *InlineResponse200260) SetLicenses(v []InlineResponse200260Licenses)`
 
-SetModel sets Model field to given value.
+SetLicenses sets Licenses field to given value.
 
-### HasModel
+### HasLicenses
 
-`func (o *InlineResponse200260) HasModel() bool`
+`func (o *InlineResponse200260) HasLicenses() bool`
 
-HasModel returns a boolean if a field has been set.
+HasLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

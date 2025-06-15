@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | Status the eSIM will be updated to | [optional] 
+**Serial** | Pointer to **string** | Serial of camera | [optional] 
+**WirelessCredentialsSent** | Pointer to **bool** | Note whether credentials were sent successfully | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineObject242WithDefaults instantiates a new InlineObject242 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetSerial
 
-`func (o *InlineObject242) GetStatus() string`
+`func (o *InlineObject242) GetSerial() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetSerialOk
 
-`func (o *InlineObject242) GetStatusOk() (*string, bool)`
+`func (o *InlineObject242) GetSerialOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetSerial
 
-`func (o *InlineObject242) SetStatus(v string)`
+`func (o *InlineObject242) SetSerial(v string)`
 
-SetStatus sets Status field to given value.
+SetSerial sets Serial field to given value.
 
-### HasStatus
+### HasSerial
 
-`func (o *InlineObject242) HasStatus() bool`
+`func (o *InlineObject242) HasSerial() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
+
+### GetWirelessCredentialsSent
+
+`func (o *InlineObject242) GetWirelessCredentialsSent() bool`
+
+GetWirelessCredentialsSent returns the WirelessCredentialsSent field if non-nil, zero value otherwise.
+
+### GetWirelessCredentialsSentOk
+
+`func (o *InlineObject242) GetWirelessCredentialsSentOk() (*bool, bool)`
+
+GetWirelessCredentialsSentOk returns a tuple with the WirelessCredentialsSent field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWirelessCredentialsSent
+
+`func (o *InlineObject242) SetWirelessCredentialsSent(v bool)`
+
+SetWirelessCredentialsSent sets WirelessCredentialsSent field to given value.
+
+### HasWirelessCredentialsSent
+
+`func (o *InlineObject242) HasWirelessCredentialsSent() bool`
+
+HasWirelessCredentialsSent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

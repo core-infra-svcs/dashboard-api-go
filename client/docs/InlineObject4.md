@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**RfProfileId** | Pointer to **string** | The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power). | [optional] 
+**RfProfileId** | Pointer to **NullableString** | The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power). | [optional] 
 **TwoFourGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsTwoFourGhzSettings**](DevicesSerialApplianceRadioSettingsTwoFourGhzSettings.md) |  | [optional] 
 **FiveGhzSettings** | Pointer to [**DevicesSerialApplianceRadioSettingsFiveGhzSettings**](DevicesSerialApplianceRadioSettingsFiveGhzSettings.md) |  | [optional] 
 
@@ -52,6 +52,16 @@ SetRfProfileId sets RfProfileId field to given value.
 
 HasRfProfileId returns a boolean if a field has been set.
 
+### SetRfProfileIdNil
+
+`func (o *InlineObject4) SetRfProfileIdNil(b bool)`
+
+ SetRfProfileIdNil sets the value for RfProfileId to be an explicit nil
+
+### UnsetRfProfileId
+`func (o *InlineObject4) UnsetRfProfileId()`
+
+UnsetRfProfileId ensures that no value is present for RfProfileId, not even an explicit nil
 ### GetTwoFourGhzSettings
 
 `func (o *InlineObject4) GetTwoFourGhzSettings() DevicesSerialApplianceRadioSettingsTwoFourGhzSettings`

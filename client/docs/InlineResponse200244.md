@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
-**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
-**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries.md) |  | [optional] 
+**Type** | **string** | Alert type | 
+**Title** | **string** | Alert type title | 
+**CategoryType** | **string** | Alert category type | 
+**Severities** | [**[]OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities**](OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities.md) | List of possible severities for the alert type | 
+**DeviceTypes** | **[]string** | List of possible device types for the alert type | 
 
 ## Methods
 
 ### NewInlineResponse200244
 
-`func NewInlineResponse200244() *InlineResponse200244`
+`func NewInlineResponse200244(type_ string, title string, categoryType string, severities []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities, deviceTypes []string, ) *InlineResponse200244`
 
 NewInlineResponse200244 instantiates a new InlineResponse200244 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +29,105 @@ NewInlineResponse200244WithDefaults instantiates a new InlineResponse200244 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworkId
+### GetType
 
-`func (o *InlineResponse200244) GetNetworkId() string`
+`func (o *InlineResponse200244) GetType() string`
 
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetNetworkIdOk
+### GetTypeOk
 
-`func (o *InlineResponse200244) GetNetworkIdOk() (*string, bool)`
+`func (o *InlineResponse200244) GetTypeOk() (*string, bool)`
 
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworkId
+### SetType
 
-`func (o *InlineResponse200244) SetNetworkId(v string)`
+`func (o *InlineResponse200244) SetType(v string)`
 
-SetNetworkId sets NetworkId field to given value.
+SetType sets Type field to given value.
 
-### HasNetworkId
 
-`func (o *InlineResponse200244) HasNetworkId() bool`
+### GetTitle
 
-HasNetworkId returns a boolean if a field has been set.
+`func (o *InlineResponse200244) GetTitle() string`
 
-### GetSerial
+GetTitle returns the Title field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200244) GetSerial() string`
+### GetTitleOk
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+`func (o *InlineResponse200244) GetTitleOk() (*string, bool)`
 
-### GetSerialOk
-
-`func (o *InlineResponse200244) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetTitle
 
-`func (o *InlineResponse200244) SetSerial(v string)`
+`func (o *InlineResponse200244) SetTitle(v string)`
 
-SetSerial sets Serial field to given value.
+SetTitle sets Title field to given value.
 
-### HasSerial
 
-`func (o *InlineResponse200244) HasSerial() bool`
+### GetCategoryType
 
-HasSerial returns a boolean if a field has been set.
+`func (o *InlineResponse200244) GetCategoryType() string`
 
-### GetBoundaries
+GetCategoryType returns the CategoryType field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200244) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries`
+### GetCategoryTypeOk
 
-GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
+`func (o *InlineResponse200244) GetCategoryTypeOk() (*string, bool)`
 
-### GetBoundariesOk
-
-`func (o *InlineResponse200244) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries, bool)`
-
-GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
+GetCategoryTypeOk returns a tuple with the CategoryType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBoundaries
+### SetCategoryType
 
-`func (o *InlineResponse200244) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesLinesByDeviceBoundaries)`
+`func (o *InlineResponse200244) SetCategoryType(v string)`
 
-SetBoundaries sets Boundaries field to given value.
+SetCategoryType sets CategoryType field to given value.
 
-### HasBoundaries
 
-`func (o *InlineResponse200244) HasBoundaries() bool`
+### GetSeverities
 
-HasBoundaries returns a boolean if a field has been set.
+`func (o *InlineResponse200244) GetSeverities() []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities`
+
+GetSeverities returns the Severities field if non-nil, zero value otherwise.
+
+### GetSeveritiesOk
+
+`func (o *InlineResponse200244) GetSeveritiesOk() (*[]OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities, bool)`
+
+GetSeveritiesOk returns a tuple with the Severities field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSeverities
+
+`func (o *InlineResponse200244) SetSeverities(v []OrganizationsOrganizationIdAssuranceAlertsTaxonomyTypesSeverities)`
+
+SetSeverities sets Severities field to given value.
+
+
+### GetDeviceTypes
+
+`func (o *InlineResponse200244) GetDeviceTypes() []string`
+
+GetDeviceTypes returns the DeviceTypes field if non-nil, zero value otherwise.
+
+### GetDeviceTypesOk
+
+`func (o *InlineResponse200244) GetDeviceTypesOk() (*[]string, bool)`
+
+GetDeviceTypesOk returns a tuple with the DeviceTypes field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceTypes
+
+`func (o *InlineResponse200244) SetDeviceTypes(v []string)`
+
+SetDeviceTypes sets DeviceTypes field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

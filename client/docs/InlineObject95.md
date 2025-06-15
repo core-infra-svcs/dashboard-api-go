@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UpgradeWindow** | Pointer to [**InlineResponse20096UpgradeWindow**](InlineResponse20096UpgradeWindow.md) |  | [optional] 
-**Timezone** | Pointer to **string** | The timezone for the network | [optional] 
-**Products** | Pointer to [**NetworksNetworkIdFirmwareUpgradesProducts**](NetworksNetworkIdFirmwareUpgradesProducts.md) |  | [optional] 
+**Size** | **string** | The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100 | 
 
 ## Methods
 
 ### NewInlineObject95
 
-`func NewInlineObject95() *InlineObject95`
+`func NewInlineObject95(size string, ) *InlineObject95`
 
 NewInlineObject95 instantiates a new InlineObject95 object
 This constructor will assign default values to properties that have it defined,
@@ -27,80 +25,25 @@ NewInlineObject95WithDefaults instantiates a new InlineObject95 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUpgradeWindow
+### GetSize
 
-`func (o *InlineObject95) GetUpgradeWindow() InlineResponse20096UpgradeWindow`
+`func (o *InlineObject95) GetSize() string`
 
-GetUpgradeWindow returns the UpgradeWindow field if non-nil, zero value otherwise.
+GetSize returns the Size field if non-nil, zero value otherwise.
 
-### GetUpgradeWindowOk
+### GetSizeOk
 
-`func (o *InlineObject95) GetUpgradeWindowOk() (*InlineResponse20096UpgradeWindow, bool)`
+`func (o *InlineObject95) GetSizeOk() (*string, bool)`
 
-GetUpgradeWindowOk returns a tuple with the UpgradeWindow field if it's non-nil, zero value otherwise
+GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUpgradeWindow
+### SetSize
 
-`func (o *InlineObject95) SetUpgradeWindow(v InlineResponse20096UpgradeWindow)`
+`func (o *InlineObject95) SetSize(v string)`
 
-SetUpgradeWindow sets UpgradeWindow field to given value.
+SetSize sets Size field to given value.
 
-### HasUpgradeWindow
-
-`func (o *InlineObject95) HasUpgradeWindow() bool`
-
-HasUpgradeWindow returns a boolean if a field has been set.
-
-### GetTimezone
-
-`func (o *InlineObject95) GetTimezone() string`
-
-GetTimezone returns the Timezone field if non-nil, zero value otherwise.
-
-### GetTimezoneOk
-
-`func (o *InlineObject95) GetTimezoneOk() (*string, bool)`
-
-GetTimezoneOk returns a tuple with the Timezone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimezone
-
-`func (o *InlineObject95) SetTimezone(v string)`
-
-SetTimezone sets Timezone field to given value.
-
-### HasTimezone
-
-`func (o *InlineObject95) HasTimezone() bool`
-
-HasTimezone returns a boolean if a field has been set.
-
-### GetProducts
-
-`func (o *InlineObject95) GetProducts() NetworksNetworkIdFirmwareUpgradesProducts`
-
-GetProducts returns the Products field if non-nil, zero value otherwise.
-
-### GetProductsOk
-
-`func (o *InlineObject95) GetProductsOk() (*NetworksNetworkIdFirmwareUpgradesProducts, bool)`
-
-GetProductsOk returns a tuple with the Products field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProducts
-
-`func (o *InlineObject95) SetProducts(v NetworksNetworkIdFirmwareUpgradesProducts)`
-
-SetProducts sets Products field to given value.
-
-### HasProducts
-
-`func (o *InlineObject95) HasProducts() bool`
-
-HasProducts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,22 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Device Name | [optional] 
-**Serial** | Pointer to **string** | Device Serial Number | [optional] 
-**Mac** | Pointer to **string** | MAC Address | [optional] 
-**PublicIp** | Pointer to **string** | Public IP Address | [optional] 
-**NetworkId** | Pointer to **string** | Network ID | [optional] 
-**Status** | Pointer to **string** | Device Status | [optional] 
-**LastReportedAt** | Pointer to **string** | Device Last Reported Location | [optional] 
-**LanIp** | Pointer to **string** | LAN IP Address | [optional] 
-**Gateway** | Pointer to **string** | IP Gateway | [optional] 
-**IpType** | Pointer to **string** | IP Type | [optional] 
-**PrimaryDns** | Pointer to **string** | Primary DNS | [optional] 
-**SecondaryDns** | Pointer to **string** | Secondary DNS | [optional] 
-**ProductType** | Pointer to **string** | Product Type | [optional] 
-**Components** | Pointer to [**OrganizationsOrganizationIdDevicesStatusesComponents**](OrganizationsOrganizationIdDevicesStatusesComponents.md) |  | [optional] 
-**Model** | Pointer to **string** | Model | [optional] 
-**Tags** | Pointer to **[]string** | Tags | [optional] 
+**CaptureId** | Pointer to **string** | Id of packet capture file | [optional] 
+**DownloadUrl** | Pointer to **string** | Download URL of captured packet file -- Depracated | [optional] 
+**Url** | Pointer to **string** | Download URL of captured packet file | [optional] 
 
 ## Methods
 
@@ -40,405 +27,80 @@ NewInlineResponse200274WithDefaults instantiates a new InlineResponse200274 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetCaptureId
 
-`func (o *InlineResponse200274) GetName() string`
+`func (o *InlineResponse200274) GetCaptureId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCaptureId returns the CaptureId field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCaptureIdOk
 
-`func (o *InlineResponse200274) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200274) GetCaptureIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCaptureIdOk returns a tuple with the CaptureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCaptureId
 
-`func (o *InlineResponse200274) SetName(v string)`
+`func (o *InlineResponse200274) SetCaptureId(v string)`
 
-SetName sets Name field to given value.
+SetCaptureId sets CaptureId field to given value.
 
-### HasName
+### HasCaptureId
 
-`func (o *InlineResponse200274) HasName() bool`
+`func (o *InlineResponse200274) HasCaptureId() bool`
 
-HasName returns a boolean if a field has been set.
+HasCaptureId returns a boolean if a field has been set.
 
-### GetSerial
+### GetDownloadUrl
 
-`func (o *InlineResponse200274) GetSerial() string`
+`func (o *InlineResponse200274) GetDownloadUrl() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetDownloadUrl returns the DownloadUrl field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetDownloadUrlOk
 
-`func (o *InlineResponse200274) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200274) GetDownloadUrlOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetDownloadUrlOk returns a tuple with the DownloadUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetDownloadUrl
 
-`func (o *InlineResponse200274) SetSerial(v string)`
+`func (o *InlineResponse200274) SetDownloadUrl(v string)`
 
-SetSerial sets Serial field to given value.
+SetDownloadUrl sets DownloadUrl field to given value.
 
-### HasSerial
+### HasDownloadUrl
 
-`func (o *InlineResponse200274) HasSerial() bool`
+`func (o *InlineResponse200274) HasDownloadUrl() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasDownloadUrl returns a boolean if a field has been set.
 
-### GetMac
+### GetUrl
 
-`func (o *InlineResponse200274) GetMac() string`
+`func (o *InlineResponse200274) GetUrl() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetUrl returns the Url field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetUrlOk
 
-`func (o *InlineResponse200274) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200274) GetUrlOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetUrl
 
-`func (o *InlineResponse200274) SetMac(v string)`
+`func (o *InlineResponse200274) SetUrl(v string)`
 
-SetMac sets Mac field to given value.
+SetUrl sets Url field to given value.
 
-### HasMac
+### HasUrl
 
-`func (o *InlineResponse200274) HasMac() bool`
+`func (o *InlineResponse200274) HasUrl() bool`
 
-HasMac returns a boolean if a field has been set.
-
-### GetPublicIp
-
-`func (o *InlineResponse200274) GetPublicIp() string`
-
-GetPublicIp returns the PublicIp field if non-nil, zero value otherwise.
-
-### GetPublicIpOk
-
-`func (o *InlineResponse200274) GetPublicIpOk() (*string, bool)`
-
-GetPublicIpOk returns a tuple with the PublicIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPublicIp
-
-`func (o *InlineResponse200274) SetPublicIp(v string)`
-
-SetPublicIp sets PublicIp field to given value.
-
-### HasPublicIp
-
-`func (o *InlineResponse200274) HasPublicIp() bool`
-
-HasPublicIp returns a boolean if a field has been set.
-
-### GetNetworkId
-
-`func (o *InlineResponse200274) GetNetworkId() string`
-
-GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
-
-### GetNetworkIdOk
-
-`func (o *InlineResponse200274) GetNetworkIdOk() (*string, bool)`
-
-GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetworkId
-
-`func (o *InlineResponse200274) SetNetworkId(v string)`
-
-SetNetworkId sets NetworkId field to given value.
-
-### HasNetworkId
-
-`func (o *InlineResponse200274) HasNetworkId() bool`
-
-HasNetworkId returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200274) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200274) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200274) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200274) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
-### GetLastReportedAt
-
-`func (o *InlineResponse200274) GetLastReportedAt() string`
-
-GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
-
-### GetLastReportedAtOk
-
-`func (o *InlineResponse200274) GetLastReportedAtOk() (*string, bool)`
-
-GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastReportedAt
-
-`func (o *InlineResponse200274) SetLastReportedAt(v string)`
-
-SetLastReportedAt sets LastReportedAt field to given value.
-
-### HasLastReportedAt
-
-`func (o *InlineResponse200274) HasLastReportedAt() bool`
-
-HasLastReportedAt returns a boolean if a field has been set.
-
-### GetLanIp
-
-`func (o *InlineResponse200274) GetLanIp() string`
-
-GetLanIp returns the LanIp field if non-nil, zero value otherwise.
-
-### GetLanIpOk
-
-`func (o *InlineResponse200274) GetLanIpOk() (*string, bool)`
-
-GetLanIpOk returns a tuple with the LanIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLanIp
-
-`func (o *InlineResponse200274) SetLanIp(v string)`
-
-SetLanIp sets LanIp field to given value.
-
-### HasLanIp
-
-`func (o *InlineResponse200274) HasLanIp() bool`
-
-HasLanIp returns a boolean if a field has been set.
-
-### GetGateway
-
-`func (o *InlineResponse200274) GetGateway() string`
-
-GetGateway returns the Gateway field if non-nil, zero value otherwise.
-
-### GetGatewayOk
-
-`func (o *InlineResponse200274) GetGatewayOk() (*string, bool)`
-
-GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGateway
-
-`func (o *InlineResponse200274) SetGateway(v string)`
-
-SetGateway sets Gateway field to given value.
-
-### HasGateway
-
-`func (o *InlineResponse200274) HasGateway() bool`
-
-HasGateway returns a boolean if a field has been set.
-
-### GetIpType
-
-`func (o *InlineResponse200274) GetIpType() string`
-
-GetIpType returns the IpType field if non-nil, zero value otherwise.
-
-### GetIpTypeOk
-
-`func (o *InlineResponse200274) GetIpTypeOk() (*string, bool)`
-
-GetIpTypeOk returns a tuple with the IpType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIpType
-
-`func (o *InlineResponse200274) SetIpType(v string)`
-
-SetIpType sets IpType field to given value.
-
-### HasIpType
-
-`func (o *InlineResponse200274) HasIpType() bool`
-
-HasIpType returns a boolean if a field has been set.
-
-### GetPrimaryDns
-
-`func (o *InlineResponse200274) GetPrimaryDns() string`
-
-GetPrimaryDns returns the PrimaryDns field if non-nil, zero value otherwise.
-
-### GetPrimaryDnsOk
-
-`func (o *InlineResponse200274) GetPrimaryDnsOk() (*string, bool)`
-
-GetPrimaryDnsOk returns a tuple with the PrimaryDns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPrimaryDns
-
-`func (o *InlineResponse200274) SetPrimaryDns(v string)`
-
-SetPrimaryDns sets PrimaryDns field to given value.
-
-### HasPrimaryDns
-
-`func (o *InlineResponse200274) HasPrimaryDns() bool`
-
-HasPrimaryDns returns a boolean if a field has been set.
-
-### GetSecondaryDns
-
-`func (o *InlineResponse200274) GetSecondaryDns() string`
-
-GetSecondaryDns returns the SecondaryDns field if non-nil, zero value otherwise.
-
-### GetSecondaryDnsOk
-
-`func (o *InlineResponse200274) GetSecondaryDnsOk() (*string, bool)`
-
-GetSecondaryDnsOk returns a tuple with the SecondaryDns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecondaryDns
-
-`func (o *InlineResponse200274) SetSecondaryDns(v string)`
-
-SetSecondaryDns sets SecondaryDns field to given value.
-
-### HasSecondaryDns
-
-`func (o *InlineResponse200274) HasSecondaryDns() bool`
-
-HasSecondaryDns returns a boolean if a field has been set.
-
-### GetProductType
-
-`func (o *InlineResponse200274) GetProductType() string`
-
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
-
-### GetProductTypeOk
-
-`func (o *InlineResponse200274) GetProductTypeOk() (*string, bool)`
-
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductType
-
-`func (o *InlineResponse200274) SetProductType(v string)`
-
-SetProductType sets ProductType field to given value.
-
-### HasProductType
-
-`func (o *InlineResponse200274) HasProductType() bool`
-
-HasProductType returns a boolean if a field has been set.
-
-### GetComponents
-
-`func (o *InlineResponse200274) GetComponents() OrganizationsOrganizationIdDevicesStatusesComponents`
-
-GetComponents returns the Components field if non-nil, zero value otherwise.
-
-### GetComponentsOk
-
-`func (o *InlineResponse200274) GetComponentsOk() (*OrganizationsOrganizationIdDevicesStatusesComponents, bool)`
-
-GetComponentsOk returns a tuple with the Components field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetComponents
-
-`func (o *InlineResponse200274) SetComponents(v OrganizationsOrganizationIdDevicesStatusesComponents)`
-
-SetComponents sets Components field to given value.
-
-### HasComponents
-
-`func (o *InlineResponse200274) HasComponents() bool`
-
-HasComponents returns a boolean if a field has been set.
-
-### GetModel
-
-`func (o *InlineResponse200274) GetModel() string`
-
-GetModel returns the Model field if non-nil, zero value otherwise.
-
-### GetModelOk
-
-`func (o *InlineResponse200274) GetModelOk() (*string, bool)`
-
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetModel
-
-`func (o *InlineResponse200274) SetModel(v string)`
-
-SetModel sets Model field to given value.
-
-### HasModel
-
-`func (o *InlineResponse200274) HasModel() bool`
-
-HasModel returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200274) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200274) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200274) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200274) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
+HasUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

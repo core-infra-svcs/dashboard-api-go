@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of the switch port. | [optional] 
+**Name** | Pointer to **NullableString** | The name of the switch port. | [optional] 
 **Tags** | Pointer to **[]string** | The list of tags of the switch port. | [optional] 
 **Enabled** | Pointer to **bool** | The status of the switch port. | [optional] 
 **PoeEnabled** | Pointer to **bool** | The PoE status of the switch port. | [optional] 
 **Type** | Pointer to **string** | The type of the switch port (&#39;trunk&#39;, &#39;access&#39;, &#39;stack&#39; or &#39;routed&#39;). | [optional] 
-**Vlan** | Pointer to **int32** | The VLAN of the switch port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports. | [optional] 
-**VoiceVlan** | Pointer to **int32** | The voice VLAN of the switch port. Only applicable to access ports. | [optional] 
+**Vlan** | Pointer to **NullableInt32** | The VLAN of the switch port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports. | [optional] 
+**VoiceVlan** | Pointer to **NullableInt32** | The voice VLAN of the switch port. Only applicable to access ports. | [optional] 
 **AllowedVlans** | Pointer to **string** | The VLANs allowed on the switch port. Only applicable to trunk ports. | [optional] 
 **IsolationEnabled** | Pointer to **bool** | The isolation status of the switch port. | [optional] 
 **RstpEnabled** | Pointer to **bool** | The rapid spanning tree protocol status. | [optional] 
 **StpGuard** | Pointer to **string** | The state of the STP guard (&#39;disabled&#39;, &#39;root guard&#39;, &#39;bpdu guard&#39; or &#39;loop guard&#39;). | [optional] 
 **LinkNegotiation** | Pointer to **string** | The link speed for the switch port. | [optional] 
-**PortScheduleId** | Pointer to **string** | The ID of the port schedule. A value of null will clear the port schedule. | [optional] 
+**PortScheduleId** | Pointer to **NullableString** | The ID of the port schedule. A value of null will clear the port schedule. | [optional] 
 **Udld** | Pointer to **string** | The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only. | [optional] 
 **AccessPolicyType** | Pointer to **string** | The type of the access policy of the switch port. Only applicable to access ports. Can be one of &#39;Open&#39;, &#39;Custom access policy&#39;, &#39;MAC allow list&#39; or &#39;Sticky MAC allow list&#39;. | [optional] 
 **AccessPolicyNumber** | Pointer to **int32** | The number of a custom access policy to configure on the switch port. Only applicable when &#39;accessPolicyType&#39; is &#39;Custom access policy&#39;. | [optional] 
@@ -25,7 +25,7 @@ Name | Type | Description | Notes
 **StickyMacAllowList** | Pointer to **[]string** | The initial list of MAC addresses for sticky Mac allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;Sticky MAC allow list&#39;. | [optional] 
 **StickyMacAllowListLimit** | Pointer to **int32** | The maximum number of MAC addresses for sticky MAC allow list. Only applicable when &#39;accessPolicyType&#39; is &#39;Sticky MAC allow list&#39;. | [optional] 
 **StormControlEnabled** | Pointer to **bool** | The storm control status of the switch port. | [optional] 
-**AdaptivePolicyGroupId** | Pointer to **string** | The adaptive policy group ID that will be used to tag traffic through this switch port. This ID must pre-exist during the configuration, else needs to be created using adaptivePolicy/groups API. Cannot be applied to a port on a switch bound to profile. | [optional] 
+**AdaptivePolicyGroupId** | Pointer to **NullableString** | The adaptive policy group ID that will be used to tag traffic through this switch port. This ID must pre-exist during the configuration, else needs to be created using adaptivePolicy/groups API. Cannot be applied to a port on a switch bound to profile. | [optional] 
 **PeerSgtCapable** | Pointer to **bool** | If true, Peer SGT is enabled for traffic through this switch port. Applicable to trunk port only, not access port. Cannot be applied to a port on a switch bound to profile. | [optional] 
 **FlexibleStackingEnabled** | Pointer to **bool** | For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled. | [optional] 
 **DaiTrusted** | Pointer to **bool** | If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic. | [optional] 
@@ -76,6 +76,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *InlineObject28) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *InlineObject28) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetTags
 
 `func (o *InlineObject28) GetTags() []string`
@@ -201,6 +211,16 @@ SetVlan sets Vlan field to given value.
 
 HasVlan returns a boolean if a field has been set.
 
+### SetVlanNil
+
+`func (o *InlineObject28) SetVlanNil(b bool)`
+
+ SetVlanNil sets the value for Vlan to be an explicit nil
+
+### UnsetVlan
+`func (o *InlineObject28) UnsetVlan()`
+
+UnsetVlan ensures that no value is present for Vlan, not even an explicit nil
 ### GetVoiceVlan
 
 `func (o *InlineObject28) GetVoiceVlan() int32`
@@ -226,6 +246,16 @@ SetVoiceVlan sets VoiceVlan field to given value.
 
 HasVoiceVlan returns a boolean if a field has been set.
 
+### SetVoiceVlanNil
+
+`func (o *InlineObject28) SetVoiceVlanNil(b bool)`
+
+ SetVoiceVlanNil sets the value for VoiceVlan to be an explicit nil
+
+### UnsetVoiceVlan
+`func (o *InlineObject28) UnsetVoiceVlan()`
+
+UnsetVoiceVlan ensures that no value is present for VoiceVlan, not even an explicit nil
 ### GetAllowedVlans
 
 `func (o *InlineObject28) GetAllowedVlans() string`
@@ -376,6 +406,16 @@ SetPortScheduleId sets PortScheduleId field to given value.
 
 HasPortScheduleId returns a boolean if a field has been set.
 
+### SetPortScheduleIdNil
+
+`func (o *InlineObject28) SetPortScheduleIdNil(b bool)`
+
+ SetPortScheduleIdNil sets the value for PortScheduleId to be an explicit nil
+
+### UnsetPortScheduleId
+`func (o *InlineObject28) UnsetPortScheduleId()`
+
+UnsetPortScheduleId ensures that no value is present for PortScheduleId, not even an explicit nil
 ### GetUdld
 
 `func (o *InlineObject28) GetUdld() string`
@@ -601,6 +641,16 @@ SetAdaptivePolicyGroupId sets AdaptivePolicyGroupId field to given value.
 
 HasAdaptivePolicyGroupId returns a boolean if a field has been set.
 
+### SetAdaptivePolicyGroupIdNil
+
+`func (o *InlineObject28) SetAdaptivePolicyGroupIdNil(b bool)`
+
+ SetAdaptivePolicyGroupIdNil sets the value for AdaptivePolicyGroupId to be an explicit nil
+
+### UnsetAdaptivePolicyGroupId
+`func (o *InlineObject28) UnsetAdaptivePolicyGroupId()`
+
+UnsetAdaptivePolicyGroupId ensures that no value is present for AdaptivePolicyGroupId, not even an explicit nil
 ### GetPeerSgtCapable
 
 `func (o *InlineObject28) GetPeerSgtCapable() bool`

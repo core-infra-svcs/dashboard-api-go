@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Devices** | [**[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices.md) | A set of devices to import (or update) | 
-**Options** | Pointer to [**OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions**](OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions.md) |  | [optional] 
+**Swaps** | [**[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps**](OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps.md) | List of replacments to perform | 
 
 ## Methods
 
 ### NewInlineObject271
 
-`func NewInlineObject271(devices []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, ) *InlineObject271`
+`func NewInlineObject271(swaps []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, ) *InlineObject271`
 
 NewInlineObject271 instantiates a new InlineObject271 object
 This constructor will assign default values to properties that have it defined,
@@ -26,50 +25,25 @@ NewInlineObject271WithDefaults instantiates a new InlineObject271 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDevices
+### GetSwaps
 
-`func (o *InlineObject271) GetDevices() []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices`
+`func (o *InlineObject271) GetSwaps() []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps`
 
-GetDevices returns the Devices field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetDevicesOk
+### GetSwapsOk
 
-`func (o *InlineObject271) GetDevicesOk() (*[]OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices, bool)`
+`func (o *InlineObject271) GetSwapsOk() (*[]OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps, bool)`
 
-GetDevicesOk returns a tuple with the Devices field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDevices
+### SetSwaps
 
-`func (o *InlineObject271) SetDevices(v []OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareDevices)`
+`func (o *InlineObject271) SetSwaps(v []OrganizationsOrganizationIdInventoryDevicesSwapsBulkSwaps)`
 
-SetDevices sets Devices field to given value.
+SetSwaps sets Swaps field to given value.
 
-
-### GetOptions
-
-`func (o *InlineObject271) GetOptions() OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions`
-
-GetOptions returns the Options field if non-nil, zero value otherwise.
-
-### GetOptionsOk
-
-`func (o *InlineObject271) GetOptionsOk() (*OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions, bool)`
-
-GetOptionsOk returns a tuple with the Options field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOptions
-
-`func (o *InlineObject271) SetOptions(v OrganizationsOrganizationIdInventoryOnboardingCloudMonitoringPrepareOptions)`
-
-SetOptions sets Options field to given value.
-
-### HasOptions
-
-`func (o *InlineObject271) HasOptions() bool`
-
-HasOptions returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

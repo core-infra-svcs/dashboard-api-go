@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
-**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
-**Example** | Pointer to [**InlineResponse200336Example**](InlineResponse200336Example.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200336Items**](InlineResponse200336Items.md) | Switches | [optional] 
+**Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineResponse200336WithDefaults instantiates a new InlineResponse200336 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertTypeId
+### GetItems
 
-`func (o *InlineResponse200336) GetAlertTypeId() string`
+`func (o *InlineResponse200336) GetItems() []InlineResponse200336Items`
 
-GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetAlertTypeIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200336) GetAlertTypeIdOk() (*string, bool)`
+`func (o *InlineResponse200336) GetItemsOk() (*[]InlineResponse200336Items, bool)`
 
-GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertTypeId
+### SetItems
 
-`func (o *InlineResponse200336) SetAlertTypeId(v string)`
+`func (o *InlineResponse200336) SetItems(v []InlineResponse200336Items)`
 
-SetAlertTypeId sets AlertTypeId field to given value.
+SetItems sets Items field to given value.
 
-### HasAlertTypeId
+### HasItems
 
-`func (o *InlineResponse200336) HasAlertTypeId() bool`
+`func (o *InlineResponse200336) HasItems() bool`
 
-HasAlertTypeId returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetAlertType
+### GetMeta
 
-`func (o *InlineResponse200336) GetAlertType() string`
+`func (o *InlineResponse200336) GetMeta() InlineResponse200222Meta`
 
-GetAlertType returns the AlertType field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetAlertTypeOk
+### GetMetaOk
 
-`func (o *InlineResponse200336) GetAlertTypeOk() (*string, bool)`
+`func (o *InlineResponse200336) GetMetaOk() (*InlineResponse200222Meta, bool)`
 
-GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertType
+### SetMeta
 
-`func (o *InlineResponse200336) SetAlertType(v string)`
+`func (o *InlineResponse200336) SetMeta(v InlineResponse200222Meta)`
 
-SetAlertType sets AlertType field to given value.
+SetMeta sets Meta field to given value.
 
-### HasAlertType
+### HasMeta
 
-`func (o *InlineResponse200336) HasAlertType() bool`
+`func (o *InlineResponse200336) HasMeta() bool`
 
-HasAlertType returns a boolean if a field has been set.
-
-### GetExample
-
-`func (o *InlineResponse200336) GetExample() InlineResponse200336Example`
-
-GetExample returns the Example field if non-nil, zero value otherwise.
-
-### GetExampleOk
-
-`func (o *InlineResponse200336) GetExampleOk() (*InlineResponse200336Example, bool)`
-
-GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetExample
-
-`func (o *InlineResponse200336) SetExample(v InlineResponse200336Example)`
-
-SetExample sets Example field to given value.
-
-### HasExample
-
-`func (o *InlineResponse200336) HasExample() bool`
-
-HasExample returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems.md) | List containing the assignment ID | 
+**Name** | **string** | Name of profile | 
 
 ## Methods
 
 ### NewInlineObject222
 
-`func NewInlineObject222(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, ) *InlineObject222`
+`func NewInlineObject222(name string, ) *InlineObject222`
 
 NewInlineObject222 instantiates a new InlineObject222 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject222WithDefaults instantiates a new InlineObject222 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineObject222) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems`
+`func (o *InlineObject222) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineObject222) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, bool)`
+`func (o *InlineObject222) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineObject222) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems)`
+`func (o *InlineObject222) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
 
 

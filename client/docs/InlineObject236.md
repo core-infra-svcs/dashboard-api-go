@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BrandingPolicyIds** | Pointer to **[]string** |       An ordered list of branding policy IDs that determines the priority order of how to apply the policies  | [optional] 
+**AlertIds** | **[]string** | Array of alert IDs to dismiss | 
 
 ## Methods
 
 ### NewInlineObject236
 
-`func NewInlineObject236() *InlineObject236`
+`func NewInlineObject236(alertIds []string, ) *InlineObject236`
 
 NewInlineObject236 instantiates a new InlineObject236 object
 This constructor will assign default values to properties that have it defined,
@@ -25,30 +25,25 @@ NewInlineObject236WithDefaults instantiates a new InlineObject236 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBrandingPolicyIds
+### GetAlertIds
 
-`func (o *InlineObject236) GetBrandingPolicyIds() []string`
+`func (o *InlineObject236) GetAlertIds() []string`
 
-GetBrandingPolicyIds returns the BrandingPolicyIds field if non-nil, zero value otherwise.
+GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
 
-### GetBrandingPolicyIdsOk
+### GetAlertIdsOk
 
-`func (o *InlineObject236) GetBrandingPolicyIdsOk() (*[]string, bool)`
+`func (o *InlineObject236) GetAlertIdsOk() (*[]string, bool)`
 
-GetBrandingPolicyIdsOk returns a tuple with the BrandingPolicyIds field if it's non-nil, zero value otherwise
+GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBrandingPolicyIds
+### SetAlertIds
 
-`func (o *InlineObject236) SetBrandingPolicyIds(v []string)`
+`func (o *InlineObject236) SetAlertIds(v []string)`
 
-SetBrandingPolicyIds sets BrandingPolicyIds field to given value.
+SetAlertIds sets AlertIds field to given value.
 
-### HasBrandingPolicyIds
-
-`func (o *InlineObject236) HasBrandingPolicyIds() bool`
-
-HasBrandingPolicyIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

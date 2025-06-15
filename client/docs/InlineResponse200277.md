@@ -6,11 +6,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Mac** | Pointer to **string** | The device MAC address. | [optional] 
 **Name** | Pointer to **string** | The device name. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdDevicesAvailabilitiesNetwork**](OrganizationsOrganizationIdDevicesAvailabilitiesNetwork.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork**](OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork.md) |  | [optional] 
 **ProductType** | Pointer to **string** | Device product type. | [optional] 
 **Serial** | Pointer to **string** | The device serial number. | [optional] 
 **Tags** | Pointer to **[]string** | List of custom tags for the device. | [optional] 
-**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks**](OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks.md) | List of device uplink addresses information. | [optional] 
+**Slots** | Pointer to [**[]OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots**](OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots.md) | Information for the device&#39;s AC power supplies. | [optional] 
 
 ## Methods
 
@@ -83,20 +83,20 @@ HasName returns a boolean if a field has been set.
 
 ### GetNetwork
 
-`func (o *InlineResponse200277) GetNetwork() OrganizationsOrganizationIdDevicesAvailabilitiesNetwork`
+`func (o *InlineResponse200277) GetNetwork() OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200277) GetNetworkOk() (*OrganizationsOrganizationIdDevicesAvailabilitiesNetwork, bool)`
+`func (o *InlineResponse200277) GetNetworkOk() (*OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200277) SetNetwork(v OrganizationsOrganizationIdDevicesAvailabilitiesNetwork)`
+`func (o *InlineResponse200277) SetNetwork(v OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceNetwork)`
 
 SetNetwork sets Network field to given value.
 
@@ -181,30 +181,30 @@ SetTags sets Tags field to given value.
 
 HasTags returns a boolean if a field has been set.
 
-### GetUplinks
+### GetSlots
 
-`func (o *InlineResponse200277) GetUplinks() []OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks`
+`func (o *InlineResponse200277) GetSlots() []OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots`
 
-GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+GetSlots returns the Slots field if non-nil, zero value otherwise.
 
-### GetUplinksOk
+### GetSlotsOk
 
-`func (o *InlineResponse200277) GetUplinksOk() (*[]OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks, bool)`
+`func (o *InlineResponse200277) GetSlotsOk() (*[]OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots, bool)`
 
-GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+GetSlotsOk returns a tuple with the Slots field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinks
+### SetSlots
 
-`func (o *InlineResponse200277) SetUplinks(v []OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceUplinks)`
+`func (o *InlineResponse200277) SetSlots(v []OrganizationsOrganizationIdDevicesPowerModulesStatusesByDeviceSlots)`
 
-SetUplinks sets Uplinks field to given value.
+SetSlots sets Slots field to given value.
 
-### HasUplinks
+### HasSlots
 
-`func (o *InlineResponse200277) HasUplinks() bool`
+`func (o *InlineResponse200277) HasSlots() bool`
 
-HasUplinks returns a boolean if a field has been set.
+HasSlots returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

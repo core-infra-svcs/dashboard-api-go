@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertIds** | **[]string** | Array of alert IDs to restore | 
+**Peers** | [**[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers**](OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers.md) | The list of VPN peers | 
 
 ## Methods
 
 ### NewInlineObject234
 
-`func NewInlineObject234(alertIds []string, ) *InlineObject234`
+`func NewInlineObject234(peers []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, ) *InlineObject234`
 
 NewInlineObject234 instantiates a new InlineObject234 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject234WithDefaults instantiates a new InlineObject234 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAlertIds
+### GetPeers
 
-`func (o *InlineObject234) GetAlertIds() []string`
+`func (o *InlineObject234) GetPeers() []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers`
 
-GetAlertIds returns the AlertIds field if non-nil, zero value otherwise.
+GetPeers returns the Peers field if non-nil, zero value otherwise.
 
-### GetAlertIdsOk
+### GetPeersOk
 
-`func (o *InlineObject234) GetAlertIdsOk() (*[]string, bool)`
+`func (o *InlineObject234) GetPeersOk() (*[]OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers, bool)`
 
-GetAlertIdsOk returns a tuple with the AlertIds field if it's non-nil, zero value otherwise
+GetPeersOk returns a tuple with the Peers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAlertIds
+### SetPeers
 
-`func (o *InlineObject234) SetAlertIds(v []string)`
+`func (o *InlineObject234) SetPeers(v []OrganizationsOrganizationIdApplianceVpnThirdPartyVPNPeersPeers)`
 
-SetAlertIds sets AlertIds field to given value.
+SetPeers sets Peers field to given value.
 
 
 

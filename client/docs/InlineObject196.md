@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200202Rules**](InlineResponse200202Rules.md) | An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule). | [optional] 
-**AllowLanAccess** | Pointer to **bool** | Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional) | [optional] 
+**Enabled** | Pointer to **bool** | If true, the SSID device type group policies are enabled. | [optional] 
+**DeviceTypePolicies** | Pointer to [**[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies**](NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies.md) | List of device type policies. | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineObject196WithDefaults instantiates a new InlineObject196 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetRules
+### GetEnabled
 
-`func (o *InlineObject196) GetRules() []InlineResponse200202Rules`
+`func (o *InlineObject196) GetEnabled() bool`
 
-GetRules returns the Rules field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetRulesOk
+### GetEnabledOk
 
-`func (o *InlineObject196) GetRulesOk() (*[]InlineResponse200202Rules, bool)`
+`func (o *InlineObject196) GetEnabledOk() (*bool, bool)`
 
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRules
+### SetEnabled
 
-`func (o *InlineObject196) SetRules(v []InlineResponse200202Rules)`
+`func (o *InlineObject196) SetEnabled(v bool)`
 
-SetRules sets Rules field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasRules
+### HasEnabled
 
-`func (o *InlineObject196) HasRules() bool`
+`func (o *InlineObject196) HasEnabled() bool`
 
-HasRules returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetAllowLanAccess
+### GetDeviceTypePolicies
 
-`func (o *InlineObject196) GetAllowLanAccess() bool`
+`func (o *InlineObject196) GetDeviceTypePolicies() []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies`
 
-GetAllowLanAccess returns the AllowLanAccess field if non-nil, zero value otherwise.
+GetDeviceTypePolicies returns the DeviceTypePolicies field if non-nil, zero value otherwise.
 
-### GetAllowLanAccessOk
+### GetDeviceTypePoliciesOk
 
-`func (o *InlineObject196) GetAllowLanAccessOk() (*bool, bool)`
+`func (o *InlineObject196) GetDeviceTypePoliciesOk() (*[]NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies, bool)`
 
-GetAllowLanAccessOk returns a tuple with the AllowLanAccess field if it's non-nil, zero value otherwise
+GetDeviceTypePoliciesOk returns a tuple with the DeviceTypePolicies field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAllowLanAccess
+### SetDeviceTypePolicies
 
-`func (o *InlineObject196) SetAllowLanAccess(v bool)`
+`func (o *InlineObject196) SetDeviceTypePolicies(v []NetworksNetworkIdWirelessSsidsNumberDeviceTypeGroupPoliciesDeviceTypePolicies)`
 
-SetAllowLanAccess sets AllowLanAccess field to given value.
+SetDeviceTypePolicies sets DeviceTypePolicies field to given value.
 
-### HasAllowLanAccess
+### HasDeviceTypePolicies
 
-`func (o *InlineObject196) HasAllowLanAccess() bool`
+`func (o *InlineObject196) HasDeviceTypePolicies() bool`
 
-HasAllowLanAccess returns a boolean if a field has been set.
+HasDeviceTypePolicies returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

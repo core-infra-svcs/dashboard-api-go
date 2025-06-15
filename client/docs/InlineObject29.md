@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | 
-**Subnet** | Pointer to **string** | The network that this L3 interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
-**InterfaceIp** | Pointer to **string** | The IP address that will be used for Layer 3 routing on this VLAN or subnet. This cannot be the same         as the device management IP. | [optional] 
+**Subnet** | Pointer to **NullableString** | The network that this L3 interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
+**InterfaceIp** | Pointer to **NullableString** | The IP address that will be used for Layer 3 routing on this VLAN or subnet. This cannot be the same         as the device management IP. | [optional] 
 **MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are:         &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
-**VlanId** | Pointer to **int32** | The VLAN this L3 interface is on. VLAN must be between 1 and 4094. | [optional] 
+**VlanId** | Pointer to **NullableInt32** | The VLAN this L3 interface is on. VLAN must be between 1 and 4094. | [optional] 
 **DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route.         This IP address must exist in a subnet with a L3 interface. Required if this is the first IPv4 interface. | [optional] 
 **OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings1**](DevicesSerialSwitchRoutingInterfacesOspfSettings1.md) |  | [optional] 
 **Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv61**](DevicesSerialSwitchRoutingInterfacesIpv61.md) |  | [optional] 
@@ -77,6 +77,16 @@ SetSubnet sets Subnet field to given value.
 
 HasSubnet returns a boolean if a field has been set.
 
+### SetSubnetNil
+
+`func (o *InlineObject29) SetSubnetNil(b bool)`
+
+ SetSubnetNil sets the value for Subnet to be an explicit nil
+
+### UnsetSubnet
+`func (o *InlineObject29) UnsetSubnet()`
+
+UnsetSubnet ensures that no value is present for Subnet, not even an explicit nil
 ### GetInterfaceIp
 
 `func (o *InlineObject29) GetInterfaceIp() string`
@@ -102,6 +112,16 @@ SetInterfaceIp sets InterfaceIp field to given value.
 
 HasInterfaceIp returns a boolean if a field has been set.
 
+### SetInterfaceIpNil
+
+`func (o *InlineObject29) SetInterfaceIpNil(b bool)`
+
+ SetInterfaceIpNil sets the value for InterfaceIp to be an explicit nil
+
+### UnsetInterfaceIp
+`func (o *InlineObject29) UnsetInterfaceIp()`
+
+UnsetInterfaceIp ensures that no value is present for InterfaceIp, not even an explicit nil
 ### GetMulticastRouting
 
 `func (o *InlineObject29) GetMulticastRouting() string`
@@ -152,6 +172,16 @@ SetVlanId sets VlanId field to given value.
 
 HasVlanId returns a boolean if a field has been set.
 
+### SetVlanIdNil
+
+`func (o *InlineObject29) SetVlanIdNil(b bool)`
+
+ SetVlanIdNil sets the value for VlanId to be an explicit nil
+
+### UnsetVlanId
+`func (o *InlineObject29) UnsetVlanId()`
+
+UnsetVlanId ensures that no value is present for VlanId, not even an explicit nil
 ### GetDefaultGateway
 
 `func (o *InlineObject29) GetDefaultGateway() string`

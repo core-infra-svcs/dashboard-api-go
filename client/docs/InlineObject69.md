@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | Name of the custom performance class | [optional] 
-**MaxLatency** | Pointer to **int32** | Maximum latency in milliseconds | [optional] 
-**MaxJitter** | Pointer to **int32** | Maximum jitter in milliseconds | [optional] 
-**MaxLossPercentage** | Pointer to **int32** | Maximum percentage of packet loss | [optional] 
+**MaxLatency** | Pointer to **NullableInt32** | Maximum latency in milliseconds | [optional] 
+**MaxJitter** | Pointer to **NullableInt32** | Maximum jitter in milliseconds | [optional] 
+**MaxLossPercentage** | Pointer to **NullableInt32** | Maximum percentage of packet loss | [optional] 
 
 ## Methods
 
@@ -78,6 +78,16 @@ SetMaxLatency sets MaxLatency field to given value.
 
 HasMaxLatency returns a boolean if a field has been set.
 
+### SetMaxLatencyNil
+
+`func (o *InlineObject69) SetMaxLatencyNil(b bool)`
+
+ SetMaxLatencyNil sets the value for MaxLatency to be an explicit nil
+
+### UnsetMaxLatency
+`func (o *InlineObject69) UnsetMaxLatency()`
+
+UnsetMaxLatency ensures that no value is present for MaxLatency, not even an explicit nil
 ### GetMaxJitter
 
 `func (o *InlineObject69) GetMaxJitter() int32`
@@ -103,6 +113,16 @@ SetMaxJitter sets MaxJitter field to given value.
 
 HasMaxJitter returns a boolean if a field has been set.
 
+### SetMaxJitterNil
+
+`func (o *InlineObject69) SetMaxJitterNil(b bool)`
+
+ SetMaxJitterNil sets the value for MaxJitter to be an explicit nil
+
+### UnsetMaxJitter
+`func (o *InlineObject69) UnsetMaxJitter()`
+
+UnsetMaxJitter ensures that no value is present for MaxJitter, not even an explicit nil
 ### GetMaxLossPercentage
 
 `func (o *InlineObject69) GetMaxLossPercentage() int32`
@@ -128,6 +148,16 @@ SetMaxLossPercentage sets MaxLossPercentage field to given value.
 
 HasMaxLossPercentage returns a boolean if a field has been set.
 
+### SetMaxLossPercentageNil
+
+`func (o *InlineObject69) SetMaxLossPercentageNil(b bool)`
+
+ SetMaxLossPercentageNil sets the value for MaxLossPercentage to be an explicit nil
+
+### UnsetMaxLossPercentage
+`func (o *InlineObject69) UnsetMaxLossPercentage()`
+
+UnsetMaxLossPercentage ensures that no value is present for MaxLossPercentage, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

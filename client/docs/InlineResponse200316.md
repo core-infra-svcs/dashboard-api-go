@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | theme id | [optional] 
-**Name** | Pointer to **string** | theme name | [optional] 
-**ThemeAssets** | Pointer to [**[]OrganizationsOrganizationIdSplashThemesThemeAssets**](OrganizationsOrganizationIdSplashThemesThemeAssets.md) | list of theme assets | [optional] 
+**Items** | Pointer to [**[]InlineResponse200316Items**](InlineResponse200316Items.md) | Sentry Group Policies for the Organization keyed by Network Id | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200316WithDefaults instantiates a new InlineResponse200316 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetItems
 
-`func (o *InlineResponse200316) GetId() string`
+`func (o *InlineResponse200316) GetItems() []InlineResponse200316Items`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetItemsOk
 
-`func (o *InlineResponse200316) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200316) GetItemsOk() (*[]InlineResponse200316Items, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetItems
 
-`func (o *InlineResponse200316) SetId(v string)`
+`func (o *InlineResponse200316) SetItems(v []InlineResponse200316Items)`
 
-SetId sets Id field to given value.
+SetItems sets Items field to given value.
 
-### HasId
+### HasItems
 
-`func (o *InlineResponse200316) HasId() bool`
+`func (o *InlineResponse200316) HasItems() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200316) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200316) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200316) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200316) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetThemeAssets
-
-`func (o *InlineResponse200316) GetThemeAssets() []OrganizationsOrganizationIdSplashThemesThemeAssets`
-
-GetThemeAssets returns the ThemeAssets field if non-nil, zero value otherwise.
-
-### GetThemeAssetsOk
-
-`func (o *InlineResponse200316) GetThemeAssetsOk() (*[]OrganizationsOrganizationIdSplashThemesThemeAssets, bool)`
-
-GetThemeAssetsOk returns a tuple with the ThemeAssets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetThemeAssets
-
-`func (o *InlineResponse200316) SetThemeAssets(v []OrganizationsOrganizationIdSplashThemesThemeAssets)`
-
-SetThemeAssets sets ThemeAssets field to given value.
-
-### HasThemeAssets
-
-`func (o *InlineResponse200316) HasThemeAssets() bool`
-
-HasThemeAssets returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

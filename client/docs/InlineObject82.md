@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **CloudArchiveEnabled** | Pointer to **bool** | Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false. | [optional] 
 **MotionDetectorVersion** | Pointer to **int32** | The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2. | [optional] 
 **SmartRetention** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention**](NetworksNetworkIdCameraQualityRetentionProfilesSmartRetention.md) |  | [optional] 
-**ScheduleId** | Pointer to **string** | Schedule for which this camera will record video, or &#39;null&#39; to always record. | [optional] 
-**MaxRetentionDays** | Pointer to **int32** | The maximum number of days for which the data will be stored, or &#39;null&#39; to keep data until storage space runs out. If the former, it can be in the range of one to ninety days. | [optional] 
+**ScheduleId** | Pointer to **NullableString** | Schedule for which this camera will record video, or &#39;null&#39; to always record. | [optional] 
+**MaxRetentionDays** | Pointer to **NullableInt32** | The maximum number of days for which the data will be stored, or &#39;null&#39; to keep data until storage space runs out. If the former, it can be in the range of one to ninety days. | [optional] 
 **VideoSettings** | Pointer to [**NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings**](NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings.md) |  | [optional] 
 
 ## Methods
@@ -234,6 +234,16 @@ SetScheduleId sets ScheduleId field to given value.
 
 HasScheduleId returns a boolean if a field has been set.
 
+### SetScheduleIdNil
+
+`func (o *InlineObject82) SetScheduleIdNil(b bool)`
+
+ SetScheduleIdNil sets the value for ScheduleId to be an explicit nil
+
+### UnsetScheduleId
+`func (o *InlineObject82) UnsetScheduleId()`
+
+UnsetScheduleId ensures that no value is present for ScheduleId, not even an explicit nil
 ### GetMaxRetentionDays
 
 `func (o *InlineObject82) GetMaxRetentionDays() int32`
@@ -259,6 +269,16 @@ SetMaxRetentionDays sets MaxRetentionDays field to given value.
 
 HasMaxRetentionDays returns a boolean if a field has been set.
 
+### SetMaxRetentionDaysNil
+
+`func (o *InlineObject82) SetMaxRetentionDaysNil(b bool)`
+
+ SetMaxRetentionDaysNil sets the value for MaxRetentionDays to be an explicit nil
+
+### UnsetMaxRetentionDays
+`func (o *InlineObject82) UnsetMaxRetentionDays()`
+
+UnsetMaxRetentionDays ensures that no value is present for MaxRetentionDays, not even an explicit nil
 ### GetVideoSettings
 
 `func (o *InlineObject82) GetVideoSettings() NetworksNetworkIdCameraQualityRetentionProfilesVideoSettings`

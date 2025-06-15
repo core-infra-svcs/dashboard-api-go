@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | The serial number for the device. | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the device. | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
+**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
+**Example** | Pointer to [**InlineResponse200342Example**](InlineResponse200342Example.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200342WithDefaults instantiates a new InlineResponse200342 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetAlertTypeId
 
-`func (o *InlineResponse200342) GetSerial() string`
+`func (o *InlineResponse200342) GetAlertTypeId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetAlertTypeIdOk
 
-`func (o *InlineResponse200342) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200342) GetAlertTypeIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetAlertTypeId
 
-`func (o *InlineResponse200342) SetSerial(v string)`
+`func (o *InlineResponse200342) SetAlertTypeId(v string)`
 
-SetSerial sets Serial field to given value.
+SetAlertTypeId sets AlertTypeId field to given value.
 
-### HasSerial
+### HasAlertTypeId
 
-`func (o *InlineResponse200342) HasSerial() bool`
+`func (o *InlineResponse200342) HasAlertTypeId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasAlertTypeId returns a boolean if a field has been set.
 
-### GetMac
+### GetAlertType
 
-`func (o *InlineResponse200342) GetMac() string`
+`func (o *InlineResponse200342) GetAlertType() string`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetAlertType returns the AlertType field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetAlertTypeOk
 
-`func (o *InlineResponse200342) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200342) GetAlertTypeOk() (*string, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetAlertType
 
-`func (o *InlineResponse200342) SetMac(v string)`
+`func (o *InlineResponse200342) SetAlertType(v string)`
 
-SetMac sets Mac field to given value.
+SetAlertType sets AlertType field to given value.
 
-### HasMac
+### HasAlertType
 
-`func (o *InlineResponse200342) HasMac() bool`
+`func (o *InlineResponse200342) HasAlertType() bool`
 
-HasMac returns a boolean if a field has been set.
+HasAlertType returns a boolean if a field has been set.
 
-### GetNetwork
+### GetExample
 
-`func (o *InlineResponse200342) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200342) GetExample() InlineResponse200342Example`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetExample returns the Example field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetExampleOk
 
-`func (o *InlineResponse200342) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200342) GetExampleOk() (*InlineResponse200342Example, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetExample
 
-`func (o *InlineResponse200342) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200342) SetExample(v InlineResponse200342Example)`
 
-SetNetwork sets Network field to given value.
+SetExample sets Example field to given value.
 
-### HasNetwork
+### HasExample
 
-`func (o *InlineResponse200342) HasNetwork() bool`
+`func (o *InlineResponse200342) HasExample() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetByBand
-
-`func (o *InlineResponse200342) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
-
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
-
-### GetByBandOk
-
-`func (o *InlineResponse200342) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
-
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetByBand
-
-`func (o *InlineResponse200342) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
-
-SetByBand sets ByBand field to given value.
-
-### HasByBand
-
-`func (o *InlineResponse200342) HasByBand() bool`
-
-HasByBand returns a boolean if a field has been set.
+HasExample returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

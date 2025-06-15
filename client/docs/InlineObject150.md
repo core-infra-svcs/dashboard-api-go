@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vlan** | Pointer to **int32** | The VLAN of the incoming packet. A null value will match any VLAN. | [optional] 
+**Vlan** | **NullableInt32** | The VLAN of the incoming packet. A null value will match any VLAN. | 
 **Protocol** | Pointer to **string** | The protocol of the incoming packet. Default value is \&quot;ANY\&quot; | [optional] 
-**SrcPort** | Pointer to **int32** | The source port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
+**SrcPort** | Pointer to **NullableInt32** | The source port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
 **SrcPortRange** | Pointer to **string** | The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. | [optional] 
-**DstPort** | Pointer to **int32** | The destination port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
+**DstPort** | Pointer to **NullableInt32** | The destination port of the incoming packet. Applicable only if protocol is TCP or UDP. | [optional] 
 **DstPortRange** | Pointer to **string** | The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. | [optional] 
-**Dscp** | Pointer to **int32** | DSCP tag that should be assigned to incoming packet. Set this to -1 to trust incoming DSCP. Default value is 0 | [optional] 
+**Dscp** | Pointer to **int32** | DSCP tag for the incoming packet. Set this to -1 to trust incoming DSCP. Default value is 0 | [optional] 
 
 ## Methods
 
 ### NewInlineObject150
 
-`func NewInlineObject150() *InlineObject150`
+`func NewInlineObject150(vlan NullableInt32, ) *InlineObject150`
 
 NewInlineObject150 instantiates a new InlineObject150 object
 This constructor will assign default values to properties that have it defined,
@@ -50,12 +50,17 @@ and a boolean to check if the value has been set.
 
 SetVlan sets Vlan field to given value.
 
-### HasVlan
 
-`func (o *InlineObject150) HasVlan() bool`
+### SetVlanNil
 
-HasVlan returns a boolean if a field has been set.
+`func (o *InlineObject150) SetVlanNil(b bool)`
 
+ SetVlanNil sets the value for Vlan to be an explicit nil
+
+### UnsetVlan
+`func (o *InlineObject150) UnsetVlan()`
+
+UnsetVlan ensures that no value is present for Vlan, not even an explicit nil
 ### GetProtocol
 
 `func (o *InlineObject150) GetProtocol() string`
@@ -106,6 +111,16 @@ SetSrcPort sets SrcPort field to given value.
 
 HasSrcPort returns a boolean if a field has been set.
 
+### SetSrcPortNil
+
+`func (o *InlineObject150) SetSrcPortNil(b bool)`
+
+ SetSrcPortNil sets the value for SrcPort to be an explicit nil
+
+### UnsetSrcPort
+`func (o *InlineObject150) UnsetSrcPort()`
+
+UnsetSrcPort ensures that no value is present for SrcPort, not even an explicit nil
 ### GetSrcPortRange
 
 `func (o *InlineObject150) GetSrcPortRange() string`
@@ -156,6 +171,16 @@ SetDstPort sets DstPort field to given value.
 
 HasDstPort returns a boolean if a field has been set.
 
+### SetDstPortNil
+
+`func (o *InlineObject150) SetDstPortNil(b bool)`
+
+ SetDstPortNil sets the value for DstPort to be an explicit nil
+
+### UnsetDstPort
+`func (o *InlineObject150) UnsetDstPort()`
+
+UnsetDstPort ensures that no value is present for DstPort, not even an explicit nil
 ### GetDstPortRange
 
 `func (o *InlineObject150) GetDstPortRange() string`

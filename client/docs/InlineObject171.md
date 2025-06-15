@@ -7,12 +7,13 @@ Name | Type | Description | Notes
 **Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
 **VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
 **VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
+**Iname** | **string** | IName of the profile | 
 
 ## Methods
 
 ### NewInlineObject171
 
-`func NewInlineObject171(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, ) *InlineObject171`
+`func NewInlineObject171(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, iname string, ) *InlineObject171`
 
 NewInlineObject171 instantiates a new InlineObject171 object
 This constructor will assign default values to properties that have it defined,
@@ -85,6 +86,26 @@ and a boolean to check if the value has been set.
 `func (o *InlineObject171) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
 
 SetVlanGroups sets VlanGroups field to given value.
+
+
+### GetIname
+
+`func (o *InlineObject171) GetIname() string`
+
+GetIname returns the Iname field if non-nil, zero value otherwise.
+
+### GetInameOk
+
+`func (o *InlineObject171) GetInameOk() (*string, bool)`
+
+GetInameOk returns a tuple with the Iname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIname
+
+`func (o *InlineObject171) SetIname(v string)`
+
+SetIname sets Iname field to given value.
 
 
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingLicenses** | Pointer to [**[]InlineResponse200293**](InlineResponse200293.md) | Resulting licenses from the move | [optional] 
+**Networks** | Pointer to [**[]InlineResponse200292Items**](InlineResponse200292Items.md) | List of networks that have XDR enabled | [optional] 
 
 ## Methods
 
@@ -25,30 +25,30 @@ NewInlineResponse200294WithDefaults instantiates a new InlineResponse200294 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingLicenses
+### GetNetworks
 
-`func (o *InlineResponse200294) GetResultingLicenses() []InlineResponse200293`
+`func (o *InlineResponse200294) GetNetworks() []InlineResponse200292Items`
 
-GetResultingLicenses returns the ResultingLicenses field if non-nil, zero value otherwise.
+GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
-### GetResultingLicensesOk
+### GetNetworksOk
 
-`func (o *InlineResponse200294) GetResultingLicensesOk() (*[]InlineResponse200293, bool)`
+`func (o *InlineResponse200294) GetNetworksOk() (*[]InlineResponse200292Items, bool)`
 
-GetResultingLicensesOk returns a tuple with the ResultingLicenses field if it's non-nil, zero value otherwise
+GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingLicenses
+### SetNetworks
 
-`func (o *InlineResponse200294) SetResultingLicenses(v []InlineResponse200293)`
+`func (o *InlineResponse200294) SetNetworks(v []InlineResponse200292Items)`
 
-SetResultingLicenses sets ResultingLicenses field to given value.
+SetNetworks sets Networks field to given value.
 
-### HasResultingLicenses
+### HasNetworks
 
-`func (o *InlineResponse200294) HasResultingLicenses() bool`
+`func (o *InlineResponse200294) HasNetworks() bool`
 
-HasResultingLicenses returns a boolean if a field has been set.
+HasNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

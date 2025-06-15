@@ -4,14 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Currency** | Pointer to **string** | The currency code of this node group&#39;s billing plans | [optional] 
-**Plans** | Pointer to [**[]NetworksNetworkIdWirelessBillingPlans**](NetworksNetworkIdWirelessBillingPlans.md) | Array of billing plans in the node group. (Can configure a maximum of 5) | [optional] 
+**DefaultPolicy** | **string** | Allows clients to access rogue networks. Blocked by default. | 
 
 ## Methods
 
 ### NewInlineObject181
 
-`func NewInlineObject181() *InlineObject181`
+`func NewInlineObject181(defaultPolicy string, ) *InlineObject181`
 
 NewInlineObject181 instantiates a new InlineObject181 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +25,25 @@ NewInlineObject181WithDefaults instantiates a new InlineObject181 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCurrency
+### GetDefaultPolicy
 
-`func (o *InlineObject181) GetCurrency() string`
+`func (o *InlineObject181) GetDefaultPolicy() string`
 
-GetCurrency returns the Currency field if non-nil, zero value otherwise.
+GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
 
-### GetCurrencyOk
+### GetDefaultPolicyOk
 
-`func (o *InlineObject181) GetCurrencyOk() (*string, bool)`
+`func (o *InlineObject181) GetDefaultPolicyOk() (*string, bool)`
 
-GetCurrencyOk returns a tuple with the Currency field if it's non-nil, zero value otherwise
+GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCurrency
+### SetDefaultPolicy
 
-`func (o *InlineObject181) SetCurrency(v string)`
+`func (o *InlineObject181) SetDefaultPolicy(v string)`
 
-SetCurrency sets Currency field to given value.
+SetDefaultPolicy sets DefaultPolicy field to given value.
 
-### HasCurrency
-
-`func (o *InlineObject181) HasCurrency() bool`
-
-HasCurrency returns a boolean if a field has been set.
-
-### GetPlans
-
-`func (o *InlineObject181) GetPlans() []NetworksNetworkIdWirelessBillingPlans`
-
-GetPlans returns the Plans field if non-nil, zero value otherwise.
-
-### GetPlansOk
-
-`func (o *InlineObject181) GetPlansOk() (*[]NetworksNetworkIdWirelessBillingPlans, bool)`
-
-GetPlansOk returns a tuple with the Plans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPlans
-
-`func (o *InlineObject181) SetPlans(v []NetworksNetworkIdWirelessBillingPlans)`
-
-SetPlans sets Plans field to given value.
-
-### HasPlans
-
-`func (o *InlineObject181) HasPlans() bool`
-
-HasPlans returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

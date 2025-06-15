@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**Name** | **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | 
+**Category** | **string** | Category of a policy object (one of: adaptivePolicy, network) | 
+**Type** | **string** | Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn, ipAndMask) | 
 **Cidr** | Pointer to **string** | CIDR Value of a policy object (e.g. 10.11.12.1/24\&quot;) | [optional] 
 **Fqdn** | Pointer to **string** | Fully qualified domain name of policy object (e.g. \&quot;example.com\&quot;) | [optional] 
 **Mask** | Pointer to **string** | Mask of a policy object (e.g. \&quot;255.255.0.0\&quot;) | [optional] 
@@ -15,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewInlineObject285
 
-`func NewInlineObject285() *InlineObject285`
+`func NewInlineObject285(name string, category string, type_ string, ) *InlineObject285`
 
 NewInlineObject285 instantiates a new InlineObject285 object
 This constructor will assign default values to properties that have it defined,
@@ -49,11 +51,46 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject285) HasName() bool`
+### GetCategory
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject285) GetCategory() string`
+
+GetCategory returns the Category field if non-nil, zero value otherwise.
+
+### GetCategoryOk
+
+`func (o *InlineObject285) GetCategoryOk() (*string, bool)`
+
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCategory
+
+`func (o *InlineObject285) SetCategory(v string)`
+
+SetCategory sets Category field to given value.
+
+
+### GetType
+
+`func (o *InlineObject285) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineObject285) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineObject285) SetType(v string)`
+
+SetType sets Type field to given value.
+
 
 ### GetCidr
 

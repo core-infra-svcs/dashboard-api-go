@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork**](OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork.md) |  | 
-**Url** | **string** | Receiver Url | 
-**Version** | **string** | Scanning API Version | 
-**Radio** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | 
-**SharedSecret** | **string** | Secret Value for Receiver | 
+**Name** | Pointer to **string** | theme name | [optional] 
+**BaseTheme** | Pointer to **string** | base theme id  | [optional] 
 
 ## Methods
 
 ### NewInlineObject298
 
-`func NewInlineObject298(network OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, url string, version string, radio OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, sharedSecret string, ) *InlineObject298`
+`func NewInlineObject298() *InlineObject298`
 
 NewInlineObject298 instantiates a new InlineObject298 object
 This constructor will assign default values to properties that have it defined,
@@ -29,105 +26,55 @@ NewInlineObject298WithDefaults instantiates a new InlineObject298 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetName
 
-`func (o *InlineObject298) GetNetwork() OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork`
+`func (o *InlineObject298) GetName() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetNameOk
 
-`func (o *InlineObject298) GetNetworkOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, bool)`
+`func (o *InlineObject298) GetNameOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetName
 
-`func (o *InlineObject298) SetNetwork(v OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork)`
+`func (o *InlineObject298) SetName(v string)`
 
-SetNetwork sets Network field to given value.
+SetName sets Name field to given value.
 
+### HasName
 
-### GetUrl
+`func (o *InlineObject298) HasName() bool`
 
-`func (o *InlineObject298) GetUrl() string`
+HasName returns a boolean if a field has been set.
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+### GetBaseTheme
 
-### GetUrlOk
+`func (o *InlineObject298) GetBaseTheme() string`
 
-`func (o *InlineObject298) GetUrlOk() (*string, bool)`
+GetBaseTheme returns the BaseTheme field if non-nil, zero value otherwise.
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+### GetBaseThemeOk
+
+`func (o *InlineObject298) GetBaseThemeOk() (*string, bool)`
+
+GetBaseThemeOk returns a tuple with the BaseTheme field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetBaseTheme
 
-`func (o *InlineObject298) SetUrl(v string)`
+`func (o *InlineObject298) SetBaseTheme(v string)`
 
-SetUrl sets Url field to given value.
+SetBaseTheme sets BaseTheme field to given value.
 
+### HasBaseTheme
 
-### GetVersion
+`func (o *InlineObject298) HasBaseTheme() bool`
 
-`func (o *InlineObject298) GetVersion() string`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *InlineObject298) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *InlineObject298) SetVersion(v string)`
-
-SetVersion sets Version field to given value.
-
-
-### GetRadio
-
-`func (o *InlineObject298) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineObject298) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineObject298) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio)`
-
-SetRadio sets Radio field to given value.
-
-
-### GetSharedSecret
-
-`func (o *InlineObject298) GetSharedSecret() string`
-
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
-
-### GetSharedSecretOk
-
-`func (o *InlineObject298) GetSharedSecretOk() (*string, bool)`
-
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSharedSecret
-
-`func (o *InlineObject298) SetSharedSecret(v string)`
-
-SetSharedSecret sets SharedSecret field to given value.
-
+HasBaseTheme returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

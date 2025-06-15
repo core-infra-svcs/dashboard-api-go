@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200366Items**](InlineResponse200366Items.md) | Wireless LAN controller layer 3 interfaces historical status | [optional] 
+**Items** | Pointer to [**[]InlineResponse200366Items**](InlineResponse200366Items.md) | L2 isolation allowlist items | [optional] 
 **Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
 
 ## Methods

@@ -4,9 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | [optional] 
+**Name** | Pointer to **string** | File name. Will overwrite files with same name. | [optional] 
+**Content** | Pointer to **string** | a file containing the asset content | [optional] 
 
 ## Methods
 
@@ -27,80 +26,55 @@ NewInlineObject299WithDefaults instantiates a new InlineObject299 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetUrl
+### GetName
 
-`func (o *InlineObject299) GetUrl() string`
+`func (o *InlineObject299) GetName() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetNameOk
 
-`func (o *InlineObject299) GetUrlOk() (*string, bool)`
+`func (o *InlineObject299) GetNameOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetName
 
-`func (o *InlineObject299) SetUrl(v string)`
+`func (o *InlineObject299) SetName(v string)`
 
-SetUrl sets Url field to given value.
+SetName sets Name field to given value.
 
-### HasUrl
+### HasName
 
-`func (o *InlineObject299) HasUrl() bool`
+`func (o *InlineObject299) HasName() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetVersion
+### GetContent
 
-`func (o *InlineObject299) GetVersion() string`
+`func (o *InlineObject299) GetContent() string`
 
-GetVersion returns the Version field if non-nil, zero value otherwise.
+GetContent returns the Content field if non-nil, zero value otherwise.
 
-### GetVersionOk
+### GetContentOk
 
-`func (o *InlineObject299) GetVersionOk() (*string, bool)`
+`func (o *InlineObject299) GetContentOk() (*string, bool)`
 
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+GetContentOk returns a tuple with the Content field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVersion
+### SetContent
 
-`func (o *InlineObject299) SetVersion(v string)`
+`func (o *InlineObject299) SetContent(v string)`
 
-SetVersion sets Version field to given value.
+SetContent sets Content field to given value.
 
-### HasVersion
+### HasContent
 
-`func (o *InlineObject299) HasVersion() bool`
+`func (o *InlineObject299) HasContent() bool`
 
-HasVersion returns a boolean if a field has been set.
-
-### GetRadio
-
-`func (o *InlineObject299) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineObject299) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineObject299) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio)`
-
-SetRadio sets Radio field to given value.
-
-### HasRadio
-
-`func (o *InlineObject299) HasRadio() bool`
-
-HasRadio returns a boolean if a field has been set.
+HasContent returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

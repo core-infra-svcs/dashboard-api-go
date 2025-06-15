@@ -4,16 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient.md) |  | 
-**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid.md) |  | 
-**Network** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork.md) |  | 
+**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
 
 ## Methods
 
 ### NewInlineObject301
 
-`func NewInlineObject301(client OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient, ssid OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, network OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, ) *InlineObject301`
+`func NewInlineObject301() *InlineObject301`
 
 NewInlineObject301 instantiates a new InlineObject301 object
 This constructor will assign default values to properties that have it defined,
@@ -28,90 +26,55 @@ NewInlineObject301WithDefaults instantiates a new InlineObject301 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetDescription
+### GetStatus
 
-`func (o *InlineObject301) GetDescription() string`
+`func (o *InlineObject301) GetStatus() string`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetStatusOk
 
-`func (o *InlineObject301) GetDescriptionOk() (*string, bool)`
+`func (o *InlineObject301) GetStatusOk() (*string, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetStatus
 
-`func (o *InlineObject301) SetDescription(v string)`
+`func (o *InlineObject301) SetStatus(v string)`
 
-SetDescription sets Description field to given value.
+SetStatus sets Status field to given value.
 
-### HasDescription
+### HasStatus
 
-`func (o *InlineObject301) HasDescription() bool`
+`func (o *InlineObject301) HasStatus() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
-### GetClient
+### GetCertificateAuthorityId
 
-`func (o *InlineObject301) GetClient() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient`
+`func (o *InlineObject301) GetCertificateAuthorityId() string`
 
-GetClient returns the Client field if non-nil, zero value otherwise.
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-### GetClientOk
+### GetCertificateAuthorityIdOk
 
-`func (o *InlineObject301) GetClientOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient, bool)`
+`func (o *InlineObject301) GetCertificateAuthorityIdOk() (*string, bool)`
 
-GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClient
+### SetCertificateAuthorityId
 
-`func (o *InlineObject301) SetClient(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient)`
+`func (o *InlineObject301) SetCertificateAuthorityId(v string)`
 
-SetClient sets Client field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
+### HasCertificateAuthorityId
 
-### GetSsid
+`func (o *InlineObject301) HasCertificateAuthorityId() bool`
 
-`func (o *InlineObject301) GetSsid() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
-
-GetSsid returns the Ssid field if non-nil, zero value otherwise.
-
-### GetSsidOk
-
-`func (o *InlineObject301) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, bool)`
-
-GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSsid
-
-`func (o *InlineObject301) SetSsid(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid)`
-
-SetSsid sets Ssid field to given value.
-
-
-### GetNetwork
-
-`func (o *InlineObject301) GetNetwork() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineObject301) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineObject301) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork)`
-
-SetNetwork sets Network field to given value.
-
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

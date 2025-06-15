@@ -4,13 +4,22 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ShortName** | Pointer to **string** | Short name of the early access feature | [optional] 
-**Name** | Pointer to **string** | Name of the early access feature | [optional] 
-**Descriptions** | Pointer to [**OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions**](OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions.md) |  | [optional] 
-**Topic** | Pointer to **string** | Topic of the early access feature | [optional] 
-**IsOrgScopedOnly** | Pointer to **bool** | If this early access feature can only be opted in for the entire organization | [optional] 
-**DocumentationLink** | Pointer to **string** | Link to the documentation of this early access feature | [optional] 
-**SupportLink** | Pointer to **string** | Link to get support for this early access feature | [optional] 
+**Name** | Pointer to **string** | Device Name | [optional] 
+**Serial** | Pointer to **string** | Device Serial Number | [optional] 
+**Mac** | Pointer to **string** | MAC Address | [optional] 
+**PublicIp** | Pointer to **string** | Public IP Address | [optional] 
+**NetworkId** | Pointer to **string** | Network ID | [optional] 
+**Status** | Pointer to **string** | Device Status | [optional] 
+**LastReportedAt** | Pointer to **string** | Device Last Reported Location | [optional] 
+**LanIp** | Pointer to **string** | LAN IP Address | [optional] 
+**Gateway** | Pointer to **string** | IP Gateway | [optional] 
+**IpType** | Pointer to **string** | IP Type | [optional] 
+**PrimaryDns** | Pointer to **string** | Primary DNS | [optional] 
+**SecondaryDns** | Pointer to **string** | Secondary DNS | [optional] 
+**ProductType** | Pointer to **string** | Product Type | [optional] 
+**Components** | Pointer to [**OrganizationsOrganizationIdDevicesStatusesComponents**](OrganizationsOrganizationIdDevicesStatusesComponents.md) |  | [optional] 
+**Model** | Pointer to **string** | Model | [optional] 
+**Tags** | Pointer to **[]string** | Tags | [optional] 
 
 ## Methods
 
@@ -30,31 +39,6 @@ will change when the set of required properties is changed
 NewInlineResponse200279WithDefaults instantiates a new InlineResponse200279 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetShortName
-
-`func (o *InlineResponse200279) GetShortName() string`
-
-GetShortName returns the ShortName field if non-nil, zero value otherwise.
-
-### GetShortNameOk
-
-`func (o *InlineResponse200279) GetShortNameOk() (*string, bool)`
-
-GetShortNameOk returns a tuple with the ShortName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetShortName
-
-`func (o *InlineResponse200279) SetShortName(v string)`
-
-SetShortName sets ShortName field to given value.
-
-### HasShortName
-
-`func (o *InlineResponse200279) HasShortName() bool`
-
-HasShortName returns a boolean if a field has been set.
 
 ### GetName
 
@@ -81,130 +65,380 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetDescriptions
+### GetSerial
 
-`func (o *InlineResponse200279) GetDescriptions() OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions`
+`func (o *InlineResponse200279) GetSerial() string`
 
-GetDescriptions returns the Descriptions field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetDescriptionsOk
+### GetSerialOk
 
-`func (o *InlineResponse200279) GetDescriptionsOk() (*OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions, bool)`
+`func (o *InlineResponse200279) GetSerialOk() (*string, bool)`
 
-GetDescriptionsOk returns a tuple with the Descriptions field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescriptions
+### SetSerial
 
-`func (o *InlineResponse200279) SetDescriptions(v OrganizationsOrganizationIdEarlyAccessFeaturesDescriptions)`
+`func (o *InlineResponse200279) SetSerial(v string)`
 
-SetDescriptions sets Descriptions field to given value.
+SetSerial sets Serial field to given value.
 
-### HasDescriptions
+### HasSerial
 
-`func (o *InlineResponse200279) HasDescriptions() bool`
+`func (o *InlineResponse200279) HasSerial() bool`
 
-HasDescriptions returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetTopic
+### GetMac
 
-`func (o *InlineResponse200279) GetTopic() string`
+`func (o *InlineResponse200279) GetMac() string`
 
-GetTopic returns the Topic field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetTopicOk
+### GetMacOk
 
-`func (o *InlineResponse200279) GetTopicOk() (*string, bool)`
+`func (o *InlineResponse200279) GetMacOk() (*string, bool)`
 
-GetTopicOk returns a tuple with the Topic field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTopic
+### SetMac
 
-`func (o *InlineResponse200279) SetTopic(v string)`
+`func (o *InlineResponse200279) SetMac(v string)`
 
-SetTopic sets Topic field to given value.
+SetMac sets Mac field to given value.
 
-### HasTopic
+### HasMac
 
-`func (o *InlineResponse200279) HasTopic() bool`
+`func (o *InlineResponse200279) HasMac() bool`
 
-HasTopic returns a boolean if a field has been set.
+HasMac returns a boolean if a field has been set.
 
-### GetIsOrgScopedOnly
+### GetPublicIp
 
-`func (o *InlineResponse200279) GetIsOrgScopedOnly() bool`
+`func (o *InlineResponse200279) GetPublicIp() string`
 
-GetIsOrgScopedOnly returns the IsOrgScopedOnly field if non-nil, zero value otherwise.
+GetPublicIp returns the PublicIp field if non-nil, zero value otherwise.
 
-### GetIsOrgScopedOnlyOk
+### GetPublicIpOk
 
-`func (o *InlineResponse200279) GetIsOrgScopedOnlyOk() (*bool, bool)`
+`func (o *InlineResponse200279) GetPublicIpOk() (*string, bool)`
 
-GetIsOrgScopedOnlyOk returns a tuple with the IsOrgScopedOnly field if it's non-nil, zero value otherwise
+GetPublicIpOk returns a tuple with the PublicIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsOrgScopedOnly
+### SetPublicIp
 
-`func (o *InlineResponse200279) SetIsOrgScopedOnly(v bool)`
+`func (o *InlineResponse200279) SetPublicIp(v string)`
 
-SetIsOrgScopedOnly sets IsOrgScopedOnly field to given value.
+SetPublicIp sets PublicIp field to given value.
 
-### HasIsOrgScopedOnly
+### HasPublicIp
 
-`func (o *InlineResponse200279) HasIsOrgScopedOnly() bool`
+`func (o *InlineResponse200279) HasPublicIp() bool`
 
-HasIsOrgScopedOnly returns a boolean if a field has been set.
+HasPublicIp returns a boolean if a field has been set.
 
-### GetDocumentationLink
+### GetNetworkId
 
-`func (o *InlineResponse200279) GetDocumentationLink() string`
+`func (o *InlineResponse200279) GetNetworkId() string`
 
-GetDocumentationLink returns the DocumentationLink field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetDocumentationLinkOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200279) GetDocumentationLinkOk() (*string, bool)`
+`func (o *InlineResponse200279) GetNetworkIdOk() (*string, bool)`
 
-GetDocumentationLinkOk returns a tuple with the DocumentationLink field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDocumentationLink
+### SetNetworkId
 
-`func (o *InlineResponse200279) SetDocumentationLink(v string)`
+`func (o *InlineResponse200279) SetNetworkId(v string)`
 
-SetDocumentationLink sets DocumentationLink field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasDocumentationLink
+### HasNetworkId
 
-`func (o *InlineResponse200279) HasDocumentationLink() bool`
+`func (o *InlineResponse200279) HasNetworkId() bool`
 
-HasDocumentationLink returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetSupportLink
+### GetStatus
 
-`func (o *InlineResponse200279) GetSupportLink() string`
+`func (o *InlineResponse200279) GetStatus() string`
 
-GetSupportLink returns the SupportLink field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetSupportLinkOk
+### GetStatusOk
 
-`func (o *InlineResponse200279) GetSupportLinkOk() (*string, bool)`
+`func (o *InlineResponse200279) GetStatusOk() (*string, bool)`
 
-GetSupportLinkOk returns a tuple with the SupportLink field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSupportLink
+### SetStatus
 
-`func (o *InlineResponse200279) SetSupportLink(v string)`
+`func (o *InlineResponse200279) SetStatus(v string)`
 
-SetSupportLink sets SupportLink field to given value.
+SetStatus sets Status field to given value.
 
-### HasSupportLink
+### HasStatus
 
-`func (o *InlineResponse200279) HasSupportLink() bool`
+`func (o *InlineResponse200279) HasStatus() bool`
 
-HasSupportLink returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
+
+### GetLastReportedAt
+
+`func (o *InlineResponse200279) GetLastReportedAt() string`
+
+GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
+
+### GetLastReportedAtOk
+
+`func (o *InlineResponse200279) GetLastReportedAtOk() (*string, bool)`
+
+GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastReportedAt
+
+`func (o *InlineResponse200279) SetLastReportedAt(v string)`
+
+SetLastReportedAt sets LastReportedAt field to given value.
+
+### HasLastReportedAt
+
+`func (o *InlineResponse200279) HasLastReportedAt() bool`
+
+HasLastReportedAt returns a boolean if a field has been set.
+
+### GetLanIp
+
+`func (o *InlineResponse200279) GetLanIp() string`
+
+GetLanIp returns the LanIp field if non-nil, zero value otherwise.
+
+### GetLanIpOk
+
+`func (o *InlineResponse200279) GetLanIpOk() (*string, bool)`
+
+GetLanIpOk returns a tuple with the LanIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLanIp
+
+`func (o *InlineResponse200279) SetLanIp(v string)`
+
+SetLanIp sets LanIp field to given value.
+
+### HasLanIp
+
+`func (o *InlineResponse200279) HasLanIp() bool`
+
+HasLanIp returns a boolean if a field has been set.
+
+### GetGateway
+
+`func (o *InlineResponse200279) GetGateway() string`
+
+GetGateway returns the Gateway field if non-nil, zero value otherwise.
+
+### GetGatewayOk
+
+`func (o *InlineResponse200279) GetGatewayOk() (*string, bool)`
+
+GetGatewayOk returns a tuple with the Gateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGateway
+
+`func (o *InlineResponse200279) SetGateway(v string)`
+
+SetGateway sets Gateway field to given value.
+
+### HasGateway
+
+`func (o *InlineResponse200279) HasGateway() bool`
+
+HasGateway returns a boolean if a field has been set.
+
+### GetIpType
+
+`func (o *InlineResponse200279) GetIpType() string`
+
+GetIpType returns the IpType field if non-nil, zero value otherwise.
+
+### GetIpTypeOk
+
+`func (o *InlineResponse200279) GetIpTypeOk() (*string, bool)`
+
+GetIpTypeOk returns a tuple with the IpType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpType
+
+`func (o *InlineResponse200279) SetIpType(v string)`
+
+SetIpType sets IpType field to given value.
+
+### HasIpType
+
+`func (o *InlineResponse200279) HasIpType() bool`
+
+HasIpType returns a boolean if a field has been set.
+
+### GetPrimaryDns
+
+`func (o *InlineResponse200279) GetPrimaryDns() string`
+
+GetPrimaryDns returns the PrimaryDns field if non-nil, zero value otherwise.
+
+### GetPrimaryDnsOk
+
+`func (o *InlineResponse200279) GetPrimaryDnsOk() (*string, bool)`
+
+GetPrimaryDnsOk returns a tuple with the PrimaryDns field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPrimaryDns
+
+`func (o *InlineResponse200279) SetPrimaryDns(v string)`
+
+SetPrimaryDns sets PrimaryDns field to given value.
+
+### HasPrimaryDns
+
+`func (o *InlineResponse200279) HasPrimaryDns() bool`
+
+HasPrimaryDns returns a boolean if a field has been set.
+
+### GetSecondaryDns
+
+`func (o *InlineResponse200279) GetSecondaryDns() string`
+
+GetSecondaryDns returns the SecondaryDns field if non-nil, zero value otherwise.
+
+### GetSecondaryDnsOk
+
+`func (o *InlineResponse200279) GetSecondaryDnsOk() (*string, bool)`
+
+GetSecondaryDnsOk returns a tuple with the SecondaryDns field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecondaryDns
+
+`func (o *InlineResponse200279) SetSecondaryDns(v string)`
+
+SetSecondaryDns sets SecondaryDns field to given value.
+
+### HasSecondaryDns
+
+`func (o *InlineResponse200279) HasSecondaryDns() bool`
+
+HasSecondaryDns returns a boolean if a field has been set.
+
+### GetProductType
+
+`func (o *InlineResponse200279) GetProductType() string`
+
+GetProductType returns the ProductType field if non-nil, zero value otherwise.
+
+### GetProductTypeOk
+
+`func (o *InlineResponse200279) GetProductTypeOk() (*string, bool)`
+
+GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductType
+
+`func (o *InlineResponse200279) SetProductType(v string)`
+
+SetProductType sets ProductType field to given value.
+
+### HasProductType
+
+`func (o *InlineResponse200279) HasProductType() bool`
+
+HasProductType returns a boolean if a field has been set.
+
+### GetComponents
+
+`func (o *InlineResponse200279) GetComponents() OrganizationsOrganizationIdDevicesStatusesComponents`
+
+GetComponents returns the Components field if non-nil, zero value otherwise.
+
+### GetComponentsOk
+
+`func (o *InlineResponse200279) GetComponentsOk() (*OrganizationsOrganizationIdDevicesStatusesComponents, bool)`
+
+GetComponentsOk returns a tuple with the Components field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetComponents
+
+`func (o *InlineResponse200279) SetComponents(v OrganizationsOrganizationIdDevicesStatusesComponents)`
+
+SetComponents sets Components field to given value.
+
+### HasComponents
+
+`func (o *InlineResponse200279) HasComponents() bool`
+
+HasComponents returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200279) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200279) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200279) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200279) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetTags
+
+`func (o *InlineResponse200279) GetTags() []string`
+
+GetTags returns the Tags field if non-nil, zero value otherwise.
+
+### GetTagsOk
+
+`func (o *InlineResponse200279) GetTagsOk() (*[]string, bool)`
+
+GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTags
+
+`func (o *InlineResponse200279) SetTags(v []string)`
+
+SetTags sets Tags field to given value.
+
+### HasTags
+
+`func (o *InlineResponse200279) HasTags() bool`
+
+HasTags returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

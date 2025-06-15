@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Name** | **string** | The name of the new VLAN | 
 **Subnet** | Pointer to **string** | The subnet of the VLAN | [optional] 
 **ApplianceIp** | Pointer to **string** | The local IP of the appliance on the VLAN | [optional] 
-**GroupPolicyId** | Pointer to **string** | The id of the desired group policy to apply to the VLAN | [optional] 
+**GroupPolicyId** | Pointer to **NullableString** | The id of the desired group policy to apply to the VLAN | [optional] 
 **TemplateVlanType** | Pointer to **string** | Type of subnetting of the VLAN. Applicable only for template network. | [optional] [default to "same"]
 **Cidr** | Pointer to **string** | CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN. | [optional] 
 **Mask** | Pointer to **int32** | Mask used for the subnet of all bound to the template networks. Applicable only for template network. | [optional] 
@@ -153,6 +153,16 @@ SetGroupPolicyId sets GroupPolicyId field to given value.
 
 HasGroupPolicyId returns a boolean if a field has been set.
 
+### SetGroupPolicyIdNil
+
+`func (o *InlineObject74) SetGroupPolicyIdNil(b bool)`
+
+ SetGroupPolicyIdNil sets the value for GroupPolicyId to be an explicit nil
+
+### UnsetGroupPolicyId
+`func (o *InlineObject74) UnsetGroupPolicyId()`
+
+UnsetGroupPolicyId ensures that no value is present for GroupPolicyId, not even an explicit nil
 ### GetTemplateVlanType
 
 `func (o *InlineObject74) GetTemplateVlanType() string`

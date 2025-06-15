@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VlanProfile** | Pointer to [**NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile**](NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile.md) |  | [optional] 
-**Serials** | **[]string** | Array of Device Serials | 
-**StackIds** | **[]string** | Array of Switch Stack IDs | 
+**RetainConfigs** | Pointer to **bool** | Optional boolean to retain all the current configs given by the template. | [optional] 
 
 ## Methods
 
 ### NewInlineObject170
 
-`func NewInlineObject170(serials []string, stackIds []string, ) *InlineObject170`
+`func NewInlineObject170() *InlineObject170`
 
 NewInlineObject170 instantiates a new InlineObject170 object
 This constructor will assign default values to properties that have it defined,
@@ -27,70 +25,30 @@ NewInlineObject170WithDefaults instantiates a new InlineObject170 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlanProfile
+### GetRetainConfigs
 
-`func (o *InlineObject170) GetVlanProfile() NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile`
+`func (o *InlineObject170) GetRetainConfigs() bool`
 
-GetVlanProfile returns the VlanProfile field if non-nil, zero value otherwise.
+GetRetainConfigs returns the RetainConfigs field if non-nil, zero value otherwise.
 
-### GetVlanProfileOk
+### GetRetainConfigsOk
 
-`func (o *InlineObject170) GetVlanProfileOk() (*NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile, bool)`
+`func (o *InlineObject170) GetRetainConfigsOk() (*bool, bool)`
 
-GetVlanProfileOk returns a tuple with the VlanProfile field if it's non-nil, zero value otherwise
+GetRetainConfigsOk returns a tuple with the RetainConfigs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlanProfile
+### SetRetainConfigs
 
-`func (o *InlineObject170) SetVlanProfile(v NetworksNetworkIdVlanProfilesAssignmentsReassignVlanProfile)`
+`func (o *InlineObject170) SetRetainConfigs(v bool)`
 
-SetVlanProfile sets VlanProfile field to given value.
+SetRetainConfigs sets RetainConfigs field to given value.
 
-### HasVlanProfile
+### HasRetainConfigs
 
-`func (o *InlineObject170) HasVlanProfile() bool`
+`func (o *InlineObject170) HasRetainConfigs() bool`
 
-HasVlanProfile returns a boolean if a field has been set.
-
-### GetSerials
-
-`func (o *InlineObject170) GetSerials() []string`
-
-GetSerials returns the Serials field if non-nil, zero value otherwise.
-
-### GetSerialsOk
-
-`func (o *InlineObject170) GetSerialsOk() (*[]string, bool)`
-
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerials
-
-`func (o *InlineObject170) SetSerials(v []string)`
-
-SetSerials sets Serials field to given value.
-
-
-### GetStackIds
-
-`func (o *InlineObject170) GetStackIds() []string`
-
-GetStackIds returns the StackIds field if non-nil, zero value otherwise.
-
-### GetStackIdsOk
-
-`func (o *InlineObject170) GetStackIdsOk() (*[]string, bool)`
-
-GetStackIdsOk returns a tuple with the StackIds field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStackIds
-
-`func (o *InlineObject170) SetStackIds(v []string)`
-
-SetStackIds sets StackIds field to given value.
-
+HasRetainConfigs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

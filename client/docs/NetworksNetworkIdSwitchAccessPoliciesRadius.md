@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **FailedAuthVlanId** | Pointer to **int32** | VLAN that clients will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
 **ReAuthenticationInterval** | Pointer to **int32** | Re-authentication period in seconds. Will be null if hostMode is Multi-Auth | [optional] 
 **Cache** | Pointer to [**NetworksNetworkIdSwitchAccessPoliciesRadiusCache**](NetworksNetworkIdSwitchAccessPoliciesRadiusCache.md) |  | [optional] 
+**Authentication** | Pointer to **map[string]interface{}** | Object for authentication mode settings | [optional] 
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetCache sets Cache field to given value.
 `func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) HasCache() bool`
 
 HasCache returns a boolean if a field has been set.
+
+### GetAuthentication
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetAuthentication() map[string]interface{}`
+
+GetAuthentication returns the Authentication field if non-nil, zero value otherwise.
+
+### GetAuthenticationOk
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) GetAuthenticationOk() (*map[string]interface{}, bool)`
+
+GetAuthenticationOk returns a tuple with the Authentication field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAuthentication
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) SetAuthentication(v map[string]interface{})`
+
+SetAuthentication sets Authentication field to given value.
+
+### HasAuthentication
+
+`func (o *NetworksNetworkIdSwitchAccessPoliciesRadius) HasAuthentication() bool`
+
+HasAuthentication returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

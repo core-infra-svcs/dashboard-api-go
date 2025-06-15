@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
-**SharedSecret** | Pointer to **string** | A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki. | [optional] 
-**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate.md) |  | [optional] 
+**Name** | **string** | Name of the profile, string length must be from 1 to 255 characters | 
+**VlanNames** | [**[]NetworksNetworkIdVlanProfilesVlanNames1**](NetworksNetworkIdVlanProfilesVlanNames1.md) | An array of named VLANs | 
+**VlanGroups** | [**[]NetworksNetworkIdVlanProfilesVlanGroups1**](NetworksNetworkIdVlanProfilesVlanGroups1.md) | An array of VLAN groups | 
 
 ## Methods
 
 ### NewInlineObject173
 
-`func NewInlineObject173() *InlineObject173`
+`func NewInlineObject173(name string, vlanNames []NetworksNetworkIdVlanProfilesVlanNames1, vlanGroups []NetworksNetworkIdVlanProfilesVlanGroups1, ) *InlineObject173`
 
 NewInlineObject173 instantiates a new InlineObject173 object
 This constructor will assign default values to properties that have it defined,
@@ -46,61 +46,46 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
-### HasName
 
-`func (o *InlineObject173) HasName() bool`
+### GetVlanNames
 
-HasName returns a boolean if a field has been set.
+`func (o *InlineObject173) GetVlanNames() []NetworksNetworkIdVlanProfilesVlanNames1`
 
-### GetSharedSecret
+GetVlanNames returns the VlanNames field if non-nil, zero value otherwise.
 
-`func (o *InlineObject173) GetSharedSecret() string`
+### GetVlanNamesOk
 
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+`func (o *InlineObject173) GetVlanNamesOk() (*[]NetworksNetworkIdVlanProfilesVlanNames1, bool)`
 
-### GetSharedSecretOk
-
-`func (o *InlineObject173) GetSharedSecretOk() (*string, bool)`
-
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+GetVlanNamesOk returns a tuple with the VlanNames field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSharedSecret
+### SetVlanNames
 
-`func (o *InlineObject173) SetSharedSecret(v string)`
+`func (o *InlineObject173) SetVlanNames(v []NetworksNetworkIdVlanProfilesVlanNames1)`
 
-SetSharedSecret sets SharedSecret field to given value.
+SetVlanNames sets VlanNames field to given value.
 
-### HasSharedSecret
 
-`func (o *InlineObject173) HasSharedSecret() bool`
+### GetVlanGroups
 
-HasSharedSecret returns a boolean if a field has been set.
+`func (o *InlineObject173) GetVlanGroups() []NetworksNetworkIdVlanProfilesVlanGroups1`
 
-### GetPayloadTemplate
+GetVlanGroups returns the VlanGroups field if non-nil, zero value otherwise.
 
-`func (o *InlineObject173) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate`
+### GetVlanGroupsOk
 
-GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
+`func (o *InlineObject173) GetVlanGroupsOk() (*[]NetworksNetworkIdVlanProfilesVlanGroups1, bool)`
 
-### GetPayloadTemplateOk
-
-`func (o *InlineObject173) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate, bool)`
-
-GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
+GetVlanGroupsOk returns a tuple with the VlanGroups field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPayloadTemplate
+### SetVlanGroups
 
-`func (o *InlineObject173) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersHttpServerIdPayloadTemplate)`
+`func (o *InlineObject173) SetVlanGroups(v []NetworksNetworkIdVlanProfilesVlanGroups1)`
 
-SetPayloadTemplate sets PayloadTemplate field to given value.
+SetVlanGroups sets VlanGroups field to given value.
 
-### HasPayloadTemplate
-
-`func (o *InlineObject173) HasPayloadTemplate() bool`
-
-HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

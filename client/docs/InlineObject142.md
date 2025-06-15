@@ -4,13 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mappings** | [**[]NetworksNetworkIdSwitchDscpToCosMappingsMappings**](NetworksNetworkIdSwitchDscpToCosMappingsMappings.md) | An array of DSCP to CoS mappings. An empty array will reset the mappings to default. | 
+**Mac** | **string** | The mac address of the trusted server being added | 
+**Vlan** | **int32** | The VLAN of the trusted server being added. It must be between 1 and 4094 | 
+**Ipv4** | [**NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41**](NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41.md) |  | 
 
 ## Methods
 
 ### NewInlineObject142
 
-`func NewInlineObject142(mappings []NetworksNetworkIdSwitchDscpToCosMappingsMappings, ) *InlineObject142`
+`func NewInlineObject142(mac string, vlan int32, ipv4 NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41, ) *InlineObject142`
 
 NewInlineObject142 instantiates a new InlineObject142 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +27,64 @@ NewInlineObject142WithDefaults instantiates a new InlineObject142 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMappings
+### GetMac
 
-`func (o *InlineObject142) GetMappings() []NetworksNetworkIdSwitchDscpToCosMappingsMappings`
+`func (o *InlineObject142) GetMac() string`
 
-GetMappings returns the Mappings field if non-nil, zero value otherwise.
+GetMac returns the Mac field if non-nil, zero value otherwise.
 
-### GetMappingsOk
+### GetMacOk
 
-`func (o *InlineObject142) GetMappingsOk() (*[]NetworksNetworkIdSwitchDscpToCosMappingsMappings, bool)`
+`func (o *InlineObject142) GetMacOk() (*string, bool)`
 
-GetMappingsOk returns a tuple with the Mappings field if it's non-nil, zero value otherwise
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMappings
+### SetMac
 
-`func (o *InlineObject142) SetMappings(v []NetworksNetworkIdSwitchDscpToCosMappingsMappings)`
+`func (o *InlineObject142) SetMac(v string)`
 
-SetMappings sets Mappings field to given value.
+SetMac sets Mac field to given value.
+
+
+### GetVlan
+
+`func (o *InlineObject142) GetVlan() int32`
+
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
+
+### GetVlanOk
+
+`func (o *InlineObject142) GetVlanOk() (*int32, bool)`
+
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVlan
+
+`func (o *InlineObject142) SetVlan(v int32)`
+
+SetVlan sets Vlan field to given value.
+
+
+### GetIpv4
+
+`func (o *InlineObject142) GetIpv4() NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41`
+
+GetIpv4 returns the Ipv4 field if non-nil, zero value otherwise.
+
+### GetIpv4Ok
+
+`func (o *InlineObject142) GetIpv4Ok() (*NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41, bool)`
+
+GetIpv4Ok returns a tuple with the Ipv4 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv4
+
+`func (o *InlineObject142) SetIpv4(v NetworksNetworkIdSwitchDhcpServerPolicyArpInspectionTrustedServersIpv41)`
+
+SetIpv4 sets Ipv4 field to given value.
 
 
 

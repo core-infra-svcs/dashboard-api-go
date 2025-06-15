@@ -4,15 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** | The name of the configuration template | 
-**TimeZone** | Pointer to **string** | The timezone of the configuration template. For a list of allowed timezones, please see the &#39;TZ&#39; column in the table in &lt;a target&#x3D;&#39;_blank&#39; href&#x3D;&#39;https://en.wikipedia.org/wiki/List_of_tz_database_time_zones&#39;&gt;this article&lt;/a&gt;. Not applicable if copying from existing network or template | [optional] 
-**CopyFromNetworkId** | Pointer to **string** | The ID of the network or config template to copy configuration from | [optional] 
+**Swaps** | [**[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps**](OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps.md) | Each object represents a swap for one eSIM | 
 
 ## Methods
 
 ### NewInlineObject248
 
-`func NewInlineObject248(name string, ) *InlineObject248`
+`func NewInlineObject248(swaps []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, ) *InlineObject248`
 
 NewInlineObject248 instantiates a new InlineObject248 object
 This constructor will assign default values to properties that have it defined,
@@ -27,75 +25,25 @@ NewInlineObject248WithDefaults instantiates a new InlineObject248 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSwaps
 
-`func (o *InlineObject248) GetName() string`
+`func (o *InlineObject248) GetSwaps() []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSwaps returns the Swaps field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSwapsOk
 
-`func (o *InlineObject248) GetNameOk() (*string, bool)`
+`func (o *InlineObject248) GetSwapsOk() (*[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSwaps
 
-`func (o *InlineObject248) SetName(v string)`
+`func (o *InlineObject248) SetSwaps(v []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps)`
 
-SetName sets Name field to given value.
+SetSwaps sets Swaps field to given value.
 
-
-### GetTimeZone
-
-`func (o *InlineObject248) GetTimeZone() string`
-
-GetTimeZone returns the TimeZone field if non-nil, zero value otherwise.
-
-### GetTimeZoneOk
-
-`func (o *InlineObject248) GetTimeZoneOk() (*string, bool)`
-
-GetTimeZoneOk returns a tuple with the TimeZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTimeZone
-
-`func (o *InlineObject248) SetTimeZone(v string)`
-
-SetTimeZone sets TimeZone field to given value.
-
-### HasTimeZone
-
-`func (o *InlineObject248) HasTimeZone() bool`
-
-HasTimeZone returns a boolean if a field has been set.
-
-### GetCopyFromNetworkId
-
-`func (o *InlineObject248) GetCopyFromNetworkId() string`
-
-GetCopyFromNetworkId returns the CopyFromNetworkId field if non-nil, zero value otherwise.
-
-### GetCopyFromNetworkIdOk
-
-`func (o *InlineObject248) GetCopyFromNetworkIdOk() (*string, bool)`
-
-GetCopyFromNetworkIdOk returns a tuple with the CopyFromNetworkId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCopyFromNetworkId
-
-`func (o *InlineObject248) SetCopyFromNetworkId(v string)`
-
-SetCopyFromNetworkId sets CopyFromNetworkId field to given value.
-
-### HasCopyFromNetworkId
-
-`func (o *InlineObject248) HasCopyFromNetworkId() bool`
-
-HasCopyFromNetworkId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Swaps** | [**[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps**](OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps.md) | Each object represents a swap for one eSIM | 
+**Status** | Pointer to **string** | Status the eSIM will be updated to | [optional] 
 
 ## Methods
 
 ### NewInlineObject245
 
-`func NewInlineObject245(swaps []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, ) *InlineObject245`
+`func NewInlineObject245() *InlineObject245`
 
 NewInlineObject245 instantiates a new InlineObject245 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject245WithDefaults instantiates a new InlineObject245 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwaps
+### GetStatus
 
-`func (o *InlineObject245) GetSwaps() []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps`
+`func (o *InlineObject245) GetStatus() string`
 
-GetSwaps returns the Swaps field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetSwapsOk
+### GetStatusOk
 
-`func (o *InlineObject245) GetSwapsOk() (*[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, bool)`
+`func (o *InlineObject245) GetStatusOk() (*string, bool)`
 
-GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwaps
+### SetStatus
 
-`func (o *InlineObject245) SetSwaps(v []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps)`
+`func (o *InlineObject245) SetStatus(v string)`
 
-SetSwaps sets Swaps field to given value.
+SetStatus sets Status field to given value.
 
+### HasStatus
+
+`func (o *InlineObject245) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

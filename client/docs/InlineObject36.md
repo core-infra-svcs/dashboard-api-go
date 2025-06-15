@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Uuid** | Pointer to **string** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s           automatically generated value. | [optional] 
-**Major** | Pointer to **int32** | Desired major value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
-**Minor** | Pointer to **int32** | Desired minor value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
+**Uuid** | Pointer to **NullableString** | Desired UUID of the beacon. If the value is set to null it will reset to Dashboard&#39;s           automatically generated value. | [optional] 
+**Major** | Pointer to **NullableInt32** | Desired major value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
+**Minor** | Pointer to **NullableInt32** | Desired minor value of the beacon. If the value is set to null it will reset to           Dashboard&#39;s automatically generated value. | [optional] 
 
 ## Methods
 
@@ -52,6 +52,16 @@ SetUuid sets Uuid field to given value.
 
 HasUuid returns a boolean if a field has been set.
 
+### SetUuidNil
+
+`func (o *InlineObject36) SetUuidNil(b bool)`
+
+ SetUuidNil sets the value for Uuid to be an explicit nil
+
+### UnsetUuid
+`func (o *InlineObject36) UnsetUuid()`
+
+UnsetUuid ensures that no value is present for Uuid, not even an explicit nil
 ### GetMajor
 
 `func (o *InlineObject36) GetMajor() int32`
@@ -77,6 +87,16 @@ SetMajor sets Major field to given value.
 
 HasMajor returns a boolean if a field has been set.
 
+### SetMajorNil
+
+`func (o *InlineObject36) SetMajorNil(b bool)`
+
+ SetMajorNil sets the value for Major to be an explicit nil
+
+### UnsetMajor
+`func (o *InlineObject36) UnsetMajor()`
+
+UnsetMajor ensures that no value is present for Major, not even an explicit nil
 ### GetMinor
 
 `func (o *InlineObject36) GetMinor() int32`
@@ -102,6 +122,16 @@ SetMinor sets Minor field to given value.
 
 HasMinor returns a boolean if a field has been set.
 
+### SetMinorNil
+
+`func (o *InlineObject36) SetMinorNil(b bool)`
+
+ SetMinorNil sets the value for Minor to be an explicit nil
+
+### UnsetMinor
+`func (o *InlineObject36) UnsetMinor()`
+
+UnsetMinor ensures that no value is present for Minor, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

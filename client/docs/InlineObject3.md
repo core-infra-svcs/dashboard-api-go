@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | The name of a device | [optional] 
+**Name** | Pointer to **NullableString** | The name of a device | [optional] 
 **Tags** | Pointer to **[]string** | The list of tags of a device | [optional] 
 **Lat** | Pointer to **float32** | The latitude of a device | [optional] 
 **Lng** | Pointer to **float32** | The longitude of a device | [optional] 
-**Address** | Pointer to **string** | The address of a device | [optional] 
-**Notes** | Pointer to **string** | The notes for the device. String. Limited to 255 characters. | [optional] 
+**Address** | Pointer to **NullableString** | The address of a device | [optional] 
+**Notes** | Pointer to **NullableString** | The notes for the device. String. Limited to 255 characters. | [optional] 
 **MoveMapMarker** | Pointer to **bool** | Whether or not to set the latitude and longitude of a device based on the new address. Only applies when lat and lng are not specified. | [optional] 
-**SwitchProfileId** | Pointer to **string** | The ID of a switch template to bind to the device (for available switch templates, see the &#39;Switch Templates&#39; endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template. | [optional] 
-**FloorPlanId** | Pointer to **string** | The floor plan to associate to this device. null disassociates the device from the floorplan. | [optional] 
+**SwitchProfileId** | Pointer to **NullableString** | The ID of a switch template to bind to the device (for available switch templates, see the &#39;Switch Templates&#39; endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template. | [optional] 
+**FloorPlanId** | Pointer to **NullableString** | The floor plan to associate to this device. null disassociates the device from the floorplan. | [optional] 
 
 ## Methods
 
@@ -58,6 +58,16 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
+### SetNameNil
+
+`func (o *InlineObject3) SetNameNil(b bool)`
+
+ SetNameNil sets the value for Name to be an explicit nil
+
+### UnsetName
+`func (o *InlineObject3) UnsetName()`
+
+UnsetName ensures that no value is present for Name, not even an explicit nil
 ### GetTags
 
 `func (o *InlineObject3) GetTags() []string`
@@ -158,6 +168,16 @@ SetAddress sets Address field to given value.
 
 HasAddress returns a boolean if a field has been set.
 
+### SetAddressNil
+
+`func (o *InlineObject3) SetAddressNil(b bool)`
+
+ SetAddressNil sets the value for Address to be an explicit nil
+
+### UnsetAddress
+`func (o *InlineObject3) UnsetAddress()`
+
+UnsetAddress ensures that no value is present for Address, not even an explicit nil
 ### GetNotes
 
 `func (o *InlineObject3) GetNotes() string`
@@ -183,6 +203,16 @@ SetNotes sets Notes field to given value.
 
 HasNotes returns a boolean if a field has been set.
 
+### SetNotesNil
+
+`func (o *InlineObject3) SetNotesNil(b bool)`
+
+ SetNotesNil sets the value for Notes to be an explicit nil
+
+### UnsetNotes
+`func (o *InlineObject3) UnsetNotes()`
+
+UnsetNotes ensures that no value is present for Notes, not even an explicit nil
 ### GetMoveMapMarker
 
 `func (o *InlineObject3) GetMoveMapMarker() bool`
@@ -233,6 +263,16 @@ SetSwitchProfileId sets SwitchProfileId field to given value.
 
 HasSwitchProfileId returns a boolean if a field has been set.
 
+### SetSwitchProfileIdNil
+
+`func (o *InlineObject3) SetSwitchProfileIdNil(b bool)`
+
+ SetSwitchProfileIdNil sets the value for SwitchProfileId to be an explicit nil
+
+### UnsetSwitchProfileId
+`func (o *InlineObject3) UnsetSwitchProfileId()`
+
+UnsetSwitchProfileId ensures that no value is present for SwitchProfileId, not even an explicit nil
 ### GetFloorPlanId
 
 `func (o *InlineObject3) GetFloorPlanId() string`
@@ -258,6 +298,16 @@ SetFloorPlanId sets FloorPlanId field to given value.
 
 HasFloorPlanId returns a boolean if a field has been set.
 
+### SetFloorPlanIdNil
+
+`func (o *InlineObject3) SetFloorPlanIdNil(b bool)`
+
+ SetFloorPlanIdNil sets the value for FloorPlanId to be an explicit nil
+
+### UnsetFloorPlanId
+`func (o *InlineObject3) UnsetFloorPlanId()`
+
+UnsetFloorPlanId ensures that no value is present for FloorPlanId, not even an explicit nil
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

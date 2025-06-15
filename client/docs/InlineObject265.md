@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Networks** | [**[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks**](OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks.md) | List containing the network ID and the product type to disable XDR on | 
+**LimitScopeToNetworks** | Pointer to **[]string** | A list of network IDs to apply the opt-in to | [optional] 
 
 ## Methods
 
 ### NewInlineObject265
 
-`func NewInlineObject265(networks []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, ) *InlineObject265`
+`func NewInlineObject265() *InlineObject265`
 
 NewInlineObject265 instantiates a new InlineObject265 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +25,30 @@ NewInlineObject265WithDefaults instantiates a new InlineObject265 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetworks
+### GetLimitScopeToNetworks
 
-`func (o *InlineObject265) GetNetworks() []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks`
+`func (o *InlineObject265) GetLimitScopeToNetworks() []string`
 
-GetNetworks returns the Networks field if non-nil, zero value otherwise.
+GetLimitScopeToNetworks returns the LimitScopeToNetworks field if non-nil, zero value otherwise.
 
-### GetNetworksOk
+### GetLimitScopeToNetworksOk
 
-`func (o *InlineObject265) GetNetworksOk() (*[]OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks, bool)`
+`func (o *InlineObject265) GetLimitScopeToNetworksOk() (*[]string, bool)`
 
-GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
+GetLimitScopeToNetworksOk returns a tuple with the LimitScopeToNetworks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetworks
+### SetLimitScopeToNetworks
 
-`func (o *InlineObject265) SetNetworks(v []OrganizationsOrganizationIdIntegrationsXdrNetworksDisableNetworks)`
+`func (o *InlineObject265) SetLimitScopeToNetworks(v []string)`
 
-SetNetworks sets Networks field to given value.
+SetLimitScopeToNetworks sets LimitScopeToNetworks field to given value.
 
+### HasLimitScopeToNetworks
+
+`func (o *InlineObject265) HasLimitScopeToNetworks() bool`
+
+HasLimitScopeToNetworks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

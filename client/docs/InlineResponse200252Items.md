@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccountId** | Pointer to **string** | Account ID of plans to be fetched | [optional] 
-**Name** | Pointer to **string** | Rate plan name | [optional] 
+**Serial** | Pointer to **string** | Serial number | [optional] 
+**Uplink** | Pointer to [**InlineResponse200252Uplink**](InlineResponse200252Uplink.md) |  | [optional] 
+**Nameservers** | Pointer to [**NetworksNetworkIdCampusGatewayClustersNameservers**](NetworksNetworkIdCampusGatewayClustersNameservers.md) |  | [optional] 
+**Sgt** | Pointer to **int32** | Infra Security Group Tag(sgt) value for Trustsec | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse200252ItemsWithDefaults instantiates a new InlineResponse200252
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccountId
+### GetSerial
 
-`func (o *InlineResponse200252Items) GetAccountId() string`
+`func (o *InlineResponse200252Items) GetSerial() string`
 
-GetAccountId returns the AccountId field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetAccountIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200252Items) GetAccountIdOk() (*string, bool)`
+`func (o *InlineResponse200252Items) GetSerialOk() (*string, bool)`
 
-GetAccountIdOk returns a tuple with the AccountId field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccountId
+### SetSerial
 
-`func (o *InlineResponse200252Items) SetAccountId(v string)`
+`func (o *InlineResponse200252Items) SetSerial(v string)`
 
-SetAccountId sets AccountId field to given value.
+SetSerial sets Serial field to given value.
 
-### HasAccountId
+### HasSerial
 
-`func (o *InlineResponse200252Items) HasAccountId() bool`
+`func (o *InlineResponse200252Items) HasSerial() bool`
 
-HasAccountId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetName
+### GetUplink
 
-`func (o *InlineResponse200252Items) GetName() string`
+`func (o *InlineResponse200252Items) GetUplink() InlineResponse200252Uplink`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUplinkOk
 
-`func (o *InlineResponse200252Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200252Items) GetUplinkOk() (*InlineResponse200252Uplink, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUplink
 
-`func (o *InlineResponse200252Items) SetName(v string)`
+`func (o *InlineResponse200252Items) SetUplink(v InlineResponse200252Uplink)`
 
-SetName sets Name field to given value.
+SetUplink sets Uplink field to given value.
 
-### HasName
+### HasUplink
 
-`func (o *InlineResponse200252Items) HasName() bool`
+`func (o *InlineResponse200252Items) HasUplink() bool`
 
-HasName returns a boolean if a field has been set.
+HasUplink returns a boolean if a field has been set.
+
+### GetNameservers
+
+`func (o *InlineResponse200252Items) GetNameservers() NetworksNetworkIdCampusGatewayClustersNameservers`
+
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
+
+### GetNameserversOk
+
+`func (o *InlineResponse200252Items) GetNameserversOk() (*NetworksNetworkIdCampusGatewayClustersNameservers, bool)`
+
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNameservers
+
+`func (o *InlineResponse200252Items) SetNameservers(v NetworksNetworkIdCampusGatewayClustersNameservers)`
+
+SetNameservers sets Nameservers field to given value.
+
+### HasNameservers
+
+`func (o *InlineResponse200252Items) HasNameservers() bool`
+
+HasNameservers returns a boolean if a field has been set.
+
+### GetSgt
+
+`func (o *InlineResponse200252Items) GetSgt() int32`
+
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
+
+### GetSgtOk
+
+`func (o *InlineResponse200252Items) GetSgtOk() (*int32, bool)`
+
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSgt
+
+`func (o *InlineResponse200252Items) SetSgt(v int32)`
+
+SetSgt sets Sgt field to given value.
+
+### HasSgt
+
+`func (o *InlineResponse200252Items) HasSgt() bool`
+
+HasSgt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

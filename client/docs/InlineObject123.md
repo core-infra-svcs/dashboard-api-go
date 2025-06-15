@@ -4,16 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WifiMac** | Pointer to **string** | The wifiMac of the device to be modified. | [optional] 
-**Id** | Pointer to **string** | The id of the device to be modified. | [optional] 
-**Serial** | Pointer to **string** | The serial of the device to be modified. | [optional] 
-**DeviceFields** | [**NetworksNetworkIdSmDevicesFieldsDeviceFields**](NetworksNetworkIdSmDevicesFieldsDeviceFields.md) |  | 
+**Ids** | **[]string** | The ids of the devices to attempt activation lock bypass. | 
 
 ## Methods
 
 ### NewInlineObject123
 
-`func NewInlineObject123(deviceFields NetworksNetworkIdSmDevicesFieldsDeviceFields, ) *InlineObject123`
+`func NewInlineObject123(ids []string, ) *InlineObject123`
 
 NewInlineObject123 instantiates a new InlineObject123 object
 This constructor will assign default values to properties that have it defined,
@@ -28,99 +25,24 @@ NewInlineObject123WithDefaults instantiates a new InlineObject123 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetWifiMac
+### GetIds
 
-`func (o *InlineObject123) GetWifiMac() string`
+`func (o *InlineObject123) GetIds() []string`
 
-GetWifiMac returns the WifiMac field if non-nil, zero value otherwise.
+GetIds returns the Ids field if non-nil, zero value otherwise.
 
-### GetWifiMacOk
+### GetIdsOk
 
-`func (o *InlineObject123) GetWifiMacOk() (*string, bool)`
+`func (o *InlineObject123) GetIdsOk() (*[]string, bool)`
 
-GetWifiMacOk returns a tuple with the WifiMac field if it's non-nil, zero value otherwise
+GetIdsOk returns a tuple with the Ids field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetWifiMac
+### SetIds
 
-`func (o *InlineObject123) SetWifiMac(v string)`
+`func (o *InlineObject123) SetIds(v []string)`
 
-SetWifiMac sets WifiMac field to given value.
-
-### HasWifiMac
-
-`func (o *InlineObject123) HasWifiMac() bool`
-
-HasWifiMac returns a boolean if a field has been set.
-
-### GetId
-
-`func (o *InlineObject123) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *InlineObject123) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *InlineObject123) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *InlineObject123) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineObject123) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineObject123) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineObject123) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineObject123) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetDeviceFields
-
-`func (o *InlineObject123) GetDeviceFields() NetworksNetworkIdSmDevicesFieldsDeviceFields`
-
-GetDeviceFields returns the DeviceFields field if non-nil, zero value otherwise.
-
-### GetDeviceFieldsOk
-
-`func (o *InlineObject123) GetDeviceFieldsOk() (*NetworksNetworkIdSmDevicesFieldsDeviceFields, bool)`
-
-GetDeviceFieldsOk returns a tuple with the DeviceFields field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDeviceFields
-
-`func (o *InlineObject123) SetDeviceFields(v NetworksNetworkIdSmDevicesFieldsDeviceFields)`
-
-SetDeviceFields sets DeviceFields field to given value.
+SetIds sets Ids field to given value.
 
 
 

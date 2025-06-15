@@ -4,14 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the device | [optional] 
-**Model** | Pointer to **string** | Model of the device | [optional] 
-**Serial** | Pointer to **string** | Serial number of the device | [optional] 
-**Mac** | Pointer to **string** | Mac address of the device | [optional] 
-**ProductType** | Pointer to **string** | Product type of the device | [optional] 
-**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
-**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage.md) |  | [optional] 
-**Clients** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesByUsageClients**](OrganizationsOrganizationIdSummaryTopDevicesByUsageClients.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | Timestamp of the start of the interval. | [optional] 
+**Draw** | Pointer to **float32** | The PoE power draw in watts for all switch ports in the organization for the given interval. | [optional] 
 
 ## Methods
 
@@ -32,205 +26,55 @@ NewInlineResponse200323WithDefaults instantiates a new InlineResponse200323 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetTs
 
-`func (o *InlineResponse200323) GetName() string`
+`func (o *InlineResponse200323) GetTs() time.Time`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetTsOk
 
-`func (o *InlineResponse200323) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200323) GetTsOk() (*time.Time, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetTs
 
-`func (o *InlineResponse200323) SetName(v string)`
+`func (o *InlineResponse200323) SetTs(v time.Time)`
 
-SetName sets Name field to given value.
+SetTs sets Ts field to given value.
 
-### HasName
+### HasTs
 
-`func (o *InlineResponse200323) HasName() bool`
+`func (o *InlineResponse200323) HasTs() bool`
 
-HasName returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetModel
+### GetDraw
 
-`func (o *InlineResponse200323) GetModel() string`
+`func (o *InlineResponse200323) GetDraw() float32`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetDraw returns the Draw field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetDrawOk
 
-`func (o *InlineResponse200323) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200323) GetDrawOk() (*float32, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetDrawOk returns a tuple with the Draw field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetDraw
 
-`func (o *InlineResponse200323) SetModel(v string)`
+`func (o *InlineResponse200323) SetDraw(v float32)`
 
-SetModel sets Model field to given value.
+SetDraw sets Draw field to given value.
 
-### HasModel
+### HasDraw
 
-`func (o *InlineResponse200323) HasModel() bool`
+`func (o *InlineResponse200323) HasDraw() bool`
 
-HasModel returns a boolean if a field has been set.
-
-### GetSerial
-
-`func (o *InlineResponse200323) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200323) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200323) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200323) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineResponse200323) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200323) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200323) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse200323) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetProductType
-
-`func (o *InlineResponse200323) GetProductType() string`
-
-GetProductType returns the ProductType field if non-nil, zero value otherwise.
-
-### GetProductTypeOk
-
-`func (o *InlineResponse200323) GetProductTypeOk() (*string, bool)`
-
-GetProductTypeOk returns a tuple with the ProductType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProductType
-
-`func (o *InlineResponse200323) SetProductType(v string)`
-
-SetProductType sets ProductType field to given value.
-
-### HasProductType
-
-`func (o *InlineResponse200323) HasProductType() bool`
-
-HasProductType returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200323) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200323) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200323) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200323) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetUsage
-
-`func (o *InlineResponse200323) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage`
-
-GetUsage returns the Usage field if non-nil, zero value otherwise.
-
-### GetUsageOk
-
-`func (o *InlineResponse200323) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage, bool)`
-
-GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUsage
-
-`func (o *InlineResponse200323) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesByUsageUsage)`
-
-SetUsage sets Usage field to given value.
-
-### HasUsage
-
-`func (o *InlineResponse200323) HasUsage() bool`
-
-HasUsage returns a boolean if a field has been set.
-
-### GetClients
-
-`func (o *InlineResponse200323) GetClients() OrganizationsOrganizationIdSummaryTopDevicesByUsageClients`
-
-GetClients returns the Clients field if non-nil, zero value otherwise.
-
-### GetClientsOk
-
-`func (o *InlineResponse200323) GetClientsOk() (*OrganizationsOrganizationIdSummaryTopDevicesByUsageClients, bool)`
-
-GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetClients
-
-`func (o *InlineResponse200323) SetClients(v OrganizationsOrganizationIdSummaryTopDevicesByUsageClients)`
-
-SetClients sets Clients field to given value.
-
-### HasClients
-
-`func (o *InlineResponse200323) HasClients() bool`
-
-HasClients returns a boolean if a field has been set.
+HasDraw returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -35,7 +35,7 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
-    createNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject199("Name_example", "GroupPolicyId_example") // InlineObject199 | 
+    createNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject201("Name_example", "GroupPolicyId_example") // InlineObject201 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **createNetworkWirelessSsidIdentityPsk** | [**InlineObject199**](InlineObject199.md) |  | 
+ **createNetworkWirelessSsidIdentityPsk** | [**InlineObject201**](InlineObject201.md) |  | 
 
 ### Return type
 
@@ -334,7 +334,7 @@ func main() {
     networkId := "networkId_example" // string | Network ID
     number := "number_example" // string | Number
     identityPskId := "identityPskId_example" // string | Identity psk ID
-    updateNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject200() // InlineObject200 |  (optional)
+    updateNetworkWirelessSsidIdentityPsk := *openapiclient.NewInlineObject202() // InlineObject202 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 
 
 
- **updateNetworkWirelessSsidIdentityPsk** | [**InlineObject200**](InlineObject200.md) |  | 
+ **updateNetworkWirelessSsidIdentityPsk** | [**InlineObject202**](InlineObject202.md) |  | 
 
 ### Return type
 

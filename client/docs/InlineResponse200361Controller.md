@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Associated wireless LAN controller cloud ID | [optional] 
+**Serial** | Pointer to **string** | Associated wireless controller cloud ID | [optional] 
 
 ## Methods
 

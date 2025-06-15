@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200361Items**](InlineResponse200361Items.md) | Access points associated with Wireless LAN controllers | [optional] 
+**Items** | Pointer to [**[]InlineResponse200361Items**](InlineResponse200361Items.md) | List of Catalyst access points information | [optional] 
 **Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
 
 ## Methods

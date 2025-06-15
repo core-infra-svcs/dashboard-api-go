@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**X509certSha1Fingerprint** | Pointer to **string** | Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation. | [optional] 
-**SloLogoutUrl** | Pointer to **string** | Dashboard will redirect users to this URL when they sign out. | [optional] 
+**Name** | Pointer to **string** | Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only) | [optional] 
+**Cidr** | Pointer to **string** | CIDR Value of a policy object (e.g. 10.11.12.1/24\&quot;) | [optional] 
+**Fqdn** | Pointer to **string** | Fully qualified domain name of policy object (e.g. \&quot;example.com\&quot;) | [optional] 
+**Mask** | Pointer to **string** | Mask of a policy object (e.g. \&quot;255.255.0.0\&quot;) | [optional] 
+**Ip** | Pointer to **string** | IP Address of a policy object (e.g. \&quot;1.2.3.4\&quot;) | [optional] 
+**GroupIds** | Pointer to **[]string** | The IDs of policy object groups the policy object belongs to | [optional] 
 
 ## Methods
 
@@ -26,55 +30,155 @@ NewInlineObject288WithDefaults instantiates a new InlineObject288 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetX509certSha1Fingerprint
+### GetName
 
-`func (o *InlineObject288) GetX509certSha1Fingerprint() string`
+`func (o *InlineObject288) GetName() string`
 
-GetX509certSha1Fingerprint returns the X509certSha1Fingerprint field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetX509certSha1FingerprintOk
+### GetNameOk
 
-`func (o *InlineObject288) GetX509certSha1FingerprintOk() (*string, bool)`
+`func (o *InlineObject288) GetNameOk() (*string, bool)`
 
-GetX509certSha1FingerprintOk returns a tuple with the X509certSha1Fingerprint field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetX509certSha1Fingerprint
+### SetName
 
-`func (o *InlineObject288) SetX509certSha1Fingerprint(v string)`
+`func (o *InlineObject288) SetName(v string)`
 
-SetX509certSha1Fingerprint sets X509certSha1Fingerprint field to given value.
+SetName sets Name field to given value.
 
-### HasX509certSha1Fingerprint
+### HasName
 
-`func (o *InlineObject288) HasX509certSha1Fingerprint() bool`
+`func (o *InlineObject288) HasName() bool`
 
-HasX509certSha1Fingerprint returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
-### GetSloLogoutUrl
+### GetCidr
 
-`func (o *InlineObject288) GetSloLogoutUrl() string`
+`func (o *InlineObject288) GetCidr() string`
 
-GetSloLogoutUrl returns the SloLogoutUrl field if non-nil, zero value otherwise.
+GetCidr returns the Cidr field if non-nil, zero value otherwise.
 
-### GetSloLogoutUrlOk
+### GetCidrOk
 
-`func (o *InlineObject288) GetSloLogoutUrlOk() (*string, bool)`
+`func (o *InlineObject288) GetCidrOk() (*string, bool)`
 
-GetSloLogoutUrlOk returns a tuple with the SloLogoutUrl field if it's non-nil, zero value otherwise
+GetCidrOk returns a tuple with the Cidr field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSloLogoutUrl
+### SetCidr
 
-`func (o *InlineObject288) SetSloLogoutUrl(v string)`
+`func (o *InlineObject288) SetCidr(v string)`
 
-SetSloLogoutUrl sets SloLogoutUrl field to given value.
+SetCidr sets Cidr field to given value.
 
-### HasSloLogoutUrl
+### HasCidr
 
-`func (o *InlineObject288) HasSloLogoutUrl() bool`
+`func (o *InlineObject288) HasCidr() bool`
 
-HasSloLogoutUrl returns a boolean if a field has been set.
+HasCidr returns a boolean if a field has been set.
+
+### GetFqdn
+
+`func (o *InlineObject288) GetFqdn() string`
+
+GetFqdn returns the Fqdn field if non-nil, zero value otherwise.
+
+### GetFqdnOk
+
+`func (o *InlineObject288) GetFqdnOk() (*string, bool)`
+
+GetFqdnOk returns a tuple with the Fqdn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFqdn
+
+`func (o *InlineObject288) SetFqdn(v string)`
+
+SetFqdn sets Fqdn field to given value.
+
+### HasFqdn
+
+`func (o *InlineObject288) HasFqdn() bool`
+
+HasFqdn returns a boolean if a field has been set.
+
+### GetMask
+
+`func (o *InlineObject288) GetMask() string`
+
+GetMask returns the Mask field if non-nil, zero value otherwise.
+
+### GetMaskOk
+
+`func (o *InlineObject288) GetMaskOk() (*string, bool)`
+
+GetMaskOk returns a tuple with the Mask field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMask
+
+`func (o *InlineObject288) SetMask(v string)`
+
+SetMask sets Mask field to given value.
+
+### HasMask
+
+`func (o *InlineObject288) HasMask() bool`
+
+HasMask returns a boolean if a field has been set.
+
+### GetIp
+
+`func (o *InlineObject288) GetIp() string`
+
+GetIp returns the Ip field if non-nil, zero value otherwise.
+
+### GetIpOk
+
+`func (o *InlineObject288) GetIpOk() (*string, bool)`
+
+GetIpOk returns a tuple with the Ip field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIp
+
+`func (o *InlineObject288) SetIp(v string)`
+
+SetIp sets Ip field to given value.
+
+### HasIp
+
+`func (o *InlineObject288) HasIp() bool`
+
+HasIp returns a boolean if a field has been set.
+
+### GetGroupIds
+
+`func (o *InlineObject288) GetGroupIds() []string`
+
+GetGroupIds returns the GroupIds field if non-nil, zero value otherwise.
+
+### GetGroupIdsOk
+
+`func (o *InlineObject288) GetGroupIdsOk() (*[]string, bool)`
+
+GetGroupIdsOk returns a tuple with the GroupIds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroupIds
+
+`func (o *InlineObject288) SetGroupIds(v []string)`
+
+SetGroupIds sets GroupIds field to given value.
+
+### HasGroupIds
+
+`func (o *InlineObject288) HasGroupIds() bool`
+
+HasGroupIds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

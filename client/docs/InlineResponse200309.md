@@ -4,8 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200309Items**](InlineResponse200309Items.md) | Array of Limited Access Roles | [optional] 
-**Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Toggle depicting if SAML SSO settings are enabled | [optional] 
 
 ## Methods
 
@@ -26,55 +25,30 @@ NewInlineResponse200309WithDefaults instantiates a new InlineResponse200309 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetEnabled
 
-`func (o *InlineResponse200309) GetItems() []InlineResponse200309Items`
+`func (o *InlineResponse200309) GetEnabled() bool`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetEnabledOk
 
-`func (o *InlineResponse200309) GetItemsOk() (*[]InlineResponse200309Items, bool)`
+`func (o *InlineResponse200309) GetEnabledOk() (*bool, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetEnabled
 
-`func (o *InlineResponse200309) SetItems(v []InlineResponse200309Items)`
+`func (o *InlineResponse200309) SetEnabled(v bool)`
 
-SetItems sets Items field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasItems
+### HasEnabled
 
-`func (o *InlineResponse200309) HasItems() bool`
+`func (o *InlineResponse200309) HasEnabled() bool`
 
-HasItems returns a boolean if a field has been set.
-
-### GetMeta
-
-`func (o *InlineResponse200309) GetMeta() InlineResponse200222Meta`
-
-GetMeta returns the Meta field if non-nil, zero value otherwise.
-
-### GetMetaOk
-
-`func (o *InlineResponse200309) GetMetaOk() (*InlineResponse200222Meta, bool)`
-
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMeta
-
-`func (o *InlineResponse200309) SetMeta(v InlineResponse200222Meta)`
-
-SetMeta sets Meta field to given value.
-
-### HasMeta
-
-`func (o *InlineResponse200309) HasMeta() bool`
-
-HasMeta returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
