@@ -4,11 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CallbackId** | Pointer to **string** | The ID of the callback | [optional] 
-**Status** | Pointer to **string** | The status of the callback | [optional] 
-**Errors** | Pointer to **[]string** | The errors returned by the callback | [optional] 
-**CreatedBy** | Pointer to [**InlineResponse200343CreatedBy**](InlineResponse200343CreatedBy.md) |  | [optional] 
-**Webhook** | Pointer to [**InlineResponse200343Webhook**](InlineResponse200343Webhook.md) |  | [optional] 
+**AlertTypeId** | Pointer to **string** | The type ID of Meraki alert | [optional] 
+**AlertType** | Pointer to **string** | The type of Meraki alert | [optional] 
+**Example** | Pointer to [**InlineResponse200343Example**](InlineResponse200343Example.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +27,80 @@ NewInlineResponse200343WithDefaults instantiates a new InlineResponse200343 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCallbackId
+### GetAlertTypeId
 
-`func (o *InlineResponse200343) GetCallbackId() string`
+`func (o *InlineResponse200343) GetAlertTypeId() string`
 
-GetCallbackId returns the CallbackId field if non-nil, zero value otherwise.
+GetAlertTypeId returns the AlertTypeId field if non-nil, zero value otherwise.
 
-### GetCallbackIdOk
+### GetAlertTypeIdOk
 
-`func (o *InlineResponse200343) GetCallbackIdOk() (*string, bool)`
+`func (o *InlineResponse200343) GetAlertTypeIdOk() (*string, bool)`
 
-GetCallbackIdOk returns a tuple with the CallbackId field if it's non-nil, zero value otherwise
+GetAlertTypeIdOk returns a tuple with the AlertTypeId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCallbackId
+### SetAlertTypeId
 
-`func (o *InlineResponse200343) SetCallbackId(v string)`
+`func (o *InlineResponse200343) SetAlertTypeId(v string)`
 
-SetCallbackId sets CallbackId field to given value.
+SetAlertTypeId sets AlertTypeId field to given value.
 
-### HasCallbackId
+### HasAlertTypeId
 
-`func (o *InlineResponse200343) HasCallbackId() bool`
+`func (o *InlineResponse200343) HasAlertTypeId() bool`
 
-HasCallbackId returns a boolean if a field has been set.
+HasAlertTypeId returns a boolean if a field has been set.
 
-### GetStatus
+### GetAlertType
 
-`func (o *InlineResponse200343) GetStatus() string`
+`func (o *InlineResponse200343) GetAlertType() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetAlertType returns the AlertType field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetAlertTypeOk
 
-`func (o *InlineResponse200343) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse200343) GetAlertTypeOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetAlertTypeOk returns a tuple with the AlertType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetAlertType
 
-`func (o *InlineResponse200343) SetStatus(v string)`
+`func (o *InlineResponse200343) SetAlertType(v string)`
 
-SetStatus sets Status field to given value.
+SetAlertType sets AlertType field to given value.
 
-### HasStatus
+### HasAlertType
 
-`func (o *InlineResponse200343) HasStatus() bool`
+`func (o *InlineResponse200343) HasAlertType() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasAlertType returns a boolean if a field has been set.
 
-### GetErrors
+### GetExample
 
-`func (o *InlineResponse200343) GetErrors() []string`
+`func (o *InlineResponse200343) GetExample() InlineResponse200343Example`
 
-GetErrors returns the Errors field if non-nil, zero value otherwise.
+GetExample returns the Example field if non-nil, zero value otherwise.
 
-### GetErrorsOk
+### GetExampleOk
 
-`func (o *InlineResponse200343) GetErrorsOk() (*[]string, bool)`
+`func (o *InlineResponse200343) GetExampleOk() (*InlineResponse200343Example, bool)`
 
-GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise
+GetExampleOk returns a tuple with the Example field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetErrors
+### SetExample
 
-`func (o *InlineResponse200343) SetErrors(v []string)`
+`func (o *InlineResponse200343) SetExample(v InlineResponse200343Example)`
 
-SetErrors sets Errors field to given value.
+SetExample sets Example field to given value.
 
-### HasErrors
+### HasExample
 
-`func (o *InlineResponse200343) HasErrors() bool`
+`func (o *InlineResponse200343) HasExample() bool`
 
-HasErrors returns a boolean if a field has been set.
-
-### GetCreatedBy
-
-`func (o *InlineResponse200343) GetCreatedBy() InlineResponse200343CreatedBy`
-
-GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
-
-### GetCreatedByOk
-
-`func (o *InlineResponse200343) GetCreatedByOk() (*InlineResponse200343CreatedBy, bool)`
-
-GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedBy
-
-`func (o *InlineResponse200343) SetCreatedBy(v InlineResponse200343CreatedBy)`
-
-SetCreatedBy sets CreatedBy field to given value.
-
-### HasCreatedBy
-
-`func (o *InlineResponse200343) HasCreatedBy() bool`
-
-HasCreatedBy returns a boolean if a field has been set.
-
-### GetWebhook
-
-`func (o *InlineResponse200343) GetWebhook() InlineResponse200343Webhook`
-
-GetWebhook returns the Webhook field if non-nil, zero value otherwise.
-
-### GetWebhookOk
-
-`func (o *InlineResponse200343) GetWebhookOk() (*InlineResponse200343Webhook, bool)`
-
-GetWebhookOk returns a tuple with the Webhook field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetWebhook
-
-`func (o *InlineResponse200343) SetWebhook(v InlineResponse200343Webhook)`
-
-SetWebhook sets Webhook field to given value.
-
-### HasWebhook
-
-`func (o *InlineResponse200343) HasWebhook() bool`
-
-HasWebhook returns a boolean if a field has been set.
+HasExample returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

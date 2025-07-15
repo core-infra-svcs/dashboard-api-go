@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200370Items**](InlineResponse200370Items.md) | Access points associated with Wireless LAN controllers | [optional] 
+**Items** | Pointer to [**[]InlineResponse200370Items**](InlineResponse200370Items.md) | Overview history of wireless LAN controllers | [optional] 
 **Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
 
 ## Methods

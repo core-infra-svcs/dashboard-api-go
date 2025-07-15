@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200362Items**](InlineResponse200362Items.md) | Paginated list of scanning settings by network ID. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200362Items**](InlineResponse200362Items.md) | List of Catalyst access points information | [optional] 
 **Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
 
 ## Methods

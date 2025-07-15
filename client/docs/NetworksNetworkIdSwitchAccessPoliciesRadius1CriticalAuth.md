@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DataVlanId** | Pointer to **int32** | VLAN that clients who use data will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
 **VoiceVlanId** | Pointer to **int32** | VLAN that clients who use voice will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth | [optional] 
-**SuspendPortBounce** | Pointer to **bool** | Enable to suspend port bounce when RADIUS servers are unreachable | [optional] 
+**SuspendPortBounce** | Pointer to **bool** | Disable port bounce when RADIUS servers are unreachable | [optional] 
 **DataGroupPolicyId** | Pointer to **string** | Group policy Number for data VLAN | [optional] 
 **VoiceGroupPolicyId** | Pointer to **string** | Group policy Number for voice VLAN | [optional] 
 **DataSgtId** | Pointer to **int32** | Security Group Tag ID for data VLAN | [optional] 

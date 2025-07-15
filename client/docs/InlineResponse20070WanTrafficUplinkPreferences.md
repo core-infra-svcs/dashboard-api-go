@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TrafficFilters** | [**[]InlineResponse20070TrafficFilters**](InlineResponse20070TrafficFilters.md) | Traffic filters | 
-**PreferredUplink** | **string** | Preferred uplink for uplink preference rule. Must be one of: &#39;wan1&#39; or &#39;wan2&#39; | 
+**PreferredUplink** | **string** | Preferred uplink for uplink preference rule. Must be one of: &#39;wan1&#39; or &#39;wan2&#39;, or any other valid uplink(wanX) if it applies to the network | 
 
 ## Methods
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Networks** | Pointer to [**[]InlineResponse200292Items**](InlineResponse200292Items.md) | List of networks that have XDR enabled | [optional] 
+**Networks** | Pointer to [**[]InlineResponse200294Networks**](InlineResponse200294Networks.md) | List of networks that have XDR disabled | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetNetworks
 
-`func (o *InlineResponse200294) GetNetworks() []InlineResponse200292Items`
+`func (o *InlineResponse200294) GetNetworks() []InlineResponse200294Networks`
 
 GetNetworks returns the Networks field if non-nil, zero value otherwise.
 
 ### GetNetworksOk
 
-`func (o *InlineResponse200294) GetNetworksOk() (*[]InlineResponse200292Items, bool)`
+`func (o *InlineResponse200294) GetNetworksOk() (*[]InlineResponse200294Networks, bool)`
 
 GetNetworksOk returns a tuple with the Networks field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetworks
 
-`func (o *InlineResponse200294) SetNetworks(v []InlineResponse200292Items)`
+`func (o *InlineResponse200294) SetNetworks(v []InlineResponse200294Networks)`
 
 SetNetworks sets Networks field to given value.
 

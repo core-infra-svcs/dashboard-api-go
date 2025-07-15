@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Interface** | Pointer to **string** | Interface for the device uplink. Available options are: cellular, man1, man2, wan1, wan2 | [optional] 
-**Addresses** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceAddresses**](OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceAddresses.md) | Available addresses for the interface. | [optional] 
+**Addresses** | Pointer to [**[]OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceAddresses**](OrganizationsOrganizationIdDevicesUplinksAddressesByDeviceAddresses.md) | Available addresses for the interface. Each interface may have one ipv4 and one ipv6 address. | [optional] 
 
 ## Methods
 

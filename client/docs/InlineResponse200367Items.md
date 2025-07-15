@@ -4,16 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Unique serial number for device. | [optional] 
-**Name** | Pointer to **string** | Name of device. | [optional] 
+**EntryId** | **string** | The id of entry | 
+**CreatedAt** | Pointer to **string** | Created at timestamp for the adaptive policy group | [optional] 
+**LastUpdatedAt** | Pointer to **string** | Updated at timestamp for the adaptive policy group | [optional] 
+**Description** | Pointer to **string** | The description of mac address | [optional] 
+**Client** | Pointer to [**InlineResponse200367Client**](InlineResponse200367Client.md) |  | [optional] 
+**Ssid** | Pointer to [**InlineResponse200367Ssid**](InlineResponse200367Ssid.md) |  | [optional] 
 **Network** | Pointer to [**InlineResponse200367Network**](InlineResponse200367Network.md) |  | [optional] 
-**BasicServiceSets** | Pointer to [**[]InlineResponse200367BasicServiceSets**](InlineResponse200367BasicServiceSets.md) | Status information for wireless access points. | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200367Items
 
-`func NewInlineResponse200367Items() *InlineResponse200367Items`
+`func NewInlineResponse200367Items(entryId string, ) *InlineResponse200367Items`
 
 NewInlineResponse200367Items instantiates a new InlineResponse200367Items object
 This constructor will assign default values to properties that have it defined,
@@ -28,55 +31,150 @@ NewInlineResponse200367ItemsWithDefaults instantiates a new InlineResponse200367
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetEntryId
 
-`func (o *InlineResponse200367Items) GetSerial() string`
+`func (o *InlineResponse200367Items) GetEntryId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetEntryId returns the EntryId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetEntryIdOk
 
-`func (o *InlineResponse200367Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200367Items) GetEntryIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetEntryIdOk returns a tuple with the EntryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetEntryId
 
-`func (o *InlineResponse200367Items) SetSerial(v string)`
+`func (o *InlineResponse200367Items) SetEntryId(v string)`
 
-SetSerial sets Serial field to given value.
+SetEntryId sets EntryId field to given value.
 
-### HasSerial
 
-`func (o *InlineResponse200367Items) HasSerial() bool`
+### GetCreatedAt
 
-HasSerial returns a boolean if a field has been set.
+`func (o *InlineResponse200367Items) GetCreatedAt() string`
 
-### GetName
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse200367Items) GetName() string`
+### GetCreatedAtOk
 
-GetName returns the Name field if non-nil, zero value otherwise.
+`func (o *InlineResponse200367Items) GetCreatedAtOk() (*string, bool)`
 
-### GetNameOk
-
-`func (o *InlineResponse200367Items) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCreatedAt
 
-`func (o *InlineResponse200367Items) SetName(v string)`
+`func (o *InlineResponse200367Items) SetCreatedAt(v string)`
 
-SetName sets Name field to given value.
+SetCreatedAt sets CreatedAt field to given value.
 
-### HasName
+### HasCreatedAt
 
-`func (o *InlineResponse200367Items) HasName() bool`
+`func (o *InlineResponse200367Items) HasCreatedAt() bool`
 
-HasName returns a boolean if a field has been set.
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetLastUpdatedAt
+
+`func (o *InlineResponse200367Items) GetLastUpdatedAt() string`
+
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
+
+### GetLastUpdatedAtOk
+
+`func (o *InlineResponse200367Items) GetLastUpdatedAtOk() (*string, bool)`
+
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastUpdatedAt
+
+`func (o *InlineResponse200367Items) SetLastUpdatedAt(v string)`
+
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
+
+### HasLastUpdatedAt
+
+`func (o *InlineResponse200367Items) HasLastUpdatedAt() bool`
+
+HasLastUpdatedAt returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *InlineResponse200367Items) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *InlineResponse200367Items) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *InlineResponse200367Items) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *InlineResponse200367Items) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetClient
+
+`func (o *InlineResponse200367Items) GetClient() InlineResponse200367Client`
+
+GetClient returns the Client field if non-nil, zero value otherwise.
+
+### GetClientOk
+
+`func (o *InlineResponse200367Items) GetClientOk() (*InlineResponse200367Client, bool)`
+
+GetClientOk returns a tuple with the Client field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetClient
+
+`func (o *InlineResponse200367Items) SetClient(v InlineResponse200367Client)`
+
+SetClient sets Client field to given value.
+
+### HasClient
+
+`func (o *InlineResponse200367Items) HasClient() bool`
+
+HasClient returns a boolean if a field has been set.
+
+### GetSsid
+
+`func (o *InlineResponse200367Items) GetSsid() InlineResponse200367Ssid`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineResponse200367Items) GetSsidOk() (*InlineResponse200367Ssid, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineResponse200367Items) SetSsid(v InlineResponse200367Ssid)`
+
+SetSsid sets Ssid field to given value.
+
+### HasSsid
+
+`func (o *InlineResponse200367Items) HasSsid() bool`
+
+HasSsid returns a boolean if a field has been set.
 
 ### GetNetwork
 
@@ -102,31 +200,6 @@ SetNetwork sets Network field to given value.
 `func (o *InlineResponse200367Items) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
-
-### GetBasicServiceSets
-
-`func (o *InlineResponse200367Items) GetBasicServiceSets() []InlineResponse200367BasicServiceSets`
-
-GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
-
-### GetBasicServiceSetsOk
-
-`func (o *InlineResponse200367Items) GetBasicServiceSetsOk() (*[]InlineResponse200367BasicServiceSets, bool)`
-
-GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetBasicServiceSets
-
-`func (o *InlineResponse200367Items) SetBasicServiceSets(v []InlineResponse200367BasicServiceSets)`
-
-SetBasicServiceSets sets BasicServiceSets field to given value.
-
-### HasBasicServiceSets
-
-`func (o *InlineResponse200367Items) HasBasicServiceSets() bool`
-
-HasBasicServiceSets returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

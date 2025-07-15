@@ -15,6 +15,9 @@ Name | Type | Description | Notes
 **NextHopIp** | Pointer to **string** | The IPv4 address of the neighbor that will establish a TCP session with the appliance | [optional] 
 **TtlSecurity** | Pointer to [**InlineResponse20075TtlSecurity**](InlineResponse20075TtlSecurity.md) |  | [optional] 
 **Authentication** | Pointer to [**InlineResponse20075Authentication**](InlineResponse20075Authentication.md) |  | [optional] 
+**MultiExitDiscriminator** | Pointer to **int32** | Multi-exit Discriminator (MED) metric associated with routes received from the neighbor | [optional] 
+**PathPrepend** | Pointer to **[]int32** | Values to prepend to the AS_PATH BGP Attribute associated with routes received from the neighbor | [optional] 
+**Weight** | Pointer to **int32** | Local weight for routes received from the neighbor | [optional] 
 
 ## Methods
 
@@ -309,6 +312,81 @@ SetAuthentication sets Authentication field to given value.
 `func (o *InlineResponse20075Neighbors) HasAuthentication() bool`
 
 HasAuthentication returns a boolean if a field has been set.
+
+### GetMultiExitDiscriminator
+
+`func (o *InlineResponse20075Neighbors) GetMultiExitDiscriminator() int32`
+
+GetMultiExitDiscriminator returns the MultiExitDiscriminator field if non-nil, zero value otherwise.
+
+### GetMultiExitDiscriminatorOk
+
+`func (o *InlineResponse20075Neighbors) GetMultiExitDiscriminatorOk() (*int32, bool)`
+
+GetMultiExitDiscriminatorOk returns a tuple with the MultiExitDiscriminator field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMultiExitDiscriminator
+
+`func (o *InlineResponse20075Neighbors) SetMultiExitDiscriminator(v int32)`
+
+SetMultiExitDiscriminator sets MultiExitDiscriminator field to given value.
+
+### HasMultiExitDiscriminator
+
+`func (o *InlineResponse20075Neighbors) HasMultiExitDiscriminator() bool`
+
+HasMultiExitDiscriminator returns a boolean if a field has been set.
+
+### GetPathPrepend
+
+`func (o *InlineResponse20075Neighbors) GetPathPrepend() []int32`
+
+GetPathPrepend returns the PathPrepend field if non-nil, zero value otherwise.
+
+### GetPathPrependOk
+
+`func (o *InlineResponse20075Neighbors) GetPathPrependOk() (*[]int32, bool)`
+
+GetPathPrependOk returns a tuple with the PathPrepend field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPathPrepend
+
+`func (o *InlineResponse20075Neighbors) SetPathPrepend(v []int32)`
+
+SetPathPrepend sets PathPrepend field to given value.
+
+### HasPathPrepend
+
+`func (o *InlineResponse20075Neighbors) HasPathPrepend() bool`
+
+HasPathPrepend returns a boolean if a field has been set.
+
+### GetWeight
+
+`func (o *InlineResponse20075Neighbors) GetWeight() int32`
+
+GetWeight returns the Weight field if non-nil, zero value otherwise.
+
+### GetWeightOk
+
+`func (o *InlineResponse20075Neighbors) GetWeightOk() (*int32, bool)`
+
+GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWeight
+
+`func (o *InlineResponse20075Neighbors) SetWeight(v int32)`
+
+SetWeight sets Weight field to given value.
+
+### HasWeight
+
+`func (o *InlineResponse20075Neighbors) HasWeight() bool`
+
+HasWeight returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

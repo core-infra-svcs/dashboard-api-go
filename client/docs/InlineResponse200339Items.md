@@ -7,9 +7,9 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | The name of the switch. | [optional] 
 **Serial** | Pointer to **string** | The serial number of the switch. | [optional] 
 **Mac** | Pointer to **string** | The MAC address of the switch. | [optional] 
-**Network** | Pointer to [**InlineResponse200335Network**](InlineResponse200335Network.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse200336Network**](InlineResponse200336Network.md) |  | [optional] 
 **Model** | Pointer to **string** | The model of the switch. | [optional] 
-**Ports** | Pointer to [**[]InlineResponse200339Ports**](InlineResponse200339Ports.md) | Ports belonging to the switch with LLDP/CDP discovery info. | [optional] 
+**Ports** | Pointer to [**[]InlineResponse200339Ports**](InlineResponse200339Ports.md) | The statuses of the ports on the switch. | [optional] 
 
 ## Methods
 
@@ -107,20 +107,20 @@ HasMac returns a boolean if a field has been set.
 
 ### GetNetwork
 
-`func (o *InlineResponse200339Items) GetNetwork() InlineResponse200335Network`
+`func (o *InlineResponse200339Items) GetNetwork() InlineResponse200336Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200339Items) GetNetworkOk() (*InlineResponse200335Network, bool)`
+`func (o *InlineResponse200339Items) GetNetworkOk() (*InlineResponse200336Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200339Items) SetNetwork(v InlineResponse200335Network)`
+`func (o *InlineResponse200339Items) SetNetwork(v InlineResponse200336Network)`
 
 SetNetwork sets Network field to given value.
 

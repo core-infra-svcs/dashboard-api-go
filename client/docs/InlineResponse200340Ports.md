@@ -5,7 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PortId** | Pointer to **string** | The string identifier of this port on the switch. This is commonly just the port number but may contain additional identifying information such as the slot and module-type if the port is located on a port module. | [optional] 
-**Intervals** | Pointer to [**[]InlineResponse200340Intervals**](InlineResponse200340Intervals.md) | An array of intervals for a port with bandwidth, traffic, and power usage data. | [optional] 
+**LastUpdatedAt** | Pointer to **string** | Timestamp for most recent discovery info on this port. | [optional] 
+**Cdp** | Pointer to [**[]InlineResponse200340Cdp**](InlineResponse200340Cdp.md) | The Cisco Discovery Protocol (CDP) information of the connected device. | [optional] 
+**Lldp** | Pointer to [**[]InlineResponse200340Lldp**](InlineResponse200340Lldp.md) | The Link Layer Discovery Protocol (LLDP) information of the connected device. | [optional] 
 
 ## Methods
 
@@ -51,30 +53,80 @@ SetPortId sets PortId field to given value.
 
 HasPortId returns a boolean if a field has been set.
 
-### GetIntervals
+### GetLastUpdatedAt
 
-`func (o *InlineResponse200340Ports) GetIntervals() []InlineResponse200340Intervals`
+`func (o *InlineResponse200340Ports) GetLastUpdatedAt() string`
 
-GetIntervals returns the Intervals field if non-nil, zero value otherwise.
+GetLastUpdatedAt returns the LastUpdatedAt field if non-nil, zero value otherwise.
 
-### GetIntervalsOk
+### GetLastUpdatedAtOk
 
-`func (o *InlineResponse200340Ports) GetIntervalsOk() (*[]InlineResponse200340Intervals, bool)`
+`func (o *InlineResponse200340Ports) GetLastUpdatedAtOk() (*string, bool)`
 
-GetIntervalsOk returns a tuple with the Intervals field if it's non-nil, zero value otherwise
+GetLastUpdatedAtOk returns a tuple with the LastUpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIntervals
+### SetLastUpdatedAt
 
-`func (o *InlineResponse200340Ports) SetIntervals(v []InlineResponse200340Intervals)`
+`func (o *InlineResponse200340Ports) SetLastUpdatedAt(v string)`
 
-SetIntervals sets Intervals field to given value.
+SetLastUpdatedAt sets LastUpdatedAt field to given value.
 
-### HasIntervals
+### HasLastUpdatedAt
 
-`func (o *InlineResponse200340Ports) HasIntervals() bool`
+`func (o *InlineResponse200340Ports) HasLastUpdatedAt() bool`
 
-HasIntervals returns a boolean if a field has been set.
+HasLastUpdatedAt returns a boolean if a field has been set.
+
+### GetCdp
+
+`func (o *InlineResponse200340Ports) GetCdp() []InlineResponse200340Cdp`
+
+GetCdp returns the Cdp field if non-nil, zero value otherwise.
+
+### GetCdpOk
+
+`func (o *InlineResponse200340Ports) GetCdpOk() (*[]InlineResponse200340Cdp, bool)`
+
+GetCdpOk returns a tuple with the Cdp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCdp
+
+`func (o *InlineResponse200340Ports) SetCdp(v []InlineResponse200340Cdp)`
+
+SetCdp sets Cdp field to given value.
+
+### HasCdp
+
+`func (o *InlineResponse200340Ports) HasCdp() bool`
+
+HasCdp returns a boolean if a field has been set.
+
+### GetLldp
+
+`func (o *InlineResponse200340Ports) GetLldp() []InlineResponse200340Lldp`
+
+GetLldp returns the Lldp field if non-nil, zero value otherwise.
+
+### GetLldpOk
+
+`func (o *InlineResponse200340Ports) GetLldpOk() (*[]InlineResponse200340Lldp, bool)`
+
+GetLldpOk returns a tuple with the Lldp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLldp
+
+`func (o *InlineResponse200340Ports) SetLldp(v []InlineResponse200340Lldp)`
+
+SetLldp sets Lldp field to given value.
+
+### HasLldp
+
+`func (o *InlineResponse200340Ports) HasLldp() bool`
+
+HasLldp returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

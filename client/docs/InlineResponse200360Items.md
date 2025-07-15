@@ -4,14 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Unique serial number for the device | [optional] 
-**Model** | Pointer to **string** | Model of the device | [optional] 
-**Name** | Pointer to **string** | Name of the device | [optional] 
-**Mac** | Pointer to **string** | MAC address of the device | [optional] 
-**Tags** | Pointer to **[]string** | List of custom tags for the device | [optional] 
-**Network** | Pointer to [**InlineResponse200281Network**](InlineResponse200281Network.md) |  | [optional] 
-**CpuCount** | Pointer to **int32** | Number of CPU cores on the device | [optional] 
-**Series** | Pointer to [**[]InlineResponse200360Series**](InlineResponse200360Series.md) | Series of cpu load average measurements on the device | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority | [optional] 
+**Crl** | Pointer to **string** | The PEM encoded CRL for the Certificate Authority | [optional] 
 
 ## Methods
 
@@ -32,205 +26,55 @@ NewInlineResponse200360ItemsWithDefaults instantiates a new InlineResponse200360
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerial
+### GetCertificateAuthorityId
 
-`func (o *InlineResponse200360Items) GetSerial() string`
+`func (o *InlineResponse200360Items) GetCertificateAuthorityId() string`
 
-GetSerial returns the Serial field if non-nil, zero value otherwise.
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-### GetSerialOk
+### GetCertificateAuthorityIdOk
 
-`func (o *InlineResponse200360Items) GetSerialOk() (*string, bool)`
+`func (o *InlineResponse200360Items) GetCertificateAuthorityIdOk() (*string, bool)`
 
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerial
+### SetCertificateAuthorityId
 
-`func (o *InlineResponse200360Items) SetSerial(v string)`
+`func (o *InlineResponse200360Items) SetCertificateAuthorityId(v string)`
 
-SetSerial sets Serial field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
-### HasSerial
+### HasCertificateAuthorityId
 
-`func (o *InlineResponse200360Items) HasSerial() bool`
+`func (o *InlineResponse200360Items) HasCertificateAuthorityId() bool`
 
-HasSerial returns a boolean if a field has been set.
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
-### GetModel
+### GetCrl
 
-`func (o *InlineResponse200360Items) GetModel() string`
+`func (o *InlineResponse200360Items) GetCrl() string`
 
-GetModel returns the Model field if non-nil, zero value otherwise.
+GetCrl returns the Crl field if non-nil, zero value otherwise.
 
-### GetModelOk
+### GetCrlOk
 
-`func (o *InlineResponse200360Items) GetModelOk() (*string, bool)`
+`func (o *InlineResponse200360Items) GetCrlOk() (*string, bool)`
 
-GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+GetCrlOk returns a tuple with the Crl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetModel
+### SetCrl
 
-`func (o *InlineResponse200360Items) SetModel(v string)`
+`func (o *InlineResponse200360Items) SetCrl(v string)`
 
-SetModel sets Model field to given value.
+SetCrl sets Crl field to given value.
 
-### HasModel
+### HasCrl
 
-`func (o *InlineResponse200360Items) HasModel() bool`
+`func (o *InlineResponse200360Items) HasCrl() bool`
 
-HasModel returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200360Items) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200360Items) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200360Items) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200360Items) HasName() bool`
-
-HasName returns a boolean if a field has been set.
-
-### GetMac
-
-`func (o *InlineResponse200360Items) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *InlineResponse200360Items) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *InlineResponse200360Items) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *InlineResponse200360Items) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetTags
-
-`func (o *InlineResponse200360Items) GetTags() []string`
-
-GetTags returns the Tags field if non-nil, zero value otherwise.
-
-### GetTagsOk
-
-`func (o *InlineResponse200360Items) GetTagsOk() (*[]string, bool)`
-
-GetTagsOk returns a tuple with the Tags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTags
-
-`func (o *InlineResponse200360Items) SetTags(v []string)`
-
-SetTags sets Tags field to given value.
-
-### HasTags
-
-`func (o *InlineResponse200360Items) HasTags() bool`
-
-HasTags returns a boolean if a field has been set.
-
-### GetNetwork
-
-`func (o *InlineResponse200360Items) GetNetwork() InlineResponse200281Network`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *InlineResponse200360Items) GetNetworkOk() (*InlineResponse200281Network, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *InlineResponse200360Items) SetNetwork(v InlineResponse200281Network)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *InlineResponse200360Items) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
-
-### GetCpuCount
-
-`func (o *InlineResponse200360Items) GetCpuCount() int32`
-
-GetCpuCount returns the CpuCount field if non-nil, zero value otherwise.
-
-### GetCpuCountOk
-
-`func (o *InlineResponse200360Items) GetCpuCountOk() (*int32, bool)`
-
-GetCpuCountOk returns a tuple with the CpuCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCpuCount
-
-`func (o *InlineResponse200360Items) SetCpuCount(v int32)`
-
-SetCpuCount sets CpuCount field to given value.
-
-### HasCpuCount
-
-`func (o *InlineResponse200360Items) HasCpuCount() bool`
-
-HasCpuCount returns a boolean if a field has been set.
-
-### GetSeries
-
-`func (o *InlineResponse200360Items) GetSeries() []InlineResponse200360Series`
-
-GetSeries returns the Series field if non-nil, zero value otherwise.
-
-### GetSeriesOk
-
-`func (o *InlineResponse200360Items) GetSeriesOk() (*[]InlineResponse200360Series, bool)`
-
-GetSeriesOk returns a tuple with the Series field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeries
-
-`func (o *InlineResponse200360Items) SetSeries(v []InlineResponse200360Series)`
-
-SetSeries sets Series field to given value.
-
-### HasSeries
-
-`func (o *InlineResponse200360Items) HasSeries() bool`
-
-HasSeries returns a boolean if a field has been set.
+HasCrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **TrafficFilters** | [**[]InlineResponse20070TrafficFilters1**](InlineResponse20070TrafficFilters1.md) | Traffic filters | 
-**PreferredUplink** | **string** | Preferred uplink for uplink preference rule. Must be one of: &#39;wan1&#39;, &#39;wan2&#39;, &#39;bestForVoIP&#39;, &#39;loadBalancing&#39; or &#39;defaultUplink&#39; | 
+**PreferredUplink** | **string** | Preferred uplink for uplink preference rule. Must be one of: &#39;wan1&#39;, &#39;wan2&#39;, &#39;bestForVoIP&#39;, &#39;loadBalancing&#39; or &#39;defaultUplink&#39;, or any other valid uplink(wanX) if it applies to the network | 
 **FailOverCriterion** | Pointer to **string** | Fail over criterion for uplink preference rule. Must be one of: &#39;poorPerformance&#39; or &#39;uplinkDown&#39; | [optional] 
 **PerformanceClass** | Pointer to [**InlineResponse20070PerformanceClass**](InlineResponse20070PerformanceClass.md) |  | [optional] 
 

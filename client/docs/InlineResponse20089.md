@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Mac** | Pointer to **string** | The MAC address of the client | [optional] 
 **DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
 **GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
+**PoliciesBySsid** | Pointer to [**[]InlineResponse20089PoliciesBySsid**](InlineResponse20089PoliciesBySsid.md) | The policies applied to the client by SSID | [optional] 
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetGroupPolicyId sets GroupPolicyId field to given value.
 `func (o *InlineResponse20089) HasGroupPolicyId() bool`
 
 HasGroupPolicyId returns a boolean if a field has been set.
+
+### GetPoliciesBySsid
+
+`func (o *InlineResponse20089) GetPoliciesBySsid() []InlineResponse20089PoliciesBySsid`
+
+GetPoliciesBySsid returns the PoliciesBySsid field if non-nil, zero value otherwise.
+
+### GetPoliciesBySsidOk
+
+`func (o *InlineResponse20089) GetPoliciesBySsidOk() (*[]InlineResponse20089PoliciesBySsid, bool)`
+
+GetPoliciesBySsidOk returns a tuple with the PoliciesBySsid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPoliciesBySsid
+
+`func (o *InlineResponse20089) SetPoliciesBySsid(v []InlineResponse20089PoliciesBySsid)`
+
+SetPoliciesBySsid sets PoliciesBySsid field to given value.
+
+### HasPoliciesBySsid
+
+`func (o *InlineResponse20089) HasPoliciesBySsid() bool`
+
+HasPoliciesBySsid returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

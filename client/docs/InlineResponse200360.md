@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200360Items**](InlineResponse200360Items.md) | The top-level property containing all cpu load data. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200360Items**](InlineResponse200360Items.md) | List of CRLs for the specified CAs | [optional] 
+**Meta** | Pointer to [**InlineResponse200360Meta**](InlineResponse200360Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -49,6 +50,31 @@ SetItems sets Items field to given value.
 `func (o *InlineResponse200360) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
+
+### GetMeta
+
+`func (o *InlineResponse200360) GetMeta() InlineResponse200360Meta`
+
+GetMeta returns the Meta field if non-nil, zero value otherwise.
+
+### GetMetaOk
+
+`func (o *InlineResponse200360) GetMetaOk() (*InlineResponse200360Meta, bool)`
+
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMeta
+
+`func (o *InlineResponse200360) SetMeta(v InlineResponse200360Meta)`
+
+SetMeta sets Meta field to given value.
+
+### HasMeta
+
+`func (o *InlineResponse200360) HasMeta() bool`
+
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

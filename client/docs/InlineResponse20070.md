@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ActiveActiveAutoVpnEnabled** | Pointer to **bool** | Whether active-active AutoVPN is enabled | [optional] 
-**DefaultUplink** | Pointer to **string** | The default uplink. Must be one of: &#39;wan1&#39; or &#39;wan2&#39; | [optional] 
+**DefaultUplink** | Pointer to **string** | The default uplink. Must be a WAN interface &#39;wanX&#39; | [optional] 
 **LoadBalancingEnabled** | Pointer to **bool** | Whether load balancing is enabled | [optional] 
 **FailoverAndFailback** | Pointer to [**InlineResponse20070FailoverAndFailback**](InlineResponse20070FailoverAndFailback.md) |  | [optional] 
 **WanTrafficUplinkPreferences** | Pointer to [**[]InlineResponse20070WanTrafficUplinkPreferences**](InlineResponse20070WanTrafficUplinkPreferences.md) | Uplink preference rules for WAN traffic | [optional] 

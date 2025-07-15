@@ -4,7 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200356Items**](InlineResponse200356Items.md) | The top-level property containing all power mode data. | [optional] 
+**Downstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream.md) |  | [optional] 
+**Upstream** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork**](OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +27,80 @@ NewInlineResponse200356WithDefaults instantiates a new InlineResponse200356 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetDownstream
 
-`func (o *InlineResponse200356) GetItems() []InlineResponse200356Items`
+`func (o *InlineResponse200356) GetDownstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetDownstreamOk
 
-`func (o *InlineResponse200356) GetItemsOk() (*[]InlineResponse200356Items, bool)`
+`func (o *InlineResponse200356) GetDownstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetDownstream
 
-`func (o *InlineResponse200356) SetItems(v []InlineResponse200356Items)`
+`func (o *InlineResponse200356) SetDownstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientDownstream)`
 
-SetItems sets Items field to given value.
+SetDownstream sets Downstream field to given value.
 
-### HasItems
+### HasDownstream
 
-`func (o *InlineResponse200356) HasItems() bool`
+`func (o *InlineResponse200356) HasDownstream() bool`
 
-HasItems returns a boolean if a field has been set.
+HasDownstream returns a boolean if a field has been set.
+
+### GetUpstream
+
+`func (o *InlineResponse200356) GetUpstream() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream`
+
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+
+### GetUpstreamOk
+
+`func (o *InlineResponse200356) GetUpstreamOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream, bool)`
+
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpstream
+
+`func (o *InlineResponse200356) SetUpstream(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientUpstream)`
+
+SetUpstream sets Upstream field to given value.
+
+### HasUpstream
+
+`func (o *InlineResponse200356) HasUpstream() bool`
+
+HasUpstream returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *InlineResponse200356) GetNetwork() OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineResponse200356) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineResponse200356) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesPacketLossByClientNetwork)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *InlineResponse200356) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

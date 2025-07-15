@@ -5,8 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Serial** | Pointer to **string** | Wireless LAN controller cloud ID | [optional] 
-**Network** | Pointer to [**InlineResponse200369Network**](InlineResponse200369Network.md) |  | [optional] 
-**Readings** | Pointer to [**[]InlineResponse200369Readings**](InlineResponse200369Readings.md) | Overview history of a wireless LAN controller | [optional] 
+**Changes** | Pointer to [**[]InlineResponse200369Changes**](InlineResponse200369Changes.md) | Connectivity information of a wireless LAN controller | [optional] 
 
 ## Methods
 
@@ -52,55 +51,30 @@ SetSerial sets Serial field to given value.
 
 HasSerial returns a boolean if a field has been set.
 
-### GetNetwork
+### GetChanges
 
-`func (o *InlineResponse200369Items) GetNetwork() InlineResponse200369Network`
+`func (o *InlineResponse200369Items) GetChanges() []InlineResponse200369Changes`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetChanges returns the Changes field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetChangesOk
 
-`func (o *InlineResponse200369Items) GetNetworkOk() (*InlineResponse200369Network, bool)`
+`func (o *InlineResponse200369Items) GetChangesOk() (*[]InlineResponse200369Changes, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetChangesOk returns a tuple with the Changes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetChanges
 
-`func (o *InlineResponse200369Items) SetNetwork(v InlineResponse200369Network)`
+`func (o *InlineResponse200369Items) SetChanges(v []InlineResponse200369Changes)`
 
-SetNetwork sets Network field to given value.
+SetChanges sets Changes field to given value.
 
-### HasNetwork
+### HasChanges
 
-`func (o *InlineResponse200369Items) HasNetwork() bool`
+`func (o *InlineResponse200369Items) HasChanges() bool`
 
-HasNetwork returns a boolean if a field has been set.
-
-### GetReadings
-
-`func (o *InlineResponse200369Items) GetReadings() []InlineResponse200369Readings`
-
-GetReadings returns the Readings field if non-nil, zero value otherwise.
-
-### GetReadingsOk
-
-`func (o *InlineResponse200369Items) GetReadingsOk() (*[]InlineResponse200369Readings, bool)`
-
-GetReadingsOk returns a tuple with the Readings field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReadings
-
-`func (o *InlineResponse200369Items) SetReadings(v []InlineResponse200369Readings)`
-
-SetReadings sets Readings field to given value.
-
-### HasReadings
-
-`func (o *InlineResponse200369Items) HasReadings() bool`
-
-HasReadings returns a boolean if a field has been set.
+HasChanges returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

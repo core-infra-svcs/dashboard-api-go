@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200275Items**](InlineResponse200275Items.md) | List of scheduled packet captures | [optional] 
-**Meta** | Pointer to [**InlineResponse200275Meta**](InlineResponse200275Meta.md) |  | [optional] 
+**CaptureId** | Pointer to **string** | Id of packet capture file | [optional] 
+**DownloadUrl** | Pointer to **string** | Download URL of captured packet file -- Depracated | [optional] 
+**Url** | Pointer to **string** | Download URL of captured packet file | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200275WithDefaults instantiates a new InlineResponse200275 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetCaptureId
 
-`func (o *InlineResponse200275) GetItems() []InlineResponse200275Items`
+`func (o *InlineResponse200275) GetCaptureId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetCaptureId returns the CaptureId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetCaptureIdOk
 
-`func (o *InlineResponse200275) GetItemsOk() (*[]InlineResponse200275Items, bool)`
+`func (o *InlineResponse200275) GetCaptureIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetCaptureIdOk returns a tuple with the CaptureId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetCaptureId
 
-`func (o *InlineResponse200275) SetItems(v []InlineResponse200275Items)`
+`func (o *InlineResponse200275) SetCaptureId(v string)`
 
-SetItems sets Items field to given value.
+SetCaptureId sets CaptureId field to given value.
 
-### HasItems
+### HasCaptureId
 
-`func (o *InlineResponse200275) HasItems() bool`
+`func (o *InlineResponse200275) HasCaptureId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasCaptureId returns a boolean if a field has been set.
 
-### GetMeta
+### GetDownloadUrl
 
-`func (o *InlineResponse200275) GetMeta() InlineResponse200275Meta`
+`func (o *InlineResponse200275) GetDownloadUrl() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetDownloadUrl returns the DownloadUrl field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetDownloadUrlOk
 
-`func (o *InlineResponse200275) GetMetaOk() (*InlineResponse200275Meta, bool)`
+`func (o *InlineResponse200275) GetDownloadUrlOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetDownloadUrlOk returns a tuple with the DownloadUrl field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetDownloadUrl
 
-`func (o *InlineResponse200275) SetMeta(v InlineResponse200275Meta)`
+`func (o *InlineResponse200275) SetDownloadUrl(v string)`
 
-SetMeta sets Meta field to given value.
+SetDownloadUrl sets DownloadUrl field to given value.
 
-### HasMeta
+### HasDownloadUrl
 
-`func (o *InlineResponse200275) HasMeta() bool`
+`func (o *InlineResponse200275) HasDownloadUrl() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasDownloadUrl returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse200275) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse200275) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse200275) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse200275) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

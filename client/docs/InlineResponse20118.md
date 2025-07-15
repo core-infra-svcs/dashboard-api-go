@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200273Items**](InlineResponse200273Items.md) | List of packet capture files | [optional] 
+**Items** | Pointer to [**[]InlineResponse200274Items**](InlineResponse200274Items.md) | List of packet capture files | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineResponse20118) GetItems() []InlineResponse200273Items`
+`func (o *InlineResponse20118) GetItems() []InlineResponse200274Items`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineResponse20118) GetItemsOk() (*[]InlineResponse200273Items, bool)`
+`func (o *InlineResponse20118) GetItemsOk() (*[]InlineResponse200274Items, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineResponse20118) SetItems(v []InlineResponse200273Items)`
+`func (o *InlineResponse20118) SetItems(v []InlineResponse200274Items)`
 
 SetItems sets Items field to given value.
 

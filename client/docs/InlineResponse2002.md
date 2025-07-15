@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **ProductClass** | Pointer to **string** | The product class associated with the entitlement | [optional] 
 **FeatureTier** | Pointer to **string** | The feature tier associated with the entitlement (null for add-ons) | [optional] 
 **IsAddOn** | Pointer to **bool** | Whether or not the entitlement is an add-on | [optional] 
+**IsFree** | Pointer to **bool** | Whether or not the entitlement is granted for free | [optional] 
 
 ## Methods
 
@@ -179,6 +180,31 @@ SetIsAddOn sets IsAddOn field to given value.
 `func (o *InlineResponse2002) HasIsAddOn() bool`
 
 HasIsAddOn returns a boolean if a field has been set.
+
+### GetIsFree
+
+`func (o *InlineResponse2002) GetIsFree() bool`
+
+GetIsFree returns the IsFree field if non-nil, zero value otherwise.
+
+### GetIsFreeOk
+
+`func (o *InlineResponse2002) GetIsFreeOk() (*bool, bool)`
+
+GetIsFreeOk returns a tuple with the IsFree field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIsFree
+
+`func (o *InlineResponse2002) SetIsFree(v bool)`
+
+SetIsFree sets IsFree field to given value.
+
+### HasIsFree
+
+`func (o *InlineResponse2002) HasIsFree() bool`
+
+HasIsFree returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

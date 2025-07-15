@@ -15,6 +15,9 @@ Name | Type | Description | Notes
 **NextHopIp** | Pointer to **string** | The IPv4 address of the remote BGP peer that will establish a TCP session with the local MX. | [optional] 
 **TtlSecurity** | Pointer to [**NetworksNetworkIdApplianceVpnBgpTtlSecurity**](NetworksNetworkIdApplianceVpnBgpTtlSecurity.md) |  | [optional] 
 **Authentication** | Pointer to [**NetworksNetworkIdApplianceVpnBgpAuthentication**](NetworksNetworkIdApplianceVpnBgpAuthentication.md) |  | [optional] 
+**MultiExitDiscriminator** | Pointer to **int32** | Configures the local metric associated with routes received from the remote peer. Routes from peers with lower metrics are will be preferred. Must be an integer between 0 and 4294967295. MED is 6th in the decision tree when identical routes from multiple peers exist. | [optional] 
+**PathPrepend** | Pointer to **[]int32** | Prepends the AS_PATH BGP Attribute associated with routes received from the remote peer. Configurable value of ASNs to prepend. Length of the array may not exceed 10, and each ASN in the array must be an integer between 1 and 4294967295. AS_PATH is 4th in the decision tree when identical routes from multiple peers exist. | [optional] 
+**Weight** | Pointer to **int32** | Sets the local weight for routes received from the remote peer. Routes from peers with higher weights will be preferred. Must be an integer between 0 and 49. | [optional] 
 
 ## Methods
 
@@ -294,6 +297,81 @@ SetAuthentication sets Authentication field to given value.
 `func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) HasAuthentication() bool`
 
 HasAuthentication returns a boolean if a field has been set.
+
+### GetMultiExitDiscriminator
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetMultiExitDiscriminator() int32`
+
+GetMultiExitDiscriminator returns the MultiExitDiscriminator field if non-nil, zero value otherwise.
+
+### GetMultiExitDiscriminatorOk
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetMultiExitDiscriminatorOk() (*int32, bool)`
+
+GetMultiExitDiscriminatorOk returns a tuple with the MultiExitDiscriminator field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMultiExitDiscriminator
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetMultiExitDiscriminator(v int32)`
+
+SetMultiExitDiscriminator sets MultiExitDiscriminator field to given value.
+
+### HasMultiExitDiscriminator
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) HasMultiExitDiscriminator() bool`
+
+HasMultiExitDiscriminator returns a boolean if a field has been set.
+
+### GetPathPrepend
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetPathPrepend() []int32`
+
+GetPathPrepend returns the PathPrepend field if non-nil, zero value otherwise.
+
+### GetPathPrependOk
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetPathPrependOk() (*[]int32, bool)`
+
+GetPathPrependOk returns a tuple with the PathPrepend field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPathPrepend
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetPathPrepend(v []int32)`
+
+SetPathPrepend sets PathPrepend field to given value.
+
+### HasPathPrepend
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) HasPathPrepend() bool`
+
+HasPathPrepend returns a boolean if a field has been set.
+
+### GetWeight
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetWeight() int32`
+
+GetWeight returns the Weight field if non-nil, zero value otherwise.
+
+### GetWeightOk
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) GetWeightOk() (*int32, bool)`
+
+GetWeightOk returns a tuple with the Weight field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetWeight
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) SetWeight(v int32)`
+
+SetWeight sets Weight field to given value.
+
+### HasWeight
+
+`func (o *NetworksNetworkIdApplianceVpnBgpNeighbors) HasWeight() bool`
+
+HasWeight returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
