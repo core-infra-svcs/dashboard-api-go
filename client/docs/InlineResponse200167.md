@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | ID of the Switch stack | [optional] 
-**Name** | Pointer to **string** | Name of the Switch stack | [optional] 
-**Serials** | Pointer to **[]string** | Serials of the switches in the switch stack | [optional] 
-**IsMonitorOnly** | Pointer to **bool** | Tells if stack is Monitored Stack. | [optional] 
-**Members** | Pointer to [**[]NetworksNetworkIdSwitchStacksMembers**](NetworksNetworkIdSwitchStacksMembers.md) | Members of the Stack | [optional] 
+**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
+**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
+**PowerExceptions** | Pointer to [**[]InlineResponse200167PowerExceptions**](InlineResponse200167PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
+**UplinkClientSampling** | Pointer to [**InlineResponse200167UplinkClientSampling**](InlineResponse200167UplinkClientSampling.md) |  | [optional] 
+**MacBlocklist** | Pointer to [**InlineResponse200167MacBlocklist**](InlineResponse200167MacBlocklist.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +29,130 @@ NewInlineResponse200167WithDefaults instantiates a new InlineResponse200167 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetVlan
 
-`func (o *InlineResponse200167) GetId() string`
+`func (o *InlineResponse200167) GetVlan() int32`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetVlan returns the Vlan field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetVlanOk
 
-`func (o *InlineResponse200167) GetIdOk() (*string, bool)`
+`func (o *InlineResponse200167) GetVlanOk() (*int32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetVlan
 
-`func (o *InlineResponse200167) SetId(v string)`
+`func (o *InlineResponse200167) SetVlan(v int32)`
 
-SetId sets Id field to given value.
+SetVlan sets Vlan field to given value.
 
-### HasId
+### HasVlan
 
-`func (o *InlineResponse200167) HasId() bool`
+`func (o *InlineResponse200167) HasVlan() bool`
 
-HasId returns a boolean if a field has been set.
+HasVlan returns a boolean if a field has been set.
 
-### GetName
+### GetUseCombinedPower
 
-`func (o *InlineResponse200167) GetName() string`
+`func (o *InlineResponse200167) GetUseCombinedPower() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetUseCombinedPowerOk
 
-`func (o *InlineResponse200167) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200167) GetUseCombinedPowerOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetUseCombinedPower
 
-`func (o *InlineResponse200167) SetName(v string)`
+`func (o *InlineResponse200167) SetUseCombinedPower(v bool)`
 
-SetName sets Name field to given value.
+SetUseCombinedPower sets UseCombinedPower field to given value.
 
-### HasName
+### HasUseCombinedPower
 
-`func (o *InlineResponse200167) HasName() bool`
+`func (o *InlineResponse200167) HasUseCombinedPower() bool`
 
-HasName returns a boolean if a field has been set.
+HasUseCombinedPower returns a boolean if a field has been set.
 
-### GetSerials
+### GetPowerExceptions
 
-`func (o *InlineResponse200167) GetSerials() []string`
+`func (o *InlineResponse200167) GetPowerExceptions() []InlineResponse200167PowerExceptions`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetPowerExceptionsOk
 
-`func (o *InlineResponse200167) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200167) GetPowerExceptionsOk() (*[]InlineResponse200167PowerExceptions, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetPowerExceptions
 
-`func (o *InlineResponse200167) SetSerials(v []string)`
+`func (o *InlineResponse200167) SetPowerExceptions(v []InlineResponse200167PowerExceptions)`
 
-SetSerials sets Serials field to given value.
+SetPowerExceptions sets PowerExceptions field to given value.
 
-### HasSerials
+### HasPowerExceptions
 
-`func (o *InlineResponse200167) HasSerials() bool`
+`func (o *InlineResponse200167) HasPowerExceptions() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasPowerExceptions returns a boolean if a field has been set.
 
-### GetIsMonitorOnly
+### GetUplinkClientSampling
 
-`func (o *InlineResponse200167) GetIsMonitorOnly() bool`
+`func (o *InlineResponse200167) GetUplinkClientSampling() InlineResponse200167UplinkClientSampling`
 
-GetIsMonitorOnly returns the IsMonitorOnly field if non-nil, zero value otherwise.
+GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
 
-### GetIsMonitorOnlyOk
+### GetUplinkClientSamplingOk
 
-`func (o *InlineResponse200167) GetIsMonitorOnlyOk() (*bool, bool)`
+`func (o *InlineResponse200167) GetUplinkClientSamplingOk() (*InlineResponse200167UplinkClientSampling, bool)`
 
-GetIsMonitorOnlyOk returns a tuple with the IsMonitorOnly field if it's non-nil, zero value otherwise
+GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsMonitorOnly
+### SetUplinkClientSampling
 
-`func (o *InlineResponse200167) SetIsMonitorOnly(v bool)`
+`func (o *InlineResponse200167) SetUplinkClientSampling(v InlineResponse200167UplinkClientSampling)`
 
-SetIsMonitorOnly sets IsMonitorOnly field to given value.
+SetUplinkClientSampling sets UplinkClientSampling field to given value.
 
-### HasIsMonitorOnly
+### HasUplinkClientSampling
 
-`func (o *InlineResponse200167) HasIsMonitorOnly() bool`
+`func (o *InlineResponse200167) HasUplinkClientSampling() bool`
 
-HasIsMonitorOnly returns a boolean if a field has been set.
+HasUplinkClientSampling returns a boolean if a field has been set.
 
-### GetMembers
+### GetMacBlocklist
 
-`func (o *InlineResponse200167) GetMembers() []NetworksNetworkIdSwitchStacksMembers`
+`func (o *InlineResponse200167) GetMacBlocklist() InlineResponse200167MacBlocklist`
 
-GetMembers returns the Members field if non-nil, zero value otherwise.
+GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
 
-### GetMembersOk
+### GetMacBlocklistOk
 
-`func (o *InlineResponse200167) GetMembersOk() (*[]NetworksNetworkIdSwitchStacksMembers, bool)`
+`func (o *InlineResponse200167) GetMacBlocklistOk() (*InlineResponse200167MacBlocklist, bool)`
 
-GetMembersOk returns a tuple with the Members field if it's non-nil, zero value otherwise
+GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMembers
+### SetMacBlocklist
 
-`func (o *InlineResponse200167) SetMembers(v []NetworksNetworkIdSwitchStacksMembers)`
+`func (o *InlineResponse200167) SetMacBlocklist(v InlineResponse200167MacBlocklist)`
 
-SetMembers sets Members field to given value.
+SetMacBlocklist sets MacBlocklist field to given value.
 
-### HasMembers
+### HasMacBlocklist
 
-`func (o *InlineResponse200167) HasMembers() bool`
+`func (o *InlineResponse200167) HasMacBlocklist() bool`
 
-HasMembers returns a boolean if a field has been set.
+HasMacBlocklist returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

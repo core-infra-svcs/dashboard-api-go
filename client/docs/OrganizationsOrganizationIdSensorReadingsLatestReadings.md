@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **Tvoc** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryTvoc**](OrganizationsOrganizationIdSensorReadingsHistoryTvoc.md) |  | [optional] 
 **Voltage** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryVoltage**](OrganizationsOrganizationIdSensorReadingsHistoryVoltage.md) |  | [optional] 
 **Water** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryWater**](OrganizationsOrganizationIdSensorReadingsHistoryWater.md) |  | [optional] 
+**RawTemperature** | Pointer to [**OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature**](OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature.md) |  | [optional] 
 
 ## Methods
 
@@ -569,6 +570,31 @@ SetWater sets Water field to given value.
 `func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) HasWater() bool`
 
 HasWater returns a boolean if a field has been set.
+
+### GetRawTemperature
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetRawTemperature() OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature`
+
+GetRawTemperature returns the RawTemperature field if non-nil, zero value otherwise.
+
+### GetRawTemperatureOk
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) GetRawTemperatureOk() (*OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature, bool)`
+
+GetRawTemperatureOk returns a tuple with the RawTemperature field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRawTemperature
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) SetRawTemperature(v OrganizationsOrganizationIdSensorReadingsHistoryRawTemperature)`
+
+SetRawTemperature sets RawTemperature field to given value.
+
+### HasRawTemperature
+
+`func (o *OrganizationsOrganizationIdSensorReadingsLatestReadings) HasRawTemperature() bool`
+
+HasRawTemperature returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

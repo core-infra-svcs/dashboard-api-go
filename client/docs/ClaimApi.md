@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## VmxNetworkDevicesClaim
 
-> InlineResponse20093 VmxNetworkDevicesClaim(ctx, networkId).VmxNetworkDevicesClaim(vmxNetworkDevicesClaim).Execute()
+> InlineResponse20094 VmxNetworkDevicesClaim(ctx, networkId).VmxNetworkDevicesClaim(vmxNetworkDevicesClaim).Execute()
 
 Claim a vMX into a network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClaimApi.VmxNetworkDevicesClaim``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `VmxNetworkDevicesClaim`: InlineResponse20093
+    // response from `VmxNetworkDevicesClaim`: InlineResponse20094
     fmt.Fprintf(os.Stdout, "Response from `ClaimApi.VmxNetworkDevicesClaim`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20093**](InlineResponse20093.md)
+[**InlineResponse20094**](InlineResponse20094.md)
 
 ### Authorization
 

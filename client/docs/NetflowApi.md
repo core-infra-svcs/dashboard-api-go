@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkNetflow
 
-> InlineResponse200111 GetNetworkNetflow(ctx, networkId).Execute()
+> InlineResponse200112 GetNetworkNetflow(ctx, networkId).Execute()
 
 Return the NetFlow traffic reporting settings for a network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetflowApi.GetNetworkNetflow``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkNetflow`: InlineResponse200111
+    // response from `GetNetworkNetflow`: InlineResponse200112
     fmt.Fprintf(os.Stdout, "Response from `NetflowApi.GetNetworkNetflow`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200111**](InlineResponse200111.md)
+[**InlineResponse200112**](InlineResponse200112.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkNetflow
 
-> InlineResponse200111 UpdateNetworkNetflow(ctx, networkId).UpdateNetworkNetflow(updateNetworkNetflow).Execute()
+> InlineResponse200112 UpdateNetworkNetflow(ctx, networkId).UpdateNetworkNetflow(updateNetworkNetflow).Execute()
 
 Update the NetFlow traffic reporting settings for a network
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `NetflowApi.UpdateNetworkNetflow``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkNetflow`: InlineResponse200111
+    // response from `UpdateNetworkNetflow`: InlineResponse200112
     fmt.Fprintf(os.Stdout, "Response from `NetflowApi.UpdateNetworkNetflow`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200111**](InlineResponse200111.md)
+[**InlineResponse200112**](InlineResponse200112.md)
 
 ### Authorization
 

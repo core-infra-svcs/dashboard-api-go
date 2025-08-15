@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetNetworkApplianceUplinksUsageHistory
 
-> []InlineResponse20072 GetNetworkApplianceUplinksUsageHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
+> []InlineResponse20073 GetNetworkApplianceUplinksUsageHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).Execute()
 
 Get the sent and received bytes for each uplink of a network.
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageHistoryApi.GetNetworkApplianceUplinksUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceUplinksUsageHistory`: []InlineResponse20072
+    // response from `GetNetworkApplianceUplinksUsageHistory`: []InlineResponse20073
     fmt.Fprintf(os.Stdout, "Response from `UsageHistoryApi.GetNetworkApplianceUplinksUsageHistory`: %v\n", resp)
 }
 ```
@@ -72,7 +72,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20072**](InlineResponse20072.md)
+[**[]InlineResponse20073**](InlineResponse20073.md)
 
 ### Authorization
 
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkClientUsageHistory
 
-> []InlineResponse20091 GetNetworkClientUsageHistory(ctx, networkId, clientId).Execute()
+> []InlineResponse20092 GetNetworkClientUsageHistory(ctx, networkId, clientId).Execute()
 
 Return the client's daily usage history
 
@@ -119,7 +119,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageHistoryApi.GetNetworkClientUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkClientUsageHistory`: []InlineResponse20091
+    // response from `GetNetworkClientUsageHistory`: []InlineResponse20092
     fmt.Fprintf(os.Stdout, "Response from `UsageHistoryApi.GetNetworkClientUsageHistory`: %v\n", resp)
 }
 ```
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20091**](InlineResponse20091.md)
+[**[]InlineResponse20092**](InlineResponse20092.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWirelessUsageHistory
 
-> []InlineResponse200208 GetNetworkWirelessUsageHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
+> []InlineResponse200210 GetNetworkWirelessUsageHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
 
 Return AP usage over time for a device or network client
 
@@ -201,7 +201,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `UsageHistoryApi.GetNetworkWirelessUsageHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessUsageHistory`: []InlineResponse200208
+    // response from `GetNetworkWirelessUsageHistory`: []InlineResponse200210
     fmt.Fprintf(os.Stdout, "Response from `UsageHistoryApi.GetNetworkWirelessUsageHistory`: %v\n", resp)
 }
 ```
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200208**](InlineResponse200208.md)
+[**[]InlineResponse200210**](InlineResponse200210.md)
 
 ### Authorization
 

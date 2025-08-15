@@ -4,13 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Swaps** | [**[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps**](OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps.md) | Each object represents a swap for one eSIM | 
+**Title** | Pointer to **string** | Service provider account name used on the Meraki UI | [optional] 
+**ApiKey** | Pointer to **string** | Service provider account API key | [optional] 
 
 ## Methods
 
 ### NewInlineObject248
 
-`func NewInlineObject248(swaps []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, ) *InlineObject248`
+`func NewInlineObject248() *InlineObject248`
 
 NewInlineObject248 instantiates a new InlineObject248 object
 This constructor will assign default values to properties that have it defined,
@@ -25,25 +26,55 @@ NewInlineObject248WithDefaults instantiates a new InlineObject248 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSwaps
+### GetTitle
 
-`func (o *InlineObject248) GetSwaps() []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps`
+`func (o *InlineObject248) GetTitle() string`
 
-GetSwaps returns the Swaps field if non-nil, zero value otherwise.
+GetTitle returns the Title field if non-nil, zero value otherwise.
 
-### GetSwapsOk
+### GetTitleOk
 
-`func (o *InlineObject248) GetSwapsOk() (*[]OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps, bool)`
+`func (o *InlineObject248) GetTitleOk() (*string, bool)`
 
-GetSwapsOk returns a tuple with the Swaps field if it's non-nil, zero value otherwise
+GetTitleOk returns a tuple with the Title field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSwaps
+### SetTitle
 
-`func (o *InlineObject248) SetSwaps(v []OrganizationsOrganizationIdCellularGatewayEsimsSwapSwaps)`
+`func (o *InlineObject248) SetTitle(v string)`
 
-SetSwaps sets Swaps field to given value.
+SetTitle sets Title field to given value.
 
+### HasTitle
+
+`func (o *InlineObject248) HasTitle() bool`
+
+HasTitle returns a boolean if a field has been set.
+
+### GetApiKey
+
+`func (o *InlineObject248) GetApiKey() string`
+
+GetApiKey returns the ApiKey field if non-nil, zero value otherwise.
+
+### GetApiKeyOk
+
+`func (o *InlineObject248) GetApiKeyOk() (*string, bool)`
+
+GetApiKeyOk returns a tuple with the ApiKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApiKey
+
+`func (o *InlineObject248) SetApiKey(v string)`
+
+SetApiKey sets ApiKey field to given value.
+
+### HasApiKey
+
+`func (o *InlineObject248) HasApiKey() bool`
+
+HasApiKey returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

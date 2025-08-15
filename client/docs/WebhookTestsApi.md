@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkWebhooksWebhookTest
 
-> InlineResponse20112 CreateNetworkWebhooksWebhookTest(ctx, networkId).CreateNetworkWebhooksWebhookTest(createNetworkWebhooksWebhookTest).Execute()
+> InlineResponse20113 CreateNetworkWebhooksWebhookTest(ctx, networkId).CreateNetworkWebhooksWebhookTest(createNetworkWebhooksWebhookTest).Execute()
 
 Send a test webhook for a network
 
@@ -40,7 +40,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhookTestsApi.CreateNetworkWebhooksWebhookTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkWebhooksWebhookTest`: InlineResponse20112
+    // response from `CreateNetworkWebhooksWebhookTest`: InlineResponse20113
     fmt.Fprintf(os.Stdout, "Response from `WebhookTestsApi.CreateNetworkWebhooksWebhookTest`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20112**](InlineResponse20112.md)
+[**InlineResponse20113**](InlineResponse20113.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkWebhooksWebhookTest
 
-> InlineResponse20112 GetNetworkWebhooksWebhookTest(ctx, networkId, webhookTestId).Execute()
+> InlineResponse20113 GetNetworkWebhooksWebhookTest(ctx, networkId, webhookTestId).Execute()
 
 Return the status of a webhook test for a network
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WebhookTestsApi.GetNetworkWebhooksWebhookTest``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWebhooksWebhookTest`: InlineResponse20112
+    // response from `GetNetworkWebhooksWebhookTest`: InlineResponse20113
     fmt.Fprintf(os.Stdout, "Response from `WebhookTestsApi.GetNetworkWebhooksWebhookTest`: %v\n", resp)
 }
 ```
@@ -138,7 +138,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20112**](InlineResponse20112.md)
+[**InlineResponse20113**](InlineResponse20113.md)
 
 ### Authorization
 

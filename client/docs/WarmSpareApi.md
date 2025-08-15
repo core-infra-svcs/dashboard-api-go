@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceWarmSpare
 
-> InlineResponse20077 GetNetworkApplianceWarmSpare(ctx, networkId).Execute()
+> InlineResponse20078 GetNetworkApplianceWarmSpare(ctx, networkId).Execute()
 
 Return MX warm spare settings
 
@@ -112,7 +112,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WarmSpareApi.GetNetworkApplianceWarmSpare``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceWarmSpare`: InlineResponse20077
+    // response from `GetNetworkApplianceWarmSpare`: InlineResponse20078
     fmt.Fprintf(os.Stdout, "Response from `WarmSpareApi.GetNetworkApplianceWarmSpare`: %v\n", resp)
 }
 ```
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20077**](InlineResponse20077.md)
+[**InlineResponse20078**](InlineResponse20078.md)
 
 ### Authorization
 
@@ -154,7 +154,7 @@ Name | Type | Description  | Notes
 
 ## SwapNetworkApplianceWarmSpare
 
-> InlineResponse20077 SwapNetworkApplianceWarmSpare(ctx, networkId).Execute()
+> InlineResponse20078 SwapNetworkApplianceWarmSpare(ctx, networkId).Execute()
 
 Swap MX primary and warm spare appliances
 
@@ -182,7 +182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WarmSpareApi.SwapNetworkApplianceWarmSpare``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SwapNetworkApplianceWarmSpare`: InlineResponse20077
+    // response from `SwapNetworkApplianceWarmSpare`: InlineResponse20078
     fmt.Fprintf(os.Stdout, "Response from `WarmSpareApi.SwapNetworkApplianceWarmSpare`: %v\n", resp)
 }
 ```
@@ -206,7 +206,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20077**](InlineResponse20077.md)
+[**InlineResponse20078**](InlineResponse20078.md)
 
 ### Authorization
 
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceWarmSpare
 
-> InlineResponse20077 UpdateNetworkApplianceWarmSpare(ctx, networkId).UpdateNetworkApplianceWarmSpare(updateNetworkApplianceWarmSpare).Execute()
+> InlineResponse20078 UpdateNetworkApplianceWarmSpare(ctx, networkId).UpdateNetworkApplianceWarmSpare(updateNetworkApplianceWarmSpare).Execute()
 
 Update MX warm spare settings
 
@@ -325,7 +325,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `WarmSpareApi.UpdateNetworkApplianceWarmSpare``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceWarmSpare`: InlineResponse20077
+    // response from `UpdateNetworkApplianceWarmSpare`: InlineResponse20078
     fmt.Fprintf(os.Stdout, "Response from `WarmSpareApi.UpdateNetworkApplianceWarmSpare`: %v\n", resp)
 }
 ```
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20077**](InlineResponse20077.md)
+[**InlineResponse20078**](InlineResponse20078.md)
 
 ### Authorization
 

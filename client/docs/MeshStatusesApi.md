@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessMeshStatuses
 
-> []InlineResponse200195 GetNetworkWirelessMeshStatuses(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> []InlineResponse200197 GetNetworkWirelessMeshStatuses(ctx, networkId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 List wireless mesh statuses for repeaters
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `MeshStatusesApi.GetNetworkWirelessMeshStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessMeshStatuses`: []InlineResponse200195
+    // response from `GetNetworkWirelessMeshStatuses`: []InlineResponse200197
     fmt.Fprintf(os.Stdout, "Response from `MeshStatusesApi.GetNetworkWirelessMeshStatuses`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200195**](InlineResponse200195.md)
+[**[]InlineResponse200197**](InlineResponse200197.md)
 
 ### Authorization
 

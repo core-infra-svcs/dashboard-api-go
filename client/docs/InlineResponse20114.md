@@ -4,8 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serials** | Pointer to **[]string** | List of updated AP serials | [optional] 
-**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
+**Network** | Pointer to [**InlineResponse20114Network**](InlineResponse20114Network.md) |  | [optional] 
+**RuleId** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**Type** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs by default. (blocked by default) | [optional] 
+**UpdatedAt** | Pointer to **time.Time** | Updated at timestamp | [optional] 
+**CreatedAt** | Pointer to **time.Time** | Created at timestamp | [optional] 
+**Match** | Pointer to [**InlineResponse20114Match**](InlineResponse20114Match.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +30,155 @@ NewInlineResponse20114WithDefaults instantiates a new InlineResponse20114 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSerials
+### GetNetwork
 
-`func (o *InlineResponse20114) GetSerials() []string`
+`func (o *InlineResponse20114) GetNetwork() InlineResponse20114Network`
 
-GetSerials returns the Serials field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetSerialsOk
+### GetNetworkOk
 
-`func (o *InlineResponse20114) GetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse20114) GetNetworkOk() (*InlineResponse20114Network, bool)`
 
-GetSerialsOk returns a tuple with the Serials field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSerials
+### SetNetwork
 
-`func (o *InlineResponse20114) SetSerials(v []string)`
+`func (o *InlineResponse20114) SetNetwork(v InlineResponse20114Network)`
 
-SetSerials sets Serials field to given value.
+SetNetwork sets Network field to given value.
 
-### HasSerials
+### HasNetwork
 
-`func (o *InlineResponse20114) HasSerials() bool`
+`func (o *InlineResponse20114) HasNetwork() bool`
 
-HasSerials returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
-### GetProfileId
+### GetRuleId
 
-`func (o *InlineResponse20114) GetProfileId() string`
+`func (o *InlineResponse20114) GetRuleId() string`
 
-GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
+GetRuleId returns the RuleId field if non-nil, zero value otherwise.
 
-### GetProfileIdOk
+### GetRuleIdOk
 
-`func (o *InlineResponse20114) GetProfileIdOk() (*string, bool)`
+`func (o *InlineResponse20114) GetRuleIdOk() (*string, bool)`
 
-GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
+GetRuleIdOk returns a tuple with the RuleId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProfileId
+### SetRuleId
 
-`func (o *InlineResponse20114) SetProfileId(v string)`
+`func (o *InlineResponse20114) SetRuleId(v string)`
 
-SetProfileId sets ProfileId field to given value.
+SetRuleId sets RuleId field to given value.
 
-### HasProfileId
+### HasRuleId
 
-`func (o *InlineResponse20114) HasProfileId() bool`
+`func (o *InlineResponse20114) HasRuleId() bool`
 
-HasProfileId returns a boolean if a field has been set.
+HasRuleId returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse20114) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse20114) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse20114) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse20114) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetUpdatedAt
+
+`func (o *InlineResponse20114) GetUpdatedAt() time.Time`
+
+GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
+
+### GetUpdatedAtOk
+
+`func (o *InlineResponse20114) GetUpdatedAtOk() (*time.Time, bool)`
+
+GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpdatedAt
+
+`func (o *InlineResponse20114) SetUpdatedAt(v time.Time)`
+
+SetUpdatedAt sets UpdatedAt field to given value.
+
+### HasUpdatedAt
+
+`func (o *InlineResponse20114) HasUpdatedAt() bool`
+
+HasUpdatedAt returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse20114) GetCreatedAt() time.Time`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse20114) GetCreatedAtOk() (*time.Time, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse20114) SetCreatedAt(v time.Time)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse20114) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetMatch
+
+`func (o *InlineResponse20114) GetMatch() InlineResponse20114Match`
+
+GetMatch returns the Match field if non-nil, zero value otherwise.
+
+### GetMatchOk
+
+`func (o *InlineResponse20114) GetMatchOk() (*InlineResponse20114Match, bool)`
+
+GetMatchOk returns a tuple with the Match field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMatch
+
+`func (o *InlineResponse20114) SetMatch(v InlineResponse20114Match)`
+
+SetMatch sets Match field to given value.
+
+### HasMatch
+
+`func (o *InlineResponse20114) HasMatch() bool`
+
+HasMatch returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

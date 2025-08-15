@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SourceSerial** | Pointer to **string** | Serial number of the source switch (must be on a network not bound to a template) | [optional] 
-**TargetSerials** | Pointer to **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | [optional] 
+**Model** | Pointer to **string** | The device model | [optional] 
+**Count** | Pointer to **int32** | Total number of devices per model | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage**](OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200335WithDefaults instantiates a new InlineResponse200335 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetSourceSerial
+### GetModel
 
-`func (o *InlineResponse200335) GetSourceSerial() string`
+`func (o *InlineResponse200335) GetModel() string`
 
-GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetSourceSerialOk
+### GetModelOk
 
-`func (o *InlineResponse200335) GetSourceSerialOk() (*string, bool)`
+`func (o *InlineResponse200335) GetModelOk() (*string, bool)`
 
-GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSourceSerial
+### SetModel
 
-`func (o *InlineResponse200335) SetSourceSerial(v string)`
+`func (o *InlineResponse200335) SetModel(v string)`
 
-SetSourceSerial sets SourceSerial field to given value.
+SetModel sets Model field to given value.
 
-### HasSourceSerial
+### HasModel
 
-`func (o *InlineResponse200335) HasSourceSerial() bool`
+`func (o *InlineResponse200335) HasModel() bool`
 
-HasSourceSerial returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
 
-### GetTargetSerials
+### GetCount
 
-`func (o *InlineResponse200335) GetTargetSerials() []string`
+`func (o *InlineResponse200335) GetCount() int32`
 
-GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
+GetCount returns the Count field if non-nil, zero value otherwise.
 
-### GetTargetSerialsOk
+### GetCountOk
 
-`func (o *InlineResponse200335) GetTargetSerialsOk() (*[]string, bool)`
+`func (o *InlineResponse200335) GetCountOk() (*int32, bool)`
 
-GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetSerials
+### SetCount
 
-`func (o *InlineResponse200335) SetTargetSerials(v []string)`
+`func (o *InlineResponse200335) SetCount(v int32)`
 
-SetTargetSerials sets TargetSerials field to given value.
+SetCount sets Count field to given value.
 
-### HasTargetSerials
+### HasCount
 
-`func (o *InlineResponse200335) HasTargetSerials() bool`
+`func (o *InlineResponse200335) HasCount() bool`
 
-HasTargetSerials returns a boolean if a field has been set.
+HasCount returns a boolean if a field has been set.
+
+### GetUsage
+
+`func (o *InlineResponse200335) GetUsage() OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse200335) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse200335) SetUsage(v OrganizationsOrganizationIdSummaryTopDevicesModelsByUsageUsage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse200335) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

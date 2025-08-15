@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Area** | Pointer to **string** | Area ID | [optional] 
 **Cost** | Pointer to **int32** | OSPF Cost | [optional] 
 **IsPassiveEnabled** | Pointer to **bool** | Disable sending Hello packets on this interface&#39;s IPv6 area | [optional] 
+**NetworkType** | Pointer to **string** | OSPFv3 network type | [optional] 
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetIsPassiveEnabled sets IsPassiveEnabled field to given value.
 `func (o *DevicesSerialSwitchRoutingInterfacesOspfV3) HasIsPassiveEnabled() bool`
 
 HasIsPassiveEnabled returns a boolean if a field has been set.
+
+### GetNetworkType
+
+`func (o *DevicesSerialSwitchRoutingInterfacesOspfV3) GetNetworkType() string`
+
+GetNetworkType returns the NetworkType field if non-nil, zero value otherwise.
+
+### GetNetworkTypeOk
+
+`func (o *DevicesSerialSwitchRoutingInterfacesOspfV3) GetNetworkTypeOk() (*string, bool)`
+
+GetNetworkTypeOk returns a tuple with the NetworkType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkType
+
+`func (o *DevicesSerialSwitchRoutingInterfacesOspfV3) SetNetworkType(v string)`
+
+SetNetworkType sets NetworkType field to given value.
+
+### HasNetworkType
+
+`func (o *DevicesSerialSwitchRoutingInterfacesOspfV3) HasNetworkType() bool`
+
+HasNetworkType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

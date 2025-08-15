@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems.md) | List containing the network ID and Profile ID | 
+**Name** | **string** | Name of profile | 
 
 ## Methods
 
 ### NewInlineObject223
 
-`func NewInlineObject223(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, ) *InlineObject223`
+`func NewInlineObject223(name string, ) *InlineObject223`
 
 NewInlineObject223 instantiates a new InlineObject223 object
 This constructor will assign default values to properties that have it defined,
@@ -25,24 +25,24 @@ NewInlineObject223WithDefaults instantiates a new InlineObject223 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetName
 
-`func (o *InlineObject223) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems`
+`func (o *InlineObject223) GetName() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetNameOk
 
-`func (o *InlineObject223) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, bool)`
+`func (o *InlineObject223) GetNameOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetName
 
-`func (o *InlineObject223) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems)`
+`func (o *InlineObject223) SetName(v string)`
 
-SetItems sets Items field to given value.
+SetName sets Name field to given value.
 
 
 

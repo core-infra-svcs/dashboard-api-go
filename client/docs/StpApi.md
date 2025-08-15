@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchStp
 
-> InlineResponse200170 GetNetworkSwitchStp(ctx, networkId).Execute()
+> InlineResponse200172 GetNetworkSwitchStp(ctx, networkId).Execute()
 
 Returns STP settings
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StpApi.GetNetworkSwitchStp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStp`: InlineResponse200170
+    // response from `GetNetworkSwitchStp`: InlineResponse200172
     fmt.Fprintf(os.Stdout, "Response from `StpApi.GetNetworkSwitchStp`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200170**](InlineResponse200170.md)
+[**InlineResponse200172**](InlineResponse200172.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStp
 
-> InlineResponse200170 UpdateNetworkSwitchStp(ctx, networkId).UpdateNetworkSwitchStp(updateNetworkSwitchStp).Execute()
+> InlineResponse200172 UpdateNetworkSwitchStp(ctx, networkId).UpdateNetworkSwitchStp(updateNetworkSwitchStp).Execute()
 
 Updates STP settings
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StpApi.UpdateNetworkSwitchStp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStp`: InlineResponse200170
+    // response from `UpdateNetworkSwitchStp`: InlineResponse200172
     fmt.Fprintf(os.Stdout, "Response from `StpApi.UpdateNetworkSwitchStp`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200170**](InlineResponse200170.md)
+[**InlineResponse200172**](InlineResponse200172.md)
 
 ### Authorization
 

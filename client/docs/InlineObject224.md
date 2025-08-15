@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems.md) | List containing the assignment ID | 
+**Items** | [**[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems**](OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems.md) | List containing the network ID and Profile ID | 
 
 ## Methods
 
 ### NewInlineObject224
 
-`func NewInlineObject224(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, ) *InlineObject224`
+`func NewInlineObject224(items []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, ) *InlineObject224`
 
 NewInlineObject224 instantiates a new InlineObject224 object
 This constructor will assign default values to properties that have it defined,
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetItems
 
-`func (o *InlineObject224) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems`
+`func (o *InlineObject224) GetItems() []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *InlineObject224) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems, bool)`
+`func (o *InlineObject224) GetItemsOk() (*[]OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *InlineObject224) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkDeleteItems)`
+`func (o *InlineObject224) SetItems(v []OrganizationsOrganizationIdApplianceDnsLocalProfilesAssignmentsBulkCreateItems)`
 
 SetItems sets Items field to given value.
 

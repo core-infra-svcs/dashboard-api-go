@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## BatchNetworkFloorPlansAutoLocateJobs
 
-> InlineResponse200102 BatchNetworkFloorPlansAutoLocateJobs(ctx, networkId).BatchNetworkFloorPlansAutoLocateJobs(batchNetworkFloorPlansAutoLocateJobs).Execute()
+> InlineResponse200103 BatchNetworkFloorPlansAutoLocateJobs(ctx, networkId).BatchNetworkFloorPlansAutoLocateJobs(batchNetworkFloorPlansAutoLocateJobs).Execute()
 
 Schedule auto locate jobs for one or more floor plans in a network
 
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AutoLocateApi.BatchNetworkFloorPlansAutoLocateJobs``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `BatchNetworkFloorPlansAutoLocateJobs`: InlineResponse200102
+    // response from `BatchNetworkFloorPlansAutoLocateJobs`: InlineResponse200103
     fmt.Fprintf(os.Stdout, "Response from `AutoLocateApi.BatchNetworkFloorPlansAutoLocateJobs`: %v\n", resp)
 }
 ```
@@ -69,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200102**](InlineResponse200102.md)
+[**InlineResponse200103**](InlineResponse200103.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFloorPlansAutoLocateDevices
 
-> []InlineResponse200289 GetOrganizationFloorPlansAutoLocateDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
+> []InlineResponse200291 GetOrganizationFloorPlansAutoLocateDevices(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
 
 List auto locate details for each device in your organization
 
@@ -191,7 +191,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AutoLocateApi.GetOrganizationFloorPlansAutoLocateDevices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFloorPlansAutoLocateDevices`: []InlineResponse200289
+    // response from `GetOrganizationFloorPlansAutoLocateDevices`: []InlineResponse200291
     fmt.Fprintf(os.Stdout, "Response from `AutoLocateApi.GetOrganizationFloorPlansAutoLocateDevices`: %v\n", resp)
 }
 ```
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200289**](InlineResponse200289.md)
+[**[]InlineResponse200291**](InlineResponse200291.md)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationFloorPlansAutoLocateStatuses
 
-> []InlineResponse200290 GetOrganizationFloorPlansAutoLocateStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
+> []InlineResponse200292 GetOrganizationFloorPlansAutoLocateStatuses(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).FloorPlanIds(floorPlanIds).Execute()
 
 List the status of auto locate for each floorplan in your organization
 
@@ -271,7 +271,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AutoLocateApi.GetOrganizationFloorPlansAutoLocateStatuses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationFloorPlansAutoLocateStatuses`: []InlineResponse200290
+    // response from `GetOrganizationFloorPlansAutoLocateStatuses`: []InlineResponse200292
     fmt.Fprintf(os.Stdout, "Response from `AutoLocateApi.GetOrganizationFloorPlansAutoLocateStatuses`: %v\n", resp)
 }
 ```
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200290**](InlineResponse200290.md)
+[**[]InlineResponse200292**](InlineResponse200292.md)
 
 ### Authorization
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 
 ## PublishNetworkFloorPlansAutoLocateJob
 
-> InlineResponse200103 PublishNetworkFloorPlansAutoLocateJob(ctx, networkId, jobId).PublishNetworkFloorPlansAutoLocateJob(publishNetworkFloorPlansAutoLocateJob).Execute()
+> InlineResponse200104 PublishNetworkFloorPlansAutoLocateJob(ctx, networkId, jobId).PublishNetworkFloorPlansAutoLocateJob(publishNetworkFloorPlansAutoLocateJob).Execute()
 
 Update the status of a finished auto locate job to be published, and update device locations
 
@@ -348,7 +348,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AutoLocateApi.PublishNetworkFloorPlansAutoLocateJob``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `PublishNetworkFloorPlansAutoLocateJob`: InlineResponse200103
+    // response from `PublishNetworkFloorPlansAutoLocateJob`: InlineResponse200104
     fmt.Fprintf(os.Stdout, "Response from `AutoLocateApi.PublishNetworkFloorPlansAutoLocateJob`: %v\n", resp)
 }
 ```
@@ -375,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200103**](InlineResponse200103.md)
+[**InlineResponse200104**](InlineResponse200104.md)
 
 ### Authorization
 
@@ -393,7 +393,7 @@ Name | Type | Description  | Notes
 
 ## RecalculateNetworkFloorPlansAutoLocateJob
 
-> InlineResponse200104 RecalculateNetworkFloorPlansAutoLocateJob(ctx, networkId, jobId).RecalculateNetworkFloorPlansAutoLocateJob(recalculateNetworkFloorPlansAutoLocateJob).Execute()
+> InlineResponse200105 RecalculateNetworkFloorPlansAutoLocateJob(ctx, networkId, jobId).RecalculateNetworkFloorPlansAutoLocateJob(recalculateNetworkFloorPlansAutoLocateJob).Execute()
 
 Trigger auto locate recalculation for a job, and optionally set anchors
 
@@ -423,7 +423,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `AutoLocateApi.RecalculateNetworkFloorPlansAutoLocateJob``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RecalculateNetworkFloorPlansAutoLocateJob`: InlineResponse200104
+    // response from `RecalculateNetworkFloorPlansAutoLocateJob`: InlineResponse200105
     fmt.Fprintf(os.Stdout, "Response from `AutoLocateApi.RecalculateNetworkFloorPlansAutoLocateJob`: %v\n", resp)
 }
 ```
@@ -450,7 +450,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200104**](InlineResponse200104.md)
+[**InlineResponse200105**](InlineResponse200105.md)
 
 ### Authorization
 

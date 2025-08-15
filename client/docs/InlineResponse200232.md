@@ -5,8 +5,11 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **NetworkId** | Pointer to **string** | Network identifier | [optional] 
-**Name** | Pointer to **string** | Network name | [optional] 
-**ByUplink** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink**](OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink.md) | Uplink usage | [optional] 
+**Serial** | Pointer to **string** | The uplink serial | [optional] 
+**Model** | Pointer to **string** | The uplink model | [optional] 
+**LastReportedAt** | Pointer to **time.Time** | Last reported time for the device | [optional] 
+**HighAvailability** | Pointer to [**OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability**](OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability.md) |  | [optional] 
+**Uplinks** | Pointer to [**[]OrganizationsOrganizationIdApplianceUplinkStatusesUplinks**](OrganizationsOrganizationIdApplianceUplinkStatusesUplinks.md) | Uplinks | [optional] 
 
 ## Methods
 
@@ -52,55 +55,130 @@ SetNetworkId sets NetworkId field to given value.
 
 HasNetworkId returns a boolean if a field has been set.
 
-### GetName
+### GetSerial
 
-`func (o *InlineResponse200232) GetName() string`
+`func (o *InlineResponse200232) GetSerial() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialOk
 
-`func (o *InlineResponse200232) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200232) GetSerialOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerial
 
-`func (o *InlineResponse200232) SetName(v string)`
+`func (o *InlineResponse200232) SetSerial(v string)`
 
-SetName sets Name field to given value.
+SetSerial sets Serial field to given value.
 
-### HasName
+### HasSerial
 
-`func (o *InlineResponse200232) HasName() bool`
+`func (o *InlineResponse200232) HasSerial() bool`
 
-HasName returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetByUplink
+### GetModel
 
-`func (o *InlineResponse200232) GetByUplink() []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink`
+`func (o *InlineResponse200232) GetModel() string`
 
-GetByUplink returns the ByUplink field if non-nil, zero value otherwise.
+GetModel returns the Model field if non-nil, zero value otherwise.
 
-### GetByUplinkOk
+### GetModelOk
 
-`func (o *InlineResponse200232) GetByUplinkOk() (*[]OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink, bool)`
+`func (o *InlineResponse200232) GetModelOk() (*string, bool)`
 
-GetByUplinkOk returns a tuple with the ByUplink field if it's non-nil, zero value otherwise
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByUplink
+### SetModel
 
-`func (o *InlineResponse200232) SetByUplink(v []OrganizationsOrganizationIdApplianceUplinksUsageByNetworkByUplink)`
+`func (o *InlineResponse200232) SetModel(v string)`
 
-SetByUplink sets ByUplink field to given value.
+SetModel sets Model field to given value.
 
-### HasByUplink
+### HasModel
 
-`func (o *InlineResponse200232) HasByUplink() bool`
+`func (o *InlineResponse200232) HasModel() bool`
 
-HasByUplink returns a boolean if a field has been set.
+HasModel returns a boolean if a field has been set.
+
+### GetLastReportedAt
+
+`func (o *InlineResponse200232) GetLastReportedAt() time.Time`
+
+GetLastReportedAt returns the LastReportedAt field if non-nil, zero value otherwise.
+
+### GetLastReportedAtOk
+
+`func (o *InlineResponse200232) GetLastReportedAtOk() (*time.Time, bool)`
+
+GetLastReportedAtOk returns a tuple with the LastReportedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastReportedAt
+
+`func (o *InlineResponse200232) SetLastReportedAt(v time.Time)`
+
+SetLastReportedAt sets LastReportedAt field to given value.
+
+### HasLastReportedAt
+
+`func (o *InlineResponse200232) HasLastReportedAt() bool`
+
+HasLastReportedAt returns a boolean if a field has been set.
+
+### GetHighAvailability
+
+`func (o *InlineResponse200232) GetHighAvailability() OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability`
+
+GetHighAvailability returns the HighAvailability field if non-nil, zero value otherwise.
+
+### GetHighAvailabilityOk
+
+`func (o *InlineResponse200232) GetHighAvailabilityOk() (*OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability, bool)`
+
+GetHighAvailabilityOk returns a tuple with the HighAvailability field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHighAvailability
+
+`func (o *InlineResponse200232) SetHighAvailability(v OrganizationsOrganizationIdApplianceUplinkStatusesHighAvailability)`
+
+SetHighAvailability sets HighAvailability field to given value.
+
+### HasHighAvailability
+
+`func (o *InlineResponse200232) HasHighAvailability() bool`
+
+HasHighAvailability returns a boolean if a field has been set.
+
+### GetUplinks
+
+`func (o *InlineResponse200232) GetUplinks() []OrganizationsOrganizationIdApplianceUplinkStatusesUplinks`
+
+GetUplinks returns the Uplinks field if non-nil, zero value otherwise.
+
+### GetUplinksOk
+
+`func (o *InlineResponse200232) GetUplinksOk() (*[]OrganizationsOrganizationIdApplianceUplinkStatusesUplinks, bool)`
+
+GetUplinksOk returns a tuple with the Uplinks field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUplinks
+
+`func (o *InlineResponse200232) SetUplinks(v []OrganizationsOrganizationIdApplianceUplinkStatusesUplinks)`
+
+SetUplinks sets Uplinks field to given value.
+
+### HasUplinks
+
+`func (o *InlineResponse200232) HasUplinks() bool`
+
+HasUplinks returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

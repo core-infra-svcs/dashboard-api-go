@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkApplianceVpnBgp
 
-> InlineResponse20075 GetNetworkApplianceVpnBgp(ctx, networkId).Execute()
+> InlineResponse20076 GetNetworkApplianceVpnBgp(ctx, networkId).Execute()
 
 Return a Hub BGP Configuration
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BgpApi.GetNetworkApplianceVpnBgp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceVpnBgp`: InlineResponse20075
+    // response from `GetNetworkApplianceVpnBgp`: InlineResponse20076
     fmt.Fprintf(os.Stdout, "Response from `BgpApi.GetNetworkApplianceVpnBgp`: %v\n", resp)
 }
 ```
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20075**](InlineResponse20075.md)
+[**InlineResponse20076**](InlineResponse20076.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceVpnBgp
 
-> InlineResponse20075 UpdateNetworkApplianceVpnBgp(ctx, networkId).UpdateNetworkApplianceVpnBgp(updateNetworkApplianceVpnBgp).Execute()
+> InlineResponse20076 UpdateNetworkApplianceVpnBgp(ctx, networkId).UpdateNetworkApplianceVpnBgp(updateNetworkApplianceVpnBgp).Execute()
 
 Update a Hub BGP Configuration
 
@@ -110,7 +110,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `BgpApi.UpdateNetworkApplianceVpnBgp``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceVpnBgp`: InlineResponse20075
+    // response from `UpdateNetworkApplianceVpnBgp`: InlineResponse20076
     fmt.Fprintf(os.Stdout, "Response from `BgpApi.UpdateNetworkApplianceVpnBgp`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20075**](InlineResponse20075.md)
+[**InlineResponse20076**](InlineResponse20076.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200276Items**](InlineResponse200276Items.md) | List of scheduled packet captures | [optional] 
+**Items** | Pointer to [**[]InlineResponse200276Items**](InlineResponse200276Items.md) | List of packet capture files | [optional] 
 **Meta** | Pointer to [**InlineResponse200276Meta**](InlineResponse200276Meta.md) |  | [optional] 
 
 ## Methods

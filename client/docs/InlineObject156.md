@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **Areas** | Pointer to [**[]NetworksNetworkIdSwitchRoutingOspfAreas**](NetworksNetworkIdSwitchRoutingOspfAreas.md) | OSPF areas | [optional] 
 **V3** | Pointer to [**NetworksNetworkIdSwitchRoutingOspfV3**](NetworksNetworkIdSwitchRoutingOspfV3.md) |  | [optional] 
 **Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
-**Md5AuthenticationKey** | Pointer to [**InlineResponse200165Md5AuthenticationKey**](InlineResponse200165Md5AuthenticationKey.md) |  | [optional] 
+**Md5AuthenticationKey** | Pointer to [**InlineResponse200166Md5AuthenticationKey**](InlineResponse200166Md5AuthenticationKey.md) |  | [optional] 
 
 ## Methods
 
@@ -183,20 +183,20 @@ HasMd5AuthenticationEnabled returns a boolean if a field has been set.
 
 ### GetMd5AuthenticationKey
 
-`func (o *InlineObject156) GetMd5AuthenticationKey() InlineResponse200165Md5AuthenticationKey`
+`func (o *InlineObject156) GetMd5AuthenticationKey() InlineResponse200166Md5AuthenticationKey`
 
 GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
 
 ### GetMd5AuthenticationKeyOk
 
-`func (o *InlineObject156) GetMd5AuthenticationKeyOk() (*InlineResponse200165Md5AuthenticationKey, bool)`
+`func (o *InlineObject156) GetMd5AuthenticationKeyOk() (*InlineResponse200166Md5AuthenticationKey, bool)`
 
 GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMd5AuthenticationKey
 
-`func (o *InlineObject156) SetMd5AuthenticationKey(v InlineResponse200165Md5AuthenticationKey)`
+`func (o *InlineObject156) SetMd5AuthenticationKey(v InlineResponse200166Md5AuthenticationKey)`
 
 SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
 

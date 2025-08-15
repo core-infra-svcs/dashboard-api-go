@@ -4,10 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Serial** | Pointer to **string** | Unique serial number for device. | [optional] 
-**Name** | Pointer to **string** | Name of device. | [optional] 
 **Network** | Pointer to [**InlineResponse200368Network**](InlineResponse200368Network.md) |  | [optional] 
-**BasicServiceSets** | Pointer to [**[]InlineResponse200368BasicServiceSets**](InlineResponse200368BasicServiceSets.md) | Status information for wireless access points. | [optional] 
+**ReceiverId** | Pointer to **string** | Receiver ID | [optional] 
+**Url** | Pointer to **string** | Receiver Url | [optional] 
+**Version** | Pointer to **string** | Scanning API Version | [optional] 
+**Radio** | Pointer to [**InlineResponse200368Radio**](InlineResponse200368Radio.md) |  | [optional] 
 
 ## Methods
 
@@ -27,56 +28,6 @@ will change when the set of required properties is changed
 NewInlineResponse200368ItemsWithDefaults instantiates a new InlineResponse200368Items object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetSerial
-
-`func (o *InlineResponse200368Items) GetSerial() string`
-
-GetSerial returns the Serial field if non-nil, zero value otherwise.
-
-### GetSerialOk
-
-`func (o *InlineResponse200368Items) GetSerialOk() (*string, bool)`
-
-GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSerial
-
-`func (o *InlineResponse200368Items) SetSerial(v string)`
-
-SetSerial sets Serial field to given value.
-
-### HasSerial
-
-`func (o *InlineResponse200368Items) HasSerial() bool`
-
-HasSerial returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *InlineResponse200368Items) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *InlineResponse200368Items) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *InlineResponse200368Items) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *InlineResponse200368Items) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetNetwork
 
@@ -103,30 +54,105 @@ SetNetwork sets Network field to given value.
 
 HasNetwork returns a boolean if a field has been set.
 
-### GetBasicServiceSets
+### GetReceiverId
 
-`func (o *InlineResponse200368Items) GetBasicServiceSets() []InlineResponse200368BasicServiceSets`
+`func (o *InlineResponse200368Items) GetReceiverId() string`
 
-GetBasicServiceSets returns the BasicServiceSets field if non-nil, zero value otherwise.
+GetReceiverId returns the ReceiverId field if non-nil, zero value otherwise.
 
-### GetBasicServiceSetsOk
+### GetReceiverIdOk
 
-`func (o *InlineResponse200368Items) GetBasicServiceSetsOk() (*[]InlineResponse200368BasicServiceSets, bool)`
+`func (o *InlineResponse200368Items) GetReceiverIdOk() (*string, bool)`
 
-GetBasicServiceSetsOk returns a tuple with the BasicServiceSets field if it's non-nil, zero value otherwise
+GetReceiverIdOk returns a tuple with the ReceiverId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBasicServiceSets
+### SetReceiverId
 
-`func (o *InlineResponse200368Items) SetBasicServiceSets(v []InlineResponse200368BasicServiceSets)`
+`func (o *InlineResponse200368Items) SetReceiverId(v string)`
 
-SetBasicServiceSets sets BasicServiceSets field to given value.
+SetReceiverId sets ReceiverId field to given value.
 
-### HasBasicServiceSets
+### HasReceiverId
 
-`func (o *InlineResponse200368Items) HasBasicServiceSets() bool`
+`func (o *InlineResponse200368Items) HasReceiverId() bool`
 
-HasBasicServiceSets returns a boolean if a field has been set.
+HasReceiverId returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse200368Items) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse200368Items) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse200368Items) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse200368Items) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
+
+### GetVersion
+
+`func (o *InlineResponse200368Items) GetVersion() string`
+
+GetVersion returns the Version field if non-nil, zero value otherwise.
+
+### GetVersionOk
+
+`func (o *InlineResponse200368Items) GetVersionOk() (*string, bool)`
+
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVersion
+
+`func (o *InlineResponse200368Items) SetVersion(v string)`
+
+SetVersion sets Version field to given value.
+
+### HasVersion
+
+`func (o *InlineResponse200368Items) HasVersion() bool`
+
+HasVersion returns a boolean if a field has been set.
+
+### GetRadio
+
+`func (o *InlineResponse200368Items) GetRadio() InlineResponse200368Radio`
+
+GetRadio returns the Radio field if non-nil, zero value otherwise.
+
+### GetRadioOk
+
+`func (o *InlineResponse200368Items) GetRadioOk() (*InlineResponse200368Radio, bool)`
+
+GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRadio
+
+`func (o *InlineResponse200368Items) SetRadio(v InlineResponse200368Radio)`
+
+SetRadio sets Radio field to given value.
+
+### HasRadio
+
+`func (o *InlineResponse200368Items) HasRadio() bool`
+
+HasRadio returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

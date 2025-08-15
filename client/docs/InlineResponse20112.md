@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Webhook delivery identifier | [optional] 
-**Url** | Pointer to **string** | URL where the webhook was delivered | [optional] 
-**Status** | Pointer to **string** | Current status of the webhook delivery | [optional] 
+**Clients** | Pointer to [**[]InlineResponse20112Clients**](InlineResponse20112Clients.md) | The list of clients to provision | [optional] 
+**DevicePolicy** | Pointer to **string** | The name of the client&#39;s policy | [optional] 
+**GroupPolicyId** | Pointer to **string** | The group policy identifier of the client | [optional] 
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewInlineResponse20112WithDefaults instantiates a new InlineResponse20112 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetClients
 
-`func (o *InlineResponse20112) GetId() string`
+`func (o *InlineResponse20112) GetClients() []InlineResponse20112Clients`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetClients returns the Clients field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetClientsOk
 
-`func (o *InlineResponse20112) GetIdOk() (*string, bool)`
+`func (o *InlineResponse20112) GetClientsOk() (*[]InlineResponse20112Clients, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetClientsOk returns a tuple with the Clients field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetClients
 
-`func (o *InlineResponse20112) SetId(v string)`
+`func (o *InlineResponse20112) SetClients(v []InlineResponse20112Clients)`
 
-SetId sets Id field to given value.
+SetClients sets Clients field to given value.
 
-### HasId
+### HasClients
 
-`func (o *InlineResponse20112) HasId() bool`
+`func (o *InlineResponse20112) HasClients() bool`
 
-HasId returns a boolean if a field has been set.
+HasClients returns a boolean if a field has been set.
 
-### GetUrl
+### GetDevicePolicy
 
-`func (o *InlineResponse20112) GetUrl() string`
+`func (o *InlineResponse20112) GetDevicePolicy() string`
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+GetDevicePolicy returns the DevicePolicy field if non-nil, zero value otherwise.
 
-### GetUrlOk
+### GetDevicePolicyOk
 
-`func (o *InlineResponse20112) GetUrlOk() (*string, bool)`
+`func (o *InlineResponse20112) GetDevicePolicyOk() (*string, bool)`
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+GetDevicePolicyOk returns a tuple with the DevicePolicy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetDevicePolicy
 
-`func (o *InlineResponse20112) SetUrl(v string)`
+`func (o *InlineResponse20112) SetDevicePolicy(v string)`
 
-SetUrl sets Url field to given value.
+SetDevicePolicy sets DevicePolicy field to given value.
 
-### HasUrl
+### HasDevicePolicy
 
-`func (o *InlineResponse20112) HasUrl() bool`
+`func (o *InlineResponse20112) HasDevicePolicy() bool`
 
-HasUrl returns a boolean if a field has been set.
+HasDevicePolicy returns a boolean if a field has been set.
 
-### GetStatus
+### GetGroupPolicyId
 
-`func (o *InlineResponse20112) GetStatus() string`
+`func (o *InlineResponse20112) GetGroupPolicyId() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetGroupPolicyId returns the GroupPolicyId field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetGroupPolicyIdOk
 
-`func (o *InlineResponse20112) GetStatusOk() (*string, bool)`
+`func (o *InlineResponse20112) GetGroupPolicyIdOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetGroupPolicyIdOk returns a tuple with the GroupPolicyId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetGroupPolicyId
 
-`func (o *InlineResponse20112) SetStatus(v string)`
+`func (o *InlineResponse20112) SetGroupPolicyId(v string)`
 
-SetStatus sets Status field to given value.
+SetGroupPolicyId sets GroupPolicyId field to given value.
 
-### HasStatus
+### HasGroupPolicyId
 
-`func (o *InlineResponse20112) HasStatus() bool`
+`func (o *InlineResponse20112) HasGroupPolicyId() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasGroupPolicyId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

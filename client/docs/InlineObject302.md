@@ -4,17 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork**](OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork.md) |  | 
-**Url** | **string** | Receiver Url | 
-**Version** | **string** | Scanning API Version | 
-**Radio** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | 
-**SharedSecret** | **string** | Secret Value for Receiver | 
+**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
+**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
 
 ## Methods
 
 ### NewInlineObject302
 
-`func NewInlineObject302(network OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, url string, version string, radio OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, sharedSecret string, ) *InlineObject302`
+`func NewInlineObject302() *InlineObject302`
 
 NewInlineObject302 instantiates a new InlineObject302 object
 This constructor will assign default values to properties that have it defined,
@@ -29,105 +26,55 @@ NewInlineObject302WithDefaults instantiates a new InlineObject302 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetStatus
 
-`func (o *InlineObject302) GetNetwork() OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork`
+`func (o *InlineObject302) GetStatus() string`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetStatusOk
 
-`func (o *InlineObject302) GetNetworkOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, bool)`
+`func (o *InlineObject302) GetStatusOk() (*string, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetStatus
 
-`func (o *InlineObject302) SetNetwork(v OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork)`
+`func (o *InlineObject302) SetStatus(v string)`
 
-SetNetwork sets Network field to given value.
+SetStatus sets Status field to given value.
 
+### HasStatus
 
-### GetUrl
+`func (o *InlineObject302) HasStatus() bool`
 
-`func (o *InlineObject302) GetUrl() string`
+HasStatus returns a boolean if a field has been set.
 
-GetUrl returns the Url field if non-nil, zero value otherwise.
+### GetCertificateAuthorityId
 
-### GetUrlOk
+`func (o *InlineObject302) GetCertificateAuthorityId() string`
 
-`func (o *InlineObject302) GetUrlOk() (*string, bool)`
+GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
 
-GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+### GetCertificateAuthorityIdOk
+
+`func (o *InlineObject302) GetCertificateAuthorityIdOk() (*string, bool)`
+
+GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUrl
+### SetCertificateAuthorityId
 
-`func (o *InlineObject302) SetUrl(v string)`
+`func (o *InlineObject302) SetCertificateAuthorityId(v string)`
 
-SetUrl sets Url field to given value.
+SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
 
+### HasCertificateAuthorityId
 
-### GetVersion
+`func (o *InlineObject302) HasCertificateAuthorityId() bool`
 
-`func (o *InlineObject302) GetVersion() string`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *InlineObject302) GetVersionOk() (*string, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *InlineObject302) SetVersion(v string)`
-
-SetVersion sets Version field to given value.
-
-
-### GetRadio
-
-`func (o *InlineObject302) GetRadio() OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio`
-
-GetRadio returns the Radio field if non-nil, zero value otherwise.
-
-### GetRadioOk
-
-`func (o *InlineObject302) GetRadioOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, bool)`
-
-GetRadioOk returns a tuple with the Radio field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRadio
-
-`func (o *InlineObject302) SetRadio(v OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio)`
-
-SetRadio sets Radio field to given value.
-
-
-### GetSharedSecret
-
-`func (o *InlineObject302) GetSharedSecret() string`
-
-GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
-
-### GetSharedSecretOk
-
-`func (o *InlineObject302) GetSharedSecretOk() (*string, bool)`
-
-GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSharedSecret
-
-`func (o *InlineObject302) SetSharedSecret(v string)`
-
-SetSharedSecret sets SharedSecret field to given value.
-
+HasCertificateAuthorityId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

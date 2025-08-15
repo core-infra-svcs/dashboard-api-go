@@ -9,9 +9,8 @@ Name | Type | Description | Notes
 **Name** | Pointer to **string** | Name of the device | [optional] 
 **Mac** | Pointer to **string** | MAC address of the device | [optional] 
 **Tags** | Pointer to **[]string** | List of custom tags for the device | [optional] 
-**Network** | Pointer to [**InlineResponse200282Network**](InlineResponse200282Network.md) |  | [optional] 
-**CpuCount** | Pointer to **int32** | Number of CPU cores on the device | [optional] 
-**Series** | Pointer to [**[]InlineResponse200361Series**](InlineResponse200361Series.md) | Series of cpu load average measurements on the device | [optional] 
+**Network** | Pointer to [**InlineResponse200284Network**](InlineResponse200284Network.md) |  | [optional] 
+**Events** | Pointer to [**[]InlineResponse200361Events**](InlineResponse200361Events.md) | Events indicating power mode changes for the device | [optional] 
 
 ## Methods
 
@@ -159,20 +158,20 @@ HasTags returns a boolean if a field has been set.
 
 ### GetNetwork
 
-`func (o *InlineResponse200361Items) GetNetwork() InlineResponse200282Network`
+`func (o *InlineResponse200361Items) GetNetwork() InlineResponse200284Network`
 
 GetNetwork returns the Network field if non-nil, zero value otherwise.
 
 ### GetNetworkOk
 
-`func (o *InlineResponse200361Items) GetNetworkOk() (*InlineResponse200282Network, bool)`
+`func (o *InlineResponse200361Items) GetNetworkOk() (*InlineResponse200284Network, bool)`
 
 GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetNetwork
 
-`func (o *InlineResponse200361Items) SetNetwork(v InlineResponse200282Network)`
+`func (o *InlineResponse200361Items) SetNetwork(v InlineResponse200284Network)`
 
 SetNetwork sets Network field to given value.
 
@@ -182,55 +181,30 @@ SetNetwork sets Network field to given value.
 
 HasNetwork returns a boolean if a field has been set.
 
-### GetCpuCount
+### GetEvents
 
-`func (o *InlineResponse200361Items) GetCpuCount() int32`
+`func (o *InlineResponse200361Items) GetEvents() []InlineResponse200361Events`
 
-GetCpuCount returns the CpuCount field if non-nil, zero value otherwise.
+GetEvents returns the Events field if non-nil, zero value otherwise.
 
-### GetCpuCountOk
+### GetEventsOk
 
-`func (o *InlineResponse200361Items) GetCpuCountOk() (*int32, bool)`
+`func (o *InlineResponse200361Items) GetEventsOk() (*[]InlineResponse200361Events, bool)`
 
-GetCpuCountOk returns a tuple with the CpuCount field if it's non-nil, zero value otherwise
+GetEventsOk returns a tuple with the Events field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCpuCount
+### SetEvents
 
-`func (o *InlineResponse200361Items) SetCpuCount(v int32)`
+`func (o *InlineResponse200361Items) SetEvents(v []InlineResponse200361Events)`
 
-SetCpuCount sets CpuCount field to given value.
+SetEvents sets Events field to given value.
 
-### HasCpuCount
+### HasEvents
 
-`func (o *InlineResponse200361Items) HasCpuCount() bool`
+`func (o *InlineResponse200361Items) HasEvents() bool`
 
-HasCpuCount returns a boolean if a field has been set.
-
-### GetSeries
-
-`func (o *InlineResponse200361Items) GetSeries() []InlineResponse200361Series`
-
-GetSeries returns the Series field if non-nil, zero value otherwise.
-
-### GetSeriesOk
-
-`func (o *InlineResponse200361Items) GetSeriesOk() (*[]InlineResponse200361Series, bool)`
-
-GetSeriesOk returns a tuple with the Series field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSeries
-
-`func (o *InlineResponse200361Items) SetSeries(v []InlineResponse200361Series)`
-
-SetSeries sets Series field to given value.
-
-### HasSeries
-
-`func (o *InlineResponse200361Items) HasSeries() bool`
-
-HasSeries returns a boolean if a field has been set.
+HasEvents returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

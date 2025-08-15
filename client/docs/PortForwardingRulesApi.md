@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallPortForwardingRules
 
-> InlineResponse20057 GetNetworkApplianceFirewallPortForwardingRules(ctx, networkId).Execute()
+> InlineResponse20058 GetNetworkApplianceFirewallPortForwardingRules(ctx, networkId).Execute()
 
 Return the port forwarding rules for an MX network
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortForwardingRulesApi.GetNetworkApplianceFirewallPortForwardingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallPortForwardingRules`: InlineResponse20057
+    // response from `GetNetworkApplianceFirewallPortForwardingRules`: InlineResponse20058
     fmt.Fprintf(os.Stdout, "Response from `PortForwardingRulesApi.GetNetworkApplianceFirewallPortForwardingRules`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20057**](InlineResponse20057.md)
+[**InlineResponse20058**](InlineResponse20058.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallPortForwardingRules
 
-> InlineResponse20057 UpdateNetworkApplianceFirewallPortForwardingRules(ctx, networkId).UpdateNetworkApplianceFirewallPortForwardingRules(updateNetworkApplianceFirewallPortForwardingRules).Execute()
+> InlineResponse20058 UpdateNetworkApplianceFirewallPortForwardingRules(ctx, networkId).UpdateNetworkApplianceFirewallPortForwardingRules(updateNetworkApplianceFirewallPortForwardingRules).Execute()
 
 Update the port forwarding rules for an MX network
 
@@ -254,7 +254,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PortForwardingRulesApi.UpdateNetworkApplianceFirewallPortForwardingRules``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallPortForwardingRules`: InlineResponse20057
+    // response from `UpdateNetworkApplianceFirewallPortForwardingRules`: InlineResponse20058
     fmt.Fprintf(os.Stdout, "Response from `PortForwardingRulesApi.UpdateNetworkApplianceFirewallPortForwardingRules`: %v\n", resp)
 }
 ```
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20057**](InlineResponse20057.md)
+[**InlineResponse20058**](InlineResponse20058.md)
 
 ### Authorization
 

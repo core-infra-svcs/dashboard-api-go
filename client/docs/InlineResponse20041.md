@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **Subnet** | **string** | The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24) | 
 **NextHopIp** | **string** | The IP address of the router to which traffic for this destination network should be sent | 
 **ManagementNextHop** | Pointer to **string** | Optional fallback IP address for management traffic | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf**](DevicesSerialSwitchRoutingStaticRoutesVrf.md) |  | [optional] 
 **AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static routes via OSPF | [optional] 
 **PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static routes over OSPF routes | [optional] 
 
@@ -140,6 +141,31 @@ SetManagementNextHop sets ManagementNextHop field to given value.
 `func (o *InlineResponse20041) HasManagementNextHop() bool`
 
 HasManagementNextHop returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineResponse20041) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineResponse20041) GetVrfOk() (*DevicesSerialSwitchRoutingStaticRoutesVrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineResponse20041) SetVrf(v DevicesSerialSwitchRoutingStaticRoutesVrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineResponse20041) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 ### GetAdvertiseViaOspfEnabled
 

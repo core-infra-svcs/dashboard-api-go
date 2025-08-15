@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200364Items**](InlineResponse200364Items.md) | Paginated list of scanning api receivers by network ID. | [optional] 
-**Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
+**Items** | Pointer to [**[]InlineResponse200364Items**](InlineResponse200364Items.md) | List of CRLs for the specified CAs | [optional] 
+**Meta** | Pointer to [**InlineResponse200364Meta**](InlineResponse200364Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200364) GetMeta() InlineResponse200222Meta`
+`func (o *InlineResponse200364) GetMeta() InlineResponse200364Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200364) GetMetaOk() (*InlineResponse200222Meta, bool)`
+`func (o *InlineResponse200364) GetMetaOk() (*InlineResponse200364Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200364) SetMeta(v InlineResponse200222Meta)`
+`func (o *InlineResponse200364) SetMeta(v InlineResponse200364Meta)`
 
 SetMeta sets Meta field to given value.
 

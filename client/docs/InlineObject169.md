@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Mode** | Pointer to **string** |     The traffic analysis mode for the network. Can be one of &#39;disabled&#39; (do not collect traffic types),     &#39;basic&#39; (collect generic traffic categories), or &#39;detailed&#39; (collect destination hostnames).  | [optional] 
-**CustomPieChartItems** | Pointer to [**[]InlineResponse200173CustomPieChartItems**](InlineResponse200173CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
+**CustomPieChartItems** | Pointer to [**[]InlineResponse200175CustomPieChartItems**](InlineResponse200175CustomPieChartItems.md) | The list of items that make up the custom pie chart for traffic reporting. | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasMode returns a boolean if a field has been set.
 
 ### GetCustomPieChartItems
 
-`func (o *InlineObject169) GetCustomPieChartItems() []InlineResponse200173CustomPieChartItems`
+`func (o *InlineObject169) GetCustomPieChartItems() []InlineResponse200175CustomPieChartItems`
 
 GetCustomPieChartItems returns the CustomPieChartItems field if non-nil, zero value otherwise.
 
 ### GetCustomPieChartItemsOk
 
-`func (o *InlineObject169) GetCustomPieChartItemsOk() (*[]InlineResponse200173CustomPieChartItems, bool)`
+`func (o *InlineObject169) GetCustomPieChartItemsOk() (*[]InlineResponse200175CustomPieChartItems, bool)`
 
 GetCustomPieChartItemsOk returns a tuple with the CustomPieChartItems field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCustomPieChartItems
 
-`func (o *InlineObject169) SetCustomPieChartItems(v []InlineResponse200173CustomPieChartItems)`
+`func (o *InlineObject169) SetCustomPieChartItems(v []InlineResponse200175CustomPieChartItems)`
 
 SetCustomPieChartItems sets CustomPieChartItems field to given value.
 

@@ -4,7 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse200338Counts**](InlineResponse200338Counts.md) |  | [optional] 
+**Network** | Pointer to [**OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork**](OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork.md) |  | [optional] 
+**Name** | Pointer to **string** | Name of the switch | [optional] 
+**Mac** | Pointer to **string** | Mac address of the switch | [optional] 
+**Model** | Pointer to **string** | Model of the switch | [optional] 
+**Usage** | Pointer to [**OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage**](OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage.md) |  | [optional] 
 
 ## Methods
 
@@ -25,30 +29,130 @@ NewInlineResponse200338WithDefaults instantiates a new InlineResponse200338 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetNetwork
 
-`func (o *InlineResponse200338) GetCounts() InlineResponse200338Counts`
+`func (o *InlineResponse200338) GetNetwork() OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetNetworkOk
 
-`func (o *InlineResponse200338) GetCountsOk() (*InlineResponse200338Counts, bool)`
+`func (o *InlineResponse200338) GetNetworkOk() (*OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetNetwork
 
-`func (o *InlineResponse200338) SetCounts(v InlineResponse200338Counts)`
+`func (o *InlineResponse200338) SetNetwork(v OrganizationsOrganizationIdSummaryTopAppliancesByUtilizationNetwork)`
 
-SetCounts sets Counts field to given value.
+SetNetwork sets Network field to given value.
 
-### HasCounts
+### HasNetwork
 
-`func (o *InlineResponse200338) HasCounts() bool`
+`func (o *InlineResponse200338) HasNetwork() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200338) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200338) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200338) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200338) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200338) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200338) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200338) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200338) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetModel
+
+`func (o *InlineResponse200338) GetModel() string`
+
+GetModel returns the Model field if non-nil, zero value otherwise.
+
+### GetModelOk
+
+`func (o *InlineResponse200338) GetModelOk() (*string, bool)`
+
+GetModelOk returns a tuple with the Model field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetModel
+
+`func (o *InlineResponse200338) SetModel(v string)`
+
+SetModel sets Model field to given value.
+
+### HasModel
+
+`func (o *InlineResponse200338) HasModel() bool`
+
+HasModel returns a boolean if a field has been set.
+
+### GetUsage
+
+`func (o *InlineResponse200338) GetUsage() OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage`
+
+GetUsage returns the Usage field if non-nil, zero value otherwise.
+
+### GetUsageOk
+
+`func (o *InlineResponse200338) GetUsageOk() (*OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage, bool)`
+
+GetUsageOk returns a tuple with the Usage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUsage
+
+`func (o *InlineResponse200338) SetUsage(v OrganizationsOrganizationIdSummaryTopSwitchesByEnergyUsageUsage)`
+
+SetUsage sets Usage field to given value.
+
+### HasUsage
+
+`func (o *InlineResponse200338) HasUsage() bool`
+
+HasUsage returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

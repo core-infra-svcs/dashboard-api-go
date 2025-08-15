@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **ManagementNextHop** | Pointer to **NullableString** | Optional fallback IP address for management traffic | [optional] 
 **AdvertiseViaOspfEnabled** | Pointer to **bool** | Option to advertise static route via OSPF | [optional] 
 **PreferOverOspfRoutesEnabled** | Pointer to **bool** | Option to prefer static route over OSPF routes | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingStaticRoutesVrf1**](DevicesSerialSwitchRoutingStaticRoutesVrf1.md) |  | [optional] 
 
 ## Methods
 
@@ -189,6 +190,31 @@ SetPreferOverOspfRoutesEnabled sets PreferOverOspfRoutesEnabled field to given v
 `func (o *InlineObject165) HasPreferOverOspfRoutesEnabled() bool`
 
 HasPreferOverOspfRoutesEnabled returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject165) GetVrf() DevicesSerialSwitchRoutingStaticRoutesVrf1`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject165) GetVrfOk() (*DevicesSerialSwitchRoutingStaticRoutesVrf1, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject165) SetVrf(v DevicesSerialSwitchRoutingStaticRoutesVrf1)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject165) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

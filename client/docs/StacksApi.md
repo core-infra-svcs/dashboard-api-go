@@ -27,7 +27,7 @@ Method | HTTP request | Description
 
 ## AddNetworkSwitchStack
 
-> InlineResponse200167 AddNetworkSwitchStack(ctx, networkId, switchStackId).AddNetworkSwitchStack(addNetworkSwitchStack).Execute()
+> InlineResponse200168 AddNetworkSwitchStack(ctx, networkId, switchStackId).AddNetworkSwitchStack(addNetworkSwitchStack).Execute()
 
 Add a switch to a stack
 
@@ -57,7 +57,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.AddNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `AddNetworkSwitchStack`: InlineResponse200167
+    // response from `AddNetworkSwitchStack`: InlineResponse200168
     fmt.Fprintf(os.Stdout, "Response from `StacksApi.AddNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200167**](InlineResponse200167.md)
+[**InlineResponse200168**](InlineResponse200168.md)
 
 ### Authorization
 
@@ -102,7 +102,7 @@ Name | Type | Description  | Notes
 
 ## CreateNetworkSwitchStack
 
-> InlineResponse200167 CreateNetworkSwitchStack(ctx, networkId).CreateNetworkSwitchStack(createNetworkSwitchStack).Execute()
+> InlineResponse200169 CreateNetworkSwitchStack(ctx, networkId).CreateNetworkSwitchStack(createNetworkSwitchStack).Execute()
 
 Create a switch stack
 
@@ -131,7 +131,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.CreateNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkSwitchStack`: InlineResponse200167
+    // response from `CreateNetworkSwitchStack`: InlineResponse200169
     fmt.Fprintf(os.Stdout, "Response from `StacksApi.CreateNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200167**](InlineResponse200167.md)
+[**InlineResponse200169**](InlineResponse200169.md)
 
 ### Authorization
 
@@ -543,7 +543,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStack
 
-> InlineResponse200167 GetNetworkSwitchStack(ctx, networkId, switchStackId).Execute()
+> InlineResponse200168 GetNetworkSwitchStack(ctx, networkId, switchStackId).Execute()
 
 Show a switch stack
 
@@ -572,7 +572,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.GetNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStack`: InlineResponse200167
+    // response from `GetNetworkSwitchStack`: InlineResponse200168
     fmt.Fprintf(os.Stdout, "Response from `StacksApi.GetNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200167**](InlineResponse200167.md)
+[**InlineResponse200168**](InlineResponse200168.md)
 
 ### Authorization
 
@@ -768,7 +768,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStackRoutingInterfaces
 
-> []InlineResponse20039 GetNetworkSwitchStackRoutingInterfaces(ctx, networkId, switchStackId).Protocol(protocol).Execute()
+> []InlineResponse20039 GetNetworkSwitchStackRoutingInterfaces(ctx, networkId, switchStackId).Mode(mode).Protocol(protocol).Execute()
 
 List layer 3 interfaces for a switch stack
 
@@ -789,11 +789,12 @@ import (
 func main() {
     networkId := "networkId_example" // string | Network ID
     switchStackId := "switchStackId_example" // string | Switch stack ID
+    mode := "mode_example" // string | Optional parameter to filter L3 interfaces by mode. (optional)
     protocol := "protocol_example" // string | Optional parameter to filter L3 interfaces by protocol. (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.StacksApi.GetNetworkSwitchStackRoutingInterfaces(context.Background(), networkId, switchStackId).Protocol(protocol).Execute()
+    resp, r, err := apiClient.StacksApi.GetNetworkSwitchStackRoutingInterfaces(context.Background(), networkId, switchStackId).Mode(mode).Protocol(protocol).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.GetNetworkSwitchStackRoutingInterfaces``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -821,6 +822,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
+ **mode** | **string** | Optional parameter to filter L3 interfaces by mode. | 
  **protocol** | **string** | Optional parameter to filter L3 interfaces by protocol. | 
 
 ### Return type
@@ -992,7 +994,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkSwitchStacks
 
-> []InlineResponse200167 GetNetworkSwitchStacks(ctx, networkId).Execute()
+> []InlineResponse200168 GetNetworkSwitchStacks(ctx, networkId).Execute()
 
 List the switch stacks in a network
 
@@ -1020,7 +1022,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.GetNetworkSwitchStacks``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchStacks`: []InlineResponse200167
+    // response from `GetNetworkSwitchStacks`: []InlineResponse200168
     fmt.Fprintf(os.Stdout, "Response from `StacksApi.GetNetworkSwitchStacks`: %v\n", resp)
 }
 ```
@@ -1044,7 +1046,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200167**](InlineResponse200167.md)
+[**[]InlineResponse200168**](InlineResponse200168.md)
 
 ### Authorization
 
@@ -1062,7 +1064,7 @@ Name | Type | Description  | Notes
 
 ## RemoveNetworkSwitchStack
 
-> InlineResponse200167 RemoveNetworkSwitchStack(ctx, networkId, switchStackId).RemoveNetworkSwitchStack(removeNetworkSwitchStack).Execute()
+> InlineResponse200168 RemoveNetworkSwitchStack(ctx, networkId, switchStackId).RemoveNetworkSwitchStack(removeNetworkSwitchStack).Execute()
 
 Remove a switch from a stack
 
@@ -1092,7 +1094,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.RemoveNetworkSwitchStack``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RemoveNetworkSwitchStack`: InlineResponse200167
+    // response from `RemoveNetworkSwitchStack`: InlineResponse200168
     fmt.Fprintf(os.Stdout, "Response from `StacksApi.RemoveNetworkSwitchStack`: %v\n", resp)
 }
 ```
@@ -1119,7 +1121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200167**](InlineResponse200167.md)
+[**InlineResponse200168**](InlineResponse200168.md)
 
 ### Authorization
 
@@ -1137,7 +1139,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchStackRoutingInterface
 
-> InlineResponse200168 UpdateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterface(updateNetworkSwitchStackRoutingInterface).Execute()
+> InlineResponse200170 UpdateNetworkSwitchStackRoutingInterface(ctx, networkId, switchStackId, interfaceId).UpdateNetworkSwitchStackRoutingInterface(updateNetworkSwitchStackRoutingInterface).Execute()
 
 Update a layer 3 interface for a switch stack
 
@@ -1168,7 +1170,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `StacksApi.UpdateNetworkSwitchStackRoutingInterface``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchStackRoutingInterface`: InlineResponse200168
+    // response from `UpdateNetworkSwitchStackRoutingInterface`: InlineResponse200170
     fmt.Fprintf(os.Stdout, "Response from `StacksApi.UpdateNetworkSwitchStackRoutingInterface`: %v\n", resp)
 }
 ```
@@ -1197,7 +1199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200168**](InlineResponse200168.md)
+[**InlineResponse200170**](InlineResponse200170.md)
 
 ### Authorization
 

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetNetworkWirelessDataRateHistory
 
-> []InlineResponse200188 GetNetworkWirelessDataRateHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
+> []InlineResponse200190 GetNetworkWirelessDataRateHistory(ctx, networkId).T0(t0).T1(t1).Timespan(timespan).Resolution(resolution).AutoResolution(autoResolution).ClientId(clientId).DeviceSerial(deviceSerial).ApTag(apTag).Band(band).Ssid(ssid).Execute()
 
 Return PHY data rates over time for a network, device, or network client
 
@@ -48,7 +48,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DataRateHistoryApi.GetNetworkWirelessDataRateHistory``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkWirelessDataRateHistory`: []InlineResponse200188
+    // response from `GetNetworkWirelessDataRateHistory`: []InlineResponse200190
     fmt.Fprintf(os.Stdout, "Response from `DataRateHistoryApi.GetNetworkWirelessDataRateHistory`: %v\n", resp)
 }
 ```
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200188**](InlineResponse200188.md)
+[**[]InlineResponse200190**](InlineResponse200190.md)
 
 ### Authorization
 

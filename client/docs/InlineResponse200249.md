@@ -4,10 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
-**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
+**NetworkId** | Pointer to **string** | The network id of the camera | [optional] 
+**Serial** | Pointer to **string** | The serial number of the camera | [optional] 
+**Boundaries** | Pointer to [**OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries**](OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries.md) |  | [optional] 
 
 ## Methods
 
@@ -28,105 +27,80 @@ NewInlineResponse200249WithDefaults instantiates a new InlineResponse200249 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetArtifactId
+### GetNetworkId
 
-`func (o *InlineResponse200249) GetArtifactId() string`
+`func (o *InlineResponse200249) GetNetworkId() string`
 
-GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetArtifactIdOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200249) GetArtifactIdOk() (*string, bool)`
+`func (o *InlineResponse200249) GetNetworkIdOk() (*string, bool)`
 
-GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArtifactId
+### SetNetworkId
 
-`func (o *InlineResponse200249) SetArtifactId(v string)`
+`func (o *InlineResponse200249) SetNetworkId(v string)`
 
-SetArtifactId sets ArtifactId field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasArtifactId
+### HasNetworkId
 
-`func (o *InlineResponse200249) HasArtifactId() bool`
+`func (o *InlineResponse200249) HasNetworkId() bool`
 
-HasArtifactId returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
 
-### GetOrganizationId
+### GetSerial
 
-`func (o *InlineResponse200249) GetOrganizationId() string`
+`func (o *InlineResponse200249) GetSerial() string`
 
-GetOrganizationId returns the OrganizationId field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetOrganizationIdOk
+### GetSerialOk
 
-`func (o *InlineResponse200249) GetOrganizationIdOk() (*string, bool)`
+`func (o *InlineResponse200249) GetSerialOk() (*string, bool)`
 
-GetOrganizationIdOk returns a tuple with the OrganizationId field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOrganizationId
+### SetSerial
 
-`func (o *InlineResponse200249) SetOrganizationId(v string)`
+`func (o *InlineResponse200249) SetSerial(v string)`
 
-SetOrganizationId sets OrganizationId field to given value.
+SetSerial sets Serial field to given value.
 
-### HasOrganizationId
+### HasSerial
 
-`func (o *InlineResponse200249) HasOrganizationId() bool`
+`func (o *InlineResponse200249) HasSerial() bool`
 
-HasOrganizationId returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetName
+### GetBoundaries
 
-`func (o *InlineResponse200249) GetName() string`
+`func (o *InlineResponse200249) GetBoundaries() OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetBoundaries returns the Boundaries field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetBoundariesOk
 
-`func (o *InlineResponse200249) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200249) GetBoundariesOk() (*OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetBoundariesOk returns a tuple with the Boundaries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetBoundaries
 
-`func (o *InlineResponse200249) SetName(v string)`
+`func (o *InlineResponse200249) SetBoundaries(v OrganizationsOrganizationIdCameraBoundariesAreasByDeviceBoundaries)`
 
-SetName sets Name field to given value.
+SetBoundaries sets Boundaries field to given value.
 
-### HasName
+### HasBoundaries
 
-`func (o *InlineResponse200249) HasName() bool`
+`func (o *InlineResponse200249) HasBoundaries() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetStatus
-
-`func (o *InlineResponse200249) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *InlineResponse200249) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *InlineResponse200249) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *InlineResponse200249) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
+HasBoundaries returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

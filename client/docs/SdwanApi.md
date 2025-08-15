@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## UpdateNetworkApplianceSdwanInternetPolicies
 
-> InlineResponse20061 UpdateNetworkApplianceSdwanInternetPolicies(ctx, networkId).UpdateNetworkApplianceSdwanInternetPolicies(updateNetworkApplianceSdwanInternetPolicies).Execute()
+> InlineResponse20062 UpdateNetworkApplianceSdwanInternetPolicies(ctx, networkId).UpdateNetworkApplianceSdwanInternetPolicies(updateNetworkApplianceSdwanInternetPolicies).Execute()
 
 Update SDWAN internet traffic preferences for an MX network
 
@@ -39,7 +39,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `SdwanApi.UpdateNetworkApplianceSdwanInternetPolicies``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceSdwanInternetPolicies`: InlineResponse20061
+    // response from `UpdateNetworkApplianceSdwanInternetPolicies`: InlineResponse20062
     fmt.Fprintf(os.Stdout, "Response from `SdwanApi.UpdateNetworkApplianceSdwanInternetPolicies`: %v\n", resp)
 }
 ```
@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20061**](InlineResponse20061.md)
+[**InlineResponse20062**](InlineResponse20062.md)
 
 ### Authorization
 

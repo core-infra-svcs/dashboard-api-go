@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## CreateOrganizationWirelessLocationScanningReceiver
 
-> InlineResponse200364Items CreateOrganizationWirelessLocationScanningReceiver(ctx, organizationId).CreateOrganizationWirelessLocationScanningReceiver(createOrganizationWirelessLocationScanningReceiver).Execute()
+> InlineResponse200368Items CreateOrganizationWirelessLocationScanningReceiver(ctx, organizationId).CreateOrganizationWirelessLocationScanningReceiver(createOrganizationWirelessLocationScanningReceiver).Execute()
 
 Add new receiver for scanning API
 
@@ -35,7 +35,7 @@ import (
 
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
-    createOrganizationWirelessLocationScanningReceiver := *openapiclient.NewInlineObject302(*openapiclient.NewOrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork(), "Url_example", "Version_example", *openapiclient.NewOrganizationsOrganizationIdWirelessLocationScanningReceiversRadio(), "SharedSecret_example") // InlineObject302 | 
+    createOrganizationWirelessLocationScanningReceiver := *openapiclient.NewInlineObject303(*openapiclient.NewOrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork(), "Url_example", "Version_example", *openapiclient.NewOrganizationsOrganizationIdWirelessLocationScanningReceiversRadio(), "SharedSecret_example") // InlineObject303 | 
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -44,7 +44,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ScanningApi.CreateOrganizationWirelessLocationScanningReceiver``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateOrganizationWirelessLocationScanningReceiver`: InlineResponse200364Items
+    // response from `CreateOrganizationWirelessLocationScanningReceiver`: InlineResponse200368Items
     fmt.Fprintf(os.Stdout, "Response from `ScanningApi.CreateOrganizationWirelessLocationScanningReceiver`: %v\n", resp)
 }
 ```
@@ -65,11 +65,11 @@ Other parameters are passed through a pointer to a apiCreateOrganizationWireless
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **createOrganizationWirelessLocationScanningReceiver** | [**InlineObject302**](InlineObject302.md) |  | 
+ **createOrganizationWirelessLocationScanningReceiver** | [**InlineObject303**](InlineObject303.md) |  | 
 
 ### Return type
 
-[**InlineResponse200364Items**](InlineResponse200364Items.md)
+[**InlineResponse200368Items**](InlineResponse200368Items.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessLocationScanningByNetwork
 
-> InlineResponse200363 GetOrganizationWirelessLocationScanningByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200367 GetOrganizationWirelessLocationScanningByNetwork(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Return scanning API settings
 
@@ -190,7 +190,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ScanningApi.GetOrganizationWirelessLocationScanningByNetwork``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessLocationScanningByNetwork`: InlineResponse200363
+    // response from `GetOrganizationWirelessLocationScanningByNetwork`: InlineResponse200367
     fmt.Fprintf(os.Stdout, "Response from `ScanningApi.GetOrganizationWirelessLocationScanningByNetwork`: %v\n", resp)
 }
 ```
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200363**](InlineResponse200363.md)
+[**InlineResponse200367**](InlineResponse200367.md)
 
 ### Authorization
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationWirelessLocationScanningReceivers
 
-> InlineResponse200364 GetOrganizationWirelessLocationScanningReceivers(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
+> InlineResponse200368 GetOrganizationWirelessLocationScanningReceivers(ctx, organizationId).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).NetworkIds(networkIds).Execute()
 
 Return scanning API receivers
 
@@ -268,7 +268,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ScanningApi.GetOrganizationWirelessLocationScanningReceivers``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationWirelessLocationScanningReceivers`: InlineResponse200364
+    // response from `GetOrganizationWirelessLocationScanningReceivers`: InlineResponse200368
     fmt.Fprintf(os.Stdout, "Response from `ScanningApi.GetOrganizationWirelessLocationScanningReceivers`: %v\n", resp)
 }
 ```
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200364**](InlineResponse200364.md)
+[**InlineResponse200368**](InlineResponse200368.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkWirelessLocationScanning
 
-> InlineResponse200194 UpdateNetworkWirelessLocationScanning(ctx, networkId).UpdateNetworkWirelessLocationScanning(updateNetworkWirelessLocationScanning).Execute()
+> InlineResponse200196 UpdateNetworkWirelessLocationScanning(ctx, networkId).UpdateNetworkWirelessLocationScanning(updateNetworkWirelessLocationScanning).Execute()
 
 Change scanning API settings
 
@@ -343,7 +343,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ScanningApi.UpdateNetworkWirelessLocationScanning``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkWirelessLocationScanning`: InlineResponse200194
+    // response from `UpdateNetworkWirelessLocationScanning`: InlineResponse200196
     fmt.Fprintf(os.Stdout, "Response from `ScanningApi.UpdateNetworkWirelessLocationScanning`: %v\n", resp)
 }
 ```
@@ -368,7 +368,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200194**](InlineResponse200194.md)
+[**InlineResponse200196**](InlineResponse200196.md)
 
 ### Authorization
 
@@ -386,7 +386,7 @@ Name | Type | Description  | Notes
 
 ## UpdateOrganizationWirelessLocationScanningReceiver
 
-> InlineResponse200364Items UpdateOrganizationWirelessLocationScanningReceiver(ctx, organizationId, receiverId).UpdateOrganizationWirelessLocationScanningReceiver(updateOrganizationWirelessLocationScanningReceiver).Execute()
+> InlineResponse200368Items UpdateOrganizationWirelessLocationScanningReceiver(ctx, organizationId, receiverId).UpdateOrganizationWirelessLocationScanningReceiver(updateOrganizationWirelessLocationScanningReceiver).Execute()
 
 Change scanning API receiver settings
 
@@ -407,7 +407,7 @@ import (
 func main() {
     organizationId := "organizationId_example" // string | Organization ID
     receiverId := "receiverId_example" // string | Receiver ID
-    updateOrganizationWirelessLocationScanningReceiver := *openapiclient.NewInlineObject303() // InlineObject303 |  (optional)
+    updateOrganizationWirelessLocationScanningReceiver := *openapiclient.NewInlineObject304() // InlineObject304 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
@@ -416,7 +416,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ScanningApi.UpdateOrganizationWirelessLocationScanningReceiver``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateOrganizationWirelessLocationScanningReceiver`: InlineResponse200364Items
+    // response from `UpdateOrganizationWirelessLocationScanningReceiver`: InlineResponse200368Items
     fmt.Fprintf(os.Stdout, "Response from `ScanningApi.UpdateOrganizationWirelessLocationScanningReceiver`: %v\n", resp)
 }
 ```
@@ -439,11 +439,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **updateOrganizationWirelessLocationScanningReceiver** | [**InlineObject303**](InlineObject303.md) |  | 
+ **updateOrganizationWirelessLocationScanningReceiver** | [**InlineObject304**](InlineObject304.md) |  | 
 
 ### Return type
 
-[**InlineResponse200364Items**](InlineResponse200364Items.md)
+[**InlineResponse200368Items**](InlineResponse200368Items.md)
 
 ### Authorization
 

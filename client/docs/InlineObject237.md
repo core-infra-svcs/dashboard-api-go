@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AlertIds** | **[]string** | Array of alert IDs to restore | 
+**AlertIds** | **[]string** | Array of alert IDs to dismiss | 
 
 ## Methods
 

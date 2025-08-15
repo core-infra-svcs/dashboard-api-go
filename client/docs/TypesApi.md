@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 ## GetOrganizationAssuranceAlertsTaxonomyTypes
 
-> []InlineResponse200244 GetOrganizationAssuranceAlertsTaxonomyTypes(ctx, organizationId).Execute()
+> []InlineResponse200246 GetOrganizationAssuranceAlertsTaxonomyTypes(ctx, organizationId).Execute()
 
 Return a list of alert types
 
@@ -38,7 +38,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `TypesApi.GetOrganizationAssuranceAlertsTaxonomyTypes``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationAssuranceAlertsTaxonomyTypes`: []InlineResponse200244
+    // response from `GetOrganizationAssuranceAlertsTaxonomyTypes`: []InlineResponse200246
     fmt.Fprintf(os.Stdout, "Response from `TypesApi.GetOrganizationAssuranceAlertsTaxonomyTypes`: %v\n", resp)
 }
 ```
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse200244**](InlineResponse200244.md)
+[**[]InlineResponse200246**](InlineResponse200246.md)
 
 ### Authorization
 

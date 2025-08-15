@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## GetNetworkApplianceConnectivityMonitoringDestinations
 
-> InlineResponse20051 GetNetworkApplianceConnectivityMonitoringDestinations(ctx, networkId).Execute()
+> InlineResponse20052 GetNetworkApplianceConnectivityMonitoringDestinations(ctx, networkId).Execute()
 
 Return the connectivity testing destinations for an MX network
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectivityMonitoringDestinationsApi.GetNetworkApplianceConnectivityMonitoringDestinations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceConnectivityMonitoringDestinations`: InlineResponse20051
+    // response from `GetNetworkApplianceConnectivityMonitoringDestinations`: InlineResponse20052
     fmt.Fprintf(os.Stdout, "Response from `ConnectivityMonitoringDestinationsApi.GetNetworkApplianceConnectivityMonitoringDestinations`: %v\n", resp)
 }
 ```
@@ -65,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkCellularGatewayConnectivityMonitoringDestinations
 
-> InlineResponse20051 GetNetworkCellularGatewayConnectivityMonitoringDestinations(ctx, networkId).Execute()
+> InlineResponse20052 GetNetworkCellularGatewayConnectivityMonitoringDestinations(ctx, networkId).Execute()
 
 Return the connectivity testing destinations for an MG network
 
@@ -111,7 +111,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectivityMonitoringDestinationsApi.GetNetworkCellularGatewayConnectivityMonitoringDestinations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkCellularGatewayConnectivityMonitoringDestinations`: InlineResponse20051
+    // response from `GetNetworkCellularGatewayConnectivityMonitoringDestinations`: InlineResponse20052
     fmt.Fprintf(os.Stdout, "Response from `ConnectivityMonitoringDestinationsApi.GetNetworkCellularGatewayConnectivityMonitoringDestinations`: %v\n", resp)
 }
 ```
@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceConnectivityMonitoringDestinations
 
-> InlineResponse20051 UpdateNetworkApplianceConnectivityMonitoringDestinations(ctx, networkId).UpdateNetworkApplianceConnectivityMonitoringDestinations(updateNetworkApplianceConnectivityMonitoringDestinations).Execute()
+> InlineResponse20052 UpdateNetworkApplianceConnectivityMonitoringDestinations(ctx, networkId).UpdateNetworkApplianceConnectivityMonitoringDestinations(updateNetworkApplianceConnectivityMonitoringDestinations).Execute()
 
 Update the connectivity testing destinations for an MX network
 
@@ -182,7 +182,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectivityMonitoringDestinationsApi.UpdateNetworkApplianceConnectivityMonitoringDestinations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceConnectivityMonitoringDestinations`: InlineResponse20051
+    // response from `UpdateNetworkApplianceConnectivityMonitoringDestinations`: InlineResponse20052
     fmt.Fprintf(os.Stdout, "Response from `ConnectivityMonitoringDestinationsApi.UpdateNetworkApplianceConnectivityMonitoringDestinations`: %v\n", resp)
 }
 ```
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCellularGatewayConnectivityMonitoringDestinations
 
-> InlineResponse20051 UpdateNetworkCellularGatewayConnectivityMonitoringDestinations(ctx, networkId).UpdateNetworkCellularGatewayConnectivityMonitoringDestinations(updateNetworkCellularGatewayConnectivityMonitoringDestinations).Execute()
+> InlineResponse20052 UpdateNetworkCellularGatewayConnectivityMonitoringDestinations(ctx, networkId).UpdateNetworkCellularGatewayConnectivityMonitoringDestinations(updateNetworkCellularGatewayConnectivityMonitoringDestinations).Execute()
 
 Update the connectivity testing destinations for an MG network
 
@@ -254,7 +254,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ConnectivityMonitoringDestinationsApi.UpdateNetworkCellularGatewayConnectivityMonitoringDestinations``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCellularGatewayConnectivityMonitoringDestinations`: InlineResponse20051
+    // response from `UpdateNetworkCellularGatewayConnectivityMonitoringDestinations`: InlineResponse20052
     fmt.Fprintf(os.Stdout, "Response from `ConnectivityMonitoringDestinationsApi.UpdateNetworkCellularGatewayConnectivityMonitoringDestinations`: %v\n", resp)
 }
 ```
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20051**](InlineResponse20051.md)
+[**InlineResponse20052**](InlineResponse20052.md)
 
 ### Authorization
 

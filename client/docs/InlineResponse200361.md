@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200361Items**](InlineResponse200361Items.md) | The top-level property containing all cpu load data. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200361Items**](InlineResponse200361Items.md) | The top-level property containing all power mode data. | [optional] 
 
 ## Methods
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DefaultMtuSize** | Pointer to **int32** | MTU size for the entire network. Default value is 9578. | [optional] 
-**Overrides** | Pointer to [**[]InlineResponse200159Overrides**](InlineResponse200159Overrides.md) | Override MTU size for individual switches or switch templates. An empty array will clear overrides. | [optional] 
+**Overrides** | Pointer to [**[]InlineResponse200160Overrides**](InlineResponse200160Overrides.md) | Override MTU size for individual switches or switch templates. An empty array will clear overrides. | [optional] 
 
 ## Methods
 
@@ -53,20 +53,20 @@ HasDefaultMtuSize returns a boolean if a field has been set.
 
 ### GetOverrides
 
-`func (o *InlineObject147) GetOverrides() []InlineResponse200159Overrides`
+`func (o *InlineObject147) GetOverrides() []InlineResponse200160Overrides`
 
 GetOverrides returns the Overrides field if non-nil, zero value otherwise.
 
 ### GetOverridesOk
 
-`func (o *InlineObject147) GetOverridesOk() (*[]InlineResponse200159Overrides, bool)`
+`func (o *InlineObject147) GetOverridesOk() (*[]InlineResponse200160Overrides, bool)`
 
 GetOverridesOk returns a tuple with the Overrides field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOverrides
 
-`func (o *InlineObject147) SetOverrides(v []InlineResponse200159Overrides)`
+`func (o *InlineObject147) SetOverrides(v []InlineResponse200160Overrides)`
 
 SetOverrides sets Overrides field to given value.
 

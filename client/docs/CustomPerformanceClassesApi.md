@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkApplianceTrafficShapingCustomPerformanceClass
 
-> InlineResponse20068 CreateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId).CreateNetworkApplianceTrafficShapingCustomPerformanceClass(createNetworkApplianceTrafficShapingCustomPerformanceClass).Execute()
+> InlineResponse20069 CreateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId).CreateNetworkApplianceTrafficShapingCustomPerformanceClass(createNetworkApplianceTrafficShapingCustomPerformanceClass).Execute()
 
 Add a custom performance class for an MX network
 
@@ -43,7 +43,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CustomPerformanceClassesApi.CreateNetworkApplianceTrafficShapingCustomPerformanceClass``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20068
+    // response from `CreateNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20069
     fmt.Fprintf(os.Stdout, "Response from `CustomPerformanceClassesApi.CreateNetworkApplianceTrafficShapingCustomPerformanceClass`: %v\n", resp)
 }
 ```
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20069**](InlineResponse20069.md)
 
 ### Authorization
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingCustomPerformanceClass
 
-> InlineResponse20068 GetNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId, customPerformanceClassId).Execute()
+> InlineResponse20069 GetNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId, customPerformanceClassId).Execute()
 
 Return a custom performance class for an MX network
 
@@ -186,7 +186,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CustomPerformanceClassesApi.GetNetworkApplianceTrafficShapingCustomPerformanceClass``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20068
+    // response from `GetNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20069
     fmt.Fprintf(os.Stdout, "Response from `CustomPerformanceClassesApi.GetNetworkApplianceTrafficShapingCustomPerformanceClass`: %v\n", resp)
 }
 ```
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20069**](InlineResponse20069.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceTrafficShapingCustomPerformanceClasses
 
-> []InlineResponse20068 GetNetworkApplianceTrafficShapingCustomPerformanceClasses(ctx, networkId).Execute()
+> []InlineResponse20069 GetNetworkApplianceTrafficShapingCustomPerformanceClasses(ctx, networkId).Execute()
 
 List all custom performance classes for an MX network
 
@@ -258,7 +258,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CustomPerformanceClassesApi.GetNetworkApplianceTrafficShapingCustomPerformanceClasses``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceTrafficShapingCustomPerformanceClasses`: []InlineResponse20068
+    // response from `GetNetworkApplianceTrafficShapingCustomPerformanceClasses`: []InlineResponse20069
     fmt.Fprintf(os.Stdout, "Response from `CustomPerformanceClassesApi.GetNetworkApplianceTrafficShapingCustomPerformanceClasses`: %v\n", resp)
 }
 ```
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20068**](InlineResponse20068.md)
+[**[]InlineResponse20069**](InlineResponse20069.md)
 
 ### Authorization
 
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceTrafficShapingCustomPerformanceClass
 
-> InlineResponse20068 UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId, customPerformanceClassId).UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(updateNetworkApplianceTrafficShapingCustomPerformanceClass).Execute()
+> InlineResponse20069 UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(ctx, networkId, customPerformanceClassId).UpdateNetworkApplianceTrafficShapingCustomPerformanceClass(updateNetworkApplianceTrafficShapingCustomPerformanceClass).Execute()
 
 Update a custom performance class for an MX network
 
@@ -330,7 +330,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `CustomPerformanceClassesApi.UpdateNetworkApplianceTrafficShapingCustomPerformanceClass``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20068
+    // response from `UpdateNetworkApplianceTrafficShapingCustomPerformanceClass`: InlineResponse20069
     fmt.Fprintf(os.Stdout, "Response from `CustomPerformanceClassesApi.UpdateNetworkApplianceTrafficShapingCustomPerformanceClass`: %v\n", resp)
 }
 ```
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20068**](InlineResponse20068.md)
+[**InlineResponse20069**](InlineResponse20069.md)
 
 ### Authorization
 

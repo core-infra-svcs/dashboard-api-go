@@ -4,8 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200293Items**](InlineResponse200293Items.md) | List of networks with XDR enabled | [optional] 
-**Meta** | Pointer to [**InlineResponse200293Meta**](InlineResponse200293Meta.md) |  | [optional] 
+**ApplicationId** | Pointer to **string** | Application identifier | [optional] 
+**Name** | Pointer to **string** | Application name | [optional] 
+**Thresholds** | Pointer to [**OrganizationsOrganizationIdInsightApplicationsThresholds**](OrganizationsOrganizationIdInsightApplicationsThresholds.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +27,80 @@ NewInlineResponse200293WithDefaults instantiates a new InlineResponse200293 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetItems
+### GetApplicationId
 
-`func (o *InlineResponse200293) GetItems() []InlineResponse200293Items`
+`func (o *InlineResponse200293) GetApplicationId() string`
 
-GetItems returns the Items field if non-nil, zero value otherwise.
+GetApplicationId returns the ApplicationId field if non-nil, zero value otherwise.
 
-### GetItemsOk
+### GetApplicationIdOk
 
-`func (o *InlineResponse200293) GetItemsOk() (*[]InlineResponse200293Items, bool)`
+`func (o *InlineResponse200293) GetApplicationIdOk() (*string, bool)`
 
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+GetApplicationIdOk returns a tuple with the ApplicationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetItems
+### SetApplicationId
 
-`func (o *InlineResponse200293) SetItems(v []InlineResponse200293Items)`
+`func (o *InlineResponse200293) SetApplicationId(v string)`
 
-SetItems sets Items field to given value.
+SetApplicationId sets ApplicationId field to given value.
 
-### HasItems
+### HasApplicationId
 
-`func (o *InlineResponse200293) HasItems() bool`
+`func (o *InlineResponse200293) HasApplicationId() bool`
 
-HasItems returns a boolean if a field has been set.
+HasApplicationId returns a boolean if a field has been set.
 
-### GetMeta
+### GetName
 
-`func (o *InlineResponse200293) GetMeta() InlineResponse200293Meta`
+`func (o *InlineResponse200293) GetName() string`
 
-GetMeta returns the Meta field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetMetaOk
+### GetNameOk
 
-`func (o *InlineResponse200293) GetMetaOk() (*InlineResponse200293Meta, bool)`
+`func (o *InlineResponse200293) GetNameOk() (*string, bool)`
 
-GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMeta
+### SetName
 
-`func (o *InlineResponse200293) SetMeta(v InlineResponse200293Meta)`
+`func (o *InlineResponse200293) SetName(v string)`
 
-SetMeta sets Meta field to given value.
+SetName sets Name field to given value.
 
-### HasMeta
+### HasName
 
-`func (o *InlineResponse200293) HasMeta() bool`
+`func (o *InlineResponse200293) HasName() bool`
 
-HasMeta returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
+
+### GetThresholds
+
+`func (o *InlineResponse200293) GetThresholds() OrganizationsOrganizationIdInsightApplicationsThresholds`
+
+GetThresholds returns the Thresholds field if non-nil, zero value otherwise.
+
+### GetThresholdsOk
+
+`func (o *InlineResponse200293) GetThresholdsOk() (*OrganizationsOrganizationIdInsightApplicationsThresholds, bool)`
+
+GetThresholdsOk returns a tuple with the Thresholds field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetThresholds
+
+`func (o *InlineResponse200293) SetThresholds(v OrganizationsOrganizationIdInsightApplicationsThresholds)`
+
+SetThresholds sets Thresholds field to given value.
+
+### HasThresholds
+
+`func (o *InlineResponse200293) HasThresholds() bool`
+
+HasThresholds returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -299,7 +299,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAppliancePrefixesDelegatedStatic
 
-> InlineResponse20059 GetNetworkAppliancePrefixesDelegatedStatic(ctx, networkId, staticDelegatedPrefixId).Execute()
+> InlineResponse20060 GetNetworkAppliancePrefixesDelegatedStatic(ctx, networkId, staticDelegatedPrefixId).Execute()
 
 Return a static delegated prefix from a network
 
@@ -328,7 +328,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PrefixesApi.GetNetworkAppliancePrefixesDelegatedStatic``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAppliancePrefixesDelegatedStatic`: InlineResponse20059
+    // response from `GetNetworkAppliancePrefixesDelegatedStatic`: InlineResponse20060
     fmt.Fprintf(os.Stdout, "Response from `PrefixesApi.GetNetworkAppliancePrefixesDelegatedStatic`: %v\n", resp)
 }
 ```
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20059**](InlineResponse20059.md)
+[**InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkAppliancePrefixesDelegatedStatics
 
-> []InlineResponse20059 GetNetworkAppliancePrefixesDelegatedStatics(ctx, networkId).Execute()
+> []InlineResponse20060 GetNetworkAppliancePrefixesDelegatedStatics(ctx, networkId).Execute()
 
 List static delegated prefixes for a network
 
@@ -400,7 +400,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `PrefixesApi.GetNetworkAppliancePrefixesDelegatedStatics``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkAppliancePrefixesDelegatedStatics`: []InlineResponse20059
+    // response from `GetNetworkAppliancePrefixesDelegatedStatics`: []InlineResponse20060
     fmt.Fprintf(os.Stdout, "Response from `PrefixesApi.GetNetworkAppliancePrefixesDelegatedStatics`: %v\n", resp)
 }
 ```
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20059**](InlineResponse20059.md)
+[**[]InlineResponse20060**](InlineResponse20060.md)
 
 ### Authorization
 

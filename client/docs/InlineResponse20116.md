@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of the Dashboard branding policy. | [optional] 
-**Enabled** | Pointer to **bool** | Boolean indicating whether this policy is enabled. | [optional] 
-**AdminSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesAdminSettings**](OrganizationsOrganizationIdBrandingPoliciesAdminSettings.md) |  | [optional] 
-**HelpSettings** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesHelpSettings1**](OrganizationsOrganizationIdBrandingPoliciesHelpSettings1.md) |  | [optional] 
-**CustomLogo** | Pointer to [**OrganizationsOrganizationIdBrandingPoliciesCustomLogo**](OrganizationsOrganizationIdBrandingPoliciesCustomLogo.md) |  | [optional] 
+**Network** | Pointer to [**InlineResponse20116Network**](InlineResponse20116Network.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | If Zigbee is enabled for the network | [optional] 
+**IotController** | Pointer to [**InlineResponse20116IotController**](InlineResponse20116IotController.md) |  | [optional] 
+**LockManagement** | Pointer to [**InlineResponse20116LockManagement**](InlineResponse20116LockManagement.md) |  | [optional] 
+**Defaults** | Pointer to [**InlineResponse20116Defaults**](InlineResponse20116Defaults.md) |  | [optional] 
 
 ## Methods
 
@@ -29,30 +29,30 @@ NewInlineResponse20116WithDefaults instantiates a new InlineResponse20116 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetNetwork
 
-`func (o *InlineResponse20116) GetName() string`
+`func (o *InlineResponse20116) GetNetwork() InlineResponse20116Network`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetNetwork returns the Network field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetNetworkOk
 
-`func (o *InlineResponse20116) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20116) GetNetworkOk() (*InlineResponse20116Network, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetNetwork
 
-`func (o *InlineResponse20116) SetName(v string)`
+`func (o *InlineResponse20116) SetNetwork(v InlineResponse20116Network)`
 
-SetName sets Name field to given value.
+SetNetwork sets Network field to given value.
 
-### HasName
+### HasNetwork
 
-`func (o *InlineResponse20116) HasName() bool`
+`func (o *InlineResponse20116) HasNetwork() bool`
 
-HasName returns a boolean if a field has been set.
+HasNetwork returns a boolean if a field has been set.
 
 ### GetEnabled
 
@@ -79,80 +79,80 @@ SetEnabled sets Enabled field to given value.
 
 HasEnabled returns a boolean if a field has been set.
 
-### GetAdminSettings
+### GetIotController
 
-`func (o *InlineResponse20116) GetAdminSettings() OrganizationsOrganizationIdBrandingPoliciesAdminSettings`
+`func (o *InlineResponse20116) GetIotController() InlineResponse20116IotController`
 
-GetAdminSettings returns the AdminSettings field if non-nil, zero value otherwise.
+GetIotController returns the IotController field if non-nil, zero value otherwise.
 
-### GetAdminSettingsOk
+### GetIotControllerOk
 
-`func (o *InlineResponse20116) GetAdminSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesAdminSettings, bool)`
+`func (o *InlineResponse20116) GetIotControllerOk() (*InlineResponse20116IotController, bool)`
 
-GetAdminSettingsOk returns a tuple with the AdminSettings field if it's non-nil, zero value otherwise
+GetIotControllerOk returns a tuple with the IotController field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAdminSettings
+### SetIotController
 
-`func (o *InlineResponse20116) SetAdminSettings(v OrganizationsOrganizationIdBrandingPoliciesAdminSettings)`
+`func (o *InlineResponse20116) SetIotController(v InlineResponse20116IotController)`
 
-SetAdminSettings sets AdminSettings field to given value.
+SetIotController sets IotController field to given value.
 
-### HasAdminSettings
+### HasIotController
 
-`func (o *InlineResponse20116) HasAdminSettings() bool`
+`func (o *InlineResponse20116) HasIotController() bool`
 
-HasAdminSettings returns a boolean if a field has been set.
+HasIotController returns a boolean if a field has been set.
 
-### GetHelpSettings
+### GetLockManagement
 
-`func (o *InlineResponse20116) GetHelpSettings() OrganizationsOrganizationIdBrandingPoliciesHelpSettings1`
+`func (o *InlineResponse20116) GetLockManagement() InlineResponse20116LockManagement`
 
-GetHelpSettings returns the HelpSettings field if non-nil, zero value otherwise.
+GetLockManagement returns the LockManagement field if non-nil, zero value otherwise.
 
-### GetHelpSettingsOk
+### GetLockManagementOk
 
-`func (o *InlineResponse20116) GetHelpSettingsOk() (*OrganizationsOrganizationIdBrandingPoliciesHelpSettings1, bool)`
+`func (o *InlineResponse20116) GetLockManagementOk() (*InlineResponse20116LockManagement, bool)`
 
-GetHelpSettingsOk returns a tuple with the HelpSettings field if it's non-nil, zero value otherwise
+GetLockManagementOk returns a tuple with the LockManagement field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetHelpSettings
+### SetLockManagement
 
-`func (o *InlineResponse20116) SetHelpSettings(v OrganizationsOrganizationIdBrandingPoliciesHelpSettings1)`
+`func (o *InlineResponse20116) SetLockManagement(v InlineResponse20116LockManagement)`
 
-SetHelpSettings sets HelpSettings field to given value.
+SetLockManagement sets LockManagement field to given value.
 
-### HasHelpSettings
+### HasLockManagement
 
-`func (o *InlineResponse20116) HasHelpSettings() bool`
+`func (o *InlineResponse20116) HasLockManagement() bool`
 
-HasHelpSettings returns a boolean if a field has been set.
+HasLockManagement returns a boolean if a field has been set.
 
-### GetCustomLogo
+### GetDefaults
 
-`func (o *InlineResponse20116) GetCustomLogo() OrganizationsOrganizationIdBrandingPoliciesCustomLogo`
+`func (o *InlineResponse20116) GetDefaults() InlineResponse20116Defaults`
 
-GetCustomLogo returns the CustomLogo field if non-nil, zero value otherwise.
+GetDefaults returns the Defaults field if non-nil, zero value otherwise.
 
-### GetCustomLogoOk
+### GetDefaultsOk
 
-`func (o *InlineResponse20116) GetCustomLogoOk() (*OrganizationsOrganizationIdBrandingPoliciesCustomLogo, bool)`
+`func (o *InlineResponse20116) GetDefaultsOk() (*InlineResponse20116Defaults, bool)`
 
-GetCustomLogoOk returns a tuple with the CustomLogo field if it's non-nil, zero value otherwise
+GetDefaultsOk returns a tuple with the Defaults field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCustomLogo
+### SetDefaults
 
-`func (o *InlineResponse20116) SetCustomLogo(v OrganizationsOrganizationIdBrandingPoliciesCustomLogo)`
+`func (o *InlineResponse20116) SetDefaults(v InlineResponse20116Defaults)`
 
-SetCustomLogo sets CustomLogo field to given value.
+SetDefaults sets Defaults field to given value.
 
-### HasCustomLogo
+### HasDefaults
 
-`func (o *InlineResponse20116) HasCustomLogo() bool`
+`func (o *InlineResponse20116) HasDefaults() bool`
 
-HasCustomLogo returns a boolean if a field has been set.
+HasDefaults returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

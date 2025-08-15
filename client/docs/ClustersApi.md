@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## CreateNetworkCampusGatewayCluster
 
-> InlineResponse20110 CreateNetworkCampusGatewayCluster(ctx, networkId).CreateNetworkCampusGatewayCluster(createNetworkCampusGatewayCluster).Execute()
+> InlineResponse20111 CreateNetworkCampusGatewayCluster(ctx, networkId).CreateNetworkCampusGatewayCluster(createNetworkCampusGatewayCluster).Execute()
 
 Create a cluster and add campus gateways to it
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClustersApi.CreateNetworkCampusGatewayCluster``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CreateNetworkCampusGatewayCluster`: InlineResponse20110
+    // response from `CreateNetworkCampusGatewayCluster`: InlineResponse20111
     fmt.Fprintf(os.Stdout, "Response from `ClustersApi.CreateNetworkCampusGatewayCluster`: %v\n", resp)
 }
 ```
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20110**](InlineResponse20110.md)
+[**InlineResponse20111**](InlineResponse20111.md)
 
 ### Authorization
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 ## GetOrganizationCampusGatewayClusters
 
-> InlineResponse200252 GetOrganizationCampusGatewayClusters(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
+> InlineResponse200254 GetOrganizationCampusGatewayClusters(ctx, organizationId).NetworkIds(networkIds).PerPage(perPage).StartingAfter(startingAfter).EndingBefore(endingBefore).Execute()
 
 Get the details of campus gateway clusters
 
@@ -116,7 +116,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClustersApi.GetOrganizationCampusGatewayClusters``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetOrganizationCampusGatewayClusters`: InlineResponse200252
+    // response from `GetOrganizationCampusGatewayClusters`: InlineResponse200254
     fmt.Fprintf(os.Stdout, "Response from `ClustersApi.GetOrganizationCampusGatewayClusters`: %v\n", resp)
 }
 ```
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200252**](InlineResponse200252.md)
+[**InlineResponse200254**](InlineResponse200254.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkCampusGatewayCluster
 
-> InlineResponse20110 UpdateNetworkCampusGatewayCluster(ctx, networkId, clusterId).UpdateNetworkCampusGatewayCluster(updateNetworkCampusGatewayCluster).Execute()
+> InlineResponse20111 UpdateNetworkCampusGatewayCluster(ctx, networkId, clusterId).UpdateNetworkCampusGatewayCluster(updateNetworkCampusGatewayCluster).Execute()
 
 Update a cluster and add/remove campus gateways to/from it
 
@@ -192,7 +192,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `ClustersApi.UpdateNetworkCampusGatewayCluster``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkCampusGatewayCluster`: InlineResponse20110
+    // response from `UpdateNetworkCampusGatewayCluster`: InlineResponse20111
     fmt.Fprintf(os.Stdout, "Response from `ClustersApi.UpdateNetworkCampusGatewayCluster`: %v\n", resp)
 }
 ```
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20110**](InlineResponse20110.md)
+[**InlineResponse20111**](InlineResponse20111.md)
 
 ### Authorization
 

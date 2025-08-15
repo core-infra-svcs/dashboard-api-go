@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mac** | Pointer to **string** | MAC address of the client | [optional] 
-**ConnectionStats** | Pointer to [**InlineResponse200184ConnectionStats**](InlineResponse200184ConnectionStats.md) |  | [optional] 
+**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
+**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
+**UtilizationTotal** | Pointer to **float32** | Total channel utilization | [optional] 
+**Utilization80211** | Pointer to **float32** | Average wifi utilization | [optional] 
+**UtilizationNon80211** | Pointer to **float32** | Average signal interference | [optional] 
 
 ## Methods
 
@@ -26,55 +29,130 @@ NewInlineResponse200184WithDefaults instantiates a new InlineResponse200184 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetMac
+### GetStartTs
 
-`func (o *InlineResponse200184) GetMac() string`
+`func (o *InlineResponse200184) GetStartTs() time.Time`
 
-GetMac returns the Mac field if non-nil, zero value otherwise.
+GetStartTs returns the StartTs field if non-nil, zero value otherwise.
 
-### GetMacOk
+### GetStartTsOk
 
-`func (o *InlineResponse200184) GetMacOk() (*string, bool)`
+`func (o *InlineResponse200184) GetStartTsOk() (*time.Time, bool)`
 
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMac
+### SetStartTs
 
-`func (o *InlineResponse200184) SetMac(v string)`
+`func (o *InlineResponse200184) SetStartTs(v time.Time)`
 
-SetMac sets Mac field to given value.
+SetStartTs sets StartTs field to given value.
 
-### HasMac
+### HasStartTs
 
-`func (o *InlineResponse200184) HasMac() bool`
+`func (o *InlineResponse200184) HasStartTs() bool`
 
-HasMac returns a boolean if a field has been set.
+HasStartTs returns a boolean if a field has been set.
 
-### GetConnectionStats
+### GetEndTs
 
-`func (o *InlineResponse200184) GetConnectionStats() InlineResponse200184ConnectionStats`
+`func (o *InlineResponse200184) GetEndTs() time.Time`
 
-GetConnectionStats returns the ConnectionStats field if non-nil, zero value otherwise.
+GetEndTs returns the EndTs field if non-nil, zero value otherwise.
 
-### GetConnectionStatsOk
+### GetEndTsOk
 
-`func (o *InlineResponse200184) GetConnectionStatsOk() (*InlineResponse200184ConnectionStats, bool)`
+`func (o *InlineResponse200184) GetEndTsOk() (*time.Time, bool)`
 
-GetConnectionStatsOk returns a tuple with the ConnectionStats field if it's non-nil, zero value otherwise
+GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetConnectionStats
+### SetEndTs
 
-`func (o *InlineResponse200184) SetConnectionStats(v InlineResponse200184ConnectionStats)`
+`func (o *InlineResponse200184) SetEndTs(v time.Time)`
 
-SetConnectionStats sets ConnectionStats field to given value.
+SetEndTs sets EndTs field to given value.
 
-### HasConnectionStats
+### HasEndTs
 
-`func (o *InlineResponse200184) HasConnectionStats() bool`
+`func (o *InlineResponse200184) HasEndTs() bool`
 
-HasConnectionStats returns a boolean if a field has been set.
+HasEndTs returns a boolean if a field has been set.
+
+### GetUtilizationTotal
+
+`func (o *InlineResponse200184) GetUtilizationTotal() float32`
+
+GetUtilizationTotal returns the UtilizationTotal field if non-nil, zero value otherwise.
+
+### GetUtilizationTotalOk
+
+`func (o *InlineResponse200184) GetUtilizationTotalOk() (*float32, bool)`
+
+GetUtilizationTotalOk returns a tuple with the UtilizationTotal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUtilizationTotal
+
+`func (o *InlineResponse200184) SetUtilizationTotal(v float32)`
+
+SetUtilizationTotal sets UtilizationTotal field to given value.
+
+### HasUtilizationTotal
+
+`func (o *InlineResponse200184) HasUtilizationTotal() bool`
+
+HasUtilizationTotal returns a boolean if a field has been set.
+
+### GetUtilization80211
+
+`func (o *InlineResponse200184) GetUtilization80211() float32`
+
+GetUtilization80211 returns the Utilization80211 field if non-nil, zero value otherwise.
+
+### GetUtilization80211Ok
+
+`func (o *InlineResponse200184) GetUtilization80211Ok() (*float32, bool)`
+
+GetUtilization80211Ok returns a tuple with the Utilization80211 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUtilization80211
+
+`func (o *InlineResponse200184) SetUtilization80211(v float32)`
+
+SetUtilization80211 sets Utilization80211 field to given value.
+
+### HasUtilization80211
+
+`func (o *InlineResponse200184) HasUtilization80211() bool`
+
+HasUtilization80211 returns a boolean if a field has been set.
+
+### GetUtilizationNon80211
+
+`func (o *InlineResponse200184) GetUtilizationNon80211() float32`
+
+GetUtilizationNon80211 returns the UtilizationNon80211 field if non-nil, zero value otherwise.
+
+### GetUtilizationNon80211Ok
+
+`func (o *InlineResponse200184) GetUtilizationNon80211Ok() (*float32, bool)`
+
+GetUtilizationNon80211Ok returns a tuple with the UtilizationNon80211 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUtilizationNon80211
+
+`func (o *InlineResponse200184) SetUtilizationNon80211(v float32)`
+
+SetUtilizationNon80211 sets UtilizationNon80211 field to given value.
+
+### HasUtilizationNon80211
+
+`func (o *InlineResponse200184) HasUtilizationNon80211() bool`
+
+HasUtilizationNon80211 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResultingNetwork** | Pointer to [**InlineResponse200307ResultingNetwork**](InlineResponse200307ResultingNetwork.md) |  | [optional] 
+**RemainderLicenses** | Pointer to [**[]InlineResponse200306**](InlineResponse200306.md) | Remainder licenses created in the source organization as a result of moving a subset of the counts of a license | [optional] 
+**MovedLicenses** | Pointer to [**[]InlineResponse200306**](InlineResponse200306.md) | Newly moved licenses created in the destination organization of the license move operation | [optional] 
 
 ## Methods
 
@@ -25,30 +26,55 @@ NewInlineResponse200307WithDefaults instantiates a new InlineResponse200307 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetResultingNetwork
+### GetRemainderLicenses
 
-`func (o *InlineResponse200307) GetResultingNetwork() InlineResponse200307ResultingNetwork`
+`func (o *InlineResponse200307) GetRemainderLicenses() []InlineResponse200306`
 
-GetResultingNetwork returns the ResultingNetwork field if non-nil, zero value otherwise.
+GetRemainderLicenses returns the RemainderLicenses field if non-nil, zero value otherwise.
 
-### GetResultingNetworkOk
+### GetRemainderLicensesOk
 
-`func (o *InlineResponse200307) GetResultingNetworkOk() (*InlineResponse200307ResultingNetwork, bool)`
+`func (o *InlineResponse200307) GetRemainderLicensesOk() (*[]InlineResponse200306, bool)`
 
-GetResultingNetworkOk returns a tuple with the ResultingNetwork field if it's non-nil, zero value otherwise
+GetRemainderLicensesOk returns a tuple with the RemainderLicenses field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResultingNetwork
+### SetRemainderLicenses
 
-`func (o *InlineResponse200307) SetResultingNetwork(v InlineResponse200307ResultingNetwork)`
+`func (o *InlineResponse200307) SetRemainderLicenses(v []InlineResponse200306)`
 
-SetResultingNetwork sets ResultingNetwork field to given value.
+SetRemainderLicenses sets RemainderLicenses field to given value.
 
-### HasResultingNetwork
+### HasRemainderLicenses
 
-`func (o *InlineResponse200307) HasResultingNetwork() bool`
+`func (o *InlineResponse200307) HasRemainderLicenses() bool`
 
-HasResultingNetwork returns a boolean if a field has been set.
+HasRemainderLicenses returns a boolean if a field has been set.
+
+### GetMovedLicenses
+
+`func (o *InlineResponse200307) GetMovedLicenses() []InlineResponse200306`
+
+GetMovedLicenses returns the MovedLicenses field if non-nil, zero value otherwise.
+
+### GetMovedLicensesOk
+
+`func (o *InlineResponse200307) GetMovedLicensesOk() (*[]InlineResponse200306, bool)`
+
+GetMovedLicensesOk returns a tuple with the MovedLicenses field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMovedLicenses
+
+`func (o *InlineResponse200307) SetMovedLicenses(v []InlineResponse200306)`
+
+SetMovedLicenses sets MovedLicenses field to given value.
+
+### HasMovedLicenses
+
+`func (o *InlineResponse200307) HasMovedLicenses() bool`
+
+HasMovedLicenses returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

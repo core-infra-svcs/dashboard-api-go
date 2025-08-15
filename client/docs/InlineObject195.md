@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | If true, Bonjour forwarding is enabled on this SSID. | [optional] 
 **Rules** | Pointer to [**[]NetworksNetworkIdGroupPoliciesBonjourForwardingRules**](NetworksNetworkIdGroupPoliciesBonjourForwardingRules.md) | List of bonjour forwarding rules. | [optional] 
-**Exception** | Pointer to [**InlineResponse200200Exception**](InlineResponse200200Exception.md) |  | [optional] 
+**Exception** | Pointer to [**InlineResponse200202Exception**](InlineResponse200202Exception.md) |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasRules returns a boolean if a field has been set.
 
 ### GetException
 
-`func (o *InlineObject195) GetException() InlineResponse200200Exception`
+`func (o *InlineObject195) GetException() InlineResponse200202Exception`
 
 GetException returns the Exception field if non-nil, zero value otherwise.
 
 ### GetExceptionOk
 
-`func (o *InlineObject195) GetExceptionOk() (*InlineResponse200200Exception, bool)`
+`func (o *InlineObject195) GetExceptionOk() (*InlineResponse200202Exception, bool)`
 
 GetExceptionOk returns a tuple with the Exception field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetException
 
-`func (o *InlineObject195) SetException(v InlineResponse200200Exception)`
+`func (o *InlineObject195) SetException(v InlineResponse200202Exception)`
 
 SetException sets Exception field to given value.
 

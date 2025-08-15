@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Service provider name. | [optional] 
-**Logo** | Pointer to [**InlineResponse200255Logo**](InlineResponse200255Logo.md) |  | [optional] 
-**IsBootstrap** | Pointer to **bool** | Indicates if service provider is the bootstrap provider. | [optional] 
-**Terms** | Pointer to [**InlineResponse200255Terms**](InlineResponse200255Terms.md) |  | [optional] 
+**Serial** | Pointer to **string** | Serial number | [optional] 
+**Uplink** | Pointer to [**InlineResponse200255Uplink**](InlineResponse200255Uplink.md) |  | [optional] 
+**Nameservers** | Pointer to [**NetworksNetworkIdCampusGatewayClustersNameservers**](NetworksNetworkIdCampusGatewayClustersNameservers.md) |  | [optional] 
+**Sgt** | Pointer to **int32** | Infra Security Group Tag(sgt) value for Trustsec | [optional] 
 
 ## Methods
 
@@ -28,105 +28,105 @@ NewInlineResponse200255ItemsWithDefaults instantiates a new InlineResponse200255
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetSerial
 
-`func (o *InlineResponse200255Items) GetName() string`
+`func (o *InlineResponse200255Items) GetSerial() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetSerial returns the Serial field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetSerialOk
 
-`func (o *InlineResponse200255Items) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200255Items) GetSerialOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetSerialOk returns a tuple with the Serial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetSerial
 
-`func (o *InlineResponse200255Items) SetName(v string)`
+`func (o *InlineResponse200255Items) SetSerial(v string)`
 
-SetName sets Name field to given value.
+SetSerial sets Serial field to given value.
 
-### HasName
+### HasSerial
 
-`func (o *InlineResponse200255Items) HasName() bool`
+`func (o *InlineResponse200255Items) HasSerial() bool`
 
-HasName returns a boolean if a field has been set.
+HasSerial returns a boolean if a field has been set.
 
-### GetLogo
+### GetUplink
 
-`func (o *InlineResponse200255Items) GetLogo() InlineResponse200255Logo`
+`func (o *InlineResponse200255Items) GetUplink() InlineResponse200255Uplink`
 
-GetLogo returns the Logo field if non-nil, zero value otherwise.
+GetUplink returns the Uplink field if non-nil, zero value otherwise.
 
-### GetLogoOk
+### GetUplinkOk
 
-`func (o *InlineResponse200255Items) GetLogoOk() (*InlineResponse200255Logo, bool)`
+`func (o *InlineResponse200255Items) GetUplinkOk() (*InlineResponse200255Uplink, bool)`
 
-GetLogoOk returns a tuple with the Logo field if it's non-nil, zero value otherwise
+GetUplinkOk returns a tuple with the Uplink field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLogo
+### SetUplink
 
-`func (o *InlineResponse200255Items) SetLogo(v InlineResponse200255Logo)`
+`func (o *InlineResponse200255Items) SetUplink(v InlineResponse200255Uplink)`
 
-SetLogo sets Logo field to given value.
+SetUplink sets Uplink field to given value.
 
-### HasLogo
+### HasUplink
 
-`func (o *InlineResponse200255Items) HasLogo() bool`
+`func (o *InlineResponse200255Items) HasUplink() bool`
 
-HasLogo returns a boolean if a field has been set.
+HasUplink returns a boolean if a field has been set.
 
-### GetIsBootstrap
+### GetNameservers
 
-`func (o *InlineResponse200255Items) GetIsBootstrap() bool`
+`func (o *InlineResponse200255Items) GetNameservers() NetworksNetworkIdCampusGatewayClustersNameservers`
 
-GetIsBootstrap returns the IsBootstrap field if non-nil, zero value otherwise.
+GetNameservers returns the Nameservers field if non-nil, zero value otherwise.
 
-### GetIsBootstrapOk
+### GetNameserversOk
 
-`func (o *InlineResponse200255Items) GetIsBootstrapOk() (*bool, bool)`
+`func (o *InlineResponse200255Items) GetNameserversOk() (*NetworksNetworkIdCampusGatewayClustersNameservers, bool)`
 
-GetIsBootstrapOk returns a tuple with the IsBootstrap field if it's non-nil, zero value otherwise
+GetNameserversOk returns a tuple with the Nameservers field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIsBootstrap
+### SetNameservers
 
-`func (o *InlineResponse200255Items) SetIsBootstrap(v bool)`
+`func (o *InlineResponse200255Items) SetNameservers(v NetworksNetworkIdCampusGatewayClustersNameservers)`
 
-SetIsBootstrap sets IsBootstrap field to given value.
+SetNameservers sets Nameservers field to given value.
 
-### HasIsBootstrap
+### HasNameservers
 
-`func (o *InlineResponse200255Items) HasIsBootstrap() bool`
+`func (o *InlineResponse200255Items) HasNameservers() bool`
 
-HasIsBootstrap returns a boolean if a field has been set.
+HasNameservers returns a boolean if a field has been set.
 
-### GetTerms
+### GetSgt
 
-`func (o *InlineResponse200255Items) GetTerms() InlineResponse200255Terms`
+`func (o *InlineResponse200255Items) GetSgt() int32`
 
-GetTerms returns the Terms field if non-nil, zero value otherwise.
+GetSgt returns the Sgt field if non-nil, zero value otherwise.
 
-### GetTermsOk
+### GetSgtOk
 
-`func (o *InlineResponse200255Items) GetTermsOk() (*InlineResponse200255Terms, bool)`
+`func (o *InlineResponse200255Items) GetSgtOk() (*int32, bool)`
 
-GetTermsOk returns a tuple with the Terms field if it's non-nil, zero value otherwise
+GetSgtOk returns a tuple with the Sgt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTerms
+### SetSgt
 
-`func (o *InlineResponse200255Items) SetTerms(v InlineResponse200255Terms)`
+`func (o *InlineResponse200255Items) SetSgt(v int32)`
 
-SetTerms sets Terms field to given value.
+SetSgt sets Sgt field to given value.
 
-### HasTerms
+### HasSgt
 
-`func (o *InlineResponse200255Items) HasTerms() bool`
+`func (o *InlineResponse200255Items) HasSgt() bool`
 
-HasTerms returns a boolean if a field has been set.
+HasSgt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200254Items**](InlineResponse200254Items.md) | List of eSIM Devices | [optional] 
+**Items** | Pointer to [**[]InlineResponse200254Items**](InlineResponse200254Items.md) | List of clusters | [optional] 
 **Meta** | Pointer to [**InlineResponse200254Meta**](InlineResponse200254Meta.md) |  | [optional] 
 
 ## Methods

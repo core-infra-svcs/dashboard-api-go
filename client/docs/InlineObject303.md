@@ -4,15 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Url** | Pointer to **string** | Receiver Url | [optional] 
-**Version** | Pointer to **string** | Scanning API Version | [optional] 
-**Radio** | Pointer to [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | [optional] 
+**Network** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork**](OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork.md) |  | 
+**Url** | **string** | Receiver Url | 
+**Version** | **string** | Scanning API Version | 
+**Radio** | [**OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio**](OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio.md) |  | 
+**SharedSecret** | **string** | Secret Value for Receiver | 
 
 ## Methods
 
 ### NewInlineObject303
 
-`func NewInlineObject303() *InlineObject303`
+`func NewInlineObject303(network OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, url string, version string, radio OrganizationsOrganizationIdWirelessLocationScanningReceiversRadio, sharedSecret string, ) *InlineObject303`
 
 NewInlineObject303 instantiates a new InlineObject303 object
 This constructor will assign default values to properties that have it defined,
@@ -26,6 +28,26 @@ will change when the set of required properties is changed
 NewInlineObject303WithDefaults instantiates a new InlineObject303 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetNetwork
+
+`func (o *InlineObject303) GetNetwork() OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineObject303) GetNetworkOk() (*OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineObject303) SetNetwork(v OrganizationsOrganizationIdWirelessLocationScanningReceiversNetwork)`
+
+SetNetwork sets Network field to given value.
+
 
 ### GetUrl
 
@@ -46,11 +68,6 @@ and a boolean to check if the value has been set.
 
 SetUrl sets Url field to given value.
 
-### HasUrl
-
-`func (o *InlineObject303) HasUrl() bool`
-
-HasUrl returns a boolean if a field has been set.
 
 ### GetVersion
 
@@ -71,11 +88,6 @@ and a boolean to check if the value has been set.
 
 SetVersion sets Version field to given value.
 
-### HasVersion
-
-`func (o *InlineObject303) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
 
 ### GetRadio
 
@@ -96,11 +108,26 @@ and a boolean to check if the value has been set.
 
 SetRadio sets Radio field to given value.
 
-### HasRadio
 
-`func (o *InlineObject303) HasRadio() bool`
+### GetSharedSecret
 
-HasRadio returns a boolean if a field has been set.
+`func (o *InlineObject303) GetSharedSecret() string`
+
+GetSharedSecret returns the SharedSecret field if non-nil, zero value otherwise.
+
+### GetSharedSecretOk
+
+`func (o *InlineObject303) GetSharedSecretOk() (*string, bool)`
+
+GetSharedSecretOk returns a tuple with the SharedSecret field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSharedSecret
+
+`func (o *InlineObject303) SetSharedSecret(v string)`
+
+SetSharedSecret sets SharedSecret field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

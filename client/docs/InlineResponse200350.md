@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Network** | Pointer to [**OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork.md) |  | [optional] 
-**ByBand** | Pointer to [**[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand**](OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand.md) | Channel utilization broken down by band. | [optional] 
+**Items** | Pointer to [**[]InlineResponse200350Items**](InlineResponse200350Items.md) | List of rules | [optional] 
+**Meta** | Pointer to [**InlineResponse200350Meta**](InlineResponse200350Meta.md) |  | [optional] 
 
 ## Methods
 
@@ -26,55 +26,55 @@ NewInlineResponse200350WithDefaults instantiates a new InlineResponse200350 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetNetwork
+### GetItems
 
-`func (o *InlineResponse200350) GetNetwork() OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork`
+`func (o *InlineResponse200350) GetItems() []InlineResponse200350Items`
 
-GetNetwork returns the Network field if non-nil, zero value otherwise.
+GetItems returns the Items field if non-nil, zero value otherwise.
 
-### GetNetworkOk
+### GetItemsOk
 
-`func (o *InlineResponse200350) GetNetworkOk() (*OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork, bool)`
+`func (o *InlineResponse200350) GetItemsOk() (*[]InlineResponse200350Items, bool)`
 
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNetwork
+### SetItems
 
-`func (o *InlineResponse200350) SetNetwork(v OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceNetwork)`
+`func (o *InlineResponse200350) SetItems(v []InlineResponse200350Items)`
 
-SetNetwork sets Network field to given value.
+SetItems sets Items field to given value.
 
-### HasNetwork
+### HasItems
 
-`func (o *InlineResponse200350) HasNetwork() bool`
+`func (o *InlineResponse200350) HasItems() bool`
 
-HasNetwork returns a boolean if a field has been set.
+HasItems returns a boolean if a field has been set.
 
-### GetByBand
+### GetMeta
 
-`func (o *InlineResponse200350) GetByBand() []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand`
+`func (o *InlineResponse200350) GetMeta() InlineResponse200350Meta`
 
-GetByBand returns the ByBand field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetByBandOk
+### GetMetaOk
 
-`func (o *InlineResponse200350) GetByBandOk() (*[]OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand, bool)`
+`func (o *InlineResponse200350) GetMetaOk() (*InlineResponse200350Meta, bool)`
 
-GetByBandOk returns a tuple with the ByBand field if it's non-nil, zero value otherwise
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetByBand
+### SetMeta
 
-`func (o *InlineResponse200350) SetByBand(v []OrganizationsOrganizationIdWirelessDevicesChannelUtilizationByDeviceByBand)`
+`func (o *InlineResponse200350) SetMeta(v InlineResponse200350Meta)`
 
-SetByBand sets ByBand field to given value.
+SetMeta sets Meta field to given value.
 
-### HasByBand
+### HasMeta
 
-`func (o *InlineResponse200350) HasByBand() bool`
+`func (o *InlineResponse200350) HasMeta() bool`
 
-HasByBand returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

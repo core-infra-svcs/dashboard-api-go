@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Rules** | Pointer to [**[]InlineResponse200203Rules**](InlineResponse200203Rules.md) | An array of L7 firewall rules for this SSID. Rules will get applied in the same order user has specified in request. Empty array will clear the L7 firewall rule configuration. | [optional] 
+**Rules** | Pointer to [**[]InlineResponse200205Rules**](InlineResponse200205Rules.md) | An array of L7 firewall rules for this SSID. Rules will get applied in the same order user has specified in request. Empty array will clear the L7 firewall rule configuration. | [optional] 
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetRules
 
-`func (o *InlineObject199) GetRules() []InlineResponse200203Rules`
+`func (o *InlineObject199) GetRules() []InlineResponse200205Rules`
 
 GetRules returns the Rules field if non-nil, zero value otherwise.
 
 ### GetRulesOk
 
-`func (o *InlineObject199) GetRulesOk() (*[]InlineResponse200203Rules, bool)`
+`func (o *InlineObject199) GetRulesOk() (*[]InlineResponse200205Rules, bool)`
 
 GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetRules
 
-`func (o *InlineObject199) SetRules(v []InlineResponse200203Rules)`
+`func (o *InlineObject199) SetRules(v []InlineResponse200205Rules)`
 
 SetRules sets Rules field to given value.
 

@@ -6,12 +6,15 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | A friendly name or description for the interface or VLAN (max length 128 characters). | [optional] 
 **Subnet** | Pointer to **NullableString** | The network that this L3 interface is on, in CIDR notation (ex. 10.1.1.0/24). | [optional] 
+**SwitchPortId** | Pointer to **NullableString** | Switch Port ID when in Routed mode (CS 17.18 or higher required) | [optional] 
 **InterfaceIp** | Pointer to **NullableString** | The IP address that will be used for Layer 3 routing on this VLAN or subnet. This cannot be the same         as the device management IP. | [optional] 
 **MulticastRouting** | Pointer to **string** | Enable multicast support if, multicast routing between VLANs is required. Options are:         &#39;disabled&#39;, &#39;enabled&#39; or &#39;IGMP snooping querier&#39;. Default is &#39;disabled&#39;. | [optional] 
 **VlanId** | Pointer to **NullableInt32** | The VLAN this L3 interface is on. VLAN must be between 1 and 4094. | [optional] 
 **DefaultGateway** | Pointer to **string** | The next hop for any traffic that isn&#39;t going to a directly connected subnet or over a static route.         This IP address must exist in a subnet with a L3 interface. Required if this is the first IPv4 interface. | [optional] 
 **OspfSettings** | Pointer to [**DevicesSerialSwitchRoutingInterfacesOspfSettings1**](DevicesSerialSwitchRoutingInterfacesOspfSettings1.md) |  | [optional] 
 **Ipv6** | Pointer to [**DevicesSerialSwitchRoutingInterfacesIpv61**](DevicesSerialSwitchRoutingInterfacesIpv61.md) |  | [optional] 
+**Vrf** | Pointer to [**DevicesSerialSwitchRoutingInterfacesVrf1**](DevicesSerialSwitchRoutingInterfacesVrf1.md) |  | [optional] 
+**Loopback** | Pointer to **map[string]interface{}** | The loopback settings of the interface. | [optional] 
 
 ## Methods
 
@@ -92,6 +95,41 @@ HasSubnet returns a boolean if a field has been set.
 `func (o *InlineObject30) UnsetSubnet()`
 
 UnsetSubnet ensures that no value is present for Subnet, not even an explicit nil
+### GetSwitchPortId
+
+`func (o *InlineObject30) GetSwitchPortId() string`
+
+GetSwitchPortId returns the SwitchPortId field if non-nil, zero value otherwise.
+
+### GetSwitchPortIdOk
+
+`func (o *InlineObject30) GetSwitchPortIdOk() (*string, bool)`
+
+GetSwitchPortIdOk returns a tuple with the SwitchPortId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSwitchPortId
+
+`func (o *InlineObject30) SetSwitchPortId(v string)`
+
+SetSwitchPortId sets SwitchPortId field to given value.
+
+### HasSwitchPortId
+
+`func (o *InlineObject30) HasSwitchPortId() bool`
+
+HasSwitchPortId returns a boolean if a field has been set.
+
+### SetSwitchPortIdNil
+
+`func (o *InlineObject30) SetSwitchPortIdNil(b bool)`
+
+ SetSwitchPortIdNil sets the value for SwitchPortId to be an explicit nil
+
+### UnsetSwitchPortId
+`func (o *InlineObject30) UnsetSwitchPortId()`
+
+UnsetSwitchPortId ensures that no value is present for SwitchPortId, not even an explicit nil
 ### GetInterfaceIp
 
 `func (o *InlineObject30) GetInterfaceIp() string`
@@ -261,6 +299,56 @@ SetIpv6 sets Ipv6 field to given value.
 `func (o *InlineObject30) HasIpv6() bool`
 
 HasIpv6 returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineObject30) GetVrf() DevicesSerialSwitchRoutingInterfacesVrf1`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineObject30) GetVrfOk() (*DevicesSerialSwitchRoutingInterfacesVrf1, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineObject30) SetVrf(v DevicesSerialSwitchRoutingInterfacesVrf1)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineObject30) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
+
+### GetLoopback
+
+`func (o *InlineObject30) GetLoopback() map[string]interface{}`
+
+GetLoopback returns the Loopback field if non-nil, zero value otherwise.
+
+### GetLoopbackOk
+
+`func (o *InlineObject30) GetLoopbackOk() (*map[string]interface{}, bool)`
+
+GetLoopbackOk returns a tuple with the Loopback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLoopback
+
+`func (o *InlineObject30) SetLoopback(v map[string]interface{})`
+
+SetLoopback sets Loopback field to given value.
+
+### HasLoopback
+
+`func (o *InlineObject30) HasLoopback() bool`
+
+HasLoopback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

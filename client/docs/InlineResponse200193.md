@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**StartTs** | Pointer to **time.Time** | The start time of the query range | [optional] 
-**EndTs** | Pointer to **time.Time** | The end time of the query range | [optional] 
-**AvgLatencyMs** | Pointer to **int32** | Average latency in milliseconds | [optional] 
+**ProfileId** | Pointer to **string** | AP profile ID | [optional] 
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewInlineResponse200193WithDefaults instantiates a new InlineResponse200193 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStartTs
+### GetProfileId
 
-`func (o *InlineResponse200193) GetStartTs() time.Time`
+`func (o *InlineResponse200193) GetProfileId() string`
 
-GetStartTs returns the StartTs field if non-nil, zero value otherwise.
+GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
-### GetStartTsOk
+### GetProfileIdOk
 
-`func (o *InlineResponse200193) GetStartTsOk() (*time.Time, bool)`
+`func (o *InlineResponse200193) GetProfileIdOk() (*string, bool)`
 
-GetStartTsOk returns a tuple with the StartTs field if it's non-nil, zero value otherwise
+GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStartTs
+### SetProfileId
 
-`func (o *InlineResponse200193) SetStartTs(v time.Time)`
+`func (o *InlineResponse200193) SetProfileId(v string)`
 
-SetStartTs sets StartTs field to given value.
+SetProfileId sets ProfileId field to given value.
 
-### HasStartTs
+### HasProfileId
 
-`func (o *InlineResponse200193) HasStartTs() bool`
+`func (o *InlineResponse200193) HasProfileId() bool`
 
-HasStartTs returns a boolean if a field has been set.
-
-### GetEndTs
-
-`func (o *InlineResponse200193) GetEndTs() time.Time`
-
-GetEndTs returns the EndTs field if non-nil, zero value otherwise.
-
-### GetEndTsOk
-
-`func (o *InlineResponse200193) GetEndTsOk() (*time.Time, bool)`
-
-GetEndTsOk returns a tuple with the EndTs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEndTs
-
-`func (o *InlineResponse200193) SetEndTs(v time.Time)`
-
-SetEndTs sets EndTs field to given value.
-
-### HasEndTs
-
-`func (o *InlineResponse200193) HasEndTs() bool`
-
-HasEndTs returns a boolean if a field has been set.
-
-### GetAvgLatencyMs
-
-`func (o *InlineResponse200193) GetAvgLatencyMs() int32`
-
-GetAvgLatencyMs returns the AvgLatencyMs field if non-nil, zero value otherwise.
-
-### GetAvgLatencyMsOk
-
-`func (o *InlineResponse200193) GetAvgLatencyMsOk() (*int32, bool)`
-
-GetAvgLatencyMsOk returns a tuple with the AvgLatencyMs field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAvgLatencyMs
-
-`func (o *InlineResponse200193) SetAvgLatencyMs(v int32)`
-
-SetAvgLatencyMs sets AvgLatencyMs field to given value.
-
-### HasAvgLatencyMs
-
-`func (o *InlineResponse200193) HasAvgLatencyMs() bool`
-
-HasAvgLatencyMs returns a boolean if a field has been set.
+HasProfileId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

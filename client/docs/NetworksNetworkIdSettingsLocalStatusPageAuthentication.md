@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Enabled** | Pointer to **bool** | Enables / disables the authentication on Local Status page(s). | [optional] 
-**Username** | Pointer to **string** | The username used for Local Status Page(s). | [optional] 
+**Username** | Pointer to **string** | The username used for Local Status Page(s). Setting this to null or empty string will clear the value, allowing you to use the default of &#39;admin&#39; | [optional] 
 **Password** | Pointer to **string** | The password used for Local Status Page(s). Set this to null to clear the password. | [optional] 
 
 ## Methods

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## GetNetworkSwitchRoutingOspf
 
-> InlineResponse200165 GetNetworkSwitchRoutingOspf(ctx, networkId).Execute()
+> InlineResponse200166 GetNetworkSwitchRoutingOspf(ctx, networkId).Vrf(vrf).Execute()
 
 Return layer 3 OSPF routing configuration
 
@@ -31,15 +31,16 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
+    vrf := "vrf_example" // string | The VRF to return the OSPF routing configuration for. When not provided, the default VRF is used. Included on networks with IOS XE 17.18 or higher (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.OspfApi.GetNetworkSwitchRoutingOspf(context.Background(), networkId).Execute()
+    resp, r, err := apiClient.OspfApi.GetNetworkSwitchRoutingOspf(context.Background(), networkId).Vrf(vrf).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `OspfApi.GetNetworkSwitchRoutingOspf``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkSwitchRoutingOspf`: InlineResponse200165
+    // response from `GetNetworkSwitchRoutingOspf`: InlineResponse200166
     fmt.Fprintf(os.Stdout, "Response from `OspfApi.GetNetworkSwitchRoutingOspf`: %v\n", resp)
 }
 ```
@@ -60,10 +61,11 @@ Other parameters are passed through a pointer to a apiGetNetworkSwitchRoutingOsp
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
+ **vrf** | **string** | The VRF to return the OSPF routing configuration for. When not provided, the default VRF is used. Included on networks with IOS XE 17.18 or higher | 
 
 ### Return type
 
-[**InlineResponse200165**](InlineResponse200165.md)
+[**InlineResponse200166**](InlineResponse200166.md)
 
 ### Authorization
 
@@ -81,7 +83,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkSwitchRoutingOspf
 
-> InlineResponse200165 UpdateNetworkSwitchRoutingOspf(ctx, networkId).UpdateNetworkSwitchRoutingOspf(updateNetworkSwitchRoutingOspf).Execute()
+> InlineResponse200166 UpdateNetworkSwitchRoutingOspf(ctx, networkId).Vrf(vrf).UpdateNetworkSwitchRoutingOspf(updateNetworkSwitchRoutingOspf).Execute()
 
 Update layer 3 OSPF routing configuration
 
@@ -101,16 +103,17 @@ import (
 
 func main() {
     networkId := "networkId_example" // string | Network ID
+    vrf := "vrf_example" // string | The VRF to return the OSPF routing configuration for. When not provided, the default VRF is used. Requires IOS XE 17.18 or higher (optional)
     updateNetworkSwitchRoutingOspf := *openapiclient.NewInlineObject156() // InlineObject156 |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.OspfApi.UpdateNetworkSwitchRoutingOspf(context.Background(), networkId).UpdateNetworkSwitchRoutingOspf(updateNetworkSwitchRoutingOspf).Execute()
+    resp, r, err := apiClient.OspfApi.UpdateNetworkSwitchRoutingOspf(context.Background(), networkId).Vrf(vrf).UpdateNetworkSwitchRoutingOspf(updateNetworkSwitchRoutingOspf).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `OspfApi.UpdateNetworkSwitchRoutingOspf``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkSwitchRoutingOspf`: InlineResponse200165
+    // response from `UpdateNetworkSwitchRoutingOspf`: InlineResponse200166
     fmt.Fprintf(os.Stdout, "Response from `OspfApi.UpdateNetworkSwitchRoutingOspf`: %v\n", resp)
 }
 ```
@@ -131,11 +134,12 @@ Other parameters are passed through a pointer to a apiUpdateNetworkSwitchRouting
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
+ **vrf** | **string** | The VRF to return the OSPF routing configuration for. When not provided, the default VRF is used. Requires IOS XE 17.18 or higher | 
  **updateNetworkSwitchRoutingOspf** | [**InlineObject156**](InlineObject156.md) |  | 
 
 ### Return type
 
-[**InlineResponse200165**](InlineResponse200165.md)
+[**InlineResponse200166**](InlineResponse200166.md)
 
 ### Authorization
 

@@ -4,11 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Vlan** | Pointer to **int32** | Management VLAN | [optional] 
-**UseCombinedPower** | Pointer to **bool** | The use Combined Power as the default behavior of secondary power supplies on supported devices. | [optional] 
-**PowerExceptions** | Pointer to [**[]InlineResponse200166PowerExceptions**](InlineResponse200166PowerExceptions.md) | Exceptions on a per switch basis to \&quot;useCombinedPower\&quot; | [optional] 
-**UplinkClientSampling** | Pointer to [**InlineResponse200166UplinkClientSampling**](InlineResponse200166UplinkClientSampling.md) |  | [optional] 
-**MacBlocklist** | Pointer to [**InlineResponse200166MacBlocklist**](InlineResponse200166MacBlocklist.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default. | [optional] 
+**HelloTimerInSeconds** | Pointer to **int32** | Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds. | [optional] 
+**DeadTimerInSeconds** | Pointer to **int32** | Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535 | [optional] 
+**Areas** | Pointer to [**[]InlineResponse200166Areas**](InlineResponse200166Areas.md) | OSPF areas | [optional] 
+**V3** | Pointer to [**InlineResponse200166V3**](InlineResponse200166V3.md) |  | [optional] 
+**Md5AuthenticationEnabled** | Pointer to **bool** | Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default. | [optional] 
+**Md5AuthenticationKey** | Pointer to [**InlineResponse200166Md5AuthenticationKey**](InlineResponse200166Md5AuthenticationKey.md) |  | [optional] 
+**Vrf** | Pointer to [**InlineResponse200166Vrf**](InlineResponse200166Vrf.md) |  | [optional] 
 
 ## Methods
 
@@ -29,130 +32,205 @@ NewInlineResponse200166WithDefaults instantiates a new InlineResponse200166 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetVlan
+### GetEnabled
 
-`func (o *InlineResponse200166) GetVlan() int32`
+`func (o *InlineResponse200166) GetEnabled() bool`
 
-GetVlan returns the Vlan field if non-nil, zero value otherwise.
+GetEnabled returns the Enabled field if non-nil, zero value otherwise.
 
-### GetVlanOk
+### GetEnabledOk
 
-`func (o *InlineResponse200166) GetVlanOk() (*int32, bool)`
+`func (o *InlineResponse200166) GetEnabledOk() (*bool, bool)`
 
-GetVlanOk returns a tuple with the Vlan field if it's non-nil, zero value otherwise
+GetEnabledOk returns a tuple with the Enabled field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetVlan
+### SetEnabled
 
-`func (o *InlineResponse200166) SetVlan(v int32)`
+`func (o *InlineResponse200166) SetEnabled(v bool)`
 
-SetVlan sets Vlan field to given value.
+SetEnabled sets Enabled field to given value.
 
-### HasVlan
+### HasEnabled
 
-`func (o *InlineResponse200166) HasVlan() bool`
+`func (o *InlineResponse200166) HasEnabled() bool`
 
-HasVlan returns a boolean if a field has been set.
+HasEnabled returns a boolean if a field has been set.
 
-### GetUseCombinedPower
+### GetHelloTimerInSeconds
 
-`func (o *InlineResponse200166) GetUseCombinedPower() bool`
+`func (o *InlineResponse200166) GetHelloTimerInSeconds() int32`
 
-GetUseCombinedPower returns the UseCombinedPower field if non-nil, zero value otherwise.
+GetHelloTimerInSeconds returns the HelloTimerInSeconds field if non-nil, zero value otherwise.
 
-### GetUseCombinedPowerOk
+### GetHelloTimerInSecondsOk
 
-`func (o *InlineResponse200166) GetUseCombinedPowerOk() (*bool, bool)`
+`func (o *InlineResponse200166) GetHelloTimerInSecondsOk() (*int32, bool)`
 
-GetUseCombinedPowerOk returns a tuple with the UseCombinedPower field if it's non-nil, zero value otherwise
+GetHelloTimerInSecondsOk returns a tuple with the HelloTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUseCombinedPower
+### SetHelloTimerInSeconds
 
-`func (o *InlineResponse200166) SetUseCombinedPower(v bool)`
+`func (o *InlineResponse200166) SetHelloTimerInSeconds(v int32)`
 
-SetUseCombinedPower sets UseCombinedPower field to given value.
+SetHelloTimerInSeconds sets HelloTimerInSeconds field to given value.
 
-### HasUseCombinedPower
+### HasHelloTimerInSeconds
 
-`func (o *InlineResponse200166) HasUseCombinedPower() bool`
+`func (o *InlineResponse200166) HasHelloTimerInSeconds() bool`
 
-HasUseCombinedPower returns a boolean if a field has been set.
+HasHelloTimerInSeconds returns a boolean if a field has been set.
 
-### GetPowerExceptions
+### GetDeadTimerInSeconds
 
-`func (o *InlineResponse200166) GetPowerExceptions() []InlineResponse200166PowerExceptions`
+`func (o *InlineResponse200166) GetDeadTimerInSeconds() int32`
 
-GetPowerExceptions returns the PowerExceptions field if non-nil, zero value otherwise.
+GetDeadTimerInSeconds returns the DeadTimerInSeconds field if non-nil, zero value otherwise.
 
-### GetPowerExceptionsOk
+### GetDeadTimerInSecondsOk
 
-`func (o *InlineResponse200166) GetPowerExceptionsOk() (*[]InlineResponse200166PowerExceptions, bool)`
+`func (o *InlineResponse200166) GetDeadTimerInSecondsOk() (*int32, bool)`
 
-GetPowerExceptionsOk returns a tuple with the PowerExceptions field if it's non-nil, zero value otherwise
+GetDeadTimerInSecondsOk returns a tuple with the DeadTimerInSeconds field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPowerExceptions
+### SetDeadTimerInSeconds
 
-`func (o *InlineResponse200166) SetPowerExceptions(v []InlineResponse200166PowerExceptions)`
+`func (o *InlineResponse200166) SetDeadTimerInSeconds(v int32)`
 
-SetPowerExceptions sets PowerExceptions field to given value.
+SetDeadTimerInSeconds sets DeadTimerInSeconds field to given value.
 
-### HasPowerExceptions
+### HasDeadTimerInSeconds
 
-`func (o *InlineResponse200166) HasPowerExceptions() bool`
+`func (o *InlineResponse200166) HasDeadTimerInSeconds() bool`
 
-HasPowerExceptions returns a boolean if a field has been set.
+HasDeadTimerInSeconds returns a boolean if a field has been set.
 
-### GetUplinkClientSampling
+### GetAreas
 
-`func (o *InlineResponse200166) GetUplinkClientSampling() InlineResponse200166UplinkClientSampling`
+`func (o *InlineResponse200166) GetAreas() []InlineResponse200166Areas`
 
-GetUplinkClientSampling returns the UplinkClientSampling field if non-nil, zero value otherwise.
+GetAreas returns the Areas field if non-nil, zero value otherwise.
 
-### GetUplinkClientSamplingOk
+### GetAreasOk
 
-`func (o *InlineResponse200166) GetUplinkClientSamplingOk() (*InlineResponse200166UplinkClientSampling, bool)`
+`func (o *InlineResponse200166) GetAreasOk() (*[]InlineResponse200166Areas, bool)`
 
-GetUplinkClientSamplingOk returns a tuple with the UplinkClientSampling field if it's non-nil, zero value otherwise
+GetAreasOk returns a tuple with the Areas field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUplinkClientSampling
+### SetAreas
 
-`func (o *InlineResponse200166) SetUplinkClientSampling(v InlineResponse200166UplinkClientSampling)`
+`func (o *InlineResponse200166) SetAreas(v []InlineResponse200166Areas)`
 
-SetUplinkClientSampling sets UplinkClientSampling field to given value.
+SetAreas sets Areas field to given value.
 
-### HasUplinkClientSampling
+### HasAreas
 
-`func (o *InlineResponse200166) HasUplinkClientSampling() bool`
+`func (o *InlineResponse200166) HasAreas() bool`
 
-HasUplinkClientSampling returns a boolean if a field has been set.
+HasAreas returns a boolean if a field has been set.
 
-### GetMacBlocklist
+### GetV3
 
-`func (o *InlineResponse200166) GetMacBlocklist() InlineResponse200166MacBlocklist`
+`func (o *InlineResponse200166) GetV3() InlineResponse200166V3`
 
-GetMacBlocklist returns the MacBlocklist field if non-nil, zero value otherwise.
+GetV3 returns the V3 field if non-nil, zero value otherwise.
 
-### GetMacBlocklistOk
+### GetV3Ok
 
-`func (o *InlineResponse200166) GetMacBlocklistOk() (*InlineResponse200166MacBlocklist, bool)`
+`func (o *InlineResponse200166) GetV3Ok() (*InlineResponse200166V3, bool)`
 
-GetMacBlocklistOk returns a tuple with the MacBlocklist field if it's non-nil, zero value otherwise
+GetV3Ok returns a tuple with the V3 field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMacBlocklist
+### SetV3
 
-`func (o *InlineResponse200166) SetMacBlocklist(v InlineResponse200166MacBlocklist)`
+`func (o *InlineResponse200166) SetV3(v InlineResponse200166V3)`
 
-SetMacBlocklist sets MacBlocklist field to given value.
+SetV3 sets V3 field to given value.
 
-### HasMacBlocklist
+### HasV3
 
-`func (o *InlineResponse200166) HasMacBlocklist() bool`
+`func (o *InlineResponse200166) HasV3() bool`
 
-HasMacBlocklist returns a boolean if a field has been set.
+HasV3 returns a boolean if a field has been set.
+
+### GetMd5AuthenticationEnabled
+
+`func (o *InlineResponse200166) GetMd5AuthenticationEnabled() bool`
+
+GetMd5AuthenticationEnabled returns the Md5AuthenticationEnabled field if non-nil, zero value otherwise.
+
+### GetMd5AuthenticationEnabledOk
+
+`func (o *InlineResponse200166) GetMd5AuthenticationEnabledOk() (*bool, bool)`
+
+GetMd5AuthenticationEnabledOk returns a tuple with the Md5AuthenticationEnabled field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMd5AuthenticationEnabled
+
+`func (o *InlineResponse200166) SetMd5AuthenticationEnabled(v bool)`
+
+SetMd5AuthenticationEnabled sets Md5AuthenticationEnabled field to given value.
+
+### HasMd5AuthenticationEnabled
+
+`func (o *InlineResponse200166) HasMd5AuthenticationEnabled() bool`
+
+HasMd5AuthenticationEnabled returns a boolean if a field has been set.
+
+### GetMd5AuthenticationKey
+
+`func (o *InlineResponse200166) GetMd5AuthenticationKey() InlineResponse200166Md5AuthenticationKey`
+
+GetMd5AuthenticationKey returns the Md5AuthenticationKey field if non-nil, zero value otherwise.
+
+### GetMd5AuthenticationKeyOk
+
+`func (o *InlineResponse200166) GetMd5AuthenticationKeyOk() (*InlineResponse200166Md5AuthenticationKey, bool)`
+
+GetMd5AuthenticationKeyOk returns a tuple with the Md5AuthenticationKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMd5AuthenticationKey
+
+`func (o *InlineResponse200166) SetMd5AuthenticationKey(v InlineResponse200166Md5AuthenticationKey)`
+
+SetMd5AuthenticationKey sets Md5AuthenticationKey field to given value.
+
+### HasMd5AuthenticationKey
+
+`func (o *InlineResponse200166) HasMd5AuthenticationKey() bool`
+
+HasMd5AuthenticationKey returns a boolean if a field has been set.
+
+### GetVrf
+
+`func (o *InlineResponse200166) GetVrf() InlineResponse200166Vrf`
+
+GetVrf returns the Vrf field if non-nil, zero value otherwise.
+
+### GetVrfOk
+
+`func (o *InlineResponse200166) GetVrfOk() (*InlineResponse200166Vrf, bool)`
+
+GetVrfOk returns a tuple with the Vrf field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVrf
+
+`func (o *InlineResponse200166) SetVrf(v InlineResponse200166Vrf)`
+
+SetVrf sets Vrf field to given value.
+
+### HasVrf
+
+`func (o *InlineResponse200166) HasVrf() bool`
+
+HasVrf returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Items** | Pointer to [**[]InlineResponse200315Items**](InlineResponse200315Items.md) | Array of Limited Access Roles | [optional] 
-**Meta** | Pointer to [**InlineResponse200222Meta**](InlineResponse200222Meta.md) |  | [optional] 
+**Items** | [**[]InlineResponse200315Items**](InlineResponse200315Items.md) | The organization&#39;s RSSI information between sensor-gateway pairs. | 
+**Meta** | Pointer to [**InlineResponse200315Meta**](InlineResponse200315Meta.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse200315
 
-`func NewInlineResponse200315() *InlineResponse200315`
+`func NewInlineResponse200315(items []InlineResponse200315Items, ) *InlineResponse200315`
 
 NewInlineResponse200315 instantiates a new InlineResponse200315 object
 This constructor will assign default values to properties that have it defined,
@@ -45,28 +45,23 @@ and a boolean to check if the value has been set.
 
 SetItems sets Items field to given value.
 
-### HasItems
-
-`func (o *InlineResponse200315) HasItems() bool`
-
-HasItems returns a boolean if a field has been set.
 
 ### GetMeta
 
-`func (o *InlineResponse200315) GetMeta() InlineResponse200222Meta`
+`func (o *InlineResponse200315) GetMeta() InlineResponse200315Meta`
 
 GetMeta returns the Meta field if non-nil, zero value otherwise.
 
 ### GetMetaOk
 
-`func (o *InlineResponse200315) GetMetaOk() (*InlineResponse200222Meta, bool)`
+`func (o *InlineResponse200315) GetMetaOk() (*InlineResponse200315Meta, bool)`
 
 GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMeta
 
-`func (o *InlineResponse200315) SetMeta(v InlineResponse200222Meta)`
+`func (o *InlineResponse200315) SetMeta(v InlineResponse200315Meta)`
 
 SetMeta sets Meta field to given value.
 

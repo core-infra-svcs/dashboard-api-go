@@ -4,14 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Confirmed** | Pointer to **bool** | A boolean representing whether or not the batch has been confirmed. This property cannot be unset once it is true. | [optional] 
-**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. | [optional] 
+**Confirmed** | Pointer to **bool** | Set to true for immediate execution. Set to false if the action should be previewed before executing. This property cannot be unset once it is true. Defaults to false. | [optional] 
+**Synchronous** | Pointer to **bool** | Set to true to force the batch to run synchronous. There can be at most 20 actions in synchronous batch. Defaults to false. | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions1**](OrganizationsOrganizationIdActionBatchesActions1.md) | A set of changes to make as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Callback** | Pointer to [**DevicesSerialLiveToolsArpTableCallback**](DevicesSerialLiveToolsArpTableCallback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineObject210
 
-`func NewInlineObject210() *InlineObject210`
+`func NewInlineObject210(actions []OrganizationsOrganizationIdActionBatchesActions1, ) *InlineObject210`
 
 NewInlineObject210 instantiates a new InlineObject210 object
 This constructor will assign default values to properties that have it defined,
@@ -75,6 +77,51 @@ SetSynchronous sets Synchronous field to given value.
 `func (o *InlineObject210) HasSynchronous() bool`
 
 HasSynchronous returns a boolean if a field has been set.
+
+### GetActions
+
+`func (o *InlineObject210) GetActions() []OrganizationsOrganizationIdActionBatchesActions1`
+
+GetActions returns the Actions field if non-nil, zero value otherwise.
+
+### GetActionsOk
+
+`func (o *InlineObject210) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions1, bool)`
+
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActions
+
+`func (o *InlineObject210) SetActions(v []OrganizationsOrganizationIdActionBatchesActions1)`
+
+SetActions sets Actions field to given value.
+
+
+### GetCallback
+
+`func (o *InlineObject210) GetCallback() DevicesSerialLiveToolsArpTableCallback`
+
+GetCallback returns the Callback field if non-nil, zero value otherwise.
+
+### GetCallbackOk
+
+`func (o *InlineObject210) GetCallbackOk() (*DevicesSerialLiveToolsArpTableCallback, bool)`
+
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCallback
+
+`func (o *InlineObject210) SetCallback(v DevicesSerialLiveToolsArpTableCallback)`
+
+SetCallback sets Callback field to given value.
+
+### HasCallback
+
+`func (o *InlineObject210) HasCallback() bool`
+
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

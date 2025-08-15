@@ -4,8 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Counts** | Pointer to [**InlineResponse20087Counts**](InlineResponse20087Counts.md) |  | [optional] 
-**Usages** | Pointer to [**InlineResponse20087Usages**](InlineResponse20087Usages.md) |  | [optional] 
+**Ts** | Pointer to **time.Time** | The timestamp | [optional] 
+**Total** | Pointer to **float32** | The total traffic over a time range for clients on a network | [optional] 
+**Upstream** | Pointer to **float32** | The upstream traffic over a time range for clients on a network | [optional] 
+**Downstream** | Pointer to **float32** | The downstream traffic over a time range for clients on a network | [optional] 
 
 ## Methods
 
@@ -26,55 +28,105 @@ NewInlineResponse20087WithDefaults instantiates a new InlineResponse20087 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCounts
+### GetTs
 
-`func (o *InlineResponse20087) GetCounts() InlineResponse20087Counts`
+`func (o *InlineResponse20087) GetTs() time.Time`
 
-GetCounts returns the Counts field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetCountsOk
+### GetTsOk
 
-`func (o *InlineResponse20087) GetCountsOk() (*InlineResponse20087Counts, bool)`
+`func (o *InlineResponse20087) GetTsOk() (*time.Time, bool)`
 
-GetCountsOk returns a tuple with the Counts field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCounts
+### SetTs
 
-`func (o *InlineResponse20087) SetCounts(v InlineResponse20087Counts)`
+`func (o *InlineResponse20087) SetTs(v time.Time)`
 
-SetCounts sets Counts field to given value.
+SetTs sets Ts field to given value.
 
-### HasCounts
+### HasTs
 
-`func (o *InlineResponse20087) HasCounts() bool`
+`func (o *InlineResponse20087) HasTs() bool`
 
-HasCounts returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
-### GetUsages
+### GetTotal
 
-`func (o *InlineResponse20087) GetUsages() InlineResponse20087Usages`
+`func (o *InlineResponse20087) GetTotal() float32`
 
-GetUsages returns the Usages field if non-nil, zero value otherwise.
+GetTotal returns the Total field if non-nil, zero value otherwise.
 
-### GetUsagesOk
+### GetTotalOk
 
-`func (o *InlineResponse20087) GetUsagesOk() (*InlineResponse20087Usages, bool)`
+`func (o *InlineResponse20087) GetTotalOk() (*float32, bool)`
 
-GetUsagesOk returns a tuple with the Usages field if it's non-nil, zero value otherwise
+GetTotalOk returns a tuple with the Total field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUsages
+### SetTotal
 
-`func (o *InlineResponse20087) SetUsages(v InlineResponse20087Usages)`
+`func (o *InlineResponse20087) SetTotal(v float32)`
 
-SetUsages sets Usages field to given value.
+SetTotal sets Total field to given value.
 
-### HasUsages
+### HasTotal
 
-`func (o *InlineResponse20087) HasUsages() bool`
+`func (o *InlineResponse20087) HasTotal() bool`
 
-HasUsages returns a boolean if a field has been set.
+HasTotal returns a boolean if a field has been set.
+
+### GetUpstream
+
+`func (o *InlineResponse20087) GetUpstream() float32`
+
+GetUpstream returns the Upstream field if non-nil, zero value otherwise.
+
+### GetUpstreamOk
+
+`func (o *InlineResponse20087) GetUpstreamOk() (*float32, bool)`
+
+GetUpstreamOk returns a tuple with the Upstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUpstream
+
+`func (o *InlineResponse20087) SetUpstream(v float32)`
+
+SetUpstream sets Upstream field to given value.
+
+### HasUpstream
+
+`func (o *InlineResponse20087) HasUpstream() bool`
+
+HasUpstream returns a boolean if a field has been set.
+
+### GetDownstream
+
+`func (o *InlineResponse20087) GetDownstream() float32`
+
+GetDownstream returns the Downstream field if non-nil, zero value otherwise.
+
+### GetDownstreamOk
+
+`func (o *InlineResponse20087) GetDownstreamOk() (*float32, bool)`
+
+GetDownstreamOk returns a tuple with the Downstream field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDownstream
+
+`func (o *InlineResponse20087) SetDownstream(v float32)`
+
+SetDownstream sets Downstream field to given value.
+
+### HasDownstream
+
+`func (o *InlineResponse20087) HasDownstream() bool`
+
+HasDownstream returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

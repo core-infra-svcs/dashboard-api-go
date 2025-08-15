@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 ## GetNetworkApplianceFirewallFirewalledService
 
-> InlineResponse20052 GetNetworkApplianceFirewallFirewalledService(ctx, networkId, service).Execute()
+> InlineResponse20053 GetNetworkApplianceFirewallFirewalledService(ctx, networkId, service).Execute()
 
 Return the accessibility settings of the given service ('ICMP', 'web', or 'SNMP')
 
@@ -41,7 +41,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewalledServicesApi.GetNetworkApplianceFirewallFirewalledService``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallFirewalledService`: InlineResponse20052
+    // response from `GetNetworkApplianceFirewallFirewalledService`: InlineResponse20053
     fmt.Fprintf(os.Stdout, "Response from `FirewalledServicesApi.GetNetworkApplianceFirewallFirewalledService`: %v\n", resp)
 }
 ```
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20052**](InlineResponse20052.md)
+[**InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 ## GetNetworkApplianceFirewallFirewalledServices
 
-> []InlineResponse20052 GetNetworkApplianceFirewallFirewalledServices(ctx, networkId).Execute()
+> []InlineResponse20053 GetNetworkApplianceFirewallFirewalledServices(ctx, networkId).Execute()
 
 List the appliance services and their accessibility rules
 
@@ -113,7 +113,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewalledServicesApi.GetNetworkApplianceFirewallFirewalledServices``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `GetNetworkApplianceFirewallFirewalledServices`: []InlineResponse20052
+    // response from `GetNetworkApplianceFirewallFirewalledServices`: []InlineResponse20053
     fmt.Fprintf(os.Stdout, "Response from `FirewalledServicesApi.GetNetworkApplianceFirewallFirewalledServices`: %v\n", resp)
 }
 ```
@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]InlineResponse20052**](InlineResponse20052.md)
+[**[]InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ## UpdateNetworkApplianceFirewallFirewalledService
 
-> InlineResponse20052 UpdateNetworkApplianceFirewallFirewalledService(ctx, networkId, service).UpdateNetworkApplianceFirewallFirewalledService(updateNetworkApplianceFirewallFirewalledService).Execute()
+> InlineResponse20053 UpdateNetworkApplianceFirewallFirewalledService(ctx, networkId, service).UpdateNetworkApplianceFirewallFirewalledService(updateNetworkApplianceFirewallFirewalledService).Execute()
 
 Updates the accessibility settings for the given service ('ICMP', 'web', or 'SNMP')
 
@@ -185,7 +185,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `FirewalledServicesApi.UpdateNetworkApplianceFirewallFirewalledService``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `UpdateNetworkApplianceFirewallFirewalledService`: InlineResponse20052
+    // response from `UpdateNetworkApplianceFirewallFirewalledService`: InlineResponse20053
     fmt.Fprintf(os.Stdout, "Response from `FirewalledServicesApi.UpdateNetworkApplianceFirewallFirewalledService`: %v\n", resp)
 }
 ```
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20052**](InlineResponse20052.md)
+[**InlineResponse20053**](InlineResponse20053.md)
 
 ### Authorization
 

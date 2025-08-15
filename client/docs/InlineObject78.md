@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Mode** | **string** | The site-to-site VPN mode. Can be one of &#39;none&#39;, &#39;spoke&#39; or &#39;hub&#39; | 
 **Hubs** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs**](NetworksNetworkIdApplianceVpnSiteToSiteVpnHubs.md) | The list of VPN hubs, in order of preference. In spoke mode, at least 1 hub is required. | [optional] 
 **Subnets** | Pointer to [**[]NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets**](NetworksNetworkIdApplianceVpnSiteToSiteVpnSubnets.md) | The list of subnets and their VPN presence. | [optional] 
-**Subnet** | Pointer to [**InlineResponse20076Subnet**](InlineResponse20076Subnet.md) |  | [optional] 
+**Subnet** | Pointer to [**InlineResponse20077Subnet**](InlineResponse20077Subnet.md) |  | [optional] 
 
 ## Methods
 
@@ -100,20 +100,20 @@ HasSubnets returns a boolean if a field has been set.
 
 ### GetSubnet
 
-`func (o *InlineObject78) GetSubnet() InlineResponse20076Subnet`
+`func (o *InlineObject78) GetSubnet() InlineResponse20077Subnet`
 
 GetSubnet returns the Subnet field if non-nil, zero value otherwise.
 
 ### GetSubnetOk
 
-`func (o *InlineObject78) GetSubnetOk() (*InlineResponse20076Subnet, bool)`
+`func (o *InlineObject78) GetSubnetOk() (*InlineResponse20077Subnet, bool)`
 
 GetSubnetOk returns a tuple with the Subnet field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSubnet
 
-`func (o *InlineObject78) SetSubnet(v InlineResponse20076Subnet)`
+`func (o *InlineObject78) SetSubnet(v InlineResponse20077Subnet)`
 
 SetSubnet sets Subnet field to given value.
 

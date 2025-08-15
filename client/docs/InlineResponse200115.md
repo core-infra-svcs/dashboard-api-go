@@ -4,9 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | Name of client | [optional] 
-**ClientId** | Pointer to **string** | ID of client | [optional] 
-**Assigned** | Pointer to [**[]NetworksNetworkIdPoliciesByClientAssigned**](NetworksNetworkIdPoliciesByClientAssigned.md) | Assigned policies | [optional] 
+**Id** | Pointer to **string** | The network or organization identifier | [optional] 
+**OrganizationWide** | Pointer to **bool** | If the data returned is organization-wide. False indicates the data is network-wide. | [optional] 
+**NetworkId** | Pointer to **string** | The network identifier | [optional] 
+**Type** | Pointer to **string** | The type of PII request | [optional] 
+**Mac** | Pointer to **string** | The MAC address of the PII request | [optional] 
+**Datasets** | Pointer to **string** | The stringified array of datasets related to the provided key that should be deleted. | [optional] 
+**Status** | Pointer to **string** | The status of the PII request | [optional] 
+**CreatedAt** | Pointer to **int32** | The request&#39;s creation time | [optional] 
+**CompletedAt** | Pointer to **int32** | The request&#39;s completion time | [optional] 
 
 ## Methods
 
@@ -27,80 +33,230 @@ NewInlineResponse200115WithDefaults instantiates a new InlineResponse200115 obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetId
 
-`func (o *InlineResponse200115) GetName() string`
+`func (o *InlineResponse200115) GetId() string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetIdOk
 
-`func (o *InlineResponse200115) GetNameOk() (*string, bool)`
+`func (o *InlineResponse200115) GetIdOk() (*string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetId
 
-`func (o *InlineResponse200115) SetName(v string)`
+`func (o *InlineResponse200115) SetId(v string)`
 
-SetName sets Name field to given value.
+SetId sets Id field to given value.
 
-### HasName
+### HasId
 
-`func (o *InlineResponse200115) HasName() bool`
+`func (o *InlineResponse200115) HasId() bool`
 
-HasName returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
-### GetClientId
+### GetOrganizationWide
 
-`func (o *InlineResponse200115) GetClientId() string`
+`func (o *InlineResponse200115) GetOrganizationWide() bool`
 
-GetClientId returns the ClientId field if non-nil, zero value otherwise.
+GetOrganizationWide returns the OrganizationWide field if non-nil, zero value otherwise.
 
-### GetClientIdOk
+### GetOrganizationWideOk
 
-`func (o *InlineResponse200115) GetClientIdOk() (*string, bool)`
+`func (o *InlineResponse200115) GetOrganizationWideOk() (*bool, bool)`
 
-GetClientIdOk returns a tuple with the ClientId field if it's non-nil, zero value otherwise
+GetOrganizationWideOk returns a tuple with the OrganizationWide field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientId
+### SetOrganizationWide
 
-`func (o *InlineResponse200115) SetClientId(v string)`
+`func (o *InlineResponse200115) SetOrganizationWide(v bool)`
 
-SetClientId sets ClientId field to given value.
+SetOrganizationWide sets OrganizationWide field to given value.
 
-### HasClientId
+### HasOrganizationWide
 
-`func (o *InlineResponse200115) HasClientId() bool`
+`func (o *InlineResponse200115) HasOrganizationWide() bool`
 
-HasClientId returns a boolean if a field has been set.
+HasOrganizationWide returns a boolean if a field has been set.
 
-### GetAssigned
+### GetNetworkId
 
-`func (o *InlineResponse200115) GetAssigned() []NetworksNetworkIdPoliciesByClientAssigned`
+`func (o *InlineResponse200115) GetNetworkId() string`
 
-GetAssigned returns the Assigned field if non-nil, zero value otherwise.
+GetNetworkId returns the NetworkId field if non-nil, zero value otherwise.
 
-### GetAssignedOk
+### GetNetworkIdOk
 
-`func (o *InlineResponse200115) GetAssignedOk() (*[]NetworksNetworkIdPoliciesByClientAssigned, bool)`
+`func (o *InlineResponse200115) GetNetworkIdOk() (*string, bool)`
 
-GetAssignedOk returns a tuple with the Assigned field if it's non-nil, zero value otherwise
+GetNetworkIdOk returns a tuple with the NetworkId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAssigned
+### SetNetworkId
 
-`func (o *InlineResponse200115) SetAssigned(v []NetworksNetworkIdPoliciesByClientAssigned)`
+`func (o *InlineResponse200115) SetNetworkId(v string)`
 
-SetAssigned sets Assigned field to given value.
+SetNetworkId sets NetworkId field to given value.
 
-### HasAssigned
+### HasNetworkId
 
-`func (o *InlineResponse200115) HasAssigned() bool`
+`func (o *InlineResponse200115) HasNetworkId() bool`
 
-HasAssigned returns a boolean if a field has been set.
+HasNetworkId returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *InlineResponse200115) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *InlineResponse200115) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *InlineResponse200115) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *InlineResponse200115) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetMac
+
+`func (o *InlineResponse200115) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *InlineResponse200115) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *InlineResponse200115) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *InlineResponse200115) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetDatasets
+
+`func (o *InlineResponse200115) GetDatasets() string`
+
+GetDatasets returns the Datasets field if non-nil, zero value otherwise.
+
+### GetDatasetsOk
+
+`func (o *InlineResponse200115) GetDatasetsOk() (*string, bool)`
+
+GetDatasetsOk returns a tuple with the Datasets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDatasets
+
+`func (o *InlineResponse200115) SetDatasets(v string)`
+
+SetDatasets sets Datasets field to given value.
+
+### HasDatasets
+
+`func (o *InlineResponse200115) HasDatasets() bool`
+
+HasDatasets returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *InlineResponse200115) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *InlineResponse200115) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *InlineResponse200115) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *InlineResponse200115) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
+
+### GetCreatedAt
+
+`func (o *InlineResponse200115) GetCreatedAt() int32`
+
+GetCreatedAt returns the CreatedAt field if non-nil, zero value otherwise.
+
+### GetCreatedAtOk
+
+`func (o *InlineResponse200115) GetCreatedAtOk() (*int32, bool)`
+
+GetCreatedAtOk returns a tuple with the CreatedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedAt
+
+`func (o *InlineResponse200115) SetCreatedAt(v int32)`
+
+SetCreatedAt sets CreatedAt field to given value.
+
+### HasCreatedAt
+
+`func (o *InlineResponse200115) HasCreatedAt() bool`
+
+HasCreatedAt returns a boolean if a field has been set.
+
+### GetCompletedAt
+
+`func (o *InlineResponse200115) GetCompletedAt() int32`
+
+GetCompletedAt returns the CompletedAt field if non-nil, zero value otherwise.
+
+### GetCompletedAtOk
+
+`func (o *InlineResponse200115) GetCompletedAtOk() (*int32, bool)`
+
+GetCompletedAtOk returns a tuple with the CompletedAt field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCompletedAt
+
+`func (o *InlineResponse200115) SetCompletedAt(v int32)`
+
+SetCompletedAt sets CompletedAt field to given value.
+
+### HasCompletedAt
+
+`func (o *InlineResponse200115) HasCompletedAt() bool`
+
+HasCompletedAt returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

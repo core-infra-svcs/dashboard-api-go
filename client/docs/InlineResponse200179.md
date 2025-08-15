@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkId** | Pointer to **string** | The network ID | [optional] 
-**DefaultPolicy** | Pointer to **string** | Indicates whether or not clients are allowed to       connect to rogue SSIDs. (blocked by default) | [optional] 
+**Id** | Pointer to **string** | A Base64 encoded ID. | [optional] 
+**Name** | Pointer to **string** | A name for easy reference to the HTTP server | [optional] 
+**Url** | Pointer to **string** | The URL of the HTTP server. | [optional] 
+**NetworkId** | Pointer to **string** | A Meraki network ID. | [optional] 
+**PayloadTemplate** | Pointer to [**NetworksNetworkIdWebhooksHttpServersPayloadTemplate**](NetworksNetworkIdWebhooksHttpServersPayloadTemplate.md) |  | [optional] 
 
 ## Methods
 
@@ -25,6 +28,81 @@ will change when the set of required properties is changed
 NewInlineResponse200179WithDefaults instantiates a new InlineResponse200179 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *InlineResponse200179) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *InlineResponse200179) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *InlineResponse200179) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *InlineResponse200179) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *InlineResponse200179) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *InlineResponse200179) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *InlineResponse200179) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *InlineResponse200179) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetUrl
+
+`func (o *InlineResponse200179) GetUrl() string`
+
+GetUrl returns the Url field if non-nil, zero value otherwise.
+
+### GetUrlOk
+
+`func (o *InlineResponse200179) GetUrlOk() (*string, bool)`
+
+GetUrlOk returns a tuple with the Url field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUrl
+
+`func (o *InlineResponse200179) SetUrl(v string)`
+
+SetUrl sets Url field to given value.
+
+### HasUrl
+
+`func (o *InlineResponse200179) HasUrl() bool`
+
+HasUrl returns a boolean if a field has been set.
 
 ### GetNetworkId
 
@@ -51,30 +129,30 @@ SetNetworkId sets NetworkId field to given value.
 
 HasNetworkId returns a boolean if a field has been set.
 
-### GetDefaultPolicy
+### GetPayloadTemplate
 
-`func (o *InlineResponse200179) GetDefaultPolicy() string`
+`func (o *InlineResponse200179) GetPayloadTemplate() NetworksNetworkIdWebhooksHttpServersPayloadTemplate`
 
-GetDefaultPolicy returns the DefaultPolicy field if non-nil, zero value otherwise.
+GetPayloadTemplate returns the PayloadTemplate field if non-nil, zero value otherwise.
 
-### GetDefaultPolicyOk
+### GetPayloadTemplateOk
 
-`func (o *InlineResponse200179) GetDefaultPolicyOk() (*string, bool)`
+`func (o *InlineResponse200179) GetPayloadTemplateOk() (*NetworksNetworkIdWebhooksHttpServersPayloadTemplate, bool)`
 
-GetDefaultPolicyOk returns a tuple with the DefaultPolicy field if it's non-nil, zero value otherwise
+GetPayloadTemplateOk returns a tuple with the PayloadTemplate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDefaultPolicy
+### SetPayloadTemplate
 
-`func (o *InlineResponse200179) SetDefaultPolicy(v string)`
+`func (o *InlineResponse200179) SetPayloadTemplate(v NetworksNetworkIdWebhooksHttpServersPayloadTemplate)`
 
-SetDefaultPolicy sets DefaultPolicy field to given value.
+SetPayloadTemplate sets PayloadTemplate field to given value.
 
-### HasDefaultPolicy
+### HasPayloadTemplate
 
-`func (o *InlineResponse200179) HasDefaultPolicy() bool`
+`func (o *InlineResponse200179) HasPayloadTemplate() bool`
 
-HasDefaultPolicy returns a boolean if a field has been set.
+HasPayloadTemplate returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

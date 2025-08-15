@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **Area** | Pointer to **string** | The OSPF area to which this interface should belong. Can be either &#39;disabled&#39; or the identifier of an           existing OSPF area. Defaults to &#39;disabled&#39;. | [optional] 
 **Cost** | Pointer to **int32** | The path cost for this interface. Defaults to 1, but can be increased up to 65535           to give lower priority. | [optional] 
 **IsPassiveEnabled** | Pointer to **bool** | When enabled, OSPF will not run on the interface, but the subnet will still be advertised. | [optional] 
+**NetworkType** | Pointer to **string** | OSPF network type | [optional] 
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetIsPassiveEnabled sets IsPassiveEnabled field to given value.
 `func (o *DevicesSerialSwitchRoutingInterfacesOspfSettings1) HasIsPassiveEnabled() bool`
 
 HasIsPassiveEnabled returns a boolean if a field has been set.
+
+### GetNetworkType
+
+`func (o *DevicesSerialSwitchRoutingInterfacesOspfSettings1) GetNetworkType() string`
+
+GetNetworkType returns the NetworkType field if non-nil, zero value otherwise.
+
+### GetNetworkTypeOk
+
+`func (o *DevicesSerialSwitchRoutingInterfacesOspfSettings1) GetNetworkTypeOk() (*string, bool)`
+
+GetNetworkTypeOk returns a tuple with the NetworkType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkType
+
+`func (o *DevicesSerialSwitchRoutingInterfacesOspfSettings1) SetNetworkType(v string)`
+
+SetNetworkType sets NetworkType field to given value.
+
+### HasNetworkType
+
+`func (o *DevicesSerialSwitchRoutingInterfacesOspfSettings1) HasNetworkType() bool`
+
+HasNetworkType returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

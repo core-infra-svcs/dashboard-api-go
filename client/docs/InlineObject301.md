@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Status** | Pointer to **string** | The \&quot;status\&quot; to update the Certificate Authority to. Only valid option is \&quot;trusted\&quot;. | [optional] 
-**CertificateAuthorityId** | Pointer to **string** | The ID of the Certificate Authority to update. | [optional] 
+**SourceSerial** | **string** | Serial number of the source switch (must be on a network not bound to a template) | 
+**TargetSerials** | **[]string** | Array of serial numbers of one or more target switches (must be on a network not bound to a template) | 
 
 ## Methods
 
 ### NewInlineObject301
 
-`func NewInlineObject301() *InlineObject301`
+`func NewInlineObject301(sourceSerial string, targetSerials []string, ) *InlineObject301`
 
 NewInlineObject301 instantiates a new InlineObject301 object
 This constructor will assign default values to properties that have it defined,
@@ -26,55 +26,45 @@ NewInlineObject301WithDefaults instantiates a new InlineObject301 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetSourceSerial
 
-`func (o *InlineObject301) GetStatus() string`
+`func (o *InlineObject301) GetSourceSerial() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetSourceSerial returns the SourceSerial field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetSourceSerialOk
 
-`func (o *InlineObject301) GetStatusOk() (*string, bool)`
+`func (o *InlineObject301) GetSourceSerialOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetSourceSerialOk returns a tuple with the SourceSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetSourceSerial
 
-`func (o *InlineObject301) SetStatus(v string)`
+`func (o *InlineObject301) SetSourceSerial(v string)`
 
-SetStatus sets Status field to given value.
+SetSourceSerial sets SourceSerial field to given value.
 
-### HasStatus
 
-`func (o *InlineObject301) HasStatus() bool`
+### GetTargetSerials
 
-HasStatus returns a boolean if a field has been set.
+`func (o *InlineObject301) GetTargetSerials() []string`
 
-### GetCertificateAuthorityId
+GetTargetSerials returns the TargetSerials field if non-nil, zero value otherwise.
 
-`func (o *InlineObject301) GetCertificateAuthorityId() string`
+### GetTargetSerialsOk
 
-GetCertificateAuthorityId returns the CertificateAuthorityId field if non-nil, zero value otherwise.
+`func (o *InlineObject301) GetTargetSerialsOk() (*[]string, bool)`
 
-### GetCertificateAuthorityIdOk
-
-`func (o *InlineObject301) GetCertificateAuthorityIdOk() (*string, bool)`
-
-GetCertificateAuthorityIdOk returns a tuple with the CertificateAuthorityId field if it's non-nil, zero value otherwise
+GetTargetSerialsOk returns a tuple with the TargetSerials field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCertificateAuthorityId
+### SetTargetSerials
 
-`func (o *InlineObject301) SetCertificateAuthorityId(v string)`
+`func (o *InlineObject301) SetTargetSerials(v []string)`
 
-SetCertificateAuthorityId sets CertificateAuthorityId field to given value.
+SetTargetSerials sets TargetSerials field to given value.
 
-### HasCertificateAuthorityId
-
-`func (o *InlineObject301) HasCertificateAuthorityId() bool`
-
-HasCertificateAuthorityId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

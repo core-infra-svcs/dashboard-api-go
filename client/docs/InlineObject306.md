@@ -5,13 +5,15 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Description** | Pointer to **string** | The description of mac address | [optional] 
-**Client** | Pointer to [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient.md) |  | [optional] 
+**Client** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient.md) |  | 
+**Ssid** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid.md) |  | 
+**Network** | [**OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork**](OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork.md) |  | 
 
 ## Methods
 
 ### NewInlineObject306
 
-`func NewInlineObject306() *InlineObject306`
+`func NewInlineObject306(client OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesClient, ssid OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, network OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, ) *InlineObject306`
 
 NewInlineObject306 instantiates a new InlineObject306 object
 This constructor will assign default values to properties that have it defined,
@@ -70,11 +72,46 @@ and a boolean to check if the value has been set.
 
 SetClient sets Client field to given value.
 
-### HasClient
 
-`func (o *InlineObject306) HasClient() bool`
+### GetSsid
 
-HasClient returns a boolean if a field has been set.
+`func (o *InlineObject306) GetSsid() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid`
+
+GetSsid returns the Ssid field if non-nil, zero value otherwise.
+
+### GetSsidOk
+
+`func (o *InlineObject306) GetSsidOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid, bool)`
+
+GetSsidOk returns a tuple with the Ssid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSsid
+
+`func (o *InlineObject306) SetSsid(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesSsid)`
+
+SetSsid sets Ssid field to given value.
+
+
+### GetNetwork
+
+`func (o *InlineObject306) GetNetwork() OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *InlineObject306) GetNetworkOk() (*OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *InlineObject306) SetNetwork(v OrganizationsOrganizationIdWirelessSsidsFirewallIsolationAllowlistEntriesNetwork)`
+
+SetNetwork sets Network field to given value.
+
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

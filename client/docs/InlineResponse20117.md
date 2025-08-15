@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ArtifactId** | Pointer to **string** | Custom analytics artifact ID | [optional] 
-**OrganizationId** | Pointer to **string** | Organization ID | [optional] 
-**Name** | Pointer to **string** | Custom analytics artifact name | [optional] 
-**Status** | Pointer to [**OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus**](OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus.md) |  | [optional] 
-**UploadId** | Pointer to **string** | Upload ID | [optional] 
-**UploadUrl** | Pointer to **string** | Upload URL | [optional] 
-**UploadUrlExpiry** | Pointer to **time.Time** | Upload URL expiry time | [optional] 
+**Id** | Pointer to **string** | ID of the action batch. Can be used to check the status of the action batch at /organizations/{organizationId}/actionBatches/{actionBatchId} | [optional] 
+**OrganizationId** | Pointer to **string** | ID of the organization this action batch belongs to | [optional] 
+**Confirmed** | Pointer to **bool** | Flag describing whether the action should be previewed before executing or not | [optional] 
+**Synchronous** | Pointer to **bool** | Flag describing whether actions should run synchronously or asynchronously | [optional] 
+**Status** | Pointer to [**OrganizationsOrganizationIdActionBatchesStatus**](OrganizationsOrganizationIdActionBatchesStatus.md) |  | [optional] 
+**Actions** | [**[]OrganizationsOrganizationIdActionBatchesActions**](OrganizationsOrganizationIdActionBatchesActions.md) | A set of changes made as part of this action (&lt;a href&#x3D;&#39;https://developer.cisco.com/meraki/api/#/rest/guides/action-batches/&#39;&gt;more details&lt;/a&gt;) | 
+**Callback** | Pointer to [**InlineResponse2011Callback**](InlineResponse2011Callback.md) |  | [optional] 
 
 ## Methods
 
 ### NewInlineResponse20117
 
-`func NewInlineResponse20117() *InlineResponse20117`
+`func NewInlineResponse20117(actions []OrganizationsOrganizationIdActionBatchesActions, ) *InlineResponse20117`
 
 NewInlineResponse20117 instantiates a new InlineResponse20117 object
 This constructor will assign default values to properties that have it defined,
@@ -31,30 +31,30 @@ NewInlineResponse20117WithDefaults instantiates a new InlineResponse20117 object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetArtifactId
+### GetId
 
-`func (o *InlineResponse20117) GetArtifactId() string`
+`func (o *InlineResponse20117) GetId() string`
 
-GetArtifactId returns the ArtifactId field if non-nil, zero value otherwise.
+GetId returns the Id field if non-nil, zero value otherwise.
 
-### GetArtifactIdOk
+### GetIdOk
 
-`func (o *InlineResponse20117) GetArtifactIdOk() (*string, bool)`
+`func (o *InlineResponse20117) GetIdOk() (*string, bool)`
 
-GetArtifactIdOk returns a tuple with the ArtifactId field if it's non-nil, zero value otherwise
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetArtifactId
+### SetId
 
-`func (o *InlineResponse20117) SetArtifactId(v string)`
+`func (o *InlineResponse20117) SetId(v string)`
 
-SetArtifactId sets ArtifactId field to given value.
+SetId sets Id field to given value.
 
-### HasArtifactId
+### HasId
 
-`func (o *InlineResponse20117) HasArtifactId() bool`
+`func (o *InlineResponse20117) HasId() bool`
 
-HasArtifactId returns a boolean if a field has been set.
+HasId returns a boolean if a field has been set.
 
 ### GetOrganizationId
 
@@ -81,47 +81,72 @@ SetOrganizationId sets OrganizationId field to given value.
 
 HasOrganizationId returns a boolean if a field has been set.
 
-### GetName
+### GetConfirmed
 
-`func (o *InlineResponse20117) GetName() string`
+`func (o *InlineResponse20117) GetConfirmed() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConfirmed returns the Confirmed field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConfirmedOk
 
-`func (o *InlineResponse20117) GetNameOk() (*string, bool)`
+`func (o *InlineResponse20117) GetConfirmedOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConfirmedOk returns a tuple with the Confirmed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConfirmed
 
-`func (o *InlineResponse20117) SetName(v string)`
+`func (o *InlineResponse20117) SetConfirmed(v bool)`
 
-SetName sets Name field to given value.
+SetConfirmed sets Confirmed field to given value.
 
-### HasName
+### HasConfirmed
 
-`func (o *InlineResponse20117) HasName() bool`
+`func (o *InlineResponse20117) HasConfirmed() bool`
 
-HasName returns a boolean if a field has been set.
+HasConfirmed returns a boolean if a field has been set.
+
+### GetSynchronous
+
+`func (o *InlineResponse20117) GetSynchronous() bool`
+
+GetSynchronous returns the Synchronous field if non-nil, zero value otherwise.
+
+### GetSynchronousOk
+
+`func (o *InlineResponse20117) GetSynchronousOk() (*bool, bool)`
+
+GetSynchronousOk returns a tuple with the Synchronous field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSynchronous
+
+`func (o *InlineResponse20117) SetSynchronous(v bool)`
+
+SetSynchronous sets Synchronous field to given value.
+
+### HasSynchronous
+
+`func (o *InlineResponse20117) HasSynchronous() bool`
+
+HasSynchronous returns a boolean if a field has been set.
 
 ### GetStatus
 
-`func (o *InlineResponse20117) GetStatus() OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus`
+`func (o *InlineResponse20117) GetStatus() OrganizationsOrganizationIdActionBatchesStatus`
 
 GetStatus returns the Status field if non-nil, zero value otherwise.
 
 ### GetStatusOk
 
-`func (o *InlineResponse20117) GetStatusOk() (*OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus, bool)`
+`func (o *InlineResponse20117) GetStatusOk() (*OrganizationsOrganizationIdActionBatchesStatus, bool)`
 
 GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStatus
 
-`func (o *InlineResponse20117) SetStatus(v OrganizationsOrganizationIdCameraCustomAnalyticsArtifactsStatus)`
+`func (o *InlineResponse20117) SetStatus(v OrganizationsOrganizationIdActionBatchesStatus)`
 
 SetStatus sets Status field to given value.
 
@@ -131,80 +156,50 @@ SetStatus sets Status field to given value.
 
 HasStatus returns a boolean if a field has been set.
 
-### GetUploadId
+### GetActions
 
-`func (o *InlineResponse20117) GetUploadId() string`
+`func (o *InlineResponse20117) GetActions() []OrganizationsOrganizationIdActionBatchesActions`
 
-GetUploadId returns the UploadId field if non-nil, zero value otherwise.
+GetActions returns the Actions field if non-nil, zero value otherwise.
 
-### GetUploadIdOk
+### GetActionsOk
 
-`func (o *InlineResponse20117) GetUploadIdOk() (*string, bool)`
+`func (o *InlineResponse20117) GetActionsOk() (*[]OrganizationsOrganizationIdActionBatchesActions, bool)`
 
-GetUploadIdOk returns a tuple with the UploadId field if it's non-nil, zero value otherwise
+GetActionsOk returns a tuple with the Actions field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUploadId
+### SetActions
 
-`func (o *InlineResponse20117) SetUploadId(v string)`
+`func (o *InlineResponse20117) SetActions(v []OrganizationsOrganizationIdActionBatchesActions)`
 
-SetUploadId sets UploadId field to given value.
+SetActions sets Actions field to given value.
 
-### HasUploadId
 
-`func (o *InlineResponse20117) HasUploadId() bool`
+### GetCallback
 
-HasUploadId returns a boolean if a field has been set.
+`func (o *InlineResponse20117) GetCallback() InlineResponse2011Callback`
 
-### GetUploadUrl
+GetCallback returns the Callback field if non-nil, zero value otherwise.
 
-`func (o *InlineResponse20117) GetUploadUrl() string`
+### GetCallbackOk
 
-GetUploadUrl returns the UploadUrl field if non-nil, zero value otherwise.
+`func (o *InlineResponse20117) GetCallbackOk() (*InlineResponse2011Callback, bool)`
 
-### GetUploadUrlOk
-
-`func (o *InlineResponse20117) GetUploadUrlOk() (*string, bool)`
-
-GetUploadUrlOk returns a tuple with the UploadUrl field if it's non-nil, zero value otherwise
+GetCallbackOk returns a tuple with the Callback field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetUploadUrl
+### SetCallback
 
-`func (o *InlineResponse20117) SetUploadUrl(v string)`
+`func (o *InlineResponse20117) SetCallback(v InlineResponse2011Callback)`
 
-SetUploadUrl sets UploadUrl field to given value.
+SetCallback sets Callback field to given value.
 
-### HasUploadUrl
+### HasCallback
 
-`func (o *InlineResponse20117) HasUploadUrl() bool`
+`func (o *InlineResponse20117) HasCallback() bool`
 
-HasUploadUrl returns a boolean if a field has been set.
-
-### GetUploadUrlExpiry
-
-`func (o *InlineResponse20117) GetUploadUrlExpiry() time.Time`
-
-GetUploadUrlExpiry returns the UploadUrlExpiry field if non-nil, zero value otherwise.
-
-### GetUploadUrlExpiryOk
-
-`func (o *InlineResponse20117) GetUploadUrlExpiryOk() (*time.Time, bool)`
-
-GetUploadUrlExpiryOk returns a tuple with the UploadUrlExpiry field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetUploadUrlExpiry
-
-`func (o *InlineResponse20117) SetUploadUrlExpiry(v time.Time)`
-
-SetUploadUrlExpiry sets UploadUrlExpiry field to given value.
-
-### HasUploadUrlExpiry
-
-`func (o *InlineResponse20117) HasUploadUrlExpiry() bool`
-
-HasUploadUrlExpiry returns a boolean if a field has been set.
+HasCallback returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
